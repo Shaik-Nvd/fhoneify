@@ -2,12 +2,40 @@ import jwt from 'jsonwebtoken';
 import config from '../../config';
 import { users, otps, redis, User } from '../../data';
 import logger from '../../lib/logger';
+import twilio from 'twilio';
+
+// Initialize Twilio client (requires ENV vars to be set in production)
+const twilioClient = twilio(
+  process.env.TWILIO_ACCOUNT_SID || 'AC_dummy_sid_for_dev',
+  process.env.TWILIO_AUTH_TOKEN || 'dummy_token_for_dev'
+);
 
 export async function sendOtp(phone: string): Promise<string> {
   const otp = String(Math.floor(100000 + Math.random() * 900000));
   otps.set(phone, { otp, expires: Date.now() + 10 * 60 * 1000 });
+
+  // If Twilio credentials are provided, send a real SMS
+  if (process.env.TWILIO_ACCOUNT_SID && process.env.TWILIO_AUTH_TOKEN && process.env.TWILIO_PHONE_NUMBER) {
+    try {
+      // Ensure phone is in E.164 format (e.g. +91...)
+      const formattedPhone = phone.startsWith('+') ? phone : `+91${phone}`;
+      
+      await twilioClient.messages.create({
+        body: `Your Fhoneify verification code is: ${otp}. Valid for 10 minutes.`,
+        from: process.env.TWILIO_PHONE_NUMBER,
+        to: formattedPhone
+      });
+      logger.info({ phone }, 'Real SMS sent via Twilio successfully');
+    } catch (error: any) {
+      logger.error({ phone, err: error.message }, 'Failed to send SMS via Twilio');
+      // We don't throw here so that dev environments without Twilio can still use the console fallback
+      process.stdout.write(`[DEV OTP FALLBACK] Phone ${phone} → OTP: ${otp}\n`);
+    }
+  } else {
+    // Development fallback if no real Twilio credentials are provided
+    process.stdout.write(`[DEV OTP] Phone ${phone} → OTP: ${otp}\n`);
+  }
   
-  process.stdout.write(`[OTP] Phone ${phone} → OTP: ${otp}\n`);
   logger.info({ phone, otp }, 'OTP generated and logged');
   return otp;
 }

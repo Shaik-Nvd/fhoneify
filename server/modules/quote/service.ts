@@ -1,4 +1,17 @@
 import { SEED_DEVICES, quotes, counters, Quote, Device } from '../../data';
+import fs from 'fs';
+import path from 'path';
+
+// Load the Cashify prices dictionary
+let cashifyPrices: Record<string, number> = {};
+try {
+  const dataPath = path.join(process.cwd(), 'server', 'data', 'cashify_prices.json');
+  if (fs.existsSync(dataPath)) {
+    cashifyPrices = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+  }
+} catch (err) {
+  console.error("Failed to load cashify_prices.json", err);
+}
 
 const CONDITION_MULTIPLIERS: Record<string, number> = {
   like_new: 0.90,
@@ -19,11 +32,27 @@ export function generateQuote(deviceId: string, condition: string, aiPriceAdjust
   if (!device) return null;
 
   let multiplier = CONDITION_MULTIPLIERS[condition] ?? 0.5;
-  let estimatedPrice = Math.round(BASE_PRICE * multiplier);
+
+  // Form the key to lookup Cashify price, e.g. "apple-iphone-11-128gb"
+  const lookupKey = `${device.model}-${device.storage}`.toLowerCase().replace(/[^a-z0-9]/g, '-');
   
-  // Dynamic Market Depreciation Engine
-  // Simulate checking an internal ledger of next-gen release dates
-  // If the device is an older model (e.g., iPhone 13 or 14), slash price by 15% due to newer models out
+  // 1. Get Base Market Price
+  let baseMarketPrice = cashifyPrices[lookupKey] || device.basePrice || 100000;
+
+  // 2. Apply Competitive Uplift (Fhoneify beats Cashify)
+  let upliftedBasePrice = baseMarketPrice;
+  if (baseMarketPrice <= 20000) {
+    upliftedBasePrice = baseMarketPrice * 1.08; // 8% greater
+  } else if (baseMarketPrice <= 50000) {
+    upliftedBasePrice = baseMarketPrice * 1.06; // 6% greater
+  } else {
+    upliftedBasePrice = baseMarketPrice * 1.04; // 4% greater
+  }
+
+  // 3. Apply Condition Multiplier to the Uplifted Base
+  let estimatedPrice = Math.round(upliftedBasePrice * multiplier);
+  
+  // Dynamic Market Depreciation Engine (Optional legacy logic, can be kept)
   if (device.model.includes('13') || device.model.includes('14') || device.model.includes('S22')) {
     estimatedPrice = Math.round(estimatedPrice * 0.85); // 15% depreciation
   }

@@ -5,7 +5,7 @@ import { useAuthStore } from '@/lib/authStore';
 import { useEffect, useState, useRef } from 'react';
 import { LazyMotion, domAnimation, m, useScroll, useTransform, useMotionValue, useSpring } from 'framer-motion';
 
-const BRANDS = ['Apple', 'Samsung', 'OnePlus', 'Xiaomi', 'Realme', 'Google'];
+const BRANDS = ['Apple', 'Xiaomi', 'Samsung', 'Vivo', 'OnePlus', 'OPPO', 'Realme', 'Motorola', 'Lenovo', 'Nokia', 'Honor', 'Asus', 'Google', 'POCO', 'LG', 'Infinix', 'Tecno', 'iQOO', 'Nothing'];
 
 const STEPS = [
   { num: '01', title: 'Get a Quote', desc: 'Select your device and condition to receive an instant valuation.' },
@@ -79,7 +79,12 @@ function TiltCard({ children, href }: { children: React.ReactNode, href: string 
 
 const BANNER_ITEMS = [
   { id: 1, title: 'Sell old phone', desc: 'From your doorstep or at any of our 200 stores pan-India', cta: 'Sell Now', link: '/sell', icon: '📱' },
-  { id: 2, title: 'Extra 10% on Apple', desc: 'Get the best exchange value for your iPhone this week only!', cta: 'Get Quote', link: '/quote', icon: '🍎' },
+  { id: 2, title: 'Extra 10% on Apple', desc: 'Get the best exchange value for your iPhone this week only!', cta: 'Get Quote', link: '/quote', icon: (
+    <svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ display: 'inline-block' }}>
+      <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+      <path d="M12 18h.01"></path>
+    </svg>
+  ) },
   { id: 3, title: 'Buy Refurbished', desc: 'Quality verified devices at unbeatable prices. 6 Months warranty.', cta: 'Buy Now', link: '/buy', icon: '🛍️' },
 ];
 
