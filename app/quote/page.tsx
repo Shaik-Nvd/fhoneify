@@ -342,7 +342,7 @@ export default function QuotePage() {
 
       {/* STAGES 3-6: MULTI-STEP QUESTIONNAIRE (2 COLUMN LAYOUT) */}
       {step >= 2 && step <= 6 && (
-        <div className="flex flex-col-reverse md:flex-row gap-8 items-start w-full">
+        <div className="flex flex-col-reverse md:flex-row gap-8 items-start w-full" style={{ marginTop: '2.5rem' }}>
           
           <div className="flex-1 w-full min-w-0 flex flex-col gap-6">
             
