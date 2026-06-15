@@ -42,7 +42,6 @@ export default function Navbar() {
       title: 'Trade-In',
       items: [
         { label: 'Get Quote', href: '/quote' },
-        { label: 'Sell Device', href: '/sell' },
       ]
     },
     {

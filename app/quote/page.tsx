@@ -6,6 +6,28 @@ import api from '@/lib/api';
 import { formatCurrency } from '@/lib/format';
 import { useAuthStore } from '@/lib/authStore';
 
+const BRAND_LOGOS: Record<string, string> = {
+  Apple: 'https://cdn.simpleicons.org/apple/white',
+  Xiaomi: 'https://cdn.simpleicons.org/xiaomi/ff6900',
+  Samsung: 'https://cdn.simpleicons.org/samsung/1428a0',
+  Vivo: 'https://logo.clearbit.com/vivo.com',
+  OnePlus: 'https://cdn.simpleicons.org/oneplus/f50100',
+  OPPO: 'https://cdn.simpleicons.org/oppo/006633',
+  Realme: 'https://logo.clearbit.com/realme.com',
+  Motorola: 'https://cdn.simpleicons.org/motorola/white',
+  Lenovo: 'https://cdn.simpleicons.org/lenovo/e2231a',
+  Nokia: 'https://cdn.simpleicons.org/nokia/white',
+  Honor: 'https://logo.clearbit.com/hihonor.com',
+  Asus: 'https://cdn.simpleicons.org/asus/00539b',
+  Google: 'https://cdn.simpleicons.org/google',
+  POCO: 'https://logo.clearbit.com/poco.net',
+  LG: 'https://cdn.simpleicons.org/lg/a50034',
+  Infinix: 'https://logo.clearbit.com/infinixmobility.com',
+  Tecno: 'https://logo.clearbit.com/tecno-mobile.com',
+  iQOO: 'https://logo.clearbit.com/iqoo.com',
+  Nothing: 'https://logo.clearbit.com/nothing.tech'
+};
+
 export interface Device {
   id: string;
   brand: string;
@@ -255,7 +277,7 @@ export default function QuotePage() {
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))', gap: '1rem' }}>
                 {brands.map((b) => (
                   <button key={b} onClick={() => handleBrandSelect(b)} className="card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', padding: '1.5rem 1rem', border: '1px solid #2a2a2a', backgroundColor: '#111', borderRadius: '12px', cursor: 'pointer', transition: 'all 200ms' }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = '#4CD964'; e.currentTarget.style.transform = 'translateY(-2px)'; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = '#2a2a2a'; e.currentTarget.style.transform = 'translateY(0)'; }}>
-                    <img src={`https://logo.clearbit.com/${b.toLowerCase().replace(' ', '') === 'xiaomi' ? 'mi.com' : b.toLowerCase().replace(' ', '') === 'nothing' ? 'nothing.tech' : b.toLowerCase().replace(' ', '') === 'motorola' ? 'motorola.com' : b.toLowerCase().replace(' ', '') === 'realme' ? 'realme.com' : b.toLowerCase().replace(' ', '') === 'vivo' ? 'vivo.com' : b.toLowerCase().replace(' ', '') === 'oppo' ? 'oppo.com' : b.toLowerCase().replace(' ', '') === 'oneplus' ? 'oneplus.com' : b.toLowerCase().replace(' ', '') === 'apple' ? 'apple.com' : b.toLowerCase().replace(' ', '') === 'samsung' ? 'samsung.com' : b.toLowerCase().replace(' ', '') === 'google' ? 'google.com' : b.toLowerCase().replace(' ', '') + '.com'}`} alt={b} style={{ width: '48px', height: '48px', objectFit: 'contain', backgroundColor: '#fff', borderRadius: '8px', padding: '4px' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; }} />
+                    <img src={BRAND_LOGOS[b] || '/images/placeholder-phone.svg'} alt={b} style={{ width: '48px', height: '48px', objectFit: 'contain', filter: ['Nothing', 'Realme'].includes(b) ? 'invert(1)' : 'none' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; }} />
                     <span style={{ fontSize: '0.85rem', fontWeight: 500, color: '#fff' }}>{b}</span>
                   </button>
                 ))}
