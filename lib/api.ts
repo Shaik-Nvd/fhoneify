@@ -33,8 +33,11 @@ api.interceptors.response.use(
   (response) => response,
   (error: AxiosError) => {
     if (error.response?.status === 401 && typeof window !== 'undefined') {
+      const configUrl = error.config?.url || '';
       const path = window.location.pathname;
-      if (!path.startsWith('/auth')) {
+      
+      // Do not globally redirect if it's an OTP error (like "Invalid OTP") or if we are on the Quote page (which has its own modal)
+      if (!configUrl.includes('/api/auth/otp') && !path.startsWith('/auth') && !path.startsWith('/quote')) {
         window.location.href = '/auth';
       }
     }

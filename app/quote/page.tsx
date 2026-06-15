@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import api from '@/lib/api';
 import { formatCurrency } from '@/lib/format';
 import { useAuthStore } from '@/lib/authStore';
+import { useHydratedAuth } from '@/lib/useHydratedAuth';
 
 const BRAND_LOGOS: Record<string, string> = {
   Apple: 'https://cdn.simpleicons.org/apple/white',
@@ -66,6 +67,7 @@ const ArrowRightIcon = () => <svg width="20" height="20" viewBox="0 0 24 24" fil
 export default function QuotePage() {
   const router = useRouter();
   const { setAuth } = useAuthStore();
+  const { isAuthenticated } = useHydratedAuth();
   const [allDevices, setAllDevices] = useState<Device[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -455,7 +457,7 @@ export default function QuotePage() {
                   ))}
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
-                  <button onClick={() => setStep(7)} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px' }}>Continue <ArrowRightIcon /></button>
+                  <button onClick={() => { if (isAuthenticated) { calculateFinalPrice(); setStep(8); } else { setStep(7); } }} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px' }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
             )}
