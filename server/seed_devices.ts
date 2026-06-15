@@ -4509,4 +4509,14 @@ export const SEED_DEVICES: Device[] = [
     "color": "Silver",
     "basePrice": 33600
   }
+  },
+  { "id": "m1", "brand": "Lenovo", "model": "Legion Phone Duel", "storage": "256GB", "ram": "12GB", "color": "Blue", "basePrice": 25000 },
+  { "id": "m2", "brand": "Nokia", "model": "Nokia X20", "storage": "128GB", "ram": "8GB", "color": "Midnight Sun", "basePrice": 12000 },
+  { "id": "m3", "brand": "Honor", "model": "Honor 90", "storage": "256GB", "ram": "8GB", "color": "Emerald Green", "basePrice": 28000 },
+  { "id": "m4", "brand": "Asus", "model": "ROG Phone 7", "storage": "512GB", "ram": "16GB", "color": "Storm White", "basePrice": 55000 },
+  { "id": "m5", "brand": "POCO", "model": "POCO F5", "storage": "256GB", "ram": "8GB", "color": "Carbon Black", "basePrice": 22000 },
+  { "id": "m6", "brand": "LG", "model": "LG Wing", "storage": "128GB", "ram": "8GB", "color": "Aurora Gray", "basePrice": 15000 },
+  { "id": "m7", "brand": "Infinix", "model": "Infinix Zero Ultra", "storage": "256GB", "ram": "8GB", "color": "Coslight Silver", "basePrice": 20000 },
+  { "id": "m8", "brand": "Tecno", "model": "Phantom V Fold", "storage": "512GB", "ram": "12GB", "color": "Black", "basePrice": 65000 },
+  { "id": "m9", "brand": "iQOO", "model": "iQOO 12", "storage": "256GB", "ram": "12GB", "color": "Alpha", "basePrice": 48000 }
 ];
