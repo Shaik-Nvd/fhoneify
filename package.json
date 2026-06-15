@@ -28,7 +28,10 @@
     "react-dom": "^18.2.0",
     "react-markdown": "^10.1.0",
     "zod": "^4.4.3",
-    "zustand": "^4.5.0"
+    "zustand": "^4.5.0",
+    "prisma": "^7.8.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
@@ -42,9 +45,6 @@
     "eslint": "^8.56.0",
     "eslint-config-next": "^14.1.0",
     "postcss": "^8.4.33",
-    "prisma": "^7.8.0",
-    "tailwindcss": "^3.4.1",
-    "tsx": "^4.7.0",
-    "typescript": "^5.3.3"
+    "tailwindcss": "^3.4.1"
   }
 }
