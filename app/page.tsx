@@ -7,6 +7,28 @@ import { LazyMotion, domAnimation, m, useScroll, useTransform, useMotionValue, u
 
 const BRANDS = ['Apple', 'Xiaomi', 'Samsung', 'Vivo', 'OnePlus', 'OPPO', 'Realme', 'Motorola', 'Lenovo', 'Nokia', 'Honor', 'Asus', 'Google', 'POCO', 'LG', 'Infinix', 'Tecno', 'iQOO', 'Nothing'];
 
+const BRAND_LOGOS: Record<string, string> = {
+  Apple: 'https://cdn.simpleicons.org/apple/white',
+  Xiaomi: 'https://cdn.simpleicons.org/xiaomi/ff6900',
+  Samsung: 'https://cdn.simpleicons.org/samsung/1428a0',
+  Vivo: 'https://logo.clearbit.com/vivo.com',
+  OnePlus: 'https://cdn.simpleicons.org/oneplus/f50100',
+  OPPO: 'https://cdn.simpleicons.org/oppo/006633',
+  Realme: 'https://logo.clearbit.com/realme.com',
+  Motorola: 'https://cdn.simpleicons.org/motorola/white',
+  Lenovo: 'https://cdn.simpleicons.org/lenovo/e2231a',
+  Nokia: 'https://cdn.simpleicons.org/nokia/white',
+  Honor: 'https://logo.clearbit.com/hihonor.com',
+  Asus: 'https://cdn.simpleicons.org/asus/00539b',
+  Google: 'https://cdn.simpleicons.org/google',
+  POCO: 'https://logo.clearbit.com/poco.net',
+  LG: 'https://cdn.simpleicons.org/lg/a50034',
+  Infinix: 'https://logo.clearbit.com/infinixmobility.com',
+  Tecno: 'https://logo.clearbit.com/tecno-mobile.com',
+  iQOO: 'https://logo.clearbit.com/iqoo.com',
+  Nothing: 'https://logo.clearbit.com/nothing.tech'
+};
+
 const STEPS = [
   { num: '01', title: 'Get a Quote', desc: 'Select your device and condition to receive an instant valuation.' },
   { num: '02', title: 'Schedule Pickup', desc: 'We come to your doorstep. Free pickup, zero hassle.' },
@@ -386,8 +408,20 @@ export default function LandingPage() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1.5rem' }}>
               {BRANDS.map((brand) => (
                 <TiltCard key={brand} href={`/quote?brand=${brand}`}>
-                  <div style={{ padding: '2.5rem 1rem', textAlign: 'center' }}>
-                    <p style={{ fontWeight: 600, color: '#fff', fontSize: '1.1rem', letterSpacing: '0.5px' }}>{brand}</p>
+                  <div style={{ padding: '2rem 1rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', height: '100%' }}>
+                    <img 
+                      src={BRAND_LOGOS[brand]} 
+                      alt={brand} 
+                      style={{ 
+                        height: '40px', 
+                        width: 'auto', 
+                        maxWidth: '80px',
+                        objectFit: 'contain',
+                        filter: ['Nothing', 'Realme'].includes(brand) ? 'invert(1)' : 'none'
+                      }} 
+                      onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                    />
+                    <p style={{ fontWeight: 600, color: '#fff', fontSize: '1rem', letterSpacing: '0.5px' }}>{brand}</p>
                   </div>
                 </TiltCard>
               ))}

@@ -177,7 +177,10 @@ export default function QuotePage() {
       
       // If it's a new user or missing name, update the profile using captured lead info
       if (isNewUser || !user.name || !user.email) {
-        await api.put('/api/auth/profile', { name: userName, email: userEmail });
+        await api.put('/api/auth/profile', 
+          { name: userName, email: userEmail }, 
+          { headers: { Authorization: `Bearer ${accessToken}` } }
+        );
       }
 
       calculateFinalPrice();
