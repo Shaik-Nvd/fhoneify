@@ -146,21 +146,21 @@ export default function Navbar() {
                         key={item.href} 
                         href={item.href}
                         style={{ 
-                          color: item.highlight ? '#d4af37' : '#a0a0a0', 
+                          color: '#a0a0a0', 
                           textDecoration: 'none', 
                           padding: '0.6rem 0.75rem', 
                           borderRadius: '8px', 
                           fontSize: '0.85rem', 
-                          fontWeight: item.highlight ? 600 : 500, 
+                          fontWeight: 500, 
                           transition: 'all 150ms' 
                         }}
                         onMouseEnter={(e) => { 
                           e.currentTarget.style.backgroundColor = '#1a1a1a'; 
-                          e.currentTarget.style.color = item.highlight ? '#f0c040' : '#fff'; 
+                          e.currentTarget.style.color = '#fff'; 
                         }}
                         onMouseLeave={(e) => { 
                           e.currentTarget.style.backgroundColor = 'transparent'; 
-                          e.currentTarget.style.color = item.highlight ? '#d4af37' : '#a0a0a0'; 
+                          e.currentTarget.style.color = '#a0a0a0'; 
                         }}
                       >
                         {item.label}
