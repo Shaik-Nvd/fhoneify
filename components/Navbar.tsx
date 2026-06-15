@@ -208,7 +208,7 @@ export default function Navbar() {
           {mounted && isAuthenticated && user ? (
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
-                <span style={{ color: '#fff', fontSize: '0.8rem', fontWeight: 600 }}>{user.phone}</span>
+                <span style={{ color: '#fff', fontSize: '0.8rem', fontWeight: 600 }}>{user.name || user.phone}</span>
                 <span style={{ color: '#a0a0a0', fontSize: '0.7rem' }}>{user.role === 'admin' ? 'Administrator' : 'Customer'}</span>
               </div>
               
@@ -324,7 +324,7 @@ export default function Navbar() {
           <div className="border-t border-[#2a2a2a] pt-6 flex flex-col gap-4">
             {mounted && isAuthenticated && user ? (
               <>
-                <span className="text-[#fff] font-medium">{user.phone}</span>
+                <span className="text-[#fff] font-medium">{user.name || user.phone}</span>
                 <Link href="/wallet" onClick={() => setIsMobileMenuOpen(false)} className="text-[#a0a0a0] hover:text-[#d4af37]">Wallet</Link>
                 <Link href="/security" onClick={() => setIsMobileMenuOpen(false)} className="text-[#a0a0a0] hover:text-[#d4af37]">Security</Link>
                 {user.role === 'admin' && (
