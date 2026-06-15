@@ -120,7 +120,30 @@ export default function QuotePage() {
   const brands = useMemo(() => [...new Set(allDevices.map((d) => d.brand).filter(Boolean))].sort(), [allDevices]);
   const models = useMemo(() => {
     if (!selectedBrand) return [];
-    return [...new Set(allDevices.filter((d) => d.brand === selectedBrand).map((d) => d.model).filter(Boolean))].sort();
+    const brandModels = [...new Set(allDevices.filter((d) => d.brand === selectedBrand).map((d) => d.model).filter(Boolean))];
+    
+    if (selectedBrand === 'Apple') {
+      const appleOrder = [
+        "Apple iPhone 6", "Apple iPhone 6 Plus", "Apple iPhone 6S", "Apple iPhone 6S Plus", "Apple iPhone SE 1st Generation",
+        "Apple iPhone 7", "Apple iPhone 7 Plus", "Apple iPhone 8", "Apple iPhone 8 Plus", "Apple iPhone X", "Apple iPhone XR",
+        "Apple iPhone XS", "Apple iPhone XS Max", "Apple iPhone 11", "Apple iPhone 11 Pro", "Apple iPhone 11 Pro Max",
+        "Apple iPhone SE 2020", "Apple iPhone 12 Mini", "Apple iPhone 12", "Apple iPhone 12 Pro", "Apple iPhone 12 Pro Max",
+        "Apple iPhone 13 Mini", "Apple iPhone 13", "Apple iPhone 13 Pro", "Apple iPhone 13 Pro Max", "Apple iPhone SE 2022",
+        "Apple iPhone 14", "Apple iPhone 14 Plus", "Apple iPhone 14 Pro", "Apple iPhone 14 Pro Max", "Apple iPhone 15",
+        "Apple iPhone 15 Plus", "Apple iPhone 15 Pro", "Apple iPhone 15 Pro Max", "Apple iPhone 16", "Apple iPhone 16 Plus",
+        "Apple iPhone 16 Pro", "Apple iPhone 16 Pro Max", "Apple iPhone 16e", "Apple iPhone 17", "Apple iPhone Air",
+        "Apple iPhone 17 Pro", "Apple iPhone 17 Pro Max", "Apple iPhone 17e"
+      ];
+      return brandModels.sort((a, b) => {
+        const indexA = appleOrder.indexOf(a);
+        const indexB = appleOrder.indexOf(b);
+        if (indexA === -1 && indexB === -1) return a.localeCompare(b);
+        if (indexA === -1) return 1;
+        if (indexB === -1) return -1;
+        return indexA - indexB;
+      });
+    }
+    return brandModels.sort();
   }, [allDevices, selectedBrand]);
   const storageOptions = useMemo(() => {
     if (!selectedBrand || !selectedModel) return [];
