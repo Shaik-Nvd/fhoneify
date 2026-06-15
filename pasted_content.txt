@@ -1,0 +1,78 @@
+Yes, proceed to Phase 10 — Frontend. Build all screens using 
+Next.js App Router + Tailwind CSS + Zustand (already set up).
+
+Connect every screen to the real backend API using the axios 
+client already configured. No mock data in the frontend.
+
+Build in this order:
+
+─── SCREEN 1: Landing Page (/)
+- Hero section: "Sell your phone. Buy refurbished."
+- Two CTA buttons: "Get a Quote" and "Buy a Phone"
+- Trust badges: "Free Pickup", "Instant Payment", "Verified Devices"
+- Popular brands row (tap to browse)
+- How it works: 3 steps for sell, 3 steps for buy
+
+─── SCREEN 2: Auth (/auth)
+- Phone number input + Send OTP button
+- OTP input (6 digits) + Verify button
+- On success: save JWT to Zustand + localStorage, redirect to /
+- Show loading states and error messages
+
+─── SCREEN 3: Quote Flow (/quote)
+- Step 1: Select brand → model → storage (dropdowns from GET /api/quote/devices)
+- Step 2: Select condition (Excellent / Good / Fair / Poor) with visual cards
+- Step 3: Show estimated price with breakdown
+- CTA: "Sell this phone" → redirect to /sell/create with quote prefilled
+
+─── SCREEN 4: Sell Flow (/sell)
+- /sell — seller dashboard: active listings + pickups + wallet balance
+- /sell/create — listing form (prefilled from quote if redirected)
+  Fields: condition, asking price, city, description, upload images
+  Show quote estimate next to asking price as reference
+- /sell/pickups — list of scheduled pickups with status
+
+─── SCREEN 5: Buy Flow (/buy)
+- /buy — listing grid with filters sidebar:
+  Filters: brand, city, condition, price range
+  Sort: newest, price low-high, price high-low
+  Listing cards: image, device name, condition badge, price, city
+- /buy/[id] — listing detail page:
+  Images, specs, condition, seller city, estimated delivery
+  "Add to Cart" button
+- /buy/cart — cart page:
+  List cart items, remove button, total price
+  "Proceed to Pay" button → mock Razorpay flow
+- /buy/checkout/[orderId] — mock payment page:
+  Show order summary
+  "Confirm Payment" button → calls /api/payments/razorpay/verify
+  On success: show confirmation + redirect to /buy/orders
+
+─── SCREEN 6: Orders & Dashboard (/dashboard)
+- /dashboard — user home:
+  Tabs: My Orders (buyer) | My Listings (seller) | Wallet | Notifications
+- /dashboard/orders — order history with status badges
+- /dashboard/notifications — in-app notification list with mark as read
+
+─── SCREEN 7: Admin Panel (/admin)
+- /admin — protected (admin role only), redirect others to /
+- /admin/orders — orders table with status filter + approve/reject actions
+- /admin/listings — listings table with approve/reject buttons
+- /admin/analytics — metrics cards + simple charts (use recharts)
+- /admin/fraud — fraud flagged listings table
+
+UI Rules:
+- Mobile-first, responsive on all screens
+- Use Tailwind only, no extra UI libraries
+- Loading skeletons on all data fetches
+- Toast notifications for success/error actions
+- Empty states for all lists
+- Protect /sell, /buy/cart, /dashboard, /admin routes 
+  (redirect to /auth if not logged in)
+- Admin routes check for role = admin
+
+After all screens are done:
+- Test full user journey end to end in the browser
+- Confirm mobile responsiveness
+- Fix any broken API connections
+- Report any backend changes needed

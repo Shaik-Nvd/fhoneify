@@ -1,0 +1,184 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String  @id @default(uuid())
+  phone        String  @unique
+  role         String  @default("user") // buyer, seller, admin, tech
+  email        String? @unique
+  referralCode String? @unique
+  referredBy   String?
+  
+  // Relations
+  listings     Listing[]
+  buyOrders    BuyOrder[]
+  sellOrders   SellOrder[]
+  pickups      Pickup[]
+  walletLedger WalletLedgerEntry[]
+}
+
+model Device {
+  id      String @id @default(uuid())
+  brand   String
+  model   String
+  storage String
+  ram     String
+  color   String
+  
+  quotes      Quote[]
+  inventory   InventoryItem[]
+}
+
+model Listing {
+  id           String   @id @default(uuid())
+  user         User     @relation(fields: [userId], references: [id])
+  userId       String
+  deviceId     String   // Ideally a relation, keeping it string for simplicity if it maps to generic SEED
+  brand        String
+  model        String
+  storage      String?
+  condition    String
+  price        Float
+  status       String   @default("active") // active, pending, sold
+  city         String
+  description  String?
+  images       String // Store as JSON string since SQLite doesn't support String[]
+  isSelectTier Boolean  @default(false)
+  locationId   String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  
+  // Relations
+  sellOrders   SellOrder[]
+  pickups      Pickup[]
+}
+
+model Quote {
+  id             String   @id @default(uuid())
+  device         Device   @relation(fields: [deviceId], references: [id])
+  deviceId       String
+  condition      String
+  estimatedPrice Float
+  createdAt      DateTime @default(now())
+}
+
+model BuyOrder {
+  id              String   @id @default(uuid())
+  user            User     @relation(fields: [userId], references: [id])
+  userId          String
+  listingIds      String // Store as JSON array
+  status          String   @default("pending") // pending, paid, shipped, delivered, cancelled
+  address         String
+  razorpayOrderId String?
+  totalPrice      Float?
+  discount        Float?
+  finalPrice      Float?
+  couponCode      String?
+  createdAt       DateTime @default(now())
+}
+
+model SellOrder {
+  id        String   @id @default(uuid())
+  user      User     @relation(fields: [userId], references: [id])
+  userId    String
+  listing   Listing  @relation(fields: [listingId], references: [id])
+  listingId String
+  status    String   @default("pending") // pending, inspected, completed, cancelled
+  price     Float
+  createdAt DateTime @default(now())
+}
+
+model WalletLedgerEntry {
+  id            String   @id @default(uuid())
+  user          User     @relation(fields: [userId], references: [id])
+  userId        String
+  amount        Float
+  type          String
+  description   String
+  balance_after Float
+  createdAt     DateTime @default(now())
+}
+
+model Pickup {
+  id                String   @id @default(uuid())
+  user              User     @relation(fields: [userId], references: [id])
+  userId            String
+  listing           Listing  @relation(fields: [listingId], references: [id])
+  listingId         String
+  pickupDate        String
+  timeSlot          String
+  address           String
+  status            String   @default("scheduled")
+  createdAt         DateTime @default(now())
+}
+
+model Coupon {
+  code          String  @id
+  discountType  String
+  discountValue Float
+  description   String
+  isActive      Boolean @default(true)
+}
+
+model Store {
+  id           String @id @default(uuid())
+  name         String
+  city         String
+  address      String
+  phone        String
+  workingHours String
+  lat          Float
+  lng          Float
+  mapLink      String?
+}
+
+model TechFloat {
+  id       String @id @default(uuid())
+  techId   String @unique
+  cash     Float  @default(0)
+  upi      Float  @default(0)
+}
+
+model ActivePickup {
+  id                String  @id @default(uuid())
+  techId            String
+  customerName      String
+  device            String
+  declaredCondition String
+  originalQuote     Float
+  status            String  @default("assigned")
+  address           String
+}
+
+model InventoryItem {
+  id              String   @id @default(uuid())
+  device          Device   @relation(fields: [deviceId], references: [id])
+  deviceId        String
+  imei            String
+  sourceListingId String?
+  phase           String   @default("received")
+  grade           String?
+  createdAt       DateTime @default(now())
+}
+
+model BlogPost {
+  id             String   @id @default(uuid())
+  slug           String   @unique
+  title          String
+  content        String
+  author         String
+  tags           String // JSON
+  published      Boolean  @default(true)
+  seoTitle       String
+  seoDescription String
+  createdAt      DateTime @default(now())
+}

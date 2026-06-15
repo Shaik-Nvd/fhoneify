@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Quote Dropdown Test</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 480px; margin: 2rem auto; padding: 0 1rem; }
+    label { display: block; margin-top: 1rem; font-weight: 600; }
+    select { width: 100%; padding: 0.5rem; margin-top: 0.25rem; }
+    #status { margin-top: 1rem; padding: 0.75rem; background: #f0fdf4; border: 1px solid #86efac; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h1>Quote — Dropdown Test</h1>
+  <label>Brand
+    <select id="brand"><option value="">Select brand</option></select>
+  </label>
+  <label>Model
+    <select id="model" disabled><option value="">Select brand first</option></select>
+  </label>
+  <label>Storage
+    <select id="storage" disabled><option value="">Select model first</option></select>
+  </label>
+  <div id="status">Loading devices…</div>
+  <script>
+    let allDevices = [];
+    const brandEl = document.getElementById('brand');
+    const modelEl = document.getElementById('model');
+    const storageEl = document.getElementById('storage');
+    const statusEl = document.getElementById('status');
+
+    function normalize(raw) {
+      return {
+        id: String(raw.id ?? ''),
+        brand: String(raw.brand ?? ''),
+        model: String(raw.model ?? ''),
+        storage: String(raw.storage ?? ''),
+      };
+    }
+
+    function extractDevices(payload) {
+      if (payload && Array.isArray(payload.data)) {
+        return payload.data.map(normalize);
+      }
+      return [];
+    }
+
+    async function init() {
+      const res = await fetch('/api/quote/devices');
+      const json = await res.json();
+      console.log('[Quote] Raw API response:', json);
+      allDevices = extractDevices(json);
+      const brands = [...new Set(allDevices.map(d => d.brand).filter(Boolean))].sort();
+      brandEl.innerHTML = '<option value="">Select brand</option>' +
+        brands.map(b => `<option value="${b}">${b}</option>`).join('');
+      statusEl.textContent = `Loaded ${allDevices.length} devices`;
+    }
+
+    brandEl.addEventListener('change', () => {
+      const brand = brandEl.value;
+      modelEl.disabled = !brand;
+      storageEl.disabled = true;
+      storageEl.innerHTML = '<option value="">Select model first</option>';
+      if (!brand) {
+        modelEl.innerHTML = '<option value="">Select brand first</option>';
+        return;
+      }
+      const models = [...new Set(
+        allDevices.filter(d => d.brand === brand).map(d => d.model).filter(Boolean)
+      )].sort();
+      modelEl.innerHTML = '<option value="">Select model</option>' +
+        models.map(m => `<option value="${m}">${m}</option>`).join('');
+      statusEl.textContent = `${models.length} model(s) for ${brand}`;
+    });
+
+    modelEl.addEventListener('change', () => {
+      const brand = brandEl.value;
+      const model = modelEl.value;
+      storageEl.disabled = !model;
+      if (!model) {
+        storageEl.innerHTML = '<option value="">Select model first</option>';
+        return;
+      }
+      const storages = [...new Set(
+        allDevices.filter(d => d.brand === brand && d.model === model).map(d => d.storage).filter(Boolean)
+      )].sort();
+      storageEl.innerHTML = '<option value="">Select storage</option>' +
+        storages.map(s => `<option value="${s}">${s}</option>`).join('');
+      statusEl.textContent = `${storages.length} storage option(s) for ${brand} ${model}`;
+    });
+
+    storageEl.addEventListener('change', () => {
+      statusEl.textContent = `Selected: ${brandEl.value} ${modelEl.value} ${storageEl.value}`;
+    });
+
+    init().catch(e => { statusEl.textContent = 'Error: ' + e.message; statusEl.style.background = '#fef2f2'; });
+  </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: fhoneify-api
+    env: node
+    buildCommand: npm install && npx prisma generate
+    startCommand: npm run start:api
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: FRONTEND_URL
+        value: https://your-vercel-domain.vercel.app

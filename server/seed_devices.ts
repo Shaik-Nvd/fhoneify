@@ -1,0 +1,4512 @@
+export interface Device {
+  id: string;
+  brand: string;
+  model: string;
+  storage: string;
+  ram: string;
+  color: string;
+  basePrice?: number;
+}
+
+export const SEED_DEVICES: Device[] = [
+  {
+    "id": "d1",
+    "brand": "Realme",
+    "model": "Realme 12 Pro+",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Titanium",
+    "basePrice": 32199
+  },
+  {
+    "id": "d2",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 14 Ultra",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Titanium",
+    "basePrice": 130500
+  },
+  {
+    "id": "d3",
+    "brand": "Oppo",
+    "model": "Oppo F25 Pro",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Titanium",
+    "basePrice": 28600
+  },
+  {
+    "id": "d4",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 14",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Red",
+    "basePrice": 87000
+  },
+  {
+    "id": "d5",
+    "brand": "Motorola",
+    "model": "Moto G84",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Red",
+    "basePrice": 23200
+  },
+  {
+    "id": "d6",
+    "brand": "Google",
+    "model": "Pixel 7a",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Black",
+    "basePrice": 51200
+  },
+  {
+    "id": "d7",
+    "brand": "Motorola",
+    "model": "Razr 40 Ultra",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "White",
+    "basePrice": 94250
+  },
+  {
+    "id": "d8",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 12 Pro+",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "White",
+    "basePrice": 32000
+  },
+  {
+    "id": "d9",
+    "brand": "OnePlus",
+    "model": "OnePlus Open",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Titanium",
+    "basePrice": 176000
+  },
+  {
+    "id": "d10",
+    "brand": "Xiaomi",
+    "model": "Poco X6 Pro",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Black",
+    "basePrice": 34800
+  },
+  {
+    "id": "d11",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 3 Lite",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 21750
+  },
+  {
+    "id": "d12",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 14 Ultra",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Green",
+    "basePrice": 117000
+  },
+  {
+    "id": "d13",
+    "brand": "Motorola",
+    "model": "Edge 40 Neo",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Green",
+    "basePrice": 24149
+  },
+  {
+    "id": "d14",
+    "brand": "Realme",
+    "model": "Realme 11 Pro+",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Black",
+    "basePrice": 35200
+  },
+  {
+    "id": "d15",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 3",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "White",
+    "basePrice": 28749
+  },
+  {
+    "id": "d16",
+    "brand": "Google",
+    "model": "Pixel 8 Pro",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Purple",
+    "basePrice": 97749
+  },
+  {
+    "id": "d17",
+    "brand": "Realme",
+    "model": "Realme 12 Pro+",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Silver",
+    "basePrice": 36400
+  },
+  {
+    "id": "d18",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 3 Lite",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Green",
+    "basePrice": 24000
+  },
+  {
+    "id": "d19",
+    "brand": "Google",
+    "model": "Pixel 7 Pro",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Gold",
+    "basePrice": 79750
+  },
+  {
+    "id": "d20",
+    "brand": "Motorola",
+    "model": "Edge 50 Pro",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Gold",
+    "basePrice": 48000
+  },
+  {
+    "id": "d21",
+    "brand": "Vivo",
+    "model": "Vivo V30 Pro",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Blue",
+    "basePrice": 60800
+  },
+  {
+    "id": "d22",
+    "brand": "Nothing",
+    "model": "Nothing Phone (2a)",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 28600
+  },
+  {
+    "id": "d23",
+    "brand": "Motorola",
+    "model": "Razr 40 Ultra",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Blue",
+    "basePrice": 94250
+  },
+  {
+    "id": "d24",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 3 Lite",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "White",
+    "basePrice": 19500
+  },
+  {
+    "id": "d25",
+    "brand": "Google",
+    "model": "Pixel 6a",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Silver",
+    "basePrice": 23000
+  },
+  {
+    "id": "d26",
+    "brand": "Vivo",
+    "model": "Vivo T2 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Blue",
+    "basePrice": 24149
+  },
+  {
+    "id": "d27",
+    "brand": "Google",
+    "model": "Pixel 7 Pro",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Titanium",
+    "basePrice": 79750
+  },
+  {
+    "id": "d28",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 13 Pro+",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 40600
+  },
+  {
+    "id": "d29",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 13 Pro",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Silver",
+    "basePrice": 35200
+  },
+  {
+    "id": "d30",
+    "brand": "Oppo",
+    "model": "Oppo F25 Pro",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Silver",
+    "basePrice": 25299
+  },
+  {
+    "id": "d31",
+    "brand": "Google",
+    "model": "Pixel 8",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Gold",
+    "basePrice": 87000
+  },
+  {
+    "id": "d32",
+    "brand": "Motorola",
+    "model": "Edge 40 Neo",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Silver",
+    "basePrice": 30450
+  },
+  {
+    "id": "d33",
+    "brand": "Google",
+    "model": "Pixel 8",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Silver",
+    "basePrice": 69000
+  },
+  {
+    "id": "d34",
+    "brand": "Apple",
+    "model": "iPhone 17",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Titanium",
+    "basePrice": 123500
+  },
+  {
+    "id": "d35",
+    "brand": "OnePlus",
+    "model": "OnePlus 12R",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Titanium",
+    "basePrice": 55100
+  },
+  {
+    "id": "d36",
+    "brand": "Nothing",
+    "model": "Nothing Phone (2)",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Blue",
+    "basePrice": 55100
+  },
+  {
+    "id": "d37",
+    "brand": "Vivo",
+    "model": "Vivo X100 Pro",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Silver",
+    "basePrice": 92000
+  },
+  {
+    "id": "d38",
+    "brand": "Apple",
+    "model": "iPhone 3G",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "White",
+    "basePrice": 4000
+  },
+  {
+    "id": "d39",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 14 Ultra",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Black",
+    "basePrice": 144000
+  },
+  {
+    "id": "d40",
+    "brand": "Vivo",
+    "model": "Vivo X100",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Blue",
+    "basePrice": 75400
+  },
+  {
+    "id": "d41",
+    "brand": "Oppo",
+    "model": "Oppo Reno 11 Pro",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Silver",
+    "basePrice": 50750
+  },
+  {
+    "id": "d42",
+    "brand": "Google",
+    "model": "Pixel 6a",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "White",
+    "basePrice": 26000
+  },
+  {
+    "id": "d43",
+    "brand": "Motorola",
+    "model": "Moto G84",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "White",
+    "basePrice": 18400
+  },
+  {
+    "id": "d44",
+    "brand": "Google",
+    "model": "Pixel 7a",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Silver",
+    "basePrice": 41600
+  },
+  {
+    "id": "d45",
+    "brand": "Apple",
+    "model": "iPhone 5",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 6500
+  },
+  {
+    "id": "d46",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 12",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Titanium",
+    "basePrice": 19200
+  },
+  {
+    "id": "d47",
+    "brand": "Nothing",
+    "model": "Nothing Phone (2)",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Gold",
+    "basePrice": 60800
+  },
+  {
+    "id": "d48",
+    "brand": "Samsung",
+    "model": "Galaxy S24+",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Red",
+    "basePrice": 97749
+  },
+  {
+    "id": "d49",
+    "brand": "Samsung",
+    "model": "Galaxy Z Fold5",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Purple",
+    "basePrice": 192000
+  },
+  {
+    "id": "d50",
+    "brand": "Apple",
+    "model": "iPhone 5s",
+    "storage": "1TB",
+    "ram": "8GB",
+    "color": "Red",
+    "basePrice": 9600
+  },
+  {
+    "id": "d51",
+    "brand": "Google",
+    "model": "Pixel 8",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Green",
+    "basePrice": 96000
+  },
+  {
+    "id": "d52",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 13 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 25299
+  },
+  {
+    "id": "d53",
+    "brand": "Oppo",
+    "model": "Oppo Reno 10 Pro+",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Blue",
+    "basePrice": 51749
+  },
+  {
+    "id": "d54",
+    "brand": "Apple",
+    "model": "iPhone XR",
+    "storage": "512GB",
+    "ram": "6GB",
+    "color": "Silver",
+    "basePrice": 34800
+  },
+  {
+    "id": "d55",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 3 Lite",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Red",
+    "basePrice": 21750
+  },
+  {
+    "id": "d56",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 3 Lite",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "White",
+    "basePrice": 21750
+  },
+  {
+    "id": "d57",
+    "brand": "Samsung",
+    "model": "Galaxy S21 FE",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Silver",
+    "basePrice": 31200
+  },
+  {
+    "id": "d58",
+    "brand": "Vivo",
+    "model": "Vivo T2 Pro",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Blue",
+    "basePrice": 30450
+  },
+  {
+    "id": "d59",
+    "brand": "Motorola",
+    "model": "Moto G84",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Titanium",
+    "basePrice": 23200
+  },
+  {
+    "id": "d60",
+    "brand": "Samsung",
+    "model": "Galaxy Z Fold5",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Blue",
+    "basePrice": 156000
+  },
+  {
+    "id": "d61",
+    "brand": "OnePlus",
+    "model": "OnePlus Open",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Red",
+    "basePrice": 159500
+  },
+  {
+    "id": "d62",
+    "brand": "Motorola",
+    "model": "Edge 50 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Silver",
+    "basePrice": 34500
+  },
+  {
+    "id": "d63",
+    "brand": "Nothing",
+    "model": "Nothing Phone (1)",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Purple",
+    "basePrice": 26000
+  },
+  {
+    "id": "d64",
+    "brand": "Samsung",
+    "model": "Galaxy Z Flip5",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Gold",
+    "basePrice": 80500
+  },
+  {
+    "id": "d65",
+    "brand": "Apple",
+    "model": "iPhone 18 Plus",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Purple",
+    "basePrice": 149500
+  },
+  {
+    "id": "d66",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 14 Ultra",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "White",
+    "basePrice": 144000
+  },
+  {
+    "id": "d67",
+    "brand": "Nothing",
+    "model": "Nothing Phone (1)",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "White",
+    "basePrice": 29000
+  },
+  {
+    "id": "d68",
+    "brand": "Vivo",
+    "model": "Vivo X100 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Green",
+    "basePrice": 92000
+  },
+  {
+    "id": "d69",
+    "brand": "Samsung",
+    "model": "Galaxy S24+",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Gold",
+    "basePrice": 123250
+  },
+  {
+    "id": "d70",
+    "brand": "Samsung",
+    "model": "Galaxy S24",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Purple",
+    "basePrice": 94250
+  },
+  {
+    "id": "d71",
+    "brand": "Oppo",
+    "model": "Oppo Reno 10 Pro+",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 65250
+  },
+  {
+    "id": "d72",
+    "brand": "Nothing",
+    "model": "Nothing Phone (2)",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Gold",
+    "basePrice": 49400
+  },
+  {
+    "id": "d73",
+    "brand": "Vivo",
+    "model": "Vivo X100",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Red",
+    "basePrice": 66700
+  },
+  {
+    "id": "d74",
+    "brand": "Realme",
+    "model": "Realme GT 3",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Red",
+    "basePrice": 56000
+  },
+  {
+    "id": "d75",
+    "brand": "Realme",
+    "model": "Realme 11 Pro+",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Blue",
+    "basePrice": 28600
+  },
+  {
+    "id": "d76",
+    "brand": "Nothing",
+    "model": "Nothing Phone (2a)",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Titanium",
+    "basePrice": 28600
+  },
+  {
+    "id": "d77",
+    "brand": "Realme",
+    "model": "Realme 12 Pro+",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Red",
+    "basePrice": 44800
+  },
+  {
+    "id": "d78",
+    "brand": "Nothing",
+    "model": "Nothing Phone (1)",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Silver",
+    "basePrice": 23000
+  },
+  {
+    "id": "d79",
+    "brand": "Samsung",
+    "model": "Galaxy S23+",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Silver",
+    "basePrice": 69000
+  },
+  {
+    "id": "d80",
+    "brand": "Motorola",
+    "model": "Edge 50 Pro",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Blue",
+    "basePrice": 43500
+  },
+  {
+    "id": "d81",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 14",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 69000
+  },
+  {
+    "id": "d82",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 3",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Purple",
+    "basePrice": 32500
+  },
+  {
+    "id": "d83",
+    "brand": "OnePlus",
+    "model": "OnePlus Open",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Gold",
+    "basePrice": 143000
+  },
+  {
+    "id": "d84",
+    "brand": "Vivo",
+    "model": "Vivo V29 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Blue",
+    "basePrice": 36800
+  },
+  {
+    "id": "d85",
+    "brand": "Apple",
+    "model": "iPhone 14 Pro",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Titanium",
+    "basePrice": 109249
+  },
+  {
+    "id": "d86",
+    "brand": "Vivo",
+    "model": "Vivo V30 Pro",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Black",
+    "basePrice": 60800
+  },
+  {
+    "id": "d87",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 12",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "White",
+    "basePrice": 17400
+  },
+  {
+    "id": "d88",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 12",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Red",
+    "basePrice": 15600
+  },
+  {
+    "id": "d89",
+    "brand": "Apple",
+    "model": "iPhone 13 Pro Max",
+    "storage": "512GB",
+    "ram": "6GB",
+    "color": "Red",
+    "basePrice": 116000
+  },
+  {
+    "id": "d90",
+    "brand": "Realme",
+    "model": "Realme Narzo 60",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Blue",
+    "basePrice": 17250
+  },
+  {
+    "id": "d91",
+    "brand": "Realme",
+    "model": "Realme 12 Pro+",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "White",
+    "basePrice": 36400
+  },
+  {
+    "id": "d92",
+    "brand": "OnePlus",
+    "model": "OnePlus 11R",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Green",
+    "basePrice": 39000
+  },
+  {
+    "id": "d93",
+    "brand": "Google",
+    "model": "Pixel 8",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "White",
+    "basePrice": 96000
+  },
+  {
+    "id": "d94",
+    "brand": "Apple",
+    "model": "iPhone 14 Plus",
+    "storage": "512GB",
+    "ram": "6GB",
+    "color": "Silver",
+    "basePrice": 108750
+  },
+  {
+    "id": "d95",
+    "brand": "Samsung",
+    "model": "Galaxy S24+",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Blue",
+    "basePrice": 136000
+  },
+  {
+    "id": "d96",
+    "brand": "Apple",
+    "model": "iPhone 15 Pro",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Titanium",
+    "basePrice": 156000
+  },
+  {
+    "id": "d97",
+    "brand": "OnePlus",
+    "model": "OnePlus Open",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Red",
+    "basePrice": 126499
+  },
+  {
+    "id": "d98",
+    "brand": "Oppo",
+    "model": "Oppo Reno 10 Pro+",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Purple",
+    "basePrice": 65250
+  },
+  {
+    "id": "d99",
+    "brand": "Nothing",
+    "model": "Nothing Phone (1)",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "White",
+    "basePrice": 32000
+  },
+  {
+    "id": "d100",
+    "brand": "Apple",
+    "model": "iPhone 17 Plus",
+    "storage": "1TB",
+    "ram": "8GB",
+    "color": "Purple",
+    "basePrice": 168000
+  },
+  {
+    "id": "d101",
+    "brand": "Nothing",
+    "model": "Nothing Phone (2)",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Green",
+    "basePrice": 49400
+  },
+  {
+    "id": "d102",
+    "brand": "Apple",
+    "model": "iPhone 13 Pro Max",
+    "storage": "1TB",
+    "ram": "8GB",
+    "color": "Green",
+    "basePrice": 128000
+  },
+  {
+    "id": "d103",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 3",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Black",
+    "basePrice": 40000
+  },
+  {
+    "id": "d104",
+    "brand": "Motorola",
+    "model": "Edge 50 Pro",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Red",
+    "basePrice": 39000
+  },
+  {
+    "id": "d105",
+    "brand": "Samsung",
+    "model": "Galaxy S21 FE",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Gold",
+    "basePrice": 34800
+  },
+  {
+    "id": "d106",
+    "brand": "Oppo",
+    "model": "Oppo Reno 11 Pro",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "White",
+    "basePrice": 50750
+  },
+  {
+    "id": "d107",
+    "brand": "Oppo",
+    "model": "Oppo Find N3 Flip",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Red",
+    "basePrice": 86250
+  },
+  {
+    "id": "d108",
+    "brand": "Nothing",
+    "model": "Nothing Phone (2a)",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Titanium",
+    "basePrice": 25299
+  },
+  {
+    "id": "d109",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 12",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "White",
+    "basePrice": 17400
+  },
+  {
+    "id": "d110",
+    "brand": "Oppo",
+    "model": "Oppo F25 Pro",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Green",
+    "basePrice": 35200
+  },
+  {
+    "id": "d111",
+    "brand": "Nothing",
+    "model": "Nothing Phone (2a)",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Silver",
+    "basePrice": 35200
+  },
+  {
+    "id": "d112",
+    "brand": "Oppo",
+    "model": "Oppo Reno 11 Pro",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Purple",
+    "basePrice": 50750
+  },
+  {
+    "id": "d113",
+    "brand": "Vivo",
+    "model": "Vivo V30 Pro",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 49400
+  },
+  {
+    "id": "d114",
+    "brand": "Samsung",
+    "model": "Galaxy Z Fold5",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Silver",
+    "basePrice": 174000
+  },
+  {
+    "id": "d115",
+    "brand": "Nothing",
+    "model": "Nothing Phone (2)",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Purple",
+    "basePrice": 60800
+  },
+  {
+    "id": "d116",
+    "brand": "Nothing",
+    "model": "Nothing Phone (2)",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Red",
+    "basePrice": 49400
+  },
+  {
+    "id": "d117",
+    "brand": "Oppo",
+    "model": "Oppo Reno 11 Pro",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Green",
+    "basePrice": 50750
+  },
+  {
+    "id": "d118",
+    "brand": "Motorola",
+    "model": "Edge 40 Neo",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Gold",
+    "basePrice": 33600
+  },
+  {
+    "id": "d119",
+    "brand": "Nothing",
+    "model": "Nothing Phone (2a)",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Blue",
+    "basePrice": 35200
+  },
+  {
+    "id": "d120",
+    "brand": "Samsung",
+    "model": "Galaxy S23 Ultra",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "White",
+    "basePrice": 110500
+  },
+  {
+    "id": "d121",
+    "brand": "Realme",
+    "model": "Realme GT 3",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Purple",
+    "basePrice": 56000
+  },
+  {
+    "id": "d122",
+    "brand": "Google",
+    "model": "Pixel 8 Pro",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 110500
+  },
+  {
+    "id": "d123",
+    "brand": "Apple",
+    "model": "iPhone 7 Plus",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Silver",
+    "basePrice": 16099
+  },
+  {
+    "id": "d124",
+    "brand": "Oppo",
+    "model": "Oppo Reno 10 Pro+",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "White",
+    "basePrice": 72000
+  },
+  {
+    "id": "d125",
+    "brand": "Google",
+    "model": "Pixel 7 Pro",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Red",
+    "basePrice": 79750
+  },
+  {
+    "id": "d126",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 12",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Purple",
+    "basePrice": 17400
+  },
+  {
+    "id": "d127",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 13 Pro",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Red",
+    "basePrice": 35200
+  },
+  {
+    "id": "d128",
+    "brand": "Nothing",
+    "model": "Nothing Phone (2)",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Silver",
+    "basePrice": 55100
+  },
+  {
+    "id": "d129",
+    "brand": "Apple",
+    "model": "iPhone 6",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Green",
+    "basePrice": 8049
+  },
+  {
+    "id": "d130",
+    "brand": "Apple",
+    "model": "iPhone 8",
+    "storage": "512GB",
+    "ram": "6GB",
+    "color": "Blue",
+    "basePrice": 23200
+  },
+  {
+    "id": "d131",
+    "brand": "Samsung",
+    "model": "Galaxy Z Fold5",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Gold",
+    "basePrice": 192000
+  },
+  {
+    "id": "d132",
+    "brand": "Samsung",
+    "model": "Galaxy S24",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Blue",
+    "basePrice": 94250
+  },
+  {
+    "id": "d133",
+    "brand": "OnePlus",
+    "model": "OnePlus 12R",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Titanium",
+    "basePrice": 49400
+  },
+  {
+    "id": "d134",
+    "brand": "Oppo",
+    "model": "Oppo F25 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Red",
+    "basePrice": 25299
+  },
+  {
+    "id": "d135",
+    "brand": "Realme",
+    "model": "Realme 12 Pro+",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Silver",
+    "basePrice": 32199
+  },
+  {
+    "id": "d136",
+    "brand": "Google",
+    "model": "Pixel 8",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Black",
+    "basePrice": 87000
+  },
+  {
+    "id": "d137",
+    "brand": "Realme",
+    "model": "Realme GT 3",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Gold",
+    "basePrice": 40250
+  },
+  {
+    "id": "d138",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 14",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Purple",
+    "basePrice": 96000
+  },
+  {
+    "id": "d139",
+    "brand": "Apple",
+    "model": "iPhone 14 Plus",
+    "storage": "512GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 108750
+  },
+  {
+    "id": "d140",
+    "brand": "Apple",
+    "model": "iPhone 11",
+    "storage": "512GB",
+    "ram": "6GB",
+    "color": "Gold",
+    "basePrice": 43500
+  },
+  {
+    "id": "d141",
+    "brand": "Motorola",
+    "model": "Moto G84",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Blue",
+    "basePrice": 18400
+  },
+  {
+    "id": "d142",
+    "brand": "OnePlus",
+    "model": "OnePlus 11R",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Red",
+    "basePrice": 48000
+  },
+  {
+    "id": "d143",
+    "brand": "Google",
+    "model": "Pixel 7",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Blue",
+    "basePrice": 52000
+  },
+  {
+    "id": "d144",
+    "brand": "Apple",
+    "model": "iPhone 18 Pro",
+    "storage": "1TB",
+    "ram": "8GB",
+    "color": "White",
+    "basePrice": 240000
+  },
+  {
+    "id": "d145",
+    "brand": "Nothing",
+    "model": "Nothing Phone (2a)",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Black",
+    "basePrice": 35200
+  },
+  {
+    "id": "d146",
+    "brand": "Apple",
+    "model": "iPhone 14 Pro",
+    "storage": "512GB",
+    "ram": "6GB",
+    "color": "Blue",
+    "basePrice": 137750
+  },
+  {
+    "id": "d147",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 13 Pro+",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 36400
+  },
+  {
+    "id": "d148",
+    "brand": "Nothing",
+    "model": "Nothing Phone (2)",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 55100
+  },
+  {
+    "id": "d149",
+    "brand": "Samsung",
+    "model": "Galaxy A54",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Silver",
+    "basePrice": 44800
+  },
+  {
+    "id": "d150",
+    "brand": "Nothing",
+    "model": "Nothing Phone (1)",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Silver",
+    "basePrice": 26000
+  },
+  {
+    "id": "d151",
+    "brand": "Realme",
+    "model": "Realme 12 Pro",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "White",
+    "basePrice": 33350
+  },
+  {
+    "id": "d152",
+    "brand": "Realme",
+    "model": "Realme 12 Pro+",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 36400
+  },
+  {
+    "id": "d153",
+    "brand": "OnePlus",
+    "model": "OnePlus Open",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Red",
+    "basePrice": 126499
+  },
+  {
+    "id": "d154",
+    "brand": "Oppo",
+    "model": "Oppo Reno 10 Pro+",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 51749
+  },
+  {
+    "id": "d155",
+    "brand": "Apple",
+    "model": "iPhone 15 Plus",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "White",
+    "basePrice": 97749
+  },
+  {
+    "id": "d156",
+    "brand": "Google",
+    "model": "Pixel 6a",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Silver",
+    "basePrice": 29000
+  },
+  {
+    "id": "d157",
+    "brand": "Oppo",
+    "model": "Oppo Reno 11 Pro",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Silver",
+    "basePrice": 50750
+  },
+  {
+    "id": "d158",
+    "brand": "Realme",
+    "model": "Realme Narzo 60",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Purple",
+    "basePrice": 24000
+  },
+  {
+    "id": "d159",
+    "brand": "Samsung",
+    "model": "Galaxy S24 Ultra",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Titanium",
+    "basePrice": 176000
+  },
+  {
+    "id": "d160",
+    "brand": "Nothing",
+    "model": "Nothing Phone (1)",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "White",
+    "basePrice": 26000
+  },
+  {
+    "id": "d161",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 12 Pro+",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 23000
+  },
+  {
+    "id": "d162",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 13 Pro",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Purple",
+    "basePrice": 28600
+  },
+  {
+    "id": "d163",
+    "brand": "Google",
+    "model": "Pixel 7",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Blue",
+    "basePrice": 52000
+  },
+  {
+    "id": "d164",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 13 Pro",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Purple",
+    "basePrice": 63249
+  },
+  {
+    "id": "d165",
+    "brand": "Vivo",
+    "model": "Vivo V30 Pro",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Titanium",
+    "basePrice": 43700
+  },
+  {
+    "id": "d166",
+    "brand": "Samsung",
+    "model": "Galaxy S24+",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Red",
+    "basePrice": 136000
+  },
+  {
+    "id": "d167",
+    "brand": "Samsung",
+    "model": "Galaxy A54",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Purple",
+    "basePrice": 36400
+  },
+  {
+    "id": "d168",
+    "brand": "Motorola",
+    "model": "Edge 50 Pro",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Gold",
+    "basePrice": 43500
+  },
+  {
+    "id": "d169",
+    "brand": "Google",
+    "model": "Pixel 7a",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Gold",
+    "basePrice": 51200
+  },
+  {
+    "id": "d170",
+    "brand": "Xiaomi",
+    "model": "Poco F5",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 29899
+  },
+  {
+    "id": "d171",
+    "brand": "Apple",
+    "model": "iPhone 17 Pro",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Green",
+    "basePrice": 161000
+  },
+  {
+    "id": "d172",
+    "brand": "Google",
+    "model": "Pixel 6a",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Blue",
+    "basePrice": 32000
+  },
+  {
+    "id": "d173",
+    "brand": "Google",
+    "model": "Pixel 8 Pro",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Silver",
+    "basePrice": 136000
+  },
+  {
+    "id": "d174",
+    "brand": "Vivo",
+    "model": "Vivo T2 Pro",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Purple",
+    "basePrice": 30450
+  },
+  {
+    "id": "d175",
+    "brand": "Nothing",
+    "model": "Nothing Phone (2)",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Green",
+    "basePrice": 60800
+  },
+  {
+    "id": "d176",
+    "brand": "OnePlus",
+    "model": "OnePlus 12R",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Green",
+    "basePrice": 55100
+  },
+  {
+    "id": "d177",
+    "brand": "Apple",
+    "model": "iPhone 17 Pro",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Titanium",
+    "basePrice": 161000
+  },
+  {
+    "id": "d178",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 12 Pro+",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 26000
+  },
+  {
+    "id": "d179",
+    "brand": "Apple",
+    "model": "iPhone 13 Pro Max",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Gold",
+    "basePrice": 92000
+  },
+  {
+    "id": "d180",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 14 Ultra",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Gold",
+    "basePrice": 103499
+  },
+  {
+    "id": "d181",
+    "brand": "Nothing",
+    "model": "Nothing Phone (2)",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Blue",
+    "basePrice": 49400
+  },
+  {
+    "id": "d182",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 3 Lite",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 19500
+  },
+  {
+    "id": "d183",
+    "brand": "Oppo",
+    "model": "Oppo Reno 11 Pro",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "White",
+    "basePrice": 45500
+  },
+  {
+    "id": "d184",
+    "brand": "Motorola",
+    "model": "Razr 40 Ultra",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Black",
+    "basePrice": 104000
+  },
+  {
+    "id": "d185",
+    "brand": "Nothing",
+    "model": "Nothing Phone (2a)",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Black",
+    "basePrice": 35200
+  },
+  {
+    "id": "d186",
+    "brand": "Apple",
+    "model": "iPhone 12 Pro Max",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Blue",
+    "basePrice": 84500
+  },
+  {
+    "id": "d187",
+    "brand": "Oppo",
+    "model": "Oppo Reno 10 Pro+",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Gold",
+    "basePrice": 72000
+  },
+  {
+    "id": "d188",
+    "brand": "Realme",
+    "model": "Realme 11 Pro+",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Green",
+    "basePrice": 28600
+  },
+  {
+    "id": "d189",
+    "brand": "Realme",
+    "model": "Realme Narzo 60",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Green",
+    "basePrice": 24000
+  },
+  {
+    "id": "d190",
+    "brand": "Oppo",
+    "model": "Oppo Reno 11 Pro",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Green",
+    "basePrice": 50750
+  },
+  {
+    "id": "d191",
+    "brand": "Apple",
+    "model": "iPhone 15 Plus",
+    "storage": "1TB",
+    "ram": "8GB",
+    "color": "Purple",
+    "basePrice": 136000
+  },
+  {
+    "id": "d192",
+    "brand": "Apple",
+    "model": "iPhone 16",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 123250
+  },
+  {
+    "id": "d193",
+    "brand": "OnePlus",
+    "model": "OnePlus 12R",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Red",
+    "basePrice": 55100
+  },
+  {
+    "id": "d194",
+    "brand": "Vivo",
+    "model": "Vivo X100 Pro",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Titanium",
+    "basePrice": 116000
+  },
+  {
+    "id": "d195",
+    "brand": "Oppo",
+    "model": "Oppo Reno 10 Pro+",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "White",
+    "basePrice": 72000
+  },
+  {
+    "id": "d196",
+    "brand": "Nothing",
+    "model": "Nothing Phone (1)",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Green",
+    "basePrice": 26000
+  },
+  {
+    "id": "d197",
+    "brand": "OnePlus",
+    "model": "OnePlus 11R",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Red",
+    "basePrice": 34500
+  },
+  {
+    "id": "d198",
+    "brand": "Motorola",
+    "model": "Razr 40 Ultra",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Gold",
+    "basePrice": 84500
+  },
+  {
+    "id": "d199",
+    "brand": "Vivo",
+    "model": "Vivo V29 Pro",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Blue",
+    "basePrice": 46400
+  },
+  {
+    "id": "d200",
+    "brand": "Vivo",
+    "model": "Vivo T2 Pro",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Blue",
+    "basePrice": 27300
+  },
+  {
+    "id": "d201",
+    "brand": "Oppo",
+    "model": "Oppo F25 Pro",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Blue",
+    "basePrice": 28600
+  },
+  {
+    "id": "d202",
+    "brand": "Vivo",
+    "model": "Vivo V30 Pro",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 43700
+  },
+  {
+    "id": "d203",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 3",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Titanium",
+    "basePrice": 36250
+  },
+  {
+    "id": "d204",
+    "brand": "Xiaomi",
+    "model": "Poco X6 Pro",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 31200
+  },
+  {
+    "id": "d205",
+    "brand": "Apple",
+    "model": "iPhone 16 Plus",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Blue",
+    "basePrice": 152000
+  },
+  {
+    "id": "d206",
+    "brand": "Nothing",
+    "model": "Nothing Phone (1)",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "White",
+    "basePrice": 32000
+  },
+  {
+    "id": "d207",
+    "brand": "Apple",
+    "model": "iPhone SE (2nd Gen)",
+    "storage": "512GB",
+    "ram": "6GB",
+    "color": "Gold",
+    "basePrice": 31900
+  },
+  {
+    "id": "d208",
+    "brand": "Samsung",
+    "model": "Galaxy S23+",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Red",
+    "basePrice": 78000
+  },
+  {
+    "id": "d209",
+    "brand": "Google",
+    "model": "Pixel 6a",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 23000
+  },
+  {
+    "id": "d210",
+    "brand": "OnePlus",
+    "model": "OnePlus 12",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Green",
+    "basePrice": 96000
+  },
+  {
+    "id": "d211",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 12",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "White",
+    "basePrice": 13799
+  },
+  {
+    "id": "d212",
+    "brand": "Oppo",
+    "model": "Oppo F25 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Blue",
+    "basePrice": 25299
+  },
+  {
+    "id": "d213",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 3 Lite",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Titanium",
+    "basePrice": 17250
+  },
+  {
+    "id": "d214",
+    "brand": "Apple",
+    "model": "iPhone 16 Plus",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "White",
+    "basePrice": 152000
+  },
+  {
+    "id": "d215",
+    "brand": "Apple",
+    "model": "iPhone 15 Pro",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 156000
+  },
+  {
+    "id": "d216",
+    "brand": "Motorola",
+    "model": "Razr 40 Ultra",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Green",
+    "basePrice": 74750
+  },
+  {
+    "id": "d217",
+    "brand": "Samsung",
+    "model": "Galaxy S23 Ultra",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "White",
+    "basePrice": 97749
+  },
+  {
+    "id": "d218",
+    "brand": "Google",
+    "model": "Pixel 7 Pro",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Silver",
+    "basePrice": 63249
+  },
+  {
+    "id": "d219",
+    "brand": "OnePlus",
+    "model": "OnePlus Open",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Blue",
+    "basePrice": 126499
+  },
+  {
+    "id": "d220",
+    "brand": "Nothing",
+    "model": "Nothing Phone (1)",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Black",
+    "basePrice": 32000
+  },
+  {
+    "id": "d221",
+    "brand": "Oppo",
+    "model": "Oppo Reno 10 Pro+",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Blue",
+    "basePrice": 51749
+  },
+  {
+    "id": "d222",
+    "brand": "Vivo",
+    "model": "Vivo X100 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 92000
+  },
+  {
+    "id": "d223",
+    "brand": "Motorola",
+    "model": "Razr 40 Ultra",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Gold",
+    "basePrice": 104000
+  },
+  {
+    "id": "d224",
+    "brand": "Google",
+    "model": "Pixel 7 Pro",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Red",
+    "basePrice": 71500
+  },
+  {
+    "id": "d225",
+    "brand": "Oppo",
+    "model": "Oppo Reno 10 Pro+",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Black",
+    "basePrice": 72000
+  },
+  {
+    "id": "d226",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 14",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Purple",
+    "basePrice": 96000
+  },
+  {
+    "id": "d227",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 14 Ultra",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "White",
+    "basePrice": 103499
+  },
+  {
+    "id": "d228",
+    "brand": "Realme",
+    "model": "Realme 12 Pro+",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 40600
+  },
+  {
+    "id": "d229",
+    "brand": "Vivo",
+    "model": "Vivo V29 Pro",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Green",
+    "basePrice": 41600
+  },
+  {
+    "id": "d230",
+    "brand": "Oppo",
+    "model": "Oppo F25 Pro",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Titanium",
+    "basePrice": 31900
+  },
+  {
+    "id": "d231",
+    "brand": "Oppo",
+    "model": "Oppo Reno 10 Pro+",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Titanium",
+    "basePrice": 72000
+  },
+  {
+    "id": "d232",
+    "brand": "Motorola",
+    "model": "Razr 40 Ultra",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "White",
+    "basePrice": 104000
+  },
+  {
+    "id": "d233",
+    "brand": "Nothing",
+    "model": "Nothing Phone (2)",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "White",
+    "basePrice": 60800
+  },
+  {
+    "id": "d234",
+    "brand": "Apple",
+    "model": "iPhone 15 Pro Max",
+    "storage": "1TB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 224000
+  },
+  {
+    "id": "d235",
+    "brand": "Samsung",
+    "model": "Galaxy S24 Ultra",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 143000
+  },
+  {
+    "id": "d236",
+    "brand": "Realme",
+    "model": "Realme 11 Pro+",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Purple",
+    "basePrice": 25299
+  },
+  {
+    "id": "d237",
+    "brand": "Samsung",
+    "model": "Galaxy S23",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Purple",
+    "basePrice": 55199
+  },
+  {
+    "id": "d238",
+    "brand": "Realme",
+    "model": "Realme 11 Pro+",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Gold",
+    "basePrice": 35200
+  },
+  {
+    "id": "d239",
+    "brand": "Nothing",
+    "model": "Nothing Phone (2)",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Gold",
+    "basePrice": 43700
+  },
+  {
+    "id": "d240",
+    "brand": "Motorola",
+    "model": "Moto G84",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "White",
+    "basePrice": 20800
+  },
+  {
+    "id": "d241",
+    "brand": "Apple",
+    "model": "iPhone 17 Plus",
+    "storage": "512GB",
+    "ram": "6GB",
+    "color": "Purple",
+    "basePrice": 152250
+  },
+  {
+    "id": "d242",
+    "brand": "Samsung",
+    "model": "Galaxy S21 FE",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 31200
+  },
+  {
+    "id": "d243",
+    "brand": "Apple",
+    "model": "iPhone 18 Plus",
+    "storage": "512GB",
+    "ram": "6GB",
+    "color": "Gold",
+    "basePrice": 166750
+  },
+  {
+    "id": "d244",
+    "brand": "Google",
+    "model": "Pixel 7",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Gold",
+    "basePrice": 64000
+  },
+  {
+    "id": "d245",
+    "brand": "Apple",
+    "model": "iPhone 15 Pro",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Green",
+    "basePrice": 138000
+  },
+  {
+    "id": "d246",
+    "brand": "Xiaomi",
+    "model": "Poco X6 Pro",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Black",
+    "basePrice": 34800
+  },
+  {
+    "id": "d247",
+    "brand": "Nothing",
+    "model": "Nothing Phone (2a)",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Blue",
+    "basePrice": 25299
+  },
+  {
+    "id": "d248",
+    "brand": "Oppo",
+    "model": "Oppo F25 Pro",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Blue",
+    "basePrice": 35200
+  },
+  {
+    "id": "d249",
+    "brand": "Google",
+    "model": "Pixel 7 Pro",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Titanium",
+    "basePrice": 71500
+  },
+  {
+    "id": "d250",
+    "brand": "Samsung",
+    "model": "Galaxy S23",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Purple",
+    "basePrice": 76800
+  },
+  {
+    "id": "d251",
+    "brand": "Nothing",
+    "model": "Nothing Phone (2a)",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Green",
+    "basePrice": 35200
+  },
+  {
+    "id": "d252",
+    "brand": "Google",
+    "model": "Pixel 7a",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Gold",
+    "basePrice": 36800
+  },
+  {
+    "id": "d253",
+    "brand": "Vivo",
+    "model": "Vivo V30 Pro",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 49400
+  },
+  {
+    "id": "d254",
+    "brand": "OnePlus",
+    "model": "OnePlus 12",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Purple",
+    "basePrice": 78000
+  },
+  {
+    "id": "d255",
+    "brand": "Realme",
+    "model": "Realme 11 Pro+",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "White",
+    "basePrice": 25299
+  },
+  {
+    "id": "d256",
+    "brand": "Google",
+    "model": "Pixel 8",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Titanium",
+    "basePrice": 96000
+  },
+  {
+    "id": "d257",
+    "brand": "Vivo",
+    "model": "Vivo V29 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Silver",
+    "basePrice": 36800
+  },
+  {
+    "id": "d258",
+    "brand": "Motorola",
+    "model": "Edge 50 Pro",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Green",
+    "basePrice": 48000
+  },
+  {
+    "id": "d259",
+    "brand": "Samsung",
+    "model": "Galaxy M54",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Purple",
+    "basePrice": 40000
+  },
+  {
+    "id": "d260",
+    "brand": "Apple",
+    "model": "iPhone 12 Pro Max",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Gold",
+    "basePrice": 104000
+  },
+  {
+    "id": "d261",
+    "brand": "Motorola",
+    "model": "Edge 50 Pro",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "White",
+    "basePrice": 43500
+  },
+  {
+    "id": "d262",
+    "brand": "Motorola",
+    "model": "Moto G84",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Red",
+    "basePrice": 25600
+  },
+  {
+    "id": "d263",
+    "brand": "Samsung",
+    "model": "Galaxy S24 Ultra",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Gold",
+    "basePrice": 159500
+  },
+  {
+    "id": "d264",
+    "brand": "OnePlus",
+    "model": "OnePlus 11",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Silver",
+    "basePrice": 65250
+  },
+  {
+    "id": "d265",
+    "brand": "Google",
+    "model": "Pixel 8 Pro",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Green",
+    "basePrice": 123250
+  },
+  {
+    "id": "d266",
+    "brand": "Samsung",
+    "model": "Galaxy S24",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 74750
+  },
+  {
+    "id": "d267",
+    "brand": "Motorola",
+    "model": "Moto G84",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Gold",
+    "basePrice": 23200
+  },
+  {
+    "id": "d268",
+    "brand": "Apple",
+    "model": "iPhone 8",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Purple",
+    "basePrice": 18400
+  },
+  {
+    "id": "d269",
+    "brand": "Nothing",
+    "model": "Nothing Phone (2)",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Red",
+    "basePrice": 60800
+  },
+  {
+    "id": "d270",
+    "brand": "Apple",
+    "model": "iPhone 17 Pro Max",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Green",
+    "basePrice": 184000
+  },
+  {
+    "id": "d271",
+    "brand": "Apple",
+    "model": "iPhone XS Max",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Titanium",
+    "basePrice": 36400
+  },
+  {
+    "id": "d272",
+    "brand": "Apple",
+    "model": "iPhone 14 Plus",
+    "storage": "512GB",
+    "ram": "6GB",
+    "color": "Red",
+    "basePrice": 108750
+  },
+  {
+    "id": "d273",
+    "brand": "Vivo",
+    "model": "Vivo V29 Pro",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Silver",
+    "basePrice": 46400
+  },
+  {
+    "id": "d274",
+    "brand": "Realme",
+    "model": "Realme 12 Pro+",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Black",
+    "basePrice": 40600
+  },
+  {
+    "id": "d275",
+    "brand": "Realme",
+    "model": "Realme 11 Pro+",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Purple",
+    "basePrice": 31900
+  },
+  {
+    "id": "d276",
+    "brand": "Oppo",
+    "model": "Oppo F25 Pro",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Titanium",
+    "basePrice": 31900
+  },
+  {
+    "id": "d277",
+    "brand": "Google",
+    "model": "Pixel 7a",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Silver",
+    "basePrice": 41600
+  },
+  {
+    "id": "d278",
+    "brand": "Vivo",
+    "model": "Vivo X100 Pro",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 116000
+  },
+  {
+    "id": "d279",
+    "brand": "OnePlus",
+    "model": "OnePlus 11R",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Green",
+    "basePrice": 39000
+  },
+  {
+    "id": "d280",
+    "brand": "Realme",
+    "model": "Realme Narzo 60",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 21750
+  },
+  {
+    "id": "d281",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 14 Ultra",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Silver",
+    "basePrice": 103499
+  },
+  {
+    "id": "d282",
+    "brand": "Realme",
+    "model": "Realme 12 Pro+",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Silver",
+    "basePrice": 44800
+  },
+  {
+    "id": "d283",
+    "brand": "Oppo",
+    "model": "Oppo Find N3 Flip",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Gold",
+    "basePrice": 86250
+  },
+  {
+    "id": "d284",
+    "brand": "Realme",
+    "model": "Realme GT 3",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 40250
+  },
+  {
+    "id": "d285",
+    "brand": "Samsung",
+    "model": "Galaxy S23 Ultra",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Gold",
+    "basePrice": 97749
+  },
+  {
+    "id": "d286",
+    "brand": "Apple",
+    "model": "iPhone 4",
+    "storage": "1TB",
+    "ram": "8GB",
+    "color": "Silver",
+    "basePrice": 6400
+  },
+  {
+    "id": "d287",
+    "brand": "Apple",
+    "model": "iPhone 4",
+    "storage": "512GB",
+    "ram": "6GB",
+    "color": "Silver",
+    "basePrice": 5800
+  },
+  {
+    "id": "d288",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 12",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Green",
+    "basePrice": 15600
+  },
+  {
+    "id": "d289",
+    "brand": "Samsung",
+    "model": "Galaxy A54",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Gold",
+    "basePrice": 44800
+  },
+  {
+    "id": "d290",
+    "brand": "Google",
+    "model": "Pixel 7",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Titanium",
+    "basePrice": 52000
+  },
+  {
+    "id": "d291",
+    "brand": "Samsung",
+    "model": "Galaxy S24",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 74750
+  },
+  {
+    "id": "d292",
+    "brand": "OnePlus",
+    "model": "OnePlus Open",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Red",
+    "basePrice": 126499
+  },
+  {
+    "id": "d293",
+    "brand": "Oppo",
+    "model": "Oppo F25 Pro",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Red",
+    "basePrice": 25299
+  },
+  {
+    "id": "d294",
+    "brand": "Samsung",
+    "model": "Galaxy S23",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Green",
+    "basePrice": 76800
+  },
+  {
+    "id": "d295",
+    "brand": "Samsung",
+    "model": "Galaxy Z Flip5",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Red",
+    "basePrice": 112000
+  },
+  {
+    "id": "d296",
+    "brand": "Motorola",
+    "model": "Edge 50 Pro",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Purple",
+    "basePrice": 48000
+  },
+  {
+    "id": "d297",
+    "brand": "Vivo",
+    "model": "Vivo X100 Pro",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 116000
+  },
+  {
+    "id": "d298",
+    "brand": "Samsung",
+    "model": "Galaxy S21 FE",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "White",
+    "basePrice": 38400
+  },
+  {
+    "id": "d299",
+    "brand": "Samsung",
+    "model": "Galaxy S24",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Gold",
+    "basePrice": 104000
+  },
+  {
+    "id": "d300",
+    "brand": "Samsung",
+    "model": "Galaxy Z Flip5",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "White",
+    "basePrice": 101500
+  },
+  {
+    "id": "d301",
+    "brand": "Oppo",
+    "model": "Oppo Reno 10 Pro+",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Red",
+    "basePrice": 51749
+  },
+  {
+    "id": "d302",
+    "brand": "Google",
+    "model": "Pixel 7a",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "White",
+    "basePrice": 51200
+  },
+  {
+    "id": "d303",
+    "brand": "Apple",
+    "model": "iPhone XR",
+    "storage": "512GB",
+    "ram": "6GB",
+    "color": "Gold",
+    "basePrice": 34800
+  },
+  {
+    "id": "d304",
+    "brand": "Google",
+    "model": "Pixel 7",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Green",
+    "basePrice": 58000
+  },
+  {
+    "id": "d305",
+    "brand": "Motorola",
+    "model": "Edge 40 Neo",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Titanium",
+    "basePrice": 30450
+  },
+  {
+    "id": "d306",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 14",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Gold",
+    "basePrice": 96000
+  },
+  {
+    "id": "d307",
+    "brand": "Realme",
+    "model": "Realme 12 Pro+",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Gold",
+    "basePrice": 36400
+  },
+  {
+    "id": "d308",
+    "brand": "Oppo",
+    "model": "Oppo Find N3 Flip",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "White",
+    "basePrice": 97500
+  },
+  {
+    "id": "d309",
+    "brand": "OnePlus",
+    "model": "OnePlus 12",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Green",
+    "basePrice": 87000
+  },
+  {
+    "id": "d310",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 14 Ultra",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 103499
+  },
+  {
+    "id": "d311",
+    "brand": "Realme",
+    "model": "Realme Narzo 60",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 17250
+  },
+  {
+    "id": "d312",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 13 Pro+",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Titanium",
+    "basePrice": 40600
+  },
+  {
+    "id": "d313",
+    "brand": "Motorola",
+    "model": "Moto G84",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Purple",
+    "basePrice": 20800
+  },
+  {
+    "id": "d314",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 14",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Purple",
+    "basePrice": 69000
+  },
+  {
+    "id": "d315",
+    "brand": "Realme",
+    "model": "Realme 12 Pro+",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Red",
+    "basePrice": 40600
+  },
+  {
+    "id": "d316",
+    "brand": "Samsung",
+    "model": "Galaxy Z Flip5",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Gold",
+    "basePrice": 101500
+  },
+  {
+    "id": "d317",
+    "brand": "Samsung",
+    "model": "Galaxy S23 Ultra",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Purple",
+    "basePrice": 97749
+  },
+  {
+    "id": "d318",
+    "brand": "Apple",
+    "model": "iPhone 16 Plus",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 109249
+  },
+  {
+    "id": "d319",
+    "brand": "Realme",
+    "model": "Realme GT 3",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Red",
+    "basePrice": 40250
+  },
+  {
+    "id": "d320",
+    "brand": "Motorola",
+    "model": "Moto G84",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Gold",
+    "basePrice": 25600
+  },
+  {
+    "id": "d321",
+    "brand": "Samsung",
+    "model": "Galaxy S24 Ultra",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Titanium",
+    "basePrice": 176000
+  },
+  {
+    "id": "d322",
+    "brand": "Apple",
+    "model": "iPhone 13",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "White",
+    "basePrice": 75400
+  },
+  {
+    "id": "d323",
+    "brand": "Apple",
+    "model": "iPhone 17",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Red",
+    "basePrice": 109249
+  },
+  {
+    "id": "d324",
+    "brand": "Motorola",
+    "model": "Razr 40 Ultra",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Titanium",
+    "basePrice": 84500
+  },
+  {
+    "id": "d325",
+    "brand": "Apple",
+    "model": "iPhone (1st Gen)",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Silver",
+    "basePrice": 2300
+  },
+  {
+    "id": "d326",
+    "brand": "Vivo",
+    "model": "Vivo T2 Pro",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "White",
+    "basePrice": 27300
+  },
+  {
+    "id": "d327",
+    "brand": "Vivo",
+    "model": "Vivo V29 Pro",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Purple",
+    "basePrice": 36800
+  },
+  {
+    "id": "d328",
+    "brand": "Samsung",
+    "model": "Galaxy S23",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Silver",
+    "basePrice": 55199
+  },
+  {
+    "id": "d329",
+    "brand": "Oppo",
+    "model": "Oppo F25 Pro",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Black",
+    "basePrice": 35200
+  },
+  {
+    "id": "d330",
+    "brand": "Realme",
+    "model": "Realme Narzo 60",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Silver",
+    "basePrice": 17250
+  },
+  {
+    "id": "d331",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 13 Pro+",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Titanium",
+    "basePrice": 40600
+  },
+  {
+    "id": "d332",
+    "brand": "Oppo",
+    "model": "Oppo Reno 10 Pro+",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "White",
+    "basePrice": 51749
+  },
+  {
+    "id": "d333",
+    "brand": "Samsung",
+    "model": "Galaxy A34",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Blue",
+    "basePrice": 25299
+  },
+  {
+    "id": "d334",
+    "brand": "Apple",
+    "model": "iPhone 14 Plus",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Blue",
+    "basePrice": 86250
+  },
+  {
+    "id": "d335",
+    "brand": "Motorola",
+    "model": "Edge 40 Neo",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Purple",
+    "basePrice": 30450
+  },
+  {
+    "id": "d336",
+    "brand": "Oppo",
+    "model": "Oppo F25 Pro",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "White",
+    "basePrice": 25299
+  },
+  {
+    "id": "d337",
+    "brand": "Oppo",
+    "model": "Oppo Reno 11 Pro",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Green",
+    "basePrice": 45500
+  },
+  {
+    "id": "d338",
+    "brand": "Google",
+    "model": "Pixel 7",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Titanium",
+    "basePrice": 64000
+  },
+  {
+    "id": "d339",
+    "brand": "Vivo",
+    "model": "Vivo X100 Pro",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Gold",
+    "basePrice": 116000
+  },
+  {
+    "id": "d340",
+    "brand": "Realme",
+    "model": "Realme 11 Pro+",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Blue",
+    "basePrice": 25299
+  },
+  {
+    "id": "d341",
+    "brand": "OnePlus",
+    "model": "OnePlus Open",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Green",
+    "basePrice": 126499
+  },
+  {
+    "id": "d342",
+    "brand": "Samsung",
+    "model": "Galaxy A54",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Gold",
+    "basePrice": 36400
+  },
+  {
+    "id": "d343",
+    "brand": "Google",
+    "model": "Pixel 7 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Red",
+    "basePrice": 63249
+  },
+  {
+    "id": "d344",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 3 Lite",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Green",
+    "basePrice": 24000
+  },
+  {
+    "id": "d345",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 14",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Titanium",
+    "basePrice": 69000
+  },
+  {
+    "id": "d346",
+    "brand": "Apple",
+    "model": "iPhone 3G",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Red",
+    "basePrice": 3625
+  },
+  {
+    "id": "d347",
+    "brand": "Motorola",
+    "model": "Edge 50 Pro",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 34500
+  },
+  {
+    "id": "d348",
+    "brand": "Motorola",
+    "model": "Edge 40 Neo",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Titanium",
+    "basePrice": 30450
+  },
+  {
+    "id": "d349",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 14",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Green",
+    "basePrice": 87000
+  },
+  {
+    "id": "d350",
+    "brand": "Vivo",
+    "model": "Vivo T2 Pro",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 30450
+  },
+  {
+    "id": "d351",
+    "brand": "Motorola",
+    "model": "Moto G84",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Green",
+    "basePrice": 25600
+  },
+  {
+    "id": "d352",
+    "brand": "Motorola",
+    "model": "Razr 40 Ultra",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Silver",
+    "basePrice": 84500
+  },
+  {
+    "id": "d353",
+    "brand": "Vivo",
+    "model": "Vivo X100 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Purple",
+    "basePrice": 92000
+  },
+  {
+    "id": "d354",
+    "brand": "Google",
+    "model": "Pixel 6a",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Green",
+    "basePrice": 23000
+  },
+  {
+    "id": "d355",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 3",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Green",
+    "basePrice": 36250
+  },
+  {
+    "id": "d356",
+    "brand": "Google",
+    "model": "Pixel 7 Pro",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Purple",
+    "basePrice": 79750
+  },
+  {
+    "id": "d357",
+    "brand": "Xiaomi",
+    "model": "Poco X6 Pro",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Black",
+    "basePrice": 38400
+  },
+  {
+    "id": "d358",
+    "brand": "Apple",
+    "model": "iPhone 3G",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Titanium",
+    "basePrice": 3250
+  },
+  {
+    "id": "d359",
+    "brand": "Vivo",
+    "model": "Vivo V29 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "White",
+    "basePrice": 36800
+  },
+  {
+    "id": "d360",
+    "brand": "Vivo",
+    "model": "Vivo V29 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Green",
+    "basePrice": 36800
+  },
+  {
+    "id": "d361",
+    "brand": "Oppo",
+    "model": "Oppo Reno 10 Pro+",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Blue",
+    "basePrice": 72000
+  },
+  {
+    "id": "d362",
+    "brand": "Xiaomi",
+    "model": "Poco X6 Pro",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Purple",
+    "basePrice": 31200
+  },
+  {
+    "id": "d363",
+    "brand": "Nothing",
+    "model": "Nothing Phone (1)",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Gold",
+    "basePrice": 23000
+  },
+  {
+    "id": "d364",
+    "brand": "OnePlus",
+    "model": "OnePlus 12",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Green",
+    "basePrice": 87000
+  },
+  {
+    "id": "d365",
+    "brand": "Oppo",
+    "model": "Oppo Reno 11 Pro",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Blue",
+    "basePrice": 56000
+  },
+  {
+    "id": "d366",
+    "brand": "Nothing",
+    "model": "Nothing Phone (2)",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Blue",
+    "basePrice": 60800
+  },
+  {
+    "id": "d367",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 12 Pro+",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "White",
+    "basePrice": 23000
+  },
+  {
+    "id": "d368",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 12",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Black",
+    "basePrice": 19200
+  },
+  {
+    "id": "d369",
+    "brand": "Realme",
+    "model": "Realme GT 3",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Red",
+    "basePrice": 56000
+  },
+  {
+    "id": "d370",
+    "brand": "Google",
+    "model": "Pixel 8 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 97749
+  },
+  {
+    "id": "d371",
+    "brand": "Realme",
+    "model": "Realme 12 Pro",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "White",
+    "basePrice": 29900
+  },
+  {
+    "id": "d372",
+    "brand": "Samsung",
+    "model": "Galaxy Z Flip5",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Titanium",
+    "basePrice": 91000
+  },
+  {
+    "id": "d373",
+    "brand": "Motorola",
+    "model": "Edge 40 Neo",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Blue",
+    "basePrice": 27300
+  },
+  {
+    "id": "d374",
+    "brand": "Vivo",
+    "model": "Vivo V30 Pro",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Blue",
+    "basePrice": 55100
+  },
+  {
+    "id": "d375",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 3 Lite",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Titanium",
+    "basePrice": 21750
+  },
+  {
+    "id": "d376",
+    "brand": "Google",
+    "model": "Pixel 7 Pro",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Silver",
+    "basePrice": 71500
+  },
+  {
+    "id": "d377",
+    "brand": "Google",
+    "model": "Pixel 7a",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Titanium",
+    "basePrice": 51200
+  },
+  {
+    "id": "d378",
+    "brand": "Google",
+    "model": "Pixel 8",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "White",
+    "basePrice": 69000
+  },
+  {
+    "id": "d379",
+    "brand": "Vivo",
+    "model": "Vivo T2 Pro",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Blue",
+    "basePrice": 30450
+  },
+  {
+    "id": "d380",
+    "brand": "Google",
+    "model": "Pixel 6a",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Blue",
+    "basePrice": 32000
+  },
+  {
+    "id": "d381",
+    "brand": "Vivo",
+    "model": "Vivo X100 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "White",
+    "basePrice": 92000
+  },
+  {
+    "id": "d382",
+    "brand": "Samsung",
+    "model": "Galaxy S24+",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Silver",
+    "basePrice": 136000
+  },
+  {
+    "id": "d383",
+    "brand": "Motorola",
+    "model": "Edge 40 Neo",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Blue",
+    "basePrice": 33600
+  },
+  {
+    "id": "d384",
+    "brand": "Vivo",
+    "model": "Vivo T2 Pro",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Purple",
+    "basePrice": 27300
+  },
+  {
+    "id": "d385",
+    "brand": "Samsung",
+    "model": "Galaxy A34",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Silver",
+    "basePrice": 35200
+  },
+  {
+    "id": "d386",
+    "brand": "Nothing",
+    "model": "Nothing Phone (1)",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Blue",
+    "basePrice": 32000
+  },
+  {
+    "id": "d387",
+    "brand": "Vivo",
+    "model": "Vivo V29 Pro",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "White",
+    "basePrice": 46400
+  },
+  {
+    "id": "d388",
+    "brand": "Xiaomi",
+    "model": "Poco F5",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Purple",
+    "basePrice": 33800
+  },
+  {
+    "id": "d389",
+    "brand": "Vivo",
+    "model": "Vivo T2 Pro",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Red",
+    "basePrice": 33600
+  },
+  {
+    "id": "d390",
+    "brand": "Oppo",
+    "model": "Oppo Find N3 Flip",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Blue",
+    "basePrice": 108750
+  },
+  {
+    "id": "d391",
+    "brand": "OnePlus",
+    "model": "OnePlus 11",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Green",
+    "basePrice": 65250
+  },
+  {
+    "id": "d392",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 3",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "White",
+    "basePrice": 32500
+  },
+  {
+    "id": "d393",
+    "brand": "OnePlus",
+    "model": "OnePlus 12",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Titanium",
+    "basePrice": 87000
+  },
+  {
+    "id": "d394",
+    "brand": "Google",
+    "model": "Pixel 6a",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "White",
+    "basePrice": 26000
+  },
+  {
+    "id": "d395",
+    "brand": "Motorola",
+    "model": "Edge 40 Neo",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Gold",
+    "basePrice": 27300
+  },
+  {
+    "id": "d396",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 12 Pro+",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Red",
+    "basePrice": 32000
+  },
+  {
+    "id": "d397",
+    "brand": "Google",
+    "model": "Pixel 7 Pro",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Titanium",
+    "basePrice": 88000
+  },
+  {
+    "id": "d398",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 3 Lite",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Silver",
+    "basePrice": 21750
+  },
+  {
+    "id": "d399",
+    "brand": "Motorola",
+    "model": "Edge 50 Pro",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Titanium",
+    "basePrice": 43500
+  },
+  {
+    "id": "d400",
+    "brand": "Realme",
+    "model": "Realme 12 Pro",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Gold",
+    "basePrice": 33350
+  },
+  {
+    "id": "d401",
+    "brand": "Apple",
+    "model": "iPhone 16 Pro Max",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Blue",
+    "basePrice": 195000
+  },
+  {
+    "id": "d402",
+    "brand": "OnePlus",
+    "model": "OnePlus 12R",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Purple",
+    "basePrice": 49400
+  },
+  {
+    "id": "d403",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 12 Pro+",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Gold",
+    "basePrice": 26000
+  },
+  {
+    "id": "d404",
+    "brand": "Realme",
+    "model": "Realme 12 Pro",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "White",
+    "basePrice": 36800
+  },
+  {
+    "id": "d405",
+    "brand": "OnePlus",
+    "model": "OnePlus 12",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Green",
+    "basePrice": 87000
+  },
+  {
+    "id": "d406",
+    "brand": "Realme",
+    "model": "Realme 12 Pro+",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Purple",
+    "basePrice": 40600
+  },
+  {
+    "id": "d407",
+    "brand": "Motorola",
+    "model": "Edge 50 Pro",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Titanium",
+    "basePrice": 39000
+  },
+  {
+    "id": "d408",
+    "brand": "Motorola",
+    "model": "Edge 40 Neo",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Green",
+    "basePrice": 33600
+  },
+  {
+    "id": "d409",
+    "brand": "Samsung",
+    "model": "Galaxy S24+",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Blue",
+    "basePrice": 123250
+  },
+  {
+    "id": "d410",
+    "brand": "Samsung",
+    "model": "Galaxy S24",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Purple",
+    "basePrice": 104000
+  },
+  {
+    "id": "d411",
+    "brand": "Samsung",
+    "model": "Galaxy S23+",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Silver",
+    "basePrice": 69000
+  },
+  {
+    "id": "d412",
+    "brand": "Samsung",
+    "model": "Galaxy A34",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Green",
+    "basePrice": 25299
+  },
+  {
+    "id": "d413",
+    "brand": "Motorola",
+    "model": "Edge 50 Pro",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "White",
+    "basePrice": 39000
+  },
+  {
+    "id": "d414",
+    "brand": "OnePlus",
+    "model": "OnePlus 12",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Silver",
+    "basePrice": 87000
+  },
+  {
+    "id": "d415",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 13 Pro",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "White",
+    "basePrice": 35200
+  },
+  {
+    "id": "d416",
+    "brand": "Oppo",
+    "model": "Oppo F25 Pro",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Blue",
+    "basePrice": 25299
+  },
+  {
+    "id": "d417",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 13 Pro",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Purple",
+    "basePrice": 25299
+  },
+  {
+    "id": "d418",
+    "brand": "Realme",
+    "model": "Realme Narzo 60",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Silver",
+    "basePrice": 17250
+  },
+  {
+    "id": "d419",
+    "brand": "Apple",
+    "model": "iPhone 18 Pro Max",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Silver",
+    "basePrice": 221000
+  },
+  {
+    "id": "d420",
+    "brand": "Google",
+    "model": "Pixel 6a",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Purple",
+    "basePrice": 32000
+  },
+  {
+    "id": "d421",
+    "brand": "Google",
+    "model": "Pixel 8 Pro",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Red",
+    "basePrice": 110500
+  },
+  {
+    "id": "d422",
+    "brand": "Apple",
+    "model": "iPhone 4S",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Titanium",
+    "basePrice": 7200
+  },
+  {
+    "id": "d423",
+    "brand": "OnePlus",
+    "model": "OnePlus 12R",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Red",
+    "basePrice": 49400
+  },
+  {
+    "id": "d424",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 14",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Red",
+    "basePrice": 87000
+  },
+  {
+    "id": "d425",
+    "brand": "Nothing",
+    "model": "Nothing Phone (2)",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "White",
+    "basePrice": 60800
+  },
+  {
+    "id": "d426",
+    "brand": "Samsung",
+    "model": "Galaxy Z Flip5",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Gold",
+    "basePrice": 112000
+  },
+  {
+    "id": "d427",
+    "brand": "Vivo",
+    "model": "Vivo V30 Pro",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Blue",
+    "basePrice": 60800
+  },
+  {
+    "id": "d428",
+    "brand": "Nothing",
+    "model": "Nothing Phone (2a)",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Purple",
+    "basePrice": 28600
+  },
+  {
+    "id": "d429",
+    "brand": "Google",
+    "model": "Pixel 8",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Blue",
+    "basePrice": 78000
+  },
+  {
+    "id": "d430",
+    "brand": "Google",
+    "model": "Pixel 8",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Purple",
+    "basePrice": 69000
+  },
+  {
+    "id": "d431",
+    "brand": "Oppo",
+    "model": "Oppo Reno 10 Pro+",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Silver",
+    "basePrice": 58500
+  },
+  {
+    "id": "d432",
+    "brand": "Motorola",
+    "model": "Moto G84",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Blue",
+    "basePrice": 18400
+  },
+  {
+    "id": "d433",
+    "brand": "Vivo",
+    "model": "Vivo X100",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "White",
+    "basePrice": 75400
+  },
+  {
+    "id": "d434",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 14 Ultra",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "White",
+    "basePrice": 130500
+  },
+  {
+    "id": "d435",
+    "brand": "Realme",
+    "model": "Realme 11 Pro+",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Titanium",
+    "basePrice": 28600
+  },
+  {
+    "id": "d436",
+    "brand": "Apple",
+    "model": "iPhone 12",
+    "storage": "1TB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 67200
+  },
+  {
+    "id": "d437",
+    "brand": "Samsung",
+    "model": "Galaxy S24 Ultra",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Titanium",
+    "basePrice": 143000
+  },
+  {
+    "id": "d438",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 3",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Purple",
+    "basePrice": 28749
+  },
+  {
+    "id": "d439",
+    "brand": "Motorola",
+    "model": "Moto G84",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Silver",
+    "basePrice": 20800
+  },
+  {
+    "id": "d440",
+    "brand": "Motorola",
+    "model": "Moto G84",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Titanium",
+    "basePrice": 25600
+  },
+  {
+    "id": "d441",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 13 Pro+",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 32199
+  },
+  {
+    "id": "d442",
+    "brand": "Google",
+    "model": "Pixel 7",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Titanium",
+    "basePrice": 64000
+  },
+  {
+    "id": "d443",
+    "brand": "Vivo",
+    "model": "Vivo T2 Pro",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Purple",
+    "basePrice": 24149
+  },
+  {
+    "id": "d444",
+    "brand": "Xiaomi",
+    "model": "Poco X6 Pro",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Gold",
+    "basePrice": 27599
+  },
+  {
+    "id": "d445",
+    "brand": "Google",
+    "model": "Pixel 7a",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Titanium",
+    "basePrice": 36800
+  },
+  {
+    "id": "d446",
+    "brand": "Google",
+    "model": "Pixel 8 Pro",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Red",
+    "basePrice": 110500
+  },
+  {
+    "id": "d447",
+    "brand": "Oppo",
+    "model": "Oppo Reno 10 Pro+",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Black",
+    "basePrice": 72000
+  },
+  {
+    "id": "d448",
+    "brand": "Motorola",
+    "model": "Edge 50 Pro",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Gold",
+    "basePrice": 39000
+  },
+  {
+    "id": "d449",
+    "brand": "Google",
+    "model": "Pixel 6a",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Silver",
+    "basePrice": 32000
+  },
+  {
+    "id": "d450",
+    "brand": "Google",
+    "model": "Pixel 6a",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Silver",
+    "basePrice": 26000
+  },
+  {
+    "id": "d451",
+    "brand": "Oppo",
+    "model": "Oppo Reno 10 Pro+",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Black",
+    "basePrice": 72000
+  },
+  {
+    "id": "d452",
+    "brand": "Samsung",
+    "model": "Galaxy S24+",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Blue",
+    "basePrice": 123250
+  },
+  {
+    "id": "d453",
+    "brand": "Apple",
+    "model": "iPhone X",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Green",
+    "basePrice": 25299
+  },
+  {
+    "id": "d454",
+    "brand": "Nothing",
+    "model": "Nothing Phone (2a)",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Purple",
+    "basePrice": 25299
+  },
+  {
+    "id": "d455",
+    "brand": "Apple",
+    "model": "iPhone 14",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Gold",
+    "basePrice": 74750
+  },
+  {
+    "id": "d456",
+    "brand": "Vivo",
+    "model": "Vivo X100 Pro",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Silver",
+    "basePrice": 128000
+  },
+  {
+    "id": "d457",
+    "brand": "Motorola",
+    "model": "Edge 50 Pro",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 34500
+  },
+  {
+    "id": "d458",
+    "brand": "Samsung",
+    "model": "Galaxy Z Fold5",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Titanium",
+    "basePrice": 174000
+  },
+  {
+    "id": "d459",
+    "brand": "Google",
+    "model": "Pixel 7 Pro",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Purple",
+    "basePrice": 79750
+  },
+  {
+    "id": "d460",
+    "brand": "Google",
+    "model": "Pixel 8 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Blue",
+    "basePrice": 97749
+  },
+  {
+    "id": "d461",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 14",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Purple",
+    "basePrice": 87000
+  },
+  {
+    "id": "d462",
+    "brand": "Realme",
+    "model": "Realme Narzo 60",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Red",
+    "basePrice": 17250
+  },
+  {
+    "id": "d463",
+    "brand": "Realme",
+    "model": "Realme Narzo 60",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "White",
+    "basePrice": 17250
+  },
+  {
+    "id": "d464",
+    "brand": "Google",
+    "model": "Pixel 6a",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Gold",
+    "basePrice": 26000
+  },
+  {
+    "id": "d465",
+    "brand": "Samsung",
+    "model": "Galaxy S23+",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Silver",
+    "basePrice": 78000
+  },
+  {
+    "id": "d466",
+    "brand": "Samsung",
+    "model": "Galaxy M54",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Titanium",
+    "basePrice": 36250
+  },
+  {
+    "id": "d467",
+    "brand": "Realme",
+    "model": "Realme 12 Pro",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 33350
+  },
+  {
+    "id": "d468",
+    "brand": "Samsung",
+    "model": "Galaxy Z Fold5",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 138000
+  },
+  {
+    "id": "d469",
+    "brand": "Google",
+    "model": "Pixel 7 Pro",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 71500
+  },
+  {
+    "id": "d470",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 3",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Gold",
+    "basePrice": 40000
+  },
+  {
+    "id": "d471",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 12 Pro+",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Silver",
+    "basePrice": 32000
+  },
+  {
+    "id": "d472",
+    "brand": "Apple",
+    "model": "iPhone (1st Gen)",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Green",
+    "basePrice": 2300
+  },
+  {
+    "id": "d473",
+    "brand": "Apple",
+    "model": "iPhone 17 Pro",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Silver",
+    "basePrice": 182000
+  },
+  {
+    "id": "d474",
+    "brand": "Samsung",
+    "model": "Galaxy S23",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 55199
+  },
+  {
+    "id": "d475",
+    "brand": "Motorola",
+    "model": "Edge 40 Neo",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Gold",
+    "basePrice": 27300
+  },
+  {
+    "id": "d476",
+    "brand": "Vivo",
+    "model": "Vivo T2 Pro",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Silver",
+    "basePrice": 27300
+  },
+  {
+    "id": "d477",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 3 Lite",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Blue",
+    "basePrice": 19500
+  },
+  {
+    "id": "d478",
+    "brand": "OnePlus",
+    "model": "OnePlus Open",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Green",
+    "basePrice": 159500
+  },
+  {
+    "id": "d479",
+    "brand": "Samsung",
+    "model": "Galaxy S23+",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "White",
+    "basePrice": 96000
+  },
+  {
+    "id": "d480",
+    "brand": "Nothing",
+    "model": "Nothing Phone (2a)",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Purple",
+    "basePrice": 31900
+  },
+  {
+    "id": "d481",
+    "brand": "Vivo",
+    "model": "Vivo X100",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Green",
+    "basePrice": 92800
+  },
+  {
+    "id": "d482",
+    "brand": "Realme",
+    "model": "Realme 12 Pro+",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Purple",
+    "basePrice": 40600
+  },
+  {
+    "id": "d483",
+    "brand": "Samsung",
+    "model": "Galaxy Z Fold5",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Green",
+    "basePrice": 192000
+  },
+  {
+    "id": "d484",
+    "brand": "Google",
+    "model": "Pixel 7",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Purple",
+    "basePrice": 52000
+  },
+  {
+    "id": "d485",
+    "brand": "Nothing",
+    "model": "Nothing Phone (2)",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Titanium",
+    "basePrice": 43700
+  },
+  {
+    "id": "d486",
+    "brand": "OnePlus",
+    "model": "OnePlus 12R",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "White",
+    "basePrice": 60800
+  },
+  {
+    "id": "d487",
+    "brand": "Realme",
+    "model": "Realme 11 Pro+",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Gold",
+    "basePrice": 31900
+  },
+  {
+    "id": "d488",
+    "brand": "Realme",
+    "model": "Realme 12 Pro+",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 40600
+  },
+  {
+    "id": "d489",
+    "brand": "Google",
+    "model": "Pixel 8",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Titanium",
+    "basePrice": 69000
+  },
+  {
+    "id": "d490",
+    "brand": "Samsung",
+    "model": "Galaxy S23",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Purple",
+    "basePrice": 69600
+  },
+  {
+    "id": "d491",
+    "brand": "OnePlus",
+    "model": "OnePlus 11",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Titanium",
+    "basePrice": 65250
+  },
+  {
+    "id": "d492",
+    "brand": "Oppo",
+    "model": "Oppo F25 Pro",
+    "storage": "512GB",
+    "ram": "8GB",
+    "color": "Red",
+    "basePrice": 31900
+  },
+  {
+    "id": "d493",
+    "brand": "Vivo",
+    "model": "Vivo X100 Pro",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Silver",
+    "basePrice": 116000
+  },
+  {
+    "id": "d494",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 3",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "White",
+    "basePrice": 32500
+  },
+  {
+    "id": "d495",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 13 Pro",
+    "storage": "1TB",
+    "ram": "12GB",
+    "color": "Gold",
+    "basePrice": 88000
+  },
+  {
+    "id": "d496",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 13 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "White",
+    "basePrice": 25299
+  },
+  {
+    "id": "d497",
+    "brand": "Realme",
+    "model": "Realme 12 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Titanium",
+    "basePrice": 26449
+  },
+  {
+    "id": "d498",
+    "brand": "Samsung",
+    "model": "Galaxy A54",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Green",
+    "basePrice": 32199
+  },
+  {
+    "id": "d499",
+    "brand": "Apple",
+    "model": "iPhone 5c",
+    "storage": "512GB",
+    "ram": "6GB",
+    "color": "Titanium",
+    "basePrice": 7975
+  },
+  {
+    "id": "d500",
+    "brand": "Motorola",
+    "model": "Edge 40 Neo",
+    "storage": "1TB",
+    "ram": "16GB",
+    "color": "Silver",
+    "basePrice": 33600
+  }
+];
