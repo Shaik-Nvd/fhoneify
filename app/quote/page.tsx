@@ -4,6 +4,7 @@ import { useEffect, useState, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import api from '@/lib/api';
 import { formatCurrency } from '@/lib/format';
+import { useAuthStore } from '@/lib/authStore';
 
 export interface Device {
   id: string;
@@ -42,6 +43,7 @@ const ArrowRightIcon = () => <svg width="20" height="20" viewBox="0 0 24 24" fil
 
 export default function QuotePage() {
   const router = useRouter();
+  const { setAuth } = useAuthStore();
   const [allDevices, setAllDevices] = useState<Device[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -68,8 +70,12 @@ export default function QuotePage() {
 
   // Lead Capture State
   const [userPhone, setUserPhone] = useState('');
+  const [userName, setUserName] = useState('');
+  const [userEmail, setUserEmail] = useState('');
   const [otp, setOtp] = useState('');
   const [showOtpInput, setShowOtpInput] = useState(false);
+  const [isAuthLoading, setIsAuthLoading] = useState(false);
+  const [authError, setAuthError] = useState<string | null>(null);
 
   useEffect(() => {
     async function fetchDevices() {
@@ -144,19 +150,45 @@ export default function QuotePage() {
     setFinalPrice(Math.max(price, 500)); // Minimum ₹500
   };
 
-  const handleOtpVerify = (e: React.FormEvent) => {
+  const handleSendOtp = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Mock OTP verification (1234 always works)
-    if (otp === '1234') {
+    if (!userPhone || userPhone.length < 10) { setAuthError('Enter a valid 10-digit phone number'); return; }
+    if (!userName || !userEmail) { setAuthError('Please enter your Name and Email'); return; }
+    try {
+      setIsAuthLoading(true); setAuthError(null);
+      const res = await api.post('/api/auth/otp/send', { phone: userPhone });
+      if (res.data?.data?.otp) alert(`DEV MODE OTP: ${res.data.data.otp}`);
+      setShowOtpInput(true);
+    } catch (err: any) {
+      setAuthError(err?.response?.data?.error || 'Failed to send OTP');
+    } finally { setIsAuthLoading(false); }
+  };
+
+  const handleOtpVerify = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (otp.length !== 4 && otp.length !== 6) { setAuthError('Enter a valid OTP'); return; }
+    try {
+      setIsAuthLoading(true); setAuthError(null);
+      const res = await api.post('/api/auth/otp/verify', { phone: userPhone, otp });
+      const { accessToken, refreshToken, user, isNewUser } = res.data.data;
+      
+      // Save tokens so next request is authenticated
+      setAuth({ id: user.id, phone: user.phone, name: user.name, role: user.role, email: user.email }, accessToken, refreshToken);
+      
+      // If it's a new user or missing name, update the profile using captured lead info
+      if (isNewUser || !user.name || !user.email) {
+        await api.put('/api/auth/profile', { name: userName, email: userEmail });
+      }
+
       calculateFinalPrice();
       setStep(8);
-    } else {
-      alert("Invalid OTP. Try '1234'");
-    }
+    } catch (err: any) {
+      setAuthError(err?.response?.data?.error || 'Invalid OTP');
+    } finally { setIsAuthLoading(false); }
   };
 
   const SidebarSummary = () => (
-    <div style={{ width: '100%', maxWidth: '300px', backgroundColor: '#fff', border: '1px solid #e0e0e0', borderRadius: '12px', padding: '1.5rem', position: 'sticky', top: '2rem', color: '#000' }}>
+    <div className="w-full md:max-w-[300px] shrink-0 bg-white border border-[#e0e0e0] rounded-xl p-6 md:sticky md:top-8 text-black mb-8 md:mb-0">
       <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', borderBottom: '1px solid #e0e0e0', paddingBottom: '1rem', marginBottom: '1rem' }}>
         <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} style={{ width: '40px', height: '60px', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
         <span style={{ fontWeight: 600, fontSize: '0.9rem' }}>{selectedBrand} {selectedModel} ({selectedStorage})</span>
@@ -284,10 +316,10 @@ export default function QuotePage() {
       )}
 
       {/* STAGES 3-6: MULTI-STEP QUESTIONNAIRE (2 COLUMN LAYOUT) */}
-      {step >= 3 && step <= 6 && (
-        <div style={{ display: 'flex', gap: '2rem', alignItems: 'flex-start', flexWrap: 'wrap' }}>
+      {step >= 2 && step <= 6 && (
+        <div className="flex flex-col-reverse md:flex-row gap-8 items-start w-full">
           
-          <div style={{ flex: '1 1 600px', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+          <div className="flex-1 w-full min-w-0 flex flex-col gap-6">
             
             {/* STAGE 3: BASIC YES/NO */}
             {step === 3 && (
@@ -411,16 +443,16 @@ export default function QuotePage() {
 
       {/* STAGE 7: LEAD CAPTURE MODAL */}
       {step === 7 && (
-        <div style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.8)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, backdropFilter: 'blur(4px)' }}>
-          <div style={{ backgroundColor: '#fff', color: '#000', borderRadius: '12px', width: '90%', maxWidth: '800px', display: 'flex', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }}>
+        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-[1000] backdrop-blur-sm p-4">
+          <div className="bg-white text-black rounded-xl w-full max-w-4xl flex flex-col md:flex-row overflow-hidden shadow-2xl max-h-[90vh] overflow-y-auto">
             
-            <div style={{ flex: 1, backgroundColor: '#4CD964', padding: '3rem', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', color: '#fff' }}>
-              <h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '2rem', color: '#fff' }}>Login/Signup</h2>
-              <span style={{ fontSize: '8rem' }}>🔐</span>
-              <p style={{ marginTop: '2rem', textAlign: 'center', fontWeight: 500, fontSize: '1.1rem' }}>Unlock the best price for your device instantly.</p>
+            <div className="flex-1 bg-[#4CD964] p-8 md:p-12 flex flex-col justify-center items-center text-white text-center">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Login/Signup</h2>
+              <span className="text-6xl md:text-8xl">🔐</span>
+              <p className="mt-6 font-medium text-lg md:text-xl">Unlock the best price for your device instantly.</p>
             </div>
 
-            <div style={{ flex: 1.5, padding: '3rem' }}>
+            <div className="flex-[1.5] p-6 md:p-12">
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '2rem' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', border: '1px solid #e0e0e0', padding: '1rem 1.5rem', borderRadius: '8px', width: '100%' }}>
                   <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} style={{ width: '40px', height: '60px', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
@@ -436,19 +468,31 @@ export default function QuotePage() {
                 <span style={{ fontSize: '1.2rem' }}>🔒</span> Login to unlock the best price
               </div>
 
-              <form onSubmit={showOtpInput ? handleOtpVerify : (e) => { e.preventDefault(); setShowOtpInput(true); }}>
+              <form onSubmit={showOtpInput ? handleOtpVerify : handleSendOtp}>
+                {authError && <div style={{ color: '#FF4C4C', fontSize: '0.85rem', marginBottom: '1rem', textAlign: 'center' }}>{authError}</div>}
+                
                 {!showOtpInput ? (
-                  <div style={{ marginBottom: '2.5rem' }}>
-                    <label style={{ display: 'block', fontSize: '0.85rem', color: '#666', marginBottom: '0.5rem' }}>Enter your phone number</label>
-                    <div style={{ display: 'flex', borderBottom: '2px solid #ccc', paddingBottom: '0.5rem' }}>
-                      <span style={{ fontWeight: 600, marginRight: '0.5rem', fontSize: '1.2rem' }}>+91</span>
-                      <input type="tel" value={userPhone} onChange={(e) => setUserPhone(e.target.value)} placeholder="Enter your Mobile" required style={{ border: 'none', outline: 'none', flex: 1, fontSize: '1.2rem', backgroundColor: 'transparent', color: '#000' }} />
+                  <>
+                    <div style={{ marginBottom: '1.5rem' }}>
+                      <label style={{ display: 'block', fontSize: '0.85rem', color: '#666', marginBottom: '0.5rem' }}>Full Name</label>
+                      <input type="text" value={userName} onChange={(e) => setUserName(e.target.value)} placeholder="John Doe" required style={{ width: '100%', border: 'none', borderBottom: '2px solid #ccc', outline: 'none', fontSize: '1.1rem', paddingBottom: '0.5rem', backgroundColor: 'transparent', color: '#000' }} />
                     </div>
-                  </div>
+                    <div style={{ marginBottom: '1.5rem' }}>
+                      <label style={{ display: 'block', fontSize: '0.85rem', color: '#666', marginBottom: '0.5rem' }}>Email Address</label>
+                      <input type="email" value={userEmail} onChange={(e) => setUserEmail(e.target.value)} placeholder="john@gmail.com" required style={{ width: '100%', border: 'none', borderBottom: '2px solid #ccc', outline: 'none', fontSize: '1.1rem', paddingBottom: '0.5rem', backgroundColor: 'transparent', color: '#000' }} />
+                    </div>
+                    <div style={{ marginBottom: '2.5rem' }}>
+                      <label style={{ display: 'block', fontSize: '0.85rem', color: '#666', marginBottom: '0.5rem' }}>Phone Number</label>
+                      <div style={{ display: 'flex', borderBottom: '2px solid #ccc', paddingBottom: '0.5rem' }}>
+                        <span style={{ fontWeight: 600, marginRight: '0.5rem', fontSize: '1.2rem' }}>+91</span>
+                        <input type="tel" value={userPhone} onChange={(e) => setUserPhone(e.target.value.replace(/\D/g, '').slice(0, 10))} placeholder="Enter your Mobile" required style={{ border: 'none', outline: 'none', flex: 1, fontSize: '1.2rem', backgroundColor: 'transparent', color: '#000' }} />
+                      </div>
+                    </div>
+                  </>
                 ) : (
                   <div style={{ marginBottom: '2.5rem' }}>
-                    <label style={{ display: 'block', fontSize: '0.85rem', color: '#666', marginBottom: '0.5rem' }}>Enter OTP (Use 1234)</label>
-                    <input type="text" value={otp} onChange={(e) => setOtp(e.target.value)} placeholder="4-digit OTP" required maxLength={4} style={{ border: 'none', borderBottom: '2px solid #ccc', outline: 'none', width: '100%', fontSize: '2rem', paddingBottom: '0.5rem', textAlign: 'center', letterSpacing: '1rem', backgroundColor: 'transparent', color: '#000' }} />
+                    <label style={{ display: 'block', fontSize: '0.85rem', color: '#666', marginBottom: '0.5rem' }}>Enter OTP sent to {userPhone}</label>
+                    <input type="text" value={otp} onChange={(e) => setOtp(e.target.value)} placeholder="6-digit OTP" required maxLength={6} style={{ border: 'none', borderBottom: '2px solid #ccc', outline: 'none', width: '100%', fontSize: '2rem', paddingBottom: '0.5rem', textAlign: 'center', letterSpacing: '1rem', backgroundColor: 'transparent', color: '#000' }} />
                   </div>
                 )}
 
@@ -457,8 +501,8 @@ export default function QuotePage() {
                   <label htmlFor="terms" style={{ fontSize: '0.85rem', color: '#666' }}>I agree to the <a href="#" style={{ color: '#4CD964', textDecoration: 'none' }}>Terms and Conditions</a> & <a href="#" style={{ color: '#4CD964', textDecoration: 'none' }}>Privacy Policy</a></label>
                 </div>
 
-                <button type="submit" style={{ width: '100%', padding: '16px', backgroundColor: userPhone.length > 5 ? '#4CD964' : '#e0e0e0', color: userPhone.length > 5 ? '#fff' : '#999', border: 'none', borderRadius: '8px', fontWeight: 700, fontSize: '1.1rem', cursor: userPhone.length > 5 ? 'pointer' : 'not-allowed', transition: 'all 200ms' }}>
-                  CONTINUE
+                <button type="submit" disabled={isAuthLoading} style={{ width: '100%', padding: '16px', backgroundColor: userPhone.length >= 10 ? '#4CD964' : '#e0e0e0', color: userPhone.length >= 10 ? '#fff' : '#999', border: 'none', borderRadius: '8px', fontWeight: 700, fontSize: '1.1rem', cursor: userPhone.length >= 10 ? 'pointer' : 'not-allowed', transition: 'all 200ms', opacity: isAuthLoading ? 0.6 : 1 }}>
+                  {isAuthLoading ? 'PROCESSING...' : (showOtpInput ? 'VERIFY & SEE PRICE' : 'GET EXACT PRICE')}
                 </button>
               </form>
             </div>

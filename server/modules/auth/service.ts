@@ -21,6 +21,7 @@ export async function verifyOtp(phone: string, otp: string, usedReferralCode?: s
   otps.delete(phone);
 
   let user = users.find((u) => u.phone === phone);
+  let isNewUser = false;
   if (!user) {
     const myReferralCode = 'REF' + Math.random().toString(36).substring(2, 6).toUpperCase();
     
@@ -34,8 +35,9 @@ export async function verifyOtp(phone: string, otp: string, usedReferralCode?: s
       }
     }
 
-    user = { id: `u-${Date.now()}`, phone, role: 'buyer', email: null, referralCode: myReferralCode, referredBy };
+    user = { id: `u-${Date.now()}`, phone, name: null, role: 'buyer', email: null, referralCode: myReferralCode, referredBy };
     users.push(user);
+    isNewUser = true;
     logger.info({ userId: user.id, phone }, 'New user registered via OTP verification');
 
     if (referredBy) {
@@ -64,7 +66,8 @@ export async function verifyOtp(phone: string, otp: string, usedReferralCode?: s
   return {
     accessToken,
     refreshToken,
-    user: { id: user.id, phone: user.phone, role: user.role, email: user.email },
+    isNewUser,
+    user: { id: user.id, phone: user.phone, name: user.name, role: user.role, email: user.email },
   };
 }
 

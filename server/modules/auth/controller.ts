@@ -90,6 +90,34 @@ export async function logout(req: Request, res: Response) {
   }
 }
 
+export async function updateProfile(req: Request, res: Response) {
+  try {
+    const userId = (req as any).user?.userId;
+    if (!userId) {
+      return res.status(401).json({ error: 'Unauthorized' });
+    }
+
+    const { name, email } = req.body;
+    
+    // In our mock data we find the user by ID and update it
+    const { users } = require('../../data');
+    const user = users.find((u: any) => u.id === userId);
+    if (!user) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+
+    if (name !== undefined) user.name = name;
+    if (email !== undefined) user.email = email;
+
+    logger.info({ userId }, 'User profile updated');
+    
+    res.json({ success: true, data: { user } });
+  } catch (err) {
+    logger.error(err, 'Update profile error');
+    res.status(500).json({ error: 'Failed to update profile' });
+  }
+}
+
 export function getMe(req: AuthenticatedRequest, res: Response) {
   try {
     if (!req.user) {

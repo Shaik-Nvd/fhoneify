@@ -14,6 +14,7 @@ datasource db {
 model User {
   id           String  @id @default(uuid())
   phone        String  @unique
+  name         String?
   role         String  @default("user") // buyer, seller, admin, tech
   email        String? @unique
   referralCode String? @unique

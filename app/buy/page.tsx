@@ -60,9 +60,9 @@ export default function BuyPage() {
       <p className="eyebrow" style={{ marginBottom: '0.5rem' }}>MARKETPLACE</p>
       <h1 style={{ fontSize: '1.75rem', fontWeight: 300, color: '#fff', marginBottom: '2rem' }}>Buy Refurbished Phones</h1>
 
-      <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
+      <div className="flex flex-col md:flex-row gap-8">
         {/* Sidebar */}
-        <aside style={{ width: '100%', maxWidth: '16rem', flexShrink: 0 }}>
+        <aside className="w-full md:w-64 shrink-0">
           <div className="card" style={{ position: 'sticky', top: '5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <h2 style={{ color: '#d4af37', fontWeight: 600, fontSize: '0.9rem' }}>Filters</h2>
             <div>
@@ -98,10 +98,10 @@ export default function BuyPage() {
         </aside>
 
         {/* Main */}
-        <div style={{ flex: 1, minWidth: '300px' }}>
+        <div className="flex-1 w-full min-w-0">
           {error && <div className="alert-error">{error}</div>}
           {loading ? (
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1rem' }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {[1,2,3,4].map((i) => <div key={i} className="skeleton" style={{ height: '14rem' }} />)}
             </div>
           ) : listings.length === 0 ? (
@@ -112,7 +112,7 @@ export default function BuyPage() {
           ) : (
             <>
               <p style={{ color: '#a0a0a0', fontSize: '0.8rem', marginBottom: '1rem' }}>{listings.length} listing(s) found</p>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1rem' }}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {listings.map((listing) => (
                   <Link key={listing.id} href={`/buy/${listing.id}`} className="card" style={{ display: 'block', textDecoration: 'none', padding: 0, overflow: 'hidden' }}>
                     <div style={{ backgroundColor: '#1a1a1a', height: '8rem', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2.5rem' }}>📱</div>

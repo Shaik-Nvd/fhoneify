@@ -13,6 +13,7 @@ export default function Navbar() {
   const cartCount = useCartStore((s) => s.items.length);
   const [mounted, setMounted] = useState(false);
   const [hoveredMenu, setHoveredMenu] = useState<string | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -94,7 +95,7 @@ export default function Navbar() {
         </Link>
 
         {/* Middle Section: Categorized Navigation */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '2.5rem' }}>
+        <div className="hidden md:flex items-center gap-10">
           {navCategories.map((category) => (
             <div 
               key={category.id}
@@ -174,7 +175,7 @@ export default function Navbar() {
         </div>
 
         {/* Right Section: Auth & Cart */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+        <div className="hidden md:flex items-center gap-6">
           <Link
             href="/cart"
             style={{ color: '#a0a0a0', fontSize: '1rem', fontWeight: 500, textDecoration: 'none', transition: 'color 150ms', position: 'relative' }}
@@ -281,7 +282,65 @@ export default function Navbar() {
             </Link>
           )}
         </div>
+
+        {/* Mobile Hamburger Icon */}
+        <div className="md:hidden flex items-center gap-4">
+          <Link href="/cart" className="relative text-[#a0a0a0]">
+            🛒
+            {mounted && cartCount > 0 && (
+              <span className="absolute -top-2 -right-3 bg-[#d4af37] text-[#0a0a0a] text-[10px] font-bold w-[18px] h-[18px] rounded-full flex items-center justify-center">
+                {cartCount}
+              </span>
+            )}
+          </Link>
+          <button 
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="text-[#d4af37] p-2 focus:outline-none"
+          >
+            <div className="space-y-1.5">
+              <span className={`block w-6 h-0.5 bg-current transition-transform ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+              <span className={`block w-6 h-0.5 bg-current transition-opacity ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
+              <span className={`block w-6 h-0.5 bg-current transition-transform ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+            </div>
+          </button>
+        </div>
       </div>
+
+      {/* Mobile Menu Dropdown */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-[#0a0a0a] border-t border-[#2a2a2a] px-4 py-6 flex flex-col gap-6 absolute w-full left-0">
+          {navCategories.map((cat) => (
+            <div key={cat.id} className="flex flex-col gap-3">
+              <span className="text-[#d4af37] font-semibold text-sm tracking-wider uppercase">{cat.title}</span>
+              <div className="flex flex-col gap-2 pl-4 border-l border-[#2a2a2a]">
+                {cat.items.map((item) => (
+                  <Link key={item.href} href={item.href} onClick={() => setIsMobileMenuOpen(false)} className="text-[#a0a0a0] hover:text-[#fff] transition-colors py-1">
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ))}
+          
+          <div className="border-t border-[#2a2a2a] pt-6 flex flex-col gap-4">
+            {mounted && isAuthenticated && user ? (
+              <>
+                <span className="text-[#fff] font-medium">{user.phone}</span>
+                <Link href="/wallet" onClick={() => setIsMobileMenuOpen(false)} className="text-[#a0a0a0] hover:text-[#d4af37]">Wallet</Link>
+                <Link href="/security" onClick={() => setIsMobileMenuOpen(false)} className="text-[#a0a0a0] hover:text-[#d4af37]">Security</Link>
+                {user.role === 'admin' && (
+                  <Link href="/admin" onClick={() => setIsMobileMenuOpen(false)} className="text-[#d4af37] font-semibold">Admin Panel</Link>
+                )}
+                <button onClick={() => { handleLogout(); setIsMobileMenuOpen(false); }} className="text-left text-[#FF3B30] font-semibold pt-2">Logout</button>
+              </>
+            ) : (
+              <Link href="/auth" onClick={() => setIsMobileMenuOpen(false)} className="bg-[#d4af37] text-[#0a0a0a] text-center font-bold py-3 rounded-lg">
+                Login / Register
+              </Link>
+            )}
+          </div>
+        </div>
+      )}
     </nav>
   );
 }

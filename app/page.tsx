@@ -97,15 +97,15 @@ function SlidingBanner() {
     <div style={{ position: 'relative', width: '100%', overflow: 'hidden', borderRadius: '16px', marginBottom: '4rem', marginTop: '4rem' }} className="glass-panel">
       <div style={{ display: 'flex', transition: 'transform 0.6s cubic-bezier(0.22, 1, 0.36, 1)', transform: `translateX(-${currentIndex * 100}%)` }}>
         {BANNER_ITEMS.map((item) => (
-          <div key={item.id} style={{ minWidth: '100%', padding: '3rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-            <div style={{ maxWidth: '60%' }}>
+          <div key={item.id} className="flex flex-col md:flex-row items-center justify-between" style={{ minWidth: '100%', padding: '2rem md:3rem', gap: '2rem' }}>
+            <div style={{ maxWidth: '100%' }} className="md:max-w-[60%] text-center md:text-left">
               <h2 className="text-gradient-animated" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 700, marginBottom: '1rem', letterSpacing: '-0.02em', display: 'inline-block' }}>{item.title}</h2>
               <p style={{ fontSize: '1.1rem', marginBottom: '2rem', fontWeight: 500, color: '#a0a0a0' }}>{item.desc}</p>
               <Link href={item.link} className="btn-primary" style={{ padding: '12px 32px', fontSize: '1rem', borderRadius: '8px', fontWeight: 600, textDecoration: 'none' }}>
                 {item.cta}
               </Link>
             </div>
-            <div style={{ fontSize: '6rem', opacity: 0.9, filter: 'drop-shadow(0 10px 15px rgba(212,175,55,0.2))' }}>
+            <div className="hidden md:block" style={{ fontSize: '6rem', opacity: 0.9, filter: 'drop-shadow(0 10px 15px rgba(212,175,55,0.2))' }}>
               {item.icon}
             </div>
           </div>
@@ -256,11 +256,11 @@ export default function LandingPage() {
         <m.div style={{ position: 'absolute', bottom: '-20%', right: '-10%', width: '60vw', height: '60vw', borderRadius: '50%', background: 'radial-gradient(circle, rgba(138,43,226,0.15) 0%, rgba(10,10,10,0) 70%)', filter: 'blur(100px)', y: orbY, x: bgXSpringInverse }} />
 
         <div style={{ maxWidth: '80rem', margin: '0 auto', padding: '0 1.5rem', width: '100%', position: 'relative', zIndex: 10 }}>
-          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '4rem' }}>
+          <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
             
             {/* Left Content */}
             <m.div 
-              style={{ flex: '1 1 500px' }}
+              className="w-full md:flex-1"
               variants={containerVariants}
               initial="hidden"
               animate="visible"
@@ -287,7 +287,7 @@ export default function LandingPage() {
                 Experience the future of hardware valuation. Get instant AI quotes for your used devices and buy verified refurbished tech.
               </m.p>
               
-              <m.div variants={itemVariants} style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem' }}>
+              <m.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center md:justify-start">
                 <Link href="/quote" style={{ textDecoration: 'none' }}>
                   <MagneticButton className="btn-primary" style={{ padding: '16px 40px', fontSize: '1rem', boxShadow: '0 10px 30px rgba(212,175,55,0.3)' }}>
                     Get a Quote
@@ -303,7 +303,7 @@ export default function LandingPage() {
 
             {/* Right Content - 3D CSS Phone */}
             <m.div 
-              style={{ flex: '1 1 400px' }}
+              className="w-full md:flex-1 hidden md:block"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.4 }}
@@ -321,7 +321,7 @@ export default function LandingPage() {
       {/* Stats - Glass Bar */}
       <section style={{ backgroundColor: '#0a0a0a', padding: '2rem 0', position: 'relative', zIndex: 20 }}>
         <m.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} style={{ maxWidth: '64rem', margin: '0 auto', padding: '0 1.5rem' }}>
-          <div className="glass-panel" style={{ borderRadius: '16px', padding: '2.5rem 2rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '2rem', textAlign: 'center' }}>
+          <div className="glass-panel grid grid-cols-2 md:grid-cols-4 gap-6 text-center rounded-2xl p-6 md:p-10">
             {STATS.map((s) => (
               <div key={s.label}>
                 <p className="text-gradient-animated" style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '0.5rem', display: 'inline-block' }}>{s.value}</p>

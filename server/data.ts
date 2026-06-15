@@ -14,6 +14,7 @@ export interface Device {
 export interface User {
   id: string;
   phone: string;
+  name?: string | null;
   role: string;
   email: string | null;
   referralCode?: string;
