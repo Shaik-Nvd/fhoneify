@@ -42,7 +42,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 });
 
 // Configure CORS and JSON parsing
-app.use(cors({ origin: ['http://localhost:3000', 'http://127.0.0.1:3000', '*'] }));
+app.use(cors());
 app.use(express.json());
 
 // Serve static quote test page
