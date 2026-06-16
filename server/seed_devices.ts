@@ -4509,191 +4509,1984 @@ export const SEED_DEVICES: Device[] = [
     "color": "Silver",
     "basePrice": 33600
   },
-  { "id": "m1", "brand": "Lenovo", "model": "Legion Phone Duel", "storage": "256GB", "ram": "12GB", "color": "Blue", "basePrice": 25000 },
-  { "id": "m2", "brand": "Nokia", "model": "Nokia X20", "storage": "128GB", "ram": "8GB", "color": "Midnight Sun", "basePrice": 12000 },
-  { "id": "m3", "brand": "Honor", "model": "Honor 90", "storage": "256GB", "ram": "8GB", "color": "Emerald Green", "basePrice": 28000 },
-  { "id": "m4", "brand": "Asus", "model": "ROG Phone 7", "storage": "512GB", "ram": "16GB", "color": "Storm White", "basePrice": 55000 },
-  { "id": "m5", "brand": "POCO", "model": "POCO F5", "storage": "256GB", "ram": "8GB", "color": "Carbon Black", "basePrice": 22000 },
-  { "id": "m6", "brand": "LG", "model": "LG Wing", "storage": "128GB", "ram": "8GB", "color": "Aurora Gray", "basePrice": 15000 },
-  { "id": "m7", "brand": "Infinix", "model": "Infinix Zero Ultra", "storage": "256GB", "ram": "8GB", "color": "Coslight Silver", "basePrice": 20000 },
-  { "id": "m8", "brand": "Tecno", "model": "Phantom V Fold", "storage": "512GB", "ram": "12GB", "color": "Black", "basePrice": 65000 },
-  { "id": "m9", "brand": "iQOO", "model": "iQOO 12", "storage": "256GB", "ram": "12GB", "color": "Alpha", "basePrice": 48000 }
-,
-  { "id": "apple_1000", "brand": "Apple", "model": "Apple iPhone 6", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1001", "brand": "Apple", "model": "Apple iPhone 6 Plus", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1002", "brand": "Apple", "model": "Apple iPhone 6S", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1003", "brand": "Apple", "model": "Apple iPhone 6S Plus", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1004", "brand": "Apple", "model": "Apple iPhone SE 1st Generation", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1005", "brand": "Apple", "model": "Apple iPhone 7", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1006", "brand": "Apple", "model": "Apple iPhone 7 Plus", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1007", "brand": "Apple", "model": "Apple iPhone 8", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1008", "brand": "Apple", "model": "Apple iPhone 8 Plus", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1009", "brand": "Apple", "model": "Apple iPhone X", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1010", "brand": "Apple", "model": "Apple iPhone XR", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1011", "brand": "Apple", "model": "Apple iPhone XS", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1012", "brand": "Apple", "model": "Apple iPhone XS Max", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1013", "brand": "Apple", "model": "Apple iPhone 11", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1014", "brand": "Apple", "model": "Apple iPhone 11 Pro", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1015", "brand": "Apple", "model": "Apple iPhone 11 Pro Max", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1016", "brand": "Apple", "model": "Apple iPhone SE 2020", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1017", "brand": "Apple", "model": "Apple iPhone 12 Mini", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1018", "brand": "Apple", "model": "Apple iPhone 12", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1019", "brand": "Apple", "model": "Apple iPhone 12 Pro", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1020", "brand": "Apple", "model": "Apple iPhone 12 Pro Max", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1021", "brand": "Apple", "model": "Apple iPhone 13 Mini", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1022", "brand": "Apple", "model": "Apple iPhone 13", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1023", "brand": "Apple", "model": "Apple iPhone 13 Pro", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1024", "brand": "Apple", "model": "Apple iPhone 13 Pro Max", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1025", "brand": "Apple", "model": "Apple iPhone SE 2022", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1026", "brand": "Apple", "model": "Apple iPhone 14", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1027", "brand": "Apple", "model": "Apple iPhone 14 Plus", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1028", "brand": "Apple", "model": "Apple iPhone 14 Pro", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1029", "brand": "Apple", "model": "Apple iPhone 14 Pro Max", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1030", "brand": "Apple", "model": "Apple iPhone 15", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1031", "brand": "Apple", "model": "Apple iPhone 15 Plus", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1032", "brand": "Apple", "model": "Apple iPhone 15 Pro", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1033", "brand": "Apple", "model": "Apple iPhone 15 Pro Max", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1034", "brand": "Apple", "model": "Apple iPhone 16", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1035", "brand": "Apple", "model": "Apple iPhone 16 Plus", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1036", "brand": "Apple", "model": "Apple iPhone 16 Pro", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1037", "brand": "Apple", "model": "Apple iPhone 16 Pro Max", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1038", "brand": "Apple", "model": "Apple iPhone 16e", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1039", "brand": "Apple", "model": "Apple iPhone 17", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1040", "brand": "Apple", "model": "Apple iPhone Air", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1041", "brand": "Apple", "model": "Apple iPhone 17 Pro", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1042", "brand": "Apple", "model": "Apple iPhone 17 Pro Max", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_1043", "brand": "Apple", "model": "Apple iPhone 17e", "storage": "128GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 }
-,
-  { "id": "apple_2000", "brand": "Apple", "model": "Apple iPhone 6", "storage": "16GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2001", "brand": "Apple", "model": "Apple iPhone 6", "storage": "32GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2002", "brand": "Apple", "model": "Apple iPhone 6", "storage": "64GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2003", "brand": "Apple", "model": "Apple iPhone 6 Plus", "storage": "16GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2004", "brand": "Apple", "model": "Apple iPhone 6 Plus", "storage": "32GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2005", "brand": "Apple", "model": "Apple iPhone 6 Plus", "storage": "64GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2006", "brand": "Apple", "model": "Apple iPhone 6S", "storage": "16GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2007", "brand": "Apple", "model": "Apple iPhone 6S", "storage": "32GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2008", "brand": "Apple", "model": "Apple iPhone 6S", "storage": "64GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2009", "brand": "Apple", "model": "Apple iPhone 6S Plus", "storage": "16GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2010", "brand": "Apple", "model": "Apple iPhone 6S Plus", "storage": "32GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2011", "brand": "Apple", "model": "Apple iPhone 6S Plus", "storage": "64GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2012", "brand": "Apple", "model": "Apple iPhone SE 1st Generation", "storage": "16GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2013", "brand": "Apple", "model": "Apple iPhone SE 1st Generation", "storage": "32GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2014", "brand": "Apple", "model": "Apple iPhone SE 1st Generation", "storage": "64GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2015", "brand": "Apple", "model": "Apple iPhone 7", "storage": "64GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2016", "brand": "Apple", "model": "Apple iPhone 7", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2017", "brand": "Apple", "model": "Apple iPhone 7", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2018", "brand": "Apple", "model": "Apple iPhone 7 Plus", "storage": "64GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2019", "brand": "Apple", "model": "Apple iPhone 7 Plus", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2020", "brand": "Apple", "model": "Apple iPhone 7 Plus", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2021", "brand": "Apple", "model": "Apple iPhone 8", "storage": "64GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2022", "brand": "Apple", "model": "Apple iPhone 8", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2023", "brand": "Apple", "model": "Apple iPhone 8", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2024", "brand": "Apple", "model": "Apple iPhone 8 Plus", "storage": "64GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2025", "brand": "Apple", "model": "Apple iPhone 8 Plus", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2026", "brand": "Apple", "model": "Apple iPhone 8 Plus", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2027", "brand": "Apple", "model": "Apple iPhone X", "storage": "64GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2028", "brand": "Apple", "model": "Apple iPhone X", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2029", "brand": "Apple", "model": "Apple iPhone X", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2030", "brand": "Apple", "model": "Apple iPhone XR", "storage": "64GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2031", "brand": "Apple", "model": "Apple iPhone XR", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2032", "brand": "Apple", "model": "Apple iPhone XR", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2033", "brand": "Apple", "model": "Apple iPhone XS", "storage": "64GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2034", "brand": "Apple", "model": "Apple iPhone XS", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2035", "brand": "Apple", "model": "Apple iPhone XS", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2036", "brand": "Apple", "model": "Apple iPhone XS Max", "storage": "64GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2037", "brand": "Apple", "model": "Apple iPhone XS Max", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2038", "brand": "Apple", "model": "Apple iPhone XS Max", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2039", "brand": "Apple", "model": "Apple iPhone 11", "storage": "64GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2040", "brand": "Apple", "model": "Apple iPhone 11", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2041", "brand": "Apple", "model": "Apple iPhone 11", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2042", "brand": "Apple", "model": "Apple iPhone 11 Pro", "storage": "64GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2043", "brand": "Apple", "model": "Apple iPhone 11 Pro", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2044", "brand": "Apple", "model": "Apple iPhone 11 Pro", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2045", "brand": "Apple", "model": "Apple iPhone 11 Pro Max", "storage": "64GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2046", "brand": "Apple", "model": "Apple iPhone 11 Pro Max", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2047", "brand": "Apple", "model": "Apple iPhone 11 Pro Max", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2048", "brand": "Apple", "model": "Apple iPhone SE 2020", "storage": "64GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2049", "brand": "Apple", "model": "Apple iPhone SE 2020", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2050", "brand": "Apple", "model": "Apple iPhone SE 2020", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2051", "brand": "Apple", "model": "Apple iPhone 12 Mini", "storage": "64GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2052", "brand": "Apple", "model": "Apple iPhone 12 Mini", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2053", "brand": "Apple", "model": "Apple iPhone 12 Mini", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2054", "brand": "Apple", "model": "Apple iPhone 12", "storage": "64GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2055", "brand": "Apple", "model": "Apple iPhone 12", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2056", "brand": "Apple", "model": "Apple iPhone 12", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2057", "brand": "Apple", "model": "Apple iPhone 12 Pro", "storage": "64GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2058", "brand": "Apple", "model": "Apple iPhone 12 Pro", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2059", "brand": "Apple", "model": "Apple iPhone 12 Pro", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2060", "brand": "Apple", "model": "Apple iPhone 12 Pro Max", "storage": "64GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2061", "brand": "Apple", "model": "Apple iPhone 12 Pro Max", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2062", "brand": "Apple", "model": "Apple iPhone 12 Pro Max", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2063", "brand": "Apple", "model": "Apple iPhone 13 Mini", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2064", "brand": "Apple", "model": "Apple iPhone 13 Mini", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2065", "brand": "Apple", "model": "Apple iPhone 13 Mini", "storage": "1TB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2066", "brand": "Apple", "model": "Apple iPhone 13", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2067", "brand": "Apple", "model": "Apple iPhone 13", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2068", "brand": "Apple", "model": "Apple iPhone 13", "storage": "1TB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2069", "brand": "Apple", "model": "Apple iPhone 13 Pro", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2070", "brand": "Apple", "model": "Apple iPhone 13 Pro", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2071", "brand": "Apple", "model": "Apple iPhone 13 Pro", "storage": "1TB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2072", "brand": "Apple", "model": "Apple iPhone 13 Pro Max", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2073", "brand": "Apple", "model": "Apple iPhone 13 Pro Max", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2074", "brand": "Apple", "model": "Apple iPhone 13 Pro Max", "storage": "1TB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2075", "brand": "Apple", "model": "Apple iPhone SE 2022", "storage": "64GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2076", "brand": "Apple", "model": "Apple iPhone SE 2022", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2077", "brand": "Apple", "model": "Apple iPhone SE 2022", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2078", "brand": "Apple", "model": "Apple iPhone 14", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2079", "brand": "Apple", "model": "Apple iPhone 14", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2080", "brand": "Apple", "model": "Apple iPhone 14", "storage": "1TB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2081", "brand": "Apple", "model": "Apple iPhone 14 Plus", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2082", "brand": "Apple", "model": "Apple iPhone 14 Plus", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2083", "brand": "Apple", "model": "Apple iPhone 14 Plus", "storage": "1TB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2084", "brand": "Apple", "model": "Apple iPhone 14 Pro", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2085", "brand": "Apple", "model": "Apple iPhone 14 Pro", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2086", "brand": "Apple", "model": "Apple iPhone 14 Pro", "storage": "1TB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2087", "brand": "Apple", "model": "Apple iPhone 14 Pro Max", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2088", "brand": "Apple", "model": "Apple iPhone 14 Pro Max", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2089", "brand": "Apple", "model": "Apple iPhone 14 Pro Max", "storage": "1TB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2090", "brand": "Apple", "model": "Apple iPhone 15", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2091", "brand": "Apple", "model": "Apple iPhone 15", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2092", "brand": "Apple", "model": "Apple iPhone 15", "storage": "1TB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2093", "brand": "Apple", "model": "Apple iPhone 15 Plus", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2094", "brand": "Apple", "model": "Apple iPhone 15 Plus", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2095", "brand": "Apple", "model": "Apple iPhone 15 Plus", "storage": "1TB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2096", "brand": "Apple", "model": "Apple iPhone 15 Pro", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2097", "brand": "Apple", "model": "Apple iPhone 15 Pro", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2098", "brand": "Apple", "model": "Apple iPhone 15 Pro", "storage": "1TB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2099", "brand": "Apple", "model": "Apple iPhone 15 Pro Max", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2100", "brand": "Apple", "model": "Apple iPhone 15 Pro Max", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2101", "brand": "Apple", "model": "Apple iPhone 15 Pro Max", "storage": "1TB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2102", "brand": "Apple", "model": "Apple iPhone 16", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2103", "brand": "Apple", "model": "Apple iPhone 16", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2104", "brand": "Apple", "model": "Apple iPhone 16", "storage": "1TB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2105", "brand": "Apple", "model": "Apple iPhone 16 Plus", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2106", "brand": "Apple", "model": "Apple iPhone 16 Plus", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2107", "brand": "Apple", "model": "Apple iPhone 16 Plus", "storage": "1TB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2108", "brand": "Apple", "model": "Apple iPhone 16 Pro", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2109", "brand": "Apple", "model": "Apple iPhone 16 Pro", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2110", "brand": "Apple", "model": "Apple iPhone 16 Pro", "storage": "1TB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2111", "brand": "Apple", "model": "Apple iPhone 16 Pro Max", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2112", "brand": "Apple", "model": "Apple iPhone 16 Pro Max", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2113", "brand": "Apple", "model": "Apple iPhone 16 Pro Max", "storage": "1TB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2114", "brand": "Apple", "model": "Apple iPhone 16e", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2115", "brand": "Apple", "model": "Apple iPhone 16e", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2116", "brand": "Apple", "model": "Apple iPhone 16e", "storage": "1TB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2117", "brand": "Apple", "model": "Apple iPhone 17", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2118", "brand": "Apple", "model": "Apple iPhone 17", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2119", "brand": "Apple", "model": "Apple iPhone 17", "storage": "1TB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2120", "brand": "Apple", "model": "Apple iPhone Air", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2121", "brand": "Apple", "model": "Apple iPhone Air", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2122", "brand": "Apple", "model": "Apple iPhone Air", "storage": "1TB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2123", "brand": "Apple", "model": "Apple iPhone 17 Pro", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2124", "brand": "Apple", "model": "Apple iPhone 17 Pro", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2125", "brand": "Apple", "model": "Apple iPhone 17 Pro", "storage": "1TB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2126", "brand": "Apple", "model": "Apple iPhone 17 Pro Max", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2127", "brand": "Apple", "model": "Apple iPhone 17 Pro Max", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2128", "brand": "Apple", "model": "Apple iPhone 17 Pro Max", "storage": "1TB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2129", "brand": "Apple", "model": "Apple iPhone 17e", "storage": "256GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2130", "brand": "Apple", "model": "Apple iPhone 17e", "storage": "512GB", "ram": "4GB", "color": "Midnight", "basePrice": 0 },
-  { "id": "apple_2131", "brand": "Apple", "model": "Apple iPhone 17e", "storage": "1TB", "ram": "4GB", "color": "Midnight", "basePrice": 0 }
+  {
+    "id": "m1",
+    "brand": "Lenovo",
+    "model": "Legion Phone Duel",
+    "storage": "256GB",
+    "ram": "12GB",
+    "color": "Blue",
+    "basePrice": 25000
+  },
+  {
+    "id": "m2",
+    "brand": "Nokia",
+    "model": "Nokia X20",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight Sun",
+    "basePrice": 12000
+  },
+  {
+    "id": "m3",
+    "brand": "Honor",
+    "model": "Honor 90",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Emerald Green",
+    "basePrice": 28000
+  },
+  {
+    "id": "m4",
+    "brand": "Asus",
+    "model": "ROG Phone 7",
+    "storage": "512GB",
+    "ram": "16GB",
+    "color": "Storm White",
+    "basePrice": 55000
+  },
+  {
+    "id": "m5",
+    "brand": "POCO",
+    "model": "POCO F5",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Carbon Black",
+    "basePrice": 22000
+  },
+  {
+    "id": "m6",
+    "brand": "LG",
+    "model": "LG Wing",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Aurora Gray",
+    "basePrice": 15000
+  },
+  {
+    "id": "m7",
+    "brand": "Infinix",
+    "model": "Infinix Zero Ultra",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Coslight Silver",
+    "basePrice": 20000
+  },
+  {
+    "id": "m8",
+    "brand": "Tecno",
+    "model": "Phantom V Fold",
+    "storage": "512GB",
+    "ram": "12GB",
+    "color": "Black",
+    "basePrice": 65000
+  },
+  {
+    "id": "m9",
+    "brand": "iQOO",
+    "model": "iQOO 12",
+    "storage": "256GB",
+    "ram": "12GB",
+    "color": "Alpha",
+    "basePrice": 48000
+  },
+  {
+    "id": "apple_1000",
+    "brand": "Apple",
+    "model": "Apple iPhone 6",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_1001",
+    "brand": "Apple",
+    "model": "Apple iPhone 6 Plus",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_1002",
+    "brand": "Apple",
+    "model": "Apple iPhone 6S",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_1003",
+    "brand": "Apple",
+    "model": "Apple iPhone 6S Plus",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_1004",
+    "brand": "Apple",
+    "model": "Apple iPhone SE 1st Generation",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 2270
+  },
+  {
+    "id": "apple_1005",
+    "brand": "Apple",
+    "model": "Apple iPhone 7",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 4660
+  },
+  {
+    "id": "apple_1006",
+    "brand": "Apple",
+    "model": "Apple iPhone 7 Plus",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5590
+  },
+  {
+    "id": "apple_1007",
+    "brand": "Apple",
+    "model": "Apple iPhone 8",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 6210
+  },
+  {
+    "id": "apple_1008",
+    "brand": "Apple",
+    "model": "Apple iPhone 8 Plus",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 7230
+  },
+  {
+    "id": "apple_1009",
+    "brand": "Apple",
+    "model": "Apple iPhone X",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_1010",
+    "brand": "Apple",
+    "model": "Apple iPhone XR",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 10710
+  },
+  {
+    "id": "apple_1011",
+    "brand": "Apple",
+    "model": "Apple iPhone XS",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_1012",
+    "brand": "Apple",
+    "model": "Apple iPhone XS Max",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_1013",
+    "brand": "Apple",
+    "model": "Apple iPhone 11",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 14020
+  },
+  {
+    "id": "apple_1014",
+    "brand": "Apple",
+    "model": "Apple iPhone 11 Pro",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_1015",
+    "brand": "Apple",
+    "model": "Apple iPhone 11 Pro Max",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_1016",
+    "brand": "Apple",
+    "model": "Apple iPhone SE 2020",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_1017",
+    "brand": "Apple",
+    "model": "Apple iPhone 12 Mini",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 15810
+  },
+  {
+    "id": "apple_1018",
+    "brand": "Apple",
+    "model": "Apple iPhone 12",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 17580
+  },
+  {
+    "id": "apple_1019",
+    "brand": "Apple",
+    "model": "Apple iPhone 12 Pro",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 23450
+  },
+  {
+    "id": "apple_1020",
+    "brand": "Apple",
+    "model": "Apple iPhone 12 Pro Max",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 25600
+  },
+  {
+    "id": "apple_1021",
+    "brand": "Apple",
+    "model": "Apple iPhone 13 Mini",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 21710
+  },
+  {
+    "id": "apple_1022",
+    "brand": "Apple",
+    "model": "Apple iPhone 13",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 23950
+  },
+  {
+    "id": "apple_1023",
+    "brand": "Apple",
+    "model": "Apple iPhone 13 Pro",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 33100
+  },
+  {
+    "id": "apple_1024",
+    "brand": "Apple",
+    "model": "Apple iPhone 13 Pro Max",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 35890
+  },
+  {
+    "id": "apple_1025",
+    "brand": "Apple",
+    "model": "Apple iPhone SE 2022",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 12250
+  },
+  {
+    "id": "apple_1026",
+    "brand": "Apple",
+    "model": "Apple iPhone 14",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 26730
+  },
+  {
+    "id": "apple_1027",
+    "brand": "Apple",
+    "model": "Apple iPhone 14 Plus",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 29120
+  },
+  {
+    "id": "apple_1028",
+    "brand": "Apple",
+    "model": "Apple iPhone 14 Pro",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 41150
+  },
+  {
+    "id": "apple_1029",
+    "brand": "Apple",
+    "model": "Apple iPhone 14 Pro Max",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 43780
+  },
+  {
+    "id": "apple_1030",
+    "brand": "Apple",
+    "model": "Apple iPhone 15",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 38040
+  },
+  {
+    "id": "apple_1031",
+    "brand": "Apple",
+    "model": "Apple iPhone 15 Plus",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 44730
+  },
+  {
+    "id": "apple_1032",
+    "brand": "Apple",
+    "model": "Apple iPhone 15 Pro",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 62600
+  },
+  {
+    "id": "apple_1033",
+    "brand": "Apple",
+    "model": "Apple iPhone 15 Pro Max",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_1034",
+    "brand": "Apple",
+    "model": "Apple iPhone 16",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 46550
+  },
+  {
+    "id": "apple_1035",
+    "brand": "Apple",
+    "model": "Apple iPhone 16 Plus",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 52820
+  },
+  {
+    "id": "apple_1036",
+    "brand": "Apple",
+    "model": "Apple iPhone 16 Pro",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 71900
+  },
+  {
+    "id": "apple_1037",
+    "brand": "Apple",
+    "model": "Apple iPhone 16 Pro Max",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_1038",
+    "brand": "Apple",
+    "model": "Apple iPhone 16e",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 36270
+  },
+  {
+    "id": "apple_1039",
+    "brand": "Apple",
+    "model": "Apple iPhone 17",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_1040",
+    "brand": "Apple",
+    "model": "Apple iPhone Air",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_1041",
+    "brand": "Apple",
+    "model": "Apple iPhone 17 Pro",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_1042",
+    "brand": "Apple",
+    "model": "Apple iPhone 17 Pro Max",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_1043",
+    "brand": "Apple",
+    "model": "Apple iPhone 17e",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2000",
+    "brand": "Apple",
+    "model": "Apple iPhone 6",
+    "storage": "16GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2001",
+    "brand": "Apple",
+    "model": "Apple iPhone 6",
+    "storage": "32GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2002",
+    "brand": "Apple",
+    "model": "Apple iPhone 6",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2003",
+    "brand": "Apple",
+    "model": "Apple iPhone 6 Plus",
+    "storage": "16GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2004",
+    "brand": "Apple",
+    "model": "Apple iPhone 6 Plus",
+    "storage": "32GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2005",
+    "brand": "Apple",
+    "model": "Apple iPhone 6 Plus",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2006",
+    "brand": "Apple",
+    "model": "Apple iPhone 6S",
+    "storage": "16GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2007",
+    "brand": "Apple",
+    "model": "Apple iPhone 6S",
+    "storage": "32GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2008",
+    "brand": "Apple",
+    "model": "Apple iPhone 6S",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2009",
+    "brand": "Apple",
+    "model": "Apple iPhone 6S Plus",
+    "storage": "16GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2010",
+    "brand": "Apple",
+    "model": "Apple iPhone 6S Plus",
+    "storage": "32GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2011",
+    "brand": "Apple",
+    "model": "Apple iPhone 6S Plus",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2012",
+    "brand": "Apple",
+    "model": "Apple iPhone SE 1st Generation",
+    "storage": "16GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2013",
+    "brand": "Apple",
+    "model": "Apple iPhone SE 1st Generation",
+    "storage": "32GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 2050
+  },
+  {
+    "id": "apple_2014",
+    "brand": "Apple",
+    "model": "Apple iPhone SE 1st Generation",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 2200
+  },
+  {
+    "id": "apple_2015",
+    "brand": "Apple",
+    "model": "Apple iPhone 7",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2016",
+    "brand": "Apple",
+    "model": "Apple iPhone 7",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 4770
+  },
+  {
+    "id": "apple_2017",
+    "brand": "Apple",
+    "model": "Apple iPhone 7",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2018",
+    "brand": "Apple",
+    "model": "Apple iPhone 7 Plus",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2019",
+    "brand": "Apple",
+    "model": "Apple iPhone 7 Plus",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 6100
+  },
+  {
+    "id": "apple_2020",
+    "brand": "Apple",
+    "model": "Apple iPhone 7 Plus",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2021",
+    "brand": "Apple",
+    "model": "Apple iPhone 8",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5870
+  },
+  {
+    "id": "apple_2022",
+    "brand": "Apple",
+    "model": "Apple iPhone 8",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 6480
+  },
+  {
+    "id": "apple_2023",
+    "brand": "Apple",
+    "model": "Apple iPhone 8",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2024",
+    "brand": "Apple",
+    "model": "Apple iPhone 8 Plus",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 7120
+  },
+  {
+    "id": "apple_2025",
+    "brand": "Apple",
+    "model": "Apple iPhone 8 Plus",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 7750
+  },
+  {
+    "id": "apple_2026",
+    "brand": "Apple",
+    "model": "Apple iPhone 8 Plus",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2027",
+    "brand": "Apple",
+    "model": "Apple iPhone X",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 9670
+  },
+  {
+    "id": "apple_2028",
+    "brand": "Apple",
+    "model": "Apple iPhone X",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 10240
+  },
+  {
+    "id": "apple_2029",
+    "brand": "Apple",
+    "model": "Apple iPhone X",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2030",
+    "brand": "Apple",
+    "model": "Apple iPhone XR",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 9850
+  },
+  {
+    "id": "apple_2031",
+    "brand": "Apple",
+    "model": "Apple iPhone XR",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 11160
+  },
+  {
+    "id": "apple_2032",
+    "brand": "Apple",
+    "model": "Apple iPhone XR",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2033",
+    "brand": "Apple",
+    "model": "Apple iPhone XS",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 10640
+  },
+  {
+    "id": "apple_2034",
+    "brand": "Apple",
+    "model": "Apple iPhone XS",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 12100
+  },
+  {
+    "id": "apple_2035",
+    "brand": "Apple",
+    "model": "Apple iPhone XS",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 12230
+  },
+  {
+    "id": "apple_2036",
+    "brand": "Apple",
+    "model": "Apple iPhone XS Max",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 12240
+  },
+  {
+    "id": "apple_2037",
+    "brand": "Apple",
+    "model": "Apple iPhone XS Max",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 13050
+  },
+  {
+    "id": "apple_2038",
+    "brand": "Apple",
+    "model": "Apple iPhone XS Max",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 13530
+  },
+  {
+    "id": "apple_2039",
+    "brand": "Apple",
+    "model": "Apple iPhone 11",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 13220
+  },
+  {
+    "id": "apple_2040",
+    "brand": "Apple",
+    "model": "Apple iPhone 11",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 14680
+  },
+  {
+    "id": "apple_2041",
+    "brand": "Apple",
+    "model": "Apple iPhone 11",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2042",
+    "brand": "Apple",
+    "model": "Apple iPhone 11 Pro",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 15840
+  },
+  {
+    "id": "apple_2043",
+    "brand": "Apple",
+    "model": "Apple iPhone 11 Pro",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 17580
+  },
+  {
+    "id": "apple_2044",
+    "brand": "Apple",
+    "model": "Apple iPhone 11 Pro",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 18310
+  },
+  {
+    "id": "apple_2045",
+    "brand": "Apple",
+    "model": "Apple iPhone 11 Pro Max",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 17120
+  },
+  {
+    "id": "apple_2046",
+    "brand": "Apple",
+    "model": "Apple iPhone 11 Pro Max",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 19220
+  },
+  {
+    "id": "apple_2047",
+    "brand": "Apple",
+    "model": "Apple iPhone 11 Pro Max",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 19950
+  },
+  {
+    "id": "apple_2048",
+    "brand": "Apple",
+    "model": "Apple iPhone SE 2020",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2049",
+    "brand": "Apple",
+    "model": "Apple iPhone SE 2020",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2050",
+    "brand": "Apple",
+    "model": "Apple iPhone SE 2020",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2051",
+    "brand": "Apple",
+    "model": "Apple iPhone 12 Mini",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 13860
+  },
+  {
+    "id": "apple_2052",
+    "brand": "Apple",
+    "model": "Apple iPhone 12 Mini",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 16490
+  },
+  {
+    "id": "apple_2053",
+    "brand": "Apple",
+    "model": "Apple iPhone 12 Mini",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2054",
+    "brand": "Apple",
+    "model": "Apple iPhone 12",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 16850
+  },
+  {
+    "id": "apple_2055",
+    "brand": "Apple",
+    "model": "Apple iPhone 12",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 19320
+  },
+  {
+    "id": "apple_2056",
+    "brand": "Apple",
+    "model": "Apple iPhone 12",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2057",
+    "brand": "Apple",
+    "model": "Apple iPhone 12 Pro",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2058",
+    "brand": "Apple",
+    "model": "Apple iPhone 12 Pro",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 25110
+  },
+  {
+    "id": "apple_2059",
+    "brand": "Apple",
+    "model": "Apple iPhone 12 Pro",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 26400
+  },
+  {
+    "id": "apple_2060",
+    "brand": "Apple",
+    "model": "Apple iPhone 12 Pro Max",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2061",
+    "brand": "Apple",
+    "model": "Apple iPhone 12 Pro Max",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 26650
+  },
+  {
+    "id": "apple_2062",
+    "brand": "Apple",
+    "model": "Apple iPhone 12 Pro Max",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 27620
+  },
+  {
+    "id": "apple_2063",
+    "brand": "Apple",
+    "model": "Apple iPhone 13 Mini",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 22080
+  },
+  {
+    "id": "apple_2064",
+    "brand": "Apple",
+    "model": "Apple iPhone 13 Mini",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 22270
+  },
+  {
+    "id": "apple_2065",
+    "brand": "Apple",
+    "model": "Apple iPhone 13 Mini",
+    "storage": "1TB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2066",
+    "brand": "Apple",
+    "model": "Apple iPhone 13",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 25490
+  },
+  {
+    "id": "apple_2067",
+    "brand": "Apple",
+    "model": "Apple iPhone 13",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 25980
+  },
+  {
+    "id": "apple_2068",
+    "brand": "Apple",
+    "model": "Apple iPhone 13",
+    "storage": "1TB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2069",
+    "brand": "Apple",
+    "model": "Apple iPhone 13 Pro",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 34880
+  },
+  {
+    "id": "apple_2070",
+    "brand": "Apple",
+    "model": "Apple iPhone 13 Pro",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 36020
+  },
+  {
+    "id": "apple_2071",
+    "brand": "Apple",
+    "model": "Apple iPhone 13 Pro",
+    "storage": "1TB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2072",
+    "brand": "Apple",
+    "model": "Apple iPhone 13 Pro Max",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 37670
+  },
+  {
+    "id": "apple_2073",
+    "brand": "Apple",
+    "model": "Apple iPhone 13 Pro Max",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 38610
+  },
+  {
+    "id": "apple_2074",
+    "brand": "Apple",
+    "model": "Apple iPhone 13 Pro Max",
+    "storage": "1TB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2075",
+    "brand": "Apple",
+    "model": "Apple iPhone SE 2022",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 11690
+  },
+  {
+    "id": "apple_2076",
+    "brand": "Apple",
+    "model": "Apple iPhone SE 2022",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 12810
+  },
+  {
+    "id": "apple_2077",
+    "brand": "Apple",
+    "model": "Apple iPhone SE 2022",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2078",
+    "brand": "Apple",
+    "model": "Apple iPhone 14",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 28590
+  },
+  {
+    "id": "apple_2079",
+    "brand": "Apple",
+    "model": "Apple iPhone 14",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 28750
+  },
+  {
+    "id": "apple_2080",
+    "brand": "Apple",
+    "model": "Apple iPhone 14",
+    "storage": "1TB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2081",
+    "brand": "Apple",
+    "model": "Apple iPhone 14 Plus",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 30290
+  },
+  {
+    "id": "apple_2082",
+    "brand": "Apple",
+    "model": "Apple iPhone 14 Plus",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 31270
+  },
+  {
+    "id": "apple_2083",
+    "brand": "Apple",
+    "model": "Apple iPhone 14 Plus",
+    "storage": "1TB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2084",
+    "brand": "Apple",
+    "model": "Apple iPhone 14 Pro",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 43580
+  },
+  {
+    "id": "apple_2085",
+    "brand": "Apple",
+    "model": "Apple iPhone 14 Pro",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 45690
+  },
+  {
+    "id": "apple_2086",
+    "brand": "Apple",
+    "model": "Apple iPhone 14 Pro",
+    "storage": "1TB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2087",
+    "brand": "Apple",
+    "model": "Apple iPhone 14 Pro Max",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 46290
+  },
+  {
+    "id": "apple_2088",
+    "brand": "Apple",
+    "model": "Apple iPhone 14 Pro Max",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 47020
+  },
+  {
+    "id": "apple_2089",
+    "brand": "Apple",
+    "model": "Apple iPhone 14 Pro Max",
+    "storage": "1TB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2090",
+    "brand": "Apple",
+    "model": "Apple iPhone 15",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 43600
+  },
+  {
+    "id": "apple_2091",
+    "brand": "Apple",
+    "model": "Apple iPhone 15",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 45570
+  },
+  {
+    "id": "apple_2092",
+    "brand": "Apple",
+    "model": "Apple iPhone 15",
+    "storage": "1TB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2093",
+    "brand": "Apple",
+    "model": "Apple iPhone 15 Plus",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 48480
+  },
+  {
+    "id": "apple_2094",
+    "brand": "Apple",
+    "model": "Apple iPhone 15 Plus",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 49250
+  },
+  {
+    "id": "apple_2095",
+    "brand": "Apple",
+    "model": "Apple iPhone 15 Plus",
+    "storage": "1TB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2096",
+    "brand": "Apple",
+    "model": "Apple iPhone 15 Pro",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 66790
+  },
+  {
+    "id": "apple_2097",
+    "brand": "Apple",
+    "model": "Apple iPhone 15 Pro",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 69030
+  },
+  {
+    "id": "apple_2098",
+    "brand": "Apple",
+    "model": "Apple iPhone 15 Pro",
+    "storage": "1TB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2099",
+    "brand": "Apple",
+    "model": "Apple iPhone 15 Pro Max",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 73610
+  },
+  {
+    "id": "apple_2100",
+    "brand": "Apple",
+    "model": "Apple iPhone 15 Pro Max",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 75950
+  },
+  {
+    "id": "apple_2101",
+    "brand": "Apple",
+    "model": "Apple iPhone 15 Pro Max",
+    "storage": "1TB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2102",
+    "brand": "Apple",
+    "model": "Apple iPhone 16",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 50960
+  },
+  {
+    "id": "apple_2103",
+    "brand": "Apple",
+    "model": "Apple iPhone 16",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 52470
+  },
+  {
+    "id": "apple_2104",
+    "brand": "Apple",
+    "model": "Apple iPhone 16",
+    "storage": "1TB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2105",
+    "brand": "Apple",
+    "model": "Apple iPhone 16 Plus",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 53020
+  },
+  {
+    "id": "apple_2106",
+    "brand": "Apple",
+    "model": "Apple iPhone 16 Plus",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 55040
+  },
+  {
+    "id": "apple_2107",
+    "brand": "Apple",
+    "model": "Apple iPhone 16 Plus",
+    "storage": "1TB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2108",
+    "brand": "Apple",
+    "model": "Apple iPhone 16 Pro",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 77000
+  },
+  {
+    "id": "apple_2109",
+    "brand": "Apple",
+    "model": "Apple iPhone 16 Pro",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 79000
+  },
+  {
+    "id": "apple_2110",
+    "brand": "Apple",
+    "model": "Apple iPhone 16 Pro",
+    "storage": "1TB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2111",
+    "brand": "Apple",
+    "model": "Apple iPhone 16 Pro Max",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 88000
+  },
+  {
+    "id": "apple_2112",
+    "brand": "Apple",
+    "model": "Apple iPhone 16 Pro Max",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 91000
+  },
+  {
+    "id": "apple_2113",
+    "brand": "Apple",
+    "model": "Apple iPhone 16 Pro Max",
+    "storage": "1TB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2114",
+    "brand": "Apple",
+    "model": "Apple iPhone 16e",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 39000
+  },
+  {
+    "id": "apple_2115",
+    "brand": "Apple",
+    "model": "Apple iPhone 16e",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 41600
+  },
+  {
+    "id": "apple_2116",
+    "brand": "Apple",
+    "model": "Apple iPhone 16e",
+    "storage": "1TB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2117",
+    "brand": "Apple",
+    "model": "Apple iPhone 17",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 56500
+  },
+  {
+    "id": "apple_2118",
+    "brand": "Apple",
+    "model": "Apple iPhone 17",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 65000
+  },
+  {
+    "id": "apple_2119",
+    "brand": "Apple",
+    "model": "Apple iPhone 17",
+    "storage": "1TB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2120",
+    "brand": "Apple",
+    "model": "Apple iPhone Air",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2121",
+    "brand": "Apple",
+    "model": "Apple iPhone Air",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2122",
+    "brand": "Apple",
+    "model": "Apple iPhone Air",
+    "storage": "1TB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2123",
+    "brand": "Apple",
+    "model": "Apple iPhone 17 Pro",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 102000
+  },
+  {
+    "id": "apple_2124",
+    "brand": "Apple",
+    "model": "Apple iPhone 17 Pro",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 106500
+  },
+  {
+    "id": "apple_2125",
+    "brand": "Apple",
+    "model": "Apple iPhone 17 Pro",
+    "storage": "1TB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2126",
+    "brand": "Apple",
+    "model": "Apple iPhone 17 Pro Max",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 107500
+  },
+  {
+    "id": "apple_2127",
+    "brand": "Apple",
+    "model": "Apple iPhone 17 Pro Max",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 114500
+  },
+  {
+    "id": "apple_2128",
+    "brand": "Apple",
+    "model": "Apple iPhone 17 Pro Max",
+    "storage": "1TB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "apple_2129",
+    "brand": "Apple",
+    "model": "Apple iPhone 17e",
+    "storage": "256GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 45200
+  },
+  {
+    "id": "apple_2130",
+    "brand": "Apple",
+    "model": "Apple iPhone 17e",
+    "storage": "512GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 53200
+  },
+  {
+    "id": "apple_2131",
+    "brand": "Apple",
+    "model": "Apple iPhone 17e",
+    "storage": "1TB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 0
+  },
+  {
+    "id": "pdf_10000",
+    "brand": "Apple",
+    "model": "Apple iPhone 11",
+    "storage": "4GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 14020
+  },
+  {
+    "id": "pdf_10001",
+    "brand": "Apple",
+    "model": "Apple iPhone 11 (4 GB/128 GB)",
+    "storage": "Standard",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 14020
+  },
+  {
+    "id": "pdf_10002",
+    "brand": "Apple",
+    "model": "Apple iPhone 11 (4 GB/64 GB)",
+    "storage": "Standard",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 13220
+  },
+  {
+    "id": "pdf_10003",
+    "brand": "Apple",
+    "model": "Apple iPhone 12",
+    "storage": "4GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 17580
+  },
+  {
+    "id": "pdf_10004",
+    "brand": "Apple",
+    "model": "Apple iPhone 12 (4 GB/128 GB)",
+    "storage": "Standard",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 17580
+  },
+  {
+    "id": "pdf_10005",
+    "brand": "Apple",
+    "model": "Apple iPhone 12 (4 GB/64 GB)",
+    "storage": "Standard",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 16850
+  },
+  {
+    "id": "pdf_10006",
+    "brand": "Apple",
+    "model": "Apple iPhone 13",
+    "storage": "4GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 23950
+  },
+  {
+    "id": "pdf_10007",
+    "brand": "Apple",
+    "model": "Apple iPhone 13",
+    "storage": "6GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 33100
+  },
+  {
+    "id": "pdf_10008",
+    "brand": "Apple",
+    "model": "Apple iPhone 13 (4 GB/128 GB)",
+    "storage": "Standard",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 23950
+  },
+  {
+    "id": "pdf_10009",
+    "brand": "Apple",
+    "model": "Apple iPhone 13 Pro",
+    "storage": "6GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 33100
+  },
+  {
+    "id": "pdf_10010",
+    "brand": "Apple",
+    "model": "Apple iPhone 13 Pro",
+    "storage": "N/A",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 37150
+  },
+  {
+    "id": "pdf_10011",
+    "brand": "Apple",
+    "model": "Apple iPhone 13 Pro (6 GB/128 GB)",
+    "storage": "Standard",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 33100
+  },
+  {
+    "id": "pdf_10012",
+    "brand": "Apple",
+    "model": "Apple iPhone 13 Pro Max",
+    "storage": "N/A",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 39620
+  },
+  {
+    "id": "pdf_10013",
+    "brand": "Apple",
+    "model": "Apple iPhone 14",
+    "storage": "6GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 41150
+  },
+  {
+    "id": "pdf_10014",
+    "brand": "Apple",
+    "model": "Apple iPhone 14 (6 GB/128 GB)",
+    "storage": "Standard",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 26730
+  },
+  {
+    "id": "pdf_10015",
+    "brand": "Apple",
+    "model": "Apple iPhone 14 Pro",
+    "storage": "6GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 41150
+  },
+  {
+    "id": "pdf_10016",
+    "brand": "Apple",
+    "model": "Apple iPhone 14 Pro",
+    "storage": "N/A",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 46580
+  },
+  {
+    "id": "pdf_10017",
+    "brand": "Apple",
+    "model": "Apple iPhone 14 Pro (6 GB/128 GB)",
+    "storage": "Standard",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 41150
+  },
+  {
+    "id": "pdf_10018",
+    "brand": "Apple",
+    "model": "Apple iPhone 14 Pro Max",
+    "storage": "N/A",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 48230
+  },
+  {
+    "id": "pdf_10019",
+    "brand": "Apple",
+    "model": "Apple iPhone 15",
+    "storage": "6GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 38040
+  },
+  {
+    "id": "pdf_10020",
+    "brand": "Apple",
+    "model": "Apple iPhone 15 (6 GB/128 GB)",
+    "storage": "Standard",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 38040
+  },
+  {
+    "id": "pdf_10021",
+    "brand": "Apple",
+    "model": "Apple iPhone 15 Pro",
+    "storage": "N/A",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 70300
+  },
+  {
+    "id": "pdf_10022",
+    "brand": "Apple",
+    "model": "Apple iPhone 15 Pro Max",
+    "storage": "N/A",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 79070
+  },
+  {
+    "id": "pdf_10023",
+    "brand": "Apple",
+    "model": "Apple iPhone 16 Pro",
+    "storage": "N/A",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 80500
+  },
+  {
+    "id": "pdf_10024",
+    "brand": "Apple",
+    "model": "Apple iPhone 16 Pro Max",
+    "storage": "N/A",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 93500
+  },
+  {
+    "id": "pdf_10025",
+    "brand": "Apple",
+    "model": "Apple iPhone 17 Pro",
+    "storage": "N/A",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 111500
+  },
+  {
+    "id": "pdf_10026",
+    "brand": "Apple",
+    "model": "Apple iPhone 17 Pro Max",
+    "storage": "N/A",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 124000
+  },
+  {
+    "id": "pdf_10027",
+    "brand": "Apple",
+    "model": "Apple iPhone 7",
+    "storage": "32GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 4430
+  },
+  {
+    "id": "pdf_10028",
+    "brand": "Apple",
+    "model": "Apple iPhone 7 Plus",
+    "storage": "32GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5190
+  },
+  {
+    "id": "pdf_10029",
+    "brand": "Apple",
+    "model": "Apple iPhone X",
+    "storage": "3GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 9850
+  },
+  {
+    "id": "pdf_10030",
+    "brand": "Apple",
+    "model": "Apple iPhone XR",
+    "storage": "3GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 9850
+  },
+  {
+    "id": "pdf_10031",
+    "brand": "Apple",
+    "model": "Apple iPhone XR (3 GB/64 GB)",
+    "storage": "Standard",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 9850
+  },
+  {
+    "id": "pdf_10032",
+    "brand": "OnePlus",
+    "model": "One Plus 9 Pro",
+    "storage": "12GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 13360
+  },
+  {
+    "id": "pdf_10033",
+    "brand": "OnePlus",
+    "model": "One Plus 9 Pro",
+    "storage": "8GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 12150
+  },
+  {
+    "id": "pdf_10034",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Note 20",
+    "storage": "Standard",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 9270
+  }
 ];

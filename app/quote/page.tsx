@@ -151,6 +151,7 @@ export default function QuotePage() {
     
     const parseStorage = (s: string) => {
       const val = parseFloat(s);
+      if (isNaN(val)) return -1;
       if (s.includes('TB')) return val * 1024;
       if (s.includes('GB')) return val;
       if (s.includes('MB')) return val / 1024;
