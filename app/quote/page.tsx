@@ -147,7 +147,17 @@ export default function QuotePage() {
   }, [allDevices, selectedBrand]);
   const storageOptions = useMemo(() => {
     if (!selectedBrand || !selectedModel) return [];
-    return [...new Set(allDevices.filter((d) => d.brand === selectedBrand && d.model === selectedModel).map((d) => d.storage).filter(Boolean))].sort();
+    const storageList = [...new Set(allDevices.filter((d) => d.brand === selectedBrand && d.model === selectedModel).map((d) => d.storage).filter(Boolean))];
+    
+    const parseStorage = (s: string) => {
+      const val = parseFloat(s);
+      if (s.includes('TB')) return val * 1024;
+      if (s.includes('GB')) return val;
+      if (s.includes('MB')) return val / 1024;
+      return val;
+    };
+    
+    return storageList.sort((a, b) => parseStorage(a) - parseStorage(b));
   }, [allDevices, selectedBrand, selectedModel]);
   const selectedDevice = useMemo(() => {
     if (!selectedBrand || !selectedModel || !selectedStorage) return null;
