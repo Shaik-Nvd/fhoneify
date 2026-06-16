@@ -287,7 +287,7 @@ export default function QuotePage() {
     <div className="w-full md:max-w-[300px] shrink-0 bg-white border border-[#e0e0e0] rounded-xl p-6 md:sticky md:top-8 text-black mb-8 md:mb-0">
       <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', borderBottom: '1px solid #e0e0e0', paddingBottom: '1rem', marginBottom: '1rem' }}>
         <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} style={{ width: '40px', height: '60px', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
-        <span style={{ fontWeight: 600, fontSize: '0.9rem' }}>{selectedBrand} {selectedModel} ({selectedStorage})</span>
+        <span style={{ fontWeight: 600, fontSize: '0.9rem' }}>{selectedModel.startsWith(selectedBrand) ? selectedModel : `${selectedBrand} ${selectedModel}`} ({selectedStorage})</span>
       </div>
       
       <h3 style={{ color: '#666', fontSize: '0.85rem', marginBottom: '1rem', fontWeight: 500 }}>Device Evaluation</h3>
@@ -346,12 +346,18 @@ export default function QuotePage() {
             <>
               <h2 style={{ color: '#fff', fontWeight: 600, fontSize: '1.25rem', textAlign: 'center', marginBottom: '1rem' }}>Select Brand</h2>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))', gap: '1rem' }}>
-                {brands.map((b) => (
-                  <button key={b} onClick={() => handleBrandSelect(b)} className="card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', padding: '1.5rem 1rem', border: '1px solid #2a2a2a', backgroundColor: '#111', borderRadius: '12px', cursor: 'pointer', transition: 'all 200ms' }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = '#4CD964'; e.currentTarget.style.transform = 'translateY(-2px)'; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = '#2a2a2a'; e.currentTarget.style.transform = 'translateY(0)'; }}>
-                    <img src={BRAND_LOGOS[b] || '/images/placeholder-phone.svg'} alt={b} style={{ width: '48px', height: '48px', objectFit: 'contain', filter: ['Nothing', 'Realme'].includes(b) ? 'invert(1)' : 'none' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; }} />
-                    <span style={{ fontSize: '0.85rem', fontWeight: 500, color: '#fff' }}>{b}</span>
-                  </button>
-                ))}
+                {brands.length === 0 ? (
+                  Array.from({ length: 12 }).map((_, i) => (
+                    <div key={i} className="card skeleton" style={{ height: '110px', borderRadius: '12px', border: '1px solid #2a2a2a' }}></div>
+                  ))
+                ) : (
+                  brands.map((b) => (
+                    <button key={b} onClick={() => handleBrandSelect(b)} className="card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', padding: '1.5rem 1rem', border: '1px solid #2a2a2a', backgroundColor: '#111', borderRadius: '12px', cursor: 'pointer', transition: 'all 200ms' }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = '#4CD964'; e.currentTarget.style.transform = 'translateY(-2px)'; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = '#2a2a2a'; e.currentTarget.style.transform = 'translateY(0)'; }}>
+                      <img src={BRAND_LOGOS[b] || '/images/placeholder-phone.svg'} alt={b} style={{ width: '48px', height: '48px', objectFit: 'contain', filter: ['Nothing', 'Realme'].includes(b) ? 'invert(1)' : 'none' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; }} />
+                      <span style={{ fontSize: '0.85rem', fontWeight: 500, color: '#fff' }}>{b}</span>
+                    </button>
+                  ))
+                )}
               </div>
             </>
           )}
@@ -401,7 +407,7 @@ export default function QuotePage() {
         <div className="card" style={{ maxWidth: '700px', margin: '0 auto', padding: '3rem 2rem', display: 'flex', alignItems: 'center', gap: '3rem', backgroundColor: '#fff', border: '1px solid #e0e0e0', borderRadius: '12px' }}>
           <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} style={{ width: '120px', height: '180px', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', flex: 1, color: '#000' }}>
-            <h2 style={{ fontSize: '1.4rem', fontWeight: 500 }}>Sell Old {selectedBrand} {selectedModel} ({selectedStorage})</h2>
+            <h2 style={{ fontSize: '1.4rem', fontWeight: 500 }}>Sell Old {selectedModel.startsWith(selectedBrand) ? selectedModel : `${selectedBrand} ${selectedModel}`} ({selectedStorage})</h2>
             <p style={{ color: '#666', fontSize: '1rem', marginTop: '1rem' }}>Get Upto</p>
             <p style={{ fontSize: '3rem', fontWeight: 700, color: '#FF4C4C' }}>{formatCurrency(basePrice || 0)}</p>
             <button onClick={() => setStep(3)} className="btn-primary" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', background: '#4CD964', color: '#fff', fontWeight: 600, marginTop: '1.5rem', width: 'fit-content', padding: '1rem 2rem', borderRadius: '8px' }}>
@@ -553,7 +559,7 @@ export default function QuotePage() {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', border: '1px solid #e0e0e0', padding: '1rem 1.5rem', borderRadius: '8px', width: '100%' }}>
                   <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} style={{ width: '40px', height: '60px', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
                   <div>
-                    <p style={{ fontSize: '0.85rem', fontWeight: 600, color: '#666' }}>{selectedBrand} {selectedModel} ({selectedStorage})</p>
+                    <p style={{ fontSize: '0.85rem', fontWeight: 600, color: '#666' }}>{selectedModel.startsWith(selectedBrand) ? selectedModel : `${selectedBrand} ${selectedModel}`} ({selectedStorage})</p
                     <p style={{ color: '#FF4C4C', fontSize: '1.75rem', fontWeight: 700 }}>₹ XX,XXX</p>
                   </div>
                 </div>
@@ -615,7 +621,7 @@ export default function QuotePage() {
           <p className="eyebrow" style={{ color: '#4CD964', fontSize: '1rem', letterSpacing: '2px' }}>FINAL EXACT QUOTE</p>
           <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} style={{ width: '100px', height: '140px', objectFit: 'contain', margin: '2rem 0' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
           <p style={{ fontSize: '4rem', fontWeight: 700, color: '#fff', lineHeight: 1 }}>{formatCurrency(finalPrice)}</p>
-          <p style={{ color: '#a0a0a0', fontSize: '1rem', marginTop: '0.5rem' }}>{selectedBrand} {selectedModel} ({selectedStorage})</p>
+          <p style={{ color: '#a0a0a0', fontSize: '1rem', marginTop: '0.5rem' }}>{selectedModel.startsWith(selectedBrand) ? selectedModel : `${selectedBrand} ${selectedModel}`} ({selectedStorage})</p>
           
           <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', width: '100%' }}>
             <button type="button" onClick={() => { setStep(1); setFinalPrice(null); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], hardware: [], accessories: [] }); }} className="btn-outline" style={{ flex: 1, padding: '16px', fontSize: '1.1rem' }}>Start Over</button>
