@@ -3397,7 +3397,7 @@ export const seedDevices = [
     "brand": "Apple",
     "model": "Apple iPhone 17 Pro Max",
     "storage": "128GB",
-    "ram": "4GB",
+    "ram": "12GB",
     "color": "Midnight",
     "basePrice": 0
   },
@@ -4549,7 +4549,7 @@ export const seedDevices = [
     "brand": "Apple",
     "model": "Apple iPhone 17 Pro Max",
     "storage": "256GB",
-    "ram": "4GB",
+    "ram": "12GB",
     "color": "Midnight",
     "basePrice": 107500
   },
@@ -4558,7 +4558,7 @@ export const seedDevices = [
     "brand": "Apple",
     "model": "Apple iPhone 17 Pro Max",
     "storage": "512GB",
-    "ram": "4GB",
+    "ram": "12GB",
     "color": "Midnight",
     "basePrice": 114500
   },
@@ -4567,9 +4567,9 @@ export const seedDevices = [
     "brand": "Apple",
     "model": "Apple iPhone 17 Pro Max",
     "storage": "1TB",
-    "ram": "4GB",
+    "ram": "12GB",
     "color": "Midnight",
-    "basePrice": 0
+    "basePrice": 117000
   },
   {
     "id": "apple_2129",
@@ -4728,8 +4728,8 @@ export const seedDevices = [
     "id": "pdf_10026",
     "brand": "Apple",
     "model": "Apple iPhone 17 Pro Max",
-    "storage": "N/A",
-    "ram": "4GB",
+    "storage": "2TB",
+    "ram": "12GB",
     "color": "Midnight",
     "basePrice": 124000
   },
