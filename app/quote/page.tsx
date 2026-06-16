@@ -559,7 +559,7 @@ export default function QuotePage() {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', border: '1px solid #e0e0e0', padding: '1rem 1.5rem', borderRadius: '8px', width: '100%' }}>
                   <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} style={{ width: '40px', height: '60px', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
                   <div>
-                    <p style={{ fontSize: '0.85rem', fontWeight: 600, color: '#666' }}>{selectedModel.startsWith(selectedBrand) ? selectedModel : `${selectedBrand} ${selectedModel}`} ({selectedStorage})</p
+                    <p style={{ fontSize: '0.85rem', fontWeight: 600, color: '#666' }}>{selectedModel.startsWith(selectedBrand) ? selectedModel : `${selectedBrand} ${selectedModel}`} ({selectedStorage})</p>
                     <p style={{ color: '#FF4C4C', fontSize: '1.75rem', fontWeight: 700 }}>₹ XX,XXX</p>
                   </div>
                 </div>
