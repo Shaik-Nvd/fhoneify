@@ -10,23 +10,23 @@ import { useHydratedAuth } from '@/lib/useHydratedAuth';
 const BRAND_LOGOS: Record<string, string> = {
   Apple: 'https://cdn.simpleicons.org/apple/white',
   Xiaomi: 'https://cdn.simpleicons.org/xiaomi/ff6900',
-  Samsung: 'https://cdn.simpleicons.org/samsung/1428a0',
-  Vivo: 'https://logo.clearbit.com/vivo.com',
+  Samsung: 'https://cdn.simpleicons.org/samsung/0C185A',
+  Vivo: 'https://www.google.com/s2/favicons?domain=vivo.com&sz=128',
   OnePlus: 'https://cdn.simpleicons.org/oneplus/f50100',
-  OPPO: 'https://cdn.simpleicons.org/oppo/006633',
-  Realme: 'https://logo.clearbit.com/realme.com',
+  OPPO: 'https://cdn.simpleicons.org/oppo/003A1C',
+  Realme: 'https://www.google.com/s2/favicons?domain=realme.com&sz=128',
   Motorola: 'https://cdn.simpleicons.org/motorola/white',
   Lenovo: 'https://cdn.simpleicons.org/lenovo/e2231a',
   Nokia: 'https://cdn.simpleicons.org/nokia/white',
-  Honor: 'https://logo.clearbit.com/hihonor.com',
-  Asus: 'https://cdn.simpleicons.org/asus/00539b',
+  Honor: 'https://www.google.com/s2/favicons?domain=hihonor.com&sz=128',
+  Asus: 'https://cdn.simpleicons.org/asus/003366',
   Google: 'https://cdn.simpleicons.org/google',
-  POCO: 'https://logo.clearbit.com/poco.net',
+  POCO: 'https://www.google.com/s2/favicons?domain=po.co&sz=128',
   LG: 'https://cdn.simpleicons.org/lg/a50034',
-  Infinix: 'https://logo.clearbit.com/infinixmobility.com',
-  Tecno: 'https://logo.clearbit.com/tecno-mobile.com',
-  iQOO: 'https://logo.clearbit.com/iqoo.com',
-  Nothing: 'https://logo.clearbit.com/nothing.tech'
+  Infinix: 'https://www.google.com/s2/favicons?domain=infinixmobility.com&sz=128',
+  Tecno: 'https://www.google.com/s2/favicons?domain=tecno-mobile.com&sz=128',
+  iQOO: 'https://www.google.com/s2/favicons?domain=iqoo.com&sz=128',
+  Nothing: 'https://www.google.com/s2/favicons?domain=nothing.tech&sz=128'
 };
 
 export interface Device {
