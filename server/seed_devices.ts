@@ -4596,7 +4596,7 @@ export const SEED_DEVICES = [
     "storage": "128GB",
     "ram": "6GB",
     "color": "Midnight",
-    "basePrice": 33100
+    "basePrice": 23950
   },
   {
     "id": "pdf_10009",
@@ -4632,7 +4632,7 @@ export const SEED_DEVICES = [
     "storage": "128GB",
     "ram": "6GB",
     "color": "Midnight",
-    "basePrice": 41150
+    "basePrice": 26730
   },
   {
     "id": "pdf_10015",
@@ -4758,7 +4758,7 @@ export const SEED_DEVICES = [
     "storage": "128GB",
     "ram": "3GB",
     "color": "Midnight",
-    "basePrice": 9850
+    "basePrice": 10710
   },
   {
     "id": "pdf_10031",
