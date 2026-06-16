@@ -147,22 +147,35 @@ export default function QuotePage() {
   }, [allDevices, selectedBrand]);
   const storageOptions = useMemo(() => {
     if (!selectedBrand || !selectedModel) return [];
-    const storageList = [...new Set(allDevices.filter((d) => d.brand === selectedBrand && d.model === selectedModel).map((d) => d.storage).filter(Boolean))];
+    
+    // Group variants by "RAM / Storage" strings
+    const storageList = [...new Set(
+      allDevices
+        .filter((d) => d.brand === selectedBrand && d.model === selectedModel)
+        .map((d) => d.ram && d.storage !== 'Standard' ? `${d.ram} / ${d.storage}` : d.storage)
+        .filter(Boolean)
+    )];
     
     const parseStorage = (s: string) => {
-      const val = parseFloat(s);
+      // s might be "4GB / 128GB" or "128GB"
+      const valStr = s.includes('/') ? s.split('/')[1].trim() : s;
+      const val = parseFloat(valStr);
       if (isNaN(val)) return -1;
-      if (s.includes('TB')) return val * 1024;
-      if (s.includes('GB')) return val;
-      if (s.includes('MB')) return val / 1024;
+      if (valStr.includes('TB')) return val * 1024;
+      if (valStr.includes('GB')) return val;
+      if (valStr.includes('MB')) return val / 1024;
       return val;
     };
     
     return storageList.sort((a, b) => parseStorage(a) - parseStorage(b));
   }, [allDevices, selectedBrand, selectedModel]);
+
   const selectedDevice = useMemo(() => {
     if (!selectedBrand || !selectedModel || !selectedStorage) return null;
-    return allDevices.find((d) => d.brand === selectedBrand && d.model === selectedModel && d.storage === selectedStorage) ?? null;
+    return allDevices.find((d) => {
+      const combinedStorage = d.ram && d.storage !== 'Standard' ? `${d.ram} / ${d.storage}` : d.storage;
+      return d.brand === selectedBrand && d.model === selectedModel && combinedStorage === selectedStorage;
+    }) ?? null;
   }, [allDevices, selectedBrand, selectedModel, selectedStorage]);
 
   const handleBrandSelect = (b: string) => { setSelectedBrand(b); setSelectedModel(''); setSelectedStorage(''); setSelectionStage('model'); };

@@ -1,14 +1,4 @@
-export interface Device {
-  id: string;
-  brand: string;
-  model: string;
-  storage: string;
-  ram: string;
-  color: string;
-  basePrice?: number;
-}
-
-export const SEED_DEVICES: Device[] = [
+export const seedDevices = [
   {
     "id": "d1",
     "brand": "Realme",
@@ -208,15 +198,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 28600
   },
   {
-    "id": "d23",
-    "brand": "Motorola",
-    "model": "Razr 40 Ultra",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Blue",
-    "basePrice": 94250
-  },
-  {
     "id": "d24",
     "brand": "OnePlus",
     "model": "OnePlus Nord CE 3 Lite",
@@ -242,15 +223,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "8GB",
     "color": "Blue",
     "basePrice": 24149
-  },
-  {
-    "id": "d27",
-    "brand": "Google",
-    "model": "Pixel 7 Pro",
-    "storage": "512GB",
-    "ram": "12GB",
-    "color": "Titanium",
-    "basePrice": 79750
   },
   {
     "id": "d28",
@@ -502,15 +474,6 @@ export const SEED_DEVICES: Device[] = [
     "storage": "512GB",
     "ram": "12GB",
     "color": "Red",
-    "basePrice": 21750
-  },
-  {
-    "id": "d56",
-    "brand": "OnePlus",
-    "model": "OnePlus Nord CE 3 Lite",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "White",
     "basePrice": 21750
   },
   {
@@ -820,15 +783,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 17250
   },
   {
-    "id": "d91",
-    "brand": "Realme",
-    "model": "Realme 12 Pro+",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "White",
-    "basePrice": 36400
-  },
-  {
     "id": "d92",
     "brand": "OnePlus",
     "model": "OnePlus 11R",
@@ -881,15 +835,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "8GB",
     "color": "Red",
     "basePrice": 126499
-  },
-  {
-    "id": "d98",
-    "brand": "Oppo",
-    "model": "Oppo Reno 10 Pro+",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Purple",
-    "basePrice": 65250
   },
   {
     "id": "d99",
@@ -982,15 +927,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 25299
   },
   {
-    "id": "d109",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 12",
-    "storage": "512GB",
-    "ram": "12GB",
-    "color": "White",
-    "basePrice": 17400
-  },
-  {
     "id": "d110",
     "brand": "Oppo",
     "model": "Oppo F25 Pro",
@@ -1007,15 +943,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "12GB",
     "color": "Silver",
     "basePrice": 35200
-  },
-  {
-    "id": "d112",
-    "brand": "Oppo",
-    "model": "Oppo Reno 11 Pro",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Purple",
-    "basePrice": 50750
   },
   {
     "id": "d113",
@@ -1036,33 +963,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 174000
   },
   {
-    "id": "d115",
-    "brand": "Nothing",
-    "model": "Nothing Phone (2)",
-    "storage": "1TB",
-    "ram": "12GB",
-    "color": "Purple",
-    "basePrice": 60800
-  },
-  {
-    "id": "d116",
-    "brand": "Nothing",
-    "model": "Nothing Phone (2)",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Red",
-    "basePrice": 49400
-  },
-  {
-    "id": "d117",
-    "brand": "Oppo",
-    "model": "Oppo Reno 11 Pro",
-    "storage": "512GB",
-    "ram": "12GB",
-    "color": "Green",
-    "basePrice": 50750
-  },
-  {
     "id": "d118",
     "brand": "Motorola",
     "model": "Edge 40 Neo",
@@ -1070,15 +970,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "12GB",
     "color": "Gold",
     "basePrice": 33600
-  },
-  {
-    "id": "d119",
-    "brand": "Nothing",
-    "model": "Nothing Phone (2a)",
-    "storage": "1TB",
-    "ram": "12GB",
-    "color": "Blue",
-    "basePrice": 35200
   },
   {
     "id": "d120",
@@ -1153,15 +1044,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 35200
   },
   {
-    "id": "d128",
-    "brand": "Nothing",
-    "model": "Nothing Phone (2)",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Silver",
-    "basePrice": 55100
-  },
-  {
     "id": "d129",
     "brand": "Apple",
     "model": "iPhone 6",
@@ -1178,15 +1060,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "6GB",
     "color": "Blue",
     "basePrice": 23200
-  },
-  {
-    "id": "d131",
-    "brand": "Samsung",
-    "model": "Galaxy Z Fold5",
-    "storage": "1TB",
-    "ram": "12GB",
-    "color": "Gold",
-    "basePrice": 192000
   },
   {
     "id": "d132",
@@ -1252,15 +1125,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 96000
   },
   {
-    "id": "d139",
-    "brand": "Apple",
-    "model": "iPhone 14 Plus",
-    "storage": "512GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 108750
-  },
-  {
     "id": "d140",
     "brand": "Apple",
     "model": "iPhone 11",
@@ -1306,15 +1170,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 240000
   },
   {
-    "id": "d145",
-    "brand": "Nothing",
-    "model": "Nothing Phone (2a)",
-    "storage": "1TB",
-    "ram": "12GB",
-    "color": "Black",
-    "basePrice": 35200
-  },
-  {
     "id": "d146",
     "brand": "Apple",
     "model": "iPhone 14 Pro",
@@ -1333,15 +1188,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 36400
   },
   {
-    "id": "d148",
-    "brand": "Nothing",
-    "model": "Nothing Phone (2)",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 55100
-  },
-  {
     "id": "d149",
     "brand": "Samsung",
     "model": "Galaxy A54",
@@ -1349,15 +1195,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "16GB",
     "color": "Silver",
     "basePrice": 44800
-  },
-  {
-    "id": "d150",
-    "brand": "Nothing",
-    "model": "Nothing Phone (1)",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Silver",
-    "basePrice": 26000
   },
   {
     "id": "d151",
@@ -1387,15 +1224,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 126499
   },
   {
-    "id": "d154",
-    "brand": "Oppo",
-    "model": "Oppo Reno 10 Pro+",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 51749
-  },
-  {
     "id": "d155",
     "brand": "Apple",
     "model": "iPhone 15 Plus",
@@ -1412,15 +1240,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "8GB",
     "color": "Silver",
     "basePrice": 29000
-  },
-  {
-    "id": "d157",
-    "brand": "Oppo",
-    "model": "Oppo Reno 11 Pro",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Silver",
-    "basePrice": 50750
   },
   {
     "id": "d158",
@@ -1441,15 +1260,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 176000
   },
   {
-    "id": "d160",
-    "brand": "Nothing",
-    "model": "Nothing Phone (1)",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "White",
-    "basePrice": 26000
-  },
-  {
     "id": "d161",
     "brand": "Xiaomi",
     "model": "Redmi Note 12 Pro+",
@@ -1466,15 +1276,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "8GB",
     "color": "Purple",
     "basePrice": 28600
-  },
-  {
-    "id": "d163",
-    "brand": "Google",
-    "model": "Pixel 7",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Blue",
-    "basePrice": 52000
   },
   {
     "id": "d164",
@@ -1511,15 +1312,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "6GB",
     "color": "Purple",
     "basePrice": 36400
-  },
-  {
-    "id": "d168",
-    "brand": "Motorola",
-    "model": "Edge 50 Pro",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Gold",
-    "basePrice": 43500
   },
   {
     "id": "d169",
@@ -1576,15 +1368,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 30450
   },
   {
-    "id": "d175",
-    "brand": "Nothing",
-    "model": "Nothing Phone (2)",
-    "storage": "1TB",
-    "ram": "12GB",
-    "color": "Green",
-    "basePrice": 60800
-  },
-  {
     "id": "d176",
     "brand": "OnePlus",
     "model": "OnePlus 12R",
@@ -1592,15 +1375,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "8GB",
     "color": "Green",
     "basePrice": 55100
-  },
-  {
-    "id": "d177",
-    "brand": "Apple",
-    "model": "iPhone 17 Pro",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Titanium",
-    "basePrice": 161000
   },
   {
     "id": "d178",
@@ -1630,15 +1404,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 103499
   },
   {
-    "id": "d181",
-    "brand": "Nothing",
-    "model": "Nothing Phone (2)",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Blue",
-    "basePrice": 49400
-  },
-  {
     "id": "d182",
     "brand": "OnePlus",
     "model": "OnePlus Nord CE 3 Lite",
@@ -1664,15 +1429,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "16GB",
     "color": "Black",
     "basePrice": 104000
-  },
-  {
-    "id": "d185",
-    "brand": "Nothing",
-    "model": "Nothing Phone (2a)",
-    "storage": "1TB",
-    "ram": "12GB",
-    "color": "Black",
-    "basePrice": 35200
   },
   {
     "id": "d186",
@@ -1711,15 +1467,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 24000
   },
   {
-    "id": "d190",
-    "brand": "Oppo",
-    "model": "Oppo Reno 11 Pro",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Green",
-    "basePrice": 50750
-  },
-  {
     "id": "d191",
     "brand": "Apple",
     "model": "iPhone 15 Plus",
@@ -1738,15 +1485,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 123250
   },
   {
-    "id": "d193",
-    "brand": "OnePlus",
-    "model": "OnePlus 12R",
-    "storage": "512GB",
-    "ram": "12GB",
-    "color": "Red",
-    "basePrice": 55100
-  },
-  {
     "id": "d194",
     "brand": "Vivo",
     "model": "Vivo X100 Pro",
@@ -1754,24 +1492,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "12GB",
     "color": "Titanium",
     "basePrice": 116000
-  },
-  {
-    "id": "d195",
-    "brand": "Oppo",
-    "model": "Oppo Reno 10 Pro+",
-    "storage": "1TB",
-    "ram": "12GB",
-    "color": "White",
-    "basePrice": 72000
-  },
-  {
-    "id": "d196",
-    "brand": "Nothing",
-    "model": "Nothing Phone (1)",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Green",
-    "basePrice": 26000
   },
   {
     "id": "d197",
@@ -1810,24 +1530,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 27300
   },
   {
-    "id": "d201",
-    "brand": "Oppo",
-    "model": "Oppo F25 Pro",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Blue",
-    "basePrice": 28600
-  },
-  {
-    "id": "d202",
-    "brand": "Vivo",
-    "model": "Vivo V30 Pro",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 43700
-  },
-  {
     "id": "d203",
     "brand": "OnePlus",
     "model": "OnePlus Nord 3",
@@ -1855,15 +1557,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 152000
   },
   {
-    "id": "d206",
-    "brand": "Nothing",
-    "model": "Nothing Phone (1)",
-    "storage": "1TB",
-    "ram": "12GB",
-    "color": "White",
-    "basePrice": 32000
-  },
-  {
     "id": "d207",
     "brand": "Apple",
     "model": "iPhone SE (2nd Gen)",
@@ -1880,15 +1573,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "6GB",
     "color": "Red",
     "basePrice": 78000
-  },
-  {
-    "id": "d209",
-    "brand": "Google",
-    "model": "Pixel 6a",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 23000
   },
   {
     "id": "d210",
@@ -1909,15 +1593,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 13799
   },
   {
-    "id": "d212",
-    "brand": "Oppo",
-    "model": "Oppo F25 Pro",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Blue",
-    "basePrice": 25299
-  },
-  {
     "id": "d213",
     "brand": "OnePlus",
     "model": "OnePlus Nord CE 3 Lite",
@@ -1925,24 +1600,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "8GB",
     "color": "Titanium",
     "basePrice": 17250
-  },
-  {
-    "id": "d214",
-    "brand": "Apple",
-    "model": "iPhone 16 Plus",
-    "storage": "1TB",
-    "ram": "12GB",
-    "color": "White",
-    "basePrice": 152000
-  },
-  {
-    "id": "d215",
-    "brand": "Apple",
-    "model": "iPhone 15 Pro",
-    "storage": "256GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 156000
   },
   {
     "id": "d216",
@@ -1972,15 +1629,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 63249
   },
   {
-    "id": "d219",
-    "brand": "OnePlus",
-    "model": "OnePlus Open",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Blue",
-    "basePrice": 126499
-  },
-  {
     "id": "d220",
     "brand": "Nothing",
     "model": "Nothing Phone (1)",
@@ -1999,15 +1647,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 51749
   },
   {
-    "id": "d222",
-    "brand": "Vivo",
-    "model": "Vivo X100 Pro",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 92000
-  },
-  {
     "id": "d223",
     "brand": "Motorola",
     "model": "Razr 40 Ultra",
@@ -2024,15 +1663,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "8GB",
     "color": "Red",
     "basePrice": 71500
-  },
-  {
-    "id": "d225",
-    "brand": "Oppo",
-    "model": "Oppo Reno 10 Pro+",
-    "storage": "1TB",
-    "ram": "16GB",
-    "color": "Black",
-    "basePrice": 72000
   },
   {
     "id": "d226",
@@ -2080,24 +1710,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 31900
   },
   {
-    "id": "d231",
-    "brand": "Oppo",
-    "model": "Oppo Reno 10 Pro+",
-    "storage": "1TB",
-    "ram": "16GB",
-    "color": "Titanium",
-    "basePrice": 72000
-  },
-  {
-    "id": "d232",
-    "brand": "Motorola",
-    "model": "Razr 40 Ultra",
-    "storage": "1TB",
-    "ram": "12GB",
-    "color": "White",
-    "basePrice": 104000
-  },
-  {
     "id": "d233",
     "brand": "Nothing",
     "model": "Nothing Phone (2)",
@@ -2143,15 +1755,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 55199
   },
   {
-    "id": "d238",
-    "brand": "Realme",
-    "model": "Realme 11 Pro+",
-    "storage": "1TB",
-    "ram": "16GB",
-    "color": "Gold",
-    "basePrice": 35200
-  },
-  {
     "id": "d239",
     "brand": "Nothing",
     "model": "Nothing Phone (2)",
@@ -2177,15 +1780,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "6GB",
     "color": "Purple",
     "basePrice": 152250
-  },
-  {
-    "id": "d242",
-    "brand": "Samsung",
-    "model": "Galaxy S21 FE",
-    "storage": "256GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 31200
   },
   {
     "id": "d243",
@@ -2215,15 +1809,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 138000
   },
   {
-    "id": "d246",
-    "brand": "Xiaomi",
-    "model": "Poco X6 Pro",
-    "storage": "512GB",
-    "ram": "12GB",
-    "color": "Black",
-    "basePrice": 34800
-  },
-  {
     "id": "d247",
     "brand": "Nothing",
     "model": "Nothing Phone (2a)",
@@ -2231,15 +1816,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "6GB",
     "color": "Blue",
     "basePrice": 25299
-  },
-  {
-    "id": "d248",
-    "brand": "Oppo",
-    "model": "Oppo F25 Pro",
-    "storage": "1TB",
-    "ram": "12GB",
-    "color": "Blue",
-    "basePrice": 35200
   },
   {
     "id": "d249",
@@ -2278,15 +1854,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 36800
   },
   {
-    "id": "d253",
-    "brand": "Vivo",
-    "model": "Vivo V30 Pro",
-    "storage": "256GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 49400
-  },
-  {
     "id": "d254",
     "brand": "OnePlus",
     "model": "OnePlus 12",
@@ -2294,33 +1861,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "6GB",
     "color": "Purple",
     "basePrice": 78000
-  },
-  {
-    "id": "d255",
-    "brand": "Realme",
-    "model": "Realme 11 Pro+",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "White",
-    "basePrice": 25299
-  },
-  {
-    "id": "d256",
-    "brand": "Google",
-    "model": "Pixel 8",
-    "storage": "1TB",
-    "ram": "12GB",
-    "color": "Titanium",
-    "basePrice": 96000
-  },
-  {
-    "id": "d257",
-    "brand": "Vivo",
-    "model": "Vivo V29 Pro",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Silver",
-    "basePrice": 36800
   },
   {
     "id": "d258",
@@ -2404,15 +1944,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 74750
   },
   {
-    "id": "d267",
-    "brand": "Motorola",
-    "model": "Moto G84",
-    "storage": "512GB",
-    "ram": "12GB",
-    "color": "Gold",
-    "basePrice": 23200
-  },
-  {
     "id": "d268",
     "brand": "Apple",
     "model": "iPhone 8",
@@ -2420,15 +1951,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "6GB",
     "color": "Purple",
     "basePrice": 18400
-  },
-  {
-    "id": "d269",
-    "brand": "Nothing",
-    "model": "Nothing Phone (2)",
-    "storage": "1TB",
-    "ram": "16GB",
-    "color": "Red",
-    "basePrice": 60800
   },
   {
     "id": "d270",
@@ -2447,24 +1969,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "6GB",
     "color": "Titanium",
     "basePrice": 36400
-  },
-  {
-    "id": "d272",
-    "brand": "Apple",
-    "model": "iPhone 14 Plus",
-    "storage": "512GB",
-    "ram": "6GB",
-    "color": "Red",
-    "basePrice": 108750
-  },
-  {
-    "id": "d273",
-    "brand": "Vivo",
-    "model": "Vivo V29 Pro",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Silver",
-    "basePrice": 46400
   },
   {
     "id": "d274",
@@ -2512,15 +2016,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 116000
   },
   {
-    "id": "d279",
-    "brand": "OnePlus",
-    "model": "OnePlus 11R",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Green",
-    "basePrice": 39000
-  },
-  {
     "id": "d280",
     "brand": "Realme",
     "model": "Realme Narzo 60",
@@ -2528,51 +2023,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "8GB",
     "color": "Black",
     "basePrice": 21750
-  },
-  {
-    "id": "d281",
-    "brand": "Xiaomi",
-    "model": "Xiaomi 14 Ultra",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Silver",
-    "basePrice": 103499
-  },
-  {
-    "id": "d282",
-    "brand": "Realme",
-    "model": "Realme 12 Pro+",
-    "storage": "1TB",
-    "ram": "12GB",
-    "color": "Silver",
-    "basePrice": 44800
-  },
-  {
-    "id": "d283",
-    "brand": "Oppo",
-    "model": "Oppo Find N3 Flip",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Gold",
-    "basePrice": 86250
-  },
-  {
-    "id": "d284",
-    "brand": "Realme",
-    "model": "Realme GT 3",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 40250
-  },
-  {
-    "id": "d285",
-    "brand": "Samsung",
-    "model": "Galaxy S23 Ultra",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Gold",
-    "basePrice": 97749
   },
   {
     "id": "d286",
@@ -2602,15 +2052,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 15600
   },
   {
-    "id": "d289",
-    "brand": "Samsung",
-    "model": "Galaxy A54",
-    "storage": "1TB",
-    "ram": "16GB",
-    "color": "Gold",
-    "basePrice": 44800
-  },
-  {
     "id": "d290",
     "brand": "Google",
     "model": "Pixel 7",
@@ -2629,33 +2070,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 74750
   },
   {
-    "id": "d292",
-    "brand": "OnePlus",
-    "model": "OnePlus Open",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Red",
-    "basePrice": 126499
-  },
-  {
-    "id": "d293",
-    "brand": "Oppo",
-    "model": "Oppo F25 Pro",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Red",
-    "basePrice": 25299
-  },
-  {
-    "id": "d294",
-    "brand": "Samsung",
-    "model": "Galaxy S23",
-    "storage": "1TB",
-    "ram": "12GB",
-    "color": "Green",
-    "basePrice": 76800
-  },
-  {
     "id": "d295",
     "brand": "Samsung",
     "model": "Galaxy Z Flip5",
@@ -2663,24 +2077,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "12GB",
     "color": "Red",
     "basePrice": 112000
-  },
-  {
-    "id": "d296",
-    "brand": "Motorola",
-    "model": "Edge 50 Pro",
-    "storage": "1TB",
-    "ram": "16GB",
-    "color": "Purple",
-    "basePrice": 48000
-  },
-  {
-    "id": "d297",
-    "brand": "Vivo",
-    "model": "Vivo X100 Pro",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 116000
   },
   {
     "id": "d298",
@@ -2710,33 +2106,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 101500
   },
   {
-    "id": "d301",
-    "brand": "Oppo",
-    "model": "Oppo Reno 10 Pro+",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Red",
-    "basePrice": 51749
-  },
-  {
-    "id": "d302",
-    "brand": "Google",
-    "model": "Pixel 7a",
-    "storage": "1TB",
-    "ram": "16GB",
-    "color": "White",
-    "basePrice": 51200
-  },
-  {
-    "id": "d303",
-    "brand": "Apple",
-    "model": "iPhone XR",
-    "storage": "512GB",
-    "ram": "6GB",
-    "color": "Gold",
-    "basePrice": 34800
-  },
-  {
     "id": "d304",
     "brand": "Google",
     "model": "Pixel 7",
@@ -2744,33 +2113,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "8GB",
     "color": "Green",
     "basePrice": 58000
-  },
-  {
-    "id": "d305",
-    "brand": "Motorola",
-    "model": "Edge 40 Neo",
-    "storage": "512GB",
-    "ram": "12GB",
-    "color": "Titanium",
-    "basePrice": 30450
-  },
-  {
-    "id": "d306",
-    "brand": "Xiaomi",
-    "model": "Xiaomi 14",
-    "storage": "1TB",
-    "ram": "16GB",
-    "color": "Gold",
-    "basePrice": 96000
-  },
-  {
-    "id": "d307",
-    "brand": "Realme",
-    "model": "Realme 12 Pro+",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Gold",
-    "basePrice": 36400
   },
   {
     "id": "d308",
@@ -2791,15 +2133,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 87000
   },
   {
-    "id": "d310",
-    "brand": "Xiaomi",
-    "model": "Xiaomi 14 Ultra",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 103499
-  },
-  {
     "id": "d311",
     "brand": "Realme",
     "model": "Realme Narzo 60",
@@ -2818,33 +2151,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 40600
   },
   {
-    "id": "d313",
-    "brand": "Motorola",
-    "model": "Moto G84",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Purple",
-    "basePrice": 20800
-  },
-  {
-    "id": "d314",
-    "brand": "Xiaomi",
-    "model": "Xiaomi 14",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Purple",
-    "basePrice": 69000
-  },
-  {
-    "id": "d315",
-    "brand": "Realme",
-    "model": "Realme 12 Pro+",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Red",
-    "basePrice": 40600
-  },
-  {
     "id": "d316",
     "brand": "Samsung",
     "model": "Galaxy Z Flip5",
@@ -2854,15 +2160,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 101500
   },
   {
-    "id": "d317",
-    "brand": "Samsung",
-    "model": "Galaxy S23 Ultra",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Purple",
-    "basePrice": 97749
-  },
-  {
     "id": "d318",
     "brand": "Apple",
     "model": "iPhone 16 Plus",
@@ -2870,33 +2167,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "4GB",
     "color": "Black",
     "basePrice": 109249
-  },
-  {
-    "id": "d319",
-    "brand": "Realme",
-    "model": "Realme GT 3",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Red",
-    "basePrice": 40250
-  },
-  {
-    "id": "d320",
-    "brand": "Motorola",
-    "model": "Moto G84",
-    "storage": "1TB",
-    "ram": "16GB",
-    "color": "Gold",
-    "basePrice": 25600
-  },
-  {
-    "id": "d321",
-    "brand": "Samsung",
-    "model": "Galaxy S24 Ultra",
-    "storage": "1TB",
-    "ram": "12GB",
-    "color": "Titanium",
-    "basePrice": 176000
   },
   {
     "id": "d322",
@@ -2917,15 +2187,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 109249
   },
   {
-    "id": "d324",
-    "brand": "Motorola",
-    "model": "Razr 40 Ultra",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Titanium",
-    "basePrice": 84500
-  },
-  {
     "id": "d325",
     "brand": "Apple",
     "model": "iPhone (1st Gen)",
@@ -2933,15 +2194,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "6GB",
     "color": "Silver",
     "basePrice": 2300
-  },
-  {
-    "id": "d326",
-    "brand": "Vivo",
-    "model": "Vivo T2 Pro",
-    "storage": "256GB",
-    "ram": "6GB",
-    "color": "White",
-    "basePrice": 27300
   },
   {
     "id": "d327",
@@ -2971,33 +2223,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 35200
   },
   {
-    "id": "d330",
-    "brand": "Realme",
-    "model": "Realme Narzo 60",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Silver",
-    "basePrice": 17250
-  },
-  {
-    "id": "d331",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 13 Pro+",
-    "storage": "512GB",
-    "ram": "12GB",
-    "color": "Titanium",
-    "basePrice": 40600
-  },
-  {
-    "id": "d332",
-    "brand": "Oppo",
-    "model": "Oppo Reno 10 Pro+",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "White",
-    "basePrice": 51749
-  },
-  {
     "id": "d333",
     "brand": "Samsung",
     "model": "Galaxy A34",
@@ -3016,33 +2241,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 86250
   },
   {
-    "id": "d335",
-    "brand": "Motorola",
-    "model": "Edge 40 Neo",
-    "storage": "512GB",
-    "ram": "12GB",
-    "color": "Purple",
-    "basePrice": 30450
-  },
-  {
-    "id": "d336",
-    "brand": "Oppo",
-    "model": "Oppo F25 Pro",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "White",
-    "basePrice": 25299
-  },
-  {
-    "id": "d337",
-    "brand": "Oppo",
-    "model": "Oppo Reno 11 Pro",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Green",
-    "basePrice": 45500
-  },
-  {
     "id": "d338",
     "brand": "Google",
     "model": "Pixel 7",
@@ -3050,42 +2248,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "12GB",
     "color": "Titanium",
     "basePrice": 64000
-  },
-  {
-    "id": "d339",
-    "brand": "Vivo",
-    "model": "Vivo X100 Pro",
-    "storage": "512GB",
-    "ram": "12GB",
-    "color": "Gold",
-    "basePrice": 116000
-  },
-  {
-    "id": "d340",
-    "brand": "Realme",
-    "model": "Realme 11 Pro+",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Blue",
-    "basePrice": 25299
-  },
-  {
-    "id": "d341",
-    "brand": "OnePlus",
-    "model": "OnePlus Open",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Green",
-    "basePrice": 126499
-  },
-  {
-    "id": "d342",
-    "brand": "Samsung",
-    "model": "Galaxy A54",
-    "storage": "256GB",
-    "ram": "6GB",
-    "color": "Gold",
-    "basePrice": 36400
   },
   {
     "id": "d343",
@@ -3151,15 +2313,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 87000
   },
   {
-    "id": "d350",
-    "brand": "Vivo",
-    "model": "Vivo T2 Pro",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 30450
-  },
-  {
     "id": "d351",
     "brand": "Motorola",
     "model": "Moto G84",
@@ -3178,15 +2331,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 84500
   },
   {
-    "id": "d353",
-    "brand": "Vivo",
-    "model": "Vivo X100 Pro",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Purple",
-    "basePrice": 92000
-  },
-  {
     "id": "d354",
     "brand": "Google",
     "model": "Pixel 6a",
@@ -3194,24 +2338,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "8GB",
     "color": "Green",
     "basePrice": 23000
-  },
-  {
-    "id": "d355",
-    "brand": "OnePlus",
-    "model": "OnePlus Nord 3",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Green",
-    "basePrice": 36250
-  },
-  {
-    "id": "d356",
-    "brand": "Google",
-    "model": "Pixel 7 Pro",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Purple",
-    "basePrice": 79750
   },
   {
     "id": "d357",
@@ -3232,60 +2358,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 3250
   },
   {
-    "id": "d359",
-    "brand": "Vivo",
-    "model": "Vivo V29 Pro",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "White",
-    "basePrice": 36800
-  },
-  {
-    "id": "d360",
-    "brand": "Vivo",
-    "model": "Vivo V29 Pro",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Green",
-    "basePrice": 36800
-  },
-  {
-    "id": "d361",
-    "brand": "Oppo",
-    "model": "Oppo Reno 10 Pro+",
-    "storage": "1TB",
-    "ram": "16GB",
-    "color": "Blue",
-    "basePrice": 72000
-  },
-  {
-    "id": "d362",
-    "brand": "Xiaomi",
-    "model": "Poco X6 Pro",
-    "storage": "256GB",
-    "ram": "6GB",
-    "color": "Purple",
-    "basePrice": 31200
-  },
-  {
-    "id": "d363",
-    "brand": "Nothing",
-    "model": "Nothing Phone (1)",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Gold",
-    "basePrice": 23000
-  },
-  {
-    "id": "d364",
-    "brand": "OnePlus",
-    "model": "OnePlus 12",
-    "storage": "512GB",
-    "ram": "12GB",
-    "color": "Green",
-    "basePrice": 87000
-  },
-  {
     "id": "d365",
     "brand": "Oppo",
     "model": "Oppo Reno 11 Pro",
@@ -3295,24 +2367,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 56000
   },
   {
-    "id": "d366",
-    "brand": "Nothing",
-    "model": "Nothing Phone (2)",
-    "storage": "1TB",
-    "ram": "16GB",
-    "color": "Blue",
-    "basePrice": 60800
-  },
-  {
-    "id": "d367",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 12 Pro+",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "White",
-    "basePrice": 23000
-  },
-  {
     "id": "d368",
     "brand": "Xiaomi",
     "model": "Redmi Note 12",
@@ -3320,15 +2374,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "16GB",
     "color": "Black",
     "basePrice": 19200
-  },
-  {
-    "id": "d369",
-    "brand": "Realme",
-    "model": "Realme GT 3",
-    "storage": "1TB",
-    "ram": "16GB",
-    "color": "Red",
-    "basePrice": 56000
   },
   {
     "id": "d370",
@@ -3376,33 +2421,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 55100
   },
   {
-    "id": "d375",
-    "brand": "OnePlus",
-    "model": "OnePlus Nord CE 3 Lite",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Titanium",
-    "basePrice": 21750
-  },
-  {
-    "id": "d376",
-    "brand": "Google",
-    "model": "Pixel 7 Pro",
-    "storage": "256GB",
-    "ram": "6GB",
-    "color": "Silver",
-    "basePrice": 71500
-  },
-  {
-    "id": "d377",
-    "brand": "Google",
-    "model": "Pixel 7a",
-    "storage": "1TB",
-    "ram": "16GB",
-    "color": "Titanium",
-    "basePrice": 51200
-  },
-  {
     "id": "d378",
     "brand": "Google",
     "model": "Pixel 8",
@@ -3412,60 +2430,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 69000
   },
   {
-    "id": "d379",
-    "brand": "Vivo",
-    "model": "Vivo T2 Pro",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Blue",
-    "basePrice": 30450
-  },
-  {
-    "id": "d380",
-    "brand": "Google",
-    "model": "Pixel 6a",
-    "storage": "1TB",
-    "ram": "16GB",
-    "color": "Blue",
-    "basePrice": 32000
-  },
-  {
-    "id": "d381",
-    "brand": "Vivo",
-    "model": "Vivo X100 Pro",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "White",
-    "basePrice": 92000
-  },
-  {
-    "id": "d382",
-    "brand": "Samsung",
-    "model": "Galaxy S24+",
-    "storage": "1TB",
-    "ram": "16GB",
-    "color": "Silver",
-    "basePrice": 136000
-  },
-  {
-    "id": "d383",
-    "brand": "Motorola",
-    "model": "Edge 40 Neo",
-    "storage": "1TB",
-    "ram": "12GB",
-    "color": "Blue",
-    "basePrice": 33600
-  },
-  {
-    "id": "d384",
-    "brand": "Vivo",
-    "model": "Vivo T2 Pro",
-    "storage": "256GB",
-    "ram": "6GB",
-    "color": "Purple",
-    "basePrice": 27300
-  },
-  {
     "id": "d385",
     "brand": "Samsung",
     "model": "Galaxy A34",
@@ -3473,15 +2437,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "12GB",
     "color": "Silver",
     "basePrice": 35200
-  },
-  {
-    "id": "d386",
-    "brand": "Nothing",
-    "model": "Nothing Phone (1)",
-    "storage": "1TB",
-    "ram": "16GB",
-    "color": "Blue",
-    "basePrice": 32000
   },
   {
     "id": "d387",
@@ -3520,33 +2475,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 108750
   },
   {
-    "id": "d391",
-    "brand": "OnePlus",
-    "model": "OnePlus 11",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Green",
-    "basePrice": 65250
-  },
-  {
-    "id": "d392",
-    "brand": "OnePlus",
-    "model": "OnePlus Nord 3",
-    "storage": "256GB",
-    "ram": "6GB",
-    "color": "White",
-    "basePrice": 32500
-  },
-  {
-    "id": "d393",
-    "brand": "OnePlus",
-    "model": "OnePlus 12",
-    "storage": "512GB",
-    "ram": "12GB",
-    "color": "Titanium",
-    "basePrice": 87000
-  },
-  {
     "id": "d394",
     "brand": "Google",
     "model": "Pixel 6a",
@@ -3583,33 +2511,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 88000
   },
   {
-    "id": "d398",
-    "brand": "OnePlus",
-    "model": "OnePlus Nord CE 3 Lite",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Silver",
-    "basePrice": 21750
-  },
-  {
-    "id": "d399",
-    "brand": "Motorola",
-    "model": "Edge 50 Pro",
-    "storage": "512GB",
-    "ram": "12GB",
-    "color": "Titanium",
-    "basePrice": 43500
-  },
-  {
-    "id": "d400",
-    "brand": "Realme",
-    "model": "Realme 12 Pro",
-    "storage": "512GB",
-    "ram": "12GB",
-    "color": "Gold",
-    "basePrice": 33350
-  },
-  {
     "id": "d401",
     "brand": "Apple",
     "model": "iPhone 16 Pro Max",
@@ -3628,15 +2529,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 49400
   },
   {
-    "id": "d403",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 12 Pro+",
-    "storage": "256GB",
-    "ram": "6GB",
-    "color": "Gold",
-    "basePrice": 26000
-  },
-  {
     "id": "d404",
     "brand": "Realme",
     "model": "Realme 12 Pro",
@@ -3644,42 +2536,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "16GB",
     "color": "White",
     "basePrice": 36800
-  },
-  {
-    "id": "d405",
-    "brand": "OnePlus",
-    "model": "OnePlus 12",
-    "storage": "512GB",
-    "ram": "12GB",
-    "color": "Green",
-    "basePrice": 87000
-  },
-  {
-    "id": "d406",
-    "brand": "Realme",
-    "model": "Realme 12 Pro+",
-    "storage": "512GB",
-    "ram": "12GB",
-    "color": "Purple",
-    "basePrice": 40600
-  },
-  {
-    "id": "d407",
-    "brand": "Motorola",
-    "model": "Edge 50 Pro",
-    "storage": "256GB",
-    "ram": "6GB",
-    "color": "Titanium",
-    "basePrice": 39000
-  },
-  {
-    "id": "d408",
-    "brand": "Motorola",
-    "model": "Edge 40 Neo",
-    "storage": "1TB",
-    "ram": "12GB",
-    "color": "Green",
-    "basePrice": 33600
   },
   {
     "id": "d409",
@@ -3709,51 +2565,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 69000
   },
   {
-    "id": "d412",
-    "brand": "Samsung",
-    "model": "Galaxy A34",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Green",
-    "basePrice": 25299
-  },
-  {
-    "id": "d413",
-    "brand": "Motorola",
-    "model": "Edge 50 Pro",
-    "storage": "256GB",
-    "ram": "6GB",
-    "color": "White",
-    "basePrice": 39000
-  },
-  {
-    "id": "d414",
-    "brand": "OnePlus",
-    "model": "OnePlus 12",
-    "storage": "512GB",
-    "ram": "12GB",
-    "color": "Silver",
-    "basePrice": 87000
-  },
-  {
-    "id": "d415",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 13 Pro",
-    "storage": "1TB",
-    "ram": "16GB",
-    "color": "White",
-    "basePrice": 35200
-  },
-  {
-    "id": "d416",
-    "brand": "Oppo",
-    "model": "Oppo F25 Pro",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Blue",
-    "basePrice": 25299
-  },
-  {
     "id": "d417",
     "brand": "Xiaomi",
     "model": "Redmi Note 13 Pro",
@@ -3763,15 +2574,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 25299
   },
   {
-    "id": "d418",
-    "brand": "Realme",
-    "model": "Realme Narzo 60",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Silver",
-    "basePrice": 17250
-  },
-  {
     "id": "d419",
     "brand": "Apple",
     "model": "iPhone 18 Pro Max",
@@ -3779,15 +2581,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "4GB",
     "color": "Silver",
     "basePrice": 221000
-  },
-  {
-    "id": "d420",
-    "brand": "Google",
-    "model": "Pixel 6a",
-    "storage": "1TB",
-    "ram": "16GB",
-    "color": "Purple",
-    "basePrice": 32000
   },
   {
     "id": "d421",
@@ -3808,33 +2601,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 7200
   },
   {
-    "id": "d423",
-    "brand": "OnePlus",
-    "model": "OnePlus 12R",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Red",
-    "basePrice": 49400
-  },
-  {
-    "id": "d424",
-    "brand": "Xiaomi",
-    "model": "Xiaomi 14",
-    "storage": "512GB",
-    "ram": "12GB",
-    "color": "Red",
-    "basePrice": 87000
-  },
-  {
-    "id": "d425",
-    "brand": "Nothing",
-    "model": "Nothing Phone (2)",
-    "storage": "1TB",
-    "ram": "12GB",
-    "color": "White",
-    "basePrice": 60800
-  },
-  {
     "id": "d426",
     "brand": "Samsung",
     "model": "Galaxy Z Flip5",
@@ -3842,24 +2608,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "16GB",
     "color": "Gold",
     "basePrice": 112000
-  },
-  {
-    "id": "d427",
-    "brand": "Vivo",
-    "model": "Vivo V30 Pro",
-    "storage": "1TB",
-    "ram": "16GB",
-    "color": "Blue",
-    "basePrice": 60800
-  },
-  {
-    "id": "d428",
-    "brand": "Nothing",
-    "model": "Nothing Phone (2a)",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Purple",
-    "basePrice": 28600
   },
   {
     "id": "d429",
@@ -3871,15 +2619,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 78000
   },
   {
-    "id": "d430",
-    "brand": "Google",
-    "model": "Pixel 8",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Purple",
-    "basePrice": 69000
-  },
-  {
     "id": "d431",
     "brand": "Oppo",
     "model": "Oppo Reno 10 Pro+",
@@ -3887,15 +2626,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "6GB",
     "color": "Silver",
     "basePrice": 58500
-  },
-  {
-    "id": "d432",
-    "brand": "Motorola",
-    "model": "Moto G84",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Blue",
-    "basePrice": 18400
   },
   {
     "id": "d433",
@@ -3916,15 +2646,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 130500
   },
   {
-    "id": "d435",
-    "brand": "Realme",
-    "model": "Realme 11 Pro+",
-    "storage": "256GB",
-    "ram": "6GB",
-    "color": "Titanium",
-    "basePrice": 28600
-  },
-  {
     "id": "d436",
     "brand": "Apple",
     "model": "iPhone 12",
@@ -3932,24 +2653,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "8GB",
     "color": "Black",
     "basePrice": 67200
-  },
-  {
-    "id": "d437",
-    "brand": "Samsung",
-    "model": "Galaxy S24 Ultra",
-    "storage": "256GB",
-    "ram": "6GB",
-    "color": "Titanium",
-    "basePrice": 143000
-  },
-  {
-    "id": "d438",
-    "brand": "OnePlus",
-    "model": "OnePlus Nord 3",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Purple",
-    "basePrice": 28749
   },
   {
     "id": "d439",
@@ -3961,15 +2664,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 20800
   },
   {
-    "id": "d440",
-    "brand": "Motorola",
-    "model": "Moto G84",
-    "storage": "1TB",
-    "ram": "16GB",
-    "color": "Titanium",
-    "basePrice": 25600
-  },
-  {
     "id": "d441",
     "brand": "Xiaomi",
     "model": "Redmi Note 13 Pro+",
@@ -3977,15 +2671,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "8GB",
     "color": "Black",
     "basePrice": 32199
-  },
-  {
-    "id": "d442",
-    "brand": "Google",
-    "model": "Pixel 7",
-    "storage": "1TB",
-    "ram": "16GB",
-    "color": "Titanium",
-    "basePrice": 64000
   },
   {
     "id": "d443",
@@ -4006,33 +2691,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 27599
   },
   {
-    "id": "d445",
-    "brand": "Google",
-    "model": "Pixel 7a",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Titanium",
-    "basePrice": 36800
-  },
-  {
-    "id": "d446",
-    "brand": "Google",
-    "model": "Pixel 8 Pro",
-    "storage": "256GB",
-    "ram": "6GB",
-    "color": "Red",
-    "basePrice": 110500
-  },
-  {
-    "id": "d447",
-    "brand": "Oppo",
-    "model": "Oppo Reno 10 Pro+",
-    "storage": "1TB",
-    "ram": "12GB",
-    "color": "Black",
-    "basePrice": 72000
-  },
-  {
     "id": "d448",
     "brand": "Motorola",
     "model": "Edge 50 Pro",
@@ -4051,48 +2709,12 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 32000
   },
   {
-    "id": "d450",
-    "brand": "Google",
-    "model": "Pixel 6a",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Silver",
-    "basePrice": 26000
-  },
-  {
-    "id": "d451",
-    "brand": "Oppo",
-    "model": "Oppo Reno 10 Pro+",
-    "storage": "1TB",
-    "ram": "12GB",
-    "color": "Black",
-    "basePrice": 72000
-  },
-  {
-    "id": "d452",
-    "brand": "Samsung",
-    "model": "Galaxy S24+",
-    "storage": "512GB",
-    "ram": "12GB",
-    "color": "Blue",
-    "basePrice": 123250
-  },
-  {
     "id": "d453",
     "brand": "Apple",
     "model": "iPhone X",
     "storage": "128GB",
     "ram": "4GB",
     "color": "Green",
-    "basePrice": 25299
-  },
-  {
-    "id": "d454",
-    "brand": "Nothing",
-    "model": "Nothing Phone (2a)",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Purple",
     "basePrice": 25299
   },
   {
@@ -4114,15 +2736,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 128000
   },
   {
-    "id": "d457",
-    "brand": "Motorola",
-    "model": "Edge 50 Pro",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 34500
-  },
-  {
     "id": "d458",
     "brand": "Samsung",
     "model": "Galaxy Z Fold5",
@@ -4130,69 +2743,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "12GB",
     "color": "Titanium",
     "basePrice": 174000
-  },
-  {
-    "id": "d459",
-    "brand": "Google",
-    "model": "Pixel 7 Pro",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Purple",
-    "basePrice": 79750
-  },
-  {
-    "id": "d460",
-    "brand": "Google",
-    "model": "Pixel 8 Pro",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Blue",
-    "basePrice": 97749
-  },
-  {
-    "id": "d461",
-    "brand": "Xiaomi",
-    "model": "Xiaomi 14",
-    "storage": "512GB",
-    "ram": "12GB",
-    "color": "Purple",
-    "basePrice": 87000
-  },
-  {
-    "id": "d462",
-    "brand": "Realme",
-    "model": "Realme Narzo 60",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Red",
-    "basePrice": 17250
-  },
-  {
-    "id": "d463",
-    "brand": "Realme",
-    "model": "Realme Narzo 60",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "White",
-    "basePrice": 17250
-  },
-  {
-    "id": "d464",
-    "brand": "Google",
-    "model": "Pixel 6a",
-    "storage": "256GB",
-    "ram": "6GB",
-    "color": "Gold",
-    "basePrice": 26000
-  },
-  {
-    "id": "d465",
-    "brand": "Samsung",
-    "model": "Galaxy S23+",
-    "storage": "256GB",
-    "ram": "6GB",
-    "color": "Silver",
-    "basePrice": 78000
   },
   {
     "id": "d466",
@@ -4222,15 +2772,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 138000
   },
   {
-    "id": "d469",
-    "brand": "Google",
-    "model": "Pixel 7 Pro",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 71500
-  },
-  {
     "id": "d470",
     "brand": "OnePlus",
     "model": "OnePlus Nord 3",
@@ -4238,15 +2779,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "12GB",
     "color": "Gold",
     "basePrice": 40000
-  },
-  {
-    "id": "d471",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 12 Pro+",
-    "storage": "1TB",
-    "ram": "12GB",
-    "color": "Silver",
-    "basePrice": 32000
   },
   {
     "id": "d472",
@@ -4265,42 +2797,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "6GB",
     "color": "Silver",
     "basePrice": 182000
-  },
-  {
-    "id": "d474",
-    "brand": "Samsung",
-    "model": "Galaxy S23",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 55199
-  },
-  {
-    "id": "d475",
-    "brand": "Motorola",
-    "model": "Edge 40 Neo",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Gold",
-    "basePrice": 27300
-  },
-  {
-    "id": "d476",
-    "brand": "Vivo",
-    "model": "Vivo T2 Pro",
-    "storage": "256GB",
-    "ram": "6GB",
-    "color": "Silver",
-    "basePrice": 27300
-  },
-  {
-    "id": "d477",
-    "brand": "OnePlus",
-    "model": "OnePlus Nord CE 3 Lite",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Blue",
-    "basePrice": 19500
   },
   {
     "id": "d478",
@@ -4339,15 +2835,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 92800
   },
   {
-    "id": "d482",
-    "brand": "Realme",
-    "model": "Realme 12 Pro+",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Purple",
-    "basePrice": 40600
-  },
-  {
     "id": "d483",
     "brand": "Samsung",
     "model": "Galaxy Z Fold5",
@@ -4355,24 +2842,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "16GB",
     "color": "Green",
     "basePrice": 192000
-  },
-  {
-    "id": "d484",
-    "brand": "Google",
-    "model": "Pixel 7",
-    "storage": "256GB",
-    "ram": "6GB",
-    "color": "Purple",
-    "basePrice": 52000
-  },
-  {
-    "id": "d485",
-    "brand": "Nothing",
-    "model": "Nothing Phone (2)",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Titanium",
-    "basePrice": 43700
   },
   {
     "id": "d486",
@@ -4393,24 +2862,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 31900
   },
   {
-    "id": "d488",
-    "brand": "Realme",
-    "model": "Realme 12 Pro+",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 40600
-  },
-  {
-    "id": "d489",
-    "brand": "Google",
-    "model": "Pixel 8",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Titanium",
-    "basePrice": 69000
-  },
-  {
     "id": "d490",
     "brand": "Samsung",
     "model": "Galaxy S23",
@@ -4429,24 +2880,6 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 65250
   },
   {
-    "id": "d492",
-    "brand": "Oppo",
-    "model": "Oppo F25 Pro",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Red",
-    "basePrice": 31900
-  },
-  {
-    "id": "d493",
-    "brand": "Vivo",
-    "model": "Vivo X100 Pro",
-    "storage": "512GB",
-    "ram": "12GB",
-    "color": "Silver",
-    "basePrice": 116000
-  },
-  {
     "id": "d494",
     "brand": "OnePlus",
     "model": "OnePlus Nord 3",
@@ -4463,15 +2896,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "12GB",
     "color": "Gold",
     "basePrice": 88000
-  },
-  {
-    "id": "d496",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 13 Pro",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "White",
-    "basePrice": 25299
   },
   {
     "id": "d497",
@@ -6175,92 +4599,20 @@ export const SEED_DEVICES: Device[] = [
     "basePrice": 0
   },
   {
-    "id": "pdf_10000",
-    "brand": "Apple",
-    "model": "Apple iPhone 11",
-    "storage": "4GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 14020
-  },
-  {
-    "id": "pdf_10001",
-    "brand": "Apple",
-    "model": "Apple iPhone 11 (4 GB/128 GB)",
-    "storage": "Standard",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 14020
-  },
-  {
-    "id": "pdf_10002",
-    "brand": "Apple",
-    "model": "Apple iPhone 11 (4 GB/64 GB)",
-    "storage": "Standard",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 13220
-  },
-  {
-    "id": "pdf_10003",
-    "brand": "Apple",
-    "model": "Apple iPhone 12",
-    "storage": "4GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 17580
-  },
-  {
-    "id": "pdf_10004",
-    "brand": "Apple",
-    "model": "Apple iPhone 12 (4 GB/128 GB)",
-    "storage": "Standard",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 17580
-  },
-  {
-    "id": "pdf_10005",
-    "brand": "Apple",
-    "model": "Apple iPhone 12 (4 GB/64 GB)",
-    "storage": "Standard",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 16850
-  },
-  {
-    "id": "pdf_10006",
-    "brand": "Apple",
-    "model": "Apple iPhone 13",
-    "storage": "4GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 23950
-  },
-  {
     "id": "pdf_10007",
     "brand": "Apple",
     "model": "Apple iPhone 13",
-    "storage": "6GB",
-    "ram": "4GB",
+    "storage": "128GB",
+    "ram": "6GB",
     "color": "Midnight",
     "basePrice": 33100
-  },
-  {
-    "id": "pdf_10008",
-    "brand": "Apple",
-    "model": "Apple iPhone 13 (4 GB/128 GB)",
-    "storage": "Standard",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 23950
   },
   {
     "id": "pdf_10009",
     "brand": "Apple",
     "model": "Apple iPhone 13 Pro",
-    "storage": "6GB",
-    "ram": "4GB",
+    "storage": "128GB",
+    "ram": "6GB",
     "color": "Midnight",
     "basePrice": 33100
   },
@@ -6272,15 +4624,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 37150
-  },
-  {
-    "id": "pdf_10011",
-    "brand": "Apple",
-    "model": "Apple iPhone 13 Pro (6 GB/128 GB)",
-    "storage": "Standard",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 33100
   },
   {
     "id": "pdf_10012",
@@ -6295,26 +4638,17 @@ export const SEED_DEVICES: Device[] = [
     "id": "pdf_10013",
     "brand": "Apple",
     "model": "Apple iPhone 14",
-    "storage": "6GB",
-    "ram": "4GB",
+    "storage": "128GB",
+    "ram": "6GB",
     "color": "Midnight",
     "basePrice": 41150
-  },
-  {
-    "id": "pdf_10014",
-    "brand": "Apple",
-    "model": "Apple iPhone 14 (6 GB/128 GB)",
-    "storage": "Standard",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 26730
   },
   {
     "id": "pdf_10015",
     "brand": "Apple",
     "model": "Apple iPhone 14 Pro",
-    "storage": "6GB",
-    "ram": "4GB",
+    "storage": "128GB",
+    "ram": "6GB",
     "color": "Midnight",
     "basePrice": 41150
   },
@@ -6326,15 +4660,6 @@ export const SEED_DEVICES: Device[] = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 46580
-  },
-  {
-    "id": "pdf_10017",
-    "brand": "Apple",
-    "model": "Apple iPhone 14 Pro (6 GB/128 GB)",
-    "storage": "Standard",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 41150
   },
   {
     "id": "pdf_10018",
@@ -6349,17 +4674,8 @@ export const SEED_DEVICES: Device[] = [
     "id": "pdf_10019",
     "brand": "Apple",
     "model": "Apple iPhone 15",
-    "storage": "6GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 38040
-  },
-  {
-    "id": "pdf_10020",
-    "brand": "Apple",
-    "model": "Apple iPhone 15 (6 GB/128 GB)",
-    "storage": "Standard",
-    "ram": "4GB",
+    "storage": "128GB",
+    "ram": "6GB",
     "color": "Midnight",
     "basePrice": 38040
   },
@@ -6439,8 +4755,8 @@ export const SEED_DEVICES: Device[] = [
     "id": "pdf_10029",
     "brand": "Apple",
     "model": "Apple iPhone X",
-    "storage": "3GB",
-    "ram": "4GB",
+    "storage": "128GB",
+    "ram": "3GB",
     "color": "Midnight",
     "basePrice": 9850
   },
@@ -6448,17 +4764,17 @@ export const SEED_DEVICES: Device[] = [
     "id": "pdf_10030",
     "brand": "Apple",
     "model": "Apple iPhone XR",
-    "storage": "3GB",
-    "ram": "4GB",
+    "storage": "128GB",
+    "ram": "3GB",
     "color": "Midnight",
     "basePrice": 9850
   },
   {
     "id": "pdf_10031",
     "brand": "Apple",
-    "model": "Apple iPhone XR (3 GB/64 GB)",
-    "storage": "Standard",
-    "ram": "4GB",
+    "model": "Apple iPhone XR",
+    "storage": "64GB",
+    "ram": "3GB",
     "color": "Midnight",
     "basePrice": 9850
   },
@@ -6466,8 +4782,8 @@ export const SEED_DEVICES: Device[] = [
     "id": "pdf_10032",
     "brand": "OnePlus",
     "model": "One Plus 9 Pro",
-    "storage": "12GB",
-    "ram": "4GB",
+    "storage": "128GB",
+    "ram": "12GB",
     "color": "Midnight",
     "basePrice": 13360
   },
@@ -6475,8 +4791,8 @@ export const SEED_DEVICES: Device[] = [
     "id": "pdf_10033",
     "brand": "OnePlus",
     "model": "One Plus 9 Pro",
-    "storage": "8GB",
-    "ram": "4GB",
+    "storage": "128GB",
+    "ram": "8GB",
     "color": "Midnight",
     "basePrice": 12150
   },
