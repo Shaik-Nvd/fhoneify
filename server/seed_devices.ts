@@ -1,4 +1,4 @@
-export const seedDevices = [
+export const SEED_DEVICES = [
   {
     "id": "d1",
     "brand": "Realme",
