@@ -3019,9 +3019,9 @@ export const SEED_DEVICES = [
     "brand": "Apple",
     "model": "Apple iPhone 6 Plus",
     "storage": "128GB",
-    "ram": "4GB",
+    "ram": "1GB",
     "color": "Midnight",
-    "basePrice": 0
+    "basePrice": 2760
   },
   {
     "id": "apple_1002",
@@ -3433,16 +3433,16 @@ export const SEED_DEVICES = [
     "brand": "Apple",
     "model": "Apple iPhone 6 Plus",
     "storage": "16GB",
-    "ram": "4GB",
+    "ram": "1GB",
     "color": "Midnight",
-    "basePrice": 0
+    "basePrice": 2200
   },
   {
     "id": "apple_2004",
     "brand": "Apple",
     "model": "Apple iPhone 6 Plus",
     "storage": "32GB",
-    "ram": "4GB",
+    "ram": "1GB",
     "color": "Midnight",
     "basePrice": 0
   },
@@ -3451,9 +3451,9 @@ export const SEED_DEVICES = [
     "brand": "Apple",
     "model": "Apple iPhone 6 Plus",
     "storage": "64GB",
-    "ram": "4GB",
+    "ram": "1GB",
     "color": "Midnight",
-    "basePrice": 0
+    "basePrice": 2500
   },
   {
     "id": "apple_2006",
