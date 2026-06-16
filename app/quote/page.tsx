@@ -619,7 +619,7 @@ export default function QuotePage() {
           
           <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', width: '100%' }}>
             <button type="button" onClick={() => { setStep(1); setFinalPrice(null); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], hardware: [], accessories: [] }); }} className="btn-outline" style={{ flex: 1, padding: '16px', fontSize: '1.1rem' }}>Start Over</button>
-            <button type="button" onClick={() => alert("Scheduled for Pickup!")} className="btn-primary" style={{ flex: 2, padding: '16px', background: '#4CD964', color: '#fff', fontSize: '1.1rem', fontWeight: 600 }}>Schedule Pickup</button>
+            <button type="button" onClick={() => { alert("Scheduled for Pickup!"); router.push('/'); }} className="btn-primary" style={{ flex: 2, padding: '16px', background: '#4CD964', color: '#fff', fontSize: '1.1rem', fontWeight: 600 }}>Schedule Pickup</button>
           </div>
         </div>
       )}
