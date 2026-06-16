@@ -1044,15 +1044,6 @@ export const SEED_DEVICES = [
     "basePrice": 35200
   },
   {
-    "id": "d129",
-    "brand": "Apple",
-    "model": "iPhone 6",
-    "storage": "128GB",
-    "ram": "4GB",
-    "color": "Green",
-    "basePrice": 8049
-  },
-  {
     "id": "d130",
     "brand": "Apple",
     "model": "iPhone 8",
@@ -3426,7 +3417,7 @@ export const SEED_DEVICES = [
     "storage": "32GB",
     "ram": "1GB",
     "color": "Midnight",
-    "basePrice": 1895
+    "basePrice": 1890
   },
   {
     "id": "apple_2002",
