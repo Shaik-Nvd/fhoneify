@@ -594,9 +594,9 @@ export default function QuotePage() {
                 ) : (
                   <div style={{ marginBottom: '2.5rem' }}>
                     <label style={{ display: 'block', fontSize: '0.85rem', color: '#666', marginBottom: '0.5rem' }}>Enter OTP sent to {userPhone}</label>
-                    <input type="text" value={otp} onChange={(e) => setOtp(e.target.value.replace(/\D/g, '').slice(0, 6))} placeholder="6-digit OTP" required maxLength={6} style={{ border: 'none', borderBottom: '2px solid #ccc', outline: 'none', width: '100%', fontSize: '2rem', paddingBottom: '0.5rem', textAlign: 'center', letterSpacing: '1rem', backgroundColor: 'transparent', color: '#000' }} />
-                    <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '0.5rem' }}>
-                      <button type="button" onClick={handleSendOtp} disabled={isAuthLoading} style={{ background: 'none', border: 'none', color: '#4CD964', fontSize: '0.85rem', cursor: isAuthLoading ? 'not-allowed' : 'pointer', fontWeight: 600 }}>Resend OTP</button>
+                    <input type="text" value={otp} onChange={(e) => setOtp(e.target.value.replace(/\D/g, '').slice(0, 6))} placeholder="6-digit OTP" required style={{ border: 'none', borderBottom: '2px solid #ccc', outline: 'none', width: '100%', fontSize: '2rem', paddingBottom: '0.5rem', textAlign: 'center', letterSpacing: '1rem', backgroundColor: 'transparent', color: '#000' }} />
+                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '1rem' }}>
+                      <button type="button" onClick={handleSendOtp} disabled={isAuthLoading} className="btn-outline" style={{ padding: '8px 16px', fontSize: '0.85rem', cursor: isAuthLoading ? 'not-allowed' : 'pointer' }}>Resend OTP</button>
                     </div>
                   </div>
                 )}
