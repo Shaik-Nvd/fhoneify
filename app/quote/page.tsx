@@ -175,8 +175,20 @@ export default function QuotePage() {
       setLoading(true);
       // Fetch base quote assuming flawless condition
       const response = await api.post('/api/quote', { deviceId: selectedDevice.id, condition: 'like_new', storage: selectedDevice.storage });
-      const price = response.data?.data?.estimatedPrice ?? response.data?.data?.estimated_price;
-      setBasePrice(typeof price === 'number' ? price : Number(price));
+      const rawPrice = response.data?.data?.estimatedPrice ?? response.data?.data?.estimated_price;
+      
+      let computedBase = typeof rawPrice === 'number' ? rawPrice : Number(rawPrice);
+      
+      // Competitive Pricing Logic against Cashify Base Price
+      if (computedBase <= 20000) {
+        computedBase *= 1.08; // +8%
+      } else if (computedBase <= 50000) {
+        computedBase *= 1.06; // +6%
+      } else {
+        computedBase *= 1.04; // +4%
+      }
+      
+      setBasePrice(Math.round(computedBase));
       setStep(2);
     } catch {
       setError('Failed to fetch quote.');
@@ -196,16 +208,26 @@ export default function QuotePage() {
     if (!basePrice) return;
     let price = basePrice;
     
-    // Mock deduction logic based on diagnostics state
-    if (diagnostics.calls === false) price *= 0.8;
-    if (diagnostics.touch === false) price *= 0.7;
-    if (diagnostics.originalScreen === false) price *= 0.85;
+    let multiplier = 1.0;
     
-    price -= diagnostics.defects.length * 500;
-    price -= diagnostics.hardware.length * 800;
-    price += diagnostics.accessories.length * 200; // Bonus for accessories
+    // Evaluate condition tier based on diagnostics
+    const hasSevereIssues = diagnostics.calls === false || diagnostics.touch === false || diagnostics.hardware.length > 1;
+    const hasModerateIssues = diagnostics.originalScreen === false || diagnostics.defects.includes('Display broken') || diagnostics.defects.includes('Back glass broken');
+    const hasMinorIssues = diagnostics.defects.length > 0 || diagnostics.hardware.length === 1;
+
+    if (hasSevereIssues) {
+      multiplier = 0.40; // Poor
+    } else if (hasModerateIssues) {
+      multiplier = 0.65; // Fair
+    } else if (hasMinorIssues) {
+      multiplier = 0.85; // Good
+    } else {
+      multiplier = 1.0; // Flawless / Like New
+    }
     
-    setFinalPrice(Math.max(price, 500)); // Minimum ₹500
+    price *= multiplier;
+    
+    setFinalPrice(Math.max(Math.round(price), 500)); // Minimum ₹500
   };
 
   const handleSendOtp = async (e: React.FormEvent) => {
