@@ -220,6 +220,8 @@ function MagneticButton({ children, className, style }: { children: React.ReactN
   );
 }
 
+import MobileHome from '@/components/MobileHome';
+
 export default function LandingPage() {
   const [mounted, setMounted] = useState(false);
   const { scrollYProgress } = useScroll();
@@ -267,9 +269,16 @@ export default function LandingPage() {
   return (
     <LazyMotion features={domAnimation}>
       <div style={{ width: '100%', overflowX: 'hidden' }}>
-      
-      {/* 3D Hero Parallax Section */}
-      <section style={{
+        
+        {/* Mobile View */}
+        <div className="block md:hidden">
+          <MobileHome />
+        </div>
+
+        {/* Desktop View */}
+        <div className="hidden md:block">
+          {/* 3D Hero Parallax Section */}
+          <section style={{
         position: 'relative',
         backgroundColor: '#0a0a0a',
         padding: '6rem 0 4rem',
@@ -429,6 +438,7 @@ export default function LandingPage() {
           </m.div>
         </div>
       </section>
+      </div>
     </div>
     </LazyMotion>
   );

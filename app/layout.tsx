@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import '@/styles/globals.css';
 import Navbar from '@/components/Navbar';
+import MobileBottomNav from '@/components/MobileBottomNav';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -25,9 +26,10 @@ export default function RootLayout({
       <body className={`${inter.variable} ${inter.className}`} style={{ backgroundColor: '#0a0a0a', color: '#ffffff' }}>
         <div className="custom-cursor" id="custom-cursor"></div>
         <Navbar />
-        <main className="page-animate" style={{ minHeight: '100vh', backgroundColor: '#0a0a0a' }}>
+        <main className="page-animate pb-20 md:pb-0" style={{ minHeight: '100vh', backgroundColor: '#0a0a0a' }}>
           {children}
         </main>
+        <MobileBottomNav />
         <script dangerouslySetInnerHTML={{
           __html: `
             let mouseX = 0, mouseY = 0;
