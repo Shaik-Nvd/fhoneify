@@ -78,7 +78,7 @@ export default function MobileHome() {
     <div className="w-full bg-[#0a0a0a] min-h-screen pb-6">
       
       {/* Mobile Search Bar */}
-      <div className="px-4 py-3 sticky top-[60px] z-40 bg-[#0a0a0a]/90 backdrop-blur-md">
+      <div className="px-4 py-3 bg-[#0a0a0a]">
         <div className="relative w-full">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
             <svg viewBox="0 0 24 24" width="18" height="18" stroke="#666" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
