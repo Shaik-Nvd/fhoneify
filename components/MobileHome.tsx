@@ -134,26 +134,14 @@ export default function MobileHome() {
           
           <Link href="/quote" className="bg-[#151c1a] rounded-xl p-4 flex flex-col items-center justify-center border border-[#1e2a26]">
             <div className="w-16 h-16 relative mb-2 flex items-center justify-center">
-              <svg viewBox="0 0 24 24" width="40" height="40" stroke="#4ade80" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                <line x1="12" y1="18" x2="12.01" y2="18"></line>
-              </svg>
-              <div className="absolute -right-2 top-0 bg-[#4ade80]/20 rounded-full p-1">
-                <span className="text-lg">💰</span>
-              </div>
+              <img src="/images/sell_phone.png" alt="Sell Phone" className="w-full h-full object-contain" />
             </div>
             <span className="text-sm text-white font-medium">Sell Phone</span>
           </Link>
 
           <Link href="/buy" className="bg-[#15191c] rounded-xl p-4 flex flex-col items-center justify-center border border-[#1e262a]">
             <div className="w-16 h-16 relative mb-2 flex items-center justify-center">
-              <svg viewBox="0 0 24 24" width="40" height="40" stroke="#60a5fa" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                <line x1="12" y1="18" x2="12.01" y2="18"></line>
-              </svg>
-              <div className="absolute -right-2 top-0 bg-[#60a5fa]/20 rounded-full p-1">
-                <span className="text-lg">🛍️</span>
-              </div>
+              <img src="/images/buy_phone.png" alt="Buy Phone" className="w-full h-full object-contain" />
             </div>
             <span className="text-sm text-white font-medium">Buy Phone</span>
           </Link>
