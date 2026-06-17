@@ -77,6 +77,16 @@ export default function QuotePage() {
   const [selectedStorage, setSelectedStorage] = useState('');
   const [selectionStage, setSelectionStage] = useState<'brand'|'model'|'storage'>('brand');
   
+  useEffect(() => {
+    if (selectedModel) {
+      document.title = `Sell ${selectedBrand} ${selectedModel} | Fhoneify`;
+    } else if (selectedBrand) {
+      document.title = `Sell ${selectedBrand} | Fhoneify`;
+    } else {
+      document.title = 'Get a Quote | Fhoneify';
+    }
+  }, [selectedBrand, selectedModel]);
+
   // New 8-stage flow: 1: Select, 2: BasePrice, 3: BasicQ, 4: Defects, 5: Hardware, 6: Accessories, 7: LeadCapture, 8: FinalPrice
   const [step, setStep] = useState(1);
   const [basePrice, setBasePrice] = useState<number | null>(null);

@@ -150,18 +150,18 @@ export default function MobileHome() {
         <h3 className="text-white font-bold text-lg mb-4">Our Services</h3>
         <div className="grid grid-cols-2 gap-3">
           
-          <Link href="/quote" className="bg-[#151c1a] rounded-xl p-4 flex flex-col items-center justify-center border border-[#1e2a26]">
-            <div className="w-16 h-16 relative mb-2 flex items-center justify-center">
-              <img src="/images/sell_phone.png" alt="Sell Phone" className="w-full h-full object-contain" />
+          <Link href="/quote" className="bg-[#151c1a] rounded-xl py-5 px-2 flex flex-col items-center justify-center border border-[#1e2a26]">
+            <div className="w-24 h-24 relative mb-2 flex items-center justify-center rounded-full overflow-hidden">
+              <img src="/images/sell_phone.png" alt="Sell Phone" className="w-full h-full object-cover" />
             </div>
-            <span className="text-sm text-white font-medium">Sell Phone</span>
+            <span className="text-sm text-white font-medium mt-1">Get Quote</span>
           </Link>
 
-          <Link href="/buy" className="bg-[#15191c] rounded-xl p-4 flex flex-col items-center justify-center border border-[#1e262a]">
-            <div className="w-16 h-16 relative mb-2 flex items-center justify-center">
-              <img src="/images/buy_phone.png" alt="Buy Phone" className="w-full h-full object-contain" />
+          <Link href="/buy" className="bg-[#15191c] rounded-xl py-5 px-2 flex flex-col items-center justify-center border border-[#1e262a]">
+            <div className="w-24 h-24 relative mb-2 flex items-center justify-center rounded-full overflow-hidden">
+              <img src="/images/buy_phone.png" alt="Buy Phone" className="w-full h-full object-cover" />
             </div>
-            <span className="text-sm text-white font-medium">Buy Phone</span>
+            <span className="text-sm text-white font-medium mt-1">Shop Phones</span>
           </Link>
 
         </div>

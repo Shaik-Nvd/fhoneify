@@ -7,7 +7,6 @@ import api from '@/lib/api';
 import { formatCurrency } from '@/lib/format';
 import { useAuthStore } from '@/lib/authStore';
 import { useCartStore } from '@/lib/cartStore';
-
 interface Listing {
   id: string;
   brand: string;
@@ -36,14 +35,18 @@ export default function ListingDetailPage() {
   const [loading, setLoading] = useState(true);
   const [adding, setAdding] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     async function load() {
       try {
         const res = await api.get(`/api/buy/listings/${id}`);
-        setListing(res.data.data);
+        setListing(res.data?.data?.listing ?? null);
+        if (res.data?.data?.listing) {
+          document.title = `${res.data.data.listing.brand} ${res.data.data.listing.model} | Fhoneify`;
+        }
       } catch {
-        setListing(null);
+        setError('Failed to load listing');
       } finally {
         setLoading(false);
       }
