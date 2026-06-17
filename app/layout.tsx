@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import '@/styles/globals.css';
 import Navbar from '@/components/Navbar';
 import MobileBottomNav from '@/components/MobileBottomNav';
+import WhatsAppFloatingBtn from '@/components/WhatsAppFloatingBtn';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -30,6 +31,7 @@ export default function RootLayout({
           {children}
         </main>
         <MobileBottomNav />
+        <WhatsAppFloatingBtn />
         <script dangerouslySetInnerHTML={{
           __html: `
             let mouseX = 0, mouseY = 0;
