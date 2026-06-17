@@ -15,8 +15,14 @@ export default function Navbar() {
   const [hoveredMenu, setHoveredMenu] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
     setMounted(true);
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
   }, []);
   
   // Hide the D2C Navbar on Partner and ITAD pages
@@ -176,135 +182,139 @@ export default function Navbar() {
         </div>
 
         {/* Right Section: Auth & Cart */}
-        <div className="hidden md:flex items-center gap-6">
-          <Link
-            href="/cart"
-            style={{ color: '#a0a0a0', fontSize: '1rem', fontWeight: 500, textDecoration: 'none', transition: 'color 150ms', position: 'relative' }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = '#d4af37')}
-            onMouseLeave={(e) => (e.currentTarget.style.color = '#a0a0a0')}
-          >
-            🛒
-            {mounted && cartCount > 0 && (
-              <span style={{
-                position: 'absolute',
-                top: '-8px',
-                right: '-12px',
-                backgroundColor: '#d4af37',
-                color: '#0a0a0a',
-                fontSize: '10px',
-                fontWeight: 700,
-                width: '18px',
-                height: '18px',
-                borderRadius: '50%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}>
-                {cartCount}
-              </span>
-            )}
-          </Link>
-
-          <div style={{ width: '1px', height: '24px', backgroundColor: '#2a2a2a' }}></div>
-
-          {mounted && isAuthenticated && user ? (
-            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
-                <span style={{ color: '#fff', fontSize: '0.8rem', fontWeight: 600 }}>{user.name || user.phone}</span>
-                <span style={{ color: '#a0a0a0', fontSize: '0.7rem' }}>{user.role === 'admin' ? 'Administrator' : 'Customer'}</span>
-              </div>
-              
-              <Link
-                href="/wallet"
-                style={{ color: '#a0a0a0', fontSize: '0.875rem', fontWeight: 500, textDecoration: 'none', transition: 'color 150ms' }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = '#d4af37')}
-                onMouseLeave={(e) => (e.currentTarget.style.color = '#a0a0a0')}
-              >
-                Wallet
-              </Link>
-              
-              <Link
-                href="/security"
-                style={{ color: '#a0a0a0', fontSize: '0.875rem', fontWeight: 500, textDecoration: 'none', transition: 'color 150ms' }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = '#d4af37')}
-                onMouseLeave={(e) => (e.currentTarget.style.color = '#a0a0a0')}
-              >
-                Security
-              </Link>
-
-              {user.role === 'admin' && (
-                <Link
-                  href="/admin"
-                  style={{ color: '#d4af37', fontSize: '0.875rem', fontWeight: 600, textDecoration: 'none', transition: 'color 150ms' }}
-                  onMouseEnter={(e) => (e.currentTarget.style.color = '#f0c040')}
-                  onMouseLeave={(e) => (e.currentTarget.style.color = '#d4af37')}
-                >
-                  Admin
-                </Link>
-              )}
-
-              <button
-                onClick={handleLogout}
-                style={{
-                  padding: '6px 14px',
-                  fontSize: '0.75rem',
-                  fontWeight: 600,
-                  borderRadius: '6px',
-                  border: '1px solid rgba(255,59,48,0.4)',
-                  backgroundColor: 'transparent',
-                  color: '#FF3B30',
-                  transition: 'all 150ms',
-                  cursor: 'pointer',
-                  marginLeft: '0.5rem'
-                }}
-                onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = 'rgba(255,59,48,0.1)'; }}
-                onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; }}
-              >
-                Logout
-              </button>
-            </div>
-          ) : (
+        {mounted && !isMobile && (
+          <div className="flex items-center gap-6">
             <Link
-              href="/auth"
-              style={{
-                padding: '8px 24px',
-                fontSize: '0.8rem',
-                fontWeight: 600,
-                borderRadius: '8px',
-                backgroundColor: '#d4af37',
-                color: '#0a0a0a',
-                textDecoration: 'none',
-                transition: 'all 150ms',
-              }}
-              onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#f0c040'; e.currentTarget.style.transform = 'scale(1.02)'; }}
-              onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = '#d4af37'; e.currentTarget.style.transform = 'scale(1)'; }}
+              href="/cart"
+              style={{ color: '#a0a0a0', fontSize: '1rem', fontWeight: 500, textDecoration: 'none', transition: 'color 150ms', position: 'relative' }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = '#d4af37')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = '#a0a0a0')}
             >
-              Login
+              🛒
+              {cartCount > 0 && (
+                <span style={{
+                  position: 'absolute',
+                  top: '-8px',
+                  right: '-12px',
+                  backgroundColor: '#d4af37',
+                  color: '#0a0a0a',
+                  fontSize: '10px',
+                  fontWeight: 700,
+                  width: '18px',
+                  height: '18px',
+                  borderRadius: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}>
+                  {cartCount}
+                </span>
+              )}
             </Link>
-          )}
-        </div>
+
+            <div style={{ width: '1px', height: '24px', backgroundColor: '#2a2a2a' }}></div>
+
+            {isAuthenticated && user ? (
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
+                  <span style={{ color: '#fff', fontSize: '0.8rem', fontWeight: 600 }}>{user.name || user.phone}</span>
+                  <span style={{ color: '#a0a0a0', fontSize: '0.7rem' }}>{user.role === 'admin' ? 'Administrator' : 'Customer'}</span>
+                </div>
+                
+                <Link
+                  href="/wallet"
+                  style={{ color: '#a0a0a0', fontSize: '0.875rem', fontWeight: 500, textDecoration: 'none', transition: 'color 150ms' }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = '#d4af37')}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = '#a0a0a0')}
+                >
+                  Wallet
+                </Link>
+                
+                <Link
+                  href="/security"
+                  style={{ color: '#a0a0a0', fontSize: '0.875rem', fontWeight: 500, textDecoration: 'none', transition: 'color 150ms' }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = '#d4af37')}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = '#a0a0a0')}
+                >
+                  Security
+                </Link>
+
+                {user.role === 'admin' && (
+                  <Link
+                    href="/admin"
+                    style={{ color: '#d4af37', fontSize: '0.875rem', fontWeight: 600, textDecoration: 'none', transition: 'color 150ms' }}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = '#f0c040')}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = '#d4af37')}
+                  >
+                    Admin
+                  </Link>
+                )}
+
+                <button
+                  onClick={handleLogout}
+                  style={{
+                    padding: '6px 14px',
+                    fontSize: '0.75rem',
+                    fontWeight: 600,
+                    borderRadius: '6px',
+                    border: '1px solid rgba(255,59,48,0.4)',
+                    backgroundColor: 'transparent',
+                    color: '#FF3B30',
+                    transition: 'all 150ms',
+                    cursor: 'pointer',
+                    marginLeft: '0.5rem'
+                  }}
+                  onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = 'rgba(255,59,48,0.1)'; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; }}
+                >
+                  Logout
+                </button>
+              </div>
+            ) : (
+              <Link
+                href="/auth"
+                style={{
+                  padding: '8px 24px',
+                  fontSize: '0.8rem',
+                  fontWeight: 600,
+                  borderRadius: '8px',
+                  backgroundColor: '#d4af37',
+                  color: '#0a0a0a',
+                  textDecoration: 'none',
+                  transition: 'all 150ms',
+                }}
+                onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#f0c040'; e.currentTarget.style.transform = 'scale(1.02)'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = '#d4af37'; e.currentTarget.style.transform = 'scale(1)'; }}
+              >
+                Login
+              </Link>
+            )}
+          </div>
+        )}
 
         {/* Mobile Hamburger Icon */}
-        <div className="md:hidden flex items-center gap-4">
-          <Link href="/cart" className="relative text-[#a0a0a0]">
-            🛒
-            {mounted && cartCount > 0 && (
-              <span className="absolute -top-2 -right-3 bg-[#d4af37] text-[#0a0a0a] text-[10px] font-bold w-[18px] h-[18px] rounded-full flex items-center justify-center">
-                {cartCount}
-              </span>
-            )}
-          </Link>
-          <button 
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="text-[#d4af37] p-2 focus:outline-none"
-          >
-            <div className="space-y-1.5">
-              <span className={`block w-6 h-0.5 bg-current transition-transform ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-              <span className={`block w-6 h-0.5 bg-current transition-opacity ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
-              <span className={`block w-6 h-0.5 bg-current transition-transform ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
-            </div>
-          </button>
-        </div>
+        {mounted && isMobile && (
+          <div className="flex items-center gap-4">
+            <Link href="/cart" className="relative text-[#a0a0a0]">
+              🛒
+              {cartCount > 0 && (
+                <span className="absolute -top-2 -right-3 bg-[#d4af37] text-[#0a0a0a] text-[10px] font-bold w-[18px] h-[18px] rounded-full flex items-center justify-center">
+                  {cartCount}
+                </span>
+              )}
+            </Link>
+            <button 
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="text-[#d4af37] p-2 focus:outline-none"
+            >
+              <div className="space-y-1.5">
+                <span className={`block w-6 h-0.5 bg-current transition-transform ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+                <span className={`block w-6 h-0.5 bg-current transition-opacity ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
+                <span className={`block w-6 h-0.5 bg-current transition-transform ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+              </div>
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Mobile Menu Dropdown */}
