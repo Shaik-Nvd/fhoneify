@@ -5,25 +5,25 @@ export const BRANDS = [
 ];
 
 export const BRAND_LOGOS: Record<string, string> = {
-  Apple: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg',
-  Xiaomi: 'https://upload.wikimedia.org/wikipedia/commons/a/ae/Xiaomi_logo_%282021-%29.svg',
-  Samsung: 'https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg',
-  Vivo: 'https://upload.wikimedia.org/wikipedia/commons/e/e5/Vivo_mobile_logo.svg',
-  OnePlus: 'https://upload.wikimedia.org/wikipedia/commons/f/f8/OnePlus_logo.svg',
-  OPPO: 'https://upload.wikimedia.org/wikipedia/commons/b/b8/OPPO_Logo.svg',
-  Realme: 'https://upload.wikimedia.org/wikipedia/commons/3/34/Realme_logo.svg',
-  Motorola: 'https://upload.wikimedia.org/wikipedia/commons/b/b3/Motorola_Logo_%28blue%29.svg',
-  Lenovo: 'https://upload.wikimedia.org/wikipedia/commons/b/b8/Lenovo_logo_2015.svg',
-  Nokia: 'https://upload.wikimedia.org/wikipedia/commons/0/02/Nokia_wordmark.svg',
+  Apple: 'https://commons.wikimedia.org/wiki/Special:FilePath/Apple_logo_black.svg',
+  Xiaomi: 'https://commons.wikimedia.org/wiki/Special:FilePath/Xiaomi_logo_(2021-).svg',
+  Samsung: 'https://commons.wikimedia.org/wiki/Special:FilePath/Samsung_Logo.svg',
+  Vivo: 'https://commons.wikimedia.org/wiki/Special:FilePath/Vivo_mobile_logo.svg',
+  OnePlus: 'https://commons.wikimedia.org/wiki/Special:FilePath/OnePlus_logo.svg',
+  OPPO: 'https://commons.wikimedia.org/wiki/Special:FilePath/OPPO_Logo.svg',
+  Realme: 'https://commons.wikimedia.org/wiki/Special:FilePath/Realme_logo.svg',
+  Motorola: 'https://commons.wikimedia.org/wiki/Special:FilePath/Motorola_Logo_(blue).svg',
+  Lenovo: 'https://commons.wikimedia.org/wiki/Special:FilePath/Lenovo_logo_2015.svg',
+  Nokia: 'https://commons.wikimedia.org/wiki/Special:FilePath/Nokia_wordmark.svg',
   Honor: 'https://commons.wikimedia.org/wiki/Special:FilePath/Honor_Logo_(2019).svg',
-  Asus: 'https://upload.wikimedia.org/wikipedia/commons/2/2e/ASUS_Logo.svg',
-  Google: 'https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg',
-  POCO: 'https://upload.wikimedia.org/wikipedia/commons/5/5e/POCO_Logo.svg',
-  LG: 'https://upload.wikimedia.org/wikipedia/commons/b/bf/LG_logo_%282015%29.svg',
-  Infinix: 'https://upload.wikimedia.org/wikipedia/commons/e/e0/Infinix_Logo.svg',
-  Tecno: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Tecno_Mobile_logo.svg',
-  iQOO: 'https://upload.wikimedia.org/wikipedia/commons/0/05/IQOO_logo.svg',
-  Nothing: 'https://upload.wikimedia.org/wikipedia/commons/3/36/Nothing_Logo.svg'
+  Asus: 'https://commons.wikimedia.org/wiki/Special:FilePath/ASUS_Logo.svg',
+  Google: 'https://commons.wikimedia.org/wiki/Special:FilePath/Google_%22G%22_logo.svg',
+  POCO: 'https://commons.wikimedia.org/wiki/Special:FilePath/POCO_Logo.svg',
+  LG: 'https://commons.wikimedia.org/wiki/Special:FilePath/LG_logo_(2015).svg',
+  Infinix: 'https://commons.wikimedia.org/wiki/Special:FilePath/Infinix_Logo.svg',
+  Tecno: 'https://commons.wikimedia.org/wiki/Special:FilePath/Tecno_Mobile_logo.svg',
+  iQOO: 'https://commons.wikimedia.org/wiki/Special:FilePath/IQOO_logo.svg',
+  Nothing: 'https://commons.wikimedia.org/wiki/Special:FilePath/Nothing_Logo.svg'
 };
 
 export const getBrandLogoStyle = (brand: string) => {
