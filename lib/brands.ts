@@ -5,25 +5,25 @@ export const BRANDS = [
 ];
 
 export const BRAND_LOGOS: Record<string, string> = {
-  Apple: 'https://commons.wikimedia.org/wiki/Special:FilePath/Apple_logo_black.svg',
-  Xiaomi: 'https://commons.wikimedia.org/wiki/Special:FilePath/Xiaomi_logo_(2021-).svg',
-  Samsung: 'https://commons.wikimedia.org/wiki/Special:FilePath/Samsung_Logo.svg',
-  Vivo: 'https://commons.wikimedia.org/wiki/Special:FilePath/Vivo_mobile_logo.svg',
-  OnePlus: 'https://commons.wikimedia.org/wiki/Special:FilePath/OnePlus_logo.svg',
-  OPPO: 'https://commons.wikimedia.org/wiki/Special:FilePath/OPPO_Logo.svg',
-  Realme: 'https://commons.wikimedia.org/wiki/Special:FilePath/Realme_logo.svg',
-  Motorola: 'https://commons.wikimedia.org/wiki/Special:FilePath/Motorola_Logo_(blue).svg',
-  Lenovo: 'https://commons.wikimedia.org/wiki/Special:FilePath/Lenovo_logo_2015.svg',
-  Nokia: 'https://commons.wikimedia.org/wiki/Special:FilePath/Nokia_wordmark.svg',
-  Honor: 'https://commons.wikimedia.org/wiki/Special:FilePath/Honor_Logo_(2019).svg',
-  Asus: 'https://commons.wikimedia.org/wiki/Special:FilePath/ASUS_Logo.svg',
-  Google: 'https://commons.wikimedia.org/wiki/Special:FilePath/Google_%22G%22_logo.svg',
-  POCO: 'https://commons.wikimedia.org/wiki/Special:FilePath/POCO_Logo.svg',
-  LG: 'https://commons.wikimedia.org/wiki/Special:FilePath/LG_logo_(2015).svg',
-  Infinix: 'https://commons.wikimedia.org/wiki/Special:FilePath/Infinix_Logo.svg',
-  Tecno: 'https://commons.wikimedia.org/wiki/Special:FilePath/Tecno_Mobile_logo.svg',
-  iQOO: 'https://commons.wikimedia.org/wiki/Special:FilePath/IQOO_logo.svg',
-  Nothing: 'https://commons.wikimedia.org/wiki/Special:FilePath/Nothing_Logo.svg'
+  Apple: 'https://cdn.simpleicons.org/apple/000000',
+  Xiaomi: 'https://cdn.simpleicons.org/xiaomi/FF6900',
+  Samsung: 'https://cdn.simpleicons.org/samsung/1428A0',
+  Vivo: 'https://upload.wikimedia.org/wikipedia/commons/e/e5/Vivo_mobile_logo.svg',
+  OnePlus: 'https://cdn.simpleicons.org/oneplus/F50100',
+  OPPO: 'https://cdn.simpleicons.org/oppo/00755E',
+  Realme: 'https://upload.wikimedia.org/wikipedia/commons/3/34/Realme_logo.svg',
+  Motorola: 'https://cdn.simpleicons.org/motorola/001489',
+  Lenovo: 'https://cdn.simpleicons.org/lenovo/E2231A',
+  Nokia: 'https://cdn.simpleicons.org/nokia/124191',
+  Honor: 'https://upload.wikimedia.org/wikipedia/commons/7/74/Honor_Logo_%282019%29.svg',
+  Asus: 'https://cdn.simpleicons.org/asus/00539B',
+  Google: 'https://cdn.simpleicons.org/google',
+  POCO: 'https://upload.wikimedia.org/wikipedia/commons/5/5e/POCO_Logo.svg',
+  LG: 'https://cdn.simpleicons.org/lg/A50034',
+  Infinix: 'https://upload.wikimedia.org/wikipedia/commons/e/e0/Infinix_Logo.svg',
+  Tecno: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Tecno_Mobile_logo.svg',
+  iQOO: 'https://upload.wikimedia.org/wikipedia/commons/0/05/IQOO_logo.svg',
+  Nothing: 'https://upload.wikimedia.org/wikipedia/commons/3/36/Nothing_Logo.svg'
 };
 
 export const getBrandLogoStyle = (brand: string) => {
