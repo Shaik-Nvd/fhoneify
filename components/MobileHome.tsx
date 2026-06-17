@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { m, useScroll, useTransform } from 'framer-motion';
 
@@ -72,6 +73,8 @@ const MOBILE_SLIDES = [
 
 export default function MobileHome() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [searchTerm, setSearchTerm] = useState('');
+  const router = useRouter();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -79,6 +82,12 @@ export default function MobileHome() {
     }, 4000);
     return () => clearInterval(timer);
   }, []);
+
+  const handleSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter' && searchTerm.trim() !== '') {
+      router.push(`/buy?q=${encodeURIComponent(searchTerm.trim())}`);
+    }
+  };
 
   return (
     <div className="w-full bg-[#0a0a0a] min-h-screen pb-6">
@@ -94,7 +103,10 @@ export default function MobileHome() {
           </div>
           <input 
             type="text" 
-            placeholder="Search for mobiles..." 
+            placeholder="Search for mobiles (e.g. iPhone 13)..." 
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            onKeyDown={handleSearch}
             className="w-full bg-[#111] border border-[#2a2a2a] text-white rounded-lg pl-10 pr-4 py-3 focus:border-[#d4af37] focus:outline-none focus:ring-1 focus:ring-[#d4af37] text-sm"
           />
         </div>

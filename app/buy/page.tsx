@@ -30,9 +30,17 @@ export default function BuyPage() {
   const [allListings, setAllListings] = useState<Listing[]>([]);
   const [brandFilter, setBrandFilter] = useState('');
   const [cityFilter, setCityFilter] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
   const [isSelectTier, setIsSelectTier] = useState(false);
 
   useEffect(() => {
+    // Check for query parameter 'q' on mount
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const q = params.get('q');
+      if (q) setSearchQuery(q);
+    }
+    
     async function fetchAll() {
       try {
         setLoading(true); setError(null);
@@ -52,8 +60,15 @@ export default function BuyPage() {
     let result = allListings;
     if (brandFilter) result = result.filter((l) => l.brand === brandFilter);
     if (cityFilter) result = result.filter((l) => l.city === cityFilter);
+    if (searchQuery) {
+      const q = searchQuery.toLowerCase();
+      result = result.filter((l) => 
+        l.brand.toLowerCase().includes(q) || 
+        l.model.toLowerCase().includes(q)
+      );
+    }
     return result;
-  }, [allListings, brandFilter, cityFilter]);
+  }, [allListings, brandFilter, cityFilter, searchQuery]);
 
   return (
     <div className="page-animate" style={{ maxWidth: '80rem', margin: '0 auto', padding: '2rem 1rem' }}>
@@ -65,6 +80,16 @@ export default function BuyPage() {
         <aside className="w-full md:w-64 shrink-0">
           <div className="card" style={{ position: 'sticky', top: '5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <h2 style={{ color: '#d4af37', fontWeight: 600, fontSize: '0.9rem' }}>Filters</h2>
+            <div>
+              <label style={{ display: 'block', fontSize: '0.75rem', color: '#a0a0a0', marginBottom: '0.35rem', fontWeight: 500 }}>Search</label>
+              <input 
+                type="text" 
+                value={searchQuery} 
+                onChange={(e) => setSearchQuery(e.target.value)} 
+                placeholder="Search models..." 
+                style={{ width: '100%' }} 
+              />
+            </div>
             <div>
               <label style={{ display: 'block', fontSize: '0.75rem', color: '#a0a0a0', marginBottom: '0.35rem', fontWeight: 500 }}>Brand</label>
               <select value={brandFilter} onChange={(e) => setBrandFilter(e.target.value)} style={{ width: '100%' }}>
@@ -91,8 +116,8 @@ export default function BuyPage() {
                 Fhoneify Select (Premium)
               </label>
             </div>
-            {(brandFilter || cityFilter || isSelectTier) && (
-              <button onClick={() => { setBrandFilter(''); setCityFilter(''); setIsSelectTier(false); }} className="text-link" style={{ fontSize: '0.8rem', background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left' }}>Clear filters</button>
+            {(brandFilter || cityFilter || isSelectTier || searchQuery) && (
+              <button onClick={() => { setBrandFilter(''); setCityFilter(''); setIsSelectTier(false); setSearchQuery(''); }} className="text-link" style={{ fontSize: '0.8rem', background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left' }}>Clear filters</button>
             )}
           </div>
         </aside>
