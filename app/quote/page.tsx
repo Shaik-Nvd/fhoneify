@@ -58,6 +58,51 @@ export default function QuotePage() {
   const [selectionStage, setSelectionStage] = useState<'brand'|'model'|'storage'>('brand');
   
   useEffect(() => {
+    const handlePopState = () => {
+      if (typeof window === 'undefined') return;
+      const params = new URLSearchParams(window.location.search);
+      const sBrand = params.get('brand') || '';
+      const sModel = params.get('model') || '';
+      const sStorage = params.get('storage') || '';
+      const sStep = parseInt(params.get('step') || '1', 10);
+      
+      let stage = params.get('stage') as any;
+      if (!stage) {
+        if (sModel) stage = 'storage';
+        else if (sBrand) stage = 'model';
+        else stage = 'brand';
+      }
+
+      setSelectedBrand(sBrand);
+      setSelectedModel(sModel);
+      setSelectedStorage(sStorage);
+      setStep(sStep);
+      setSelectionStage(stage);
+    };
+
+    handlePopState();
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  const navigateToState = (newBrand: string, newModel: string, newStorage: string, newStage: string, newStep: number) => {
+    const params = new URLSearchParams();
+    if (newBrand) params.set('brand', newBrand);
+    if (newModel) params.set('model', newModel);
+    if (newStorage) params.set('storage', newStorage);
+    if (newStage) params.set('stage', newStage);
+    if (newStep > 1) params.set('step', newStep.toString());
+
+    const newUrl = `${window.location.pathname}?${params.toString()}`;
+    window.history.pushState(null, '', newUrl);
+
+    setSelectedBrand(newBrand);
+    setSelectedModel(newModel);
+    setSelectedStorage(newStorage);
+    setSelectionStage(newStage as any);
+    setStep(newStep);
+  };
+
     if (selectedModel) {
       document.title = `Sell ${selectedBrand} ${selectedModel} | Fhoneify`;
     } else if (selectedBrand) {
@@ -197,9 +242,9 @@ export default function QuotePage() {
     }) ?? null;
   }, [allDevices, selectedBrand, selectedModel, selectedStorage]);
 
-  const handleBrandSelect = (b: string) => { setSelectedBrand(b); setSelectedModel(''); setSelectedStorage(''); setSelectionStage('model'); };
-  const handleModelSelect = (m: string) => { setSelectedModel(m); setSelectedStorage(''); setSelectionStage('storage'); };
-  const handleStorageSelect = (s: string) => { setSelectedStorage(s); };
+  const handleBrandSelect = (b: string) => { navigateToState(b, '', '', 'model', 1); };
+  const handleModelSelect = (m: string) => { navigateToState(selectedBrand, m, '', 'storage', 1); };
+  const handleStorageSelect = (s: string) => { navigateToState(selectedBrand, selectedModel, s, 'storage', 1); };
 
   const handleFetchBasePrice = async () => {
     if (!selectedDevice) return;
@@ -221,7 +266,7 @@ export default function QuotePage() {
       }
       
       setBasePrice(Math.round(computedBase));
-      setStep(2);
+      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 2);
     } catch {
       setError('Failed to fetch quote.');
     } finally {
@@ -286,7 +331,7 @@ export default function QuotePage() {
       // Save tokens so next request is authenticated
       setAuth({ id: user.id, phone: user.phone, name: user.name, role: user.role, email: user.email }, accessToken, refreshToken);
       calculateFinalPrice();
-      setStep(8);
+      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 8);
     } catch (err: any) {
       setAuthError(err?.response?.data?.error || 'Invalid OTP');
     } finally { setIsAuthLoading(false); }
@@ -375,7 +420,7 @@ export default function QuotePage() {
             <>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
                 <h2 style={{ color: '#fff', fontWeight: 600, fontSize: '1.25rem' }}>Select Model</h2>
-                <button onClick={() => setSelectionStage('brand')} style={{ color: '#4CD964', background: 'none', border: 'none', cursor: 'pointer' }}>Change Brand</button>
+                <button onClick={() => navigateToState('', '', '', 'brand', 1)} style={{ color: '#4CD964', background: 'none', border: 'none', cursor: 'pointer' }}>Change Brand</button>
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '1rem' }}>
                 {models.map((m) => (
@@ -392,7 +437,7 @@ export default function QuotePage() {
             <>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
                 <h2 style={{ color: '#fff', fontWeight: 600, fontSize: '1.25rem' }}>Select Storage</h2>
-                <button onClick={() => setSelectionStage('model')} style={{ color: '#4CD964', background: 'none', border: 'none', cursor: 'pointer' }}>Change Model</button>
+                <button onClick={() => navigateToState(selectedBrand, '', '', 'model', 1)} style={{ color: '#4CD964', background: 'none', border: 'none', cursor: 'pointer' }}>Change Model</button>
               </div>
               <div className="card" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', border: '1px solid #2a2a2a', backgroundColor: '#111' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
@@ -419,7 +464,7 @@ export default function QuotePage() {
             <h2 style={{ fontSize: '1.4rem', fontWeight: 500 }}>Sell Old {selectedModel.startsWith(selectedBrand) ? selectedModel : `${selectedBrand} ${selectedModel}`} ({selectedStorage})</h2>
             <p style={{ color: '#666', fontSize: '1rem', marginTop: '1rem' }}>Get Upto</p>
             <p style={{ fontSize: '3rem', fontWeight: 700, color: '#FF4C4C' }}>{formatCurrency(basePrice || 0)}</p>
-            <button onClick={() => setStep(3)} className="btn-primary" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', background: '#4CD964', color: '#fff', fontWeight: 600, marginTop: '1.5rem', width: 'fit-content', padding: '1rem 2rem', borderRadius: '8px' }}>
+            <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 3)} className="btn-primary" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', background: '#4CD964', color: '#fff', fontWeight: 600, marginTop: '1.5rem', width: 'fit-content', padding: '1rem 2rem', borderRadius: '8px' }}>
               Get Exact Value <ArrowRightIcon />
             </button>
           </div>
@@ -457,7 +502,7 @@ export default function QuotePage() {
                   </div>
                 ))}
                 <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
-                  <button onClick={() => setStep(4)} disabled={diagnostics.calls === null || diagnostics.touch === null || diagnostics.originalScreen === null} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (diagnostics.calls !== null && diagnostics.touch !== null && diagnostics.originalScreen !== null) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
+                  <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 4)} disabled={diagnostics.calls === null || diagnostics.touch === null || diagnostics.originalScreen === null} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (diagnostics.calls !== null && diagnostics.touch !== null && diagnostics.originalScreen !== null) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
             )}
@@ -481,7 +526,7 @@ export default function QuotePage() {
                   ))}
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
-                  <button onClick={() => setStep(5)} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px' }}>Continue <ArrowRightIcon /></button>
+                  <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 5)} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px' }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
             )}
@@ -518,7 +563,7 @@ export default function QuotePage() {
                   ))}
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
-                  <button onClick={() => setStep(6)} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px' }}>Continue <ArrowRightIcon /></button>
+                  <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 6)} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px' }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
             )}
@@ -541,7 +586,7 @@ export default function QuotePage() {
                   ))}
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
-                  <button onClick={() => { if (isAuthenticated) { calculateFinalPrice(); setStep(8); } else { setStep(7); } }} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px' }}>Continue <ArrowRightIcon /></button>
+                  <button onClick={() => { if (isAuthenticated) { calculateFinalPrice(); navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 8); } else { navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 7); } }} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px' }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
             )}
@@ -572,7 +617,7 @@ export default function QuotePage() {
                     <p style={{ color: '#FF4C4C', fontSize: '1.75rem', fontWeight: 700 }}>₹ XX,XXX</p>
                   </div>
                 </div>
-                <button onClick={() => { setStep(6); setShowOtpInput(false); }} style={{ background: 'none', border: 'none', fontSize: '2rem', cursor: 'pointer', paddingLeft: '1rem', color: '#999', lineHeight: 1 }}>×</button>
+                <button onClick={() => { navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 6); setShowOtpInput(false); }} style={{ background: 'none', border: 'none', fontSize: '2rem', cursor: 'pointer', paddingLeft: '1rem', color: '#999', lineHeight: 1 }}>×</button>
               </div>
 
               <div style={{ backgroundColor: '#e8f5e9', color: '#4CD964', padding: '1rem', borderRadius: '8px', textAlign: 'center', fontWeight: 600, marginBottom: '2.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', border: '1px solid #c8e6c9' }}>
@@ -625,7 +670,7 @@ export default function QuotePage() {
           <p style={{ color: '#a0a0a0', fontSize: '1rem', marginTop: '0.5rem' }}>{selectedModel.startsWith(selectedBrand) ? selectedModel : `${selectedBrand} ${selectedModel}`} ({selectedStorage})</p>
           
           <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', width: '100%' }}>
-            <button type="button" onClick={() => { setStep(1); setFinalPrice(null); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], hardware: [], accessories: [] }); }} className="btn-outline" style={{ flex: 1, padding: '16px', fontSize: '1.1rem' }}>Start Over</button>
+            <button type="button" onClick={() => { navigateToState('', '', '', 'brand', 1); setFinalPrice(null); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], hardware: [], accessories: [] }); }} className="btn-outline" style={{ flex: 1, padding: '16px', fontSize: '1.1rem' }}>Start Over</button>
             <button type="button" onClick={() => { alert("Scheduled for Pickup!"); router.push('/'); }} className="btn-primary" style={{ flex: 2, padding: '16px', background: '#4CD964', color: '#fff', fontSize: '1.1rem', fontWeight: 600 }}>Schedule Pickup</button>
           </div>
         </div>
