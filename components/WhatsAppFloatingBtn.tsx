@@ -10,6 +10,13 @@ export default function WhatsAppFloatingBtn() {
   
   const phoneNumber = "919739063840";
   
+  // Only show the WhatsApp floating button on relevant pages
+  const isAllowedPage = pathname === '/' || pathname.startsWith('/buy') || pathname.startsWith('/quote') || pathname.startsWith('/sell');
+  
+  if (!isAllowedPage) {
+    return null;
+  }
+  
   let message = "I'm interested in your services.";
   if (pathname === '/') message = "Hi Fhoneify, I'd like to know more about your services.";
   else if (pathname.startsWith('/buy/')) {
@@ -23,8 +30,6 @@ export default function WhatsAppFloatingBtn() {
   }
   else if (pathname.startsWith('/buy')) message = "I'm interested in buying a refurbished phone.";
   else if (pathname.startsWith('/quote') || pathname.startsWith('/sell')) message = "I’m interested to sell my phone";
-  else if (pathname.startsWith('/cart') || pathname.startsWith('/checkout')) message = "I need help with my cart/checkout.";
-  else if (pathname.startsWith('/orders') || pathname.startsWith('/wallet') || pathname.startsWith('/security')) message = "I have a question about my account/order.";
   
   const prefilledMessage = encodeURIComponent(message);
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${prefilledMessage}`;
