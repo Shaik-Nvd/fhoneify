@@ -10,7 +10,7 @@ const MOBILE_SLIDES = [
     title: "Sell old phone",
     desc: "From your doorstep or at any of our 200 stores pan-India",
     btnText: "Sell Now",
-    btnLink: "/sell",
+    btnLink: "/quote",
     bg: "linear-gradient(135deg, #2EC4B6 0%, #1A9386 100%)",
     icon: (
       <svg viewBox="0 0 24 24" width="64" height="64" stroke="white" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.9 }}>
@@ -132,7 +132,7 @@ export default function MobileHome() {
         <h3 className="text-white font-bold text-lg mb-4">Our Services</h3>
         <div className="grid grid-cols-2 gap-3">
           
-          <Link href="/sell" className="bg-[#151c1a] rounded-xl p-4 flex flex-col items-center justify-center border border-[#1e2a26]">
+          <Link href="/quote" className="bg-[#151c1a] rounded-xl p-4 flex flex-col items-center justify-center border border-[#1e2a26]">
             <div className="w-16 h-16 relative mb-2 flex items-center justify-center">
               <svg viewBox="0 0 24 24" width="40" height="40" stroke="#4ade80" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
@@ -166,7 +166,7 @@ export default function MobileHome() {
         <h3 className="text-white font-bold text-lg mb-4">Sell Your Old Device Now</h3>
         <div className="grid grid-cols-2 gap-3">
           
-          <Link href="/sell" className="bg-[#151c1a] rounded-xl p-4 flex flex-col items-center justify-center border border-[#1e2a26]">
+          <Link href="/quote" className="bg-[#151c1a] rounded-xl p-4 flex flex-col items-center justify-center border border-[#1e2a26]">
             <div className="w-16 h-16 relative mb-2 flex items-center justify-center">
               <svg viewBox="0 0 24 24" width="40" height="40" stroke="#4ade80" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
