@@ -104,20 +104,54 @@ export default function QuotePage() {
   useEffect(() => {
     async function fetchDevices() {
       try {
-        setLoading(true);
+        const cached = localStorage.getItem('fhoneify-devices-cache');
+        const cacheTime = localStorage.getItem('fhoneify-devices-time');
+        const now = Date.now();
+        
+        let hasValidCache = false;
+        if (cached && cacheTime && now - parseInt(cacheTime) < 1000 * 60 * 60 * 24) {
+          // Use cache immediately
+          setAllDevices(extractDevices(JSON.parse(cached)));
+          setLoading(false);
+          hasValidCache = true;
+        } else {
+          setLoading(true);
+        }
+        
         setError(null);
-        const response = await api.get('/api/quote/devices');
-        setAllDevices(extractDevices(response.data));
+        
+        // Fetch fresh data
+        const refreshData = async () => {
+          const response = await api.get('/api/quote/devices');
+          setAllDevices(extractDevices(response.data));
+          try {
+            localStorage.setItem('fhoneify-devices-cache', JSON.stringify(response.data));
+            localStorage.setItem('fhoneify-devices-time', Date.now().toString());
+          } catch (e) {
+            // Ignore quota errors
+          }
+        };
+
+        if (!hasValidCache) {
+          await refreshData();
+          setLoading(false);
+        } else {
+          // Refresh silently in background
+          refreshData().catch(() => {});
+        }
       } catch {
         setError('Failed to load devices.');
-      } finally {
         setLoading(false);
       }
     }
     fetchDevices();
   }, []);
 
-  const brands = useMemo(() => [...new Set(allDevices.map((d) => d.brand).filter(Boolean))].sort(), [allDevices]);
+  const brands = useMemo(() => {
+    const extracted = [...new Set(allDevices.map((d) => d.brand).filter(Boolean))];
+    if (extracted.length === 0) return Object.keys(BRAND_LOGOS).sort();
+    return extracted.sort();
+  }, [allDevices]);
   const models = useMemo(() => {
     if (!selectedBrand) return [];
     const brandModels = [...new Set(allDevices.filter((d) => d.brand === selectedBrand).map((d) => d.model).filter(Boolean))];
