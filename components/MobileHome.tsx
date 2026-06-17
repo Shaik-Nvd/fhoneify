@@ -3,6 +3,9 @@
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import TopSellingModels from '@/components/TopSellingModels';
+import WhyUs from '@/components/WhyUs';
+import CustomerStories from '@/components/CustomerStories';
+import FAQs from '@/components/FAQs';
 import { useState, useEffect } from 'react';
 import { m, useScroll, useTransform } from 'framer-motion';
 
@@ -226,6 +229,21 @@ export default function MobileHome() {
       {/* Top Selling Models */}
       <div className="px-4 mt-8 mb-8">
         <TopSellingModels />
+      </div>
+
+      {/* Why Us */}
+      <div className="px-4 mt-8 mb-8">
+        <WhyUs />
+      </div>
+
+      {/* Customer Stories */}
+      <div className="px-4 mt-8 mb-8 overflow-hidden">
+        <CustomerStories />
+      </div>
+
+      {/* FAQs */}
+      <div className="px-4 mt-8 mb-12">
+        <FAQs />
       </div>
 
     </div>
