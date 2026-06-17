@@ -15,7 +15,7 @@ export const BRAND_LOGOS: Record<string, string> = {
   Motorola: 'https://upload.wikimedia.org/wikipedia/commons/b/b3/Motorola_Logo_%28blue%29.svg',
   Lenovo: 'https://upload.wikimedia.org/wikipedia/commons/b/b8/Lenovo_logo_2015.svg',
   Nokia: 'https://upload.wikimedia.org/wikipedia/commons/0/02/Nokia_wordmark.svg',
-  Honor: 'https://upload.wikimedia.org/wikipedia/commons/1/1a/Honor_Logo.svg',
+  Honor: 'https://commons.wikimedia.org/wiki/Special:FilePath/Honor_Logo_(2019).svg',
   Asus: 'https://upload.wikimedia.org/wikipedia/commons/2/2e/ASUS_Logo.svg',
   Google: 'https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg',
   POCO: 'https://upload.wikimedia.org/wikipedia/commons/5/5e/POCO_Logo.svg',
