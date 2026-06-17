@@ -24,12 +24,6 @@ const conditionConfig: Record<string, { label: string; className: string }> = {
   poor: { label: 'Poor', className: 'badge-danger' },
 };
 
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Buy Refurbished Phones',
-};
-
 export default function BuyPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);

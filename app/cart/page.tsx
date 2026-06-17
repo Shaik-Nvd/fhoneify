@@ -8,12 +8,6 @@ import { useAuthStore } from '@/lib/authStore';
 import { useCartStore } from '@/lib/cartStore';
 import { formatCurrency } from '@/lib/format';
 
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Your Cart',
-};
-
 export default function CartPage() {
   const router = useRouter();
   const { isAuthenticated } = useAuthStore();

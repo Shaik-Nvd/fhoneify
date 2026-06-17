@@ -4,11 +4,6 @@ import { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import api from '@/lib/api';
 import { useAuthStore } from '@/lib/authStore';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Login & Register',
-};
 
 export default function AuthPage() {
   const router = useRouter();

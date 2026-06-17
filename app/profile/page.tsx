@@ -4,11 +4,6 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useHydratedAuth } from '@/lib/useHydratedAuth';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Your Profile',
-};
 
 export default function ProfilePage() {
   const router = useRouter();

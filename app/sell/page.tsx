@@ -16,10 +16,6 @@ interface DashboardData {
   pendingCount: number;
 }
 
-export const metadata: Metadata = {
-  title: 'Sell Your Phone',
-};
-
 export default function SellDashboardPage() {
   const router = useRouter();
   const { hydrated, isAuthenticated, user } = useHydratedAuth();
