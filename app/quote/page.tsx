@@ -254,18 +254,9 @@ export default function QuotePage() {
       setLoading(true);
       // Fetch base quote assuming flawless condition
       const response = await api.post('/api/quote', { deviceId: selectedDevice.id, condition: 'like_new', storage: selectedDevice.storage });
-      const rawPrice = response.data?.data?.estimatedPrice ?? response.data?.data?.estimated_price;
+      const rawPrice = response.data?.data?.upliftedBasePrice ?? response.data?.data?.estimatedPrice ?? response.data?.data?.estimated_price;
       
       let computedBase = typeof rawPrice === 'number' ? rawPrice : Number(rawPrice);
-      
-      // Competitive Pricing Logic against Cashify Base Price
-      if (computedBase <= 20000) {
-        computedBase *= 1.08; // +8%
-      } else if (computedBase <= 50000) {
-        computedBase *= 1.06; // +6%
-      } else {
-        computedBase *= 1.04; // +4%
-      }
       
       setBasePrice(Math.round(computedBase));
       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 2);

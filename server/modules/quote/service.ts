@@ -75,7 +75,7 @@ export function generateQuote(deviceId: string, condition: string, aiPriceAdjust
   };
 
   quotes.set(quoteId, quote);
-  return { estimatedPrice, deviceId, condition, quoteId };
+  return { estimatedPrice, deviceId, condition, quoteId, upliftedBasePrice };
 }
 
 export function getQuoteById(quoteId: string): Quote | null {
