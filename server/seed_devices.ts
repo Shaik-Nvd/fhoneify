@@ -3030,7 +3030,7 @@ export const SEED_DEVICES = [
     "storage": "128GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 0
+    "basePrice": 2800
   },
   {
     "id": "apple_1003",
@@ -3462,7 +3462,7 @@ export const SEED_DEVICES = [
     "storage": "16GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 0
+    "basePrice": 2080
   },
   {
     "id": "apple_2007",
@@ -3471,7 +3471,7 @@ export const SEED_DEVICES = [
     "storage": "32GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 0
+    "basePrice": 2390
   },
   {
     "id": "apple_2008",
@@ -3480,7 +3480,7 @@ export const SEED_DEVICES = [
     "storage": "64GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 0
+    "basePrice": 2750
   },
   {
     "id": "apple_2009",
