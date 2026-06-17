@@ -156,7 +156,7 @@ function FloatingPhone() {
   const phoneZ = useTransform(scrollYProgress, [0, 0.5], ["0px", "-100px"]);
 
   return (
-    <div className="perspective-container" style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '400px' }}>
+    <div className="perspective-container" style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '600px' }}>
       <m.div 
         className="floating-phone"
         style={{ 
