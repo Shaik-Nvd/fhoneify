@@ -1,13 +1,23 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function WhatsAppFloatingBtn() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(true);
+  const pathname = usePathname();
   
   const phoneNumber = "919739063840";
-  const prefilledMessage = encodeURIComponent("I’m interested to sell my phone");
+  
+  let message = "I'm interested in your services.";
+  if (pathname === '/') message = "Hi Fhoneify, I'd like to know more about your services.";
+  else if (pathname.startsWith('/buy')) message = "I'm interested in buying a refurbished phone.";
+  else if (pathname.startsWith('/quote') || pathname.startsWith('/sell')) message = "I’m interested to sell my phone";
+  else if (pathname.startsWith('/cart') || pathname.startsWith('/checkout')) message = "I need help with my cart/checkout.";
+  else if (pathname.startsWith('/orders') || pathname.startsWith('/wallet') || pathname.startsWith('/security')) message = "I have a question about my account/order.";
+  
+  const prefilledMessage = encodeURIComponent(message);
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${prefilledMessage}`;
 
   useEffect(() => {
@@ -91,7 +101,7 @@ export default function WhatsAppFloatingBtn() {
         target="_blank"
         rel="noopener noreferrer"
         onClick={handleClick}
-        className="flex items-center justify-center w-12 h-12 bg-[#25D366] rounded-full shadow-lg hover:bg-[#128C7E] transition-colors duration-300 absolute bottom-0 right-0"
+        className={`flex items-center justify-center w-12 h-12 bg-[#25D366] rounded-full shadow-lg hover:bg-[#128C7E] transition-colors duration-300 absolute bottom-0 right-0 ${!isOpen ? 'whatsapp-pulse' : ''}`}
         style={{
           boxShadow: '0 4px 12px rgba(37, 211, 102, 0.4)'
         }}
