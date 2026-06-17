@@ -61,7 +61,7 @@ export default function TopSellingModels() {
                 </div>
                 <div>
                   <div className="text-white font-medium text-base">{item.brand} {item.model}</div>
-                  <div className="text-[#a0a0a0] text-sm">({item.ram}/{item.storage})</div>
+                  <div className="text-[#a0a0a0] text-sm">({item.storage})</div>
                 </div>
               </div>
               <div>
@@ -90,7 +90,7 @@ export default function TopSellingModels() {
             </div>
             <div className="flex-1">
               <div className="text-white font-medium text-sm line-clamp-1">{item.brand} {item.model}</div>
-              <div className="text-[#a0a0a0] text-xs mb-1">({item.ram}/{item.storage})</div>
+              <div className="text-[#a0a0a0] text-xs mb-1">({item.storage})</div>
               <div className="text-[#FFD700] font-bold">₹{calculateFhoneifyPrice(item.price).toLocaleString('en-IN')}</div>
             </div>
             <button 

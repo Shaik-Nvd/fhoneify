@@ -172,13 +172,8 @@ export default function QuotePage() {
   const storageOptions = useMemo(() => {
     if (!selectedBrand || !selectedModel) return [];
     
-    // Group variants by "RAM / Storage" strings
-    const storageList = [...new Set(
-      allDevices
-        .filter((d) => d.brand === selectedBrand && d.model === selectedModel)
-        .map((d) => d.ram && d.storage !== 'Standard' ? `${d.ram} / ${d.storage}` : d.storage)
-        .filter(Boolean)
-    )];
+    const availableVariants = allDevices.filter((d) => d.brand === selectedBrand && d.model === selectedModel);
+    const storageList = Array.from(new Set(availableVariants.map((d) => d.storage).filter(Boolean)));
     
     const parseStorage = (s: string) => {
       // s might be "4GB / 128GB" or "128GB"
@@ -197,7 +192,7 @@ export default function QuotePage() {
   const selectedDevice = useMemo(() => {
     if (!selectedBrand || !selectedModel || !selectedStorage) return null;
     return allDevices.find((d) => {
-      const combinedStorage = d.ram && d.storage !== 'Standard' ? `${d.ram} / ${d.storage}` : d.storage;
+      const combinedStorage = d.storage;
       return d.brand === selectedBrand && d.model === selectedModel && combinedStorage === selectedStorage;
     }) ?? null;
   }, [allDevices, selectedBrand, selectedModel, selectedStorage]);
