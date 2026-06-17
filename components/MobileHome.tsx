@@ -6,8 +6,10 @@ import TopSellingModels from '@/components/TopSellingModels';
 import WhyUs from '@/components/WhyUs';
 import CustomerStories from '@/components/CustomerStories';
 import FAQs from '@/components/FAQs';
+import WarrantyClaim from '@/components/WarrantyClaim';
 import { useState, useEffect } from 'react';
 import { m, useScroll, useTransform } from 'framer-motion';
+import { BRANDS, BRAND_LOGOS, getBrandLogoStyle } from '@/lib/brands';
 
 const MOBILE_SLIDES = [
   {
@@ -158,19 +160,53 @@ export default function MobileHome() {
             <div className="w-24 h-24 relative mb-2 flex items-center justify-center rounded-full overflow-hidden">
               <img src="/images/sell_phone.png" alt="Sell Phone" className="w-full h-full object-cover" />
             </div>
-            <span className="text-sm text-white font-medium mt-1">Get Quote</span>
+            <span className="text-sm text-white font-medium mt-1">Sell Phones</span>
           </Link>
 
           <Link href="/buy" className="bg-[#15191c] rounded-xl py-5 px-2 flex flex-col items-center justify-center border border-[#1e262a]">
             <div className="w-24 h-24 relative mb-2 flex items-center justify-center rounded-full overflow-hidden">
               <img src="/images/buy_phone.png" alt="Buy Phone" className="w-full h-full object-cover" />
             </div>
-            <span className="text-sm text-white font-medium mt-1">Shop Phones</span>
+            <span className="text-sm text-white font-medium mt-1">Buy Phones</span>
           </Link>
 
         </div>
       </div>
 
+      {/* Top Brands Section */}
+      <div className="px-4 mt-8">
+        <h3 className="text-white font-bold text-lg mb-4">Top Brands</h3>
+        <div className="flex overflow-x-auto gap-3 pb-2 hide-scrollbar">
+          {BRANDS.slice(0, 10).map((brand) => (
+            <Link 
+              key={brand} 
+              href={`/quote?brand=${encodeURIComponent(brand)}`}
+              className="bg-[#111] rounded-xl p-3 border border-[#2a2a2a] flex flex-col items-center shrink-0 w-24 hover:border-[#38b2ac] transition-colors"
+            >
+              <div className="h-10 w-full flex items-center justify-center mb-2">
+                <img 
+                  src={BRAND_LOGOS[brand]} 
+                  alt={brand} 
+                  style={{
+                    ...getBrandLogoStyle(brand),
+                    height: '100%',
+                    width: 'auto',
+                    maxWidth: '100%'
+                  }}
+                  onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                />
+              </div>
+              <span className="text-xs text-[#a0a0a0] font-medium text-center w-full truncate">{brand}</span>
+            </Link>
+          ))}
+          <Link 
+            href="/quote"
+            className="bg-[#111] rounded-xl p-3 border border-[#2a2a2a] flex flex-col items-center justify-center shrink-0 w-24 hover:border-[#38b2ac] transition-colors"
+          >
+            <span className="text-xs text-[#d4af37] font-medium">View All</span>
+          </Link>
+        </div>
+      </div>
 
       {/* Buy Refurbished Devices Section */}
       <div className="px-4 mt-8">
@@ -244,6 +280,11 @@ export default function MobileHome() {
       {/* FAQs */}
       <div className="px-4 mt-8 mb-12">
         <FAQs />
+      </div>
+
+      {/* Warranty Claim */}
+      <div className="px-4 mt-8 mb-4">
+        <WarrantyClaim />
       </div>
 
     </div>

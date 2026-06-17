@@ -5,29 +5,7 @@ import { useAuthStore } from '@/lib/authStore';
 import { useEffect, useState, useRef } from 'react';
 import { LazyMotion, domAnimation, m, useScroll, useTransform, useMotionValue, useSpring } from 'framer-motion';
 
-const BRANDS = ['Apple', 'Xiaomi', 'Samsung', 'Vivo', 'OnePlus', 'OPPO', 'Realme', 'Motorola', 'Lenovo', 'Nokia', 'Honor', 'Asus', 'Google', 'POCO', 'LG', 'Infinix', 'Tecno', 'iQOO', 'Nothing'];
-
-const BRAND_LOGOS: Record<string, string> = {
-  Apple: 'https://cdn.simpleicons.org/apple/white',
-  Xiaomi: 'https://cdn.simpleicons.org/xiaomi/ff6900',
-  Samsung: 'https://cdn.simpleicons.org/samsung/0C185A',
-  Vivo: 'https://www.google.com/s2/favicons?domain=vivo.com&sz=128',
-  OnePlus: 'https://cdn.simpleicons.org/oneplus/f50100',
-  OPPO: 'https://cdn.simpleicons.org/oppo/003A1C',
-  Realme: 'https://www.google.com/s2/favicons?domain=realme.com&sz=128',
-  Motorola: 'https://cdn.simpleicons.org/motorola/white',
-  Lenovo: 'https://cdn.simpleicons.org/lenovo/e2231a',
-  Nokia: 'https://cdn.simpleicons.org/nokia/white',
-  Honor: 'https://www.google.com/s2/favicons?domain=hihonor.com&sz=128',
-  Asus: 'https://cdn.simpleicons.org/asus/003366',
-  Google: 'https://cdn.simpleicons.org/google',
-  POCO: 'https://www.google.com/s2/favicons?domain=po.co&sz=128',
-  LG: 'https://cdn.simpleicons.org/lg/a50034',
-  Infinix: 'https://www.google.com/s2/favicons?domain=infinixmobility.com&sz=128',
-  Tecno: 'https://www.google.com/s2/favicons?domain=tecno-mobile.com&sz=128',
-  iQOO: 'https://www.google.com/s2/favicons?domain=iqoo.com&sz=128',
-  Nothing: 'https://www.google.com/s2/favicons?domain=nothing.tech&sz=128'
-};
+import { BRANDS, BRAND_LOGOS, getBrandLogoStyle } from '@/lib/brands';
 
 const STEPS = [
   { num: '01', title: 'Get a Quote', desc: 'Select your device and condition to receive an instant valuation.' },
@@ -224,6 +202,7 @@ import TopSellingModels from '@/components/TopSellingModels';
 import WhyUs from '@/components/WhyUs';
 import CustomerStories from '@/components/CustomerStories';
 import FAQs from '@/components/FAQs';
+import WarrantyClaim from '@/components/WarrantyClaim';
 
 export default function LandingPage() {
   const [mounted, setMounted] = useState(false);
@@ -442,6 +421,11 @@ export default function LandingPage() {
           <m.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <FAQs />
           </m.div>
+          
+          {/* Warranty Claim */}
+          <div className="mb-16">
+            <WarrantyClaim />
+          </div>
         </div>
       </section>
 
@@ -461,11 +445,10 @@ export default function LandingPage() {
                       src={BRAND_LOGOS[brand]} 
                       alt={brand} 
                       style={{ 
+                        ...getBrandLogoStyle(brand),
                         height: '40px', 
                         width: 'auto', 
                         maxWidth: '80px',
-                        objectFit: 'contain',
-                        filter: ['Nothing', 'Realme'].includes(brand) ? 'invert(1)' : 'none'
                       }} 
                       onError={(e) => { e.currentTarget.style.display = 'none'; }}
                     />

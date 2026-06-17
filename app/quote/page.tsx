@@ -7,27 +7,7 @@ import { formatCurrency } from '@/lib/format';
 import { useAuthStore } from '@/lib/authStore';
 import { useHydratedAuth } from '@/lib/useHydratedAuth';
 
-const BRAND_LOGOS: Record<string, string> = {
-  Apple: 'https://cdn.simpleicons.org/apple/white',
-  Xiaomi: 'https://cdn.simpleicons.org/xiaomi/ff6900',
-  Samsung: 'https://cdn.simpleicons.org/samsung/0C185A',
-  Vivo: 'https://www.google.com/s2/favicons?domain=vivo.com&sz=128',
-  OnePlus: 'https://cdn.simpleicons.org/oneplus/f50100',
-  OPPO: 'https://cdn.simpleicons.org/oppo/003A1C',
-  Realme: 'https://www.google.com/s2/favicons?domain=realme.com&sz=128',
-  Motorola: 'https://cdn.simpleicons.org/motorola/white',
-  Lenovo: 'https://cdn.simpleicons.org/lenovo/e2231a',
-  Nokia: 'https://cdn.simpleicons.org/nokia/white',
-  Honor: 'https://www.google.com/s2/favicons?domain=hihonor.com&sz=128',
-  Asus: 'https://cdn.simpleicons.org/asus/003366',
-  Google: 'https://cdn.simpleicons.org/google',
-  POCO: 'https://www.google.com/s2/favicons?domain=po.co&sz=128',
-  LG: 'https://cdn.simpleicons.org/lg/a50034',
-  Infinix: 'https://www.google.com/s2/favicons?domain=infinixmobility.com&sz=128',
-  Tecno: 'https://www.google.com/s2/favicons?domain=tecno-mobile.com&sz=128',
-  iQOO: 'https://www.google.com/s2/favicons?domain=iqoo.com&sz=128',
-  Nothing: 'https://www.google.com/s2/favicons?domain=nothing.tech&sz=128'
-};
+import { BRAND_LOGOS, getBrandLogoStyle } from '@/lib/brands';
 
 export interface Device {
   id: string;
@@ -387,7 +367,7 @@ export default function QuotePage() {
                 ) : (
                   brands.map((b) => (
                     <button key={b} onClick={() => handleBrandSelect(b)} className="card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', padding: '1.5rem 1rem', border: '1px solid #2a2a2a', backgroundColor: '#111', borderRadius: '12px', cursor: 'pointer', transition: 'all 200ms' }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = '#4CD964'; e.currentTarget.style.transform = 'translateY(-2px)'; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = '#2a2a2a'; e.currentTarget.style.transform = 'translateY(0)'; }}>
-                      <img src={BRAND_LOGOS[b] || '/images/placeholder-phone.svg'} alt={b} style={{ width: '48px', height: '48px', objectFit: 'contain', filter: ['Nothing', 'Realme'].includes(b) ? 'invert(1)' : 'none' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; }} />
+                      <img src={BRAND_LOGOS[b] || '/images/placeholder-phone.svg'} alt={b} style={getBrandLogoStyle(b)} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; }} />
                       <span style={{ fontSize: '0.85rem', fontWeight: 500, color: '#fff' }}>{b}</span>
                     </button>
                   ))

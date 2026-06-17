@@ -66,7 +66,7 @@ export default function TopSellingModels() {
               </div>
               <div>
                 <div className="text-[#a0a0a0] text-sm mb-1">Get Upto</div>
-                <div className="text-[#d4af37] font-bold text-xl">₹{calculateFhoneifyPrice(item.price).toLocaleString('en-IN')}</div>
+                <div className="text-[#FFD700] font-bold text-xl">₹{calculateFhoneifyPrice(item.price).toLocaleString('en-IN')}</div>
               </div>
               <div className="flex justify-end">
                 <button 
@@ -91,7 +91,7 @@ export default function TopSellingModels() {
             <div className="flex-1">
               <div className="text-white font-medium text-sm line-clamp-1">{item.brand} {item.model}</div>
               <div className="text-[#a0a0a0] text-xs mb-1">({item.ram}/{item.storage})</div>
-              <div className="text-[#d4af37] font-bold">₹{calculateFhoneifyPrice(item.price).toLocaleString('en-IN')}</div>
+              <div className="text-[#FFD700] font-bold">₹{calculateFhoneifyPrice(item.price).toLocaleString('en-IN')}</div>
             </div>
             <button 
               onClick={() => handleSellClick(item.brand, item.model)}
