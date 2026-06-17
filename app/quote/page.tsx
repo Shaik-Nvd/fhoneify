@@ -94,7 +94,9 @@ export default function QuotePage() {
     if (newStep > 1) params.set('step', newStep.toString());
 
     const newUrl = `${window.location.pathname}?${params.toString()}`;
-    window.history.pushState(null, '', newUrl);
+    
+    // Pass existing history state so Next.js App Router doesn't break on back navigation
+    window.history.pushState(window.history.state, '', newUrl);
 
     setSelectedBrand(newBrand);
     setSelectedModel(newModel);
