@@ -19,32 +19,6 @@ export default function WhatsAppFloatingBtn() {
     return () => clearTimeout(timer);
   }, [pathname]);
 
-  const phoneNumber = "919739063840";
-  
-  // Only show the WhatsApp floating button on relevant pages
-  const isAllowedPage = pathname === '/' || pathname.startsWith('/buy') || pathname.startsWith('/quote') || pathname.startsWith('/sell');
-  
-  if (!isAllowedPage) {
-    return null;
-  }
-  
-  let message = "I'm interested in your services.";
-  if (pageContext && pageContext !== 'Fhoneify — Premium Phone Resale') {
-    message = `I'm reaching out from the ${pageContext} page.`;
-    if (pathname.startsWith('/buy') && pageContext !== 'Buy Refurbished Phones') {
-       message = `I'm interested in buying a phone (from: ${pageContext})`;
-    } else if (pathname.startsWith('/quote') || pathname.startsWith('/sell')) {
-       message = `I'm interested to sell my phone (from: ${pageContext})`;
-    }
-  } else {
-    if (pathname === '/') message = "Hi Fhoneify, I'd like to know more about your services.";
-    else if (pathname.startsWith('/buy')) message = "I'm interested in buying a refurbished phone.";
-    else if (pathname.startsWith('/quote') || pathname.startsWith('/sell')) message = "I'm interested to sell my phone";
-  }
-  
-  const prefilledMessage = encodeURIComponent(message);
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${prefilledMessage}`;
-
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
@@ -64,6 +38,32 @@ export default function WhatsAppFloatingBtn() {
       clearTimeout(timer);
     };
   }, []);
+
+  // Only show the WhatsApp floating button on relevant pages
+  const isAllowedPage = pathname === '/' || pathname.startsWith('/buy') || pathname.startsWith('/quote') || pathname.startsWith('/sell');
+  
+  if (!isAllowedPage) {
+    return null;
+  }
+  
+  const phoneNumber = "919739063840";
+  
+  let message = "I'm interested in your services.";
+  if (pageContext && pageContext !== 'Fhoneify — Premium Phone Resale') {
+    message = `I'm reaching out from the ${pageContext} page.`;
+    if (pathname.startsWith('/buy') && pageContext !== 'Buy Refurbished Phones') {
+       message = `I'm interested in buying a phone (from: ${pageContext})`;
+    } else if (pathname.startsWith('/quote') || pathname.startsWith('/sell')) {
+       message = `I'm interested to sell my phone (from: ${pageContext})`;
+    }
+  } else {
+    if (pathname === '/') message = "Hi Fhoneify, I'd like to know more about your services.";
+    else if (pathname.startsWith('/buy')) message = "I'm interested in buying a refurbished phone.";
+    else if (pathname.startsWith('/quote') || pathname.startsWith('/sell')) message = "I'm interested to sell my phone";
+  }
+  
+  const prefilledMessage = encodeURIComponent(message);
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${prefilledMessage}`;
 
   const handleClick = (e: React.MouseEvent) => {
     if (isMobile) {
