@@ -31,7 +31,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${inter.className}`} style={{ backgroundColor: '#0a0a0a', color: '#ffffff' }}>
         <div className="custom-cursor" id="custom-cursor"></div>
         <Navbar />
-        <main className="page-animate pb-20 md:pb-0" style={{ minHeight: '100vh', backgroundColor: '#0a0a0a' }}>
+        <main className="page-animate pb-[calc(80px+env(safe-area-inset-bottom,16px))] md:pb-0" style={{ minHeight: '100vh', backgroundColor: '#0a0a0a' }}>
           {children}
         </main>
         <MobileBottomNav />
