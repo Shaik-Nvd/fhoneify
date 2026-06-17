@@ -294,11 +294,11 @@ export default function LandingPage() {
             >
               <m.p variants={itemVariants} className="eyebrow" style={{ marginBottom: '1.5rem', letterSpacing: '4px' }}>INDIA&apos;S PREMIUM PHONE RESALE</m.p>
               <m.h1 variants={itemVariants} style={{
-                fontSize: 'clamp(3.5rem, 6vw, 5.5rem)',
+                fontSize: 'clamp(2.2rem, 8vw, 4.5rem)',
                 fontWeight: 300,
                 color: '#ffffff',
                 lineHeight: 1.1,
-                marginBottom: '1.5rem',
+                marginBottom: '1rem',
                 letterSpacing: '-0.04em',
               }}>
                 Sell Smart.<br/>
@@ -315,13 +315,13 @@ export default function LandingPage() {
               </m.p>
               
               <m.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center md:justify-start">
-                <Link href="/quote" style={{ textDecoration: 'none' }}>
-                  <MagneticButton className="btn-primary" style={{ padding: '16px 40px', fontSize: '1rem', boxShadow: '0 10px 30px rgba(212,175,55,0.3)' }}>
+                <Link href="/quote" style={{ textDecoration: 'none' }} className="w-full sm:w-auto">
+                  <MagneticButton className="btn-primary w-full sm:w-auto" style={{ padding: '16px 40px', fontSize: '1.1rem', boxShadow: '0 10px 30px rgba(212,175,55,0.3)', width: '100%', justifyContent: 'center' }}>
                     Get a Quote
                   </MagneticButton>
                 </Link>
-                <Link href="/buy" style={{ textDecoration: 'none' }}>
-                  <MagneticButton className="glass-panel" style={{ padding: '16px 40px', fontSize: '1rem', color: '#fff', borderRadius: '8px', fontWeight: 600 }}>
+                <Link href="/buy" style={{ textDecoration: 'none' }} className="w-full sm:w-auto">
+                  <MagneticButton className="glass-panel w-full sm:w-auto" style={{ padding: '16px 40px', fontSize: '1.1rem', color: '#fff', borderRadius: '8px', fontWeight: 600, width: '100%', justifyContent: 'center' }}>
                     Buy a Phone
                   </MagneticButton>
                 </Link>

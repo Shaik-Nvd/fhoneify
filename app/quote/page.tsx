@@ -246,7 +246,6 @@ export default function QuotePage() {
   const handleSendOtp = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!userPhone || userPhone.length < 10) { setAuthError('Enter a valid 10-digit phone number'); return; }
-    if (!userName || !userEmail) { setAuthError('Please enter your Name and Email'); return; }
     try {
       setIsAuthLoading(true); setAuthError(null);
       const res = await api.post('/api/auth/otp/send', { phone: userPhone });
@@ -267,15 +266,6 @@ export default function QuotePage() {
       
       // Save tokens so next request is authenticated
       setAuth({ id: user.id, phone: user.phone, name: user.name, role: user.role, email: user.email }, accessToken, refreshToken);
-      
-      // If it's a new user or missing name, update the profile using captured lead info
-      if (isNewUser || !user.name || !user.email) {
-        await api.put('/api/auth/profile', 
-          { name: userName, email: userEmail }, 
-          { headers: { Authorization: `Bearer ${accessToken}` } }
-        );
-      }
-
       calculateFinalPrice();
       setStep(8);
     } catch (err: any) {
@@ -575,14 +565,6 @@ export default function QuotePage() {
                 
                 {!showOtpInput ? (
                   <>
-                    <div style={{ marginBottom: '1.5rem' }}>
-                      <label style={{ display: 'block', fontSize: '0.85rem', color: '#666', marginBottom: '0.5rem' }}>Full Name</label>
-                      <input type="text" value={userName} onChange={(e) => setUserName(e.target.value)} placeholder="John Doe" required style={{ width: '100%', border: 'none', borderBottom: '2px solid #ccc', outline: 'none', fontSize: '1.1rem', paddingBottom: '0.5rem', backgroundColor: 'transparent', color: '#000' }} />
-                    </div>
-                    <div style={{ marginBottom: '1.5rem' }}>
-                      <label style={{ display: 'block', fontSize: '0.85rem', color: '#666', marginBottom: '0.5rem' }}>Email Address</label>
-                      <input type="email" value={userEmail} onChange={(e) => setUserEmail(e.target.value)} placeholder="john@gmail.com" required style={{ width: '100%', border: 'none', borderBottom: '2px solid #ccc', outline: 'none', fontSize: '1.1rem', paddingBottom: '0.5rem', backgroundColor: 'transparent', color: '#000' }} />
-                    </div>
                     <div style={{ marginBottom: '2.5rem' }}>
                       <label style={{ display: 'block', fontSize: '0.85rem', color: '#666', marginBottom: '0.5rem' }}>Phone Number</label>
                       <div style={{ display: 'flex', borderBottom: '2px solid #ccc', paddingBottom: '0.5rem' }}>
