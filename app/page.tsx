@@ -220,6 +220,7 @@ function MagneticButton({ children, className, style }: { children: React.ReactN
 }
 
 import MobileHome from '@/components/MobileHome';
+import TopSellingModels from '@/components/TopSellingModels';
 
 export default function LandingPage() {
   const [mounted, setMounted] = useState(false);
@@ -402,6 +403,15 @@ export default function LandingPage() {
               </m.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Top Selling Models */}
+      <section style={{ backgroundColor: '#0a0a0a', padding: '0 0 8rem 0' }}>
+        <div style={{ maxWidth: '64rem', margin: '0 auto', padding: '0 1.5rem' }}>
+          <m.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <TopSellingModels />
+          </m.div>
         </div>
       </section>
 

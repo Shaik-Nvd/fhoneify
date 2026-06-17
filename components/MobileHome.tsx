@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import TopSellingModels from '@/components/TopSellingModels';
 import { useState, useEffect } from 'react';
 import { m, useScroll, useTransform } from 'framer-motion';
 
@@ -220,6 +221,11 @@ export default function MobileHome() {
           </div>
 
         </div>
+      </div>
+
+      {/* Top Selling Models */}
+      <div className="px-4 mt-8 mb-8">
+        <TopSellingModels />
       </div>
 
     </div>
