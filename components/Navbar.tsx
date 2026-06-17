@@ -102,16 +102,18 @@ export default function Navbar() {
               onMouseEnter={() => setHoveredMenu(category.id)} 
               onMouseLeave={() => setHoveredMenu(null)}
             >
-              <span style={{ 
-                color: hoveredMenu === category.id ? '#d4af37' : '#a0a0a0', 
-                fontSize: '0.875rem', 
-                fontWeight: 500, 
-                cursor: 'pointer', 
-                transition: 'color 150ms', 
-                display: 'flex', 
-                alignItems: 'center', 
-                gap: '6px' 
-              }}>
+              <span 
+                onClick={() => setHoveredMenu(hoveredMenu === category.id ? null : category.id)}
+                style={{ 
+                  color: hoveredMenu === category.id ? '#d4af37' : '#a0a0a0', 
+                  fontSize: '0.875rem', 
+                  fontWeight: 500, 
+                  cursor: 'pointer', 
+                  transition: 'color 150ms', 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  gap: '6px' 
+                }}>
                 {category.title}
                 <span style={{ 
                   fontSize: '0.55rem', 
@@ -307,19 +309,37 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-[#0a0a0a] border-t border-[#2a2a2a] px-4 py-6 flex flex-col gap-6 absolute w-full left-0">
-          {navCategories.map((cat) => (
-            <div key={cat.id} className="flex flex-col gap-3">
-              <span className="text-[#d4af37] font-semibold text-sm tracking-wider uppercase">{cat.title}</span>
-              <div className="flex flex-col gap-2 pl-4 border-l border-[#2a2a2a]">
-                {cat.items.map((item) => (
-                  <Link key={item.href} href={item.href} onClick={() => setIsMobileMenuOpen(false)} className="text-[#a0a0a0] hover:text-[#fff] transition-colors py-1">
-                    {item.label}
-                  </Link>
-                ))}
+        <div className="md:hidden bg-[#0a0a0a] border-t border-[#2a2a2a] px-4 py-6 flex flex-col gap-4 absolute w-full left-0 max-h-[80vh] overflow-y-auto shadow-2xl">
+          {navCategories.map((cat) => {
+            const isExpanded = hoveredMenu === cat.id; // Reusing hoveredMenu state for mobile accordion
+            return (
+              <div key={cat.id} className="flex flex-col border-b border-[#1a1a1a] pb-2">
+                <button 
+                  onClick={() => setHoveredMenu(isExpanded ? null : cat.id)}
+                  className="flex justify-between items-center w-full text-left py-2"
+                >
+                  <span className="text-[#d4af37] font-semibold text-sm tracking-wider uppercase">{cat.title}</span>
+                  <span className={`text-[#d4af37] text-xs transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}>▼</span>
+                </button>
+                
+                {isExpanded && (
+                  <div className="flex flex-col gap-3 pl-2 pt-2 pb-2 mt-1">
+                    {cat.items.map((item) => (
+                      <Link 
+                        key={item.href} 
+                        href={item.href} 
+                        onClick={() => { setIsMobileMenuOpen(false); setHoveredMenu(null); }} 
+                        className="text-[#a0a0a0] hover:text-[#fff] transition-colors py-1 flex items-center gap-2"
+                      >
+                        <span className="w-1 h-1 bg-[#d4af37] rounded-full opacity-50"></span>
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
-            </div>
-          ))}
+            );
+          })}
           
           <div className="border-t border-[#2a2a2a] pt-6 flex flex-col gap-4">
             {mounted && isAuthenticated && user ? (
