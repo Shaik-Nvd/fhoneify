@@ -285,6 +285,12 @@ body:hover .custom-cursor {
   opacity: 1;
 }
 
+@media (hover: none) and (pointer: coarse), (max-width: 768px) {
+  .custom-cursor {
+    display: none !important;
+  }
+}
+
 /* Animated Text Gradient */
 .text-gradient-animated {
   background: linear-gradient(to right, #d4af37, #ffecd2, #fcb69f, #d4af37);
