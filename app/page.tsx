@@ -39,7 +39,7 @@ const STATS = [
   { value: '50K+', label: 'Phones Sold' },
   { value: '₹12Cr+', label: 'Paid to Sellers' },
   { value: '4.8★', label: 'User Rating' },
-  { value: '100+', label: 'Cities Served' },
+  { value: 'Bengaluru', label: 'Currently Serving' },
 ];
 
 const TRUST = [
@@ -360,7 +360,7 @@ export default function LandingPage() {
           <div className="glass-panel grid grid-cols-2 md:grid-cols-4 gap-6 text-center rounded-2xl p-6 md:p-10">
             {STATS.map((s) => (
               <div key={s.label}>
-                <p className="text-gradient-animated" style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '0.5rem', display: 'inline-block' }}>{s.value}</p>
+                <p className="text-gradient-animated" style={{ fontSize: s.value.length > 6 ? '1.8rem' : '2.5rem', fontWeight: 700, marginBottom: '0.5rem', display: 'inline-block' }}>{s.value}</p>
                 <p style={{ fontSize: '0.85rem', color: '#a0a0a0', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 600 }}>{s.label}</p>
               </div>
             ))}
