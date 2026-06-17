@@ -7,60 +7,66 @@ import { m, useScroll, useTransform } from 'framer-motion';
 const MOBILE_SLIDES = [
   {
     id: 1,
-    title: "Sell old phone",
-    desc: "From your doorstep or at any of our 200 stores pan-India",
-    btnText: "Sell Now",
+    title: "Every phone inspected. Every price earned.",
+    desc: "Get the fairest value based on thorough 60-point checks.",
+    btnText: "Get Quote",
     btnLink: "/quote",
-    bg: "linear-gradient(135deg, #2EC4B6 0%, #1A9386 100%)",
-    icon: (
-      <svg viewBox="0 0 24 24" width="64" height="64" stroke="white" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.9 }}>
-        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-        <path d="M12 18h.01"></path>
-      </svg>
-    )
+    bg: "linear-gradient(135deg, #1f4037 0%, #99f2c8 100%)",
+    icon: <div className="text-5xl opacity-80">🔍</div>
   },
   {
     id: 2,
-    title: "Price Crash Zone",
-    desc: "Get the devices you want at lowest-ever prices",
-    btnText: "Order Now",
-    btnLink: "/buy",
-    bg: "linear-gradient(135deg, #4A90E2 0%, #1C54A8 100%)",
-    icon: (
-      <svg viewBox="0 0 24 24" width="64" height="64" stroke="white" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.9 }}>
-        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-        <polyline points="22 4 12 14.01 9 11.01"></polyline>
-      </svg>
-    )
+    title: "Upgrade smart. Sell smarter.",
+    desc: "Don't settle for less. Maximize your device's resale value.",
+    btnText: "Sell Now",
+    btnLink: "/quote",
+    bg: "linear-gradient(135deg, #4b6cb7 0%, #182848 100%)",
+    icon: <div className="text-5xl opacity-80">💡</div>
   },
   {
     id: 3,
-    title: "Join Fhoneify Partner",
-    desc: "Get leads, grow your inventory & accelerate profit",
-    btnText: "Get Details",
-    btnLink: "/partner",
-    bg: "linear-gradient(135deg, #10B981 0%, #047857 100%)",
-    icon: (
-      <svg viewBox="0 0 24 24" width="64" height="64" stroke="white" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.9 }}>
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-        <circle cx="9" cy="7" r="4"></circle>
-        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-      </svg>
-    )
+    title: "Turn your old phone into instant cash.",
+    desc: "Fast, secure payments directly to your bank account.",
+    btnText: "Get Cash",
+    btnLink: "/quote",
+    bg: "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
+    icon: <div className="text-5xl opacity-80">💸</div>
   },
   {
     id: 4,
-    title: "Refurbished Mega Sale",
-    desc: "Save up to 20% OFF on certified renewed mobile phones",
-    btnText: "Buy Now",
-    btnLink: "/buy",
-    bg: "linear-gradient(135deg, #F59E0B 0%, #B45309 100%)",
-    icon: (
-      <svg viewBox="0 0 24 24" width="64" height="64" stroke="white" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.9 }}>
-        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-      </svg>
-    )
+    title: "Your phone's still worth something. Let's prove it.",
+    desc: "Find out its true market value in less than 60 seconds.",
+    btnText: "Check Value",
+    btnLink: "/quote",
+    bg: "linear-gradient(135deg, #f12711 0%, #f5af19 100%)",
+    icon: <div className="text-5xl opacity-80">📱</div>
+  },
+  {
+    id: 5,
+    title: "Don't let it collect dust. Let it collect cash.",
+    desc: "Convert your unused tech into money today.",
+    btnText: "Sell Now",
+    btnLink: "/quote",
+    bg: "linear-gradient(135deg, #8E2DE2 0%, #4A00E0 100%)",
+    icon: <div className="text-5xl opacity-80">💰</div>
+  },
+  {
+    id: 6,
+    title: "We inspect so you don't have to worry.",
+    desc: "Professional diagnostics ensuring the fairest price.",
+    btnText: "Learn More",
+    btnLink: "/quote",
+    bg: "linear-gradient(135deg, #00b09b 0%, #96c93d 100%)",
+    icon: <div className="text-5xl opacity-80">✅</div>
+  },
+  {
+    id: 7,
+    title: "Phones change. Value shouldn't.",
+    desc: "Lock in your guaranteed price right now.",
+    btnText: "Lock Price",
+    btnLink: "/quote",
+    bg: "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)",
+    icon: <div className="text-5xl opacity-80">🔒</div>
   }
 ];
 

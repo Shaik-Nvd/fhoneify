@@ -100,14 +100,13 @@ function TiltCard({ children, href }: { children: React.ReactNode, href: string 
 }
 
 const BANNER_ITEMS = [
-  { id: 1, title: 'Sell old phone', desc: 'From your doorstep or at any of our 200 stores pan-India', cta: 'Sell Now', link: '/sell', icon: '📱' },
-  { id: 2, title: 'Extra 10% on Apple', desc: 'Get the best exchange value for your iPhone this week only!', cta: 'Get Quote', link: '/quote', icon: (
-    <svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ display: 'inline-block' }}>
-      <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-      <path d="M12 18h.01"></path>
-    </svg>
-  ) },
-  { id: 3, title: 'Buy Refurbished', desc: 'Quality verified devices at unbeatable prices. 6 Months warranty.', cta: 'Buy Now', link: '/buy', icon: '🛍️' },
+  { id: 1, title: 'Every phone inspected. Every price earned.', desc: 'Get the fairest value based on thorough 60-point checks.', cta: 'Get Quote', link: '/quote', icon: '🔍' },
+  { id: 2, title: 'Upgrade smart. Sell smarter.', desc: 'Don\'t settle for less. Maximize your device\'s resale value.', cta: 'Sell Now', link: '/quote', icon: '💡' },
+  { id: 3, title: 'Turn your old phone into instant cash.', desc: 'Fast, secure payments directly to your bank account.', cta: 'Get Cash', link: '/quote', icon: '💸' },
+  { id: 4, title: 'Your phone\'s still worth something. Let\'s prove it.', desc: 'Find out its true market value in less than 60 seconds.', cta: 'Check Value', link: '/quote', icon: '📱' },
+  { id: 5, title: 'Don\'t let it collect dust. Let it collect cash.', desc: 'Convert your unused tech into money today.', cta: 'Sell Now', link: '/quote', icon: '💰' },
+  { id: 6, title: 'We inspect so you don\'t have to worry.', desc: 'Professional diagnostics ensuring the fairest price.', cta: 'Learn More', link: '/quote', icon: '✅' },
+  { id: 7, title: 'Phones change. Value shouldn\'t.', desc: 'Lock in your guaranteed price right now.', cta: 'Lock Price', link: '/quote', icon: '🔒' },
 ];
 
 function SlidingBanner() {
