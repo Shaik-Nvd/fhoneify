@@ -83,11 +83,14 @@ export default function AuthPage() {
           <form onSubmit={handleSendOtp} className="card" style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
             <div>
               <label style={{ display: 'block', fontSize: '0.8rem', color: '#a0a0a0', marginBottom: '0.35rem', fontWeight: 500 }}>Phone Number</label>
-              <input
-                id="phone" type="tel" value={phone}
-                onChange={(e) => setPhone(e.target.value.replace(/\D/g, '').slice(0, 10))}
-                placeholder="9876543210" style={{ width: '100%' }}
-              />
+              <div style={{ position: 'relative' }}>
+                <span style={{ position: 'absolute', left: '16px', top: '50%', transform: 'translateY(-50%)', color: '#a0a0a0', fontSize: '0.875rem', fontWeight: 500, borderRight: '1px solid #2a2a2a', paddingRight: '10px' }}>+91</span>
+                <input
+                  id="phone" type="tel" value={phone}
+                  onChange={(e) => setPhone(e.target.value.replace(/\D/g, '').slice(0, 10))}
+                  placeholder="9876543210" style={{ width: '100%', paddingLeft: '4.5rem' }}
+                />
+              </div>
             </div>
             <button type="submit" disabled={loading} className="btn-primary" style={{ width: '100%', padding: '14px', opacity: loading ? 0.4 : 1 }}>
               {loading ? 'Sending...' : 'Send OTP'}

@@ -29,7 +29,7 @@ export default function WhatsAppFloatingBtn() {
     }
   }
   else if (pathname.startsWith('/buy')) message = "I'm interested in buying a refurbished phone.";
-  else if (pathname.startsWith('/quote') || pathname.startsWith('/sell')) message = "I’m interested to sell my phone";
+  else if (pathname.startsWith('/quote') || pathname.startsWith('/sell')) message = "I'm interested to sell my phone";
   
   const prefilledMessage = encodeURIComponent(message);
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${prefilledMessage}`;
