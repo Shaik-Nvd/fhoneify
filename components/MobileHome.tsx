@@ -198,7 +198,7 @@ export default function MobileHome() {
               FHONEIFY ASSURED
             </div>
             <div className="h-[120px] w-full flex items-center justify-center mt-6 mb-2">
-              <img src="https://m.media-amazon.com/images/I/81x15N13N0L._SX679_.jpg" alt="Samsung S23" className="max-h-full max-w-full object-contain mix-blend-screen" />
+              <img src="https://m.media-amazon.com/images/I/61RZDb2mQxL._SX679_.jpg" alt="Samsung S23" className="max-h-full max-w-full object-contain mix-blend-screen" />
             </div>
             <div className="bg-[#4ade80]/10 text-[#4ade80] text-xs font-semibold px-2 py-1 rounded inline-block mb-2">
               ₹18,500 OFF
