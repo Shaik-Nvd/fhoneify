@@ -27,6 +27,12 @@ const TOP_MODELS: TopModel[] = [
   { id: '10', brand: 'Apple', model: 'iPhone 11', ram: '4 GB', storage: '64 GB', price: 13220, image: 'https://m.media-amazon.com/images/I/71tpxtLD0aL._SX679_.jpg' },
 ];
 
+const calculateFhoneifyPrice = (basePrice: number) => {
+  if (basePrice <= 20000) return Math.round(basePrice * 1.08); // +8%
+  if (basePrice <= 50000) return Math.round(basePrice * 1.06); // +6%
+  return Math.round(basePrice * 1.04); // +4%
+};
+
 export default function TopSellingModels() {
   const router = useRouter();
 
@@ -60,7 +66,7 @@ export default function TopSellingModels() {
               </div>
               <div>
                 <div className="text-[#a0a0a0] text-sm mb-1">Get Upto</div>
-                <div className="text-[#d4af37] font-bold text-xl">₹{item.price.toLocaleString('en-IN')}</div>
+                <div className="text-[#d4af37] font-bold text-xl">₹{calculateFhoneifyPrice(item.price).toLocaleString('en-IN')}</div>
               </div>
               <div className="flex justify-end">
                 <button 
@@ -85,7 +91,7 @@ export default function TopSellingModels() {
             <div className="flex-1">
               <div className="text-white font-medium text-sm line-clamp-1">{item.brand} {item.model}</div>
               <div className="text-[#a0a0a0] text-xs mb-1">({item.ram}/{item.storage})</div>
-              <div className="text-[#d4af37] font-bold">₹{item.price.toLocaleString('en-IN')}</div>
+              <div className="text-[#d4af37] font-bold">₹{calculateFhoneifyPrice(item.price).toLocaleString('en-IN')}</div>
             </div>
             <button 
               onClick={() => handleSellClick(item.brand, item.model)}
