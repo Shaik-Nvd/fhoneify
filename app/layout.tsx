@@ -17,6 +17,10 @@ export const metadata: Metadata = {
   description: "India's premium marketplace for selling and buying verified refurbished phones",
 };
 
+export const viewport = {
+  themeColor: '#0a0a0a',
+};
+
 export default function RootLayout({
   children,
 }: {
