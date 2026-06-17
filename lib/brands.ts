@@ -5,21 +5,21 @@ export const BRANDS = [
 ];
 
 export const BRAND_LOGOS: Record<string, string> = {
-  Apple: 'https://cdn.simpleicons.org/apple/white',
-  Xiaomi: 'https://cdn.simpleicons.org/xiaomi/ff6900',
-  Samsung: 'https://cdn.simpleicons.org/samsung/0C185A',
+  Apple: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg',
+  Xiaomi: 'https://upload.wikimedia.org/wikipedia/commons/a/ae/Xiaomi_logo_%282021-%29.svg',
+  Samsung: 'https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg',
   Vivo: 'https://upload.wikimedia.org/wikipedia/commons/e/e5/Vivo_mobile_logo.svg',
-  OnePlus: 'https://cdn.simpleicons.org/oneplus/f50100',
-  OPPO: 'https://cdn.simpleicons.org/oppo/white',
+  OnePlus: 'https://upload.wikimedia.org/wikipedia/commons/f/f8/OnePlus_logo.svg',
+  OPPO: 'https://upload.wikimedia.org/wikipedia/commons/b/b8/OPPO_Logo.svg',
   Realme: 'https://upload.wikimedia.org/wikipedia/commons/3/34/Realme_logo.svg',
-  Motorola: 'https://cdn.simpleicons.org/motorola/white',
-  Lenovo: 'https://cdn.simpleicons.org/lenovo/e2231a',
-  Nokia: 'https://cdn.simpleicons.org/nokia/white',
-  Honor: 'https://www.google.com/s2/favicons?domain=hihonor.com&sz=128',
-  Asus: 'https://cdn.simpleicons.org/asus/003366',
-  Google: 'https://cdn.simpleicons.org/google',
+  Motorola: 'https://upload.wikimedia.org/wikipedia/commons/b/b3/Motorola_Logo_%28blue%29.svg',
+  Lenovo: 'https://upload.wikimedia.org/wikipedia/commons/b/b8/Lenovo_logo_2015.svg',
+  Nokia: 'https://upload.wikimedia.org/wikipedia/commons/0/02/Nokia_wordmark.svg',
+  Honor: 'https://upload.wikimedia.org/wikipedia/commons/1/1a/Honor_Logo.svg',
+  Asus: 'https://upload.wikimedia.org/wikipedia/commons/2/2e/ASUS_Logo.svg',
+  Google: 'https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg',
   POCO: 'https://upload.wikimedia.org/wikipedia/commons/5/5e/POCO_Logo.svg',
-  LG: 'https://cdn.simpleicons.org/lg/a50034',
+  LG: 'https://upload.wikimedia.org/wikipedia/commons/b/bf/LG_logo_%282015%29.svg',
   Infinix: 'https://upload.wikimedia.org/wikipedia/commons/e/e0/Infinix_Logo.svg',
   Tecno: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Tecno_Mobile_logo.svg',
   iQOO: 'https://upload.wikimedia.org/wikipedia/commons/0/05/IQOO_logo.svg',
@@ -33,11 +33,9 @@ export const getBrandLogoStyle = (brand: string) => {
     objectFit: 'contain'
   };
 
-  if (['Nothing', 'Realme'].includes(brand)) {
+  // Black logos that need inversion on a dark background
+  if (['Apple', 'Nothing'].includes(brand)) {
     baseStyle.filter = 'invert(1)';
-  } else if (brand === 'Samsung') {
-    baseStyle.filter = 'brightness(0.5)';
-    baseStyle.transform = 'scale(1.3)';
   }
 
   return baseStyle;
