@@ -30,13 +30,12 @@ export const getBrandLogoStyle = (brand: string) => {
   const baseStyle: React.CSSProperties = {
     height: '48px',
     width: '48px',
-    objectFit: 'contain'
+    objectFit: 'contain',
+    backgroundColor: '#ffffff',
+    padding: '4px',
+    borderRadius: '8px',
+    boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
   };
-
-  // Black logos that need inversion on a dark background
-  if (['Apple', 'Nothing'].includes(brand)) {
-    baseStyle.filter = 'invert(1)';
-  }
 
   return baseStyle;
 };
