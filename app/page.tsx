@@ -326,12 +326,12 @@ export default function LandingPage() {
               <m.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center md:justify-start">
                 <Link href="/quote" style={{ textDecoration: 'none' }} className="w-full sm:w-auto">
                   <MagneticButton className="btn-primary w-full sm:w-auto" style={{ padding: '16px 40px', fontSize: '1.1rem', boxShadow: '0 10px 30px rgba(212,175,55,0.3)', width: '100%', justifyContent: 'center' }}>
-                    Get a Quote
+                    Sell Phone
                   </MagneticButton>
                 </Link>
                 <Link href="/buy" style={{ textDecoration: 'none' }} className="w-full sm:w-auto">
                   <MagneticButton className="glass-panel w-full sm:w-auto" style={{ padding: '16px 40px', fontSize: '1.1rem', color: '#fff', borderRadius: '8px', fontWeight: 600, width: '100%', justifyContent: 'center' }}>
-                    Buy a Phone
+                    Buy Phone
                   </MagneticButton>
                 </Link>
               </m.div>
