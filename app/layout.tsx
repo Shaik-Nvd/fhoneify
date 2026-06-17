@@ -15,7 +15,10 @@ const inter = Inter({
 import type { Viewport } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Fhoneify — Premium Phone Resale',
+  title: {
+    template: '%s | Fhoneify',
+    default: 'Fhoneify — Premium Phone Resale',
+  },
   description: "India's premium marketplace for selling and buying verified refurbished phones",
 };
 

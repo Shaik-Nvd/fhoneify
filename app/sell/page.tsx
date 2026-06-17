@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import api from '@/lib/api';
 import { useHydratedAuth } from '@/lib/useHydratedAuth';
 import { formatCurrency } from '@/lib/format';
+import { Metadata } from 'next';
 
 interface DashboardData {
   listings: Array<{ id: string; brand: string; model: string; price: number; status: string; city: string }>;
@@ -14,6 +15,10 @@ interface DashboardData {
   activeCount: number;
   pendingCount: number;
 }
+
+export const metadata: Metadata = {
+  title: 'Sell Your Phone',
+};
 
 export default function SellDashboardPage() {
   const router = useRouter();
