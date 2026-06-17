@@ -12,13 +12,18 @@ const inter = Inter({
   variable: '--font-inter',
 });
 
+import type { Viewport } from 'next';
+
 export const metadata: Metadata = {
   title: 'Fhoneify — Premium Phone Resale',
   description: "India's premium marketplace for selling and buying verified refurbished phones",
 };
 
-export const viewport = {
+export const viewport: Viewport = {
   themeColor: '#0a0a0a',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 export default function RootLayout({
