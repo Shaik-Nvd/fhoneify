@@ -161,28 +161,6 @@ export default function MobileHome() {
         </div>
       </div>
 
-      {/* Sell Your Old Device Now Section */}
-      <div className="px-4 mt-8">
-        <h3 className="text-white font-bold text-lg mb-4">Sell Your Old Device Now</h3>
-        <div className="grid grid-cols-2 gap-3">
-          
-          <Link href="/quote" className="bg-[#151c1a] rounded-xl p-4 flex flex-col items-center justify-center border border-[#1e2a26]">
-            <div className="w-16 h-16 relative mb-2 flex items-center justify-center">
-              <svg viewBox="0 0 24 24" width="40" height="40" stroke="#4ade80" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                <line x1="12" y1="18" x2="12.01" y2="18"></line>
-              </svg>
-              <div className="absolute -right-2 top-0 bg-[#4ade80]/20 rounded-full p-1">
-                <span className="text-lg">📱</span>
-              </div>
-            </div>
-            <span className="text-sm text-white font-medium">Sell Phone</span>
-          </Link>
-          
-          {/* We omit Sell Laptop/Sell TV etc. to stick strictly to "only mobile phones selling and buying" */}
-
-        </div>
-      </div>
 
       {/* Buy Refurbished Devices Section */}
       <div className="px-4 mt-8">
