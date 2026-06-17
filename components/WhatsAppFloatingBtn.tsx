@@ -12,6 +12,15 @@ export default function WhatsAppFloatingBtn() {
   
   let message = "I'm interested in your services.";
   if (pathname === '/') message = "Hi Fhoneify, I'd like to know more about your services.";
+  else if (pathname.startsWith('/buy/')) {
+    const slug = pathname.split('/')[2];
+    if (slug) {
+      const formattedName = slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+      message = `I'm interested in buying the ${formattedName}.`;
+    } else {
+      message = "I'm interested in buying a refurbished phone.";
+    }
+  }
   else if (pathname.startsWith('/buy')) message = "I'm interested in buying a refurbished phone.";
   else if (pathname.startsWith('/quote') || pathname.startsWith('/sell')) message = "I’m interested to sell my phone";
   else if (pathname.startsWith('/cart') || pathname.startsWith('/checkout')) message = "I need help with my cart/checkout.";
