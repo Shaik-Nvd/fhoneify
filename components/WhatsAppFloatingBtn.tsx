@@ -7,7 +7,7 @@ export default function WhatsAppFloatingBtn() {
   const [isMobile, setIsMobile] = useState(true);
   
   const phoneNumber = "919739063840";
-  const prefilledMessage = encodeURIComponent("Hi Fhoneify, I'm interested in your services and would like to know more!");
+  const prefilledMessage = encodeURIComponent("I’m interested to sell my phone");
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${prefilledMessage}`;
 
   useEffect(() => {
