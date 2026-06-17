@@ -71,7 +71,7 @@ export default function TopSellingModels() {
               <div className="flex justify-end">
                 <button 
                   onClick={() => handleSellClick(item.brand, item.model)}
-                  className="bg-[#38b2ac] hover:bg-[#319795] text-white font-medium py-2 px-6 rounded transition-colors text-sm"
+                  className="bg-[#d4af37] hover:bg-[#f0c040] text-[#0a0a0a] font-medium py-2 px-6 rounded transition-colors text-sm"
                 >
                   Sell Now
                 </button>
@@ -95,7 +95,7 @@ export default function TopSellingModels() {
             </div>
             <button 
               onClick={() => handleSellClick(item.brand, item.model)}
-              className="bg-[#38b2ac] hover:bg-[#319795] text-white font-medium py-1.5 px-4 rounded text-xs whitespace-nowrap"
+              className="bg-[#d4af37] hover:bg-[#f0c040] text-[#0a0a0a] font-bold py-1.5 px-4 rounded text-xs whitespace-nowrap transition-colors"
             >
               Sell Now
             </button>
