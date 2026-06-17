@@ -16,8 +16,8 @@ export default function WarrantyClaim() {
             <div>
               <p className="text-white text-base md:text-lg">
                 Drop a &quot;Hi&quot; on WhatsApp on{' '}
-                <a href="https://wa.me/9330303035" target="_blank" rel="noopener noreferrer" className="font-bold hover:text-[#38b2ac] transition-colors underline decoration-[#38b2ac]/50">
-                  9330303035
+                <a href="https://wa.me/9739063840" target="_blank" rel="noopener noreferrer" className="font-bold hover:text-[#38b2ac] transition-colors underline decoration-[#38b2ac]/50">
+                  9739063840
                 </a>
                 {' '}or email at{' '}
                 <a href="mailto:return@fhoneify.com" className="font-bold hover:text-[#38b2ac] transition-colors">
