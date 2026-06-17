@@ -105,6 +105,7 @@ export default function QuotePage() {
     setStep(newStep);
   };
 
+  useEffect(() => {
     if (selectedModel) {
       document.title = `Sell ${selectedBrand} ${selectedModel} | Fhoneify`;
     } else if (selectedBrand) {
