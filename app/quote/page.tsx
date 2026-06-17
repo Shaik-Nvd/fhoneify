@@ -458,9 +458,9 @@ export default function QuotePage() {
 
       {/* STAGE 2: BASE PRICE SCREEN */}
       {step === 2 && (
-        <div className="card" style={{ maxWidth: '700px', margin: '0 auto', padding: '3rem 2rem', display: 'flex', alignItems: 'center', gap: '3rem', backgroundColor: '#fff', border: '1px solid #e0e0e0', borderRadius: '12px' }}>
+        <div className="card flex flex-col md:flex-row items-center gap-6 md:gap-12 p-6 md:p-12 bg-white border border-[#e0e0e0] rounded-xl max-w-[700px] mx-auto text-center md:text-left">
           <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} style={{ width: '120px', height: '180px', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', flex: 1, color: '#000' }}>
+          <div className="flex flex-col gap-2 flex-1 w-full text-black items-center md:items-start">
             <h2 style={{ fontSize: '1.4rem', fontWeight: 500 }}>Sell Old {selectedModel.startsWith(selectedBrand) ? selectedModel : `${selectedBrand} ${selectedModel}`} ({selectedStorage})</h2>
             <p style={{ color: '#666', fontSize: '1rem', marginTop: '1rem' }}>Get Upto</p>
             <p style={{ fontSize: '3rem', fontWeight: 700, color: '#FF4C4C' }}>{formatCurrency(basePrice || 0)}</p>
@@ -479,7 +479,7 @@ export default function QuotePage() {
             
             {/* STAGE 3: BASIC YES/NO */}
             {step === 3 && (
-              <div className="card" style={{ backgroundColor: '#fff', color: '#000', padding: '3rem 2rem', borderRadius: '8px', border: '1px solid #e0e0e0' }}>
+              <div className="card bg-white text-black p-6 md:p-12 rounded-lg border border-[#e0e0e0]">
                 <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem' }}>Tell us more about your device?</h2>
                 <p style={{ textAlign: 'center', color: '#666', fontSize: '0.85rem', marginBottom: '3rem' }}>Please answer a few questions about your device.</p>
                 
@@ -509,7 +509,7 @@ export default function QuotePage() {
 
             {/* STAGE 4: DEFECTS */}
             {step === 4 && (
-              <div className="card" style={{ backgroundColor: '#fff', color: '#000', padding: '3rem 2rem', borderRadius: '8px', border: '1px solid #e0e0e0' }}>
+              <div className="card bg-white text-black p-6 md:p-12 rounded-lg border border-[#e0e0e0]">
                 <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem' }}>Select screen/body defects that are applicable!</h2>
                 <p style={{ textAlign: 'center', color: '#666', fontSize: '0.85rem', marginBottom: '3rem' }}>Please provide correct details</p>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(130px, 1fr))', gap: '1rem', marginBottom: '3rem' }}>
@@ -533,7 +533,7 @@ export default function QuotePage() {
 
             {/* STAGE 5: HARDWARE */}
             {step === 5 && (
-              <div className="card" style={{ backgroundColor: '#fff', color: '#000', padding: '3rem 2rem', borderRadius: '8px', border: '1px solid #e0e0e0' }}>
+              <div className="card bg-white text-black p-6 md:p-12 rounded-lg border border-[#e0e0e0]">
                 <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem' }}>Functional or Physical Problems</h2>
                 <p style={{ textAlign: 'center', color: '#666', fontSize: '0.85rem', marginBottom: '3rem' }}>Please choose appropriate condition to get accurate quote</p>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(130px, 1fr))', gap: '1rem', marginBottom: '3rem' }}>
@@ -570,7 +570,7 @@ export default function QuotePage() {
 
             {/* STAGE 6: ACCESSORIES */}
             {step === 6 && (
-              <div className="card" style={{ backgroundColor: '#fff', color: '#000', padding: '3rem 2rem', borderRadius: '8px', border: '1px solid #e0e0e0' }}>
+              <div className="card bg-white text-black p-6 md:p-12 rounded-lg border border-[#e0e0e0]">
                 <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem' }}>Do you have the following?</h2>
                 <p style={{ textAlign: 'center', color: '#666', fontSize: '0.85rem', marginBottom: '3rem' }}>Please select accessories which are available</p>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem', marginBottom: '3rem' }}>
@@ -663,7 +663,7 @@ export default function QuotePage() {
 
       {/* STAGE 8: FINAL EXACT PRICE */}
       {step === 8 && finalPrice != null && (
-        <div className="card" style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center', display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center', backgroundColor: '#111', border: '1px solid #4CD964', padding: '3rem' }}>
+        <div className="card flex flex-col gap-4 items-center bg-[#111] border border-[#4CD964] p-6 md:p-12 rounded-xl max-w-[600px] mx-auto text-center">
           <p className="eyebrow" style={{ color: '#4CD964', fontSize: '1rem', letterSpacing: '2px' }}>FINAL EXACT QUOTE</p>
           <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} style={{ width: '100px', height: '140px', objectFit: 'contain', margin: '2rem 0' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
           <p style={{ fontSize: '4rem', fontWeight: 700, color: '#fff', lineHeight: 1 }}>{formatCurrency(finalPrice)}</p>
