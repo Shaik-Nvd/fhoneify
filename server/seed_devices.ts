@@ -3438,15 +3438,6 @@ export const SEED_DEVICES = [
     "basePrice": 2200
   },
   {
-    "id": "apple_2004",
-    "brand": "Apple",
-    "model": "Apple iPhone 6 Plus",
-    "storage": "32GB",
-    "ram": "1GB",
-    "color": "Midnight",
-    "basePrice": 0
-  },
-  {
     "id": "apple_2005",
     "brand": "Apple",
     "model": "Apple iPhone 6 Plus",
