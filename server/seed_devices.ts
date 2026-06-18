@@ -3633,7 +3633,7 @@ export const SEED_DEVICES = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 0
-  {
+  },
     "id": "apple_2051",
     "brand": "Apple",
     "model": "Apple iPhone 12 Mini",
@@ -3650,16 +3650,6 @@ export const SEED_DEVICES = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 16490
-  },
-  {
-    "id": "apple_2053",
-    "brand": "Apple",
-    "model": "Apple iPhone 12 Mini",
-    "storage": "512GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 0
-  },
   {
     "id": "apple_2054",
     "brand": "Apple",
