@@ -224,7 +224,10 @@ export default function QuotePage() {
   const storageOptions = useMemo(() => {
     if (!selectedBrand || !selectedModel) return [];
     
-    const availableVariants = allDevices.filter((d) => d.brand === selectedBrand && d.model === selectedModel);
+    const availableVariants = allDevices.filter((d) => 
+      d.brand === selectedBrand && 
+      (d.model === selectedModel || d.model === `${selectedBrand} ${selectedModel}` || selectedModel === `${selectedBrand} ${d.model}`)
+    );
     const storageList = Array.from(new Set(availableVariants.map((d) => d.storage).filter(Boolean)));
     
     const parseStorage = (s: string) => {
@@ -457,11 +460,21 @@ export default function QuotePage() {
                   <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} style={{ width: '60px', height: '80px', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
                   <div><p style={{ color: '#a0a0a0', fontSize: '0.8rem' }}>{selectedBrand}</p><h3 style={{ color: '#fff', fontSize: '1.2rem', fontWeight: 600 }}>{selectedModel}</h3></div>
                 </div>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
-                  {storageOptions.map((s) => (
-                    <button key={s} onClick={() => handleStorageSelect(s)} style={{ padding: '0.75rem 1.5rem', borderRadius: '8px', border: selectedStorage === s ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: selectedStorage === s ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: selectedStorage === s ? '#4CD964' : '#fff', cursor: 'pointer' }}>{s}</button>
-                  ))}
-                </div>
+                
+                {storageOptions.length === 0 && !loading ? (
+                  <div style={{ textAlign: 'center', padding: '2rem 1rem', color: '#a0a0a0' }}>
+                    <span style={{ fontSize: '2.5rem', display: 'block', marginBottom: '1rem' }}>📱</span>
+                    <h3 style={{ color: '#fff', fontSize: '1.1rem', fontWeight: 500, marginBottom: '0.5rem' }}>Model configuration not found</h3>
+                    <p style={{ fontSize: '0.9rem' }}>We couldn't find the storage variants for this model. It might be under process.</p>
+                    <button onClick={() => navigateToState(selectedBrand, '', '', 'model', 1)} style={{ marginTop: '1.5rem', padding: '0.5rem 1rem', backgroundColor: '#d4af37', color: '#000', borderRadius: '6px', fontWeight: 600, border: 'none', cursor: 'pointer' }}>View All {selectedBrand} Models</button>
+                  </div>
+                ) : (
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
+                    {storageOptions.map((s) => (
+                      <button key={s} onClick={() => handleStorageSelect(s)} style={{ padding: '0.75rem 1.5rem', borderRadius: '8px', border: selectedStorage === s ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: selectedStorage === s ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: selectedStorage === s ? '#4CD964' : '#fff', cursor: 'pointer' }}>{s}</button>
+                    ))}
+                  </div>
+                )}
                 {loading && <p style={{ color: '#4CD964', textAlign: 'center', marginTop: '1rem', fontWeight: 600 }}>Loading...</p>}
               </div>
             </>

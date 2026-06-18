@@ -38,7 +38,8 @@ export default function TopSellingModels() {
 
   const handleSellClick = (brand: string, model: string) => {
     // Navigate to quote page with pre-filled brand and model
-    router.push(`/quote?brand=${encodeURIComponent(brand)}&model=${encodeURIComponent(model)}`);
+    const fullModel = model.startsWith(brand) ? model : `${brand} ${model}`;
+    router.push(`/quote?brand=${encodeURIComponent(brand)}&model=${encodeURIComponent(fullModel)}`);
   };
 
   return (
