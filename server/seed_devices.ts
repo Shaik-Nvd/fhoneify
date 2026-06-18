@@ -3633,16 +3633,6 @@ export const SEED_DEVICES = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 0
-  },
-  {
-    "id": "apple_2050",
-    "brand": "Apple",
-    "model": "Apple iPhone SE 2020",
-    "storage": "512GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 0
-  },
   {
     "id": "apple_2051",
     "brand": "Apple",
