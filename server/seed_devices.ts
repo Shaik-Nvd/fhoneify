@@ -3527,15 +3527,6 @@ export const SEED_DEVICES = [
     "basePrice": 11160
   },
   {
-    "id": "apple_2032",
-    "brand": "Apple",
-    "model": "Apple iPhone XR",
-    "storage": "512GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 0
-  },
-  {
     "id": "apple_2033",
     "brand": "Apple",
     "model": "Apple iPhone XS",
