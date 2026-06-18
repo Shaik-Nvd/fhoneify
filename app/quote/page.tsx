@@ -146,8 +146,8 @@ export default function QuotePage() {
   useEffect(() => {
     async function fetchDevices() {
       try {
-        const cached = localStorage.getItem('fhoneify-devices-cache');
-        const cacheTime = localStorage.getItem('fhoneify-devices-time');
+        const cached = localStorage.getItem('fhoneify-devices-cache-v2');
+        const cacheTime = localStorage.getItem('fhoneify-devices-time-v2');
         const now = Date.now();
         
         let hasValidCache = false;
@@ -167,8 +167,8 @@ export default function QuotePage() {
           const response = await api.get('/api/quote/devices');
           setAllDevices(extractDevices(response.data));
           try {
-            localStorage.setItem('fhoneify-devices-cache', JSON.stringify(response.data));
-            localStorage.setItem('fhoneify-devices-time', Date.now().toString());
+            localStorage.setItem('fhoneify-devices-cache-v2', JSON.stringify(response.data));
+            localStorage.setItem('fhoneify-devices-time-v2', Date.now().toString());
           } catch (e) {
             // Ignore quota errors
           }
