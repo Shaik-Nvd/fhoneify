@@ -279,15 +279,6 @@ export const SEED_DEVICES = [
     "basePrice": 69000
   },
   {
-    "id": "d34",
-    "brand": "Apple",
-    "model": "iPhone 17",
-    "storage": "256GB",
-    "ram": "4GB",
-    "color": "Titanium",
-    "basePrice": 123500
-  },
-  {
     "id": "d35",
     "brand": "OnePlus",
     "model": "OnePlus 12R",
@@ -432,15 +423,6 @@ export const SEED_DEVICES = [
     "basePrice": 51749
   },
   {
-    "id": "d54",
-    "brand": "Apple",
-    "model": "iPhone XR",
-    "storage": "512GB",
-    "ram": "6GB",
-    "color": "Silver",
-    "basePrice": 34800
-  },
-  {
     "id": "d55",
     "brand": "OnePlus",
     "model": "OnePlus Nord CE 3 Lite",
@@ -520,15 +502,6 @@ export const SEED_DEVICES = [
     "ram": "8GB",
     "color": "Gold",
     "basePrice": 80500
-  },
-  {
-    "id": "d65",
-    "brand": "Apple",
-    "model": "iPhone 18 Plus",
-    "storage": "256GB",
-    "ram": "6GB",
-    "color": "Purple",
-    "basePrice": 149500
   },
   {
     "id": "d66",
@@ -702,15 +675,6 @@ export const SEED_DEVICES = [
     "basePrice": 36800
   },
   {
-    "id": "d85",
-    "brand": "Apple",
-    "model": "iPhone 14 Pro",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Titanium",
-    "basePrice": 109249
-  },
-  {
     "id": "d86",
     "brand": "Vivo",
     "model": "Vivo V30 Pro",
@@ -736,15 +700,6 @@ export const SEED_DEVICES = [
     "ram": "8GB",
     "color": "Red",
     "basePrice": 15600
-  },
-  {
-    "id": "d89",
-    "brand": "Apple",
-    "model": "iPhone 13 Pro Max",
-    "storage": "512GB",
-    "ram": "6GB",
-    "color": "Red",
-    "basePrice": 116000
   },
   {
     "id": "d90",
@@ -774,15 +729,6 @@ export const SEED_DEVICES = [
     "basePrice": 96000
   },
   {
-    "id": "d94",
-    "brand": "Apple",
-    "model": "iPhone 14 Plus",
-    "storage": "512GB",
-    "ram": "6GB",
-    "color": "Silver",
-    "basePrice": 108750
-  },
-  {
     "id": "d95",
     "brand": "Samsung",
     "model": "Galaxy S24+",
@@ -790,15 +736,6 @@ export const SEED_DEVICES = [
     "ram": "12GB",
     "color": "Blue",
     "basePrice": 136000
-  },
-  {
-    "id": "d96",
-    "brand": "Apple",
-    "model": "iPhone 15 Pro",
-    "storage": "256GB",
-    "ram": "6GB",
-    "color": "Titanium",
-    "basePrice": 156000
   },
   {
     "id": "d97",
@@ -819,15 +756,6 @@ export const SEED_DEVICES = [
     "basePrice": 32000
   },
   {
-    "id": "d100",
-    "brand": "Apple",
-    "model": "iPhone 17 Plus",
-    "storage": "1TB",
-    "ram": "8GB",
-    "color": "Purple",
-    "basePrice": 168000
-  },
-  {
     "id": "d101",
     "brand": "Nothing",
     "model": "Nothing Phone (2)",
@@ -835,15 +763,6 @@ export const SEED_DEVICES = [
     "ram": "6GB",
     "color": "Green",
     "basePrice": 49400
-  },
-  {
-    "id": "d102",
-    "brand": "Apple",
-    "model": "iPhone 13 Pro Max",
-    "storage": "1TB",
-    "ram": "8GB",
-    "color": "Green",
-    "basePrice": 128000
   },
   {
     "id": "d103",
@@ -972,15 +891,6 @@ export const SEED_DEVICES = [
     "basePrice": 110500
   },
   {
-    "id": "d123",
-    "brand": "Apple",
-    "model": "iPhone 7 Plus",
-    "storage": "128GB",
-    "ram": "4GB",
-    "color": "Silver",
-    "basePrice": 16099
-  },
-  {
     "id": "d124",
     "brand": "Oppo",
     "model": "Oppo Reno 10 Pro+",
@@ -1015,15 +925,6 @@ export const SEED_DEVICES = [
     "ram": "16GB",
     "color": "Red",
     "basePrice": 35200
-  },
-  {
-    "id": "d130",
-    "brand": "Apple",
-    "model": "iPhone 8",
-    "storage": "512GB",
-    "ram": "6GB",
-    "color": "Blue",
-    "basePrice": 23200
   },
   {
     "id": "d132",
@@ -1089,15 +990,6 @@ export const SEED_DEVICES = [
     "basePrice": 96000
   },
   {
-    "id": "d140",
-    "brand": "Apple",
-    "model": "iPhone 11",
-    "storage": "512GB",
-    "ram": "6GB",
-    "color": "Gold",
-    "basePrice": 43500
-  },
-  {
     "id": "d141",
     "brand": "Motorola",
     "model": "Moto G84",
@@ -1123,24 +1015,6 @@ export const SEED_DEVICES = [
     "ram": "8GB",
     "color": "Blue",
     "basePrice": 52000
-  },
-  {
-    "id": "d144",
-    "brand": "Apple",
-    "model": "iPhone 18 Pro",
-    "storage": "1TB",
-    "ram": "8GB",
-    "color": "White",
-    "basePrice": 240000
-  },
-  {
-    "id": "d146",
-    "brand": "Apple",
-    "model": "iPhone 14 Pro",
-    "storage": "512GB",
-    "ram": "6GB",
-    "color": "Blue",
-    "basePrice": 137750
   },
   {
     "id": "d147",
@@ -1186,15 +1060,6 @@ export const SEED_DEVICES = [
     "ram": "6GB",
     "color": "Red",
     "basePrice": 126499
-  },
-  {
-    "id": "d155",
-    "brand": "Apple",
-    "model": "iPhone 15 Plus",
-    "storage": "128GB",
-    "ram": "4GB",
-    "color": "White",
-    "basePrice": 97749
   },
   {
     "id": "d156",
@@ -1296,15 +1161,6 @@ export const SEED_DEVICES = [
     "basePrice": 29899
   },
   {
-    "id": "d171",
-    "brand": "Apple",
-    "model": "iPhone 17 Pro",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Green",
-    "basePrice": 161000
-  },
-  {
     "id": "d172",
     "brand": "Google",
     "model": "Pixel 6a",
@@ -1350,15 +1206,6 @@ export const SEED_DEVICES = [
     "basePrice": 26000
   },
   {
-    "id": "d179",
-    "brand": "Apple",
-    "model": "iPhone 13 Pro Max",
-    "storage": "128GB",
-    "ram": "4GB",
-    "color": "Gold",
-    "basePrice": 92000
-  },
-  {
     "id": "d180",
     "brand": "Xiaomi",
     "model": "Xiaomi 14 Ultra",
@@ -1395,15 +1242,6 @@ export const SEED_DEVICES = [
     "basePrice": 104000
   },
   {
-    "id": "d186",
-    "brand": "Apple",
-    "model": "iPhone 12 Pro Max",
-    "storage": "256GB",
-    "ram": "4GB",
-    "color": "Blue",
-    "basePrice": 84500
-  },
-  {
     "id": "d187",
     "brand": "Oppo",
     "model": "Oppo Reno 10 Pro+",
@@ -1429,24 +1267,6 @@ export const SEED_DEVICES = [
     "ram": "16GB",
     "color": "Green",
     "basePrice": 24000
-  },
-  {
-    "id": "d191",
-    "brand": "Apple",
-    "model": "iPhone 15 Plus",
-    "storage": "1TB",
-    "ram": "8GB",
-    "color": "Purple",
-    "basePrice": 136000
-  },
-  {
-    "id": "d192",
-    "brand": "Apple",
-    "model": "iPhone 16",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 123250
   },
   {
     "id": "d194",
@@ -1510,24 +1330,6 @@ export const SEED_DEVICES = [
     "ram": "6GB",
     "color": "Black",
     "basePrice": 31200
-  },
-  {
-    "id": "d205",
-    "brand": "Apple",
-    "model": "iPhone 16 Plus",
-    "storage": "1TB",
-    "ram": "12GB",
-    "color": "Blue",
-    "basePrice": 152000
-  },
-  {
-    "id": "d207",
-    "brand": "Apple",
-    "model": "iPhone SE (2nd Gen)",
-    "storage": "512GB",
-    "ram": "6GB",
-    "color": "Gold",
-    "basePrice": 31900
   },
   {
     "id": "d208",
@@ -1683,15 +1485,6 @@ export const SEED_DEVICES = [
     "basePrice": 60800
   },
   {
-    "id": "d234",
-    "brand": "Apple",
-    "model": "iPhone 15 Pro Max",
-    "storage": "1TB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 224000
-  },
-  {
     "id": "d235",
     "brand": "Samsung",
     "model": "Galaxy S24 Ultra",
@@ -1737,24 +1530,6 @@ export const SEED_DEVICES = [
     "basePrice": 20800
   },
   {
-    "id": "d241",
-    "brand": "Apple",
-    "model": "iPhone 17 Plus",
-    "storage": "512GB",
-    "ram": "6GB",
-    "color": "Purple",
-    "basePrice": 152250
-  },
-  {
-    "id": "d243",
-    "brand": "Apple",
-    "model": "iPhone 18 Plus",
-    "storage": "512GB",
-    "ram": "6GB",
-    "color": "Gold",
-    "basePrice": 166750
-  },
-  {
     "id": "d244",
     "brand": "Google",
     "model": "Pixel 7",
@@ -1762,15 +1537,6 @@ export const SEED_DEVICES = [
     "ram": "16GB",
     "color": "Gold",
     "basePrice": 64000
-  },
-  {
-    "id": "d245",
-    "brand": "Apple",
-    "model": "iPhone 15 Pro",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Green",
-    "basePrice": 138000
   },
   {
     "id": "d247",
@@ -1845,15 +1611,6 @@ export const SEED_DEVICES = [
     "basePrice": 40000
   },
   {
-    "id": "d260",
-    "brand": "Apple",
-    "model": "iPhone 12 Pro Max",
-    "storage": "1TB",
-    "ram": "12GB",
-    "color": "Gold",
-    "basePrice": 104000
-  },
-  {
     "id": "d261",
     "brand": "Motorola",
     "model": "Edge 50 Pro",
@@ -1906,33 +1663,6 @@ export const SEED_DEVICES = [
     "ram": "8GB",
     "color": "Black",
     "basePrice": 74750
-  },
-  {
-    "id": "d268",
-    "brand": "Apple",
-    "model": "iPhone 8",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Purple",
-    "basePrice": 18400
-  },
-  {
-    "id": "d270",
-    "brand": "Apple",
-    "model": "iPhone 17 Pro Max",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Green",
-    "basePrice": 184000
-  },
-  {
-    "id": "d271",
-    "brand": "Apple",
-    "model": "iPhone XS Max",
-    "storage": "256GB",
-    "ram": "6GB",
-    "color": "Titanium",
-    "basePrice": 36400
   },
   {
     "id": "d274",
@@ -2106,33 +1836,6 @@ export const SEED_DEVICES = [
     "basePrice": 101500
   },
   {
-    "id": "d318",
-    "brand": "Apple",
-    "model": "iPhone 16 Plus",
-    "storage": "128GB",
-    "ram": "4GB",
-    "color": "Black",
-    "basePrice": 109249
-  },
-  {
-    "id": "d322",
-    "brand": "Apple",
-    "model": "iPhone 13",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "White",
-    "basePrice": 75400
-  },
-  {
-    "id": "d323",
-    "brand": "Apple",
-    "model": "iPhone 17",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Red",
-    "basePrice": 109249
-  },
-  {
     "id": "d327",
     "brand": "Vivo",
     "model": "Vivo V29 Pro",
@@ -2167,15 +1870,6 @@ export const SEED_DEVICES = [
     "ram": "8GB",
     "color": "Blue",
     "basePrice": 25299
-  },
-  {
-    "id": "d334",
-    "brand": "Apple",
-    "model": "iPhone 14 Plus",
-    "storage": "128GB",
-    "ram": "4GB",
-    "color": "Blue",
-    "basePrice": 86250
   },
   {
     "id": "d338",
@@ -2430,15 +2124,6 @@ export const SEED_DEVICES = [
     "basePrice": 88000
   },
   {
-    "id": "d401",
-    "brand": "Apple",
-    "model": "iPhone 16 Pro Max",
-    "storage": "256GB",
-    "ram": "6GB",
-    "color": "Blue",
-    "basePrice": 195000
-  },
-  {
     "id": "d402",
     "brand": "OnePlus",
     "model": "OnePlus 12R",
@@ -2491,15 +2176,6 @@ export const SEED_DEVICES = [
     "ram": "6GB",
     "color": "Purple",
     "basePrice": 25299
-  },
-  {
-    "id": "d419",
-    "brand": "Apple",
-    "model": "iPhone 18 Pro Max",
-    "storage": "256GB",
-    "ram": "4GB",
-    "color": "Silver",
-    "basePrice": 221000
   },
   {
     "id": "d421",
@@ -2556,15 +2232,6 @@ export const SEED_DEVICES = [
     "basePrice": 130500
   },
   {
-    "id": "d436",
-    "brand": "Apple",
-    "model": "iPhone 12",
-    "storage": "1TB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 67200
-  },
-  {
     "id": "d439",
     "brand": "Motorola",
     "model": "Moto G84",
@@ -2619,15 +2286,6 @@ export const SEED_DEVICES = [
     "basePrice": 32000
   },
   {
-    "id": "d455",
-    "brand": "Apple",
-    "model": "iPhone 14",
-    "storage": "128GB",
-    "ram": "4GB",
-    "color": "Gold",
-    "basePrice": 74750
-  },
-  {
     "id": "d456",
     "brand": "Vivo",
     "model": "Vivo X100 Pro",
@@ -2680,15 +2338,6 @@ export const SEED_DEVICES = [
     "ram": "12GB",
     "color": "Gold",
     "basePrice": 40000
-  },
-  {
-    "id": "d473",
-    "brand": "Apple",
-    "model": "iPhone 17 Pro",
-    "storage": "256GB",
-    "ram": "6GB",
-    "color": "Silver",
-    "basePrice": 182000
   },
   {
     "id": "d478",
