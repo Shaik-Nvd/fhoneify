@@ -108,6 +108,7 @@ export default function AdminLeadsPage() {
               <thead>
                 <tr style={{ borderBottom: '1px solid #333', color: '#a0a0a0' }}>
                   <th style={{ padding: '0.75rem 0' }}>Date</th>
+                  <th style={{ padding: '0.75rem 0' }}>Name</th>
                   <th style={{ padding: '0.75rem 0' }}>Phone</th>
                   <th style={{ padding: '0.75rem 0' }}>Device</th>
                   <th style={{ padding: '0.75rem 0' }}>Quoted Price</th>
@@ -118,6 +119,7 @@ export default function AdminLeadsPage() {
                 {leads.map(l => (
                   <tr key={l.id} style={{ borderBottom: '1px solid #2a2a2c', color: '#fff' }}>
                     <td style={{ padding: '0.75rem 0', fontSize: '0.9rem' }}>{new Date(l.createdAt).toLocaleString()}</td>
+                    <td style={{ padding: '0.75rem 0' }}>{l.name || '-'}</td>
                     <td style={{ padding: '0.75rem 0' }}>{l.phone}</td>
                     <td style={{ padding: '0.75rem 0' }}>{l.brand} {l.model} ({l.storage})</td>
                     <td style={{ padding: '0.75rem 0', fontWeight: 600, color: '#d4af37' }}>₹{l.quotedPrice}</td>
@@ -126,7 +128,7 @@ export default function AdminLeadsPage() {
                     </td>
                   </tr>
                 ))}
-                {leads.length === 0 && <tr><td colSpan={5} style={{ padding: '1rem 0', color: '#666', textAlign: 'center' }}>No leads yet</td></tr>}
+                {leads.length === 0 && <tr><td colSpan={6} style={{ padding: '1rem 0', color: '#666', textAlign: 'center' }}>No leads yet</td></tr>}
               </tbody>
             </table>
           </div>

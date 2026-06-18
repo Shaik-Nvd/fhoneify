@@ -82,10 +82,11 @@ export function getQuoteById(quoteId: string): Quote | null {
   return quotes.get(quoteId) || null;
 }
 
-export function createLead(data: { userId?: string; phone: string; brand: string; model: string; storage: string; quotedPrice: number }): Lead {
+export function createLead(data: { userId?: string; name?: string; phone: string; brand: string; model: string; storage: string; quotedPrice: number }): Lead {
   const lead: Lead = {
     id: `lead-${Date.now()}`,
     userId: data.userId,
+    name: data.name,
     phone: data.phone,
     brand: data.brand,
     model: data.model,

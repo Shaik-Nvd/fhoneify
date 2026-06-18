@@ -10,6 +10,7 @@ const CreateQuoteSchema = z.object({
 });
 
 const CreateLeadSchema = z.object({
+  name: z.string().optional(),
   phone: z.string().min(1, 'phone is required'),
   brand: z.string(),
   model: z.string(),

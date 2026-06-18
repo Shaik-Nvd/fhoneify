@@ -97,6 +97,7 @@ export interface Pickup {
 export interface Lead {
   id: string;
   userId?: string;
+  name?: string;
   phone: string;
   brand: string;
   model: string;

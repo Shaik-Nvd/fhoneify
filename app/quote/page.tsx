@@ -623,11 +623,17 @@ export default function QuotePage() {
                 
                 {!showOtpInput ? (
                   <>
-                    <div style={{ marginBottom: '2.5rem' }}>
+                    <div style={{ marginBottom: '1.5rem' }}>
                       <label style={{ display: 'block', fontSize: '0.85rem', color: '#666', marginBottom: '0.5rem' }}>Phone Number</label>
                       <div style={{ display: 'flex', borderBottom: '2px solid #ccc', paddingBottom: '0.5rem' }}>
                         <span style={{ fontWeight: 600, marginRight: '0.5rem', fontSize: '1.2rem' }}>+91</span>
                         <input type="tel" value={userPhone} onChange={(e) => setUserPhone(e.target.value.replace(/\D/g, '').slice(0, 10))} placeholder="Enter your Mobile" required style={{ border: 'none', outline: 'none', flex: 1, fontSize: '1.2rem', backgroundColor: 'transparent', color: '#000' }} />
+                      </div>
+                    </div>
+                    <div style={{ marginBottom: '2.5rem' }}>
+                      <label style={{ display: 'block', fontSize: '0.85rem', color: '#666', marginBottom: '0.5rem' }}>Your Name (Optional)</label>
+                      <div style={{ display: 'flex', borderBottom: '2px solid #ccc', paddingBottom: '0.5rem' }}>
+                        <input type="text" value={userName} onChange={(e) => setUserName(e.target.value)} placeholder="Enter your Name" style={{ border: 'none', outline: 'none', flex: 1, fontSize: '1.2rem', backgroundColor: 'transparent', color: '#000' }} />
                       </div>
                     </div>
                   </>
@@ -675,6 +681,7 @@ export default function QuotePage() {
                   method: 'POST',
                   headers,
                   body: JSON.stringify({
+                    name: userName,
                     phone: userPhone,
                     brand: selectedBrand,
                     model: selectedModel,
