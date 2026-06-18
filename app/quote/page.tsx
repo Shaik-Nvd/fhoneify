@@ -397,6 +397,8 @@ export default function QuotePage() {
     </div>
   );
 
+  const isTierA = selectedBrand === 'Apple' && /1[3-9]|[2-9]\d/i.test(selectedModel) && !/12|11|XR|XS|SE/i.test(selectedModel);
+
   return (
     <div className="page-animate" style={{ maxWidth: step > 2 ? '1000px' : '40rem', margin: '0 auto', padding: '3rem 1rem' }}>
       
@@ -470,7 +472,7 @@ export default function QuotePage() {
                   <div style={{ textAlign: 'center', padding: '2rem 1rem', color: '#a0a0a0' }}>
                     <span style={{ fontSize: '2.5rem', display: 'block', marginBottom: '1rem' }}>📱</span>
                     <h3 style={{ color: '#fff', fontSize: '1.1rem', fontWeight: 500, marginBottom: '0.5rem' }}>Model configuration not found</h3>
-                    <p style={{ fontSize: '0.9rem' }}>We couldn't find the storage variants for this model. It might be under process.</p>
+                    <p style={{ fontSize: '0.9rem' }}>We couldn&apos;t find the storage variants for this model. It might be under process.</p>
                     <button onClick={() => navigateToState(selectedBrand, '', '', 'model', 1)} style={{ marginTop: '1.5rem', padding: '0.5rem 1rem', backgroundColor: '#d4af37', color: '#000', borderRadius: '6px', fontWeight: 600, border: 'none', cursor: 'pointer' }}>View All {selectedBrand} Models</button>
                   </div>
                 ) : (
@@ -500,11 +502,7 @@ export default function QuotePage() {
             </button>
           </div>
         </div>
-      )}
-
-  const isTierA = selectedBrand === 'Apple' && /1[3-9]|[2-9]\d/i.test(selectedModel) && !/12|11|XR|XS|SE/i.test(selectedModel);
-
-      {/* STAGES 3-6: MULTI-STEP QUESTIONNAIRE (2 COLUMN LAYOUT) */}
+      )}      {/* STAGES 3-6: MULTI-STEP QUESTIONNAIRE (2 COLUMN LAYOUT) */}
       {((step >= 2 && step <= 6) || step === 10) && (
         <div className="flex flex-col-reverse md:flex-row gap-8 items-start w-full" style={{ marginTop: '2.5rem' }}>
           
@@ -549,7 +547,7 @@ export default function QuotePage() {
                 {/* Warranty Question */}
                 <div style={{ marginBottom: '2.5rem' }}>
                   <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>Is your device under manufacturer warranty?</h3>
-                  <p style={{ color: '#cccccc', fontSize: '0.9rem', marginBottom: '1.25rem' }}>You can get a better price for your device if it's under manufacturer warranty with a GST valid bill.</p>
+                  <p style={{ color: '#cccccc', fontSize: '0.9rem', marginBottom: '1.25rem' }}>You can get a better price for your device if it&apos;s under manufacturer warranty with a GST valid bill.</p>
                   <div style={{ display: 'flex', gap: '1rem' }}>
                     <button onClick={() => setDiagnostics({ ...diagnostics, warranty: true })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.warranty === true ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.warranty === true ? 'rgba(76,217,100,0.1)' : '#1a1a1a', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.warranty === true ? '#4CD964' : '#fff' }}>
                       <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.warranty === true ? '1px solid #4CD964' : '1px solid #444', backgroundColor: diagnostics.warranty === true ? '#4CD964' : 'transparent' }} /> Yes
@@ -579,7 +577,7 @@ export default function QuotePage() {
                 {/* eSIM Question */}
                 <div style={{ marginBottom: '2.5rem' }}>
                   <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>How many eSIMs does your device support?</h3>
-                  <p style={{ color: '#cccccc', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Please select "Dual eSIM" if your device supports dual eSIMs. Otherwise, select "Single eSIM".</p>
+                  <p style={{ color: '#cccccc', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Please select &quot;Dual eSIM&quot; if your device supports dual eSIMs. Otherwise, select &quot;Single eSIM&quot;.</p>
                   <div style={{ display: 'flex', gap: '1rem' }}>
                     <button onClick={() => setDiagnostics({ ...diagnostics, eSim: 'Single eSIM' })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.eSim === 'Single eSIM' ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.eSim === 'Single eSIM' ? 'rgba(76,217,100,0.1)' : '#1a1a1a', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.eSim === 'Single eSIM' ? '#4CD964' : '#fff' }}>
                       <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.eSim === 'Single eSIM' ? '1px solid #4CD964' : '1px solid #444', backgroundColor: diagnostics.eSim === 'Single eSIM' ? '#4CD964' : 'transparent' }} /> Single eSIM
@@ -594,7 +592,7 @@ export default function QuotePage() {
                 {diagnostics.warranty === true && (
                   <div style={{ marginBottom: '2.5rem' }}>
                     <h3 style={{ textAlign: 'center', fontWeight: 600, fontSize: '1.2rem', marginBottom: '0.25rem', color: '#ffffff' }}>What is your mobile age?</h3>
-                    <p style={{ textAlign: 'center', color: '#cccccc', fontSize: '0.85rem', marginBottom: '1.5rem' }}>(Because you chose your device is under brand's warranty)</p>
+                    <p style={{ textAlign: 'center', color: '#cccccc', fontSize: '0.85rem', marginBottom: '1.5rem' }}>(Because you chose your device is under brand&apos;s warranty)</p>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
                       {[
                         { id: 'below3', label: 'Below 3 months', sub: 'Valid bill mandatory' },
@@ -808,7 +806,7 @@ export default function QuotePage() {
           <p style={{ color: '#a0a0a0', fontSize: '1rem', marginTop: '0.5rem' }}>{selectedModel.startsWith(selectedBrand) ? selectedModel : `${selectedBrand} ${selectedModel}`} ({selectedStorage})</p>
           
           <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', width: '100%' }}>
-            <button type="button" onClick={() => { navigateToState('', '', '', 'brand', 1); setFinalPrice(null); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], hardware: [], accessories: [] }); }} className="btn-outline" style={{ flex: 1, padding: '16px', fontSize: '1.1rem' }}>Start Over</button>
+            <button type="button" onClick={() => { navigateToState('', '', '', 'brand', 1); setFinalPrice(null); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], hardware: [], accessories: [], warranty: null, validBill: null, eSim: null, mobileAge: null }); }} className="btn-outline" style={{ flex: 1, padding: '16px', fontSize: '1.1rem' }}>Start Over</button>
             <button type="button" onClick={() => setStep(9)} className="btn-primary" style={{ flex: 2, padding: '16px', background: '#4CD964', color: '#fff', fontSize: '1.1rem', fontWeight: 600 }}>Schedule Pickup</button>
           </div>
         </div>
