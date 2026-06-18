@@ -3483,15 +3483,6 @@ export const SEED_DEVICES = [
     "basePrice": 6480
   },
   {
-    "id": "apple_2023",
-    "brand": "Apple",
-    "model": "Apple iPhone 8",
-    "storage": "512GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 0
-  },
-  {
     "id": "apple_2024",
     "brand": "Apple",
     "model": "Apple iPhone 8 Plus",
