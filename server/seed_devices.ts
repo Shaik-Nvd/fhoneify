@@ -3519,15 +3519,6 @@ export const SEED_DEVICES = [
     "basePrice": 10240
   },
   {
-    "id": "apple_2029",
-    "brand": "Apple",
-    "model": "Apple iPhone X",
-    "storage": "512GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 0
-  },
-  {
     "id": "apple_2030",
     "brand": "Apple",
     "model": "Apple iPhone XR",
@@ -4597,15 +4588,6 @@ export const SEED_DEVICES = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 5190
-  },
-  {
-    "id": "pdf_10029",
-    "brand": "Apple",
-    "model": "Apple iPhone X",
-    "storage": "128GB",
-    "ram": "3GB",
-    "color": "Midnight",
-    "basePrice": 9850
   },
   {
     "id": "pdf_10030",
