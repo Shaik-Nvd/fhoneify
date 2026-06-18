@@ -64,7 +64,7 @@ export function getQuote(req: Request, res: Response) {
   }
 }
 
-export function createLead(req: Request, res: Response) {
+export async function createLead(req: Request, res: Response) {
   try {
     const result = CreateLeadSchema.safeParse(req.body);
     if (!result.success) {
@@ -74,7 +74,7 @@ export function createLead(req: Request, res: Response) {
     // Optional user context
     const userId = (req as any).user?.id;
     
-    const lead = quoteService.createLead({ ...result.data, userId });
+    const lead = await quoteService.createLead({ ...result.data, userId });
     return res.json({ success: true, data: lead, message: 'Lead created successfully' });
   } catch (err: any) {
     logger.error({ err: err.message }, 'Error in createLead controller');

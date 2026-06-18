@@ -113,6 +113,7 @@ export default function AdminLeadsPage() {
                   <th style={{ padding: '0.75rem 0' }}>Device</th>
                   <th style={{ padding: '0.75rem 0' }}>Quoted Price</th>
                   <th style={{ padding: '0.75rem 0' }}>Pickup Info</th>
+                  <th style={{ padding: '0.75rem 0' }}>Address Details</th>
                   <th style={{ padding: '0.75rem 0' }}>Status</th>
                 </tr>
               </thead>
@@ -127,12 +128,15 @@ export default function AdminLeadsPage() {
                     <td style={{ padding: '0.75rem 0', fontSize: '0.9rem', color: '#a0a0a0' }}>
                       {l.pickupDate ? `${l.pickupDate} | ${l.pickupTime || '-'}` : '-'}
                     </td>
+                    <td style={{ padding: '0.75rem 0', fontSize: '0.9rem', color: '#a0a0a0' }}>
+                      {l.address ? `${l.address}, ${l.city || ''} - ${l.pincode || ''}` : '-'}
+                    </td>
                     <td style={{ padding: '0.75rem 0' }}>
                       <span style={{ padding: '0.2rem 0.5rem', background: '#4CD96420', color: '#4CD964', borderRadius: '4px', fontSize: '0.8rem' }}>{l.status}</span>
                     </td>
                   </tr>
                 ))}
-                {leads.length === 0 && <tr><td colSpan={7} style={{ padding: '1rem 0', color: '#666', textAlign: 'center' }}>No leads yet</td></tr>}
+                {leads.length === 0 && <tr><td colSpan={8} style={{ padding: '1rem 0', color: '#666', textAlign: 'center' }}>No leads yet</td></tr>}
               </tbody>
             </table>
           </div>

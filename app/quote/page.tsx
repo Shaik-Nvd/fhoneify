@@ -342,47 +342,47 @@ export default function QuotePage() {
   };
 
   const SidebarSummary = () => (
-    <div className="w-full md:max-w-[300px] shrink-0 bg-white border border-[#e0e0e0] rounded-xl p-6 md:sticky md:top-8 text-black mb-8 md:mb-0">
-      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', borderBottom: '1px solid #e0e0e0', paddingBottom: '1rem', marginBottom: '1rem' }}>
+    <div className="w-full md:max-w-[300px] shrink-0 bg-[#111] border border-[#2a2a2a] rounded-xl p-6 md:sticky md:top-8 text-white mb-8 md:mb-0">
+      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', borderBottom: '1px solid #2a2a2a', paddingBottom: '1rem', marginBottom: '1rem' }}>
         <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} style={{ width: '40px', height: '60px', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
         <span style={{ fontWeight: 600, fontSize: '0.9rem' }}>{selectedModel.startsWith(selectedBrand) ? selectedModel : `${selectedBrand} ${selectedModel}`} ({selectedStorage})</span>
       </div>
       
-      <h3 style={{ color: '#666', fontSize: '0.85rem', marginBottom: '1rem', fontWeight: 500 }}>Device Evaluation</h3>
+      <h3 style={{ color: '#a0a0a0', fontSize: '0.85rem', marginBottom: '1rem', fontWeight: 500 }}>Device Evaluation</h3>
       
       {diagnostics.calls !== null && (
         <div style={{ marginBottom: '0.75rem' }}>
-          <p style={{ color: '#999', fontSize: '0.75rem' }}>Make/Receive Calls</p>
+          <p style={{ color: '#888', fontSize: '0.75rem' }}>Make/Receive Calls</p>
           <p style={{ color: '#4CD964', fontSize: '0.85rem', fontWeight: 600 }}>• {diagnostics.calls ? 'Yes' : 'No'}</p>
         </div>
       )}
       {diagnostics.touch !== null && (
         <div style={{ marginBottom: '0.75rem' }}>
-          <p style={{ color: '#999', fontSize: '0.75rem' }}>Touch Working</p>
+          <p style={{ color: '#888', fontSize: '0.75rem' }}>Touch Working</p>
           <p style={{ color: '#4CD964', fontSize: '0.85rem', fontWeight: 600 }}>• {diagnostics.touch ? 'Yes' : 'No'}</p>
         </div>
       )}
       {diagnostics.originalScreen !== null && (
         <div style={{ marginBottom: '0.75rem' }}>
-          <p style={{ color: '#999', fontSize: '0.75rem' }}>Screen Original</p>
+          <p style={{ color: '#888', fontSize: '0.75rem' }}>Screen Original</p>
           <p style={{ color: '#4CD964', fontSize: '0.85rem', fontWeight: 600 }}>• {diagnostics.originalScreen ? 'Yes' : 'No'}</p>
         </div>
       )}
       {diagnostics.defects.length > 0 && (
         <div style={{ marginBottom: '0.75rem' }}>
-          <p style={{ color: '#999', fontSize: '0.75rem' }}>Defects</p>
+          <p style={{ color: '#888', fontSize: '0.75rem' }}>Defects</p>
           <p style={{ color: '#FF3B30', fontSize: '0.85rem', fontWeight: 600 }}>• {diagnostics.defects.length} selected</p>
         </div>
       )}
       {diagnostics.hardware.length > 0 && (
         <div style={{ marginBottom: '0.75rem' }}>
-          <p style={{ color: '#999', fontSize: '0.75rem' }}>Hardware Issues</p>
+          <p style={{ color: '#888', fontSize: '0.75rem' }}>Hardware Issues</p>
           <p style={{ color: '#FF3B30', fontSize: '0.85rem', fontWeight: 600 }}>• {diagnostics.hardware.length} selected</p>
         </div>
       )}
       {diagnostics.accessories.length > 0 && (
         <div style={{ marginBottom: '0.75rem' }}>
-          <p style={{ color: '#999', fontSize: '0.75rem' }}>Accessories</p>
+          <p style={{ color: '#888', fontSize: '0.75rem' }}>Accessories</p>
           <p style={{ color: '#4CD964', fontSize: '0.85rem', fontWeight: 600 }}>• {diagnostics.accessories.length} available</p>
         </div>
       )}
@@ -462,9 +462,9 @@ export default function QuotePage() {
 
       {/* STAGE 2: BASE PRICE SCREEN */}
       {step === 2 && (
-        <div className="card flex flex-col md:flex-row items-center gap-6 md:gap-12 p-6 md:p-12 bg-white border border-[#e0e0e0] rounded-xl max-w-[700px] mx-auto text-center md:text-left">
+        <div className="card flex flex-col md:flex-row items-center gap-6 md:gap-12 p-6 md:p-12 bg-[#111] border border-[#2a2a2a] rounded-xl max-w-[700px] mx-auto text-center md:text-left">
           <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} style={{ width: '120px', height: '180px', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
-          <div className="flex flex-col gap-2 flex-1 w-full text-black items-center md:items-start">
+          <div className="flex flex-col gap-2 flex-1 w-full text-white items-center md:items-start">
             <h2 style={{ fontSize: '1.4rem', fontWeight: 500 }}>Sell Old {selectedModel.startsWith(selectedBrand) ? selectedModel : `${selectedBrand} ${selectedModel}`} ({selectedStorage})</h2>
             <p style={{ color: '#666', fontSize: '1rem', marginTop: '1rem' }}>Get Upto</p>
             <p style={{ fontSize: '3rem', fontWeight: 700, color: '#FF4C4C' }}>{formatCurrency(basePrice || 0)}</p>
@@ -483,9 +483,9 @@ export default function QuotePage() {
             
             {/* STAGE 3: BASIC YES/NO */}
             {step === 3 && (
-              <div className="card bg-white text-black p-6 md:p-12 rounded-lg border border-[#e0e0e0]">
-                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem' }}>Tell us more about your device?</h2>
-                <p style={{ textAlign: 'center', color: '#666', fontSize: '0.85rem', marginBottom: '3rem' }}>Please answer a few questions about your device.</p>
+              <div className="card p-6 md:p-12 rounded-lg border border-[#2a2a2a] bg-[#111] text-white">
+                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: '#ffffff' }}>Tell us more about your device?</h2>
+                <p style={{ textAlign: 'center', color: '#cccccc', fontSize: '0.85rem', marginBottom: '3rem' }}>Please answer a few questions about your device.</p>
                 
                 {[
                   { id: 'calls', title: 'Are you able to make and receive calls?', desc: 'Check your device for cellular network connectivity issues.' },
@@ -493,14 +493,14 @@ export default function QuotePage() {
                   { id: 'originalScreen', title: 'Is your phone\'s screen original?', desc: 'Pick "Yes" if screen was never changed. Pick "No" if screen was changed.' }
                 ].map((q) => (
                   <div key={q.id} style={{ marginBottom: '2.5rem' }}>
-                    <h3 style={{ fontWeight: 600, fontSize: '1rem', marginBottom: '0.25rem' }}>{q.title}</h3>
-                    <p style={{ color: '#666', fontSize: '0.8rem', marginBottom: '1.25rem' }}>{q.desc}</p>
+                    <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>{q.title}</h3>
+                    <p style={{ color: '#cccccc', fontSize: '0.9rem', marginBottom: '1.25rem' }}>{q.desc}</p>
                     <div style={{ display: 'flex', gap: '1rem' }}>
-                      <button onClick={() => setDiagnostics({ ...diagnostics, [q.id]: true })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: '1px solid #e0e0e0', backgroundColor: diagnostics[q.id as keyof typeof diagnostics] === true ? '#e8f5e9' : '#fafafa', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500 }}>
-                        <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: '1px solid #ccc', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: diagnostics[q.id as keyof typeof diagnostics] === true ? '#4CD964' : 'transparent' }} /> Yes
+                      <button onClick={() => setDiagnostics({ ...diagnostics, [q.id]: true })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics[q.id as keyof typeof diagnostics] === true ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics[q.id as keyof typeof diagnostics] === true ? 'rgba(76,217,100,0.1)' : '#1a1a1a', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics[q.id as keyof typeof diagnostics] === true ? '#4CD964' : '#fff' }}>
+                        <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics[q.id as keyof typeof diagnostics] === true ? '1px solid #4CD964' : '1px solid #444', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: diagnostics[q.id as keyof typeof diagnostics] === true ? '#4CD964' : 'transparent' }} /> Yes
                       </button>
-                      <button onClick={() => setDiagnostics({ ...diagnostics, [q.id]: false })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: '1px solid #e0e0e0', backgroundColor: diagnostics[q.id as keyof typeof diagnostics] === false ? '#ffebee' : '#fafafa', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500 }}>
-                        <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: '1px solid #ccc', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: diagnostics[q.id as keyof typeof diagnostics] === false ? '#FF3B30' : 'transparent' }} /> No
+                      <button onClick={() => setDiagnostics({ ...diagnostics, [q.id]: false })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics[q.id as keyof typeof diagnostics] === false ? '1px solid #FF3B30' : '1px solid #2a2a2a', backgroundColor: diagnostics[q.id as keyof typeof diagnostics] === false ? 'rgba(255,59,48,0.1)' : '#1a1a1a', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics[q.id as keyof typeof diagnostics] === false ? '#FF3B30' : '#fff' }}>
+                        <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics[q.id as keyof typeof diagnostics] === false ? '1px solid #FF3B30' : '1px solid #444', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: diagnostics[q.id as keyof typeof diagnostics] === false ? '#FF3B30' : 'transparent' }} /> No
                       </button>
                     </div>
                   </div>
@@ -513,9 +513,9 @@ export default function QuotePage() {
 
             {/* STAGE 4: DEFECTS */}
             {step === 4 && (
-              <div className="card bg-white text-black p-6 md:p-12 rounded-lg border border-[#e0e0e0]">
-                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem' }}>Select screen/body defects that are applicable!</h2>
-                <p style={{ textAlign: 'center', color: '#666', fontSize: '0.85rem', marginBottom: '3rem' }}>Please provide correct details</p>
+              <div className="card p-6 md:p-12 rounded-lg border border-[#2a2a2a] bg-[#111] text-white">
+                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: '#ffffff' }}>Select screen/body defects that are applicable!</h2>
+                <p style={{ textAlign: 'center', color: '#cccccc', fontSize: '0.85rem', marginBottom: '3rem' }}>Please provide correct details</p>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(130px, 1fr))', gap: '1rem', marginBottom: '3rem' }}>
                   {[
                     { id: 'screen_scratch', label: 'Broken/scratch on device screen', icon: '📱' },
@@ -523,7 +523,7 @@ export default function QuotePage() {
                     { id: 'body_scratch', label: 'Scratch/Dent on device body', icon: '📏' },
                     { id: 'panel_missing', label: 'Device panel missing/broken', icon: '🔧' }
                   ].map((d) => (
-                    <button key={d.id} onClick={() => toggleArrayItem('defects', d.id)} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem', padding: '2rem 1rem', borderRadius: '8px', border: diagnostics.defects.includes(d.id) ? '2px solid #4CD964' : '1px solid #e0e0e0', backgroundColor: diagnostics.defects.includes(d.id) ? '#f0fdf4' : '#fafafa', cursor: 'pointer' }}>
+                    <button key={d.id} onClick={() => toggleArrayItem('defects', d.id)} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem', padding: '2rem 1rem', borderRadius: '8px', border: diagnostics.defects.includes(d.id) ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.defects.includes(d.id) ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.defects.includes(d.id) ? '#4CD964' : '#fff', cursor: 'pointer' }}>
                       <span style={{ fontSize: '3rem' }}>{d.icon}</span>
                       <span style={{ fontSize: '0.8rem', textAlign: 'center', fontWeight: 500, lineHeight: 1.4 }}>{d.label}</span>
                     </button>
@@ -537,9 +537,9 @@ export default function QuotePage() {
 
             {/* STAGE 5: HARDWARE */}
             {step === 5 && (
-              <div className="card bg-white text-black p-6 md:p-12 rounded-lg border border-[#e0e0e0]">
-                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem' }}>Functional or Physical Problems</h2>
-                <p style={{ textAlign: 'center', color: '#666', fontSize: '0.85rem', marginBottom: '3rem' }}>Please choose appropriate condition to get accurate quote</p>
+              <div className="card p-6 md:p-12 rounded-lg border border-[#2a2a2a] bg-[#111] text-white">
+                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: '#ffffff' }}>Functional or Physical Problems</h2>
+                <p style={{ textAlign: 'center', color: '#cccccc', fontSize: '0.85rem', marginBottom: '3rem' }}>Please choose appropriate condition to get accurate quote</p>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(130px, 1fr))', gap: '1rem', marginBottom: '3rem' }}>
                   {[
                     { id: 'front_camera', label: 'Front Camera not working', icon: '📸' },
@@ -560,7 +560,7 @@ export default function QuotePage() {
                     { id: 'proximity', label: 'Proximity Sensor not working', icon: '🖐' },
                     { id: 'battery_service', label: 'Battery in Service (< 80%)', icon: '🔋' }
                   ].map((h) => (
-                    <button key={h.id} onClick={() => toggleArrayItem('hardware', h.id)} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem', padding: '1.5rem 0.5rem', borderRadius: '8px', border: diagnostics.hardware.includes(h.id) ? '2px solid #4CD964' : '1px solid #e0e0e0', backgroundColor: diagnostics.hardware.includes(h.id) ? '#f0fdf4' : '#fafafa', cursor: 'pointer' }}>
+                    <button key={h.id} onClick={() => toggleArrayItem('hardware', h.id)} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem', padding: '1.5rem 0.5rem', borderRadius: '8px', border: diagnostics.hardware.includes(h.id) ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.hardware.includes(h.id) ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.hardware.includes(h.id) ? '#4CD964' : '#fff', cursor: 'pointer' }}>
                       <span style={{ fontSize: '2.5rem' }}>{h.icon}</span>
                       <span style={{ fontSize: '0.75rem', textAlign: 'center', fontWeight: 500 }}>{h.label}</span>
                     </button>
@@ -574,16 +574,16 @@ export default function QuotePage() {
 
             {/* STAGE 6: ACCESSORIES */}
             {step === 6 && (
-              <div className="card bg-white text-black p-6 md:p-12 rounded-lg border border-[#e0e0e0]">
-                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem' }}>Do you have the following?</h2>
-                <p style={{ textAlign: 'center', color: '#666', fontSize: '0.85rem', marginBottom: '3rem' }}>Please select accessories which are available</p>
+              <div className="card p-6 md:p-12 rounded-lg border border-[#2a2a2a] bg-[#111] text-white">
+                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: '#ffffff' }}>Do you have the following?</h2>
+                <p style={{ textAlign: 'center', color: '#cccccc', fontSize: '0.85rem', marginBottom: '3rem' }}>Please select accessories which are available</p>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem', marginBottom: '3rem' }}>
                   {[
                     { id: 'box', label: 'Original Box with same IMEI', icon: '📦' },
                     { id: 'bill', label: 'Valid Bill', icon: '🧾' },
                     { id: 'charger', label: 'Original Charger', icon: '🔌' }
                   ].map((a) => (
-                    <button key={a.id} onClick={() => toggleArrayItem('accessories', a.id)} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem', padding: '3rem 1rem', borderRadius: '8px', border: diagnostics.accessories.includes(a.id) ? '2px solid #4CD964' : '1px solid #e0e0e0', backgroundColor: diagnostics.accessories.includes(a.id) ? '#f0fdf4' : '#fafafa', cursor: 'pointer' }}>
+                    <button key={a.id} onClick={() => toggleArrayItem('accessories', a.id)} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem', padding: '3rem 1rem', borderRadius: '8px', border: diagnostics.accessories.includes(a.id) ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.accessories.includes(a.id) ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.accessories.includes(a.id) ? '#4CD964' : '#fff', cursor: 'pointer' }}>
                       <span style={{ fontSize: '4rem' }}>{a.icon}</span>
                       <span style={{ fontSize: '0.9rem', textAlign: 'center', fontWeight: 500 }}>{a.label}</span>
                     </button>

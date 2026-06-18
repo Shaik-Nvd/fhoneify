@@ -1,5 +1,5 @@
 export const BRANDS = [
-  'Apple', 'Xiaomi', 'Samsung', 'Vivo', 'OnePlus', 'OPPO', 'Realme', 
+  'Apple', 'Xiaomi', 'Samsung', 'Vivo', 'OnePlus', 'OPPO', 'Realme',
   'Motorola', 'Lenovo', 'Nokia', 'Honor', 'Asus', 'Google', 'POCO', 
   'LG', 'Infinix', 'Tecno', 'iQOO', 'Nothing'
 ];

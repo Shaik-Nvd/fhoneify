@@ -6,9 +6,8 @@ generator client {
 }
 
 datasource db {
-  provider  = "postgresql"
-  url       = env("DATABASE_URL")
-  directUrl = env("DIRECT_URL")
+  provider  = "sqlite"
+  url       = "file:./dev.db"
 }
 
 model User {
@@ -183,4 +182,22 @@ model BlogPost {
   seoTitle       String
   seoDescription String
   createdAt      DateTime @default(now())
+}
+
+model Lead {
+  id          String   @id @default(uuid())
+  userId      String?
+  name        String?
+  phone       String
+  brand       String
+  model       String
+  storage     String
+  quotedPrice Float
+  pickupDate  String?
+  pickupTime  String?
+  address     String?
+  pincode     String?
+  city        String?
+  status      String   @default("pending")
+  createdAt   DateTime @default(now())
 }

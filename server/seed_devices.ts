@@ -378,24 +378,6 @@ export const SEED_DEVICES = [
     "basePrice": 60800
   },
   {
-    "id": "d48",
-    "brand": "Samsung",
-    "model": "Galaxy S24+",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Red",
-    "basePrice": 97749
-  },
-  {
-    "id": "d49",
-    "brand": "Samsung",
-    "model": "Galaxy Z Fold5",
-    "storage": "1TB",
-    "ram": "12GB",
-    "color": "Purple",
-    "basePrice": 192000
-  },
-  {
     "id": "d51",
     "brand": "Google",
     "model": "Pixel 8",
@@ -432,15 +414,6 @@ export const SEED_DEVICES = [
     "basePrice": 21750
   },
   {
-    "id": "d57",
-    "brand": "Samsung",
-    "model": "Galaxy S21 FE",
-    "storage": "256GB",
-    "ram": "6GB",
-    "color": "Silver",
-    "basePrice": 31200
-  },
-  {
     "id": "d58",
     "brand": "Vivo",
     "model": "Vivo T2 Pro",
@@ -457,15 +430,6 @@ export const SEED_DEVICES = [
     "ram": "8GB",
     "color": "Titanium",
     "basePrice": 23200
-  },
-  {
-    "id": "d60",
-    "brand": "Samsung",
-    "model": "Galaxy Z Fold5",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Blue",
-    "basePrice": 156000
   },
   {
     "id": "d61",
@@ -495,15 +459,6 @@ export const SEED_DEVICES = [
     "basePrice": 26000
   },
   {
-    "id": "d64",
-    "brand": "Samsung",
-    "model": "Galaxy Z Flip5",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Gold",
-    "basePrice": 80500
-  },
-  {
     "id": "d66",
     "brand": "Xiaomi",
     "model": "Xiaomi 14 Ultra",
@@ -529,24 +484,6 @@ export const SEED_DEVICES = [
     "ram": "8GB",
     "color": "Green",
     "basePrice": 92000
-  },
-  {
-    "id": "d69",
-    "brand": "Samsung",
-    "model": "Galaxy S24+",
-    "storage": "512GB",
-    "ram": "12GB",
-    "color": "Gold",
-    "basePrice": 123250
-  },
-  {
-    "id": "d70",
-    "brand": "Samsung",
-    "model": "Galaxy S24",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Purple",
-    "basePrice": 94250
   },
   {
     "id": "d71",
@@ -619,15 +556,6 @@ export const SEED_DEVICES = [
     "ram": "8GB",
     "color": "Silver",
     "basePrice": 23000
-  },
-  {
-    "id": "d79",
-    "brand": "Samsung",
-    "model": "Galaxy S23+",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Silver",
-    "basePrice": 69000
   },
   {
     "id": "d80",
@@ -729,15 +657,6 @@ export const SEED_DEVICES = [
     "basePrice": 96000
   },
   {
-    "id": "d95",
-    "brand": "Samsung",
-    "model": "Galaxy S24+",
-    "storage": "1TB",
-    "ram": "12GB",
-    "color": "Blue",
-    "basePrice": 136000
-  },
-  {
     "id": "d97",
     "brand": "OnePlus",
     "model": "OnePlus Open",
@@ -781,15 +700,6 @@ export const SEED_DEVICES = [
     "ram": "6GB",
     "color": "Red",
     "basePrice": 39000
-  },
-  {
-    "id": "d105",
-    "brand": "Samsung",
-    "model": "Galaxy S21 FE",
-    "storage": "512GB",
-    "ram": "12GB",
-    "color": "Gold",
-    "basePrice": 34800
   },
   {
     "id": "d106",
@@ -846,15 +756,6 @@ export const SEED_DEVICES = [
     "basePrice": 49400
   },
   {
-    "id": "d114",
-    "brand": "Samsung",
-    "model": "Galaxy Z Fold5",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Silver",
-    "basePrice": 174000
-  },
-  {
     "id": "d118",
     "brand": "Motorola",
     "model": "Edge 40 Neo",
@@ -862,15 +763,6 @@ export const SEED_DEVICES = [
     "ram": "12GB",
     "color": "Gold",
     "basePrice": 33600
-  },
-  {
-    "id": "d120",
-    "brand": "Samsung",
-    "model": "Galaxy S23 Ultra",
-    "storage": "256GB",
-    "ram": "6GB",
-    "color": "White",
-    "basePrice": 110500
   },
   {
     "id": "d121",
@@ -925,15 +817,6 @@ export const SEED_DEVICES = [
     "ram": "16GB",
     "color": "Red",
     "basePrice": 35200
-  },
-  {
-    "id": "d132",
-    "brand": "Samsung",
-    "model": "Galaxy S24",
-    "storage": "512GB",
-    "ram": "12GB",
-    "color": "Blue",
-    "basePrice": 94250
   },
   {
     "id": "d133",
@@ -1026,15 +909,6 @@ export const SEED_DEVICES = [
     "basePrice": 36400
   },
   {
-    "id": "d149",
-    "brand": "Samsung",
-    "model": "Galaxy A54",
-    "storage": "1TB",
-    "ram": "16GB",
-    "color": "Silver",
-    "basePrice": 44800
-  },
-  {
     "id": "d151",
     "brand": "Realme",
     "model": "Realme 12 Pro",
@@ -1080,15 +954,6 @@ export const SEED_DEVICES = [
     "basePrice": 24000
   },
   {
-    "id": "d159",
-    "brand": "Samsung",
-    "model": "Galaxy S24 Ultra",
-    "storage": "1TB",
-    "ram": "12GB",
-    "color": "Titanium",
-    "basePrice": 176000
-  },
-  {
     "id": "d161",
     "brand": "Xiaomi",
     "model": "Redmi Note 12 Pro+",
@@ -1123,24 +988,6 @@ export const SEED_DEVICES = [
     "ram": "6GB",
     "color": "Titanium",
     "basePrice": 43700
-  },
-  {
-    "id": "d166",
-    "brand": "Samsung",
-    "model": "Galaxy S24+",
-    "storage": "1TB",
-    "ram": "16GB",
-    "color": "Red",
-    "basePrice": 136000
-  },
-  {
-    "id": "d167",
-    "brand": "Samsung",
-    "model": "Galaxy A54",
-    "storage": "256GB",
-    "ram": "6GB",
-    "color": "Purple",
-    "basePrice": 36400
   },
   {
     "id": "d169",
@@ -1332,15 +1179,6 @@ export const SEED_DEVICES = [
     "basePrice": 31200
   },
   {
-    "id": "d208",
-    "brand": "Samsung",
-    "model": "Galaxy S23+",
-    "storage": "256GB",
-    "ram": "6GB",
-    "color": "Red",
-    "basePrice": 78000
-  },
-  {
     "id": "d210",
     "brand": "OnePlus",
     "model": "OnePlus 12",
@@ -1375,15 +1213,6 @@ export const SEED_DEVICES = [
     "ram": "6GB",
     "color": "Green",
     "basePrice": 74750
-  },
-  {
-    "id": "d217",
-    "brand": "Samsung",
-    "model": "Galaxy S23 Ultra",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "White",
-    "basePrice": 97749
   },
   {
     "id": "d218",
@@ -1485,15 +1314,6 @@ export const SEED_DEVICES = [
     "basePrice": 60800
   },
   {
-    "id": "d235",
-    "brand": "Samsung",
-    "model": "Galaxy S24 Ultra",
-    "storage": "256GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 143000
-  },
-  {
     "id": "d236",
     "brand": "Realme",
     "model": "Realme 11 Pro+",
@@ -1501,15 +1321,6 @@ export const SEED_DEVICES = [
     "ram": "6GB",
     "color": "Purple",
     "basePrice": 25299
-  },
-  {
-    "id": "d237",
-    "brand": "Samsung",
-    "model": "Galaxy S23",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Purple",
-    "basePrice": 55199
   },
   {
     "id": "d239",
@@ -1557,15 +1368,6 @@ export const SEED_DEVICES = [
     "basePrice": 71500
   },
   {
-    "id": "d250",
-    "brand": "Samsung",
-    "model": "Galaxy S23",
-    "storage": "1TB",
-    "ram": "12GB",
-    "color": "Purple",
-    "basePrice": 76800
-  },
-  {
     "id": "d251",
     "brand": "Nothing",
     "model": "Nothing Phone (2a)",
@@ -1602,15 +1404,6 @@ export const SEED_DEVICES = [
     "basePrice": 48000
   },
   {
-    "id": "d259",
-    "brand": "Samsung",
-    "model": "Galaxy M54",
-    "storage": "1TB",
-    "ram": "16GB",
-    "color": "Purple",
-    "basePrice": 40000
-  },
-  {
     "id": "d261",
     "brand": "Motorola",
     "model": "Edge 50 Pro",
@@ -1629,15 +1422,6 @@ export const SEED_DEVICES = [
     "basePrice": 25600
   },
   {
-    "id": "d263",
-    "brand": "Samsung",
-    "model": "Galaxy S24 Ultra",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Gold",
-    "basePrice": 159500
-  },
-  {
     "id": "d264",
     "brand": "OnePlus",
     "model": "OnePlus 11",
@@ -1654,15 +1438,6 @@ export const SEED_DEVICES = [
     "ram": "12GB",
     "color": "Green",
     "basePrice": 123250
-  },
-  {
-    "id": "d266",
-    "brand": "Samsung",
-    "model": "Galaxy S24",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 74750
   },
   {
     "id": "d274",
@@ -1737,51 +1512,6 @@ export const SEED_DEVICES = [
     "basePrice": 52000
   },
   {
-    "id": "d291",
-    "brand": "Samsung",
-    "model": "Galaxy S24",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 74750
-  },
-  {
-    "id": "d295",
-    "brand": "Samsung",
-    "model": "Galaxy Z Flip5",
-    "storage": "1TB",
-    "ram": "12GB",
-    "color": "Red",
-    "basePrice": 112000
-  },
-  {
-    "id": "d298",
-    "brand": "Samsung",
-    "model": "Galaxy S21 FE",
-    "storage": "1TB",
-    "ram": "16GB",
-    "color": "White",
-    "basePrice": 38400
-  },
-  {
-    "id": "d299",
-    "brand": "Samsung",
-    "model": "Galaxy S24",
-    "storage": "1TB",
-    "ram": "12GB",
-    "color": "Gold",
-    "basePrice": 104000
-  },
-  {
-    "id": "d300",
-    "brand": "Samsung",
-    "model": "Galaxy Z Flip5",
-    "storage": "512GB",
-    "ram": "12GB",
-    "color": "White",
-    "basePrice": 101500
-  },
-  {
     "id": "d304",
     "brand": "Google",
     "model": "Pixel 7",
@@ -1827,15 +1557,6 @@ export const SEED_DEVICES = [
     "basePrice": 40600
   },
   {
-    "id": "d316",
-    "brand": "Samsung",
-    "model": "Galaxy Z Flip5",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Gold",
-    "basePrice": 101500
-  },
-  {
     "id": "d327",
     "brand": "Vivo",
     "model": "Vivo V29 Pro",
@@ -1845,15 +1566,6 @@ export const SEED_DEVICES = [
     "basePrice": 36800
   },
   {
-    "id": "d328",
-    "brand": "Samsung",
-    "model": "Galaxy S23",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Silver",
-    "basePrice": 55199
-  },
-  {
     "id": "d329",
     "brand": "Oppo",
     "model": "Oppo F25 Pro",
@@ -1861,15 +1573,6 @@ export const SEED_DEVICES = [
     "ram": "16GB",
     "color": "Black",
     "basePrice": 35200
-  },
-  {
-    "id": "d333",
-    "brand": "Samsung",
-    "model": "Galaxy A34",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Blue",
-    "basePrice": 25299
   },
   {
     "id": "d338",
@@ -2007,15 +1710,6 @@ export const SEED_DEVICES = [
     "basePrice": 29900
   },
   {
-    "id": "d372",
-    "brand": "Samsung",
-    "model": "Galaxy Z Flip5",
-    "storage": "256GB",
-    "ram": "6GB",
-    "color": "Titanium",
-    "basePrice": 91000
-  },
-  {
     "id": "d373",
     "brand": "Motorola",
     "model": "Edge 40 Neo",
@@ -2041,15 +1735,6 @@ export const SEED_DEVICES = [
     "ram": "8GB",
     "color": "White",
     "basePrice": 69000
-  },
-  {
-    "id": "d385",
-    "brand": "Samsung",
-    "model": "Galaxy A34",
-    "storage": "1TB",
-    "ram": "12GB",
-    "color": "Silver",
-    "basePrice": 35200
   },
   {
     "id": "d387",
@@ -2142,33 +1827,6 @@ export const SEED_DEVICES = [
     "basePrice": 36800
   },
   {
-    "id": "d409",
-    "brand": "Samsung",
-    "model": "Galaxy S24+",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Blue",
-    "basePrice": 123250
-  },
-  {
-    "id": "d410",
-    "brand": "Samsung",
-    "model": "Galaxy S24",
-    "storage": "1TB",
-    "ram": "16GB",
-    "color": "Purple",
-    "basePrice": 104000
-  },
-  {
-    "id": "d411",
-    "brand": "Samsung",
-    "model": "Galaxy S23+",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Silver",
-    "basePrice": 69000
-  },
-  {
     "id": "d417",
     "brand": "Xiaomi",
     "model": "Redmi Note 13 Pro",
@@ -2185,15 +1843,6 @@ export const SEED_DEVICES = [
     "ram": "8GB",
     "color": "Red",
     "basePrice": 110500
-  },
-  {
-    "id": "d426",
-    "brand": "Samsung",
-    "model": "Galaxy Z Flip5",
-    "storage": "1TB",
-    "ram": "16GB",
-    "color": "Gold",
-    "basePrice": 112000
   },
   {
     "id": "d429",
@@ -2295,24 +1944,6 @@ export const SEED_DEVICES = [
     "basePrice": 128000
   },
   {
-    "id": "d458",
-    "brand": "Samsung",
-    "model": "Galaxy Z Fold5",
-    "storage": "512GB",
-    "ram": "12GB",
-    "color": "Titanium",
-    "basePrice": 174000
-  },
-  {
-    "id": "d466",
-    "brand": "Samsung",
-    "model": "Galaxy M54",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Titanium",
-    "basePrice": 36250
-  },
-  {
     "id": "d467",
     "brand": "Realme",
     "model": "Realme 12 Pro",
@@ -2320,15 +1951,6 @@ export const SEED_DEVICES = [
     "ram": "8GB",
     "color": "Black",
     "basePrice": 33350
-  },
-  {
-    "id": "d468",
-    "brand": "Samsung",
-    "model": "Galaxy Z Fold5",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 138000
   },
   {
     "id": "d470",
@@ -2349,15 +1971,6 @@ export const SEED_DEVICES = [
     "basePrice": 159500
   },
   {
-    "id": "d479",
-    "brand": "Samsung",
-    "model": "Galaxy S23+",
-    "storage": "1TB",
-    "ram": "16GB",
-    "color": "White",
-    "basePrice": 96000
-  },
-  {
     "id": "d480",
     "brand": "Nothing",
     "model": "Nothing Phone (2a)",
@@ -2376,15 +1989,6 @@ export const SEED_DEVICES = [
     "basePrice": 92800
   },
   {
-    "id": "d483",
-    "brand": "Samsung",
-    "model": "Galaxy Z Fold5",
-    "storage": "1TB",
-    "ram": "16GB",
-    "color": "Green",
-    "basePrice": 192000
-  },
-  {
     "id": "d486",
     "brand": "OnePlus",
     "model": "OnePlus 12R",
@@ -2401,15 +2005,6 @@ export const SEED_DEVICES = [
     "ram": "8GB",
     "color": "Gold",
     "basePrice": 31900
-  },
-  {
-    "id": "d490",
-    "brand": "Samsung",
-    "model": "Galaxy S23",
-    "storage": "512GB",
-    "ram": "12GB",
-    "color": "Purple",
-    "basePrice": 69600
   },
   {
     "id": "d491",
@@ -2446,15 +2041,6 @@ export const SEED_DEVICES = [
     "ram": "8GB",
     "color": "Titanium",
     "basePrice": 26449
-  },
-  {
-    "id": "d498",
-    "brand": "Samsung",
-    "model": "Galaxy A54",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Green",
-    "basePrice": 32199
   },
   {
     "id": "d500",
@@ -2580,7 +2166,7 @@ export const SEED_DEVICES = [
     "storage": "128GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 0
+    "basePrice": 10000
   },
   {
     "id": "apple_1004",
@@ -2634,7 +2220,7 @@ export const SEED_DEVICES = [
     "storage": "128GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 0
+    "basePrice": 10000
   },
   {
     "id": "apple_1010",
@@ -2661,7 +2247,7 @@ export const SEED_DEVICES = [
     "storage": "128GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 0
+    "basePrice": 11500
   },
   {
     "id": "apple_1017",
@@ -2814,7 +2400,7 @@ export const SEED_DEVICES = [
     "storage": "128GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 0
+    "basePrice": 10000
   },
   {
     "id": "apple_1034",
@@ -2931,7 +2517,7 @@ export const SEED_DEVICES = [
     "storage": "16GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 0
+    "basePrice": 10000
   },
   {
     "id": "apple_2010",
@@ -2940,7 +2526,7 @@ export const SEED_DEVICES = [
     "storage": "32GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 0
+    "basePrice": 10000
   },
   {
     "id": "apple_2011",
@@ -2949,7 +2535,7 @@ export const SEED_DEVICES = [
     "storage": "64GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 0
+    "basePrice": 10000
   },
   {
     "id": "apple_2012",
@@ -2958,7 +2544,7 @@ export const SEED_DEVICES = [
     "storage": "16GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 0
+    "basePrice": 10000
   },
   {
     "id": "apple_2013",
@@ -2994,7 +2580,7 @@ export const SEED_DEVICES = [
     "storage": "64GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 0
+    "basePrice": 10000
   },
   {
     "id": "apple_2019",
@@ -3012,7 +2598,7 @@ export const SEED_DEVICES = [
     "storage": "512GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 0
+    "basePrice": 10000
   },
   {
     "id": "apple_2021",
@@ -3219,7 +2805,7 @@ export const SEED_DEVICES = [
     "storage": "64GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 0
+    "basePrice": 10500
   },
   {
     "id": "apple_2049",
@@ -3228,7 +2814,7 @@ export const SEED_DEVICES = [
     "storage": "256GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 0
+    "basePrice": 13500
   },
   {
     "id": "apple_2051",
@@ -3363,7 +2949,7 @@ export const SEED_DEVICES = [
     "storage": "1TB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 0
+    "basePrice": 10000
   },
   {
     "id": "apple_2072",
@@ -3390,7 +2976,7 @@ export const SEED_DEVICES = [
     "storage": "1TB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 0
+    "basePrice": 10000
   },
   {
     "id": "apple_2075",
@@ -3471,7 +3057,7 @@ export const SEED_DEVICES = [
     "storage": "1TB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 0
+    "basePrice": 10000
   },
   {
     "id": "apple_2087",
@@ -3498,7 +3084,7 @@ export const SEED_DEVICES = [
     "storage": "1TB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 0
+    "basePrice": 10000
   },
   {
     "id": "apple_2090",
@@ -3561,7 +3147,7 @@ export const SEED_DEVICES = [
     "storage": "1TB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 0
+    "basePrice": 10000
   },
   {
     "id": "apple_2099",
@@ -3588,7 +3174,7 @@ export const SEED_DEVICES = [
     "storage": "1TB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 0
+    "basePrice": 10000
   },
   {
     "id": "apple_2102",
@@ -3651,7 +3237,7 @@ export const SEED_DEVICES = [
     "storage": "1TB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 0
+    "basePrice": 10000
   },
   {
     "id": "apple_2111",
@@ -3678,7 +3264,7 @@ export const SEED_DEVICES = [
     "storage": "1TB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 0
+    "basePrice": 10000
   },
   {
     "id": "apple_2114",
@@ -3723,7 +3309,7 @@ export const SEED_DEVICES = [
     "storage": "256GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 0
+    "basePrice": 10000
   },
   {
     "id": "apple_2121",
@@ -3732,7 +3318,7 @@ export const SEED_DEVICES = [
     "storage": "512GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 0
+    "basePrice": 10000
   },
   {
     "id": "apple_2122",
@@ -3741,7 +3327,7 @@ export const SEED_DEVICES = [
     "storage": "1TB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 0
+    "basePrice": 10000
   },
   {
     "id": "apple_2123",
@@ -3768,7 +3354,7 @@ export const SEED_DEVICES = [
     "storage": "1TB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 0
+    "basePrice": 10000
   },
   {
     "id": "apple_2126",

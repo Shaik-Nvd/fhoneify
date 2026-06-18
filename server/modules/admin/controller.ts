@@ -79,9 +79,9 @@ export function getUsers(req: AuthenticatedRequest, res: Response) {
   }
 }
 
-export function getLeads(req: AuthenticatedRequest, res: Response) {
+export async function getLeads(req: AuthenticatedRequest, res: Response) {
   try {
-    const data = adminService.getLeads();
+    const data = await adminService.getLeads();
     return res.json({ success: true, data });
   } catch (err: any) {
     logger.error({ err: err.message }, 'Error in getLeads controller');

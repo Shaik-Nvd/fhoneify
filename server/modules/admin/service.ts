@@ -1,4 +1,5 @@
 import { users, leads, listings, buy_orders, enrichListing, Listing, BuyOrder, User, Lead } from '../../data';
+import prisma from '../../lib/prisma';
 
 export function getAnalytics() {
   const paidOrders = buy_orders.filter((o) => o.status === 'paid');
@@ -58,6 +59,8 @@ export function getUsers(): User[] {
   return users;
 }
 
-export function getLeads(): Lead[] {
-  return leads;
+export async function getLeads() {
+  return await prisma.lead.findMany({
+    orderBy: { createdAt: 'desc' }
+  });
 }

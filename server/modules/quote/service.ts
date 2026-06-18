@@ -1,6 +1,7 @@
 import { SEED_DEVICES, quotes, counters, Quote, Device, leads, Lead } from '../../data';
 import fs from 'fs';
 import path from 'path';
+import prisma from '../../lib/prisma';
 
 // Load the Cashify prices dictionary
 let cashifyPrices: Record<string, number> = {};
@@ -82,24 +83,23 @@ export function getQuoteById(quoteId: string): Quote | null {
   return quotes.get(quoteId) || null;
 }
 
-export function createLead(data: { userId?: string; name?: string; phone: string; brand: string; model: string; storage: string; quotedPrice: number; pickupDate?: string; pickupTime?: string; address?: string; pincode?: string; city?: string; }): Lead {
-  const lead: Lead = {
-    id: `lead-${Date.now()}`,
-    userId: data.userId,
-    name: data.name,
-    phone: data.phone,
-    brand: data.brand,
-    model: data.model,
-    storage: data.storage,
-    quotedPrice: data.quotedPrice,
-    pickupDate: data.pickupDate,
-    pickupTime: data.pickupTime,
-    address: data.address,
-    pincode: data.pincode,
-    city: data.city,
-    status: 'pending',
-    createdAt: new Date().toISOString(),
-  };
-  leads.push(lead);
+export async function createLead(data: { userId?: string; name?: string; phone: string; brand: string; model: string; storage: string; quotedPrice: number; pickupDate?: string; pickupTime?: string; address?: string; pincode?: string; city?: string; }) {
+  const lead = await prisma.lead.create({
+    data: {
+      userId: data.userId || null,
+      name: data.name || null,
+      phone: data.phone,
+      brand: data.brand,
+      model: data.model,
+      storage: data.storage,
+      quotedPrice: data.quotedPrice,
+      pickupDate: data.pickupDate || null,
+      pickupTime: data.pickupTime || null,
+      address: data.address || null,
+      pincode: data.pincode || null,
+      city: data.city || null,
+      status: 'pending',
+    }
+  });
   return lead;
 }
