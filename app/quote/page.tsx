@@ -251,20 +251,26 @@ export default function QuotePage() {
 
   const handleBrandSelect = (b: string) => { navigateToState(b, '', '', 'model', 1); };
   const handleModelSelect = (m: string) => { navigateToState(selectedBrand, m, '', 'storage', 1); };
-  const handleStorageSelect = (s: string) => { navigateToState(selectedBrand, selectedModel, s, 'storage', 1); };
+  const handleStorageSelect = async (s: string) => { 
+    navigateToState(selectedBrand, selectedModel, s, 'storage', 1); 
+    
+    const device = allDevices.find(d => 
+      d.brand.toLowerCase() === selectedBrand.toLowerCase() && 
+      d.model.toLowerCase() === selectedModel.toLowerCase() && 
+      d.storage === s
+    );
 
-  const handleFetchBasePrice = async () => {
-    if (!selectedDevice) return;
+    if (!device) return;
+
     try {
       setLoading(true);
-      // Fetch base quote assuming flawless condition
-      const response = await api.post('/api/quote', { deviceId: selectedDevice.id, condition: 'like_new', storage: selectedDevice.storage });
+      const response = await api.post('/api/quote', { deviceId: device.id, condition: 'like_new', storage: device.storage });
       const rawPrice = response.data?.data?.upliftedBasePrice ?? response.data?.data?.estimatedPrice ?? response.data?.data?.estimated_price;
       
       let computedBase = typeof rawPrice === 'number' ? rawPrice : Number(rawPrice);
       
       setBasePrice(Math.round(computedBase));
-      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 2);
+      navigateToState(selectedBrand, selectedModel, s, 'storage', 2);
     } catch {
       setError('Failed to fetch quote.');
     } finally {
@@ -447,7 +453,7 @@ export default function QuotePage() {
                     <button key={s} onClick={() => handleStorageSelect(s)} style={{ padding: '0.75rem 1.5rem', borderRadius: '8px', border: selectedStorage === s ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: selectedStorage === s ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: selectedStorage === s ? '#4CD964' : '#fff', cursor: 'pointer' }}>{s}</button>
                   ))}
                 </div>
-                <button onClick={handleFetchBasePrice} disabled={!selectedDevice || loading} className="btn-primary" style={{ padding: '14px', marginTop: '1rem', background: '#4CD964', color: '#000', fontWeight: 600, opacity: selectedDevice && !loading ? 1 : 0.5 }}>{loading ? 'Loading...' : 'Get Exact Value'}</button>
+                {loading && <p style={{ color: '#4CD964', textAlign: 'center', marginTop: '1rem', fontWeight: 600 }}>Loading...</p>}
               </div>
             </>
           )}
