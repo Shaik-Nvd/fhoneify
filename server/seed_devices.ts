@@ -3401,4 +3401,3292 @@ export const SEED_DEVICES = [
     "color": "Midnight",
     "basePrice": 53200
   }
-];
+,\n\n,\n{
+  "id": "samsung_model_1781781056901_0",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A14 5G",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 6980
+},\n{
+  "id": "samsung_model_1781781056901_1",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A14 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 7760
+},\n{
+  "id": "samsung_model_1781781056901_2",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A14 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 8290
+},\n{
+  "id": "samsung_model_1781781056901_3",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A14 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 8880
+},\n{
+  "id": "samsung_model_1781781056901_4",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A13",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3750
+},\n{
+  "id": "samsung_model_1781781056901_5",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A13",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 4170
+},\n{
+  "id": "samsung_model_1781781056901_6",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A13",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 4660
+},\n{
+  "id": "samsung_model_1781781056901_7",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A03",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2240
+},\n{
+  "id": "samsung_model_1781781056901_8",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A03",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2690
+},\n{
+  "id": "samsung_model_1781781056902_9",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A03 CORE",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2150
+},\n{
+  "id": "samsung_model_1781781056902_10",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A03 S",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2150
+},\n{
+  "id": "samsung_model_1781781056902_11",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A03 S",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2980
+},\n{
+  "id": "samsung_model_1781781056902_12",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A10",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1850
+},\n{
+  "id": "samsung_model_1781781056902_13",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A10S",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1920
+},\n{
+  "id": "samsung_model_1781781056902_14",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A10S",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2000
+},\n{
+  "id": "samsung_model_1781781056902_15",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A12",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3710
+},\n{
+  "id": "samsung_model_1781781056902_16",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A12",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3500
+},\n{
+  "id": "samsung_model_1781781056902_17",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A12",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3980
+},\n{
+  "id": "samsung_model_1781781056902_18",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A2 CORE",
+  "storage": "16GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 730
+},\n{
+  "id": "samsung_model_1781781056902_19",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A20",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2540
+},\n{
+  "id": "samsung_model_1781781056902_20",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A20S",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2440
+},\n{
+  "id": "samsung_model_1781781056902_21",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A20S",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2730
+},\n{
+  "id": "samsung_model_1781781056902_22",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A21S",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3350
+},\n{
+  "id": "samsung_model_1781781056902_23",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A21S",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3580
+},\n{
+  "id": "samsung_model_1781781056902_24",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A21S",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3750
+},\n{
+  "id": "samsung_model_1781781056902_25",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A22",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3850
+},\n{
+  "id": "samsung_model_1781781056902_26",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A22",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 4220
+},\n{
+  "id": "samsung_model_1781781056902_27",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A22 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 6020
+},\n{
+  "id": "samsung_model_1781781056902_28",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A22 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 6520
+},\n{
+  "id": "samsung_model_1781781056902_29",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A23",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 4520
+},\n{
+  "id": "samsung_model_1781781056902_30",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A23",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 4940
+},\n{
+  "id": "samsung_model_1781781056902_31",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A30",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2670
+},\n{
+  "id": "samsung_model_1781781056902_32",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A30S",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2570
+},\n{
+  "id": "samsung_model_1781781056902_33",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A30S",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2730
+},\n{
+  "id": "samsung_model_1781781056902_34",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A31",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3580
+},\n{
+  "id": "samsung_model_1781781056902_35",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A32",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 4810
+},\n{
+  "id": "samsung_model_1781781056902_36",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A32",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 5340
+},\n{
+  "id": "samsung_model_1781781056902_37",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A5",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1080
+},\n{
+  "id": "samsung_model_1781781056902_38",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A50",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2930
+},\n{
+  "id": "samsung_model_1781781056902_39",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A50",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3370
+},\n{
+  "id": "samsung_model_1781781056902_40",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A50",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3180
+},\n{
+  "id": "samsung_model_1781781056902_41",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A50S",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2800
+},\n{
+  "id": "samsung_model_1781781056902_42",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A50S",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3000
+},\n{
+  "id": "samsung_model_1781781056902_43",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A51",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3940
+},\n{
+  "id": "samsung_model_1781781056902_44",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A51",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 4140
+},\n{
+  "id": "samsung_model_1781781056902_45",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A52",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 5420
+},\n{
+  "id": "samsung_model_1781781056902_46",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A52",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 5790
+},\n{
+  "id": "samsung_model_1781781056902_47",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A52S",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 7620
+},\n{
+  "id": "samsung_model_1781781056902_48",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A52S",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 8190
+},\n{
+  "id": "samsung_model_1781781056902_49",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A53 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 6780
+},\n{
+  "id": "samsung_model_1781781056902_50",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A53 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 7190
+},\n{
+  "id": "samsung_model_1781781056902_51",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A53 5G",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 7590
+},\n{
+  "id": "samsung_model_1781781056902_52",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A6",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1330
+},\n{
+  "id": "samsung_model_1781781056902_53",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A6",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1460
+},\n{
+  "id": "samsung_model_1781781056902_54",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A6",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1640
+},\n{
+  "id": "samsung_model_1781781056902_55",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A6 PLUS",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1510
+},\n{
+  "id": "samsung_model_1781781056902_56",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A6 PLUS",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1640
+},\n{
+  "id": "samsung_model_1781781056902_57",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A6 PLUS",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1820
+},\n{
+  "id": "samsung_model_1781781056902_58",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A7",
+  "storage": "16GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1260
+},\n{
+  "id": "samsung_model_1781781056902_59",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A7 2017",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1410
+},\n{
+  "id": "samsung_model_1781781056902_60",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A7 2018",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1820
+},\n{
+  "id": "samsung_model_1781781056902_61",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A7",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2010
+},\n{
+  "id": "samsung_model_1781781056902_62",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A7",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2150
+},\n{
+  "id": "samsung_model_1781781056902_63",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A70",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3700
+},\n{
+  "id": "samsung_model_1781781056902_64",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A70S",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3460
+},\n{
+  "id": "samsung_model_1781781056902_65",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A70S",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3690
+},\n{
+  "id": "samsung_model_1781781056902_66",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A71",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 4070
+},\n{
+  "id": "samsung_model_1781781056902_67",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A71",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 4430
+},\n{
+  "id": "samsung_model_1781781056902_68",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A72",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 6360
+},\n{
+  "id": "samsung_model_1781781056902_69",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A72",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 6910
+},\n{
+  "id": "samsung_model_1781781056902_70",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A73",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 8930
+},\n{
+  "id": "samsung_model_1781781056902_71",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A73",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 9660
+},\n{
+  "id": "samsung_model_1781781056902_72",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A8 PLUS",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2300
+},\n{
+  "id": "samsung_model_1781781056902_73",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A8 STAR",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1730
+},\n{
+  "id": "samsung_model_1781781056902_74",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A80",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 5040
+},\n{
+  "id": "samsung_model_1781781056902_75",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A9",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2260
+},\n{
+  "id": "samsung_model_1781781056902_76",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A9 2018",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2480
+},\n{
+  "id": "samsung_model_1781781056902_77",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A9 PRO",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1480
+},\n{
+  "id": "samsung_model_1781781056902_78",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY C7 PRO",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2110
+},\n{
+  "id": "samsung_model_1781781056902_79",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY C9 PRO",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2150
+},\n{
+  "id": "samsung_model_1781781056902_80",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F02S",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2740
+},\n{
+  "id": "samsung_model_1781781056902_81",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F02S",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2890
+},\n{
+  "id": "samsung_model_1781781056902_82",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F12",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3650
+},\n{
+  "id": "samsung_model_1781781056902_83",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F12",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3230
+},\n{
+  "id": "samsung_model_1781781056902_84",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F13",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3750
+},\n{
+  "id": "samsung_model_1781781056902_85",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F13",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 4000
+},\n{
+  "id": "samsung_model_1781781056902_86",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F22",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3500
+},\n{
+  "id": "samsung_model_1781781056902_87",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F22",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3810
+},\n{
+  "id": "samsung_model_1781781056902_88",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F23 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 5890
+},\n{
+  "id": "samsung_model_1781781056902_89",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F23 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 6190
+},\n{
+  "id": "samsung_model_1781781056902_90",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F41",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3220
+},\n{
+  "id": "samsung_model_1781781056902_91",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F41",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3560
+},\n{
+  "id": "samsung_model_1781781056902_92",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F42 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 6340
+},\n{
+  "id": "samsung_model_1781781056902_93",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F42 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 6930
+},\n{
+  "id": "samsung_model_1781781056902_94",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F62",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 4880
+},\n{
+  "id": "samsung_model_1781781056902_95",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F62",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 5040
+},\n{
+  "id": "samsung_model_1781781056902_96",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY FOLD",
+  "storage": "512GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 12790
+},\n{
+  "id": "samsung_model_1781781056902_97",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY J2 2016",
+  "storage": "8GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 810
+},\n{
+  "id": "samsung_model_1781781056902_98",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY J2 2017",
+  "storage": "8GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 700
+},\n{
+  "id": "samsung_model_1781781056902_99",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY J2 2018",
+  "storage": "16GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1190
+},\n{
+  "id": "samsung_model_1781781056902_100",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY J2 ACE",
+  "storage": "8GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 660
+},\n{
+  "id": "samsung_model_1781781056902_101",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY J2 CORE",
+  "storage": "8GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 740
+},\n{
+  "id": "samsung_model_1781781056902_102",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY J2 CORE 2020",
+  "storage": "16GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1290
+},\n{
+  "id": "samsung_model_1781781056902_103",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY J2 PRO",
+  "storage": "16GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 890
+},\n{
+  "id": "samsung_model_1781781056902_104",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY J3",
+  "storage": "8GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 880
+},\n{
+  "id": "samsung_model_1781781056902_105",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY J3 2017",
+  "storage": "16GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1170
+},\n{
+  "id": "samsung_model_1781781056902_106",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY J3 PRO",
+  "storage": "16GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 890
+},\n{
+  "id": "samsung_model_1781781056902_107",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY J4",
+  "storage": "16GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1110
+},\n{
+  "id": "samsung_model_1781781056902_108",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY J4",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1330
+},\n{
+  "id": "samsung_model_1781781056902_109",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY J4 PLUS",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1480
+},\n{
+  "id": "samsung_model_1781781056902_110",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY J5",
+  "storage": "16GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 890
+},\n{
+  "id": "samsung_model_1781781056902_111",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY J5 2017",
+  "storage": "16GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 960
+},\n{
+  "id": "samsung_model_1781781056902_112",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY J5 PRIME",
+  "storage": "16GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1130
+},\n{
+  "id": "samsung_model_1781781056902_113",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY J5 PRIME",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1200
+},\n{
+  "id": "samsung_model_1781781056902_114",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY J6",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1530
+},\n{
+  "id": "samsung_model_1781781056902_115",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY J6",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1700
+},\n{
+  "id": "samsung_model_1781781056902_116",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY J6 PLUS",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1890
+},\n{
+  "id": "samsung_model_1781781056902_117",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY J7",
+  "storage": "16GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1110
+},\n{
+  "id": "samsung_model_1781781056902_118",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY J7 DUO",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1410
+},\n{
+  "id": "samsung_model_1781781056902_119",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY J7 MAX",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1440
+},\n{
+  "id": "samsung_model_1781781056902_120",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY J7 NXT",
+  "storage": "16GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1190
+},\n{
+  "id": "samsung_model_1781781056902_121",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY J7 NXT",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1410
+},\n{
+  "id": "samsung_model_1781781056902_122",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY J7 PRIME",
+  "storage": "16GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1190
+},\n{
+  "id": "samsung_model_1781781056902_123",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY J7 PRIME",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1260
+},\n{
+  "id": "samsung_model_1781781056902_124",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY J7 PRIME",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1480
+},\n{
+  "id": "samsung_model_1781781056902_125",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY J7 PRO",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1000
+},\n{
+  "id": "samsung_model_1781781056902_126",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY J7 PRO",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1110
+},\n{
+  "id": "samsung_model_1781781056902_127",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY J8",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2340
+},\n{
+  "id": "samsung_model_1781781056902_128",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M01",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2180
+},\n{
+  "id": "samsung_model_1781781056902_129",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M01 CORE",
+  "storage": "16GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1310
+},\n{
+  "id": "samsung_model_1781781056902_130",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M01 CORE",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1580
+},\n{
+  "id": "samsung_model_1781781056902_131",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M01S",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2080
+},\n{
+  "id": "samsung_model_1781781056902_132",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M02",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2460
+},\n{
+  "id": "samsung_model_1781781056902_133",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M02",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2690
+},\n{
+  "id": "samsung_model_1781781056902_134",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M02S",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2260
+},\n{
+  "id": "samsung_model_1781781056902_135",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M02S",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2840
+},\n{
+  "id": "samsung_model_1781781056902_136",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M10",
+  "storage": "16GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2000
+},\n{
+  "id": "samsung_model_1781781056902_137",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M10",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2150
+},\n{
+  "id": "samsung_model_1781781056902_138",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M10S",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2160
+},\n{
+  "id": "samsung_model_1781781056902_139",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M11",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2390
+},\n{
+  "id": "samsung_model_1781781056902_140",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M11",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2950
+},\n{
+  "id": "samsung_model_1781781056902_141",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M12",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3710
+},\n{
+  "id": "samsung_model_1781781056902_142",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M12",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3940
+},\n{
+  "id": "samsung_model_1781781056902_143",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M20",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2080
+},\n{
+  "id": "samsung_model_1781781056902_144",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M20",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2230
+},\n{
+  "id": "samsung_model_1781781056902_145",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M21",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3030
+},\n{
+  "id": "samsung_model_1781781056902_146",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M21",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3320
+},\n{
+  "id": "samsung_model_1781781056902_147",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M21 EDITION",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3270
+},\n{
+  "id": "samsung_model_1781781056902_148",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M21 EDITION",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3390
+},\n{
+  "id": "samsung_model_1781781056902_149",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M30",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2450
+},\n{
+  "id": "samsung_model_1781781056902_150",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M30",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2690
+},\n{
+  "id": "samsung_model_1781781056902_151",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M30",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2920
+},\n{
+  "id": "samsung_model_1781781056902_152",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M30S",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2480
+},\n{
+  "id": "samsung_model_1781781056902_153",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M30S",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2730
+},\n{
+  "id": "samsung_model_1781781056902_154",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M30S",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2890
+},\n{
+  "id": "samsung_model_1781781056902_155",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M31",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3150
+},\n{
+  "id": "samsung_model_1781781056902_156",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M31",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3470
+},\n{
+  "id": "samsung_model_1781781056902_157",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M31",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3660
+},\n{
+  "id": "samsung_model_1781781056902_158",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M31S",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3450
+},\n{
+  "id": "samsung_model_1781781056902_159",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M31S",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 4020
+},\n{
+  "id": "samsung_model_1781781056902_160",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M32",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3450
+},\n{
+  "id": "samsung_model_1781781056902_161",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M32",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 4210
+},\n{
+  "id": "samsung_model_1781781056902_162",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M32 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 6210
+},\n{
+  "id": "samsung_model_1781781056902_163",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M32 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 6570
+},\n{
+  "id": "samsung_model_1781781056902_164",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M33 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 6370
+},\n{
+  "id": "samsung_model_1781781056902_165",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M33 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 6620
+},\n{
+  "id": "samsung_model_1781781056902_166",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M40",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3150
+},\n{
+  "id": "samsung_model_1781781056902_167",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M42 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 6320
+},\n{
+  "id": "samsung_model_1781781056902_168",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M42 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 6650
+},\n{
+  "id": "samsung_model_1781781056902_169",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M51",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 4380
+},\n{
+  "id": "samsung_model_1781781056902_170",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M51",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 4660
+},\n{
+  "id": "samsung_model_1781781056902_171",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M52 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 6900
+},\n{
+  "id": "samsung_model_1781781056902_172",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M52 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 7170
+},\n{
+  "id": "samsung_model_1781781056902_173",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M53 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 7190
+},\n{
+  "id": "samsung_model_1781781056902_174",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M53 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 7480
+},\n{
+  "id": "samsung_model_1781781056902_175",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY NOTE 5",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2110
+},\n{
+  "id": "samsung_model_1781781056902_176",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY NOTE 5",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2190
+},\n{
+  "id": "samsung_model_1781781056902_177",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY NOTE 8",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 4900
+},\n{
+  "id": "samsung_model_1781781056902_178",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY NOTE 8",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 5570
+},\n{
+  "id": "samsung_model_1781781056902_179",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY NOTE 8",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 6090
+},\n{
+  "id": "samsung_model_1781781056902_180",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY NOTE 9",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 5940
+},\n{
+  "id": "samsung_model_1781781056902_181",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY NOTE 9",
+  "storage": "512GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 6380
+},\n{
+  "id": "samsung_model_1781781056902_182",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY NOTE 10",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 9020
+},\n{
+  "id": "samsung_model_1781781056902_183",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY NOTE 10 LITE",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 5640
+},\n{
+  "id": "samsung_model_1781781056902_184",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY NOTE 10 LITE",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 6010
+},\n{
+  "id": "samsung_model_1781781056902_185",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY NOTE 10 PLUS",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 9740
+},\n{
+  "id": "samsung_model_1781781056902_186",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY NOTE 10 PLUS",
+  "storage": "512GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 9870
+},\n{
+  "id": "samsung_model_1781781056902_187",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY NOTE 10 PLUS 5G",
+  "storage": "512GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 11130
+},\n{
+  "id": "samsung_model_1781781056902_188",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY NOTE 20",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 9270
+},\n{
+  "id": "samsung_model_1781781056902_189",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY NOTE 20 ULTRA",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 14370
+},\n{
+  "id": "samsung_model_1781781056902_190",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY NOTE FAN EDITION",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2800
+},\n{
+  "id": "samsung_model_1781781056902_191",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY ON MAX",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 1520
+},\n{
+  "id": "samsung_model_1781781056902_192",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S10",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 7160
+},\n{
+  "id": "samsung_model_1781781056902_193",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S10",
+  "storage": "512GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 7460
+},\n{
+  "id": "samsung_model_1781781056902_194",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S10E",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 5790
+},\n{
+  "id": "samsung_model_1781781056902_195",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S10 LITE",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 5820
+},\n{
+  "id": "samsung_model_1781781056902_196",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S10 LITE",
+  "storage": "512GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 6350
+},\n{
+  "id": "samsung_model_1781781056902_197",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S10 PLUS",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 7360
+},\n{
+  "id": "samsung_model_1781781056902_198",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S10 PLUS",
+  "storage": "512GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 7800
+},\n{
+  "id": "samsung_model_1781781056902_199",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S10 PLUS",
+  "storage": "1 TB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 9330
+},\n{
+  "id": "samsung_model_1781781056902_200",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S20",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 8890
+},\n{
+  "id": "samsung_model_1781781056902_201",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S20 FE",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 7040
+},\n{
+  "id": "samsung_model_1781781056902_202",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S20 FE",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 7950
+},\n{
+  "id": "samsung_model_1781781056902_203",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S20 FE 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 8370
+},\n{
+  "id": "samsung_model_1781781056902_204",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S20 PLUS",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 10130
+},\n{
+  "id": "samsung_model_1781781056902_205",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S20 ULTRA",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 13580
+},\n{
+  "id": "samsung_model_1781781056902_206",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S20 ULTRA 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 14070
+},\n{
+  "id": "samsung_model_1781781056902_207",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S21",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 12180
+},\n{
+  "id": "samsung_model_1781781056902_208",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S21",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 13000
+},\n{
+  "id": "samsung_model_1781781056902_209",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S21 FE 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 10630
+},\n{
+  "id": "samsung_model_1781781056902_210",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S21 FE 5G",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 11360
+},\n{
+  "id": "samsung_model_1781781056902_211",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S21 PLUS",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 13120
+},\n{
+  "id": "samsung_model_1781781056902_212",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S21 PLUS",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 13990
+},\n{
+  "id": "samsung_model_1781781056902_213",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S21 ULTRA",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 17300
+},\n{
+  "id": "samsung_model_1781781056902_214",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S21 ULTRA",
+  "storage": "512GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 19800
+},\n{
+  "id": "samsung_model_1781781056902_215",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S22",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 15930
+},\n{
+  "id": "samsung_model_1781781056902_216",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S22",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 16710
+},\n{
+  "id": "samsung_model_1781781056902_217",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S22 PLUS",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 16960
+},\n{
+  "id": "samsung_model_1781781056902_218",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S22 PLUS",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 17630
+},\n{
+  "id": "samsung_model_1781781056902_219",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S22 ULTRA",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 26600
+},\n{
+  "id": "samsung_model_1781781056902_220",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S22 ULTRA",
+  "storage": "512GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 27410
+},\n{
+  "id": "samsung_model_1781781056902_221",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S22 ULTRA",
+  "storage": "1 TB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 28380
+},\n{
+  "id": "samsung_model_1781781056902_222",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S23",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 22790
+},\n{
+  "id": "samsung_model_1781781056902_223",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S23",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 23410
+},\n{
+  "id": "samsung_model_1781781056902_224",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S23 FE",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 16910
+},\n{
+  "id": "samsung_model_1781781056902_225",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S23 FE",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 17770
+},\n{
+  "id": "samsung_model_1781781056902_226",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S23 PLUS",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 26600
+},\n{
+  "id": "samsung_model_1781781056902_227",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S23 PLUS",
+  "storage": "512GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 27330
+},\n{
+  "id": "samsung_model_1781781056902_228",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S23 ULTRA",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 36780
+},\n{
+  "id": "samsung_model_1781781056902_229",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S23 ULTRA",
+  "storage": "512GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 38210
+},\n{
+  "id": "samsung_model_1781781056902_230",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S23 ULTRA",
+  "storage": "1 TB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 39700
+},\n{
+  "id": "samsung_model_1781781056902_231",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S24",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 28960
+},\n{
+  "id": "samsung_model_1781781056902_232",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S24",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 34410
+},\n{
+  "id": "samsung_model_1781781056902_233",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S24",
+  "storage": "512GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 35540
+},\n{
+  "id": "samsung_model_1781781056902_234",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S24 PLUS",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 36190
+},\n{
+  "id": "samsung_model_1781781056902_235",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S24 PLUS",
+  "storage": "512GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 36500
+},\n{
+  "id": "samsung_model_1781781056902_236",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S24 FE",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 22350
+},\n{
+  "id": "samsung_model_1781781056902_237",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S24 FE",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 25630
+},\n{
+  "id": "samsung_model_1781781056902_238",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S24 ULTRA",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 61340
+},\n{
+  "id": "samsung_model_1781781056902_239",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S24 ULTRA",
+  "storage": "512GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 63240
+},\n{
+  "id": "samsung_model_1781781056902_240",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S24 ULTRA",
+  "storage": "1 TB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 63810
+},\n{
+  "id": "samsung_model_1781781056902_241",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S25",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 39470
+},\n{
+  "id": "samsung_model_1781781056902_242",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S25",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 44060
+},\n{
+  "id": "samsung_model_1781781056902_243",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S25",
+  "storage": "512GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 44700
+},\n{
+  "id": "samsung_model_1781781056902_244",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S25 PLUS",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 49650
+},\n{
+  "id": "samsung_model_1781781056902_245",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S25 PLUS",
+  "storage": "512GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 52780
+},\n{
+  "id": "samsung_model_1781781056902_246",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S25 FE",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 33500
+},\n{
+  "id": "samsung_model_1781781056902_247",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S25 FE",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 36000
+},\n{
+  "id": "samsung_model_1781781056902_248",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S25 FE",
+  "storage": "512GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 40000
+},\n{
+  "id": "samsung_model_1781781056902_249",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S25 EDGE",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 51350
+},\n{
+  "id": "samsung_model_1781781056902_250",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S25 EDGE",
+  "storage": "512GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 56110
+},\n{
+  "id": "samsung_model_1781781056902_251",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S25 ULTRA",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 71130
+},\n{
+  "id": "samsung_model_1781781056902_252",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S25 ULTRA",
+  "storage": "512GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 74180
+},\n{
+  "id": "samsung_model_1781781056902_253",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S25 ULTRA",
+  "storage": "1 TB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 75600
+},\n{
+  "id": "samsung_model_1781781056902_254",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S26",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 55900
+},\n{
+  "id": "samsung_model_1781781056902_255",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S26",
+  "storage": "512GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 61000
+},\n{
+  "id": "samsung_model_1781781056902_256",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S26 PLUS",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 73000
+},\n{
+  "id": "samsung_model_1781781056902_257",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S26 PLUS",
+  "storage": "512GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 78000
+},\n{
+  "id": "samsung_model_1781781056902_258",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S26 ULTRA",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 83000
+},\n{
+  "id": "samsung_model_1781781056902_259",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S26 ULTRA",
+  "storage": "512GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 88500
+},\n{
+  "id": "samsung_model_1781781056902_260",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY S26 ULTRA",
+  "storage": "1 TB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 105000
+},\n{
+  "id": "samsung_model_1781781056903_261",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY Z FOLD 2",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 17440
+},\n{
+  "id": "samsung_model_1781781056903_262",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY Z FOLD 3",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 21050
+},\n{
+  "id": "samsung_model_1781781056903_263",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY Z FOLD 3",
+  "storage": "512GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 21450
+},\n{
+  "id": "samsung_model_1781781056903_264",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY Z FOLD 4",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 28330
+},\n{
+  "id": "samsung_model_1781781056903_265",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY Z FOLD 4",
+  "storage": "512GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 29910
+},\n{
+  "id": "samsung_model_1781781056903_266",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY Z FOLD 4",
+  "storage": "1 TB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 32790
+},\n{
+  "id": "samsung_model_1781781056903_267",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY Z FOLD 5",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 49920
+},\n{
+  "id": "samsung_model_1781781056903_268",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY Z FOLD 5",
+  "storage": "512GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 50880
+},\n{
+  "id": "samsung_model_1781781056903_269",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY Z FOLD 5",
+  "storage": "1 TB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 54530
+},\n{
+  "id": "samsung_model_1781781056903_270",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY Z FOLD 6",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 69120
+},\n{
+  "id": "samsung_model_1781781056903_271",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY Z FOLD 6",
+  "storage": "512GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 70750
+},\n{
+  "id": "samsung_model_1781781056903_272",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY Z FOLD 6",
+  "storage": "1 TB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 73630
+},\n{
+  "id": "samsung_model_1781781056903_273",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY Z FOLD 7",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 94800
+},\n{
+  "id": "samsung_model_1781781056903_274",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY Z FOLD 7",
+  "storage": "512GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 96800
+},\n{
+  "id": "samsung_model_1781781056903_275",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY Z FOLD 7",
+  "storage": "1 TB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 100000
+},\n{
+  "id": "samsung_model_1781781056903_276",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY Z FLIP 3",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 12290
+},\n{
+  "id": "samsung_model_1781781056903_277",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY Z FLIP 3",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 12780
+},\n{
+  "id": "samsung_model_1781781056903_278",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY Z FLIP 4",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 15560
+},\n{
+  "id": "samsung_model_1781781056903_279",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY Z FLIP 4",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 15800
+},\n{
+  "id": "samsung_model_1781781056903_280",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY Z FLIP 5",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 27410
+},\n{
+  "id": "samsung_model_1781781056903_281",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY Z FLIP 5",
+  "storage": "512GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 28700
+},\n{
+  "id": "samsung_model_1781781056903_282",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY Z FLIP 6",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 36960
+},\n{
+  "id": "samsung_model_1781781056903_283",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY Z FLIP 6",
+  "storage": "512GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 40800
+},\n{
+  "id": "samsung_model_1781781056903_284",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY Z FLIP 7",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 58500
+},\n{
+  "id": "samsung_model_1781781056903_285",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY Z FLIP 7",
+  "storage": "512GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 60000
+},\n{
+  "id": "samsung_model_1781781056903_286",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY Z FLIP 7 FE",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 51000
+},\n{
+  "id": "samsung_model_1781781056903_287",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY Z FLIP 7 FE",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 52900
+},\n{
+  "id": "samsung_model_1781781056903_288",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A25 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 10190
+},\n{
+  "id": "samsung_model_1781781056903_289",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A25 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 11520
+},\n{
+  "id": "samsung_model_1781781056903_290",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A25 5G",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 11810
+},\n{
+  "id": "samsung_model_1781781056903_291",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A15 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 8940
+},\n{
+  "id": "samsung_model_1781781056903_292",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A15 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 9180
+},\n{
+  "id": "samsung_model_1781781056903_293",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A15 5G",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 9370
+},\n{
+  "id": "samsung_model_1781781056903_294",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F15 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 7330
+},\n{
+  "id": "samsung_model_1781781056903_295",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F15 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 8470
+},\n{
+  "id": "samsung_model_1781781056903_296",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F15 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 9100
+},\n{
+  "id": "samsung_model_1781781056903_297",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A35 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 12500
+},\n{
+  "id": "samsung_model_1781781056903_298",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A35 5G",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 13230
+},\n{
+  "id": "samsung_model_1781781056903_299",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A55 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 15990
+},\n{
+  "id": "samsung_model_1781781056903_300",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A55 5G",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 16780
+},\n{
+  "id": "samsung_model_1781781056903_301",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A55 5G",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 18180
+},\n{
+  "id": "samsung_model_1781781056903_302",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M55 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 12940
+},\n{
+  "id": "samsung_model_1781781056903_303",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M55 5G",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 13930
+},\n{
+  "id": "samsung_model_1781781056903_304",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M55 5G",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 14930
+},\n{
+  "id": "samsung_model_1781781056903_305",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M15 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 7160
+},\n{
+  "id": "samsung_model_1781781056903_306",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M15 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 7600
+},\n{
+  "id": "samsung_model_1781781056903_307",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M15 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 7960
+},\n{
+  "id": "samsung_model_1781781056903_308",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F55 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 10840
+},\n{
+  "id": "samsung_model_1781781056903_309",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F55 5G",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 12440
+},\n{
+  "id": "samsung_model_1781781056903_310",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F55 5G",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 13230
+},\n{
+  "id": "samsung_model_1781781056903_311",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M35 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 9690
+},\n{
+  "id": "samsung_model_1781781056903_312",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M35 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 9950
+},\n{
+  "id": "samsung_model_1781781056903_313",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M35 5G",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 10090
+},\n{
+  "id": "samsung_model_1781781056903_314",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M55S 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 11240
+},\n{
+  "id": "samsung_model_1781781056903_315",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M55S 5G",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 12440
+},\n{
+  "id": "samsung_model_1781781056903_316",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A33 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 6440
+},\n{
+  "id": "samsung_model_1781781056903_317",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A33 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 6950
+},\n{
+  "id": "samsung_model_1781781056903_318",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A34 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 9900
+},\n{
+  "id": "samsung_model_1781781056903_319",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A34 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 10230
+},\n{
+  "id": "samsung_model_1781781056903_320",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A34 5G",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 10780
+},\n{
+  "id": "samsung_model_1781781056903_321",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A36 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 18100
+},\n{
+  "id": "samsung_model_1781781056903_322",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A36 5G",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 18570
+},\n{
+  "id": "samsung_model_1781781056903_323",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A36 5G",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 19690
+},\n{
+  "id": "samsung_model_1781781056903_324",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A37 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 25620
+},\n{
+  "id": "samsung_model_1781781056903_325",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A37 5G",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 29550
+},\n{
+  "id": "samsung_model_1781781056903_326",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A37 5G",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 33000
+},\n{
+  "id": "samsung_model_1781781056903_327",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F54 5G",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 10500
+},\n{
+  "id": "samsung_model_1781781056903_328",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M34 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 8310
+},\n{
+  "id": "samsung_model_1781781056903_329",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M34 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 8930
+},\n{
+  "id": "samsung_model_1781781056903_330",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M34 5G",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 9160
+},\n{
+  "id": "samsung_model_1781781056903_331",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F34 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 8720
+},\n{
+  "id": "samsung_model_1781781056903_332",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F34 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 9300
+},\n{
+  "id": "samsung_model_1781781056903_333",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F14 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 6790
+},\n{
+  "id": "samsung_model_1781781056903_334",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F14 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 7090
+},\n{
+  "id": "samsung_model_1781781056903_335",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M14 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 7230
+},\n{
+  "id": "samsung_model_1781781056903_336",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M14 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 7470
+},\n{
+  "id": "samsung_model_1781781056903_337",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A14",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 5960
+},\n{
+  "id": "samsung_model_1781781056903_338",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A14",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 6450
+},\n{
+  "id": "samsung_model_1781781056903_339",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M14 4G",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 4920
+},\n{
+  "id": "samsung_model_1781781056903_340",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M14 4G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 5820
+},\n{
+  "id": "samsung_model_1781781056903_341",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A05",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 4900
+},\n{
+  "id": "samsung_model_1781781056903_342",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A05",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 5270
+},\n{
+  "id": "samsung_model_1781781056903_343",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A05S",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 5270
+},\n{
+  "id": "samsung_model_1781781056903_344",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A05S",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 5760
+},\n{
+  "id": "samsung_model_1781781056903_345",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F14",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 4820
+},\n{
+  "id": "samsung_model_1781781056903_346",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M05",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 4520
+},\n{
+  "id": "samsung_model_1781781056903_347",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A06",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 4670
+},\n{
+  "id": "samsung_model_1781781056903_348",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A06",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 5030
+},\n{
+  "id": "samsung_model_1781781056903_349",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A16 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 9770
+},\n{
+  "id": "samsung_model_1781781056903_350",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A16 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 10510
+},\n{
+  "id": "samsung_model_1781781056903_351",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A16 5G",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 11250
+},\n{
+  "id": "samsung_model_1781781056903_352",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F05",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 4090
+},\n{
+  "id": "samsung_model_1781781056903_353",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A56 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 24300
+},\n{
+  "id": "samsung_model_1781781056903_354",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A56 5G",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 25680
+},\n{
+  "id": "samsung_model_1781781056903_355",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A56 5G",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 27000
+},\n{
+  "id": "samsung_model_1781781056903_356",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A07",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 5590
+},\n{
+  "id": "samsung_model_1781781056903_357",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A04S",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3230
+},\n{
+  "id": "samsung_model_1781781056903_358",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A04S",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3400
+},\n{
+  "id": "samsung_model_1781781056903_359",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A04",
+  "storage": "32GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2390
+},\n{
+  "id": "samsung_model_1781781056903_360",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A04",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3000
+},\n{
+  "id": "samsung_model_1781781056903_361",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A04",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3650
+},\n{
+  "id": "samsung_model_1781781056903_362",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M04",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3320
+},\n{
+  "id": "samsung_model_1781781056903_363",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M04",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 3460
+},\n{
+  "id": "samsung_model_1781781056903_364",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F04",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 2830
+},\n{
+  "id": "samsung_model_1781781056903_365",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F06 5G",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 5080
+},\n{
+  "id": "samsung_model_1781781056903_366",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F06 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 5580
+},\n{
+  "id": "samsung_model_1781781056903_367",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F06 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 6290
+},\n{
+  "id": "samsung_model_1781781056903_368",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A26 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 11600
+},\n{
+  "id": "samsung_model_1781781056903_369",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A26 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 12350
+},\n{
+  "id": "samsung_model_1781781056903_370",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A26 5G",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 13300
+},\n{
+  "id": "samsung_model_1781781056903_371",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F16 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 8680
+},\n{
+  "id": "samsung_model_1781781056903_372",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F16 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 9060
+},\n{
+  "id": "samsung_model_1781781056903_373",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F16 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 9690
+},\n{
+  "id": "samsung_model_1781781056903_374",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M06 5G",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 5230
+},\n{
+  "id": "samsung_model_1781781056903_375",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M06 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 5840
+},\n{
+  "id": "samsung_model_1781781056903_376",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M06 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 6190
+},\n{
+  "id": "samsung_model_1781781056903_377",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M16 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 8120
+},\n{
+  "id": "samsung_model_1781781056903_378",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M16 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 8680
+},\n{
+  "id": "samsung_model_1781781056903_379",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M16 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 9640
+},\n{
+  "id": "samsung_model_1781781056903_380",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M56 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 14750
+},\n{
+  "id": "samsung_model_1781781056903_381",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M56 5G",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 17000
+},\n{
+  "id": "samsung_model_1781781056903_382",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F36 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 11100
+},\n{
+  "id": "samsung_model_1781781056903_383",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F36 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 12180
+},\n{
+  "id": "samsung_model_1781781056903_384",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F36 5G",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 13200
+},\n{
+  "id": "samsung_model_1781781056903_385",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M36 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 10500
+},\n{
+  "id": "samsung_model_1781781056903_386",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M36 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 12000
+},\n{
+  "id": "samsung_model_1781781056903_387",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M36 5G",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 12500
+},\n{
+  "id": "samsung_model_1781781056903_388",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F56 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 15830
+},\n{
+  "id": "samsung_model_1781781056903_389",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F56 5G",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 18470
+},\n{
+  "id": "samsung_model_1781781056903_390",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M15 5G PRIME EDITION",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 6900
+},\n{
+  "id": "samsung_model_1781781056903_391",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M15 5G PRIME EDITION",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 7610
+},\n{
+  "id": "samsung_model_1781781056903_392",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M15 5G PRIME EDITION",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 8630
+},\n{
+  "id": "samsung_model_1781781056903_393",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A57 5G",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 36900
+},\n{
+  "id": "samsung_model_1781781056903_394",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A57 5G",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 39950
+},\n{
+  "id": "samsung_model_1781781056903_395",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M07",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 4950
+},\n{
+  "id": "samsung_model_1781781056903_396",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F07",
+  "storage": "64GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 4870
+},\n{
+  "id": "samsung_model_1781781056903_397",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A07 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 10780
+},\n{
+  "id": "samsung_model_1781781056903_398",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A07 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 11650
+},\n{
+  "id": "samsung_model_1781781056903_399",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F07E 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 8900
+},\n{
+  "id": "samsung_model_1781781056903_400",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F07E 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 9600
+},\n{
+  "id": "samsung_model_1781781056903_401",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A17 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 11600
+},\n{
+  "id": "samsung_model_1781781056903_402",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A17 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 12500
+},\n{
+  "id": "samsung_model_1781781056903_403",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY A17 5G",
+  "storage": "256GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 13430
+},\n{
+  "id": "samsung_model_1781781056903_404",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M17 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 9200
+},\n{
+  "id": "samsung_model_1781781056903_405",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M17 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 10190
+},\n{
+  "id": "samsung_model_1781781056903_406",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M17 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 10750
+},\n{
+  "id": "samsung_model_1781781056903_407",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M17E 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 9300
+},\n{
+  "id": "samsung_model_1781781056903_408",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY M17E 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 10700
+},\n{
+  "id": "samsung_model_1781781056903_409",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F17 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 8750
+},\n{
+  "id": "samsung_model_1781781056903_410",
+  "brand": "Samsung",
+  "model": "SAMSUNG GALAXY F17 5G",
+  "storage": "128GB",
+  "ram": "8GB",
+  "color": "Black",
+  "basePrice": 9930
+}\n];\n
