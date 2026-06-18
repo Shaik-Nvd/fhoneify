@@ -2617,6 +2617,7 @@ export const SEED_DEVICES = [
     "ram": "12GB",
     "color": "Silver",
     "basePrice": 32000
+  },
   {
     "id": "d455",
     "brand": "Apple",
@@ -3634,6 +3635,7 @@ export const SEED_DEVICES = [
     "color": "Midnight",
     "basePrice": 0
   },
+  {
     "id": "apple_2051",
     "brand": "Apple",
     "model": "Apple iPhone 12 Mini",
@@ -3650,6 +3652,7 @@ export const SEED_DEVICES = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 16490
+  },
   {
     "id": "apple_2054",
     "brand": "Apple",
@@ -3669,24 +3672,6 @@ export const SEED_DEVICES = [
     "basePrice": 19320
   },
   {
-    "id": "apple_2056",
-    "brand": "Apple",
-    "model": "Apple iPhone 12",
-    "storage": "512GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 0
-  },
-  {
-    "id": "apple_2057",
-    "brand": "Apple",
-    "model": "Apple iPhone 12 Pro",
-    "storage": "64GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 0
-  },
-  {
     "id": "apple_2058",
     "brand": "Apple",
     "model": "Apple iPhone 12 Pro",
@@ -3703,15 +3688,6 @@ export const SEED_DEVICES = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 26400
-  },
-  {
-    "id": "apple_2060",
-    "brand": "Apple",
-    "model": "Apple iPhone 12 Pro Max",
-    "storage": "64GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 0
   },
   {
     "id": "apple_2061",
@@ -3775,15 +3751,6 @@ export const SEED_DEVICES = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 25980
-  },
-  {
-    "id": "apple_2068",
-    "brand": "Apple",
-    "model": "Apple iPhone 13",
-    "storage": "1TB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 0
   },
   {
     "id": "apple_2069",
