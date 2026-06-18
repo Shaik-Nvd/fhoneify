@@ -315,15 +315,6 @@ export const SEED_DEVICES = [
     "basePrice": 92000
   },
   {
-    "id": "d38",
-    "brand": "Apple",
-    "model": "iPhone 3G",
-    "storage": "1TB",
-    "ram": "12GB",
-    "color": "White",
-    "basePrice": 4000
-  },
-  {
     "id": "d39",
     "brand": "Xiaomi",
     "model": "Xiaomi 14 Ultra",
@@ -378,15 +369,6 @@ export const SEED_DEVICES = [
     "basePrice": 41600
   },
   {
-    "id": "d45",
-    "brand": "Apple",
-    "model": "iPhone 5",
-    "storage": "256GB",
-    "ram": "4GB",
-    "color": "Black",
-    "basePrice": 6500
-  },
-  {
     "id": "d46",
     "brand": "Xiaomi",
     "model": "Redmi Note 12",
@@ -421,15 +403,6 @@ export const SEED_DEVICES = [
     "ram": "12GB",
     "color": "Purple",
     "basePrice": 192000
-  },
-  {
-    "id": "d50",
-    "brand": "Apple",
-    "model": "iPhone 5s",
-    "storage": "1TB",
-    "ram": "8GB",
-    "color": "Red",
-    "basePrice": 9600
   },
   {
     "id": "d51",
@@ -2016,24 +1989,6 @@ export const SEED_DEVICES = [
     "basePrice": 21750
   },
   {
-    "id": "d286",
-    "brand": "Apple",
-    "model": "iPhone 4",
-    "storage": "1TB",
-    "ram": "8GB",
-    "color": "Silver",
-    "basePrice": 6400
-  },
-  {
-    "id": "d287",
-    "brand": "Apple",
-    "model": "iPhone 4",
-    "storage": "512GB",
-    "ram": "6GB",
-    "color": "Silver",
-    "basePrice": 5800
-  },
-  {
     "id": "d288",
     "brand": "Xiaomi",
     "model": "Redmi Note 12",
@@ -2178,15 +2133,6 @@ export const SEED_DEVICES = [
     "basePrice": 109249
   },
   {
-    "id": "d325",
-    "brand": "Apple",
-    "model": "iPhone (1st Gen)",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Silver",
-    "basePrice": 2300
-  },
-  {
     "id": "d327",
     "brand": "Vivo",
     "model": "Vivo V29 Pro",
@@ -2268,15 +2214,6 @@ export const SEED_DEVICES = [
     "basePrice": 69000
   },
   {
-    "id": "d346",
-    "brand": "Apple",
-    "model": "iPhone 3G",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Red",
-    "basePrice": 3625
-  },
-  {
     "id": "d347",
     "brand": "Motorola",
     "model": "Edge 50 Pro",
@@ -2338,15 +2275,6 @@ export const SEED_DEVICES = [
     "ram": "16GB",
     "color": "Black",
     "basePrice": 38400
-  },
-  {
-    "id": "d358",
-    "brand": "Apple",
-    "model": "iPhone 3G",
-    "storage": "256GB",
-    "ram": "4GB",
-    "color": "Titanium",
-    "basePrice": 3250
   },
   {
     "id": "d365",
@@ -2583,15 +2511,6 @@ export const SEED_DEVICES = [
     "basePrice": 110500
   },
   {
-    "id": "d422",
-    "brand": "Apple",
-    "model": "iPhone 4S",
-    "storage": "1TB",
-    "ram": "12GB",
-    "color": "Titanium",
-    "basePrice": 7200
-  },
-  {
     "id": "d426",
     "brand": "Samsung",
     "model": "Galaxy Z Flip5",
@@ -2772,15 +2691,6 @@ export const SEED_DEVICES = [
     "basePrice": 40000
   },
   {
-    "id": "d472",
-    "brand": "Apple",
-    "model": "iPhone (1st Gen)",
-    "storage": "128GB",
-    "ram": "4GB",
-    "color": "Green",
-    "basePrice": 2300
-  },
-  {
     "id": "d473",
     "brand": "Apple",
     "model": "iPhone 17 Pro",
@@ -2905,15 +2815,6 @@ export const SEED_DEVICES = [
     "ram": "8GB",
     "color": "Green",
     "basePrice": 32199
-  },
-  {
-    "id": "d499",
-    "brand": "Apple",
-    "model": "iPhone 5c",
-    "storage": "512GB",
-    "ram": "6GB",
-    "color": "Titanium",
-    "basePrice": 7975
   },
   {
     "id": "d500",
