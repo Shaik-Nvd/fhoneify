@@ -3581,15 +3581,6 @@ export const SEED_DEVICES = [
     "basePrice": 14680
   },
   {
-    "id": "apple_2041",
-    "brand": "Apple",
-    "model": "Apple iPhone 11",
-    "storage": "512GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 0
-  },
-  {
     "id": "apple_2042",
     "brand": "Apple",
     "model": "Apple iPhone 11 Pro",
