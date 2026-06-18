@@ -3195,15 +3195,6 @@ export const SEED_DEVICES = [
     "basePrice": 71900
   },
   {
-    "id": "apple_1037",
-    "brand": "Apple",
-    "model": "Apple iPhone 16 Pro Max",
-    "storage": "128GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 0
-  },
-  {
     "id": "apple_1038",
     "brand": "Apple",
     "model": "Apple iPhone 16e",
@@ -3211,51 +3202,6 @@ export const SEED_DEVICES = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 36270
-  },
-  {
-    "id": "apple_1039",
-    "brand": "Apple",
-    "model": "Apple iPhone 17",
-    "storage": "128GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 0
-  },
-  {
-    "id": "apple_1040",
-    "brand": "Apple",
-    "model": "Apple iPhone Air",
-    "storage": "128GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 0
-  },
-  {
-    "id": "apple_1041",
-    "brand": "Apple",
-    "model": "Apple iPhone 17 Pro",
-    "storage": "128GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 0
-  },
-  {
-    "id": "apple_1042",
-    "brand": "Apple",
-    "model": "Apple iPhone 17 Pro Max",
-    "storage": "128GB",
-    "ram": "12GB",
-    "color": "Midnight",
-    "basePrice": 0
-  },
-  {
-    "id": "apple_1043",
-    "brand": "Apple",
-    "model": "Apple iPhone 17e",
-    "storage": "128GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 0
   },
   {
     "id": "apple_2000",
@@ -3726,15 +3672,6 @@ export const SEED_DEVICES = [
     "basePrice": 22270
   },
   {
-    "id": "apple_2065",
-    "brand": "Apple",
-    "model": "Apple iPhone 13 Mini",
-    "storage": "1TB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 0
-  },
-  {
     "id": "apple_2066",
     "brand": "Apple",
     "model": "Apple iPhone 13",
@@ -3825,15 +3762,6 @@ export const SEED_DEVICES = [
     "basePrice": 12810
   },
   {
-    "id": "apple_2077",
-    "brand": "Apple",
-    "model": "Apple iPhone SE 2022",
-    "storage": "512GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 0
-  },
-  {
     "id": "apple_2078",
     "brand": "Apple",
     "model": "Apple iPhone 14",
@@ -3852,15 +3780,6 @@ export const SEED_DEVICES = [
     "basePrice": 28750
   },
   {
-    "id": "apple_2080",
-    "brand": "Apple",
-    "model": "Apple iPhone 14",
-    "storage": "1TB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 0
-  },
-  {
     "id": "apple_2081",
     "brand": "Apple",
     "model": "Apple iPhone 14 Plus",
@@ -3877,15 +3796,6 @@ export const SEED_DEVICES = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 31270
-  },
-  {
-    "id": "apple_2083",
-    "brand": "Apple",
-    "model": "Apple iPhone 14 Plus",
-    "storage": "1TB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 0
   },
   {
     "id": "apple_2084",
@@ -3960,15 +3870,6 @@ export const SEED_DEVICES = [
     "basePrice": 45570
   },
   {
-    "id": "apple_2092",
-    "brand": "Apple",
-    "model": "Apple iPhone 15",
-    "storage": "1TB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 0
-  },
-  {
     "id": "apple_2093",
     "brand": "Apple",
     "model": "Apple iPhone 15 Plus",
@@ -3985,15 +3886,6 @@ export const SEED_DEVICES = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 49250
-  },
-  {
-    "id": "apple_2095",
-    "brand": "Apple",
-    "model": "Apple iPhone 15 Plus",
-    "storage": "1TB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 0
   },
   {
     "id": "apple_2096",
@@ -4068,15 +3960,6 @@ export const SEED_DEVICES = [
     "basePrice": 52470
   },
   {
-    "id": "apple_2104",
-    "brand": "Apple",
-    "model": "Apple iPhone 16",
-    "storage": "1TB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 0
-  },
-  {
     "id": "apple_2105",
     "brand": "Apple",
     "model": "Apple iPhone 16 Plus",
@@ -4093,15 +3976,6 @@ export const SEED_DEVICES = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 55040
-  },
-  {
-    "id": "apple_2107",
-    "brand": "Apple",
-    "model": "Apple iPhone 16 Plus",
-    "storage": "1TB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 0
   },
   {
     "id": "apple_2108",
@@ -4176,15 +4050,6 @@ export const SEED_DEVICES = [
     "basePrice": 41600
   },
   {
-    "id": "apple_2116",
-    "brand": "Apple",
-    "model": "Apple iPhone 16e",
-    "storage": "1TB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 0
-  },
-  {
     "id": "apple_2117",
     "brand": "Apple",
     "model": "Apple iPhone 17",
@@ -4201,15 +4066,6 @@ export const SEED_DEVICES = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 65000
-  },
-  {
-    "id": "apple_2119",
-    "brand": "Apple",
-    "model": "Apple iPhone 17",
-    "storage": "1TB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 0
   },
   {
     "id": "apple_2120",
@@ -4309,14 +4165,5 @@ export const SEED_DEVICES = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 53200
-  },
-  {
-    "id": "apple_2131",
-    "brand": "Apple",
-    "model": "Apple iPhone 17e",
-    "storage": "1TB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 0
   }
 ];
