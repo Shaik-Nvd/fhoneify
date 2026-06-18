@@ -82,7 +82,7 @@ export function getQuoteById(quoteId: string): Quote | null {
   return quotes.get(quoteId) || null;
 }
 
-export function createLead(data: { userId?: string; name?: string; phone: string; brand: string; model: string; storage: string; quotedPrice: number }): Lead {
+export function createLead(data: { userId?: string; name?: string; phone: string; brand: string; model: string; storage: string; quotedPrice: number; pickupDate?: string; pickupTime?: string }): Lead {
   const lead: Lead = {
     id: `lead-${Date.now()}`,
     userId: data.userId,
@@ -92,6 +92,8 @@ export function createLead(data: { userId?: string; name?: string; phone: string
     model: data.model,
     storage: data.storage,
     quotedPrice: data.quotedPrice,
+    pickupDate: data.pickupDate,
+    pickupTime: data.pickupTime,
     status: 'pending',
     createdAt: new Date().toISOString(),
   };

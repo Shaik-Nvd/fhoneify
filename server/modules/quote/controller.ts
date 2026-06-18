@@ -16,6 +16,8 @@ const CreateLeadSchema = z.object({
   model: z.string(),
   storage: z.string(),
   quotedPrice: z.number(),
+  pickupDate: z.string().optional(),
+  pickupTime: z.string().optional(),
 });
 
 export function listDevices(req: Request, res: Response) {

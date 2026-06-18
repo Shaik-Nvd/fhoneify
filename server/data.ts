@@ -103,6 +103,8 @@ export interface Lead {
   model: string;
   storage: string;
   quotedPrice: number;
+  pickupDate?: string;
+  pickupTime?: string;
   status: 'pending' | 'contacted' | 'completed';
   createdAt: string;
 }
