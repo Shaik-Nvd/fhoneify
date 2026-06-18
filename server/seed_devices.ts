@@ -2994,16 +2994,6 @@ export const SEED_DEVICES = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 10710
-  },
-  {
-    "id": "apple_1011",
-    "brand": "Apple",
-    "model": "Apple iPhone XS",
-    "storage": "128GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 0
-  },
   {
     "id": "apple_1012",
     "brand": "Apple",
