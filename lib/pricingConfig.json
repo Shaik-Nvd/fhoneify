@@ -1,0 +1,41 @@
+{
+  "bonuses": {
+    "warranty": 0.07,
+    "gstBill": 0.02,
+    "eSim": 0.05,
+    "box": 1000
+  },
+  "ageMultipliers": {
+    "below3": 1.00,
+    "3to6": 0.95,
+    "6to11": 0.90,
+    "above11": 0.80
+  },
+  "deductions": {
+    "calls": 3000,
+    "touch": 3500,
+    "originalScreen": 2000,
+    "screen_scratch": 4000,
+    "screen_spot": 3000,
+    "body_scratch": 1500,
+    "panel_missing": 2500,
+    "front_camera": 1500,
+    "back_camera": 1500,
+    "camera_glass": 800,
+    "volume": 800,
+    "power": 800,
+    "silent": 600,
+    "charging": 1200,
+    "speaker": 800,
+    "audio_receiver": 800,
+    "microphone": 800,
+    "wifi": 2000,
+    "bluetooth": 1200,
+    "vibrator": 500,
+    "face": 1500,
+    "fingerprint": 1200,
+    "proximity": 600,
+    "battery_service": 4500
+  },
+  "modelFloorPrice": 500
+}
