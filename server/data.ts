@@ -105,6 +105,9 @@ export interface Lead {
   quotedPrice: number;
   pickupDate?: string;
   pickupTime?: string;
+  address?: string;
+  pincode?: string;
+  city?: string;
   status: 'pending' | 'contacted' | 'completed';
   createdAt: string;
 }

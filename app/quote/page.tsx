@@ -130,11 +130,13 @@ export default function QuotePage() {
     accessories: [] as string[]
   });
 
-  // Lead Capture State
   const [userPhone, setUserPhone] = useState('');
   const [userName, setUserName] = useState('');
   const [pickupDate, setPickupDate] = useState('');
   const [pickupTime, setPickupTime] = useState('');
+  const [address, setAddress] = useState('');
+  const [pincode, setPincode] = useState('');
+  const [city, setCity] = useState('');
   const [userEmail, setUserEmail] = useState('');
   const [otp, setOtp] = useState('');
   const [showOtpInput, setShowOtpInput] = useState(false);
@@ -671,49 +673,86 @@ export default function QuotePage() {
           <p style={{ fontSize: '4rem', fontWeight: 700, color: '#fff', lineHeight: 1 }}>{formatCurrency(finalPrice)}</p>
           <p style={{ color: '#a0a0a0', fontSize: '1rem', marginTop: '0.5rem' }}>{selectedModel.startsWith(selectedBrand) ? selectedModel : `${selectedBrand} ${selectedModel}`} ({selectedStorage})</p>
           
-          <div style={{ width: '100%', textAlign: 'left', marginTop: '1.5rem' }}>
-            <label style={{ display: 'block', fontSize: '0.85rem', color: '#a0a0a0', marginBottom: '0.5rem' }}>Preferred Pickup Date</label>
-            <input type="date" value={pickupDate} onChange={(e) => setPickupDate(e.target.value)} style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000', color: '#fff', marginBottom: '1rem' }} />
-
-            <label style={{ display: 'block', fontSize: '0.85rem', color: '#a0a0a0', marginBottom: '0.5rem' }}>Preferred Pickup Time</label>
-            <select value={pickupTime} onChange={(e) => setPickupTime(e.target.value)} style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000', color: '#fff' }}>
-              <option value="">Select Time Slot</option>
-              <option value="10:00 AM - 1:00 PM">10:00 AM - 1:00 PM</option>
-              <option value="1:00 PM - 4:00 PM">1:00 PM - 4:00 PM</option>
-              <option value="4:00 PM - 7:00 PM">4:00 PM - 7:00 PM</option>
-            </select>
-          </div>
-          
           <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', width: '100%' }}>
             <button type="button" onClick={() => { navigateToState('', '', '', 'brand', 1); setFinalPrice(null); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], hardware: [], accessories: [] }); }} className="btn-outline" style={{ flex: 1, padding: '16px', fontSize: '1.1rem' }}>Start Over</button>
-            <button type="button" onClick={async () => { 
-              try {
-                const token = localStorage.getItem('accessToken');
-                const headers: any = { 'Content-Type': 'application/json' };
-                if (token) headers['Authorization'] = `Bearer ${token}`;
-                
-                await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'}/api/quote/leads`, {
-                  method: 'POST',
-                  headers,
-                  body: JSON.stringify({
-                    name: userName,
-                    phone: userPhone,
-                    brand: selectedBrand,
-                    model: selectedModel,
-                    storage: selectedStorage,
-                    quotedPrice: finalPrice,
-                    pickupDate,
-                    pickupTime
-                  })
-                });
-                alert("Scheduled for Pickup! Our executive will contact you shortly.");
-                router.push('/');
-              } catch (err) {
-                console.error("Failed to schedule pickup", err);
-                alert("Something went wrong. Please try again.");
-              }
-            }} className="btn-primary" style={{ flex: 2, padding: '16px', background: '#4CD964', color: '#fff', fontSize: '1.1rem', fontWeight: 600 }}>Schedule Pickup</button>
+            <button type="button" onClick={() => setStep(9)} className="btn-primary" style={{ flex: 2, padding: '16px', background: '#4CD964', color: '#fff', fontSize: '1.1rem', fontWeight: 600 }}>Schedule Pickup</button>
           </div>
+        </div>
+      )}
+
+      {/* STAGE 9: PICKUP DETAILS FORM */}
+      {step === 9 && (
+        <div className="card flex flex-col gap-4 bg-[#111] border border-[#333] p-6 md:p-8 rounded-xl max-w-[600px] mx-auto text-left">
+          <p className="eyebrow" style={{ color: '#d4af37', fontSize: '1rem', letterSpacing: '2px', textAlign: 'center', marginBottom: '1.5rem' }}>SCHEDULE PICKUP</p>
+          
+          <form onSubmit={async (e) => {
+            e.preventDefault();
+            try {
+              const token = localStorage.getItem('accessToken');
+              const headers: any = { 'Content-Type': 'application/json' };
+              if (token) headers['Authorization'] = `Bearer ${token}`;
+              
+              await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'}/api/quote/leads`, {
+                method: 'POST',
+                headers,
+                body: JSON.stringify({
+                  name: userName,
+                  phone: userPhone,
+                  brand: selectedBrand,
+                  model: selectedModel,
+                  storage: selectedStorage,
+                  quotedPrice: finalPrice,
+                  pickupDate,
+                  pickupTime,
+                  address,
+                  pincode,
+                  city
+                })
+              });
+              alert("Scheduled for Pickup! Our executive will contact you shortly.");
+              router.push('/');
+            } catch (err) {
+              console.error("Failed to schedule pickup", err);
+              alert("Something went wrong. Please try again.");
+            }
+          }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem' }}>
+              <div>
+                <label style={{ display: 'block', fontSize: '0.85rem', color: '#a0a0a0', marginBottom: '0.5rem' }}>Preferred Date</label>
+                <input type="date" required value={pickupDate} onChange={(e) => setPickupDate(e.target.value)} style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000', color: '#fff' }} />
+              </div>
+              <div>
+                <label style={{ display: 'block', fontSize: '0.85rem', color: '#a0a0a0', marginBottom: '0.5rem' }}>Preferred Time</label>
+                <select required value={pickupTime} onChange={(e) => setPickupTime(e.target.value)} style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000', color: '#fff' }}>
+                  <option value="">Select Time Slot</option>
+                  <option value="10:00 AM - 1:00 PM">10:00 AM - 1:00 PM</option>
+                  <option value="1:00 PM - 4:00 PM">1:00 PM - 4:00 PM</option>
+                  <option value="4:00 PM - 7:00 PM">4:00 PM - 7:00 PM</option>
+                </select>
+              </div>
+            </div>
+
+            <div style={{ marginBottom: '1rem' }}>
+              <label style={{ display: 'block', fontSize: '0.85rem', color: '#a0a0a0', marginBottom: '0.5rem' }}>Flat / House No / Building Name</label>
+              <input type="text" required value={address} onChange={(e) => setAddress(e.target.value)} placeholder="e.g. 101, Fhoneify Apartments" style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000', color: '#fff' }} />
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '2rem' }}>
+              <div>
+                <label style={{ display: 'block', fontSize: '0.85rem', color: '#a0a0a0', marginBottom: '0.5rem' }}>Pincode</label>
+                <input type="text" required value={pincode} onChange={(e) => setPincode(e.target.value.replace(/\D/g, '').slice(0, 6))} placeholder="6 Digit Pincode" style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000', color: '#fff' }} />
+              </div>
+              <div>
+                <label style={{ display: 'block', fontSize: '0.85rem', color: '#a0a0a0', marginBottom: '0.5rem' }}>City</label>
+                <input type="text" required value={city} onChange={(e) => setCity(e.target.value)} placeholder="e.g. Bengaluru" style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000', color: '#fff' }} />
+              </div>
+            </div>
+
+            <div style={{ display: 'flex', gap: '1rem', width: '100%' }}>
+              <button type="button" onClick={() => setStep(8)} className="btn-outline" style={{ flex: 1, padding: '16px', fontSize: '1.1rem' }}>Back</button>
+              <button type="submit" className="btn-primary" style={{ flex: 2, padding: '16px', background: '#4CD964', color: '#fff', fontSize: '1.1rem', fontWeight: 600 }}>Confirm Pickup</button>
+            </div>
+          </form>
         </div>
       )}
 
