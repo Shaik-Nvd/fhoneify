@@ -191,8 +191,8 @@ export default function QuotePage() {
 
   const brands = useMemo(() => {
     const extracted = [...new Set(allDevices.map((d) => d.brand).filter(Boolean))];
-    if (extracted.length === 0) return Object.keys(BRAND_LOGOS).sort();
-    return extracted.sort();
+    const allBrands = [...new Set([...Object.keys(BRAND_LOGOS), ...extracted])];
+    return allBrands.sort();
   }, [allDevices]);
   const models = useMemo(() => {
     if (!selectedBrand) return [];
@@ -426,14 +426,23 @@ export default function QuotePage() {
                 <h2 style={{ color: '#fff', fontWeight: 600, fontSize: '1.25rem' }}>Select Model</h2>
                 <button onClick={() => navigateToState('', '', '', 'brand', 1)} style={{ color: '#4CD964', background: 'none', border: 'none', cursor: 'pointer' }}>Change Brand</button>
               </div>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '1rem' }}>
-                {models.map((m) => (
-                  <button key={m} onClick={() => handleModelSelect(m)} className="card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem', padding: '1rem', border: '1px solid #2a2a2a', backgroundColor: '#111', borderRadius: '12px', cursor: 'pointer' }}>
-                    <img src={`/images/models/${m.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={m} style={{ width: '70px', height: '100px', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
-                    <span style={{ fontSize: '0.8rem', color: '#fff', textAlign: 'center' }}>{m}</span>
-                  </button>
-                ))}
-              </div>
+              
+              {models.length === 0 && !loading ? (
+                <div style={{ textAlign: 'center', padding: '4rem 1rem', color: '#a0a0a0' }}>
+                  <span style={{ fontSize: '3rem', display: 'block', marginBottom: '1rem' }}>🚧</span>
+                  <h3 style={{ color: '#fff', fontSize: '1.25rem', fontWeight: 500, marginBottom: '0.5rem' }}>Under Construction</h3>
+                  <p>Brand models are currently being processed. We are onboarding new mobile phones!</p>
+                </div>
+              ) : (
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '1rem' }}>
+                  {models.map((m) => (
+                    <button key={m} onClick={() => handleModelSelect(m)} className="card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem', padding: '1rem', border: '1px solid #2a2a2a', backgroundColor: '#111', borderRadius: '12px', cursor: 'pointer' }}>
+                      <img src={`/images/models/${m.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={m} style={{ width: '70px', height: '100px', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
+                      <span style={{ fontSize: '0.8rem', color: '#fff', textAlign: 'center' }}>{m}</span>
+                    </button>
+                  ))}
+                </div>
+              )}
             </>
           )}
 
