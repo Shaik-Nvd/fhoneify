@@ -3528,15 +3528,6 @@ export const SEED_DEVICES = [
     "basePrice": 2200
   },
   {
-    "id": "apple_2015",
-    "brand": "Apple",
-    "model": "Apple iPhone 7",
-    "storage": "64GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 0
-  },
-  {
     "id": "apple_2016",
     "brand": "Apple",
     "model": "Apple iPhone 7",
@@ -3544,15 +3535,6 @@ export const SEED_DEVICES = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 4770
-  },
-  {
-    "id": "apple_2017",
-    "brand": "Apple",
-    "model": "Apple iPhone 7",
-    "storage": "512GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 0
   },
   {
     "id": "apple_2018",
