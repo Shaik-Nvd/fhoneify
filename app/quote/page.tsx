@@ -665,7 +665,30 @@ export default function QuotePage() {
           
           <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', width: '100%' }}>
             <button type="button" onClick={() => { navigateToState('', '', '', 'brand', 1); setFinalPrice(null); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], hardware: [], accessories: [] }); }} className="btn-outline" style={{ flex: 1, padding: '16px', fontSize: '1.1rem' }}>Start Over</button>
-            <button type="button" onClick={() => { alert("Scheduled for Pickup!"); router.push('/'); }} className="btn-primary" style={{ flex: 2, padding: '16px', background: '#4CD964', color: '#fff', fontSize: '1.1rem', fontWeight: 600 }}>Schedule Pickup</button>
+            <button type="button" onClick={async () => { 
+              try {
+                const token = localStorage.getItem('accessToken');
+                const headers: any = { 'Content-Type': 'application/json' };
+                if (token) headers['Authorization'] = `Bearer ${token}`;
+                
+                await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'}/api/quote/leads`, {
+                  method: 'POST',
+                  headers,
+                  body: JSON.stringify({
+                    phone: userPhone,
+                    brand: selectedBrand,
+                    model: selectedModel,
+                    storage: selectedStorage,
+                    quotedPrice: finalPrice
+                  })
+                });
+                alert("Scheduled for Pickup! Our executive will contact you shortly.");
+                router.push('/');
+              } catch (err) {
+                console.error("Failed to schedule pickup", err);
+                alert("Something went wrong. Please try again.");
+              }
+            }} className="btn-primary" style={{ flex: 2, padding: '16px', background: '#4CD964', color: '#fff', fontSize: '1.1rem', fontWeight: 600 }}>Schedule Pickup</button>
           </div>
         </div>
       )}

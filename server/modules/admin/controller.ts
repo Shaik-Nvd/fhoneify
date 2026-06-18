@@ -68,3 +68,23 @@ export function rejectListing(req: AuthenticatedRequest, res: Response) {
     return res.status(500).json({ success: false, error: 'Internal server error' });
   }
 }
+
+export function getUsers(req: AuthenticatedRequest, res: Response) {
+  try {
+    const data = adminService.getUsers();
+    return res.json({ success: true, data });
+  } catch (err: any) {
+    logger.error({ err: err.message }, 'Error in getUsers controller');
+    return res.status(500).json({ success: false, error: 'Internal server error' });
+  }
+}
+
+export function getLeads(req: AuthenticatedRequest, res: Response) {
+  try {
+    const data = adminService.getLeads();
+    return res.json({ success: true, data });
+  } catch (err: any) {
+    logger.error({ err: err.message }, 'Error in getLeads controller');
+    return res.status(500).json({ success: false, error: 'Internal server error' });
+  }
+}

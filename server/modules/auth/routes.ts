@@ -6,6 +6,7 @@ const router = Router();
 
 router.post('/otp/send', ctrl.sendOtp);
 router.post('/otp/verify', ctrl.verifyOtp);
+router.post('/admin/login', ctrl.adminLogin);
 router.post('/refresh', ctrl.refreshToken);
 router.post('/logout', ctrl.logout);
 router.put('/profile', requireAuth, ctrl.updateProfile);

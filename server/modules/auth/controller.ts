@@ -14,6 +14,11 @@ const VerifyOtpSchema = z.object({
   referralCode: z.string().optional(),
 });
 
+const AdminLoginSchema = z.object({
+  username: z.string().min(1, 'Username is required'),
+  password: z.string().min(1, 'Password is required'),
+});
+
 const RefreshTokenSchema = z.object({
   refreshToken: z.string().min(1, 'Refresh token is required'),
 });
@@ -126,6 +131,24 @@ export function getMe(req: AuthenticatedRequest, res: Response) {
     return res.json({ success: true, data: authService.getMe(req.user) });
   } catch (err: any) {
     logger.error({ err: err.message }, 'Error in getMe controller');
+    return res.status(500).json({ success: false, error: 'Internal server error' });
+  }
+}
+
+export async function adminLogin(req: Request, res: Response) {
+  try {
+    const result = AdminLoginSchema.safeParse(req.body);
+    if (!result.success) {
+      return res.status(400).json({ success: false, error: result.error.issues[0].message });
+    }
+    const { username, password } = result.data;
+    const loginResult = await authService.adminLoginWithPassword(username, password);
+    if (!loginResult) {
+      return res.status(401).json({ success: false, error: 'Invalid admin credentials' });
+    }
+    return res.json({ success: true, data: loginResult, message: 'Admin login successful' });
+  } catch (err: any) {
+    logger.error({ err: err.message }, 'Error in adminLogin controller');
     return res.status(500).json({ success: false, error: 'Internal server error' });
   }
 }

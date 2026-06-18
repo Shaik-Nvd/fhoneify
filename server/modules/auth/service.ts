@@ -158,3 +158,36 @@ export async function logout(accessToken: string | null, refreshToken?: string) 
 export function getMe(user: User) {
   return { id: user.id, phone: user.phone, role: user.role, email: user.email };
 }
+
+export async function adminLoginWithPassword(username: string, password: string) {
+  // Hardcoded for now based on user requirements. In production, this should be in DB and hashed.
+  if (username === 'admin' && password === '9739063840') {
+    // Find or mock the admin user
+    let user = users.find((u) => u.role === 'admin');
+    if (!user) {
+      user = { id: `u-admin-${Date.now()}`, phone: '9739063840', name: 'Super Admin', role: 'admin', email: 'admin@fhoneify.com' };
+      users.push(user);
+    }
+
+    const accessToken = jwt.sign(
+      { userId: user.id, role: user.role },
+      config.JWT_SECRET,
+      { expiresIn: config.JWT_EXPIRY as any }
+    );
+
+    const refreshToken = jwt.sign(
+      { userId: user.id, tokenType: 'refresh' },
+      config.JWT_SECRET,
+      { expiresIn: config.REFRESH_TOKEN_EXPIRY as any }
+    );
+
+    await redis.setEx(`refresh:${refreshToken}`, 7 * 24 * 3600, JSON.stringify({ userId: user.id }));
+
+    return {
+      accessToken,
+      refreshToken,
+      user: { id: user.id, phone: user.phone, name: user.name, role: user.role, email: user.email },
+    };
+  }
+  return null;
+}

@@ -94,6 +94,18 @@ export interface Pickup {
   createdAt: string;
 }
 
+export interface Lead {
+  id: string;
+  userId?: string;
+  phone: string;
+  brand: string;
+  model: string;
+  storage: string;
+  quotedPrice: number;
+  status: 'pending' | 'contacted' | 'completed';
+  createdAt: string;
+}
+
 export interface Notification {
   id: string;
   userId: string;
@@ -300,6 +312,7 @@ export const notifications: Notification[] = [];
 
 export const buy_orders: BuyOrder[] = [];
 export const sell_orders: SellOrder[] = [];
+export const leads: Lead[] = [];
 export const wallet_ledger: WalletLedgerEntry[] = [];
 export const repair_quotes = new Map<string, RepairQuote>();
 export const repair_bookings: RepairBooking[] = [];

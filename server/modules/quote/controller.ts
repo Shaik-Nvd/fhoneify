@@ -9,6 +9,14 @@ const CreateQuoteSchema = z.object({
   storage: z.string().optional(),
 });
 
+const CreateLeadSchema = z.object({
+  phone: z.string().min(1, 'phone is required'),
+  brand: z.string(),
+  model: z.string(),
+  storage: z.string(),
+  quotedPrice: z.number(),
+});
+
 export function listDevices(req: Request, res: Response) {
   try {
     const devices = quoteService.listDevices();
@@ -46,6 +54,24 @@ export function getQuote(req: Request, res: Response) {
     return res.json({ success: true, data: quote });
   } catch (err: any) {
     logger.error({ err: err.message }, 'Error in getQuote controller');
+    return res.status(500).json({ success: false, error: 'Internal server error' });
+  }
+}
+
+export function createLead(req: Request, res: Response) {
+  try {
+    const result = CreateLeadSchema.safeParse(req.body);
+    if (!result.success) {
+      return res.status(400).json({ success: false, error: result.error.issues[0].message });
+    }
+    
+    // Optional user context
+    const userId = (req as any).user?.id;
+    
+    const lead = quoteService.createLead({ ...result.data, userId });
+    return res.json({ success: true, data: lead, message: 'Lead created successfully' });
+  } catch (err: any) {
+    logger.error({ err: err.message }, 'Error in createLead controller');
     return res.status(500).json({ success: false, error: 'Internal server error' });
   }
 }

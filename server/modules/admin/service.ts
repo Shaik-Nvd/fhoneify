@@ -1,4 +1,4 @@
-import { users, listings, buy_orders, enrichListing, Listing, BuyOrder } from '../../data';
+import { users, leads, listings, buy_orders, enrichListing, Listing, BuyOrder, User, Lead } from '../../data';
 
 export function getAnalytics() {
   const paidOrders = buy_orders.filter((o) => o.status === 'paid');
@@ -52,4 +52,12 @@ export function rejectListing(id: string): Listing | null {
   if (!listing) return null;
   listing.status = 'rejected';
   return listing;
+}
+
+export function getUsers(): User[] {
+  return users;
+}
+
+export function getLeads(): Lead[] {
+  return leads;
 }

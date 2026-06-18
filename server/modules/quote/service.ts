@@ -1,4 +1,4 @@
-import { SEED_DEVICES, quotes, counters, Quote, Device } from '../../data';
+import { SEED_DEVICES, quotes, counters, Quote, Device, leads, Lead } from '../../data';
 import fs from 'fs';
 import path from 'path';
 
@@ -80,4 +80,20 @@ export function generateQuote(deviceId: string, condition: string, aiPriceAdjust
 
 export function getQuoteById(quoteId: string): Quote | null {
   return quotes.get(quoteId) || null;
+}
+
+export function createLead(data: { userId?: string; phone: string; brand: string; model: string; storage: string; quotedPrice: number }): Lead {
+  const lead: Lead = {
+    id: `lead-${Date.now()}`,
+    userId: data.userId,
+    phone: data.phone,
+    brand: data.brand,
+    model: data.model,
+    storage: data.storage,
+    quotedPrice: data.quotedPrice,
+    status: 'pending',
+    createdAt: new Date().toISOString(),
+  };
+  leads.push(lead);
+  return lead;
 }
