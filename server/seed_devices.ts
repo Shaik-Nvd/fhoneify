@@ -4966,5 +4966,1571 @@ export const SEED_DEVICES = [
     "ram": "8GB",
     "color": "Black",
     "basePrice": 9930
+  },
+  {
+    "id": "x_1000",
+    "brand": "Xiaomi",
+    "model": "Mi 10T Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 7760
+  },
+  {
+    "id": "x_1001",
+    "brand": "Xiaomi",
+    "model": "Mi 11 Ultra",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 17300
+  },
+  {
+    "id": "x_1002",
+    "brand": "Xiaomi",
+    "model": "Mi Mix 2",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 2830
+  },
+  {
+    "id": "x_1003",
+    "brand": "Xiaomi",
+    "model": "Redmi 8",
+    "storage": "64GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 3370
+  },
+  {
+    "id": "x_1004",
+    "brand": "Xiaomi",
+    "model": "Redmi Y1 Lite",
+    "storage": "16GB",
+    "ram": "2GB",
+    "color": "Black",
+    "basePrice": 980
+  },
+  {
+    "id": "x_1005",
+    "brand": "Xiaomi",
+    "model": "Black Shark 2",
+    "storage": "12GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5910
+  },
+  {
+    "id": "x_1006",
+    "brand": "Xiaomi",
+    "model": "Black Shark 2",
+    "storage": "256GB",
+    "ram": "12GB",
+    "color": "Black",
+    "basePrice": 5910
+  },
+  {
+    "id": "x_1007",
+    "brand": "Xiaomi",
+    "model": "Black Shark 2",
+    "storage": "6GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 4920
+  },
+  {
+    "id": "x_1008",
+    "brand": "Xiaomi",
+    "model": "Black Shark 2",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 4920
+  },
+  {
+    "id": "x_1009",
+    "brand": "Xiaomi",
+    "model": "Mi 10T",
+    "storage": "6GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 7260
+  },
+  {
+    "id": "x_1010",
+    "brand": "Xiaomi",
+    "model": "Mi 10T",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 7260
+  },
+  {
+    "id": "x_1011",
+    "brand": "Xiaomi",
+    "model": "Mi 10T",
+    "storage": "8GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 7580
+  },
+  {
+    "id": "x_1012",
+    "brand": "Xiaomi",
+    "model": "Mi 10T",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 7580
+  },
+  {
+    "id": "x_1013",
+    "brand": "Xiaomi",
+    "model": "Mi 10i",
+    "storage": "6GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 6730
+  },
+  {
+    "id": "x_1014",
+    "brand": "Xiaomi",
+    "model": "Mi 10i",
+    "storage": "6GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 7230
+  },
+  {
+    "id": "x_1015",
+    "brand": "Xiaomi",
+    "model": "Mi 10i",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 7230
+  },
+  {
+    "id": "x_1016",
+    "brand": "Xiaomi",
+    "model": "Mi 10i",
+    "storage": "64GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 6730
+  },
+  {
+    "id": "x_1017",
+    "brand": "Xiaomi",
+    "model": "Mi 10i",
+    "storage": "8GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 7410
+  },
+  {
+    "id": "x_1018",
+    "brand": "Xiaomi",
+    "model": "Mi 10i",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 7410
+  },
+  {
+    "id": "x_1019",
+    "brand": "Xiaomi",
+    "model": "Mi 11 Lite",
+    "storage": "6GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5650
+  },
+  {
+    "id": "x_1020",
+    "brand": "Xiaomi",
+    "model": "Mi 11 Lite",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 5650
+  },
+  {
+    "id": "x_1021",
+    "brand": "Xiaomi",
+    "model": "Mi 11 Lite",
+    "storage": "8GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 6070
+  },
+  {
+    "id": "x_1022",
+    "brand": "Xiaomi",
+    "model": "Mi 11 Lite",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 6070
+  },
+  {
+    "id": "x_1023",
+    "brand": "Xiaomi",
+    "model": "Mi 11X",
+    "storage": "6GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 7460
+  },
+  {
+    "id": "x_1024",
+    "brand": "Xiaomi",
+    "model": "Mi 11X",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 7460
+  },
+  {
+    "id": "x_1025",
+    "brand": "Xiaomi",
+    "model": "Mi 11X",
+    "storage": "8GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 8100
+  },
+  {
+    "id": "x_1026",
+    "brand": "Xiaomi",
+    "model": "Mi 11X",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 8100
+  },
+  {
+    "id": "x_1027",
+    "brand": "Xiaomi",
+    "model": "Mi 11X Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 7610
+  },
+  {
+    "id": "x_1028",
+    "brand": "Xiaomi",
+    "model": "Mi 11X Pro",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 8180
+  },
+  {
+    "id": "x_1029",
+    "brand": "Xiaomi",
+    "model": "Mi A2",
+    "storage": "4GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 2500
+  },
+  {
+    "id": "x_1030",
+    "brand": "Xiaomi",
+    "model": "Mi A2",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 2500
+  },
+  {
+    "id": "x_1031",
+    "brand": "Xiaomi",
+    "model": "Mi A2",
+    "storage": "6GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 2850
+  },
+  {
+    "id": "x_1032",
+    "brand": "Xiaomi",
+    "model": "Mi A2",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 2850
+  },
+  {
+    "id": "x_1033",
+    "brand": "Xiaomi",
+    "model": "Mi A3",
+    "storage": "4GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 3710
+  },
+  {
+    "id": "x_1034",
+    "brand": "Xiaomi",
+    "model": "Mi A3",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 3710
+  },
+  {
+    "id": "x_1035",
+    "brand": "Xiaomi",
+    "model": "Mi A3",
+    "storage": "6GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 4130
+  },
+  {
+    "id": "x_1036",
+    "brand": "Xiaomi",
+    "model": "Mi A3",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 4130
+  },
+  {
+    "id": "x_1037",
+    "brand": "Xiaomi",
+    "model": "Mi Max 2",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 2220
+  },
+  {
+    "id": "x_1038",
+    "brand": "Xiaomi",
+    "model": "Mi Max 2",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Black",
+    "basePrice": 1680
+  },
+  {
+    "id": "x_1039",
+    "brand": "Xiaomi",
+    "model": "Mi Max 2",
+    "storage": "64GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 1810
+  },
+  {
+    "id": "x_1040",
+    "brand": "Xiaomi",
+    "model": "Redmi 5",
+    "storage": "16GB",
+    "ram": "2GB",
+    "color": "Black",
+    "basePrice": 1590
+  },
+  {
+    "id": "x_1041",
+    "brand": "Xiaomi",
+    "model": "Redmi 5",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Black",
+    "basePrice": 1700
+  },
+  {
+    "id": "x_1042",
+    "brand": "Xiaomi",
+    "model": "Redmi 5",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 2010
+  },
+  {
+    "id": "x_1043",
+    "brand": "Xiaomi",
+    "model": "Redmi 5A",
+    "storage": "16GB",
+    "ram": "2GB",
+    "color": "Black",
+    "basePrice": 1140
+  },
+  {
+    "id": "x_1044",
+    "brand": "Xiaomi",
+    "model": "Redmi 5A",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Black",
+    "basePrice": 1290
+  },
+  {
+    "id": "x_1045",
+    "brand": "Xiaomi",
+    "model": "Redmi 6",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Black",
+    "basePrice": 1740
+  },
+  {
+    "id": "x_1046",
+    "brand": "Xiaomi",
+    "model": "Redmi 6",
+    "storage": "64GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 1820
+  },
+  {
+    "id": "x_1047",
+    "brand": "Xiaomi",
+    "model": "Redmi 6 pro",
+    "storage": "3GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 2160
+  },
+  {
+    "id": "x_1048",
+    "brand": "Xiaomi",
+    "model": "Redmi 6 pro",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Black",
+    "basePrice": 2160
+  },
+  {
+    "id": "x_1049",
+    "brand": "Xiaomi",
+    "model": "Redmi 6 pro",
+    "storage": "4GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 2280
+  },
+  {
+    "id": "x_1050",
+    "brand": "Xiaomi",
+    "model": "Redmi 6 pro",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 2280
+  },
+  {
+    "id": "x_1051",
+    "brand": "Xiaomi",
+    "model": "Redmi 6A",
+    "storage": "16GB",
+    "ram": "2GB",
+    "color": "Black",
+    "basePrice": 1410
+  },
+  {
+    "id": "x_1052",
+    "brand": "Xiaomi",
+    "model": "Redmi 6A",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Black",
+    "basePrice": 1510
+  },
+  {
+    "id": "x_1053",
+    "brand": "Xiaomi",
+    "model": "Redmi 7",
+    "storage": "2GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 2350
+  },
+  {
+    "id": "x_1054",
+    "brand": "Xiaomi",
+    "model": "Redmi 7",
+    "storage": "2GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 2500
+  },
+  {
+    "id": "x_1055",
+    "brand": "Xiaomi",
+    "model": "Redmi 7",
+    "storage": "16GB",
+    "ram": "2GB",
+    "color": "Black",
+    "basePrice": 2350
+  },
+  {
+    "id": "x_1056",
+    "brand": "Xiaomi",
+    "model": "Redmi 7",
+    "storage": "32GB",
+    "ram": "2GB",
+    "color": "Black",
+    "basePrice": 2500
+  },
+  {
+    "id": "x_1057",
+    "brand": "Xiaomi",
+    "model": "Redmi 7",
+    "storage": "3GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 2570
+  },
+  {
+    "id": "x_1058",
+    "brand": "Xiaomi",
+    "model": "Redmi 7",
+    "storage": "3GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 2690
+  },
+  {
+    "id": "x_1059",
+    "brand": "Xiaomi",
+    "model": "Redmi 7",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Black",
+    "basePrice": 2570
+  },
+  {
+    "id": "x_1060",
+    "brand": "Xiaomi",
+    "model": "Redmi 7",
+    "storage": "64GB",
+    "ram": "3GB",
+    "color": "Black",
+    "basePrice": 2690
+  },
+  {
+    "id": "x_1061",
+    "brand": "Xiaomi",
+    "model": "Redmi 7A",
+    "storage": "16GB",
+    "ram": "2GB",
+    "color": "Black",
+    "basePrice": 1440
+  },
+  {
+    "id": "x_1062",
+    "brand": "Xiaomi",
+    "model": "Redmi 7A",
+    "storage": "32GB",
+    "ram": "2GB",
+    "color": "Black",
+    "basePrice": 1590
+  },
+  {
+    "id": "x_1063",
+    "brand": "Xiaomi",
+    "model": "Redmi 7A",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Black",
+    "basePrice": 1720
+  },
+  {
+    "id": "x_1064",
+    "brand": "Xiaomi",
+    "model": "Redmi 8A",
+    "storage": "2GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 2250
+  },
+  {
+    "id": "x_1065",
+    "brand": "Xiaomi",
+    "model": "Redmi 8A",
+    "storage": "3GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 2460
+  },
+  {
+    "id": "x_1066",
+    "brand": "Xiaomi",
+    "model": "Redmi 8A Dual",
+    "storage": "2GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 2700
+  },
+  {
+    "id": "x_1067",
+    "brand": "Xiaomi",
+    "model": "Redmi 8A Dual",
+    "storage": "32GB",
+    "ram": "2GB",
+    "color": "Black",
+    "basePrice": 2700
+  },
+  {
+    "id": "x_1068",
+    "brand": "Xiaomi",
+    "model": "Redmi 8A Dual",
+    "storage": "3GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 2800
+  },
+  {
+    "id": "x_1069",
+    "brand": "Xiaomi",
+    "model": "Redmi 8A Dual",
+    "storage": "3GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 2990
+  },
+  {
+    "id": "x_1070",
+    "brand": "Xiaomi",
+    "model": "Redmi 8A Dual",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Black",
+    "basePrice": 2800
+  },
+  {
+    "id": "x_1071",
+    "brand": "Xiaomi",
+    "model": "Redmi 8A Dual",
+    "storage": "64GB",
+    "ram": "3GB",
+    "color": "Black",
+    "basePrice": 2990
+  },
+  {
+    "id": "x_1072",
+    "brand": "Xiaomi",
+    "model": "Redmi 9",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 3400
+  },
+  {
+    "id": "x_1073",
+    "brand": "Xiaomi",
+    "model": "Redmi 9",
+    "storage": "64GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 3120
+  },
+  {
+    "id": "x_1074",
+    "brand": "Xiaomi",
+    "model": "Redmi 9 Power",
+    "storage": "4GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 3560
+  },
+  {
+    "id": "x_1075",
+    "brand": "Xiaomi",
+    "model": "Redmi 9 Power",
+    "storage": "4GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 3750
+  },
+  {
+    "id": "x_1076",
+    "brand": "Xiaomi",
+    "model": "Redmi 9 Power",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 3750
+  },
+  {
+    "id": "x_1077",
+    "brand": "Xiaomi",
+    "model": "Redmi 9 Power",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 3560
+  },
+  {
+    "id": "x_1078",
+    "brand": "Xiaomi",
+    "model": "Redmi 9 Power",
+    "storage": "6GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 4010
+  },
+  {
+    "id": "x_1079",
+    "brand": "Xiaomi",
+    "model": "Redmi 9 Power",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 4010
+  },
+  {
+    "id": "x_1080",
+    "brand": "Xiaomi",
+    "model": "Redmi 9 Prime",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 3790
+  },
+  {
+    "id": "x_1081",
+    "brand": "Xiaomi",
+    "model": "Redmi 9 Prime",
+    "storage": "64GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 3490
+  },
+  {
+    "id": "x_1082",
+    "brand": "Xiaomi",
+    "model": "Redmi 9A",
+    "storage": "2GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 2730
+  },
+  {
+    "id": "x_1083",
+    "brand": "Xiaomi",
+    "model": "Redmi 9A",
+    "storage": "32GB",
+    "ram": "2GB",
+    "color": "Black",
+    "basePrice": 2730
+  },
+  {
+    "id": "x_1084",
+    "brand": "Xiaomi",
+    "model": "Redmi 9A",
+    "storage": "3GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 2950
+  },
+  {
+    "id": "x_1085",
+    "brand": "Xiaomi",
+    "model": "Redmi 9A",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Black",
+    "basePrice": 2950
+  },
+  {
+    "id": "x_1086",
+    "brand": "Xiaomi",
+    "model": "Redmi 9i",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 3290
+  },
+  {
+    "id": "x_1087",
+    "brand": "Xiaomi",
+    "model": "Redmi 9i",
+    "storage": "64GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 3070
+  },
+  {
+    "id": "x_1088",
+    "brand": "Xiaomi",
+    "model": "Redmi Go",
+    "storage": "16GB",
+    "ram": "2GB",
+    "color": "Black",
+    "basePrice": 1040
+  },
+  {
+    "id": "x_1089",
+    "brand": "Xiaomi",
+    "model": "Redmi Go",
+    "storage": "8GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 830
+  },
+  {
+    "id": "x_1090",
+    "brand": "Xiaomi",
+    "model": "Redmi K20",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 4960
+  },
+  {
+    "id": "x_1091",
+    "brand": "Xiaomi",
+    "model": "Redmi K20",
+    "storage": "64GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 4620
+  },
+  {
+    "id": "x_1092",
+    "brand": "Xiaomi",
+    "model": "Redmi K20 Pro",
+    "storage": "6GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5720
+  },
+  {
+    "id": "x_1093",
+    "brand": "Xiaomi",
+    "model": "Redmi K20 Pro",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 5720
+  },
+  {
+    "id": "x_1094",
+    "brand": "Xiaomi",
+    "model": "Redmi K20 Pro",
+    "storage": "8GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 6120
+  },
+  {
+    "id": "x_1095",
+    "brand": "Xiaomi",
+    "model": "Redmi K20 Pro",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 6120
+  },
+  {
+    "id": "x_1096",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 10",
+    "storage": "4GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 4160
+  },
+  {
+    "id": "x_1097",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 10",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 4160
+  },
+  {
+    "id": "x_1098",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 10",
+    "storage": "6GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 4530
+  },
+  {
+    "id": "x_1099",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 10",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 4530
+  },
+  {
+    "id": "x_1100",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 10 Pro",
+    "storage": "6GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 4540
+  },
+  {
+    "id": "x_1101",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 10 Pro",
+    "storage": "6GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5190
+  },
+  {
+    "id": "x_1102",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 10 Pro",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 5190
+  },
+  {
+    "id": "x_1103",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 10 Pro",
+    "storage": "64GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 4540
+  },
+  {
+    "id": "x_1104",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 10 Pro",
+    "storage": "8GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5690
+  },
+  {
+    "id": "x_1105",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 10 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5690
+  },
+  {
+    "id": "x_1106",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 10 Pro Max",
+    "storage": "6GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "x_1107",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 10 Pro Max",
+    "storage": "6GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5420
+  },
+  {
+    "id": "x_1108",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 10 Pro Max",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 5420
+  },
+  {
+    "id": "x_1109",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 10 Pro Max",
+    "storage": "64GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "x_1110",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 10 Pro Max",
+    "storage": "8GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5980
+  },
+  {
+    "id": "x_1111",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 10 Pro Max",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5980
+  },
+  {
+    "id": "x_1112",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 5",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Black",
+    "basePrice": 1780
+  },
+  {
+    "id": "x_1113",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 5",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 2080
+  },
+  {
+    "id": "x_1114",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 5 Pro",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 2500
+  },
+  {
+    "id": "x_1115",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 5 Pro",
+    "storage": "64GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 2650
+  },
+  {
+    "id": "x_1116",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 6 Pro",
+    "storage": "4GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 2840
+  },
+  {
+    "id": "x_1117",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 6 Pro",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 2840
+  },
+  {
+    "id": "x_1118",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 6 Pro",
+    "storage": "6GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 3070
+  },
+  {
+    "id": "x_1119",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 6 Pro",
+    "storage": "64GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 3070
+  },
+  {
+    "id": "x_1120",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 7",
+    "storage": "3GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 2470
+  },
+  {
+    "id": "x_1121",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 7",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Black",
+    "basePrice": 2470
+  },
+  {
+    "id": "x_1122",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 7",
+    "storage": "4GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 3030
+  },
+  {
+    "id": "x_1123",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 7",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 3030
+  },
+  {
+    "id": "x_1124",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 7 Pro",
+    "storage": "4GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 3760
+  },
+  {
+    "id": "x_1125",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 7 Pro",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 3760
+  },
+  {
+    "id": "x_1126",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 7 Pro",
+    "storage": "6GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 4090
+  },
+  {
+    "id": "x_1127",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 7 Pro",
+    "storage": "6GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 3820
+  },
+  {
+    "id": "x_1128",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 7 Pro",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 4090
+  },
+  {
+    "id": "x_1129",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 7 Pro",
+    "storage": "64GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 3820
+  },
+  {
+    "id": "x_1130",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 7S",
+    "storage": "3GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 3290
+  },
+  {
+    "id": "x_1131",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 7S",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Black",
+    "basePrice": 3290
+  },
+  {
+    "id": "x_1132",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 7S",
+    "storage": "4GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 3450
+  },
+  {
+    "id": "x_1133",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 7S",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 3450
+  },
+  {
+    "id": "x_1134",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 8",
+    "storage": "3GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 3560
+  },
+  {
+    "id": "x_1135",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 8",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Black",
+    "basePrice": 3560
+  },
+  {
+    "id": "x_1136",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 8",
+    "storage": "4GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 3790
+  },
+  {
+    "id": "x_1137",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 8",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 3790
+  },
+  {
+    "id": "x_1138",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 8",
+    "storage": "6GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 4050
+  },
+  {
+    "id": "x_1139",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 8",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 4050
+  },
+  {
+    "id": "x_1140",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 8 Pro",
+    "storage": "6GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 4240
+  },
+  {
+    "id": "x_1141",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 8 Pro",
+    "storage": "6GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 4510
+  },
+  {
+    "id": "x_1142",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 8 Pro",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 4510
+  },
+  {
+    "id": "x_1143",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 8 Pro",
+    "storage": "64GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 4240
+  },
+  {
+    "id": "x_1144",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 8 Pro",
+    "storage": "8GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 4750
+  },
+  {
+    "id": "x_1145",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 8 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 4750
+  },
+  {
+    "id": "x_1146",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 9",
+    "storage": "4GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 4170
+  },
+  {
+    "id": "x_1147",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 9",
+    "storage": "4GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 4390
+  },
+  {
+    "id": "x_1148",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 9",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 4390
+  },
+  {
+    "id": "x_1149",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 9",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 4170
+  },
+  {
+    "id": "x_1150",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 9",
+    "storage": "6GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 4630
+  },
+  {
+    "id": "x_1151",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 9",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 4630
+  },
+  {
+    "id": "x_1152",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 9 Pro",
+    "storage": "4GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 4360
+  },
+  {
+    "id": "x_1153",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 9 Pro",
+    "storage": "4GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 4760
+  },
+  {
+    "id": "x_1154",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 9 Pro",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 4760
+  },
+  {
+    "id": "x_1155",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 9 Pro",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 4360
+  },
+  {
+    "id": "x_1156",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 9 Pro",
+    "storage": "6GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5010
+  },
+  {
+    "id": "x_1157",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 9 Pro",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 5010
+  },
+  {
+    "id": "x_1158",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 9 Pro Max",
+    "storage": "6GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 4740
+  },
+  {
+    "id": "x_1159",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 9 Pro Max",
+    "storage": "6GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5170
+  },
+  {
+    "id": "x_1160",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 9 Pro Max",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 5170
+  },
+  {
+    "id": "x_1161",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 9 Pro Max",
+    "storage": "64GB",
+    "ram": "6GB",
+    "color": "Black",
+    "basePrice": 4740
+  },
+  {
+    "id": "x_1162",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 9 Pro Max",
+    "storage": "8GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5460
+  },
+  {
+    "id": "x_1163",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 9 Pro Max",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5460
+  },
+  {
+    "id": "x_1164",
+    "brand": "Xiaomi",
+    "model": "Redmi Y1",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Black",
+    "basePrice": 1230
+  },
+  {
+    "id": "x_1165",
+    "brand": "Xiaomi",
+    "model": "Redmi Y1",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 1380
+  },
+  {
+    "id": "x_1166",
+    "brand": "Xiaomi",
+    "model": "Redmi Y2",
+    "storage": "3GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 2120
+  },
+  {
+    "id": "x_1167",
+    "brand": "Xiaomi",
+    "model": "Redmi Y2",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Black",
+    "basePrice": 2120
+  },
+  {
+    "id": "x_1168",
+    "brand": "Xiaomi",
+    "model": "Redmi Y2",
+    "storage": "4GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 2200
+  },
+  {
+    "id": "x_1169",
+    "brand": "Xiaomi",
+    "model": "Redmi Y2",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 2200
+  },
+  {
+    "id": "x_1170",
+    "brand": "Xiaomi",
+    "model": "Redmi Y3",
+    "storage": "3GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 2350
+  },
+  {
+    "id": "x_1171",
+    "brand": "Xiaomi",
+    "model": "Redmi Y3",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Black",
+    "basePrice": 2350
+  },
+  {
+    "id": "x_1172",
+    "brand": "Xiaomi",
+    "model": "Redmi Y3",
+    "storage": "4GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 2500
+  },
+  {
+    "id": "x_1173",
+    "brand": "Xiaomi",
+    "model": "Redmi Y3",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 2500
   }
 ];
