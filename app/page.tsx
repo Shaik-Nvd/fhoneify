@@ -124,34 +124,78 @@ function SlidingBanner() {
   );
 }
 
-// 3D Floating CSS Phone Component
+// 3D Floating CSS Phone Component with Dramatic Scroll Parallax
 function FloatingPhone() {
-  const { scrollYProgress } = useScroll();
-  const phoneRotateY = useTransform(scrollYProgress, [0, 0.5], ["-15deg", "45deg"]);
-  const phoneRotateX = useTransform(scrollYProgress, [0, 0.5], ["5deg", "25deg"]);
-  const phoneScale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8]);
-  const phoneZ = useTransform(scrollYProgress, [0, 0.5], ["0px", "-100px"]);
+  const { scrollY } = useScroll();
+  
+  // Supercharged 3D transforms
+  const phoneRotateY = useTransform(scrollY, [0, 1000], ["-20deg", "60deg"]);
+  const phoneRotateX = useTransform(scrollY, [0, 1000], ["10deg", "45deg"]);
+  const phoneRotateZ = useTransform(scrollY, [0, 1000], ["-5deg", "15deg"]);
+  const phoneScale = useTransform(scrollY, [0, 1000], [1, 1.25]);
+  
+  // Deep travel into the next section
+  const phoneY = useTransform(scrollY, [0, 1000], ["0px", "600px"]);
+  const phoneZ = useTransform(scrollY, [0, 1000], ["0px", "300px"]);
+
+  // Counter-moving parallax badges
+  const badge1Y = useTransform(scrollY, [0, 1000], ["0px", "-200px"]);
+  const badge2Y = useTransform(scrollY, [0, 1000], ["0px", "-350px"]);
+  const badge3Y = useTransform(scrollY, [0, 1000], ["0px", "-150px"]);
 
   return (
-    <div className="perspective-container" style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '600px' }}>
+    <div className="perspective-container" style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '600px', position: 'relative' }}>
+      
+      {/* Floating Badge 1 */}
+      <m.div style={{ position: 'absolute', top: '15%', left: '-5%', y: badge1Y, zIndex: 20 }} className="glass-card p-3 md:p-4 rounded-xl flex items-center gap-3 shadow-2xl">
+        <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'linear-gradient(135deg, #d4af37, #b8860b)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem' }}>✨</div>
+        <div>
+          <p style={{ color: '#fff', fontWeight: 700, fontSize: '0.9rem', margin: 0 }}>Instant</p>
+          <p style={{ color: '#a0a0a0', fontSize: '0.75rem', margin: 0 }}>Valuation</p>
+        </div>
+      </m.div>
+
+      {/* Floating Badge 2 */}
+      <m.div style={{ position: 'absolute', bottom: '15%', right: '-15%', y: badge2Y, zIndex: 20 }} className="glass-card p-3 md:p-4 rounded-xl flex items-center gap-3 shadow-2xl">
+        <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'linear-gradient(135deg, #10b981, #059669)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem' }}>💸</div>
+        <div>
+          <p style={{ color: '#fff', fontWeight: 700, fontSize: '0.9rem', margin: 0 }}>Highest</p>
+          <p style={{ color: '#a0a0a0', fontSize: '0.75rem', margin: 0 }}>Market Price</p>
+        </div>
+      </m.div>
+
+      {/* Floating Badge 3 */}
+      <m.div style={{ position: 'absolute', top: '60%', left: '-20%', y: badge3Y, zIndex: -1, opacity: 0.8 }} className="glass-card p-2 md:p-3 rounded-xl flex items-center gap-2 shadow-2xl">
+        <span style={{ fontSize: '1.2rem' }}>🔒</span>
+        <span style={{ color: '#fff', fontWeight: 600, fontSize: '0.85rem' }}>Secure Wipe</span>
+      </m.div>
+
       <m.div 
         className="floating-phone"
         style={{ 
           rotateY: phoneRotateY, 
           rotateX: phoneRotateX, 
+          rotateZ: phoneRotateZ,
           scale: phoneScale,
-          z: phoneZ
+          y: phoneY,
+          z: phoneZ,
+          transformStyle: "preserve-3d",
+          position: 'relative',
+          zIndex: 10
         }}
       >
-        <div className="css-phone">
+        <div className="css-phone" style={{ boxShadow: '0 50px 100px -20px rgba(212,175,55,0.25), 0 30px 60px -30px rgba(0,0,0,0.5), inset 0 0 20px rgba(255,255,255,0.1)' }}>
           <div className="css-phone-screen">
-            <h1 className="text-gradient-animated" style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem' }}>FHONEIFY</h1>
-            <p style={{ color: '#a0a0a0', fontSize: '0.8rem', textAlign: 'center', maxWidth: '80%' }}>AI-Powered Valuation Engine</p>
-            <div style={{ marginTop: '2rem', display: 'flex', gap: '0.5rem' }}>
-              <div style={{ width: '40px', height: '40px', borderRadius: '8px', background: 'rgba(212,175,55,0.2)' }} />
-              <div style={{ width: '40px', height: '40px', borderRadius: '8px', background: 'rgba(212,175,55,0.2)' }} />
-              <div style={{ width: '40px', height: '40px', borderRadius: '8px', background: 'rgba(212,175,55,0.2)' }} />
+            <h1 className="text-gradient-animated" style={{ fontSize: '1.8rem', fontWeight: 800, marginBottom: '1rem', letterSpacing: '1px' }}>FHONEIFY</h1>
+            <p style={{ color: '#a0a0a0', fontSize: '0.85rem', textAlign: 'center', maxWidth: '85%', lineHeight: 1.4 }}>AI-Powered Valuation Engine</p>
+            <div style={{ marginTop: '3rem', display: 'flex', gap: '0.8rem' }}>
+              <m.div animate={{ y: [0, -5, 0] }} transition={{ repeat: Infinity, duration: 2, delay: 0 }} style={{ width: '45px', height: '45px', borderRadius: '12px', background: 'linear-gradient(135deg, rgba(212,175,55,0.3), rgba(212,175,55,0.1))', boxShadow: 'inset 0 0 10px rgba(212,175,55,0.2)' }} />
+              <m.div animate={{ y: [0, -5, 0] }} transition={{ repeat: Infinity, duration: 2, delay: 0.2 }} style={{ width: '45px', height: '45px', borderRadius: '12px', background: 'linear-gradient(135deg, rgba(212,175,55,0.3), rgba(212,175,55,0.1))', boxShadow: 'inset 0 0 10px rgba(212,175,55,0.2)' }} />
+              <m.div animate={{ y: [0, -5, 0] }} transition={{ repeat: Infinity, duration: 2, delay: 0.4 }} style={{ width: '45px', height: '45px', borderRadius: '12px', background: 'linear-gradient(135deg, rgba(212,175,55,0.3), rgba(212,175,55,0.1))', boxShadow: 'inset 0 0 10px rgba(212,175,55,0.2)' }} />
             </div>
+            
+            {/* Screen Glare effect */}
+            <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 50%)', pointerEvents: 'none', borderRadius: 'inherit' }} />
           </div>
         </div>
       </m.div>
@@ -264,7 +308,6 @@ export default function LandingPage() {
         position: 'relative',
         backgroundColor: '#0a0a0a',
         padding: '6rem 0 4rem',
-        overflow: 'hidden',
         minHeight: '90vh',
         display: 'flex',
         alignItems: 'center'
