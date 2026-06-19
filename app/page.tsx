@@ -124,13 +124,30 @@ function SlidingBanner() {
   );
 }
 
-// 3D Floating CSS Phone Component with Dramatic Scroll Parallax
-function FloatingPhone() {
+// 3D Floating CSS Phone Component with Dramatic Scroll Parallax & Mouse Interactivity
+function FloatingPhone({ mouseX, mouseY }: { mouseX: any, mouseY: any }) {
   const { scrollY } = useScroll();
   
-  // Supercharged 3D transforms
-  const phoneRotateY = useTransform(scrollY, [0, 1000], ["-20deg", "60deg"]);
-  const phoneRotateX = useTransform(scrollY, [0, 1000], ["10deg", "45deg"]);
+  // Combine scroll and mouse for X and Y rotations
+  // Scroll gives basic animation, mouse gives interactive tilt
+  const phoneRotateY = useTransform(
+    [scrollY, mouseX],
+    ([sy, mx]: any) => {
+      const scrollRot = Math.min(sy * 0.08, 60) - 20;
+      const mouseRot = ((mx || 0.5) - 0.5) * 40;
+      return `${scrollRot + mouseRot}deg`;
+    }
+  );
+
+  const phoneRotateX = useTransform(
+    [scrollY, mouseY],
+    ([sy, my]: any) => {
+      const scrollRot = Math.min(sy * 0.035, 35) + 10;
+      const mouseRot = ((my || 0.5) - 0.5) * -40;
+      return `${scrollRot + mouseRot}deg`;
+    }
+  );
+
   const phoneRotateZ = useTransform(scrollY, [0, 1000], ["-5deg", "15deg"]);
   const phoneScale = useTransform(scrollY, [0, 1000], [1, 1.25]);
   
@@ -143,8 +160,38 @@ function FloatingPhone() {
   const badge2Y = useTransform(scrollY, [0, 1000], ["0px", "-350px"]);
   const badge3Y = useTransform(scrollY, [0, 1000], ["0px", "-150px"]);
 
+  // Interactive sweeping glare based on mouse
+  const glareX = useTransform(mouseX, [0, 1], [0, 100]);
+  const glareY = useTransform(mouseY, [0, 1], [0, 100]);
+  const glareBackground = useTransform(
+    [glareX, glareY],
+    ([gx, gy]: any) => `radial-gradient(circle at ${gx || 50}% ${gy || 50}%, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 50%)`
+  );
+
   return (
     <div className="perspective-container" style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '600px', position: 'relative' }}>
+      
+      {/* Orbiting Glow Particles */}
+      <m.div animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 15, ease: "linear" }} style={{ position: 'absolute', width: '150%', height: '150%', zIndex: 0, pointerEvents: 'none' }}>
+        <m.div animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.8, 0.3] }} transition={{ repeat: Infinity, duration: 2 }} style={{ position: 'absolute', top: '20%', left: '20%', width: '10px', height: '10px', background: '#d4af37', borderRadius: '50%', filter: 'blur(2px)' }} />
+        <m.div animate={{ scale: [1, 1.5, 1], opacity: [0.4, 1, 0.4] }} transition={{ repeat: Infinity, duration: 3, delay: 1 }} style={{ position: 'absolute', bottom: '30%', right: '15%', width: '8px', height: '8px', background: '#8a2be2', borderRadius: '50%', filter: 'blur(2px)' }} />
+        <m.div animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.7, 0.2] }} transition={{ repeat: Infinity, duration: 2.5, delay: 0.5 }} style={{ position: 'absolute', top: '50%', left: '80%', width: '12px', height: '12px', background: '#10b981', borderRadius: '50%', filter: 'blur(3px)' }} />
+      </m.div>
+
+      {/* Rotating Conic Light Ring Casting a Halo Glow */}
+      <m.div 
+        animate={{ rotate: 360 }}
+        transition={{ repeat: Infinity, duration: 12, ease: "linear" }}
+        style={{
+           position: 'absolute',
+           width: '100%', height: '100%',
+           background: 'conic-gradient(from 0deg, transparent 0%, rgba(212,175,55,0.3) 20%, transparent 40%, transparent 50%, rgba(138,43,226,0.2) 70%, transparent 90%)',
+           filter: 'blur(40px)',
+           zIndex: 0,
+           borderRadius: '50%',
+           pointerEvents: 'none'
+        }}
+      />
       
       {/* Floating Badge 1 */}
       <m.div style={{ position: 'absolute', top: '15%', left: '-5%', y: badge1Y, zIndex: 20 }} className="glass-card p-3 md:p-4 rounded-xl flex items-center gap-3 shadow-2xl">
@@ -194,8 +241,8 @@ function FloatingPhone() {
               <m.div animate={{ y: [0, -5, 0] }} transition={{ repeat: Infinity, duration: 2, delay: 0.4 }} style={{ width: '45px', height: '45px', borderRadius: '12px', background: 'linear-gradient(135deg, rgba(212,175,55,0.3), rgba(212,175,55,0.1))', boxShadow: 'inset 0 0 10px rgba(212,175,55,0.2)' }} />
             </div>
             
-            {/* Screen Glare effect */}
-            <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 50%)', pointerEvents: 'none', borderRadius: 'inherit' }} />
+            {/* Screen Glare effect that tracks the cursor */}
+            <m.div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: glareBackground as any, pointerEvents: 'none', borderRadius: 'inherit' }} />
           </div>
         </div>
       </m.div>
@@ -369,7 +416,7 @@ export default function LandingPage() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.4 }}
             >
-              <FloatingPhone />
+              <FloatingPhone mouseX={mouseX} mouseY={mouseY} />
             </m.div>
           </div>
 
