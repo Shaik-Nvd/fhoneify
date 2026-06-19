@@ -440,8 +440,8 @@ export default function QuotePage() {
               {models.length === 0 && !loading ? (
                 <div style={{ textAlign: 'center', padding: '4rem 1rem', color: '#a0a0a0' }}>
                   <span style={{ fontSize: '3rem', display: 'block', marginBottom: '1rem' }}>🚧</span>
-                  <h3 style={{ color: '#fff', fontSize: '1.25rem', fontWeight: 500, marginBottom: '0.5rem' }}>Under Construction</h3>
-                  <p>Brand models are currently being processed. We are onboarding new mobile phones!</p>
+                  <h3 style={{ color: '#fff', fontSize: '1.25rem', fontWeight: 500, marginBottom: '0.5rem' }}>Coming Soon</h3>
+                  <p>We are coming soon! Mobile phones for this brand are under processing and uploading.</p>
                 </div>
               ) : (
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '1rem' }}>
