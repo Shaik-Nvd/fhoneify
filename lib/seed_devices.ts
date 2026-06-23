@@ -9247,5 +9247,245 @@ export const SEED_DEVICES = [
     "storage": "4 GB/64 GB",
     "color": "Midnight",
     "basePrice": 2600
+  },
+  {
+    "id": "nothing_17000",
+    "brand": "Nothing",
+    "model": "Nothing Phone 1",
+    "storage": "8 GB/128 GB",
+    "color": "White",
+    "basePrice": 12430
+  },
+  {
+    "id": "nothing_17001",
+    "brand": "Nothing",
+    "model": "Nothing Phone 1",
+    "storage": "8 GB/256 GB",
+    "color": "White",
+    "basePrice": 13030
+  },
+  {
+    "id": "nothing_17002",
+    "brand": "Nothing",
+    "model": "Nothing Phone 1",
+    "storage": "12 GB/256 GB",
+    "color": "White",
+    "basePrice": 13380
+  },
+  {
+    "id": "nothing_17003",
+    "brand": "Nothing",
+    "model": "Nothing Phone 2",
+    "storage": "8 GB/128 GB",
+    "color": "White",
+    "basePrice": 18990
+  },
+  {
+    "id": "nothing_17004",
+    "brand": "Nothing",
+    "model": "Nothing Phone 2",
+    "storage": "12 GB/256 GB",
+    "color": "White",
+    "basePrice": 19660
+  },
+  {
+    "id": "nothing_17005",
+    "brand": "Nothing",
+    "model": "Nothing Phone 2",
+    "storage": "12 GB/512 GB",
+    "color": "White",
+    "basePrice": 20160
+  },
+  {
+    "id": "nothing_17006",
+    "brand": "Nothing",
+    "model": "Nothing Phone 2a 5G",
+    "storage": "12 GB/256 GB",
+    "color": "White",
+    "basePrice": 16360
+  },
+  {
+    "id": "nothing_17007",
+    "brand": "Nothing",
+    "model": "Nothing Phone 2a 5G",
+    "storage": "8 GB/128 GB",
+    "color": "White",
+    "basePrice": 15210
+  },
+  {
+    "id": "nothing_17008",
+    "brand": "Nothing",
+    "model": "Nothing Phone 2a 5G",
+    "storage": "8 GB/256 GB",
+    "color": "White",
+    "basePrice": 15670
+  },
+  {
+    "id": "nothing_17009",
+    "brand": "Nothing",
+    "model": "CMF by Nothing Phone 1",
+    "storage": "6 GB/128 GB",
+    "color": "White",
+    "basePrice": 9890
+  },
+  {
+    "id": "nothing_17010",
+    "brand": "Nothing",
+    "model": "CMF by Nothing Phone 1",
+    "storage": "8 GB/128 GB",
+    "color": "White",
+    "basePrice": 10940
+  },
+  {
+    "id": "nothing_17011",
+    "brand": "Nothing",
+    "model": "Nothing Phone 2a Plus",
+    "storage": "12 GB/256 GB",
+    "color": "White",
+    "basePrice": 17310
+  },
+  {
+    "id": "nothing_17012",
+    "brand": "Nothing",
+    "model": "Nothing Phone 2a Plus",
+    "storage": "8 GB/256 GB",
+    "color": "White",
+    "basePrice": 16760
+  },
+  {
+    "id": "nothing_17013",
+    "brand": "Nothing",
+    "model": "Nothing Phone 3a",
+    "storage": "8 GB/128 GB",
+    "color": "White",
+    "basePrice": 18010
+  },
+  {
+    "id": "nothing_17014",
+    "brand": "Nothing",
+    "model": "Nothing Phone 3a",
+    "storage": "8 GB/256 GB",
+    "color": "White",
+    "basePrice": 19530
+  },
+  {
+    "id": "nothing_17015",
+    "brand": "Nothing",
+    "model": "Nothing Phone 3a Pro",
+    "storage": "12 GB/256 GB",
+    "color": "White",
+    "basePrice": 22500
+  },
+  {
+    "id": "nothing_17016",
+    "brand": "Nothing",
+    "model": "Nothing Phone 3a Pro",
+    "storage": "8 GB/256 GB",
+    "color": "White",
+    "basePrice": 21690
+  },
+  {
+    "id": "nothing_17017",
+    "brand": "Nothing",
+    "model": "Nothing Phone 3a Pro",
+    "storage": "8 GB/128 GB",
+    "color": "White",
+    "basePrice": 20400
+  },
+  {
+    "id": "nothing_17018",
+    "brand": "Nothing",
+    "model": "CMF by Nothing Phone 2 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "color": "White",
+    "basePrice": 12700
+  },
+  {
+    "id": "nothing_17019",
+    "brand": "Nothing",
+    "model": "CMF by Nothing Phone 2 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "color": "White",
+    "basePrice": 14100
+  },
+  {
+    "id": "nothing_17020",
+    "brand": "Nothing",
+    "model": "Nothing Phone 3",
+    "storage": "12 GB/256 GB",
+    "color": "White",
+    "basePrice": 32000
+  },
+  {
+    "id": "nothing_17021",
+    "brand": "Nothing",
+    "model": "Nothing Phone 3",
+    "storage": "16 GB/512 GB",
+    "color": "White",
+    "basePrice": 32400
+  },
+  {
+    "id": "nothing_17022",
+    "brand": "Nothing",
+    "model": "Nothing Phone 3a Lite",
+    "storage": "8 GB/128 GB",
+    "color": "White",
+    "basePrice": 14000
+  },
+  {
+    "id": "nothing_17023",
+    "brand": "Nothing",
+    "model": "Nothing Phone 3a Lite",
+    "storage": "8 GB/256 GB",
+    "color": "White",
+    "basePrice": 15000
+  },
+  {
+    "id": "nothing_17024",
+    "brand": "Nothing",
+    "model": "Nothing Phone 4a",
+    "storage": "8 GB/256 GB",
+    "color": "White",
+    "basePrice": 24300
+  },
+  {
+    "id": "nothing_17025",
+    "brand": "Nothing",
+    "model": "Nothing Phone 4a",
+    "storage": "12 GB/256 GB",
+    "color": "White",
+    "basePrice": 25600
+  },
+  {
+    "id": "nothing_17026",
+    "brand": "Nothing",
+    "model": "Nothing Phone 4a",
+    "storage": "8 GB/128 GB",
+    "color": "White",
+    "basePrice": 22500
+  },
+  {
+    "id": "nothing_17027",
+    "brand": "Nothing",
+    "model": "Nothing Phone 4a Pro",
+    "storage": "8 GB/128 GB",
+    "color": "White",
+    "basePrice": 27400
+  },
+  {
+    "id": "nothing_17028",
+    "brand": "Nothing",
+    "model": "Nothing Phone 4a Pro",
+    "storage": "12 GB/256 GB",
+    "color": "White",
+    "basePrice": 31200
+  },
+  {
+    "id": "nothing_17029",
+    "brand": "Nothing",
+    "model": "Nothing Phone 4a Pro",
+    "storage": "8 GB/256 GB",
+    "color": "White",
+    "basePrice": 29000
   }
 ];
