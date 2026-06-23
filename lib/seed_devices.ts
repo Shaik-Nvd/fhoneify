@@ -7703,5 +7703,517 @@ export const SEED_DEVICES = [
     "storage": "4 GB/128 GB",
     "color": "Midnight",
     "basePrice": 5150
+  },
+  {
+    "id": "iqoo_12000",
+    "brand": "iQOO",
+    "model": "iQOO 3",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 6320
+  },
+  {
+    "id": "iqoo_12001",
+    "brand": "iQOO",
+    "model": "iQOO 3",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6100
+  },
+  {
+    "id": "iqoo_12002",
+    "brand": "iQOO",
+    "model": "iQOO 7 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 9280
+  },
+  {
+    "id": "iqoo_12003",
+    "brand": "iQOO",
+    "model": "iQOO 7 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 9010
+  },
+  {
+    "id": "iqoo_12004",
+    "brand": "iQOO",
+    "model": "iQOO 7 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8900
+  },
+  {
+    "id": "iqoo_12005",
+    "brand": "iQOO",
+    "model": "iQOO 7 Legend 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 10910
+  },
+  {
+    "id": "iqoo_12006",
+    "brand": "iQOO",
+    "model": "iQOO 7 Legend 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 10750
+  },
+  {
+    "id": "iqoo_12007",
+    "brand": "iQOO",
+    "model": "iQOO Z3 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7080
+  },
+  {
+    "id": "iqoo_12008",
+    "brand": "iQOO",
+    "model": "iQOO Z3 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7660
+  },
+  {
+    "id": "iqoo_12009",
+    "brand": "iQOO",
+    "model": "iQOO Z3 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 7840
+  },
+  {
+    "id": "iqoo_12010",
+    "brand": "iQOO",
+    "model": "iQOO Z5 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7310
+  },
+  {
+    "id": "iqoo_12011",
+    "brand": "iQOO",
+    "model": "iQOO Z5 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 7760
+  },
+  {
+    "id": "iqoo_12012",
+    "brand": "iQOO",
+    "model": "iQOO 9 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 10720
+  },
+  {
+    "id": "iqoo_12013",
+    "brand": "iQOO",
+    "model": "iQOO 9 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 11280
+  },
+  {
+    "id": "iqoo_12014",
+    "brand": "iQOO",
+    "model": "iQOO 9 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 16210
+  },
+  {
+    "id": "iqoo_12015",
+    "brand": "iQOO",
+    "model": "iQOO 9 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 15830
+  },
+  {
+    "id": "iqoo_12016",
+    "brand": "iQOO",
+    "model": "iQOO 9 SE 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 10600
+  },
+  {
+    "id": "iqoo_12017",
+    "brand": "iQOO",
+    "model": "iQOO 9 SE 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 10870
+  },
+  {
+    "id": "iqoo_12018",
+    "brand": "iQOO",
+    "model": "iQOO Z6 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7880
+  },
+  {
+    "id": "iqoo_12019",
+    "brand": "iQOO",
+    "model": "iQOO Z6 Pro 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7540
+  },
+  {
+    "id": "iqoo_12020",
+    "brand": "iQOO",
+    "model": "iQOO Z6 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8290
+  },
+  {
+    "id": "iqoo_12021",
+    "brand": "iQOO",
+    "model": "iQOO Z6 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7720
+  },
+  {
+    "id": "iqoo_12022",
+    "brand": "iQOO",
+    "model": "iQOO Z6 5G",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7010
+  },
+  {
+    "id": "iqoo_12023",
+    "brand": "iQOO",
+    "model": "iQOO Z6 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7310
+  },
+  {
+    "id": "iqoo_12024",
+    "brand": "iQOO",
+    "model": "iQOO Z6",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5230
+  },
+  {
+    "id": "iqoo_12025",
+    "brand": "iQOO",
+    "model": "iQOO Z6",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5720
+  },
+  {
+    "id": "iqoo_12026",
+    "brand": "iQOO",
+    "model": "iQOO Z6",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6100
+  },
+  {
+    "id": "iqoo_12027",
+    "brand": "iQOO",
+    "model": "iQOO Neo 6 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 9870
+  },
+  {
+    "id": "iqoo_12028",
+    "brand": "iQOO",
+    "model": "iQOO Neo 6 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 10220
+  },
+  {
+    "id": "iqoo_12029",
+    "brand": "iQOO",
+    "model": "iQOO 9T 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 13970
+  },
+  {
+    "id": "iqoo_12030",
+    "brand": "iQOO",
+    "model": "iQOO 9T 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 15150
+  },
+  {
+    "id": "iqoo_12031",
+    "brand": "iQOO",
+    "model": "iQOO 3 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 7120
+  },
+  {
+    "id": "iqoo_12032",
+    "brand": "iQOO",
+    "model": "iQOO Z6 Lite 5G",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 5570
+  },
+  {
+    "id": "iqoo_12033",
+    "brand": "iQOO",
+    "model": "iQOO Z6 Lite 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6480
+  },
+  {
+    "id": "iqoo_12034",
+    "brand": "iQOO",
+    "model": "iQOO 11 5G",
+    "storage": "16 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 18020
+  },
+  {
+    "id": "iqoo_12035",
+    "brand": "iQOO",
+    "model": "iQOO 11 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 17650
+  },
+  {
+    "id": "iqoo_12036",
+    "brand": "iQOO",
+    "model": "iQOO Neo 7 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 11000
+  },
+  {
+    "id": "iqoo_12037",
+    "brand": "iQOO",
+    "model": "iQOO Neo 7 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 11440
+  },
+  {
+    "id": "iqoo_12038",
+    "brand": "iQOO",
+    "model": "iQOO Z7 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 9280
+  },
+  {
+    "id": "iqoo_12039",
+    "brand": "iQOO",
+    "model": "iQOO Z7 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8350
+  },
+  {
+    "id": "iqoo_12040",
+    "brand": "iQOO",
+    "model": "iQOO Z7s 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8220
+  },
+  {
+    "id": "iqoo_12041",
+    "brand": "iQOO",
+    "model": "iQOO Z7s 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7540
+  },
+  {
+    "id": "iqoo_12042",
+    "brand": "iQOO",
+    "model": "iQOO Neo 7 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 16460
+  },
+  {
+    "id": "iqoo_12043",
+    "brand": "iQOO",
+    "model": "iQOO Neo 7 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 16950
+  },
+  {
+    "id": "iqoo_12044",
+    "brand": "iQOO",
+    "model": "iQOO Z7 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 14640
+  },
+  {
+    "id": "iqoo_12045",
+    "brand": "iQOO",
+    "model": "iQOO Z7 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 12480
+  },
+  {
+    "id": "iqoo_12046",
+    "brand": "iQOO",
+    "model": "iQOO Neo 9 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 20140
+  },
+  {
+    "id": "iqoo_12047",
+    "brand": "iQOO",
+    "model": "iQOO Neo 9 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 19060
+  },
+  {
+    "id": "iqoo_12048",
+    "brand": "iQOO",
+    "model": "iQOO Neo 9 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 17050
+  },
+  {
+    "id": "iqoo_12049",
+    "brand": "iQOO",
+    "model": "iQOO Z9 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8070
+  },
+  {
+    "id": "iqoo_12050",
+    "brand": "iQOO",
+    "model": "iQOO Z9 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7570
+  },
+  {
+    "id": "iqoo_12051",
+    "brand": "iQOO",
+    "model": "iQOO Z9 Lite 5G",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7060
+  },
+  {
+    "id": "iqoo_12052",
+    "brand": "iQOO",
+    "model": "iQOO Z9 Lite 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7600
+  },
+  {
+    "id": "iqoo_12053",
+    "brand": "iQOO",
+    "model": "iQOO Z9s 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 12500
+  },
+  {
+    "id": "iqoo_12054",
+    "brand": "iQOO",
+    "model": "iQOO Z9s 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 12100
+  },
+  {
+    "id": "iqoo_12055",
+    "brand": "iQOO",
+    "model": "iQOO Z9s Pro 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 12890
+  },
+  {
+    "id": "iqoo_12056",
+    "brand": "iQOO",
+    "model": "iQOO Z9s Pro 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 13130
+  },
+  {
+    "id": "iqoo_12057",
+    "brand": "iQOO",
+    "model": "iQOO Z9s Pro 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 13920
+  },
+  {
+    "id": "iqoo_12058",
+    "brand": "iQOO",
+    "model": "iQOO Neo 10R 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 19500
+  },
+  {
+    "id": "iqoo_12059",
+    "brand": "iQOO",
+    "model": "iQOO Neo 10R 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 17000
+  },
+  {
+    "id": "iqoo_12060",
+    "brand": "iQOO",
+    "model": "iQOO Neo 10R 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 19320
+  },
+  {
+    "id": "iqoo_12061",
+    "brand": "iQOO",
+    "model": "iQOO Z10 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 16400
+  },
+  {
+    "id": "iqoo_12062",
+    "brand": "iQOO",
+    "model": "iQOO Z10 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 15900
+  },
+  {
+    "id": "iqoo_12063",
+    "brand": "iQOO",
+    "model": "iQOO Z10 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 18000
   }
 ];
