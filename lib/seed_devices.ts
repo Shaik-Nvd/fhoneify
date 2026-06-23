@@ -7533,11 +7533,739 @@ export const SEED_DEVICES = [
     "basePrice": 1000
   },
   {
-    "id": "samsung_30001",
+    "id": "samsung_31000",
     "brand": "Samsung",
-    "model": "Under Construction",
-    "storage": "Coming Soon",
-    "color": "N/A",
-    "basePrice": 1000
+    "model": "Samsung Galaxy Note 20",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 9270
+  },
+  {
+    "id": "samsung_31001",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A14 5G",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7760
+  },
+  {
+    "id": "samsung_31002",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A14 5G",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 6980
+  },
+  {
+    "id": "samsung_31003",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A14 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8290
+  },
+  {
+    "id": "samsung_31004",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A14 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8880
+  },
+  {
+    "id": "samsung_31005",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A13",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4660
+  },
+  {
+    "id": "samsung_31006",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A13",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3750
+  },
+  {
+    "id": "samsung_31007",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A13",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4170
+  },
+  {
+    "id": "samsung_31008",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A03",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2240
+  },
+  {
+    "id": "samsung_31009",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A03",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2690
+  },
+  {
+    "id": "samsung_31010",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A03 Core",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2150
+  },
+  {
+    "id": "samsung_31011",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A03s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2980
+  },
+  {
+    "id": "samsung_31012",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A03s",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2150
+  },
+  {
+    "id": "samsung_31013",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A10",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1850
+  },
+  {
+    "id": "samsung_31014",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A10s",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1920
+  },
+  {
+    "id": "samsung_31015",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A10s",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2000
+  },
+  {
+    "id": "samsung_31016",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A12",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3500
+  },
+  {
+    "id": "samsung_31017",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A12",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3980
+  },
+  {
+    "id": "samsung_31018",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A12",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3710
+  },
+  {
+    "id": "samsung_31019",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A20",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2540
+  },
+  {
+    "id": "samsung_31020",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A20s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2730
+  },
+  {
+    "id": "samsung_31021",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A20s",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2440
+  },
+  {
+    "id": "samsung_31022",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A21s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3350
+  },
+  {
+    "id": "samsung_31023",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A21s",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3750
+  },
+  {
+    "id": "samsung_31024",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A21s",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3580
+  },
+  {
+    "id": "samsung_31025",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A22",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4220
+  },
+  {
+    "id": "samsung_31026",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A22",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3850
+  },
+  {
+    "id": "samsung_31027",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A22 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6020
+  },
+  {
+    "id": "samsung_31028",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A22 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6520
+  },
+  {
+    "id": "samsung_31029",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A23",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4940
+  },
+  {
+    "id": "samsung_31030",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A23",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4520
+  },
+  {
+    "id": "samsung_31031",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A30",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2670
+  },
+  {
+    "id": "samsung_31032",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A30s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2570
+  },
+  {
+    "id": "samsung_31033",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A30s",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2730
+  },
+  {
+    "id": "samsung_31034",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A31",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3580
+  },
+  {
+    "id": "samsung_31035",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A32",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5340
+  },
+  {
+    "id": "samsung_31036",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A32",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4810
+  },
+  {
+    "id": "samsung_31037",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A5 2017",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1080
+  },
+  {
+    "id": "samsung_31038",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A50",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2930
+  },
+  {
+    "id": "samsung_31039",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A50",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3370
+  },
+  {
+    "id": "samsung_31040",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A50",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3180
+  },
+  {
+    "id": "samsung_31041",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A50s",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3000
+  },
+  {
+    "id": "samsung_31042",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A50s",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2800
+  },
+  {
+    "id": "samsung_31043",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A51",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3940
+  },
+  {
+    "id": "samsung_31044",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A51",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4140
+  },
+  {
+    "id": "samsung_31045",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A52",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5790
+  },
+  {
+    "id": "samsung_31046",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A52",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5420
+  },
+  {
+    "id": "samsung_31047",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A52s 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7620
+  },
+  {
+    "id": "samsung_31048",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A52s 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8190
+  },
+  {
+    "id": "samsung_31049",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A53 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6780
+  },
+  {
+    "id": "samsung_31050",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A53 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7190
+  },
+  {
+    "id": "samsung_31051",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A53 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 7590
+  },
+  {
+    "id": "samsung_31052",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A6",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1330
+  },
+  {
+    "id": "samsung_31053",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A6",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1460
+  },
+  {
+    "id": "samsung_31054",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A6 Plus",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1640
+  },
+  {
+    "id": "samsung_31055",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A6 Plus",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1510
+  },
+  {
+    "id": "samsung_31056",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A6 Plus",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1820
+  },
+  {
+    "id": "samsung_31057",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A7 2017",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1410
+  },
+  {
+    "id": "samsung_31058",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A7 2018",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1820
+  },
+  {
+    "id": "samsung_31059",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A7 2018",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2150
+  },
+  {
+    "id": "samsung_31060",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A7 2018",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2010
+  },
+  {
+    "id": "samsung_31061",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A70",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3700
+  },
+  {
+    "id": "samsung_31062",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A70s",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3460
+  },
+  {
+    "id": "samsung_31063",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A70s",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3690
+  },
+  {
+    "id": "samsung_31064",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A71",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4430
+  },
+  {
+    "id": "samsung_31065",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A71",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4070
+  },
+  {
+    "id": "samsung_31066",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A72",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6360
+  },
+  {
+    "id": "samsung_31067",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A72",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 6910
+  },
+  {
+    "id": "samsung_31068",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A73 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8930
+  },
+  {
+    "id": "samsung_31069",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A73 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 9660
+  },
+  {
+    "id": "samsung_31070",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A8 Plus",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2300
+  },
+  {
+    "id": "samsung_31071",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A8 Star",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1780
+  },
+  {
+    "id": "samsung_31072",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A80",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5040
+  },
+  {
+    "id": "samsung_31073",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A9 2018",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2480
+  },
+  {
+    "id": "samsung_31074",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A9 2018",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2260
+  },
+  {
+    "id": "samsung_31075",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A9 Pro",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1480
+  },
+  {
+    "id": "samsung_31076",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy C5 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2040
+  },
+  {
+    "id": "samsung_31077",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy C7 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2110
+  },
+  {
+    "id": "samsung_31078",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy C9 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2150
+  },
+  {
+    "id": "samsung_31079",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F02s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2890
+  },
+  {
+    "id": "samsung_31080",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F02s",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2740
+  },
+  {
+    "id": "samsung_31081",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F12",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3650
+  },
+  {
+    "id": "samsung_31082",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F12",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3230
+  },
+  {
+    "id": "samsung_31083",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F13",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4000
+  },
+  {
+    "id": "samsung_31084",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F13",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3750
+  },
+  {
+    "id": "samsung_31085",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F22",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3500
+  },
+  {
+    "id": "samsung_31086",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F22",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3810
+  },
+  {
+    "id": "samsung_31087",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F23 5G",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5890
+  },
+  {
+    "id": "samsung_31088",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F23 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6190
+  },
+  {
+    "id": "samsung_31089",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F41",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3220
+  },
+  {
+    "id": "samsung_31090",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F41",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3560
+  },
+  {
+    "id": "samsung_31091",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S22 Ultra 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 26600
   }
 ];
