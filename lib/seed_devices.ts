@@ -11015,5 +11015,549 @@ export const SEED_DEVICES = [
     "storage": "4 GB/64 GB",
     "color": "Midnight",
     "basePrice": 3750
+  },
+  {
+    "id": "tecno_21000",
+    "brand": "Tecno",
+    "model": "Tecno Spark 4",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1970
+  },
+  {
+    "id": "tecno_21001",
+    "brand": "Tecno",
+    "model": "Tecno Spark 4",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1790
+  },
+  {
+    "id": "tecno_21002",
+    "brand": "Tecno",
+    "model": "Tecno Camon 12 Air",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2010
+  },
+  {
+    "id": "tecno_21003",
+    "brand": "Tecno",
+    "model": "Tecno Camon 12 Air",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2140
+  },
+  {
+    "id": "tecno_21004",
+    "brand": "Tecno",
+    "model": "Tecno Camon 15 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3280
+  },
+  {
+    "id": "tecno_21005",
+    "brand": "Tecno",
+    "model": "Tecno Camon 15",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2410
+  },
+  {
+    "id": "tecno_21006",
+    "brand": "Tecno",
+    "model": "Tecno Spark 5",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1930
+  },
+  {
+    "id": "tecno_21007",
+    "brand": "Tecno",
+    "model": "Tecno Spark 6 Air",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2010
+  },
+  {
+    "id": "tecno_21008",
+    "brand": "Tecno",
+    "model": "Tecno Spark 6 Air",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1840
+  },
+  {
+    "id": "tecno_21009",
+    "brand": "Tecno",
+    "model": "Tecno Spark 6 Air",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1670
+  },
+  {
+    "id": "tecno_21010",
+    "brand": "Tecno",
+    "model": "Tecno Spark 5 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2390
+  },
+  {
+    "id": "tecno_21011",
+    "brand": "Tecno",
+    "model": "Tecno Spark Power 2",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2270
+  },
+  {
+    "id": "tecno_21012",
+    "brand": "Tecno",
+    "model": "Tecno Spark Power 2 Air",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2110
+  },
+  {
+    "id": "tecno_21013",
+    "brand": "Tecno",
+    "model": "Tecno Camon 16",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2670
+  },
+  {
+    "id": "tecno_21014",
+    "brand": "Tecno",
+    "model": "Tecno POVA",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2760
+  },
+  {
+    "id": "tecno_21015",
+    "brand": "Tecno",
+    "model": "Tecno POVA",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2630
+  },
+  {
+    "id": "tecno_21016",
+    "brand": "Tecno",
+    "model": "Tecno Camon 16 Premier",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3850
+  },
+  {
+    "id": "tecno_21017",
+    "brand": "Tecno",
+    "model": "Tecno Spark 7 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2540
+  },
+  {
+    "id": "tecno_21018",
+    "brand": "Tecno",
+    "model": "Tecno Spark 7 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2940
+  },
+  {
+    "id": "tecno_21019",
+    "brand": "Tecno",
+    "model": "Tecno Camon 17",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3360
+  },
+  {
+    "id": "tecno_21020",
+    "brand": "Tecno",
+    "model": "Tecno Camon 17 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4170
+  },
+  {
+    "id": "tecno_21021",
+    "brand": "Tecno",
+    "model": "Tecno POVA 2",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3070
+  },
+  {
+    "id": "tecno_21022",
+    "brand": "Tecno",
+    "model": "Tecno POVA 2",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2900
+  },
+  {
+    "id": "tecno_21023",
+    "brand": "Tecno",
+    "model": "Tecno Spark 8",
+    "storage": "2 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2200
+  },
+  {
+    "id": "tecno_21024",
+    "brand": "Tecno",
+    "model": "Tecno Spark 8T",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2730
+  },
+  {
+    "id": "tecno_21025",
+    "brand": "Tecno",
+    "model": "Tecno Camon 18",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3410
+  },
+  {
+    "id": "tecno_21026",
+    "brand": "Tecno",
+    "model": "Tecno Spark 8 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2900
+  },
+  {
+    "id": "tecno_21027",
+    "brand": "Tecno",
+    "model": "Tecno Spark 8C",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2820
+  },
+  {
+    "id": "tecno_21028",
+    "brand": "Tecno",
+    "model": "Tecno Pova 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4660
+  },
+  {
+    "id": "tecno_21029",
+    "brand": "Tecno",
+    "model": "Tecno Pova Neo",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2950
+  },
+  {
+    "id": "tecno_21030",
+    "brand": "Tecno",
+    "model": "Tecno Phantom X",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5230
+  },
+  {
+    "id": "tecno_21031",
+    "brand": "Tecno",
+    "model": "Tecno POVA 3",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3330
+  },
+  {
+    "id": "tecno_21032",
+    "brand": "Tecno",
+    "model": "Tecno POVA 3",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3480
+  },
+  {
+    "id": "tecno_21033",
+    "brand": "Tecno",
+    "model": "Tecno Spark 8P",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2820
+  },
+  {
+    "id": "tecno_21034",
+    "brand": "Tecno",
+    "model": "Tecno Spark 9",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2900
+  },
+  {
+    "id": "tecno_21035",
+    "brand": "Tecno",
+    "model": "Tecno Spark 9",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2640
+  },
+  {
+    "id": "tecno_21036",
+    "brand": "Tecno",
+    "model": "Tecno Camon 19",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3650
+  },
+  {
+    "id": "tecno_21037",
+    "brand": "Tecno",
+    "model": "Tecno Camon 19 Neo",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3520
+  },
+  {
+    "id": "tecno_21038",
+    "brand": "Tecno",
+    "model": "Tecno Camon 19 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8150
+  },
+  {
+    "id": "tecno_21039",
+    "brand": "Tecno",
+    "model": "Tecno Camon 19 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8580
+  },
+  {
+    "id": "tecno_21040",
+    "brand": "Tecno",
+    "model": "Tecno Camon 20",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 6850
+  },
+  {
+    "id": "tecno_21041",
+    "brand": "Tecno",
+    "model": "Tecno Camon 20 Premier 5G",
+    "storage": "16 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 9800
+  },
+  {
+    "id": "tecno_21042",
+    "brand": "Tecno",
+    "model": "Tecno Camon 20 Premier 5G",
+    "storage": "8 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 9000
+  },
+  {
+    "id": "tecno_21043",
+    "brand": "Tecno",
+    "model": "Tecno Camon 20 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8720
+  },
+  {
+    "id": "tecno_21044",
+    "brand": "Tecno",
+    "model": "Tecno Camon 20 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 9500
+  },
+  {
+    "id": "tecno_21045",
+    "brand": "Tecno",
+    "model": "Tecno Phantom V Fold 5G",
+    "storage": "12 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 20500
+  },
+  {
+    "id": "tecno_21046",
+    "brand": "Tecno",
+    "model": "Tecno Phantom V Fold 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 16660
+  },
+  {
+    "id": "tecno_21047",
+    "brand": "Tecno",
+    "model": "Tecno Phantom X2 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 12500
+  },
+  {
+    "id": "tecno_21048",
+    "brand": "Tecno",
+    "model": "Tecno Phantom X2 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 14200
+  },
+  {
+    "id": "tecno_21049",
+    "brand": "Tecno",
+    "model": "Tecno Pova 4",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3780
+  },
+  {
+    "id": "tecno_21050",
+    "brand": "Tecno",
+    "model": "Tecno Spark 10 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 7350
+  },
+  {
+    "id": "tecno_21051",
+    "brand": "Tecno",
+    "model": "Tecno Spark 10 5G",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 5680
+  },
+  {
+    "id": "tecno_21052",
+    "brand": "Tecno",
+    "model": "Tecno Spark 10 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6200
+  },
+  {
+    "id": "tecno_21053",
+    "brand": "Tecno",
+    "model": "Tecno Spark 7P",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2720
+  },
+  {
+    "id": "tecno_21054",
+    "brand": "Tecno",
+    "model": "Tecno Spark Go 2023",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3720
+  },
+  {
+    "id": "tecno_21055",
+    "brand": "Tecno",
+    "model": "Tecno Spark GO 3",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 5880
+  },
+  {
+    "id": "tecno_21056",
+    "brand": "Tecno",
+    "model": "Tecno Camon 30 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 12400
+  },
+  {
+    "id": "tecno_21057",
+    "brand": "Tecno",
+    "model": "Tecno Camon 30 Premier 5G",
+    "storage": "12 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 14500
+  },
+  {
+    "id": "tecno_21058",
+    "brand": "Tecno",
+    "model": "Tecno Pova 7 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7450
+  },
+  {
+    "id": "tecno_21059",
+    "brand": "Tecno",
+    "model": "Tecno Pova 7 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8400
+  },
+  {
+    "id": "tecno_21060",
+    "brand": "Tecno",
+    "model": "Tecno Pova 7 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 10500
+  },
+  {
+    "id": "tecno_21061",
+    "brand": "Tecno",
+    "model": "Tecno Pova 7 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 10000
+  },
+  {
+    "id": "tecno_21062",
+    "brand": "Tecno",
+    "model": "Tecno Pova Curve 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8330
+  },
+  {
+    "id": "tecno_21063",
+    "brand": "Tecno",
+    "model": "Tecno Pova Curve 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 10000
+  },
+  {
+    "id": "tecno_21064",
+    "brand": "Tecno",
+    "model": "Tecno Pova Curve 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 11000
+  },
+  {
+    "id": "tecno_21065",
+    "brand": "Tecno",
+    "model": "Tecno Spark 30C 5G",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5990
+  },
+  {
+    "id": "tecno_21066",
+    "brand": "Tecno",
+    "model": "Tecno Spark 30C 5G",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 5390
+  },
+  {
+    "id": "tecno_21067",
+    "brand": "Tecno",
+    "model": "Tecno Camon 20s Pro 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8820
   }
 ];
