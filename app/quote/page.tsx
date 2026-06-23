@@ -19,16 +19,18 @@ export interface Device {
   storage: string;
   ram?: string;
   color?: string;
+  basePrice?: number;
 }
 
 function normalizeDevice(raw: Record<string, unknown>): Device {
   return {
-    id: String(raw.id ?? ''),
-    brand: String(raw.brand ?? ''),
-    model: String(raw.model ?? ''),
-    storage: String(raw.storage ?? ''),
-    ram: raw.ram != null ? String(raw.ram) : undefined,
-    color: raw.color != null ? String(raw.color) : undefined,
+    id: String(raw.id || ''),
+    brand: String(raw.brand || ''),
+    model: String(raw.model || ''),
+    storage: String(raw.storage || ''),
+    ram: raw.ram ? String(raw.ram) : undefined,
+    color: raw.color ? String(raw.color) : undefined,
+    basePrice: typeof raw.basePrice === 'number' ? raw.basePrice : undefined,
   };
 }
 
