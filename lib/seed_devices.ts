@@ -7207,5 +7207,501 @@ export const SEED_DEVICES = [
     "storage": "12 GB/256 GB",
     "color": "Midnight",
     "basePrice": 11470
+  },
+  {
+    "id": "infinix_11000",
+    "brand": "Infinix",
+    "model": "Infinix Hot 7 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2040
+  },
+  {
+    "id": "infinix_11001",
+    "brand": "Infinix",
+    "model": "Infinix Zero 5 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2240
+  },
+  {
+    "id": "infinix_11002",
+    "brand": "Infinix",
+    "model": "Infinix Hot 8",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2380
+  },
+  {
+    "id": "infinix_11003",
+    "brand": "Infinix",
+    "model": "Infinix S5",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1990
+  },
+  {
+    "id": "infinix_11004",
+    "brand": "Infinix",
+    "model": "Infinix S5 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2560
+  },
+  {
+    "id": "infinix_11005",
+    "brand": "Infinix",
+    "model": "Infinix Hot 9 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2820
+  },
+  {
+    "id": "infinix_11006",
+    "brand": "Infinix",
+    "model": "Infinix Note 7",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2790
+  },
+  {
+    "id": "infinix_11007",
+    "brand": "Infinix",
+    "model": "Infinix Smart HD 2021",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1780
+  },
+  {
+    "id": "infinix_11008",
+    "brand": "Infinix",
+    "model": "Infinix Hot 10",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2910
+  },
+  {
+    "id": "infinix_11009",
+    "brand": "Infinix",
+    "model": "Infinix Hot 10",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3520
+  },
+  {
+    "id": "infinix_11010",
+    "brand": "Infinix",
+    "model": "Infinix Zero 8i",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3930
+  },
+  {
+    "id": "infinix_11011",
+    "brand": "Infinix",
+    "model": "Infinix Smart 5",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2130
+  },
+  {
+    "id": "infinix_11012",
+    "brand": "Infinix",
+    "model": "Infinix Hot 10 Play",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2480
+  },
+  {
+    "id": "infinix_11013",
+    "brand": "Infinix",
+    "model": "Infinix Hot 10 Play",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2910
+  },
+  {
+    "id": "infinix_11014",
+    "brand": "Infinix",
+    "model": "Infinix Hot 10s",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2970
+  },
+  {
+    "id": "infinix_11015",
+    "brand": "Infinix",
+    "model": "Infinix Hot 10s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2750
+  },
+  {
+    "id": "infinix_11016",
+    "brand": "Infinix",
+    "model": "Infinix Note 10",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3120
+  },
+  {
+    "id": "infinix_11017",
+    "brand": "Infinix",
+    "model": "Infinix Note 10",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2860
+  },
+  {
+    "id": "infinix_11018",
+    "brand": "Infinix",
+    "model": "Infinix Note 10 Pro",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 4210
+  },
+  {
+    "id": "infinix_11019",
+    "brand": "Infinix",
+    "model": "Infinix Hot 11",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2930
+  },
+  {
+    "id": "infinix_11020",
+    "brand": "Infinix",
+    "model": "Infinix Hot 11S",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3150
+  },
+  {
+    "id": "infinix_11021",
+    "brand": "Infinix",
+    "model": "Infinix Hot 11S",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3300
+  },
+  {
+    "id": "infinix_11022",
+    "brand": "Infinix",
+    "model": "Infinix Note 11s",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3190
+  },
+  {
+    "id": "infinix_11023",
+    "brand": "Infinix",
+    "model": "Infinix Note 11s",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3400
+  },
+  {
+    "id": "infinix_11024",
+    "brand": "Infinix",
+    "model": "Infinix Note 11",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3560
+  },
+  {
+    "id": "infinix_11025",
+    "brand": "Infinix",
+    "model": "Infinix Note 11",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3190
+  },
+  {
+    "id": "infinix_11026",
+    "brand": "Infinix",
+    "model": "Infinix Zero 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5420
+  },
+  {
+    "id": "infinix_11027",
+    "brand": "Infinix",
+    "model": "Infinix Smart 4 Plus",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2150
+  },
+  {
+    "id": "infinix_11028",
+    "brand": "Infinix",
+    "model": "Infinix HOT 12 Play",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3500
+  },
+  {
+    "id": "infinix_11029",
+    "brand": "Infinix",
+    "model": "Infinix Hot 9",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2600
+  },
+  {
+    "id": "infinix_11030",
+    "brand": "Infinix",
+    "model": "Infinix Note 11s Free Fire Edition",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3900
+  },
+  {
+    "id": "infinix_11031",
+    "brand": "Infinix",
+    "model": "Infinix Hot 11 2022",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2670
+  },
+  {
+    "id": "infinix_11032",
+    "brand": "Infinix",
+    "model": "Infinix Note 12 Turbo",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3790
+  },
+  {
+    "id": "infinix_11033",
+    "brand": "Infinix",
+    "model": "Infinix Note 12",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4240
+  },
+  {
+    "id": "infinix_11034",
+    "brand": "Infinix",
+    "model": "Infinix Note 12",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4050
+  },
+  {
+    "id": "infinix_11035",
+    "brand": "Infinix",
+    "model": "Infinix Note 12 Pro 4G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 4820
+  },
+  {
+    "id": "infinix_11036",
+    "brand": "Infinix",
+    "model": "Infinix Note 12 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5900
+  },
+  {
+    "id": "infinix_11037",
+    "brand": "Infinix",
+    "model": "Infinix Hot 12",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3260
+  },
+  {
+    "id": "infinix_11038",
+    "brand": "Infinix",
+    "model": "Infinix Smart 6",
+    "storage": "2 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2360
+  },
+  {
+    "id": "infinix_11039",
+    "brand": "Infinix",
+    "model": "Infinix Note 12 5G",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4200
+  },
+  {
+    "id": "infinix_11040",
+    "brand": "Infinix",
+    "model": "Infinix Smart 6 Plus",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2390
+  },
+  {
+    "id": "infinix_11041",
+    "brand": "Infinix",
+    "model": "Infinix Hot 12 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3530
+  },
+  {
+    "id": "infinix_11042",
+    "brand": "Infinix",
+    "model": "Infinix Hot 12 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3190
+  },
+  {
+    "id": "infinix_11043",
+    "brand": "Infinix",
+    "model": "Infinix Smart 6 HD",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2080
+  },
+  {
+    "id": "infinix_11044",
+    "brand": "Infinix",
+    "model": "Infinix Zero Ultra",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8540
+  },
+  {
+    "id": "infinix_11045",
+    "brand": "Infinix",
+    "model": "Infinix Zero 20",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4490
+  },
+  {
+    "id": "infinix_11046",
+    "brand": "Infinix",
+    "model": "Infinix Hot 20 5G",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4080
+  },
+  {
+    "id": "infinix_11047",
+    "brand": "Infinix",
+    "model": "Infinix Hot 20 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4380
+  },
+  {
+    "id": "infinix_11048",
+    "brand": "Infinix",
+    "model": "Infinix Hot 20 Play",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2890
+  },
+  {
+    "id": "infinix_11049",
+    "brand": "Infinix",
+    "model": "Infinix Note 12i",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2890
+  },
+  {
+    "id": "infinix_11050",
+    "brand": "Infinix",
+    "model": "Infinix Smart 7",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2080
+  },
+  {
+    "id": "infinix_11051",
+    "brand": "Infinix",
+    "model": "Infinix Smart 7",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2300
+  },
+  {
+    "id": "infinix_11052",
+    "brand": "Infinix",
+    "model": "Infinix Zero 5G 2023",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5420
+  },
+  {
+    "id": "infinix_11053",
+    "brand": "Infinix",
+    "model": "Infinix Zero 5G 2023 Turbo",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5940
+  },
+  {
+    "id": "infinix_11054",
+    "brand": "Infinix",
+    "model": "Infinix Smart 7 HD",
+    "storage": "2 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1850
+  },
+  {
+    "id": "infinix_11055",
+    "brand": "Infinix",
+    "model": "Infinix Hot 30i",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4870
+  },
+  {
+    "id": "infinix_11056",
+    "brand": "Infinix",
+    "model": "Infinix Hot 30i",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3260
+  },
+  {
+    "id": "infinix_11057",
+    "brand": "Infinix",
+    "model": "Infinix GT 10 Pro",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 9210
+  },
+  {
+    "id": "infinix_11058",
+    "brand": "Infinix",
+    "model": "Infinix Note 30 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 7700
+  },
+  {
+    "id": "infinix_11059",
+    "brand": "Infinix",
+    "model": "Infinix Note 30 5G",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6100
+  },
+  {
+    "id": "infinix_11060",
+    "brand": "Infinix",
+    "model": "Infinix Hot 30 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6190
+  },
+  {
+    "id": "infinix_11061",
+    "brand": "Infinix",
+    "model": "Infinix Hot 30 5G",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5150
   }
 ];
