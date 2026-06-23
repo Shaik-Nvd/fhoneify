@@ -8215,5 +8215,53 @@ export const SEED_DEVICES = [
     "storage": "12 GB/256 GB",
     "color": "Midnight",
     "basePrice": 18000
+  },
+  {
+    "id": "lenovo_13000",
+    "brand": "Lenovo",
+    "model": "Lenovo K9 Note",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1380
+  },
+  {
+    "id": "lenovo_13001",
+    "brand": "Lenovo",
+    "model": "Lenovo A6 Note",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1200
+  },
+  {
+    "id": "lenovo_13002",
+    "brand": "Lenovo",
+    "model": "Lenovo K10 Note",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1440
+  },
+  {
+    "id": "lenovo_13003",
+    "brand": "Lenovo",
+    "model": "Lenovo K10 Note",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 1510
+  },
+  {
+    "id": "lenovo_13004",
+    "brand": "Lenovo",
+    "model": "Lenovo K10 Plus",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1940
+  },
+  {
+    "id": "lenovo_13005",
+    "brand": "Lenovo",
+    "model": "Lenovo Z6 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5260
   }
 ];
