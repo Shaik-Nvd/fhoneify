@@ -6991,5 +6991,221 @@ export const SEED_DEVICES = [
     "storage": "8 GB/256 GB",
     "color": "Obsidian",
     "basePrice": 33200
+  },
+  {
+    "id": "honor_10000",
+    "brand": "Honor",
+    "model": "Honor 8X",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2450
+  },
+  {
+    "id": "honor_10001",
+    "brand": "Honor",
+    "model": "Honor 8X",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2150
+  },
+  {
+    "id": "honor_10002",
+    "brand": "Honor",
+    "model": "Honor 8X",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2560
+  },
+  {
+    "id": "honor_10003",
+    "brand": "Honor",
+    "model": "Honor Play",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2040
+  },
+  {
+    "id": "honor_10004",
+    "brand": "Honor",
+    "model": "Honor Play",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2110
+  },
+  {
+    "id": "honor_10005",
+    "brand": "Honor",
+    "model": "Honor 9N",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1860
+  },
+  {
+    "id": "honor_10006",
+    "brand": "Honor",
+    "model": "Honor 9N",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2010
+  },
+  {
+    "id": "honor_10007",
+    "brand": "Honor",
+    "model": "Honor 9N",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2300
+  },
+  {
+    "id": "honor_10008",
+    "brand": "Honor",
+    "model": "Honor 10",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2520
+  },
+  {
+    "id": "honor_10009",
+    "brand": "Honor",
+    "model": "Honor 7A",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1640
+  },
+  {
+    "id": "honor_10010",
+    "brand": "Honor",
+    "model": "Honor 9 Lite",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1860
+  },
+  {
+    "id": "honor_10011",
+    "brand": "Honor",
+    "model": "Honor 9 Lite",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1600
+  },
+  {
+    "id": "honor_10012",
+    "brand": "Honor",
+    "model": "Honor 7X",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1560
+  },
+  {
+    "id": "honor_10013",
+    "brand": "Honor",
+    "model": "Honor 7X",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1360
+  },
+  {
+    "id": "honor_10014",
+    "brand": "Honor",
+    "model": "Honor 8C",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1520
+  },
+  {
+    "id": "honor_10015",
+    "brand": "Honor",
+    "model": "Honor 8C",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1410
+  },
+  {
+    "id": "honor_10016",
+    "brand": "Honor",
+    "model": "Honor 20i",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2480
+  },
+  {
+    "id": "honor_10017",
+    "brand": "Honor",
+    "model": "Honor 20",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2750
+  },
+  {
+    "id": "honor_10018",
+    "brand": "Honor",
+    "model": "Honor 9x Pro",
+    "storage": "6 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 3160
+  },
+  {
+    "id": "honor_10019",
+    "brand": "Honor",
+    "model": "Honor 9A",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2080
+  },
+  {
+    "id": "honor_10020",
+    "brand": "Honor",
+    "model": "Honor 200 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 12050
+  },
+  {
+    "id": "honor_10021",
+    "brand": "Honor",
+    "model": "Honor 200 5G",
+    "storage": "12 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 14410
+  },
+  {
+    "id": "honor_10022",
+    "brand": "Honor",
+    "model": "Honor 200 Pro 5G",
+    "storage": "12 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 21020
+  },
+  {
+    "id": "honor_10023",
+    "brand": "Honor",
+    "model": "Honor 200 Lite 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8120
+  },
+  {
+    "id": "honor_10024",
+    "brand": "Honor",
+    "model": "Honor 90",
+    "storage": "12 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 12350
+  },
+  {
+    "id": "honor_10025",
+    "brand": "Honor",
+    "model": "Honor 90",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 10390
+  },
+  {
+    "id": "honor_10026",
+    "brand": "Honor",
+    "model": "Honor 90",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 11470
   }
 ];
