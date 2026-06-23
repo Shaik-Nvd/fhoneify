@@ -10,6 +10,7 @@ import { useHydratedAuth } from '@/lib/useHydratedAuth';
 import { BRAND_LOGOS, getBrandLogoStyle } from '@/lib/brands';
 import config from '@/lib/pricingConfig.json';
 import { SEED_DEVICES } from '@/lib/seed_devices';
+import cashifyPrices from '@/lib/cashify_prices.json';
 
 export interface Device {
   id: string;
@@ -234,18 +235,23 @@ export default function QuotePage() {
     if (!device) return;
 
     try {
-      setLoading(true);
-      const response = await api.post('/api/quote', { deviceId: device.id, condition: 'like_new', storage: device.storage });
-      const rawPrice = response.data?.data?.upliftedBasePrice ?? response.data?.data?.estimatedPrice ?? response.data?.data?.estimated_price;
+      // INSTANT CALCULATION INSTEAD OF API CALL TO AVOID 40S DELAY
+      const lookupKey = `${device.model}-${device.storage}`.toLowerCase().replace(/[^a-z0-9]/g, '-');
+      const baseMarketPrice = (cashifyPrices as Record<string, number>)[lookupKey] || (device as any).basePrice || 100000;
       
-      let computedBase = typeof rawPrice === 'number' ? rawPrice : Number(rawPrice);
-      
-      setBasePrice(Math.round(computedBase));
+      let upliftedBasePrice = baseMarketPrice;
+      if (baseMarketPrice <= 20000) {
+        upliftedBasePrice = baseMarketPrice * 1.08;
+      } else if (baseMarketPrice <= 50000) {
+        upliftedBasePrice = baseMarketPrice * 1.06;
+      } else {
+        upliftedBasePrice = baseMarketPrice * 1.04;
+      }
+
+      setBasePrice(Math.round(upliftedBasePrice));
       navigateToState(selectedBrand, selectedModel, s, 'storage', 2);
     } catch {
       setError('Failed to fetch quote.');
-    } finally {
-      setLoading(false);
     }
   };
 
