@@ -11559,5 +11559,613 @@ export const SEED_DEVICES = [
     "storage": "8 GB/128 GB",
     "color": "Midnight",
     "basePrice": 8820
+  },
+  {
+    "id": "vivo_22000",
+    "brand": "Vivo",
+    "model": "Vivo V9 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3120
+  },
+  {
+    "id": "vivo_22001",
+    "brand": "Vivo",
+    "model": "Vivo V9 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2970
+  },
+  {
+    "id": "vivo_22002",
+    "brand": "Vivo",
+    "model": "Vivo V11 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3600
+  },
+  {
+    "id": "vivo_22003",
+    "brand": "Vivo",
+    "model": "Vivo V11",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3110
+  },
+  {
+    "id": "vivo_22004",
+    "brand": "Vivo",
+    "model": "Vivo Y83 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2650
+  },
+  {
+    "id": "vivo_22005",
+    "brand": "Vivo",
+    "model": "Vivo NEX",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4490
+  },
+  {
+    "id": "vivo_22006",
+    "brand": "Vivo",
+    "model": "Vivo Y71i",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1340
+  },
+  {
+    "id": "vivo_22007",
+    "brand": "Vivo",
+    "model": "Vivo Y81",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1830
+  },
+  {
+    "id": "vivo_22008",
+    "brand": "Vivo",
+    "model": "Vivo Y81",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2140
+  },
+  {
+    "id": "vivo_22009",
+    "brand": "Vivo",
+    "model": "Vivo Y83",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2260
+  },
+  {
+    "id": "vivo_22010",
+    "brand": "Vivo",
+    "model": "Vivo V9 Youth",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2150
+  },
+  {
+    "id": "vivo_22011",
+    "brand": "Vivo",
+    "model": "Vivo Y71",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1720
+  },
+  {
+    "id": "vivo_22012",
+    "brand": "Vivo",
+    "model": "Vivo Y71",
+    "storage": "3 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1380
+  },
+  {
+    "id": "vivo_22013",
+    "brand": "Vivo",
+    "model": "Vivo Y71",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1490
+  },
+  {
+    "id": "vivo_22014",
+    "brand": "Vivo",
+    "model": "Vivo Y53i",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 970
+  },
+  {
+    "id": "vivo_22015",
+    "brand": "Vivo",
+    "model": "Vivo X21",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3640
+  },
+  {
+    "id": "vivo_22016",
+    "brand": "Vivo",
+    "model": "Vivo V9",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2640
+  },
+  {
+    "id": "vivo_22017",
+    "brand": "Vivo",
+    "model": "Vivo V7",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2080
+  },
+  {
+    "id": "vivo_22018",
+    "brand": "Vivo",
+    "model": "Vivo V7 Plus",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2150
+  },
+  {
+    "id": "vivo_22019",
+    "brand": "Vivo",
+    "model": "Vivo Y69",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1530
+  },
+  {
+    "id": "vivo_22020",
+    "brand": "Vivo",
+    "model": "Vivo X9",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2400
+  },
+  {
+    "id": "vivo_22021",
+    "brand": "Vivo",
+    "model": "Vivo X9",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2250
+  },
+  {
+    "id": "vivo_22022",
+    "brand": "Vivo",
+    "model": "Vivo X9s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2330
+  },
+  {
+    "id": "vivo_22023",
+    "brand": "Vivo",
+    "model": "Vivo X9s Plus",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2550
+  },
+  {
+    "id": "vivo_22024",
+    "brand": "Vivo",
+    "model": "Vivo Y55s",
+    "storage": "3 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1050
+  },
+  {
+    "id": "vivo_22025",
+    "brand": "Vivo",
+    "model": "Vivo Y66",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1490
+  },
+  {
+    "id": "vivo_22026",
+    "brand": "Vivo",
+    "model": "Vivo V5 Plus",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2170
+  },
+  {
+    "id": "vivo_22027",
+    "brand": "Vivo",
+    "model": "Vivo V5 Plus",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1930
+  },
+  {
+    "id": "vivo_22028",
+    "brand": "Vivo",
+    "model": "Vivo V5",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1480
+  },
+  {
+    "id": "vivo_22029",
+    "brand": "Vivo",
+    "model": "Vivo Y95",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2960
+  },
+  {
+    "id": "vivo_22030",
+    "brand": "Vivo",
+    "model": "Vivo Y93",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2420
+  },
+  {
+    "id": "vivo_22031",
+    "brand": "Vivo",
+    "model": "Vivo Y93",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2500
+  },
+  {
+    "id": "vivo_22032",
+    "brand": "Vivo",
+    "model": "Vivo Y81i",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1340
+  },
+  {
+    "id": "vivo_22033",
+    "brand": "Vivo",
+    "model": "Vivo Z10",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2500
+  },
+  {
+    "id": "vivo_22034",
+    "brand": "Vivo",
+    "model": "Vivo Y91",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2270
+  },
+  {
+    "id": "vivo_22035",
+    "brand": "Vivo",
+    "model": "Vivo Y91",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2050
+  },
+  {
+    "id": "vivo_22036",
+    "brand": "Vivo",
+    "model": "Vivo V15 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4570
+  },
+  {
+    "id": "vivo_22037",
+    "brand": "Vivo",
+    "model": "Vivo V15 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4800
+  },
+  {
+    "id": "vivo_22038",
+    "brand": "Vivo",
+    "model": "Vivo Y91i",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1750
+  },
+  {
+    "id": "vivo_22039",
+    "brand": "Vivo",
+    "model": "Vivo Y91i",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1900
+  },
+  {
+    "id": "vivo_22040",
+    "brand": "Vivo",
+    "model": "Vivo Y91i",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1570
+  },
+  {
+    "id": "vivo_22041",
+    "brand": "Vivo",
+    "model": "Vivo V15",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4460
+  },
+  {
+    "id": "vivo_22042",
+    "brand": "Vivo",
+    "model": "Vivo V15",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4240
+  },
+  {
+    "id": "vivo_22043",
+    "brand": "Vivo",
+    "model": "Vivo Y17",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4500
+  },
+  {
+    "id": "vivo_22044",
+    "brand": "Vivo",
+    "model": "Vivo Y15 2019",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3610
+  },
+  {
+    "id": "vivo_22045",
+    "brand": "Vivo",
+    "model": "Vivo Y12",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3480
+  },
+  {
+    "id": "vivo_22046",
+    "brand": "Vivo",
+    "model": "Vivo Y12",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3710
+  },
+  {
+    "id": "vivo_22047",
+    "brand": "Vivo",
+    "model": "Vivo Z1 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3600
+  },
+  {
+    "id": "vivo_22048",
+    "brand": "Vivo",
+    "model": "Vivo Z1 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3940
+  },
+  {
+    "id": "vivo_22049",
+    "brand": "Vivo",
+    "model": "Vivo Z1 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3390
+  },
+  {
+    "id": "vivo_22050",
+    "brand": "Vivo",
+    "model": "Vivo Z1 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3450
+  },
+  {
+    "id": "vivo_22051",
+    "brand": "Vivo",
+    "model": "Vivo S1",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4140
+  },
+  {
+    "id": "vivo_22052",
+    "brand": "Vivo",
+    "model": "Vivo S1",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4010
+  },
+  {
+    "id": "vivo_22053",
+    "brand": "Vivo",
+    "model": "Vivo S1",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4000
+  },
+  {
+    "id": "vivo_22054",
+    "brand": "Vivo",
+    "model": "Vivo Y90",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1980
+  },
+  {
+    "id": "vivo_22055",
+    "brand": "Vivo",
+    "model": "Vivo Z1x",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3750
+  },
+  {
+    "id": "vivo_22056",
+    "brand": "Vivo",
+    "model": "Vivo Z1x",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4320
+  },
+  {
+    "id": "vivo_22057",
+    "brand": "Vivo",
+    "model": "Vivo Z1x",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4090
+  },
+  {
+    "id": "vivo_22058",
+    "brand": "Vivo",
+    "model": "Vivo Z1x",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4010
+  },
+  {
+    "id": "vivo_22059",
+    "brand": "Vivo",
+    "model": "Vivo V17 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5550
+  },
+  {
+    "id": "vivo_22060",
+    "brand": "Vivo",
+    "model": "Vivo U10",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2820
+  },
+  {
+    "id": "vivo_22061",
+    "brand": "Vivo",
+    "model": "Vivo U10",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3260
+  },
+  {
+    "id": "vivo_22062",
+    "brand": "Vivo",
+    "model": "Vivo U10",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3040
+  },
+  {
+    "id": "vivo_22063",
+    "brand": "Vivo",
+    "model": "Vivo Y19",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4240
+  },
+  {
+    "id": "vivo_22064",
+    "brand": "Vivo",
+    "model": "Vivo U20",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3470
+  },
+  {
+    "id": "vivo_22065",
+    "brand": "Vivo",
+    "model": "Vivo U20",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3820
+  },
+  {
+    "id": "vivo_22066",
+    "brand": "Vivo",
+    "model": "Vivo U20",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3560
+  },
+  {
+    "id": "vivo_22067",
+    "brand": "Vivo",
+    "model": "Vivo V17",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5380
+  },
+  {
+    "id": "vivo_22068",
+    "brand": "Vivo",
+    "model": "Vivo S1 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4810
+  },
+  {
+    "id": "vivo_22069",
+    "brand": "Vivo",
+    "model": "Vivo Y11 2019",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2800
+  },
+  {
+    "id": "vivo_22070",
+    "brand": "Vivo",
+    "model": "Vivo V19",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5640
+  },
+  {
+    "id": "vivo_22071",
+    "brand": "Vivo",
+    "model": "Vivo V19",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 6070
+  },
+  {
+    "id": "vivo_22072",
+    "brand": "Vivo",
+    "model": "Vivo Y50",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5170
+  },
+  {
+    "id": "vivo_22073",
+    "brand": "Vivo",
+    "model": "Vivo Y30",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4770
+  },
+  {
+    "id": "vivo_22074",
+    "brand": "Vivo",
+    "model": "Vivo Y30",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4620
+  },
+  {
+    "id": "vivo_22075",
+    "brand": "Vivo",
+    "model": "Vivo V50e",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 19040
   }
 ];
