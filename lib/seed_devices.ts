@@ -6791,5 +6791,205 @@ export const SEED_DEVICES = [
     "storage": "8 GB/128 GB",
     "color": "Midnight",
     "basePrice": 7330
+  },
+  {
+    "id": "google_9000",
+    "brand": "Google",
+    "model": "Google Pixel 4A",
+    "storage": "6 GB/128 GB",
+    "color": "Obsidian",
+    "basePrice": 4390
+  },
+  {
+    "id": "google_9001",
+    "brand": "Google",
+    "model": "Google Pixel 6a",
+    "storage": "6 GB/128 GB",
+    "color": "Obsidian",
+    "basePrice": 10080
+  },
+  {
+    "id": "google_9002",
+    "brand": "Google",
+    "model": "Google Pixel 7",
+    "storage": "8 GB/256 GB",
+    "color": "Obsidian",
+    "basePrice": 14160
+  },
+  {
+    "id": "google_9003",
+    "brand": "Google",
+    "model": "Google Pixel 7",
+    "storage": "8 GB/128 GB",
+    "color": "Obsidian",
+    "basePrice": 14240
+  },
+  {
+    "id": "google_9004",
+    "brand": "Google",
+    "model": "Google Pixel 7 Pro",
+    "storage": "12 GB/128 GB",
+    "color": "Obsidian",
+    "basePrice": 18470
+  },
+  {
+    "id": "google_9005",
+    "brand": "Google",
+    "model": "Google Pixel 7 Pro",
+    "storage": "12 GB/256 GB",
+    "color": "Obsidian",
+    "basePrice": 19040
+  },
+  {
+    "id": "google_9006",
+    "brand": "Google",
+    "model": "Google Pixel 7a",
+    "storage": "8 GB/128 GB",
+    "color": "Obsidian",
+    "basePrice": 17120
+  },
+  {
+    "id": "google_9007",
+    "brand": "Google",
+    "model": "Google Pixel 8",
+    "storage": "8 GB/256 GB",
+    "color": "Obsidian",
+    "basePrice": 24800
+  },
+  {
+    "id": "google_9008",
+    "brand": "Google",
+    "model": "Google Pixel 8",
+    "storage": "8 GB/128 GB",
+    "color": "Obsidian",
+    "basePrice": 24390
+  },
+  {
+    "id": "google_9009",
+    "brand": "Google",
+    "model": "Google Pixel 8 Pro",
+    "storage": "12 GB/256 GB",
+    "color": "Obsidian",
+    "basePrice": 33220
+  },
+  {
+    "id": "google_9010",
+    "brand": "Google",
+    "model": "Google Pixel 8 Pro",
+    "storage": "12 GB/128 GB",
+    "color": "Obsidian",
+    "basePrice": 31490
+  },
+  {
+    "id": "google_9011",
+    "brand": "Google",
+    "model": "Google Pixel 8 Pro",
+    "storage": "12 GB/512 GB",
+    "color": "Obsidian",
+    "basePrice": 33790
+  },
+  {
+    "id": "google_9012",
+    "brand": "Google",
+    "model": "Google Pixel 8a",
+    "storage": "8 GB/256 GB",
+    "color": "Obsidian",
+    "basePrice": 23370
+  },
+  {
+    "id": "google_9013",
+    "brand": "Google",
+    "model": "Google Pixel 8a",
+    "storage": "8 GB/128 GB",
+    "color": "Obsidian",
+    "basePrice": 23080
+  },
+  {
+    "id": "google_9014",
+    "brand": "Google",
+    "model": "Google Pixel 9",
+    "storage": "12 GB/256 GB",
+    "color": "Obsidian",
+    "basePrice": 37630
+  },
+  {
+    "id": "google_9015",
+    "brand": "Google",
+    "model": "Google Pixel 9 Pro XL",
+    "storage": "16 GB/512 GB",
+    "color": "Obsidian",
+    "basePrice": 57120
+  },
+  {
+    "id": "google_9016",
+    "brand": "Google",
+    "model": "Google Pixel 9 Pro XL",
+    "storage": "16 GB/256 GB",
+    "color": "Obsidian",
+    "basePrice": 54620
+  },
+  {
+    "id": "google_9017",
+    "brand": "Google",
+    "model": "Google Pixel 9 Pro Fold",
+    "storage": "16 GB/256 GB",
+    "color": "Obsidian",
+    "basePrice": 69510
+  },
+  {
+    "id": "google_9018",
+    "brand": "Google",
+    "model": "Google Pixel 9 Pro",
+    "storage": "16 GB/256 GB",
+    "color": "Obsidian",
+    "basePrice": 50110
+  },
+  {
+    "id": "google_9019",
+    "brand": "Google",
+    "model": "Google Pixel 9a",
+    "storage": "8 GB/256 GB",
+    "color": "Obsidian",
+    "basePrice": 27700
+  },
+  {
+    "id": "google_9020",
+    "brand": "Google",
+    "model": "Google Pixel 10",
+    "storage": "12 GB/256 GB",
+    "color": "Obsidian",
+    "basePrice": 45500
+  },
+  {
+    "id": "google_9021",
+    "brand": "Google",
+    "model": "Google Pixel 10 Pro",
+    "storage": "16 GB/256 GB",
+    "color": "Obsidian",
+    "basePrice": 64900
+  },
+  {
+    "id": "google_9022",
+    "brand": "Google",
+    "model": "Google Pixel 10 Pro XL",
+    "storage": "16 GB/256 GB",
+    "color": "Obsidian",
+    "basePrice": 73000
+  },
+  {
+    "id": "google_9023",
+    "brand": "Google",
+    "model": "Google Pixel 10 Pro Fold",
+    "storage": "16 GB/256 GB",
+    "color": "Obsidian",
+    "basePrice": 98000
+  },
+  {
+    "id": "google_9024",
+    "brand": "Google",
+    "model": "Google Pixel 10a",
+    "storage": "8 GB/256 GB",
+    "color": "Obsidian",
+    "basePrice": 33200
   }
 ];
