@@ -8263,5 +8263,37 @@ export const SEED_DEVICES = [
     "storage": "8 GB/128 GB",
     "color": "Midnight",
     "basePrice": 5260
+  },
+  {
+    "id": "lg_14000",
+    "brand": "LG",
+    "model": "LG W10",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2190
+  },
+  {
+    "id": "lg_14001",
+    "brand": "LG",
+    "model": "LG G8s ThinQ",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4370
+  },
+  {
+    "id": "lg_14002",
+    "brand": "LG",
+    "model": "LG G8X ThinQ",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4540
+  },
+  {
+    "id": "lg_14003",
+    "brand": "LG",
+    "model": "LG Q60",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2710
   }
 ];
