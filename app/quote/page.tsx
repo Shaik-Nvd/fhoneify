@@ -9,6 +9,7 @@ import { useHydratedAuth } from '@/lib/useHydratedAuth';
 
 import { BRAND_LOGOS, getBrandLogoStyle } from '@/lib/brands';
 import config from '@/lib/pricingConfig.json';
+import { SEED_DEVICES } from '@/lib/seed_devices';
 
 export interface Device {
   id: string;
@@ -50,8 +51,14 @@ export default function QuotePage() {
   const { setAuth } = useAuthStore();
   const { isAuthenticated } = useHydratedAuth();
   const [allDevices, setAllDevices] = useState<Device[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  // Initialize data on mount to avoid hydration mismatch if needed, 
+  // or just set it statically. Since SEED_DEVICES is a constant:
+  useEffect(() => {
+    setAllDevices(extractDevices(SEED_DEVICES));
+  }, []);
   
   const [selectedBrand, setSelectedBrand] = useState('');
   const [selectedModel, setSelectedModel] = useState('');
@@ -148,51 +155,7 @@ export default function QuotePage() {
   const [isAuthLoading, setIsAuthLoading] = useState(false);
   const [authError, setAuthError] = useState<string | null>(null);
 
-  useEffect(() => {
-    async function fetchDevices() {
-      try {
-        const cached = localStorage.getItem('fhoneify-devices-cache-v2');
-        const cacheTime = localStorage.getItem('fhoneify-devices-time-v2');
-        const now = Date.now();
-        
-        let hasValidCache = false;
-        if (cached && cacheTime && now - parseInt(cacheTime) < 1000 * 60 * 60 * 24) {
-          // Use cache immediately
-          setAllDevices(extractDevices(JSON.parse(cached)));
-          setLoading(false);
-          hasValidCache = true;
-        } else {
-          setLoading(true);
-        }
-        
-        setError(null);
-        
-        // Fetch fresh data
-        const refreshData = async () => {
-          const response = await api.get('/api/quote/devices');
-          setAllDevices(extractDevices(response.data));
-          try {
-            localStorage.setItem('fhoneify-devices-cache-v2', JSON.stringify(response.data));
-            localStorage.setItem('fhoneify-devices-time-v2', Date.now().toString());
-          } catch (e) {
-            // Ignore quota errors
-          }
-        };
-
-        if (!hasValidCache) {
-          await refreshData();
-          setLoading(false);
-        } else {
-          // Refresh silently in background
-          refreshData().catch(() => {});
-        }
-      } catch {
-        setError('Failed to load devices.');
-        setLoading(false);
-      }
-    }
-    fetchDevices();
-  }, []);
+  // Device fetch removed because it's now loaded statically and instantly from SEED_DEVICES
 
   const brands = useMemo(() => {
     const extracted = [...new Set(allDevices.map((d) => d.brand).filter(Boolean))];
