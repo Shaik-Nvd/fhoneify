@@ -701,8 +701,8 @@ export default function QuotePage() {
         <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-[1000] backdrop-blur-sm p-4">
           <div className="bg-white text-black rounded-xl w-full max-w-4xl flex flex-col md:flex-row overflow-hidden shadow-2xl max-h-[90vh] overflow-y-auto">
             
-            <div className="flex-1 bg-[#4CD964] p-8 md:p-12 flex flex-col justify-center items-center text-white text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Login/Signup</h2>
+            <div className="flex-1 bg-[#d4af37] p-8 md:p-12 flex flex-col justify-center items-center text-[#000] text-center">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#000]">Login/Signup</h2>
               <span className="text-6xl md:text-8xl">🔐</span>
               <p className="mt-6 font-medium text-lg md:text-xl">Unlock the best price for your device instantly.</p>
             </div>
@@ -719,7 +719,7 @@ export default function QuotePage() {
                 <button onClick={() => { navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 6); setShowOtpInput(false); }} style={{ background: 'none', border: 'none', fontSize: '2rem', cursor: 'pointer', paddingLeft: '1rem', color: '#999', lineHeight: 1 }}>×</button>
               </div>
 
-              <div style={{ backgroundColor: '#e8f5e9', color: '#4CD964', padding: '1rem', borderRadius: '8px', textAlign: 'center', fontWeight: 600, marginBottom: '2.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', border: '1px solid #c8e6c9' }}>
+              <div style={{ backgroundColor: 'rgba(212, 175, 55, 0.1)', color: '#d4af37', padding: '1rem', borderRadius: '8px', textAlign: 'center', fontWeight: 600, marginBottom: '2.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', border: '1px solid rgba(212, 175, 55, 0.3)' }}>
                 <span style={{ fontSize: '1.2rem' }}>🔒</span> Login to unlock the best price
               </div>
 
@@ -753,11 +753,11 @@ export default function QuotePage() {
                 )}
 
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '2rem' }}>
-                  <input type="checkbox" required id="terms" style={{ width: '16px', height: '16px' }} />
-                  <label htmlFor="terms" style={{ fontSize: '0.85rem', color: '#666' }}>I agree to the <a href="#" style={{ color: '#4CD964', textDecoration: 'none' }}>Terms and Conditions</a> & <a href="#" style={{ color: '#4CD964', textDecoration: 'none' }}>Privacy Policy</a></label>
+                  <input type="checkbox" required id="terms" style={{ width: '16px', height: '16px', accentColor: '#d4af37' }} />
+                  <label htmlFor="terms" style={{ fontSize: '0.85rem', color: '#666' }}>I agree to the <a href="#" style={{ color: '#d4af37', textDecoration: 'none' }}>Terms and Conditions</a> & <a href="#" style={{ color: '#d4af37', textDecoration: 'none' }}>Privacy Policy</a></label>
                 </div>
 
-                <button type="submit" disabled={isAuthLoading} style={{ width: '100%', padding: '16px', backgroundColor: userPhone.length >= 10 ? '#4CD964' : '#e0e0e0', color: userPhone.length >= 10 ? '#fff' : '#999', border: 'none', borderRadius: '8px', fontWeight: 700, fontSize: '1.1rem', cursor: userPhone.length >= 10 ? 'pointer' : 'not-allowed', transition: 'all 200ms', opacity: isAuthLoading ? 0.6 : 1 }}>
+                <button type="submit" disabled={isAuthLoading} style={{ width: '100%', padding: '16px', backgroundColor: userPhone.length >= 10 ? '#d4af37' : '#e0e0e0', color: userPhone.length >= 10 ? '#000' : '#999', border: 'none', borderRadius: '8px', fontWeight: 700, fontSize: '1.1rem', cursor: userPhone.length >= 10 ? 'pointer' : 'not-allowed', transition: 'all 200ms', opacity: isAuthLoading ? 0.6 : 1 }}>
                   {isAuthLoading ? 'PROCESSING...' : (showOtpInput ? 'VERIFY & SEE PRICE' : 'GET EXACT PRICE')}
                 </button>
               </form>
