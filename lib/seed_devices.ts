@@ -10135,5 +10135,885 @@ export const SEED_DEVICES = [
     "storage": "8 GB/128 GB",
     "color": "Midnight",
     "basePrice": 8990
+  },
+  {
+    "id": "realme_20000",
+    "brand": "Realme",
+    "model": "Realme 2 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2700
+  },
+  {
+    "id": "realme_20001",
+    "brand": "Realme",
+    "model": "Realme 2 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2470
+  },
+  {
+    "id": "realme_20002",
+    "brand": "Realme",
+    "model": "Realme 2 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2940
+  },
+  {
+    "id": "realme_20003",
+    "brand": "Realme",
+    "model": "Realme C1 2019",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2010
+  },
+  {
+    "id": "realme_20004",
+    "brand": "Realme",
+    "model": "Realme C1 2019",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1820
+  },
+  {
+    "id": "realme_20005",
+    "brand": "Realme",
+    "model": "Realme C1",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1740
+  },
+  {
+    "id": "realme_20006",
+    "brand": "Realme",
+    "model": "Realme 2",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2080
+  },
+  {
+    "id": "realme_20007",
+    "brand": "Realme",
+    "model": "Realme 2",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2670
+  },
+  {
+    "id": "realme_20008",
+    "brand": "Realme",
+    "model": "Realme 1",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2960
+  },
+  {
+    "id": "realme_20009",
+    "brand": "Realme",
+    "model": "Realme 1",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2010
+  },
+  {
+    "id": "realme_20010",
+    "brand": "Realme",
+    "model": "Realme 1",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2240
+  },
+  {
+    "id": "realme_20011",
+    "brand": "Realme",
+    "model": "Realme U1",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2630
+  },
+  {
+    "id": "realme_20012",
+    "brand": "Realme",
+    "model": "Realme U1",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2360
+  },
+  {
+    "id": "realme_20013",
+    "brand": "Realme",
+    "model": "Realme U1",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2240
+  },
+  {
+    "id": "realme_20014",
+    "brand": "Realme",
+    "model": "Realme 3",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2320
+  },
+  {
+    "id": "realme_20015",
+    "brand": "Realme",
+    "model": "Realme 3",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2860
+  },
+  {
+    "id": "realme_20016",
+    "brand": "Realme",
+    "model": "Realme 3",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2630
+  },
+  {
+    "id": "realme_20017",
+    "brand": "Realme",
+    "model": "Realme 3 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3290
+  },
+  {
+    "id": "realme_20018",
+    "brand": "Realme",
+    "model": "Realme 3 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3820
+  },
+  {
+    "id": "realme_20019",
+    "brand": "Realme",
+    "model": "Realme 3 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3480
+  },
+  {
+    "id": "realme_20020",
+    "brand": "Realme",
+    "model": "Realme C2",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2200
+  },
+  {
+    "id": "realme_20021",
+    "brand": "Realme",
+    "model": "Realme C2",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2310
+  },
+  {
+    "id": "realme_20022",
+    "brand": "Realme",
+    "model": "Realme C2",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 2010
+  },
+  {
+    "id": "realme_20023",
+    "brand": "Realme",
+    "model": "Realme X",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5130
+  },
+  {
+    "id": "realme_20024",
+    "brand": "Realme",
+    "model": "Realme X",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4710
+  },
+  {
+    "id": "realme_20025",
+    "brand": "Realme",
+    "model": "Realme 3i",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2360
+  },
+  {
+    "id": "realme_20026",
+    "brand": "Realme",
+    "model": "Realme 3i",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2780
+  },
+  {
+    "id": "realme_20027",
+    "brand": "Realme",
+    "model": "Realme 5",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2800
+  },
+  {
+    "id": "realme_20028",
+    "brand": "Realme",
+    "model": "Realme 5",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3180
+  },
+  {
+    "id": "realme_20029",
+    "brand": "Realme",
+    "model": "Realme 5",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3510
+  },
+  {
+    "id": "realme_20030",
+    "brand": "Realme",
+    "model": "Realme 5 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4060
+  },
+  {
+    "id": "realme_20031",
+    "brand": "Realme",
+    "model": "Realme 5 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3820
+  },
+  {
+    "id": "realme_20032",
+    "brand": "Realme",
+    "model": "Realme 5 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3660
+  },
+  {
+    "id": "realme_20033",
+    "brand": "Realme",
+    "model": "Realme XT",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4580
+  },
+  {
+    "id": "realme_20034",
+    "brand": "Realme",
+    "model": "Realme XT",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4960
+  },
+  {
+    "id": "realme_20035",
+    "brand": "Realme",
+    "model": "Realme XT",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4290
+  },
+  {
+    "id": "realme_20036",
+    "brand": "Realme",
+    "model": "Realme 5s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3130
+  },
+  {
+    "id": "realme_20037",
+    "brand": "Realme",
+    "model": "Realme 5s",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3520
+  },
+  {
+    "id": "realme_20038",
+    "brand": "Realme",
+    "model": "Realme X2 Pro",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5480
+  },
+  {
+    "id": "realme_20039",
+    "brand": "Realme",
+    "model": "Realme X2 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5170
+  },
+  {
+    "id": "realme_20040",
+    "brand": "Realme",
+    "model": "Realme X2 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4750
+  },
+  {
+    "id": "realme_20041",
+    "brand": "Realme",
+    "model": "Realme X2",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5260
+  },
+  {
+    "id": "realme_20042",
+    "brand": "Realme",
+    "model": "Realme X2",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5020
+  },
+  {
+    "id": "realme_20043",
+    "brand": "Realme",
+    "model": "Realme X2",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4600
+  },
+  {
+    "id": "realme_20044",
+    "brand": "Realme",
+    "model": "Realme X2",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4140
+  },
+  {
+    "id": "realme_20045",
+    "brand": "Realme",
+    "model": "Realme 5i",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3780
+  },
+  {
+    "id": "realme_20046",
+    "brand": "Realme",
+    "model": "Realme 5i",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4010
+  },
+  {
+    "id": "realme_20047",
+    "brand": "Realme",
+    "model": "Realme C3",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3140
+  },
+  {
+    "id": "realme_20048",
+    "brand": "Realme",
+    "model": "Realme C3",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3450
+  },
+  {
+    "id": "realme_20049",
+    "brand": "Realme",
+    "model": "Realme X50 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6640
+  },
+  {
+    "id": "realme_20050",
+    "brand": "Realme",
+    "model": "Realme X50 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6880
+  },
+  {
+    "id": "realme_20051",
+    "brand": "Realme",
+    "model": "Realme X50 Pro",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 7410
+  },
+  {
+    "id": "realme_20052",
+    "brand": "Realme",
+    "model": "Realme 6",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5020
+  },
+  {
+    "id": "realme_20053",
+    "brand": "Realme",
+    "model": "Realme 6",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4630
+  },
+  {
+    "id": "realme_20054",
+    "brand": "Realme",
+    "model": "Realme 6",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4190
+  },
+  {
+    "id": "realme_20055",
+    "brand": "Realme",
+    "model": "Realme 6",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4850
+  },
+  {
+    "id": "realme_20056",
+    "brand": "Realme",
+    "model": "Realme 6 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4950
+  },
+  {
+    "id": "realme_20057",
+    "brand": "Realme",
+    "model": "Realme 6 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5130
+  },
+  {
+    "id": "realme_20058",
+    "brand": "Realme",
+    "model": "Realme 6 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4520
+  },
+  {
+    "id": "realme_20059",
+    "brand": "Realme",
+    "model": "Realme Narzo 10",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3850
+  },
+  {
+    "id": "realme_20060",
+    "brand": "Realme",
+    "model": "Realme Narzo 10A",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3240
+  },
+  {
+    "id": "realme_20061",
+    "brand": "Realme",
+    "model": "Realme Narzo 10A",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3510
+  },
+  {
+    "id": "realme_20062",
+    "brand": "Realme",
+    "model": "Realme X3",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5410
+  },
+  {
+    "id": "realme_20063",
+    "brand": "Realme",
+    "model": "Realme X3",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5830
+  },
+  {
+    "id": "realme_20064",
+    "brand": "Realme",
+    "model": "Realme X3 SuperZoom",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5760
+  },
+  {
+    "id": "realme_20065",
+    "brand": "Realme",
+    "model": "Realme X3 SuperZoom",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5260
+  },
+  {
+    "id": "realme_20066",
+    "brand": "Realme",
+    "model": "Realme X3 SuperZoom",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5990
+  },
+  {
+    "id": "realme_20067",
+    "brand": "Realme",
+    "model": "Realme C11",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2770
+  },
+  {
+    "id": "realme_20068",
+    "brand": "Realme",
+    "model": "Realme C12",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3150
+  },
+  {
+    "id": "realme_20069",
+    "brand": "Realme",
+    "model": "Realme C12",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3590
+  },
+  {
+    "id": "realme_20070",
+    "brand": "Realme",
+    "model": "Realme 6i",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4010
+  },
+  {
+    "id": "realme_20071",
+    "brand": "Realme",
+    "model": "Realme 6i",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4480
+  },
+  {
+    "id": "realme_20072",
+    "brand": "Realme",
+    "model": "Realme 7 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5680
+  },
+  {
+    "id": "realme_20073",
+    "brand": "Realme",
+    "model": "Realme 7 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5380
+  },
+  {
+    "id": "realme_20074",
+    "brand": "Realme",
+    "model": "Realme C15",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3480
+  },
+  {
+    "id": "realme_20075",
+    "brand": "Realme",
+    "model": "Realme C15",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3130
+  },
+  {
+    "id": "realme_20076",
+    "brand": "Realme",
+    "model": "Realme C15",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3790
+  },
+  {
+    "id": "realme_20077",
+    "brand": "Realme",
+    "model": "Realme 7",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5230
+  },
+  {
+    "id": "realme_20078",
+    "brand": "Realme",
+    "model": "Realme 7",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4580
+  },
+  {
+    "id": "realme_20079",
+    "brand": "Realme",
+    "model": "Realme Narzo 20 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4670
+  },
+  {
+    "id": "realme_20080",
+    "brand": "Realme",
+    "model": "Realme Narzo 20 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4200
+  },
+  {
+    "id": "realme_20081",
+    "brand": "Realme",
+    "model": "Realme Narzo 20",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4090
+  },
+  {
+    "id": "realme_20082",
+    "brand": "Realme",
+    "model": "Realme Narzo 20",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4390
+  },
+  {
+    "id": "realme_20083",
+    "brand": "Realme",
+    "model": "Realme Narzo 20A",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3750
+  },
+  {
+    "id": "realme_20084",
+    "brand": "Realme",
+    "model": "Realme Narzo 20A",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3320
+  },
+  {
+    "id": "realme_20085",
+    "brand": "Realme",
+    "model": "Realme 7i",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3820
+  },
+  {
+    "id": "realme_20086",
+    "brand": "Realme",
+    "model": "Realme 7i",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4450
+  },
+  {
+    "id": "realme_20087",
+    "brand": "Realme",
+    "model": "Realme C15 Qualcomm Edition",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3130
+  },
+  {
+    "id": "realme_20088",
+    "brand": "Realme",
+    "model": "Realme C15 Qualcomm Edition",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3400
+  },
+  {
+    "id": "realme_20089",
+    "brand": "Realme",
+    "model": "Realme X7",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7420
+  },
+  {
+    "id": "realme_20090",
+    "brand": "Realme",
+    "model": "Realme X7",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7120
+  },
+  {
+    "id": "realme_20091",
+    "brand": "Realme",
+    "model": "Realme X7 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7690
+  },
+  {
+    "id": "realme_20092",
+    "brand": "Realme",
+    "model": "Realme Narzo 30A",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3480
+  },
+  {
+    "id": "realme_20093",
+    "brand": "Realme",
+    "model": "Realme Narzo 30A",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3940
+  },
+  {
+    "id": "realme_20094",
+    "brand": "Realme",
+    "model": "Realme Narzo 30 Pro 5G",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 6550
+  },
+  {
+    "id": "realme_20095",
+    "brand": "Realme",
+    "model": "Realme Narzo 30 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6910
+  },
+  {
+    "id": "realme_20096",
+    "brand": "Realme",
+    "model": "Realme 8",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5380
+  },
+  {
+    "id": "realme_20097",
+    "brand": "Realme",
+    "model": "Realme 8",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5800
+  },
+  {
+    "id": "realme_20098",
+    "brand": "Realme",
+    "model": "Realme 8",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5140
+  },
+  {
+    "id": "realme_20099",
+    "brand": "Realme",
+    "model": "Realme 8 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6290
+  },
+  {
+    "id": "realme_20100",
+    "brand": "Realme",
+    "model": "Realme 8 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5900
+  },
+  {
+    "id": "realme_20101",
+    "brand": "Realme",
+    "model": "Realme C21",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3200
+  },
+  {
+    "id": "realme_20102",
+    "brand": "Realme",
+    "model": "Realme C21",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3400
+  },
+  {
+    "id": "realme_20103",
+    "brand": "Realme",
+    "model": "Realme C20",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2630
+  },
+  {
+    "id": "realme_20104",
+    "brand": "Realme",
+    "model": "Realme C25",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3670
+  },
+  {
+    "id": "realme_20105",
+    "brand": "Realme",
+    "model": "Realme C25",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3400
+  },
+  {
+    "id": "realme_20106",
+    "brand": "Realme",
+    "model": "Realme X7 Max 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8670
+  },
+  {
+    "id": "realme_20107",
+    "brand": "Realme",
+    "model": "Realme X7 Max 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8140
+  },
+  {
+    "id": "realme_20108",
+    "brand": "Realme",
+    "model": "Realme C25s",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4060
+  },
+  {
+    "id": "realme_20109",
+    "brand": "Realme",
+    "model": "Realme C25s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3750
   }
 ];
