@@ -239,7 +239,7 @@ export default function QuotePage() {
     try {
       // INSTANT CALCULATION INSTEAD OF API CALL TO AVOID 40S DELAY
       const lookupKey = `${device.model}-${device.storage}`.toLowerCase().replace(/[^a-z0-9]/g, '-');
-      const baseMarketPrice = (cashifyPrices as Record<string, number>)[lookupKey] || (device as any).basePrice || 100000;
+      const baseMarketPrice = (cashifyPrices as Record<string, number>)[lookupKey] || (device as any).basePrice || 1000;
       
       let upliftedBasePrice = baseMarketPrice;
       if (baseMarketPrice <= 20000) {

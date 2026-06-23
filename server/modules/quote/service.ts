@@ -38,7 +38,7 @@ export function generateQuote(deviceId: string, condition: string, aiPriceAdjust
   const lookupKey = `${device.model}-${device.storage}`.toLowerCase().replace(/[^a-z0-9]/g, '-');
   
   // 1. Get Base Market Price
-  let baseMarketPrice = cashifyPrices[lookupKey] || device.basePrice || 100000;
+  let baseMarketPrice = cashifyPrices[lookupKey] || device.basePrice || 1000;
 
   // 2. Apply Competitive Uplift (Fhoneify beats Cashify)
   let upliftedBasePrice = baseMarketPrice;
