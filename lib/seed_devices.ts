@@ -5911,5 +5911,837 @@ export const SEED_DEVICES = [
     "ram": "4GB",
     "color": "Black",
     "basePrice": 2500
+  },
+  {
+    "id": "oneplus_7000",
+    "brand": "OnePlus",
+    "model": "OnePlus 9 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 13360
+  },
+  {
+    "id": "oneplus_7001",
+    "brand": "OnePlus",
+    "model": "OnePlus 9 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 12150
+  },
+  {
+    "id": "oneplus_7002",
+    "brand": "OnePlus",
+    "model": "OnePlus 6T",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5050
+  },
+  {
+    "id": "oneplus_7003",
+    "brand": "OnePlus",
+    "model": "OnePlus 6T",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5600
+  },
+  {
+    "id": "oneplus_7004",
+    "brand": "OnePlus",
+    "model": "OnePlus 6T",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5720
+  },
+  {
+    "id": "oneplus_7005",
+    "brand": "OnePlus",
+    "model": "OnePlus 6",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4130
+  },
+  {
+    "id": "oneplus_7006",
+    "brand": "OnePlus",
+    "model": "OnePlus 6",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3940
+  },
+  {
+    "id": "oneplus_7007",
+    "brand": "OnePlus",
+    "model": "OnePlus 6",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 4240
+  },
+  {
+    "id": "oneplus_7008",
+    "brand": "OnePlus",
+    "model": "OnePlus 5T",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2930
+  },
+  {
+    "id": "oneplus_7009",
+    "brand": "OnePlus",
+    "model": "OnePlus 5T",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2570
+  },
+  {
+    "id": "oneplus_7010",
+    "brand": "OnePlus",
+    "model": "OnePlus 5",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2420
+  },
+  {
+    "id": "oneplus_7011",
+    "brand": "OnePlus",
+    "model": "OnePlus 5",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2780
+  },
+  {
+    "id": "oneplus_7012",
+    "brand": "OnePlus",
+    "model": "Oneplus 3T",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2040
+  },
+  {
+    "id": "oneplus_7013",
+    "brand": "OnePlus",
+    "model": "OnePlus 3T",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1860
+  },
+  {
+    "id": "oneplus_7014",
+    "brand": "OnePlus",
+    "model": "OnePlus 3",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1700
+  },
+  {
+    "id": "oneplus_7015",
+    "brand": "OnePlus",
+    "model": "OnePlus 6T McLaren",
+    "storage": "10 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5790
+  },
+  {
+    "id": "oneplus_7016",
+    "brand": "OnePlus",
+    "model": "OnePlus 7",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5670
+  },
+  {
+    "id": "oneplus_7017",
+    "brand": "OnePlus",
+    "model": "OnePlus 7",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 6210
+  },
+  {
+    "id": "oneplus_7018",
+    "brand": "OnePlus",
+    "model": "OnePlus 7 Pro",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8070
+  },
+  {
+    "id": "oneplus_7019",
+    "brand": "OnePlus",
+    "model": "OnePlus 7 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7500
+  },
+  {
+    "id": "oneplus_7020",
+    "brand": "OnePlus",
+    "model": "OnePlus 7 Pro",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8140
+  },
+  {
+    "id": "oneplus_7021",
+    "brand": "OnePlus",
+    "model": "OnePlus 7T",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 6890
+  },
+  {
+    "id": "oneplus_7022",
+    "brand": "OnePlus",
+    "model": "OnePlus 7T",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6490
+  },
+  {
+    "id": "oneplus_7023",
+    "brand": "OnePlus",
+    "model": "Oneplus 7T Pro",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8280
+  },
+  {
+    "id": "oneplus_7024",
+    "brand": "OnePlus",
+    "model": "OnePlus 7T Pro",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8630
+  },
+  {
+    "id": "oneplus_7025",
+    "brand": "OnePlus",
+    "model": "OnePlus 8",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 10270
+  },
+  {
+    "id": "oneplus_7026",
+    "brand": "OnePlus",
+    "model": "OnePlus 8",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 9660
+  },
+  {
+    "id": "oneplus_7027",
+    "brand": "OnePlus",
+    "model": "OnePlus 8",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 10450
+  },
+  {
+    "id": "oneplus_7028",
+    "brand": "OnePlus",
+    "model": "OnePlus 8 Pro",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 12420
+  },
+  {
+    "id": "oneplus_7029",
+    "brand": "OnePlus",
+    "model": "OnePlus 8 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 11930
+  },
+  {
+    "id": "oneplus_7030",
+    "brand": "OnePlus",
+    "model": "OnePlus 7T Pro McLaren Edition",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 9090
+  },
+  {
+    "id": "oneplus_7031",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8930
+  },
+  {
+    "id": "oneplus_7032",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 6890
+  },
+  {
+    "id": "oneplus_7033",
+    "brand": "OnePlus",
+    "model": "OnePlus 8T",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 10260
+  },
+  {
+    "id": "oneplus_7034",
+    "brand": "OnePlus",
+    "model": "OnePlus 8T",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 9770
+  },
+  {
+    "id": "oneplus_7035",
+    "brand": "OnePlus",
+    "model": "OnePlus 9 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 10220
+  },
+  {
+    "id": "oneplus_7036",
+    "brand": "OnePlus",
+    "model": "OnePlus 9 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 9930
+  },
+  {
+    "id": "oneplus_7037",
+    "brand": "OnePlus",
+    "model": "OnePlus 9R 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 10160
+  },
+  {
+    "id": "oneplus_7038",
+    "brand": "OnePlus",
+    "model": "OnePlus 9R 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 9360
+  },
+  {
+    "id": "oneplus_7039",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8000
+  },
+  {
+    "id": "oneplus_7040",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7260
+  },
+  {
+    "id": "oneplus_7041",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7590
+  },
+  {
+    "id": "oneplus_7042",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 2 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8420
+  },
+  {
+    "id": "oneplus_7043",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 2 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 9920
+  },
+  {
+    "id": "oneplus_7044",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 2 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 9350
+  },
+  {
+    "id": "oneplus_7045",
+    "brand": "OnePlus",
+    "model": "OnePlus 9RT 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 10220
+  },
+  {
+    "id": "oneplus_7046",
+    "brand": "OnePlus",
+    "model": "OnePlus 9RT 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 11490
+  },
+  {
+    "id": "oneplus_7047",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 2 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8710
+  },
+  {
+    "id": "oneplus_7048",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 2 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 9010
+  },
+  {
+    "id": "oneplus_7049",
+    "brand": "OnePlus",
+    "model": "OnePlus 10 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 14150
+  },
+  {
+    "id": "oneplus_7050",
+    "brand": "OnePlus",
+    "model": "OnePlus 10 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 15170
+  },
+  {
+    "id": "oneplus_7051",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 2 Lite 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7990
+  },
+  {
+    "id": "oneplus_7052",
+    "brand": "OnePlus",
+    "model": "OnePlus 10R 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 10030
+  },
+  {
+    "id": "oneplus_7053",
+    "brand": "OnePlus",
+    "model": "OnePlus 10R 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 10730
+  },
+  {
+    "id": "oneplus_7054",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 2T 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 9380
+  },
+  {
+    "id": "oneplus_7055",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 2T 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 10050
+  },
+  {
+    "id": "oneplus_7056",
+    "brand": "OnePlus",
+    "model": "OnePlus 10T 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 14230
+  },
+  {
+    "id": "oneplus_7057",
+    "brand": "OnePlus",
+    "model": "OnePlus 10T 5G",
+    "storage": "16 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 15710
+  },
+  {
+    "id": "oneplus_7058",
+    "brand": "OnePlus",
+    "model": "OnePlus 10T 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 14530
+  },
+  {
+    "id": "oneplus_7059",
+    "brand": "OnePlus",
+    "model": "OnePlus 11 5G",
+    "storage": "16 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 24750
+  },
+  {
+    "id": "oneplus_7060",
+    "brand": "OnePlus",
+    "model": "OnePlus 11 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 23580
+  },
+  {
+    "id": "oneplus_7061",
+    "brand": "OnePlus",
+    "model": "Oneplus 11 5G Marble Edition",
+    "storage": "16 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 26630
+  },
+  {
+    "id": "oneplus_7062",
+    "brand": "OnePlus",
+    "model": "OnePlus 11R 5G",
+    "storage": "16 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 21490
+  },
+  {
+    "id": "oneplus_7063",
+    "brand": "OnePlus",
+    "model": "OnePlus 11R 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 20470
+  },
+  {
+    "id": "oneplus_7064",
+    "brand": "OnePlus",
+    "model": "Oneplus 11R 5G",
+    "storage": "18 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 22060
+  },
+  {
+    "id": "oneplus_7065",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 3 Lite 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 11740
+  },
+  {
+    "id": "oneplus_7066",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 3 Lite 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 12460
+  },
+  {
+    "id": "oneplus_7067",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 3 5G",
+    "storage": "16 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 15220
+  },
+  {
+    "id": "oneplus_7068",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 3 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 14700
+  },
+  {
+    "id": "oneplus_7069",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 3 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 13630
+  },
+  {
+    "id": "oneplus_7070",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 3 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 14210
+  },
+  {
+    "id": "oneplus_7071",
+    "brand": "OnePlus",
+    "model": "Oneplus Open",
+    "storage": "16 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 54320
+  },
+  {
+    "id": "oneplus_7072",
+    "brand": "OnePlus",
+    "model": "OnePlus 12",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 34630
+  },
+  {
+    "id": "oneplus_7073",
+    "brand": "OnePlus",
+    "model": "OnePlus 12",
+    "storage": "16 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 37600
+  },
+  {
+    "id": "oneplus_7074",
+    "brand": "OnePlus",
+    "model": "OnePlus 12R",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 24200
+  },
+  {
+    "id": "oneplus_7075",
+    "brand": "OnePlus",
+    "model": "OnePlus 12R",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 25580
+  },
+  {
+    "id": "oneplus_7076",
+    "brand": "OnePlus",
+    "model": "OnePlus 12R",
+    "storage": "16 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 26420
+  },
+  {
+    "id": "oneplus_7077",
+    "brand": "OnePlus",
+    "model": "Oneplus Nord CE4 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 13920
+  },
+  {
+    "id": "oneplus_7078",
+    "brand": "OnePlus",
+    "model": "Oneplus Nord CE4 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 15550
+  },
+  {
+    "id": "oneplus_7079",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE4 Lite 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 13050
+  },
+  {
+    "id": "oneplus_7080",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE4 Lite 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 13810
+  },
+  {
+    "id": "oneplus_7081",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 4",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 19950
+  },
+  {
+    "id": "oneplus_7082",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 4",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 17770
+  },
+  {
+    "id": "oneplus_7083",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 4",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 20400
+  },
+  {
+    "id": "oneplus_7084",
+    "brand": "OnePlus",
+    "model": "OnePlus 13",
+    "storage": "24 GB/1 TB",
+    "color": "Midnight",
+    "basePrice": 50500
+  },
+  {
+    "id": "oneplus_7085",
+    "brand": "OnePlus",
+    "model": "OnePlus 13",
+    "storage": "16 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 46680
+  },
+  {
+    "id": "oneplus_7086",
+    "brand": "OnePlus",
+    "model": "OnePlus 13",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 43630
+  },
+  {
+    "id": "oneplus_7087",
+    "brand": "OnePlus",
+    "model": "OnePlus 13R",
+    "storage": "16 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 29800
+  },
+  {
+    "id": "oneplus_7088",
+    "brand": "OnePlus",
+    "model": "OnePlus 13R",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 28890
+  },
+  {
+    "id": "oneplus_7089",
+    "brand": "OnePlus",
+    "model": "OnePlus 13s",
+    "storage": "12 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 37500
+  },
+  {
+    "id": "oneplus_7090",
+    "brand": "OnePlus",
+    "model": "OnePlus 13s",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 35440
+  },
+  {
+    "id": "oneplus_7091",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 5",
+    "storage": "12 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 26000
+  },
+  {
+    "id": "oneplus_7092",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 5",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 24820
+  },
+  {
+    "id": "oneplus_7093",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 5",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 23000
+  },
+  {
+    "id": "oneplus_7094",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 5",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 17210
+  },
+  {
+    "id": "oneplus_7095",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 5",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 19000
+  },
+  {
+    "id": "oneplus_7096",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 5",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 18430
+  },
+  {
+    "id": "oneplus_7097",
+    "brand": "OnePlus",
+    "model": "OnePlus 15",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 54480
+  },
+  {
+    "id": "oneplus_7098",
+    "brand": "OnePlus",
+    "model": "OnePlus 15",
+    "storage": "16 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 57000
+  },
+  {
+    "id": "oneplus_7099",
+    "brand": "OnePlus",
+    "model": "Oneplus 15R",
+    "storage": "12 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 36300
+  },
+  {
+    "id": "oneplus_7100",
+    "brand": "OnePlus",
+    "model": "Oneplus 15R",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 34610
+  },
+  {
+    "id": "oneplus_7101",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 6 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 26500
+  },
+  {
+    "id": "oneplus_7102",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 6 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 28500
+  },
+  {
+    "id": "oneplus_7103",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 2 Lite 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7720
   }
 ];

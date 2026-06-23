@@ -430,7 +430,7 @@ export default function QuotePage() {
           {selectionStage === 'storage' && (
             <>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
-                <h2 style={{ color: '#fff', fontWeight: 600, fontSize: '1.25rem' }}>Select Storage</h2>
+                <h2 style={{ color: '#fff', fontWeight: 600, fontSize: '1.25rem' }}>Choose a variant</h2>
                 <button onClick={() => navigateToState(selectedBrand, '', '', 'model', 1)} style={{ color: '#4CD964', background: 'none', border: 'none', cursor: 'pointer' }}>Change Model</button>
               </div>
               <div className="card" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', border: '1px solid #2a2a2a', backgroundColor: '#111' }}>
