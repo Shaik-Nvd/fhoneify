@@ -6743,5 +6743,53 @@ export const SEED_DEVICES = [
     "storage": "6 GB/128 GB",
     "color": "Midnight",
     "basePrice": 7720
+  },
+  {
+    "id": "asus_8000",
+    "brand": "Asus",
+    "model": "Asus ROG Phone II ZS660KL",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7020
+  },
+  {
+    "id": "asus_8001",
+    "brand": "Asus",
+    "model": "Asus ROG Phone II ZS660KL",
+    "storage": "12 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 7450
+  },
+  {
+    "id": "asus_8002",
+    "brand": "Asus",
+    "model": "Asus ROG Phone 3",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8380
+  },
+  {
+    "id": "asus_8003",
+    "brand": "Asus",
+    "model": "Asus ROG Phone 3",
+    "storage": "12 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8820
+  },
+  {
+    "id": "asus_8004",
+    "brand": "Asus",
+    "model": "Asus ROG Phone 3",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 9320
+  },
+  {
+    "id": "asus_8005",
+    "brand": "Asus",
+    "model": "Asus 8z",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7330
   }
 ];
