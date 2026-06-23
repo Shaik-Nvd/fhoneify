@@ -8807,5 +8807,445 @@ export const SEED_DEVICES = [
     "storage": "12 GB/256 GB",
     "color": "Midnight",
     "basePrice": 15070
+  },
+  {
+    "id": "nokia_16000",
+    "brand": "Nokia",
+    "model": "Nokia 6.1 Plus",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2260
+  },
+  {
+    "id": "nokia_16001",
+    "brand": "Nokia",
+    "model": "Nokia 6.1 Plus",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2380
+  },
+  {
+    "id": "nokia_16002",
+    "brand": "Nokia",
+    "model": "Nokia 5.1 Plus",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2390
+  },
+  {
+    "id": "nokia_16003",
+    "brand": "Nokia",
+    "model": "Nokia 5.1 Plus",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1750
+  },
+  {
+    "id": "nokia_16004",
+    "brand": "Nokia",
+    "model": "Nokia 5.1 Plus",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2130
+  },
+  {
+    "id": "nokia_16005",
+    "brand": "Nokia",
+    "model": "Nokia 8 Sirocco",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3710
+  },
+  {
+    "id": "nokia_16006",
+    "brand": "Nokia",
+    "model": "Nokia 7 Plus",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2150
+  },
+  {
+    "id": "nokia_16007",
+    "brand": "Nokia",
+    "model": "Nokia 8.1",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2670
+  },
+  {
+    "id": "nokia_16008",
+    "brand": "Nokia",
+    "model": "Nokia 8.1",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2230
+  },
+  {
+    "id": "nokia_16009",
+    "brand": "Nokia",
+    "model": "Nokia 7.1",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2010
+  },
+  {
+    "id": "nokia_16010",
+    "brand": "Nokia",
+    "model": "Nokia 3.2",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1410
+  },
+  {
+    "id": "nokia_16011",
+    "brand": "Nokia",
+    "model": "Nokia 3.2",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1560
+  },
+  {
+    "id": "nokia_16012",
+    "brand": "Nokia",
+    "model": "Nokia 4.2",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1670
+  },
+  {
+    "id": "nokia_16013",
+    "brand": "Nokia",
+    "model": "Nokia 2.2",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 860
+  },
+  {
+    "id": "nokia_16014",
+    "brand": "Nokia",
+    "model": "Nokia 2.2",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1040
+  },
+  {
+    "id": "nokia_16015",
+    "brand": "Nokia",
+    "model": "Nokia 7.2",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2710
+  },
+  {
+    "id": "nokia_16016",
+    "brand": "Nokia",
+    "model": "Nokia 7.2",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2300
+  },
+  {
+    "id": "nokia_16017",
+    "brand": "Nokia",
+    "model": "Nokia 6.2",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2190
+  },
+  {
+    "id": "nokia_16018",
+    "brand": "Nokia",
+    "model": "Nokia 5.3",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3070
+  },
+  {
+    "id": "nokia_16019",
+    "brand": "Nokia",
+    "model": "Nokia 5.3",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2900
+  },
+  {
+    "id": "nokia_16020",
+    "brand": "Nokia",
+    "model": "Nokia 2.4",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2300
+  },
+  {
+    "id": "nokia_16021",
+    "brand": "Nokia",
+    "model": "Nokia 3.4",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2380
+  },
+  {
+    "id": "nokia_16022",
+    "brand": "Nokia",
+    "model": "Nokia 5.4",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2640
+  },
+  {
+    "id": "nokia_16023",
+    "brand": "Nokia",
+    "model": "Nokia 5.4",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3080
+  },
+  {
+    "id": "nokia_16024",
+    "brand": "Nokia",
+    "model": "Nokia G20",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2710
+  },
+  {
+    "id": "nokia_16025",
+    "brand": "Nokia",
+    "model": "Nokia C20 Plus",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1930
+  },
+  {
+    "id": "nokia_16026",
+    "brand": "Nokia",
+    "model": "Nokia C20 Plus",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1670
+  },
+  {
+    "id": "nokia_16027",
+    "brand": "Nokia",
+    "model": "Nokia C01 Plus",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1260
+  },
+  {
+    "id": "nokia_16028",
+    "brand": "Nokia",
+    "model": "Nokia C01 Plus",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1520
+  },
+  {
+    "id": "nokia_16029",
+    "brand": "Nokia",
+    "model": "Nokia G10",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2510
+  },
+  {
+    "id": "nokia_16030",
+    "brand": "Nokia",
+    "model": "Nokia C30",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2520
+  },
+  {
+    "id": "nokia_16031",
+    "brand": "Nokia",
+    "model": "Nokia C30",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2240
+  },
+  {
+    "id": "nokia_16032",
+    "brand": "Nokia",
+    "model": "Nokia XR20",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6940
+  },
+  {
+    "id": "nokia_16033",
+    "brand": "Nokia",
+    "model": "Nokia G21",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2750
+  },
+  {
+    "id": "nokia_16034",
+    "brand": "Nokia",
+    "model": "Nokia G21",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3490
+  },
+  {
+    "id": "nokia_16035",
+    "brand": "Nokia",
+    "model": "Nokia C21 Plus",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2670
+  },
+  {
+    "id": "nokia_16036",
+    "brand": "Nokia",
+    "model": "Nokia C21 Plus",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2480
+  },
+  {
+    "id": "nokia_16037",
+    "brand": "Nokia",
+    "model": "Nokia G60 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6310
+  },
+  {
+    "id": "nokia_16038",
+    "brand": "Nokia",
+    "model": "Nokia C12",
+    "storage": "2 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2010
+  },
+  {
+    "id": "nokia_16039",
+    "brand": "Nokia",
+    "model": "Nokia X30 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 7790
+  },
+  {
+    "id": "nokia_16040",
+    "brand": "Nokia",
+    "model": "Nokia C12 Pro",
+    "storage": "2 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2110
+  },
+  {
+    "id": "nokia_16041",
+    "brand": "Nokia",
+    "model": "Nokia C12 Pro",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2300
+  },
+  {
+    "id": "nokia_16042",
+    "brand": "Nokia",
+    "model": "Nokia C12 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2450
+  },
+  {
+    "id": "nokia_16043",
+    "brand": "Nokia",
+    "model": "Nokia C31",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2230
+  },
+  {
+    "id": "nokia_16044",
+    "brand": "Nokia",
+    "model": "Nokia C31",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2600
+  },
+  {
+    "id": "nokia_16045",
+    "brand": "Nokia",
+    "model": "Nokia C32",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2380
+  },
+  {
+    "id": "nokia_16046",
+    "brand": "Nokia",
+    "model": "Nokia C32",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2790
+  },
+  {
+    "id": "nokia_16047",
+    "brand": "Nokia",
+    "model": "Nokia C32",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2600
+  },
+  {
+    "id": "nokia_16048",
+    "brand": "Nokia",
+    "model": "Nokia C22",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2380
+  },
+  {
+    "id": "nokia_16049",
+    "brand": "Nokia",
+    "model": "Nokia C22",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2960
+  },
+  {
+    "id": "nokia_16050",
+    "brand": "Nokia",
+    "model": "Nokia C22",
+    "storage": "2 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2130
+  },
+  {
+    "id": "nokia_16051",
+    "brand": "Nokia",
+    "model": "Nokia G42 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4850
+  },
+  {
+    "id": "nokia_16052",
+    "brand": "Nokia",
+    "model": "Nokia G42 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5230
+  },
+  {
+    "id": "nokia_16053",
+    "brand": "Nokia",
+    "model": "Nokia G42 5G",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3660
+  },
+  {
+    "id": "nokia_16054",
+    "brand": "Nokia",
+    "model": "Nokia G11 Plus",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2600
   }
 ];
