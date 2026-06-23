@@ -9487,5 +9487,653 @@ export const SEED_DEVICES = [
     "storage": "8 GB/256 GB",
     "color": "White",
     "basePrice": 29000
+  },
+  {
+    "id": "oppo_18000",
+    "brand": "OPPO",
+    "model": "OPPO A7",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2380
+  },
+  {
+    "id": "oppo_18001",
+    "brand": "OPPO",
+    "model": "OPPO A7",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2040
+  },
+  {
+    "id": "oppo_18002",
+    "brand": "OPPO",
+    "model": "OPPO F9 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2670
+  },
+  {
+    "id": "oppo_18003",
+    "brand": "OPPO",
+    "model": "OPPO F9 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2970
+  },
+  {
+    "id": "oppo_18004",
+    "brand": "OPPO",
+    "model": "OPPO F9",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2640
+  },
+  {
+    "id": "oppo_18005",
+    "brand": "OPPO",
+    "model": "OPPO A3s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2120
+  },
+  {
+    "id": "oppo_18006",
+    "brand": "OPPO",
+    "model": "OPPO A3s",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1930
+  },
+  {
+    "id": "oppo_18007",
+    "brand": "OPPO",
+    "model": "OPPO A3s",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1740
+  },
+  {
+    "id": "oppo_18008",
+    "brand": "OPPO",
+    "model": "OPPO Find X",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 6970
+  },
+  {
+    "id": "oppo_18009",
+    "brand": "OPPO",
+    "model": "OPPO A5",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2690
+  },
+  {
+    "id": "oppo_18010",
+    "brand": "OPPO",
+    "model": "OPPO A5",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2460
+  },
+  {
+    "id": "oppo_18011",
+    "brand": "OPPO",
+    "model": "OPPO F7",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2600
+  },
+  {
+    "id": "oppo_18012",
+    "brand": "OPPO",
+    "model": "OPPO F7",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2380
+  },
+  {
+    "id": "oppo_18013",
+    "brand": "OPPO",
+    "model": "OPPO A83",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1360
+  },
+  {
+    "id": "oppo_18014",
+    "brand": "OPPO",
+    "model": "OPPO A83",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1440
+  },
+  {
+    "id": "oppo_18015",
+    "brand": "OPPO",
+    "model": "OPPO A83",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1670
+  },
+  {
+    "id": "oppo_18016",
+    "brand": "OPPO",
+    "model": "OPPO F5 Youth",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1700
+  },
+  {
+    "id": "oppo_18017",
+    "brand": "OPPO",
+    "model": "OPPO F5",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1930
+  },
+  {
+    "id": "oppo_18018",
+    "brand": "OPPO",
+    "model": "OPPO F5",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1780
+  },
+  {
+    "id": "oppo_18019",
+    "brand": "OPPO",
+    "model": "OPPO R11",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2270
+  },
+  {
+    "id": "oppo_18020",
+    "brand": "OPPO",
+    "model": "OPPO A77",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1490
+  },
+  {
+    "id": "oppo_18021",
+    "brand": "OPPO",
+    "model": "OPPO F3",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1480
+  },
+  {
+    "id": "oppo_18022",
+    "brand": "OPPO",
+    "model": "OPPO F3 Plus",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2230
+  },
+  {
+    "id": "oppo_18023",
+    "brand": "OPPO",
+    "model": "OPPO F3 Plus",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1860
+  },
+  {
+    "id": "oppo_18024",
+    "brand": "OPPO",
+    "model": "OPPO A57",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1510
+  },
+  {
+    "id": "oppo_18025",
+    "brand": "OPPO",
+    "model": "OPPO F1s",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1190
+  },
+  {
+    "id": "oppo_18026",
+    "brand": "OPPO",
+    "model": "OPPO F1s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1330
+  },
+  {
+    "id": "oppo_18027",
+    "brand": "OPPO",
+    "model": "OPPO F1 plus",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1260
+  },
+  {
+    "id": "oppo_18028",
+    "brand": "OPPO",
+    "model": "OPPO R17",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4170
+  },
+  {
+    "id": "oppo_18029",
+    "brand": "OPPO",
+    "model": "OPPO K1",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3180
+  },
+  {
+    "id": "oppo_18030",
+    "brand": "OPPO",
+    "model": "OPPO K1",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3030
+  },
+  {
+    "id": "oppo_18031",
+    "brand": "OPPO",
+    "model": "OPPO F11 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4040
+  },
+  {
+    "id": "oppo_18032",
+    "brand": "OPPO",
+    "model": "OPPO F11 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4440
+  },
+  {
+    "id": "oppo_18033",
+    "brand": "OPPO",
+    "model": "OPPO A5s",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2420
+  },
+  {
+    "id": "oppo_18034",
+    "brand": "OPPO",
+    "model": "OPPO A5s",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2200
+  },
+  {
+    "id": "oppo_18035",
+    "brand": "OPPO",
+    "model": "OPPO A5s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2690
+  },
+  {
+    "id": "oppo_18036",
+    "brand": "OPPO",
+    "model": "OPPO A1K",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2320
+  },
+  {
+    "id": "oppo_18037",
+    "brand": "OPPO",
+    "model": "OPPO F11",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3280
+  },
+  {
+    "id": "oppo_18038",
+    "brand": "OPPO",
+    "model": "OPPO F11",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3680
+  },
+  {
+    "id": "oppo_18039",
+    "brand": "OPPO",
+    "model": "OPPO Reno",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4920
+  },
+  {
+    "id": "oppo_18040",
+    "brand": "OPPO",
+    "model": "OPPO Reno 10x Zoom",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5490
+  },
+  {
+    "id": "oppo_18041",
+    "brand": "OPPO",
+    "model": "OPPO Reno 10x Zoom",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5870
+  },
+  {
+    "id": "oppo_18042",
+    "brand": "OPPO",
+    "model": "OPPO K3",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4170
+  },
+  {
+    "id": "oppo_18043",
+    "brand": "OPPO",
+    "model": "OPPO K3",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4350
+  },
+  {
+    "id": "oppo_18044",
+    "brand": "OPPO",
+    "model": "OPPO A9",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3920
+  },
+  {
+    "id": "oppo_18045",
+    "brand": "OPPO",
+    "model": "OPPO Reno 2Z",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5680
+  },
+  {
+    "id": "oppo_18046",
+    "brand": "OPPO",
+    "model": "OPPO Reno 2",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5910
+  },
+  {
+    "id": "oppo_18047",
+    "brand": "OPPO",
+    "model": "OPPO A5 2020",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3450
+  },
+  {
+    "id": "oppo_18048",
+    "brand": "OPPO",
+    "model": "OPPO A5 2020",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3030
+  },
+  {
+    "id": "oppo_18049",
+    "brand": "OPPO",
+    "model": "OPPO A5 2020",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3290
+  },
+  {
+    "id": "oppo_18050",
+    "brand": "OPPO",
+    "model": "OPPO A5 2020",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3180
+  },
+  {
+    "id": "oppo_18051",
+    "brand": "OPPO",
+    "model": "OPPO A9 2020",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4050
+  },
+  {
+    "id": "oppo_18052",
+    "brand": "OPPO",
+    "model": "OPPO A9 2020",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3820
+  },
+  {
+    "id": "oppo_18053",
+    "brand": "OPPO",
+    "model": "OPPO Reno2 F",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5720
+  },
+  {
+    "id": "oppo_18054",
+    "brand": "OPPO",
+    "model": "OPPO Reno2 F",
+    "storage": "6 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5070
+  },
+  {
+    "id": "oppo_18055",
+    "brand": "OPPO",
+    "model": "OPPO F15",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4640
+  },
+  {
+    "id": "oppo_18056",
+    "brand": "OPPO",
+    "model": "OPPO F15",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4960
+  },
+  {
+    "id": "oppo_18057",
+    "brand": "OPPO",
+    "model": "OPPO A71 2018",
+    "storage": "3 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1060
+  },
+  {
+    "id": "oppo_18058",
+    "brand": "OPPO",
+    "model": "OPPO A31",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3830
+  },
+  {
+    "id": "oppo_18059",
+    "brand": "OPPO",
+    "model": "OPPO A31",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4330
+  },
+  {
+    "id": "oppo_18060",
+    "brand": "OPPO",
+    "model": "OPPO A12",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2840
+  },
+  {
+    "id": "oppo_18061",
+    "brand": "OPPO",
+    "model": "OPPO A12",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3290
+  },
+  {
+    "id": "oppo_18062",
+    "brand": "OPPO",
+    "model": "OPPO A52",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4580
+  },
+  {
+    "id": "oppo_18063",
+    "brand": "OPPO",
+    "model": "OPPO A52",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4170
+  },
+  {
+    "id": "oppo_18064",
+    "brand": "OPPO",
+    "model": "OPPO A52",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4660
+  },
+  {
+    "id": "oppo_18065",
+    "brand": "OPPO",
+    "model": "OPPO Find X2",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 10980
+  },
+  {
+    "id": "oppo_18066",
+    "brand": "OPPO",
+    "model": "OPPO A11K",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2500
+  },
+  {
+    "id": "oppo_18067",
+    "brand": "OPPO",
+    "model": "OPPO Reno3 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5720
+  },
+  {
+    "id": "oppo_18068",
+    "brand": "OPPO",
+    "model": "OPPO Reno3 Pro",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5760
+  },
+  {
+    "id": "oppo_18069",
+    "brand": "OPPO",
+    "model": "OPPO Reno4 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6740
+  },
+  {
+    "id": "oppo_18070",
+    "brand": "OPPO",
+    "model": "OPPO A53",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4440
+  },
+  {
+    "id": "oppo_18071",
+    "brand": "OPPO",
+    "model": "OPPO A53",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_18072",
+    "brand": "OPPO",
+    "model": "OPPO F17 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5410
+  },
+  {
+    "id": "oppo_18073",
+    "brand": "OPPO",
+    "model": "OPPO F17",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5020
+  },
+  {
+    "id": "oppo_18074",
+    "brand": "OPPO",
+    "model": "OPPO F17",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5230
+  },
+  {
+    "id": "oppo_18075",
+    "brand": "OPPO",
+    "model": "OPPO A33 2020",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3140
+  },
+  {
+    "id": "oppo_18076",
+    "brand": "OPPO",
+    "model": "OPPO A15",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2990
+  },
+  {
+    "id": "oppo_18077",
+    "brand": "OPPO",
+    "model": "OPPO A15",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3310
+  },
+  {
+    "id": "oppo_18078",
+    "brand": "OPPO",
+    "model": "OPPO A15s",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4090
+  },
+  {
+    "id": "oppo_18079",
+    "brand": "OPPO",
+    "model": "OPPO A15s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3510
+  },
+  {
+    "id": "oppo_18080",
+    "brand": "OPPO",
+    "model": "OPPO Reno5 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8990
   }
 ];
