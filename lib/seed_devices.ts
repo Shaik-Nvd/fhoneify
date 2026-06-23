@@ -7525,14 +7525,6 @@ export const SEED_DEVICES = [
     "basePrice": 19040
   },
   {
-    "id": "xiaomi_30000",
-    "brand": "Xiaomi",
-    "model": "Under Construction",
-    "storage": "Coming Soon",
-    "color": "N/A",
-    "basePrice": 1000
-  },
-  {
     "id": "samsung_31000",
     "brand": "Samsung",
     "model": "Samsung Galaxy Note 20",
@@ -8267,5 +8259,861 @@ export const SEED_DEVICES = [
     "storage": "12 GB/256 GB",
     "color": "Midnight",
     "basePrice": 26600
+  },
+  {
+    "id": "xiaomi_32000",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 6 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2840
+  },
+  {
+    "id": "xiaomi_32001",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 6 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3070
+  },
+  {
+    "id": "xiaomi_32002",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi A2",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2500
+  },
+  {
+    "id": "xiaomi_32003",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi A2",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2850
+  },
+  {
+    "id": "xiaomi_32004",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 6",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1740
+  },
+  {
+    "id": "xiaomi_32005",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 6",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1820
+  },
+  {
+    "id": "xiaomi_32006",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 6 pro",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2160
+  },
+  {
+    "id": "xiaomi_32007",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 6 pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2280
+  },
+  {
+    "id": "xiaomi_32008",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 6A",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1410
+  },
+  {
+    "id": "xiaomi_32009",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 6A",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1510
+  },
+  {
+    "id": "xiaomi_32010",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y2",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2200
+  },
+  {
+    "id": "xiaomi_32011",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y2",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2120
+  },
+  {
+    "id": "xiaomi_32012",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 5",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1700
+  },
+  {
+    "id": "xiaomi_32013",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 5",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2010
+  },
+  {
+    "id": "xiaomi_32014",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 5",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1590
+  },
+  {
+    "id": "xiaomi_32015",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 5 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2650
+  },
+  {
+    "id": "xiaomi_32016",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 5 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2500
+  },
+  {
+    "id": "xiaomi_32017",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 5",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1780
+  },
+  {
+    "id": "xiaomi_32018",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 5",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2080
+  },
+  {
+    "id": "xiaomi_32019",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 5A",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1290
+  },
+  {
+    "id": "xiaomi_32020",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 5A",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1140
+  },
+  {
+    "id": "xiaomi_32021",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y1",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1230
+  },
+  {
+    "id": "xiaomi_32022",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y1",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1380
+  },
+  {
+    "id": "xiaomi_32023",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y1 Lite",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 980
+  },
+  {
+    "id": "xiaomi_32024",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi Mix 2",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2830
+  },
+  {
+    "id": "xiaomi_32025",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi Max 2",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1680
+  },
+  {
+    "id": "xiaomi_32026",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi Max 2",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1810
+  },
+  {
+    "id": "xiaomi_32027",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi Max 2",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2220
+  },
+  {
+    "id": "xiaomi_32028",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3030
+  },
+  {
+    "id": "xiaomi_32029",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2470
+  },
+  {
+    "id": "xiaomi_32030",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4090
+  },
+  {
+    "id": "xiaomi_32031",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3820
+  },
+  {
+    "id": "xiaomi_32032",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3760
+  },
+  {
+    "id": "xiaomi_32033",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Go",
+    "storage": "1 GB/8 GB",
+    "color": "Midnight",
+    "basePrice": 830
+  },
+  {
+    "id": "xiaomi_32034",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Go",
+    "storage": "1 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1040
+  },
+  {
+    "id": "xiaomi_32035",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 2350
+  },
+  {
+    "id": "xiaomi_32036",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2570
+  },
+  {
+    "id": "xiaomi_32037",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2690
+  },
+  {
+    "id": "xiaomi_32038",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2500
+  },
+  {
+    "id": "xiaomi_32039",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7S",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3450
+  },
+  {
+    "id": "xiaomi_32040",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7S",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3290
+  },
+  {
+    "id": "xiaomi_32041",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y3",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2350
+  },
+  {
+    "id": "xiaomi_32042",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y3",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2500
+  },
+  {
+    "id": "xiaomi_32043",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Black Shark 2",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5910
+  },
+  {
+    "id": "xiaomi_32044",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Black Shark 2",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4920
+  },
+  {
+    "id": "xiaomi_32045",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi K20",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4960
+  },
+  {
+    "id": "xiaomi_32046",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi K20",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4620
+  },
+  {
+    "id": "xiaomi_32047",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi K20 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5720
+  },
+  {
+    "id": "xiaomi_32048",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi K20 Pro",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 6120
+  },
+  {
+    "id": "xiaomi_32049",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7A",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1720
+  },
+  {
+    "id": "xiaomi_32050",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7A",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1440
+  },
+  {
+    "id": "xiaomi_32051",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7A",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1590
+  },
+  {
+    "id": "xiaomi_32052",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi A3",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3710
+  },
+  {
+    "id": "xiaomi_32053",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi A3",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4130
+  },
+  {
+    "id": "xiaomi_32054",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 8A",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2250
+  },
+  {
+    "id": "xiaomi_32055",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 8A",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2460
+  },
+  {
+    "id": "xiaomi_32056",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 8",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3370
+  },
+  {
+    "id": "xiaomi_32057",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 8",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3790
+  },
+  {
+    "id": "xiaomi_32058",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 8",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4050
+  },
+  {
+    "id": "xiaomi_32059",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 8",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3560
+  },
+  {
+    "id": "xiaomi_32060",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 8 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4510
+  },
+  {
+    "id": "xiaomi_32061",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 8 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4240
+  },
+  {
+    "id": "xiaomi_32062",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 8 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4750
+  },
+  {
+    "id": "xiaomi_32063",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9 Pro",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4760
+  },
+  {
+    "id": "xiaomi_32064",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4360
+  },
+  {
+    "id": "xiaomi_32065",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5010
+  },
+  {
+    "id": "xiaomi_32066",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 8A Dual",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2800
+  },
+  {
+    "id": "xiaomi_32067",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 8A Dual",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2700
+  },
+  {
+    "id": "xiaomi_32068",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 8A Dual",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2990
+  },
+  {
+    "id": "xiaomi_32069",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9 Pro Max",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5170
+  },
+  {
+    "id": "xiaomi_32070",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9 Pro Max",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5460
+  },
+  {
+    "id": "xiaomi_32071",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9 Pro Max",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4740
+  },
+  {
+    "id": "xiaomi_32072",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4170
+  },
+  {
+    "id": "xiaomi_32073",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4390
+  },
+  {
+    "id": "xiaomi_32074",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4630
+  },
+  {
+    "id": "xiaomi_32075",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9 Prime",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3790
+  },
+  {
+    "id": "xiaomi_32076",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9 Prime",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3490
+  },
+  {
+    "id": "xiaomi_32077",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3120
+  },
+  {
+    "id": "xiaomi_32078",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3400
+  },
+  {
+    "id": "xiaomi_32079",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9A",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2730
+  },
+  {
+    "id": "xiaomi_32080",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9A",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2950
+  },
+  {
+    "id": "xiaomi_32081",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9i",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3070
+  },
+  {
+    "id": "xiaomi_32082",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9i",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3290
+  },
+  {
+    "id": "xiaomi_32083",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10T",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7580
+  },
+  {
+    "id": "xiaomi_32084",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10T",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7260
+  },
+  {
+    "id": "xiaomi_32085",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10T Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7760
+  },
+  {
+    "id": "xiaomi_32086",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10i",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 6730
+  },
+  {
+    "id": "xiaomi_32087",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10i",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7230
+  },
+  {
+    "id": "xiaomi_32088",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10i",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7410
+  },
+  {
+    "id": "xiaomi_32089",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9 Power",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3560
+  },
+  {
+    "id": "xiaomi_32090",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9 Power",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3750
+  },
+  {
+    "id": "xiaomi_32091",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9 Power",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4010
+  },
+  {
+    "id": "xiaomi_32092",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4160
+  },
+  {
+    "id": "xiaomi_32093",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4530
+  },
+  {
+    "id": "xiaomi_32094",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4540
+  },
+  {
+    "id": "xiaomi_32095",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5190
+  },
+  {
+    "id": "xiaomi_32096",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5690
+  },
+  {
+    "id": "xiaomi_32097",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Pro Max",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5420
+  },
+  {
+    "id": "xiaomi_32098",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Pro Max",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_32099",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Pro Max",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5980
+  },
+  {
+    "id": "xiaomi_32100",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11X Pro",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8180
+  },
+  {
+    "id": "xiaomi_32101",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11X Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7610
+  },
+  {
+    "id": "xiaomi_32102",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11 Ultra",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 17300
+  },
+  {
+    "id": "xiaomi_32103",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11X",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7460
+  },
+  {
+    "id": "xiaomi_32104",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11X",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8100
+  },
+  {
+    "id": "xiaomi_32105",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11 Lite",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5650
+  },
+  {
+    "id": "xiaomi_32106",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11 Lite",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6070
   }
 ];
