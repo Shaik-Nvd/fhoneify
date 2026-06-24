@@ -52,7 +52,7 @@ const ArrowRightIcon = () => <svg width="20" height="20" viewBox="0 0 24 24" fil
 export default function QuotePage() {
   const router = useRouter();
   const { setAuth } = useAuthStore();
-  const { isAuthenticated } = useHydratedAuth();
+  const { isAuthenticated, user } = useHydratedAuth();
   const [allDevices, setAllDevices] = useState<Device[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -799,8 +799,8 @@ export default function QuotePage() {
                 method: 'POST',
                 headers,
                 body: JSON.stringify({
-                  name: userName || '',
-                  phone: userPhone || '',
+                  name: userName || user?.name || '',
+                  phone: userPhone || user?.phone || '',
                   brand: selectedBrand || '',
                   model: selectedModel || '',
                   storage: selectedStorage || '',

@@ -45,6 +45,8 @@ export default function AdminLeadsPage() {
     }
 
     fetchData();
+    const intervalId = setInterval(fetchData, 5000);
+    return () => clearInterval(intervalId);
   }, [router]);
 
   if (loading) {
