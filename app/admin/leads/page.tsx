@@ -104,17 +104,17 @@ export default function AdminLeadsPage() {
         <div style={{ background: '#1c1c1e', padding: '1.5rem', borderRadius: '12px' }}>
           <h2 style={{ fontSize: '1.25rem', color: '#4CD964', marginBottom: '1rem' }}>Scheduled Pickups (Leads) ({leads.length})</h2>
           <div style={{ overflowX: 'auto' }}>
-            <table style={{ width: '100%', textAlign: 'left', borderCollapse: 'collapse' }}>
+            <table style={{ width: '100%', minWidth: '1200px', textAlign: 'left', borderCollapse: 'collapse' }}>
               <thead>
                 <tr style={{ borderBottom: '1px solid #333', color: '#a0a0a0' }}>
-                  <th style={{ padding: '0.75rem 0' }}>Created At</th>
-                  <th style={{ padding: '0.75rem 0' }}>Name</th>
-                  <th style={{ padding: '0.75rem 0' }}>Phone</th>
-                  <th style={{ padding: '0.75rem 0' }}>Device</th>
-                  <th style={{ padding: '0.75rem 0' }}>Quoted Price</th>
-                  <th style={{ padding: '0.75rem 0' }}>Pickup Info</th>
-                  <th style={{ padding: '0.75rem 0' }}>Address Details</th>
-                  <th style={{ padding: '0.75rem 0' }}>Status</th>
+                  <th style={{ padding: '0.75rem 0', minWidth: '120px' }}>Created At</th>
+                  <th style={{ padding: '0.75rem 0', minWidth: '100px' }}>Name</th>
+                  <th style={{ padding: '0.75rem 0', minWidth: '120px' }}>Phone</th>
+                  <th style={{ padding: '0.75rem 0', minWidth: '250px' }}>Device</th>
+                  <th style={{ padding: '0.75rem 0', minWidth: '100px' }}>Quoted Price</th>
+                  <th style={{ padding: '0.75rem 0', minWidth: '180px' }}>Pickup Info</th>
+                  <th style={{ padding: '0.75rem 0', minWidth: '250px' }}>Address Details</th>
+                  <th style={{ padding: '0.75rem 0', minWidth: '100px' }}>Status</th>
                 </tr>
               </thead>
               <tbody>

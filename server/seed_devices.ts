@@ -1269,4647 +1269,8994 @@ export const SEED_DEVICES = [
     "basePrice": 53200
   },
   {
-    "id": "samsung_model_1781781056901_0",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A14 5G",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 6980
+    "id": "oneplus_7000",
+    "brand": "OnePlus",
+    "model": "OnePlus 9 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 13360
   },
   {
-    "id": "samsung_model_1781781056901_1",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A14 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 7760
+    "id": "oneplus_7001",
+    "brand": "OnePlus",
+    "model": "OnePlus 9 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 12150
   },
   {
-    "id": "samsung_model_1781781056901_2",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A14 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 8290
+    "id": "oneplus_7002",
+    "brand": "OnePlus",
+    "model": "OnePlus 6T",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5050
   },
   {
-    "id": "samsung_model_1781781056901_3",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A14 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 8880
+    "id": "oneplus_7003",
+    "brand": "OnePlus",
+    "model": "OnePlus 6T",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5600
   },
   {
-    "id": "samsung_model_1781781056901_4",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A13",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3750
+    "id": "oneplus_7004",
+    "brand": "OnePlus",
+    "model": "OnePlus 6T",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5720
   },
   {
-    "id": "samsung_model_1781781056901_5",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A13",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 4170
+    "id": "oneplus_7005",
+    "brand": "OnePlus",
+    "model": "OnePlus 6",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4130
   },
   {
-    "id": "samsung_model_1781781056901_6",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A13",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 4660
+    "id": "oneplus_7006",
+    "brand": "OnePlus",
+    "model": "OnePlus 6",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3940
   },
   {
-    "id": "samsung_model_1781781056901_7",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A03",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2240
+    "id": "oneplus_7007",
+    "brand": "OnePlus",
+    "model": "OnePlus 6",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 4240
   },
   {
-    "id": "samsung_model_1781781056901_8",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A03",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2690
-  },
-  {
-    "id": "samsung_model_1781781056902_9",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A03 CORE",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2150
-  },
-  {
-    "id": "samsung_model_1781781056902_10",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A03 S",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2150
-  },
-  {
-    "id": "samsung_model_1781781056902_11",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A03 S",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2980
-  },
-  {
-    "id": "samsung_model_1781781056902_12",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A10",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1850
-  },
-  {
-    "id": "samsung_model_1781781056902_13",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A10S",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1920
-  },
-  {
-    "id": "samsung_model_1781781056902_14",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A10S",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2000
-  },
-  {
-    "id": "samsung_model_1781781056902_15",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A12",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3710
-  },
-  {
-    "id": "samsung_model_1781781056902_16",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A12",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3500
-  },
-  {
-    "id": "samsung_model_1781781056902_17",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A12",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3980
-  },
-  {
-    "id": "samsung_model_1781781056902_18",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A2 CORE",
-    "storage": "16GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 730
-  },
-  {
-    "id": "samsung_model_1781781056902_19",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A20",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2540
-  },
-  {
-    "id": "samsung_model_1781781056902_20",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A20S",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2440
-  },
-  {
-    "id": "samsung_model_1781781056902_21",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A20S",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2730
-  },
-  {
-    "id": "samsung_model_1781781056902_22",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A21S",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3350
-  },
-  {
-    "id": "samsung_model_1781781056902_23",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A21S",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3580
-  },
-  {
-    "id": "samsung_model_1781781056902_24",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A21S",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3750
-  },
-  {
-    "id": "samsung_model_1781781056902_25",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A22",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3850
-  },
-  {
-    "id": "samsung_model_1781781056902_26",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A22",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 4220
-  },
-  {
-    "id": "samsung_model_1781781056902_27",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A22 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 6020
-  },
-  {
-    "id": "samsung_model_1781781056902_28",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A22 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 6520
-  },
-  {
-    "id": "samsung_model_1781781056902_29",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A23",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 4520
-  },
-  {
-    "id": "samsung_model_1781781056902_30",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A23",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 4940
-  },
-  {
-    "id": "samsung_model_1781781056902_31",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A30",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2670
-  },
-  {
-    "id": "samsung_model_1781781056902_32",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A30S",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2570
-  },
-  {
-    "id": "samsung_model_1781781056902_33",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A30S",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2730
-  },
-  {
-    "id": "samsung_model_1781781056902_34",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A31",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3580
-  },
-  {
-    "id": "samsung_model_1781781056902_35",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A32",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 4810
-  },
-  {
-    "id": "samsung_model_1781781056902_36",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A32",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 5340
-  },
-  {
-    "id": "samsung_model_1781781056902_37",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A5",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1080
-  },
-  {
-    "id": "samsung_model_1781781056902_38",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A50",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
+    "id": "oneplus_7008",
+    "brand": "OnePlus",
+    "model": "OnePlus 5T",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
     "basePrice": 2930
   },
   {
-    "id": "samsung_model_1781781056902_39",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A50",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3370
-  },
-  {
-    "id": "samsung_model_1781781056902_40",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A50",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3180
-  },
-  {
-    "id": "samsung_model_1781781056902_41",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A50S",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2800
-  },
-  {
-    "id": "samsung_model_1781781056902_42",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A50S",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3000
-  },
-  {
-    "id": "samsung_model_1781781056902_43",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A51",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3940
-  },
-  {
-    "id": "samsung_model_1781781056902_44",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A51",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 4140
-  },
-  {
-    "id": "samsung_model_1781781056902_45",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A52",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 5420
-  },
-  {
-    "id": "samsung_model_1781781056902_46",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A52",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 5790
-  },
-  {
-    "id": "samsung_model_1781781056902_47",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A52S",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 7620
-  },
-  {
-    "id": "samsung_model_1781781056902_48",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A52S",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 8190
-  },
-  {
-    "id": "samsung_model_1781781056902_49",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A53 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 6780
-  },
-  {
-    "id": "samsung_model_1781781056902_50",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A53 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 7190
-  },
-  {
-    "id": "samsung_model_1781781056902_51",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A53 5G",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 7590
-  },
-  {
-    "id": "samsung_model_1781781056902_52",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A6",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1330
-  },
-  {
-    "id": "samsung_model_1781781056902_53",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A6",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1460
-  },
-  {
-    "id": "samsung_model_1781781056902_54",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A6",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1640
-  },
-  {
-    "id": "samsung_model_1781781056902_55",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A6 PLUS",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1510
-  },
-  {
-    "id": "samsung_model_1781781056902_56",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A6 PLUS",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1640
-  },
-  {
-    "id": "samsung_model_1781781056902_57",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A6 PLUS",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1820
-  },
-  {
-    "id": "samsung_model_1781781056902_58",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A7",
-    "storage": "16GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1260
-  },
-  {
-    "id": "samsung_model_1781781056902_59",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A7 2017",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1410
-  },
-  {
-    "id": "samsung_model_1781781056902_60",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A7 2018",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1820
-  },
-  {
-    "id": "samsung_model_1781781056902_61",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A7",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2010
-  },
-  {
-    "id": "samsung_model_1781781056902_62",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A7",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2150
-  },
-  {
-    "id": "samsung_model_1781781056902_63",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A70",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3700
-  },
-  {
-    "id": "samsung_model_1781781056902_64",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A70S",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3460
-  },
-  {
-    "id": "samsung_model_1781781056902_65",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A70S",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3690
-  },
-  {
-    "id": "samsung_model_1781781056902_66",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A71",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 4070
-  },
-  {
-    "id": "samsung_model_1781781056902_67",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A71",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 4430
-  },
-  {
-    "id": "samsung_model_1781781056902_68",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A72",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 6360
-  },
-  {
-    "id": "samsung_model_1781781056902_69",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A72",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 6910
-  },
-  {
-    "id": "samsung_model_1781781056902_70",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A73",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 8930
-  },
-  {
-    "id": "samsung_model_1781781056902_71",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A73",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 9660
-  },
-  {
-    "id": "samsung_model_1781781056902_72",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A8 PLUS",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2300
-  },
-  {
-    "id": "samsung_model_1781781056902_73",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A8 STAR",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1730
-  },
-  {
-    "id": "samsung_model_1781781056902_74",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A80",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 5040
-  },
-  {
-    "id": "samsung_model_1781781056902_75",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A9",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2260
-  },
-  {
-    "id": "samsung_model_1781781056902_76",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A9 2018",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2480
-  },
-  {
-    "id": "samsung_model_1781781056902_77",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A9 PRO",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1480
-  },
-  {
-    "id": "samsung_model_1781781056902_78",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY C7 PRO",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2110
-  },
-  {
-    "id": "samsung_model_1781781056902_79",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY C9 PRO",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2150
-  },
-  {
-    "id": "samsung_model_1781781056902_80",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F02S",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2740
-  },
-  {
-    "id": "samsung_model_1781781056902_81",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F02S",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2890
-  },
-  {
-    "id": "samsung_model_1781781056902_82",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F12",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3650
-  },
-  {
-    "id": "samsung_model_1781781056902_83",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F12",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3230
-  },
-  {
-    "id": "samsung_model_1781781056902_84",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F13",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3750
-  },
-  {
-    "id": "samsung_model_1781781056902_85",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F13",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 4000
-  },
-  {
-    "id": "samsung_model_1781781056902_86",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F22",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3500
-  },
-  {
-    "id": "samsung_model_1781781056902_87",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F22",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3810
-  },
-  {
-    "id": "samsung_model_1781781056902_88",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F23 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 5890
-  },
-  {
-    "id": "samsung_model_1781781056902_89",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F23 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 6190
-  },
-  {
-    "id": "samsung_model_1781781056902_90",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F41",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3220
-  },
-  {
-    "id": "samsung_model_1781781056902_91",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F41",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3560
-  },
-  {
-    "id": "samsung_model_1781781056902_92",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F42 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 6340
-  },
-  {
-    "id": "samsung_model_1781781056902_93",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F42 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 6930
-  },
-  {
-    "id": "samsung_model_1781781056902_94",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F62",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 4880
-  },
-  {
-    "id": "samsung_model_1781781056902_95",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F62",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 5040
-  },
-  {
-    "id": "samsung_model_1781781056902_96",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY FOLD",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 12790
-  },
-  {
-    "id": "samsung_model_1781781056902_97",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY J2 2016",
-    "storage": "8GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 810
-  },
-  {
-    "id": "samsung_model_1781781056902_98",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY J2 2017",
-    "storage": "8GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 700
-  },
-  {
-    "id": "samsung_model_1781781056902_99",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY J2 2018",
-    "storage": "16GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1190
-  },
-  {
-    "id": "samsung_model_1781781056902_100",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY J2 ACE",
-    "storage": "8GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 660
-  },
-  {
-    "id": "samsung_model_1781781056902_101",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY J2 CORE",
-    "storage": "8GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 740
-  },
-  {
-    "id": "samsung_model_1781781056902_102",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY J2 CORE 2020",
-    "storage": "16GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1290
-  },
-  {
-    "id": "samsung_model_1781781056902_103",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY J2 PRO",
-    "storage": "16GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 890
-  },
-  {
-    "id": "samsung_model_1781781056902_104",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY J3",
-    "storage": "8GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 880
-  },
-  {
-    "id": "samsung_model_1781781056902_105",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY J3 2017",
-    "storage": "16GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1170
-  },
-  {
-    "id": "samsung_model_1781781056902_106",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY J3 PRO",
-    "storage": "16GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 890
-  },
-  {
-    "id": "samsung_model_1781781056902_107",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY J4",
-    "storage": "16GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1110
-  },
-  {
-    "id": "samsung_model_1781781056902_108",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY J4",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1330
-  },
-  {
-    "id": "samsung_model_1781781056902_109",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY J4 PLUS",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1480
-  },
-  {
-    "id": "samsung_model_1781781056902_110",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY J5",
-    "storage": "16GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 890
-  },
-  {
-    "id": "samsung_model_1781781056902_111",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY J5 2017",
-    "storage": "16GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 960
-  },
-  {
-    "id": "samsung_model_1781781056902_112",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY J5 PRIME",
-    "storage": "16GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1130
-  },
-  {
-    "id": "samsung_model_1781781056902_113",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY J5 PRIME",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1200
-  },
-  {
-    "id": "samsung_model_1781781056902_114",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY J6",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1530
-  },
-  {
-    "id": "samsung_model_1781781056902_115",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY J6",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
+    "id": "oneplus_7009",
+    "brand": "OnePlus",
+    "model": "OnePlus 5T",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2570
+  },
+  {
+    "id": "oneplus_7010",
+    "brand": "OnePlus",
+    "model": "OnePlus 5",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2420
+  },
+  {
+    "id": "oneplus_7011",
+    "brand": "OnePlus",
+    "model": "OnePlus 5",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2780
+  },
+  {
+    "id": "oneplus_7012",
+    "brand": "OnePlus",
+    "model": "Oneplus 3T",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2040
+  },
+  {
+    "id": "oneplus_7013",
+    "brand": "OnePlus",
+    "model": "OnePlus 3T",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1860
+  },
+  {
+    "id": "oneplus_7014",
+    "brand": "OnePlus",
+    "model": "OnePlus 3",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
     "basePrice": 1700
   },
   {
-    "id": "samsung_model_1781781056902_116",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY J6 PLUS",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1890
-  },
-  {
-    "id": "samsung_model_1781781056902_117",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY J7",
-    "storage": "16GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1110
-  },
-  {
-    "id": "samsung_model_1781781056902_118",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY J7 DUO",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1410
-  },
-  {
-    "id": "samsung_model_1781781056902_119",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY J7 MAX",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1440
-  },
-  {
-    "id": "samsung_model_1781781056902_120",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY J7 NXT",
-    "storage": "16GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1190
-  },
-  {
-    "id": "samsung_model_1781781056902_121",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY J7 NXT",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1410
-  },
-  {
-    "id": "samsung_model_1781781056902_122",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY J7 PRIME",
-    "storage": "16GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1190
-  },
-  {
-    "id": "samsung_model_1781781056902_123",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY J7 PRIME",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1260
-  },
-  {
-    "id": "samsung_model_1781781056902_124",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY J7 PRIME",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1480
-  },
-  {
-    "id": "samsung_model_1781781056902_125",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY J7 PRO",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1000
-  },
-  {
-    "id": "samsung_model_1781781056902_126",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY J7 PRO",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1110
-  },
-  {
-    "id": "samsung_model_1781781056902_127",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY J8",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2340
-  },
-  {
-    "id": "samsung_model_1781781056902_128",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M01",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2180
-  },
-  {
-    "id": "samsung_model_1781781056902_129",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M01 CORE",
-    "storage": "16GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1310
-  },
-  {
-    "id": "samsung_model_1781781056902_130",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M01 CORE",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1580
-  },
-  {
-    "id": "samsung_model_1781781056902_131",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M01S",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2080
-  },
-  {
-    "id": "samsung_model_1781781056902_132",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M02",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2460
-  },
-  {
-    "id": "samsung_model_1781781056902_133",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M02",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2690
-  },
-  {
-    "id": "samsung_model_1781781056902_134",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M02S",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2260
-  },
-  {
-    "id": "samsung_model_1781781056902_135",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M02S",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2840
-  },
-  {
-    "id": "samsung_model_1781781056902_136",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M10",
-    "storage": "16GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2000
-  },
-  {
-    "id": "samsung_model_1781781056902_137",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M10",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2150
-  },
-  {
-    "id": "samsung_model_1781781056902_138",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M10S",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2160
-  },
-  {
-    "id": "samsung_model_1781781056902_139",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M11",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2390
-  },
-  {
-    "id": "samsung_model_1781781056902_140",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M11",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2950
-  },
-  {
-    "id": "samsung_model_1781781056902_141",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M12",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3710
-  },
-  {
-    "id": "samsung_model_1781781056902_142",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M12",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3940
-  },
-  {
-    "id": "samsung_model_1781781056902_143",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M20",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2080
-  },
-  {
-    "id": "samsung_model_1781781056902_144",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M20",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2230
-  },
-  {
-    "id": "samsung_model_1781781056902_145",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M21",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3030
-  },
-  {
-    "id": "samsung_model_1781781056902_146",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M21",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3320
-  },
-  {
-    "id": "samsung_model_1781781056902_147",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M21 EDITION",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3270
-  },
-  {
-    "id": "samsung_model_1781781056902_148",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M21 EDITION",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3390
-  },
-  {
-    "id": "samsung_model_1781781056902_149",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M30",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2450
-  },
-  {
-    "id": "samsung_model_1781781056902_150",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M30",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2690
-  },
-  {
-    "id": "samsung_model_1781781056902_151",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M30",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2920
-  },
-  {
-    "id": "samsung_model_1781781056902_152",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M30S",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2480
-  },
-  {
-    "id": "samsung_model_1781781056902_153",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M30S",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2730
-  },
-  {
-    "id": "samsung_model_1781781056902_154",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M30S",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2890
-  },
-  {
-    "id": "samsung_model_1781781056902_155",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M31",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3150
-  },
-  {
-    "id": "samsung_model_1781781056902_156",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M31",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3470
-  },
-  {
-    "id": "samsung_model_1781781056902_157",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M31",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3660
-  },
-  {
-    "id": "samsung_model_1781781056902_158",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M31S",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3450
-  },
-  {
-    "id": "samsung_model_1781781056902_159",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M31S",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 4020
-  },
-  {
-    "id": "samsung_model_1781781056902_160",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M32",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3450
-  },
-  {
-    "id": "samsung_model_1781781056902_161",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M32",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 4210
-  },
-  {
-    "id": "samsung_model_1781781056902_162",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M32 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 6210
-  },
-  {
-    "id": "samsung_model_1781781056902_163",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M32 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 6570
-  },
-  {
-    "id": "samsung_model_1781781056902_164",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M33 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 6370
-  },
-  {
-    "id": "samsung_model_1781781056902_165",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M33 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 6620
-  },
-  {
-    "id": "samsung_model_1781781056902_166",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M40",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3150
-  },
-  {
-    "id": "samsung_model_1781781056902_167",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M42 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 6320
-  },
-  {
-    "id": "samsung_model_1781781056902_168",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M42 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 6650
-  },
-  {
-    "id": "samsung_model_1781781056902_169",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M51",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 4380
-  },
-  {
-    "id": "samsung_model_1781781056902_170",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M51",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 4660
-  },
-  {
-    "id": "samsung_model_1781781056902_171",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M52 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 6900
-  },
-  {
-    "id": "samsung_model_1781781056902_172",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M52 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 7170
-  },
-  {
-    "id": "samsung_model_1781781056902_173",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M53 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 7190
-  },
-  {
-    "id": "samsung_model_1781781056902_174",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M53 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 7480
-  },
-  {
-    "id": "samsung_model_1781781056902_175",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY NOTE 5",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2110
-  },
-  {
-    "id": "samsung_model_1781781056902_176",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY NOTE 5",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2190
-  },
-  {
-    "id": "samsung_model_1781781056902_177",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY NOTE 8",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 4900
-  },
-  {
-    "id": "samsung_model_1781781056902_178",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY NOTE 8",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 5570
-  },
-  {
-    "id": "samsung_model_1781781056902_179",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY NOTE 8",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 6090
-  },
-  {
-    "id": "samsung_model_1781781056902_180",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY NOTE 9",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 5940
-  },
-  {
-    "id": "samsung_model_1781781056902_181",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY NOTE 9",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 6380
-  },
-  {
-    "id": "samsung_model_1781781056902_182",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY NOTE 10",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 9020
-  },
-  {
-    "id": "samsung_model_1781781056902_183",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY NOTE 10 LITE",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 5640
-  },
-  {
-    "id": "samsung_model_1781781056902_184",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY NOTE 10 LITE",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 6010
-  },
-  {
-    "id": "samsung_model_1781781056902_185",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY NOTE 10 PLUS",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 9740
-  },
-  {
-    "id": "samsung_model_1781781056902_186",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY NOTE 10 PLUS",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 9870
-  },
-  {
-    "id": "samsung_model_1781781056902_187",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY NOTE 10 PLUS 5G",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 11130
-  },
-  {
-    "id": "samsung_model_1781781056902_188",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY NOTE 20",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 9270
-  },
-  {
-    "id": "samsung_model_1781781056902_189",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY NOTE 20 ULTRA",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 14370
-  },
-  {
-    "id": "samsung_model_1781781056902_190",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY NOTE FAN EDITION",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2800
-  },
-  {
-    "id": "samsung_model_1781781056902_191",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY ON MAX",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 1520
-  },
-  {
-    "id": "samsung_model_1781781056902_192",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S10",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 7160
-  },
-  {
-    "id": "samsung_model_1781781056902_193",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S10",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 7460
-  },
-  {
-    "id": "samsung_model_1781781056902_194",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S10E",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
+    "id": "oneplus_7015",
+    "brand": "OnePlus",
+    "model": "OnePlus 6T McLaren",
+    "storage": "10 GB/256 GB",
+    "color": "Midnight",
     "basePrice": 5790
   },
   {
-    "id": "samsung_model_1781781056902_195",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S10 LITE",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 5820
-  },
-  {
-    "id": "samsung_model_1781781056902_196",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S10 LITE",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 6350
-  },
-  {
-    "id": "samsung_model_1781781056902_197",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S10 PLUS",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 7360
-  },
-  {
-    "id": "samsung_model_1781781056902_198",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S10 PLUS",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 7800
-  },
-  {
-    "id": "samsung_model_1781781056902_199",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S10 PLUS",
-    "storage": "1 TB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 9330
-  },
-  {
-    "id": "samsung_model_1781781056902_200",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S20",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 8890
-  },
-  {
-    "id": "samsung_model_1781781056902_201",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S20 FE",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 7040
-  },
-  {
-    "id": "samsung_model_1781781056902_202",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S20 FE",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 7950
-  },
-  {
-    "id": "samsung_model_1781781056902_203",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S20 FE 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 8370
-  },
-  {
-    "id": "samsung_model_1781781056902_204",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S20 PLUS",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 10130
-  },
-  {
-    "id": "samsung_model_1781781056902_205",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S20 ULTRA",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 13580
-  },
-  {
-    "id": "samsung_model_1781781056902_206",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S20 ULTRA 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 14070
-  },
-  {
-    "id": "samsung_model_1781781056902_207",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S21",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 12180
-  },
-  {
-    "id": "samsung_model_1781781056902_208",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S21",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 13000
-  },
-  {
-    "id": "samsung_model_1781781056902_209",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S21 FE 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 10630
-  },
-  {
-    "id": "samsung_model_1781781056902_210",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S21 FE 5G",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 11360
-  },
-  {
-    "id": "samsung_model_1781781056902_211",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S21 PLUS",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 13120
-  },
-  {
-    "id": "samsung_model_1781781056902_212",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S21 PLUS",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 13990
-  },
-  {
-    "id": "samsung_model_1781781056902_213",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S21 ULTRA",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 17300
-  },
-  {
-    "id": "samsung_model_1781781056902_214",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S21 ULTRA",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 19800
-  },
-  {
-    "id": "samsung_model_1781781056902_215",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S22",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 15930
-  },
-  {
-    "id": "samsung_model_1781781056902_216",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S22",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 16710
-  },
-  {
-    "id": "samsung_model_1781781056902_217",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S22 PLUS",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 16960
-  },
-  {
-    "id": "samsung_model_1781781056902_218",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S22 PLUS",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 17630
-  },
-  {
-    "id": "samsung_model_1781781056902_219",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S22 ULTRA",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 26600
-  },
-  {
-    "id": "samsung_model_1781781056902_220",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S22 ULTRA",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 27410
-  },
-  {
-    "id": "samsung_model_1781781056902_221",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S22 ULTRA",
-    "storage": "1 TB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 28380
-  },
-  {
-    "id": "samsung_model_1781781056902_222",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S23",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 22790
-  },
-  {
-    "id": "samsung_model_1781781056902_223",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S23",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 23410
-  },
-  {
-    "id": "samsung_model_1781781056902_224",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S23 FE",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 16910
-  },
-  {
-    "id": "samsung_model_1781781056902_225",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S23 FE",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 17770
-  },
-  {
-    "id": "samsung_model_1781781056902_226",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S23 PLUS",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 26600
-  },
-  {
-    "id": "samsung_model_1781781056902_227",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S23 PLUS",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 27330
-  },
-  {
-    "id": "samsung_model_1781781056902_228",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S23 ULTRA",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 36780
-  },
-  {
-    "id": "samsung_model_1781781056902_229",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S23 ULTRA",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 38210
-  },
-  {
-    "id": "samsung_model_1781781056902_230",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S23 ULTRA",
-    "storage": "1 TB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 39700
-  },
-  {
-    "id": "samsung_model_1781781056902_231",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S24",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 28960
-  },
-  {
-    "id": "samsung_model_1781781056902_232",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S24",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 34410
-  },
-  {
-    "id": "samsung_model_1781781056902_233",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S24",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 35540
-  },
-  {
-    "id": "samsung_model_1781781056902_234",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S24 PLUS",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 36190
-  },
-  {
-    "id": "samsung_model_1781781056902_235",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S24 PLUS",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 36500
-  },
-  {
-    "id": "samsung_model_1781781056902_236",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S24 FE",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 22350
-  },
-  {
-    "id": "samsung_model_1781781056902_237",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S24 FE",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 25630
-  },
-  {
-    "id": "samsung_model_1781781056902_238",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S24 ULTRA",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 61340
-  },
-  {
-    "id": "samsung_model_1781781056902_239",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S24 ULTRA",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 63240
-  },
-  {
-    "id": "samsung_model_1781781056902_240",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S24 ULTRA",
-    "storage": "1 TB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 63810
-  },
-  {
-    "id": "samsung_model_1781781056902_241",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S25",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 39470
-  },
-  {
-    "id": "samsung_model_1781781056902_242",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S25",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 44060
-  },
-  {
-    "id": "samsung_model_1781781056902_243",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S25",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 44700
-  },
-  {
-    "id": "samsung_model_1781781056902_244",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S25 PLUS",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 49650
-  },
-  {
-    "id": "samsung_model_1781781056902_245",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S25 PLUS",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 52780
-  },
-  {
-    "id": "samsung_model_1781781056902_246",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S25 FE",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 33500
-  },
-  {
-    "id": "samsung_model_1781781056902_247",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S25 FE",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 36000
-  },
-  {
-    "id": "samsung_model_1781781056902_248",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S25 FE",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 40000
-  },
-  {
-    "id": "samsung_model_1781781056902_249",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S25 EDGE",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 51350
-  },
-  {
-    "id": "samsung_model_1781781056902_250",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S25 EDGE",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 56110
-  },
-  {
-    "id": "samsung_model_1781781056902_251",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S25 ULTRA",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 71130
-  },
-  {
-    "id": "samsung_model_1781781056902_252",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S25 ULTRA",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 74180
-  },
-  {
-    "id": "samsung_model_1781781056902_253",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S25 ULTRA",
-    "storage": "1 TB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 75600
-  },
-  {
-    "id": "samsung_model_1781781056902_254",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S26",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 55900
-  },
-  {
-    "id": "samsung_model_1781781056902_255",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S26",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 61000
-  },
-  {
-    "id": "samsung_model_1781781056902_256",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S26 PLUS",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 73000
-  },
-  {
-    "id": "samsung_model_1781781056902_257",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S26 PLUS",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 78000
-  },
-  {
-    "id": "samsung_model_1781781056902_258",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S26 ULTRA",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 83000
-  },
-  {
-    "id": "samsung_model_1781781056902_259",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S26 ULTRA",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 88500
-  },
-  {
-    "id": "samsung_model_1781781056902_260",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY S26 ULTRA",
-    "storage": "1 TB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 105000
-  },
-  {
-    "id": "samsung_model_1781781056903_261",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY Z FOLD 2",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 17440
-  },
-  {
-    "id": "samsung_model_1781781056903_262",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY Z FOLD 3",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 21050
-  },
-  {
-    "id": "samsung_model_1781781056903_263",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY Z FOLD 3",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 21450
-  },
-  {
-    "id": "samsung_model_1781781056903_264",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY Z FOLD 4",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 28330
-  },
-  {
-    "id": "samsung_model_1781781056903_265",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY Z FOLD 4",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 29910
-  },
-  {
-    "id": "samsung_model_1781781056903_266",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY Z FOLD 4",
-    "storage": "1 TB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 32790
-  },
-  {
-    "id": "samsung_model_1781781056903_267",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY Z FOLD 5",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 49920
-  },
-  {
-    "id": "samsung_model_1781781056903_268",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY Z FOLD 5",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 50880
-  },
-  {
-    "id": "samsung_model_1781781056903_269",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY Z FOLD 5",
-    "storage": "1 TB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 54530
-  },
-  {
-    "id": "samsung_model_1781781056903_270",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY Z FOLD 6",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 69120
-  },
-  {
-    "id": "samsung_model_1781781056903_271",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY Z FOLD 6",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 70750
-  },
-  {
-    "id": "samsung_model_1781781056903_272",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY Z FOLD 6",
-    "storage": "1 TB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 73630
-  },
-  {
-    "id": "samsung_model_1781781056903_273",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY Z FOLD 7",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 94800
-  },
-  {
-    "id": "samsung_model_1781781056903_274",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY Z FOLD 7",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 96800
-  },
-  {
-    "id": "samsung_model_1781781056903_275",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY Z FOLD 7",
-    "storage": "1 TB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 100000
-  },
-  {
-    "id": "samsung_model_1781781056903_276",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY Z FLIP 3",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 12290
-  },
-  {
-    "id": "samsung_model_1781781056903_277",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY Z FLIP 3",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 12780
-  },
-  {
-    "id": "samsung_model_1781781056903_278",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY Z FLIP 4",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 15560
-  },
-  {
-    "id": "samsung_model_1781781056903_279",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY Z FLIP 4",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 15800
-  },
-  {
-    "id": "samsung_model_1781781056903_280",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY Z FLIP 5",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 27410
-  },
-  {
-    "id": "samsung_model_1781781056903_281",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY Z FLIP 5",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 28700
-  },
-  {
-    "id": "samsung_model_1781781056903_282",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY Z FLIP 6",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 36960
-  },
-  {
-    "id": "samsung_model_1781781056903_283",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY Z FLIP 6",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 40800
-  },
-  {
-    "id": "samsung_model_1781781056903_284",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY Z FLIP 7",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 58500
-  },
-  {
-    "id": "samsung_model_1781781056903_285",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY Z FLIP 7",
-    "storage": "512GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 60000
-  },
-  {
-    "id": "samsung_model_1781781056903_286",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY Z FLIP 7 FE",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 51000
-  },
-  {
-    "id": "samsung_model_1781781056903_287",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY Z FLIP 7 FE",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 52900
-  },
-  {
-    "id": "samsung_model_1781781056903_288",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A25 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 10190
-  },
-  {
-    "id": "samsung_model_1781781056903_289",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A25 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 11520
-  },
-  {
-    "id": "samsung_model_1781781056903_290",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A25 5G",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 11810
-  },
-  {
-    "id": "samsung_model_1781781056903_291",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A15 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 8940
-  },
-  {
-    "id": "samsung_model_1781781056903_292",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A15 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 9180
-  },
-  {
-    "id": "samsung_model_1781781056903_293",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A15 5G",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 9370
-  },
-  {
-    "id": "samsung_model_1781781056903_294",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F15 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 7330
-  },
-  {
-    "id": "samsung_model_1781781056903_295",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F15 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 8470
-  },
-  {
-    "id": "samsung_model_1781781056903_296",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F15 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 9100
-  },
-  {
-    "id": "samsung_model_1781781056903_297",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A35 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 12500
-  },
-  {
-    "id": "samsung_model_1781781056903_298",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A35 5G",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 13230
-  },
-  {
-    "id": "samsung_model_1781781056903_299",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A55 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 15990
-  },
-  {
-    "id": "samsung_model_1781781056903_300",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A55 5G",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 16780
-  },
-  {
-    "id": "samsung_model_1781781056903_301",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A55 5G",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 18180
-  },
-  {
-    "id": "samsung_model_1781781056903_302",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M55 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 12940
-  },
-  {
-    "id": "samsung_model_1781781056903_303",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M55 5G",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 13930
-  },
-  {
-    "id": "samsung_model_1781781056903_304",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M55 5G",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 14930
-  },
-  {
-    "id": "samsung_model_1781781056903_305",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M15 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 7160
-  },
-  {
-    "id": "samsung_model_1781781056903_306",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M15 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 7600
-  },
-  {
-    "id": "samsung_model_1781781056903_307",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M15 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 7960
-  },
-  {
-    "id": "samsung_model_1781781056903_308",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F55 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 10840
-  },
-  {
-    "id": "samsung_model_1781781056903_309",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F55 5G",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 12440
-  },
-  {
-    "id": "samsung_model_1781781056903_310",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F55 5G",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 13230
-  },
-  {
-    "id": "samsung_model_1781781056903_311",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M35 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 9690
-  },
-  {
-    "id": "samsung_model_1781781056903_312",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M35 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 9950
-  },
-  {
-    "id": "samsung_model_1781781056903_313",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M35 5G",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 10090
-  },
-  {
-    "id": "samsung_model_1781781056903_314",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M55S 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 11240
-  },
-  {
-    "id": "samsung_model_1781781056903_315",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M55S 5G",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 12440
-  },
-  {
-    "id": "samsung_model_1781781056903_316",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A33 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 6440
-  },
-  {
-    "id": "samsung_model_1781781056903_317",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A33 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 6950
-  },
-  {
-    "id": "samsung_model_1781781056903_318",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A34 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 9900
-  },
-  {
-    "id": "samsung_model_1781781056903_319",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A34 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 10230
-  },
-  {
-    "id": "samsung_model_1781781056903_320",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A34 5G",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 10780
-  },
-  {
-    "id": "samsung_model_1781781056903_321",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A36 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 18100
-  },
-  {
-    "id": "samsung_model_1781781056903_322",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A36 5G",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 18570
-  },
-  {
-    "id": "samsung_model_1781781056903_323",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A36 5G",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 19690
-  },
-  {
-    "id": "samsung_model_1781781056903_324",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A37 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 25620
-  },
-  {
-    "id": "samsung_model_1781781056903_325",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A37 5G",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 29550
-  },
-  {
-    "id": "samsung_model_1781781056903_326",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A37 5G",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 33000
-  },
-  {
-    "id": "samsung_model_1781781056903_327",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F54 5G",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 10500
-  },
-  {
-    "id": "samsung_model_1781781056903_328",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M34 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 8310
-  },
-  {
-    "id": "samsung_model_1781781056903_329",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M34 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 8930
-  },
-  {
-    "id": "samsung_model_1781781056903_330",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M34 5G",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 9160
-  },
-  {
-    "id": "samsung_model_1781781056903_331",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F34 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 8720
-  },
-  {
-    "id": "samsung_model_1781781056903_332",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F34 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 9300
-  },
-  {
-    "id": "samsung_model_1781781056903_333",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F14 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 6790
-  },
-  {
-    "id": "samsung_model_1781781056903_334",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F14 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 7090
-  },
-  {
-    "id": "samsung_model_1781781056903_335",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M14 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 7230
-  },
-  {
-    "id": "samsung_model_1781781056903_336",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M14 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 7470
-  },
-  {
-    "id": "samsung_model_1781781056903_337",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A14",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 5960
-  },
-  {
-    "id": "samsung_model_1781781056903_338",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A14",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 6450
-  },
-  {
-    "id": "samsung_model_1781781056903_339",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M14 4G",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 4920
-  },
-  {
-    "id": "samsung_model_1781781056903_340",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M14 4G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 5820
-  },
-  {
-    "id": "samsung_model_1781781056903_341",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A05",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 4900
-  },
-  {
-    "id": "samsung_model_1781781056903_342",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A05",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 5270
-  },
-  {
-    "id": "samsung_model_1781781056903_343",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A05S",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 5270
-  },
-  {
-    "id": "samsung_model_1781781056903_344",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A05S",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 5760
-  },
-  {
-    "id": "samsung_model_1781781056903_345",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F14",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 4820
-  },
-  {
-    "id": "samsung_model_1781781056903_346",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M05",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 4520
-  },
-  {
-    "id": "samsung_model_1781781056903_347",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A06",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 4670
-  },
-  {
-    "id": "samsung_model_1781781056903_348",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A06",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 5030
-  },
-  {
-    "id": "samsung_model_1781781056903_349",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A16 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 9770
-  },
-  {
-    "id": "samsung_model_1781781056903_350",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A16 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 10510
-  },
-  {
-    "id": "samsung_model_1781781056903_351",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A16 5G",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 11250
-  },
-  {
-    "id": "samsung_model_1781781056903_352",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F05",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 4090
-  },
-  {
-    "id": "samsung_model_1781781056903_353",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A56 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 24300
-  },
-  {
-    "id": "samsung_model_1781781056903_354",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A56 5G",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 25680
-  },
-  {
-    "id": "samsung_model_1781781056903_355",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A56 5G",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 27000
-  },
-  {
-    "id": "samsung_model_1781781056903_356",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A07",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 5590
-  },
-  {
-    "id": "samsung_model_1781781056903_357",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A04S",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3230
-  },
-  {
-    "id": "samsung_model_1781781056903_358",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A04S",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3400
-  },
-  {
-    "id": "samsung_model_1781781056903_359",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A04",
-    "storage": "32GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2390
-  },
-  {
-    "id": "samsung_model_1781781056903_360",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A04",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3000
-  },
-  {
-    "id": "samsung_model_1781781056903_361",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A04",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3650
-  },
-  {
-    "id": "samsung_model_1781781056903_362",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M04",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3320
-  },
-  {
-    "id": "samsung_model_1781781056903_363",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M04",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3460
-  },
-  {
-    "id": "samsung_model_1781781056903_364",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F04",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2830
-  },
-  {
-    "id": "samsung_model_1781781056903_365",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F06 5G",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 5080
-  },
-  {
-    "id": "samsung_model_1781781056903_366",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F06 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 5580
-  },
-  {
-    "id": "samsung_model_1781781056903_367",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F06 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 6290
-  },
-  {
-    "id": "samsung_model_1781781056903_368",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A26 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 11600
-  },
-  {
-    "id": "samsung_model_1781781056903_369",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A26 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 12350
-  },
-  {
-    "id": "samsung_model_1781781056903_370",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A26 5G",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 13300
-  },
-  {
-    "id": "samsung_model_1781781056903_371",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F16 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 8680
-  },
-  {
-    "id": "samsung_model_1781781056903_372",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F16 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 9060
-  },
-  {
-    "id": "samsung_model_1781781056903_373",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F16 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 9690
-  },
-  {
-    "id": "samsung_model_1781781056903_374",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M06 5G",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 5230
-  },
-  {
-    "id": "samsung_model_1781781056903_375",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M06 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 5840
-  },
-  {
-    "id": "samsung_model_1781781056903_376",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M06 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 6190
-  },
-  {
-    "id": "samsung_model_1781781056903_377",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M16 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 8120
-  },
-  {
-    "id": "samsung_model_1781781056903_378",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M16 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 8680
-  },
-  {
-    "id": "samsung_model_1781781056903_379",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M16 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 9640
-  },
-  {
-    "id": "samsung_model_1781781056903_380",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M56 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 14750
-  },
-  {
-    "id": "samsung_model_1781781056903_381",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M56 5G",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 17000
-  },
-  {
-    "id": "samsung_model_1781781056903_382",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F36 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 11100
-  },
-  {
-    "id": "samsung_model_1781781056903_383",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F36 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 12180
-  },
-  {
-    "id": "samsung_model_1781781056903_384",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F36 5G",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 13200
-  },
-  {
-    "id": "samsung_model_1781781056903_385",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M36 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 10500
-  },
-  {
-    "id": "samsung_model_1781781056903_386",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M36 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 12000
-  },
-  {
-    "id": "samsung_model_1781781056903_387",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M36 5G",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 12500
-  },
-  {
-    "id": "samsung_model_1781781056903_388",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F56 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 15830
-  },
-  {
-    "id": "samsung_model_1781781056903_389",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F56 5G",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 18470
-  },
-  {
-    "id": "samsung_model_1781781056903_390",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M15 5G PRIME EDITION",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 6900
-  },
-  {
-    "id": "samsung_model_1781781056903_391",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M15 5G PRIME EDITION",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 7610
-  },
-  {
-    "id": "samsung_model_1781781056903_392",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M15 5G PRIME EDITION",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
+    "id": "oneplus_7016",
+    "brand": "OnePlus",
+    "model": "OnePlus 7",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5670
+  },
+  {
+    "id": "oneplus_7017",
+    "brand": "OnePlus",
+    "model": "OnePlus 7",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 6210
+  },
+  {
+    "id": "oneplus_7018",
+    "brand": "OnePlus",
+    "model": "OnePlus 7 Pro",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8070
+  },
+  {
+    "id": "oneplus_7019",
+    "brand": "OnePlus",
+    "model": "OnePlus 7 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7500
+  },
+  {
+    "id": "oneplus_7020",
+    "brand": "OnePlus",
+    "model": "OnePlus 7 Pro",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8140
+  },
+  {
+    "id": "oneplus_7021",
+    "brand": "OnePlus",
+    "model": "OnePlus 7T",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 6890
+  },
+  {
+    "id": "oneplus_7022",
+    "brand": "OnePlus",
+    "model": "OnePlus 7T",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6490
+  },
+  {
+    "id": "oneplus_7023",
+    "brand": "OnePlus",
+    "model": "Oneplus 7T Pro",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8280
+  },
+  {
+    "id": "oneplus_7024",
+    "brand": "OnePlus",
+    "model": "OnePlus 7T Pro",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
     "basePrice": 8630
   },
   {
-    "id": "samsung_model_1781781056903_393",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A57 5G",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 36900
+    "id": "oneplus_7025",
+    "brand": "OnePlus",
+    "model": "OnePlus 8",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 10270
   },
   {
-    "id": "samsung_model_1781781056903_394",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A57 5G",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 39950
+    "id": "oneplus_7026",
+    "brand": "OnePlus",
+    "model": "OnePlus 8",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 9660
   },
   {
-    "id": "samsung_model_1781781056903_395",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M07",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 4950
+    "id": "oneplus_7027",
+    "brand": "OnePlus",
+    "model": "OnePlus 8",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 10450
   },
   {
-    "id": "samsung_model_1781781056903_396",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F07",
-    "storage": "64GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 4870
+    "id": "oneplus_7028",
+    "brand": "OnePlus",
+    "model": "OnePlus 8 Pro",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 12420
   },
   {
-    "id": "samsung_model_1781781056903_397",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A07 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 10780
+    "id": "oneplus_7029",
+    "brand": "OnePlus",
+    "model": "OnePlus 8 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 11930
   },
   {
-    "id": "samsung_model_1781781056903_398",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A07 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 11650
+    "id": "oneplus_7030",
+    "brand": "OnePlus",
+    "model": "OnePlus 7T Pro McLaren Edition",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 9090
   },
   {
-    "id": "samsung_model_1781781056903_399",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F07E 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 8900
+    "id": "oneplus_7031",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8930
   },
   {
-    "id": "samsung_model_1781781056903_400",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F07E 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 9600
+    "id": "oneplus_7032",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 6890
   },
   {
-    "id": "samsung_model_1781781056903_401",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A17 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 11600
+    "id": "oneplus_7033",
+    "brand": "OnePlus",
+    "model": "OnePlus 8T",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 10260
   },
   {
-    "id": "samsung_model_1781781056903_402",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A17 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 12500
+    "id": "oneplus_7034",
+    "brand": "OnePlus",
+    "model": "OnePlus 8T",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 9770
   },
   {
-    "id": "samsung_model_1781781056903_403",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY A17 5G",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 13430
+    "id": "oneplus_7035",
+    "brand": "OnePlus",
+    "model": "OnePlus 9 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 10220
   },
   {
-    "id": "samsung_model_1781781056903_404",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M17 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 9200
-  },
-  {
-    "id": "samsung_model_1781781056903_405",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M17 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 10190
-  },
-  {
-    "id": "samsung_model_1781781056903_406",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M17 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 10750
-  },
-  {
-    "id": "samsung_model_1781781056903_407",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M17E 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 9300
-  },
-  {
-    "id": "samsung_model_1781781056903_408",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY M17E 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 10700
-  },
-  {
-    "id": "samsung_model_1781781056903_409",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F17 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 8750
-  },
-  {
-    "id": "samsung_model_1781781056903_410",
-    "brand": "Samsung",
-    "model": "SAMSUNG GALAXY F17 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
+    "id": "oneplus_7036",
+    "brand": "OnePlus",
+    "model": "OnePlus 9 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
     "basePrice": 9930
   },
   {
-    "id": "x_1000",
-    "brand": "Xiaomi",
-    "model": "Mi 10T Pro",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
+    "id": "oneplus_7037",
+    "brand": "OnePlus",
+    "model": "OnePlus 9R 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 10160
+  },
+  {
+    "id": "oneplus_7038",
+    "brand": "OnePlus",
+    "model": "OnePlus 9R 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 9360
+  },
+  {
+    "id": "oneplus_7039",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8000
+  },
+  {
+    "id": "oneplus_7040",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7260
+  },
+  {
+    "id": "oneplus_7041",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7590
+  },
+  {
+    "id": "oneplus_7042",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 2 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8420
+  },
+  {
+    "id": "oneplus_7043",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 2 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 9920
+  },
+  {
+    "id": "oneplus_7044",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 2 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 9350
+  },
+  {
+    "id": "oneplus_7045",
+    "brand": "OnePlus",
+    "model": "OnePlus 9RT 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 10220
+  },
+  {
+    "id": "oneplus_7046",
+    "brand": "OnePlus",
+    "model": "OnePlus 9RT 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 11490
+  },
+  {
+    "id": "oneplus_7047",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 2 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8710
+  },
+  {
+    "id": "oneplus_7048",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 2 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 9010
+  },
+  {
+    "id": "oneplus_7049",
+    "brand": "OnePlus",
+    "model": "OnePlus 10 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 14150
+  },
+  {
+    "id": "oneplus_7050",
+    "brand": "OnePlus",
+    "model": "OnePlus 10 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 15170
+  },
+  {
+    "id": "oneplus_7051",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 2 Lite 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7990
+  },
+  {
+    "id": "oneplus_7052",
+    "brand": "OnePlus",
+    "model": "OnePlus 10R 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 10030
+  },
+  {
+    "id": "oneplus_7053",
+    "brand": "OnePlus",
+    "model": "OnePlus 10R 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 10730
+  },
+  {
+    "id": "oneplus_7054",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 2T 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 9380
+  },
+  {
+    "id": "oneplus_7055",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 2T 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 10050
+  },
+  {
+    "id": "oneplus_7056",
+    "brand": "OnePlus",
+    "model": "OnePlus 10T 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 14230
+  },
+  {
+    "id": "oneplus_7057",
+    "brand": "OnePlus",
+    "model": "OnePlus 10T 5G",
+    "storage": "16 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 15710
+  },
+  {
+    "id": "oneplus_7058",
+    "brand": "OnePlus",
+    "model": "OnePlus 10T 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 14530
+  },
+  {
+    "id": "oneplus_7059",
+    "brand": "OnePlus",
+    "model": "OnePlus 11 5G",
+    "storage": "16 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 24750
+  },
+  {
+    "id": "oneplus_7060",
+    "brand": "OnePlus",
+    "model": "OnePlus 11 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 23580
+  },
+  {
+    "id": "oneplus_7061",
+    "brand": "OnePlus",
+    "model": "Oneplus 11 5G Marble Edition",
+    "storage": "16 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 26630
+  },
+  {
+    "id": "oneplus_7062",
+    "brand": "OnePlus",
+    "model": "OnePlus 11R 5G",
+    "storage": "16 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 21490
+  },
+  {
+    "id": "oneplus_7063",
+    "brand": "OnePlus",
+    "model": "OnePlus 11R 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 20470
+  },
+  {
+    "id": "oneplus_7064",
+    "brand": "OnePlus",
+    "model": "Oneplus 11R 5G",
+    "storage": "18 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 22060
+  },
+  {
+    "id": "oneplus_7065",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 3 Lite 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 11740
+  },
+  {
+    "id": "oneplus_7066",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 3 Lite 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 12460
+  },
+  {
+    "id": "oneplus_7067",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 3 5G",
+    "storage": "16 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 15220
+  },
+  {
+    "id": "oneplus_7068",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 3 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 14700
+  },
+  {
+    "id": "oneplus_7069",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 3 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 13630
+  },
+  {
+    "id": "oneplus_7070",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 3 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 14210
+  },
+  {
+    "id": "oneplus_7071",
+    "brand": "OnePlus",
+    "model": "Oneplus Open",
+    "storage": "16 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 54320
+  },
+  {
+    "id": "oneplus_7072",
+    "brand": "OnePlus",
+    "model": "OnePlus 12",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 34630
+  },
+  {
+    "id": "oneplus_7073",
+    "brand": "OnePlus",
+    "model": "OnePlus 12",
+    "storage": "16 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 37600
+  },
+  {
+    "id": "oneplus_7074",
+    "brand": "OnePlus",
+    "model": "OnePlus 12R",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 24200
+  },
+  {
+    "id": "oneplus_7075",
+    "brand": "OnePlus",
+    "model": "OnePlus 12R",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 25580
+  },
+  {
+    "id": "oneplus_7076",
+    "brand": "OnePlus",
+    "model": "OnePlus 12R",
+    "storage": "16 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 26420
+  },
+  {
+    "id": "oneplus_7077",
+    "brand": "OnePlus",
+    "model": "Oneplus Nord CE4 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 13920
+  },
+  {
+    "id": "oneplus_7078",
+    "brand": "OnePlus",
+    "model": "Oneplus Nord CE4 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 15550
+  },
+  {
+    "id": "oneplus_7079",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE4 Lite 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 13050
+  },
+  {
+    "id": "oneplus_7080",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE4 Lite 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 13810
+  },
+  {
+    "id": "oneplus_7081",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 4",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 19950
+  },
+  {
+    "id": "oneplus_7082",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 4",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 17770
+  },
+  {
+    "id": "oneplus_7083",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 4",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 20400
+  },
+  {
+    "id": "oneplus_7084",
+    "brand": "OnePlus",
+    "model": "OnePlus 13",
+    "storage": "24 GB/1 TB",
+    "color": "Midnight",
+    "basePrice": 50500
+  },
+  {
+    "id": "oneplus_7085",
+    "brand": "OnePlus",
+    "model": "OnePlus 13",
+    "storage": "16 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 46680
+  },
+  {
+    "id": "oneplus_7086",
+    "brand": "OnePlus",
+    "model": "OnePlus 13",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 43630
+  },
+  {
+    "id": "oneplus_7087",
+    "brand": "OnePlus",
+    "model": "OnePlus 13R",
+    "storage": "16 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 29800
+  },
+  {
+    "id": "oneplus_7088",
+    "brand": "OnePlus",
+    "model": "OnePlus 13R",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 28890
+  },
+  {
+    "id": "oneplus_7089",
+    "brand": "OnePlus",
+    "model": "OnePlus 13s",
+    "storage": "12 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 37500
+  },
+  {
+    "id": "oneplus_7090",
+    "brand": "OnePlus",
+    "model": "OnePlus 13s",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 35440
+  },
+  {
+    "id": "oneplus_7091",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 5",
+    "storage": "12 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 26000
+  },
+  {
+    "id": "oneplus_7092",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 5",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 24820
+  },
+  {
+    "id": "oneplus_7093",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 5",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 23000
+  },
+  {
+    "id": "oneplus_7094",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 5",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 17210
+  },
+  {
+    "id": "oneplus_7095",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 5",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 19000
+  },
+  {
+    "id": "oneplus_7096",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 5",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 18430
+  },
+  {
+    "id": "oneplus_7097",
+    "brand": "OnePlus",
+    "model": "OnePlus 15",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 54480
+  },
+  {
+    "id": "oneplus_7098",
+    "brand": "OnePlus",
+    "model": "OnePlus 15",
+    "storage": "16 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 57000
+  },
+  {
+    "id": "oneplus_7099",
+    "brand": "OnePlus",
+    "model": "Oneplus 15R",
+    "storage": "12 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 36300
+  },
+  {
+    "id": "oneplus_7100",
+    "brand": "OnePlus",
+    "model": "Oneplus 15R",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 34610
+  },
+  {
+    "id": "oneplus_7101",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 6 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 26500
+  },
+  {
+    "id": "oneplus_7102",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 6 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 28500
+  },
+  {
+    "id": "oneplus_7103",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 2 Lite 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7720
+  },
+  {
+    "id": "asus_8000",
+    "brand": "Asus",
+    "model": "Asus ROG Phone II ZS660KL",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7020
+  },
+  {
+    "id": "asus_8001",
+    "brand": "Asus",
+    "model": "Asus ROG Phone II ZS660KL",
+    "storage": "12 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 7450
+  },
+  {
+    "id": "asus_8002",
+    "brand": "Asus",
+    "model": "Asus ROG Phone 3",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8380
+  },
+  {
+    "id": "asus_8003",
+    "brand": "Asus",
+    "model": "Asus ROG Phone 3",
+    "storage": "12 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8820
+  },
+  {
+    "id": "asus_8004",
+    "brand": "Asus",
+    "model": "Asus ROG Phone 3",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 9320
+  },
+  {
+    "id": "asus_8005",
+    "brand": "Asus",
+    "model": "Asus 8z",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7330
+  },
+  {
+    "id": "google_9000",
+    "brand": "Google",
+    "model": "Google Pixel 4A",
+    "storage": "6 GB/128 GB",
+    "color": "Obsidian",
+    "basePrice": 4390
+  },
+  {
+    "id": "google_9001",
+    "brand": "Google",
+    "model": "Google Pixel 6a",
+    "storage": "6 GB/128 GB",
+    "color": "Obsidian",
+    "basePrice": 10080
+  },
+  {
+    "id": "google_9002",
+    "brand": "Google",
+    "model": "Google Pixel 7",
+    "storage": "8 GB/256 GB",
+    "color": "Obsidian",
+    "basePrice": 14160
+  },
+  {
+    "id": "google_9003",
+    "brand": "Google",
+    "model": "Google Pixel 7",
+    "storage": "8 GB/128 GB",
+    "color": "Obsidian",
+    "basePrice": 14240
+  },
+  {
+    "id": "google_9004",
+    "brand": "Google",
+    "model": "Google Pixel 7 Pro",
+    "storage": "12 GB/128 GB",
+    "color": "Obsidian",
+    "basePrice": 18470
+  },
+  {
+    "id": "google_9005",
+    "brand": "Google",
+    "model": "Google Pixel 7 Pro",
+    "storage": "12 GB/256 GB",
+    "color": "Obsidian",
+    "basePrice": 19040
+  },
+  {
+    "id": "google_9006",
+    "brand": "Google",
+    "model": "Google Pixel 7a",
+    "storage": "8 GB/128 GB",
+    "color": "Obsidian",
+    "basePrice": 17120
+  },
+  {
+    "id": "google_9007",
+    "brand": "Google",
+    "model": "Google Pixel 8",
+    "storage": "8 GB/256 GB",
+    "color": "Obsidian",
+    "basePrice": 24800
+  },
+  {
+    "id": "google_9008",
+    "brand": "Google",
+    "model": "Google Pixel 8",
+    "storage": "8 GB/128 GB",
+    "color": "Obsidian",
+    "basePrice": 24390
+  },
+  {
+    "id": "google_9009",
+    "brand": "Google",
+    "model": "Google Pixel 8 Pro",
+    "storage": "12 GB/256 GB",
+    "color": "Obsidian",
+    "basePrice": 33220
+  },
+  {
+    "id": "google_9010",
+    "brand": "Google",
+    "model": "Google Pixel 8 Pro",
+    "storage": "12 GB/128 GB",
+    "color": "Obsidian",
+    "basePrice": 31490
+  },
+  {
+    "id": "google_9011",
+    "brand": "Google",
+    "model": "Google Pixel 8 Pro",
+    "storage": "12 GB/512 GB",
+    "color": "Obsidian",
+    "basePrice": 33790
+  },
+  {
+    "id": "google_9012",
+    "brand": "Google",
+    "model": "Google Pixel 8a",
+    "storage": "8 GB/256 GB",
+    "color": "Obsidian",
+    "basePrice": 23370
+  },
+  {
+    "id": "google_9013",
+    "brand": "Google",
+    "model": "Google Pixel 8a",
+    "storage": "8 GB/128 GB",
+    "color": "Obsidian",
+    "basePrice": 23080
+  },
+  {
+    "id": "google_9014",
+    "brand": "Google",
+    "model": "Google Pixel 9",
+    "storage": "12 GB/256 GB",
+    "color": "Obsidian",
+    "basePrice": 37630
+  },
+  {
+    "id": "google_9015",
+    "brand": "Google",
+    "model": "Google Pixel 9 Pro XL",
+    "storage": "16 GB/512 GB",
+    "color": "Obsidian",
+    "basePrice": 57120
+  },
+  {
+    "id": "google_9016",
+    "brand": "Google",
+    "model": "Google Pixel 9 Pro XL",
+    "storage": "16 GB/256 GB",
+    "color": "Obsidian",
+    "basePrice": 54620
+  },
+  {
+    "id": "google_9017",
+    "brand": "Google",
+    "model": "Google Pixel 9 Pro Fold",
+    "storage": "16 GB/256 GB",
+    "color": "Obsidian",
+    "basePrice": 69510
+  },
+  {
+    "id": "google_9018",
+    "brand": "Google",
+    "model": "Google Pixel 9 Pro",
+    "storage": "16 GB/256 GB",
+    "color": "Obsidian",
+    "basePrice": 50110
+  },
+  {
+    "id": "google_9019",
+    "brand": "Google",
+    "model": "Google Pixel 9a",
+    "storage": "8 GB/256 GB",
+    "color": "Obsidian",
+    "basePrice": 27700
+  },
+  {
+    "id": "google_9020",
+    "brand": "Google",
+    "model": "Google Pixel 10",
+    "storage": "12 GB/256 GB",
+    "color": "Obsidian",
+    "basePrice": 45500
+  },
+  {
+    "id": "google_9021",
+    "brand": "Google",
+    "model": "Google Pixel 10 Pro",
+    "storage": "16 GB/256 GB",
+    "color": "Obsidian",
+    "basePrice": 64900
+  },
+  {
+    "id": "google_9022",
+    "brand": "Google",
+    "model": "Google Pixel 10 Pro XL",
+    "storage": "16 GB/256 GB",
+    "color": "Obsidian",
+    "basePrice": 73000
+  },
+  {
+    "id": "google_9023",
+    "brand": "Google",
+    "model": "Google Pixel 10 Pro Fold",
+    "storage": "16 GB/256 GB",
+    "color": "Obsidian",
+    "basePrice": 98000
+  },
+  {
+    "id": "google_9024",
+    "brand": "Google",
+    "model": "Google Pixel 10a",
+    "storage": "8 GB/256 GB",
+    "color": "Obsidian",
+    "basePrice": 33200
+  },
+  {
+    "id": "honor_10000",
+    "brand": "Honor",
+    "model": "Honor 8X",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2450
+  },
+  {
+    "id": "honor_10001",
+    "brand": "Honor",
+    "model": "Honor 8X",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2150
+  },
+  {
+    "id": "honor_10002",
+    "brand": "Honor",
+    "model": "Honor 8X",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2560
+  },
+  {
+    "id": "honor_10003",
+    "brand": "Honor",
+    "model": "Honor Play",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2040
+  },
+  {
+    "id": "honor_10004",
+    "brand": "Honor",
+    "model": "Honor Play",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2110
+  },
+  {
+    "id": "honor_10005",
+    "brand": "Honor",
+    "model": "Honor 9N",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1860
+  },
+  {
+    "id": "honor_10006",
+    "brand": "Honor",
+    "model": "Honor 9N",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2010
+  },
+  {
+    "id": "honor_10007",
+    "brand": "Honor",
+    "model": "Honor 9N",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2300
+  },
+  {
+    "id": "honor_10008",
+    "brand": "Honor",
+    "model": "Honor 10",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2520
+  },
+  {
+    "id": "honor_10009",
+    "brand": "Honor",
+    "model": "Honor 7A",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1640
+  },
+  {
+    "id": "honor_10010",
+    "brand": "Honor",
+    "model": "Honor 9 Lite",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1860
+  },
+  {
+    "id": "honor_10011",
+    "brand": "Honor",
+    "model": "Honor 9 Lite",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1600
+  },
+  {
+    "id": "honor_10012",
+    "brand": "Honor",
+    "model": "Honor 7X",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1560
+  },
+  {
+    "id": "honor_10013",
+    "brand": "Honor",
+    "model": "Honor 7X",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1360
+  },
+  {
+    "id": "honor_10014",
+    "brand": "Honor",
+    "model": "Honor 8C",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1520
+  },
+  {
+    "id": "honor_10015",
+    "brand": "Honor",
+    "model": "Honor 8C",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1410
+  },
+  {
+    "id": "honor_10016",
+    "brand": "Honor",
+    "model": "Honor 20i",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2480
+  },
+  {
+    "id": "honor_10017",
+    "brand": "Honor",
+    "model": "Honor 20",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2750
+  },
+  {
+    "id": "honor_10018",
+    "brand": "Honor",
+    "model": "Honor 9x Pro",
+    "storage": "6 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 3160
+  },
+  {
+    "id": "honor_10019",
+    "brand": "Honor",
+    "model": "Honor 9A",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2080
+  },
+  {
+    "id": "honor_10020",
+    "brand": "Honor",
+    "model": "Honor 200 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 12050
+  },
+  {
+    "id": "honor_10021",
+    "brand": "Honor",
+    "model": "Honor 200 5G",
+    "storage": "12 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 14410
+  },
+  {
+    "id": "honor_10022",
+    "brand": "Honor",
+    "model": "Honor 200 Pro 5G",
+    "storage": "12 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 21020
+  },
+  {
+    "id": "honor_10023",
+    "brand": "Honor",
+    "model": "Honor 200 Lite 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8120
+  },
+  {
+    "id": "honor_10024",
+    "brand": "Honor",
+    "model": "Honor 90",
+    "storage": "12 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 12350
+  },
+  {
+    "id": "honor_10025",
+    "brand": "Honor",
+    "model": "Honor 90",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 10390
+  },
+  {
+    "id": "honor_10026",
+    "brand": "Honor",
+    "model": "Honor 90",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 11470
+  },
+  {
+    "id": "infinix_11000",
+    "brand": "Infinix",
+    "model": "Infinix Hot 7 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2040
+  },
+  {
+    "id": "infinix_11001",
+    "brand": "Infinix",
+    "model": "Infinix Zero 5 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2240
+  },
+  {
+    "id": "infinix_11002",
+    "brand": "Infinix",
+    "model": "Infinix Hot 8",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2380
+  },
+  {
+    "id": "infinix_11003",
+    "brand": "Infinix",
+    "model": "Infinix S5",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1990
+  },
+  {
+    "id": "infinix_11004",
+    "brand": "Infinix",
+    "model": "Infinix S5 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2560
+  },
+  {
+    "id": "infinix_11005",
+    "brand": "Infinix",
+    "model": "Infinix Hot 9 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2820
+  },
+  {
+    "id": "infinix_11006",
+    "brand": "Infinix",
+    "model": "Infinix Note 7",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2790
+  },
+  {
+    "id": "infinix_11007",
+    "brand": "Infinix",
+    "model": "Infinix Smart HD 2021",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1780
+  },
+  {
+    "id": "infinix_11008",
+    "brand": "Infinix",
+    "model": "Infinix Hot 10",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2910
+  },
+  {
+    "id": "infinix_11009",
+    "brand": "Infinix",
+    "model": "Infinix Hot 10",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3520
+  },
+  {
+    "id": "infinix_11010",
+    "brand": "Infinix",
+    "model": "Infinix Zero 8i",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3930
+  },
+  {
+    "id": "infinix_11011",
+    "brand": "Infinix",
+    "model": "Infinix Smart 5",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2130
+  },
+  {
+    "id": "infinix_11012",
+    "brand": "Infinix",
+    "model": "Infinix Hot 10 Play",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2480
+  },
+  {
+    "id": "infinix_11013",
+    "brand": "Infinix",
+    "model": "Infinix Hot 10 Play",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2910
+  },
+  {
+    "id": "infinix_11014",
+    "brand": "Infinix",
+    "model": "Infinix Hot 10s",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2970
+  },
+  {
+    "id": "infinix_11015",
+    "brand": "Infinix",
+    "model": "Infinix Hot 10s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2750
+  },
+  {
+    "id": "infinix_11016",
+    "brand": "Infinix",
+    "model": "Infinix Note 10",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3120
+  },
+  {
+    "id": "infinix_11017",
+    "brand": "Infinix",
+    "model": "Infinix Note 10",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2860
+  },
+  {
+    "id": "infinix_11018",
+    "brand": "Infinix",
+    "model": "Infinix Note 10 Pro",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 4210
+  },
+  {
+    "id": "infinix_11019",
+    "brand": "Infinix",
+    "model": "Infinix Hot 11",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2930
+  },
+  {
+    "id": "infinix_11020",
+    "brand": "Infinix",
+    "model": "Infinix Hot 11S",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3150
+  },
+  {
+    "id": "infinix_11021",
+    "brand": "Infinix",
+    "model": "Infinix Hot 11S",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3300
+  },
+  {
+    "id": "infinix_11022",
+    "brand": "Infinix",
+    "model": "Infinix Note 11s",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3190
+  },
+  {
+    "id": "infinix_11023",
+    "brand": "Infinix",
+    "model": "Infinix Note 11s",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3400
+  },
+  {
+    "id": "infinix_11024",
+    "brand": "Infinix",
+    "model": "Infinix Note 11",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3560
+  },
+  {
+    "id": "infinix_11025",
+    "brand": "Infinix",
+    "model": "Infinix Note 11",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3190
+  },
+  {
+    "id": "infinix_11026",
+    "brand": "Infinix",
+    "model": "Infinix Zero 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5420
+  },
+  {
+    "id": "infinix_11027",
+    "brand": "Infinix",
+    "model": "Infinix Smart 4 Plus",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2150
+  },
+  {
+    "id": "infinix_11028",
+    "brand": "Infinix",
+    "model": "Infinix HOT 12 Play",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3500
+  },
+  {
+    "id": "infinix_11029",
+    "brand": "Infinix",
+    "model": "Infinix Hot 9",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2600
+  },
+  {
+    "id": "infinix_11030",
+    "brand": "Infinix",
+    "model": "Infinix Note 11s Free Fire Edition",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3900
+  },
+  {
+    "id": "infinix_11031",
+    "brand": "Infinix",
+    "model": "Infinix Hot 11 2022",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2670
+  },
+  {
+    "id": "infinix_11032",
+    "brand": "Infinix",
+    "model": "Infinix Note 12 Turbo",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3790
+  },
+  {
+    "id": "infinix_11033",
+    "brand": "Infinix",
+    "model": "Infinix Note 12",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4240
+  },
+  {
+    "id": "infinix_11034",
+    "brand": "Infinix",
+    "model": "Infinix Note 12",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4050
+  },
+  {
+    "id": "infinix_11035",
+    "brand": "Infinix",
+    "model": "Infinix Note 12 Pro 4G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 4820
+  },
+  {
+    "id": "infinix_11036",
+    "brand": "Infinix",
+    "model": "Infinix Note 12 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5900
+  },
+  {
+    "id": "infinix_11037",
+    "brand": "Infinix",
+    "model": "Infinix Hot 12",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3260
+  },
+  {
+    "id": "infinix_11038",
+    "brand": "Infinix",
+    "model": "Infinix Smart 6",
+    "storage": "2 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2360
+  },
+  {
+    "id": "infinix_11039",
+    "brand": "Infinix",
+    "model": "Infinix Note 12 5G",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4200
+  },
+  {
+    "id": "infinix_11040",
+    "brand": "Infinix",
+    "model": "Infinix Smart 6 Plus",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2390
+  },
+  {
+    "id": "infinix_11041",
+    "brand": "Infinix",
+    "model": "Infinix Hot 12 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3530
+  },
+  {
+    "id": "infinix_11042",
+    "brand": "Infinix",
+    "model": "Infinix Hot 12 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3190
+  },
+  {
+    "id": "infinix_11043",
+    "brand": "Infinix",
+    "model": "Infinix Smart 6 HD",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2080
+  },
+  {
+    "id": "infinix_11044",
+    "brand": "Infinix",
+    "model": "Infinix Zero Ultra",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8540
+  },
+  {
+    "id": "infinix_11045",
+    "brand": "Infinix",
+    "model": "Infinix Zero 20",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4490
+  },
+  {
+    "id": "infinix_11046",
+    "brand": "Infinix",
+    "model": "Infinix Hot 20 5G",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4080
+  },
+  {
+    "id": "infinix_11047",
+    "brand": "Infinix",
+    "model": "Infinix Hot 20 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4380
+  },
+  {
+    "id": "infinix_11048",
+    "brand": "Infinix",
+    "model": "Infinix Hot 20 Play",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2890
+  },
+  {
+    "id": "infinix_11049",
+    "brand": "Infinix",
+    "model": "Infinix Note 12i",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2890
+  },
+  {
+    "id": "infinix_11050",
+    "brand": "Infinix",
+    "model": "Infinix Smart 7",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2080
+  },
+  {
+    "id": "infinix_11051",
+    "brand": "Infinix",
+    "model": "Infinix Smart 7",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2300
+  },
+  {
+    "id": "infinix_11052",
+    "brand": "Infinix",
+    "model": "Infinix Zero 5G 2023",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5420
+  },
+  {
+    "id": "infinix_11053",
+    "brand": "Infinix",
+    "model": "Infinix Zero 5G 2023 Turbo",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5940
+  },
+  {
+    "id": "infinix_11054",
+    "brand": "Infinix",
+    "model": "Infinix Smart 7 HD",
+    "storage": "2 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1850
+  },
+  {
+    "id": "infinix_11055",
+    "brand": "Infinix",
+    "model": "Infinix Hot 30i",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4870
+  },
+  {
+    "id": "infinix_11056",
+    "brand": "Infinix",
+    "model": "Infinix Hot 30i",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3260
+  },
+  {
+    "id": "infinix_11057",
+    "brand": "Infinix",
+    "model": "Infinix GT 10 Pro",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 9210
+  },
+  {
+    "id": "infinix_11058",
+    "brand": "Infinix",
+    "model": "Infinix Note 30 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 7700
+  },
+  {
+    "id": "infinix_11059",
+    "brand": "Infinix",
+    "model": "Infinix Note 30 5G",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6100
+  },
+  {
+    "id": "infinix_11060",
+    "brand": "Infinix",
+    "model": "Infinix Hot 30 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6190
+  },
+  {
+    "id": "infinix_11061",
+    "brand": "Infinix",
+    "model": "Infinix Hot 30 5G",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5150
+  },
+  {
+    "id": "iqoo_12000",
+    "brand": "iQOO",
+    "model": "iQOO 3",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 6320
+  },
+  {
+    "id": "iqoo_12001",
+    "brand": "iQOO",
+    "model": "iQOO 3",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6100
+  },
+  {
+    "id": "iqoo_12002",
+    "brand": "iQOO",
+    "model": "iQOO 7 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 9280
+  },
+  {
+    "id": "iqoo_12003",
+    "brand": "iQOO",
+    "model": "iQOO 7 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 9010
+  },
+  {
+    "id": "iqoo_12004",
+    "brand": "iQOO",
+    "model": "iQOO 7 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8900
+  },
+  {
+    "id": "iqoo_12005",
+    "brand": "iQOO",
+    "model": "iQOO 7 Legend 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 10910
+  },
+  {
+    "id": "iqoo_12006",
+    "brand": "iQOO",
+    "model": "iQOO 7 Legend 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 10750
+  },
+  {
+    "id": "iqoo_12007",
+    "brand": "iQOO",
+    "model": "iQOO Z3 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7080
+  },
+  {
+    "id": "iqoo_12008",
+    "brand": "iQOO",
+    "model": "iQOO Z3 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7660
+  },
+  {
+    "id": "iqoo_12009",
+    "brand": "iQOO",
+    "model": "iQOO Z3 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 7840
+  },
+  {
+    "id": "iqoo_12010",
+    "brand": "iQOO",
+    "model": "iQOO Z5 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7310
+  },
+  {
+    "id": "iqoo_12011",
+    "brand": "iQOO",
+    "model": "iQOO Z5 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
     "basePrice": 7760
   },
   {
-    "id": "x_1001",
+    "id": "iqoo_12012",
+    "brand": "iQOO",
+    "model": "iQOO 9 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 10720
+  },
+  {
+    "id": "iqoo_12013",
+    "brand": "iQOO",
+    "model": "iQOO 9 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 11280
+  },
+  {
+    "id": "iqoo_12014",
+    "brand": "iQOO",
+    "model": "iQOO 9 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 16210
+  },
+  {
+    "id": "iqoo_12015",
+    "brand": "iQOO",
+    "model": "iQOO 9 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 15830
+  },
+  {
+    "id": "iqoo_12016",
+    "brand": "iQOO",
+    "model": "iQOO 9 SE 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 10600
+  },
+  {
+    "id": "iqoo_12017",
+    "brand": "iQOO",
+    "model": "iQOO 9 SE 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 10870
+  },
+  {
+    "id": "iqoo_12018",
+    "brand": "iQOO",
+    "model": "iQOO Z6 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7880
+  },
+  {
+    "id": "iqoo_12019",
+    "brand": "iQOO",
+    "model": "iQOO Z6 Pro 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7540
+  },
+  {
+    "id": "iqoo_12020",
+    "brand": "iQOO",
+    "model": "iQOO Z6 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8290
+  },
+  {
+    "id": "iqoo_12021",
+    "brand": "iQOO",
+    "model": "iQOO Z6 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7720
+  },
+  {
+    "id": "iqoo_12022",
+    "brand": "iQOO",
+    "model": "iQOO Z6 5G",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7010
+  },
+  {
+    "id": "iqoo_12023",
+    "brand": "iQOO",
+    "model": "iQOO Z6 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7310
+  },
+  {
+    "id": "iqoo_12024",
+    "brand": "iQOO",
+    "model": "iQOO Z6",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5230
+  },
+  {
+    "id": "iqoo_12025",
+    "brand": "iQOO",
+    "model": "iQOO Z6",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5720
+  },
+  {
+    "id": "iqoo_12026",
+    "brand": "iQOO",
+    "model": "iQOO Z6",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6100
+  },
+  {
+    "id": "iqoo_12027",
+    "brand": "iQOO",
+    "model": "iQOO Neo 6 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 9870
+  },
+  {
+    "id": "iqoo_12028",
+    "brand": "iQOO",
+    "model": "iQOO Neo 6 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 10220
+  },
+  {
+    "id": "iqoo_12029",
+    "brand": "iQOO",
+    "model": "iQOO 9T 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 13970
+  },
+  {
+    "id": "iqoo_12030",
+    "brand": "iQOO",
+    "model": "iQOO 9T 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 15150
+  },
+  {
+    "id": "iqoo_12031",
+    "brand": "iQOO",
+    "model": "iQOO 3 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 7120
+  },
+  {
+    "id": "iqoo_12032",
+    "brand": "iQOO",
+    "model": "iQOO Z6 Lite 5G",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 5570
+  },
+  {
+    "id": "iqoo_12033",
+    "brand": "iQOO",
+    "model": "iQOO Z6 Lite 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6480
+  },
+  {
+    "id": "iqoo_12034",
+    "brand": "iQOO",
+    "model": "iQOO 11 5G",
+    "storage": "16 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 18020
+  },
+  {
+    "id": "iqoo_12035",
+    "brand": "iQOO",
+    "model": "iQOO 11 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 17650
+  },
+  {
+    "id": "iqoo_12036",
+    "brand": "iQOO",
+    "model": "iQOO Neo 7 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 11000
+  },
+  {
+    "id": "iqoo_12037",
+    "brand": "iQOO",
+    "model": "iQOO Neo 7 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 11440
+  },
+  {
+    "id": "iqoo_12038",
+    "brand": "iQOO",
+    "model": "iQOO Z7 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 9280
+  },
+  {
+    "id": "iqoo_12039",
+    "brand": "iQOO",
+    "model": "iQOO Z7 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8350
+  },
+  {
+    "id": "iqoo_12040",
+    "brand": "iQOO",
+    "model": "iQOO Z7s 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8220
+  },
+  {
+    "id": "iqoo_12041",
+    "brand": "iQOO",
+    "model": "iQOO Z7s 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7540
+  },
+  {
+    "id": "iqoo_12042",
+    "brand": "iQOO",
+    "model": "iQOO Neo 7 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 16460
+  },
+  {
+    "id": "iqoo_12043",
+    "brand": "iQOO",
+    "model": "iQOO Neo 7 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 16950
+  },
+  {
+    "id": "iqoo_12044",
+    "brand": "iQOO",
+    "model": "iQOO Z7 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 14640
+  },
+  {
+    "id": "iqoo_12045",
+    "brand": "iQOO",
+    "model": "iQOO Z7 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 12480
+  },
+  {
+    "id": "iqoo_12046",
+    "brand": "iQOO",
+    "model": "iQOO Neo 9 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 20140
+  },
+  {
+    "id": "iqoo_12047",
+    "brand": "iQOO",
+    "model": "iQOO Neo 9 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 19060
+  },
+  {
+    "id": "iqoo_12048",
+    "brand": "iQOO",
+    "model": "iQOO Neo 9 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 17050
+  },
+  {
+    "id": "iqoo_12049",
+    "brand": "iQOO",
+    "model": "iQOO Z9 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8070
+  },
+  {
+    "id": "iqoo_12050",
+    "brand": "iQOO",
+    "model": "iQOO Z9 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7570
+  },
+  {
+    "id": "iqoo_12051",
+    "brand": "iQOO",
+    "model": "iQOO Z9 Lite 5G",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7060
+  },
+  {
+    "id": "iqoo_12052",
+    "brand": "iQOO",
+    "model": "iQOO Z9 Lite 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7600
+  },
+  {
+    "id": "iqoo_12053",
+    "brand": "iQOO",
+    "model": "iQOO Z9s 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 12500
+  },
+  {
+    "id": "iqoo_12054",
+    "brand": "iQOO",
+    "model": "iQOO Z9s 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 12100
+  },
+  {
+    "id": "iqoo_12055",
+    "brand": "iQOO",
+    "model": "iQOO Z9s Pro 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 12890
+  },
+  {
+    "id": "iqoo_12056",
+    "brand": "iQOO",
+    "model": "iQOO Z9s Pro 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 13130
+  },
+  {
+    "id": "iqoo_12057",
+    "brand": "iQOO",
+    "model": "iQOO Z9s Pro 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 13920
+  },
+  {
+    "id": "iqoo_12058",
+    "brand": "iQOO",
+    "model": "iQOO Neo 10R 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 19500
+  },
+  {
+    "id": "iqoo_12059",
+    "brand": "iQOO",
+    "model": "iQOO Neo 10R 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 17000
+  },
+  {
+    "id": "iqoo_12060",
+    "brand": "iQOO",
+    "model": "iQOO Neo 10R 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 19320
+  },
+  {
+    "id": "iqoo_12061",
+    "brand": "iQOO",
+    "model": "iQOO Z10 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 16400
+  },
+  {
+    "id": "iqoo_12062",
+    "brand": "iQOO",
+    "model": "iQOO Z10 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 15900
+  },
+  {
+    "id": "iqoo_12063",
+    "brand": "iQOO",
+    "model": "iQOO Z10 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 18000
+  },
+  {
+    "id": "lenovo_13000",
+    "brand": "Lenovo",
+    "model": "Lenovo K9 Note",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1380
+  },
+  {
+    "id": "lenovo_13001",
+    "brand": "Lenovo",
+    "model": "Lenovo A6 Note",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1200
+  },
+  {
+    "id": "lenovo_13002",
+    "brand": "Lenovo",
+    "model": "Lenovo K10 Note",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1440
+  },
+  {
+    "id": "lenovo_13003",
+    "brand": "Lenovo",
+    "model": "Lenovo K10 Note",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 1510
+  },
+  {
+    "id": "lenovo_13004",
+    "brand": "Lenovo",
+    "model": "Lenovo K10 Plus",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1940
+  },
+  {
+    "id": "lenovo_13005",
+    "brand": "Lenovo",
+    "model": "Lenovo Z6 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5260
+  },
+  {
+    "id": "lg_14000",
+    "brand": "LG",
+    "model": "LG W10",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2190
+  },
+  {
+    "id": "lg_14001",
+    "brand": "LG",
+    "model": "LG G8s ThinQ",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4370
+  },
+  {
+    "id": "lg_14002",
+    "brand": "LG",
+    "model": "LG G8X ThinQ",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4540
+  },
+  {
+    "id": "lg_14003",
+    "brand": "LG",
+    "model": "LG Q60",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2710
+  },
+  {
+    "id": "motorola_15000",
+    "brand": "Motorola",
+    "model": "Motorola One Power",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2270
+  },
+  {
+    "id": "motorola_15001",
+    "brand": "Motorola",
+    "model": "Motorola Moto G6 Plus",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1970
+  },
+  {
+    "id": "motorola_15002",
+    "brand": "Motorola",
+    "model": "Motorola Moto Z2 Force",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1670
+  },
+  {
+    "id": "motorola_15003",
+    "brand": "Motorola",
+    "model": "Motorola Moto G6",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1210
+  },
+  {
+    "id": "motorola_15004",
+    "brand": "Motorola",
+    "model": "Motorola Moto G6",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1690
+  },
+  {
+    "id": "motorola_15005",
+    "brand": "Motorola",
+    "model": "Motorola Moto G7 Power",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1970
+  },
+  {
+    "id": "motorola_15006",
+    "brand": "Motorola",
+    "model": "Motorola Moto G7",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1740
+  },
+  {
+    "id": "motorola_15007",
+    "brand": "Motorola",
+    "model": "Motorola Moto One",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1970
+  },
+  {
+    "id": "motorola_15008",
+    "brand": "Motorola",
+    "model": "Motorola One Vision",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2270
+  },
+  {
+    "id": "motorola_15009",
+    "brand": "Motorola",
+    "model": "Motorola One Action",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2540
+  },
+  {
+    "id": "motorola_15010",
+    "brand": "Motorola",
+    "model": "Motorola Moto E6s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2080
+  },
+  {
+    "id": "motorola_15011",
+    "brand": "Motorola",
+    "model": "Motorola One Macro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2040
+  },
+  {
+    "id": "motorola_15012",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge Plus",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8180
+  },
+  {
+    "id": "motorola_15013",
+    "brand": "Motorola",
+    "model": "Motorola Moto G8 Power Lite",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2760
+  },
+  {
+    "id": "motorola_15014",
+    "brand": "Motorola",
+    "model": "Motorola Moto Razr",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 9660
+  },
+  {
+    "id": "motorola_15015",
+    "brand": "Motorola",
+    "model": "Motorola One Fusion Plus",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4510
+  },
+  {
+    "id": "motorola_15016",
+    "brand": "Motorola",
+    "model": "Motorola Moto G9",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2760
+  },
+  {
+    "id": "motorola_15017",
+    "brand": "Motorola",
+    "model": "Motorola Moto E7 Plus",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2800
+  },
+  {
+    "id": "motorola_15018",
+    "brand": "Motorola",
+    "model": "Motorola Moto Razr 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 12870
+  },
+  {
+    "id": "motorola_15019",
+    "brand": "Motorola",
+    "model": "Motorola Moto G9 Power",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2840
+  },
+  {
+    "id": "motorola_15020",
+    "brand": "Motorola",
+    "model": "Motorola Moto G 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4960
+  },
+  {
+    "id": "motorola_15021",
+    "brand": "Motorola",
+    "model": "Motorola Moto G30",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3180
+  },
+  {
+    "id": "motorola_15022",
+    "brand": "Motorola",
+    "model": "Motorola Moto G10 Power",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3030
+  },
+  {
+    "id": "motorola_15023",
+    "brand": "Motorola",
+    "model": "Motorola Moto E7 Power",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2230
+  },
+  {
+    "id": "motorola_15024",
+    "brand": "Motorola",
+    "model": "Motorola Moto E7 Power",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2710
+  },
+  {
+    "id": "motorola_15025",
+    "brand": "Motorola",
+    "model": "Motorola Moto G60",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5180
+  },
+  {
+    "id": "motorola_15026",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 20 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7800
+  },
+  {
+    "id": "motorola_15027",
+    "brand": "Motorola",
+    "model": "Motorola Moto G40 Fusion",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4050
+  },
+  {
+    "id": "motorola_15028",
+    "brand": "Motorola",
+    "model": "Motorola Moto G40 Fusion",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4880
+  },
+  {
+    "id": "motorola_15029",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 20 Fusion",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6890
+  },
+  {
+    "id": "motorola_15030",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 20 Fusion",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6550
+  },
+  {
+    "id": "motorola_15031",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 20",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6930
+  },
+  {
+    "id": "motorola_15032",
+    "brand": "Motorola",
+    "model": "Motorola Moto G31",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3670
+  },
+  {
+    "id": "motorola_15033",
+    "brand": "Motorola",
+    "model": "Motorola Moto G31",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4050
+  },
+  {
+    "id": "motorola_15034",
+    "brand": "Motorola",
+    "model": "Motorola Moto G51 5G",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 5340
+  },
+  {
+    "id": "motorola_15035",
+    "brand": "Motorola",
+    "model": "Motorola Moto E40",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3590
+  },
+  {
+    "id": "motorola_15036",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 30 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 9320
+  },
+  {
+    "id": "motorola_15037",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 30",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8600
+  },
+  {
+    "id": "motorola_15038",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 30",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8940
+  },
+  {
+    "id": "motorola_15039",
+    "brand": "Motorola",
+    "model": "Motorola Moto G52",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4670
+  },
+  {
+    "id": "motorola_15040",
+    "brand": "Motorola",
+    "model": "Motorola Moto G52",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3980
+  },
+  {
+    "id": "motorola_15041",
+    "brand": "Motorola",
+    "model": "Motorola Moto G71 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6480
+  },
+  {
+    "id": "motorola_15042",
+    "brand": "Motorola",
+    "model": "Motorola Moto G82 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7910
+  },
+  {
+    "id": "motorola_15043",
+    "brand": "Motorola",
+    "model": "Motorola Moto G82 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7160
+  },
+  {
+    "id": "motorola_15044",
+    "brand": "Motorola",
+    "model": "Motorola Moto G22",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3750
+  },
+  {
+    "id": "motorola_15045",
+    "brand": "Motorola",
+    "model": "Motorola Moto G42",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3520
+  },
+  {
+    "id": "motorola_15046",
+    "brand": "Motorola",
+    "model": "Motorola Moto G32",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4580
+  },
+  {
+    "id": "motorola_15047",
+    "brand": "Motorola",
+    "model": "Motorola Moto G32",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4170
+  },
+  {
+    "id": "motorola_15048",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 30 Fusion",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 10150
+  },
+  {
+    "id": "motorola_15049",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 30 Ultra",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 13100
+  },
+  {
+    "id": "motorola_15050",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 30 Ultra",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 12500
+  },
+  {
+    "id": "motorola_15051",
+    "brand": "Motorola",
+    "model": "Motorola Moto G72",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5110
+  },
+  {
+    "id": "motorola_15052",
+    "brand": "Motorola",
+    "model": "Motorola Moto G62 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6830
+  },
+  {
+    "id": "motorola_15053",
+    "brand": "Motorola",
+    "model": "Motorola Moto G62 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6360
+  },
+  {
+    "id": "motorola_15054",
+    "brand": "Motorola",
+    "model": "Motorola Moto e32s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2990
+  },
+  {
+    "id": "motorola_15055",
+    "brand": "Motorola",
+    "model": "Motorola Moto e32s",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2690
+  },
+  {
+    "id": "motorola_15056",
+    "brand": "Motorola",
+    "model": "Motorola Moto E13",
+    "storage": "2 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3830
+  },
+  {
+    "id": "motorola_15057",
+    "brand": "Motorola",
+    "model": "Motorola Moto E13",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4270
+  },
+  {
+    "id": "motorola_15058",
+    "brand": "Motorola",
+    "model": "Motorola Moto E13",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4070
+  },
+  {
+    "id": "motorola_15059",
+    "brand": "Motorola",
+    "model": "Motorola Moto e32",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3220
+  },
+  {
+    "id": "motorola_15060",
+    "brand": "Motorola",
+    "model": "Motorola Moto G73 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7270
+  },
+  {
+    "id": "motorola_15061",
+    "brand": "Motorola",
+    "model": "Motorola Moto e22s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3200
+  },
+  {
+    "id": "motorola_15062",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 50 Fusion",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 13960
+  },
+  {
+    "id": "motorola_15063",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 50 Fusion",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 15070
+  },
+  {
+    "id": "nokia_16000",
+    "brand": "Nokia",
+    "model": "Nokia 6.1 Plus",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2260
+  },
+  {
+    "id": "nokia_16001",
+    "brand": "Nokia",
+    "model": "Nokia 6.1 Plus",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2380
+  },
+  {
+    "id": "nokia_16002",
+    "brand": "Nokia",
+    "model": "Nokia 5.1 Plus",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2390
+  },
+  {
+    "id": "nokia_16003",
+    "brand": "Nokia",
+    "model": "Nokia 5.1 Plus",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1750
+  },
+  {
+    "id": "nokia_16004",
+    "brand": "Nokia",
+    "model": "Nokia 5.1 Plus",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2130
+  },
+  {
+    "id": "nokia_16005",
+    "brand": "Nokia",
+    "model": "Nokia 8 Sirocco",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3710
+  },
+  {
+    "id": "nokia_16006",
+    "brand": "Nokia",
+    "model": "Nokia 7 Plus",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2150
+  },
+  {
+    "id": "nokia_16007",
+    "brand": "Nokia",
+    "model": "Nokia 8.1",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2670
+  },
+  {
+    "id": "nokia_16008",
+    "brand": "Nokia",
+    "model": "Nokia 8.1",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2230
+  },
+  {
+    "id": "nokia_16009",
+    "brand": "Nokia",
+    "model": "Nokia 7.1",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2010
+  },
+  {
+    "id": "nokia_16010",
+    "brand": "Nokia",
+    "model": "Nokia 3.2",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1410
+  },
+  {
+    "id": "nokia_16011",
+    "brand": "Nokia",
+    "model": "Nokia 3.2",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1560
+  },
+  {
+    "id": "nokia_16012",
+    "brand": "Nokia",
+    "model": "Nokia 4.2",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1670
+  },
+  {
+    "id": "nokia_16013",
+    "brand": "Nokia",
+    "model": "Nokia 2.2",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 860
+  },
+  {
+    "id": "nokia_16014",
+    "brand": "Nokia",
+    "model": "Nokia 2.2",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1040
+  },
+  {
+    "id": "nokia_16015",
+    "brand": "Nokia",
+    "model": "Nokia 7.2",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2710
+  },
+  {
+    "id": "nokia_16016",
+    "brand": "Nokia",
+    "model": "Nokia 7.2",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2300
+  },
+  {
+    "id": "nokia_16017",
+    "brand": "Nokia",
+    "model": "Nokia 6.2",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2190
+  },
+  {
+    "id": "nokia_16018",
+    "brand": "Nokia",
+    "model": "Nokia 5.3",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3070
+  },
+  {
+    "id": "nokia_16019",
+    "brand": "Nokia",
+    "model": "Nokia 5.3",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2900
+  },
+  {
+    "id": "nokia_16020",
+    "brand": "Nokia",
+    "model": "Nokia 2.4",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2300
+  },
+  {
+    "id": "nokia_16021",
+    "brand": "Nokia",
+    "model": "Nokia 3.4",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2380
+  },
+  {
+    "id": "nokia_16022",
+    "brand": "Nokia",
+    "model": "Nokia 5.4",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2640
+  },
+  {
+    "id": "nokia_16023",
+    "brand": "Nokia",
+    "model": "Nokia 5.4",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3080
+  },
+  {
+    "id": "nokia_16024",
+    "brand": "Nokia",
+    "model": "Nokia G20",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2710
+  },
+  {
+    "id": "nokia_16025",
+    "brand": "Nokia",
+    "model": "Nokia C20 Plus",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1930
+  },
+  {
+    "id": "nokia_16026",
+    "brand": "Nokia",
+    "model": "Nokia C20 Plus",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1670
+  },
+  {
+    "id": "nokia_16027",
+    "brand": "Nokia",
+    "model": "Nokia C01 Plus",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1260
+  },
+  {
+    "id": "nokia_16028",
+    "brand": "Nokia",
+    "model": "Nokia C01 Plus",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1520
+  },
+  {
+    "id": "nokia_16029",
+    "brand": "Nokia",
+    "model": "Nokia G10",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2510
+  },
+  {
+    "id": "nokia_16030",
+    "brand": "Nokia",
+    "model": "Nokia C30",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2520
+  },
+  {
+    "id": "nokia_16031",
+    "brand": "Nokia",
+    "model": "Nokia C30",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2240
+  },
+  {
+    "id": "nokia_16032",
+    "brand": "Nokia",
+    "model": "Nokia XR20",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6940
+  },
+  {
+    "id": "nokia_16033",
+    "brand": "Nokia",
+    "model": "Nokia G21",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2750
+  },
+  {
+    "id": "nokia_16034",
+    "brand": "Nokia",
+    "model": "Nokia G21",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3490
+  },
+  {
+    "id": "nokia_16035",
+    "brand": "Nokia",
+    "model": "Nokia C21 Plus",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2670
+  },
+  {
+    "id": "nokia_16036",
+    "brand": "Nokia",
+    "model": "Nokia C21 Plus",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2480
+  },
+  {
+    "id": "nokia_16037",
+    "brand": "Nokia",
+    "model": "Nokia G60 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6310
+  },
+  {
+    "id": "nokia_16038",
+    "brand": "Nokia",
+    "model": "Nokia C12",
+    "storage": "2 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2010
+  },
+  {
+    "id": "nokia_16039",
+    "brand": "Nokia",
+    "model": "Nokia X30 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 7790
+  },
+  {
+    "id": "nokia_16040",
+    "brand": "Nokia",
+    "model": "Nokia C12 Pro",
+    "storage": "2 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2110
+  },
+  {
+    "id": "nokia_16041",
+    "brand": "Nokia",
+    "model": "Nokia C12 Pro",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2300
+  },
+  {
+    "id": "nokia_16042",
+    "brand": "Nokia",
+    "model": "Nokia C12 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2450
+  },
+  {
+    "id": "nokia_16043",
+    "brand": "Nokia",
+    "model": "Nokia C31",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2230
+  },
+  {
+    "id": "nokia_16044",
+    "brand": "Nokia",
+    "model": "Nokia C31",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2600
+  },
+  {
+    "id": "nokia_16045",
+    "brand": "Nokia",
+    "model": "Nokia C32",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2380
+  },
+  {
+    "id": "nokia_16046",
+    "brand": "Nokia",
+    "model": "Nokia C32",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2790
+  },
+  {
+    "id": "nokia_16047",
+    "brand": "Nokia",
+    "model": "Nokia C32",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2600
+  },
+  {
+    "id": "nokia_16048",
+    "brand": "Nokia",
+    "model": "Nokia C22",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2380
+  },
+  {
+    "id": "nokia_16049",
+    "brand": "Nokia",
+    "model": "Nokia C22",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2960
+  },
+  {
+    "id": "nokia_16050",
+    "brand": "Nokia",
+    "model": "Nokia C22",
+    "storage": "2 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2130
+  },
+  {
+    "id": "nokia_16051",
+    "brand": "Nokia",
+    "model": "Nokia G42 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4850
+  },
+  {
+    "id": "nokia_16052",
+    "brand": "Nokia",
+    "model": "Nokia G42 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5230
+  },
+  {
+    "id": "nokia_16053",
+    "brand": "Nokia",
+    "model": "Nokia G42 5G",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3660
+  },
+  {
+    "id": "nokia_16054",
+    "brand": "Nokia",
+    "model": "Nokia G11 Plus",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2600
+  },
+  {
+    "id": "nothing_17000",
+    "brand": "Nothing",
+    "model": "Nothing Phone 1",
+    "storage": "8 GB/128 GB",
+    "color": "White",
+    "basePrice": 12430
+  },
+  {
+    "id": "nothing_17001",
+    "brand": "Nothing",
+    "model": "Nothing Phone 1",
+    "storage": "8 GB/256 GB",
+    "color": "White",
+    "basePrice": 13030
+  },
+  {
+    "id": "nothing_17002",
+    "brand": "Nothing",
+    "model": "Nothing Phone 1",
+    "storage": "12 GB/256 GB",
+    "color": "White",
+    "basePrice": 13380
+  },
+  {
+    "id": "nothing_17003",
+    "brand": "Nothing",
+    "model": "Nothing Phone 2",
+    "storage": "8 GB/128 GB",
+    "color": "White",
+    "basePrice": 18990
+  },
+  {
+    "id": "nothing_17004",
+    "brand": "Nothing",
+    "model": "Nothing Phone 2",
+    "storage": "12 GB/256 GB",
+    "color": "White",
+    "basePrice": 19660
+  },
+  {
+    "id": "nothing_17005",
+    "brand": "Nothing",
+    "model": "Nothing Phone 2",
+    "storage": "12 GB/512 GB",
+    "color": "White",
+    "basePrice": 20160
+  },
+  {
+    "id": "nothing_17006",
+    "brand": "Nothing",
+    "model": "Nothing Phone 2a 5G",
+    "storage": "12 GB/256 GB",
+    "color": "White",
+    "basePrice": 16360
+  },
+  {
+    "id": "nothing_17007",
+    "brand": "Nothing",
+    "model": "Nothing Phone 2a 5G",
+    "storage": "8 GB/128 GB",
+    "color": "White",
+    "basePrice": 15210
+  },
+  {
+    "id": "nothing_17008",
+    "brand": "Nothing",
+    "model": "Nothing Phone 2a 5G",
+    "storage": "8 GB/256 GB",
+    "color": "White",
+    "basePrice": 15670
+  },
+  {
+    "id": "nothing_17009",
+    "brand": "Nothing",
+    "model": "CMF by Nothing Phone 1",
+    "storage": "6 GB/128 GB",
+    "color": "White",
+    "basePrice": 9890
+  },
+  {
+    "id": "nothing_17010",
+    "brand": "Nothing",
+    "model": "CMF by Nothing Phone 1",
+    "storage": "8 GB/128 GB",
+    "color": "White",
+    "basePrice": 10940
+  },
+  {
+    "id": "nothing_17011",
+    "brand": "Nothing",
+    "model": "Nothing Phone 2a Plus",
+    "storage": "12 GB/256 GB",
+    "color": "White",
+    "basePrice": 17310
+  },
+  {
+    "id": "nothing_17012",
+    "brand": "Nothing",
+    "model": "Nothing Phone 2a Plus",
+    "storage": "8 GB/256 GB",
+    "color": "White",
+    "basePrice": 16760
+  },
+  {
+    "id": "nothing_17013",
+    "brand": "Nothing",
+    "model": "Nothing Phone 3a",
+    "storage": "8 GB/128 GB",
+    "color": "White",
+    "basePrice": 18010
+  },
+  {
+    "id": "nothing_17014",
+    "brand": "Nothing",
+    "model": "Nothing Phone 3a",
+    "storage": "8 GB/256 GB",
+    "color": "White",
+    "basePrice": 19530
+  },
+  {
+    "id": "nothing_17015",
+    "brand": "Nothing",
+    "model": "Nothing Phone 3a Pro",
+    "storage": "12 GB/256 GB",
+    "color": "White",
+    "basePrice": 22500
+  },
+  {
+    "id": "nothing_17016",
+    "brand": "Nothing",
+    "model": "Nothing Phone 3a Pro",
+    "storage": "8 GB/256 GB",
+    "color": "White",
+    "basePrice": 21690
+  },
+  {
+    "id": "nothing_17017",
+    "brand": "Nothing",
+    "model": "Nothing Phone 3a Pro",
+    "storage": "8 GB/128 GB",
+    "color": "White",
+    "basePrice": 20400
+  },
+  {
+    "id": "nothing_17018",
+    "brand": "Nothing",
+    "model": "CMF by Nothing Phone 2 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "color": "White",
+    "basePrice": 12700
+  },
+  {
+    "id": "nothing_17019",
+    "brand": "Nothing",
+    "model": "CMF by Nothing Phone 2 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "color": "White",
+    "basePrice": 14100
+  },
+  {
+    "id": "nothing_17020",
+    "brand": "Nothing",
+    "model": "Nothing Phone 3",
+    "storage": "12 GB/256 GB",
+    "color": "White",
+    "basePrice": 32000
+  },
+  {
+    "id": "nothing_17021",
+    "brand": "Nothing",
+    "model": "Nothing Phone 3",
+    "storage": "16 GB/512 GB",
+    "color": "White",
+    "basePrice": 32400
+  },
+  {
+    "id": "nothing_17022",
+    "brand": "Nothing",
+    "model": "Nothing Phone 3a Lite",
+    "storage": "8 GB/128 GB",
+    "color": "White",
+    "basePrice": 14000
+  },
+  {
+    "id": "nothing_17023",
+    "brand": "Nothing",
+    "model": "Nothing Phone 3a Lite",
+    "storage": "8 GB/256 GB",
+    "color": "White",
+    "basePrice": 15000
+  },
+  {
+    "id": "nothing_17024",
+    "brand": "Nothing",
+    "model": "Nothing Phone 4a",
+    "storage": "8 GB/256 GB",
+    "color": "White",
+    "basePrice": 24300
+  },
+  {
+    "id": "nothing_17025",
+    "brand": "Nothing",
+    "model": "Nothing Phone 4a",
+    "storage": "12 GB/256 GB",
+    "color": "White",
+    "basePrice": 25600
+  },
+  {
+    "id": "nothing_17026",
+    "brand": "Nothing",
+    "model": "Nothing Phone 4a",
+    "storage": "8 GB/128 GB",
+    "color": "White",
+    "basePrice": 22500
+  },
+  {
+    "id": "nothing_17027",
+    "brand": "Nothing",
+    "model": "Nothing Phone 4a Pro",
+    "storage": "8 GB/128 GB",
+    "color": "White",
+    "basePrice": 27400
+  },
+  {
+    "id": "nothing_17028",
+    "brand": "Nothing",
+    "model": "Nothing Phone 4a Pro",
+    "storage": "12 GB/256 GB",
+    "color": "White",
+    "basePrice": 31200
+  },
+  {
+    "id": "nothing_17029",
+    "brand": "Nothing",
+    "model": "Nothing Phone 4a Pro",
+    "storage": "8 GB/256 GB",
+    "color": "White",
+    "basePrice": 29000
+  },
+  {
+    "id": "oppo_18000",
+    "brand": "OPPO",
+    "model": "OPPO A7",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2380
+  },
+  {
+    "id": "oppo_18001",
+    "brand": "OPPO",
+    "model": "OPPO A7",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2040
+  },
+  {
+    "id": "oppo_18002",
+    "brand": "OPPO",
+    "model": "OPPO F9 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2670
+  },
+  {
+    "id": "oppo_18003",
+    "brand": "OPPO",
+    "model": "OPPO F9 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2970
+  },
+  {
+    "id": "oppo_18004",
+    "brand": "OPPO",
+    "model": "OPPO F9",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2640
+  },
+  {
+    "id": "oppo_18005",
+    "brand": "OPPO",
+    "model": "OPPO A3s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2120
+  },
+  {
+    "id": "oppo_18006",
+    "brand": "OPPO",
+    "model": "OPPO A3s",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1930
+  },
+  {
+    "id": "oppo_18007",
+    "brand": "OPPO",
+    "model": "OPPO A3s",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1740
+  },
+  {
+    "id": "oppo_18008",
+    "brand": "OPPO",
+    "model": "OPPO Find X",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 6970
+  },
+  {
+    "id": "oppo_18009",
+    "brand": "OPPO",
+    "model": "OPPO A5",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2690
+  },
+  {
+    "id": "oppo_18010",
+    "brand": "OPPO",
+    "model": "OPPO A5",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2460
+  },
+  {
+    "id": "oppo_18011",
+    "brand": "OPPO",
+    "model": "OPPO F7",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2600
+  },
+  {
+    "id": "oppo_18012",
+    "brand": "OPPO",
+    "model": "OPPO F7",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2380
+  },
+  {
+    "id": "oppo_18013",
+    "brand": "OPPO",
+    "model": "OPPO A83",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1360
+  },
+  {
+    "id": "oppo_18014",
+    "brand": "OPPO",
+    "model": "OPPO A83",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1440
+  },
+  {
+    "id": "oppo_18015",
+    "brand": "OPPO",
+    "model": "OPPO A83",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1670
+  },
+  {
+    "id": "oppo_18016",
+    "brand": "OPPO",
+    "model": "OPPO F5 Youth",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1700
+  },
+  {
+    "id": "oppo_18017",
+    "brand": "OPPO",
+    "model": "OPPO F5",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1930
+  },
+  {
+    "id": "oppo_18018",
+    "brand": "OPPO",
+    "model": "OPPO F5",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1780
+  },
+  {
+    "id": "oppo_18019",
+    "brand": "OPPO",
+    "model": "OPPO R11",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2270
+  },
+  {
+    "id": "oppo_18020",
+    "brand": "OPPO",
+    "model": "OPPO A77",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1490
+  },
+  {
+    "id": "oppo_18021",
+    "brand": "OPPO",
+    "model": "OPPO F3",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1480
+  },
+  {
+    "id": "oppo_18022",
+    "brand": "OPPO",
+    "model": "OPPO F3 Plus",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2230
+  },
+  {
+    "id": "oppo_18023",
+    "brand": "OPPO",
+    "model": "OPPO F3 Plus",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1860
+  },
+  {
+    "id": "oppo_18024",
+    "brand": "OPPO",
+    "model": "OPPO A57",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1510
+  },
+  {
+    "id": "oppo_18025",
+    "brand": "OPPO",
+    "model": "OPPO F1s",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1190
+  },
+  {
+    "id": "oppo_18026",
+    "brand": "OPPO",
+    "model": "OPPO F1s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1330
+  },
+  {
+    "id": "oppo_18027",
+    "brand": "OPPO",
+    "model": "OPPO F1 plus",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1260
+  },
+  {
+    "id": "oppo_18028",
+    "brand": "OPPO",
+    "model": "OPPO R17",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4170
+  },
+  {
+    "id": "oppo_18029",
+    "brand": "OPPO",
+    "model": "OPPO K1",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3180
+  },
+  {
+    "id": "oppo_18030",
+    "brand": "OPPO",
+    "model": "OPPO K1",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3030
+  },
+  {
+    "id": "oppo_18031",
+    "brand": "OPPO",
+    "model": "OPPO F11 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4040
+  },
+  {
+    "id": "oppo_18032",
+    "brand": "OPPO",
+    "model": "OPPO F11 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4440
+  },
+  {
+    "id": "oppo_18033",
+    "brand": "OPPO",
+    "model": "OPPO A5s",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2420
+  },
+  {
+    "id": "oppo_18034",
+    "brand": "OPPO",
+    "model": "OPPO A5s",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2200
+  },
+  {
+    "id": "oppo_18035",
+    "brand": "OPPO",
+    "model": "OPPO A5s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2690
+  },
+  {
+    "id": "oppo_18036",
+    "brand": "OPPO",
+    "model": "OPPO A1K",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2320
+  },
+  {
+    "id": "oppo_18037",
+    "brand": "OPPO",
+    "model": "OPPO F11",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3280
+  },
+  {
+    "id": "oppo_18038",
+    "brand": "OPPO",
+    "model": "OPPO F11",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3680
+  },
+  {
+    "id": "oppo_18039",
+    "brand": "OPPO",
+    "model": "OPPO Reno",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4920
+  },
+  {
+    "id": "oppo_18040",
+    "brand": "OPPO",
+    "model": "OPPO Reno 10x Zoom",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5490
+  },
+  {
+    "id": "oppo_18041",
+    "brand": "OPPO",
+    "model": "OPPO Reno 10x Zoom",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5870
+  },
+  {
+    "id": "oppo_18042",
+    "brand": "OPPO",
+    "model": "OPPO K3",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4170
+  },
+  {
+    "id": "oppo_18043",
+    "brand": "OPPO",
+    "model": "OPPO K3",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4350
+  },
+  {
+    "id": "oppo_18044",
+    "brand": "OPPO",
+    "model": "OPPO A9",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3920
+  },
+  {
+    "id": "oppo_18045",
+    "brand": "OPPO",
+    "model": "OPPO Reno 2Z",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5680
+  },
+  {
+    "id": "oppo_18046",
+    "brand": "OPPO",
+    "model": "OPPO Reno 2",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5910
+  },
+  {
+    "id": "oppo_18047",
+    "brand": "OPPO",
+    "model": "OPPO A5 2020",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3450
+  },
+  {
+    "id": "oppo_18048",
+    "brand": "OPPO",
+    "model": "OPPO A5 2020",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3030
+  },
+  {
+    "id": "oppo_18049",
+    "brand": "OPPO",
+    "model": "OPPO A5 2020",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3290
+  },
+  {
+    "id": "oppo_18050",
+    "brand": "OPPO",
+    "model": "OPPO A5 2020",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3180
+  },
+  {
+    "id": "oppo_18051",
+    "brand": "OPPO",
+    "model": "OPPO A9 2020",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4050
+  },
+  {
+    "id": "oppo_18052",
+    "brand": "OPPO",
+    "model": "OPPO A9 2020",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3820
+  },
+  {
+    "id": "oppo_18053",
+    "brand": "OPPO",
+    "model": "OPPO Reno2 F",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5720
+  },
+  {
+    "id": "oppo_18054",
+    "brand": "OPPO",
+    "model": "OPPO Reno2 F",
+    "storage": "6 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5070
+  },
+  {
+    "id": "oppo_18055",
+    "brand": "OPPO",
+    "model": "OPPO F15",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4640
+  },
+  {
+    "id": "oppo_18056",
+    "brand": "OPPO",
+    "model": "OPPO F15",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4960
+  },
+  {
+    "id": "oppo_18057",
+    "brand": "OPPO",
+    "model": "OPPO A71 2018",
+    "storage": "3 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1060
+  },
+  {
+    "id": "oppo_18058",
+    "brand": "OPPO",
+    "model": "OPPO A31",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3830
+  },
+  {
+    "id": "oppo_18059",
+    "brand": "OPPO",
+    "model": "OPPO A31",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4330
+  },
+  {
+    "id": "oppo_18060",
+    "brand": "OPPO",
+    "model": "OPPO A12",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2840
+  },
+  {
+    "id": "oppo_18061",
+    "brand": "OPPO",
+    "model": "OPPO A12",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3290
+  },
+  {
+    "id": "oppo_18062",
+    "brand": "OPPO",
+    "model": "OPPO A52",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4580
+  },
+  {
+    "id": "oppo_18063",
+    "brand": "OPPO",
+    "model": "OPPO A52",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4170
+  },
+  {
+    "id": "oppo_18064",
+    "brand": "OPPO",
+    "model": "OPPO A52",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4660
+  },
+  {
+    "id": "oppo_18065",
+    "brand": "OPPO",
+    "model": "OPPO Find X2",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 10980
+  },
+  {
+    "id": "oppo_18066",
+    "brand": "OPPO",
+    "model": "OPPO A11K",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2500
+  },
+  {
+    "id": "oppo_18067",
+    "brand": "OPPO",
+    "model": "OPPO Reno3 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5720
+  },
+  {
+    "id": "oppo_18068",
+    "brand": "OPPO",
+    "model": "OPPO Reno3 Pro",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5760
+  },
+  {
+    "id": "oppo_18069",
+    "brand": "OPPO",
+    "model": "OPPO Reno4 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6740
+  },
+  {
+    "id": "oppo_18070",
+    "brand": "OPPO",
+    "model": "OPPO A53",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4440
+  },
+  {
+    "id": "oppo_18071",
+    "brand": "OPPO",
+    "model": "OPPO A53",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_18072",
+    "brand": "OPPO",
+    "model": "OPPO F17 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5410
+  },
+  {
+    "id": "oppo_18073",
+    "brand": "OPPO",
+    "model": "OPPO F17",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5020
+  },
+  {
+    "id": "oppo_18074",
+    "brand": "OPPO",
+    "model": "OPPO F17",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5230
+  },
+  {
+    "id": "oppo_18075",
+    "brand": "OPPO",
+    "model": "OPPO A33 2020",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3140
+  },
+  {
+    "id": "oppo_18076",
+    "brand": "OPPO",
+    "model": "OPPO A15",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2990
+  },
+  {
+    "id": "oppo_18077",
+    "brand": "OPPO",
+    "model": "OPPO A15",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3310
+  },
+  {
+    "id": "oppo_18078",
+    "brand": "OPPO",
+    "model": "OPPO A15s",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4090
+  },
+  {
+    "id": "oppo_18079",
+    "brand": "OPPO",
+    "model": "OPPO A15s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3510
+  },
+  {
+    "id": "oppo_18080",
+    "brand": "OPPO",
+    "model": "OPPO Reno5 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8990
+  },
+  {
+    "id": "realme_20000",
+    "brand": "Realme",
+    "model": "Realme 2 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2700
+  },
+  {
+    "id": "realme_20001",
+    "brand": "Realme",
+    "model": "Realme 2 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2470
+  },
+  {
+    "id": "realme_20002",
+    "brand": "Realme",
+    "model": "Realme 2 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2940
+  },
+  {
+    "id": "realme_20003",
+    "brand": "Realme",
+    "model": "Realme C1 2019",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2010
+  },
+  {
+    "id": "realme_20004",
+    "brand": "Realme",
+    "model": "Realme C1 2019",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1820
+  },
+  {
+    "id": "realme_20005",
+    "brand": "Realme",
+    "model": "Realme C1",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1740
+  },
+  {
+    "id": "realme_20006",
+    "brand": "Realme",
+    "model": "Realme 2",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2080
+  },
+  {
+    "id": "realme_20007",
+    "brand": "Realme",
+    "model": "Realme 2",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2670
+  },
+  {
+    "id": "realme_20008",
+    "brand": "Realme",
+    "model": "Realme 1",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2960
+  },
+  {
+    "id": "realme_20009",
+    "brand": "Realme",
+    "model": "Realme 1",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2010
+  },
+  {
+    "id": "realme_20010",
+    "brand": "Realme",
+    "model": "Realme 1",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2240
+  },
+  {
+    "id": "realme_20011",
+    "brand": "Realme",
+    "model": "Realme U1",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2630
+  },
+  {
+    "id": "realme_20012",
+    "brand": "Realme",
+    "model": "Realme U1",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2360
+  },
+  {
+    "id": "realme_20013",
+    "brand": "Realme",
+    "model": "Realme U1",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2240
+  },
+  {
+    "id": "realme_20014",
+    "brand": "Realme",
+    "model": "Realme 3",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2320
+  },
+  {
+    "id": "realme_20015",
+    "brand": "Realme",
+    "model": "Realme 3",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2860
+  },
+  {
+    "id": "realme_20016",
+    "brand": "Realme",
+    "model": "Realme 3",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2630
+  },
+  {
+    "id": "realme_20017",
+    "brand": "Realme",
+    "model": "Realme 3 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3290
+  },
+  {
+    "id": "realme_20018",
+    "brand": "Realme",
+    "model": "Realme 3 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3820
+  },
+  {
+    "id": "realme_20019",
+    "brand": "Realme",
+    "model": "Realme 3 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3480
+  },
+  {
+    "id": "realme_20020",
+    "brand": "Realme",
+    "model": "Realme C2",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2200
+  },
+  {
+    "id": "realme_20021",
+    "brand": "Realme",
+    "model": "Realme C2",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2310
+  },
+  {
+    "id": "realme_20022",
+    "brand": "Realme",
+    "model": "Realme C2",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 2010
+  },
+  {
+    "id": "realme_20023",
+    "brand": "Realme",
+    "model": "Realme X",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5130
+  },
+  {
+    "id": "realme_20024",
+    "brand": "Realme",
+    "model": "Realme X",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4710
+  },
+  {
+    "id": "realme_20025",
+    "brand": "Realme",
+    "model": "Realme 3i",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2360
+  },
+  {
+    "id": "realme_20026",
+    "brand": "Realme",
+    "model": "Realme 3i",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2780
+  },
+  {
+    "id": "realme_20027",
+    "brand": "Realme",
+    "model": "Realme 5",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2800
+  },
+  {
+    "id": "realme_20028",
+    "brand": "Realme",
+    "model": "Realme 5",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3180
+  },
+  {
+    "id": "realme_20029",
+    "brand": "Realme",
+    "model": "Realme 5",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3510
+  },
+  {
+    "id": "realme_20030",
+    "brand": "Realme",
+    "model": "Realme 5 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4060
+  },
+  {
+    "id": "realme_20031",
+    "brand": "Realme",
+    "model": "Realme 5 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3820
+  },
+  {
+    "id": "realme_20032",
+    "brand": "Realme",
+    "model": "Realme 5 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3660
+  },
+  {
+    "id": "realme_20033",
+    "brand": "Realme",
+    "model": "Realme XT",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4580
+  },
+  {
+    "id": "realme_20034",
+    "brand": "Realme",
+    "model": "Realme XT",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4960
+  },
+  {
+    "id": "realme_20035",
+    "brand": "Realme",
+    "model": "Realme XT",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4290
+  },
+  {
+    "id": "realme_20036",
+    "brand": "Realme",
+    "model": "Realme 5s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3130
+  },
+  {
+    "id": "realme_20037",
+    "brand": "Realme",
+    "model": "Realme 5s",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3520
+  },
+  {
+    "id": "realme_20038",
+    "brand": "Realme",
+    "model": "Realme X2 Pro",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5480
+  },
+  {
+    "id": "realme_20039",
+    "brand": "Realme",
+    "model": "Realme X2 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5170
+  },
+  {
+    "id": "realme_20040",
+    "brand": "Realme",
+    "model": "Realme X2 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4750
+  },
+  {
+    "id": "realme_20041",
+    "brand": "Realme",
+    "model": "Realme X2",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5260
+  },
+  {
+    "id": "realme_20042",
+    "brand": "Realme",
+    "model": "Realme X2",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5020
+  },
+  {
+    "id": "realme_20043",
+    "brand": "Realme",
+    "model": "Realme X2",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4600
+  },
+  {
+    "id": "realme_20044",
+    "brand": "Realme",
+    "model": "Realme X2",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4140
+  },
+  {
+    "id": "realme_20045",
+    "brand": "Realme",
+    "model": "Realme 5i",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3780
+  },
+  {
+    "id": "realme_20046",
+    "brand": "Realme",
+    "model": "Realme 5i",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4010
+  },
+  {
+    "id": "realme_20047",
+    "brand": "Realme",
+    "model": "Realme C3",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3140
+  },
+  {
+    "id": "realme_20048",
+    "brand": "Realme",
+    "model": "Realme C3",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3450
+  },
+  {
+    "id": "realme_20049",
+    "brand": "Realme",
+    "model": "Realme X50 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6640
+  },
+  {
+    "id": "realme_20050",
+    "brand": "Realme",
+    "model": "Realme X50 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6880
+  },
+  {
+    "id": "realme_20051",
+    "brand": "Realme",
+    "model": "Realme X50 Pro",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 7410
+  },
+  {
+    "id": "realme_20052",
+    "brand": "Realme",
+    "model": "Realme 6",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5020
+  },
+  {
+    "id": "realme_20053",
+    "brand": "Realme",
+    "model": "Realme 6",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4630
+  },
+  {
+    "id": "realme_20054",
+    "brand": "Realme",
+    "model": "Realme 6",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4190
+  },
+  {
+    "id": "realme_20055",
+    "brand": "Realme",
+    "model": "Realme 6",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4850
+  },
+  {
+    "id": "realme_20056",
+    "brand": "Realme",
+    "model": "Realme 6 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4950
+  },
+  {
+    "id": "realme_20057",
+    "brand": "Realme",
+    "model": "Realme 6 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5130
+  },
+  {
+    "id": "realme_20058",
+    "brand": "Realme",
+    "model": "Realme 6 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4520
+  },
+  {
+    "id": "realme_20059",
+    "brand": "Realme",
+    "model": "Realme Narzo 10",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3850
+  },
+  {
+    "id": "realme_20060",
+    "brand": "Realme",
+    "model": "Realme Narzo 10A",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3240
+  },
+  {
+    "id": "realme_20061",
+    "brand": "Realme",
+    "model": "Realme Narzo 10A",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3510
+  },
+  {
+    "id": "realme_20062",
+    "brand": "Realme",
+    "model": "Realme X3",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5410
+  },
+  {
+    "id": "realme_20063",
+    "brand": "Realme",
+    "model": "Realme X3",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5830
+  },
+  {
+    "id": "realme_20064",
+    "brand": "Realme",
+    "model": "Realme X3 SuperZoom",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5760
+  },
+  {
+    "id": "realme_20065",
+    "brand": "Realme",
+    "model": "Realme X3 SuperZoom",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5260
+  },
+  {
+    "id": "realme_20066",
+    "brand": "Realme",
+    "model": "Realme X3 SuperZoom",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5990
+  },
+  {
+    "id": "realme_20067",
+    "brand": "Realme",
+    "model": "Realme C11",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2770
+  },
+  {
+    "id": "realme_20068",
+    "brand": "Realme",
+    "model": "Realme C12",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3150
+  },
+  {
+    "id": "realme_20069",
+    "brand": "Realme",
+    "model": "Realme C12",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3590
+  },
+  {
+    "id": "realme_20070",
+    "brand": "Realme",
+    "model": "Realme 6i",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4010
+  },
+  {
+    "id": "realme_20071",
+    "brand": "Realme",
+    "model": "Realme 6i",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4480
+  },
+  {
+    "id": "realme_20072",
+    "brand": "Realme",
+    "model": "Realme 7 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5680
+  },
+  {
+    "id": "realme_20073",
+    "brand": "Realme",
+    "model": "Realme 7 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5380
+  },
+  {
+    "id": "realme_20074",
+    "brand": "Realme",
+    "model": "Realme C15",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3480
+  },
+  {
+    "id": "realme_20075",
+    "brand": "Realme",
+    "model": "Realme C15",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3130
+  },
+  {
+    "id": "realme_20076",
+    "brand": "Realme",
+    "model": "Realme C15",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3790
+  },
+  {
+    "id": "realme_20077",
+    "brand": "Realme",
+    "model": "Realme 7",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5230
+  },
+  {
+    "id": "realme_20078",
+    "brand": "Realme",
+    "model": "Realme 7",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4580
+  },
+  {
+    "id": "realme_20079",
+    "brand": "Realme",
+    "model": "Realme Narzo 20 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4670
+  },
+  {
+    "id": "realme_20080",
+    "brand": "Realme",
+    "model": "Realme Narzo 20 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4200
+  },
+  {
+    "id": "realme_20081",
+    "brand": "Realme",
+    "model": "Realme Narzo 20",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4090
+  },
+  {
+    "id": "realme_20082",
+    "brand": "Realme",
+    "model": "Realme Narzo 20",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4390
+  },
+  {
+    "id": "realme_20083",
+    "brand": "Realme",
+    "model": "Realme Narzo 20A",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3750
+  },
+  {
+    "id": "realme_20084",
+    "brand": "Realme",
+    "model": "Realme Narzo 20A",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3320
+  },
+  {
+    "id": "realme_20085",
+    "brand": "Realme",
+    "model": "Realme 7i",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3820
+  },
+  {
+    "id": "realme_20086",
+    "brand": "Realme",
+    "model": "Realme 7i",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4450
+  },
+  {
+    "id": "realme_20087",
+    "brand": "Realme",
+    "model": "Realme C15 Qualcomm Edition",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3130
+  },
+  {
+    "id": "realme_20088",
+    "brand": "Realme",
+    "model": "Realme C15 Qualcomm Edition",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3400
+  },
+  {
+    "id": "realme_20089",
+    "brand": "Realme",
+    "model": "Realme X7",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7420
+  },
+  {
+    "id": "realme_20090",
+    "brand": "Realme",
+    "model": "Realme X7",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7120
+  },
+  {
+    "id": "realme_20091",
+    "brand": "Realme",
+    "model": "Realme X7 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7690
+  },
+  {
+    "id": "realme_20092",
+    "brand": "Realme",
+    "model": "Realme Narzo 30A",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3480
+  },
+  {
+    "id": "realme_20093",
+    "brand": "Realme",
+    "model": "Realme Narzo 30A",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3940
+  },
+  {
+    "id": "realme_20094",
+    "brand": "Realme",
+    "model": "Realme Narzo 30 Pro 5G",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 6550
+  },
+  {
+    "id": "realme_20095",
+    "brand": "Realme",
+    "model": "Realme Narzo 30 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6910
+  },
+  {
+    "id": "realme_20096",
+    "brand": "Realme",
+    "model": "Realme 8",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5380
+  },
+  {
+    "id": "realme_20097",
+    "brand": "Realme",
+    "model": "Realme 8",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5800
+  },
+  {
+    "id": "realme_20098",
+    "brand": "Realme",
+    "model": "Realme 8",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5140
+  },
+  {
+    "id": "realme_20099",
+    "brand": "Realme",
+    "model": "Realme 8 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6290
+  },
+  {
+    "id": "realme_20100",
+    "brand": "Realme",
+    "model": "Realme 8 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5900
+  },
+  {
+    "id": "realme_20101",
+    "brand": "Realme",
+    "model": "Realme C21",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3200
+  },
+  {
+    "id": "realme_20102",
+    "brand": "Realme",
+    "model": "Realme C21",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3400
+  },
+  {
+    "id": "realme_20103",
+    "brand": "Realme",
+    "model": "Realme C20",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2630
+  },
+  {
+    "id": "realme_20104",
+    "brand": "Realme",
+    "model": "Realme C25",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3670
+  },
+  {
+    "id": "realme_20105",
+    "brand": "Realme",
+    "model": "Realme C25",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3400
+  },
+  {
+    "id": "realme_20106",
+    "brand": "Realme",
+    "model": "Realme X7 Max 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8670
+  },
+  {
+    "id": "realme_20107",
+    "brand": "Realme",
+    "model": "Realme X7 Max 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8140
+  },
+  {
+    "id": "realme_20108",
+    "brand": "Realme",
+    "model": "Realme C25s",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4060
+  },
+  {
+    "id": "realme_20109",
+    "brand": "Realme",
+    "model": "Realme C25s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3750
+  },
+  {
+    "id": "tecno_21000",
+    "brand": "Tecno",
+    "model": "Tecno Spark 4",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1970
+  },
+  {
+    "id": "tecno_21001",
+    "brand": "Tecno",
+    "model": "Tecno Spark 4",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1790
+  },
+  {
+    "id": "tecno_21002",
+    "brand": "Tecno",
+    "model": "Tecno Camon 12 Air",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2010
+  },
+  {
+    "id": "tecno_21003",
+    "brand": "Tecno",
+    "model": "Tecno Camon 12 Air",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2140
+  },
+  {
+    "id": "tecno_21004",
+    "brand": "Tecno",
+    "model": "Tecno Camon 15 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3280
+  },
+  {
+    "id": "tecno_21005",
+    "brand": "Tecno",
+    "model": "Tecno Camon 15",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2410
+  },
+  {
+    "id": "tecno_21006",
+    "brand": "Tecno",
+    "model": "Tecno Spark 5",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1930
+  },
+  {
+    "id": "tecno_21007",
+    "brand": "Tecno",
+    "model": "Tecno Spark 6 Air",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2010
+  },
+  {
+    "id": "tecno_21008",
+    "brand": "Tecno",
+    "model": "Tecno Spark 6 Air",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1840
+  },
+  {
+    "id": "tecno_21009",
+    "brand": "Tecno",
+    "model": "Tecno Spark 6 Air",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1670
+  },
+  {
+    "id": "tecno_21010",
+    "brand": "Tecno",
+    "model": "Tecno Spark 5 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2390
+  },
+  {
+    "id": "tecno_21011",
+    "brand": "Tecno",
+    "model": "Tecno Spark Power 2",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2270
+  },
+  {
+    "id": "tecno_21012",
+    "brand": "Tecno",
+    "model": "Tecno Spark Power 2 Air",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2110
+  },
+  {
+    "id": "tecno_21013",
+    "brand": "Tecno",
+    "model": "Tecno Camon 16",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2670
+  },
+  {
+    "id": "tecno_21014",
+    "brand": "Tecno",
+    "model": "Tecno POVA",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2760
+  },
+  {
+    "id": "tecno_21015",
+    "brand": "Tecno",
+    "model": "Tecno POVA",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2630
+  },
+  {
+    "id": "tecno_21016",
+    "brand": "Tecno",
+    "model": "Tecno Camon 16 Premier",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3850
+  },
+  {
+    "id": "tecno_21017",
+    "brand": "Tecno",
+    "model": "Tecno Spark 7 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2540
+  },
+  {
+    "id": "tecno_21018",
+    "brand": "Tecno",
+    "model": "Tecno Spark 7 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2940
+  },
+  {
+    "id": "tecno_21019",
+    "brand": "Tecno",
+    "model": "Tecno Camon 17",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3360
+  },
+  {
+    "id": "tecno_21020",
+    "brand": "Tecno",
+    "model": "Tecno Camon 17 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4170
+  },
+  {
+    "id": "tecno_21021",
+    "brand": "Tecno",
+    "model": "Tecno POVA 2",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3070
+  },
+  {
+    "id": "tecno_21022",
+    "brand": "Tecno",
+    "model": "Tecno POVA 2",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2900
+  },
+  {
+    "id": "tecno_21023",
+    "brand": "Tecno",
+    "model": "Tecno Spark 8",
+    "storage": "2 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2200
+  },
+  {
+    "id": "tecno_21024",
+    "brand": "Tecno",
+    "model": "Tecno Spark 8T",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2730
+  },
+  {
+    "id": "tecno_21025",
+    "brand": "Tecno",
+    "model": "Tecno Camon 18",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3410
+  },
+  {
+    "id": "tecno_21026",
+    "brand": "Tecno",
+    "model": "Tecno Spark 8 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2900
+  },
+  {
+    "id": "tecno_21027",
+    "brand": "Tecno",
+    "model": "Tecno Spark 8C",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2820
+  },
+  {
+    "id": "tecno_21028",
+    "brand": "Tecno",
+    "model": "Tecno Pova 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4660
+  },
+  {
+    "id": "tecno_21029",
+    "brand": "Tecno",
+    "model": "Tecno Pova Neo",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2950
+  },
+  {
+    "id": "tecno_21030",
+    "brand": "Tecno",
+    "model": "Tecno Phantom X",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5230
+  },
+  {
+    "id": "tecno_21031",
+    "brand": "Tecno",
+    "model": "Tecno POVA 3",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3330
+  },
+  {
+    "id": "tecno_21032",
+    "brand": "Tecno",
+    "model": "Tecno POVA 3",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3480
+  },
+  {
+    "id": "tecno_21033",
+    "brand": "Tecno",
+    "model": "Tecno Spark 8P",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2820
+  },
+  {
+    "id": "tecno_21034",
+    "brand": "Tecno",
+    "model": "Tecno Spark 9",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2900
+  },
+  {
+    "id": "tecno_21035",
+    "brand": "Tecno",
+    "model": "Tecno Spark 9",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2640
+  },
+  {
+    "id": "tecno_21036",
+    "brand": "Tecno",
+    "model": "Tecno Camon 19",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3650
+  },
+  {
+    "id": "tecno_21037",
+    "brand": "Tecno",
+    "model": "Tecno Camon 19 Neo",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3520
+  },
+  {
+    "id": "tecno_21038",
+    "brand": "Tecno",
+    "model": "Tecno Camon 19 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8150
+  },
+  {
+    "id": "tecno_21039",
+    "brand": "Tecno",
+    "model": "Tecno Camon 19 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8580
+  },
+  {
+    "id": "tecno_21040",
+    "brand": "Tecno",
+    "model": "Tecno Camon 20",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 6850
+  },
+  {
+    "id": "tecno_21041",
+    "brand": "Tecno",
+    "model": "Tecno Camon 20 Premier 5G",
+    "storage": "16 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 9800
+  },
+  {
+    "id": "tecno_21042",
+    "brand": "Tecno",
+    "model": "Tecno Camon 20 Premier 5G",
+    "storage": "8 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 9000
+  },
+  {
+    "id": "tecno_21043",
+    "brand": "Tecno",
+    "model": "Tecno Camon 20 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8720
+  },
+  {
+    "id": "tecno_21044",
+    "brand": "Tecno",
+    "model": "Tecno Camon 20 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 9500
+  },
+  {
+    "id": "tecno_21045",
+    "brand": "Tecno",
+    "model": "Tecno Phantom V Fold 5G",
+    "storage": "12 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 20500
+  },
+  {
+    "id": "tecno_21046",
+    "brand": "Tecno",
+    "model": "Tecno Phantom V Fold 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 16660
+  },
+  {
+    "id": "tecno_21047",
+    "brand": "Tecno",
+    "model": "Tecno Phantom X2 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 12500
+  },
+  {
+    "id": "tecno_21048",
+    "brand": "Tecno",
+    "model": "Tecno Phantom X2 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 14200
+  },
+  {
+    "id": "tecno_21049",
+    "brand": "Tecno",
+    "model": "Tecno Pova 4",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3780
+  },
+  {
+    "id": "tecno_21050",
+    "brand": "Tecno",
+    "model": "Tecno Spark 10 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 7350
+  },
+  {
+    "id": "tecno_21051",
+    "brand": "Tecno",
+    "model": "Tecno Spark 10 5G",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 5680
+  },
+  {
+    "id": "tecno_21052",
+    "brand": "Tecno",
+    "model": "Tecno Spark 10 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6200
+  },
+  {
+    "id": "tecno_21053",
+    "brand": "Tecno",
+    "model": "Tecno Spark 7P",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2720
+  },
+  {
+    "id": "tecno_21054",
+    "brand": "Tecno",
+    "model": "Tecno Spark Go 2023",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3720
+  },
+  {
+    "id": "tecno_21055",
+    "brand": "Tecno",
+    "model": "Tecno Spark GO 3",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 5880
+  },
+  {
+    "id": "tecno_21056",
+    "brand": "Tecno",
+    "model": "Tecno Camon 30 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 12400
+  },
+  {
+    "id": "tecno_21057",
+    "brand": "Tecno",
+    "model": "Tecno Camon 30 Premier 5G",
+    "storage": "12 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 14500
+  },
+  {
+    "id": "tecno_21058",
+    "brand": "Tecno",
+    "model": "Tecno Pova 7 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7450
+  },
+  {
+    "id": "tecno_21059",
+    "brand": "Tecno",
+    "model": "Tecno Pova 7 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8400
+  },
+  {
+    "id": "tecno_21060",
+    "brand": "Tecno",
+    "model": "Tecno Pova 7 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 10500
+  },
+  {
+    "id": "tecno_21061",
+    "brand": "Tecno",
+    "model": "Tecno Pova 7 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 10000
+  },
+  {
+    "id": "tecno_21062",
+    "brand": "Tecno",
+    "model": "Tecno Pova Curve 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8330
+  },
+  {
+    "id": "tecno_21063",
+    "brand": "Tecno",
+    "model": "Tecno Pova Curve 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 10000
+  },
+  {
+    "id": "tecno_21064",
+    "brand": "Tecno",
+    "model": "Tecno Pova Curve 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 11000
+  },
+  {
+    "id": "tecno_21065",
+    "brand": "Tecno",
+    "model": "Tecno Spark 30C 5G",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5990
+  },
+  {
+    "id": "tecno_21066",
+    "brand": "Tecno",
+    "model": "Tecno Spark 30C 5G",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 5390
+  },
+  {
+    "id": "tecno_21067",
+    "brand": "Tecno",
+    "model": "Tecno Camon 20s Pro 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8820
+  },
+  {
+    "id": "vivo_22000",
+    "brand": "Vivo",
+    "model": "Vivo V9 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3120
+  },
+  {
+    "id": "vivo_22001",
+    "brand": "Vivo",
+    "model": "Vivo V9 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2970
+  },
+  {
+    "id": "vivo_22002",
+    "brand": "Vivo",
+    "model": "Vivo V11 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3600
+  },
+  {
+    "id": "vivo_22003",
+    "brand": "Vivo",
+    "model": "Vivo V11",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3110
+  },
+  {
+    "id": "vivo_22004",
+    "brand": "Vivo",
+    "model": "Vivo Y83 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2650
+  },
+  {
+    "id": "vivo_22005",
+    "brand": "Vivo",
+    "model": "Vivo NEX",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4490
+  },
+  {
+    "id": "vivo_22006",
+    "brand": "Vivo",
+    "model": "Vivo Y71i",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1340
+  },
+  {
+    "id": "vivo_22007",
+    "brand": "Vivo",
+    "model": "Vivo Y81",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1830
+  },
+  {
+    "id": "vivo_22008",
+    "brand": "Vivo",
+    "model": "Vivo Y81",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2140
+  },
+  {
+    "id": "vivo_22009",
+    "brand": "Vivo",
+    "model": "Vivo Y83",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2260
+  },
+  {
+    "id": "vivo_22010",
+    "brand": "Vivo",
+    "model": "Vivo V9 Youth",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2150
+  },
+  {
+    "id": "vivo_22011",
+    "brand": "Vivo",
+    "model": "Vivo Y71",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1720
+  },
+  {
+    "id": "vivo_22012",
+    "brand": "Vivo",
+    "model": "Vivo Y71",
+    "storage": "3 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1380
+  },
+  {
+    "id": "vivo_22013",
+    "brand": "Vivo",
+    "model": "Vivo Y71",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1490
+  },
+  {
+    "id": "vivo_22014",
+    "brand": "Vivo",
+    "model": "Vivo Y53i",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 970
+  },
+  {
+    "id": "vivo_22015",
+    "brand": "Vivo",
+    "model": "Vivo X21",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3640
+  },
+  {
+    "id": "vivo_22016",
+    "brand": "Vivo",
+    "model": "Vivo V9",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2640
+  },
+  {
+    "id": "vivo_22017",
+    "brand": "Vivo",
+    "model": "Vivo V7",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2080
+  },
+  {
+    "id": "vivo_22018",
+    "brand": "Vivo",
+    "model": "Vivo V7 Plus",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2150
+  },
+  {
+    "id": "vivo_22019",
+    "brand": "Vivo",
+    "model": "Vivo Y69",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1530
+  },
+  {
+    "id": "vivo_22020",
+    "brand": "Vivo",
+    "model": "Vivo X9",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2400
+  },
+  {
+    "id": "vivo_22021",
+    "brand": "Vivo",
+    "model": "Vivo X9",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2250
+  },
+  {
+    "id": "vivo_22022",
+    "brand": "Vivo",
+    "model": "Vivo X9s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2330
+  },
+  {
+    "id": "vivo_22023",
+    "brand": "Vivo",
+    "model": "Vivo X9s Plus",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2550
+  },
+  {
+    "id": "vivo_22024",
+    "brand": "Vivo",
+    "model": "Vivo Y55s",
+    "storage": "3 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1050
+  },
+  {
+    "id": "vivo_22025",
+    "brand": "Vivo",
+    "model": "Vivo Y66",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1490
+  },
+  {
+    "id": "vivo_22026",
+    "brand": "Vivo",
+    "model": "Vivo V5 Plus",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2170
+  },
+  {
+    "id": "vivo_22027",
+    "brand": "Vivo",
+    "model": "Vivo V5 Plus",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1930
+  },
+  {
+    "id": "vivo_22028",
+    "brand": "Vivo",
+    "model": "Vivo V5",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1480
+  },
+  {
+    "id": "vivo_22029",
+    "brand": "Vivo",
+    "model": "Vivo Y95",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2960
+  },
+  {
+    "id": "vivo_22030",
+    "brand": "Vivo",
+    "model": "Vivo Y93",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2420
+  },
+  {
+    "id": "vivo_22031",
+    "brand": "Vivo",
+    "model": "Vivo Y93",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2500
+  },
+  {
+    "id": "vivo_22032",
+    "brand": "Vivo",
+    "model": "Vivo Y81i",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1340
+  },
+  {
+    "id": "vivo_22033",
+    "brand": "Vivo",
+    "model": "Vivo Z10",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2500
+  },
+  {
+    "id": "vivo_22034",
+    "brand": "Vivo",
+    "model": "Vivo Y91",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2270
+  },
+  {
+    "id": "vivo_22035",
+    "brand": "Vivo",
+    "model": "Vivo Y91",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2050
+  },
+  {
+    "id": "vivo_22036",
+    "brand": "Vivo",
+    "model": "Vivo V15 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4570
+  },
+  {
+    "id": "vivo_22037",
+    "brand": "Vivo",
+    "model": "Vivo V15 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4800
+  },
+  {
+    "id": "vivo_22038",
+    "brand": "Vivo",
+    "model": "Vivo Y91i",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1750
+  },
+  {
+    "id": "vivo_22039",
+    "brand": "Vivo",
+    "model": "Vivo Y91i",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1900
+  },
+  {
+    "id": "vivo_22040",
+    "brand": "Vivo",
+    "model": "Vivo Y91i",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1570
+  },
+  {
+    "id": "vivo_22041",
+    "brand": "Vivo",
+    "model": "Vivo V15",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4460
+  },
+  {
+    "id": "vivo_22042",
+    "brand": "Vivo",
+    "model": "Vivo V15",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4240
+  },
+  {
+    "id": "vivo_22043",
+    "brand": "Vivo",
+    "model": "Vivo Y17",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4500
+  },
+  {
+    "id": "vivo_22044",
+    "brand": "Vivo",
+    "model": "Vivo Y15 2019",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3610
+  },
+  {
+    "id": "vivo_22045",
+    "brand": "Vivo",
+    "model": "Vivo Y12",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3480
+  },
+  {
+    "id": "vivo_22046",
+    "brand": "Vivo",
+    "model": "Vivo Y12",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3710
+  },
+  {
+    "id": "vivo_22047",
+    "brand": "Vivo",
+    "model": "Vivo Z1 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3600
+  },
+  {
+    "id": "vivo_22048",
+    "brand": "Vivo",
+    "model": "Vivo Z1 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3940
+  },
+  {
+    "id": "vivo_22049",
+    "brand": "Vivo",
+    "model": "Vivo Z1 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3390
+  },
+  {
+    "id": "vivo_22050",
+    "brand": "Vivo",
+    "model": "Vivo Z1 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3450
+  },
+  {
+    "id": "vivo_22051",
+    "brand": "Vivo",
+    "model": "Vivo S1",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4140
+  },
+  {
+    "id": "vivo_22052",
+    "brand": "Vivo",
+    "model": "Vivo S1",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4010
+  },
+  {
+    "id": "vivo_22053",
+    "brand": "Vivo",
+    "model": "Vivo S1",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4000
+  },
+  {
+    "id": "vivo_22054",
+    "brand": "Vivo",
+    "model": "Vivo Y90",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1980
+  },
+  {
+    "id": "vivo_22055",
+    "brand": "Vivo",
+    "model": "Vivo Z1x",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3750
+  },
+  {
+    "id": "vivo_22056",
+    "brand": "Vivo",
+    "model": "Vivo Z1x",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4320
+  },
+  {
+    "id": "vivo_22057",
+    "brand": "Vivo",
+    "model": "Vivo Z1x",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4090
+  },
+  {
+    "id": "vivo_22058",
+    "brand": "Vivo",
+    "model": "Vivo Z1x",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4010
+  },
+  {
+    "id": "vivo_22059",
+    "brand": "Vivo",
+    "model": "Vivo V17 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5550
+  },
+  {
+    "id": "vivo_22060",
+    "brand": "Vivo",
+    "model": "Vivo U10",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2820
+  },
+  {
+    "id": "vivo_22061",
+    "brand": "Vivo",
+    "model": "Vivo U10",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3260
+  },
+  {
+    "id": "vivo_22062",
+    "brand": "Vivo",
+    "model": "Vivo U10",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3040
+  },
+  {
+    "id": "vivo_22063",
+    "brand": "Vivo",
+    "model": "Vivo Y19",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4240
+  },
+  {
+    "id": "vivo_22064",
+    "brand": "Vivo",
+    "model": "Vivo U20",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3470
+  },
+  {
+    "id": "vivo_22065",
+    "brand": "Vivo",
+    "model": "Vivo U20",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3820
+  },
+  {
+    "id": "vivo_22066",
+    "brand": "Vivo",
+    "model": "Vivo U20",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3560
+  },
+  {
+    "id": "vivo_22067",
+    "brand": "Vivo",
+    "model": "Vivo V17",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5380
+  },
+  {
+    "id": "vivo_22068",
+    "brand": "Vivo",
+    "model": "Vivo S1 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4810
+  },
+  {
+    "id": "vivo_22069",
+    "brand": "Vivo",
+    "model": "Vivo Y11 2019",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2800
+  },
+  {
+    "id": "vivo_22070",
+    "brand": "Vivo",
+    "model": "Vivo V19",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5640
+  },
+  {
+    "id": "vivo_22071",
+    "brand": "Vivo",
+    "model": "Vivo V19",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 6070
+  },
+  {
+    "id": "vivo_22072",
+    "brand": "Vivo",
+    "model": "Vivo Y50",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5170
+  },
+  {
+    "id": "vivo_22073",
+    "brand": "Vivo",
+    "model": "Vivo Y30",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4770
+  },
+  {
+    "id": "vivo_22074",
+    "brand": "Vivo",
+    "model": "Vivo Y30",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4620
+  },
+  {
+    "id": "vivo_22075",
+    "brand": "Vivo",
+    "model": "Vivo V50e",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 19040
+  },
+  {
+    "id": "samsung_31000",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Note 20",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 9270
+  },
+  {
+    "id": "samsung_31001",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A14 5G",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7760
+  },
+  {
+    "id": "samsung_31002",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A14 5G",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 6980
+  },
+  {
+    "id": "samsung_31003",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A14 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8290
+  },
+  {
+    "id": "samsung_31004",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A14 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8880
+  },
+  {
+    "id": "samsung_31005",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A13",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4660
+  },
+  {
+    "id": "samsung_31006",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A13",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3750
+  },
+  {
+    "id": "samsung_31007",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A13",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4170
+  },
+  {
+    "id": "samsung_31008",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A03",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2240
+  },
+  {
+    "id": "samsung_31009",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A03",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2690
+  },
+  {
+    "id": "samsung_31010",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A03 Core",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2150
+  },
+  {
+    "id": "samsung_31011",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A03s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2980
+  },
+  {
+    "id": "samsung_31012",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A03s",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2150
+  },
+  {
+    "id": "samsung_31013",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A10",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1850
+  },
+  {
+    "id": "samsung_31014",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A10s",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1920
+  },
+  {
+    "id": "samsung_31015",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A10s",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2000
+  },
+  {
+    "id": "samsung_31016",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A12",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3500
+  },
+  {
+    "id": "samsung_31017",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A12",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3980
+  },
+  {
+    "id": "samsung_31018",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A12",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3710
+  },
+  {
+    "id": "samsung_31019",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A20",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2540
+  },
+  {
+    "id": "samsung_31020",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A20s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2730
+  },
+  {
+    "id": "samsung_31021",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A20s",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2440
+  },
+  {
+    "id": "samsung_31022",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A21s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3350
+  },
+  {
+    "id": "samsung_31023",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A21s",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3750
+  },
+  {
+    "id": "samsung_31024",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A21s",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3580
+  },
+  {
+    "id": "samsung_31025",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A22",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4220
+  },
+  {
+    "id": "samsung_31026",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A22",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3850
+  },
+  {
+    "id": "samsung_31027",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A22 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6020
+  },
+  {
+    "id": "samsung_31028",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A22 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6520
+  },
+  {
+    "id": "samsung_31029",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A23",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4940
+  },
+  {
+    "id": "samsung_31030",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A23",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4520
+  },
+  {
+    "id": "samsung_31031",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A30",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2670
+  },
+  {
+    "id": "samsung_31032",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A30s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2570
+  },
+  {
+    "id": "samsung_31033",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A30s",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2730
+  },
+  {
+    "id": "samsung_31034",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A31",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3580
+  },
+  {
+    "id": "samsung_31035",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A32",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5340
+  },
+  {
+    "id": "samsung_31036",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A32",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4810
+  },
+  {
+    "id": "samsung_31037",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A5 2017",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1080
+  },
+  {
+    "id": "samsung_31038",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A50",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2930
+  },
+  {
+    "id": "samsung_31039",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A50",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3370
+  },
+  {
+    "id": "samsung_31040",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A50",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3180
+  },
+  {
+    "id": "samsung_31041",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A50s",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3000
+  },
+  {
+    "id": "samsung_31042",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A50s",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2800
+  },
+  {
+    "id": "samsung_31043",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A51",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3940
+  },
+  {
+    "id": "samsung_31044",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A51",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4140
+  },
+  {
+    "id": "samsung_31045",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A52",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5790
+  },
+  {
+    "id": "samsung_31046",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A52",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5420
+  },
+  {
+    "id": "samsung_31047",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A52s 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7620
+  },
+  {
+    "id": "samsung_31048",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A52s 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8190
+  },
+  {
+    "id": "samsung_31049",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A53 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6780
+  },
+  {
+    "id": "samsung_31050",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A53 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7190
+  },
+  {
+    "id": "samsung_31051",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A53 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 7590
+  },
+  {
+    "id": "samsung_31052",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A6",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1330
+  },
+  {
+    "id": "samsung_31053",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A6",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1460
+  },
+  {
+    "id": "samsung_31054",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A6 Plus",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1640
+  },
+  {
+    "id": "samsung_31055",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A6 Plus",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1510
+  },
+  {
+    "id": "samsung_31056",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A6 Plus",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1820
+  },
+  {
+    "id": "samsung_31057",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A7 2017",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1410
+  },
+  {
+    "id": "samsung_31058",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A7 2018",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1820
+  },
+  {
+    "id": "samsung_31059",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A7 2018",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2150
+  },
+  {
+    "id": "samsung_31060",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A7 2018",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2010
+  },
+  {
+    "id": "samsung_31061",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A70",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3700
+  },
+  {
+    "id": "samsung_31062",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A70s",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3460
+  },
+  {
+    "id": "samsung_31063",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A70s",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3690
+  },
+  {
+    "id": "samsung_31064",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A71",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4430
+  },
+  {
+    "id": "samsung_31065",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A71",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4070
+  },
+  {
+    "id": "samsung_31066",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A72",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6360
+  },
+  {
+    "id": "samsung_31067",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A72",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 6910
+  },
+  {
+    "id": "samsung_31068",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A73 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8930
+  },
+  {
+    "id": "samsung_31069",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A73 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 9660
+  },
+  {
+    "id": "samsung_31070",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A8 Plus",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2300
+  },
+  {
+    "id": "samsung_31071",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A8 Star",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1780
+  },
+  {
+    "id": "samsung_31072",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A80",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5040
+  },
+  {
+    "id": "samsung_31073",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A9 2018",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2480
+  },
+  {
+    "id": "samsung_31074",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A9 2018",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2260
+  },
+  {
+    "id": "samsung_31075",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A9 Pro",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1480
+  },
+  {
+    "id": "samsung_31076",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy C5 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2040
+  },
+  {
+    "id": "samsung_31077",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy C7 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2110
+  },
+  {
+    "id": "samsung_31078",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy C9 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2150
+  },
+  {
+    "id": "samsung_31079",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F02s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2890
+  },
+  {
+    "id": "samsung_31080",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F02s",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2740
+  },
+  {
+    "id": "samsung_31081",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F12",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3650
+  },
+  {
+    "id": "samsung_31082",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F12",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3230
+  },
+  {
+    "id": "samsung_31083",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F13",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4000
+  },
+  {
+    "id": "samsung_31084",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F13",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3750
+  },
+  {
+    "id": "samsung_31085",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F22",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3500
+  },
+  {
+    "id": "samsung_31086",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F22",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3810
+  },
+  {
+    "id": "samsung_31087",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F23 5G",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5890
+  },
+  {
+    "id": "samsung_31088",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F23 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6190
+  },
+  {
+    "id": "samsung_31089",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F41",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3220
+  },
+  {
+    "id": "samsung_31090",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F41",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3560
+  },
+  {
+    "id": "samsung_31091",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S22 Ultra 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 26600
+  },
+  {
+    "id": "xiaomi_32000",
     "brand": "Xiaomi",
-    "model": "Mi 11 Ultra",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
+    "model": "Xiaomi Redmi Note 6 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2840
+  },
+  {
+    "id": "xiaomi_32001",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 6 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3070
+  },
+  {
+    "id": "xiaomi_32002",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi A2",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2500
+  },
+  {
+    "id": "xiaomi_32003",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi A2",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2850
+  },
+  {
+    "id": "xiaomi_32004",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 6",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1740
+  },
+  {
+    "id": "xiaomi_32005",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 6",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1820
+  },
+  {
+    "id": "xiaomi_32006",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 6 pro",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2160
+  },
+  {
+    "id": "xiaomi_32007",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 6 pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2280
+  },
+  {
+    "id": "xiaomi_32008",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 6A",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1410
+  },
+  {
+    "id": "xiaomi_32009",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 6A",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1510
+  },
+  {
+    "id": "xiaomi_32010",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y2",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2200
+  },
+  {
+    "id": "xiaomi_32011",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y2",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2120
+  },
+  {
+    "id": "xiaomi_32012",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 5",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1700
+  },
+  {
+    "id": "xiaomi_32013",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 5",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2010
+  },
+  {
+    "id": "xiaomi_32014",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 5",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1590
+  },
+  {
+    "id": "xiaomi_32015",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 5 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2650
+  },
+  {
+    "id": "xiaomi_32016",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 5 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2500
+  },
+  {
+    "id": "xiaomi_32017",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 5",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1780
+  },
+  {
+    "id": "xiaomi_32018",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 5",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2080
+  },
+  {
+    "id": "xiaomi_32019",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 5A",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1290
+  },
+  {
+    "id": "xiaomi_32020",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 5A",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1140
+  },
+  {
+    "id": "xiaomi_32021",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y1",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1230
+  },
+  {
+    "id": "xiaomi_32022",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y1",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1380
+  },
+  {
+    "id": "xiaomi_32023",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y1 Lite",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 980
+  },
+  {
+    "id": "xiaomi_32024",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi Mix 2",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2830
+  },
+  {
+    "id": "xiaomi_32025",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi Max 2",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1680
+  },
+  {
+    "id": "xiaomi_32026",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi Max 2",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1810
+  },
+  {
+    "id": "xiaomi_32027",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi Max 2",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2220
+  },
+  {
+    "id": "xiaomi_32028",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3030
+  },
+  {
+    "id": "xiaomi_32029",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2470
+  },
+  {
+    "id": "xiaomi_32030",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4090
+  },
+  {
+    "id": "xiaomi_32031",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3820
+  },
+  {
+    "id": "xiaomi_32032",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3760
+  },
+  {
+    "id": "xiaomi_32033",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Go",
+    "storage": "1 GB/8 GB",
+    "color": "Midnight",
+    "basePrice": 830
+  },
+  {
+    "id": "xiaomi_32034",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Go",
+    "storage": "1 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1040
+  },
+  {
+    "id": "xiaomi_32035",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 2350
+  },
+  {
+    "id": "xiaomi_32036",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2570
+  },
+  {
+    "id": "xiaomi_32037",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2690
+  },
+  {
+    "id": "xiaomi_32038",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2500
+  },
+  {
+    "id": "xiaomi_32039",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7S",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3450
+  },
+  {
+    "id": "xiaomi_32040",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7S",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3290
+  },
+  {
+    "id": "xiaomi_32041",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y3",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2350
+  },
+  {
+    "id": "xiaomi_32042",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y3",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2500
+  },
+  {
+    "id": "xiaomi_32043",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Black Shark 2",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5910
+  },
+  {
+    "id": "xiaomi_32044",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Black Shark 2",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4920
+  },
+  {
+    "id": "xiaomi_32045",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi K20",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4960
+  },
+  {
+    "id": "xiaomi_32046",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi K20",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4620
+  },
+  {
+    "id": "xiaomi_32047",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi K20 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5720
+  },
+  {
+    "id": "xiaomi_32048",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi K20 Pro",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 6120
+  },
+  {
+    "id": "xiaomi_32049",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7A",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1720
+  },
+  {
+    "id": "xiaomi_32050",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7A",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1440
+  },
+  {
+    "id": "xiaomi_32051",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7A",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1590
+  },
+  {
+    "id": "xiaomi_32052",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi A3",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3710
+  },
+  {
+    "id": "xiaomi_32053",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi A3",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4130
+  },
+  {
+    "id": "xiaomi_32054",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 8A",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2250
+  },
+  {
+    "id": "xiaomi_32055",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 8A",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2460
+  },
+  {
+    "id": "xiaomi_32056",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 8",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3370
+  },
+  {
+    "id": "xiaomi_32057",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 8",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3790
+  },
+  {
+    "id": "xiaomi_32058",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 8",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4050
+  },
+  {
+    "id": "xiaomi_32059",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 8",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3560
+  },
+  {
+    "id": "xiaomi_32060",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 8 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4510
+  },
+  {
+    "id": "xiaomi_32061",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 8 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4240
+  },
+  {
+    "id": "xiaomi_32062",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 8 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4750
+  },
+  {
+    "id": "xiaomi_32063",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9 Pro",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4760
+  },
+  {
+    "id": "xiaomi_32064",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4360
+  },
+  {
+    "id": "xiaomi_32065",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5010
+  },
+  {
+    "id": "xiaomi_32066",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 8A Dual",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2800
+  },
+  {
+    "id": "xiaomi_32067",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 8A Dual",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2700
+  },
+  {
+    "id": "xiaomi_32068",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 8A Dual",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2990
+  },
+  {
+    "id": "xiaomi_32069",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9 Pro Max",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5170
+  },
+  {
+    "id": "xiaomi_32070",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9 Pro Max",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5460
+  },
+  {
+    "id": "xiaomi_32071",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9 Pro Max",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4740
+  },
+  {
+    "id": "xiaomi_32072",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4170
+  },
+  {
+    "id": "xiaomi_32073",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4390
+  },
+  {
+    "id": "xiaomi_32074",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4630
+  },
+  {
+    "id": "xiaomi_32075",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9 Prime",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3790
+  },
+  {
+    "id": "xiaomi_32076",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9 Prime",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3490
+  },
+  {
+    "id": "xiaomi_32077",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3120
+  },
+  {
+    "id": "xiaomi_32078",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3400
+  },
+  {
+    "id": "xiaomi_32079",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9A",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2730
+  },
+  {
+    "id": "xiaomi_32080",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9A",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2950
+  },
+  {
+    "id": "xiaomi_32081",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9i",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3070
+  },
+  {
+    "id": "xiaomi_32082",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9i",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3290
+  },
+  {
+    "id": "xiaomi_32083",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10T",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7580
+  },
+  {
+    "id": "xiaomi_32084",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10T",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7260
+  },
+  {
+    "id": "xiaomi_32085",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10T Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7760
+  },
+  {
+    "id": "xiaomi_32086",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10i",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 6730
+  },
+  {
+    "id": "xiaomi_32087",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10i",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7230
+  },
+  {
+    "id": "xiaomi_32088",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10i",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7410
+  },
+  {
+    "id": "xiaomi_32089",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9 Power",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3560
+  },
+  {
+    "id": "xiaomi_32090",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9 Power",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3750
+  },
+  {
+    "id": "xiaomi_32091",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9 Power",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4010
+  },
+  {
+    "id": "xiaomi_32092",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4160
+  },
+  {
+    "id": "xiaomi_32093",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4530
+  },
+  {
+    "id": "xiaomi_32094",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4540
+  },
+  {
+    "id": "xiaomi_32095",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5190
+  },
+  {
+    "id": "xiaomi_32096",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5690
+  },
+  {
+    "id": "xiaomi_32097",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Pro Max",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5420
+  },
+  {
+    "id": "xiaomi_32098",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Pro Max",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_32099",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Pro Max",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5980
+  },
+  {
+    "id": "xiaomi_32100",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11X Pro",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8180
+  },
+  {
+    "id": "xiaomi_32101",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11X Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7610
+  },
+  {
+    "id": "xiaomi_32102",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11 Ultra",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
     "basePrice": 17300
   },
   {
-    "id": "x_1002",
+    "id": "xiaomi_32103",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11X",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7460
+  },
+  {
+    "id": "xiaomi_32104",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11X",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8100
+  },
+  {
+    "id": "xiaomi_32105",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11 Lite",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5650
+  },
+  {
+    "id": "xiaomi_32106",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11 Lite",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6070
+  },
+  {
+    "id": "iqoo_10000",
+    "brand": "iQOO",
+    "model": "Iqoo 12 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_10001",
+    "brand": "iQOO",
+    "model": "Iqoo 13 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_10002",
+    "brand": "iQOO",
+    "model": "Iqoo 15 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_10003",
+    "brand": "iQOO",
+    "model": "Iqoo 15r",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_10004",
+    "brand": "iQOO",
+    "model": "Iqoo Neo 10",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_10005",
+    "brand": "iQOO",
+    "model": "Iqoo Z10 Lite 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_10006",
+    "brand": "iQOO",
+    "model": "Iqoo Z10r 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_10007",
+    "brand": "iQOO",
+    "model": "Iqoo Z10x 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_10008",
+    "brand": "iQOO",
+    "model": "Iqoo Z11x 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_10009",
+    "brand": "iQOO",
+    "model": "Iqoo Z9x 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_10010",
+    "brand": "Xiaomi",
+    "model": "Mi 10t Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_10011",
+    "brand": "Xiaomi",
+    "model": "Mi 11 Ultra",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_10012",
     "brand": "Xiaomi",
     "model": "Mi Mix 2",
     "storage": "128GB",
     "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2830
-  },
-  {
-    "id": "x_1003",
-    "brand": "Xiaomi",
-    "model": "Redmi 8",
-    "storage": "64GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 3370
-  },
-  {
-    "id": "x_1004",
-    "brand": "Xiaomi",
-    "model": "Redmi Y1 Lite",
-    "storage": "16GB",
-    "ram": "2GB",
-    "color": "Black",
-    "basePrice": 980
-  },
-  {
-    "id": "x_1006",
-    "brand": "Xiaomi",
-    "model": "Black Shark 2",
-    "storage": "256GB",
-    "ram": "12GB",
-    "color": "Black",
-    "basePrice": 5910
-  },
-  {
-    "id": "x_1008",
-    "brand": "Xiaomi",
-    "model": "Black Shark 2",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 4920
-  },
-  {
-    "id": "x_1010",
-    "brand": "Xiaomi",
-    "model": "Mi 10T",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 7260
-  },
-  {
-    "id": "x_1012",
-    "brand": "Xiaomi",
-    "model": "Mi 10T",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 7580
-  },
-  {
-    "id": "x_1015",
-    "brand": "Xiaomi",
-    "model": "Mi 10i",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 7230
-  },
-  {
-    "id": "x_1016",
-    "brand": "Xiaomi",
-    "model": "Mi 10i",
-    "storage": "64GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 6730
-  },
-  {
-    "id": "x_1018",
-    "brand": "Xiaomi",
-    "model": "Mi 10i",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 7410
-  },
-  {
-    "id": "x_1020",
-    "brand": "Xiaomi",
-    "model": "Mi 11 Lite",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 5650
-  },
-  {
-    "id": "x_1022",
-    "brand": "Xiaomi",
-    "model": "Mi 11 Lite",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 6070
-  },
-  {
-    "id": "x_1024",
-    "brand": "Xiaomi",
-    "model": "Mi 11X",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 7460
-  },
-  {
-    "id": "x_1026",
-    "brand": "Xiaomi",
-    "model": "Mi 11X",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 8100
-  },
-  {
-    "id": "x_1027",
-    "brand": "Xiaomi",
-    "model": "Mi 11X Pro",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 7610
-  },
-  {
-    "id": "x_1028",
-    "brand": "Xiaomi",
-    "model": "Mi 11X Pro",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 8180
-  },
-  {
-    "id": "x_1030",
-    "brand": "Xiaomi",
-    "model": "Mi A2",
-    "storage": "64GB",
-    "ram": "4GB",
-    "color": "Black",
-    "basePrice": 2500
-  },
-  {
-    "id": "x_1032",
-    "brand": "Xiaomi",
-    "model": "Mi A2",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 2850
-  },
-  {
-    "id": "x_1034",
-    "brand": "Xiaomi",
-    "model": "Mi A3",
-    "storage": "64GB",
-    "ram": "4GB",
-    "color": "Black",
-    "basePrice": 3710
-  },
-  {
-    "id": "x_1036",
-    "brand": "Xiaomi",
-    "model": "Mi A3",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 4130
-  },
-  {
-    "id": "x_1037",
-    "brand": "Xiaomi",
-    "model": "Mi Max 2",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 2220
-  },
-  {
-    "id": "x_1038",
-    "brand": "Xiaomi",
-    "model": "Mi Max 2",
-    "storage": "32GB",
-    "ram": "3GB",
-    "color": "Black",
-    "basePrice": 1680
-  },
-  {
-    "id": "x_1039",
-    "brand": "Xiaomi",
-    "model": "Mi Max 2",
-    "storage": "64GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 1810
-  },
-  {
-    "id": "x_1040",
-    "brand": "Xiaomi",
-    "model": "Redmi 5",
-    "storage": "16GB",
-    "ram": "2GB",
-    "color": "Black",
-    "basePrice": 1590
-  },
-  {
-    "id": "x_1041",
-    "brand": "Xiaomi",
-    "model": "Redmi 5",
-    "storage": "32GB",
-    "ram": "3GB",
-    "color": "Black",
-    "basePrice": 1700
-  },
-  {
-    "id": "x_1042",
-    "brand": "Xiaomi",
-    "model": "Redmi 5",
-    "storage": "64GB",
-    "ram": "4GB",
-    "color": "Black",
-    "basePrice": 2010
-  },
-  {
-    "id": "x_1043",
-    "brand": "Xiaomi",
-    "model": "Redmi 5A",
-    "storage": "16GB",
-    "ram": "2GB",
-    "color": "Black",
-    "basePrice": 1140
-  },
-  {
-    "id": "x_1044",
-    "brand": "Xiaomi",
-    "model": "Redmi 5A",
-    "storage": "32GB",
-    "ram": "3GB",
-    "color": "Black",
-    "basePrice": 1290
-  },
-  {
-    "id": "x_1045",
-    "brand": "Xiaomi",
-    "model": "Redmi 6",
-    "storage": "32GB",
-    "ram": "3GB",
-    "color": "Black",
-    "basePrice": 1740
-  },
-  {
-    "id": "x_1046",
-    "brand": "Xiaomi",
-    "model": "Redmi 6",
-    "storage": "64GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 1820
-  },
-  {
-    "id": "x_1048",
-    "brand": "Xiaomi",
-    "model": "Redmi 6 pro",
-    "storage": "32GB",
-    "ram": "3GB",
-    "color": "Black",
-    "basePrice": 2160
-  },
-  {
-    "id": "x_1050",
-    "brand": "Xiaomi",
-    "model": "Redmi 6 pro",
-    "storage": "64GB",
-    "ram": "4GB",
-    "color": "Black",
-    "basePrice": 2280
-  },
-  {
-    "id": "x_1051",
-    "brand": "Xiaomi",
-    "model": "Redmi 6A",
-    "storage": "16GB",
-    "ram": "2GB",
-    "color": "Black",
-    "basePrice": 1410
-  },
-  {
-    "id": "x_1052",
-    "brand": "Xiaomi",
-    "model": "Redmi 6A",
-    "storage": "32GB",
-    "ram": "3GB",
-    "color": "Black",
-    "basePrice": 1510
-  },
-  {
-    "id": "x_1055",
-    "brand": "Xiaomi",
-    "model": "Redmi 7",
-    "storage": "16GB",
-    "ram": "2GB",
-    "color": "Black",
-    "basePrice": 2350
-  },
-  {
-    "id": "x_1056",
-    "brand": "Xiaomi",
-    "model": "Redmi 7",
-    "storage": "32GB",
-    "ram": "2GB",
-    "color": "Black",
-    "basePrice": 2500
-  },
-  {
-    "id": "x_1059",
-    "brand": "Xiaomi",
-    "model": "Redmi 7",
-    "storage": "32GB",
-    "ram": "3GB",
-    "color": "Black",
-    "basePrice": 2570
-  },
-  {
-    "id": "x_1060",
-    "brand": "Xiaomi",
-    "model": "Redmi 7",
-    "storage": "64GB",
-    "ram": "3GB",
-    "color": "Black",
-    "basePrice": 2690
-  },
-  {
-    "id": "x_1061",
-    "brand": "Xiaomi",
-    "model": "Redmi 7A",
-    "storage": "16GB",
-    "ram": "2GB",
-    "color": "Black",
-    "basePrice": 1440
-  },
-  {
-    "id": "x_1062",
-    "brand": "Xiaomi",
-    "model": "Redmi 7A",
-    "storage": "32GB",
-    "ram": "2GB",
-    "color": "Black",
-    "basePrice": 1590
-  },
-  {
-    "id": "x_1063",
-    "brand": "Xiaomi",
-    "model": "Redmi 7A",
-    "storage": "32GB",
-    "ram": "3GB",
-    "color": "Black",
-    "basePrice": 1720
-  },
-  {
-    "id": "x_1067",
-    "brand": "Xiaomi",
-    "model": "Redmi 8A Dual",
-    "storage": "32GB",
-    "ram": "2GB",
-    "color": "Black",
-    "basePrice": 2700
-  },
-  {
-    "id": "x_1070",
-    "brand": "Xiaomi",
-    "model": "Redmi 8A Dual",
-    "storage": "32GB",
-    "ram": "3GB",
-    "color": "Black",
-    "basePrice": 2800
-  },
-  {
-    "id": "x_1071",
-    "brand": "Xiaomi",
-    "model": "Redmi 8A Dual",
-    "storage": "64GB",
-    "ram": "3GB",
-    "color": "Black",
-    "basePrice": 2990
-  },
-  {
-    "id": "x_1072",
-    "brand": "Xiaomi",
-    "model": "Redmi 9",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3400
-  },
-  {
-    "id": "x_1073",
-    "brand": "Xiaomi",
-    "model": "Redmi 9",
-    "storage": "64GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 3120
-  },
-  {
-    "id": "x_1076",
-    "brand": "Xiaomi",
-    "model": "Redmi 9 Power",
-    "storage": "128GB",
-    "ram": "4GB",
-    "color": "Black",
-    "basePrice": 3750
-  },
-  {
-    "id": "x_1077",
-    "brand": "Xiaomi",
-    "model": "Redmi 9 Power",
-    "storage": "64GB",
-    "ram": "4GB",
-    "color": "Black",
-    "basePrice": 3560
-  },
-  {
-    "id": "x_1079",
-    "brand": "Xiaomi",
-    "model": "Redmi 9 Power",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 4010
-  },
-  {
-    "id": "x_1080",
-    "brand": "Xiaomi",
-    "model": "Redmi 9 Prime",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3790
-  },
-  {
-    "id": "x_1081",
-    "brand": "Xiaomi",
-    "model": "Redmi 9 Prime",
-    "storage": "64GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 3490
-  },
-  {
-    "id": "x_1083",
-    "brand": "Xiaomi",
-    "model": "Redmi 9A",
-    "storage": "32GB",
-    "ram": "2GB",
-    "color": "Black",
-    "basePrice": 2730
-  },
-  {
-    "id": "x_1085",
-    "brand": "Xiaomi",
-    "model": "Redmi 9A",
-    "storage": "32GB",
-    "ram": "3GB",
-    "color": "Black",
-    "basePrice": 2950
-  },
-  {
-    "id": "x_1086",
-    "brand": "Xiaomi",
-    "model": "Redmi 9i",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 3290
-  },
-  {
-    "id": "x_1087",
-    "brand": "Xiaomi",
-    "model": "Redmi 9i",
-    "storage": "64GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 3070
-  },
-  {
-    "id": "x_1088",
-    "brand": "Xiaomi",
-    "model": "Redmi Go",
-    "storage": "16GB",
-    "ram": "2GB",
-    "color": "Black",
-    "basePrice": 1040
-  },
-  {
-    "id": "x_1089",
-    "brand": "Xiaomi",
-    "model": "Redmi Go",
-    "storage": "8GB",
-    "ram": "4GB",
-    "color": "Black",
-    "basePrice": 830
-  },
-  {
-    "id": "x_1090",
-    "brand": "Xiaomi",
-    "model": "Redmi K20",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 4960
-  },
-  {
-    "id": "x_1091",
-    "brand": "Xiaomi",
-    "model": "Redmi K20",
-    "storage": "64GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 4620
-  },
-  {
-    "id": "x_1093",
-    "brand": "Xiaomi",
-    "model": "Redmi K20 Pro",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 5720
-  },
-  {
-    "id": "x_1095",
-    "brand": "Xiaomi",
-    "model": "Redmi K20 Pro",
-    "storage": "256GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 6120
-  },
-  {
-    "id": "x_1097",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 10",
-    "storage": "64GB",
-    "ram": "4GB",
-    "color": "Black",
-    "basePrice": 4160
-  },
-  {
-    "id": "x_1099",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 10",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 4530
-  },
-  {
-    "id": "x_1102",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 10 Pro",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 5190
-  },
-  {
-    "id": "x_1103",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 10 Pro",
-    "storage": "64GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 4540
-  },
-  {
-    "id": "x_1105",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 10 Pro",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Black",
-    "basePrice": 5690
-  },
-  {
-    "id": "x_1108",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 10 Pro Max",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 5420
-  },
-  {
-    "id": "x_1109",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 10 Pro Max",
-    "storage": "64GB",
-    "ram": "6GB",
-    "color": "Black",
+    "color": "Midnight",
     "basePrice": 5000
   },
   {
-    "id": "x_1111",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 10 Pro Max",
+    "id": "motorola_10013",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 50 Fusion 12 Gb 256 Gb ",
     "storage": "128GB",
     "ram": "8GB",
-    "color": "Black",
-    "basePrice": 5980
+    "color": "Midnight",
+    "basePrice": 5000
   },
   {
-    "id": "x_1112",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 5",
-    "storage": "32GB",
-    "ram": "3GB",
-    "color": "Black",
-    "basePrice": 1780
-  },
-  {
-    "id": "x_1113",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 5",
-    "storage": "64GB",
-    "ram": "4GB",
-    "color": "Black",
-    "basePrice": 2080
-  },
-  {
-    "id": "x_1114",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 5 Pro",
-    "storage": "64GB",
-    "ram": "4GB",
-    "color": "Black",
-    "basePrice": 2500
-  },
-  {
-    "id": "x_1115",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 5 Pro",
-    "storage": "64GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 2650
-  },
-  {
-    "id": "x_1117",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 6 Pro",
-    "storage": "64GB",
-    "ram": "4GB",
-    "color": "Black",
-    "basePrice": 2840
-  },
-  {
-    "id": "x_1119",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 6 Pro",
-    "storage": "64GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 3070
-  },
-  {
-    "id": "x_1121",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 7",
-    "storage": "32GB",
-    "ram": "3GB",
-    "color": "Black",
-    "basePrice": 2470
-  },
-  {
-    "id": "x_1123",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 7",
-    "storage": "64GB",
-    "ram": "4GB",
-    "color": "Black",
-    "basePrice": 3030
-  },
-  {
-    "id": "x_1125",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 7 Pro",
-    "storage": "64GB",
-    "ram": "4GB",
-    "color": "Black",
-    "basePrice": 3760
-  },
-  {
-    "id": "x_1128",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 7 Pro",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 4090
-  },
-  {
-    "id": "x_1129",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 7 Pro",
-    "storage": "64GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 3820
-  },
-  {
-    "id": "x_1131",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 7S",
-    "storage": "32GB",
-    "ram": "3GB",
-    "color": "Black",
-    "basePrice": 3290
-  },
-  {
-    "id": "x_1133",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 7S",
-    "storage": "64GB",
-    "ram": "4GB",
-    "color": "Black",
-    "basePrice": 3450
-  },
-  {
-    "id": "x_1135",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 8",
-    "storage": "32GB",
-    "ram": "3GB",
-    "color": "Black",
-    "basePrice": 3560
-  },
-  {
-    "id": "x_1137",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 8",
-    "storage": "64GB",
-    "ram": "4GB",
-    "color": "Black",
-    "basePrice": 3790
-  },
-  {
-    "id": "x_1139",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 8",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 4050
-  },
-  {
-    "id": "x_1142",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 8 Pro",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 4510
-  },
-  {
-    "id": "x_1143",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 8 Pro",
-    "storage": "64GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 4240
-  },
-  {
-    "id": "x_1145",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 8 Pro",
+    "id": "motorola_10014",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 50 Fusion 8 Gb 128 Gb ",
     "storage": "128GB",
     "ram": "8GB",
-    "color": "Black",
-    "basePrice": 4750
+    "color": "Midnight",
+    "basePrice": 5000
   },
   {
-    "id": "x_1148",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 9",
-    "storage": "128GB",
-    "ram": "4GB",
-    "color": "Black",
-    "basePrice": 4390
-  },
-  {
-    "id": "x_1149",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 9",
-    "storage": "64GB",
-    "ram": "4GB",
-    "color": "Black",
-    "basePrice": 4170
-  },
-  {
-    "id": "x_1151",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 9",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 4630
-  },
-  {
-    "id": "x_1154",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 9 Pro",
-    "storage": "128GB",
-    "ram": "4GB",
-    "color": "Black",
-    "basePrice": 4760
-  },
-  {
-    "id": "x_1155",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 9 Pro",
-    "storage": "64GB",
-    "ram": "4GB",
-    "color": "Black",
-    "basePrice": 4360
-  },
-  {
-    "id": "x_1157",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 9 Pro",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 5010
-  },
-  {
-    "id": "x_1160",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 9 Pro Max",
-    "storage": "128GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 5170
-  },
-  {
-    "id": "x_1161",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 9 Pro Max",
-    "storage": "64GB",
-    "ram": "6GB",
-    "color": "Black",
-    "basePrice": 4740
-  },
-  {
-    "id": "x_1163",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 9 Pro Max",
+    "id": "nokia_10015",
+    "brand": "Nokia",
+    "model": "Nokia 2 2",
     "storage": "128GB",
     "ram": "8GB",
-    "color": "Black",
-    "basePrice": 5460
+    "color": "Midnight",
+    "basePrice": 5000
   },
   {
-    "id": "x_1164",
-    "brand": "Xiaomi",
-    "model": "Redmi Y1",
-    "storage": "32GB",
-    "ram": "3GB",
-    "color": "Black",
-    "basePrice": 1230
+    "id": "nokia_10016",
+    "brand": "Nokia",
+    "model": "Nokia 2 4",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
   },
   {
-    "id": "x_1165",
-    "brand": "Xiaomi",
-    "model": "Redmi Y1",
-    "storage": "64GB",
-    "ram": "4GB",
-    "color": "Black",
-    "basePrice": 1380
+    "id": "nokia_10017",
+    "brand": "Nokia",
+    "model": "Nokia 3 2",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
   },
   {
-    "id": "x_1167",
-    "brand": "Xiaomi",
-    "model": "Redmi Y2",
-    "storage": "32GB",
-    "ram": "3GB",
-    "color": "Black",
-    "basePrice": 2120
+    "id": "nokia_10018",
+    "brand": "Nokia",
+    "model": "Nokia 3 4",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
   },
   {
-    "id": "x_1169",
-    "brand": "Xiaomi",
-    "model": "Redmi Y2",
-    "storage": "64GB",
-    "ram": "4GB",
-    "color": "Black",
-    "basePrice": 2200
+    "id": "nokia_10019",
+    "brand": "Nokia",
+    "model": "Nokia 4 2",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
   },
   {
-    "id": "x_1171",
-    "brand": "Xiaomi",
-    "model": "Redmi Y3",
-    "storage": "32GB",
-    "ram": "3GB",
-    "color": "Black",
-    "basePrice": 2350
+    "id": "nokia_10020",
+    "brand": "Nokia",
+    "model": "Nokia 5 1 Plus",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
   },
   {
-    "id": "x_1173",
+    "id": "nokia_10021",
+    "brand": "Nokia",
+    "model": "Nokia 5 3",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_10022",
+    "brand": "Nokia",
+    "model": "Nokia 5 4",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_10023",
+    "brand": "Nokia",
+    "model": "Nokia 6 1 Plus",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_10024",
+    "brand": "Nokia",
+    "model": "Nokia 6 2",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_10025",
+    "brand": "Nokia",
+    "model": "Nokia 7 1",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_10026",
+    "brand": "Nokia",
+    "model": "Nokia 7 2",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_10027",
+    "brand": "Nokia",
+    "model": "Nokia 8 1",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_10028",
+    "brand": "OnePlus",
+    "model": "Oneplus Nord Ce 2 Lite 5g 6 Gb 128 Gb ",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_10029",
+    "brand": "OnePlus",
+    "model": "Oneplus Nord Ce 6 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_10030",
+    "brand": "OnePlus",
+    "model": "Oneplus Nord Ce 6 Lite 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10031",
+    "brand": "Oppo",
+    "model": "Oppo A11k",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10032",
+    "brand": "Oppo",
+    "model": "Oppo A12",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10033",
+    "brand": "Oppo",
+    "model": "Oppo A15",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10034",
+    "brand": "Oppo",
+    "model": "Oppo A15s",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10035",
+    "brand": "Oppo",
+    "model": "Oppo A1k",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10036",
+    "brand": "Oppo",
+    "model": "Oppo A31",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10037",
+    "brand": "Oppo",
+    "model": "Oppo A33 2020",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10038",
+    "brand": "Oppo",
+    "model": "Oppo A3s",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10039",
+    "brand": "Oppo",
+    "model": "Oppo A5 2020",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10040",
+    "brand": "Oppo",
+    "model": "Oppo A5",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10041",
+    "brand": "Oppo",
+    "model": "Oppo A52",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10042",
+    "brand": "Oppo",
+    "model": "Oppo A53",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10043",
+    "brand": "Oppo",
+    "model": "Oppo A57",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10044",
+    "brand": "Oppo",
+    "model": "Oppo A5s",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10045",
+    "brand": "Oppo",
+    "model": "Oppo A7",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10046",
+    "brand": "Oppo",
+    "model": "Oppo A71 2018",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10047",
+    "brand": "Oppo",
+    "model": "Oppo A77",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10048",
+    "brand": "Oppo",
+    "model": "Oppo A83",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10049",
+    "brand": "Oppo",
+    "model": "Oppo A9 2020",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10050",
+    "brand": "Oppo",
+    "model": "Oppo A9",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10051",
+    "brand": "Oppo",
+    "model": "Oppo F1 Plus",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10052",
+    "brand": "Oppo",
+    "model": "Oppo F11 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10053",
+    "brand": "Oppo",
+    "model": "Oppo F11",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10054",
+    "brand": "Oppo",
+    "model": "Oppo F15",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10055",
+    "brand": "Oppo",
+    "model": "Oppo F17 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10056",
+    "brand": "Oppo",
+    "model": "Oppo F17",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10057",
+    "brand": "Oppo",
+    "model": "Oppo F1s",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10058",
+    "brand": "Oppo",
+    "model": "Oppo F3 Plus",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10059",
+    "brand": "Oppo",
+    "model": "Oppo F3",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10060",
+    "brand": "Oppo",
+    "model": "Oppo F5 Youth",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10061",
+    "brand": "Oppo",
+    "model": "Oppo F5",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10062",
+    "brand": "Oppo",
+    "model": "Oppo F7",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10063",
+    "brand": "Oppo",
+    "model": "Oppo F9 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10064",
+    "brand": "Oppo",
+    "model": "Oppo F9",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10065",
+    "brand": "Oppo",
+    "model": "Oppo Find X",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10066",
+    "brand": "Oppo",
+    "model": "Oppo Find X2",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10067",
+    "brand": "Oppo",
+    "model": "Oppo K1",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10068",
+    "brand": "Oppo",
+    "model": "Oppo K3",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10069",
+    "brand": "Oppo",
+    "model": "Oppo R11",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10070",
+    "brand": "Oppo",
+    "model": "Oppo R17",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10071",
+    "brand": "Oppo",
+    "model": "Oppo Reno 10x Zoom",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10072",
+    "brand": "Oppo",
+    "model": "Oppo Reno 2",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10073",
+    "brand": "Oppo",
+    "model": "Oppo Reno 2z",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10074",
+    "brand": "Oppo",
+    "model": "Oppo Reno",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10075",
+    "brand": "Oppo",
+    "model": "Oppo Reno2 F",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10076",
+    "brand": "Oppo",
+    "model": "Oppo Reno3 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10077",
+    "brand": "Oppo",
+    "model": "Oppo Reno4 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10078",
+    "brand": "Oppo",
+    "model": "Oppo Reno5 Pro 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10079",
+    "brand": "POCO",
+    "model": "POCO C3",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10080",
+    "brand": "POCO",
+    "model": "POCO C31",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10081",
+    "brand": "POCO",
+    "model": "POCO C50",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10082",
+    "brand": "POCO",
+    "model": "POCO C51",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10083",
+    "brand": "POCO",
+    "model": "POCO C55",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10084",
+    "brand": "POCO",
+    "model": "POCO C61",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10085",
+    "brand": "POCO",
+    "model": "POCO C65",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10086",
+    "brand": "POCO",
+    "model": "POCO C71",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10087",
+    "brand": "POCO",
+    "model": "POCO C75 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10088",
+    "brand": "POCO",
+    "model": "POCO C85 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10089",
+    "brand": "POCO",
+    "model": "POCO C85x",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10090",
+    "brand": "POCO",
+    "model": "POCO F1",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10091",
+    "brand": "POCO",
+    "model": "POCO F3 Gt",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10092",
+    "brand": "POCO",
+    "model": "POCO F4 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10093",
+    "brand": "POCO",
+    "model": "POCO F5 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10094",
+    "brand": "POCO",
+    "model": "POCO F6 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10095",
+    "brand": "POCO",
+    "model": "POCO F7 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10096",
+    "brand": "POCO",
+    "model": "POCO M2 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10097",
+    "brand": "POCO",
+    "model": "POCO M2 Reloaded",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10098",
+    "brand": "POCO",
+    "model": "POCO M2",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10099",
+    "brand": "POCO",
+    "model": "POCO M3 Pro 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10100",
+    "brand": "POCO",
+    "model": "POCO M3",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10101",
+    "brand": "POCO",
+    "model": "POCO M4 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10102",
+    "brand": "POCO",
+    "model": "POCO M4 Pro 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10103",
+    "brand": "POCO",
+    "model": "POCO M4 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10104",
+    "brand": "POCO",
+    "model": "POCO M5",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10105",
+    "brand": "POCO",
+    "model": "POCO M6 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10106",
+    "brand": "POCO",
+    "model": "POCO M6 Plus 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10107",
+    "brand": "POCO",
+    "model": "POCO M6 Pro 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10108",
+    "brand": "POCO",
+    "model": "POCO M7 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10109",
+    "brand": "POCO",
+    "model": "POCO M7 Plus 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10110",
+    "brand": "POCO",
+    "model": "POCO M7 Pro 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10111",
+    "brand": "POCO",
+    "model": "POCO M8 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10112",
+    "brand": "POCO",
+    "model": "POCO X2",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10113",
+    "brand": "POCO",
+    "model": "POCO X3 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10114",
+    "brand": "POCO",
+    "model": "POCO X3",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10115",
+    "brand": "POCO",
+    "model": "POCO X4 Pro 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10116",
+    "brand": "POCO",
+    "model": "POCO X5 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10117",
+    "brand": "POCO",
+    "model": "POCO X5 Pro 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10118",
+    "brand": "POCO",
+    "model": "POCO X6 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10119",
+    "brand": "POCO",
+    "model": "POCO X6 Neo 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10120",
+    "brand": "POCO",
+    "model": "POCO X6 Pro 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10121",
+    "brand": "POCO",
+    "model": "POCO X7 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10122",
+    "brand": "POCO",
+    "model": "POCO X7 Pro 5g",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_10123",
+    "brand": "POCO",
+    "model": "POCO X8 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_10124",
     "brand": "Xiaomi",
-    "model": "Redmi Y3",
-    "storage": "64GB",
-    "ram": "4GB",
-    "color": "Black",
-    "basePrice": 2500
+    "model": "Redmi 8",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_10125",
+    "brand": "Xiaomi",
+    "model": "Redmi Y1 Lite",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_10126",
+    "brand": "Vivo",
+    "model": "Vivo V50e 8 Gb 256 Gb ",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
   }
 ];

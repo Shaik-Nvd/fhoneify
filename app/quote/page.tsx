@@ -652,7 +652,7 @@ export default function QuotePage() {
                     { id: 'audio_receiver', label: 'Audio Receiver not working', icon: '📞' },
                     { id: 'camera_glass', label: 'Camera Glass Broken', icon: '🔍' },
                     { id: 'microphone', label: 'Microphone not working', icon: '🎤' },
-                    { id: 'bluetooth', label: 'Bluetooth not working', icon: '🦷' },
+                    { id: 'bluetooth', label: 'Bluetooth not working', icon: '🛜' },
                     { id: 'vibrator', label: 'Vibrator is not working', icon: '📳' },
                     { id: 'proximity', label: 'Proximity Sensor not working', icon: '🖐' },
                     { id: 'battery_service', label: 'Battery in Service (< 80%)', icon: '🔋' }
@@ -795,28 +795,34 @@ export default function QuotePage() {
               const headers: any = { 'Content-Type': 'application/json' };
               if (token) headers['Authorization'] = `Bearer ${token}`;
               
-              await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'}/api/quote/leads`, {
+              const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'}/api/quote/leads`, {
                 method: 'POST',
                 headers,
                 body: JSON.stringify({
-                  name: userName,
-                  phone: userPhone,
-                  brand: selectedBrand,
-                  model: selectedModel,
-                  storage: selectedStorage,
-                  quotedPrice: finalPrice,
-                  pickupDate,
-                  pickupTime,
-                  address,
-                  pincode,
-                  city
+                  name: userName || '',
+                  phone: userPhone || '',
+                  brand: selectedBrand || '',
+                  model: selectedModel || '',
+                  storage: selectedStorage || '',
+                  quotedPrice: finalPrice || 0,
+                  pickupDate: pickupDate || '',
+                  pickupTime: pickupTime || '',
+                  address: address || '',
+                  pincode: pincode || '',
+                  city: city || ''
                 })
               });
+              
+              if (!res.ok) {
+                const data = await res.json().catch(() => ({}));
+                throw new Error(data.error || data.message || 'Failed to schedule pickup');
+              }
+              
               alert("Scheduled for Pickup! Our executive will contact you shortly.");
               router.push('/');
-            } catch (err) {
+            } catch (err: any) {
               console.error("Failed to schedule pickup", err);
-              alert("Something went wrong. Please try again.");
+              alert("Something went wrong: " + (err.message || "Please try again."));
             }
           }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem' }}>
