@@ -88,3 +88,18 @@ export async function getLeads(req: AuthenticatedRequest, res: Response) {
     return res.status(500).json({ success: false, error: 'Internal server error' });
   }
 }
+
+export async function updateLeadStatus(req: AuthenticatedRequest, res: Response) {
+  try {
+    const { id } = req.params;
+    const { status } = req.body;
+    if (!status) {
+      return res.status(400).json({ success: false, error: 'Status is required' });
+    }
+    const lead = await adminService.updateLeadStatus(id, status);
+    return res.json({ success: true, data: lead, message: 'Lead status updated' });
+  } catch (err: any) {
+    logger.error({ err: err.message }, 'Error in updateLeadStatus controller');
+    return res.status(500).json({ success: false, error: 'Internal server error' });
+  }
+}

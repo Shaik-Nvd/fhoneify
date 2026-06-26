@@ -64,3 +64,10 @@ export async function getLeads() {
     orderBy: { createdAt: 'desc' }
   });
 }
+
+export async function updateLeadStatus(id: string, status: string) {
+  return await prisma.lead.update({
+    where: { id },
+    data: { status }
+  });
+}

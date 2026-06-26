@@ -9,6 +9,42 @@ export default function AdminLeadsPage() {
   const [leads, setLeads] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  
+  const LEAD_STATUSES = ['pending', 'processing', 'email sent', 'follow-up 1', 'follow-up 2', 'follow-up 3', 'converted', 'lost'];
+
+  const getStatusColor = (status: string) => {
+    switch (status.toLowerCase()) {
+      case 'converted': return '#4CD964';
+      case 'lost': return '#FF3B30';
+      case 'pending': return '#FF9500';
+      default: return '#5AC8FA'; // processing, email sent, follow-ups
+    }
+  };
+
+  const handleStatusChange = async (leadId: string, newStatus: string) => {
+    const token = localStorage.getItem('accessToken');
+    if (!token) return;
+
+    try {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+      const res = await fetch(`${apiUrl}/api/admin/leads/${leadId}/status`, {
+        method: 'PATCH',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ status: newStatus })
+      });
+      const data = await res.json();
+      if (data.success) {
+        setLeads(leads.map(l => l.id === leadId ? { ...l, status: newStatus } : l));
+      } else {
+        alert('Failed to update status: ' + data.error);
+      }
+    } catch (err: any) {
+      alert('Error updating status: ' + err.message);
+    }
+  };
 
   useEffect(() => {
     async function fetchData() {
@@ -134,7 +170,27 @@ export default function AdminLeadsPage() {
                       {l.address ? `${l.address}, ${l.city || ''} - ${l.pincode || ''}` : '-'}
                     </td>
                     <td style={{ padding: '0.75rem 0' }}>
-                      <span style={{ padding: '0.2rem 0.5rem', background: '#4CD96420', color: '#4CD964', borderRadius: '4px', fontSize: '0.8rem' }}>{l.status}</span>
+                      <select 
+                        value={l.status || 'pending'} 
+                        onChange={(e) => handleStatusChange(l.id, e.target.value)}
+                        style={{ 
+                          padding: '0.4rem 0.5rem', 
+                          background: `${getStatusColor(l.status)}20`, 
+                          color: getStatusColor(l.status), 
+                          border: `1px solid ${getStatusColor(l.status)}50`, 
+                          borderRadius: '4px', 
+                          fontSize: '0.8rem',
+                          outline: 'none',
+                          cursor: 'pointer',
+                          textTransform: 'capitalize'
+                        }}
+                      >
+                        {LEAD_STATUSES.map(s => (
+                          <option key={s} value={s} style={{ background: '#1c1c1e', color: '#fff' }}>
+                            {s}
+                          </option>
+                        ))}
+                      </select>
                     </td>
                   </tr>
                 ))}

@@ -14,6 +14,7 @@ router.get('/orders', ctrl.getOrders);
 router.get('/fraud', ctrl.getFraudListings);
 router.get('/users', ctrl.getUsers);
 router.get('/leads', ctrl.getLeads);
+router.patch('/leads/:id/status', ctrl.updateLeadStatus);
 router.patch('/listings/:id/approve', ctrl.approveListing);
 router.patch('/listings/:id/reject', ctrl.rejectListing);
 
