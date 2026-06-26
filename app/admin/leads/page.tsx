@@ -50,6 +50,36 @@ export default function AdminLeadsPage() {
     }
   };
 
+  const downloadCSV = () => {
+    if (leads.length === 0) {
+      alert('No leads to export');
+      return;
+    }
+    const headers = ['Date', 'Name', 'Phone', 'Brand', 'Model', 'Storage', 'Quote', 'Pickup Date', 'Pickup Time', 'Status'];
+    const rows = leads.map(l => [
+      new Date(l.createdAt).toLocaleDateString(),
+      `"${l.name || ''}"`,
+      l.phone,
+      l.brand,
+      l.model,
+      l.storage,
+      l.quotedPrice,
+      l.pickupDate || '',
+      l.pickupTime || '',
+      l.status
+    ]);
+    const csvContent = [headers.join(','), ...rows.map(e => e.join(','))].join('\n');
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    const url = URL.createObjectURL(blob);
+    link.setAttribute('href', url);
+    link.setAttribute('download', `leads_export_${new Date().toISOString().split('T')[0]}.csv`);
+    link.style.visibility = 'hidden';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   useEffect(() => {
     async function fetchData() {
       const token = localStorage.getItem('accessToken');
@@ -112,18 +142,26 @@ export default function AdminLeadsPage() {
             </h1>
             <p className="text-muted mt-2 font-medium">Manage your leads and users in real-time.</p>
           </div>
-          <button 
-            onClick={() => {
-              localStorage.removeItem('accessToken');
-              localStorage.removeItem('refreshToken');
-              router.push('/admin/login');
-            }}
-            className="group relative px-6 py-2.5 rounded-full overflow-hidden bg-surface-elevated border border-white/10 hover:border-danger/50 transition-all duration-300 shadow-lg"
-          >
-            <span className="relative z-10 text-sm font-semibold text-muted group-hover:text-danger transition-colors duration-300">
-              Sign Out
-            </span>
-          </button>
+          <div className="flex items-center gap-4">
+            <button 
+              onClick={downloadCSV}
+              className="px-6 py-2.5 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 hover:bg-blue-500/20 hover:border-blue-500/50 transition-all duration-300 font-semibold shadow-[0_0_15px_rgba(59,130,246,0.1)]"
+            >
+              Export CSV
+            </button>
+            <button 
+              onClick={() => {
+                localStorage.removeItem('accessToken');
+                localStorage.removeItem('refreshToken');
+                router.push('/admin/login');
+              }}
+              className="group relative px-6 py-2.5 rounded-full overflow-hidden bg-surface-elevated border border-white/10 hover:border-danger/50 transition-all duration-300 shadow-lg"
+            >
+              <span className="relative z-10 text-sm font-semibold text-muted group-hover:text-danger transition-colors duration-300">
+                Sign Out
+              </span>
+            </button>
+          </div>
         </div>
 
         {error && (

@@ -59,6 +59,8 @@ export function getUsers(): User[] {
   return users;
 }
 
+import twilio from 'twilio';
+
 export async function getLeads() {
   return await prisma.lead.findMany({
     orderBy: { createdAt: 'desc' }
@@ -66,8 +68,42 @@ export async function getLeads() {
 }
 
 export async function updateLeadStatus(id: string, status: string) {
-  return await prisma.lead.update({
+  const lead = await prisma.lead.update({
     where: { id },
     data: { status }
   });
+
+  // Automated SMS Notifications using Twilio
+  try {
+    if (status === 'processing' || status === 'email sent' || status === 'follow-up 1') {
+      const accountSid = process.env.TWILIO_ACCOUNT_SID;
+      const authToken = process.env.TWILIO_AUTH_TOKEN;
+      const fromPhone = process.env.TWILIO_PHONE_NUMBER;
+
+      if (accountSid && authToken && fromPhone) {
+        const client = twilio(accountSid, authToken);
+        let messageBody = `Hi ${lead.name || 'there'}! Your Fhoneify device pickup is now: ${status.toUpperCase()}.`;
+        
+        if (status === 'processing') {
+          messageBody = `Hi ${lead.name || 'there'}! We are currently processing your device pickup request for your ${lead.brand} ${lead.model}. Fhoneify team.`;
+        } else if (status === 'email sent') {
+          messageBody = `Hi ${lead.name || 'there'}, we've sent you an email regarding your Fhoneify pickup. Please check your inbox!`;
+        }
+
+        await client.messages.create({
+          body: messageBody,
+          from: fromPhone,
+          // Assuming Indian phone numbers since currency is ₹ in the app
+          to: lead.phone.startsWith('+') ? lead.phone : `+91${lead.phone}` 
+        });
+        console.log(`[Twilio] Sent SMS to ${lead.phone} for status ${status}`);
+      } else {
+        console.log(`[Twilio Mock] Would have sent SMS to ${lead.phone} for status ${status}. Missing Twilio credentials in .env`);
+      }
+    }
+  } catch (err: any) {
+    console.error('[Twilio Error] Failed to send SMS:', err.message);
+  }
+
+  return lead;
 }
