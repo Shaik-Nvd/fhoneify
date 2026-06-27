@@ -32,4 +32,13 @@ try {
   logger.error(error, 'Failed to initialize Firebase Admin');
 }
 
-export const authAdmin = getAuth();
+let authAdminInstance = null;
+try {
+  if (getApps().length > 0) {
+    authAdminInstance = getAuth();
+  }
+} catch (e) {
+  logger.error('Failed to get Firebase Auth admin instance');
+}
+
+export const authAdmin = authAdminInstance;
