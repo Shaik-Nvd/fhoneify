@@ -10,7 +10,8 @@ const SendOtpSchema = z.object({
 
 const VerifyOtpSchema = z.object({
   phone: z.string().min(1, 'Phone is required'),
-  otp: z.string().length(6, 'OTP must be 6 digits'),
+  otp: z.string().optional(),
+  firebaseToken: z.string().optional(),
   referralCode: z.string().optional(),
 });
 
@@ -51,8 +52,11 @@ export async function verifyOtp(req: Request, res: Response) {
     if (!result.success) {
       return res.status(400).json({ success: false, error: result.error.issues[0].message });
     }
-    const { phone, otp, referralCode } = result.data;
-    const loginResult = await authService.verifyOtp(phone, otp, referralCode);
+    const { phone, otp, referralCode, firebaseToken } = result.data;
+    if (!otp && !firebaseToken) {
+      return res.status(400).json({ success: false, error: 'OTP or Firebase Token is required' });
+    }
+    const loginResult = await authService.verifyOtp(phone, otp, referralCode, firebaseToken);
     if (!loginResult) {
       return res.status(401).json({ success: false, error: 'Invalid or expired OTP' });
     }

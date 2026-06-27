@@ -18,7 +18,7 @@ import type { Viewport } from 'next';
 export const metadata: Metadata = {
   title: {
     template: '%s | Fhoneify',
-    default: 'Fhoneify - Premium Phone Resale',
+    default: 'Fhoneify | Premium Phone Resale',
   },
   description: "India's premium marketplace for selling and buying verified refurbished phones",
 };

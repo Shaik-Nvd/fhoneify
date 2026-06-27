@@ -4,6 +4,14 @@ import { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import api from '@/lib/api';
 import { useAuthStore } from '@/lib/authStore';
+import { auth } from '@/lib/firebase';
+import { RecaptchaVerifier, signInWithPhoneNumber, ConfirmationResult } from 'firebase/auth';
+
+declare global {
+  interface Window {
+    recaptchaVerifier: RecaptchaVerifier;
+  }
+}
 
 export default function AuthPage() {
   const router = useRouter();
@@ -14,19 +22,33 @@ export default function AuthPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
+  const [confirmationResult, setConfirmationResult] = useState<ConfirmationResult | null>(null);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      if (window.recaptchaVerifier) {
+        window.recaptchaVerifier.clear();
+      }
+      window.recaptchaVerifier = new RecaptchaVerifier(auth, 'recaptcha-container', {
+        size: 'invisible',
+        callback: () => {}
+      });
+    }
+  }, []);
 
   const handleSendOtp = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!phone || phone.length < 10) { setError('Enter a valid 10-digit phone number'); return; }
     try {
       setLoading(true); setError(null);
-      const res = await api.post('/api/auth/otp/send', { phone });
-      // We removed the alert here so it doesn't show up on the live website.
-      // The OTP is still printed in the backend terminal during local development.
+      const formattedPhone = '+91' + phone;
+      const appVerifier = window.recaptchaVerifier;
+      const confirmation = await signInWithPhoneNumber(auth, formattedPhone, appVerifier);
+      setConfirmationResult(confirmation);
       setStep('otp');
-    } catch (err: unknown) {
-      const msg = (err as { response?: { data?: { error?: string } } })?.response?.data?.error;
-      setError(msg || 'Failed to send OTP');
+    } catch (err: any) {
+      console.error(err);
+      setError(err.message || 'Failed to send OTP. Please try again.');
     } finally { setLoading(false); }
   };
 
@@ -52,13 +74,19 @@ export default function AuthPage() {
     if (otpStr.length !== 6) { setError('Enter the 6-digit OTP'); return; }
     try {
       setLoading(true); setError(null);
-      const res = await api.post('/api/auth/otp/verify', { phone, otp: otpStr });
+      if (!confirmationResult) throw new Error("Please request OTP again");
+      
+      const result = await confirmationResult.confirm(otpStr);
+      const firebaseToken = await result.user.getIdToken();
+      
+      const res = await api.post('/api/auth/otp/verify', { phone, firebaseToken });
       const { accessToken, refreshToken, user } = res.data.data;
       setAuth({ id: user.id, phone: user.phone, role: user.role, email: user.email }, accessToken, refreshToken);
       router.push(user.role === 'admin' ? '/admin' : '/');
-    } catch (err: unknown) {
-      const msg = (err as { response?: { data?: { error?: string } } })?.response?.data?.error;
-      setError(msg || 'Invalid OTP');
+    } catch (err: any) {
+      console.error(err);
+      const msg = err.response?.data?.error || err.message || 'Invalid OTP';
+      setError(msg);
     } finally { setLoading(false); }
   };
 
@@ -69,6 +97,8 @@ export default function AuthPage() {
           <p style={{ fontSize: '1.5rem', fontWeight: 700, color: '#d4af37', letterSpacing: '3px', textTransform: 'uppercase', marginBottom: '0.5rem' }}>FHONEIFY</p>
           <p style={{ color: '#a0a0a0', fontSize: '0.85rem' }}>{step === 'phone' ? 'Enter your phone to get started' : 'Enter the 6-digit code'}</p>
         </div>
+
+        <div id="recaptcha-container"></div>
 
         {error && <div className="alert-error">{error}</div>}
 

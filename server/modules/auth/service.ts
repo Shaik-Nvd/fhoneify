@@ -3,6 +3,7 @@ import config from '../../config';
 import { users, otps, redis, User } from '../../data';
 import logger from '../../lib/logger';
 import twilio from 'twilio';
+import { authAdmin } from '../../lib/firebaseAdmin';
 
 // Initialize Twilio client (requires ENV vars to be set in production)
 const twilioClient = twilio(
@@ -72,13 +73,33 @@ export async function sendOtp(phone: string): Promise<string> {
   return otp;
 }
 
-export async function verifyOtp(phone: string, otp: string, usedReferralCode?: string) {
-  const stored = otps.get(phone);
-  if (!stored || stored.otp !== otp || stored.expires < Date.now()) {
-    logger.warn({ phone, otp }, 'Invalid or expired OTP verification attempt');
+export async function verifyOtp(phone: string, otp?: string, usedReferralCode?: string, firebaseToken?: string) {
+  if (firebaseToken) {
+    try {
+      if (!authAdmin) {
+        logger.error('Firebase Admin not initialized, cannot verify token');
+        return null;
+      }
+      const decodedToken = await authAdmin.verifyIdToken(firebaseToken);
+      const expectedPhone = `+91${phone}`;
+      if (decodedToken.phone_number !== expectedPhone) {
+        throw new Error(`Phone number mismatch: expected ${expectedPhone}, got ${decodedToken.phone_number}`);
+      }
+      // Token is valid, proceed with login
+    } catch (error) {
+      logger.error(error, 'Failed to verify Firebase token');
+      throw new Error('Invalid Firebase Token');
+    }
+  } else if (otp) {
+    const stored = otps.get(phone);
+    if (!stored || stored.otp !== otp || stored.expires < Date.now()) {
+      logger.warn({ phone, otp }, 'Invalid or expired OTP verification attempt');
+      return null;
+    }
+    otps.delete(phone);
+  } else {
     return null;
   }
-  otps.delete(phone);
 
   let user = users.find((u) => u.phone === phone);
   let isNewUser = false;

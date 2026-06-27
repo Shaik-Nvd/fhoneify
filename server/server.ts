@@ -1,5 +1,8 @@
 import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
+
+// Bypass strict SSL for local development (fixes UNABLE_TO_VERIFY_LEAF_SIGNATURE from proxy/antivirus)
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 import fs from 'fs';
 import path from 'path';
 import config from './config';

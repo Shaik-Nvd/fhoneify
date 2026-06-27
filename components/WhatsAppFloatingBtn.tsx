@@ -49,7 +49,7 @@ export default function WhatsAppFloatingBtn() {
   const phoneNumber = "919739063840";
   
   let message = "I'm interested in your services.";
-  if (pageContext && pageContext !== 'Fhoneify — Premium Phone Resale') {
+  if (pageContext && pageContext !== 'Fhoneify | Premium Phone Resale') {
     message = `I'm reaching out from the ${pageContext} page.`;
     if (pathname.startsWith('/buy') && pageContext !== 'Buy Refurbished Phones') {
        message = `I'm interested in buying a phone (from: ${pageContext})`;

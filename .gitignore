@@ -16,3 +16,6 @@ out/
 coverage/
 .pnpm-debug.log
 pnpm-lock.yaml
+
+serviceAccountKey.json
+
