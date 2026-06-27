@@ -14,25 +14,55 @@ export async function sendOtp(phone: string): Promise<string> {
   const otp = String(Math.floor(100000 + Math.random() * 900000));
   otps.set(phone, { otp, expires: Date.now() + 10 * 60 * 1000 });
 
-  // If Twilio credentials are provided, send a real SMS
-  if (process.env.TWILIO_ACCOUNT_SID && process.env.TWILIO_AUTH_TOKEN && process.env.TWILIO_PHONE_NUMBER) {
+  // If Cunnekt credentials are provided, send a real WhatsApp message
+  if (process.env.CUNNEKT_API_KEY && process.env.CUNNEKT_BASE_URL) {
     try {
-      // Ensure phone is in E.164 format (e.g. +91...)
-      const formattedPhone = phone.startsWith('+') ? phone : `+91${phone}`;
+      // Ensure phone is in format without '+' but with country code '91' for Indian numbers
+      const formattedPhone = phone.replace(/^\+/, '');
+      const finalPhone = formattedPhone.startsWith('91') || formattedPhone.length > 10 ? formattedPhone : `91${formattedPhone}`;
       
-      await twilioClient.messages.create({
-        body: `Your Fhoneify verification code is: ${otp}. Valid for 10 minutes.`,
-        from: process.env.TWILIO_PHONE_NUMBER,
-        to: formattedPhone
-      });
-      logger.info({ phone }, 'Real SMS sent via Twilio successfully');
+      const axios = require('axios');
+      
+      // Sending template message via Cunnekt API. 
+      // Assuming 'otptemplate' as seen in the dashboard and standard Cunnekt payload.
+      const cunnektUrl = process.env.CUNNEKT_BASE_URL?.endsWith('/') 
+        ? `${process.env.CUNNEKT_BASE_URL}sendnotification` 
+        : `${process.env.CUNNEKT_BASE_URL}/sendnotification`;
+
+      await axios.post(
+        cunnektUrl, 
+        {
+          mobile: finalPhone,
+          templateid: "otptemplate",
+          template: {
+            components: [
+              {
+                type: "body",
+                parameters: [
+                  {
+                    type: "text",
+                    text: otp
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          headers: {
+            'API-KEY': process.env.CUNNEKT_API_KEY,
+            'Content-Type': 'application/json'
+          }
+        }
+      );
+      logger.info({ phone: finalPhone }, 'OTP sent via Cunnekt WhatsApp successfully');
     } catch (error: any) {
-      logger.error({ phone, err: error.message }, 'Failed to send SMS via Twilio');
-      // We don't throw here so that dev environments without Twilio can still use the console fallback
+      logger.error({ phone, err: error.response?.data || error.message }, 'Failed to send OTP via Cunnekt');
+      // We don't throw here so that dev environments can still use the console fallback
       process.stdout.write(`[DEV OTP FALLBACK] Phone ${phone} → OTP: ${otp}\n`);
     }
   } else {
-    // Development fallback if no real Twilio credentials are provided
+    // Development fallback if no real credentials are provided
     process.stdout.write(`[DEV OTP] Phone ${phone} → OTP: ${otp}\n`);
   }
   
