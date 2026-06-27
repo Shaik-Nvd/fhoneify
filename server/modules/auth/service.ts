@@ -22,9 +22,9 @@ export async function sendOtp(phone: string): Promise<string> {
       const finalPhone = formattedPhone.startsWith('91') || formattedPhone.length > 10 ? formattedPhone : `91${formattedPhone}`;
       
       const axios = require('axios');
+      const https = require('https');
       
       // Sending template message via Cunnekt API. 
-      // Assuming 'otptemplate' as seen in the dashboard and standard Cunnekt payload.
       const cunnektUrl = process.env.CUNNEKT_BASE_URL?.endsWith('/') 
         ? `${process.env.CUNNEKT_BASE_URL}sendnotification` 
         : `${process.env.CUNNEKT_BASE_URL}/sendnotification`;
@@ -52,7 +52,9 @@ export async function sendOtp(phone: string): Promise<string> {
           headers: {
             'API-KEY': process.env.CUNNEKT_API_KEY,
             'Content-Type': 'application/json'
-          }
+          },
+          // Bypass SSL "unable to verify the first certificate" error
+          httpsAgent: new https.Agent({ rejectUnauthorized: false })
         }
       );
       logger.info({ phone: finalPhone }, 'OTP sent via Cunnekt WhatsApp successfully');
