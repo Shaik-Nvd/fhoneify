@@ -35,7 +35,10 @@ export async function sendOtp(req: Request, res: Response) {
     }
     const { phone } = result.data;
     const otp = await authService.sendOtp(phone);
-    return res.json({ success: true, data: { otp }, message: 'OTP sent successfully' });
+    
+    // For security, never send the OTP back to the frontend in production.
+    const responseData = process.env.NODE_ENV === 'development' ? { otp } : {};
+    return res.json({ success: true, data: responseData, message: 'OTP sent successfully' });
   } catch (err: any) {
     logger.error({ err: err.message }, 'Error in sendOtp controller');
     return res.status(500).json({ success: false, error: 'Internal server error' });

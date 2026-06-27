@@ -21,10 +21,8 @@ export default function AuthPage() {
     try {
       setLoading(true); setError(null);
       const res = await api.post('/api/auth/otp/send', { phone });
-      const generatedOtp = res.data?.data?.otp;
-      if (generatedOtp) {
-        alert(`DEV MODE OTP: ${generatedOtp}`);
-      }
+      // We removed the alert here so it doesn't show up on the live website.
+      // The OTP is still printed in the backend terminal during local development.
       setStep('otp');
     } catch (err: unknown) {
       const msg = (err as { response?: { data?: { error?: string } } })?.response?.data?.error;
