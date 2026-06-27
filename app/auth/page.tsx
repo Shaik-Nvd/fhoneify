@@ -27,7 +27,11 @@ export default function AuthPage() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       if (window.recaptchaVerifier) {
-        window.recaptchaVerifier.clear();
+        try {
+          window.recaptchaVerifier.clear();
+        } catch (e) {
+          console.warn('Recaptcha clear error:', e);
+        }
       }
       window.recaptchaVerifier = new RecaptchaVerifier(auth, 'recaptcha-container', {
         size: 'invisible',

@@ -37,18 +37,14 @@ export default function Navbar() {
 
   const navCategories = [
     {
-      id: 'shop',
-      title: 'Shop',
-      items: [
-        { label: 'Buy Phones', href: '/buy' },
-      ]
+      id: 'buy',
+      title: 'Buy Phones',
+      href: '/buy'
     },
     {
-      id: 'trade',
-      title: 'Trade-In',
-      items: [
-        { label: 'Get Quote', href: '/quote' },
-      ]
+      id: 'quote',
+      title: 'Get Quote',
+      href: '/quote'
     },
     {
       id: 'services',
@@ -105,32 +101,49 @@ export default function Navbar() {
             <div 
               key={category.id}
               style={{ position: 'relative' }} 
-              onMouseEnter={() => setHoveredMenu(category.id)} 
-              onMouseLeave={() => setHoveredMenu(null)}
+              onMouseEnter={() => !category.href && setHoveredMenu(category.id)} 
+              onMouseLeave={() => !category.href && setHoveredMenu(null)}
             >
-              <span 
-                onClick={() => setHoveredMenu(hoveredMenu === category.id ? null : category.id)}
-                style={{ 
-                  color: hoveredMenu === category.id ? '#d4af37' : '#a0a0a0', 
-                  fontSize: '0.875rem', 
-                  fontWeight: 500, 
-                  cursor: 'pointer', 
-                  transition: 'color 150ms', 
-                  display: 'flex', 
-                  alignItems: 'center', 
-                  gap: '6px' 
-                }}>
-                {category.title}
-                <span style={{ 
-                  fontSize: '0.55rem', 
-                  transform: hoveredMenu === category.id ? 'rotate(180deg)' : 'rotate(0deg)', 
-                  transition: 'transform 200ms ease' 
-                }}>
-                  ▼
+              {category.href ? (
+                <Link
+                  href={category.href}
+                  style={{
+                    color: hoveredMenu === category.id ? '#d4af37' : '#a0a0a0',
+                    fontSize: '0.875rem',
+                    fontWeight: 500,
+                    textDecoration: 'none',
+                    transition: 'color 150ms',
+                  }}
+                  onMouseEnter={(e) => { e.currentTarget.style.color = '#fff'; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.color = '#a0a0a0'; }}
+                >
+                  {category.title}
+                </Link>
+              ) : (
+                <span 
+                  onClick={() => setHoveredMenu(hoveredMenu === category.id ? null : category.id)}
+                  style={{ 
+                    color: hoveredMenu === category.id ? '#d4af37' : '#a0a0a0', 
+                    fontSize: '0.875rem', 
+                    fontWeight: 500, 
+                    cursor: 'pointer', 
+                    transition: 'color 150ms', 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    gap: '6px' 
+                  }}>
+                  {category.title}
+                  <span style={{ 
+                    fontSize: '0.55rem', 
+                    transform: hoveredMenu === category.id ? 'rotate(180deg)' : 'rotate(0deg)', 
+                    transition: 'transform 200ms ease' 
+                  }}>
+                    ▼
+                  </span>
                 </span>
-              </span>
+              )}
               
-              {hoveredMenu === category.id && (
+              {!category.href && hoveredMenu === category.id && (
                 <div style={{ 
                   position: 'absolute', 
                   top: '100%', 

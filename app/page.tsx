@@ -195,7 +195,7 @@ function FloatingPhone({ mouseX, mouseY }: { mouseX: any, mouseY: any }) {
       
       {/* Floating Badge 1 */}
       <m.div style={{ position: 'absolute', top: '15%', left: '-5%', y: badge1Y, zIndex: 20 }} className="glass-card p-3 md:p-4 rounded-xl flex items-center gap-3 shadow-2xl">
-        <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'linear-gradient(135deg, #d4af37, #b8860b)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem' }}>✨</div>
+        <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'linear-gradient(135deg, #221f15, #0f0d08)', border: '1px solid rgba(212,175,55,0.4)', boxShadow: '0 4px 15px rgba(212,175,55,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem' }}>✨</div>
         <div>
           <p style={{ color: '#fff', fontWeight: 700, fontSize: '0.9rem', margin: 0 }}>Instant</p>
           <p style={{ color: '#a0a0a0', fontSize: '0.75rem', margin: 0 }}>Valuation</p>
@@ -204,7 +204,7 @@ function FloatingPhone({ mouseX, mouseY }: { mouseX: any, mouseY: any }) {
 
       {/* Floating Badge 2 */}
       <m.div style={{ position: 'absolute', bottom: '15%', right: '-15%', y: badge2Y, zIndex: 20 }} className="glass-card p-3 md:p-4 rounded-xl flex items-center gap-3 shadow-2xl">
-        <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'linear-gradient(135deg, #10b981, #059669)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem' }}>💸</div>
+        <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'linear-gradient(135deg, #221f15, #0f0d08)', border: '1px solid rgba(212,175,55,0.4)', boxShadow: '0 4px 15px rgba(212,175,55,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem' }}>💰</div>
         <div>
           <p style={{ color: '#fff', fontWeight: 700, fontSize: '0.9rem', margin: 0 }}>Highest</p>
           <p style={{ color: '#a0a0a0', fontSize: '0.75rem', margin: 0 }}>Market Price</p>

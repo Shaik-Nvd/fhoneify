@@ -1,41 +1,44 @@
 {
+  "multipliers": {
+    "calls_no": 0.80,
+    "touch_no": 0.82,
+    "originalScreen_no": 0.87,
+    "warranty_no": 0.92,
+    "gstBill_no": 0.95
+  },
+  "ageBonus": {
+    "below3": 1.10,
+    "3to6": 1.07,
+    "6to11": 1.04,
+    "above11": 1.00
+  },
+  "defects_screen_body": {
+    "screen_scratch": 0.35,
+    "screen_spot": 0.25,
+    "panel_missing": 0.20,
+    "body_scratch": 0.08
+  },
+  "defects_functional": {
+    "fingerprint": 0.15,
+    "battery_service": 0.15,
+    "front_camera": 0.10,
+    "back_camera": 0.10,
+    "wifi": 0.12,
+    "speaker": 0.10,
+    "audio_receiver": 0.10,
+    "charging": 0.10,
+    "microphone": 0.10,
+    "face": 0.05,
+    "volume": 0.05,
+    "power": 0.05,
+    "camera_glass": 0.05,
+    "bluetooth": 0.05,
+    "silent": 0.02,
+    "vibrator": 0.02,
+    "proximity": 0.02
+  },
   "bonuses": {
-    "warranty": 0.07,
-    "gstBill": 0.02,
-    "eSim": 0.05,
-    "box": 1000
-  },
-  "ageMultipliers": {
-    "below3": 1.00,
-    "3to6": 0.95,
-    "6to11": 0.90,
-    "above11": 0.80
-  },
-  "deductions": {
-    "calls": 3000,
-    "touch": 3500,
-    "originalScreen": 2000,
-    "screen_scratch": 4000,
-    "screen_spot": 3000,
-    "body_scratch": 1500,
-    "panel_missing": 2500,
-    "front_camera": 1500,
-    "back_camera": 1500,
-    "camera_glass": 800,
-    "volume": 800,
-    "power": 800,
-    "silent": 600,
-    "charging": 1200,
-    "speaker": 800,
-    "audio_receiver": 800,
-    "microphone": 800,
-    "wifi": 2000,
-    "bluetooth": 1200,
-    "vibrator": 500,
-    "face": 1500,
-    "fingerprint": 1200,
-    "proximity": 600,
-    "battery_service": 4500
+    "box": 300
   },
   "modelFloorPrice": 500
 }

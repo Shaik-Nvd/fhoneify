@@ -6,6 +6,14 @@ import api from '@/lib/api';
 import { formatCurrency } from '@/lib/format';
 import { useAuthStore } from '@/lib/authStore';
 import { useHydratedAuth } from '@/lib/useHydratedAuth';
+import { auth } from '@/lib/firebase';
+import { RecaptchaVerifier, signInWithPhoneNumber, ConfirmationResult } from 'firebase/auth';
+
+declare global {
+  interface Window {
+    recaptchaVerifier: any;
+  }
+}
 
 import { BRAND_LOGOS, getBrandLogoStyle } from '@/lib/brands';
 import config from '@/lib/pricingConfig.json';
@@ -157,6 +165,23 @@ export default function QuotePage() {
   const [showOtpInput, setShowOtpInput] = useState(false);
   const [isAuthLoading, setIsAuthLoading] = useState(false);
   const [authError, setAuthError] = useState<string | null>(null);
+  const [confirmationResult, setConfirmationResult] = useState<ConfirmationResult | null>(null);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      if (window.recaptchaVerifier) {
+        try {
+          window.recaptchaVerifier.clear();
+        } catch (e) {
+          console.warn('Recaptcha clear error:', e);
+        }
+      }
+      window.recaptchaVerifier = new RecaptchaVerifier(auth, 'quote-recaptcha-container', {
+        size: 'invisible',
+        callback: () => {}
+      });
+    }
+  }, []);
 
   // Device fetch removed because it's now loaded statically and instantly from SEED_DEVICES
 
@@ -267,25 +292,48 @@ export default function QuotePage() {
   const calculateFinalPrice = () => {
     if (!basePrice) return;
     
-    let warranty_bonus = diagnostics.warranty ? config.bonuses.warranty : 0;
-    let gst_bill_bonus = diagnostics.validBill ? config.bonuses.gstBill : 0;
-    let esim_bonus = diagnostics.eSim === 'Dual eSIM' ? (config.bonuses as any).eSim || 0.05 : 0;
-    let age_multiplier = diagnostics.warranty && diagnostics.mobileAge ? config.ageMultipliers[diagnostics.mobileAge as keyof typeof config.ageMultipliers] || 1.0 : 1.0;
-
-    let price = basePrice * (1 + warranty_bonus + gst_bill_bonus + esim_bonus) * age_multiplier;
-
-    if (diagnostics.accessories.includes('box')) price += config.bonuses.box;
-
-    if (diagnostics.calls === false) price -= config.deductions.calls;
-    if (diagnostics.touch === false) price -= config.deductions.touch;
-    if (diagnostics.originalScreen === false) price -= config.deductions.originalScreen;
-
+    // 1. Base Price
+    let price = basePrice;
+    
+    // 2. Binary Multipliers
+    if (diagnostics.calls === false) price *= config.multipliers.calls_no;
+    if (diagnostics.touch === false) price *= config.multipliers.touch_no;
+    if (diagnostics.originalScreen === false) price *= config.multipliers.originalScreen_no;
+    
+    if (diagnostics.warranty) {
+      // Age Bonus applies ONLY if under warranty AND GST Bill is valid
+      if (diagnostics.validBill && diagnostics.mobileAge) {
+        let age_multiplier = config.ageBonus[diagnostics.mobileAge as keyof typeof config.ageBonus] || 1.0;
+        price *= age_multiplier;
+      }
+    } else {
+      // Penalty for no warranty
+      price *= config.multipliers.warranty_no;
+    }
+    
+    // GST Bill penalty (applies independently if no bill, even if warranty is expired)
+    if (diagnostics.validBill === false) price *= config.multipliers.gstBill_no;
+    
+    // 3. Screen / Body Defects (Additive within group)
+    let screenBodyPenaltySum = 0;
     diagnostics.defects.forEach(d => { 
-      if (d in config.deductions) price -= config.deductions[d as keyof typeof config.deductions]; 
+      if (d in config.defects_screen_body) {
+        screenBodyPenaltySum += config.defects_screen_body[d as keyof typeof config.defects_screen_body];
+      }
     });
+    price *= (1 - Math.min(screenBodyPenaltySum, 1));
+    
+    // 4. Functional Defects (Additive within group)
+    let functionalPenaltySum = 0;
     diagnostics.hardware.forEach(h => { 
-      if (h in config.deductions) price -= config.deductions[h as keyof typeof config.deductions]; 
+      if (h in config.defects_functional) {
+        functionalPenaltySum += config.defects_functional[h as keyof typeof config.defects_functional];
+      }
     });
+    price *= (1 - Math.min(functionalPenaltySum, 1));
+    
+    // 5. Accessories Bonus
+    if (diagnostics.accessories.includes('box')) price += config.bonuses.box;
 
     setFinalPrice(Math.max(Math.round(price), config.modelFloorPrice));
   };
@@ -295,20 +343,30 @@ export default function QuotePage() {
     if (!userPhone || userPhone.length < 10) { setAuthError('Enter a valid 10-digit phone number'); return; }
     try {
       setIsAuthLoading(true); setAuthError(null);
-      const res = await api.post('/api/auth/otp/send', { phone: userPhone });
-      if (res.data?.data?.otp) alert(`DEV MODE OTP: ${res.data.data.otp}`);
+      
+      const formattedPhone = '+91' + userPhone;
+      const appVerifier = window.recaptchaVerifier;
+      const confirmation = await signInWithPhoneNumber(auth, formattedPhone, appVerifier);
+      setConfirmationResult(confirmation);
+      
       setShowOtpInput(true);
     } catch (err: any) {
-      setAuthError(err?.response?.data?.error || 'Failed to send OTP');
+      console.error(err);
+      setAuthError(err.message || 'Failed to send OTP');
     } finally { setIsAuthLoading(false); }
   };
 
   const handleOtpVerify = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (otp.length !== 4 && otp.length !== 6) { setAuthError('Enter a valid OTP'); return; }
+    if (otp.length !== 6) { setAuthError('Enter a valid 6-digit OTP'); return; }
     try {
       setIsAuthLoading(true); setAuthError(null);
-      const res = await api.post('/api/auth/otp/verify', { phone: userPhone, otp });
+      if (!confirmationResult) throw new Error("Please request OTP again");
+      
+      const result = await confirmationResult.confirm(otp);
+      const firebaseToken = await result.user.getIdToken();
+      
+      const res = await api.post('/api/auth/otp/verify', { phone: userPhone, firebaseToken, name: userName });
       const { accessToken, refreshToken, user, isNewUser } = res.data.data;
       
       // Save tokens so next request is authenticated
@@ -316,7 +374,8 @@ export default function QuotePage() {
       calculateFinalPrice();
       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 8);
     } catch (err: any) {
-      setAuthError(err?.response?.data?.error || 'Invalid OTP');
+      console.error(err);
+      setAuthError(err?.response?.data?.error || err.message || 'Invalid OTP');
     } finally { setIsAuthLoading(false); }
   };
 
@@ -372,6 +431,8 @@ export default function QuotePage() {
 
   return (
     <div className="page-animate" style={{ maxWidth: step > 2 ? '1000px' : '40rem', margin: '0 auto', padding: '3rem 1rem' }}>
+      
+      <div id="quote-recaptcha-container"></div>
       
       {error && <div className="alert-error" style={{ marginBottom: '1rem' }}>{error}</div>}
 
