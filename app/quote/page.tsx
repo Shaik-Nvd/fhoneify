@@ -329,8 +329,8 @@ export default function QuotePage() {
     });
     price *= (1 - Math.min(functionalPenaltySum, 1));
     
-    // 5. Box penalty (Missing original box)
-    if (!diagnostics.accessories.includes('box')) price *= config.multipliers.box_no;
+    // 5. Box bonus (Additive flat value)
+    if (diagnostics.accessories.includes('box')) price += config.bonuses.box;
 
     setFinalPrice(Math.max(Math.round(price), config.modelFloorPrice));
   };

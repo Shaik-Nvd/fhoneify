@@ -3,15 +3,14 @@
     "calls_no": 0.80,
     "touch_no": 0.82,
     "originalScreen_no": 0.87,
-    "warranty_no": 0.79,
-    "gstBill_no": 1.00,
-    "box_no": 0.90
+    "warranty_no": 0.7966,
+    "gstBill_no": 1.00
   },
   "ageBonus": {
-    "below3": 0.99,
-    "3to6": 0.94,
-    "6to11": 0.91,
-    "above11": 0.79
+    "below3": 1.0000,
+    "3to6": 0.9427,
+    "6to11": 0.9114,
+    "above11": 0.7966
   },
   "defects_screen_body": {
     "screen_scratch": 0.35,
@@ -39,6 +38,7 @@
     "proximity": 0.02
   },
   "bonuses": {
+    "box": 380
   },
   "modelFloorPrice": 500
 }
