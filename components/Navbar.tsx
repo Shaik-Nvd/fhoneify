@@ -143,7 +143,7 @@ export default function Navbar() {
                 </span>
               )}
               
-              {!category.href && hoveredMenu === category.id && (
+              {!category.href && hoveredMenu === category.id && category.items && (
                 <div style={{ 
                   position: 'absolute', 
                   top: '100%', 
@@ -337,28 +337,40 @@ export default function Navbar() {
             const isExpanded = hoveredMenu === cat.id; // Reusing hoveredMenu state for mobile accordion
             return (
               <div key={cat.id} className="flex flex-col border-b border-[#1a1a1a] pb-2">
-                <button 
-                  onClick={() => setHoveredMenu(isExpanded ? null : cat.id)}
-                  className="flex justify-between items-center w-full text-left py-2"
-                >
-                  <span className="text-[#d4af37] font-semibold text-sm tracking-wider uppercase">{cat.title}</span>
-                  <span className={`text-[#d4af37] text-xs transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}>▼</span>
-                </button>
-                
-                {isExpanded && (
-                  <div className="flex flex-col gap-3 pl-2 pt-2 pb-2 mt-1">
-                    {cat.items.map((item) => (
-                      <Link 
-                        key={item.href} 
-                        href={item.href} 
-                        onClick={() => { setIsMobileMenuOpen(false); setHoveredMenu(null); }} 
-                        className="text-[#a0a0a0] hover:text-[#fff] transition-colors py-1 flex items-center gap-2"
-                      >
-                        <span className="w-1 h-1 bg-[#d4af37] rounded-full opacity-50"></span>
-                        {item.label}
-                      </Link>
-                    ))}
-                  </div>
+                {cat.href ? (
+                  <Link 
+                    href={cat.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="flex justify-between items-center w-full text-left py-2"
+                  >
+                    <span className="text-[#d4af37] font-semibold text-sm tracking-wider uppercase">{cat.title}</span>
+                  </Link>
+                ) : (
+                  <>
+                    <button 
+                      onClick={() => setHoveredMenu(isExpanded ? null : cat.id)}
+                      className="flex justify-between items-center w-full text-left py-2"
+                    >
+                      <span className="text-[#d4af37] font-semibold text-sm tracking-wider uppercase">{cat.title}</span>
+                      <span className={`text-[#d4af37] text-xs transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}>▼</span>
+                    </button>
+                    
+                    {isExpanded && cat.items && (
+                      <div className="flex flex-col gap-3 pl-2 pt-2 pb-2 mt-1">
+                        {cat.items.map((item) => (
+                          <Link 
+                            key={item.href} 
+                            href={item.href} 
+                            onClick={() => { setIsMobileMenuOpen(false); setHoveredMenu(null); }} 
+                            className="text-[#a0a0a0] hover:text-[#fff] transition-colors py-1 flex items-center gap-2"
+                          >
+                            <span className="w-1 h-1 bg-[#d4af37] rounded-full opacity-50"></span>
+                            {item.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </>
                 )}
               </div>
             );
