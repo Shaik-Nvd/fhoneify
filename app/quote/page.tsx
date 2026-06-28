@@ -300,20 +300,16 @@ export default function QuotePage() {
     if (diagnostics.touch === false) price *= config.multipliers.touch_no;
     if (diagnostics.originalScreen === false) price *= config.multipliers.originalScreen_no;
     
-    if (diagnostics.warranty) {
-      // Age Bonus applies ONLY if under warranty AND GST Bill is valid
-      if (diagnostics.validBill && diagnostics.mobileAge) {
-        let age_multiplier = config.ageBonus[diagnostics.mobileAge as keyof typeof config.ageBonus] || 1.0;
-        price *= age_multiplier;
-      }
+    const hasValidBill = diagnostics.validBill === true || diagnostics.accessories.includes('bill');
+    
+    if (diagnostics.warranty && hasValidBill && diagnostics.mobileAge) {
+      // Age bonus applies ONLY if under warranty AND GST Bill is valid
+      let age_multiplier = config.ageBonus[diagnostics.mobileAge as keyof typeof config.ageBonus] || 1.0;
+      price *= age_multiplier;
     } else {
-      // Penalty for no warranty
+      // Penalty for no warranty, or if warranty exists but no valid bill (which voids warranty value)
       price *= config.multipliers.warranty_no;
     }
-    
-    // GST Bill penalty (applies independently if no bill, even if warranty is expired)
-    const hasValidBill = diagnostics.validBill === true || diagnostics.accessories.includes('bill');
-    if (!hasValidBill) price *= config.multipliers.gstBill_no;
     
     // 3. Screen / Body Defects (Additive within group)
     let screenBodyPenaltySum = 0;

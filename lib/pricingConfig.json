@@ -3,15 +3,15 @@
     "calls_no": 0.80,
     "touch_no": 0.82,
     "originalScreen_no": 0.87,
-    "warranty_no": 0.92,
-    "gstBill_no": 0.95,
+    "warranty_no": 0.79,
+    "gstBill_no": 1.00,
     "box_no": 0.90
   },
   "ageBonus": {
-    "below3": 1.10,
-    "3to6": 1.07,
-    "6to11": 1.04,
-    "above11": 1.00
+    "below3": 0.99,
+    "3to6": 0.94,
+    "6to11": 0.91,
+    "above11": 0.79
   },
   "defects_screen_body": {
     "screen_scratch": 0.35,
