@@ -831,11 +831,34 @@ export default function QuotePage() {
 
       {/* STAGE 8: FINAL EXACT PRICE */}
       {step === 8 && finalPrice != null && (
-        <div className="card flex flex-col gap-4 items-center bg-[#111] border border-[#4CD964] p-6 md:p-12 rounded-xl max-w-[600px] mx-auto text-center">
-          <p className="eyebrow" style={{ color: '#4CD964', fontSize: '1rem', letterSpacing: '2px' }}>FINAL EXACT QUOTE</p>
-          <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} style={{ width: '100px', height: '140px', objectFit: 'contain', margin: '2rem 0' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
-          <p style={{ fontSize: '4rem', fontWeight: 700, color: '#fff', lineHeight: 1 }}>{formatCurrency(finalPrice)}</p>
-          <p style={{ color: '#a0a0a0', fontSize: '1rem', marginTop: '0.5rem' }}>{selectedModel.startsWith(selectedBrand) ? selectedModel : `${selectedBrand} ${selectedModel}`} ({selectedStorage})</p>
+        <div className="card flex flex-col gap-4 bg-[#111] border border-[#2a2a2a] p-6 md:p-8 rounded-xl max-w-[600px] mx-auto text-left">
+          <div style={{ display: 'flex', gap: '2rem', alignItems: 'flex-start', borderBottom: '1px solid #2a2a2a', paddingBottom: '2rem', marginBottom: '1rem' }}>
+            <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} style={{ width: '80px', height: 'auto', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
+            <div>
+              <h2 style={{ fontSize: '1.25rem', fontWeight: 600, color: '#fff', marginBottom: '0.25rem' }}>{selectedModel.startsWith(selectedBrand) ? selectedModel : `${selectedBrand} ${selectedModel}`} ({selectedStorage})</h2>
+              <p style={{ color: '#a0a0a0', fontSize: '0.85rem', marginBottom: '0.5rem' }}>Selling price :</p>
+              <p style={{ fontSize: '2.5rem', fontWeight: 700, color: '#FF3B30', lineHeight: 1 }}>{formatCurrency(finalPrice - 99)}</p>
+            </div>
+          </div>
+          
+          <div>
+            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, color: '#fff', marginBottom: '1.5rem' }}>Price Summary</h3>
+            
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem', color: '#ccc', fontSize: '0.9rem' }}>
+              <span>Base Price</span>
+              <span>{formatCurrency(finalPrice)}</span>
+            </div>
+            
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem', color: '#ccc', fontSize: '0.9rem', borderBottom: '1px solid #2a2a2a', paddingBottom: '1.5rem' }}>
+              <span>Processing Fee</span>
+              <span>-₹99</span>
+            </div>
+            
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '2rem', color: '#fff', fontSize: '1.1rem', fontWeight: 700 }}>
+              <span>Total Amount</span>
+              <span>{formatCurrency(finalPrice - 99)}</span>
+            </div>
+          </div>
           
           <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', width: '100%' }}>
             <button type="button" onClick={() => { navigateToState('', '', '', 'brand', 1); setFinalPrice(null); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], hardware: [], accessories: [], warranty: null, validBill: null, eSim: null, mobileAge: null }); }} className="btn-outline" style={{ flex: 1, padding: '16px', fontSize: '1.1rem' }}>Start Over</button>
