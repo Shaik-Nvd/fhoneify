@@ -312,7 +312,8 @@ export default function QuotePage() {
     }
     
     // GST Bill penalty (applies independently if no bill, even if warranty is expired)
-    if (diagnostics.validBill === false) price *= config.multipliers.gstBill_no;
+    const hasValidBill = diagnostics.validBill === true || diagnostics.accessories.includes('bill');
+    if (!hasValidBill) price *= config.multipliers.gstBill_no;
     
     // 3. Screen / Body Defects (Additive within group)
     let screenBodyPenaltySum = 0;
@@ -427,7 +428,10 @@ export default function QuotePage() {
     </div>
   );
 
-  const isTierA = selectedBrand === 'Apple' && /1[3-9]|[2-9]\d/i.test(selectedModel) && !/12|11|XR|XS|SE/i.test(selectedModel);
+  const isAppleTierA = selectedBrand === 'Apple' && /1[3-9]|[2-9]\d/i.test(selectedModel) && !/12|11|XR|XS|SE/i.test(selectedModel);
+  const isSamsungTierA = selectedBrand === 'Samsung' && /(Galaxy S|Galaxy Z|Fold|Flip)/i.test(selectedModel);
+  const isGoogleTierA = selectedBrand === 'Google';
+  const isTierA = isAppleTierA || isSamsungTierA || isGoogleTierA;
 
   return (
     <div className="page-animate" style={{ maxWidth: step > 2 ? '1000px' : '40rem', margin: '0 auto', padding: '3rem 1rem' }}>
