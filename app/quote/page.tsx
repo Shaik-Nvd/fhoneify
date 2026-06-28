@@ -333,8 +333,8 @@ export default function QuotePage() {
     });
     price *= (1 - Math.min(functionalPenaltySum, 1));
     
-    // 5. Accessories Bonus
-    if (diagnostics.accessories.includes('box')) price += config.bonuses.box;
+    // 5. Box penalty (Missing original box)
+    if (!diagnostics.accessories.includes('box')) price *= config.multipliers.box_no;
 
     setFinalPrice(Math.max(Math.round(price), config.modelFloorPrice));
   };

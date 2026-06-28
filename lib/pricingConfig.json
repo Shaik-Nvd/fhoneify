@@ -4,7 +4,8 @@
     "touch_no": 0.82,
     "originalScreen_no": 0.87,
     "warranty_no": 0.92,
-    "gstBill_no": 0.95
+    "gstBill_no": 0.95,
+    "box_no": 0.90
   },
   "ageBonus": {
     "below3": 1.10,
@@ -38,7 +39,6 @@
     "proximity": 0.02
   },
   "bonuses": {
-    "box": 300
   },
   "modelFloorPrice": 500
 }
