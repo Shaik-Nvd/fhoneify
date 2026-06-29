@@ -6,14 +6,7 @@ import api from '@/lib/api';
 import { formatCurrency } from '@/lib/format';
 import { useAuthStore } from '@/lib/authStore';
 import { useHydratedAuth } from '@/lib/useHydratedAuth';
-import { auth } from '@/lib/firebase';
-import { RecaptchaVerifier, signInWithPhoneNumber, ConfirmationResult } from 'firebase/auth';
 
-declare global {
-  interface Window {
-    recaptchaVerifier: RecaptchaVerifier;
-  }
-}
 
 import { BRAND_LOGOS, getBrandLogoStyle } from '@/lib/brands';
 import config from '@/lib/pricingConfig.json';
@@ -165,23 +158,6 @@ export default function QuotePage() {
   const [showOtpInput, setShowOtpInput] = useState(false);
   const [isAuthLoading, setIsAuthLoading] = useState(false);
   const [authError, setAuthError] = useState<string | null>(null);
-  const [confirmationResult, setConfirmationResult] = useState<ConfirmationResult | null>(null);
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      if (window.recaptchaVerifier) {
-        try {
-          window.recaptchaVerifier.clear();
-        } catch (e) {
-          console.warn('Recaptcha clear error:', e);
-        }
-      }
-      window.recaptchaVerifier = new RecaptchaVerifier(auth, 'quote-recaptcha-container', {
-        size: 'invisible',
-        callback: () => {}
-      });
-    }
-  }, []);
 
   // Device fetch removed because it's now loaded statically and instantly from SEED_DEVICES
 
@@ -275,7 +251,11 @@ export default function QuotePage() {
         upliftedBasePrice = baseMarketPrice * 1.04;
       }
 
-      setBasePrice(Math.round(upliftedBasePrice));
+      const realStartPrice = Math.round(upliftedBasePrice);
+      const marketingMargin = 380; // Unachievable marketing gap
+      
+      // The "Get Upto" price displayed to the user includes the box bonus and the marketing margin
+      setBasePrice(realStartPrice + config.bonuses.box + marketingMargin);
       navigateToState(selectedBrand, selectedModel, s, 'storage', 2);
     } catch {
       setError('Failed to fetch quote.');
@@ -293,7 +273,8 @@ export default function QuotePage() {
     if (!basePrice) return;
     
     // 1. Base Price
-    let price = basePrice;
+    // Strip the marketing margin and box bonus to get the true starting price for calculations
+    let price = basePrice - config.bonuses.box - 380;
     
     // 2. Binary Multipliers
     if (diagnostics.calls === false) price *= config.multipliers.calls_no;
@@ -341,15 +322,13 @@ export default function QuotePage() {
     try {
       setIsAuthLoading(true); setAuthError(null);
       
-      const formattedPhone = '+91' + userPhone;
-      const appVerifier = window.recaptchaVerifier;
-      const confirmation = await signInWithPhoneNumber(auth, formattedPhone, appVerifier);
-      setConfirmationResult(confirmation);
+      const res = await api.post('/api/auth/otp/send', { phone: '+91' + userPhone });
+      if (res.data.error) throw new Error(res.data.error);
       
       setShowOtpInput(true);
     } catch (err: any) {
       console.error(err);
-      setAuthError(err.message || 'Failed to send OTP');
+      setAuthError(err.response?.data?.error || err.message || 'Failed to send OTP');
     } finally { setIsAuthLoading(false); }
   };
 
@@ -358,12 +337,10 @@ export default function QuotePage() {
     if (otp.length !== 6) { setAuthError('Enter a valid 6-digit OTP'); return; }
     try {
       setIsAuthLoading(true); setAuthError(null);
-      if (!confirmationResult) throw new Error("Please request OTP again");
       
-      const result = await confirmationResult.confirm(otp);
-      const firebaseToken = await result.user.getIdToken();
+      const res = await api.post('/api/auth/otp/verify', { phone: '+91' + userPhone, code: otp, name: userName });
+      if (res.data.error) throw new Error(res.data.error);
       
-      const res = await api.post('/api/auth/otp/verify', { phone: userPhone, firebaseToken, name: userName });
       const { accessToken, refreshToken, user, isNewUser } = res.data.data;
       
       // Save tokens so next request is authenticated

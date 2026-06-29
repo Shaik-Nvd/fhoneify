@@ -29,6 +29,7 @@ import { b2bRouter } from './modules/b2b/routes';
 import { externalRouter } from './modules/external/routes';
 import { diagnosticsRouter } from './modules/diagnostics/routes';
 import { logisticsRouter } from './modules/logistics/routes';
+import webhookRouter from './modules/webhook/routes';
 
 const app = express();
 
@@ -89,6 +90,7 @@ app.use('/api/security', securityRouter);
 app.use('/api/b2b', b2bRouter);
 app.use('/api/external', externalRouter);
 app.use('/api/diagnostics', diagnosticsRouter);
+app.use('/api/webhook', webhookRouter);
 
 // Global Error Handler
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {

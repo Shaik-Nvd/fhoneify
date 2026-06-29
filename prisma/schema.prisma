@@ -202,3 +202,11 @@ model Lead {
   status      String   @default("pending")
   createdAt   DateTime @default(now())
 }
+
+model WhatsAppOTP {
+  id        String   @id @default(uuid())
+  phone     String   @unique
+  code      String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}

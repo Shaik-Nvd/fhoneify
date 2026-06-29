@@ -3,6 +3,9 @@ import { z } from 'zod';
 import * as authService from './service';
 import logger from '../../lib/logger';
 import { AuthenticatedRequest } from '../../middleware/auth';
+import { PrismaClient } from '@prisma/client';
+
+const prisma = new PrismaClient();
 
 const SendOtpSchema = z.object({
   phone: z.string().min(1, 'Phone is required'),
@@ -29,41 +32,66 @@ const LogoutSchema = z.object({
 });
 
 export async function sendOtp(req: Request, res: Response) {
+  const { phone } = req.body; // Needs to be format "+1234567890"
+  if (!phone) { return res.status(400).json({ error: 'Phone required' }); }
+
+  const code = Math.floor(100000 + Math.random() * 900000).toString();
+  const expiresAt = new Date(Date.now() + 5 * 60 * 1000); // 5 mins
+
   try {
-    const result = SendOtpSchema.safeParse(req.body);
-    if (!result.success) {
-      return res.status(400).json({ success: false, error: result.error.issues[0].message });
+    await prisma.whatsAppOTP.upsert({
+      where: { phone },
+      update: { code, expiresAt, createdAt: new Date() },
+      create: { phone, code, expiresAt },
+    });
+
+    const response = await fetch(`https://graph.facebook.com/v18.0/${process.env.WHATSAPP_PHONE_NUMBER_ID}/messages`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${process.env.WHATSAPP_ACCESS_TOKEN}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        messaging_product: 'whatsapp',
+        to: phone,
+        type: 'template',
+        template: {
+          name: process.env.WHATSAPP_OTP_TEMPLATE_NAME,
+          language: { code: 'en_US' },
+          components: [
+            { type: 'body', parameters: [{ type: 'text', text: code }] },
+            { type: 'button', sub_type: 'url', index: '0', parameters: [{ type: 'text', text: code }] }
+          ]
+        }
+      })
+    });
+
+    if (!response.ok) {
+      const err = await response.json();
+      console.error(err);
+      return res.status(500).json({ error: 'WhatsApp delivery failed' });
     }
-    const { phone } = result.data;
-    const otp = await authService.sendOtp(phone);
-    
-    // For security, never send the OTP back to the frontend in production.
-    const responseData = process.env.NODE_ENV === 'development' ? { otp } : {};
-    return res.json({ success: true, data: responseData, message: 'OTP sent successfully' });
-  } catch (err: any) {
-    logger.error({ err: err.message }, 'Error in sendOtp controller');
-    return res.status(500).json({ success: false, error: 'Internal server error' });
+
+    return res.status(200).json({ success: true });
+  } catch (e) {
+    return res.status(500).json({ error: 'Server database error' });
   }
 }
 
 export async function verifyOtp(req: Request, res: Response) {
+  const { phone, code, referralCode } = req.body;
   try {
-    const result = VerifyOtpSchema.safeParse(req.body);
-    if (!result.success) {
-      return res.status(400).json({ success: false, error: result.error.issues[0].message });
+    const record = await prisma.whatsAppOTP.findUnique({ where: { phone } });
+    if (!record || record.code !== code || new Date() > record.expiresAt) {
+      return res.status(400).json({ error: 'Invalid or expired OTP' });
     }
-    const { phone, otp, referralCode, firebaseToken } = result.data;
-    if (!otp && !firebaseToken) {
-      return res.status(400).json({ success: false, error: 'OTP or Firebase Token is required' });
-    }
-    const loginResult = await authService.verifyOtp(phone, otp, referralCode, firebaseToken);
-    if (!loginResult) {
-      return res.status(401).json({ success: false, error: 'Invalid or expired OTP' });
-    }
+    await prisma.whatsAppOTP.delete({ where: { phone } });
+    
+    const loginResult = await authService.generateTokensForUser(phone, referralCode);
     return res.json({ success: true, data: loginResult, message: 'Login successful' });
-  } catch (err: any) {
-    logger.error({ err: err.message }, 'Error in verifyOtp controller');
-    return res.status(500).json({ success: false, error: 'Internal server error' });
+  } catch (e) {
+    logger.error(e, 'Verification system error');
+    return res.status(500).json({ error: 'Verification system error' });
   }
 }
 
