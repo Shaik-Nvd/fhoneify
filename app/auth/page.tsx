@@ -10,6 +10,7 @@ export default function AuthPage() {
   const [phone, setPhone] = useState('+91 ');
   const [code, setCode] = useState('');
   const [isCodeStep, setIsCodeStep] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [msg, setMsg] = useState({ text: '', isError: false });
 
   const apiPost = async (route: string, body: object) => {
@@ -24,11 +25,14 @@ export default function AuthPage() {
 
   const handleRequest = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsLoading(true);
     setMsg({ text: 'Sending WhatsApp OTP...', isError: false });
     
     // Remove spaces before sending to API
     const formattedPhone = phone.replace(/\s+/g, '');
     const data = await apiPost('auth/otp/send', { phone: formattedPhone });
+    
+    setIsLoading(false);
     
     if (data.bypassCode) {
        setMsg({ text: `WhatsApp failed! Use this temporary bypass code: ${data.bypassCode}`, isError: true });
@@ -139,12 +143,20 @@ export default function AuthPage() {
               </div>
               <button 
                 type="submit" 
-                className="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-semibold py-4 rounded-xl hover:from-emerald-400 hover:to-emerald-500 focus:ring-4 focus:ring-emerald-500/20 transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_25px_rgba(16,185,129,0.5)] flex items-center justify-center gap-3 group"
+                disabled={isLoading}
+                className="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-semibold py-4 rounded-xl hover:from-emerald-400 hover:to-emerald-500 focus:ring-4 focus:ring-emerald-500/20 transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_25px_rgba(16,185,129,0.5)] flex items-center justify-center gap-3 group disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                <span>Send WhatsApp OTP</span>
-                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
+                <span>{isLoading ? 'Processing...' : 'Send WhatsApp OTP'}</span>
+                {isLoading ? (
+                  <svg className="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                ) : (
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                )}
               </button>
             </motion.form>
           ) : (
