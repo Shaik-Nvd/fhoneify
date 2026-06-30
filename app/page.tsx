@@ -233,7 +233,7 @@ function FloatingPhone({ mouseX, mouseY }: { mouseX: any, mouseY: any }) {
       >
         <div className="css-phone" style={{ boxShadow: '0 50px 100px -20px rgba(212,175,55,0.25), 0 30px 60px -30px rgba(0,0,0,0.5), inset 0 0 20px rgba(255,255,255,0.1)' }}>
           <div className="css-phone-screen">
-            <h1 className="text-gradient-animated" style={{ fontSize: '1.8rem', fontWeight: 800, marginBottom: '1rem', letterSpacing: '1px' }}>FHONEIFY</h1>
+            <h1 className="text-gradient-animated" style={{ fontSize: '1.8rem', fontWeight: 800, marginBottom: '1rem', letterSpacing: '1px' }}>Fhoneify</h1>
             <p style={{ color: '#a0a0a0', fontSize: '0.85rem', textAlign: 'center', maxWidth: '85%', lineHeight: 1.4 }}>AI-Powered Valuation Engine</p>
             <div style={{ marginTop: '3rem', display: 'flex', gap: '0.8rem' }}>
               <m.div animate={{ y: [0, -5, 0] }} transition={{ repeat: Infinity, duration: 2, delay: 0 }} style={{ width: '45px', height: '45px', borderRadius: '12px', background: 'linear-gradient(135deg, rgba(212,175,55,0.3), rgba(212,175,55,0.1))', boxShadow: 'inset 0 0 10px rgba(212,175,55,0.2)' }} />

@@ -220,7 +220,7 @@ export default function MobileHome() {
           <div className="min-w-[180px] bg-[#111] border border-[#2a2a2a] rounded-xl p-3 snap-start relative">
             <div className="absolute top-3 left-3 bg-[#1A9386]/20 text-[#1A9386] text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1">
               <svg viewBox="0 0 24 24" width="10" height="10" stroke="currentColor" strokeWidth="2" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              FHONEIFY ASSURED
+              Fhoneify Assured
             </div>
             <div className="h-[120px] w-full flex items-center justify-center mt-6 mb-2">
               <img src="https://m.media-amazon.com/images/I/71xb2xkN5qL._SX679_.jpg" alt="iPhone 13" className="max-h-full max-w-full object-contain mix-blend-screen" />
@@ -234,7 +234,7 @@ export default function MobileHome() {
           <div className="min-w-[180px] bg-[#111] border border-[#2a2a2a] rounded-xl p-3 snap-start relative">
             <div className="absolute top-3 left-3 bg-[#1A9386]/20 text-[#1A9386] text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1">
               <svg viewBox="0 0 24 24" width="10" height="10" stroke="currentColor" strokeWidth="2" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              FHONEIFY ASSURED
+              Fhoneify Assured
             </div>
             <div className="h-[120px] w-full flex items-center justify-center mt-6 mb-2">
               <img src="https://m.media-amazon.com/images/I/51L8W6d-DNL._SX300_SY300_QL70_FMwebp_.jpg" alt="Samsung S23" className="max-h-full max-w-full object-contain mix-blend-screen" />
@@ -248,7 +248,7 @@ export default function MobileHome() {
           <div className="min-w-[180px] bg-[#111] border border-[#2a2a2a] rounded-xl p-3 snap-start relative">
             <div className="absolute top-3 left-3 bg-[#1A9386]/20 text-[#1A9386] text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1">
               <svg viewBox="0 0 24 24" width="10" height="10" stroke="currentColor" strokeWidth="2" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              FHONEIFY ASSURED
+              Fhoneify Assured
             </div>
             <div className="h-[120px] w-full flex items-center justify-center mt-6 mb-2">
               <img src="https://m.media-amazon.com/images/I/61bK6PMOC3L._SX679_.jpg" alt="iPhone 14" className="max-h-full max-w-full object-contain mix-blend-screen" />

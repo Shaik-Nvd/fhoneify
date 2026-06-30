@@ -10,7 +10,7 @@ export default function PartnerLayout({ children }: { children: React.ReactNode 
         <div style={{ maxWidth: '80rem', margin: '0 auto', padding: '0 1.5rem', display: 'flex', height: '64px', alignItems: 'center', justifyContent: 'space-between' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
             <Link href="/partner" style={{ fontSize: '1.25rem', fontWeight: 800, color: '#fff', textDecoration: 'none', letterSpacing: '2px' }}>
-              FHONEIFY <span style={{ color: '#d4af37', fontWeight: 400 }}>PARTNER</span>
+              Fhoneify <span style={{ color: '#d4af37', fontWeight: 400 }}>PARTNER</span>
             </Link>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>

@@ -92,7 +92,7 @@ export default function Navbar() {
             textTransform: 'uppercase',
           }}
         >
-          FHONEIFY
+          Fhoneify
         </Link>
 
         {/* Middle Section: Categorized Navigation */}

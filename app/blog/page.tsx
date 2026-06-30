@@ -18,7 +18,7 @@ export default function BlogIndexPage() {
   return (
     <div className="page-animate" style={{ maxWidth: '64rem', margin: '0 auto', padding: '4rem 1rem' }}>
       <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-        <p className="eyebrow" style={{ marginBottom: '1rem' }}>FHONEIFY BLOG</p>
+        <p className="eyebrow" style={{ marginBottom: '1rem' }}>Fhoneify Blog</p>
         <h1 style={{ fontSize: '3rem', fontWeight: 300, color: '#fff', marginBottom: '1rem' }}>Insights & Guides</h1>
         <p style={{ color: '#a0a0a0', maxWidth: '32rem', margin: '0 auto' }}>
           Discover tips on selling your phone, sustainability, and why refurbished devices are the future.
