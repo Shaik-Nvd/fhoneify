@@ -59,13 +59,19 @@ export async function sendOtp(req: Request, res: Response) {
         signal: controller.signal,
         body: JSON.stringify({
           messaging_product: 'whatsapp',
-          to: phone,
+          to: phone.replace('+', ''),
           type: 'template',
           template: {
             name: process.env.WHATSAPP_OTP_TEMPLATE_NAME,
             language: { code: 'en' },
             components: [
-              { type: 'body', parameters: [{ type: 'text', text: code }] }
+              { type: 'body', parameters: [{ type: 'text', text: code }] },
+              {
+                type: 'button',
+                sub_type: 'url',
+                index: '0',
+                parameters: [{ type: 'text', text: code }]
+              }
             ]
           }
         })
