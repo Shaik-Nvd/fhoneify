@@ -813,7 +813,7 @@ export default function QuotePage() {
             <div>
               <h2 style={{ fontSize: '1.25rem', fontWeight: 600, color: '#fff', marginBottom: '0.25rem' }}>{selectedModel.startsWith(selectedBrand) ? selectedModel : `${selectedBrand} ${selectedModel}`} ({selectedStorage})</h2>
               <p style={{ color: '#a0a0a0', fontSize: '0.85rem', marginBottom: '0.5rem' }}>Selling price :</p>
-              <p style={{ fontSize: '2.5rem', fontWeight: 700, color: '#FF3B30', lineHeight: 1 }}>{formatCurrency(finalPrice - 99)}</p>
+              <p style={{ fontSize: '2.5rem', fontWeight: 700, color: '#FF3B30', lineHeight: 1 }}>{formatCurrency((finalPrice || 0) - (finalPrice === 1200 ? 0 : 99))}</p>
             </div>
           </div>
           
@@ -827,12 +827,12 @@ export default function QuotePage() {
             
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem', color: '#ccc', fontSize: '0.9rem', borderBottom: '1px solid #2a2a2a', paddingBottom: '1.5rem' }}>
               <span>Processing Fee</span>
-              <span>-₹99</span>
+              <span>{finalPrice === 1200 ? '₹0' : '-₹99'}</span>
             </div>
             
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '2rem', color: '#fff', fontSize: '1.1rem', fontWeight: 700 }}>
               <span>Total Amount</span>
-              <span>{formatCurrency(finalPrice - 99)}</span>
+              <span>{formatCurrency((finalPrice || 0) - (finalPrice === 1200 ? 0 : 99))}</span>
             </div>
           </div>
           
