@@ -272,48 +272,47 @@ export default function QuotePage() {
   const calculateFinalPrice = () => {
     if (!basePrice) return;
     
-    // 1. Base Price
-    // Strip the marketing margin and box bonus to get the true starting price for calculations
-    let price = basePrice - config.bonuses.box - 380;
+    const floor_price = config.modelFloorPrice; // 1200
+    const internal_base = basePrice - config.bonuses.box - 380;
     
-    // 2. Binary Multipliers
-    if (diagnostics.calls === false) price *= config.multipliers.calls_no;
-    if (diagnostics.touch === false) price *= config.multipliers.touch_no;
-    if (diagnostics.originalScreen === false) price *= config.multipliers.originalScreen_no;
-    
+    // Multipliers
+    let age_multiplier = config.multipliers.warranty_no; // Default 0.7966
     const hasValidBill = diagnostics.validBill === true || diagnostics.accessories.includes('bill');
-    
     if (diagnostics.warranty && hasValidBill && diagnostics.mobileAge) {
-      // Age bonus applies ONLY if under warranty AND GST Bill is valid
-      let age_multiplier = config.ageBonus[diagnostics.mobileAge as keyof typeof config.ageBonus] || 1.0;
-      price *= age_multiplier;
-    } else {
-      // Penalty for no warranty, or if warranty exists but no valid bill (which voids warranty value)
-      price *= config.multipliers.warranty_no;
+      age_multiplier = config.ageBonus[diagnostics.mobileAge as keyof typeof config.ageBonus] || 1.0;
     }
     
-    // 3. Screen / Body Defects (Additive within group)
-    let screenBodyPenaltySum = 0;
+    const calls_multiplier = diagnostics.calls === false ? config.multipliers.calls_no : 1.0;
+    const touch_multiplier = diagnostics.touch === false ? config.multipliers.touch_no : 1.0;
+    const screen_orig_mult = diagnostics.originalScreen === false ? config.multipliers.originalScreen_no : 1.0;
+    
+    // Defect sums
+    let screen_body_sum = 0;
     diagnostics.defects.forEach(d => { 
       if (d in config.defects_screen_body) {
-        screenBodyPenaltySum += config.defects_screen_body[d as keyof typeof config.defects_screen_body];
+        screen_body_sum += config.defects_screen_body[d as keyof typeof config.defects_screen_body];
       }
     });
-    price *= (1 - Math.min(screenBodyPenaltySum, 1));
     
-    // 4. Functional Defects (Additive within group)
-    let functionalPenaltySum = 0;
+    let functional_sum = 0;
     diagnostics.hardware.forEach(h => { 
       if (h in config.defects_functional) {
-        functionalPenaltySum += config.defects_functional[h as keyof typeof config.defects_functional];
+        functional_sum += config.defects_functional[h as keyof typeof config.defects_functional];
       }
     });
-    price *= (1 - Math.min(functionalPenaltySum, 1));
     
-    // 5. Box bonus (Additive flat value)
-    if (diagnostics.accessories.includes('box')) price += config.bonuses.box;
-
-    setFinalPrice(Math.max(Math.round(price), config.modelFloorPrice));
+    const box_bonus = diagnostics.accessories.includes('box') ? config.bonuses.box : 0;
+    
+    const calculated = internal_base 
+      * age_multiplier 
+      * calls_multiplier 
+      * touch_multiplier 
+      * screen_orig_mult 
+      * (1 - Math.min(screen_body_sum, 1)) 
+      * (1 - Math.min(functional_sum, 1)) 
+      + box_bonus;
+      
+    setFinalPrice(Math.max(Math.round(calculated), floor_price));
   };
 
   const handleSendOtp = async (e: React.FormEvent) => {

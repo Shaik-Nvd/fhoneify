@@ -33,7 +33,7 @@ export const SEED_DEVICES = [
     "storage": "128GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 10000
+    "basePrice": 3820
   },
   {
     "id": "apple_1004",
@@ -45,6 +45,15 @@ export const SEED_DEVICES = [
     "basePrice": 2270
   },
   {
+    "id": "apple_1005_32",
+    "brand": "Apple",
+    "model": "Apple iPhone 7",
+    "storage": "32GB",
+    "ram": "2GB",
+    "color": "Midnight",
+    "basePrice": 4430
+  },
+  {
     "id": "apple_1005",
     "brand": "Apple",
     "model": "Apple iPhone 7",
@@ -52,6 +61,15 @@ export const SEED_DEVICES = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 4660
+  },
+  {
+    "id": "apple_1006_32",
+    "brand": "Apple",
+    "model": "Apple iPhone 7 Plus",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": 5190
   },
   {
     "id": "apple_1006",
@@ -114,7 +132,7 @@ export const SEED_DEVICES = [
     "storage": "128GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 11500
+    "basePrice": 7850
   },
   {
     "id": "apple_1017",
@@ -384,7 +402,7 @@ export const SEED_DEVICES = [
     "storage": "16GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 10000
+    "basePrice": 2390
   },
   {
     "id": "apple_2010",
@@ -393,7 +411,7 @@ export const SEED_DEVICES = [
     "storage": "32GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 10000
+    "basePrice": 2950
   },
   {
     "id": "apple_2011",
@@ -402,7 +420,7 @@ export const SEED_DEVICES = [
     "storage": "64GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 10000
+    "basePrice": 3440
   },
   {
     "id": "apple_2012",
@@ -411,7 +429,7 @@ export const SEED_DEVICES = [
     "storage": "16GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 10000
+    "basePrice": 1700
   },
   {
     "id": "apple_2013",
@@ -672,7 +690,7 @@ export const SEED_DEVICES = [
     "storage": "64GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 10500
+    "basePrice": 7290
   },
   {
     "id": "apple_2049",
@@ -681,7 +699,7 @@ export const SEED_DEVICES = [
     "storage": "256GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 13500
+    "basePrice": 8340
   },
   {
     "id": "apple_2051",
@@ -816,7 +834,7 @@ export const SEED_DEVICES = [
     "storage": "1TB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 10000
+    "basePrice": 37150
   },
   {
     "id": "apple_2072",
@@ -843,7 +861,7 @@ export const SEED_DEVICES = [
     "storage": "1TB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 10000
+    "basePrice": 39620
   },
   {
     "id": "apple_2075",
@@ -924,7 +942,7 @@ export const SEED_DEVICES = [
     "storage": "1TB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 10000
+    "basePrice": 46580
   },
   {
     "id": "apple_2087",
@@ -951,7 +969,7 @@ export const SEED_DEVICES = [
     "storage": "1TB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 10000
+    "basePrice": 48230
   },
   {
     "id": "apple_2090",
@@ -1014,7 +1032,7 @@ export const SEED_DEVICES = [
     "storage": "1TB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 10000
+    "basePrice": 70300
   },
   {
     "id": "apple_2099",
@@ -1041,7 +1059,7 @@ export const SEED_DEVICES = [
     "storage": "1TB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 10000
+    "basePrice": 79070
   },
   {
     "id": "apple_2102",
@@ -1104,7 +1122,7 @@ export const SEED_DEVICES = [
     "storage": "1TB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 10000
+    "basePrice": 80500
   },
   {
     "id": "apple_2111",
@@ -1131,7 +1149,7 @@ export const SEED_DEVICES = [
     "storage": "1TB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 10000
+    "basePrice": 93500
   },
   {
     "id": "apple_2114",
@@ -1176,7 +1194,7 @@ export const SEED_DEVICES = [
     "storage": "256GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 10000
+    "basePrice": 68000
   },
   {
     "id": "apple_2121",
@@ -1185,7 +1203,7 @@ export const SEED_DEVICES = [
     "storage": "512GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 10000
+    "basePrice": 77000
   },
   {
     "id": "apple_2122",
@@ -1194,7 +1212,7 @@ export const SEED_DEVICES = [
     "storage": "1TB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 10000
+    "basePrice": 87000
   },
   {
     "id": "apple_2123",
@@ -1221,7 +1239,7 @@ export const SEED_DEVICES = [
     "storage": "1TB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 10000
+    "basePrice": 111500
   },
   {
     "id": "apple_2126",
@@ -1249,6 +1267,15 @@ export const SEED_DEVICES = [
     "ram": "12GB",
     "color": "Midnight",
     "basePrice": 117000
+  },
+  {
+    "id": "apple_2128_2tb",
+    "brand": "Apple",
+    "model": "Apple iPhone 17 Pro Max",
+    "storage": "2TB",
+    "ram": "12GB",
+    "color": "Midnight",
+    "basePrice": 124000
   },
   {
     "id": "apple_2129",
@@ -8261,6 +8288,14 @@ export const SEED_DEVICES = [
     "basePrice": 26600
   },
   {
+    "id": "samsung_31092",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S24 Ultra 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 61340
+  },
+  {
     "id": "xiaomi_32000",
     "brand": "Xiaomi",
     "model": "Xiaomi Redmi Note 6 Pro",
@@ -10258,5 +10293,1152 @@ export const SEED_DEVICES = [
     "ram": "8GB",
     "color": "Midnight",
     "basePrice": 5000
-  }
+  },
+  {
+    "id": "iqoo_add_11000",
+    "brand": "iQOO",
+    "model": "iQOO 12 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 25480
+  },
+  {
+    "id": "iqoo_add_11001",
+    "brand": "iQOO",
+    "model": "iQOO 12 5G",
+    "storage": "16 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 28130
+  },
+  {
+    "id": "iqoo_add_11002",
+    "brand": "iQOO",
+    "model": "iQOO 12 5G",
+    "storage": "16 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 26850
+  },
+  {
+    "id": "iqoo_add_11003",
+    "brand": "iQOO",
+    "model": "iQOO Z9x 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8380
+  },
+  {
+    "id": "iqoo_add_11004",
+    "brand": "iQOO",
+    "model": "iQOO Z9x 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7840
+  },
+  {
+    "id": "iqoo_add_11005",
+    "brand": "iQOO",
+    "model": "iQOO Z9x 5G",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7550
+  },
+  {
+    "id": "iqoo_add_11006",
+    "brand": "iQOO",
+    "model": "iQOO Z9s 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 12840
+  },
+  {
+    "id": "iqoo_add_11007",
+    "brand": "iQOO",
+    "model": "iQOO 13 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 30000
+  },
+  {
+    "id": "iqoo_add_11008",
+    "brand": "iQOO",
+    "model": "iQOO 13 5G",
+    "storage": "16 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 31200
+  },
+  {
+    "id": "iqoo_add_11009",
+    "brand": "iQOO",
+    "model": "iQOO Z10x 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 9800
+  },
+  {
+    "id": "iqoo_add_11010",
+    "brand": "iQOO",
+    "model": "iQOO Z10x 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 10500
+  },
+  {
+    "id": "iqoo_add_11011",
+    "brand": "iQOO",
+    "model": "iQOO Z10x 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 11100
+  },
+  {
+    "id": "iqoo_add_11012",
+    "brand": "iQOO",
+    "model": "iQOO Neo 10",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 23600
+  },
+  {
+    "id": "iqoo_add_11013",
+    "brand": "iQOO",
+    "model": "iQOO Neo 10",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 24860
+  },
+  {
+    "id": "iqoo_add_11014",
+    "brand": "iQOO",
+    "model": "iQOO Neo 10",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 20450
+  },
+  {
+    "id": "iqoo_add_11015",
+    "brand": "iQOO",
+    "model": "iQOO Neo 10",
+    "storage": "16 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 25500
+  },
+  {
+    "id": "iqoo_add_11016",
+    "brand": "iQOO",
+    "model": "iQOO Z10 Lite 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8650
+  },
+  {
+    "id": "iqoo_add_11017",
+    "brand": "iQOO",
+    "model": "iQOO Z10 Lite 5G",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 6860
+  },
+  {
+    "id": "iqoo_add_11018",
+    "brand": "iQOO",
+    "model": "iQOO Z10 Lite 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8200
+  },
+  {
+    "id": "iqoo_add_11019",
+    "brand": "iQOO",
+    "model": "iQOO Z10 Lite 5G",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7350
+  },
+  {
+    "id": "iqoo_add_11020",
+    "brand": "iQOO",
+    "model": "iQOO Z10R 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 16000
+  },
+  {
+    "id": "iqoo_add_11021",
+    "brand": "iQOO",
+    "model": "iQOO Z10R 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 14640
+  },
+  {
+    "id": "iqoo_add_11022",
+    "brand": "iQOO",
+    "model": "iQOO Z10R 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 15200
+  },
+  {
+    "id": "iqoo_add_11023",
+    "brand": "iQOO",
+    "model": "iQOO 15 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 40000
+  },
+  {
+    "id": "iqoo_add_11024",
+    "brand": "iQOO",
+    "model": "iQOO 15 5G",
+    "storage": "16 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 42000
+  },
+  {
+    "id": "iqoo_add_11025",
+    "brand": "iQOO",
+    "model": "iQOO 15R",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 29000
+  },
+  {
+    "id": "iqoo_add_11026",
+    "brand": "iQOO",
+    "model": "iQOO 15R",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 30000
+  },
+  {
+    "id": "iqoo_add_11027",
+    "brand": "iQOO",
+    "model": "iQOO 15R",
+    "storage": "12 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 32000
+  },
+  {
+    "id": "iqoo_add_11028",
+    "brand": "iQOO",
+    "model": "iQOO Z11x 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 14000
+  },
+  {
+    "id": "iqoo_add_11029",
+    "brand": "iQOO",
+    "model": "iQOO Z11x 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 14500
+  },
+  {
+    "id": "iqoo_add_11030",
+    "brand": "iQOO",
+    "model": "iQOO Z11x 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 15200
+  },
+
+  {
+    "id": "oneplus_add_13000",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8490
+  },
+
+  {
+    "id": "motorola_add_16000",
+    "brand": "Motorola",
+    "model": "Motorola Moto G85 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 12150
+  },
+
+  {
+    "id": "poco_add_22000",
+    "brand": "POCO",
+    "model": "POCO F1",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 3600
+  },
+  {
+    "id": "poco_add_22001",
+    "brand": "POCO",
+    "model": "POCO F1",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3260
+  },
+  {
+    "id": "poco_add_22002",
+    "brand": "POCO",
+    "model": "POCO F1",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2970
+  },
+  {
+    "id": "poco_add_22003",
+    "brand": "POCO",
+    "model": "POCO X2",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4210
+  },
+  {
+    "id": "poco_add_22004",
+    "brand": "POCO",
+    "model": "POCO X2",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4520
+  },
+  {
+    "id": "poco_add_22005",
+    "brand": "POCO",
+    "model": "POCO X2",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 4750
+  },
+  {
+    "id": "poco_add_22006",
+    "brand": "POCO",
+    "model": "POCO M2 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4280
+  },
+  {
+    "id": "poco_add_22007",
+    "brand": "POCO",
+    "model": "POCO M2 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4750
+  },
+  {
+    "id": "poco_add_22008",
+    "brand": "POCO",
+    "model": "POCO M2 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4920
+  },
+  {
+    "id": "poco_add_22009",
+    "brand": "POCO",
+    "model": "POCO M2",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3850
+  },
+  {
+    "id": "poco_add_22010",
+    "brand": "POCO",
+    "model": "POCO M2",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4200
+  },
+  {
+    "id": "poco_add_22011",
+    "brand": "POCO",
+    "model": "POCO M2",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4350
+  },
+  {
+    "id": "poco_add_22012",
+    "brand": "POCO",
+    "model": "POCO C3",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3290
+  },
+  {
+    "id": "poco_add_22013",
+    "brand": "POCO",
+    "model": "POCO C3",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3050
+  },
+  {
+    "id": "poco_add_22014",
+    "brand": "POCO",
+    "model": "POCO X3",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4600
+  },
+  {
+    "id": "poco_add_22015",
+    "brand": "POCO",
+    "model": "POCO X3",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4820
+  },
+  {
+    "id": "poco_add_22016",
+    "brand": "POCO",
+    "model": "POCO X3",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5130
+  },
+  {
+    "id": "poco_add_22017",
+    "brand": "POCO",
+    "model": "POCO M3",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4720
+  },
+  {
+    "id": "poco_add_22018",
+    "brand": "POCO",
+    "model": "POCO M3",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4090
+  },
+  {
+    "id": "poco_add_22019",
+    "brand": "POCO",
+    "model": "POCO M3",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4320
+  },
+  {
+    "id": "poco_add_22020",
+    "brand": "POCO",
+    "model": "POCO X3 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4960
+  },
+  {
+    "id": "poco_add_22021",
+    "brand": "POCO",
+    "model": "POCO X3 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5330
+  },
+  {
+    "id": "poco_add_22022",
+    "brand": "POCO",
+    "model": "POCO M3 Pro 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6400
+  },
+  {
+    "id": "poco_add_22023",
+    "brand": "POCO",
+    "model": "POCO M3 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 5650
+  },
+  {
+    "id": "poco_add_22024",
+    "brand": "POCO",
+    "model": "POCO F3 GT",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8140
+  },
+  {
+    "id": "poco_add_22025",
+    "brand": "POCO",
+    "model": "POCO F3 GT",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7880
+  },
+  {
+    "id": "poco_add_22026",
+    "brand": "POCO",
+    "model": "POCO F3 GT",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8520
+  },
+  {
+    "id": "poco_add_22027",
+    "brand": "POCO",
+    "model": "POCO M2 Reloaded",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3030
+  },
+  {
+    "id": "poco_add_22028",
+    "brand": "POCO",
+    "model": "POCO C31",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3200
+  },
+  {
+    "id": "poco_add_22029",
+    "brand": "POCO",
+    "model": "POCO C31",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3510
+  },
+  {
+    "id": "poco_add_22030",
+    "brand": "POCO",
+    "model": "POCO M4 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6890
+  },
+  {
+    "id": "poco_add_22031",
+    "brand": "POCO",
+    "model": "POCO M4 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 6210
+  },
+  {
+    "id": "poco_add_22032",
+    "brand": "POCO",
+    "model": "POCO M4 Pro 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6800
+  },
+  {
+    "id": "poco_add_22033",
+    "brand": "POCO",
+    "model": "POCO M4 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4960
+  },
+  {
+    "id": "poco_add_22034",
+    "brand": "POCO",
+    "model": "POCO M4 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4540
+  },
+  {
+    "id": "poco_add_22035",
+    "brand": "POCO",
+    "model": "POCO M4 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5110
+  },
+  {
+    "id": "poco_add_22036",
+    "brand": "POCO",
+    "model": "POCO X4 Pro 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7340
+  },
+  {
+    "id": "poco_add_22037",
+    "brand": "POCO",
+    "model": "POCO X4 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7850
+  },
+  {
+    "id": "poco_add_22038",
+    "brand": "POCO",
+    "model": "POCO X4 Pro 5G",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 6720
+  },
+  {
+    "id": "poco_add_22039",
+    "brand": "POCO",
+    "model": "POCO M4 5G",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 5460
+  },
+  {
+    "id": "poco_add_22040",
+    "brand": "POCO",
+    "model": "POCO M4 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5840
+  },
+  {
+    "id": "poco_add_22041",
+    "brand": "POCO",
+    "model": "POCO F4 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7270
+  },
+  {
+    "id": "poco_add_22042",
+    "brand": "POCO",
+    "model": "POCO F4 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7040
+  },
+  {
+    "id": "poco_add_22043",
+    "brand": "POCO",
+    "model": "POCO F4 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 7720
+  },
+  {
+    "id": "poco_add_22044",
+    "brand": "POCO",
+    "model": "POCO M5",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3900
+  },
+  {
+    "id": "poco_add_22045",
+    "brand": "POCO",
+    "model": "POCO M5",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4090
+  },
+  {
+    "id": "poco_add_22046",
+    "brand": "POCO",
+    "model": "POCO X5 Pro 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 10540
+  },
+  {
+    "id": "poco_add_22047",
+    "brand": "POCO",
+    "model": "POCO X5 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 11190
+  },
+  {
+    "id": "poco_add_22048",
+    "brand": "POCO",
+    "model": "POCO C50",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 4660
+  },
+  {
+    "id": "poco_add_22049",
+    "brand": "POCO",
+    "model": "POCO C50",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 4250
+  },
+  {
+    "id": "poco_add_22050",
+    "brand": "POCO",
+    "model": "POCO C55",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5050
+  },
+  {
+    "id": "poco_add_22051",
+    "brand": "POCO",
+    "model": "POCO C55",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4400
+  },
+  {
+    "id": "poco_add_22052",
+    "brand": "POCO",
+    "model": "POCO X5 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 10050
+  },
+  {
+    "id": "poco_add_22053",
+    "brand": "POCO",
+    "model": "POCO X5 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 9510
+  },
+  {
+    "id": "poco_add_22054",
+    "brand": "POCO",
+    "model": "POCO C51",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4700
+  },
+  {
+    "id": "poco_add_22055",
+    "brand": "POCO",
+    "model": "POCO C51",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4360
+  },
+  {
+    "id": "poco_add_22056",
+    "brand": "POCO",
+    "model": "POCO F5 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 12250
+  },
+  {
+    "id": "poco_add_22057",
+    "brand": "POCO",
+    "model": "POCO F5 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 13230
+  },
+  {
+    "id": "poco_add_22058",
+    "brand": "POCO",
+    "model": "POCO M6 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 6220
+  },
+  {
+    "id": "poco_add_22059",
+    "brand": "POCO",
+    "model": "POCO M6 Pro 5G",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7400
+  },
+  {
+    "id": "poco_add_22060",
+    "brand": "POCO",
+    "model": "POCO M6 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8330
+  },
+  {
+    "id": "poco_add_22061",
+    "brand": "POCO",
+    "model": "POCO M6 Pro 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7940
+  },
+  {
+    "id": "poco_add_22062",
+    "brand": "POCO",
+    "model": "POCO C65",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4580
+  },
+  {
+    "id": "poco_add_22063",
+    "brand": "POCO",
+    "model": "POCO C65",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4950
+  },
+  {
+    "id": "poco_add_22064",
+    "brand": "POCO",
+    "model": "POCO C65",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5350
+  },
+  {
+    "id": "poco_add_22065",
+    "brand": "POCO",
+    "model": "POCO X6 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 11090
+  },
+  {
+    "id": "poco_add_22066",
+    "brand": "POCO",
+    "model": "POCO X6 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 10680
+  },
+  {
+    "id": "poco_add_22067",
+    "brand": "POCO",
+    "model": "POCO X6 5G",
+    "storage": "12 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 12590
+  },
+  {
+    "id": "poco_add_22068",
+    "brand": "POCO",
+    "model": "POCO X6 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 14210
+  },
+  {
+    "id": "poco_add_22069",
+    "brand": "POCO",
+    "model": "POCO X6 Pro 5G",
+    "storage": "12 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 14670
+  },
+  {
+    "id": "poco_add_22070",
+    "brand": "POCO",
+    "model": "POCO M6 5G",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 5100
+  },
+  {
+    "id": "poco_add_22071",
+    "brand": "POCO",
+    "model": "POCO M6 5G",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5440
+  },
+  {
+    "id": "poco_add_22072",
+    "brand": "POCO",
+    "model": "POCO M6 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 6320
+  },
+  {
+    "id": "poco_add_22073",
+    "brand": "POCO",
+    "model": "POCO M6 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5930
+  },
+  {
+    "id": "poco_add_22074",
+    "brand": "POCO",
+    "model": "POCO C61",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4450
+  },
+  {
+    "id": "poco_add_22075",
+    "brand": "POCO",
+    "model": "POCO C61",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4750
+  },
+  {
+    "id": "poco_add_22076",
+    "brand": "POCO",
+    "model": "POCO F6 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 13720
+  },
+  {
+    "id": "poco_add_22077",
+    "brand": "POCO",
+    "model": "POCO F6 5G",
+    "storage": "12 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 14990
+  },
+  {
+    "id": "poco_add_22078",
+    "brand": "POCO",
+    "model": "POCO F6 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 14410
+  },
+  {
+    "id": "poco_add_22079",
+    "brand": "POCO",
+    "model": "POCO X6 Neo 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8780
+  },
+  {
+    "id": "poco_add_22080",
+    "brand": "POCO",
+    "model": "POCO X6 Neo 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8440
+  },
+  {
+    "id": "poco_add_22081",
+    "brand": "POCO",
+    "model": "POCO X7 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 12000
+  },
+  {
+    "id": "poco_add_22082",
+    "brand": "POCO",
+    "model": "POCO X7 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 11500
+  },
+  {
+    "id": "poco_add_22083",
+    "brand": "POCO",
+    "model": "POCO M7 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8950
+  },
+  {
+    "id": "poco_add_22084",
+    "brand": "POCO",
+    "model": "POCO M7 Pro 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8370
+  },
+  {
+    "id": "poco_add_22085",
+    "brand": "POCO",
+    "model": "POCO C75 5G",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 5190
+  },
+  {
+    "id": "poco_add_22086",
+    "brand": "POCO",
+    "model": "POCO C75 5G",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5700
+  },
+  {
+    "id": "poco_add_22087",
+    "brand": "POCO",
+    "model": "POCO X7 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 14290
+  },
+  {
+    "id": "poco_add_22088",
+    "brand": "POCO",
+    "model": "POCO X7 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 16010
+  },
+  {
+    "id": "poco_add_22089",
+    "brand": "POCO",
+    "model": "POCO M6 Plus 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6750
+  },
+  {
+    "id": "poco_add_22090",
+    "brand": "POCO",
+    "model": "POCO M6 Plus 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6400
+  },
+  {
+    "id": "poco_add_22091",
+    "brand": "POCO",
+    "model": "POCO M7 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6100
+  },
+  {
+    "id": "poco_add_22092",
+    "brand": "POCO",
+    "model": "POCO M7 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6550
+  },
+  {
+    "id": "poco_add_22093",
+    "brand": "POCO",
+    "model": "POCO C71",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3930
+  },
+  {
+    "id": "poco_add_22094",
+    "brand": "POCO",
+    "model": "POCO C71",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4180
+  },
+  {
+    "id": "poco_add_22095",
+    "brand": "POCO",
+    "model": "POCO F7 5G",
+    "storage": "12 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 20850
+  },
+  {
+    "id": "poco_add_22096",
+    "brand": "POCO",
+    "model": "POCO F7 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 20500
+  },
+  {
+    "id": "poco_add_22097",
+    "brand": "POCO",
+    "model": "POCO M7 Plus 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8750
+  },
+  {
+    "id": "poco_add_22098",
+    "brand": "POCO",
+    "model": "POCO M7 Plus 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 9250
+  },
+  {
+    "id": "poco_add_22099",
+    "brand": "POCO",
+    "model": "POCO M7 Plus 5G",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7850
+  },
+  {
+    "id": "poco_add_22100",
+    "brand": "POCO",
+    "model": "POCO C85 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7910
+  },
+  {
+    "id": "poco_add_22101",
+    "brand": "POCO",
+    "model": "POCO C85 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 9300
+  },
+  {
+    "id": "poco_add_22102",
+    "brand": "POCO",
+    "model": "POCO C85 5G",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7340
+  },
+  {
+    "id": "poco_add_22103",
+    "brand": "POCO",
+    "model": "POCO M8 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 13000
+  },
+  {
+    "id": "poco_add_22104",
+    "brand": "POCO",
+    "model": "POCO M8 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 14000
+  },
+  {
+    "id": "poco_add_22105",
+    "brand": "POCO",
+    "model": "POCO M8 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 15500
+  },
+  {
+    "id": "poco_add_22106",
+    "brand": "POCO",
+    "model": "POCO C85x",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 7450
+  },
+  {
+    "id": "poco_add_22107",
+    "brand": "POCO",
+    "model": "POCO C85x",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8010
+  },
+  {
+    "id": "poco_add_22108",
+    "brand": "POCO",
+    "model": "POCO X8 Pro",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 21400
+  },
+  {
+    "id": "poco_add_22109",
+    "brand": "POCO",
+    "model": "POCO X8 Pro",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 23400
+  },
 ];

@@ -1,8 +1,8 @@
 {
   "multipliers": {
-    "calls_no": 0.80,
-    "touch_no": 0.82,
-    "originalScreen_no": 0.87,
+    "calls_no": 0,
+    "touch_no": 0.3170,
+    "originalScreen_no": 0.5587,
     "warranty_no": 0.7966,
     "gstBill_no": 1.00
   },
@@ -40,5 +40,5 @@
   "bonuses": {
     "box": 380
   },
-  "modelFloorPrice": 500
+  "modelFloorPrice": 1200
 }
