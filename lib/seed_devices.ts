@@ -11652,35 +11652,7 @@ export const SEED_DEVICES = [
     "basePrice": null
   }
 ,
-  {
-    "id": "oppo_custom_789196",
-    "brand": "OPPO",
-    "model": "OPPO F1s",
-    "storage": "32GB",
-    "ram": "3GB",
-    "color": "Midnight",
-    "basePrice": null
-  }
 ,
-  {
-    "id": "oppo_custom_374138",
-    "brand": "OPPO",
-    "model": "OPPO F1s",
-    "storage": "64GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": null
-  }
-,
-  {
-    "id": "oppo_custom_177612",
-    "brand": "OPPO",
-    "model": "OPPO F1 plus",
-    "storage": "64GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": null
-  }
 ,
   {
     "id": "oppo_custom_696093",
