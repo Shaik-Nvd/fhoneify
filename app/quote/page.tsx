@@ -198,7 +198,7 @@ export default function QuotePage() {
       });
     }
     return brandModels.sort();
-  }, [allDevices, selectedBrand]);
+  }, [allDevices, selectedBrand, modelSearchQuery]);
   const storageOptions = useMemo(() => {
     if (!selectedBrand || !selectedModel) return [];
     
