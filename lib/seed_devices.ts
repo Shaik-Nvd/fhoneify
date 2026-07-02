@@ -1,4 +1,4 @@
-export const SEED_DEVICES = [
+export const SEED_DEVICES: any[] = [
   {
     "id": "apple_1000",
     "brand": "Apple",
