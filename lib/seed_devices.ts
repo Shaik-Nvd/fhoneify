@@ -11441,4 +11441,1044 @@ export const SEED_DEVICES = [
     "color": "Midnight",
     "basePrice": 23400
   },
+,
+  {
+    "id": "oppo_custom_713078",
+    "brand": "OPPO",
+    "model": "OPPO A7",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_547238",
+    "brand": "OPPO",
+    "model": "OPPO F9 Pro",
+    "storage": "64GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_949585",
+    "brand": "OPPO",
+    "model": "OPPO F9",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_777973",
+    "brand": "OPPO",
+    "model": "OPPO A3s",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_218111",
+    "brand": "OPPO",
+    "model": "OPPO A3s",
+    "storage": "16GB",
+    "ram": "2GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_750026",
+    "brand": "OPPO",
+    "model": "OPPO A3s",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_96755",
+    "brand": "OPPO",
+    "model": "OPPO Find X",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_144412",
+    "brand": "OPPO",
+    "model": "OPPO A5",
+    "storage": "32GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_608120",
+    "brand": "OPPO",
+    "model": "OPPO A5",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_581487",
+    "brand": "OPPO",
+    "model": "OPPO F7",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_84066",
+    "brand": "OPPO",
+    "model": "OPPO A83",
+    "storage": "16GB",
+    "ram": "2GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_794453",
+    "brand": "OPPO",
+    "model": "OPPO A83",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_947792",
+    "brand": "OPPO",
+    "model": "OPPO A83",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_504973",
+    "brand": "OPPO",
+    "model": "OPPO F5 Youth",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_96899",
+    "brand": "OPPO",
+    "model": "OPPO F5",
+    "storage": "32GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_485952",
+    "brand": "OPPO",
+    "model": "OPPO F5",
+    "storage": "64GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_688565",
+    "brand": "OPPO",
+    "model": "OPPO R11",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_116616",
+    "brand": "OPPO",
+    "model": "OPPO A77",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_552117",
+    "brand": "OPPO",
+    "model": "OPPO F3",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_353262",
+    "brand": "OPPO",
+    "model": "OPPO F3 Plus",
+    "storage": "64GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_795807",
+    "brand": "OPPO",
+    "model": "OPPO A57",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_789196",
+    "brand": "OPPO",
+    "model": "OPPO F1s",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_374138",
+    "brand": "OPPO",
+    "model": "OPPO F1s",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_177612",
+    "brand": "OPPO",
+    "model": "OPPO F1 plus",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_696093",
+    "brand": "OPPO",
+    "model": "OPPO K1",
+    "storage": "64GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_1888",
+    "brand": "OPPO",
+    "model": "OPPO F11 Pro",
+    "storage": "64GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_520990",
+    "brand": "OPPO",
+    "model": "OPPO A5s",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_107669",
+    "brand": "OPPO",
+    "model": "OPPO A5s",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_677404",
+    "brand": "OPPO",
+    "model": "OPPO A1K",
+    "storage": "32GB",
+    "ram": "2GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_252183",
+    "brand": "OPPO",
+    "model": "OPPO Reno 10x Zoom",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_311042",
+    "brand": "OPPO",
+    "model": "OPPO K3",
+    "storage": "64GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_716106",
+    "brand": "OPPO",
+    "model": "OPPO Reno 2Z",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_913185",
+    "brand": "OPPO",
+    "model": "OPPO Reno 2",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_68749",
+    "brand": "OPPO",
+    "model": "OPPO A5 2020",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_614286",
+    "brand": "OPPO",
+    "model": "OPPO Reno2 F",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_316975",
+    "brand": "OPPO",
+    "model": "OPPO A71 2018",
+    "storage": "16GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_917701",
+    "brand": "OPPO",
+    "model": "OPPO A31",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_606891",
+    "brand": "OPPO",
+    "model": "OPPO A12",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_290540",
+    "brand": "OPPO",
+    "model": "OPPO A12",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_428760",
+    "brand": "OPPO",
+    "model": "OPPO Find X2",
+    "storage": "256GB",
+    "ram": "12GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_466176",
+    "brand": "OPPO",
+    "model": "OPPO A11K",
+    "storage": "32GB",
+    "ram": "2GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_528507",
+    "brand": "OPPO",
+    "model": "OPPO Reno3 Pro",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_910778",
+    "brand": "OPPO",
+    "model": "OPPO A53",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_577758",
+    "brand": "OPPO",
+    "model": "OPPO A33 2020",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_765781",
+    "brand": "OPPO",
+    "model": "OPPO A15",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_916211",
+    "brand": "OPPO",
+    "model": "OPPO A15s",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_185395",
+    "brand": "OPPO",
+    "model": "OPPO F19 Pro",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_751516",
+    "brand": "OPPO",
+    "model": "OPPO F19 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_573732",
+    "brand": "OPPO",
+    "model": "OPPO F19 Pro Plus 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_679106",
+    "brand": "OPPO",
+    "model": "OPPO F19",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_30109",
+    "brand": "OPPO",
+    "model": "OPPO A54",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_50909",
+    "brand": "OPPO",
+    "model": "OPPO A54",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_242113",
+    "brand": "OPPO",
+    "model": "OPPO A53s 5G",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_709049",
+    "brand": "OPPO",
+    "model": "OPPO A74 5G",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_862985",
+    "brand": "OPPO",
+    "model": "OPPO Reno6 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_563821",
+    "brand": "OPPO",
+    "model": "OPPO Reno6 Pro 5G",
+    "storage": "256GB",
+    "ram": "12GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_665815",
+    "brand": "OPPO",
+    "model": "OPPO F19s",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_640782",
+    "brand": "OPPO",
+    "model": "OPPO A55",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_444247",
+    "brand": "OPPO",
+    "model": "OPPO A55",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_82355",
+    "brand": "OPPO",
+    "model": "OPPO A16",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_64195",
+    "brand": "OPPO",
+    "model": "OPPO A16K",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_146281",
+    "brand": "OPPO",
+    "model": "OPPO A16K",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_587581",
+    "brand": "OPPO",
+    "model": "OPPO Reno7 5G",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_686109",
+    "brand": "OPPO",
+    "model": "OPPO Reno7 Pro 5G",
+    "storage": "256GB",
+    "ram": "12GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_281787",
+    "brand": "OPPO",
+    "model": "OPPO A76",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_378041",
+    "brand": "OPPO",
+    "model": "OPPO K10",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_329706",
+    "brand": "OPPO",
+    "model": "OPPO A16e",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_640635",
+    "brand": "OPPO",
+    "model": "OPPO A16e",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_299266",
+    "brand": "OPPO",
+    "model": "OPPO F21 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_580616",
+    "brand": "OPPO",
+    "model": "OPPO F21 Pro 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_444934",
+    "brand": "OPPO",
+    "model": "OPPO A96",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_487571",
+    "brand": "OPPO",
+    "model": "OPPO K10 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_77363",
+    "brand": "OPPO",
+    "model": "OPPO Reno8 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_104273",
+    "brand": "OPPO",
+    "model": "OPPO Reno8 Pro 5G",
+    "storage": "256GB",
+    "ram": "12GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_46138",
+    "brand": "OPPO",
+    "model": "OPPO A57 2022",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_417568",
+    "brand": "OPPO",
+    "model": "OPPO F21s Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_772247",
+    "brand": "OPPO",
+    "model": "OPPO F21s Pro 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_172751",
+    "brand": "OPPO",
+    "model": "OPPO A77 2022",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_757779",
+    "brand": "OPPO",
+    "model": "OPPO A77 2022",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_966693",
+    "brand": "OPPO",
+    "model": "OPPO A17K",
+    "storage": "64GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_805493",
+    "brand": "OPPO",
+    "model": "OPPO A77s",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_558257",
+    "brand": "OPPO",
+    "model": "OPPO A78 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_218058",
+    "brand": "OPPO",
+    "model": "OPPO Reno8T 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_978786",
+    "brand": "OPPO",
+    "model": "OPPO Find N2 Flip 5G",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_130491",
+    "brand": "OPPO",
+    "model": "OPPO F23 5G",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_156098",
+    "brand": "OPPO",
+    "model": "OPPO Reno10 5G",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_237737",
+    "brand": "OPPO",
+    "model": "OPPO Reno10 Pro 5G",
+    "storage": "256GB",
+    "ram": "12GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_404786",
+    "brand": "OPPO",
+    "model": "OPPO Reno10 Pro Plus 5G",
+    "storage": "256GB",
+    "ram": "12GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_662402",
+    "brand": "OPPO",
+    "model": "OPPO A78",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_9904",
+    "brand": "OPPO",
+    "model": "OPPO Find N3 Flip 5G",
+    "storage": "256GB",
+    "ram": "12GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_203967",
+    "brand": "OPPO",
+    "model": "OPPO A58",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_890318",
+    "brand": "OPPO",
+    "model": "OPPO A38",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_605420",
+    "brand": "OPPO",
+    "model": "OPPO A17",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_98209",
+    "brand": "OPPO",
+    "model": "OPPO A18",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_329537",
+    "brand": "OPPO",
+    "model": "OPPO A18",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_203855",
+    "brand": "OPPO",
+    "model": "OPPO A79 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_929004",
+    "brand": "OPPO",
+    "model": "OPPO A59 5G",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_609670",
+    "brand": "OPPO",
+    "model": "OPPO Reno11 5G",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_20385",
+    "brand": "OPPO",
+    "model": "OPPO Reno11 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_390941",
+    "brand": "OPPO",
+    "model": "OPPO Reno11 Pro 5G",
+    "storage": "256GB",
+    "ram": "12GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_588226",
+    "brand": "OPPO",
+    "model": "OPPO F25 Pro 5G",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_376025",
+    "brand": "OPPO",
+    "model": "OPPO F25 Pro 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_531502",
+    "brand": "OPPO",
+    "model": "OPPO F27 Pro Plus 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
+,
+  {
+    "id": "oppo_custom_732030",
+    "brand": "OPPO",
+    "model": "OPPO F27 Pro Plus 5G",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  }
 ];
