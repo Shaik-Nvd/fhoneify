@@ -66,6 +66,7 @@ export default function QuotePage() {
   
   const [selectedBrand, setSelectedBrand] = useState('');
   const [selectedModel, setSelectedModel] = useState('');
+  const [modelSearchQuery, setModelSearchQuery] = useState('');
   const [selectedStorage, setSelectedStorage] = useState('');
   const [selectionStage, setSelectionStage] = useState<'brand'|'model'|'storage'>('brand');
   
@@ -112,6 +113,7 @@ export default function QuotePage() {
 
     setSelectedBrand(newBrand);
     setSelectedModel(newModel);
+    if (!newModel) setModelSearchQuery('');
     setSelectedStorage(newStorage);
     setSelectionStage(newStage as any);
     setStep(newStep);
@@ -168,7 +170,11 @@ export default function QuotePage() {
   }, [allDevices]);
   const models = useMemo(() => {
     if (!selectedBrand) return [];
-    const brandModels = [...new Set(allDevices.filter((d) => d.brand === selectedBrand).map((d) => d.model).filter(Boolean))];
+    let brandModels = [...new Set(allDevices.filter((d) => d.brand === selectedBrand).map((d) => d.model).filter(Boolean))];
+    
+    if (modelSearchQuery) {
+      brandModels = brandModels.filter((m) => m.toLowerCase().includes(modelSearchQuery.toLowerCase()));
+    }
     
     if (selectedBrand === 'Apple') {
       const appleOrder = [
@@ -440,9 +446,16 @@ export default function QuotePage() {
 
           {selectionStage === 'model' && (
             <>
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', gap: '1rem' }}>
                 <h2 style={{ color: '#fff', fontWeight: 600, fontSize: '1.25rem' }}>Select Model</h2>
-                <button onClick={() => navigateToState('', '', '', 'brand', 1)} style={{ color: '#4CD964', background: 'none', border: 'none', cursor: 'pointer' }}>Change Brand</button>
+                <input 
+                  type="text" 
+                  placeholder="Search model..." 
+                  value={modelSearchQuery}
+                  onChange={(e) => setModelSearchQuery(e.target.value)}
+                  style={{ flex: 1, minWidth: '200px', maxWidth: '300px', padding: '0.75rem 1rem', borderRadius: '8px', border: '1px solid #2a2a2a', backgroundColor: '#111', color: '#fff', fontSize: '0.9rem' }}
+                />
+                <button onClick={() => navigateToState('', '', '', 'brand', 1)} style={{ color: '#4CD964', background: 'none', border: 'none', cursor: 'pointer', whiteSpace: 'nowrap' }}>Change Brand</button>
               </div>
               
               {models.length === 0 && !loading ? (
