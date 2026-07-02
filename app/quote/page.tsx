@@ -38,12 +38,12 @@ function normalizeDevice(raw: Record<string, unknown>): Device {
 function extractDevices(payload: unknown): Device[] {
   if (!payload || typeof payload !== 'object') return [];
   const obj = payload as Record<string, unknown>;
-  if (Array.isArray(obj.data)) return obj.data.map((row) => normalizeDevice(row as Record<string, unknown>));
+  if (Array.isArray(obj.data)) return obj.data.filter(Boolean).map((row) => normalizeDevice(row as Record<string, unknown>));
   if (obj.data && typeof obj.data === 'object' && !Array.isArray(obj.data)) {
     const inner = obj.data as Record<string, unknown>;
-    if (Array.isArray(inner.devices)) return inner.devices.map((row) => normalizeDevice(row as Record<string, unknown>));
+    if (Array.isArray(inner.devices)) return inner.devices.filter(Boolean).map((row) => normalizeDevice(row as Record<string, unknown>));
   }
-  if (Array.isArray(payload)) return payload.map((row) => normalizeDevice(row as Record<string, unknown>));
+  if (Array.isArray(payload)) return payload.filter(Boolean).map((row) => normalizeDevice(row as Record<string, unknown>));
   return [];
 }
 
