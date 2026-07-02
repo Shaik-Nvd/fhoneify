@@ -28,38 +28,54 @@ export default function AuthPage() {
     setIsLoading(true);
     setMsg({ text: 'Sending WhatsApp OTP...', isError: false });
     
-    // Remove spaces before sending to API
-    const formattedPhone = phone.replace(/\s+/g, '');
-    const data = await apiPost('auth/otp/send', { phone: formattedPhone });
-    
-    setIsLoading(false);
-    
-    if (data.bypassCode) {
-       setMsg({ text: `WhatsApp failed! Use this temporary bypass code: ${data.bypassCode}`, isError: true });
-       setIsCodeStep(true);
-    } else if (data.error) {
-       setMsg({ text: data.error, isError: true });
-    } else {
-       setMsg({ text: 'Check your WhatsApp for the code!', isError: false });
-       setIsCodeStep(true);
+    try {
+      // Remove spaces before sending to API
+      const formattedPhone = phone.replace(/\s+/g, '');
+      const data = await apiPost('auth/otp/send', { phone: formattedPhone });
+      
+      setIsLoading(false);
+      
+      if (data.bypassCode) {
+         setMsg({ text: `WhatsApp failed! Use this temporary bypass code: ${data.bypassCode}`, isError: true });
+         setIsCodeStep(true);
+      } else if (data.error) {
+         setMsg({ text: data.error, isError: true });
+      } else {
+         setMsg({ text: 'Check your WhatsApp for the code!', isError: false });
+         setIsCodeStep(true);
+      }
+    } catch (error) {
+      setIsLoading(false);
+      setMsg({ text: 'Network error or server unreachable. Please try again later.', isError: true });
+      console.error('API Error:', error);
     }
   };
 
   const handleVerify = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsLoading(true);
+    setMsg({ text: 'Verifying code...', isError: false });
     
-    // Remove spaces before verifying
-    const formattedPhone = phone.replace(/\s+/g, '');
-    const result = await apiPost('auth/otp/verify', { phone: formattedPhone, code });
-    if (result.error) return setMsg({ text: result.error, isError: true });
-    
-    if (result.success && result.data) {
-      const { accessToken, refreshToken, user } = result.data;
-      setAuth({ id: user.id, phone: user.phone, role: user.role, email: user.email }, accessToken, refreshToken);
-      setMsg({ text: 'Access granted! Redirecting...', isError: false });
-      router.push(user.role === 'admin' ? '/admin' : '/');
-    } else {
-      setMsg({ text: 'Invalid code. Please try again.', isError: true });
+    try {
+      // Remove spaces before verifying
+      const formattedPhone = phone.replace(/\s+/g, '');
+      const result = await apiPost('auth/otp/verify', { phone: formattedPhone, code });
+      setIsLoading(false);
+      
+      if (result.error) return setMsg({ text: result.error, isError: true });
+      
+      if (result.success && result.data) {
+        const { accessToken, refreshToken, user } = result.data;
+        setAuth({ id: user.id, phone: user.phone, role: user.role, email: user.email }, accessToken, refreshToken);
+        setMsg({ text: 'Access granted! Redirecting...', isError: false });
+        router.push(user.role === 'admin' ? '/admin' : '/');
+      } else {
+        setMsg({ text: 'Invalid code. Please try again.', isError: true });
+      }
+    } catch (error) {
+      setIsLoading(false);
+      setMsg({ text: 'Network error or server unreachable. Please try again later.', isError: true });
+      console.error('API Error:', error);
     }
   };
 

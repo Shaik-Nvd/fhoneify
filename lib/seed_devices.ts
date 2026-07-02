@@ -5090,7 +5090,7 @@ export const SEED_DEVICES = [
   {
     "id": "oppo_18027",
     "brand": "OPPO",
-    "model": "OPPO F1 plus",
+    "model": "OPPO F1 Plus",
     "storage": "4 GB/64 GB",
     "color": "Midnight",
     "basePrice": 1260
@@ -8346,7 +8346,7 @@ export const SEED_DEVICES = [
   {
     "id": "xiaomi_32006",
     "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 6 pro",
+    "model": "Xiaomi Redmi 6 Pro",
     "storage": "3 GB/32 GB",
     "color": "Midnight",
     "basePrice": 2160
@@ -8354,7 +8354,7 @@ export const SEED_DEVICES = [
   {
     "id": "xiaomi_32007",
     "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 6 pro",
+    "model": "Xiaomi Redmi 6 Pro",
     "storage": "4 GB/64 GB",
     "color": "Midnight",
     "basePrice": 2280
@@ -9154,7 +9154,7 @@ export const SEED_DEVICES = [
   {
     "id": "iqoo_10000",
     "brand": "iQOO",
-    "model": "Iqoo 12 5g",
+    "model": "Iqoo 12 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -9163,7 +9163,7 @@ export const SEED_DEVICES = [
   {
     "id": "iqoo_10001",
     "brand": "iQOO",
-    "model": "Iqoo 13 5g",
+    "model": "Iqoo 13 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -9172,7 +9172,7 @@ export const SEED_DEVICES = [
   {
     "id": "iqoo_10002",
     "brand": "iQOO",
-    "model": "Iqoo 15 5g",
+    "model": "Iqoo 15 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -9199,7 +9199,7 @@ export const SEED_DEVICES = [
   {
     "id": "iqoo_10005",
     "brand": "iQOO",
-    "model": "Iqoo Z10 Lite 5g",
+    "model": "Iqoo Z10 Lite 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -9208,7 +9208,7 @@ export const SEED_DEVICES = [
   {
     "id": "iqoo_10006",
     "brand": "iQOO",
-    "model": "Iqoo Z10r 5g",
+    "model": "Iqoo Z10r 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -9217,7 +9217,7 @@ export const SEED_DEVICES = [
   {
     "id": "iqoo_10007",
     "brand": "iQOO",
-    "model": "Iqoo Z10x 5g",
+    "model": "Iqoo Z10x 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -9226,7 +9226,7 @@ export const SEED_DEVICES = [
   {
     "id": "iqoo_10008",
     "brand": "iQOO",
-    "model": "Iqoo Z11x 5g",
+    "model": "Iqoo Z11x 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -9235,7 +9235,7 @@ export const SEED_DEVICES = [
   {
     "id": "iqoo_10009",
     "brand": "iQOO",
-    "model": "Iqoo Z9x 5g",
+    "model": "Iqoo Z9x 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -9415,7 +9415,7 @@ export const SEED_DEVICES = [
   {
     "id": "oneplus_10029",
     "brand": "OnePlus",
-    "model": "Oneplus Nord Ce 6 5g",
+    "model": "Oneplus Nord Ce 6 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -9424,7 +9424,7 @@ export const SEED_DEVICES = [
   {
     "id": "oneplus_10030",
     "brand": "OnePlus",
-    "model": "Oneplus Nord Ce 6 Lite 5g",
+    "model": "Oneplus Nord Ce 6 Lite 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -9432,7 +9432,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10031",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A11k",
     "storage": "128GB",
     "ram": "8GB",
@@ -9441,7 +9441,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10032",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A12",
     "storage": "128GB",
     "ram": "8GB",
@@ -9450,7 +9450,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10033",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A15",
     "storage": "128GB",
     "ram": "8GB",
@@ -9459,7 +9459,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10034",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A15s",
     "storage": "128GB",
     "ram": "8GB",
@@ -9468,7 +9468,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10035",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A1k",
     "storage": "128GB",
     "ram": "8GB",
@@ -9477,7 +9477,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10036",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A31",
     "storage": "128GB",
     "ram": "8GB",
@@ -9486,7 +9486,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10037",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A33 2020",
     "storage": "128GB",
     "ram": "8GB",
@@ -9495,7 +9495,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10038",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A3s",
     "storage": "128GB",
     "ram": "8GB",
@@ -9504,7 +9504,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10039",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A5 2020",
     "storage": "128GB",
     "ram": "8GB",
@@ -9513,7 +9513,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10040",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A5",
     "storage": "128GB",
     "ram": "8GB",
@@ -9522,7 +9522,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10041",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A52",
     "storage": "128GB",
     "ram": "8GB",
@@ -9531,7 +9531,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10042",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A53",
     "storage": "128GB",
     "ram": "8GB",
@@ -9540,7 +9540,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10043",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A57",
     "storage": "128GB",
     "ram": "8GB",
@@ -9549,7 +9549,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10044",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A5s",
     "storage": "128GB",
     "ram": "8GB",
@@ -9558,7 +9558,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10045",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A7",
     "storage": "128GB",
     "ram": "8GB",
@@ -9567,7 +9567,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10046",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A71 2018",
     "storage": "128GB",
     "ram": "8GB",
@@ -9576,7 +9576,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10047",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A77",
     "storage": "128GB",
     "ram": "8GB",
@@ -9585,7 +9585,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10048",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A83",
     "storage": "128GB",
     "ram": "8GB",
@@ -9594,7 +9594,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10049",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A9 2020",
     "storage": "128GB",
     "ram": "8GB",
@@ -9603,7 +9603,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10050",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A9",
     "storage": "128GB",
     "ram": "8GB",
@@ -9612,7 +9612,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10051",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo F1 Plus",
     "storage": "128GB",
     "ram": "8GB",
@@ -9621,7 +9621,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10052",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo F11 Pro",
     "storage": "128GB",
     "ram": "8GB",
@@ -9630,7 +9630,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10053",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo F11",
     "storage": "128GB",
     "ram": "8GB",
@@ -9639,7 +9639,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10054",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo F15",
     "storage": "128GB",
     "ram": "8GB",
@@ -9648,7 +9648,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10055",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo F17 Pro",
     "storage": "128GB",
     "ram": "8GB",
@@ -9657,7 +9657,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10056",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo F17",
     "storage": "128GB",
     "ram": "8GB",
@@ -9666,7 +9666,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10057",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo F1s",
     "storage": "128GB",
     "ram": "8GB",
@@ -9675,7 +9675,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10058",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo F3 Plus",
     "storage": "128GB",
     "ram": "8GB",
@@ -9684,7 +9684,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10059",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo F3",
     "storage": "128GB",
     "ram": "8GB",
@@ -9693,7 +9693,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10060",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo F5 Youth",
     "storage": "128GB",
     "ram": "8GB",
@@ -9702,7 +9702,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10061",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo F5",
     "storage": "128GB",
     "ram": "8GB",
@@ -9711,7 +9711,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10062",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo F7",
     "storage": "128GB",
     "ram": "8GB",
@@ -9720,7 +9720,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10063",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo F9 Pro",
     "storage": "128GB",
     "ram": "8GB",
@@ -9729,7 +9729,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10064",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo F9",
     "storage": "128GB",
     "ram": "8GB",
@@ -9738,7 +9738,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10065",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo Find X",
     "storage": "128GB",
     "ram": "8GB",
@@ -9747,7 +9747,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10066",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo Find X2",
     "storage": "128GB",
     "ram": "8GB",
@@ -9756,7 +9756,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10067",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo K1",
     "storage": "128GB",
     "ram": "8GB",
@@ -9765,7 +9765,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10068",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo K3",
     "storage": "128GB",
     "ram": "8GB",
@@ -9774,7 +9774,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10069",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo R11",
     "storage": "128GB",
     "ram": "8GB",
@@ -9783,7 +9783,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10070",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo R17",
     "storage": "128GB",
     "ram": "8GB",
@@ -9792,7 +9792,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10071",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo Reno 10x Zoom",
     "storage": "128GB",
     "ram": "8GB",
@@ -9801,7 +9801,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10072",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo Reno 2",
     "storage": "128GB",
     "ram": "8GB",
@@ -9810,7 +9810,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10073",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo Reno 2z",
     "storage": "128GB",
     "ram": "8GB",
@@ -9819,7 +9819,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10074",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo Reno",
     "storage": "128GB",
     "ram": "8GB",
@@ -9828,7 +9828,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10075",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo Reno2 F",
     "storage": "128GB",
     "ram": "8GB",
@@ -9837,7 +9837,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10076",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo Reno3 Pro",
     "storage": "128GB",
     "ram": "8GB",
@@ -9846,7 +9846,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10077",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo Reno4 Pro",
     "storage": "128GB",
     "ram": "8GB",
@@ -9855,8 +9855,8 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10078",
-    "brand": "Oppo",
-    "model": "Oppo Reno5 Pro 5g",
+    "brand": "OPPO",
+    "model": "Oppo Reno5 Pro 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -9937,7 +9937,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10087",
     "brand": "POCO",
-    "model": "POCO C75 5g",
+    "model": "POCO C75 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -9946,7 +9946,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10088",
     "brand": "POCO",
-    "model": "POCO C85 5g",
+    "model": "POCO C85 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -9973,7 +9973,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10091",
     "brand": "POCO",
-    "model": "POCO F3 Gt",
+    "model": "POCO F3 GT",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -9982,7 +9982,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10092",
     "brand": "POCO",
-    "model": "POCO F4 5g",
+    "model": "POCO F4 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -9991,7 +9991,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10093",
     "brand": "POCO",
-    "model": "POCO F5 5g",
+    "model": "POCO F5 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10000,7 +10000,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10094",
     "brand": "POCO",
-    "model": "POCO F6 5g",
+    "model": "POCO F6 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10009,7 +10009,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10095",
     "brand": "POCO",
-    "model": "POCO F7 5g",
+    "model": "POCO F7 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10045,7 +10045,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10099",
     "brand": "POCO",
-    "model": "POCO M3 Pro 5g",
+    "model": "POCO M3 Pro 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10063,7 +10063,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10101",
     "brand": "POCO",
-    "model": "POCO M4 5g",
+    "model": "POCO M4 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10072,7 +10072,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10102",
     "brand": "POCO",
-    "model": "POCO M4 Pro 5g",
+    "model": "POCO M4 Pro 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10099,7 +10099,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10105",
     "brand": "POCO",
-    "model": "POCO M6 5g",
+    "model": "POCO M6 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10108,7 +10108,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10106",
     "brand": "POCO",
-    "model": "POCO M6 Plus 5g",
+    "model": "POCO M6 Plus 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10117,7 +10117,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10107",
     "brand": "POCO",
-    "model": "POCO M6 Pro 5g",
+    "model": "POCO M6 Pro 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10126,7 +10126,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10108",
     "brand": "POCO",
-    "model": "POCO M7 5g",
+    "model": "POCO M7 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10135,7 +10135,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10109",
     "brand": "POCO",
-    "model": "POCO M7 Plus 5g",
+    "model": "POCO M7 Plus 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10144,7 +10144,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10110",
     "brand": "POCO",
-    "model": "POCO M7 Pro 5g",
+    "model": "POCO M7 Pro 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10153,7 +10153,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10111",
     "brand": "POCO",
-    "model": "POCO M8 5g",
+    "model": "POCO M8 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10189,7 +10189,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10115",
     "brand": "POCO",
-    "model": "POCO X4 Pro 5g",
+    "model": "POCO X4 Pro 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10198,7 +10198,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10116",
     "brand": "POCO",
-    "model": "POCO X5 5g",
+    "model": "POCO X5 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10207,7 +10207,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10117",
     "brand": "POCO",
-    "model": "POCO X5 Pro 5g",
+    "model": "POCO X5 Pro 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10216,7 +10216,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10118",
     "brand": "POCO",
-    "model": "POCO X6 5g",
+    "model": "POCO X6 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10225,7 +10225,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10119",
     "brand": "POCO",
-    "model": "POCO X6 Neo 5g",
+    "model": "POCO X6 Neo 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10234,7 +10234,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10120",
     "brand": "POCO",
-    "model": "POCO X6 Pro 5g",
+    "model": "POCO X6 Pro 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10243,7 +10243,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10121",
     "brand": "POCO",
-    "model": "POCO X7 5g",
+    "model": "POCO X7 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10252,7 +10252,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10122",
     "brand": "POCO",
-    "model": "POCO X7 Pro 5g",
+    "model": "POCO X7 Pro 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
