@@ -258,10 +258,8 @@ export default function QuotePage() {
       }
 
       const realStartPrice = Math.round(upliftedBasePrice);
-      const marketingMargin = 380; // Unachievable marketing gap
-      
-      // The "Get Upto" price displayed to the user includes the box bonus and the marketing margin
-      setBasePrice(realStartPrice + config.bonuses.box + marketingMargin);
+      // The "Get Upto" price displayed to the user follows the algorithm strictly
+      setBasePrice(realStartPrice);
       navigateToState(selectedBrand, selectedModel, s, 'storage', 2);
     } catch {
       setError('Failed to fetch quote.');
@@ -279,7 +277,7 @@ export default function QuotePage() {
     if (!basePrice) return;
     
     const floor_price = config.modelFloorPrice; // 1200
-    const internal_base = basePrice - config.bonuses.box - 380;
+    const internal_base = basePrice;
     
     // Multipliers
     let age_multiplier = config.multipliers.warranty_no; // Default 0.7966
