@@ -1,1 +1,8 @@
  npm run setup-cashify
+
+
+Could you clarify how your production website is hosted?
+
+If you use a service like Vercel, Netlify, or Render, the changes I just pushed to your GitHub main branch will automatically be deployed to your live website in a few minutes!
+
+If you are hosting it yourself on a VPS (like AWS, DigitalOcean, or Hostinger) or testing the production build locally, let me know and I can run the npm run build command for you or guide you through pulling the changes to your server!

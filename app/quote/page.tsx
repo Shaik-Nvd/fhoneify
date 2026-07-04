@@ -889,7 +889,7 @@ export default function QuotePage() {
 
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '2rem' }}>
                   <input type="checkbox" required id="terms" style={{ width: '16px', height: '16px', accentColor: '#d4af37' }} />
-                  <label htmlFor="terms" style={{ fontSize: '0.85rem', color: '#666' }}>I agree to the <a href="#" style={{ color: '#d4af37', textDecoration: 'none' }}>Terms and Conditions</a> & <a href="#" style={{ color: '#d4af37', textDecoration: 'none' }}>Privacy Policy</a></label>
+                  <label htmlFor="terms" style={{ fontSize: '0.85rem', color: '#666' }}>I agree to the <a href="/terms" target="_blank" rel="noopener noreferrer" style={{ color: '#d4af37', textDecoration: 'none' }}>Terms and Conditions</a> & <a href="/privacy" target="_blank" rel="noopener noreferrer" style={{ color: '#d4af37', textDecoration: 'none' }}>Privacy Policy</a></label>
                 </div>
 
                 <button type="submit" disabled={isAuthLoading} style={{ width: '100%', padding: '16px', backgroundColor: userPhone.length >= 10 ? '#d4af37' : '#e0e0e0', color: userPhone.length >= 10 ? '#000' : '#999', border: 'none', borderRadius: '8px', fontWeight: 700, fontSize: '1.1rem', cursor: userPhone.length >= 10 ? 'pointer' : 'not-allowed', transition: 'all 200ms', opacity: isAuthLoading ? 0.6 : 1 }}>
