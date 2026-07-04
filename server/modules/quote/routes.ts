@@ -5,6 +5,7 @@ const router = Router();
 
 router.get('/devices', ctrl.listDevices);
 router.post('/', ctrl.createQuote);
+router.post('/cashify-price', ctrl.getCashifyPrice);
 router.post('/leads', ctrl.createLead);
 router.get('/:id', ctrl.getQuote);
 

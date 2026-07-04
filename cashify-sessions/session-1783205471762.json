@@ -1,0 +1,214 @@
+{
+  "cookies": [
+    {
+      "name": "_cs__city-info__v1",
+      "value": "%7B%22ri%22%3A249%2C%22rn%22%3A%22Gurgaon%22%2C%22dp%22%3A122001%2C%22xmd%22%3A1%2C%22cs%22%3A%5B-1%5D%2C%22id%22%3Atrue%7D",
+      "domain": "www.cashify.in",
+      "path": "/",
+      "expires": 1814741420.308446,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_cs__pc__v1",
+      "value": "122001",
+      "domain": "www.cashify.in",
+      "path": "/",
+      "expires": 1814741420.309143,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_gcl_au",
+      "value": "1.1.1747320660.1783205421",
+      "domain": ".cashify.in",
+      "path": "/",
+      "expires": 1790981421,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "CLID",
+      "value": "ef87d62b14b5466b95845b90c784bb0a.20260704.20270704",
+      "domain": "www.clarity.ms",
+      "path": "/",
+      "expires": 1814741421.543042,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_hjSessionUser_435614",
+      "value": "eyJpZCI6IjI2ZGQ2MThjLWE3OGItNTZiNy1hNDc5LThjYWU4YTY2Y2ZmMyIsImNyZWF0ZWQiOjE3ODMyMDU0MjE3ODcsImV4aXN0aW5nIjpmYWxzZX0=",
+      "domain": ".cashify.in",
+      "path": "/",
+      "expires": 1814741421,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_hjSession_435614",
+      "value": "eyJpZCI6ImIwNjhlNGE2LThkYTAtNDk1YS05OWRhLTllODE3ZTczODhjZCIsImMiOjE3ODMyMDU0MjE3OTAsInMiOjAsInIiOjAsInNiIjowLCJzciI6MCwic2UiOjAsImZzIjoxLCJzcCI6MH0=",
+      "domain": ".cashify.in",
+      "path": "/",
+      "expires": 1783207251,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "SM",
+      "value": "T",
+      "domain": ".c.clarity.ms",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "MUID",
+      "value": "076B4A188BCE6FA815235D948FCE61FB",
+      "domain": ".clarity.ms",
+      "path": "/",
+      "expires": 1816901421.892474,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ga",
+      "value": "GA1.1.1800519385.1783205422",
+      "domain": ".cashify.in",
+      "path": "/",
+      "expires": 1817765421.945109,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_clck",
+      "value": "ap1pcb%5E2%5Eg7g%5E0%5E2376",
+      "domain": ".cashify.in",
+      "path": "/",
+      "expires": 1814741422,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "test_cookie",
+      "value": "CheckForPermission",
+      "domain": ".doubleclick.net",
+      "path": "/",
+      "expires": 1783206322.821777,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_clsk",
+      "value": "mpfx4u%5E1783205422941%5E1%5E0%5Ed.clarity.ms%2Fcollect",
+      "domain": ".cashify.in",
+      "path": "/",
+      "expires": 1783291822,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_cs__user_auth__v1",
+      "value": "eyJhbGciOiJIUzI1NiJ9.eyJtbiI6Ijg1NTM2Mjc0NzQiLCJ1aWQiOiIyNTYzMTA1IiwidW5hbWUiOiJuYXZlZWQiLCJraWQiOiIxMjM0NyIsImNsaWQiOiJjdXN0b21lciIsImNsdiI6InYxIiwiZXhwIjoxNzg0NDE1MDYzLCJjcCI6eyJzb3VyY2UiOiJjYXNoaWZ5In0sImd0Ijoib3RwIiwidnQiOjB9.rOSpzdSz-GWp8N4vHfmdayIJxOm9LAKcNhLFAyIgU-w",
+      "domain": ".cashify.in",
+      "path": "/",
+      "expires": 1784415063.56855,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "mp_5d27d57b0e6eae1593b14303f56280ba_mixpanel",
+      "value": "%7B%22distinct_id%22%3A%228553627474%22%2C%22%24device_id%22%3A%22885965a8-5d70-4546-bbb2-68f17684055b%22%2C%22%24initial_referrer%22%3A%22%24direct%22%2C%22%24initial_referring_domain%22%3A%22%24direct%22%2C%22__mps%22%3A%7B%7D%2C%22__mpso%22%3A%7B%7D%2C%22__mpus%22%3A%7B%7D%2C%22__mpa%22%3A%7B%7D%2C%22__mpu%22%3A%7B%7D%2C%22__mpr%22%3A%5B%5D%2C%22__mpap%22%3A%5B%5D%2C%22phone%22%3A%228553627474%22%2C%22email%22%3A%22Shaiknavvd786%40gmail.com%22%2C%22name%22%3A%22naveed%22%2C%22urefId%22%3A%22OFLJBUE%22%2C%22platform%22%3A%22cashify%22%2C%22%24user_id%22%3A%228553627474%22%7D",
+      "domain": ".cashify.in",
+      "path": "/",
+      "expires": 1814741463,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_PK3S363B17",
+      "value": "GS2.1.s1783205421$o1$g1$t1783205470$j11$l0$h0",
+      "domain": ".cashify.in",
+      "path": "/",
+      "expires": 1817765470.87439,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://www.cashify.in",
+      "localStorage": [
+        {
+          "name": "lastExternalReferrerTime",
+          "value": "1783205422661"
+        },
+        {
+          "name": "_ls__us_int_v1_exp_",
+          "value": "1814741420"
+        },
+        {
+          "name": "_ls_ev_v1_exp_",
+          "value": "1814741468"
+        },
+        {
+          "name": "gumlet-webp",
+          "value": "yes"
+        },
+        {
+          "name": "lastExternalReferrer",
+          "value": "empty"
+        },
+        {
+          "name": "__mpq_5d27d57b0e6eae1593b14303f56280ba_pp",
+          "value": "[]"
+        },
+        {
+          "name": "_ls__us_int_v1",
+          "value": "t"
+        },
+        {
+          "name": "_gcl_ls",
+          "value": "{\"schema\":\"gcl\",\"version\":1,\"gsid_dc\":{\"value\":{\"joinId\":\"aloMMl_DjcDAPnhGG3Ga7HOS_8zNrTowig\",\"lastJoinedTimeMs\":1783205421174},\"expires\":1783205721174},\"gcl_ctr\":{\"value\":{\"value\":0,\"timeouts\":0,\"errors\":0,\"eopCount\":0,\"creationTimeMs\":1783205421178},\"expires\":1790981421178}}"
+        },
+        {
+          "name": "_ls_ev_v1",
+          "value": "1"
+        },
+        {
+          "name": "_WE_z15ba1d691",
+          "value": "N4IgNgrglgJiBcIDGAzAhgVhgBjTNAjABwCmaAzGgGzYZHkYCc5jjARjAEwDsFPSZTgXJIQAGhAAXKAFsSCAt3qdaAFk4baEqAGcA4gC8oABwTowOkhJ2j4BayR06oAewB2CUE8kKl5FRjqmlQSxgButvbgaG4wUG4A5gAKaAnyiAAWkpLGOvAA9PkA7iUAdEhoOhlQKACepfH54iAATiQoJC1tLQggzTrQcHZ+AUEqISBhkkNREMYoniDGGe4kAPptaEgZaGxg6eaWEjAkYVACOp4AvhIkMmhQYBtk27v7ZmgWVksQVc9bOz2B0+R0mUDYnX+ryBHy+tzCJDckjWSBaUEknSglQQAG0ALoSIokNjGX4ZKGA97wQ7fFpIHQUt7AuEgIo7SQ6NDGYyMmHUkEkG5SHQAEQQGBUEjQAEcdENQGBTJlsrkCsUyhUqjV6o1mpJasZ0iA4m0kD4hUgXBAkS1ar0AJKxLHNNoJVweRAAaTQLTcaEkaAA1mhmkh0XbEAAhREJT4QFoQZpElFWm0RkCOuIhwnrV3u3re33+oPZ1nrMP63rRxJxhPNEy9AgYbilDDYUrEKilIggIUWHzDZRqDTjCQ5CIKCQQEPwHEgADCGRaLjkzQIqkYzQA6vEYC4ipdjo5A5IXKYCSAZXLForelkcnlCiUiuVKtU6g03E0xwajSaSGavZTv6kg9PAoDJpa1qgemmbOjmzxuu4BY+n6AbBkm5bhlWMa1omoRgP6KAuC0Mi9Jq752ghKBQC0OjIn6q6IH6CIkHACF3A8YC9AAyjsUCBixYQwEoVAAAIJPcjzlCumFrMsqy9AA1IwxAYBg5BUDwqjcKozS/J09pDCAKlqRpWm6bp+ltCgaywL0ADyABiAAyABSkYAKoAKJASAlhOO63kAB7GLRbGwqCJDGNKuIXkUPJntIbhrPqhq9KsAC09HRaGgzKapRDqZp2lWRIYAyByvhDoEVCadg3BXEAAA=="
+        },
+        {
+          "name": "__mpq_5d27d57b0e6eae1593b14303f56280ba_ev",
+          "value": "[]"
+        }
+      ]
+    },
+    {
+      "origin": "https://z15ba1d691.webengage.co",
+      "localStorage": [
+        {
+          "name": "_WE_z15ba1d691",
+          "value": "N4IgNgrglgJiBcIDGAzAhgVhgBjTNAjABwCmaAzGgGzYZHkYCc5jjARjAEwDsFPSZTgXJIQAGhAAXKAFsSCAt3qdaAFk4baEqAGcA4gC8oABwTowOkhJ2j4BayR06oAewB2CUE8kKl5FRjqmlQSxgButvbgaG4wUG4A5gAKaAnyiAAWkpLGOvAA9PkA7iUAdEhoOhlQKACepfH54iAATiQoJC1tLQggzTrQcHZ+AUEqISBhkkNREMYoniDGGe4kAPptaEgZaGxg6eaWEjAkYVACOp4AvhIkMmhQYBtk27v7ZmgWVksQVc9bOz2B0+R0mUDYnX+ryBHy+tzCJDckjWSBaUEknSglQQAG0ALoSIokNjGX4ZKGA97wQ7fFpIHQUt7AuEgIo7SQ6NDGYyMmHUkEkG5SHQAEQQGBUEjQAEcdENQGBTJlsrkCsUyhUqjV6o1mpJasZ0iA4m0kD4hUgXBAkS1ar0AJKxLHNNoJVweRAAaTQLTcaEkaAA1mhmkh0XbEAAhREJT4QFoQZpElFWm0RkCOuIhwnrV3u3re33+oPZ1nrMP63rRxJxhPNEy9AgYbilDDYUrEKilIggIUWHzDZRqDTjCQ5CIKCQQEPwHEgADCGRaLjkzQIqkYzQA6vEYC4ipdjo5A5IXKYCSAZXLForelkcnlCiUiuVKtU6g03E0xwajSaSGavZTv6kg9PAoDJpa1qgemmbOjmzxuu4BY+n6AbBkm5bhlWMa1omoRgP6KAuC0Mi9Jq752ghKBQC0OjIn6q6IH6CIkHACF3A8YC9AAyjsUCBixYQwEoVAAAIJPcjzlCumFrMsqy9AA1IwxAYBg5BUDwqjcKozS/J09pDCAKlqRpWm6bp+ltCgaywL0ADyABiAAyABSkYAKoAKJASAlhOO63kAB7GLRbGwqCJDGNKuIXkUPJntIbhrPqhq9KsAC09HRaGgzKapRDqZp2lWRIYAyByvhDoEVCadg3BXEAAA=="
+        }
+      ]
+    }
+  ]
+}

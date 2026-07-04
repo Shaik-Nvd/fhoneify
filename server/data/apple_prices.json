@@ -1,0 +1,264 @@
+╔══════════════════════════════════════════════════════════╗
+║  Cashify Apple Scraper v3  ·  Fast & Concurrent           ║
+╚══════════════════════════════════════════════════════════╝
+
+Fetching brand page: https://www.cashify.in/sell-old-mobile-phone/sell-apple
+Skipped 9 non-iPhone link(s) found on the brand page.
+Found 54 model links. Scraping with 12 parallel workers...
+
+  ⟶  Sell Old Apple iPhone X
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-x
+       ✓  Sell Old Apple iPhone X (3 GB/64 GB)  →  ₹9,740
+       ✓  Sell Old Apple iPhone X (3 GB/256 GB)  →  ₹10,470
+  ⟶  Sell Old Apple iPhone 11
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-11
+       ✓  Sell Old Apple iPhone 11 (4 GB/256 GB)  →  ₹14,520
+  ⟶  Sell Old Apple iPhone 12
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-12
+       ✓  Sell Old Apple iPhone 12 (4 GB/256 GB)  →  ₹19,320
+  ⟶  Sell Old Apple iPhone 6 Plus
+link : https://www.cashify.in/sell-old-mobile-phone/used-iphone-6-plus
+       ✓  Sell Old Apple iPhone 6 Plus (1 GB/16 GB)  →  ₹2,200
+       ✓  Sell Old Apple iPhone 6 Plus (1 GB/64 GB)  →  ₹2,500
+       ✓  Sell Old Apple iPhone 6 Plus (1 GB/128 GB)  →  ₹2,760
+  ⟶  Sell Old Apple iPhone 8
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-8
+       ✓  Sell Old Apple iPhone 8 (2 GB/64 GB)  →  ₹5,930
+       ✓  Sell Old Apple iPhone 8 (2 GB/128 GB)  →  ₹6,210
+       ✓  Sell Old Apple iPhone 8 (2 GB/256 GB)  →  ₹6,480
+  ⟶  Sell Old Apple iPhone 7
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-7
+       ✓  Sell Old Apple iPhone 7 (2 GB/32 GB)  →  ₹4,540
+       ✓  Sell Old Apple iPhone 7 (2 GB/128 GB)  →  ₹4,770
+       ✓  Sell Old Apple iPhone 7 (2 GB/256 GB)  →  ₹4,920
+  ⟶  Sell Old Apple iPhone 8 Plus
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-8-plus
+       ✓  Sell Old Apple iPhone 8 Plus (3 GB/64 GB)  →  ₹7,120
+       ✓  Sell Old Apple iPhone 8 Plus (3 GB/128 GB)  →  ₹7,230
+       ✓  Sell Old Apple iPhone 8 Plus (3 GB/256 GB)  →  ₹7,840
+  ⟶  Sell Old Apple iPhone 7 Plus
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-7-plus
+       ✓  Sell Old Apple iPhone 7 Plus (3 GB/32 GB)  →  ₹5,190
+       ✓  Sell Old Apple iPhone 7 Plus (3 GB/128 GB)  →  ₹5,590
+  ⟶  Sell Old Apple iPhone 6
+link : https://www.cashify.in/sell-old-mobile-phone/used-iphone-6
+       ✓  Sell Old Apple iPhone 6 (1 GB/16 GB)  →  ₹1,670
+       ✓  Sell Old Apple iPhone 6 (1 GB/32 GB)  →  ₹1,890
+       ✓  Sell Old Apple iPhone 6 (1 GB/64 GB)  →  ₹2,120
+       ✓  Sell Old Apple iPhone 6 (1 GB/128 GB)  →  ₹2,320
+  ⟶  Sell Old Apple iPhone 6S Plus
+link : https://www.cashify.in/sell-old-mobile-phone/used-iphone-6s-plus
+       ✓  Sell Old Apple iPhone 6S Plus (2 GB/16 GB)  →  ₹2,390
+       ✓  Sell Old Apple iPhone 6S Plus (2 GB/32 GB)  →  ₹2,950
+       ✓  Sell Old Apple iPhone 6S Plus (2 GB/64 GB)  →  ₹3,440
+       ✓  Sell Old Apple iPhone 6S Plus (2 GB/128 GB)  →  ₹3,820
+  ⟶  Sell Old Apple iPhone 6S
+link : https://www.cashify.in/sell-old-mobile-phone/used-iphone-6s
+       ✓  Sell Old Samsung Galaxy Note 20 (8 GB/256 GB)  →  ₹9,270
+       ✓  Sell Old Apple iPhone 6S (2 GB/16 GB)  →  ₹2,130
+       ✓  Sell Old Apple iPhone 6S (2 GB/32 GB)  →  ₹2,440
+       ✓  Sell Old Apple iPhone 6S (2 GB/64 GB)  →  ₹2,750
+       ✓  Sell Old Apple iPhone 6S (2 GB/128 GB)  →  ₹2,800
+  ⟶  Sell Old Apple iPhone SE 1st Generation
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-se
+       ✓  Sell Old Apple iPhone SE 1st Generation (2 GB/16 GB)  →  ₹1,700
+       ✓  Sell Old Apple iPhone SE 1st Generation (2 GB/32 GB)  →  ₹2,050
+       ✓  Sell Old Apple iPhone SE 1st Generation (2 GB/64 GB)  →  ₹2,200
+       ✓  Sell Old Apple iPhone SE 1st Generation (2 GB/128 GB)  →  ₹2,270
+  ⟶  Sell Old Apple iPhone XR
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-xr
+       ✓  Sell Old Apple iPhone XR (3 GB/64 GB)  →  ₹9,960
+       ✓  Sell Old Apple iPhone XR (3 GB/128 GB)  →  ₹10,790
+       ✓  Sell Old Apple iPhone XR (3 GB/256 GB)  →  ₹11,160
+  ⟶  Sell Old Apple iPhone XS Max
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-xs-max
+       ✓  Sell Old Apple iPhone XS Max (4 GB/64 GB)  →  ₹12,500
+       ✓  Sell Old Apple iPhone XS Max (4 GB/256 GB)  →  ₹13,090
+       ✓  Sell Old Apple iPhone XS Max (4 GB/512 GB)  →  ₹13,530
+  ⟶  Sell Old Apple iPhone XS
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-xs
+       ✓  Sell Old Apple iPhone XS (4 GB/64 GB)  →  ₹10,680
+       ✓  Sell Old Apple iPhone XS (4 GB/256 GB)  →  ₹12,000
+       ✓  Sell Old Apple iPhone XS (4 GB/512 GB)  →  ₹12,180
+  ⟶  Sell Old Apple iPhone 11 Pro Max
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-11-pro-max
+       ✓  Sell Old Apple iPhone 11 Pro Max (4 GB/64 GB)  →  ₹16,950
+       ✓  Sell Old Apple iPhone 11 Pro Max (4 GB/256 GB)  →  ₹19,060
+       ✓  Sell Old Apple iPhone 11 Pro Max (4 GB/512 GB)  →  ₹19,950
+  ⟶  Sell Old Apple iPhone 11 Pro
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-11-pro
+       ✓  Sell Old Apple iPhone 11 Pro (4 GB/64 GB)  →  ₹15,960
+       ✓  Sell Old Apple iPhone 11 Pro (4 GB/256 GB)  →  ₹17,740
+       ✓  Sell Old Apple iPhone 11 Pro (4 GB/512 GB)  →  ₹18,310
+  ⟶  Sell Old Apple iPhone SE 2020
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-se-2
+       ✓  Sell Old Apple iPhone SE 2020 (3 GB/64 GB)  →  ₹7,370
+       ✓  Sell Old Apple iPhone SE 2020 (3 GB/128 GB)  →  ₹7,850
+       ✓  Sell Old Apple iPhone SE 2020 (3 GB/256 GB)  →  ₹8,060
+  ⟶  Sell Old Apple iPhone 13
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-13
+       ✓  Sell Old Apple iPhone 13 (4 GB/256 GB)  →  ₹25,410
+       ✓  Sell Old Apple iPhone 13 (4 GB/512 GB)  →  ₹25,740
+  ⟶  Sell Old Apple iPhone 12 Pro
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-12-pro
+       ✓  Sell Old Apple iPhone 12 Pro (6 GB/128 GB)  →  ₹23,410
+       ✓  Sell Old Apple iPhone 12 Pro (6 GB/256 GB)  →  ₹25,250
+       ✓  Sell Old Apple iPhone 12 Pro (6 GB/512 GB)  →  ₹26,510
+  ⟶  Sell Old Apple iPhone 13 Pro
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-13-pro
+       ✓  Sell Old Apple iPhone 13 Pro (6 GB/256 GB)  →  ₹34,560
+       ✓  Sell Old Apple iPhone 13 Pro (6 GB/512 GB)  →  ₹36,020
+       ✓  Sell Old Apple iPhone 13 Pro (6 GB/1 TB)  →  ₹37,150
+  ⟶  Sell Old Apple iPhone 12 Pro Max
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-12-pro-max
+       ✓  Sell Old Apple iPhone 12 Pro Max (6 GB/128 GB)  →  ₹25,470
+       ✓  Sell Old Apple iPhone 12 Pro Max (6 GB/256 GB)  →  ₹26,890
+       ✓  Sell Old Apple iPhone 12 Pro Max (6 GB/512 GB)  →  ₹27,460
+  ⟶  Sell Old Apple iPhone 12 Mini
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-12-mini
+       ✓  Sell Old Apple iPhone 12 Mini (4 GB/64 GB)  →  ₹14,020
+       ✓  Sell Old Apple iPhone 12 Mini (4 GB/128 GB)  →  ₹16,010
+       ✓  Sell Old Apple iPhone 12 Mini (4 GB/256 GB)  →  ₹16,490
+  ⟶  Sell Old Apple iPhone 14 Pro Max
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-14-pro-max
+       ✓  Sell Old Apple iPhone 14 Pro Max (6 GB/128 GB)  →  ₹43,860
+       ✓  Sell Old Apple iPhone 14 Pro Max (6 GB/256 GB)  →  ₹46,530
+       ✓  Sell Old Apple iPhone 14 Pro Max (6 GB/512 GB)  →  ₹47,180
+       ✓  Sell Old Apple iPhone 14 Pro Max (6 GB/1 TB)  →  ₹48,230
+  ⟶  Sell Old Apple iPhone 14
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-14
+       ✓  Sell Old Apple iPhone 14 (6 GB/256 GB)  →  ₹28,510
+       ✓  Sell Old Apple iPhone 14 (6 GB/512 GB)  →  ₹28,750
+  ⟶  Sell Old Apple iPhone 13 Pro Max
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-13-pro-max
+       ✓  Sell Old Apple iPhone 13 Pro Max (6 GB/128 GB)  →  ₹35,730
+       ✓  Sell Old Apple iPhone 13 Pro Max (6 GB/256 GB)  →  ₹37,750
+       ✓  Sell Old Apple iPhone 13 Pro Max (6 GB/512 GB)  →  ₹38,610
+       ✓  Sell Old Apple iPhone 13 Pro Max (6 GB/1 TB)  →  ₹39,370
+  ⟶  Sell Old Apple iPhone 13 Mini
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-13-mini
+       ✓  Sell Old Apple iPhone 13 Mini (4 GB/128 GB)  →  ₹21,830
+       ✓  Sell Old Apple iPhone 13 Mini (4 GB/256 GB)  →  ₹22,440
+       ✓  Sell Old Apple iPhone 13 Mini (4 GB/512 GB)  →  ₹22,850
+  ⟶  Sell Old Apple iPhone 14 Pro
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-14-pro
+       ✓  Sell Old Apple iPhone 14 Pro (6 GB/256 GB)  →  ₹44,070
+       ✓  Sell Old Apple iPhone 14 Pro (6 GB/512 GB)  →  ₹45,690
+       ✓  Sell Old Apple iPhone 14 Pro (6 GB/1 TB)  →  ₹46,580
+  ⟶  Sell Old Apple iPhone SE 2022
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-se-2022
+       ✓  Sell Old Apple iPhone SE 2022 (4 GB/64 GB)  →  ₹11,690
+       ✓  Sell Old Apple iPhone SE 2022 (4 GB/128 GB)  →  ₹12,400
+       ✓  Sell Old Apple iPhone SE 2022 (4 GB/256 GB)  →  ₹12,640
+  ⟶  Sell Old Apple iPhone 14 Plus
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-14-plus
+       ✓  Sell Old Apple iPhone 14 Plus (6 GB/128 GB)  →  ₹29,350
+       ✓  Sell Old Apple iPhone 14 Plus (6 GB/256 GB)  →  ₹30,050
+       ✓  Sell Old Apple iPhone 14 Plus (6 GB/512 GB)  →  ₹30,940
+  ⟶  Sell Old Apple iPhone 15 Pro Max
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-15-pro-max
+       ✓  Sell Old Apple iPhone 15 Pro Max (8 GB/256 GB)  →  ₹72,830
+       ✓  Sell Old Apple iPhone 15 Pro Max (8 GB/512 GB)  →  ₹74,780
+       ✓  Sell Old Apple iPhone 15 Pro Max (8 GB/1 TB)  →  ₹79,070
+  ⟶  Sell Old Apple iPhone 15 Pro
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-15-pro
+       ✓  Sell Old Apple iPhone 15 Pro (8 GB/256 GB)  →  ₹67,280
+       ✓  Sell Old Apple iPhone 15 Pro (8 GB/512 GB)  →  ₹68,250
+       ✓  Sell Old Apple iPhone 15 Pro (8 GB/1 TB)  →  ₹70,300
+  ⟶  Sell Old Apple iPhone 15
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-15
+       ✓  Sell Old Apple iPhone 15 (6 GB/256 GB)  →  ₹43,270
+       ✓  Sell Old Apple iPhone 15 (6 GB/512 GB)  →  ₹45,570
+  ⟶  Sell Old Apple iPhone 15 Plus
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-15-plus
+       ✓  Sell Old Apple iPhone 15 Plus (6 GB/128 GB)  →  ₹44,970
+       ✓  Sell Old Apple iPhone 15 Plus (6 GB/256 GB)  →  ₹48,190
+       ✓  Sell Old Apple iPhone 15 Plus (6 GB/512 GB)  →  ₹49,250
+  ⟶  Sell Old Apple iPhone 13 (4 GB/128 GB)
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-13-4-gb-128-gb
+       ✓  Sell Old Apple iPhone 13 (4 GB/128 GB)  →  ₹23,950
+  ⟶  Sell Old Apple iPhone 16 Plus
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-16-plus
+       ✓  Sell Old Apple iPhone 16 Plus (8 GB/128 GB)  →  ₹53,410
+       ✓  Sell Old Apple iPhone 16 Plus (8 GB/256 GB)  →  ₹53,790
+       ✓  Sell Old Apple iPhone 16 Plus (8 GB/512 GB)  →  ₹54,950
+  ⟶  Sell Old Apple iPhone 14 (6 GB/128 GB)
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-14-6-gb-128-gb
+       ✓  Sell Old Apple iPhone 14 (6 GB/128 GB)  →  ₹27,120
+  ⟶  Sell Old Apple iPhone 17
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-17
+       ✓  Sell Old Apple iPhone 17 (8 GB/256 GB)  →  ₹56,500
+       ✓  Sell Old Apple iPhone 17 (8 GB/512 GB)  →  ₹65,000
+  ⟶  Sell Old Apple iPhone Air
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-17-Air
+       ✓  Sell Old Apple iPhone Air (12 GB/256 GB)  →  ₹67,100
+       ✓  Sell Old Apple iPhone Air (12 GB/512 GB)  →  ₹77,000
+       ✓  Sell Old Apple iPhone Air (12 GB/1 TB)  →  ₹87,000
+  ⟶  Sell Old Apple iPhone 16 Pro Max
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-16-pro-max
+       ✓  Sell Old Apple iPhone 16 Pro Max (8 GB/256 GB)  →  ₹87,300
+       ✓  Sell Old Apple iPhone 16 Pro Max (8 GB/512 GB)  →  ₹90,300
+       ✓  Sell Old Apple iPhone 16 Pro Max (8 GB/1 TB)  →  ₹93,500
+  ⟶  Sell Old Apple iPhone 16
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-16
+       ✓  Sell Old Apple iPhone 16 (8 GB/128 GB)  →  ₹45,080
+       ✓  Sell Old Apple iPhone 16 (8 GB/256 GB)  →  ₹50,960
+       ✓  Sell Old Apple iPhone 16 (8 GB/512 GB)  →  ₹52,470
+  ⟶  Sell Old Apple iPhone 16 Pro
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-16-pro
+       ✓  Sell Old Apple iPhone 16 Pro (8 GB/128 GB)  →  ₹72,000
+       ✓  Sell Old Apple iPhone 16 Pro (8 GB/256 GB)  →  ₹77,500
+       ✓  Sell Old Apple iPhone 16 Pro (8 GB/512 GB)  →  ₹79,000
+       ✓  Sell Old Apple iPhone 16 Pro (8 GB/1 TB)  →  ₹80,500
+  ⟶  Sell Old Apple iPhone 16e
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-16e
+       ✓  Sell Old Apple iPhone 16e (8 GB/128 GB)  →  ₹36,000
+       ✓  Sell Old Apple iPhone 16e (8 GB/256 GB)  →  ₹39,000
+       ✓  Sell Old Apple iPhone 16e (8 GB/512 GB)  →  ₹41,600
+  ⟶  Sell Old Apple iPhone 17e
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-17e
+       ✓  Sell Old Apple iPhone 17e (8 GB/256 GB)  →  ₹44,000
+       ✓  Sell Old Apple iPhone 17e (8 GB/512 GB)  →  ₹52,700
+  ⟶  Sell Old Apple iPhone 11 (4 GB/64 GB)
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-11-4-gb-64-gb
+       ✓  Sell Old Apple iPhone 11 (4 GB/64 GB)  →  ₹13,220
+  ⟶  Sell Old Apple iPhone 17 Pro
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-17-pro
+       ✓  Sell Old Apple iPhone 17 Pro (12 GB/256 GB)  →  ₹99,000
+       ✓  Sell Old Apple iPhone 17 Pro (12 GB/512 GB)  →  ₹105,000
+       ✓  Sell Old Apple iPhone 17 Pro (12 GB/1 TB)  →  ₹110,500
+  ⟶  Sell Old Apple iPhone 14 Pro (6 GB/128 GB)
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-14-pro-6-gb-128-gb
+       ✓  Sell Old Apple iPhone 14 Pro (6 GB/128 GB)  →  ₹41,640
+  ⟶  Sell Old Apple iPhone 12 (4 GB/128 GB)
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-12-4-gb-128-gb
+       ✓  Sell Old Apple iPhone 12 (4 GB/128 GB)  →  ₹17,700
+  ⟶  Sell Old Apple iPhone 15 (6 GB/128 GB)
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-15-6-gb-128-gb
+       ✓  Sell Old Apple iPhone 15 (6 GB/128 GB)  →  ₹38,520
+  ⟶  Sell Old Apple iPhone 15 Pro (8 GB/128 GB)
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-15-pro-8-gb-128-gb
+       ✓  Sell Old Apple iPhone 15 Pro (8 GB/128 GB)  →  ₹63,280
+  ⟶  Sell Old Apple iPhone 17 Pro Max
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-17-pro-max
+       ✓  Sell Old Apple iPhone 17 Pro Max (12 GB/256 GB)  →  ₹108,500
+       ✓  Sell Old Apple iPhone 17 Pro Max (12 GB/512 GB)  →  ₹114,500
+       ✓  Sell Old Apple iPhone 17 Pro Max (12 GB/1 TB)  →  ₹116,000
+       ✓  Sell Old Apple iPhone 17 Pro Max (12 GB/2 TB)  →  ₹123,000
+  ⟶  Sell Old Apple iPhone 11 (4 GB/128 GB)
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-11-4-gb-128-gb
+       ✓  Sell Old Apple iPhone 11 (4 GB/128 GB)  →  ₹14,110
+  ⟶  Sell Old Apple iPhone 12 (4 GB/64 GB)
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-12-4-gb-64-gb
+       ✓  Sell Old Apple iPhone 12 (4 GB/64 GB)  →  ₹16,690
+  ⟶  Sell Old Apple iPhone 13 Pro (6 GB/128 GB)
+link : https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-13-pro-6-gb-128-gb
+       ✓  Sell Old Apple iPhone 13 Pro (6 GB/128 GB)  →  ₹33,100
+
+══════════════════════════════════════════════════════════
+  Devices scraped : 54
+  Prices found    : 140 / 140 variants
+  Saved JSON      : apple_prices.json
+  Saved text      : apple_prices_display.txt
+  Elapsed time    : 19.9s
+══════════════════════════════════════════════════════════

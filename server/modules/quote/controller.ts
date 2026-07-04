@@ -81,3 +81,30 @@ export async function createLead(req: Request, res: Response) {
     return res.status(500).json({ success: false, error: 'Internal server error' });
   }
 }
+
+import { scrapeCashifyPrice } from './cashifyScraper';
+
+export async function getCashifyPrice(req: Request, res: Response) {
+  try {
+    const { brand, model, storage, answers, fhoneifyPrice } = req.body;
+    if (!brand || !model) {
+      return res.status(400).json({ success: false, error: 'brand and model are required' });
+    }
+
+    if (fhoneifyPrice) {
+      logger.info(`Fhoneify calculated price for ${brand} ${model} (${storage}): ₹${fhoneifyPrice}`);
+    }
+    
+    // Call the scraper
+    const result = await scrapeCashifyPrice({ brand, model, storage, answers });
+    
+    if (result.success) {
+      return res.json({ success: true, data: result.price });
+    } else {
+      return res.status(500).json({ success: false, error: result.error });
+    }
+  } catch (err: any) {
+    logger.error({ err: err.message }, 'Error in getCashifyPrice controller');
+    return res.status(500).json({ success: false, error: err.message || 'Internal server error' });
+  }
+}

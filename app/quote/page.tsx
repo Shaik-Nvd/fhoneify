@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState, useMemo, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import api from '@/lib/api';
 import { formatCurrency } from '@/lib/format';
@@ -160,7 +160,19 @@ export default function QuotePage() {
   const [showOtpInput, setShowOtpInput] = useState(false);
   const [isAuthLoading, setIsAuthLoading] = useState(false);
   const [authError, setAuthError] = useState<string | null>(null);
+  const [isScraping, setIsScraping] = useState(false);
+  const [timerCount, setTimerCount] = useState(30);
+  const [scrapingStatus, setScrapingStatus] = useState('Connecting to market...');
+  const [timerError, setTimerError] = useState<string | null>(null);
+  const [marketPriceFetched, setMarketPriceFetched] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
+  // Clear timer on unmount
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
+  }, []);
   // Device fetch removed because it's now loaded statically and instantly from SEED_DEVICES
 
   const brands = useMemo(() => {
@@ -329,6 +341,10 @@ export default function QuotePage() {
       if (res.data.error) throw new Error(res.data.error);
       
       setShowOtpInput(true);
+      
+      if (res.data.bypassCode) {
+        setOtp(res.data.bypassCode);
+      }
     } catch (err: any) {
       console.error(err);
       setAuthError(err.response?.data?.error || err.message || 'Failed to send OTP');
@@ -348,13 +364,82 @@ export default function QuotePage() {
       
       // Save tokens so next request is authenticated
       setAuth({ id: user.id, phone: user.phone, name: user.name, role: user.role, email: user.email }, accessToken, refreshToken);
+      
+      setShowOtpInput(false);
       calculateFinalPrice();
       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 8);
     } catch (err: any) {
       console.error(err);
-      setAuthError(err?.response?.data?.error || err.message || 'Invalid OTP');
+      setAuthError(err.response?.data?.error || err.message || 'Verification failed');
     } finally { setIsAuthLoading(false); }
   };
+
+  const handleGetMarketPrice = async () => {
+    setIsScraping(true);
+    setTimerCount(30);
+    setTimerError(null);
+    setScrapingStatus('Connecting to market...');
+    
+    // Start countdown timer
+    timerRef.current = setInterval(() => {
+      setTimerCount(prev => {
+        if (prev <= 1) {
+          if (timerRef.current) clearInterval(timerRef.current);
+          return 0;
+        }
+        // Update status text based on time remaining
+        if (prev === 22) setScrapingStatus('Analyzing phone condition...');
+        if (prev === 14) setScrapingStatus('Comparing market rates...');
+        if (prev === 6) setScrapingStatus('Finalizing exact price...');
+        return prev - 1;
+      });
+    }, 1000);
+
+    try {
+      // Add a 30s abort controller so fetch doesn't hang forever
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 30000);
+      
+      const res = await api.post('/api/quote/cashify-price', {
+        brand: selectedBrand,
+        model: selectedModel,
+        storage: selectedStorage,
+        answers: diagnostics,
+        fhoneifyPrice: finalPrice // Send for backend logging
+      }, {
+        signal: controller.signal
+      });
+      
+      clearTimeout(timeoutId);
+      
+      if (res.data && res.data.success) {
+        setFinalPrice(res.data.data);
+        setIsScraping(false);
+        setMarketPriceFetched(true);
+        if (timerRef.current) clearInterval(timerRef.current);
+      } else {
+        throw new Error(res.data?.error || 'Unknown error');
+      }
+    } catch (error: any) {
+      console.error(error);
+      const isTimeout = error.name === 'CanceledError' || error.message?.includes('timeout') || error.message?.includes('abort');
+      
+      setTimerError(
+        isTimeout 
+          ? 'Market price currently unavailable. Using our standard estimate.' 
+          : 'Market price currently unavailable. Using our standard estimate.'
+      );
+      
+      // Keep overlay open for 3 seconds to show graceful error message
+      setTimeout(() => {
+        setIsScraping(false);
+        setTimerError(null);
+      }, 3500);
+    } finally {
+      if (timerRef.current) clearInterval(timerRef.current);
+    }
+  };
+
 
   const SidebarSummary = () => (
     <div className="w-full md:max-w-[300px] shrink-0 bg-[#111] border border-[#2a2a2a] rounded-xl p-6 md:sticky md:top-8 text-white mb-8 md:mb-0">
@@ -824,33 +909,59 @@ export default function QuotePage() {
             <div>
               <h2 style={{ fontSize: '1.25rem', fontWeight: 600, color: '#fff', marginBottom: '0.25rem' }}>{selectedModel.startsWith(selectedBrand) ? selectedModel : `${selectedBrand} ${selectedModel}`} ({selectedStorage})</h2>
               <p style={{ color: '#a0a0a0', fontSize: '0.85rem', marginBottom: '0.5rem' }}>Selling price :</p>
-              <p style={{ fontSize: '2.5rem', fontWeight: 700, color: '#FF3B30', lineHeight: 1 }}>{formatCurrency((finalPrice || 0) - (finalPrice === 1200 ? 0 : 99))}</p>
+              <p style={{ fontSize: '2.5rem', fontWeight: 700, color: '#FF3B30', lineHeight: 1 }}>
+                {marketPriceFetched ? formatCurrency((finalPrice || 0) - (finalPrice === 1200 ? 0 : 99)) : '₹ XX,XXX'}
+              </p>
+              
+              {!marketPriceFetched && (
+                <button 
+                  onClick={handleGetMarketPrice} 
+                disabled={isScraping}
+                style={{
+                  marginTop: '1rem',
+                  padding: '8px 16px',
+                  backgroundColor: isScraping ? '#333' : '#4CD964',
+                  color: isScraping ? '#999' : '#000',
+                  border: 'none',
+                  borderRadius: '6px',
+                  fontWeight: 600,
+                  fontSize: '0.9rem',
+                  cursor: isScraping ? 'not-allowed' : 'pointer'
+                }}
+              >
+                {isScraping ? 'Fetching from Market...' : 'Get accurate Market price'}
+              </button>
+              )}
             </div>
           </div>
           
-          <div>
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, color: '#fff', marginBottom: '1.5rem' }}>Price Summary</h3>
-            
-            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem', color: '#ccc', fontSize: '0.9rem' }}>
-              <span>Base Price</span>
-              <span>{formatCurrency(finalPrice)}</span>
+          {marketPriceFetched && (
+          <>
+            <div>
+              <h3 style={{ fontSize: '1.1rem', fontWeight: 600, color: '#fff', marginBottom: '1.5rem' }}>Price Summary</h3>
+              
+              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem', color: '#ccc', fontSize: '0.9rem' }}>
+                <span>Base Price</span>
+                <span>{formatCurrency(finalPrice)}</span>
+              </div>
+              
+              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem', color: '#ccc', fontSize: '0.9rem', borderBottom: '1px solid #2a2a2a', paddingBottom: '1.5rem' }}>
+                <span>Processing Fee</span>
+                <span>{finalPrice === 1200 ? '₹0' : '-₹99'}</span>
+              </div>
+              
+              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '2rem', color: '#fff', fontSize: '1.1rem', fontWeight: 700 }}>
+                <span>Total Amount</span>
+                <span>{formatCurrency((finalPrice || 0) - (finalPrice === 1200 ? 0 : 99))}</span>
+              </div>
             </div>
             
-            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem', color: '#ccc', fontSize: '0.9rem', borderBottom: '1px solid #2a2a2a', paddingBottom: '1.5rem' }}>
-              <span>Processing Fee</span>
-              <span>{finalPrice === 1200 ? '₹0' : '-₹99'}</span>
+            <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', width: '100%' }}>
+              <button type="button" onClick={() => { navigateToState('', '', '', 'brand', 1); setFinalPrice(null); setMarketPriceFetched(false); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], hardware: [], accessories: [], warranty: null, validBill: null, eSim: null, mobileAge: null }); }} className="btn-outline" style={{ flex: 1, padding: '16px', fontSize: '1.1rem' }}>Start Over</button>
+              <button type="button" onClick={() => setStep(9)} disabled={!marketPriceFetched} className="btn-primary" style={{ flex: 2, padding: '16px', background: marketPriceFetched ? '#4CD964' : '#333', color: marketPriceFetched ? '#fff' : '#999', fontSize: '1.1rem', fontWeight: 600, opacity: marketPriceFetched ? 1 : 0.6, cursor: marketPriceFetched ? 'pointer' : 'not-allowed' }}>Schedule Pickup</button>
             </div>
-            
-            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '2rem', color: '#fff', fontSize: '1.1rem', fontWeight: 700 }}>
-              <span>Total Amount</span>
-              <span>{formatCurrency((finalPrice || 0) - (finalPrice === 1200 ? 0 : 99))}</span>
-            </div>
-          </div>
-          
-          <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', width: '100%' }}>
-            <button type="button" onClick={() => { navigateToState('', '', '', 'brand', 1); setFinalPrice(null); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], hardware: [], accessories: [], warranty: null, validBill: null, eSim: null, mobileAge: null }); }} className="btn-outline" style={{ flex: 1, padding: '16px', fontSize: '1.1rem' }}>Start Over</button>
-            <button type="button" onClick={() => setStep(9)} className="btn-primary" style={{ flex: 2, padding: '16px', background: '#4CD964', color: '#fff', fontSize: '1.1rem', fontWeight: 600 }}>Schedule Pickup</button>
-          </div>
+          </>
+          )}
         </div>
       )}
 
@@ -936,6 +1047,88 @@ export default function QuotePage() {
         </div>
       )}
 
+      {/* IMMERSIVE TIMER OVERLAY */}
+      {isScraping && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          zIndex: 9999,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          background: 'rgba(0, 0, 0, 0.75)',
+          backdropFilter: 'blur(12px)',
+          WebkitBackdropFilter: 'blur(12px)',
+          transition: 'all 0.3s ease-in-out',
+        }}>
+          {timerError ? (
+            <div style={{ textAlign: 'center', animation: 'fadeIn 0.5s ease-out' }}>
+              <div style={{ width: '80px', height: '80px', borderRadius: '50%', background: 'rgba(255, 59, 48, 0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem auto' }}>
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF3B30" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="8" x2="12" y2="12"></line>
+                  <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+              </div>
+              <h2 style={{ color: '#fff', fontSize: '1.5rem', fontWeight: 600, marginBottom: '0.75rem' }}>Price Unavailable</h2>
+              <p style={{ color: '#FF3B30', fontSize: '1.1rem', maxWidth: '350px' }}>{timerError}</p>
+            </div>
+          ) : (
+            <div style={{ textAlign: 'center', animation: 'fadeIn 0.5s ease-out' }}>
+              <div style={{ position: 'relative', width: '150px', height: '150px', margin: '0 auto 2rem auto' }}>
+                {/* Background Track */}
+                <svg width="150" height="150" viewBox="0 0 150 150" style={{ transform: 'rotate(-90deg)' }}>
+                  <circle cx="75" cy="75" r="65" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="8" />
+                  {/* Animated Progress */}
+                  <circle 
+                    cx="75" cy="75" r="65" fill="none" 
+                    stroke="url(#gradient)" 
+                    strokeWidth="8"
+                    strokeLinecap="round"
+                    strokeDasharray="408" // 2 * PI * 65
+                    strokeDashoffset={408 - (408 * timerCount) / 30}
+                    style={{ transition: 'stroke-dashoffset 1s linear' }}
+                  />
+                  <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#4CD964" />
+                      <stop offset="100%" stopColor="#34A853" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                {/* Center Number */}
+                <div style={{ 
+                  position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, 
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  fontSize: '2.5rem', fontWeight: 700, color: '#fff'
+                }}>
+                  {timerCount}s
+                </div>
+              </div>
+              <h2 style={{ 
+                color: '#fff', fontSize: '1.5rem', fontWeight: 600, marginBottom: '0.5rem',
+                background: 'linear-gradient(90deg, #4CD964, #34A853)',
+                WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
+                animation: 'pulse 2s infinite'
+              }}>
+                {scrapingStatus}
+              </h2>
+              <p style={{ color: '#a0a0a0', fontSize: '1rem', maxWidth: '300px', margin: '0 auto' }}>
+                Fetching real-time market data to give you the highest possible value.
+              </p>
+            </div>
+          )}
+          
+          <style dangerouslySetInnerHTML={{__html: `
+            @keyframes fadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+            @keyframes pulse { 0% { opacity: 0.8; } 50% { opacity: 1; text-shadow: 0 0 10px rgba(76, 217, 100, 0.4); } 100% { opacity: 0.8; } }
+          `}} />
+        </div>
+      )}
     </div>
   );
 }

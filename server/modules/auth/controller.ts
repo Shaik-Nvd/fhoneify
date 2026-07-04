@@ -45,51 +45,52 @@ export async function sendOtp(req: Request, res: Response) {
       create: { phone, code, expiresAt },
     });
 
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 3000); // 3 second timeout for blazing fast fallback
-
-    let response;
-    try {
-      response = await fetch(`https://graph.facebook.com/v25.0/${process.env.WHATSAPP_PHONE_NUMBER_ID}/messages`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${process.env.WHATSAPP_ACCESS_TOKEN}`,
-          'Content-Type': 'application/json',
-        },
-        signal: controller.signal,
-        body: JSON.stringify({
-          messaging_product: 'whatsapp',
-          to: phone.replace('+', ''),
-          type: 'template',
-          template: {
-            name: process.env.WHATSAPP_OTP_TEMPLATE_NAME,
-            language: { code: 'en' },
-            components: [
-              { type: 'body', parameters: [{ type: 'text', text: code }] },
-              {
-                type: 'button',
-                sub_type: 'url',
-                index: '0',
-                parameters: [{ type: 'text', text: code }]
+    // Send the WhatsApp message asynchronously in the background
+    // This allows the frontend to instantly show the OTP input without waiting for WhatsApp API
+    if (process.env.WHATSAPP_ACCESS_TOKEN && process.env.WHATSAPP_PHONE_NUMBER_ID) {
+      logger.info(`[WhatsApp API] Attempting to send OTP ${code} to ${phone}`);
+      setTimeout(async () => {
+        try {
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 10000);
+          
+          await fetch(`https://graph.facebook.com/v25.0/${process.env.WHATSAPP_PHONE_NUMBER_ID}/messages`, {
+            method: 'POST',
+            headers: {
+              'Authorization': `Bearer ${process.env.WHATSAPP_ACCESS_TOKEN}`,
+              'Content-Type': 'application/json',
+            },
+            signal: controller.signal,
+            body: JSON.stringify({
+              messaging_product: 'whatsapp',
+              to: phone.replace('+', ''),
+              type: 'template',
+              template: {
+                name: process.env.WHATSAPP_OTP_TEMPLATE_NAME,
+                language: { code: 'en' },
+                components: [
+                  { type: 'body', parameters: [{ type: 'text', text: code }] },
+                  {
+                    type: 'button',
+                    sub_type: 'url',
+                    index: '0',
+                    parameters: [{ type: 'text', text: code }]
+                  }
+                ]
               }
-            ]
-          }
-        })
-      });
-      clearTimeout(timeoutId);
-    } catch (fetchErr) {
-      clearTimeout(timeoutId);
-      logger.error('WhatsApp API request timed out or failed instantly', fetchErr);
-      return res.status(200).json({ success: true, bypassCode: code, message: 'WhatsApp delivery timed out (Fallback activated)' });
+            })
+          });
+          clearTimeout(timeoutId);
+        } catch (fetchErr) {
+          logger.error('Background WhatsApp delivery failed', fetchErr);
+        }
+      }, 0);
+    } else {
+      logger.info(`Developer bypass activated. OTP for ${phone} is ${code}`);
+      return res.status(200).json({ success: true, bypassCode: code, message: 'Developer bypass' });
     }
 
-    if (!response.ok) {
-      const err = await response.json();
-      console.error(err);
-      // Fallback: return the generated random code to the frontend so they aren't blocked
-      return res.status(200).json({ success: true, bypassCode: code, message: 'WhatsApp delivery failed' });
-    }
-
+    // Instantly return success so the frontend loads the OTP box immediately
     return res.status(200).json({ success: true });
   } catch (e) {
     return res.status(500).json({ error: 'Server database error' });
