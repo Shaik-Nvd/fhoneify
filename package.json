@@ -10,7 +10,8 @@
     "start": "next start",
     "start:api": "tsx server/server.ts",
     "lint": "next lint",
-    "setup-cashify": "node scripts/setup-cashify.js"
+    "setup-cashify": "node scripts/setup-cashify.js",
+    "postinstall": "npx playwright install chromium"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"

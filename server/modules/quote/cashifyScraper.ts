@@ -37,7 +37,7 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
     let context: BrowserContext | null = null;
 
     try {
-      browser = await chromium.launch({ headless: false }); // Launch visible to avoid some bot blocks
+      browser = await chromium.launch({ headless: true }); // Must be headless in production server environments
       context = await browser.newContext({ storageState: sessionFile });
       const page = await context.newPage();
 
