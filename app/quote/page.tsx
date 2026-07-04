@@ -424,10 +424,12 @@ export default function QuotePage() {
       console.error(error);
       const isTimeout = error.name === 'CanceledError' || error.message?.includes('timeout') || error.message?.includes('abort');
       
+      const serverErrorMessage = error.response?.data?.error || error.message || 'Unknown error';
+      
       setTimerError(
         isTimeout 
-          ? 'Market price currently unavailable. Using our standard estimate.' 
-          : 'Market price currently unavailable. Using our standard estimate.'
+          ? 'Market price currently unavailable. Request timed out.' 
+          : `Server Error: ${serverErrorMessage}`
       );
       
       // Keep overlay open for 3 seconds to show graceful error message
