@@ -54,10 +54,8 @@ export default function QuotePage() {
   const isWarrantyEligible = (brand: string, model: string) => {
     if (brand === 'Apple') {
       const lowerModel = model.toLowerCase();
-      // Only iPhones 13, 14, 15, 16, 17, and iPhone Air are warranty eligible
+      // Only iPhones 15, 16, 17, and iPhone Air are warranty eligible (released within 1-2 years)
       return (
-        lowerModel.includes('13') ||
-        lowerModel.includes('14') ||
         lowerModel.includes('15') ||
         lowerModel.includes('16') ||
         lowerModel.includes('17') ||
@@ -70,21 +68,15 @@ export default function QuotePage() {
   const isESimEligible = (brand: string, model: string) => {
     if (brand.toLowerCase() !== 'apple') return false;
     const lower = model.toLowerCase();
-    return (
-      lower.includes('xs') ||
-      lower.includes('xr') ||
-      lower.includes('11') ||
-      lower.includes('12') ||
-      lower.includes('13') ||
-      lower.includes('14') ||
-      lower.includes('15') ||
-      lower.includes('16') ||
-      lower.includes('17') ||
-      lower.includes('air') ||
-      lower.includes('se 2020') ||
-      lower.includes('se 2022') ||
-      (lower.includes('se') && (lower.includes('2nd') || lower.includes('3rd') || lower.includes('2020') || lower.includes('2022')))
-    );
+    // eSIM question is only asked for Pro and Pro Max variants of iPhone 13, 14, 15, 16, 17
+    const isProOrProMax = lower.includes('pro') || lower.includes('max');
+    const isRecentGeneration = 
+      lower.includes('13') || 
+      lower.includes('14') || 
+      lower.includes('15') || 
+      lower.includes('16') || 
+      lower.includes('17');
+    return isProOrProMax && isRecentGeneration;
   };
 
   const hasChargerInBox = (brand: string, model: string) => {

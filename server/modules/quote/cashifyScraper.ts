@@ -34,7 +34,10 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
   // Boot or reuse global browser
   if (!globalBrowser) {
     logger.info('Launching new persistent Chromium instance...');
-    globalBrowser = await chromium.launch({ headless: false });
+    globalBrowser = await chromium.launch({ 
+      headless: true,
+      args: ['--no-sandbox', '--disable-setuid-sandbox']
+    });
   }
 
   for (let i = 0; i < sessionFiles.length; i++) {

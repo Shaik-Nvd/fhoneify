@@ -8,7 +8,7 @@
     "dev:api": "tsx watch server/server.ts",
     "build": "next build",
     "start": "next start",
-    "start:api": "tsx server/server.ts",
+    "start:api": "npx prisma db push && tsx server/server.ts",
     "lint": "next lint",
     "setup-cashify": "node scripts/setup-cashify.js",
     "postinstall": "npx playwright install chromium"
@@ -30,6 +30,8 @@
     "pino": "^10.3.1",
     "playwright": "^1.61.1",
     "prisma": "^5.14.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^10.1.0",

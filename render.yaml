@@ -1,10 +1,8 @@
 services:
   - type: web
     name: fhoneify-api
-    env: node
+    env: docker
     plan: free
-    buildCommand: npm install && npx prisma generate && npx prisma db push
-    startCommand: npm run start:api
     envVars:
       - key: NODE_ENV
         value: production
