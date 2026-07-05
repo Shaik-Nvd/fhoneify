@@ -147,20 +147,20 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
         
         if (yesBtns.length >= 3 && noBtns.length >= 3) {
           // Calls
-          if (answers.calls === 'no') await noBtns[0].click(); else await yesBtns[0].click();
+          if (answers.calls === false) await noBtns[0].click(); else await yesBtns[0].click();
           // Touch screen
-          if (answers.screen === 'touch_faulty') await noBtns[1].click(); else await yesBtns[1].click();
+          if (answers.touch === false) await noBtns[1].click(); else await yesBtns[1].click();
           // Original screen
-          if (answers.screen === 'broken' || answers.screen === 'scratched' || answers.screen === 'touch_faulty') await noBtns[2].click(); else await yesBtns[2].click();
+          if (answers.originalScreen === false) await noBtns[2].click(); else await yesBtns[2].click();
           
           // Warranty (may or may not be present)
           if (yesBtns.length >= 4 && noBtns.length >= 4) {
-            if (answers.warranty !== '11+') await noBtns[3].click(); else await yesBtns[3].click();
+            if (answers.mobileAge === '>11' || answers.warranty === false) await noBtns[3].click(); else await yesBtns[3].click();
           }
           
           // GST bill (if present)
           if (yesBtns.length > 4) {
-            if (answers.warranty && answers.warranty !== '11+') await yesBtns[4].click(); else await noBtns[4].click();
+            if (answers.validBill === false) await noBtns[4].click(); else await yesBtns[4].click();
           }
         }
         
@@ -170,12 +170,12 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
         // PAGE 2: Screen/Body Defects
         await page.waitForTimeout(2000);
         
-        if (answers.screen === 'broken' || answers.screen === 'scratched') {
+        if (answers.defects && answers.defects.includes('broken_screen')) {
           const screenScratch = await page.$('text=Broken/scratch on device screen');
           if (screenScratch) await screenScratch.click();
         }
         
-        if (answers.body === 'dented' || answers.body === 'scratched') {
+        if (answers.defects && (answers.defects.includes('body_dent') || answers.defects.includes('body_scratch'))) {
           const bodyDent = await page.$('text=Scratch/Dent on device body');
           if (bodyDent) await bodyDent.click();
         }
@@ -183,22 +183,60 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
         const continueBtn2 = await page.$('text="Continue"');
         if (continueBtn2) await continueBtn2.click();
 
+        // Handle possible SUB-PAGES for Screen/Body defects
+        await page.waitForTimeout(2000);
+        const subPageScreen = await page.$('text=Tell us more about your device screen defects');
+        if (subPageScreen) {
+          if (answers.defects && answers.defects.includes('broken_screen')) {
+            const cracked = await page.$('text=Screen cracked/ glass broken');
+            if (cracked) await cracked.click();
+          } else {
+            const scratches = await page.$('text=1-2 scratches on screen');
+            if (scratches) await scratches.click();
+          }
+          const contSub1 = await page.$('text="Continue"');
+          if (contSub1) await contSub1.click();
+          await page.waitForTimeout(2000);
+        }
+
+        const subPageBody = await page.$('text=Tell us more about your device body defects');
+        if (subPageBody) {
+          if (answers.defects && answers.defects.includes('body_dent')) {
+            const dent = await page.$('text=Dent'); // Assuming "Dent" is an option, will fallback to scratch if not
+            if (dent) await dent.click();
+            else {
+              const bodyDented = await page.$$('text=Dent');
+              if (bodyDented.length > 0) await bodyDented[0].click();
+            }
+          } else {
+            const scratches = await page.$('text=1-2 scratches on device body');
+            if (scratches) await scratches.click();
+            else {
+              const genericScratch = await page.$$('text=scratch');
+              if (genericScratch.length > 0) await genericScratch[0].click();
+            }
+          }
+          const contSub2 = await page.$('text="Continue"');
+          if (contSub2) await contSub2.click();
+          await page.waitForTimeout(2000);
+        }
+
         // PAGE 3: Functional Defects
         await page.waitForTimeout(2000);
-        if (answers.functional && answers.functional.length > 0) {
-          if (answers.functional.includes('front-camera')) {
+        if (answers.hardware && answers.hardware.length > 0) {
+          if (answers.hardware.includes('front_camera')) {
             const frontCam = await page.$('text=Front Camera not working');
             if (frontCam) await frontCam.click();
           }
-          if (answers.functional.includes('back-camera')) {
+          if (answers.hardware.includes('back_camera')) {
             const backCam = await page.$('text=Back Camera not working');
             if (backCam) await backCam.click();
           }
-          if (answers.functional.includes('battery')) {
+          if (answers.hardware.includes('battery')) {
             const battery = await page.$('text=Battery faulty');
             if (battery) await battery.click();
           }
-          if (answers.functional.includes('wifi')) {
+          if (answers.hardware.includes('wifi')) {
             const wifi = await page.$('text=WiFi not working');
             if (wifi) await wifi.click();
           }
@@ -227,17 +265,33 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
 
       // Extract final price from the page
       const priceText = await page.evaluate(() => {
+        // Try to find the Selling price explicitly
+        const sellingPriceLabel = Array.from(document.querySelectorAll('*'))
+          .find(el => el.textContent?.trim().includes('Selling price'));
+        
+        if (sellingPriceLabel) {
+          // Look for the next element containing ₹
+          let curr = sellingPriceLabel.nextElementSibling;
+          while (curr) {
+            if (curr.textContent?.includes('₹')) return curr.textContent.trim();
+            curr = curr.nextElementSibling;
+          }
+          // If not next sibling, search in parent's next sibling
+          let parent = sellingPriceLabel.parentElement;
+          if (parent && parent.nextElementSibling) {
+            if (parent.nextElementSibling.textContent?.includes('₹')) {
+              return parent.nextElementSibling.textContent.trim();
+            }
+          }
+        }
+        
+        // Fallback: get the FIRST element with ₹ that isn't a voucher (which are usually later)
         const priceElements = Array.from(document.querySelectorAll('span, div, h1, h2, h3, h4, h5, h6'))
           .filter(el => {
             const text = el.textContent?.trim() || '';
             return text.includes('₹') && text.length < 15;
           });
-        
-        if (priceElements.length > 0) {
-          // We reverse to get the last price element rendered, which is usually the final calculated price block
-          return priceElements[priceElements.length - 1].textContent?.trim();
-        }
-        return null;
+        return priceElements.length > 0 ? priceElements[0].textContent?.trim() : null;
       });
 
     if (!priceText) {
