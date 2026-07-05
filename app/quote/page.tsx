@@ -62,18 +62,6 @@ export default function QuotePage() {
     }
     return true;
   };
-
-  const hasFunctionalDefectsPage = (brand: string, model: string) => {
-    if (brand === 'Apple') {
-      const lowerModel = model.toLowerCase();
-      // Newer iPhones generally do not get the functional defects page on Cashify
-      if (lowerModel.includes('iphone 12') || lowerModel.includes('iphone 13') || lowerModel.includes('iphone 14') || lowerModel.includes('iphone 15') || lowerModel.includes('iphone 16')) {
-        return false;
-      }
-      return true;
-    }
-    return true;
-  };
   
   const router = useRouter();
   const { setAuth } = useAuthStore();
@@ -745,7 +733,7 @@ export default function QuotePage() {
                     } else if (diagnostics.defects.includes('body_scratch')) {
                       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 6);
                     } else {
-                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', hasFunctionalDefectsPage(selectedBrand, selectedModel) ? 7 : 8);
+                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 7);
                     }
                   }} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px' }}>Continue <ArrowRightIcon /></button>
                 </div>
@@ -778,7 +766,7 @@ export default function QuotePage() {
                     if (diagnostics.defects.includes('body_scratch')) {
                       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 6);
                     } else {
-                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', hasFunctionalDefectsPage(selectedBrand, selectedModel) ? 7 : 8);
+                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 7);
                     }
                   }} disabled={!diagnostics.screenCondition} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: diagnostics.screenCondition ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
                 </div>
@@ -818,7 +806,7 @@ export default function QuotePage() {
                 </div>
 
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
-                  <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', hasFunctionalDefectsPage(selectedBrand, selectedModel) ? 7 : 8)} disabled={!diagnostics.bodyScratches || !diagnostics.bodyDents} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (diagnostics.bodyScratches && diagnostics.bodyDents) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
+                  <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 7)} disabled={!diagnostics.bodyScratches || !diagnostics.bodyDents} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (diagnostics.bodyScratches && diagnostics.bodyDents) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
             )}
