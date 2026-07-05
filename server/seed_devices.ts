@@ -14686,4 +14686,1085 @@ export const SEED_DEVICES = [
     "color": "Midnight",
     "basePrice": 32000
   }
+,
+  {
+    "id": "xiaomi_batch_1",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 6 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_2",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi A2",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_3",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 6",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_4",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 6 pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_5",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 6A",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_6",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y2",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_7",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 5",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_8",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 5 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_9",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 5",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_10",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 5A",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_11",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y1",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_12",
+    "brand": "Xiaomi",
+    "model": "Redmi Y1 Lite",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_13",
+    "brand": "Xiaomi",
+    "model": "Mi Mix 2",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_14",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi Max 2",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_15",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 4A",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_16",
+    "brand": "Xiaomi",
+    "model": "Redmi 3S Prime",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_17",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 3S",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_18",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi Max",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_19",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 5",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_20",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 3",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_21",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_22",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_23",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Go",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_24",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_25",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7S",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_26",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y3",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_27",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Black Shark 2",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_28",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi K20",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_29",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi K20 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_30",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7A",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_31",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi A3",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_32",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 8A",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_33",
+    "brand": "Xiaomi",
+    "model": "Redmi 8",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_34",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 8",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_35",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 8 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_36",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_37",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 8A Dual",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_38",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9 Pro Max",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_39",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_40",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9 Prime",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_41",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_42",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9A",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_43",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9i",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_44",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10T",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_45",
+    "brand": "Xiaomi",
+    "model": "Mi 10T Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_46",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10i",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_47",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9 Power",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_48",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_49",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_50",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Pro Max",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_51",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11X Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_52",
+    "brand": "Xiaomi",
+    "model": "Mi 11 Ultra",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_53",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11X",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_54",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11 Lite",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_55",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_56",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10T 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_57",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_58",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 10 Prime",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_59",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 11 Lite NE 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_60",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Lite",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_61",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11T 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_62",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9 Activ",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_63",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 11i 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_64",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 11i HyperCharge 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_65",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 11T Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_66",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_67",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11S",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_68",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11 Pro Plus 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_69",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_70",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 10",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_71",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 12 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_72",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 10 Prime 2022",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_73",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 10A",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_74",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi K50i 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_75",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 11 Prime 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_76",
+    "brand": "Xiaomi",
+    "model": "Redmi 10 Power",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_77",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 11SE",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_78",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 11 Prime",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_79",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A1 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_80",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 12 Pro Plus 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_81",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 12 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_82",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 12 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_83",
+    "brand": "Xiaomi",
+    "model": "13 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_84",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 12",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_85",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A2 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_86",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A2",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_87",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 12 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_88",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 12C",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_89",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 12",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_90",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 13C",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_91",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 13C 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_92",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 13 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_93",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 13 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_94",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 13 Pro Plus 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_95",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A3",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_96",
+    "brand": "Xiaomi",
+    "model": "14",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_97",
+    "brand": "Xiaomi",
+    "model": "14 Ultra",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_98",
+    "brand": "Xiaomi",
+    "model": "Redmi A1",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_99",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 14 CIVI",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_100",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A3x",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_101",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 13 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_102",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 14 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_103",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 14 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_104",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 14 Pro Plus 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_105",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 14C 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_106",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A4 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_107",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A5",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_108",
+    "brand": "Xiaomi",
+    "model": "15",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_109",
+    "brand": "Xiaomi",
+    "model": "15 Ultra",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_110",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 15 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_111",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 14 SE 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_112",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 15C 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_113",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 15 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_114",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 15 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_115",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 15 Pro Plus 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_116",
+    "brand": "Xiaomi",
+    "model": "17 Ultra",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_117",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 17",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_118",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 15A 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_119",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A7 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_120",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 17T",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  }
 ];
