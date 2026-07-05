@@ -155,9 +155,10 @@ export default function QuotePage() {
     // Pass existing history state so Next.js App Router doesn't break on back navigation
     window.history.pushState(window.history.state, '', newUrl);
 
-    setSelectedBrand(newBrand);
-    setSelectedModel(newModel);
-    if (!newModel) setModelSearchQuery('');
+    setSelectedSamsungSeries(null);
+    setSelectedXiaomiSeries(null);
+    setSelectedVivoSeries(null);
+    setModelSearchQuery('');
     setSelectedStorage(newStorage);
     setSelectionStage(newStage as any);
     setStep(newStep);
@@ -219,6 +220,7 @@ export default function QuotePage() {
   const [marketPriceFetched, setMarketPriceFetched] = useState(false);
   const [selectedSamsungSeries, setSelectedSamsungSeries] = useState<string | null>(null);
   const [selectedXiaomiSeries, setSelectedXiaomiSeries] = useState<string | null>(null);
+  const [selectedVivoSeries, setSelectedVivoSeries] = useState<string | null>(null);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   // Clear timer on unmount
@@ -316,6 +318,30 @@ export default function QuotePage() {
     }
   };
 
+  const matchVivoSeries = (modelName: string, series: string): boolean => {
+    const normalized = modelName.toLowerCase();
+    switch (series) {
+      case 'V Series':
+        return normalized.includes('vivo v');
+      case 'X Series':
+        return normalized.includes('vivo x');
+      case 'Y Series':
+        return normalized.includes('vivo y');
+      case 'Nex Series':
+        return normalized.includes('vivo nex');
+      case 'Z Series':
+        return normalized.includes('vivo z');
+      case 'S Series':
+        return normalized.includes('vivo s');
+      case 'U Series':
+        return normalized.includes('vivo u');
+      case 'T Series':
+        return normalized.includes('vivo t');
+      default:
+        return false;
+    }
+  };
+
   const models = useMemo(() => {
     if (!selectedBrand) return [];
     let brandModels = [...new Set(allDevices.filter((d) => d.brand === selectedBrand).map((d) => d.model).filter(Boolean))];
@@ -330,6 +356,10 @@ export default function QuotePage() {
     
     if (selectedBrand === 'Xiaomi' && selectedXiaomiSeries) {
       brandModels = brandModels.filter((m) => matchXiaomiSeries(m, selectedXiaomiSeries));
+    }
+    
+    if (selectedBrand === 'Vivo' && selectedVivoSeries) {
+      brandModels = brandModels.filter((m) => matchVivoSeries(m, selectedVivoSeries));
     }
     
     if (selectedBrand === 'Apple') {
@@ -354,7 +384,7 @@ export default function QuotePage() {
       });
     }
     return brandModels.sort();
-  }, [allDevices, selectedBrand, modelSearchQuery, selectedSamsungSeries, selectedXiaomiSeries]);
+  }, [allDevices, selectedBrand, modelSearchQuery, selectedSamsungSeries, selectedXiaomiSeries, selectedVivoSeries]);
   const storageOptions = useMemo(() => {
     if (!selectedBrand || !selectedModel) return [];
     
