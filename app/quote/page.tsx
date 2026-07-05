@@ -912,7 +912,7 @@ export default function QuotePage() {
               <h2 style={{ fontSize: '1.25rem', fontWeight: 600, color: '#fff', marginBottom: '0.25rem' }}>{selectedModel.startsWith(selectedBrand) ? selectedModel : `${selectedBrand} ${selectedModel}`} ({selectedStorage})</h2>
               <p style={{ color: '#a0a0a0', fontSize: '0.85rem', marginBottom: '0.5rem' }}>Selling price :</p>
               <p style={{ fontSize: '2.5rem', fontWeight: 700, color: '#FF3B30', lineHeight: 1 }}>
-                {marketPriceFetched ? formatCurrency((finalPrice || 0) - (finalPrice === 1200 ? 0 : 99)) : '₹ XX,XXX'}
+                {marketPriceFetched ? formatCurrency((finalPrice || 0) - (finalPrice === 1200 ? 0 : 99)) : '₹ --,---'}
               </p>
               
               {!marketPriceFetched && (
