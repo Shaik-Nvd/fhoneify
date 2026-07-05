@@ -645,7 +645,7 @@ export default function QuotePage() {
           functionalScale: 0.9,
           physicalScale: 0.85,
         };
-      } else if (lowerBrand === 'oneplus' || lowerBrand === 'google') {
+      } else if (lowerBrand === 'oneplus' || lowerBrand === 'google' || lowerBrand === 'nothing' || lowerBrand === 'asus' || lowerBrand === 'huawei') {
         params = {
           warrantyPenalty: 0.10,
           gstBillPenalty: 0.05,
@@ -655,7 +655,7 @@ export default function QuotePage() {
           functionalScale: 0.8,
           physicalScale: 0.75,
         };
-      } else if (lowerBrand === 'vivo' || lowerBrand === 'oppo' || lowerBrand === 'xiaomi' || lowerBrand === 'poco') {
+      } else if (lowerBrand === 'vivo' || lowerBrand === 'oppo' || lowerBrand === 'xiaomi' || lowerBrand === 'poco' || lowerBrand === 'realme' || lowerBrand === 'motorola' || lowerBrand === 'iqoo' || lowerBrand === 'infinix' || lowerBrand === 'tecno' || lowerBrand === 'lg') {
         params = {
           warrantyPenalty: 0.12,
           gstBillPenalty: 0.08,
