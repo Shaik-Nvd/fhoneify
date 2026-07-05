@@ -15767,4 +15767,1706 @@ export const SEED_DEVICES = [
     "color": "Midnight",
     "basePrice": 5000
   }
+,
+  {
+    "id": "vivo_batch_1",
+    "brand": "Vivo",
+    "model": "Vivo V9 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_2",
+    "brand": "Vivo",
+    "model": "Vivo V11 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_3",
+    "brand": "Vivo",
+    "model": "Vivo V11",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_4",
+    "brand": "Vivo",
+    "model": "Vivo Y83 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_5",
+    "brand": "Vivo",
+    "model": "Vivo NEX",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_6",
+    "brand": "Vivo",
+    "model": "Vivo Y71i",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_7",
+    "brand": "Vivo",
+    "model": "Vivo Y81",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_8",
+    "brand": "Vivo",
+    "model": "Vivo Y83",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_9",
+    "brand": "Vivo",
+    "model": "Vivo V9 Youth",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_10",
+    "brand": "Vivo",
+    "model": "Vivo Y71",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_11",
+    "brand": "Vivo",
+    "model": "Vivo Y53i",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_12",
+    "brand": "Vivo",
+    "model": "Vivo X21",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_13",
+    "brand": "Vivo",
+    "model": "Vivo V9",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_14",
+    "brand": "Vivo",
+    "model": "Vivo V7",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_15",
+    "brand": "Vivo",
+    "model": "Vivo V7 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_16",
+    "brand": "Vivo",
+    "model": "Vivo Y69",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_17",
+    "brand": "Vivo",
+    "model": "Vivo Y55s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_18",
+    "brand": "Vivo",
+    "model": "Vivo Y66",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_19",
+    "brand": "Vivo",
+    "model": "Vivo V5 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_20",
+    "brand": "Vivo",
+    "model": "Vivo V5",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_21",
+    "brand": "Vivo",
+    "model": "Vivo Y55L",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_22",
+    "brand": "Vivo",
+    "model": "Vivo Y53",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_23",
+    "brand": "Vivo",
+    "model": "Vivo Y31L",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_24",
+    "brand": "Vivo",
+    "model": "Vivo Y21L",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_25",
+    "brand": "Vivo",
+    "model": "Vivo Y21",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_26",
+    "brand": "Vivo",
+    "model": "Vivo V3",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_27",
+    "brand": "Vivo",
+    "model": "Vivo V3 Max",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_28",
+    "brand": "Vivo",
+    "model": "Vivo Y51L",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_29",
+    "brand": "Vivo",
+    "model": "Vivo Y95",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_30",
+    "brand": "Vivo",
+    "model": "Vivo Y93",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_31",
+    "brand": "Vivo",
+    "model": "Vivo Y81i",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_32",
+    "brand": "Vivo",
+    "model": "Vivo Z10",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_33",
+    "brand": "Vivo",
+    "model": "Vivo Y91",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_34",
+    "brand": "Vivo",
+    "model": "Vivo V15 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_35",
+    "brand": "Vivo",
+    "model": "Vivo Y91i",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_36",
+    "brand": "Vivo",
+    "model": "Vivo V15",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_37",
+    "brand": "Vivo",
+    "model": "Vivo Y17",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_38",
+    "brand": "Vivo",
+    "model": "Vivo Y15 2019",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_39",
+    "brand": "Vivo",
+    "model": "Vivo Y12",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_40",
+    "brand": "Vivo",
+    "model": "Vivo Z1 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_41",
+    "brand": "Vivo",
+    "model": "Vivo S1",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_42",
+    "brand": "Vivo",
+    "model": "Vivo Y90",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_43",
+    "brand": "Vivo",
+    "model": "Vivo Z1x",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_44",
+    "brand": "Vivo",
+    "model": "Vivo V17 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_45",
+    "brand": "Vivo",
+    "model": "Vivo U10",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_46",
+    "brand": "Vivo",
+    "model": "Vivo Y19",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_47",
+    "brand": "Vivo",
+    "model": "Vivo U20",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_48",
+    "brand": "Vivo",
+    "model": "Vivo V17",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_49",
+    "brand": "Vivo",
+    "model": "Vivo S1 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_50",
+    "brand": "Vivo",
+    "model": "Vivo Y11 2019",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_51",
+    "brand": "Vivo",
+    "model": "Vivo V19",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_52",
+    "brand": "Vivo",
+    "model": "Vivo Y50",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_53",
+    "brand": "Vivo",
+    "model": "Vivo Y30",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_54",
+    "brand": "Vivo",
+    "model": "Vivo X50",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_55",
+    "brand": "Vivo",
+    "model": "Vivo X50 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_56",
+    "brand": "Vivo",
+    "model": "Vivo V20",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_57",
+    "brand": "Vivo",
+    "model": "Vivo Y20i",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_58",
+    "brand": "Vivo",
+    "model": "Vivo Y20",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_59",
+    "brand": "Vivo",
+    "model": "Vivo V20 SE",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_60",
+    "brand": "Vivo",
+    "model": "Vivo V20 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_61",
+    "brand": "Vivo",
+    "model": "Vivo Y51 2020",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_62",
+    "brand": "Vivo",
+    "model": "Vivo Y20G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_63",
+    "brand": "Vivo",
+    "model": "Vivo V20 2021",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_64",
+    "brand": "Vivo",
+    "model": "Vivo Y51A",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_65",
+    "brand": "Vivo",
+    "model": "Vivo Y20A",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_66",
+    "brand": "Vivo",
+    "model": "Vivo Y31 2021",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_67",
+    "brand": "Vivo",
+    "model": "Vivo X60",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_68",
+    "brand": "Vivo",
+    "model": "Vivo X60 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_69",
+    "brand": "Vivo",
+    "model": "Vivo X60 Pro Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_70",
+    "brand": "Vivo",
+    "model": "Vivo V21 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_71",
+    "brand": "Vivo",
+    "model": "Vivo V21e 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_72",
+    "brand": "Vivo",
+    "model": "Vivo Y73",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_73",
+    "brand": "Vivo",
+    "model": "Vivo Y72 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_74",
+    "brand": "Vivo",
+    "model": "Vivo Y12s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_75",
+    "brand": "Vivo",
+    "model": "Vivo Y1s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_76",
+    "brand": "Vivo",
+    "model": "Vivo Y53s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_77",
+    "brand": "Vivo",
+    "model": "Vivo Y12G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_78",
+    "brand": "Vivo",
+    "model": "Vivo Y33s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_79",
+    "brand": "Vivo",
+    "model": "Vivo Y21 2021",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_80",
+    "brand": "Vivo",
+    "model": "Vivo X70 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_81",
+    "brand": "Vivo",
+    "model": "Vivo Y3s 2021",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_82",
+    "brand": "Vivo",
+    "model": "Vivo Y20T",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_83",
+    "brand": "Vivo",
+    "model": "Vivo V23 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_84",
+    "brand": "Vivo",
+    "model": "Vivo V23 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_85",
+    "brand": "Vivo",
+    "model": "Vivo Y21T",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_86",
+    "brand": "Vivo",
+    "model": "Vivo T1 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_87",
+    "brand": "Vivo",
+    "model": "Vivo V23e 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_88",
+    "brand": "Vivo",
+    "model": "Vivo Y75 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_89",
+    "brand": "Vivo",
+    "model": "Vivo Y21e",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_90",
+    "brand": "Vivo",
+    "model": "Vivo Y21a",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_91",
+    "brand": "Vivo",
+    "model": "Vivo Y33T",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_92",
+    "brand": "Vivo",
+    "model": "Vivo Y15s 2021",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_93",
+    "brand": "Vivo",
+    "model": "Vivo Y21G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_94",
+    "brand": "Vivo",
+    "model": "Vivo X70 Pro Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_95",
+    "brand": "Vivo",
+    "model": "Vivo X80",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_96",
+    "brand": "Vivo",
+    "model": "Vivo X80 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_97",
+    "brand": "Vivo",
+    "model": "Vivo T1 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_98",
+    "brand": "Vivo",
+    "model": "Vivo T1",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_99",
+    "brand": "Vivo",
+    "model": "Vivo Y75",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_100",
+    "brand": "Vivo",
+    "model": "Vivo Y01",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_101",
+    "brand": "Vivo",
+    "model": "Vivo T1x",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_102",
+    "brand": "Vivo",
+    "model": "Vivo V25 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_103",
+    "brand": "Vivo",
+    "model": "Vivo Y22 2022",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_104",
+    "brand": "Vivo",
+    "model": "Vivo V25 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_105",
+    "brand": "Vivo",
+    "model": "Vivo Y16",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_106",
+    "brand": "Vivo",
+    "model": "Vivo Y35",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_107",
+    "brand": "Vivo",
+    "model": "Vivo Y02",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_108",
+    "brand": "Vivo",
+    "model": "Vivo Y100 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_109",
+    "brand": "Vivo",
+    "model": "Vivo Y56 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_110",
+    "brand": "Vivo",
+    "model": "Vivo V27 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_111",
+    "brand": "Vivo",
+    "model": "Vivo V27",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_112",
+    "brand": "Vivo",
+    "model": "Vivo Y01a",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_113",
+    "brand": "Vivo",
+    "model": "Vivo X90",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_114",
+    "brand": "Vivo",
+    "model": "Vivo X90 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_115",
+    "brand": "Vivo",
+    "model": "Vivo Y100A 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_116",
+    "brand": "Vivo",
+    "model": "Vivo Y02T",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_117",
+    "brand": "Vivo",
+    "model": "Vivo T2 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_118",
+    "brand": "Vivo",
+    "model": "Vivo T2x 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_119",
+    "brand": "Vivo",
+    "model": "Vivo V29e",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_120",
+    "brand": "Vivo",
+    "model": "Vivo Y27",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_121",
+    "brand": "Vivo",
+    "model": "Vivo Y36",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_122",
+    "brand": "Vivo",
+    "model": "Vivo V29",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_123",
+    "brand": "Vivo",
+    "model": "Vivo V29 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_124",
+    "brand": "Vivo",
+    "model": "Vivo T2 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_125",
+    "brand": "Vivo",
+    "model": "Vivo Y17S",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_126",
+    "brand": "Vivo",
+    "model": "Vivo Y200 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_127",
+    "brand": "Vivo",
+    "model": "Vivo Y28 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_128",
+    "brand": "Vivo",
+    "model": "Vivo X100",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_129",
+    "brand": "Vivo",
+    "model": "Vivo X100 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_130",
+    "brand": "Vivo",
+    "model": "Vivo V30",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_131",
+    "brand": "Vivo",
+    "model": "Vivo V30 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_132",
+    "brand": "Vivo",
+    "model": "Vivo Y200e 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_133",
+    "brand": "Vivo",
+    "model": "Vivo T3x 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_134",
+    "brand": "Vivo",
+    "model": "Vivo T3 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_135",
+    "brand": "Vivo",
+    "model": "Vivo V30e",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_136",
+    "brand": "Vivo",
+    "model": "Vivo Y18",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_137",
+    "brand": "Vivo",
+    "model": "Vivo Y18e",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_138",
+    "brand": "Vivo",
+    "model": "Vivo Y200 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_139",
+    "brand": "Vivo",
+    "model": "Vivo X Fold 3 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_140",
+    "brand": "Vivo",
+    "model": "Vivo T3 Lite 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_141",
+    "brand": "Vivo",
+    "model": "Vivo Y28s 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_142",
+    "brand": "Vivo",
+    "model": "Vivo Y18i",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_143",
+    "brand": "Vivo",
+    "model": "Vivo Y28e 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_144",
+    "brand": "Vivo",
+    "model": "Vivo V40",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_145",
+    "brand": "Vivo",
+    "model": "Vivo V50 Elite",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_146",
+    "brand": "Vivo",
+    "model": "Vivo V40 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_147",
+    "brand": "Vivo",
+    "model": "Vivo Y58 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_148",
+    "brand": "Vivo",
+    "model": "Vivo T3 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_149",
+    "brand": "Vivo",
+    "model": "Vivo V40e",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_150",
+    "brand": "Vivo",
+    "model": "Vivo T3 Ultra",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_151",
+    "brand": "Vivo",
+    "model": "Vivo Y18T",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_152",
+    "brand": "Vivo",
+    "model": "Vivo X200",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_153",
+    "brand": "Vivo",
+    "model": "Vivo X200 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_154",
+    "brand": "Vivo",
+    "model": "Vivo Y300 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_155",
+    "brand": "Vivo",
+    "model": "Vivo Y300 Plus 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_156",
+    "brand": "Vivo",
+    "model": "Vivo Y29 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_157",
+    "brand": "Vivo",
+    "model": "Vivo V50",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_158",
+    "brand": "Vivo",
+    "model": "Vivo T4X 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_159",
+    "brand": "Vivo",
+    "model": "Vivo V50e",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_160",
+    "brand": "Vivo",
+    "model": "Vivo T4 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_161",
+    "brand": "Vivo",
+    "model": "Vivo T4 Ultra 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_162",
+    "brand": "Vivo",
+    "model": "Vivo Y19 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_163",
+    "brand": "Vivo",
+    "model": "Vivo Y19e",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_164",
+    "brand": "Vivo",
+    "model": "Vivo Y39 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_165",
+    "brand": "Vivo",
+    "model": "Vivo T4 Lite 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_166",
+    "brand": "Vivo",
+    "model": "Vivo Y400 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_167",
+    "brand": "Vivo",
+    "model": "Vivo X200 FE",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_168",
+    "brand": "Vivo",
+    "model": "Vivo Y400 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_169",
+    "brand": "Vivo",
+    "model": "Vivo T4R 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_170",
+    "brand": "Vivo",
+    "model": "Vivo V60",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_171",
+    "brand": "Vivo",
+    "model": "Vivo X Fold 5",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_172",
+    "brand": "Vivo",
+    "model": "Vivo T4 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_173",
+    "brand": "Vivo",
+    "model": "Vivo Y31 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_174",
+    "brand": "Vivo",
+    "model": "Vivo V60e",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_175",
+    "brand": "Vivo",
+    "model": "Vivo Y31 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_176",
+    "brand": "Vivo",
+    "model": "Vivo Y19s 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_177",
+    "brand": "Vivo",
+    "model": "Vivo X300",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_178",
+    "brand": "Vivo",
+    "model": "Vivo X300 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_179",
+    "brand": "Vivo",
+    "model": "Vivo V70",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_180",
+    "brand": "Vivo",
+    "model": "Vivo V70 Elite",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_181",
+    "brand": "Vivo",
+    "model": "Vivo X200T",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_182",
+    "brand": "Vivo",
+    "model": "Vivo Y51 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_183",
+    "brand": "Vivo",
+    "model": "Vivo V70 FE",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_184",
+    "brand": "Vivo",
+    "model": "Vivo T5x 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_185",
+    "brand": "Vivo",
+    "model": "Vivo Y11 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_186",
+    "brand": "Vivo",
+    "model": "Vivo Y21 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_187",
+    "brand": "Vivo",
+    "model": "Vivo X300 FE",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_188",
+    "brand": "Vivo",
+    "model": "Vivo X300 Ultra",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_189",
+    "brand": "Vivo",
+    "model": "Vivo Y05",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  }
 ];
