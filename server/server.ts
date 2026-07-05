@@ -1,3 +1,6 @@
+if (process.env.NODE_ENV === 'production') {
+  process.env.PLAYWRIGHT_BROWSERS_PATH = '/ms-playwright';
+}
 import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 

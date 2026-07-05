@@ -1,3 +1,6 @@
+if (process.env.NODE_ENV === 'production') {
+  process.env.PLAYWRIGHT_BROWSERS_PATH = '/ms-playwright';
+}
 import { chromium, Browser, BrowserContext, Page } from 'playwright';
 import path from 'path';
 import fs from 'fs';
