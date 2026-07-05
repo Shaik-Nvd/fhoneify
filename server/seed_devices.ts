@@ -9934,15 +9934,7 @@ export const SEED_DEVICES = [
     "color": "Midnight",
     "basePrice": 5000
   },
-  {
-    "id": "poco_10087",
-    "brand": "POCO",
-    "model": "POCO C75 5g",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
+
   {
     "id": "poco_10088",
     "brand": "POCO",
