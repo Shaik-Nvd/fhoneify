@@ -224,21 +224,32 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
         // PAGE 3: Functional Defects
         await page.waitForTimeout(2000);
         if (answers.hardware && answers.hardware.length > 0) {
-          if (answers.hardware.includes('front_camera')) {
-            const frontCam = await page.$('text=Front Camera not working');
-            if (frontCam) await frontCam.click();
-          }
-          if (answers.hardware.includes('back_camera')) {
-            const backCam = await page.$('text=Back Camera not working');
-            if (backCam) await backCam.click();
-          }
-          if (answers.hardware.includes('battery')) {
-            const battery = await page.$('text=Battery faulty');
-            if (battery) await battery.click();
-          }
-          if (answers.hardware.includes('wifi')) {
-            const wifi = await page.$('text=WiFi not working');
-            if (wifi) await wifi.click();
+          const hardwareMap: Record<string, string> = {
+            'front_camera': 'Front Camera not working',
+            'back_camera': 'Back Camera not working',
+            'volume': 'Volume Button not working',
+            'fingerprint': 'Finger Touch not working',
+            'wifi': 'WiFi not working',
+            'speaker': 'Speaker Faulty',
+            'silent': 'Silent Button not working',
+            'face': 'Face Sensor not working',
+            'power': 'Power Button not working',
+            'charging': 'Charging Port not working',
+            'audio_receiver': 'Audio Receiver not working',
+            'camera_glass': 'Camera Glass Broken',
+            'microphone': 'Microphone not working',
+            'bluetooth': 'Bluetooth not working',
+            'vibrator': 'Vibrator is not working',
+            'proximity': 'Proximity Sensor not working',
+            'battery_service': 'Battery in Service (Health is less than 80%)',
+            'battery_health': 'Battery Health 80-85%'
+          };
+
+          for (const hwId of answers.hardware) {
+            if (hardwareMap[hwId]) {
+              const el = await page.$(`text="${hardwareMap[hwId]}"`);
+              if (el) await el.click();
+            }
           }
         }
         const continueBtn3 = await page.$('text="Continue"');

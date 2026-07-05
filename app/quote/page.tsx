@@ -803,7 +803,8 @@ export default function QuotePage() {
                     { id: 'bluetooth', label: 'Bluetooth not working', icon: '🛜' },
                     { id: 'vibrator', label: 'Vibrator is not working', icon: '📳' },
                     { id: 'proximity', label: 'Proximity Sensor not working', icon: '🖐' },
-                    { id: 'battery_service', label: 'Battery in Service (< 80%)', icon: '🔋' }
+                    { id: 'battery_service', label: 'Battery in Service (< 80%)', icon: '🔋' },
+                    { id: 'battery_health', label: 'Battery Health 80-85%', icon: '🔋' }
                   ].map((h) => (
                     <button key={h.id} onClick={() => toggleArrayItem('hardware', h.id)} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem', padding: '1.5rem 0.5rem', borderRadius: '8px', border: diagnostics.hardware.includes(h.id) ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.hardware.includes(h.id) ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.hardware.includes(h.id) ? '#4CD964' : '#fff', cursor: 'pointer' }}>
                       <span style={{ fontSize: '2.5rem' }}>{h.icon}</span>

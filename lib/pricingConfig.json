@@ -21,6 +21,7 @@
   "defects_functional": {
     "fingerprint": 0.15,
     "battery_service": 0.15,
+    "battery_health": 0.10,
     "front_camera": 0.10,
     "back_camera": 0.10,
     "wifi": 0.12,
