@@ -62,6 +62,18 @@ export default function QuotePage() {
     }
     return true;
   };
+
+  const hasFunctionalDefectsPage = (brand: string, model: string) => {
+    if (brand === 'Apple') {
+      const lowerModel = model.toLowerCase();
+      // Newer iPhones generally do not get the functional defects page on Cashify
+      if (lowerModel.includes('iphone 12') || lowerModel.includes('iphone 13') || lowerModel.includes('iphone 14') || lowerModel.includes('iphone 15') || lowerModel.includes('iphone 16')) {
+        return false;
+      }
+      return true;
+    }
+    return true;
+  };
   
   const router = useRouter();
   const { setAuth } = useAuthStore();
@@ -733,7 +745,7 @@ export default function QuotePage() {
                     } else if (diagnostics.defects.includes('body_scratch')) {
                       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 6);
                     } else {
-                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 7);
+                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', hasFunctionalDefectsPage(selectedBrand, selectedModel) ? 7 : 8);
                     }
                   }} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px' }}>Continue <ArrowRightIcon /></button>
                 </div>
@@ -766,7 +778,7 @@ export default function QuotePage() {
                     if (diagnostics.defects.includes('body_scratch')) {
                       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 6);
                     } else {
-                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 7);
+                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', hasFunctionalDefectsPage(selectedBrand, selectedModel) ? 7 : 8);
                     }
                   }} disabled={!diagnostics.screenCondition} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: diagnostics.screenCondition ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
                 </div>
@@ -806,7 +818,7 @@ export default function QuotePage() {
                 </div>
 
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
-                  <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 7)} disabled={!diagnostics.bodyScratches || !diagnostics.bodyDents} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (diagnostics.bodyScratches && diagnostics.bodyDents) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
+                  <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', hasFunctionalDefectsPage(selectedBrand, selectedModel) ? 7 : 8)} disabled={!diagnostics.bodyScratches || !diagnostics.bodyDents} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (diagnostics.bodyScratches && diagnostics.bodyDents) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
             )}
@@ -921,7 +933,7 @@ export default function QuotePage() {
       )}
 
 {/* STAGE 10: LEAD CAPTURE MODAL */}
-      {step === 7 && (
+      {step === 10 && (
         <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-[1000] backdrop-blur-sm p-4">
           <div className="bg-white text-black rounded-xl w-full max-w-4xl flex flex-col md:flex-row overflow-hidden shadow-2xl max-h-[90vh] overflow-y-auto">
             
@@ -940,7 +952,7 @@ export default function QuotePage() {
                     <p style={{ color: '#FF4C4C', fontSize: '1.75rem', fontWeight: 700 }}>₹ XX,XXX</p>
                   </div>
                 </div>
-                <button onClick={() => { navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 6); setShowOtpInput(false); }} style={{ background: 'none', border: 'none', fontSize: '2rem', cursor: 'pointer', paddingLeft: '1rem', color: '#999', lineHeight: 1 }}>×</button>
+                <button onClick={() => { navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 9); setShowOtpInput(false); }} style={{ background: 'none', border: 'none', fontSize: '2rem', cursor: 'pointer', paddingLeft: '1rem', color: '#999', lineHeight: 1 }}>×</button>
               </div>
 
               <div style={{ backgroundColor: 'rgba(212, 175, 55, 0.1)', color: '#d4af37', padding: '1rem', borderRadius: '8px', textAlign: 'center', fontWeight: 600, marginBottom: '2.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', border: '1px solid rgba(212, 175, 55, 0.3)' }}>
