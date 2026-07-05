@@ -745,8 +745,8 @@ export default function QuotePage() {
             {/* STAGE 6: BODY DEFECT SUB-PAGE */}
             {step === 6 && (
               <div className="card p-6 md:p-12 rounded-lg border border-[#2a2a2a] bg-[#111] text-white">
-                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: '#ffffff' }}>Tell us more about your device's body defects?</h2>
-                <p style={{ textAlign: 'center', color: '#cccccc', fontSize: '0.85rem', marginBottom: '3rem' }}>(Because you selected device's body defect)</p>
+                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: '#ffffff' }}>Tell us more about your device&apos;s body defects?</h2>
+                <p style={{ textAlign: 'center', color: '#cccccc', fontSize: '0.85rem', marginBottom: '3rem' }}>(Because you selected device&apos;s body defect)</p>
                 
                 <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>1. Scratches on device Body</h3>
                 <div style={{ display: 'flex', gap: '1rem', marginBottom: '2.5rem' }}>
