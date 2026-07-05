@@ -134,12 +134,14 @@ export default function QuotePage() {
   const [basePrice, setBasePrice] = useState<number | null>(null);
   const [finalPrice, setFinalPrice] = useState<number | null>(null);
 
-  // Diagnostics State
   const [diagnostics, setDiagnostics] = useState({
     calls: null as boolean | null,
     touch: null as boolean | null,
     originalScreen: null as boolean | null,
     defects: [] as string[],
+    screenCondition: null as string | null,
+    bodyScratches: null as string | null,
+    bodyDents: null as string | null,
     hardware: [] as string[],
     accessories: [] as string[],
     warranty: null as boolean | null,
@@ -608,8 +610,8 @@ export default function QuotePage() {
             </button>
           </div>
         </div>
-      )}      {/* STAGES 3-6: MULTI-STEP QUESTIONNAIRE (2 COLUMN LAYOUT) */}
-      {((step >= 2 && step <= 6) || step === 10) && (
+      )}      {/* STAGES 3-9: MULTI-STEP QUESTIONNAIRE (2 COLUMN LAYOUT) */}
+      {step >= 3 && step <= 9 && (
         <div className="flex flex-col-reverse md:flex-row gap-8 items-start w-full" style={{ marginTop: '2.5rem' }}>
           
           <div className="flex-1 w-full min-w-0 flex flex-col gap-6">
@@ -638,112 +640,27 @@ export default function QuotePage() {
                     </div>
                   </div>
                 ))}
-                <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
-                  <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', isTierA ? 10 : 4)} disabled={diagnostics.calls === null || diagnostics.touch === null || diagnostics.originalScreen === null} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (diagnostics.calls !== null && diagnostics.touch !== null && diagnostics.originalScreen !== null) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
-                </div>
-              </div>
-            )}
-
-            {/* STAGE 10: TIER A ADVANCED QUESTIONS */}
-            {step === 10 && (
-              <div className="card p-6 md:p-12 rounded-lg border border-[#2a2a2a] bg-[#111] text-white">
-                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: '#ffffff' }}>Device Condition & Warranty</h2>
-                <p style={{ textAlign: 'center', color: '#cccccc', fontSize: '0.85rem', marginBottom: '3rem' }}>Help us offer you the best price</p>
                 
                 {/* Warranty Question */}
                 <div style={{ marginBottom: '2.5rem' }}>
                   <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>Is your device under manufacturer warranty?</h3>
-                  <p style={{ color: '#cccccc', fontSize: '0.9rem', marginBottom: '1.25rem' }}>You can get a better price for your device if it&apos;s under manufacturer warranty with a GST valid bill.</p>
                   <div style={{ display: 'flex', gap: '1rem' }}>
                     <button onClick={() => setDiagnostics({ ...diagnostics, warranty: true })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.warranty === true ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.warranty === true ? 'rgba(76,217,100,0.1)' : '#1a1a1a', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.warranty === true ? '#4CD964' : '#fff' }}>
                       <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.warranty === true ? '1px solid #4CD964' : '1px solid #444', backgroundColor: diagnostics.warranty === true ? '#4CD964' : 'transparent' }} /> Yes
                     </button>
-                    <button onClick={() => {
-                      setDiagnostics({ ...diagnostics, warranty: false, mobileAge: null });
-                    }} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.warranty === false ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.warranty === false ? 'rgba(76,217,100,0.1)' : '#1a1a1a', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.warranty === false ? '#4CD964' : '#fff' }}>
-                      <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.warranty === false ? '1px solid #4CD964' : '1px solid #444', backgroundColor: diagnostics.warranty === false ? '#4CD964' : 'transparent' }} /> No
+                    <button onClick={() => setDiagnostics({ ...diagnostics, warranty: false, mobileAge: null })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.warranty === false ? '1px solid #FF3B30' : '1px solid #2a2a2a', backgroundColor: diagnostics.warranty === false ? 'rgba(255,59,48,0.1)' : '#1a1a1a', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.warranty === false ? '#FF3B30' : '#fff' }}>
+                      <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.warranty === false ? '1px solid #FF3B30' : '1px solid #444', backgroundColor: diagnostics.warranty === false ? '#FF3B30' : 'transparent' }} /> No
                     </button>
                   </div>
                 </div>
-
-                {/* GST Bill Question */}
-                <div style={{ marginBottom: '2.5rem' }}>
-                  <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>Do you have GST valid bill with the same IMEI?</h3>
-                  <p style={{ color: '#cccccc', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Make sure your bill has device IMEI mentioned on it.</p>
-                  <div style={{ display: 'flex', gap: '1rem' }}>
-                    <button onClick={() => setDiagnostics({ ...diagnostics, validBill: true })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.validBill === true ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.validBill === true ? 'rgba(76,217,100,0.1)' : '#1a1a1a', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.validBill === true ? '#4CD964' : '#fff' }}>
-                      <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.validBill === true ? '1px solid #4CD964' : '1px solid #444', backgroundColor: diagnostics.validBill === true ? '#4CD964' : 'transparent' }} /> Yes
-                    </button>
-                    <button onClick={() => setDiagnostics({ ...diagnostics, validBill: false })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.validBill === false ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.validBill === false ? 'rgba(76,217,100,0.1)' : '#1a1a1a', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.validBill === false ? '#4CD964' : '#fff' }}>
-                      <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.validBill === false ? '1px solid #4CD964' : '1px solid #444', backgroundColor: diagnostics.validBill === false ? '#4CD964' : 'transparent' }} /> No
-                    </button>
-                  </div>
-                </div>
-
-                {/* eSIM Question */}
-                <div style={{ marginBottom: '2.5rem' }}>
-                  <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>How many eSIMs does your device support?</h3>
-                  <p style={{ color: '#cccccc', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Please select &quot;Dual eSIM&quot; if your device supports dual eSIMs. Otherwise, select &quot;Single eSIM&quot;.</p>
-                  <div style={{ display: 'flex', gap: '1rem' }}>
-                    <button onClick={() => setDiagnostics({ ...diagnostics, eSim: 'Single eSIM' })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.eSim === 'Single eSIM' ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.eSim === 'Single eSIM' ? 'rgba(76,217,100,0.1)' : '#1a1a1a', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.eSim === 'Single eSIM' ? '#4CD964' : '#fff' }}>
-                      <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.eSim === 'Single eSIM' ? '1px solid #4CD964' : '1px solid #444', backgroundColor: diagnostics.eSim === 'Single eSIM' ? '#4CD964' : 'transparent' }} /> Single eSIM
-                    </button>
-                    <button onClick={() => setDiagnostics({ ...diagnostics, eSim: 'Dual eSIM' })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.eSim === 'Dual eSIM' ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.eSim === 'Dual eSIM' ? 'rgba(76,217,100,0.1)' : '#1a1a1a', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.eSim === 'Dual eSIM' ? '#4CD964' : '#fff' }}>
-                      <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.eSim === 'Dual eSIM' ? '1px solid #4CD964' : '1px solid #444', backgroundColor: diagnostics.eSim === 'Dual eSIM' ? '#4CD964' : 'transparent' }} /> Dual eSIM
-                    </button>
-                  </div>
-                </div>
-
-                {/* Mobile Age Question (Conditional) */}
-                {diagnostics.warranty === true && (
-                  <div style={{ marginBottom: '2.5rem' }}>
-                    <h3 style={{ textAlign: 'center', fontWeight: 600, fontSize: '1.2rem', marginBottom: '0.25rem', color: '#ffffff' }}>What is your mobile age?</h3>
-                    <p style={{ textAlign: 'center', color: '#cccccc', fontSize: '0.85rem', marginBottom: '1.5rem' }}>(Because you chose your device is under brand&apos;s warranty)</p>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
-                      {[
-                        { id: 'below3', label: 'Below 3 months', sub: 'Valid bill mandatory' },
-                        { id: '3to6', label: '3 months - 6 months', sub: 'Valid bill mandatory' },
-                        { id: '6to11', label: '6 months - 11 months', sub: 'Valid bill mandatory' },
-                        { id: 'above11', label: 'Above 11 months', sub: '' }
-                      ].map((age) => (
-                        <button key={age.id} onClick={() => setDiagnostics({ ...diagnostics, mobileAge: age.id as any })} style={{ display: 'flex', flexDirection: 'column', padding: '1rem', borderRadius: '8px', border: diagnostics.mobileAge === age.id ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.mobileAge === age.id ? 'rgba(76,217,100,0.1)' : '#1a1a1a', cursor: 'pointer', color: diagnostics.mobileAge === age.id ? '#4CD964' : '#fff', textAlign: 'left' }}>
-                          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: age.sub ? '0.25rem' : '0' }}>
-                            <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.mobileAge === age.id ? '1px solid #4CD964' : '1px solid #444', backgroundColor: diagnostics.mobileAge === age.id ? '#4CD964' : 'transparent', flexShrink: 0 }} />
-                            <span style={{ fontWeight: 500, fontSize: '1rem' }}>{age.label}</span>
-                          </div>
-                          {age.sub && <span style={{ color: '#a0a0a0', fontSize: '0.75rem', paddingLeft: '1.5rem' }}>{age.sub}</span>}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                )}
 
                 <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
-                  <button 
-                    onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 4)} 
-                    disabled={
-                      diagnostics.warranty === null || 
-                      diagnostics.validBill === null || 
-                      diagnostics.eSim === null || 
-                      (diagnostics.warranty && !diagnostics.mobileAge) ||
-                      (diagnostics.warranty && diagnostics.mobileAge !== 'above11' && diagnostics.validBill === false)
-                    } 
-                    className="btn-primary" 
-                    style={{ 
-                      background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', 
-                      opacity: (diagnostics.warranty !== null && diagnostics.validBill !== null && diagnostics.eSim !== null && (!diagnostics.warranty || diagnostics.mobileAge) && !(diagnostics.warranty && diagnostics.mobileAge !== 'above11' && diagnostics.validBill === false)) ? 1 : 0.5 
-                    }}
-                  >
-                    Continue <ArrowRightIcon />
-                  </button>
+                  <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 4)} disabled={diagnostics.calls === null || diagnostics.touch === null || diagnostics.originalScreen === null || diagnostics.warranty === null} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (diagnostics.calls !== null && diagnostics.touch !== null && diagnostics.originalScreen !== null && diagnostics.warranty !== null) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
                 </div>
-                {diagnostics.warranty && diagnostics.mobileAge && diagnostics.mobileAge !== 'above11' && diagnostics.validBill === false && (
-                  <p style={{ color: '#FF3B30', textAlign: 'center', marginTop: '1rem', fontSize: '0.85rem' }}>A valid GST bill is mandatory for devices under 11 months old.</p>
-                )}
               </div>
             )}
 
-            {/* STAGE 4: DEFECTS */}
+            {/* STAGE 4: PHYSICAL DEFECTS */}
             {step === 4 && (
               <div className="card p-6 md:p-12 rounded-lg border border-[#2a2a2a] bg-[#111] text-white">
                 <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: '#ffffff' }}>Select screen/body defects that are applicable!</h2>
@@ -762,13 +679,93 @@ export default function QuotePage() {
                   ))}
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
-                  <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 5)} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px' }}>Continue <ArrowRightIcon /></button>
+                  <button onClick={() => {
+                    // Logic for sub-pages
+                    if (diagnostics.defects.includes('screen_scratch')) {
+                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 5);
+                    } else if (diagnostics.defects.includes('body_scratch')) {
+                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 6);
+                    } else {
+                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 7);
+                    }
+                  }} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px' }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
             )}
 
-            {/* STAGE 5: HARDWARE */}
+            {/* STAGE 5: SCREEN DEFECT SUB-PAGE */}
             {step === 5 && (
+              <div className="card p-6 md:p-12 rounded-lg border border-[#2a2a2a] bg-[#111] text-white">
+                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: '#ffffff' }}>Tell us more about your device screen defects?</h2>
+                <p style={{ textAlign: 'center', color: '#cccccc', fontSize: '0.85rem', marginBottom: '3rem' }}>(Because you selected screen defect)</p>
+                
+                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>Screen Physical Condition</h3>
+                <p style={{ color: '#cccccc', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Check physical condition of Display Screen</p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '3rem' }}>
+                  {[
+                    'Screen cracked/ glass broken',
+                    'Chipped/cracked outside display area',
+                    'More than 2 scratches on screen',
+                    '1-2 scratches on screen'
+                  ].map((opt) => (
+                    <button key={opt} onClick={() => setDiagnostics({ ...diagnostics, screenCondition: opt })} style={{ textAlign: 'left', padding: '1rem 1.5rem', borderRadius: '8px', border: diagnostics.screenCondition === opt ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.screenCondition === opt ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.screenCondition === opt ? '#4CD964' : '#fff', cursor: 'pointer', fontWeight: 500 }}>
+                      {opt}
+                    </button>
+                  ))}
+                </div>
+
+                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                  <button onClick={() => {
+                    if (diagnostics.defects.includes('body_scratch')) {
+                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 6);
+                    } else {
+                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 7);
+                    }
+                  }} disabled={!diagnostics.screenCondition} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: diagnostics.screenCondition ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
+                </div>
+              </div>
+            )}
+
+            {/* STAGE 6: BODY DEFECT SUB-PAGE */}
+            {step === 6 && (
+              <div className="card p-6 md:p-12 rounded-lg border border-[#2a2a2a] bg-[#111] text-white">
+                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: '#ffffff' }}>Tell us more about your device's body defects?</h2>
+                <p style={{ textAlign: 'center', color: '#cccccc', fontSize: '0.85rem', marginBottom: '3rem' }}>(Because you selected device's body defect)</p>
+                
+                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>1. Scratches on device Body</h3>
+                <div style={{ display: 'flex', gap: '1rem', marginBottom: '2.5rem' }}>
+                  {[
+                    'More than 2 scratches',
+                    '1-2 scratches',
+                    'No scratches'
+                  ].map((opt) => (
+                    <button key={opt} onClick={() => setDiagnostics({ ...diagnostics, bodyScratches: opt })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.bodyScratches === opt ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.bodyScratches === opt ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.bodyScratches === opt ? '#4CD964' : '#fff', cursor: 'pointer', fontWeight: 500, fontSize: '0.9rem' }}>
+                      {opt}
+                    </button>
+                  ))}
+                </div>
+
+                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>2. Dents on device Body</h3>
+                <div style={{ display: 'flex', gap: '1rem', marginBottom: '3rem' }}>
+                  {[
+                    'Major dent(s) or more than 2',
+                    '1-2 minor dents',
+                    'No dents'
+                  ].map((opt) => (
+                    <button key={opt} onClick={() => setDiagnostics({ ...diagnostics, bodyDents: opt })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.bodyDents === opt ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.bodyDents === opt ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.bodyDents === opt ? '#4CD964' : '#fff', cursor: 'pointer', fontWeight: 500, fontSize: '0.9rem' }}>
+                      {opt}
+                    </button>
+                  ))}
+                </div>
+
+                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                  <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 7)} disabled={!diagnostics.bodyScratches || !diagnostics.bodyDents} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (diagnostics.bodyScratches && diagnostics.bodyDents) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
+                </div>
+              </div>
+            )}
+
+            {/* STAGE 7: HARDWARE / FUNCTIONAL */}
+            {step === 7 && (
               <div className="card p-6 md:p-12 rounded-lg border border-[#2a2a2a] bg-[#111] text-white">
                 <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: '#ffffff' }}>Functional or Physical Problems</h2>
                 <p style={{ textAlign: 'center', color: '#cccccc', fontSize: '0.85rem', marginBottom: '3rem' }}>Please choose appropriate condition to get accurate quote</p>
@@ -799,13 +796,13 @@ export default function QuotePage() {
                   ))}
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
-                  <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 6)} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px' }}>Continue <ArrowRightIcon /></button>
+                  <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 8)} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px' }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
             )}
 
-            {/* STAGE 6: ACCESSORIES */}
-            {step === 6 && (
+            {/* STAGE 8: ACCESSORIES */}
+            {step === 8 && (
               <div className="card p-6 md:p-12 rounded-lg border border-[#2a2a2a] bg-[#111] text-white">
                 <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: '#ffffff' }}>Do you have the following?</h2>
                 <p style={{ textAlign: 'center', color: '#cccccc', fontSize: '0.85rem', marginBottom: '3rem' }}>Please select accessories which are available</p>
@@ -822,7 +819,49 @@ export default function QuotePage() {
                   ))}
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
-                  <button onClick={() => { if (isAuthenticated) { calculateFinalPrice(); navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 8); } else { navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 7); } }} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px' }}>Continue <ArrowRightIcon /></button>
+                  <button onClick={() => { 
+                    if (diagnostics.warranty || diagnostics.accessories.includes('bill')) {
+                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 9);
+                    } else if (isAuthenticated) { 
+                      calculateFinalPrice(); navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11); 
+                    } else { 
+                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 10); 
+                    } 
+                  }} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px' }}>Continue <ArrowRightIcon /></button>
+                </div>
+              </div>
+            )}
+
+            {/* STAGE 9: MOBILE AGE */}
+            {step === 9 && (
+              <div className="card p-6 md:p-12 rounded-lg border border-[#2a2a2a] bg-[#111] text-white">
+                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: '#ffffff' }}>What is your mobile age?</h2>
+                <p style={{ textAlign: 'center', color: '#cccccc', fontSize: '0.85rem', marginBottom: '3rem' }}>Please select the age of your device from the purchase date.</p>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginBottom: '3rem' }}>
+                  {[
+                    { id: 'below3', label: 'Below 3 months', sub: 'Valid bill mandatory' },
+                    { id: '3to6', label: '3 months - 6 months', sub: 'Valid bill mandatory' },
+                    { id: '6to11', label: '6 months - 11 months', sub: 'Valid bill mandatory' },
+                    { id: 'above11', label: 'Above 11 months', sub: '' }
+                  ].map((age) => (
+                    <button key={age.id} onClick={() => setDiagnostics({ ...diagnostics, mobileAge: age.id as any })} style={{ display: 'flex', flexDirection: 'column', padding: '1.5rem', borderRadius: '8px', border: diagnostics.mobileAge === age.id ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.mobileAge === age.id ? 'rgba(76,217,100,0.1)' : '#1a1a1a', cursor: 'pointer', color: diagnostics.mobileAge === age.id ? '#4CD964' : '#fff', textAlign: 'left' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: age.sub ? '0.25rem' : '0' }}>
+                        <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.mobileAge === age.id ? '1px solid #4CD964' : '1px solid #444', backgroundColor: diagnostics.mobileAge === age.id ? '#4CD964' : 'transparent', flexShrink: 0 }} />
+                        <span style={{ fontWeight: 500, fontSize: '1rem' }}>{age.label}</span>
+                      </div>
+                      {age.sub && <span style={{ color: '#a0a0a0', fontSize: '0.75rem', paddingLeft: '1.5rem' }}>{age.sub}</span>}
+                    </button>
+                  ))}
+                </div>
+
+                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                  <button onClick={() => { 
+                    if (isAuthenticated) { 
+                      calculateFinalPrice(); navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11); 
+                    } else { 
+                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 10); 
+                    } 
+                  }} disabled={!diagnostics.mobileAge} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: diagnostics.mobileAge ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
             )}
@@ -833,7 +872,7 @@ export default function QuotePage() {
         </div>
       )}
 
-      {/* STAGE 7: LEAD CAPTURE MODAL */}
+{/* STAGE 10: LEAD CAPTURE MODAL */}
       {step === 7 && (
         <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-[1000] backdrop-blur-sm p-4">
           <div className="bg-white text-black rounded-xl w-full max-w-4xl flex flex-col md:flex-row overflow-hidden shadow-2xl max-h-[90vh] overflow-y-auto">
@@ -903,8 +942,8 @@ export default function QuotePage() {
         </div>
       )}
 
-      {/* STAGE 8: FINAL EXACT PRICE */}
-      {step === 8 && finalPrice != null && (
+      {/* STAGE 11: FINAL EXACT PRICE */}
+      {step === 11 && finalPrice != null && (
         <div className="card flex flex-col gap-4 bg-[#111] border border-[#2a2a2a] p-6 md:p-8 rounded-xl max-w-[600px] mx-auto text-left">
           <div style={{ display: 'flex', gap: '2rem', alignItems: 'flex-start', borderBottom: '1px solid #2a2a2a', paddingBottom: '2rem', marginBottom: '1rem' }}>
             <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} style={{ width: '80px', height: 'auto', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
@@ -959,15 +998,15 @@ export default function QuotePage() {
             </div>
             
             <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', width: '100%' }}>
-              <button type="button" onClick={() => { navigateToState('', '', '', 'brand', 1); setFinalPrice(null); setMarketPriceFetched(false); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], hardware: [], accessories: [], warranty: null, validBill: null, eSim: null, mobileAge: null }); }} className="btn-outline" style={{ flex: 1, padding: '16px', fontSize: '1.1rem' }}>Start Over</button>
-              <button type="button" onClick={() => setStep(9)} disabled={!marketPriceFetched} className="btn-primary" style={{ flex: 2, padding: '16px', background: marketPriceFetched ? '#4CD964' : '#333', color: marketPriceFetched ? '#fff' : '#999', fontSize: '1.1rem', fontWeight: 600, opacity: marketPriceFetched ? 1 : 0.6, cursor: marketPriceFetched ? 'pointer' : 'not-allowed' }}>Schedule Pickup</button>
+              <button type="button" onClick={() => { navigateToState('', '', '', 'brand', 1); setFinalPrice(null); setMarketPriceFetched(false); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], screenCondition: null, bodyScratches: null, bodyDents: null, hardware: [], accessories: [], warranty: null, validBill: null, eSim: null, mobileAge: null }); }} className="btn-outline" style={{ flex: 1, padding: '16px', fontSize: '1.1rem' }}>Start Over</button>
+              <button type="button" onClick={() => setStep(12)} disabled={!marketPriceFetched} className="btn-primary" style={{ flex: 2, padding: '16px', background: marketPriceFetched ? '#4CD964' : '#333', color: marketPriceFetched ? '#fff' : '#999', fontSize: '1.1rem', fontWeight: 600, opacity: marketPriceFetched ? 1 : 0.6, cursor: marketPriceFetched ? 'pointer' : 'not-allowed' }}>Schedule Pickup</button>
             </div>
           </>
           )}
         </div>
       )}
 
-      {/* STAGE 9: PICKUP DETAILS FORM */}
+      {/* STAGE 12: PICKUP DETAILS FORM */}
       {step === 9 && (
         <div className="card flex flex-col gap-4 bg-[#111] border border-[#333] p-6 md:p-8 rounded-xl max-w-[600px] mx-auto text-left">
           <p className="eyebrow" style={{ color: '#d4af37', fontSize: '1rem', letterSpacing: '2px', textAlign: 'center', marginBottom: '1.5rem' }}>SCHEDULE PICKUP</p>
