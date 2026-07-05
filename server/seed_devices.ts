@@ -17469,4 +17469,455 @@ export const SEED_DEVICES = [
     "color": "Midnight",
     "basePrice": 5000
   }
+,
+  {
+    "id": "oneplus_batch_1",
+    "brand": "OnePlus",
+    "model": "OnePlus 6T",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_2",
+    "brand": "OnePlus",
+    "model": "OnePlus 6",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_3",
+    "brand": "OnePlus",
+    "model": "OnePlus 5T",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_4",
+    "brand": "OnePlus",
+    "model": "OnePlus 5",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_5",
+    "brand": "OnePlus",
+    "model": "OnePlus 3T",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_6",
+    "brand": "OnePlus",
+    "model": "OnePlus 3",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_7",
+    "brand": "OnePlus",
+    "model": "OnePlus 6T McLaren",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_8",
+    "brand": "OnePlus",
+    "model": "OnePlus 7",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_9",
+    "brand": "OnePlus",
+    "model": "OnePlus 7 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_10",
+    "brand": "OnePlus",
+    "model": "OnePlus 7T",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_11",
+    "brand": "OnePlus",
+    "model": "OnePlus 7T Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_12",
+    "brand": "OnePlus",
+    "model": "OnePlus 8",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_13",
+    "brand": "OnePlus",
+    "model": "OnePlus 8 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_14",
+    "brand": "OnePlus",
+    "model": "OnePlus 7T Pro McLaren Edition",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_15",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_16",
+    "brand": "OnePlus",
+    "model": "OnePlus 8T",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_17",
+    "brand": "OnePlus",
+    "model": "OnePlus 9 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_18",
+    "brand": "OnePlus",
+    "model": "OnePlus 9R 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_19",
+    "brand": "OnePlus",
+    "model": "OnePlus 9 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_20",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_21",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 2 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_22",
+    "brand": "OnePlus",
+    "model": "OnePlus 9RT 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_23",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 2 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_24",
+    "brand": "OnePlus",
+    "model": "OnePlus 10 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_25",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 2 Lite 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_26",
+    "brand": "OnePlus",
+    "model": "OnePlus 10R 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_27",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 2T 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_28",
+    "brand": "OnePlus",
+    "model": "OnePlus 10T 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_29",
+    "brand": "OnePlus",
+    "model": "OnePlus 11 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_30",
+    "brand": "OnePlus",
+    "model": "Oneplus 11 5G Marble Edition",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_31",
+    "brand": "OnePlus",
+    "model": "OnePlus 11R 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_32",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 3 Lite 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_33",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 3 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_34",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 3 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_35",
+    "brand": "OnePlus",
+    "model": "Oneplus Open",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_36",
+    "brand": "OnePlus",
+    "model": "OnePlus 12",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_37",
+    "brand": "OnePlus",
+    "model": "OnePlus 12R",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_38",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE4 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_39",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE4 Lite 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_40",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 4",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_41",
+    "brand": "OnePlus",
+    "model": "OnePlus 13",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_42",
+    "brand": "OnePlus",
+    "model": "OnePlus 13R",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_43",
+    "brand": "OnePlus",
+    "model": "OnePlus 13s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_44",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 5",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_45",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 5",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_46",
+    "brand": "OnePlus",
+    "model": "OnePlus 15",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_47",
+    "brand": "OnePlus",
+    "model": "OnePlus 15R",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_48",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 6 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_49",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 6 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oneplus_batch_50",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 6 Lite 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  }
 ];
