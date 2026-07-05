@@ -158,6 +158,7 @@ export default function QuotePage() {
     setSelectedSamsungSeries(null);
     setSelectedXiaomiSeries(null);
     setSelectedVivoSeries(null);
+    setSelectedOppoSeries(null);
     setModelSearchQuery('');
     setSelectedStorage(newStorage);
     setSelectionStage(newStage as any);
@@ -221,6 +222,7 @@ export default function QuotePage() {
   const [selectedSamsungSeries, setSelectedSamsungSeries] = useState<string | null>(null);
   const [selectedXiaomiSeries, setSelectedXiaomiSeries] = useState<string | null>(null);
   const [selectedVivoSeries, setSelectedVivoSeries] = useState<string | null>(null);
+  const [selectedOppoSeries, setSelectedOppoSeries] = useState<string | null>(null);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   // Clear timer on unmount
@@ -342,6 +344,26 @@ export default function QuotePage() {
     }
   };
 
+  const matchOppoSeries = (modelName: string, series: string): boolean => {
+    const normalized = modelName.toLowerCase();
+    switch (series) {
+      case 'F Series':
+        return normalized.includes('oppo f');
+      case 'R Series':
+        return normalized.includes('oppo r') && !normalized.includes('reno');
+      case 'A Series':
+        return normalized.includes('oppo a');
+      case 'K Series':
+        return normalized.includes('oppo k');
+      case 'Reno Series':
+        return normalized.includes('reno');
+      case 'Find Series':
+        return normalized.includes('find');
+      default:
+        return false;
+    }
+  };
+
   const models = useMemo(() => {
     if (!selectedBrand) return [];
     let brandModels = [...new Set(allDevices.filter((d) => d.brand === selectedBrand).map((d) => d.model).filter(Boolean))];
@@ -360,6 +382,9 @@ export default function QuotePage() {
     
     if (selectedBrand === 'Vivo' && selectedVivoSeries) {
       brandModels = brandModels.filter((m) => matchVivoSeries(m, selectedVivoSeries));
+    }
+    if (selectedBrand === 'OPPO' && selectedOppoSeries) {
+      brandModels = brandModels.filter((m) => matchOppoSeries(m, selectedOppoSeries));
     }
     
     if (selectedBrand === 'Apple') {
@@ -384,7 +409,7 @@ export default function QuotePage() {
       });
     }
     return brandModels.sort();
-  }, [allDevices, selectedBrand, modelSearchQuery, selectedSamsungSeries, selectedXiaomiSeries, selectedVivoSeries]);
+  }, [allDevices, selectedBrand, modelSearchQuery, selectedSamsungSeries, selectedXiaomiSeries, selectedVivoSeries, selectedOppoSeries]);
   const storageOptions = useMemo(() => {
     if (!selectedBrand || !selectedModel) return [];
     
