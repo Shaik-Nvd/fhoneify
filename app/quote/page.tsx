@@ -564,6 +564,47 @@ export default function QuotePage() {
     let screen_body_sum = 0;
     let functional_sum = 0;
 
+    const applyGranularDefects = (scale: number) => {
+      let sum = 0;
+      diag.defects.forEach(d => {
+        let penalty = config.defects_screen_body[d as keyof typeof config.defects_screen_body] || 0;
+        if (d === 'screen_scratch' && diag.screenCondition) {
+          if (diag.screenCondition === 'Chipped/cracked outside display area') penalty = 0.20;
+          else if (diag.screenCondition === 'More than 2 scratches on screen') penalty = 0.15;
+          else if (diag.screenCondition === '1-2 scratches on screen') penalty = 0.08;
+        }
+        if (d === 'screen_spot') {
+          let spotPenalty = penalty;
+          if (diag.screenSpots === '3 or more minor spots on screen') spotPenalty = 0.25;
+          else if (diag.screenSpots === '1-2 minor spots on screen') spotPenalty = 0.15;
+          else if (diag.screenSpots === 'No spots on screen') spotPenalty = 0;
+          if (diag.screenLines === 'Visible line(s) on display') spotPenalty = Math.max(spotPenalty, 0.30);
+          else if (diag.screenLines === 'Display faded along edges') spotPenalty = Math.max(spotPenalty, 0.20);
+          if (diag.screenDiscoloration === 'Major Discoloration') spotPenalty = Math.max(spotPenalty, 0.25);
+          else if (diag.screenDiscoloration === 'Minor Discoloration') spotPenalty = Math.max(spotPenalty, 0.10);
+          penalty = spotPenalty;
+        }
+        if (d === 'body_scratch') {
+          let bPenalty = 0;
+          if (diag.bodyScratches === 'More than 2 scratches') bPenalty += 0.08;
+          else if (diag.bodyScratches === '1-2 scratches') bPenalty += 0.03;
+          if (diag.bodyDents === 'Major dent(s) or more than 2') bPenalty += 0.12;
+          else if (diag.bodyDents === '1-2 minor dents') bPenalty += 0.05;
+          if (bPenalty > 0) penalty = bPenalty;
+        }
+        if (d === 'panel_missing') {
+          let pPenalty = 0;
+          if (diag.bodyPanel === 'Missing side or back panel') pPenalty = 0.20;
+          else if (diag.bodyPanel === 'Cracked/ broken side or back panel') pPenalty = 0.15;
+          if (diag.bodyBent === 'Bent/ curved panel') pPenalty = Math.max(pPenalty, 0.25);
+          else if (diag.bodyBent === 'Loose screen (Gap in screen and body)') pPenalty = Math.max(pPenalty, 0.15);
+          if (pPenalty > 0) penalty = pPenalty;
+        }
+        sum += penalty * scale;
+      });
+      return sum;
+    };
+
     if (selectedBrand.toLowerCase() === 'apple') {
       const params = getAppleModelParams(selectedModel);
       
@@ -578,11 +619,7 @@ export default function QuotePage() {
       touch_multiplier = diag.touch === false ? params.touchPenalty : 1.0;
       screen_orig_mult = diag.originalScreen === false ? params.originalScreenPenalty : 1.0;
 
-      diag.defects.forEach(d => { 
-        if (d in config.defects_screen_body) {
-          screen_body_sum += config.defects_screen_body[d as keyof typeof config.defects_screen_body] * params.physicalScale;
-        }
-      });
+      screen_body_sum = applyGranularDefects(params.physicalScale);
       
       diag.hardware.forEach(h => { 
         if (h in config.defects_functional) {
@@ -600,11 +637,7 @@ export default function QuotePage() {
       touch_multiplier = diag.touch === false ? config.multipliers.touch_no : 1.0;
       screen_orig_mult = diag.originalScreen === false ? config.multipliers.originalScreen_no : 1.0;
 
-      diag.defects.forEach(d => { 
-        if (d in config.defects_screen_body) {
-          screen_body_sum += config.defects_screen_body[d as keyof typeof config.defects_screen_body];
-        }
-      });
+      screen_body_sum = applyGranularDefects(1.0);
       
       diag.hardware.forEach(h => { 
         if (h in config.defects_functional) {
