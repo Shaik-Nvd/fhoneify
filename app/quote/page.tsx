@@ -217,6 +217,7 @@ export default function QuotePage() {
   const [scrapingStatus, setScrapingStatus] = useState('Connecting to market...');
   const [timerError, setTimerError] = useState<string | null>(null);
   const [marketPriceFetched, setMarketPriceFetched] = useState(false);
+  const [selectedSamsungSeries, setSelectedSamsungSeries] = useState<string | null>(null);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   // Clear timer on unmount
@@ -232,12 +233,44 @@ export default function QuotePage() {
     const allBrands = [...new Set([...Object.keys(BRAND_LOGOS), ...extracted])];
     return allBrands.sort();
   }, [allDevices]);
+  const matchSamsungSeries = (modelName: string, series: string): boolean => {
+    const normalized = modelName.toLowerCase();
+    switch (series) {
+      case 'Galaxy Fold Series':
+        return normalized.includes('fold');
+      case 'Galaxy Z Flip Series':
+        return normalized.includes('flip');
+      case 'Galaxy A Series':
+        return normalized.includes('galaxy a') && !normalized.includes('fold') && !normalized.includes('flip');
+      case 'Galaxy J Series':
+        return normalized.includes('galaxy j');
+      case 'Galaxy Note Series':
+        return normalized.includes('galaxy note');
+      case 'Galaxy On Series':
+        return normalized.includes('galaxy on');
+      case 'Galaxy S Series':
+        return normalized.includes('galaxy s') && !normalized.includes('fold') && !normalized.includes('flip');
+      case 'Galaxy C Series':
+        return normalized.includes('galaxy c');
+      case 'Galaxy M Series':
+        return normalized.includes('galaxy m');
+      case 'Galaxy F Series':
+        return normalized.includes('galaxy f');
+      default:
+        return false;
+    }
+  };
+
   const models = useMemo(() => {
     if (!selectedBrand) return [];
     let brandModels = [...new Set(allDevices.filter((d) => d.brand === selectedBrand).map((d) => d.model).filter(Boolean))];
     
     if (modelSearchQuery) {
       brandModels = brandModels.filter((m) => m.toLowerCase().includes(modelSearchQuery.toLowerCase()));
+    }
+    
+    if (selectedBrand === 'Samsung' && selectedSamsungSeries) {
+      brandModels = brandModels.filter((m) => matchSamsungSeries(m, selectedSamsungSeries));
     }
     
     if (selectedBrand === 'Apple') {
@@ -262,7 +295,7 @@ export default function QuotePage() {
       });
     }
     return brandModels.sort();
-  }, [allDevices, selectedBrand, modelSearchQuery]);
+  }, [allDevices, selectedBrand, modelSearchQuery, selectedSamsungSeries]);
   const storageOptions = useMemo(() => {
     if (!selectedBrand || !selectedModel) return [];
     
@@ -294,7 +327,10 @@ export default function QuotePage() {
     }) ?? null;
   }, [allDevices, selectedBrand, selectedModel, selectedStorage]);
 
-  const handleBrandSelect = (b: string) => { navigateToState(b, '', '', 'model', 1); };
+  const handleBrandSelect = (b: string) => { 
+    setSelectedSamsungSeries(null);
+    navigateToState(b, '', '', 'model', 1); 
+  };
   const handleModelSelect = (m: string) => { navigateToState(selectedBrand, m, '', 'storage', 1); };
   const handleStorageSelect = async (s: string) => { 
     navigateToState(selectedBrand, selectedModel, s, 'storage', 1); 
@@ -813,6 +849,49 @@ export default function QuotePage() {
                 />
                 <button onClick={() => navigateToState('', '', '', 'brand', 1)} style={{ color: '#4CD964', background: 'none', border: 'none', cursor: 'pointer', whiteSpace: 'nowrap' }}>Change Brand</button>
               </div>
+
+              {selectedBrand === 'Samsung' && (
+                <div style={{ marginBottom: '2rem' }}>
+                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
+                    {[
+                      "Galaxy A Series",
+                      "Galaxy J Series",
+                      "Galaxy Note Series",
+                      "Galaxy On Series",
+                      "Galaxy S Series",
+                      "Galaxy C Series",
+                      "Galaxy M Series",
+                      "Galaxy Fold Series",
+                      "Galaxy Z Flip Series",
+                      "Galaxy F Series"
+                    ].map((series) => {
+                      const isSelected = selectedSamsungSeries === series;
+                      return (
+                        <button
+                          key={series}
+                          type="button"
+                          onClick={() => setSelectedSamsungSeries(isSelected ? null : series)}
+                          style={{
+                            padding: '0.75rem 1rem',
+                            borderRadius: '8px',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
+                            color: isSelected ? '#4CD964' : '#fff',
+                            cursor: 'pointer',
+                            fontSize: '0.85rem',
+                            fontWeight: 500,
+                            textAlign: 'center',
+                            transition: 'all 200ms'
+                          }}
+                        >
+                          {series}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
               
               {models.length === 0 && !loading ? (
                 <div style={{ textAlign: 'center', padding: '4rem 1rem', color: '#a0a0a0' }}>
