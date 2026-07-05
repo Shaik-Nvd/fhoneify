@@ -8,7 +8,7 @@
     "dev:api": "tsx watch server/server.ts",
     "build": "next build",
     "start": "next start",
-    "start:api": "npx prisma db push && tsx server/server.ts",
+    "start:api": "npx prisma db push && PLAYWRIGHT_BROWSERS_PATH=/ms-playwright tsx server/server.ts",
     "lint": "next lint",
     "setup-cashify": "node scripts/setup-cashify.js",
     "postinstall": "npx playwright install chromium"
