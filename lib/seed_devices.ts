@@ -25625,4 +25625,104 @@ export const SEED_DEVICES: any[] = [
     "color": "Black",
     "basePrice": 5000
   }
+,
+  {
+    "id": "nothing_batch_1",
+    "brand": "Nothing",
+    "model": "Nothing Phone 1",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "White",
+    "basePrice": 5000
+  },
+  {
+    "id": "nothing_batch_2",
+    "brand": "Nothing",
+    "model": "Nothing Phone 2",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "White",
+    "basePrice": 5000
+  },
+  {
+    "id": "nothing_batch_3",
+    "brand": "Nothing",
+    "model": "Nothing Phone 2a 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "White",
+    "basePrice": 5000
+  },
+  {
+    "id": "nothing_batch_4",
+    "brand": "Nothing",
+    "model": "CMF by Nothing Phone 1",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "White",
+    "basePrice": 5000
+  },
+  {
+    "id": "nothing_batch_5",
+    "brand": "Nothing",
+    "model": "Nothing Phone 2a Plus",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "White",
+    "basePrice": 5000
+  },
+  {
+    "id": "nothing_batch_6",
+    "brand": "Nothing",
+    "model": "Nothing Phone 3a",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "White",
+    "basePrice": 5000
+  },
+  {
+    "id": "nothing_batch_7",
+    "brand": "Nothing",
+    "model": "Nothing Phone 3a Pro",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "White",
+    "basePrice": 5000
+  },
+  {
+    "id": "nothing_batch_8",
+    "brand": "Nothing",
+    "model": "CMF by Nothing Phone 2 Pro",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "White",
+    "basePrice": 5000
+  },
+  {
+    "id": "nothing_batch_9",
+    "brand": "Nothing",
+    "model": "Nothing Phone 3",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "White",
+    "basePrice": 5000
+  },
+  {
+    "id": "nothing_batch_10",
+    "brand": "Nothing",
+    "model": "Nothing Phone 3a Lite",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "White",
+    "basePrice": 5000
+  },
+  {
+    "id": "nothing_batch_11",
+    "brand": "Nothing",
+    "model": "Nothing Phone 4a",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "White",
+    "basePrice": 5000
+  }
 ];
