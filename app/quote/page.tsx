@@ -60,7 +60,8 @@ export default function QuotePage() {
         lowerModel.includes('14') ||
         lowerModel.includes('15') ||
         lowerModel.includes('16') ||
-        lowerModel.includes('17')
+        lowerModel.includes('17') ||
+        lowerModel.includes('air')
       );
     }
     return true;
@@ -275,7 +276,10 @@ export default function QuotePage() {
 
     try {
       // INSTANT CALCULATION INSTEAD OF API CALL TO AVOID 40S DELAY
-      const lookupKey = `${device.model}-${device.storage}`.toLowerCase().replace(/[^a-z0-9]/g, '-');
+      let lookupKey = `${device.model}-${device.storage}`.toLowerCase().replace(/[^a-z0-9]/g, '-');
+      if (lookupKey.includes('iphone-air')) {
+        lookupKey = lookupKey.replace('iphone-air', 'iphone-17-air');
+      }
       const baseMarketPrice = (cashifyPrices as Record<string, number>)[lookupKey] || (device as any).basePrice || 1000;
       
       let upliftedBasePrice = baseMarketPrice;
@@ -317,7 +321,8 @@ export default function QuotePage() {
       lowerModel.includes('iphone 14') ||
       lowerModel.includes('iphone 15') ||
       lowerModel.includes('iphone 16') ||
-      lowerModel.includes('iphone 17')
+      lowerModel.includes('iphone 17') ||
+      lowerModel.includes('air')
     ) && !lowerModel.includes('se'); // SE series models use Touch ID
 
     const hasTouchId = isApple && (
@@ -330,7 +335,8 @@ export default function QuotePage() {
     const hasActionButton = isApple && (
       (lowerModel.includes('15') && (lowerModel.includes('pro') || lowerModel.includes('max'))) ||
       lowerModel.includes('16') ||
-      lowerModel.includes('17')
+      lowerModel.includes('17') ||
+      lowerModel.includes('air')
     );
 
     const baseList = [
@@ -375,7 +381,7 @@ export default function QuotePage() {
       physicalScale: 1.0,
     };
 
-    if (lowerModel.includes('17')) {
+    if (lowerModel.includes('17') || lowerModel.includes('air')) {
       params = {
         warrantyPenalty: 0.18, // -18%
         gstBillPenalty: 0.10,   // -10%

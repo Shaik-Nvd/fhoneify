@@ -8,7 +8,8 @@ const MODELS_TO_TEST = [
   { brand: 'Apple', model: 'Apple iPhone 14 Pro Max', storage: '256GB' },
   { brand: 'Apple', model: 'Apple iPhone 15', storage: '128GB' },
   { brand: 'Apple', model: 'Apple iPhone 16', storage: '128GB' },
-  { brand: 'Apple', model: 'Apple iPhone 17', storage: '256GB' }
+  { brand: 'Apple', model: 'Apple iPhone 17', storage: '256GB' },
+  { brand: 'Apple', model: 'Apple iPhone Air', storage: '256GB' }
 ];
 
 const ALL_DEFECTS = ['screen_scratch', 'screen_spot', 'panel_missing', 'body_scratch'];
@@ -37,7 +38,7 @@ const getAppleModelParams = (model: string) => {
     physicalScale: 1.0,
   };
 
-  if (lowerModel.includes('17')) {
+  if (lowerModel.includes('17') || lowerModel.includes('air')) {
     params = {
       warrantyPenalty: 0.18,
       gstBillPenalty: 0.10,
@@ -100,7 +101,8 @@ const isWarrantyEligible = (model: string) => {
     lowerModel.includes('14') ||
     lowerModel.includes('15') ||
     lowerModel.includes('16') ||
-    lowerModel.includes('17')
+    lowerModel.includes('17') ||
+    lowerModel.includes('air')
   );
 };
 
@@ -113,7 +115,10 @@ function runSimulation() {
   let passedTests = 0;
 
   for (const device of MODELS_TO_TEST) {
-    const lookupKey = `${device.model}-${device.storage}`.toLowerCase().replace(/[^a-z0-9]/g, '-');
+    let lookupKey = `${device.model}-${device.storage}`.toLowerCase().replace(/[^a-z0-9]/g, '-');
+    if (lookupKey.includes('iphone-air')) {
+      lookupKey = lookupKey.replace('iphone-air', 'iphone-17-air');
+    }
     const baseMarketPrice = (cashifyPrices as any)[lookupKey];
     
     if (!baseMarketPrice) {
