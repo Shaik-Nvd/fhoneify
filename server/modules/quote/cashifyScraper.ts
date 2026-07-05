@@ -5,6 +5,8 @@ import logger from '../../lib/logger';
 
 const SESSIONS_DIR = path.join(__dirname, '../../../cashify-sessions');
 
+let globalBrowser: Browser | null = null;
+
 export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: string, storage: string, answers: any }) {
   let sessionFiles: string[] = [];
   
@@ -28,18 +30,32 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
   sessionFiles.sort(() => Math.random() - 0.5);
 
   let lastError: Error | null = null;
+  
+  // Boot or reuse global browser
+  if (!globalBrowser) {
+    logger.info('Launching new persistent Chromium instance...');
+    globalBrowser = await chromium.launch({ headless: true });
+  }
 
   for (let i = 0; i < sessionFiles.length; i++) {
     const sessionFile = sessionFiles[i];
     logger.info(`[Attempt ${i+1}/${sessionFiles.length}] Using session: ${path.basename(sessionFile)}`);
     
-    let browser: Browser | null = null;
     let context: BrowserContext | null = null;
 
     try {
-      browser = await chromium.launch({ headless: true }); // Must be headless in production server environments
-      context = await browser.newContext({ storageState: sessionFile });
+      context = await globalBrowser.newContext({ storageState: sessionFile });
       const page = await context.newPage();
+
+      // Block heavy resources (images, css, fonts) for lightning fast loads
+      await page.route('**/*', route => {
+        const type = route.request().resourceType();
+        if (['image', 'media', 'font', 'stylesheet'].includes(type)) {
+          route.abort();
+        } else {
+          route.continue();
+        }
+      });
 
       // Set a default timeout
       page.setDefaultTimeout(15000);
@@ -144,7 +160,6 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
       // Loop will continue and try the next session!
     } finally {
       if (context) await context.close();
-      if (browser) await browser.close();
     }
   }
 
