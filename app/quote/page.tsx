@@ -727,9 +727,9 @@ export default function QuotePage() {
 
     // Uplift applies dynamically to the final price after deductions
     let upliftPercent = 1.04;
-    if (rawCalculated <= 20000) {
+    if (rawBase <= 20000) {
       upliftPercent = 1.08;
-    } else if (rawCalculated <= 50000) {
+    } else if (rawBase <= 50000) {
       upliftPercent = 1.06;
     }
 
