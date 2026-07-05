@@ -36,7 +36,9 @@
     "bluetooth": 0.05,
     "silent": 0.02,
     "vibrator": 0.02,
-    "proximity": 0.02
+    "proximity": 0.02,
+    "s_pen": 0.08,
+    "hinge": 0.20
   },
   "bonuses": {
     "box": 380

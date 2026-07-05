@@ -408,6 +408,20 @@ export default function QuotePage() {
       lowerModel.includes('air')
     );
 
+    const isSamsung = brand.toLowerCase() === 'samsung';
+    const hasSPen = isSamsung && (
+      lowerModel.includes('note') || 
+      lowerModel.includes('s22 ultra') || 
+      lowerModel.includes('s23 ultra') || 
+      lowerModel.includes('s24 ultra')
+    );
+
+    const isFoldable = 
+      lowerModel.includes('fold') || 
+      lowerModel.includes('flip') || 
+      lowerModel.includes('razr') || 
+      lowerModel.includes('open');
+
     const baseList = [
       { id: 'front_camera', label: 'Front Camera not working', icon: '📸' },
       { id: 'back_camera', label: 'Back Camera not working', icon: '📷' },
@@ -430,7 +444,9 @@ export default function QuotePage() {
       { id: 'vibrator', label: 'Vibrator is not working', icon: '📳' },
       { id: 'proximity', label: 'Proximity Sensor not working', icon: '🖐' },
       { id: 'battery_service', label: 'Battery in Service (< 80%)', icon: '🔋' },
-      { id: 'battery_health', label: 'Battery Health 80-85%', icon: '🔋' }
+      { id: 'battery_health', label: 'Battery Health 80-85%', icon: '🔋' },
+      ...(hasSPen ? [{ id: 's_pen', label: 'S-Pen Faulty / Missing', icon: '🖊️' }] : []),
+      ...(isFoldable ? [{ id: 'hinge', label: 'Hinge / Folding Mechanism Faulty', icon: '📱' }] : [])
     ];
 
     return baseList;
