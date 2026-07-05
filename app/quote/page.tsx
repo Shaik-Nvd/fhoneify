@@ -637,7 +637,7 @@ export default function QuotePage() {
       
       setShowOtpInput(false);
       calculateFinalPrice();
-      setMarketPriceFetched(true);
+      setMarketPriceFetched(false);
       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11);
     } catch (err: any) {
       console.error(err);
@@ -1259,7 +1259,7 @@ export default function QuotePage() {
                       setDiagnostics(updatedDiag);
                       if (isAuthenticated) { 
                         calculateFinalPrice(updatedDiag); 
-                        setMarketPriceFetched(true);
+                        setMarketPriceFetched(false);
                         navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11); 
                       } else { 
                         navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 10); 
@@ -1303,6 +1303,7 @@ export default function QuotePage() {
                     setDiagnostics(updatedDiag);
                     if (isAuthenticated) { 
                       calculateFinalPrice(updatedDiag); 
+                      setMarketPriceFetched(false);
                       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11); 
                     } else { 
                       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 10); 
