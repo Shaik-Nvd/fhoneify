@@ -24110,4 +24110,689 @@ export const SEED_DEVICES: any[] = [
     "color": "Aurora",
     "basePrice": 5000
   }
+,
+  {
+    "id": "infinix_batch_1",
+    "brand": "Infinix",
+    "model": "Infinix Hot S3X",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_2",
+    "brand": "Infinix",
+    "model": "Infinix Note 5 Stylus",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_3",
+    "brand": "Infinix",
+    "model": "Infinix Hot 7 Pro",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_4",
+    "brand": "Infinix",
+    "model": "Infinix Smart 3 Plus",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_5",
+    "brand": "Infinix",
+    "model": "Infinix Note 5",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_6",
+    "brand": "Infinix",
+    "model": "Infinix S4",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_7",
+    "brand": "Infinix",
+    "model": "Infinix Smart 2",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_8",
+    "brand": "Infinix",
+    "model": "Infinix Hot S3",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_9",
+    "brand": "Infinix",
+    "model": "Infinix Note 4",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_10",
+    "brand": "Infinix",
+    "model": "Infinix Zero 5 Pro",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_11",
+    "brand": "Infinix",
+    "model": "Infinix Hot 6 Pro",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_12",
+    "brand": "Infinix",
+    "model": "Infinix Hot 7",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_13",
+    "brand": "Infinix",
+    "model": "Infinix Hot 8",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_14",
+    "brand": "Infinix",
+    "model": "Infinix S5",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_15",
+    "brand": "Infinix",
+    "model": "Infinix S5 Pro",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_16",
+    "brand": "Infinix",
+    "model": "Infinix S5 Lite",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_17",
+    "brand": "Infinix",
+    "model": "Infinix Hot 9 Pro",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_18",
+    "brand": "Infinix",
+    "model": "Infinix Note 7",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_19",
+    "brand": "Infinix",
+    "model": "Infinix Smart HD 2021",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_20",
+    "brand": "Infinix",
+    "model": "Infinix Hot 10",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_21",
+    "brand": "Infinix",
+    "model": "Infinix Zero 8i",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_22",
+    "brand": "Infinix",
+    "model": "Infinix Smart 5",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_23",
+    "brand": "Infinix",
+    "model": "Infinix Hot 10 Play",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_24",
+    "brand": "Infinix",
+    "model": "Infinix Hot 10s",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_25",
+    "brand": "Infinix",
+    "model": "Infinix Note 10",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_26",
+    "brand": "Infinix",
+    "model": "Infinix Note 10 Pro",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_27",
+    "brand": "Infinix",
+    "model": "Infinix Hot 11",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_28",
+    "brand": "Infinix",
+    "model": "Infinix Hot 11S",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_29",
+    "brand": "Infinix",
+    "model": "Infinix Note 11S",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_30",
+    "brand": "Infinix",
+    "model": "Infinix Note 11",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_31",
+    "brand": "Infinix",
+    "model": "Infinix Zero 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_32",
+    "brand": "Infinix",
+    "model": "Infinix Smart 4 Plus",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_33",
+    "brand": "Infinix",
+    "model": "Infinix HOT 12 Play",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_34",
+    "brand": "Infinix",
+    "model": "Infinix Hot 9",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_35",
+    "brand": "Infinix",
+    "model": "Infinix Note 11s Free Fire Edition",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_36",
+    "brand": "Infinix",
+    "model": "Infinix Hot 11 2022",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_37",
+    "brand": "Infinix",
+    "model": "Infinix Smart 4",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_38",
+    "brand": "Infinix",
+    "model": "Infinix Note 12 Turbo",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_39",
+    "brand": "Infinix",
+    "model": "Infinix Note 12",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_40",
+    "brand": "Infinix",
+    "model": "Infinix Note 12 Pro 4G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_41",
+    "brand": "Infinix",
+    "model": "Infinix Note 12 Pro 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_42",
+    "brand": "Infinix",
+    "model": "Infinix Hot 12",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_43",
+    "brand": "Infinix",
+    "model": "Infinix Smart 6",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_44",
+    "brand": "Infinix",
+    "model": "Infinix Note 12 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_45",
+    "brand": "Infinix",
+    "model": "Infinix Smart 6 Plus",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_46",
+    "brand": "Infinix",
+    "model": "Infinix Hot 12 Pro",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_47",
+    "brand": "Infinix",
+    "model": "Infinix Smart 6 HD",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_48",
+    "brand": "Infinix",
+    "model": "Infinix Zero Ultra",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_49",
+    "brand": "Infinix",
+    "model": "Infinix Zero 20",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_50",
+    "brand": "Infinix",
+    "model": "Infinix Hot 20 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_51",
+    "brand": "Infinix",
+    "model": "Infinix Hot 20 Play",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_52",
+    "brand": "Infinix",
+    "model": "Infinix Note 12i",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_53",
+    "brand": "Infinix",
+    "model": "Infinix Smart 7",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_54",
+    "brand": "Infinix",
+    "model": "Infinix Zero 5G 2023",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_55",
+    "brand": "Infinix",
+    "model": "Infinix Zero 5G 2023 Turbo",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_56",
+    "brand": "Infinix",
+    "model": "Infinix Smart 7 HD",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_57",
+    "brand": "Infinix",
+    "model": "Infinix Hot 30i",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_58",
+    "brand": "Infinix",
+    "model": "Infinix GT 10 Pro",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_59",
+    "brand": "Infinix",
+    "model": "Infinix Note 30 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_60",
+    "brand": "Infinix",
+    "model": "Infinix Hot 30 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_61",
+    "brand": "Infinix",
+    "model": "Infinix Smart 8 HD",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_62",
+    "brand": "Infinix",
+    "model": "Infinix Smart 8",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_63",
+    "brand": "Infinix",
+    "model": "Infinix Note 40 Pro 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_64",
+    "brand": "Infinix",
+    "model": "Infinix GT 20 Pro",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_65",
+    "brand": "Infinix",
+    "model": "Infinix Hot 40i",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_66",
+    "brand": "Infinix",
+    "model": "Infinix Note 40 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_67",
+    "brand": "Infinix",
+    "model": "Infinix Note 40 Pro Plus 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_68",
+    "brand": "Infinix",
+    "model": "Infinix Zero Flip 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_69",
+    "brand": "Infinix",
+    "model": "Infinix Note 40X 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_70",
+    "brand": "Infinix",
+    "model": "Infinix Zero 40 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_71",
+    "brand": "Infinix",
+    "model": "Infinix Hot 50 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_72",
+    "brand": "Infinix",
+    "model": "Infinix Note 50X 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_73",
+    "brand": "Infinix",
+    "model": "Infinix Hot 60i 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_74",
+    "brand": "Infinix",
+    "model": "Infinix Hot 60 5G Plus",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_75",
+    "brand": "Infinix",
+    "model": "Infinix Smart 9 HD",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "infinix_batch_76",
+    "brand": "Infinix",
+    "model": "Infinix Smart 10",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Black",
+    "basePrice": 5000
+  }
 ];
