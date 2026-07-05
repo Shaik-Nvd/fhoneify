@@ -683,7 +683,7 @@ export default function QuotePage() {
 
   const handleGetMarketPrice = async () => {
     setIsScraping(true);
-    setTimerCount(30);
+    setTimerCount(90);
     setTimerError(null);
     setScrapingStatus('Connecting to market...');
     
@@ -696,16 +696,16 @@ export default function QuotePage() {
         }
         // Update status text based on time remaining
         if (prev === 75) setScrapingStatus('Analyzing phone condition...');
-        if (prev === 45) setScrapingStatus('Comparing market rates...');
-        if (prev === 15) setScrapingStatus('Finalizing exact price...');
+        if (prev === 50) setScrapingStatus('Comparing market rates...');
+        if (prev === 25) setScrapingStatus('Finalizing exact price...');
         return prev - 1;
       });
     }, 1000);
 
     try {
-      // Add a 90s abort controller so fetch doesn't hang forever, but gives Render enough time to boot Chromium
+      // Add a 150s abort controller so fetch doesn't hang forever, but gives Render enough time to boot Chromium and scrape 
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 90000);
+      const timeoutId = setTimeout(() => controller.abort(), 150000);
       
       const res = await api.post('/api/quote/cashify-price', {
         brand: selectedBrand,

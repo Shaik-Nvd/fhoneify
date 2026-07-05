@@ -93,13 +93,9 @@ export async function getCashifyPrice(req: Request, res: Response) {
 
     if (fhoneifyPrice) {
       logger.info(`Fhoneify calculated price for ${brand} ${model} (${storage}): ₹${fhoneifyPrice}`);
-      // Return instantly to bypass slow E2E Playwright scraping that causes 30s+ timeouts
-      // Simulate an AI Market Price slightly lower than Fhoneify's price to make the offer look competitive
-      const simulatedMarketPrice = Math.floor(fhoneifyPrice * 0.95);
-      return res.json({ success: true, data: simulatedMarketPrice });
     }
     
-    // Fallback if no fhoneifyPrice was provided (unlikely)
+    // Call the scraper to get real AI Market Price for cross checking
     const result = await scrapeCashifyPrice({ brand, model, storage, answers });
     
     if (result.success) {
