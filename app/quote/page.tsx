@@ -223,6 +223,8 @@ export default function QuotePage() {
   const [selectedXiaomiSeries, setSelectedXiaomiSeries] = useState<string | null>(null);
   const [selectedVivoSeries, setSelectedVivoSeries] = useState<string | null>(null);
   const [selectedOppoSeries, setSelectedOppoSeries] = useState<string | null>(null);
+  const [selectedRealmeSeries, setSelectedRealmeSeries] = useState<string | null>(null);
+  const [selectedMotorolaSeries, setSelectedMotorolaSeries] = useState<string | null>(null);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   // Clear timer on unmount
@@ -364,6 +366,57 @@ export default function QuotePage() {
     }
   };
 
+  const matchRealmeSeries = (modelName: string, series: string): boolean => {
+    const normalized = modelName.toLowerCase();
+    
+    // Exact matching for numbered series
+    const matchNumber = (num: string) => {
+      // e.g. "Realme 7", "Realme 7i", "Realme 7 Pro"
+      return normalized.match(new RegExp(`realme\\s+${num}(?!\\d)`)) !== null;
+    };
+
+    switch (series) {
+      case 'Realme 1 Series': return matchNumber('1');
+      case 'Realme 2 Series': return matchNumber('2');
+      case 'Realme 3 Series': return matchNumber('3');
+      case 'Realme 5 Series': return matchNumber('5');
+      case 'Realme 6 Series': return matchNumber('6');
+      case 'Realme 7 Series': return matchNumber('7');
+      case 'Realme 8 Series': return matchNumber('8');
+      case 'Realme 9 Series': return matchNumber('9');
+      case 'Realme 10 Series': return matchNumber('10');
+      case 'Realme 11 Series': return matchNumber('11');
+      case 'Realme 12 Series': return matchNumber('12');
+      case 'Realme 13 Series': return matchNumber('13');
+      case 'Realme 14 Series': return matchNumber('14');
+      case 'Realme 15 Series': return matchNumber('15');
+      case 'Realme 16 Series': return matchNumber('16');
+      case 'Realme C Series': return normalized.includes('realme c');
+      case 'Realme X Series': return normalized.includes('realme x');
+      case 'Realme U Series': return normalized.includes('realme u');
+      case 'Realme Narzo Series': return normalized.includes('narzo');
+      case 'Realme GT Series': return normalized.includes('realme gt');
+      case 'Realme P Series': return normalized.includes('realme p');
+      default:
+        return false;
+    }
+  };
+
+  const matchMotorolaSeries = (modelName: string, series: string): boolean => {
+    const normalized = modelName.toLowerCase();
+    switch (series) {
+      case 'Moto E Series': return normalized.includes('moto e') || normalized.includes('motorola e');
+      case 'Moto G Series': return normalized.includes('moto g') || normalized.includes('motorola g');
+      case 'Moto Z Series': return normalized.includes('moto z') || normalized.includes('motorola z');
+      case 'Moto M Series': return normalized.includes('moto m') || normalized.includes('motorola m');
+      case 'Moto One Series': return normalized.includes('one');
+      case 'Moto Edge Series': return normalized.includes('edge');
+      case 'Moto Razr Series': return normalized.includes('razr');
+      default:
+        return false;
+    }
+  };
+
   const models = useMemo(() => {
     if (!selectedBrand) return [];
     let brandModels = [...new Set(allDevices.filter((d) => d.brand === selectedBrand).map((d) => d.model).filter(Boolean))];
@@ -385,6 +438,12 @@ export default function QuotePage() {
     }
     if (selectedBrand === 'OPPO' && selectedOppoSeries) {
       brandModels = brandModels.filter((m) => matchOppoSeries(m, selectedOppoSeries));
+    }
+    if (selectedBrand === 'Realme' && selectedRealmeSeries) {
+      brandModels = brandModels.filter((m) => matchRealmeSeries(m, selectedRealmeSeries));
+    }
+    if (selectedBrand === 'Motorola' && selectedMotorolaSeries) {
+      brandModels = brandModels.filter((m) => matchMotorolaSeries(m, selectedMotorolaSeries));
     }
     
     if (selectedBrand === 'Apple') {
@@ -409,7 +468,7 @@ export default function QuotePage() {
       });
     }
     return brandModels.sort();
-  }, [allDevices, selectedBrand, modelSearchQuery, selectedSamsungSeries, selectedXiaomiSeries, selectedVivoSeries, selectedOppoSeries]);
+  }, [allDevices, selectedBrand, modelSearchQuery, selectedSamsungSeries, selectedXiaomiSeries, selectedVivoSeries, selectedOppoSeries, selectedRealmeSeries, selectedMotorolaSeries]);
   const storageOptions = useMemo(() => {
     if (!selectedBrand || !selectedModel) return [];
     
@@ -1162,7 +1221,100 @@ export default function QuotePage() {
                   </div>
                 </div>
               )}
-              
+
+              {selectedBrand === 'OPPO' && (
+                <div style={{ marginBottom: '2rem' }}>
+                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
+                    {[
+                      "F Series",
+                      "R Series",
+                      "A Series",
+                      "K Series",
+                      "Reno Series",
+                      "Find Series"
+                    ].map((series) => {
+                      const isSelected = selectedOppoSeries === series;
+                      return (
+                        <button
+                          key={series}
+                          type="button"
+                          onClick={() => setSelectedOppoSeries(isSelected ? null : series)}
+                          style={{
+                            padding: '0.75rem 1rem',
+                            borderRadius: '8px',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
+                            color: isSelected ? '#4CD964' : '#fff',
+                            cursor: 'pointer',
+                            fontSize: '0.85rem',
+                            fontWeight: 500,
+                            textAlign: 'center',
+                            transition: 'all 200ms'
+                          }}
+                        >
+                          {series}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {selectedBrand === 'Realme' && (
+                <div style={{ marginBottom: '2rem' }}>
+                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
+                    {[
+                      "Realme 2 Series",
+                      "Realme 1 Series",
+                      "Realme C Series",
+                      "Realme 3 Series",
+                      "Realme 5 Series",
+                      "Realme 6 Series",
+                      "Realme X Series",
+                      "Realme U Series",
+                      "Realme Narzo Series",
+                      "Realme 7 Series",
+                      "Realme 8 Series",
+                      "Realme GT Series",
+                      "Realme 9 Series",
+                      "Realme 10 Series",
+                      "Realme 11 Series",
+                      "Realme 12 Series",
+                      "Realme P Series",
+                      "Realme 13 Series",
+                      "Realme 14 Series",
+                      "Realme 15 Series",
+                      "Realme 16 Series"
+                    ].map((series) => {
+                      const isSelected = selectedRealmeSeries === series;
+                      return (
+                        <button
+                          key={series}
+                          type="button"
+                          onClick={() => setSelectedRealmeSeries(isSelected ? null : series)}
+                          style={{
+                            padding: '0.75rem 1rem',
+                            borderRadius: '8px',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
+                            color: isSelected ? '#4CD964' : '#fff',
+                            cursor: 'pointer',
+                            fontSize: '0.85rem',
+                            fontWeight: 500,
+                            textAlign: 'center',
+                            transition: 'all 200ms'
+                          }}
+                        >
+                          {series}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
               {models.length === 0 && !loading ? (
                 <div style={{ textAlign: 'center', padding: '4rem 1rem', color: '#a0a0a0' }}>
                   <span style={{ fontSize: '3rem', display: 'block', marginBottom: '1rem' }}>🚧</span>
