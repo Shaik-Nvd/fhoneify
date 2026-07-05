@@ -15765,5 +15765,29 @@ export const SEED_DEVICES: any[] = [
     "storage": "8 GB/128 GB",
     "color": "Midnight",
     "basePrice": 6200
+  },
+  {
+    "id": "nothing_4a_1",
+    "brand": "Nothing",
+    "model": "Nothing Phone 4a Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 28000
+  },
+  {
+    "id": "nothing_4a_2",
+    "brand": "Nothing",
+    "model": "Nothing Phone 4a Pro",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 29700
+  },
+  {
+    "id": "nothing_4a_3",
+    "brand": "Nothing",
+    "model": "Nothing Phone 4a Pro",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 32000
   }
 ];
