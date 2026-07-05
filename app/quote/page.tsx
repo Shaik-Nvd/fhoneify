@@ -1077,7 +1077,7 @@ export default function QuotePage() {
                 <p style={{ textAlign: 'center', color: '#cccccc', fontSize: '0.85rem', marginBottom: '3rem' }}>Please select accessories which are available</p>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem', marginBottom: '3rem' }}>
                   {[
-                    { id: 'box', label: 'Original Box', icon: '📦' },
+                    {id: 'box', label: 'Original Box with same IMEI', icon: '📦'},
                     ...(hasChargerInBox(selectedBrand, selectedModel) ? [{ id: 'charger', label: 'Original Charger', icon: '🔌' }] : [])
                   ].map((a) => (
                     <button key={a.id} onClick={() => toggleArrayItem('accessories', a.id)} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem', padding: '3rem 1rem', borderRadius: '8px', border: diagnostics.accessories.includes(a.id) ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.accessories.includes(a.id) ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.accessories.includes(a.id) ? '#4CD964' : '#fff', cursor: 'pointer' }}>
