@@ -1034,6 +1034,31 @@ export default function QuotePage() {
                 <span>Total Amount</span>
                 <span>{formatCurrency((finalPrice || 0) - (finalPrice === 1200 ? 0 : 99))}</span>
               </div>
+              
+              <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
+                <button 
+                  type="button" 
+                  onClick={handleGetMarketPrice}
+                  disabled={isScraping}
+                  className="btn-outline" 
+                  style={{ 
+                    padding: '10px 24px', 
+                    fontSize: '1rem', 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    gap: '0.5rem',
+                    backgroundColor: 'rgba(212, 175, 55, 0.1)',
+                    borderColor: '#d4af37',
+                    color: '#d4af37',
+                    borderRadius: '8px',
+                    cursor: isScraping ? 'not-allowed' : 'pointer',
+                    fontWeight: 600
+                  }}
+                >
+                  <span style={{ fontSize: '1.2rem' }}>✨</span>
+                  {isScraping ? 'Generating...' : 'Ai generated market price'}
+                </button>
+              </div>
             </div>
             
             <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', width: '100%' }}>
