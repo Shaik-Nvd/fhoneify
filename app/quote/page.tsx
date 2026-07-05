@@ -195,6 +195,8 @@ export default function QuotePage() {
     screenCondition: null as string | null,
     bodyScratches: null as string | null,
     bodyDents: null as string | null,
+    bodyPanel: null as string | null,
+    bodyBent: null as string | null,
     hardware: [] as string[],
     accessories: [] as string[],
     warranty: null as boolean | null,
@@ -883,7 +885,7 @@ export default function QuotePage() {
           </div>
         </div>
       )}      {/* STAGES 3-9: MULTI-STEP QUESTIONNAIRE (2 COLUMN LAYOUT) */}
-      {step >= 3 && step <= 9 && (
+      {((step >= 3 && step <= 9) || step === 13) && (
         <div className="flex flex-col-reverse md:flex-row gap-8 items-start w-full" style={{ marginTop: '2.5rem' }}>
           
           <div className="flex-1 w-full min-w-0 flex flex-col gap-6">
@@ -972,6 +974,8 @@ export default function QuotePage() {
                       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 5);
                     } else if (diagnostics.defects.includes('body_scratch')) {
                       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 6);
+                    } else if (diagnostics.defects.includes('panel_missing')) {
+                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 13);
                     } else {
                       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 7);
                     }
@@ -1005,6 +1009,8 @@ export default function QuotePage() {
                   <button onClick={() => {
                     if (diagnostics.defects.includes('body_scratch')) {
                       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 6);
+                    } else if (diagnostics.defects.includes('panel_missing')) {
+                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 13);
                     } else {
                       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 7);
                     }
@@ -1046,7 +1052,53 @@ export default function QuotePage() {
                 </div>
 
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
-                  <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 7)} disabled={!diagnostics.bodyScratches || !diagnostics.bodyDents} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (diagnostics.bodyScratches && diagnostics.bodyDents) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
+                  <button onClick={() => {
+                    if (diagnostics.defects.includes('panel_missing')) {
+                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 13);
+                    } else {
+                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 7);
+                    }
+                  }} disabled={!diagnostics.bodyScratches || !diagnostics.bodyDents} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (diagnostics.bodyScratches && diagnostics.bodyDents) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
+                </div>
+              </div>
+            )}
+
+            {/* STAGE 13: PANEL & BENT DEFECT SUB-PAGE */}
+            {step === 13 && (
+              <div className="card p-6 md:p-12 rounded-lg border border-[#2a2a2a] bg-[#111] text-white">
+                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: '#ffffff' }}>Tell us more about your device&apos;s body defects?</h2>
+                <p style={{ textAlign: 'center', color: '#cccccc', fontSize: '0.85rem', marginBottom: '3rem' }}>(Because you selected device&apos;s body defect)</p>
+                
+                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>1. Device Side/Back Panel Condition</h3>
+                <p style={{ color: '#cccccc', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Check your device&apos;s side & back panels</p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2.5rem' }}>
+                  {[
+                    { id: 'Cracked/ broken side or back panel', label: 'Cracked/ broken side or back panel' },
+                    { id: 'Missing side or back panel', label: 'Missing side or back panel' },
+                    { id: 'No defect on side or back panel', label: 'No defect on side or back panel' }
+                  ].map((opt) => (
+                    <button key={opt.id} onClick={() => setDiagnostics({ ...diagnostics, bodyPanel: opt.id })} style={{ textAlign: 'left', padding: '1rem 1.5rem', borderRadius: '8px', border: diagnostics.bodyPanel === opt.id ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.bodyPanel === opt.id ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.bodyPanel === opt.id ? '#4CD964' : '#fff', cursor: 'pointer', fontWeight: 500 }}>
+                      {opt.label}
+                    </button>
+                  ))}
+                </div>
+
+                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>2. Device Bent/Screen loose</h3>
+                <p style={{ color: '#cccccc', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Check if your device is bent or display screen is loose</p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '3rem' }}>
+                  {[
+                    { id: 'Bent/ curved panel', label: 'Bent/ curved panel' },
+                    { id: 'Loose screen (Gap in screen and body)', label: 'Loose screen (Gap in screen and body)' },
+                    { id: 'Phone not bent', label: 'Phone not bent' }
+                  ].map((opt) => (
+                    <button key={opt.id} onClick={() => setDiagnostics({ ...diagnostics, bodyBent: opt.id })} style={{ textAlign: 'left', padding: '1rem 1.5rem', borderRadius: '8px', border: diagnostics.bodyBent === opt.id ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.bodyBent === opt.id ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.bodyBent === opt.id ? '#4CD964' : '#fff', cursor: 'pointer', fontWeight: 500 }}>
+                      {opt.label}
+                    </button>
+                  ))}
+                </div>
+
+                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                  <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 7)} disabled={!diagnostics.bodyPanel || !diagnostics.bodyBent} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (diagnostics.bodyPanel && diagnostics.bodyBent) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
             )}
@@ -1297,7 +1349,7 @@ export default function QuotePage() {
             </div>
             
             <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', width: '100%' }}>
-              <button type="button" onClick={() => { navigateToState('', '', '', 'brand', 1); setFinalPrice(null); setMarketPriceFetched(false); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], screenCondition: null, bodyScratches: null, bodyDents: null, hardware: [], accessories: [], warranty: null, validBill: null, eSim: null, mobileAge: null }); }} className="btn-outline" style={{ flex: 1, padding: '16px', fontSize: '1.1rem' }}>Start Over</button>
+              <button type="button" onClick={() => { navigateToState('', '', '', 'brand', 1); setFinalPrice(null); setMarketPriceFetched(false); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], screenCondition: null, bodyScratches: null, bodyDents: null, bodyPanel: null, bodyBent: null, hardware: [], accessories: [], warranty: null, validBill: null, eSim: null, mobileAge: null }); }} className="btn-outline" style={{ flex: 1, padding: '16px', fontSize: '1.1rem' }}>Start Over</button>
               <button type="button" onClick={() => setStep(12)} disabled={!marketPriceFetched} className="btn-primary" style={{ flex: 2, padding: '16px', background: marketPriceFetched ? '#4CD964' : '#333', color: marketPriceFetched ? '#fff' : '#999', fontSize: '1.1rem', fontWeight: 600, opacity: marketPriceFetched ? 1 : 0.6, cursor: marketPriceFetched ? 'pointer' : 'not-allowed' }}>Schedule Pickup</button>
             </div>
           </>
