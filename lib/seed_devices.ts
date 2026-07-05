@@ -24795,4 +24795,491 @@ export const SEED_DEVICES: any[] = [
     "color": "Black",
     "basePrice": 5000
   }
+,
+  {
+    "id": "tecno_batch_1",
+    "brand": "Tecno",
+    "model": "Tecno Spark 4",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_2",
+    "brand": "Tecno",
+    "model": "Tecno Camon 15 Pro",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_3",
+    "brand": "Tecno",
+    "model": "Tecno Camon 15",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_4",
+    "brand": "Tecno",
+    "model": "Tecno Spark Power 2 Air",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_5",
+    "brand": "Tecno",
+    "model": "Tecno Camon 16",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_6",
+    "brand": "Tecno",
+    "model": "Tecno POVA",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_7",
+    "brand": "Tecno",
+    "model": "Tecno Camon 16 Premier",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_8",
+    "brand": "Tecno",
+    "model": "Tecno Spark 7 Pro",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_9",
+    "brand": "Tecno",
+    "model": "Tecno Camon 17",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_10",
+    "brand": "Tecno",
+    "model": "Tecno Camon 17 Pro",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_11",
+    "brand": "Tecno",
+    "model": "Tecno POVA 2",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_12",
+    "brand": "Tecno",
+    "model": "Tecno Spark 8",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_13",
+    "brand": "Tecno",
+    "model": "Tecno Spark 8T",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_14",
+    "brand": "Tecno",
+    "model": "Tecno Camon 18",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_15",
+    "brand": "Tecno",
+    "model": "Tecno Spark 8 Pro",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_16",
+    "brand": "Tecno",
+    "model": "Tecno Spark 8C",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_17",
+    "brand": "Tecno",
+    "model": "Tecno Pova 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_18",
+    "brand": "Tecno",
+    "model": "Tecno Pova Neo",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_19",
+    "brand": "Tecno",
+    "model": "Tecno Phantom X",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_20",
+    "brand": "Tecno",
+    "model": "Tecno Pova 3",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_21",
+    "brand": "Tecno",
+    "model": "Tecno Spark 8P",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_22",
+    "brand": "Tecno",
+    "model": "Tecno Spark 9",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_23",
+    "brand": "Tecno",
+    "model": "Tecno Camon 19",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_24",
+    "brand": "Tecno",
+    "model": "Tecno Camon 19 Neo",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_25",
+    "brand": "Tecno",
+    "model": "Tecno Camon 19 Pro 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_26",
+    "brand": "Tecno",
+    "model": "Tecno Camon 20",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_27",
+    "brand": "Tecno",
+    "model": "Tecno Camon 20 Premier 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_28",
+    "brand": "Tecno",
+    "model": "Tecno Camon 20 Pro 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_29",
+    "brand": "Tecno",
+    "model": "Tecno Phantom V Fold 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_30",
+    "brand": "Tecno",
+    "model": "Tecno Phantom X2 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_31",
+    "brand": "Tecno",
+    "model": "Tecno Phantom X2 Pro 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_32",
+    "brand": "Tecno",
+    "model": "Tecno Pova 4",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_33",
+    "brand": "Tecno",
+    "model": "Tecno Spark 10 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_34",
+    "brand": "Tecno",
+    "model": "Tecno Spark 7P",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_35",
+    "brand": "Tecno",
+    "model": "Tecno Spark Go 2023",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_36",
+    "brand": "Tecno",
+    "model": "Tecno Spark GO 3",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_37",
+    "brand": "Tecno",
+    "model": "Tecno Camon 30 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_38",
+    "brand": "Tecno",
+    "model": "Tecno Camon 30 Premier 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_39",
+    "brand": "Tecno",
+    "model": "Tecno Pova 7 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_40",
+    "brand": "Tecno",
+    "model": "Tecno Pova 7 Pro 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_41",
+    "brand": "Tecno",
+    "model": "Tecno Pova Curve 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_42",
+    "brand": "Tecno",
+    "model": "Tecno Spark 30C 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_43",
+    "brand": "Tecno",
+    "model": "Tecno Camon 20s Pro 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_44",
+    "brand": "Tecno",
+    "model": "Tecno Phantom V Flip2 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_45",
+    "brand": "Tecno",
+    "model": "Tecno Phantom V Fold2 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_46",
+    "brand": "Tecno",
+    "model": "Tecno Pova Slim 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_47",
+    "brand": "Tecno",
+    "model": "Tecno Spark Go 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_48",
+    "brand": "Tecno",
+    "model": "Tecno Phantom V Flip 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_49",
+    "brand": "Tecno",
+    "model": "Tecno Pova 6 Pro 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_50",
+    "brand": "Tecno",
+    "model": "Tecno Pova 6 Neo 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_51",
+    "brand": "Tecno",
+    "model": "Tecno Spark 20 Pro 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_52",
+    "brand": "Tecno",
+    "model": "Tecno Pova 5 Pro",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_53",
+    "brand": "Tecno",
+    "model": "Tecno POP X",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "tecno_batch_54",
+    "brand": "Tecno",
+    "model": "Tecno Pova Curve 2 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  }
 ];
