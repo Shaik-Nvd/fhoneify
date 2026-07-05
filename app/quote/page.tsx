@@ -918,35 +918,72 @@ export default function QuotePage() {
                   </div>
                 ))}
                 
-                {/* eSIM Question (if eligible) */}
-                {isESimEligible(selectedBrand, selectedModel) && (
-                  <div style={{ marginBottom: '2.5rem' }}>
-                    <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>How many eSIMs does your device support?</h3>
-                    <p style={{ color: '#cccccc', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Please select eSIM support details.</p>
-                    <div style={{ display: 'flex', gap: '1rem' }}>
-                      <button onClick={() => setDiagnostics({ ...diagnostics, eSim: 'Single eSIM' })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.eSim === 'Single eSIM' ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.eSim === 'Single eSIM' ? 'rgba(76,217,100,0.1)' : '#1a1a1a', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.eSim === 'Single eSIM' ? '#4CD964' : '#fff' }}>
-                        <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.eSim === 'Single eSIM' ? '1px solid #4CD964' : '1px solid #444', backgroundColor: diagnostics.eSim === 'Single eSIM' ? '#4CD964' : 'transparent' }} /> Single eSIM
-                      </button>
-                      <button onClick={() => setDiagnostics({ ...diagnostics, eSim: 'Dual eSIM' })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.eSim === 'Dual eSIM' ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.eSim === 'Dual eSIM' ? 'rgba(76,217,100,0.1)' : '#1a1a1a', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.eSim === 'Dual eSIM' ? '#4CD964' : '#fff' }}>
-                        <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.eSim === 'Dual eSIM' ? '1px solid #4CD964' : '1px solid #444', backgroundColor: diagnostics.eSim === 'Dual eSIM' ? '#4CD964' : 'transparent' }} /> Dual eSIM
-                      </button>
+                {/* Newer model flow: Warranty and GST Bill Questions */}
+                {isWarrantyEligible(selectedBrand, selectedModel) ? (
+                  <>
+                    <div style={{ marginBottom: '2.5rem' }}>
+                      <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>Is your device under manufacturer warranty?</h3>
+                      <p style={{ color: '#cccccc', fontSize: '0.9rem', marginBottom: '1.25rem' }}>You can get a better price for your device if it&apos;s under manufacturer warranty with a GST valid bill.</p>
+                      <div style={{ display: 'flex', gap: '1rem' }}>
+                        <button onClick={() => setDiagnostics({ ...diagnostics, warranty: true })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.warranty === true ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.warranty === true ? 'rgba(76,217,100,0.1)' : '#1a1a1a', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.warranty === true ? '#4CD964' : '#fff' }}>
+                          <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.warranty === true ? '1px solid #4CD964' : '1px solid #444', backgroundColor: diagnostics.warranty === true ? '#4CD964' : '#transparent' }} /> Yes
+                        </button>
+                        <button onClick={() => setDiagnostics({ ...diagnostics, warranty: false, mobileAge: 'above11' })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.warranty === false ? '1px solid #FF3B30' : '1px solid #2a2a2a', backgroundColor: diagnostics.warranty === false ? 'rgba(255,59,48,0.1)' : '#1a1a1a', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.warranty === false ? '#FF3B30' : '#fff' }}>
+                          <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.warranty === false ? '1px solid #FF3B30' : '1px solid #444', backgroundColor: diagnostics.warranty === false ? '#FF3B30' : 'transparent' }} /> No
+                        </button>
+                      </div>
                     </div>
-                  </div>
+
+                    <div style={{ marginBottom: '2.5rem' }}>
+                      <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>Do you have GST valid bill with the same IMEI?</h3>
+                      <p style={{ color: '#cccccc', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Make sure your bill has device IMEI mentioned on it.</p>
+                      <div style={{ display: 'flex', gap: '1rem' }}>
+                        <button onClick={() => setDiagnostics({ ...diagnostics, validBill: true })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.validBill === true ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.validBill === true ? 'rgba(76,217,100,0.1)' : '#1a1a1a', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.validBill === true ? '#4CD964' : '#fff' }}>
+                          <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.validBill === true ? '1px solid #4CD964' : '1px solid #444', backgroundColor: diagnostics.validBill === true ? '#4CD964' : '#transparent' }} /> Yes
+                        </button>
+                        <button onClick={() => setDiagnostics({ ...diagnostics, validBill: false })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.validBill === false ? '1px solid #FF3B30' : '1px solid #2a2a2a', backgroundColor: diagnostics.validBill === false ? 'rgba(255,59,48,0.1)' : '#1a1a1a', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.validBill === false ? '#FF3B30' : '#fff' }}>
+                          <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.validBill === false ? '1px solid #FF3B30' : '1px solid #444', backgroundColor: diagnostics.validBill === false ? '#FF3B30' : 'transparent' }} /> No
+                        </button>
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  /* Older model flow: eSIM Question (if eligible) */
+                  isESimEligible(selectedBrand, selectedModel) && (
+                    <div style={{ marginBottom: '2.5rem' }}>
+                      <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>How many eSIMs does your device support?</h3>
+                      <p style={{ color: '#cccccc', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Please select eSIM support details.</p>
+                      <div style={{ display: 'flex', gap: '1rem' }}>
+                        <button onClick={() => setDiagnostics({ ...diagnostics, eSim: 'Single eSIM' })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.eSim === 'Single eSIM' ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.eSim === 'Single eSIM' ? 'rgba(76,217,100,0.1)' : '#1a1a1a', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.eSim === 'Single eSIM' ? '#4CD964' : '#fff' }}>
+                          <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.eSim === 'Single eSIM' ? '1px solid #4CD964' : '1px solid #444', backgroundColor: diagnostics.eSim === 'Single eSIM' ? '#4CD964' : '#transparent' }} /> Single eSIM
+                        </button>
+                        <button onClick={() => setDiagnostics({ ...diagnostics, eSim: 'Dual eSIM' })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.eSim === 'Dual eSIM' ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.eSim === 'Dual eSIM' ? 'rgba(76,217,100,0.1)' : '#1a1a1a', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.eSim === 'Dual eSIM' ? '#4CD964' : '#fff' }}>
+                          <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.eSim === 'Dual eSIM' ? '1px solid #4CD964' : '1px solid #444', backgroundColor: diagnostics.eSim === 'Dual eSIM' ? '#4CD964' : 'transparent' }} /> Dual eSIM
+                        </button>
+                      </div>
+                    </div>
+                  )
                 )}
 
                 <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
                   <button onClick={() => {
+                    // If not a newer model, silently set warranty/bill to false
+                    if (!isWarrantyEligible(selectedBrand, selectedModel)) {
+                      setDiagnostics({ ...diagnostics, warranty: false, validBill: false, mobileAge: 'above11' });
+                    }
                     navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 4);
                   }} disabled={
                     diagnostics.calls === null || 
                     diagnostics.touch === null || 
                     diagnostics.originalScreen === null || 
-                    (isESimEligible(selectedBrand, selectedModel) && diagnostics.eSim === null)
+                    (isWarrantyEligible(selectedBrand, selectedModel) && (diagnostics.warranty === null || diagnostics.validBill === null)) ||
+                    (!isWarrantyEligible(selectedBrand, selectedModel) && isESimEligible(selectedBrand, selectedModel) && diagnostics.eSim === null)
                   } className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (
                     diagnostics.calls !== null && 
                     diagnostics.touch !== null && 
                     diagnostics.originalScreen !== null && 
-                    (!isESimEligible(selectedBrand, selectedModel) || diagnostics.eSim !== null)
+                    ((isWarrantyEligible(selectedBrand, selectedModel) && diagnostics.warranty !== null && diagnostics.validBill !== null) ||
+                     (!isWarrantyEligible(selectedBrand, selectedModel) && (!isESimEligible(selectedBrand, selectedModel) || diagnostics.eSim !== null)))
                   ) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
@@ -1211,13 +1248,14 @@ export default function QuotePage() {
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
                   <button onClick={() => { 
                     const isEligible = isWarrantyEligible(selectedBrand, selectedModel);
-                    if (isEligible) {
+                    const hasWarrantyAndBill = diagnostics.warranty === true && diagnostics.validBill === true;
+                    if (isEligible && hasWarrantyAndBill) {
                       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 9);
                     } else {
                       const updatedDiag = {
                         ...diagnostics,
-                        validBill: false,
-                        warranty: false,
+                        validBill: isEligible ? !!diagnostics.validBill : false,
+                        warranty: isEligible ? !!diagnostics.warranty : false,
                         mobileAge: 'above11' as const
                       };
                       setDiagnostics(updatedDiag);

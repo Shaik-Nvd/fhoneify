@@ -145,7 +145,18 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
         const yesBtns = await page.$$('text="Yes"');
         const noBtns = await page.$$('text="No"');
         
-        if (yesBtns.length >= 3 && noBtns.length >= 3) {
+        if (yesBtns.length >= 5 && noBtns.length >= 5) {
+          // Calls
+          if (answers.calls === false) await noBtns[0].click(); else await yesBtns[0].click();
+          // Touch screen
+          if (answers.touch === false) await noBtns[1].click(); else await yesBtns[1].click();
+          // Original screen
+          if (answers.originalScreen === false) await noBtns[2].click(); else await yesBtns[2].click();
+          // Warranty
+          if (answers.warranty === false) await noBtns[3].click(); else await yesBtns[3].click();
+          // GST Bill
+          if (answers.validBill === false) await noBtns[4].click(); else await yesBtns[4].click();
+        } else if (yesBtns.length >= 3 && noBtns.length >= 3) {
           // Calls
           if (answers.calls === false) await noBtns[0].click(); else await yesBtns[0].click();
           // Touch screen
