@@ -1403,7 +1403,6 @@ export default function QuotePage() {
           </div>
           
           {marketPriceFetched && (
-          <>
             <div>
               <h3 style={{ fontSize: '1.1rem', fontWeight: 600, color: '#fff', marginBottom: '1.5rem' }}>Price Summary</h3>
               
@@ -1421,39 +1420,39 @@ export default function QuotePage() {
                 <span>Total Amount</span>
                 <span>{formatCurrency((finalPrice || 0) - (finalPrice === 1200 ? 0 : 99))}</span>
               </div>
-              
-              <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
-                <button 
-                  type="button" 
-                  onClick={handleGetMarketPrice}
-                  disabled={isScraping}
-                  className="btn-outline" 
-                  style={{ 
-                    padding: '10px 24px', 
-                    fontSize: '1rem', 
-                    display: 'flex', 
-                    alignItems: 'center', 
-                    gap: '0.5rem',
-                    backgroundColor: 'rgba(212, 175, 55, 0.1)',
-                    borderColor: '#d4af37',
-                    color: '#d4af37',
-                    borderRadius: '8px',
-                    cursor: isScraping ? 'not-allowed' : 'pointer',
-                    fontWeight: 600
-                  }}
-                >
-                  <span style={{ fontSize: '1.2rem' }}>✨</span>
-                  {isScraping ? 'Generating...' : 'Ai generated market price'}
-                </button>
-              </div>
             </div>
-            
-            <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', width: '100%' }}>
-              <button type="button" onClick={() => { navigateToState('', '', '', 'brand', 1); setFinalPrice(null); setMarketPriceFetched(false); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], screenCondition: null, screenSpots: null, screenLines: null, screenDiscoloration: null, bodyScratches: null, bodyDents: null, bodyPanel: null, bodyBent: null, hardware: [], accessories: [], warranty: null, validBill: null, eSim: null, mobileAge: null }); }} className="btn-outline" style={{ flex: 1, padding: '16px', fontSize: '1.1rem' }}>Start Over</button>
-              <button type="button" onClick={() => setStep(12)} disabled={!marketPriceFetched} className="btn-primary" style={{ flex: 2, padding: '16px', background: marketPriceFetched ? '#4CD964' : '#333', color: marketPriceFetched ? '#fff' : '#999', fontSize: '1.1rem', fontWeight: 600, opacity: marketPriceFetched ? 1 : 0.6, cursor: marketPriceFetched ? 'pointer' : 'not-allowed' }}>Schedule Pickup</button>
-            </div>
-          </>
           )}
+          
+          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
+            <button 
+              type="button" 
+              onClick={handleGetMarketPrice}
+              disabled={isScraping || marketPriceFetched}
+              className="btn-outline" 
+              style={{ 
+                padding: '10px 24px', 
+                fontSize: '1rem', 
+                display: 'flex', 
+                alignItems: 'center', 
+                gap: '0.5rem',
+                backgroundColor: 'rgba(212, 175, 55, 0.1)',
+                borderColor: '#d4af37',
+                color: '#d4af37',
+                borderRadius: '8px',
+                cursor: (isScraping || marketPriceFetched) ? 'not-allowed' : 'pointer',
+                fontWeight: 600,
+                opacity: marketPriceFetched ? 0.6 : 1
+              }}
+            >
+              <span style={{ fontSize: '1.2rem' }}>✨</span>
+              {isScraping ? 'Generating...' : marketPriceFetched ? 'Market price fetched' : 'Ai generated market price'}
+            </button>
+          </div>
+          
+          <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', width: '100%' }}>
+            <button type="button" onClick={() => { navigateToState('', '', '', 'brand', 1); setFinalPrice(null); setMarketPriceFetched(false); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], screenCondition: null, screenSpots: null, screenLines: null, screenDiscoloration: null, bodyScratches: null, bodyDents: null, bodyPanel: null, bodyBent: null, hardware: [], accessories: [], warranty: null, validBill: null, eSim: null, mobileAge: null }); }} className="btn-outline" style={{ flex: 1, padding: '16px', fontSize: '1.1rem' }}>Start Over</button>
+            <button type="button" onClick={() => setStep(12)} disabled={!marketPriceFetched} className="btn-primary" style={{ flex: 2, padding: '16px', background: marketPriceFetched ? '#4CD964' : '#333', color: marketPriceFetched ? '#fff' : '#999', fontSize: '1.1rem', fontWeight: 600, opacity: marketPriceFetched ? 1 : 0.6, cursor: marketPriceFetched ? 'pointer' : 'not-allowed' }}>Schedule Pickup</button>
+          </div>
         </div>
       )}
 
