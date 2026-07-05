@@ -50,7 +50,7 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
       // Block heavy resources (images, css, fonts) for lightning fast loads
       await page.route('**/*', route => {
         const type = route.request().resourceType();
-        if (['image', 'media', 'font', 'stylesheet'].includes(type)) {
+        if (['image', 'media', 'font'].includes(type)) {
           route.abort();
         } else {
           route.continue();
