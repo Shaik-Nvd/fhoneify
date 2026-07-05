@@ -17920,4 +17920,2823 @@ export const SEED_DEVICES = [
     "color": "Midnight",
     "basePrice": 5000
   }
+,
+  {
+    "id": "oppo_batch_1",
+    "brand": "OPPO",
+    "model": "OPPO A7",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_2",
+    "brand": "OPPO",
+    "model": "OPPO F9 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_3",
+    "brand": "OPPO",
+    "model": "OPPO F9",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_4",
+    "brand": "OPPO",
+    "model": "OPPO A3s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_5",
+    "brand": "OPPO",
+    "model": "OPPO Find X",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_6",
+    "brand": "OPPO",
+    "model": "OPPO A5",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_7",
+    "brand": "OPPO",
+    "model": "OPPO F7",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_8",
+    "brand": "OPPO",
+    "model": "OPPO A83",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_9",
+    "brand": "OPPO",
+    "model": "OPPO F5 Youth",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_10",
+    "brand": "OPPO",
+    "model": "OPPO F5",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_11",
+    "brand": "OPPO",
+    "model": "OPPO A71",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_12",
+    "brand": "OPPO",
+    "model": "OPPO A33",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_13",
+    "brand": "OPPO",
+    "model": "OPPO R11",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_14",
+    "brand": "OPPO",
+    "model": "OPPO A77",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_15",
+    "brand": "OPPO",
+    "model": "OPPO F3",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_16",
+    "brand": "OPPO",
+    "model": "OPPO F3 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_17",
+    "brand": "OPPO",
+    "model": "OPPO A57",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_18",
+    "brand": "OPPO",
+    "model": "OPPO F1s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_19",
+    "brand": "OPPO",
+    "model": "OPPO A37",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_20",
+    "brand": "OPPO",
+    "model": "OPPO A37f",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_21",
+    "brand": "OPPO",
+    "model": "OPPO F1 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_22",
+    "brand": "OPPO",
+    "model": "OPPO F1",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_23",
+    "brand": "OPPO",
+    "model": "OPPO R17 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_24",
+    "brand": "OPPO",
+    "model": "OPPO R17",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_25",
+    "brand": "OPPO",
+    "model": "OPPO K1",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_26",
+    "brand": "OPPO",
+    "model": "OPPO F11 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_27",
+    "brand": "OPPO",
+    "model": "OPPO A5s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_28",
+    "brand": "OPPO",
+    "model": "OPPO A1K",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_29",
+    "brand": "OPPO",
+    "model": "OPPO F11",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_30",
+    "brand": "OPPO",
+    "model": "OPPO Reno",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_31",
+    "brand": "OPPO",
+    "model": "OPPO Reno 10x Zoom",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_32",
+    "brand": "OPPO",
+    "model": "OPPO R15 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_33",
+    "brand": "OPPO",
+    "model": "OPPO K3",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_34",
+    "brand": "OPPO",
+    "model": "OPPO A9",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_35",
+    "brand": "OPPO",
+    "model": "OPPO Reno 2Z",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_36",
+    "brand": "OPPO",
+    "model": "OPPO Reno 2",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_37",
+    "brand": "OPPO",
+    "model": "OPPO A5 2020",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_38",
+    "brand": "OPPO",
+    "model": "OPPO A9 2020",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_39",
+    "brand": "OPPO",
+    "model": "OPPO Reno2 F",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_40",
+    "brand": "OPPO",
+    "model": "OPPO F15",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_41",
+    "brand": "OPPO",
+    "model": "OPPO A71 2018",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_42",
+    "brand": "OPPO",
+    "model": "OPPO A31",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_43",
+    "brand": "OPPO",
+    "model": "OPPO A12",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_44",
+    "brand": "OPPO",
+    "model": "OPPO A52",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_45",
+    "brand": "OPPO",
+    "model": "OPPO Find X2",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_46",
+    "brand": "OPPO",
+    "model": "OPPO A11K",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_47",
+    "brand": "OPPO",
+    "model": "OPPO Reno3 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_48",
+    "brand": "OPPO",
+    "model": "OPPO Reno4 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_49",
+    "brand": "OPPO",
+    "model": "OPPO A53",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_50",
+    "brand": "OPPO",
+    "model": "OPPO F17 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_51",
+    "brand": "OPPO",
+    "model": "OPPO F17",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_52",
+    "brand": "OPPO",
+    "model": "OPPO A33 2020",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_53",
+    "brand": "OPPO",
+    "model": "OPPO A15",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_54",
+    "brand": "OPPO",
+    "model": "OPPO A15s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_55",
+    "brand": "OPPO",
+    "model": "OPPO Reno5 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_56",
+    "brand": "OPPO",
+    "model": "OPPO F19 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_57",
+    "brand": "OPPO",
+    "model": "OPPO F19 Pro Plus 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_58",
+    "brand": "OPPO",
+    "model": "OPPO F19",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_59",
+    "brand": "OPPO",
+    "model": "OPPO A54",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_60",
+    "brand": "OPPO",
+    "model": "OPPO A53s 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_61",
+    "brand": "OPPO",
+    "model": "OPPO A74 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_62",
+    "brand": "OPPO",
+    "model": "OPPO Reno6 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_63",
+    "brand": "OPPO",
+    "model": "OPPO Reno6 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_64",
+    "brand": "OPPO",
+    "model": "OPPO F19s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_65",
+    "brand": "OPPO",
+    "model": "OPPO A55",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_66",
+    "brand": "OPPO",
+    "model": "OPPO A16",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_67",
+    "brand": "OPPO",
+    "model": "OPPO A16K",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_68",
+    "brand": "OPPO",
+    "model": "OPPO Reno7 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_69",
+    "brand": "OPPO",
+    "model": "OPPO Reno7 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_70",
+    "brand": "OPPO",
+    "model": "Oppo A76",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_71",
+    "brand": "OPPO",
+    "model": "OPPO K10",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_72",
+    "brand": "OPPO",
+    "model": "OPPO A16e",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_73",
+    "brand": "OPPO",
+    "model": "OPPO F21 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_74",
+    "brand": "OPPO",
+    "model": "OPPO F21 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_75",
+    "brand": "OPPO",
+    "model": "OPPO A96",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_76",
+    "brand": "OPPO",
+    "model": "OPPO K10 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_77",
+    "brand": "OPPO",
+    "model": "OPPO Reno8 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_78",
+    "brand": "OPPO",
+    "model": "OPPO Reno8 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_79",
+    "brand": "OPPO",
+    "model": "OPPO A57 2022",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_80",
+    "brand": "OPPO",
+    "model": "OPPO F21s Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_81",
+    "brand": "OPPO",
+    "model": "OPPO F21s Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_82",
+    "brand": "OPPO",
+    "model": "OPPO A77 2022",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_83",
+    "brand": "OPPO",
+    "model": "OPPO A17K",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_84",
+    "brand": "OPPO",
+    "model": "OPPO A77s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_85",
+    "brand": "OPPO",
+    "model": "OPPO A78 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_86",
+    "brand": "OPPO",
+    "model": "OPPO Reno8T 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_87",
+    "brand": "OPPO",
+    "model": "OPPO Find N2 Flip 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_88",
+    "brand": "OPPO",
+    "model": "OPPO F23 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_89",
+    "brand": "OPPO",
+    "model": "OPPO Reno10 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_90",
+    "brand": "OPPO",
+    "model": "OPPO Reno10 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_91",
+    "brand": "OPPO",
+    "model": "OPPO Reno10 Pro Plus 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_92",
+    "brand": "OPPO",
+    "model": "OPPO A78",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_93",
+    "brand": "OPPO",
+    "model": "OPPO Find N3 Flip 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_94",
+    "brand": "OPPO",
+    "model": "OPPO A58",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_95",
+    "brand": "OPPO",
+    "model": "OPPO A38",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_96",
+    "brand": "OPPO",
+    "model": "OPPO A17",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_97",
+    "brand": "OPPO",
+    "model": "OPPO A18",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_98",
+    "brand": "OPPO",
+    "model": "OPPO A79 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_99",
+    "brand": "OPPO",
+    "model": "OPPO A59 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_100",
+    "brand": "OPPO",
+    "model": "OPPO Reno11 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_101",
+    "brand": "OPPO",
+    "model": "OPPO Reno11 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_102",
+    "brand": "OPPO",
+    "model": "OPPO F25 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_103",
+    "brand": "OPPO",
+    "model": "OPPO F27 Pro Plus 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_104",
+    "brand": "OPPO",
+    "model": "OPPO A3 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_105",
+    "brand": "OPPO",
+    "model": "OPPO Reno12 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_106",
+    "brand": "OPPO",
+    "model": "OPPO Reno12 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_107",
+    "brand": "OPPO",
+    "model": "OPPO A3x 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_108",
+    "brand": "OPPO",
+    "model": "OPPO K12x 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_109",
+    "brand": "OPPO",
+    "model": "OPPO F27 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_110",
+    "brand": "OPPO",
+    "model": "OPPO A3 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_111",
+    "brand": "OPPO",
+    "model": "OPPO A3x",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_112",
+    "brand": "OPPO",
+    "model": "OPPO Find X8 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_113",
+    "brand": "OPPO",
+    "model": "OPPO Find X8 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_114",
+    "brand": "OPPO",
+    "model": "OPPO Reno13 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_115",
+    "brand": "OPPO",
+    "model": "OPPO Reno13 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_116",
+    "brand": "OPPO",
+    "model": "OPPO F29 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_117",
+    "brand": "OPPO",
+    "model": "OPPO F29 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_118",
+    "brand": "OPPO",
+    "model": "OPPO A5 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_119",
+    "brand": "OPPO",
+    "model": "OPPO A5 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_120",
+    "brand": "OPPO",
+    "model": "OPPO A5x 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_121",
+    "brand": "OPPO",
+    "model": "OPPO K13 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_122",
+    "brand": "OPPO",
+    "model": "OPPO K13x 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_123",
+    "brand": "OPPO",
+    "model": "OPPO Reno14 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_124",
+    "brand": "OPPO",
+    "model": "OPPO Reno14 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_125",
+    "brand": "OPPO",
+    "model": "OPPO A5X",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_126",
+    "brand": "OPPO",
+    "model": "Oppo F31 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_127",
+    "brand": "OPPO",
+    "model": "Oppo K13 Turbo Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_128",
+    "brand": "OPPO",
+    "model": "OPPO K13 Turbo 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_129",
+    "brand": "OPPO",
+    "model": "Oppo F31 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_130",
+    "brand": "OPPO",
+    "model": "Oppo F31 Pro Plus 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_131",
+    "brand": "OPPO",
+    "model": "OPPO Find X9 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_132",
+    "brand": "OPPO",
+    "model": "OPPO Find X9 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_133",
+    "brand": "OPPO",
+    "model": "OPPO A6x 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_134",
+    "brand": "OPPO",
+    "model": "OPPO Reno15 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_135",
+    "brand": "OPPO",
+    "model": "Oppo Reno15 Pro Mini 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_136",
+    "brand": "OPPO",
+    "model": "OPPO Reno15 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_137",
+    "brand": "OPPO",
+    "model": "OPPO A6 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_138",
+    "brand": "OPPO",
+    "model": "OPPO Reno 15c 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_139",
+    "brand": "OPPO",
+    "model": "OPPO K14x 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_140",
+    "brand": "OPPO",
+    "model": "OPPO A6 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_141",
+    "brand": "OPPO",
+    "model": "OPPO K14 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_142",
+    "brand": "OPPO",
+    "model": "OPPO A6s 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_143",
+    "brand": "OPPO",
+    "model": "OPPO F33 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_144",
+    "brand": "OPPO",
+    "model": "OPPO F33 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_145",
+    "brand": "OPPO",
+    "model": "OPPO F11 Pro Avenger Edition",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_146",
+    "brand": "OPPO",
+    "model": "OPPO Find X9s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_147",
+    "brand": "OPPO",
+    "model": "OPPO Find X9 Ultra",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  }
+,
+  {
+    "id": "realme_batch_1",
+    "brand": "Realme",
+    "model": "Realme 2 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_2",
+    "brand": "Realme",
+    "model": "Realme C1 2019",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_3",
+    "brand": "Realme",
+    "model": "Realme C1",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_4",
+    "brand": "Realme",
+    "model": "Realme 2",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_5",
+    "brand": "Realme",
+    "model": "Realme 1",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_6",
+    "brand": "Realme",
+    "model": "Realme U1",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_7",
+    "brand": "Realme",
+    "model": "Realme 3",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_8",
+    "brand": "Realme",
+    "model": "Realme 3 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_9",
+    "brand": "Realme",
+    "model": "Realme C2",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_10",
+    "brand": "Realme",
+    "model": "Realme X",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_11",
+    "brand": "Realme",
+    "model": "Realme 3i",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_12",
+    "brand": "Realme",
+    "model": "Realme 5",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_13",
+    "brand": "Realme",
+    "model": "Realme 5 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_14",
+    "brand": "Realme",
+    "model": "Realme XT",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_15",
+    "brand": "Realme",
+    "model": "Realme 5s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_16",
+    "brand": "Realme",
+    "model": "Realme X2 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_17",
+    "brand": "Realme",
+    "model": "Realme X2",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_18",
+    "brand": "Realme",
+    "model": "Realme 5i",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_19",
+    "brand": "Realme",
+    "model": "Realme C3",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_20",
+    "brand": "Realme",
+    "model": "Realme X50 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_21",
+    "brand": "Realme",
+    "model": "Realme 6",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_22",
+    "brand": "Realme",
+    "model": "Realme 6 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_23",
+    "brand": "Realme",
+    "model": "Realme Narzo 10",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_24",
+    "brand": "Realme",
+    "model": "Realme Narzo 10A",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_25",
+    "brand": "Realme",
+    "model": "Realme X3",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_26",
+    "brand": "Realme",
+    "model": "Realme X3 SuperZoom",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_27",
+    "brand": "Realme",
+    "model": "Realme C11",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_28",
+    "brand": "Realme",
+    "model": "Realme C12",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_29",
+    "brand": "Realme",
+    "model": "Realme 6i",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_30",
+    "brand": "Realme",
+    "model": "Realme 7 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_31",
+    "brand": "Realme",
+    "model": "Realme C15",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_32",
+    "brand": "Realme",
+    "model": "Realme 7",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_33",
+    "brand": "Realme",
+    "model": "Realme Narzo 20 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_34",
+    "brand": "Realme",
+    "model": "Realme Narzo 20",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_35",
+    "brand": "Realme",
+    "model": "Realme Narzo 20A",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_36",
+    "brand": "Realme",
+    "model": "Realme 7i",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_37",
+    "brand": "Realme",
+    "model": "Realme C15 Qualcomm Edition",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_38",
+    "brand": "Realme",
+    "model": "Realme X7",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_39",
+    "brand": "Realme",
+    "model": "Realme X7 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_40",
+    "brand": "Realme",
+    "model": "Realme Narzo 30A",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_41",
+    "brand": "Realme",
+    "model": "Realme Narzo 30 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_42",
+    "brand": "Realme",
+    "model": "Realme 8",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_43",
+    "brand": "Realme",
+    "model": "Realme 8 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_44",
+    "brand": "Realme",
+    "model": "Realme C21",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_45",
+    "brand": "Realme",
+    "model": "Realme C20",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_46",
+    "brand": "Realme",
+    "model": "Realme C25",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_47",
+    "brand": "Realme",
+    "model": "Realme X7 Max 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_48",
+    "brand": "Realme",
+    "model": "Realme C25s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_49",
+    "brand": "Realme",
+    "model": "Realme Narzo 30",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_50",
+    "brand": "Realme",
+    "model": "Realme Narzo 30 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_51",
+    "brand": "Realme",
+    "model": "Realme 8 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_52",
+    "brand": "Realme",
+    "model": "Realme C11 2021",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_53",
+    "brand": "Realme",
+    "model": "Realme GT 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_54",
+    "brand": "Realme",
+    "model": "Realme GT Master Edition",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_55",
+    "brand": "Realme",
+    "model": "Realme C21Y",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_56",
+    "brand": "Realme",
+    "model": "Realme 8i",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_57",
+    "brand": "Realme",
+    "model": "Realme 8s 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_58",
+    "brand": "Realme",
+    "model": "Realme C25Y",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_59",
+    "brand": "Realme",
+    "model": "Realme Narzo 50A",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_60",
+    "brand": "Realme",
+    "model": "Realme Narzo 50i",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_61",
+    "brand": "Realme",
+    "model": "Realme GT Neo 2",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_62",
+    "brand": "Realme",
+    "model": "Realme 9i",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_63",
+    "brand": "Realme",
+    "model": "Realme 9 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_64",
+    "brand": "Realme",
+    "model": "Realme 9 Pro Plus 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_65",
+    "brand": "Realme",
+    "model": "Realme Narzo 50",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_66",
+    "brand": "Realme",
+    "model": "Realme C35",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_67",
+    "brand": "Realme",
+    "model": "Realme 9 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_68",
+    "brand": "Realme",
+    "model": "Realme 9 5G Speed Edition",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_69",
+    "brand": "Realme",
+    "model": "Realme C31",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_70",
+    "brand": "Realme",
+    "model": "Realme GT 2",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_71",
+    "brand": "Realme",
+    "model": "Realme GT 2 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_72",
+    "brand": "Realme",
+    "model": "Realme 9",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_73",
+    "brand": "Realme",
+    "model": "Realme GT Neo 3",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_74",
+    "brand": "Realme",
+    "model": "Realme Narzo 50A Prime",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_75",
+    "brand": "Realme",
+    "model": "Realme C30",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_76",
+    "brand": "Realme",
+    "model": "Realme 9i 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_77",
+    "brand": "Realme",
+    "model": "Realme GT NEO 3 150W",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_78",
+    "brand": "Realme",
+    "model": "Realme GT Neo 3T",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_79",
+    "brand": "Realme",
+    "model": "Realme C33",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_80",
+    "brand": "Realme",
+    "model": "Realme C30s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_81",
+    "brand": "Realme",
+    "model": "Realme Narzo 50 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_82",
+    "brand": "Realme",
+    "model": "Realme Narzo 50 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_83",
+    "brand": "Realme",
+    "model": "Realme Narzo 50i Prime",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_84",
+    "brand": "Realme",
+    "model": "Realme 10 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_85",
+    "brand": "Realme",
+    "model": "Realme 10 Pro Plus 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_86",
+    "brand": "Realme",
+    "model": "Realme 10",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_87",
+    "brand": "Realme",
+    "model": "Realme C55",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_88",
+    "brand": "Realme",
+    "model": "Realme C33 2023",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_89",
+    "brand": "Realme",
+    "model": "Realme Narzo N53",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_90",
+    "brand": "Realme",
+    "model": "Realme 11 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_91",
+    "brand": "Realme",
+    "model": "Realme 11 Pro Plus 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_92",
+    "brand": "Realme",
+    "model": "Realme Narzo N55",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_93",
+    "brand": "Realme",
+    "model": "Realme C53",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_94",
+    "brand": "Realme",
+    "model": "Realme Narzo 60 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_95",
+    "brand": "Realme",
+    "model": "Realme Narzo 60 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_96",
+    "brand": "Realme",
+    "model": "Realme 11x 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_97",
+    "brand": "Realme",
+    "model": "Realme 11 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_98",
+    "brand": "Realme",
+    "model": "Realme Narzo 60X 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_99",
+    "brand": "Realme",
+    "model": "Realme C67 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_100",
+    "brand": "Realme",
+    "model": "Realme C51",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_101",
+    "brand": "Realme",
+    "model": "Realme 12 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_102",
+    "brand": "Realme",
+    "model": "Realme 12 Pro Plus 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_103",
+    "brand": "Realme",
+    "model": "Realme 12 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_104",
+    "brand": "Realme",
+    "model": "Realme 12 Plus 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_105",
+    "brand": "Realme",
+    "model": "Realme 12x 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_106",
+    "brand": "Realme",
+    "model": "Realme P1 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_107",
+    "brand": "Realme",
+    "model": "Realme P1 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_108",
+    "brand": "Realme",
+    "model": "Realme Narzo 70 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_109",
+    "brand": "Realme",
+    "model": "Realme Narzo 70 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_110",
+    "brand": "Realme",
+    "model": "Realme Narzo 70X 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_111",
+    "brand": "Realme",
+    "model": "Realme GT 6T 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_112",
+    "brand": "Realme",
+    "model": "Realme Narzo N65 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_113",
+    "brand": "Realme",
+    "model": "Realme GT 6",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_114",
+    "brand": "Realme",
+    "model": "Realme C65 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_115",
+    "brand": "Realme",
+    "model": "Realme C61",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_116",
+    "brand": "Realme",
+    "model": "Realme Narzo N61",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_117",
+    "brand": "Realme",
+    "model": "Realme C63",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_118",
+    "brand": "Realme",
+    "model": "Realme C63 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_119",
+    "brand": "Realme",
+    "model": "Realme P2 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_120",
+    "brand": "Realme",
+    "model": "Realme 13 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_121",
+    "brand": "Realme",
+    "model": "Realme 13 Plus 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_122",
+    "brand": "Realme",
+    "model": "Realme 13 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_123",
+    "brand": "Realme",
+    "model": "Realme 13 Pro Plus 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_124",
+    "brand": "Realme",
+    "model": "Realme Narzo 70 Turbo 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_125",
+    "brand": "Realme",
+    "model": "Realme P1 Speed 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_126",
+    "brand": "Realme",
+    "model": "Realme 14x 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_127",
+    "brand": "Realme",
+    "model": "Realme 14 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_128",
+    "brand": "Realme",
+    "model": "Realme 14 Pro Plus 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_129",
+    "brand": "Realme",
+    "model": "Realme Narzo N63",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_130",
+    "brand": "Realme",
+    "model": "Realme P3x 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_131",
+    "brand": "Realme",
+    "model": "Realme P3 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_132",
+    "brand": "Realme",
+    "model": "Realme P3 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_133",
+    "brand": "Realme",
+    "model": "Realme P3 Ultra 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_134",
+    "brand": "Realme",
+    "model": "Realme 14 Pro Lite 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_135",
+    "brand": "Realme",
+    "model": "Realme C75 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_136",
+    "brand": "Realme",
+    "model": "Realme Narzo 80x 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_137",
+    "brand": "Realme",
+    "model": "Realme C73 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_138",
+    "brand": "Realme",
+    "model": "Realme 14T 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_139",
+    "brand": "Realme",
+    "model": "Realme GT 7",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_140",
+    "brand": "Realme",
+    "model": "Realme GT 7 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_141",
+    "brand": "Realme",
+    "model": "Realme GT 7T",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_142",
+    "brand": "Realme",
+    "model": "Realme Narzo 80 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_143",
+    "brand": "Realme",
+    "model": "Realme Narzo 80 Lite 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_144",
+    "brand": "Realme",
+    "model": "Realme C71",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_145",
+    "brand": "Realme",
+    "model": "Realme 15 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_146",
+    "brand": "Realme",
+    "model": "Realme 15 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_147",
+    "brand": "Realme",
+    "model": "Realme 15T 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_148",
+    "brand": "Realme",
+    "model": "Realme Narzo 80 Lite 4G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_149",
+    "brand": "Realme",
+    "model": "Realme P3 Lite 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_150",
+    "brand": "Realme",
+    "model": "Realme P4 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_151",
+    "brand": "Realme",
+    "model": "Realme P4 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_152",
+    "brand": "Realme",
+    "model": "Realme 15x 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_153",
+    "brand": "Realme",
+    "model": "Realme C85 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_154",
+    "brand": "Realme",
+    "model": "Realme GT 8 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_155",
+    "brand": "Realme",
+    "model": "Realme 16 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_156",
+    "brand": "Realme",
+    "model": "Realme Narzo 90x 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_157",
+    "brand": "Realme",
+    "model": "Realme P4x 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_158",
+    "brand": "Realme",
+    "model": "Realme P4 Power 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_159",
+    "brand": "Realme",
+    "model": "Realme 16 Pro Plus 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_160",
+    "brand": "Realme",
+    "model": "Realme C83 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_161",
+    "brand": "Realme",
+    "model": "Realme Narzo 90 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_162",
+    "brand": "Realme",
+    "model": "Realme Narzo Power 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_163",
+    "brand": "Realme",
+    "model": "Realme P4 Lite",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_164",
+    "brand": "Realme",
+    "model": "Realme 16 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_165",
+    "brand": "Realme",
+    "model": "Realme P4 Lite 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "realme_batch_166",
+    "brand": "Realme",
+    "model": "Realme Narzo 100 Lite 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  }
 ];
