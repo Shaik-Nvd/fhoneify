@@ -20739,4 +20739,806 @@ export const SEED_DEVICES = [
     "color": "Midnight",
     "basePrice": 5000
   }
+,
+  {
+    "id": "motorola_batch_1",
+    "brand": "Motorola",
+    "model": "Motorola One Power",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_2",
+    "brand": "Motorola",
+    "model": "Motorola Moto E5 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_3",
+    "brand": "Motorola",
+    "model": "Motorola Moto G6 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_4",
+    "brand": "Motorola",
+    "model": "Motorola Moto E5",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_5",
+    "brand": "Motorola",
+    "model": "Motorola Moto Z2 Force",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_6",
+    "brand": "Motorola",
+    "model": "Motorola Moto G6",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_7",
+    "brand": "Motorola",
+    "model": "Motorola Moto G6 Play",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_8",
+    "brand": "Motorola",
+    "model": "Motorola Moto G7 Power",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_9",
+    "brand": "Motorola",
+    "model": "Motorola Moto G7",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_10",
+    "brand": "Motorola",
+    "model": "Motorola Moto One",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_11",
+    "brand": "Motorola",
+    "model": "Motorola One Vision",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_12",
+    "brand": "Motorola",
+    "model": "Motorola One Action",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_13",
+    "brand": "Motorola",
+    "model": "Motorola Moto E6s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_14",
+    "brand": "Motorola",
+    "model": "Motorola One Macro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_15",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_16",
+    "brand": "Motorola",
+    "model": "Motorola Moto G8 Power Lite",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_17",
+    "brand": "Motorola",
+    "model": "Motorola Moto Razr",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_18",
+    "brand": "Motorola",
+    "model": "Motorola One Fusion Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_19",
+    "brand": "Motorola",
+    "model": "Motorola Moto G9",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_20",
+    "brand": "Motorola",
+    "model": "Motorola Moto E7 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_21",
+    "brand": "Motorola",
+    "model": "Motorola Moto Razr 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_22",
+    "brand": "Motorola",
+    "model": "Motorola Moto G9 Power",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_23",
+    "brand": "Motorola",
+    "model": "Motorola Moto G 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_24",
+    "brand": "Motorola",
+    "model": "Motorola Moto G30",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_25",
+    "brand": "Motorola",
+    "model": "Motorola Moto G10 Power",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_26",
+    "brand": "Motorola",
+    "model": "Motorola Moto E7 Power",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_27",
+    "brand": "Motorola",
+    "model": "Motorola Moto G60",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_28",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 20 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_29",
+    "brand": "Motorola",
+    "model": "Motorola Moto G40 Fusion",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_30",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 20 Fusion",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_31",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 20",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_32",
+    "brand": "Motorola",
+    "model": "Motorola Moto G31",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_33",
+    "brand": "Motorola",
+    "model": "Motorola Moto G51 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_34",
+    "brand": "Motorola",
+    "model": "Motorola Moto E40",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_35",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 30 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_36",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 30",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_37",
+    "brand": "Motorola",
+    "model": "Motorola Moto G52",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_38",
+    "brand": "Motorola",
+    "model": "Motorola Moto G71 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_39",
+    "brand": "Motorola",
+    "model": "Motorola Moto G82 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_40",
+    "brand": "Motorola",
+    "model": "Motorola Moto G22",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_41",
+    "brand": "Motorola",
+    "model": "Motorola Moto G42",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_42",
+    "brand": "Motorola",
+    "model": "Motorola Moto G32",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_43",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 30 Fusion",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_44",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 30 Ultra",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_45",
+    "brand": "Motorola",
+    "model": "Motorola Moto G72",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_46",
+    "brand": "Motorola",
+    "model": "Motorola Moto G62 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_47",
+    "brand": "Motorola",
+    "model": "Motorola Moto E32s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_48",
+    "brand": "Motorola",
+    "model": "Motorola Moto E13",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_49",
+    "brand": "Motorola",
+    "model": "Motorola Moto G8 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_50",
+    "brand": "Motorola",
+    "model": "Motorola Moto e32",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_51",
+    "brand": "Motorola",
+    "model": "Motorola Moto G73 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_52",
+    "brand": "Motorola",
+    "model": "Motorola Moto e22s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_53",
+    "brand": "Motorola",
+    "model": "Motorola Moto G13",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_54",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 40",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_55",
+    "brand": "Motorola",
+    "model": "Motorola Moto Razr 40 Ultra",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_56",
+    "brand": "Motorola",
+    "model": "Motorola Moto G14",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_57",
+    "brand": "Motorola",
+    "model": "Motorola Moto G54 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_58",
+    "brand": "Motorola",
+    "model": "Motorola Moto G84 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_59",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 40 Neo",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_60",
+    "brand": "Motorola",
+    "model": "Motorola Moto G34 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_61",
+    "brand": "Motorola",
+    "model": "Motorola Moto G64 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_62",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 50 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_63",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 50 Fusion",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_64",
+    "brand": "Motorola",
+    "model": "Motorola Moto G04",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_65",
+    "brand": "Motorola",
+    "model": "Motorola Moto G24 Power",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_66",
+    "brand": "Motorola",
+    "model": "Motorola Moto G85 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_67",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 50 Ultra",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_68",
+    "brand": "Motorola",
+    "model": "Motorola Moto Razr 50 Ultra",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_69",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 50",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_70",
+    "brand": "Motorola",
+    "model": "Motorola Moto G04s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_71",
+    "brand": "Motorola",
+    "model": "Motorola Moto G45 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_72",
+    "brand": "Motorola",
+    "model": "Motorola Moto Razr 50",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_73",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 50 Neo",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_74",
+    "brand": "Motorola",
+    "model": "Motorola Moto G35 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_75",
+    "brand": "Motorola",
+    "model": "Motorola Moto G05",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_76",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 60 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_77",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 60 Fusion",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_78",
+    "brand": "Motorola",
+    "model": "Motorola Moto Razr 60",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_79",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 60 Stylus",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_80",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 60",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_81",
+    "brand": "Motorola",
+    "model": "Motorola Moto G96 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_82",
+    "brand": "Motorola",
+    "model": "Motorola Moto G86 Power 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_83",
+    "brand": "Motorola",
+    "model": "Motorola Moto Razr 60 Ultra",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_84",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 70",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_85",
+    "brand": "Motorola",
+    "model": "Motorola Moto G57 Power 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_86",
+    "brand": "Motorola",
+    "model": "Motorola Moto G06 Power",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_87",
+    "brand": "Motorola",
+    "model": "Motorola Moto Signature",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_88",
+    "brand": "Motorola",
+    "model": "Motorola Moto G67 Power 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "motorola_batch_89",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 70 Fusion",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  }
 ];
