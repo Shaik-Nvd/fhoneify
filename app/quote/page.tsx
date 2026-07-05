@@ -51,6 +51,18 @@ function extractDevices(payload: unknown): Device[] {
 const ArrowRightIcon = () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>;
 
 export default function QuotePage() {
+  const isWarrantyEligible = (brand: string, model: string) => {
+    if (brand === 'Apple') {
+      const lowerModel = model.toLowerCase();
+      // Older iPhones generally do not get the warranty question on Cashify
+      if (lowerModel.includes('iphone 7') || lowerModel.includes('iphone 8') || lowerModel.includes('iphone x') || lowerModel.includes('iphone 11') || lowerModel.includes('iphone 6') || lowerModel.includes('iphone se')) {
+        return false;
+      }
+      return true;
+    }
+    return true;
+  };
+  
   const router = useRouter();
   const { setAuth } = useAuthStore();
   const { isAuthenticated, user } = useHydratedAuth();
@@ -642,20 +654,22 @@ export default function QuotePage() {
                 ))}
                 
                 {/* Warranty Question */}
-                <div style={{ marginBottom: '2.5rem' }}>
-                  <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>Is your device under manufacturer warranty?</h3>
-                  <div style={{ display: 'flex', gap: '1rem' }}>
-                    <button onClick={() => setDiagnostics({ ...diagnostics, warranty: true })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.warranty === true ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.warranty === true ? 'rgba(76,217,100,0.1)' : '#1a1a1a', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.warranty === true ? '#4CD964' : '#fff' }}>
-                      <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.warranty === true ? '1px solid #4CD964' : '1px solid #444', backgroundColor: diagnostics.warranty === true ? '#4CD964' : 'transparent' }} /> Yes
-                    </button>
-                    <button onClick={() => setDiagnostics({ ...diagnostics, warranty: false, mobileAge: null })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.warranty === false ? '1px solid #FF3B30' : '1px solid #2a2a2a', backgroundColor: diagnostics.warranty === false ? 'rgba(255,59,48,0.1)' : '#1a1a1a', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.warranty === false ? '#FF3B30' : '#fff' }}>
-                      <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.warranty === false ? '1px solid #FF3B30' : '1px solid #444', backgroundColor: diagnostics.warranty === false ? '#FF3B30' : 'transparent' }} /> No
-                    </button>
+                {isWarrantyEligible(selectedBrand, selectedModel) && (
+                  <div style={{ marginBottom: '2.5rem' }}>
+                    <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>Is your device under manufacturer warranty?</h3>
+                    <div style={{ display: 'flex', gap: '1rem' }}>
+                      <button onClick={() => setDiagnostics({ ...diagnostics, warranty: true })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.warranty === true ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.warranty === true ? 'rgba(76,217,100,0.1)' : '#1a1a1a', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.warranty === true ? '#4CD964' : '#fff' }}>
+                        <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.warranty === true ? '1px solid #4CD964' : '1px solid #444', backgroundColor: diagnostics.warranty === true ? '#4CD964' : 'transparent' }} /> Yes
+                      </button>
+                      <button onClick={() => setDiagnostics({ ...diagnostics, warranty: false, mobileAge: null })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.warranty === false ? '1px solid #FF3B30' : '1px solid #2a2a2a', backgroundColor: diagnostics.warranty === false ? 'rgba(255,59,48,0.1)' : '#1a1a1a', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.warranty === false ? '#FF3B30' : '#fff' }}>
+                        <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.warranty === false ? '1px solid #FF3B30' : '1px solid #444', backgroundColor: diagnostics.warranty === false ? '#FF3B30' : 'transparent' }} /> No
+                      </button>
+                    </div>
                   </div>
-                </div>
+                )}
 
                 {/* GST Bill Question (for Apple models) */}
-                {selectedBrand === 'Apple' && (
+                {selectedBrand === 'Apple' && isWarrantyEligible(selectedBrand, selectedModel) && (
                   <div style={{ marginBottom: '2.5rem' }}>
                     <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>Do you have GST valid bill with the same IMEI?</h3>
                     <p style={{ color: '#cccccc', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Make sure your bill has device IMEI mentioned on it.</p>
@@ -671,7 +685,24 @@ export default function QuotePage() {
                 )}
 
                 <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
-                  <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 4)} disabled={diagnostics.calls === null || diagnostics.touch === null || diagnostics.originalScreen === null || diagnostics.warranty === null || (selectedBrand === 'Apple' && diagnostics.validBill === null)} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (diagnostics.calls !== null && diagnostics.touch !== null && diagnostics.originalScreen !== null && diagnostics.warranty !== null && (selectedBrand !== 'Apple' || diagnostics.validBill !== null)) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
+                  <button onClick={() => {
+                    const showWarranty = isWarrantyEligible(selectedBrand, selectedModel);
+                    if (!showWarranty) {
+                      // Silently set warranty and bill to false for internal logic if skipping them
+                      setDiagnostics({ ...diagnostics, warranty: false, validBill: false });
+                    }
+                    navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 4);
+                  }} disabled={
+                    diagnostics.calls === null || 
+                    diagnostics.touch === null || 
+                    diagnostics.originalScreen === null || 
+                    (isWarrantyEligible(selectedBrand, selectedModel) && (diagnostics.warranty === null || (selectedBrand === 'Apple' && diagnostics.validBill === null)))
+                  } className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (
+                    diagnostics.calls !== null && 
+                    diagnostics.touch !== null && 
+                    diagnostics.originalScreen !== null && 
+                    (!isWarrantyEligible(selectedBrand, selectedModel) || (diagnostics.warranty !== null && (selectedBrand !== 'Apple' || diagnostics.validBill !== null)))
+                  ) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
             )}
