@@ -25282,4 +25282,347 @@ export const SEED_DEVICES: any[] = [
     "color": "Black",
     "basePrice": 5000
   }
+,
+  {
+    "id": "iqoo_batch_1",
+    "brand": "iQOO",
+    "model": "iQOO 3",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_2",
+    "brand": "iQOO",
+    "model": "iQOO 7 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_3",
+    "brand": "iQOO",
+    "model": "iQOO 7 Legend 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_4",
+    "brand": "iQOO",
+    "model": "iQOO Z3 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_5",
+    "brand": "iQOO",
+    "model": "iQOO Z5 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_6",
+    "brand": "iQOO",
+    "model": "iQOO 9 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_7",
+    "brand": "iQOO",
+    "model": "iQOO 9 Pro 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_8",
+    "brand": "iQOO",
+    "model": "iQOO 9 SE 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_9",
+    "brand": "iQOO",
+    "model": "iQOO Z6 Pro 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_10",
+    "brand": "iQOO",
+    "model": "iQOO Z6 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_11",
+    "brand": "iQOO",
+    "model": "iQOO Z6",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_12",
+    "brand": "iQOO",
+    "model": "iQOO Neo 6 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_13",
+    "brand": "iQOO",
+    "model": "iQOO 9T 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_14",
+    "brand": "iQOO",
+    "model": "iQOO 3 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_15",
+    "brand": "iQOO",
+    "model": "iQOO Z6 Lite 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_16",
+    "brand": "iQOO",
+    "model": "iQOO 11 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_17",
+    "brand": "iQOO",
+    "model": "iQOO Neo 7 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_18",
+    "brand": "iQOO",
+    "model": "iQOO Z7 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_19",
+    "brand": "iQOO",
+    "model": "iQOO Z7s 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_20",
+    "brand": "iQOO",
+    "model": "iQOO Neo 7 Pro 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_21",
+    "brand": "iQOO",
+    "model": "iQOO Z7 Pro 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_22",
+    "brand": "iQOO",
+    "model": "iQOO 12 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_23",
+    "brand": "iQOO",
+    "model": "iQOO Neo 9 Pro 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_24",
+    "brand": "iQOO",
+    "model": "iQOO Z9 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_25",
+    "brand": "iQOO",
+    "model": "iQOO Z9x 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_26",
+    "brand": "iQOO",
+    "model": "iQOO Z9 Lite 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_27",
+    "brand": "iQOO",
+    "model": "iQOO Z9s 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_28",
+    "brand": "iQOO",
+    "model": "iQOO Z9s Pro 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_29",
+    "brand": "iQOO",
+    "model": "iQOO 13 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_30",
+    "brand": "iQOO",
+    "model": "iQOO Neo 10R 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_31",
+    "brand": "iQOO",
+    "model": "iQOO Z10 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_32",
+    "brand": "iQOO",
+    "model": "iQOO Z10x 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_33",
+    "brand": "iQOO",
+    "model": "iQOO Neo 10",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_34",
+    "brand": "iQOO",
+    "model": "iQOO Z10 Lite 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_35",
+    "brand": "iQOO",
+    "model": "iQOO Z10R 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_36",
+    "brand": "iQOO",
+    "model": "iQOO 15 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_37",
+    "brand": "iQOO",
+    "model": "iQOO 15R",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  },
+  {
+    "id": "iqoo_batch_38",
+    "brand": "iQOO",
+    "model": "iQOO Z11x 5G",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Black",
+    "basePrice": 5000
+  }
 ];
