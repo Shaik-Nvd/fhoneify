@@ -86,6 +86,22 @@ export default function QuotePage() {
       (lower.includes('se') && (lower.includes('2nd') || lower.includes('3rd') || lower.includes('2020') || lower.includes('2022')))
     );
   };
+
+  const hasChargerInBox = (brand: string, model: string) => {
+    if (brand.toLowerCase() !== 'apple') return true;
+    const lower = model.toLowerCase();
+    return !(
+      lower.includes('12') ||
+      lower.includes('13') ||
+      lower.includes('14') ||
+      lower.includes('15') ||
+      lower.includes('16') ||
+      lower.includes('17') ||
+      lower.includes('air') ||
+      lower.includes('se 2022') ||
+      (lower.includes('se') && lower.includes('2022'))
+    );
+  };
   
   const router = useRouter();
   const { setAuth } = useAuthStore();
@@ -1062,8 +1078,7 @@ export default function QuotePage() {
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem', marginBottom: '3rem' }}>
                   {[
                     { id: 'box', label: 'Original Box', icon: '📦' },
-                    { id: 'bill', label: 'Valid Bill', icon: '🧾' },
-                    { id: 'charger', label: 'Original Charger', icon: '🔌' }
+                    ...(hasChargerInBox(selectedBrand, selectedModel) ? [{ id: 'charger', label: 'Original Charger', icon: '🔌' }] : [])
                   ].map((a) => (
                     <button key={a.id} onClick={() => toggleArrayItem('accessories', a.id)} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem', padding: '3rem 1rem', borderRadius: '8px', border: diagnostics.accessories.includes(a.id) ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.accessories.includes(a.id) ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.accessories.includes(a.id) ? '#4CD964' : '#fff', cursor: 'pointer' }}>
                       <span style={{ fontSize: '4rem' }}>{a.icon}</span>
@@ -1073,14 +1088,8 @@ export default function QuotePage() {
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
                   <button onClick={() => { 
-                    const hasBill = diagnostics.accessories.includes('bill');
-                    if (hasBill) {
-                      const updatedDiag = {
-                        ...diagnostics,
-                        validBill: true,
-                        warranty: true
-                      };
-                      setDiagnostics(updatedDiag);
+                    const isEligible = isWarrantyEligible(selectedBrand, selectedModel);
+                    if (isEligible) {
                       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 9);
                     } else {
                       const updatedDiag = {
@@ -1130,7 +1139,8 @@ export default function QuotePage() {
                     const isUnderWarranty = diagnostics.mobileAge !== 'above11';
                     const updatedDiag = {
                       ...diagnostics,
-                      warranty: isUnderWarranty
+                      warranty: isUnderWarranty,
+                      validBill: isUnderWarranty
                     };
                     setDiagnostics(updatedDiag);
                     if (isAuthenticated) { 
@@ -1171,7 +1181,7 @@ export default function QuotePage() {
                   </div>
                 </div>
                 <button onClick={() => { 
-                  const prevStep = diagnostics.accessories.includes('bill') ? 9 : 8;
+                  const prevStep = isWarrantyEligible(selectedBrand, selectedModel) ? 9 : 8;
                   navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', prevStep); 
                   setShowOtpInput(false); 
                 }} style={{ background: 'none', border: 'none', fontSize: '2rem', cursor: 'pointer', paddingLeft: '1rem', color: '#999', lineHeight: 1 }}>×</button>
