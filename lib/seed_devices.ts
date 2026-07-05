@@ -22645,4 +22645,455 @@ export const SEED_DEVICES: any[] = [
     "color": "Midnight",
     "basePrice": 5000
   }
+,
+  {
+    "id": "lenovo_batch_1",
+    "brand": "Lenovo",
+    "model": "Lenovo K9 Note",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "lenovo_batch_2",
+    "brand": "Lenovo",
+    "model": "Lenovo A5",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "lenovo_batch_3",
+    "brand": "Lenovo",
+    "model": "Lenovo A6 Note",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "lenovo_batch_4",
+    "brand": "Lenovo",
+    "model": "Lenovo K10 Note",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "lenovo_batch_5",
+    "brand": "Lenovo",
+    "model": "Lenovo K10 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "lenovo_batch_6",
+    "brand": "Lenovo",
+    "model": "Lenovo Z6 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_1",
+    "brand": "Nokia",
+    "model": "Nokia 2.1",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_2",
+    "brand": "Nokia",
+    "model": "Nokia 5.1",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_3",
+    "brand": "Nokia",
+    "model": "Nokia 6.1 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_4",
+    "brand": "Nokia",
+    "model": "Nokia 5.1 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_5",
+    "brand": "Nokia",
+    "model": "Nokia 3.1",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_6",
+    "brand": "Nokia",
+    "model": "Nokia 6.1",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_7",
+    "brand": "Nokia",
+    "model": "Nokia 8 Sirocco",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_8",
+    "brand": "Nokia",
+    "model": "Nokia 7 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_9",
+    "brand": "Nokia",
+    "model": "Nokia 2",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_10",
+    "brand": "Nokia",
+    "model": "Nokia 7",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_11",
+    "brand": "Nokia",
+    "model": "Nokia 8",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_12",
+    "brand": "Nokia",
+    "model": "Nokia 5",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_13",
+    "brand": "Nokia",
+    "model": "Nokia 3",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_14",
+    "brand": "Nokia",
+    "model": "Nokia 3.1 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_15",
+    "brand": "Nokia",
+    "model": "Nokia 8.1",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_16",
+    "brand": "Nokia",
+    "model": "Nokia 7.1",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_17",
+    "brand": "Nokia",
+    "model": "Nokia 3.2",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_18",
+    "brand": "Nokia",
+    "model": "Nokia 4.2",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_19",
+    "brand": "Nokia",
+    "model": "Nokia 2.2",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_20",
+    "brand": "Nokia",
+    "model": "Nokia 7.2",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_21",
+    "brand": "Nokia",
+    "model": "Nokia 6.2",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_22",
+    "brand": "Nokia",
+    "model": "Nokia 2.3",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_23",
+    "brand": "Nokia",
+    "model": "Nokia 5.3",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_24",
+    "brand": "Nokia",
+    "model": "Nokia C3 2020",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_25",
+    "brand": "Nokia",
+    "model": "Nokia 2.4",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_26",
+    "brand": "Nokia",
+    "model": "Nokia 3.4",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_27",
+    "brand": "Nokia",
+    "model": "Nokia 5.4",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_28",
+    "brand": "Nokia",
+    "model": "Nokia G20",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_29",
+    "brand": "Nokia",
+    "model": "Nokia C20 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_30",
+    "brand": "Nokia",
+    "model": "Nokia C01 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_31",
+    "brand": "Nokia",
+    "model": "Nokia G10",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_32",
+    "brand": "Nokia",
+    "model": "Nokia C30",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_33",
+    "brand": "Nokia",
+    "model": "Nokia XR20",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_34",
+    "brand": "Nokia",
+    "model": "Nokia G21",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_35",
+    "brand": "Nokia",
+    "model": "Nokia C21 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_36",
+    "brand": "Nokia",
+    "model": "Nokia G60 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_37",
+    "brand": "Nokia",
+    "model": "Nokia C12",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_38",
+    "brand": "Nokia",
+    "model": "Nokia X30 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_39",
+    "brand": "Nokia",
+    "model": "Nokia C12 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_40",
+    "brand": "Nokia",
+    "model": "Nokia C31",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_41",
+    "brand": "Nokia",
+    "model": "Nokia C32",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_42",
+    "brand": "Nokia",
+    "model": "Nokia C22",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_43",
+    "brand": "Nokia",
+    "model": "Nokia G42 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "nokia_batch_44",
+    "brand": "Nokia",
+    "model": "Nokia G11 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  }
 ];
