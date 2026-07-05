@@ -1092,7 +1092,7 @@ export default function QuotePage() {
                     strokeWidth="8"
                     strokeLinecap="round"
                     strokeDasharray="408" // 2 * PI * 65
-                    strokeDashoffset={408 - (408 * timerCount) / 30}
+                    strokeDashoffset={408 - (408 * timerCount) / 60}
                     style={{ transition: 'stroke-dashoffset 1s linear' }}
                   />
                   <defs>
