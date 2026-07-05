@@ -34,7 +34,7 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
   // Boot or reuse global browser
   if (!globalBrowser) {
     logger.info('Launching new persistent Chromium instance...');
-    globalBrowser = await chromium.launch({ headless: true });
+    globalBrowser = await chromium.launch({ headless: false });
   }
 
   for (let i = 0; i < sessionFiles.length; i++) {
@@ -152,15 +152,16 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
           if (answers.touch === false) await noBtns[1].click(); else await yesBtns[1].click();
           // Original screen
           if (answers.originalScreen === false) await noBtns[2].click(); else await yesBtns[2].click();
-          
-          // Warranty (may or may not be present)
-          if (yesBtns.length >= 4 && noBtns.length >= 4) {
-            if (answers.mobileAge === '>11' || answers.warranty === false) await noBtns[3].click(); else await yesBtns[3].click();
-          }
-          
-          // GST bill (if present)
-          if (yesBtns.length > 4) {
-            if (answers.validBill === false) await noBtns[4].click(); else await yesBtns[4].click();
+        }
+        
+        // eSIM Question (if present)
+        const singleEsimBtn = await page.$('text="Single eSIM"');
+        const dualEsimBtn = await page.$('text="Dual eSIM"');
+        if (singleEsimBtn && dualEsimBtn) {
+          if (answers.eSim === 'Dual eSIM') {
+            await dualEsimBtn.click();
+          } else {
+            await singleEsimBtn.click();
           }
         }
         
@@ -270,6 +271,25 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
         const continueBtn4 = await page.$('text="Continue"');
         if (continueBtn4) await continueBtn4.click();
         
+        // PAGE 5: Mobile Age (if warranty is true / age question is shown)
+        await page.waitForTimeout(2000);
+        const agePageTitle = await page.$('text=What is your mobile age?');
+        if (agePageTitle || (answers.warranty === true && answers.validBill === true)) {
+          let ageText = 'Above 11 months';
+          if (answers.mobileAge === 'below3') ageText = 'Below 3 months';
+          else if (answers.mobileAge === '3to6') ageText = '3 months - 6 months';
+          else if (answers.mobileAge === '6to11') ageText = '6 months - 11 months';
+          
+          const ageBtn = await page.$(`text="${ageText}"`);
+          if (ageBtn) {
+            await ageBtn.click();
+          } else {
+            // fallback: check if any age button is visible
+            const firstAgeBtn = await page.$('text="Above 11 months"');
+            if (firstAgeBtn) await firstAgeBtn.click();
+          }
+        }
+
         // Final calculation wait
         await page.waitForTimeout(4000);
       }
