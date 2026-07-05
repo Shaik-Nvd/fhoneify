@@ -654,8 +654,24 @@ export default function QuotePage() {
                   </div>
                 </div>
 
+                {/* GST Bill Question (for Apple models) */}
+                {selectedBrand === 'Apple' && (
+                  <div style={{ marginBottom: '2.5rem' }}>
+                    <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>Do you have GST valid bill with the same IMEI?</h3>
+                    <p style={{ color: '#cccccc', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Make sure your bill has device IMEI mentioned on it.</p>
+                    <div style={{ display: 'flex', gap: '1rem' }}>
+                      <button onClick={() => setDiagnostics({ ...diagnostics, validBill: true })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.validBill === true ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.validBill === true ? 'rgba(76,217,100,0.1)' : '#1a1a1a', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.validBill === true ? '#4CD964' : '#fff' }}>
+                        <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.validBill === true ? '1px solid #4CD964' : '1px solid #444', backgroundColor: diagnostics.validBill === true ? '#4CD964' : 'transparent' }} /> Yes
+                      </button>
+                      <button onClick={() => setDiagnostics({ ...diagnostics, validBill: false })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.validBill === false ? '1px solid #FF3B30' : '1px solid #2a2a2a', backgroundColor: diagnostics.validBill === false ? 'rgba(255,59,48,0.1)' : '#1a1a1a', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.validBill === false ? '#FF3B30' : '#fff' }}>
+                        <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.validBill === false ? '1px solid #FF3B30' : '1px solid #444', backgroundColor: diagnostics.validBill === false ? '#FF3B30' : 'transparent' }} /> No
+                      </button>
+                    </div>
+                  </div>
+                )}
+
                 <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
-                  <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 4)} disabled={diagnostics.calls === null || diagnostics.touch === null || diagnostics.originalScreen === null || diagnostics.warranty === null} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (diagnostics.calls !== null && diagnostics.touch !== null && diagnostics.originalScreen !== null && diagnostics.warranty !== null) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
+                  <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 4)} disabled={diagnostics.calls === null || diagnostics.touch === null || diagnostics.originalScreen === null || diagnostics.warranty === null || (selectedBrand === 'Apple' && diagnostics.validBill === null)} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (diagnostics.calls !== null && diagnostics.touch !== null && diagnostics.originalScreen !== null && diagnostics.warranty !== null && (selectedBrand !== 'Apple' || diagnostics.validBill !== null)) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
             )}
@@ -809,7 +825,7 @@ export default function QuotePage() {
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem', marginBottom: '3rem' }}>
                   {[
                     { id: 'box', label: 'Original Box with same IMEI', icon: '📦' },
-                    { id: 'bill', label: 'Valid Bill', icon: '🧾' },
+                    ...(selectedBrand !== 'Apple' ? [{ id: 'bill', label: 'Valid Bill', icon: '🧾' }] : []),
                     { id: 'charger', label: 'Original Charger', icon: '🔌' }
                   ].map((a) => (
                     <button key={a.id} onClick={() => toggleArrayItem('accessories', a.id)} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem', padding: '3rem 1rem', borderRadius: '8px', border: diagnostics.accessories.includes(a.id) ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.accessories.includes(a.id) ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.accessories.includes(a.id) ? '#4CD964' : '#fff', cursor: 'pointer' }}>
@@ -820,7 +836,7 @@ export default function QuotePage() {
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
                   <button onClick={() => { 
-                    if (diagnostics.warranty || diagnostics.accessories.includes('bill')) {
+                    if (diagnostics.warranty || diagnostics.accessories.includes('bill') || (selectedBrand === 'Apple' && diagnostics.validBill)) {
                       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 9);
                     } else if (isAuthenticated) { 
                       calculateFinalPrice(); navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11); 
