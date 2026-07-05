@@ -46,7 +46,7 @@ export default function WhatsAppFloatingBtn() {
     return null;
   }
   
-  const phoneNumber = "919739063840";
+  const phoneNumber = "919187448347";
   
   let message = "I'm interested in your services.";
   if (pageContext && pageContext !== 'Fhoneify | Premium Phone Resale') {
