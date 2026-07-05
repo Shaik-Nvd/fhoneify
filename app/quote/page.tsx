@@ -388,17 +388,17 @@ export default function QuotePage() {
           return 0;
         }
         // Update status text based on time remaining
-        if (prev === 45) setScrapingStatus('Analyzing phone condition...');
-        if (prev === 30) setScrapingStatus('Comparing market rates...');
+        if (prev === 75) setScrapingStatus('Analyzing phone condition...');
+        if (prev === 45) setScrapingStatus('Comparing market rates...');
         if (prev === 15) setScrapingStatus('Finalizing exact price...');
         return prev - 1;
       });
     }, 1000);
 
     try {
-      // Add a 60s abort controller so fetch doesn't hang forever, but gives Render enough time to boot Chromium
+      // Add a 90s abort controller so fetch doesn't hang forever, but gives Render enough time to boot Chromium
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 60000);
+      const timeoutId = setTimeout(() => controller.abort(), 90000);
       
       const res = await api.post('/api/quote/cashify-price', {
         brand: selectedBrand,

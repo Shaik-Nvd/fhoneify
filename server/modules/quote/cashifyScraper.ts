@@ -120,12 +120,21 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
         logger.warn('Could not find storage variant to click. Price might not appear.');
       }
     }
-        // Wait for price to render initially
       await page.waitForTimeout(1000);
 
       // --- FULL CASHIFY SIMULATION ---
       const answers = deviceDetails.answers || {};
 
+      // PAGE 0: Select the right variant and click Get Exact Value
+      let formattedStorage = deviceDetails.storage;
+      if (deviceDetails.storage && deviceDetails.storage.match(/^[0-9]+[a-zA-Z]+$/)) {
+        formattedStorage = deviceDetails.storage.replace(/([0-9]+)([a-zA-Z]+)/, '$1 $2');
+      }
+      const storageOptions = await page.$$(`text="${formattedStorage}"`);
+      if (storageOptions.length > 0) {
+        await storageOptions[0].click();
+      }  
+      
       // 1. Click Get Exact Value
       const getExactValueBtn = await page.$('text="Get Exact Value"');
       if (getExactValueBtn) {
@@ -136,18 +145,18 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
         const yesBtns = await page.$$('text="Yes"');
         const noBtns = await page.$$('text="No"');
         
-        if (yesBtns.length >= 4 && noBtns.length >= 4) {
+        if (yesBtns.length >= 3 && noBtns.length >= 3) {
           // Calls
           if (answers.calls === 'no') await noBtns[0].click(); else await yesBtns[0].click();
+          // Touch screen
+          if (answers.screen === 'touch_faulty') await noBtns[1].click(); else await yesBtns[1].click();
+          // Original screen
+          if (answers.screen === 'broken' || answers.screen === 'scratched' || answers.screen === 'touch_faulty') await noBtns[2].click(); else await yesBtns[2].click();
           
-          // Touch screen (default yes)
-          await yesBtns[1].click();
-          
-          // Screen original (default yes)
-          await yesBtns[2].click();
-          
-          // Warranty (default yes if < 11 months)
-          if (answers.warranty && answers.warranty !== '11+') await yesBtns[3].click(); else await noBtns[3].click();
+          // Warranty (may or may not be present)
+          if (yesBtns.length >= 4 && noBtns.length >= 4) {
+            if (answers.warranty !== '11+') await noBtns[3].click(); else await yesBtns[3].click();
+          }
           
           // GST bill (if present)
           if (yesBtns.length > 4) {
