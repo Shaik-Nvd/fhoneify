@@ -57,8 +57,8 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
         }
       });
 
-      // Set a default timeout
-      page.setDefaultTimeout(15000);
+      // Set a default timeout for all page actions
+      page.setDefaultTimeout(45000);
 
     // Load the URL lookup dictionary (if it exists)
     let urlDictionary: Record<string, string> = {};
