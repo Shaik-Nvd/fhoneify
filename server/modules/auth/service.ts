@@ -186,7 +186,7 @@ export function getMe(user: User) {
 
 export async function adminLoginWithPassword(username: string, password: string) {
   // Hardcoded for now based on user requirements. In production, this should be in DB and hashed.
-  if (username === 'admin' && password === '9739063840') {
+  if (username === 'Fhoneify-web' && password === 'Fhoneify@Get2go') {
     // Find or mock the admin user
     let user = users.find((u) => u.role === 'admin');
     if (!user) {
