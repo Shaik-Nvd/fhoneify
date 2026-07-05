@@ -193,6 +193,9 @@ export default function QuotePage() {
     originalScreen: null as boolean | null,
     defects: [] as string[],
     screenCondition: null as string | null,
+    screenSpots: null as string | null,
+    screenLines: null as string | null,
+    screenDiscoloration: null as string | null,
     bodyScratches: null as string | null,
     bodyDents: null as string | null,
     bodyPanel: null as string | null,
@@ -885,7 +888,7 @@ export default function QuotePage() {
           </div>
         </div>
       )}      {/* STAGES 3-9: MULTI-STEP QUESTIONNAIRE (2 COLUMN LAYOUT) */}
-      {((step >= 3 && step <= 9) || step === 13) && (
+      {((step >= 3 && step <= 9) || step === 13 || step === 14) && (
         <div className="flex flex-col-reverse md:flex-row gap-8 items-start w-full" style={{ marginTop: '2.5rem' }}>
           
           <div className="flex-1 w-full min-w-0 flex flex-col gap-6">
@@ -972,6 +975,8 @@ export default function QuotePage() {
                     // Logic for sub-pages
                     if (diagnostics.defects.includes('screen_scratch')) {
                       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 5);
+                    } else if (diagnostics.defects.includes('screen_spot')) {
+                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 14);
                     } else if (diagnostics.defects.includes('body_scratch')) {
                       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 6);
                     } else if (diagnostics.defects.includes('panel_missing')) {
@@ -1007,7 +1012,9 @@ export default function QuotePage() {
 
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
                   <button onClick={() => {
-                    if (diagnostics.defects.includes('body_scratch')) {
+                    if (diagnostics.defects.includes('screen_spot')) {
+                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 14);
+                    } else if (diagnostics.defects.includes('body_scratch')) {
                       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 6);
                     } else if (diagnostics.defects.includes('panel_missing')) {
                       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 13);
@@ -1099,6 +1106,69 @@ export default function QuotePage() {
 
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
                   <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 7)} disabled={!diagnostics.bodyPanel || !diagnostics.bodyBent} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (diagnostics.bodyPanel && diagnostics.bodyBent) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
+                </div>
+              </div>
+            )}
+
+            {/* STAGE 14: SCREEN SPOTS/LINES/DISCOLORATION DEFECT SUB-PAGE */}
+            {step === 14 && (
+              <div className="card p-6 md:p-12 rounded-lg border border-[#2a2a2a] bg-[#111] text-white">
+                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: '#ffffff' }}>Tell us more about your device&apos;s screen defects?</h2>
+                <p style={{ textAlign: 'center', color: '#cccccc', fontSize: '0.85rem', marginBottom: '3rem' }}>(because you selected defective screen)</p>
+                
+                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>1. Dead Pixels/Spots on Screen</h3>
+                <p style={{ color: '#cccccc', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Check your device&apos;s screen for visible spots</p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2.5rem' }}>
+                  {[
+                    { id: 'Large/ heavy visible spots on screen', label: 'Large/ heavy visible spots on screen' },
+                    { id: '3 or more minor spots on screen', label: '3 or more minor spots on screen' },
+                    { id: '1-2 minor spots on screen', label: '1-2 minor spots on screen' },
+                    { id: 'No spots on screen', label: 'No spots on screen' }
+                  ].map((opt) => (
+                    <button key={opt.id} onClick={() => setDiagnostics({ ...diagnostics, screenSpots: opt.id })} style={{ textAlign: 'left', padding: '1rem 1.5rem', borderRadius: '8px', border: diagnostics.screenSpots === opt.id ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.screenSpots === opt.id ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.screenSpots === opt.id ? '#4CD964' : '#fff', cursor: 'pointer', fontWeight: 500 }}>
+                      {opt.label}
+                    </button>
+                  ))}
+                </div>
+
+                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>2. Visible Lines on Screen</h3>
+                <p style={{ color: '#cccccc', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Check your device&apos;s screen for visible lines</p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2.5rem' }}>
+                  {[
+                    { id: 'Visible line(s) on display', label: 'Visible line(s) on display' },
+                    { id: 'Display faded along edges', label: 'Display faded along edges' },
+                    { id: 'No line(s) on Display', label: 'No line(s) on Display' }
+                  ].map((opt) => (
+                    <button key={opt.id} onClick={() => setDiagnostics({ ...diagnostics, screenLines: opt.id })} style={{ textAlign: 'left', padding: '1rem 1.5rem', borderRadius: '8px', border: diagnostics.screenLines === opt.id ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.screenLines === opt.id ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.screenLines === opt.id ? '#4CD964' : '#fff', cursor: 'pointer', fontWeight: 500 }}>
+                      {opt.label}
+                    </button>
+                  ))}
+                </div>
+
+                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>3. Discoloration on Screen</h3>
+                <p style={{ color: '#cccccc', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Check your device&apos;s screen for discoloration</p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '3rem' }}>
+                  {[
+                    { id: 'Major Discoloration', label: 'Major Discoloration' },
+                    { id: 'Minor Discoloration', label: 'Minor Discoloration' },
+                    { id: 'No Discoloration', label: 'No Discoloration' }
+                  ].map((opt) => (
+                    <button key={opt.id} onClick={() => setDiagnostics({ ...diagnostics, screenDiscoloration: opt.id })} style={{ textAlign: 'left', padding: '1rem 1.5rem', borderRadius: '8px', border: diagnostics.screenDiscoloration === opt.id ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.screenDiscoloration === opt.id ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.screenDiscoloration === opt.id ? '#4CD964' : '#fff', cursor: 'pointer', fontWeight: 500 }}>
+                      {opt.label}
+                    </button>
+                  ))}
+                </div>
+
+                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                  <button onClick={() => {
+                    if (diagnostics.defects.includes('body_scratch')) {
+                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 6);
+                    } else if (diagnostics.defects.includes('panel_missing')) {
+                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 13);
+                    } else {
+                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 7);
+                    }
+                  }} disabled={!diagnostics.screenSpots || !diagnostics.screenLines || !diagnostics.screenDiscoloration} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (diagnostics.screenSpots && diagnostics.screenLines && diagnostics.screenDiscoloration) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
             )}
@@ -1349,7 +1419,7 @@ export default function QuotePage() {
             </div>
             
             <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', width: '100%' }}>
-              <button type="button" onClick={() => { navigateToState('', '', '', 'brand', 1); setFinalPrice(null); setMarketPriceFetched(false); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], screenCondition: null, bodyScratches: null, bodyDents: null, bodyPanel: null, bodyBent: null, hardware: [], accessories: [], warranty: null, validBill: null, eSim: null, mobileAge: null }); }} className="btn-outline" style={{ flex: 1, padding: '16px', fontSize: '1.1rem' }}>Start Over</button>
+              <button type="button" onClick={() => { navigateToState('', '', '', 'brand', 1); setFinalPrice(null); setMarketPriceFetched(false); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], screenCondition: null, screenSpots: null, screenLines: null, screenDiscoloration: null, bodyScratches: null, bodyDents: null, bodyPanel: null, bodyBent: null, hardware: [], accessories: [], warranty: null, validBill: null, eSim: null, mobileAge: null }); }} className="btn-outline" style={{ flex: 1, padding: '16px', fontSize: '1.1rem' }}>Start Over</button>
               <button type="button" onClick={() => setStep(12)} disabled={!marketPriceFetched} className="btn-primary" style={{ flex: 2, padding: '16px', background: marketPriceFetched ? '#4CD964' : '#333', color: marketPriceFetched ? '#fff' : '#999', fontSize: '1.1rem', fontWeight: 600, opacity: marketPriceFetched ? 1 : 0.6, cursor: marketPriceFetched ? 'pointer' : 'not-allowed' }}>Schedule Pickup</button>
             </div>
           </>
