@@ -147,6 +147,7 @@ export default function QuotePage() {
   // New 8-stage flow: 1: Select, 2: BasePrice, 3: BasicQ, 4: Defects, 5: Hardware, 6: Accessories, 7: LeadCapture, 8: FinalPrice
   const [step, setStep] = useState(1);
   const [basePrice, setBasePrice] = useState<number | null>(null);
+  const [rawBasePrice, setRawBasePrice] = useState<number | null>(null);
   const [finalPrice, setFinalPrice] = useState<number | null>(null);
 
   const [diagnostics, setDiagnostics] = useState({
@@ -289,6 +290,7 @@ export default function QuotePage() {
       const realStartPrice = Math.round(upliftedBasePrice);
       // The "Get Upto" price displayed to the user follows the algorithm strictly
       setBasePrice(realStartPrice);
+      setRawBasePrice(baseMarketPrice);
       navigateToState(selectedBrand, selectedModel, s, 'storage', 2);
     } catch {
       setError('Failed to fetch quote.');
@@ -537,14 +539,24 @@ export default function QuotePage() {
 
     const box_bonus = diagnostics.accessories.includes('box') ? config.bonuses.box : 0;
     
-    const calculated = internal_base 
+    const rawBase = rawBasePrice || internal_base;
+    const rawCalculated = rawBase 
       * age_multiplier 
       * calls_multiplier 
       * touch_multiplier 
       * screen_orig_mult 
       * (1 - Math.min(screen_body_sum, 1)) 
-      * (1 - Math.min(functional_sum, 1)) 
-      + box_bonus;
+      * (1 - Math.min(functional_sum, 1));
+
+    // Uplift applies dynamically to the final price after deductions
+    let upliftPercent = 1.04;
+    if (rawCalculated <= 20000) {
+      upliftPercent = 1.08;
+    } else if (rawCalculated <= 50000) {
+      upliftPercent = 1.06;
+    }
+
+    const calculated = (rawCalculated * upliftPercent) + box_bonus;
       
     setFinalPrice(Math.max(Math.round(calculated), floor_price));
   };
