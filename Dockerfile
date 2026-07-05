@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/playwright:v1.45.0-jammy
+FROM mcr.microsoft.com/playwright:v1.61.1-jammy
 
 # Set Node environment
 ENV NODE_ENV=production
