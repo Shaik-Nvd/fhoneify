@@ -54,11 +54,14 @@ export default function QuotePage() {
   const isWarrantyEligible = (brand: string, model: string) => {
     if (brand === 'Apple') {
       const lowerModel = model.toLowerCase();
-      // Older iPhones generally do not get the warranty question on Cashify
-      if (lowerModel.includes('iphone 7') || lowerModel.includes('iphone 8') || lowerModel.includes('iphone x') || lowerModel.includes('iphone 11') || lowerModel.includes('iphone 6') || lowerModel.includes('iphone se')) {
-        return false;
-      }
-      return true;
+      // Only iPhones 13, 14, 15, 16, 17 are warranty eligible
+      return (
+        lowerModel.includes('13') ||
+        lowerModel.includes('14') ||
+        lowerModel.includes('15') ||
+        lowerModel.includes('16') ||
+        lowerModel.includes('17')
+      );
     }
     return true;
   };
@@ -299,38 +302,239 @@ export default function QuotePage() {
     });
   };
 
+  const getFunctionalProblems = (brand: string, model: string) => {
+    const lowerModel = model.toLowerCase();
+    const isApple = brand.toLowerCase() === 'apple';
+    
+    // Determine Touch ID vs Face ID for Apple
+    const hasFaceId = isApple && (
+      lowerModel.includes('iphone x') ||
+      lowerModel.includes('iphone 11') ||
+      lowerModel.includes('iphone 12') ||
+      lowerModel.includes('iphone 13') ||
+      lowerModel.includes('iphone 14') ||
+      lowerModel.includes('iphone 15') ||
+      lowerModel.includes('iphone 16') ||
+      lowerModel.includes('iphone 17')
+    ) && !lowerModel.includes('se'); // SE series models use Touch ID
+
+    const hasTouchId = isApple && (
+      lowerModel.includes('iphone 6') ||
+      lowerModel.includes('iphone 7') ||
+      lowerModel.includes('iphone 8') ||
+      lowerModel.includes('se')
+    );
+
+    const hasActionButton = isApple && (
+      (lowerModel.includes('15') && (lowerModel.includes('pro') || lowerModel.includes('max'))) ||
+      lowerModel.includes('16') ||
+      lowerModel.includes('17')
+    );
+
+    const baseList = [
+      { id: 'front_camera', label: 'Front Camera not working', icon: '📸' },
+      { id: 'back_camera', label: 'Back Camera not working', icon: '📷' },
+      { id: 'volume', label: 'Volume Button not working', icon: '🔉' },
+      ...(hasTouchId ? [{ id: 'fingerprint', label: 'Finger Touch (Touch ID) not working', icon: '👆' }] : []),
+      { id: 'wifi', label: 'WiFi not working', icon: '📶' },
+      { id: 'speaker', label: 'Speaker Faulty', icon: '🔊' },
+      { 
+        id: 'silent', 
+        label: hasActionButton ? 'Action Button not working' : 'Silent Button not working', 
+        icon: '🔕' 
+      },
+      ...(hasFaceId ? [{ id: 'face', label: 'Face ID / Face Sensor not working', icon: '👱' }] : []),
+      { id: 'power', label: 'Power Button not working', icon: '⏻' },
+      { id: 'charging', label: 'Charging Port not working', icon: '🔌' },
+      { id: 'audio_receiver', label: 'Audio Receiver not working', icon: '📞' },
+      { id: 'camera_glass', label: 'Camera Glass Broken', icon: '🔍' },
+      { id: 'microphone', label: 'Microphone not working', icon: '🎤' },
+      { id: 'bluetooth', label: 'Bluetooth not working', icon: '🛜' },
+      { id: 'vibrator', label: 'Vibrator is not working', icon: '📳' },
+      { id: 'proximity', label: 'Proximity Sensor not working', icon: '🖐' },
+      { id: 'battery_service', label: 'Battery in Service (< 80%)', icon: '🔋' },
+      { id: 'battery_health', label: 'Battery Health 80-85%', icon: '🔋' }
+    ];
+
+    return baseList;
+  };
+
+  const getAppleModelParams = (model: string) => {
+    const lowerModel = model.toLowerCase();
+    
+    // Default fallback (Recent category)
+    let params = {
+      warrantyPenalty: 0.05, // -5%
+      gstBillPenalty: 0.02,   // -2%
+      callsPenalty: 0.55,     // -45%
+      originalScreenPenalty: 0.70, // -30%
+      touchPenalty: 0.3170,   // -68.3%
+      functionalScale: 1.0,
+      physicalScale: 1.0,
+    };
+
+    if (lowerModel.includes('17')) {
+      params = {
+        warrantyPenalty: 0.18, // -18%
+        gstBillPenalty: 0.10,   // -10%
+        callsPenalty: 0.45,     // -55%
+        originalScreenPenalty: 0.60, // -40%
+        touchPenalty: 0.25,     // -75%
+        functionalScale: 1.3,
+        physicalScale: 1.2,
+      };
+    } else if (lowerModel.includes('16')) {
+      params = {
+        warrantyPenalty: 0.12, // -12%
+        gstBillPenalty: 0.08,   // -8%
+        callsPenalty: 0.48,     // -52%
+        originalScreenPenalty: 0.65, // -35%
+        touchPenalty: 0.30,     // -70%
+        functionalScale: 1.2,
+        physicalScale: 1.1,
+      };
+    } else if (lowerModel.includes('15')) {
+      params = {
+        warrantyPenalty: 0.08, // -8%
+        gstBillPenalty: 0.05,   // -5%
+        callsPenalty: 0.52,     // -48%
+        originalScreenPenalty: 0.68, // -32%
+        touchPenalty: 0.32,     // -68%
+        functionalScale: 1.1,
+        physicalScale: 1.05,
+      };
+    } else if (lowerModel.includes('14')) {
+      params = {
+        warrantyPenalty: 0.05, // -5%
+        gstBillPenalty: 0.02,   // -2%
+        callsPenalty: 0.55,     // -45%
+        originalScreenPenalty: 0.70, // -30%
+        touchPenalty: 0.35,     // -65%
+        functionalScale: 1.0,
+        physicalScale: 1.0,
+      };
+    } else if (lowerModel.includes('13') || lowerModel.includes('se (2022') || lowerModel.includes('se 2022')) {
+      params = {
+        warrantyPenalty: 0.05, // -5%
+        gstBillPenalty: 0.02,   // -2%
+        callsPenalty: 0.55,     // -45%
+        originalScreenPenalty: 0.70, // -30%
+        touchPenalty: 0.35,     // -65%
+        functionalScale: 0.9,
+        physicalScale: 0.9,
+      };
+    } else if (lowerModel.includes('12')) {
+      params = {
+        warrantyPenalty: 0.0,
+        gstBillPenalty: 0.0,
+        callsPenalty: 0.60,     // -40%
+        originalScreenPenalty: 0.75, // -25%
+        touchPenalty: 0.40,     // -60%
+        functionalScale: 0.8,
+        physicalScale: 0.8,
+      };
+    } else if (lowerModel.includes('11') || lowerModel.includes('se (2020') || lowerModel.includes('se 2020')) {
+      params = {
+        warrantyPenalty: 0.0,
+        gstBillPenalty: 0.0,
+        callsPenalty: 0.60,     // -40%
+        originalScreenPenalty: 0.78, // -22%
+        touchPenalty: 0.40,     // -60%
+        functionalScale: 0.7,
+        physicalScale: 0.7,
+      };
+    } else if (lowerModel.includes('xs') || lowerModel.includes('xr') || lowerModel.includes('x')) {
+      params = {
+        warrantyPenalty: 0.0,
+        gstBillPenalty: 0.0,
+        callsPenalty: 0.62,     // -38%
+        originalScreenPenalty: 0.80, // -20%
+        touchPenalty: 0.45,     // -55%
+        functionalScale: 0.6,
+        physicalScale: 0.6,
+      };
+    } else if (
+      lowerModel.includes('8') ||
+      lowerModel.includes('7') ||
+      lowerModel.includes('6') ||
+      lowerModel.includes('se') // 1st Gen
+    ) {
+      params = {
+        warrantyPenalty: 0.0,
+        gstBillPenalty: 0.0,
+        callsPenalty: 0.65,     // -35%
+        originalScreenPenalty: 0.82, // -18%
+        touchPenalty: 0.50,     // -50%
+        functionalScale: 0.5,
+        physicalScale: 0.5,
+      };
+    }
+
+    return params;
+  };
+
   const calculateFinalPrice = () => {
     if (!basePrice) return;
     
     const floor_price = config.modelFloorPrice; // 1200
     const internal_base = basePrice;
     
-    // Multipliers
-    let age_multiplier = config.multipliers.warranty_no; // Default 0.7966
-    const hasValidBill = diagnostics.validBill === true || diagnostics.accessories.includes('bill');
-    if (diagnostics.warranty && hasValidBill && diagnostics.mobileAge) {
-      age_multiplier = config.ageBonus[diagnostics.mobileAge as keyof typeof config.ageBonus] || 1.0;
-    }
-    
-    const calls_multiplier = diagnostics.calls === false ? config.multipliers.calls_no : 1.0;
-    const touch_multiplier = diagnostics.touch === false ? config.multipliers.touch_no : 1.0;
-    const screen_orig_mult = diagnostics.originalScreen === false ? config.multipliers.originalScreen_no : 1.0;
-    
-    // Defect sums
+    let age_multiplier = 1.0;
+    let calls_multiplier = 1.0;
+    let touch_multiplier = 1.0;
+    let screen_orig_mult = 1.0;
     let screen_body_sum = 0;
-    diagnostics.defects.forEach(d => { 
-      if (d in config.defects_screen_body) {
-        screen_body_sum += config.defects_screen_body[d as keyof typeof config.defects_screen_body];
-      }
-    });
-    
     let functional_sum = 0;
-    diagnostics.hardware.forEach(h => { 
-      if (h in config.defects_functional) {
-        functional_sum += config.defects_functional[h as keyof typeof config.defects_functional];
+
+    if (selectedBrand.toLowerCase() === 'apple') {
+      const params = getAppleModelParams(selectedModel);
+      
+      const hasValidBill = diagnostics.validBill === true || diagnostics.accessories.includes('bill');
+      if (diagnostics.warranty && hasValidBill && diagnostics.mobileAge) {
+        age_multiplier = config.ageBonus[diagnostics.mobileAge as keyof typeof config.ageBonus] || 1.0;
+      } else {
+        age_multiplier = 1.0 - params.warrantyPenalty - (hasValidBill ? 0 : params.gstBillPenalty);
       }
-    });
-    
+
+      calls_multiplier = diagnostics.calls === false ? params.callsPenalty : 1.0;
+      touch_multiplier = diagnostics.touch === false ? params.touchPenalty : 1.0;
+      screen_orig_mult = diagnostics.originalScreen === false ? params.originalScreenPenalty : 1.0;
+
+      diagnostics.defects.forEach(d => { 
+        if (d in config.defects_screen_body) {
+          screen_body_sum += config.defects_screen_body[d as keyof typeof config.defects_screen_body] * params.physicalScale;
+        }
+      });
+      
+      diagnostics.hardware.forEach(h => { 
+        if (h in config.defects_functional) {
+          functional_sum += config.defects_functional[h as keyof typeof config.defects_functional] * params.functionalScale;
+        }
+      });
+    } else {
+      age_multiplier = config.multipliers.warranty_no; // Default 0.7966
+      const hasValidBill = diagnostics.validBill === true || diagnostics.accessories.includes('bill');
+      if (diagnostics.warranty && hasValidBill && diagnostics.mobileAge) {
+        age_multiplier = config.ageBonus[diagnostics.mobileAge as keyof typeof config.ageBonus] || 1.0;
+      }
+      
+      calls_multiplier = diagnostics.calls === false ? config.multipliers.calls_no : 1.0;
+      touch_multiplier = diagnostics.touch === false ? config.multipliers.touch_no : 1.0;
+      screen_orig_mult = diagnostics.originalScreen === false ? config.multipliers.originalScreen_no : 1.0;
+
+      diagnostics.defects.forEach(d => { 
+        if (d in config.defects_screen_body) {
+          screen_body_sum += config.defects_screen_body[d as keyof typeof config.defects_screen_body];
+        }
+      });
+      
+      diagnostics.hardware.forEach(h => { 
+        if (h in config.defects_functional) {
+          functional_sum += config.defects_functional[h as keyof typeof config.defects_functional];
+        }
+      });
+    }
+
     const box_bonus = diagnostics.accessories.includes('box') ? config.bonuses.box : 0;
     
     const calculated = internal_base 
@@ -818,26 +1022,7 @@ export default function QuotePage() {
                 <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: '#ffffff' }}>Functional or Physical Problems</h2>
                 <p style={{ textAlign: 'center', color: '#cccccc', fontSize: '0.85rem', marginBottom: '3rem' }}>Please choose appropriate condition to get accurate quote</p>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(130px, 1fr))', gap: '1rem', marginBottom: '3rem' }}>
-                  {[
-                    { id: 'front_camera', label: 'Front Camera not working', icon: '📸' },
-                    { id: 'back_camera', label: 'Back Camera not working', icon: '📷' },
-                    { id: 'volume', label: 'Volume Button not working', icon: '🔉' },
-                    { id: 'fingerprint', label: 'Finger Touch not working', icon: '👆' },
-                    { id: 'wifi', label: 'WiFi not working', icon: '📶' },
-                    { id: 'speaker', label: 'Speaker Faulty', icon: '🔊' },
-                    { id: 'silent', label: 'Silent Button not working', icon: '🔕' },
-                    { id: 'face', label: 'Face Sensor not working', icon: '👱' },
-                    { id: 'power', label: 'Power Button not working', icon: '⏻' },
-                    { id: 'charging', label: 'Charging Port not working', icon: '🔌' },
-                    { id: 'audio_receiver', label: 'Audio Receiver not working', icon: '📞' },
-                    { id: 'camera_glass', label: 'Camera Glass Broken', icon: '🔍' },
-                    { id: 'microphone', label: 'Microphone not working', icon: '🎤' },
-                    { id: 'bluetooth', label: 'Bluetooth not working', icon: '🛜' },
-                    { id: 'vibrator', label: 'Vibrator is not working', icon: '📳' },
-                    { id: 'proximity', label: 'Proximity Sensor not working', icon: '🖐' },
-                    { id: 'battery_service', label: 'Battery in Service (< 80%)', icon: '🔋' },
-                    { id: 'battery_health', label: 'Battery Health 80-85%', icon: '🔋' }
-                  ].map((h) => (
+                  {getFunctionalProblems(selectedBrand, selectedModel).map((h) => (
                     <button key={h.id} onClick={() => toggleArrayItem('hardware', h.id)} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem', padding: '1.5rem 0.5rem', borderRadius: '8px', border: diagnostics.hardware.includes(h.id) ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.hardware.includes(h.id) ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.hardware.includes(h.id) ? '#4CD964' : '#fff', cursor: 'pointer' }}>
                       <span style={{ fontSize: '2.5rem' }}>{h.icon}</span>
                       <span style={{ fontSize: '0.75rem', textAlign: 'center', fontWeight: 500 }}>{h.label}</span>
@@ -869,7 +1054,9 @@ export default function QuotePage() {
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
                   <button onClick={() => { 
-                    if (diagnostics.warranty || diagnostics.accessories.includes('bill') || (selectedBrand === 'Apple' && diagnostics.validBill)) {
+                    if (diagnostics.warranty === true) {
+                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 9);
+                    } else {
                       if (isAuthenticated) { 
                         calculateFinalPrice(); 
                         setMarketPriceFetched(true);
@@ -877,13 +1064,7 @@ export default function QuotePage() {
                       } else { 
                         navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 10); 
                       }
-                    } else if (isAuthenticated) { 
-                      calculateFinalPrice(); 
-                      setMarketPriceFetched(true);
-                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11); 
-                    } else { 
-                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 10); 
-                    } 
+                    }
                   }} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px' }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
@@ -949,7 +1130,11 @@ export default function QuotePage() {
                     <p style={{ color: '#FF4C4C', fontSize: '1.75rem', fontWeight: 700 }}>₹ XX,XXX</p>
                   </div>
                 </div>
-                <button onClick={() => { navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 9); setShowOtpInput(false); }} style={{ background: 'none', border: 'none', fontSize: '2rem', cursor: 'pointer', paddingLeft: '1rem', color: '#999', lineHeight: 1 }}>×</button>
+                <button onClick={() => { 
+                  const prevStep = diagnostics.warranty === true ? 9 : 8;
+                  navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', prevStep); 
+                  setShowOtpInput(false); 
+                }} style={{ background: 'none', border: 'none', fontSize: '2rem', cursor: 'pointer', paddingLeft: '1rem', color: '#999', lineHeight: 1 }}>×</button>
               </div>
 
               <div style={{ backgroundColor: 'rgba(212, 175, 55, 0.1)', color: '#d4af37', padding: '1rem', borderRadius: '8px', textAlign: 'center', fontWeight: 600, marginBottom: '2.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', border: '1px solid rgba(212, 175, 55, 0.3)' }}>
@@ -1071,7 +1256,7 @@ export default function QuotePage() {
       )}
 
       {/* STAGE 12: PICKUP DETAILS FORM */}
-      {step === 9 && (
+      {step === 12 && (
         <div className="card flex flex-col gap-4 bg-[#111] border border-[#333] p-6 md:p-8 rounded-xl max-w-[600px] mx-auto text-left">
           <p className="eyebrow" style={{ color: '#d4af37', fontSize: '1rem', letterSpacing: '2px', textAlign: 'center', marginBottom: '1.5rem' }}>SCHEDULE PICKUP</p>
           
