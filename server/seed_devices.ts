@@ -21992,4 +21992,330 @@ export const SEED_DEVICES = [
     "color": "Midnight",
     "basePrice": 5000
   }
+,
+  {
+    "id": "honor_batch_1",
+    "brand": "Honor",
+    "model": "Honor 8X",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "honor_batch_2",
+    "brand": "Honor",
+    "model": "Honor Play",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "honor_batch_3",
+    "brand": "Honor",
+    "model": "Honor 7S",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "honor_batch_4",
+    "brand": "Honor",
+    "model": "Honor 9N",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "honor_batch_5",
+    "brand": "Honor",
+    "model": "Honor 10",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "honor_batch_6",
+    "brand": "Honor",
+    "model": "Honor 7A",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "honor_batch_7",
+    "brand": "Honor",
+    "model": "Honor 7C",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "honor_batch_8",
+    "brand": "Honor",
+    "model": "Honor View 10",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "honor_batch_9",
+    "brand": "Honor",
+    "model": "Honor 9 Lite",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "honor_batch_10",
+    "brand": "Honor",
+    "model": "Honor Holly 4 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "honor_batch_11",
+    "brand": "Honor",
+    "model": "Honor 9i",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "honor_batch_12",
+    "brand": "Honor",
+    "model": "Honor 7X",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "honor_batch_13",
+    "brand": "Honor",
+    "model": "Honor 8",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "honor_batch_14",
+    "brand": "Honor",
+    "model": "Honor 8 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "honor_batch_15",
+    "brand": "Honor",
+    "model": "Honor 8 Smart",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "honor_batch_16",
+    "brand": "Honor",
+    "model": "Honor 6X",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "honor_batch_17",
+    "brand": "Honor",
+    "model": "Honor 5C",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "honor_batch_18",
+    "brand": "Honor",
+    "model": "Honor 8C",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "honor_batch_19",
+    "brand": "Honor",
+    "model": "Honor 10 Lite",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "honor_batch_20",
+    "brand": "Honor",
+    "model": "Honor View 20",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "honor_batch_21",
+    "brand": "Honor",
+    "model": "Honor 20i",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "honor_batch_22",
+    "brand": "Honor",
+    "model": "Honor 20",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "honor_batch_23",
+    "brand": "Honor",
+    "model": "Honor 9X Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "honor_batch_24",
+    "brand": "Honor",
+    "model": "Honor 9A",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "honor_batch_25",
+    "brand": "Honor",
+    "model": "Honor 9S",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "honor_batch_26",
+    "brand": "Honor",
+    "model": "Honor 200 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "honor_batch_27",
+    "brand": "Honor",
+    "model": "Honor 200 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "honor_batch_28",
+    "brand": "Honor",
+    "model": "Honor 200 Lite 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "honor_batch_29",
+    "brand": "Honor",
+    "model": "Honor 90",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  }
+,
+  {
+    "id": "asus_batch_1",
+    "brand": "Asus",
+    "model": "Asus ZenFone 5Z",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "asus_batch_2",
+    "brand": "Asus",
+    "model": "Asus Zenfone Max Pro M1",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "asus_batch_3",
+    "brand": "Asus",
+    "model": "Asus ZenFone Max Pro M2",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "asus_batch_4",
+    "brand": "Asus",
+    "model": "Asus ROG Phone ZS600KL",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "asus_batch_5",
+    "brand": "Asus",
+    "model": "Asus ROG Phone II ZS660KL",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "asus_batch_6",
+    "brand": "Asus",
+    "model": "Asus ROG Phone 3",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "asus_batch_7",
+    "brand": "Asus",
+    "model": "Asus 8z",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  }
 ];
