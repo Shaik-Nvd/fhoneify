@@ -381,7 +381,8 @@ export default function QuotePage() {
       
       setShowOtpInput(false);
       calculateFinalPrice();
-      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 8);
+      setMarketPriceFetched(true);
+      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11);
     } catch (err: any) {
       console.error(err);
       setAuthError(err.response?.data?.error || err.message || 'Verification failed');
@@ -869,9 +870,17 @@ export default function QuotePage() {
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
                   <button onClick={() => { 
                     if (diagnostics.warranty || diagnostics.accessories.includes('bill') || (selectedBrand === 'Apple' && diagnostics.validBill)) {
-                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 9);
+                      if (isAuthenticated) { 
+                        calculateFinalPrice(); 
+                        setMarketPriceFetched(true);
+                        navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11); 
+                      } else { 
+                        navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 10); 
+                      }
                     } else if (isAuthenticated) { 
-                      calculateFinalPrice(); navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11); 
+                      calculateFinalPrice(); 
+                      setMarketPriceFetched(true);
+                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11); 
                     } else { 
                       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 10); 
                     } 
@@ -999,28 +1008,10 @@ export default function QuotePage() {
               <h2 style={{ fontSize: '1.25rem', fontWeight: 600, color: '#fff', marginBottom: '0.25rem' }}>{selectedModel.startsWith(selectedBrand) ? selectedModel : `${selectedBrand} ${selectedModel}`} ({selectedStorage})</h2>
               <p style={{ color: '#a0a0a0', fontSize: '0.85rem', marginBottom: '0.5rem' }}>Selling price :</p>
               <p style={{ fontSize: '2.5rem', fontWeight: 700, color: '#FF3B30', lineHeight: 1 }}>
-                {marketPriceFetched ? formatCurrency((finalPrice || 0) - (finalPrice === 1200 ? 0 : 99)) : '₹ --,---'}
+                {formatCurrency((finalPrice || 0) - (finalPrice === 1200 ? 0 : 99))}
               </p>
               
-              {!marketPriceFetched && (
-                <button 
-                  onClick={handleGetMarketPrice} 
-                disabled={isScraping}
-                style={{
-                  marginTop: '1rem',
-                  padding: '8px 16px',
-                  backgroundColor: isScraping ? '#333' : '#4CD964',
-                  color: isScraping ? '#999' : '#000',
-                  border: 'none',
-                  borderRadius: '6px',
-                  fontWeight: 600,
-                  fontSize: '0.9rem',
-                  cursor: isScraping ? 'not-allowed' : 'pointer'
-                }}
-              >
-                {isScraping ? 'Fetching from Market...' : 'Get accurate Market price'}
-              </button>
-              )}
+
             </div>
           </div>
           
