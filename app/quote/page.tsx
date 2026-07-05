@@ -218,6 +218,7 @@ export default function QuotePage() {
   const [timerError, setTimerError] = useState<string | null>(null);
   const [marketPriceFetched, setMarketPriceFetched] = useState(false);
   const [selectedSamsungSeries, setSelectedSamsungSeries] = useState<string | null>(null);
+  const [selectedXiaomiSeries, setSelectedXiaomiSeries] = useState<string | null>(null);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   // Clear timer on unmount
@@ -261,6 +262,60 @@ export default function QuotePage() {
     }
   };
 
+  const matchXiaomiSeries = (modelName: string, series: string): boolean => {
+    const normalized = modelName.toLowerCase();
+    const isRedmiNote = normalized.includes('redmi note');
+    
+    switch (series) {
+      case 'Mi Series':
+        return normalized.includes(' mi ') || normalized.startsWith('mi ') || normalized.startsWith('xiaomi mi');
+      case 'Redmi Note Series':
+        return isRedmiNote;
+      case 'Redmi 3 Series':
+        return normalized.includes('redmi 3') && !isRedmiNote;
+      case 'Redmi 4 Series':
+        return (normalized.includes('redmi 4') || normalized.includes('redmi pro')) && !isRedmiNote;
+      case 'Redmi 5 Series':
+        return normalized.includes('redmi 5') && !isRedmiNote;
+      case 'Redmi 6 Series':
+        return normalized.includes('redmi 6') && !isRedmiNote;
+      case 'Redmi 7 Series':
+        return normalized.includes('redmi 7') && !isRedmiNote;
+      case 'Redmi 8 Series':
+        return normalized.includes('redmi 8') && !isRedmiNote;
+      case 'Redmi 9 Series':
+        return normalized.includes('redmi 9') && !isRedmiNote;
+      case 'Redmi 10 Series':
+        return normalized.includes('redmi 10') && !isRedmiNote;
+      case 'Redmi Y Series':
+        return normalized.includes('redmi y');
+      case 'Redmi K Series':
+        return normalized.includes('redmi k');
+      case 'Redmi A Series':
+        return normalized.includes('redmi a') && !isRedmiNote;
+      case 'Redmi 14 Series':
+        return normalized.includes('redmi 14') && !isRedmiNote;
+      case 'Redmi 15 Series':
+        return normalized.includes('redmi 15') && !isRedmiNote;
+      case '11 Series':
+        return normalized.includes('xiaomi 11');
+      case '12 Series':
+        return normalized.includes('xiaomi 12');
+      case '13 Series':
+        return normalized.includes('xiaomi 13');
+      case '14 Series':
+        return normalized.includes('xiaomi 14') && !normalized.includes('redmi');
+      case '15 Series':
+        return normalized.includes('xiaomi 15') && !normalized.includes('redmi');
+      case '17 Series':
+        return normalized.includes('xiaomi 17');
+      case 'Other Xiaomi Smartphones':
+        return ![' mi ', 'redmi 3', 'redmi 4', 'redmi pro', 'redmi 5', 'redmi 6', 'redmi 7', 'redmi 8', 'redmi 9', 'redmi 10', 'redmi 14', 'redmi 15', 'redmi note', 'redmi y', 'redmi k', 'redmi a', 'xiaomi 11', 'xiaomi 12', 'xiaomi 13', 'xiaomi 14', 'xiaomi 15', 'xiaomi 17'].some(key => normalized.includes(key)) && !normalized.startsWith('mi ') && !normalized.startsWith('xiaomi mi');
+      default:
+        return false;
+    }
+  };
+
   const models = useMemo(() => {
     if (!selectedBrand) return [];
     let brandModels = [...new Set(allDevices.filter((d) => d.brand === selectedBrand).map((d) => d.model).filter(Boolean))];
@@ -271,6 +326,10 @@ export default function QuotePage() {
     
     if (selectedBrand === 'Samsung' && selectedSamsungSeries) {
       brandModels = brandModels.filter((m) => matchSamsungSeries(m, selectedSamsungSeries));
+    }
+    
+    if (selectedBrand === 'Xiaomi' && selectedXiaomiSeries) {
+      brandModels = brandModels.filter((m) => matchXiaomiSeries(m, selectedXiaomiSeries));
     }
     
     if (selectedBrand === 'Apple') {
@@ -295,7 +354,7 @@ export default function QuotePage() {
       });
     }
     return brandModels.sort();
-  }, [allDevices, selectedBrand, modelSearchQuery, selectedSamsungSeries]);
+  }, [allDevices, selectedBrand, modelSearchQuery, selectedSamsungSeries, selectedXiaomiSeries]);
   const storageOptions = useMemo(() => {
     if (!selectedBrand || !selectedModel) return [];
     
@@ -973,6 +1032,61 @@ export default function QuotePage() {
                           key={series}
                           type="button"
                           onClick={() => setSelectedSamsungSeries(isSelected ? null : series)}
+                          style={{
+                            padding: '0.75rem 1rem',
+                            borderRadius: '8px',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
+                            color: isSelected ? '#4CD964' : '#fff',
+                            cursor: 'pointer',
+                            fontSize: '0.85rem',
+                            fontWeight: 500,
+                            textAlign: 'center',
+                            transition: 'all 200ms'
+                          }}
+                        >
+                          {series}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {selectedBrand === 'Xiaomi' && (
+                <div style={{ marginBottom: '2rem' }}>
+                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
+                    {[
+                      "Mi Series",
+                      "Redmi 3 Series",
+                      "Redmi 4 Series",
+                      "Redmi 5 Series",
+                      "Redmi 6 Series",
+                      "Redmi Note Series",
+                      "Redmi Y Series",
+                      "Other Xiaomi Smartphones",
+                      "Redmi 7 Series",
+                      "Redmi K Series",
+                      "Redmi 8 Series",
+                      "Redmi 9 Series",
+                      "Redmi 10 Series",
+                      "11 Series",
+                      "12 Series",
+                      "Redmi A Series",
+                      "13 Series",
+                      "14 Series",
+                      "Redmi 14 Series",
+                      "15 Series",
+                      "Redmi 15 Series",
+                      "17 Series"
+                    ].map((series) => {
+                      const isSelected = selectedXiaomiSeries === series;
+                      return (
+                        <button
+                          key={series}
+                          type="button"
+                          onClick={() => setSelectedXiaomiSeries(isSelected ? null : series)}
                           style={{
                             padding: '0.75rem 1rem',
                             borderRadius: '8px',
