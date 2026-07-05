@@ -1458,7 +1458,7 @@ export default function QuotePage() {
           
           <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', width: '100%' }}>
             <button type="button" onClick={() => { navigateToState('', '', '', 'brand', 1); setFinalPrice(null); setMarketPriceFetched(false); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], screenCondition: null, screenSpots: null, screenLines: null, screenDiscoloration: null, bodyScratches: null, bodyDents: null, bodyPanel: null, bodyBent: null, hardware: [], accessories: [], warranty: null, validBill: null, eSim: null, mobileAge: null }); }} className="btn-outline" style={{ flex: 1, padding: '16px', fontSize: '1.1rem' }}>Start Over</button>
-            <button type="button" onClick={() => setStep(12)} disabled={!marketPriceFetched} className="btn-primary" style={{ flex: 2, padding: '16px', background: marketPriceFetched ? '#4CD964' : '#333', color: marketPriceFetched ? '#fff' : '#999', fontSize: '1.1rem', fontWeight: 600, opacity: marketPriceFetched ? 1 : 0.6, cursor: marketPriceFetched ? 'pointer' : 'not-allowed' }}>Schedule Pickup</button>
+            <button type="button" onClick={() => setStep(12)} className="btn-primary" style={{ flex: 2, padding: '16px', background: '#4CD964', color: '#fff', fontSize: '1.1rem', fontWeight: 600, cursor: 'pointer' }}>Schedule Pickup</button>
           </div>
         </div>
       )}
