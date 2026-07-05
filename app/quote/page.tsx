@@ -394,7 +394,7 @@ export default function QuotePage() {
       lowerModel.includes('air')
     ) && !lowerModel.includes('se'); // SE series models use Touch ID
 
-    const hasTouchId = isApple && (
+    const hasFingerprint = !isApple || (
       lowerModel.includes('iphone 6') ||
       lowerModel.includes('iphone 7') ||
       lowerModel.includes('iphone 8') ||
@@ -412,7 +412,7 @@ export default function QuotePage() {
       { id: 'front_camera', label: 'Front Camera not working', icon: '📸' },
       { id: 'back_camera', label: 'Back Camera not working', icon: '📷' },
       { id: 'volume', label: 'Volume Button not working', icon: '🔉' },
-      ...(hasTouchId ? [{ id: 'fingerprint', label: 'Finger Touch (Touch ID) not working', icon: '👆' }] : []),
+      ...(hasFingerprint ? [{ id: 'fingerprint', label: 'Finger Touch (Touch ID) not working', icon: '👆' }] : []),
       { id: 'wifi', label: 'WiFi not working', icon: '📶' },
       { id: 'speaker', label: 'Speaker Faulty', icon: '🔊' },
       { 
@@ -605,100 +605,121 @@ export default function QuotePage() {
       return sum;
     };
 
-    if (selectedBrand.toLowerCase() === 'apple') {
-      if (diag.calls === false) {
-        setFinalPrice(1200);
-        return;
-      }
-
-      const perfect_multiplier = 0.92930875;
-      const rawBase = rawBasePrice || internal_base;
-      let current_price = rawBase * perfect_multiplier;
-
-      const hasValidBill = diag.validBill === true || diag.accessories.includes('bill');
-
-      if (!diag.warranty) current_price *= 0.7593;
-      if (!diag.originalScreen) current_price *= 0.60;
-      if (!hasValidBill) current_price *= 0.90;
-      if (!diag.touch) current_price *= 0.65;
-
-      if (diag.warranty) {
-         if (diag.mobileAge === '3to6' || diag.mobileAge === '3-6 months') current_price *= 0.95;
-         else if (diag.mobileAge === '6to11' || diag.mobileAge === '6-11 months') current_price *= 0.88;
-         else if (diag.mobileAge === 'above11' || diag.mobileAge === 'Above 11 months') current_price *= 0.82;
-      }
-
-      let fixed_deductions = 0;
-      diag.defects.forEach(d => {
-        if (d === 'screen_scratch') {
-          if (diag.screenCondition === 'Screen cracked/ glass broken' || diag.screenCondition === 'Chipped/cracked outside display area') fixed_deductions += 15000;
-          else if (diag.screenCondition === 'More than 2 scratches on screen' || diag.screenCondition === '1-2 scratches on screen') fixed_deductions += 2000;
-        }
-        if (d === 'screen_spot') fixed_deductions += 5000;
-        if (d === 'body_scratch') {
-          if (diag.bodyDents && diag.bodyDents !== 'No dents') fixed_deductions += 3500;
-          else fixed_deductions += 1500;
-        }
-        if (d === 'panel_missing') {
-          fixed_deductions += 8000;
-        }
-      });
-
-      diag.hardware.forEach(h => {
-         if (h === 'battery_service' || h === 'battery_health') fixed_deductions += 5000;
-         else if (h === 'front_camera' || h === 'back_camera' || h === 'camera_glass') fixed_deductions += 8000;
-         else if (h === 'face') fixed_deductions += 6000;
-         else if (h === 'wifi' || h === 'bluetooth') fixed_deductions += 3500;
-         else if (h === 'speaker' || h === 'microphone' || h === 'audio_receiver') fixed_deductions += 2500;
-         else if (h === 'charging') fixed_deductions += 3000;
-         else fixed_deductions += 2000;
-      });
-
-      current_price -= fixed_deductions;
+    const getAndroidModelParams = (brand: string) => {
+      const lowerBrand = brand.toLowerCase();
       
-      const box_bonus = diag.accessories.includes('box') ? config.bonuses.box : 0;
-      const finalApplePrice = Math.max(Math.round(current_price + box_bonus), floor_price);
-      setFinalPrice(finalApplePrice);
-    } else {
-      age_multiplier = config.multipliers.warranty_no; // Default 0.7966
+      // Default fallback
+      let params = {
+        warrantyPenalty: 0.10, 
+        gstBillPenalty: 0.05,
+        callsPenalty: 0.50,
+        originalScreenPenalty: 0.70,
+        touchPenalty: 0.40,
+        functionalScale: 0.8,
+        physicalScale: 0.8,
+      };
+
+      if (lowerBrand === 'samsung') {
+        params = {
+          warrantyPenalty: 0.10,
+          gstBillPenalty: 0.05,
+          callsPenalty: 0.55,
+          originalScreenPenalty: 0.65,
+          touchPenalty: 0.35,
+          functionalScale: 0.9,
+          physicalScale: 0.85,
+        };
+      } else if (lowerBrand === 'oneplus' || lowerBrand === 'google') {
+        params = {
+          warrantyPenalty: 0.10,
+          gstBillPenalty: 0.05,
+          callsPenalty: 0.50,
+          originalScreenPenalty: 0.60,
+          touchPenalty: 0.40,
+          functionalScale: 0.8,
+          physicalScale: 0.75,
+        };
+      } else if (lowerBrand === 'vivo' || lowerBrand === 'oppo' || lowerBrand === 'xiaomi' || lowerBrand === 'poco') {
+        params = {
+          warrantyPenalty: 0.12,
+          gstBillPenalty: 0.08,
+          callsPenalty: 0.45,
+          originalScreenPenalty: 0.55,
+          touchPenalty: 0.45,
+          functionalScale: 0.75,
+          physicalScale: 0.70,
+        };
+      }
+
+      return params;
+    };
+
+    if (selectedBrand.toLowerCase() === 'apple') {
+      const params = getAppleModelParams(selectedModel);
+      
       const hasValidBill = diag.validBill === true || diag.accessories.includes('bill');
       if (diag.warranty && hasValidBill && diag.mobileAge) {
         age_multiplier = config.ageBonus[diag.mobileAge as keyof typeof config.ageBonus] || 1.0;
+      } else {
+        age_multiplier = 1.0 - params.warrantyPenalty - (hasValidBill ? 0 : params.gstBillPenalty);
       }
-      
-      calls_multiplier = diag.calls === false ? config.multipliers.calls_no : 1.0;
-      touch_multiplier = diag.touch === false ? config.multipliers.touch_no : 1.0;
-      screen_orig_mult = diag.originalScreen === false ? config.multipliers.originalScreen_no : 1.0;
 
-      screen_body_sum = applyGranularDefects(1.0);
+      calls_multiplier = diag.calls === false ? params.callsPenalty : 1.0;
+      touch_multiplier = diag.touch === false ? params.touchPenalty : 1.0;
+      screen_orig_mult = diag.originalScreen === false ? params.originalScreenPenalty : 1.0;
+
+      screen_body_sum = applyGranularDefects(params.physicalScale);
       
       diag.hardware.forEach(h => { 
         if (h in config.defects_functional) {
-          functional_sum += config.defects_functional[h as keyof typeof config.defects_functional];
+          functional_sum += config.defects_functional[h as keyof typeof config.defects_functional] * params.functionalScale;
         }
       });
-
-      const box_bonus = diag.accessories.includes('box') ? config.bonuses.box : 0;
-      const rawBase = rawBasePrice || internal_base;
-      const rawCalculated = rawBase 
-        * age_multiplier 
-        * calls_multiplier 
-        * touch_multiplier 
-        * screen_orig_mult 
-        * (1 - Math.min(screen_body_sum, 1)) 
-        * (1 - Math.min(functional_sum, 1));
-
-      // Uplift applies dynamically to the final price after deductions
-      let upliftPercent = 1.04;
-      if (rawCalculated <= 20000) {
-        upliftPercent = 1.08;
-      } else if (rawCalculated <= 50000) {
-        upliftPercent = 1.06;
+    } else {
+      const params = getAndroidModelParams(selectedBrand);
+      
+      const hasValidBill = diag.validBill === true || diag.accessories.includes('bill');
+      if (diag.warranty && hasValidBill && diag.mobileAge) {
+        age_multiplier = config.ageBonus[diag.mobileAge as keyof typeof config.ageBonus] || 1.0;
+      } else {
+        age_multiplier = 1.0 - params.warrantyPenalty - (hasValidBill ? 0 : params.gstBillPenalty);
       }
+      
+      calls_multiplier = diag.calls === false ? params.callsPenalty : 1.0;
+      touch_multiplier = diag.touch === false ? params.touchPenalty : 1.0;
+      screen_orig_mult = diag.originalScreen === false ? params.originalScreenPenalty : 1.0;
 
-      const calculated = (rawCalculated * upliftPercent) + box_bonus;
-      setFinalPrice(Math.max(Math.round(calculated), floor_price));
+      screen_body_sum = applyGranularDefects(params.physicalScale);
+      
+      diag.hardware.forEach(h => { 
+        if (h in config.defects_functional) {
+          functional_sum += config.defects_functional[h as keyof typeof config.defects_functional] * params.functionalScale;
+        }
+      });
     }
+
+    const box_bonus = diag.accessories.includes('box') ? config.bonuses.box : 0;
+    
+    const rawBase = rawBasePrice || internal_base;
+    const rawCalculated = rawBase 
+      * age_multiplier 
+      * calls_multiplier 
+      * touch_multiplier 
+      * screen_orig_mult 
+      * (1 - Math.min(screen_body_sum, 1)) 
+      * (1 - Math.min(functional_sum, 1));
+
+    // Uplift applies dynamically to the final price after deductions
+    let upliftPercent = 1.04;
+    if (rawCalculated <= 20000) {
+      upliftPercent = 1.08;
+    } else if (rawCalculated <= 50000) {
+      upliftPercent = 1.06;
+    }
+
+    const calculated = (rawCalculated * upliftPercent) + box_bonus;
+      
+    setFinalPrice(Math.max(Math.round(calculated), floor_price));
   };
 
   const handleSendOtp = async (e: React.FormEvent) => {
