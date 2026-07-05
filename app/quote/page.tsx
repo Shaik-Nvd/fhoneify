@@ -161,7 +161,7 @@ export default function QuotePage() {
   const [isAuthLoading, setIsAuthLoading] = useState(false);
   const [authError, setAuthError] = useState<string | null>(null);
   const [isScraping, setIsScraping] = useState(false);
-  const [timerCount, setTimerCount] = useState(30);
+  const [timerCount, setTimerCount] = useState(60);
   const [scrapingStatus, setScrapingStatus] = useState('Connecting to market...');
   const [timerError, setTimerError] = useState<string | null>(null);
   const [marketPriceFetched, setMarketPriceFetched] = useState(false);
@@ -388,9 +388,9 @@ export default function QuotePage() {
           return 0;
         }
         // Update status text based on time remaining
-        if (prev === 22) setScrapingStatus('Analyzing phone condition...');
-        if (prev === 14) setScrapingStatus('Comparing market rates...');
-        if (prev === 6) setScrapingStatus('Finalizing exact price...');
+        if (prev === 45) setScrapingStatus('Analyzing phone condition...');
+        if (prev === 30) setScrapingStatus('Comparing market rates...');
+        if (prev === 15) setScrapingStatus('Finalizing exact price...');
         return prev - 1;
       });
     }, 1000);
