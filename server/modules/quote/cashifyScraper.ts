@@ -120,26 +120,116 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
         logger.warn('Could not find storage variant to click. Price might not appear.');
       }
     }
-    
-    // Wait for price to render
-    await page.waitForTimeout(3000);
+        // Wait for price to render initially
+      await page.waitForTimeout(1000);
 
-    // Extract price from the page
-    // We look for elements containing the ₹ symbol or "Selling price"
-    const priceText = await page.evaluate(() => {
-      // Find elements that look like a large price
-      const priceElements = Array.from(document.querySelectorAll('span, div, h1, h2, h3, h4, h5, h6'))
-        .filter(el => {
-          const text = el.textContent?.trim() || '';
-          return text.includes('₹') && text.length < 15;
-        });
-      
-      if (priceElements.length > 0) {
-        // Assume the first one with the highest font size or just the first one is the price
-        return priceElements[0].textContent?.trim();
+      // --- FULL CASHIFY SIMULATION ---
+      const answers = deviceDetails.answers || {};
+
+      // 1. Click Get Exact Value
+      const getExactValueBtn = await page.$('text="Get Exact Value"');
+      if (getExactValueBtn) {
+        await getExactValueBtn.click();
+        
+        // PAGE 1: Yes/No Questions
+        await page.waitForSelector('text=Are you able to make and receive calls?', { timeout: 10000 });
+        const yesBtns = await page.$$('text="Yes"');
+        const noBtns = await page.$$('text="No"');
+        
+        if (yesBtns.length >= 4 && noBtns.length >= 4) {
+          // Calls
+          if (answers.calls === 'no') await noBtns[0].click(); else await yesBtns[0].click();
+          
+          // Touch screen (default yes)
+          await yesBtns[1].click();
+          
+          // Screen original (default yes)
+          await yesBtns[2].click();
+          
+          // Warranty (default yes if < 11 months)
+          if (answers.warranty && answers.warranty !== '11+') await yesBtns[3].click(); else await noBtns[3].click();
+          
+          // GST bill (if present)
+          if (yesBtns.length > 4) {
+            if (answers.warranty && answers.warranty !== '11+') await yesBtns[4].click(); else await noBtns[4].click();
+          }
+        }
+        
+        const continueBtn1 = await page.$('text="Continue"');
+        if (continueBtn1) await continueBtn1.click();
+
+        // PAGE 2: Screen/Body Defects
+        await page.waitForTimeout(2000);
+        
+        if (answers.screen === 'broken' || answers.screen === 'scratched') {
+          const screenScratch = await page.$('text=Broken/scratch on device screen');
+          if (screenScratch) await screenScratch.click();
+        }
+        
+        if (answers.body === 'dented' || answers.body === 'scratched') {
+          const bodyDent = await page.$('text=Scratch/Dent on device body');
+          if (bodyDent) await bodyDent.click();
+        }
+        
+        const continueBtn2 = await page.$('text="Continue"');
+        if (continueBtn2) await continueBtn2.click();
+
+        // PAGE 3: Functional Defects
+        await page.waitForTimeout(2000);
+        if (answers.functional && answers.functional.length > 0) {
+          if (answers.functional.includes('front-camera')) {
+            const frontCam = await page.$('text=Front Camera not working');
+            if (frontCam) await frontCam.click();
+          }
+          if (answers.functional.includes('back-camera')) {
+            const backCam = await page.$('text=Back Camera not working');
+            if (backCam) await backCam.click();
+          }
+          if (answers.functional.includes('battery')) {
+            const battery = await page.$('text=Battery faulty');
+            if (battery) await battery.click();
+          }
+          if (answers.functional.includes('wifi')) {
+            const wifi = await page.$('text=WiFi not working');
+            if (wifi) await wifi.click();
+          }
+        }
+        const continueBtn3 = await page.$('text="Continue"');
+        if (continueBtn3) await continueBtn3.click();
+        
+        // PAGE 4: Accessories
+        await page.waitForTimeout(2000);
+        if (answers.accessories && answers.accessories.length > 0) {
+          if (answers.accessories.includes('charger')) {
+            const charger = await page.$('text=Original Charger of device');
+            if (charger) await charger.click();
+          }
+          if (answers.accessories.includes('box')) {
+            const box = await page.$('text=Box with same IMEI');
+            if (box) await box.click();
+          }
+        }
+        const continueBtn4 = await page.$('text="Continue"');
+        if (continueBtn4) await continueBtn4.click();
+        
+        // Final calculation wait
+        await page.waitForTimeout(4000);
       }
-      return null;
-    });
+
+      // Extract final price from the page
+      const priceText = await page.evaluate(() => {
+        const priceElements = Array.from(document.querySelectorAll('span, div, h1, h2, h3, h4, h5, h6'))
+          .filter(el => {
+            const text = el.textContent?.trim() || '';
+            return text.includes('₹') && text.length < 15;
+          });
+        
+        if (priceElements.length > 0) {
+          // We reverse to get the last price element rendered, which is usually the final calculated price block
+          return priceElements[priceElements.length - 1].textContent?.trim();
+        }
+        return null;
+      });
 
     if (!priceText) {
       throw new Error('Could not extract price from the page.');
