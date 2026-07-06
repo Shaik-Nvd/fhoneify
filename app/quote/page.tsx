@@ -2321,7 +2321,7 @@ export default function QuotePage() {
             </div>
           </div>
           
-          {!appliedCoupon && marketPriceFetched && (
+          {!appliedCoupon && (
             <div style={{ backgroundColor: 'rgba(76,217,100,0.1)', border: '1px dashed #4CD964', padding: '1.5rem', borderRadius: '8px', marginBottom: '1.5rem' }}>
               <h3 style={{ fontSize: '1.1rem', fontWeight: 600, color: '#4CD964', marginBottom: '0.5rem' }}>🎉 Have a Coupon Code?</h3>
               {isFirstTimeUser && generatedCoupon && (
