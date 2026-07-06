@@ -2314,7 +2314,7 @@ export default function QuotePage() {
             <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} style={{ width: '80px', height: 'auto', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
             <div>
               <h2 style={{ fontSize: '1.25rem', fontWeight: 600, color: '#fff', marginBottom: '0.25rem' }}>{getDisplayModelName(selectedBrand, selectedModel)} ({selectedStorage})</h2>
-              <p style={{ color: '#a0a0a0', fontSize: '0.85rem', marginBottom: '0.5rem' }}>Selling price :</p>
+              <p style={{ color: '#a0a0a0', fontSize: '0.85rem', marginBottom: '0.5rem' }}>Estimated value :</p>
               <p style={{ fontSize: '2.5rem', fontWeight: 700, color: '#FF3B30', lineHeight: 1 }}>
                 {formatCurrency((finalPrice || 0) - (finalPrice === 1200 ? 0 : 99) + (appliedCoupon ? 299 : 0))}
               </p>
