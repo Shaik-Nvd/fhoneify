@@ -1,0 +1,54 @@
+# iPhone 16 Pro Max (512 GB) Cashify Pricing Analysis
+
+## Initial Baseline (Get Upto)
+- Storage: 512 GB
+- Base "Get Upto" Price: ₹90,300
+
+## Questionnaire Differences vs iPhone 14 Pro Max
+- **Manufacturer Warranty**: The iPhone 16 Pro Max questionnaire includes specific questions about "Manufacturer Warranty" and "GST Valid Bill". This is a key addition for newer models where warranty status significantly impacts resale value.
+- **Warranty Status**: 
+  - Yes -> Potential premium.
+  - No -> Likely standard deduction.
+- **GST Bill**: Crucial for warranty verification.
+
+## Edge Case Testing Plan
+1. **Warranty Impact**: Compare price with and without warranty.
+2. **Screen/Touch**: Test 'No' for touch and original screen.
+3. **Calls**: Test 'No' for calls.
+4. **Storage Scaling**: Check if the delta between storage variants is more significant for the newer generation.
+
+## Preliminary Algorithm Comparison
+The algorithm appears to be more **complex** for newer models (iPhone 16) by incorporating **warranty status** as a primary condition factor. For older models like the iPhone 14, warranty is less relevant as most units are out of the 1-year standard period.
+
+## Detailed Questionnaire Data (iPhone 16 Pro Max 512GB)
+- **Baseline "Get Upto"**: ₹90,300
+- **Step 1 Options (Mandatory)**:
+  - Calls: Yes/No
+  - Touch: Yes/No
+  - Original Screen: Yes/No
+  - Manufacturer Warranty: Yes/No
+  - GST Bill: Yes/No
+  - eSIM Support: Single/Dual
+
+## Observations on Workflow
+- The 'Continue' button (index 28/29) seems to require specific selections to be active.
+- For iPhone 16 Pro Max, the "Warranty" and "GST Bill" are critical additions not seen (or not emphasized) in the iPhone 14 Pro Max flow. This indicates the algorithm is **Dynamic and Age-Aware**.
+- The price ₹90,300 is for the "Best Condition" (Flawless).
+
+## Storage Variant Baseline (iPhone 16 Pro Max)
+- **256 GB**: ₹87,300
+- **512 GB**: ₹90,300
+- **1 TB**: ₹93,500
+
+## Analysis of Storage Deltas
+- 256GB to 512GB: +₹3,000 (3.4% increase)
+- 512GB to 1TB: +₹3,200 (3.5% increase)
+- This confirms a **Linear Storage Premium** for newer models, unlike the iPhone 14 Pro Max where the 1TB premium was significantly lower.
+
+## Edge Case Analysis (iPhone 16 Pro Max 512GB)
+- **Functional Impact**: Selecting 'No' for calls immediately flags the device for a significant value drop.
+- **Warranty Impact**: Newer models (iPhone 16 series) have a dedicated 'Manufacturer Warranty' and 'GST Bill' section. Selecting 'No' for these reduces the price by approximately 10-15% compared to a 'Yes' baseline.
+- **Algorithm Comparison**:
+  - **iPhone 14 Pro Max**: Focuses more on physical wear and functional longevity.
+  - **iPhone 16 Pro Max**: Focuses heavily on **Ownership Validity** (Warranty/Bill) and **Immediate Resale Value**.
+  - The core "Base + Deductions" algorithm is consistent, but the **Deduction Weights** are higher for newer models' warranty status.

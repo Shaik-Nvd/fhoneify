@@ -1,0 +1,38 @@
+# iPhone 14 Pro Max Cashify Pricing Data
+
+## Storage Variant "Get Upto" Prices (Max Possible Value)
+- 128 GB: ₹43,860
+- 256 GB: ₹46,530
+- 512 GB: ₹47,180
+- 1 TB: ₹48,230
+
+## Questionnaire Sections & Edge Cases
+1. Basic Condition: 
+   - Calls (Y/N) -> 'No' is a major red flag (Network/Blacklist risk).
+   - Touch (Y/N) -> 'No' triggers major deduction.
+   - Original Screen (Y/N) -> 'No' (Third-party replacement) reduces value by ~20-30%.
+   - eSIM (Single/Dual) -> Dual eSIM might add slight value or be standard for newer iPhones.
+2. Screen/Body Defects: 
+   - Broken/scratch on screen: Major deduction.
+   - Dead Spot/Visible line/Discoloration: Often results in "Below Average" condition.
+   - Scratch/Dent on body: Minor to Moderate deduction.
+   - Panel missing/broken: Significant deduction.
+3. Functional Problems:
+   - Cameras, Buttons, WiFi, Speaker, FaceID, Charging, etc.
+   - Battery Health: <80% (Service required) is a major deduction (~₹3,000-5,000).
+4. Accessories:
+   - Original Box: Adds ~₹500-1,000 or prevents deduction.
+
+## Pricing Algorithm Insights
+- **Base Price**: Determined by storage capacity. Delta decreases as capacity increases.
+- **Deduction Structure**: 
+  - Percentage-based for physical condition (e.g., -10% for scratches, -40% for broken screen).
+  - Fixed-cost based for functional repairs (e.g., -₹2,000 for a faulty speaker).
+- **The "XX,XXX" Gate**: Cashify hides the final "Exact Value" behind a login to capture lead data.
+
+## Algorithm Type: Multiplicative-Additive Hybrid
+`Final_Value = (Base_Price[Storage] * Condition_Factor) - Repair_Costs + Accessory_Bonus`
+- `Base_Price[Storage]`: The starting market value for that specific model/capacity.
+- `Condition_Factor`: 1.0 (Flawless), 0.9 (Good), 0.7 (Average), 0.5 (Below Average).
+- `Repair_Costs`: Fixed amounts for specific functional failures.
+- `Accessory_Bonus`: Small additions for original box/charger.

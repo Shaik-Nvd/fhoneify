@@ -239,6 +239,18 @@ export default function QuotePage() {
   const [selectedInfinixSeries, setSelectedInfinixSeries] = useState<string | null>(null);
   const [selectedTecnoSeries, setSelectedTecnoSeries] = useState<string | null>(null);
   const [selectedIqooSeries, setSelectedIqooSeries] = useState<string | null>(null);
+  
+  // Coupon state
+  const [isFirstTimeUser, setIsFirstTimeUser] = useState(false);
+  const [generatedCoupon, setGeneratedCoupon] = useState<string | null>(null);
+  const [couponInput, setCouponInput] = useState('');
+  const [appliedCoupon, setAppliedCoupon] = useState(false);
+
+  const getDisplayModelName = (brand: string, model: string) => {
+    let clean = model.replace(/\s*\d+\s*[gG][bB]\s*\d+\s*[gG][bB]\s*$/i, '').trim();
+    return clean.startsWith(brand) ? clean : `${brand} ${clean}`;
+  };
+
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   // Clear timer on unmount
@@ -880,6 +892,15 @@ export default function QuotePage() {
       // Save tokens so next request is authenticated
       setAuth({ id: user.id, phone: user.phone, name: user.name, role: user.role, email: user.email }, accessToken, refreshToken);
       
+      if (isNewUser) {
+        setIsFirstTimeUser(true);
+        const code = 'NEW' + Math.floor(1000 + Math.random() * 9000);
+        setGeneratedCoupon(code);
+      } else {
+        setIsFirstTimeUser(false);
+        setGeneratedCoupon(null);
+      }
+      
       setShowOtpInput(false);
       calculateFinalPrice();
       setMarketPriceFetched(false);
@@ -963,7 +984,7 @@ export default function QuotePage() {
     <div className="w-full md:max-w-[300px] shrink-0 bg-[#111] border border-[#2a2a2a] rounded-xl p-6 md:sticky md:top-8 text-white mb-8 md:mb-0">
       <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', borderBottom: '1px solid #2a2a2a', paddingBottom: '1rem', marginBottom: '1rem' }}>
         <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} style={{ width: '40px', height: '60px', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
-        <span style={{ fontWeight: 600, fontSize: '0.9rem' }}>{selectedModel.startsWith(selectedBrand) ? selectedModel : `${selectedBrand} ${selectedModel}`} ({selectedStorage})</span>
+        <span style={{ fontWeight: 600, fontSize: '0.9rem' }}>{getDisplayModelName(selectedBrand, selectedModel)} ({selectedStorage})</span>
       </div>
       
       <h3 style={{ color: '#a0a0a0', fontSize: '0.85rem', marginBottom: '1rem', fontWeight: 500 }}>Device Evaluation</h3>
@@ -1764,7 +1785,7 @@ export default function QuotePage() {
         <div className="card flex flex-col md:flex-row items-center gap-6 md:gap-12 p-6 md:p-12 bg-[#111] border border-[#2a2a2a] rounded-xl max-w-[700px] mx-auto text-center md:text-left">
           <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} style={{ width: '120px', height: '180px', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
           <div className="flex flex-col gap-2 flex-1 w-full text-white items-center md:items-start">
-            <h2 style={{ fontSize: '1.4rem', fontWeight: 500 }}>Sell Old {selectedModel.startsWith(selectedBrand) ? selectedModel : `${selectedBrand} ${selectedModel}`} ({selectedStorage})</h2>
+            <h2 style={{ fontSize: '1.4rem', fontWeight: 500 }}>Sell Old {getDisplayModelName(selectedBrand, selectedModel)} ({selectedStorage})</h2>
             <p style={{ color: '#666', fontSize: '1rem', marginTop: '1rem' }}>Get Upto</p>
             <p style={{ fontSize: '3rem', fontWeight: 700, color: '#FF4C4C' }}>{formatCurrency(basePrice || 0)}</p>
             <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 3)} className="btn-primary" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', background: '#4CD964', color: '#fff', fontWeight: 600, marginTop: '1.5rem', width: 'fit-content', padding: '1rem 2rem', borderRadius: '8px' }}>
@@ -2228,7 +2249,7 @@ export default function QuotePage() {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', border: '1px solid #e0e0e0', padding: '1rem 1.5rem', borderRadius: '8px', width: '100%' }}>
                   <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} style={{ width: '40px', height: '60px', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
                   <div>
-                    <p style={{ fontSize: '0.85rem', fontWeight: 600, color: '#666' }}>{selectedModel.startsWith(selectedBrand) ? selectedModel : `${selectedBrand} ${selectedModel}`} ({selectedStorage})</p>
+                    <p style={{ fontSize: '0.85rem', fontWeight: 600, color: '#666' }}>{getDisplayModelName(selectedBrand, selectedModel)} ({selectedStorage})</p>
                     <p style={{ color: '#FF4C4C', fontSize: '1.75rem', fontWeight: 700 }}>₹ XX,XXX</p>
                   </div>
                 </div>
@@ -2292,16 +2313,43 @@ export default function QuotePage() {
           <div style={{ display: 'flex', gap: '2rem', alignItems: 'flex-start', borderBottom: '1px solid #2a2a2a', paddingBottom: '2rem', marginBottom: '1rem' }}>
             <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} style={{ width: '80px', height: 'auto', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
             <div>
-              <h2 style={{ fontSize: '1.25rem', fontWeight: 600, color: '#fff', marginBottom: '0.25rem' }}>{selectedModel.startsWith(selectedBrand) ? selectedModel : `${selectedBrand} ${selectedModel}`} ({selectedStorage})</h2>
+              <h2 style={{ fontSize: '1.25rem', fontWeight: 600, color: '#fff', marginBottom: '0.25rem' }}>{getDisplayModelName(selectedBrand, selectedModel)} ({selectedStorage})</h2>
               <p style={{ color: '#a0a0a0', fontSize: '0.85rem', marginBottom: '0.5rem' }}>Selling price :</p>
               <p style={{ fontSize: '2.5rem', fontWeight: 700, color: '#FF3B30', lineHeight: 1 }}>
-                {formatCurrency((finalPrice || 0) - (finalPrice === 1200 ? 0 : 99))}
+                {formatCurrency((finalPrice || 0) - (finalPrice === 1200 ? 0 : 99) + (appliedCoupon ? 299 : 0))}
               </p>
-              
-
             </div>
           </div>
           
+          {isFirstTimeUser && generatedCoupon && !appliedCoupon && marketPriceFetched && (
+            <div style={{ backgroundColor: 'rgba(76,217,100,0.1)', border: '1px dashed #4CD964', padding: '1.5rem', borderRadius: '8px', marginBottom: '1.5rem' }}>
+              <h3 style={{ fontSize: '1.1rem', fontWeight: 600, color: '#4CD964', marginBottom: '0.5rem' }}>🎉 First Time User Bonus!</h3>
+              <p style={{ color: '#ccc', fontSize: '0.9rem', marginBottom: '1rem' }}>Use code <strong style={{ color: '#fff', backgroundColor: '#333', padding: '0.2rem 0.5rem', borderRadius: '4px' }}>{generatedCoupon}</strong> for an extra ₹299 on your selling price.</p>
+              <div style={{ display: 'flex', gap: '0.5rem' }}>
+                <input 
+                  type="text" 
+                  value={couponInput}
+                  onChange={(e) => setCouponInput(e.target.value.toUpperCase())}
+                  placeholder="Enter code" 
+                  style={{ flex: 1, padding: '0.75rem', borderRadius: '4px', border: '1px solid #444', backgroundColor: '#222', color: '#fff', outline: 'none' }} 
+                />
+                <button 
+                  onClick={() => {
+                    if (couponInput === generatedCoupon) {
+                      setAppliedCoupon(true);
+                    } else {
+                      alert('Invalid coupon code');
+                    }
+                  }}
+                  className="btn-primary" 
+                  style={{ padding: '0 1.5rem', borderRadius: '4px', fontWeight: 600, backgroundColor: '#4CD964', color: '#fff' }}
+                >
+                  Apply
+                </button>
+              </div>
+            </div>
+          )}
+
           {marketPriceFetched && (
             <div>
               <h3 style={{ fontSize: '1.1rem', fontWeight: 600, color: '#fff', marginBottom: '1.5rem' }}>Price Summary</h3>
@@ -2311,14 +2359,21 @@ export default function QuotePage() {
                 <span>{formatCurrency(finalPrice)}</span>
               </div>
               
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem', color: '#ccc', fontSize: '0.9rem', borderBottom: '1px solid #2a2a2a', paddingBottom: '1.5rem' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem', color: '#ccc', fontSize: '0.9rem', ...(appliedCoupon ? {} : { borderBottom: '1px solid #2a2a2a', paddingBottom: '1.5rem' }) }}>
                 <span>Processing Fee</span>
                 <span>{finalPrice === 1200 ? '₹0' : '-₹99'}</span>
               </div>
+
+              {appliedCoupon && (
+                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem', color: '#4CD964', fontSize: '0.9rem', borderBottom: '1px solid #2a2a2a', paddingBottom: '1.5rem' }}>
+                  <span>First Time User Bonus</span>
+                  <span>+₹299</span>
+                </div>
+              )}
               
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '2rem', color: '#fff', fontSize: '1.1rem', fontWeight: 700 }}>
                 <span>Total Amount</span>
-                <span>{formatCurrency((finalPrice || 0) - (finalPrice === 1200 ? 0 : 99))}</span>
+                <span>{formatCurrency((finalPrice || 0) - (finalPrice === 1200 ? 0 : 99) + (appliedCoupon ? 299 : 0))}</span>
               </div>
             </div>
           )}

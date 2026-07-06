@@ -36,7 +36,7 @@ export const getAppleModelParams = (model: string) => {
 
   if (lowerModel.includes('17') || lowerModel.includes('air')) {
     params = {
-      warrantyPenalty: 0.15, gstBillPenalty: 0.05, callsPenalty: 0.50, originalScreenPenalty: 0.65, touchPenalty: 0.42, functionalScale: 1.1, physicalScale: 1.1,
+      warrantyPenalty: 0.15, gstBillPenalty: 0.05, callsPenalty: 0.50, originalScreenPenalty: 0.65, touchPenalty: 0.42, functionalScale: 1.38, physicalScale: 1.38,
     };
   } else if (lowerModel.includes('16')) {
     params = {

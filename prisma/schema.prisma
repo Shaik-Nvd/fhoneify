@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -12,73 +9,67 @@ datasource db {
 }
 
 model User {
-  id           String  @id @default(uuid())
-  phone        String  @unique
-  name         String?
-  role         String  @default("user") // buyer, seller, admin, tech
-  email        String? @unique
-  referralCode String? @unique
+  id           String              @id @default(uuid())
+  phone        String              @unique
+  role         String              @default("user")
+  email        String?             @unique
+  referralCode String?             @unique
   referredBy   String?
-  
-  // Relations
-  listings     Listing[]
+  name         String?
   buyOrders    BuyOrder[]
-  sellOrders   SellOrder[]
+  listings     Listing[]
   pickups      Pickup[]
+  sellOrders   SellOrder[]
   walletLedger WalletLedgerEntry[]
 }
 
 model Device {
-  id      String @id @default(uuid())
-  brand   String
-  model   String
-  storage String
-  ram     String
-  color   String
-  
-  quotes      Quote[]
-  inventory   InventoryItem[]
+  id        String          @id @default(uuid())
+  brand     String
+  model     String
+  storage   String
+  ram       String
+  color     String
+  inventory InventoryItem[]
+  quotes    Quote[]
 }
 
 model Listing {
-  id           String   @id @default(uuid())
-  user         User     @relation(fields: [userId], references: [id])
+  id           String      @id @default(uuid())
   userId       String
-  deviceId     String   // Ideally a relation, keeping it string for simplicity if it maps to generic SEED
+  deviceId     String
   brand        String
   model        String
   storage      String?
   condition    String
   price        Float
-  status       String   @default("active") // active, pending, sold
+  status       String      @default("active")
   city         String
   description  String?
-  images       String // Store as JSON string since SQLite doesn't support String[]
-  isSelectTier Boolean  @default(false)
+  images       String
+  isSelectTier Boolean     @default(false)
   locationId   String?
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
-  
-  // Relations
-  sellOrders   SellOrder[]
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+  user         User        @relation(fields: [userId], references: [id])
   pickups      Pickup[]
+  sellOrders   SellOrder[]
 }
 
 model Quote {
   id             String   @id @default(uuid())
-  device         Device   @relation(fields: [deviceId], references: [id])
   deviceId       String
   condition      String
   estimatedPrice Float
   createdAt      DateTime @default(now())
+  device         Device   @relation(fields: [deviceId], references: [id])
 }
 
 model BuyOrder {
   id              String   @id @default(uuid())
-  user            User     @relation(fields: [userId], references: [id])
   userId          String
-  listingIds      String // Store as JSON array
-  status          String   @default("pending") // pending, paid, shipped, delivered, cancelled
+  listingIds      String
+  status          String   @default("pending")
   address         String
   razorpayOrderId String?
   totalPrice      Float?
@@ -86,41 +77,42 @@ model BuyOrder {
   finalPrice      Float?
   couponCode      String?
   createdAt       DateTime @default(now())
+  user            User     @relation(fields: [userId], references: [id])
 }
 
 model SellOrder {
   id        String   @id @default(uuid())
-  user      User     @relation(fields: [userId], references: [id])
   userId    String
-  listing   Listing  @relation(fields: [listingId], references: [id])
   listingId String
-  status    String   @default("pending") // pending, inspected, completed, cancelled
+  status    String   @default("pending")
   price     Float
   createdAt DateTime @default(now())
+  listing   Listing  @relation(fields: [listingId], references: [id])
+  user      User     @relation(fields: [userId], references: [id])
 }
 
 model WalletLedgerEntry {
   id            String   @id @default(uuid())
-  user          User     @relation(fields: [userId], references: [id])
   userId        String
   amount        Float
   type          String
   description   String
   balance_after Float
   createdAt     DateTime @default(now())
+  user          User     @relation(fields: [userId], references: [id])
 }
 
 model Pickup {
-  id                String   @id @default(uuid())
-  user              User     @relation(fields: [userId], references: [id])
-  userId            String
-  listing           Listing  @relation(fields: [listingId], references: [id])
-  listingId         String
-  pickupDate        String
-  timeSlot          String
-  address           String
-  status            String   @default("scheduled")
-  createdAt         DateTime @default(now())
+  id         String   @id @default(uuid())
+  userId     String
+  listingId  String
+  pickupDate String
+  timeSlot   String
+  address    String
+  status     String   @default("scheduled")
+  createdAt  DateTime @default(now())
+  listing    Listing  @relation(fields: [listingId], references: [id])
+  user       User     @relation(fields: [userId], references: [id])
 }
 
 model Coupon {
@@ -132,7 +124,7 @@ model Coupon {
 }
 
 model Store {
-  id           String @id @default(uuid())
+  id           String  @id @default(uuid())
   name         String
   city         String
   address      String
@@ -144,32 +136,32 @@ model Store {
 }
 
 model TechFloat {
-  id       String @id @default(uuid())
-  techId   String @unique
-  cash     Float  @default(0)
-  upi      Float  @default(0)
+  id     String @id @default(uuid())
+  techId String @unique
+  cash   Float  @default(0)
+  upi    Float  @default(0)
 }
 
 model ActivePickup {
-  id                String  @id @default(uuid())
+  id                String @id @default(uuid())
   techId            String
   customerName      String
   device            String
   declaredCondition String
   originalQuote     Float
-  status            String  @default("assigned")
+  status            String @default("assigned")
   address           String
 }
 
 model InventoryItem {
   id              String   @id @default(uuid())
-  device          Device   @relation(fields: [deviceId], references: [id])
   deviceId        String
   imei            String
   sourceListingId String?
   phase           String   @default("received")
   grade           String?
   createdAt       DateTime @default(now())
+  device          Device   @relation(fields: [deviceId], references: [id])
 }
 
 model BlogPost {
@@ -178,7 +170,7 @@ model BlogPost {
   title          String
   content        String
   author         String
-  tags           String // JSON
+  tags           String
   published      Boolean  @default(true)
   seoTitle       String
   seoDescription String

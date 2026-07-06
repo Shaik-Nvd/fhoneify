@@ -1,0 +1,18 @@
+# iPhone 17 Cashify Pricing Analysis
+
+## Storage Variant "Get Upto" Prices
+- 256 GB: ₹56,500
+- 512 GB: ₹65,000
+
+## Baseline Configuration (Flawless)
+- Calls: Yes
+- Touch: Yes
+- Original Screen: Yes
+- Warranty: Yes
+- GST Bill: Yes
+- eSIM: Single
+
+## Observations
+- The jump from 256GB to 512GB is ₹8,500 (~15% increase), which is more significant than the iPhone 14 Pro Max's storage delta.
+- Cashify now explicitly asks for GST bill and Warranty for the iPhone 17, reinforcing the "New Model" logic identified in the iPhone 16 analysis.
+- The base price for a 256GB iPhone 17 is higher than the 1TB iPhone 14 Pro Max, showing the premium for the latest generation.
