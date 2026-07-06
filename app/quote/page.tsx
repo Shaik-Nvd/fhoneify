@@ -11,6 +11,7 @@ import { useHydratedAuth } from '@/lib/useHydratedAuth';
 import { BRAND_LOGOS, getBrandLogoStyle } from '@/lib/brands';
 import config from '@/lib/pricingConfig.json';
 import { SEED_DEVICES } from '@/lib/seed_devices';
+import { calculateFhoneifyPrice, DiagnosticsType } from '@/lib/pricingCalculator';
 import cashifyPrices from '@/lib/cashify_prices.json';
 
 export interface Device {
@@ -52,16 +53,6 @@ const ArrowRightIcon = () => <svg width="20" height="20" viewBox="0 0 24 24" fil
 
 export default function QuotePage() {
   const isWarrantyEligible = (brand: string, model: string) => {
-    if (brand === 'Apple') {
-      const lowerModel = model.toLowerCase();
-      // Only iPhones 15, 16, 17, and iPhone Air are warranty eligible (released within 1-2 years)
-      return (
-        lowerModel.includes('15') ||
-        lowerModel.includes('16') ||
-        lowerModel.includes('17') ||
-        lowerModel.includes('air')
-      );
-    }
     return true;
   };
 
@@ -155,6 +146,8 @@ export default function QuotePage() {
     // Pass existing history state so Next.js App Router doesn't break on back navigation
     window.history.pushState(window.history.state, '', newUrl);
 
+    setSelectedBrand(newBrand);
+    setSelectedModel(newModel);
     setSelectedSamsungSeries(null);
     setSelectedXiaomiSeries(null);
     setSelectedVivoSeries(null);
@@ -225,6 +218,17 @@ export default function QuotePage() {
   const [selectedOppoSeries, setSelectedOppoSeries] = useState<string | null>(null);
   const [selectedRealmeSeries, setSelectedRealmeSeries] = useState<string | null>(null);
   const [selectedMotorolaSeries, setSelectedMotorolaSeries] = useState<string | null>(null);
+  const [selectedLenovoSeries, setSelectedLenovoSeries] = useState<string | null>(null);
+  const [selectedNokiaSeries, setSelectedNokiaSeries] = useState<string | null>(null);
+  const [selectedHonorSeries, setSelectedHonorSeries] = useState<string | null>(null);
+  const [selectedAsusSeries, setSelectedAsusSeries] = useState<string | null>(null);
+  const [selectedGoogleSeries, setSelectedGoogleSeries] = useState<string | null>(null);
+  const [selectedPocoSeries, setSelectedPocoSeries] = useState<string | null>(null);
+  const [selectedHuaweiSeries, setSelectedHuaweiSeries] = useState<string | null>(null);
+  const [selectedLgSeries, setSelectedLgSeries] = useState<string | null>(null);
+  const [selectedInfinixSeries, setSelectedInfinixSeries] = useState<string | null>(null);
+  const [selectedTecnoSeries, setSelectedTecnoSeries] = useState<string | null>(null);
+  const [selectedIqooSeries, setSelectedIqooSeries] = useState<string | null>(null);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   // Clear timer on unmount
@@ -417,6 +421,148 @@ export default function QuotePage() {
     }
   };
 
+  const matchLenovoSeries = (modelName: string, series: string): boolean => {
+    const normalized = modelName.toLowerCase();
+    switch (series) {
+      case 'A Series': return normalized.includes('lenovo a') || normalized.includes(' a5') || normalized.includes(' a6');
+      case 'K Series': return normalized.includes('lenovo k') || normalized.includes(' k9') || normalized.includes(' k10');
+      case 'Z Series': return normalized.includes('lenovo z') || normalized.includes(' z6');
+      default:
+        return false;
+    }
+  };
+
+  const matchNokiaSeries = (modelName: string, series: string): boolean => {
+    const normalized = modelName.toLowerCase();
+    switch (series) {
+      case 'Nokia 2 Series': return normalized.includes('nokia 2');
+      case 'Nokia 3 Series': return normalized.includes('nokia 3');
+      case 'Nokia 5 Series': return normalized.includes('nokia 5');
+      case 'Nokia 6 Series': return normalized.includes('nokia 6');
+      case 'Nokia 7 Series': return normalized.includes('nokia 7');
+      case 'Nokia 8 Series': return normalized.includes('nokia 8');
+      case 'Nokia 4 Series': return normalized.includes('nokia 4');
+      case 'Nokia C Series': return normalized.includes('nokia c');
+      case 'Nokia G Series': return normalized.includes('nokia g');
+      case 'Nokia X Series': return normalized.includes('nokia x');
+      default:
+        return false;
+    }
+  };
+
+  const matchHonorSeries = (modelName: string, series: string): boolean => {
+    const normalized = modelName.toLowerCase();
+    switch (series) {
+      case 'Honor 7 Series': return normalized.includes('honor 7') || normalized.includes('honor 7s') || normalized.includes('honor 7a') || normalized.includes('honor 7c') || normalized.includes('honor 7x');
+      case 'Honor 8 Series': return normalized.includes('honor 8');
+      case 'Honor 9 Series': return normalized.includes('honor 9');
+      case 'Honor Holly Series': return normalized.includes('holly');
+      case 'Honor 10 Series': return normalized.includes('honor 10') || normalized.includes('view 10');
+      case 'Honor 5 Series': return normalized.includes('honor 5');
+      case 'Honor 6 Series': return normalized.includes('honor 6');
+      case 'Honor Play Series': return normalized.includes('play');
+      case 'Honor 20 Series': return normalized.includes('honor 20') || normalized.includes('view 20');
+      case 'Honor 200 Series': return normalized.includes('honor 200');
+      default:
+        return false;
+    }
+  };
+
+  const matchAsusSeries = (modelName: string, series: string): boolean => {
+    const normalized = modelName.toLowerCase();
+    switch (series) {
+      case 'Zenfone 5 Series': return normalized.includes('zenfone 5');
+      case 'Zenfone Max Series': return normalized.includes('zenfone max');
+      case 'ROG Series': return normalized.includes('rog');
+      case '8 Series': return normalized.includes('8z') || normalized.includes('8');
+      default:
+        return false;
+    }
+  };
+
+  const matchGoogleSeries = (modelName: string, series: string): boolean => {
+    const normalized = modelName.toLowerCase();
+    switch (series) {
+      case 'Pixel 3 Series': return normalized.includes('pixel 3');
+      case 'Pixel 4 Series': return normalized.includes('pixel 4');
+      case 'Pixel 6 Series': return normalized.includes('pixel 6');
+      case 'Pixel 7 Series': return normalized.includes('pixel 7');
+      case 'Pixel 8 Series': return normalized.includes('pixel 8');
+      case 'Pixel 9 Series': return normalized.includes('pixel 9');
+      case 'Pixel 10 Series': return normalized.includes('pixel 10');
+      default:
+        return false;
+    }
+  };
+
+  const matchPocoSeries = (modelName: string, series: string): boolean => {
+    const normalized = modelName.toLowerCase();
+    switch (series) {
+      case 'POCO X Series': return normalized.includes('poco x');
+      case 'POCO F Series': return normalized.includes('poco f');
+      case 'POCO M Series': return normalized.includes('poco m');
+      case 'POCO C Series': return normalized.includes('poco c');
+      default:
+        return false;
+    }
+  };
+
+  const matchHuaweiSeries = (modelName: string, series: string): boolean => {
+    const normalized = modelName.toLowerCase();
+    switch (series) {
+      case 'Huawei P Series': return normalized.includes('p') && !normalized.includes('plus') && !normalized.includes('pro');
+      case 'Huawei Mate Series': return normalized.includes('mate');
+      default:
+        return false;
+    }
+  };
+
+  const matchLgSeries = (modelName: string, series: string): boolean => {
+    const normalized = modelName.toLowerCase();
+    switch (series) {
+      case 'G Series': return normalized.includes('g') && !normalized.includes('lg ');
+      case 'V Series': return normalized.includes('v') && !normalized.includes('lg ');
+      case 'W Series': return normalized.includes('w') && !normalized.includes('lg ');
+      default:
+        return false;
+    }
+  };
+
+  const matchInfinixSeries = (modelName: string, series: string): boolean => {
+    const normalized = modelName.toLowerCase();
+    switch (series) {
+      case 'S Series': return normalized.includes('s') && !normalized.includes('smart') && !normalized.includes('note') && !normalized.includes('hot') && !normalized.includes('zero') && !normalized.includes('gt');
+      case 'Zero Series': return normalized.includes('zero');
+      case 'Hot Series': return normalized.includes('hot');
+      case 'Note Series': return normalized.includes('note');
+      case 'GT Series': return normalized.includes('gt');
+      default:
+        return false;
+    }
+  };
+
+  const matchTecnoSeries = (modelName: string, series: string): boolean => {
+    const normalized = modelName.toLowerCase();
+    switch (series) {
+      case 'Camon Series': return normalized.includes('camon');
+      case 'Spark Series': return normalized.includes('spark');
+      case 'Phantom Series': return normalized.includes('phantom');
+      case 'POVA Series': return normalized.includes('pova');
+      case 'Pop Series': return normalized.includes('pop');
+      default:
+        return false;
+    }
+  };
+
+  const matchIqooSeries = (modelName: string, series: string): boolean => {
+    const normalized = modelName.toLowerCase();
+    switch (series) {
+      case 'iQOO Series': return normalized.includes('iqoo');
+      default:
+        return false;
+    }
+  };
+
   const models = useMemo(() => {
     if (!selectedBrand) return [];
     let brandModels = [...new Set(allDevices.filter((d) => d.brand === selectedBrand).map((d) => d.model).filter(Boolean))];
@@ -445,6 +591,39 @@ export default function QuotePage() {
     if (selectedBrand === 'Motorola' && selectedMotorolaSeries) {
       brandModels = brandModels.filter((m) => matchMotorolaSeries(m, selectedMotorolaSeries));
     }
+    if (selectedBrand === 'Lenovo' && selectedLenovoSeries) {
+      brandModels = brandModels.filter((m) => matchLenovoSeries(m, selectedLenovoSeries));
+    }
+    if (selectedBrand === 'Nokia' && selectedNokiaSeries) {
+      brandModels = brandModels.filter((m) => matchNokiaSeries(m, selectedNokiaSeries));
+    }
+    if (selectedBrand === 'Honor' && selectedHonorSeries) {
+      brandModels = brandModels.filter((m) => matchHonorSeries(m, selectedHonorSeries));
+    }
+    if (selectedBrand === 'Asus' && selectedAsusSeries) {
+      brandModels = brandModels.filter((m) => matchAsusSeries(m, selectedAsusSeries));
+    }
+    if (selectedBrand === 'Google' && selectedGoogleSeries) {
+      brandModels = brandModels.filter((m) => matchGoogleSeries(m, selectedGoogleSeries));
+    }
+    if (selectedBrand === 'POCO' && selectedPocoSeries) {
+      brandModels = brandModels.filter((m) => matchPocoSeries(m, selectedPocoSeries));
+    }
+    if (selectedBrand === 'Huawei' && selectedHuaweiSeries) {
+      brandModels = brandModels.filter((m) => matchHuaweiSeries(m, selectedHuaweiSeries));
+    }
+    if (selectedBrand === 'LG' && selectedLgSeries) {
+      brandModels = brandModels.filter((m) => matchLgSeries(m, selectedLgSeries));
+    }
+    if (selectedBrand === 'Infinix' && selectedInfinixSeries) {
+      brandModels = brandModels.filter((m) => matchInfinixSeries(m, selectedInfinixSeries));
+    }
+    if (selectedBrand === 'Tecno' && selectedTecnoSeries) {
+      brandModels = brandModels.filter((m) => matchTecnoSeries(m, selectedTecnoSeries));
+    }
+    if (selectedBrand === 'iQOO' && selectedIqooSeries) {
+      brandModels = brandModels.filter((m) => matchIqooSeries(m, selectedIqooSeries));
+    }
     
     if (selectedBrand === 'Apple') {
       const appleOrder = [
@@ -468,7 +647,7 @@ export default function QuotePage() {
       });
     }
     return brandModels.sort();
-  }, [allDevices, selectedBrand, modelSearchQuery, selectedSamsungSeries, selectedXiaomiSeries, selectedVivoSeries, selectedOppoSeries, selectedRealmeSeries, selectedMotorolaSeries]);
+  }, [allDevices, selectedBrand, modelSearchQuery, selectedSamsungSeries, selectedXiaomiSeries, selectedVivoSeries, selectedOppoSeries, selectedRealmeSeries, selectedMotorolaSeries, selectedLenovoSeries, selectedNokiaSeries, selectedHonorSeries, selectedAsusSeries, selectedGoogleSeries, selectedPocoSeries, selectedHuaweiSeries, selectedLgSeries, selectedInfinixSeries, selectedTecnoSeries, selectedIqooSeries]);
   const storageOptions = useMemo(() => {
     if (!selectedBrand || !selectedModel) return [];
     
@@ -625,119 +804,7 @@ export default function QuotePage() {
     return baseList;
   };
 
-  const getAppleModelParams = (model: string) => {
-    const lowerModel = model.toLowerCase();
-    
-    // Default fallback (Recent category)
-    let params = {
-      warrantyPenalty: 0.05, // -5%
-      gstBillPenalty: 0.02,   // -2%
-      callsPenalty: 0.55,     // -45%
-      originalScreenPenalty: 0.70, // -30%
-      touchPenalty: 0.3170,   // -68.3%
-      functionalScale: 1.0,
-      physicalScale: 1.0,
-    };
-
-    if (lowerModel.includes('17') || lowerModel.includes('air')) {
-      params = {
-        warrantyPenalty: 0.18, // -18%
-        gstBillPenalty: 0.10,   // -10%
-        callsPenalty: 0.45,     // -55%
-        originalScreenPenalty: 0.60, // -40%
-        touchPenalty: 0.25,     // -75%
-        functionalScale: 1.3,
-        physicalScale: 1.2,
-      };
-    } else if (lowerModel.includes('16')) {
-      params = {
-        warrantyPenalty: 0.12, // -12%
-        gstBillPenalty: 0.08,   // -8%
-        callsPenalty: 0.48,     // -52%
-        originalScreenPenalty: 0.65, // -35%
-        touchPenalty: 0.30,     // -70%
-        functionalScale: 1.2,
-        physicalScale: 1.1,
-      };
-    } else if (lowerModel.includes('15')) {
-      params = {
-        warrantyPenalty: 0.08, // -8%
-        gstBillPenalty: 0.05,   // -5%
-        callsPenalty: 0.52,     // -48%
-        originalScreenPenalty: 0.68, // -32%
-        touchPenalty: 0.32,     // -68%
-        functionalScale: 1.1,
-        physicalScale: 1.05,
-      };
-    } else if (lowerModel.includes('14')) {
-      params = {
-        warrantyPenalty: 0.05, // -5%
-        gstBillPenalty: 0.02,   // -2%
-        callsPenalty: 0.55,     // -45%
-        originalScreenPenalty: 0.70, // -30%
-        touchPenalty: 0.35,     // -65%
-        functionalScale: 1.0,
-        physicalScale: 1.0,
-      };
-    } else if (lowerModel.includes('13') || lowerModel.includes('se (2022') || lowerModel.includes('se 2022')) {
-      params = {
-        warrantyPenalty: 0.05, // -5%
-        gstBillPenalty: 0.02,   // -2%
-        callsPenalty: 0.55,     // -45%
-        originalScreenPenalty: 0.70, // -30%
-        touchPenalty: 0.35,     // -65%
-        functionalScale: 0.9,
-        physicalScale: 0.9,
-      };
-    } else if (lowerModel.includes('12')) {
-      params = {
-        warrantyPenalty: 0.0,
-        gstBillPenalty: 0.0,
-        callsPenalty: 0.60,     // -40%
-        originalScreenPenalty: 0.75, // -25%
-        touchPenalty: 0.40,     // -60%
-        functionalScale: 0.8,
-        physicalScale: 0.8,
-      };
-    } else if (lowerModel.includes('11') || lowerModel.includes('se (2020') || lowerModel.includes('se 2020')) {
-      params = {
-        warrantyPenalty: 0.0,
-        gstBillPenalty: 0.0,
-        callsPenalty: 0.60,     // -40%
-        originalScreenPenalty: 0.78, // -22%
-        touchPenalty: 0.40,     // -60%
-        functionalScale: 0.7,
-        physicalScale: 0.7,
-      };
-    } else if (lowerModel.includes('xs') || lowerModel.includes('xr') || lowerModel.includes('x')) {
-      params = {
-        warrantyPenalty: 0.0,
-        gstBillPenalty: 0.0,
-        callsPenalty: 0.62,     // -38%
-        originalScreenPenalty: 0.80, // -20%
-        touchPenalty: 0.45,     // -55%
-        functionalScale: 0.6,
-        physicalScale: 0.6,
-      };
-    } else if (
-      lowerModel.includes('8') ||
-      lowerModel.includes('7') ||
-      lowerModel.includes('6') ||
-      lowerModel.includes('se') // 1st Gen
-    ) {
-      params = {
-        warrantyPenalty: 0.0,
-        gstBillPenalty: 0.0,
-        callsPenalty: 0.65,     // -35%
-        originalScreenPenalty: 0.82, // -18%
-        touchPenalty: 0.50,     // -50%
-        functionalScale: 0.5,
-        physicalScale: 0.5,
-      };
-    }
-
-    return params;
-  };
+  // Model params moved to lib/pricingCalculator.ts
 
   const calculateFinalPrice = (overrideDiagnostics?: typeof diagnostics) => {
     if (!basePrice) return;
@@ -746,169 +813,20 @@ export default function QuotePage() {
     const floor_price = config.modelFloorPrice; // 1200
     const internal_base = basePrice;
     
-    let age_multiplier = 1.0;
-    let calls_multiplier = 1.0;
-    let touch_multiplier = 1.0;
-    let screen_orig_mult = 1.0;
-    let screen_body_sum = 0;
-    let functional_sum = 0;
 
-    const applyGranularDefects = (scale: number) => {
-      let sum = 0;
-      diag.defects.forEach(d => {
-        let penalty = config.defects_screen_body[d as keyof typeof config.defects_screen_body] || 0;
-        if (d === 'screen_scratch' && diag.screenCondition) {
-          if (diag.screenCondition === 'Chipped/cracked outside display area') penalty = 0.20;
-          else if (diag.screenCondition === 'More than 2 scratches on screen') penalty = 0.15;
-          else if (diag.screenCondition === '1-2 scratches on screen') penalty = 0.08;
-        }
-        if (d === 'screen_spot') {
-          let spotPenalty = penalty;
-          if (diag.screenSpots === '3 or more minor spots on screen') spotPenalty = 0.25;
-          else if (diag.screenSpots === '1-2 minor spots on screen') spotPenalty = 0.15;
-          else if (diag.screenSpots === 'No spots on screen') spotPenalty = 0;
-          if (diag.screenLines === 'Visible line(s) on display') spotPenalty = Math.max(spotPenalty, 0.30);
-          else if (diag.screenLines === 'Display faded along edges') spotPenalty = Math.max(spotPenalty, 0.20);
-          if (diag.screenDiscoloration === 'Major Discoloration') spotPenalty = Math.max(spotPenalty, 0.25);
-          else if (diag.screenDiscoloration === 'Minor Discoloration') spotPenalty = Math.max(spotPenalty, 0.10);
-          penalty = spotPenalty;
-        }
-        if (d === 'body_scratch') {
-          let bPenalty = 0;
-          if (diag.bodyScratches === 'More than 2 scratches') bPenalty += 0.08;
-          else if (diag.bodyScratches === '1-2 scratches') bPenalty += 0.03;
-          if (diag.bodyDents === 'Major dent(s) or more than 2') bPenalty += 0.12;
-          else if (diag.bodyDents === '1-2 minor dents') bPenalty += 0.05;
-          if (bPenalty > 0) penalty = bPenalty;
-        }
-        if (d === 'panel_missing') {
-          let pPenalty = 0;
-          if (diag.bodyPanel === 'Missing side or back panel') pPenalty = 0.20;
-          else if (diag.bodyPanel === 'Cracked/ broken side or back panel') pPenalty = 0.15;
-          if (diag.bodyBent === 'Bent/ curved panel') pPenalty = Math.max(pPenalty, 0.25);
-          else if (diag.bodyBent === 'Loose screen (Gap in screen and body)') pPenalty = Math.max(pPenalty, 0.15);
-          if (pPenalty > 0) penalty = pPenalty;
-        }
-        sum += penalty * scale;
-      });
-      return sum;
-    };
 
-    const getAndroidModelParams = (brand: string) => {
-      const lowerBrand = brand.toLowerCase();
+  // applyGranularDefects moved to lib/pricingCalculator.ts
+
+  // Android model params moved to lib/pricingCalculator.ts
+
+    const calculated = calculateFhoneifyPrice(
+      selectedBrand,
+      selectedModel,
+      rawBasePrice || internal_base,
+      diag as DiagnosticsType
+    );
       
-      // Default fallback
-      let params = {
-        warrantyPenalty: 0.10, 
-        gstBillPenalty: 0.05,
-        callsPenalty: 0.50,
-        originalScreenPenalty: 0.70,
-        touchPenalty: 0.40,
-        functionalScale: 0.8,
-        physicalScale: 0.8,
-      };
-
-      if (lowerBrand === 'samsung') {
-        params = {
-          warrantyPenalty: 0.10,
-          gstBillPenalty: 0.05,
-          callsPenalty: 0.55,
-          originalScreenPenalty: 0.65,
-          touchPenalty: 0.35,
-          functionalScale: 0.9,
-          physicalScale: 0.85,
-        };
-      } else if (lowerBrand === 'oneplus' || lowerBrand === 'google' || lowerBrand === 'nothing' || lowerBrand === 'asus' || lowerBrand === 'huawei') {
-        params = {
-          warrantyPenalty: 0.10,
-          gstBillPenalty: 0.05,
-          callsPenalty: 0.50,
-          originalScreenPenalty: 0.60,
-          touchPenalty: 0.40,
-          functionalScale: 0.8,
-          physicalScale: 0.75,
-        };
-      } else if (lowerBrand === 'vivo' || lowerBrand === 'oppo' || lowerBrand === 'xiaomi' || lowerBrand === 'poco' || lowerBrand === 'realme' || lowerBrand === 'motorola' || lowerBrand === 'iqoo' || lowerBrand === 'infinix' || lowerBrand === 'tecno' || lowerBrand === 'lg') {
-        params = {
-          warrantyPenalty: 0.12,
-          gstBillPenalty: 0.08,
-          callsPenalty: 0.45,
-          originalScreenPenalty: 0.55,
-          touchPenalty: 0.45,
-          functionalScale: 0.75,
-          physicalScale: 0.70,
-        };
-      }
-
-      return params;
-    };
-
-    if (selectedBrand.toLowerCase() === 'apple') {
-      const params = getAppleModelParams(selectedModel);
-      
-      const hasValidBill = diag.validBill === true || diag.accessories.includes('bill');
-      if (diag.warranty && hasValidBill && diag.mobileAge) {
-        age_multiplier = config.ageBonus[diag.mobileAge as keyof typeof config.ageBonus] || 1.0;
-      } else {
-        age_multiplier = 1.0 - params.warrantyPenalty - (hasValidBill ? 0 : params.gstBillPenalty);
-      }
-
-      calls_multiplier = diag.calls === false ? params.callsPenalty : 1.0;
-      touch_multiplier = diag.touch === false ? params.touchPenalty : 1.0;
-      screen_orig_mult = diag.originalScreen === false ? params.originalScreenPenalty : 1.0;
-
-      screen_body_sum = applyGranularDefects(params.physicalScale);
-      
-      diag.hardware.forEach(h => { 
-        if (h in config.defects_functional) {
-          functional_sum += config.defects_functional[h as keyof typeof config.defects_functional] * params.functionalScale;
-        }
-      });
-    } else {
-      const params = getAndroidModelParams(selectedBrand);
-      
-      const hasValidBill = diag.validBill === true || diag.accessories.includes('bill');
-      if (diag.warranty && hasValidBill && diag.mobileAge) {
-        age_multiplier = config.ageBonus[diag.mobileAge as keyof typeof config.ageBonus] || 1.0;
-      } else {
-        age_multiplier = 1.0 - params.warrantyPenalty - (hasValidBill ? 0 : params.gstBillPenalty);
-      }
-      
-      calls_multiplier = diag.calls === false ? params.callsPenalty : 1.0;
-      touch_multiplier = diag.touch === false ? params.touchPenalty : 1.0;
-      screen_orig_mult = diag.originalScreen === false ? params.originalScreenPenalty : 1.0;
-
-      screen_body_sum = applyGranularDefects(params.physicalScale);
-      
-      diag.hardware.forEach(h => { 
-        if (h in config.defects_functional) {
-          functional_sum += config.defects_functional[h as keyof typeof config.defects_functional] * params.functionalScale;
-        }
-      });
-    }
-
-    const box_bonus = diag.accessories.includes('box') ? config.bonuses.box : 0;
-    
-    const rawBase = rawBasePrice || internal_base;
-    const rawCalculated = rawBase 
-      * age_multiplier 
-      * calls_multiplier 
-      * touch_multiplier 
-      * screen_orig_mult 
-      * (1 - Math.min(screen_body_sum, 1)) 
-      * (1 - Math.min(functional_sum, 1));
-
-    // Uplift applies dynamically to the final price after deductions
-    let upliftPercent = 1.04;
-    if (rawBase <= 20000) {
-      upliftPercent = 1.08;
-    } else if (rawBase <= 50000) {
-      upliftPercent = 1.06;
-    }
-
-    const calculated = (rawCalculated * upliftPercent) + box_bonus;
-      
-    setFinalPrice(Math.max(Math.round(calculated), floor_price));
+    setFinalPrice(calculated);
   };
 
   const handleSendOtp = async (e: React.FormEvent) => {
@@ -1315,6 +1233,463 @@ export default function QuotePage() {
                 </div>
               )}
 
+              {selectedBrand === 'Motorola' && (
+                <div style={{ marginBottom: '2rem' }}>
+                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
+                    {[
+                      "Moto E Series",
+                      "Moto G Series",
+                      "Moto Z Series",
+                      "Moto M Series",
+                      "Moto One Series",
+                      "Moto Edge Series",
+                      "Moto Razr Series"
+                    ].map((series) => {
+                      const isSelected = selectedMotorolaSeries === series;
+                      return (
+                        <button
+                          key={series}
+                          type="button"
+                          onClick={() => setSelectedMotorolaSeries(isSelected ? null : series)}
+                          style={{
+                            padding: '0.75rem 1rem',
+                            borderRadius: '8px',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
+                            color: isSelected ? '#4CD964' : '#fff',
+                            cursor: 'pointer',
+                            fontSize: '0.85rem',
+                            fontWeight: 500,
+                            textAlign: 'center',
+                            transition: 'all 200ms'
+                          }}
+                        >
+                          {series}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {selectedBrand === 'Lenovo' && (
+                <div style={{ marginBottom: '2rem' }}>
+                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
+                    {[
+                      "A Series",
+                      "K Series",
+                      "Z Series"
+                    ].map((series) => {
+                      const isSelected = selectedLenovoSeries === series;
+                      return (
+                        <button
+                          key={series}
+                          type="button"
+                          onClick={() => setSelectedLenovoSeries(isSelected ? null : series)}
+                          style={{
+                            padding: '0.75rem 1rem',
+                            borderRadius: '8px',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
+                            color: isSelected ? '#4CD964' : '#fff',
+                            cursor: 'pointer',
+                            fontSize: '0.85rem',
+                            fontWeight: 500,
+                            textAlign: 'center',
+                            transition: 'all 200ms'
+                          }}
+                        >
+                          {series}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {selectedBrand === 'Nokia' && (
+                <div style={{ marginBottom: '2rem' }}>
+                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
+                    {[
+                      "Nokia 2 Series",
+                      "Nokia 3 Series",
+                      "Nokia 5 Series",
+                      "Nokia 6 Series",
+                      "Nokia 7 Series",
+                      "Nokia 8 Series",
+                      "Nokia 4 Series",
+                      "Nokia C Series",
+                      "Nokia G Series",
+                      "Nokia X Series"
+                    ].map((series) => {
+                      const isSelected = selectedNokiaSeries === series;
+                      return (
+                        <button
+                          key={series}
+                          type="button"
+                          onClick={() => setSelectedNokiaSeries(isSelected ? null : series)}
+                          style={{
+                            padding: '0.75rem 1rem',
+                            borderRadius: '8px',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
+                            color: isSelected ? '#4CD964' : '#fff',
+                            cursor: 'pointer',
+                            fontSize: '0.85rem',
+                            fontWeight: 500,
+                            textAlign: 'center',
+                            transition: 'all 200ms'
+                          }}
+                        >
+                          {series}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {selectedBrand === 'Honor' && (
+                <div style={{ marginBottom: '2rem' }}>
+                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
+                    {[
+                      "Honor 7 Series",
+                      "Honor 8 Series",
+                      "Honor 9 Series",
+                      "Honor Holly Series",
+                      "Honor 10 Series",
+                      "Honor 5 Series",
+                      "Honor 6 Series",
+                      "Honor Play Series",
+                      "Honor 20 Series",
+                      "Honor 200 Series"
+                    ].map((series) => {
+                      const isSelected = selectedHonorSeries === series;
+                      return (
+                        <button
+                          key={series}
+                          type="button"
+                          onClick={() => setSelectedHonorSeries(isSelected ? null : series)}
+                          style={{
+                            padding: '0.75rem 1rem',
+                            borderRadius: '8px',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
+                            color: isSelected ? '#4CD964' : '#fff',
+                            cursor: 'pointer',
+                            fontSize: '0.85rem',
+                            fontWeight: 500,
+                            textAlign: 'center',
+                            transition: 'all 200ms'
+                          }}
+                        >
+                          {series}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {selectedBrand === 'Asus' && (
+                <div style={{ marginBottom: '2rem' }}>
+                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
+                    {[
+                      "Zenfone 5 Series",
+                      "Zenfone Max Series",
+                      "ROG Series",
+                      "8 Series"
+                    ].map((series) => {
+                      const isSelected = selectedAsusSeries === series;
+                      return (
+                        <button
+                          key={series}
+                          type="button"
+                          onClick={() => setSelectedAsusSeries(isSelected ? null : series)}
+                          style={{
+                            padding: '0.75rem 1rem',
+                            borderRadius: '8px',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
+                            color: isSelected ? '#4CD964' : '#fff',
+                            cursor: 'pointer',
+                            fontSize: '0.85rem',
+                            fontWeight: 500,
+                            textAlign: 'center',
+                            transition: 'all 200ms'
+                          }}
+                        >
+                          {series}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {selectedBrand === 'Google' && (
+                <div style={{ marginBottom: '2rem' }}>
+                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
+                    {[
+                      "Pixel 3 Series",
+                      "Pixel 4 Series",
+                      "Pixel 6 Series",
+                      "Pixel 7 Series",
+                      "Pixel 8 Series",
+                      "Pixel 9 Series",
+                      "Pixel 10 Series"
+                    ].map((series) => {
+                      const isSelected = selectedGoogleSeries === series;
+                      return (
+                        <button
+                          key={series}
+                          type="button"
+                          onClick={() => setSelectedGoogleSeries(isSelected ? null : series)}
+                          style={{
+                            padding: '0.75rem 1rem',
+                            borderRadius: '8px',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
+                            color: isSelected ? '#4CD964' : '#fff',
+                            cursor: 'pointer',
+                            fontSize: '0.85rem',
+                            fontWeight: 500,
+                            textAlign: 'center',
+                            transition: 'all 200ms'
+                          }}
+                        >
+                          {series}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {selectedBrand === 'POCO' && (
+                <div style={{ marginBottom: '2rem' }}>
+                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
+                    {[
+                      "POCO X Series",
+                      "POCO F Series",
+                      "POCO M Series",
+                      "POCO C Series"
+                    ].map((series) => {
+                      const isSelected = selectedPocoSeries === series;
+                      return (
+                        <button
+                          key={series}
+                          type="button"
+                          onClick={() => setSelectedPocoSeries(isSelected ? null : series)}
+                          style={{
+                            padding: '0.75rem 1rem',
+                            borderRadius: '8px',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
+                            color: isSelected ? '#4CD964' : '#fff',
+                            cursor: 'pointer',
+                            fontSize: '0.85rem',
+                            fontWeight: 500,
+                            textAlign: 'center',
+                            transition: 'all 200ms'
+                          }}
+                        >
+                          {series}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {selectedBrand === 'Huawei' && (
+                <div style={{ marginBottom: '2rem' }}>
+                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
+                    {[
+                      "Huawei P Series",
+                      "Huawei Mate Series"
+                    ].map((series) => {
+                      const isSelected = selectedHuaweiSeries === series;
+                      return (
+                        <button
+                          key={series}
+                          type="button"
+                          onClick={() => setSelectedHuaweiSeries(isSelected ? null : series)}
+                          style={{
+                            padding: '0.75rem 1rem',
+                            borderRadius: '8px',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
+                            color: isSelected ? '#4CD964' : '#fff',
+                            cursor: 'pointer',
+                            fontSize: '0.85rem',
+                            fontWeight: 500,
+                            textAlign: 'center',
+                            transition: 'all 200ms'
+                          }}
+                        >
+                          {series}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {selectedBrand === 'LG' && (
+                <div style={{ marginBottom: '2rem' }}>
+                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
+                    {[
+                      "G Series",
+                      "V Series",
+                      "W Series"
+                    ].map((series) => {
+                      const isSelected = selectedLgSeries === series;
+                      return (
+                        <button
+                          key={series}
+                          type="button"
+                          onClick={() => setSelectedLgSeries(isSelected ? null : series)}
+                          style={{
+                            padding: '0.75rem 1rem',
+                            borderRadius: '8px',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
+                            color: isSelected ? '#4CD964' : '#fff',
+                            cursor: 'pointer',
+                            fontSize: '0.85rem',
+                            fontWeight: 500,
+                            textAlign: 'center',
+                            transition: 'all 200ms'
+                          }}
+                        >
+                          {series}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {selectedBrand === 'Infinix' && (
+                <div style={{ marginBottom: '2rem' }}>
+                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
+                    {[
+                      "S Series",
+                      "Zero Series",
+                      "Hot Series",
+                      "Note Series",
+                      "GT Series"
+                    ].map((series) => {
+                      const isSelected = selectedInfinixSeries === series;
+                      return (
+                        <button
+                          key={series}
+                          type="button"
+                          onClick={() => setSelectedInfinixSeries(isSelected ? null : series)}
+                          style={{
+                            padding: '0.75rem 1rem',
+                            borderRadius: '8px',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
+                            color: isSelected ? '#4CD964' : '#fff',
+                            cursor: 'pointer',
+                            fontSize: '0.85rem',
+                            fontWeight: 500,
+                            textAlign: 'center',
+                            transition: 'all 200ms'
+                          }}
+                        >
+                          {series}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {selectedBrand === 'Tecno' && (
+                <div style={{ marginBottom: '2rem' }}>
+                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
+                    {[
+                      "Camon Series",
+                      "Spark Series",
+                      "Phantom Series",
+                      "POVA Series",
+                      "Pop Series"
+                    ].map((series) => {
+                      const isSelected = selectedTecnoSeries === series;
+                      return (
+                        <button
+                          key={series}
+                          type="button"
+                          onClick={() => setSelectedTecnoSeries(isSelected ? null : series)}
+                          style={{
+                            padding: '0.75rem 1rem',
+                            borderRadius: '8px',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
+                            color: isSelected ? '#4CD964' : '#fff',
+                            cursor: 'pointer',
+                            fontSize: '0.85rem',
+                            fontWeight: 500,
+                            textAlign: 'center',
+                            transition: 'all 200ms'
+                          }}
+                        >
+                          {series}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {selectedBrand === 'iQOO' && (
+                <div style={{ marginBottom: '2rem' }}>
+                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
+                    {[
+                      "iQOO Series"
+                    ].map((series) => {
+                      const isSelected = selectedIqooSeries === series;
+                      return (
+                        <button
+                          key={series}
+                          type="button"
+                          onClick={() => setSelectedIqooSeries(isSelected ? null : series)}
+                          style={{
+                            padding: '0.75rem 1rem',
+                            borderRadius: '8px',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
+                            color: isSelected ? '#4CD964' : '#fff',
+                            cursor: 'pointer',
+                            fontSize: '0.85rem',
+                            fontWeight: 500,
+                            textAlign: 'center',
+                            transition: 'all 200ms'
+                          }}
+                        >
+                          {series}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
               {models.length === 0 && !loading ? (
                 <div style={{ textAlign: 'center', padding: '4rem 1rem', color: '#a0a0a0' }}>
                   <span style={{ fontSize: '3rem', display: 'block', marginBottom: '1rem' }}>🚧</span>
@@ -1395,7 +1770,7 @@ export default function QuotePage() {
                 {[
                   { id: 'calls', title: 'Are you able to make and receive calls?', desc: 'Check your device for cellular network connectivity issues.' },
                   { id: 'touch', title: 'Is your device\'s touch screen working properly?', desc: 'Check the touch screen functionality of your phone.' },
-                  { id: 'originalScreen', title: 'Is your phone\'s screen original?', desc: 'Pick "Yes" if screen was never changed. Pick "No" if screen was changed.' }
+                  { id: 'originalScreen', title: 'Is your phone\'s screen original?', desc: 'Pick "Yes" if screen was never changed or was changed by Authorized Service Center. Pick "No" if screen was changed at local shop.' }
                 ].map((q) => (
                   <div key={q.id} style={{ marginBottom: '2.5rem' }}>
                     <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>{q.title}</h3>
@@ -1955,6 +2330,72 @@ export default function QuotePage() {
               <span style={{ fontSize: '1.2rem' }}>✨</span>
               {isScraping ? 'Generating...' : marketPriceFetched ? 'Market price fetched' : 'Ai generated market price'}
             </button>
+          </div>
+          <div style={{
+            marginTop: '2.5rem',
+            position: 'relative',
+            padding: '1.25rem 1.5rem',
+            background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.12) 0%, rgba(212, 175, 55, 0.02) 100%)',
+            border: '1px solid rgba(212, 175, 55, 0.2)',
+            borderRadius: '16px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '1.25rem',
+            boxShadow: '0 8px 32px rgba(212, 175, 55, 0.08), inset 0 0 20px rgba(212, 175, 55, 0.03)',
+            backdropFilter: 'blur(16px)',
+            WebkitBackdropFilter: 'blur(16px)',
+            overflow: 'hidden'
+          }}>
+            <style>{`
+              @keyframes premiumGlow {
+                0% { box-shadow: 0 0 10px rgba(212,175,55,0.2); }
+                50% { box-shadow: 0 0 20px rgba(212,175,55,0.5); }
+                100% { box-shadow: 0 0 10px rgba(212,175,55,0.2); }
+              }
+              @keyframes premiumShimmer {
+                0% { transform: translateX(-150%) skewX(-15deg); }
+                100% { transform: translateX(250%) skewX(-15deg); }
+              }
+            `}</style>
+            
+            <div style={{
+              position: 'absolute',
+              top: 0, left: 0,
+              width: '40%', height: '100%',
+              background: 'linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.08), transparent)',
+              animation: 'premiumShimmer 4s infinite cubic-bezier(0.4, 0, 0.2, 1)',
+              pointerEvents: 'none'
+            }} />
+
+            <div style={{
+              background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.25), rgba(212, 175, 55, 0.05))',
+              padding: '12px',
+              borderRadius: '14px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              animation: 'premiumGlow 3s infinite',
+              flexShrink: 0,
+              border: '1px solid rgba(212, 175, 55, 0.3)'
+            }}>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+            </div>
+            
+            <p style={{ color: '#e0e0e0', fontSize: '0.95rem', margin: 0, fontWeight: 400, letterSpacing: '0.3px', lineHeight: 1.6, position: 'relative', zIndex: 1 }}>
+              <span style={{ 
+                color: '#d4af37', 
+                fontWeight: 700, 
+                marginRight: '8px',
+                textTransform: 'uppercase',
+                letterSpacing: '1.5px',
+                fontSize: '0.8rem'
+              }}>Note:</span> 
+              Final pricing and verification will be confirmed following the physical inspection.
+            </p>
           </div>
           
           <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', width: '100%' }}>
