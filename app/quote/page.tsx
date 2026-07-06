@@ -2337,6 +2337,27 @@ export default function QuotePage() {
               <p style={{ fontSize: '2.5rem', fontWeight: 700, color: '#FF3B30', lineHeight: 1 }}>
                 {formatCurrency((finalPrice || 0) - (finalPrice === 1200 ? 0 : 99) + (appliedCoupon ? 299 : 0))}
               </p>
+              <button 
+                onClick={() => {
+                  setFinalPrice(null);
+                  setMarketPriceFetched(false);
+                  setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], screenCondition: null, screenSpots: null, screenLines: null, screenDiscoloration: null, bodyScratches: null, bodyDents: null, bodyPanel: null, bodyBent: null, hardware: [], accessories: [], warranty: null, validBill: null, eSim: null, mobileAge: null });
+                  navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 3);
+                }}
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  borderBottom: '1px solid #26a69a',
+                  color: '#26a69a',
+                  cursor: 'pointer',
+                  padding: '2px 0',
+                  marginTop: '0.75rem',
+                  fontSize: '0.9rem',
+                  display: 'inline-block'
+                }}
+              >
+                Recalculate
+              </button>
             </div>
           </div>
           
