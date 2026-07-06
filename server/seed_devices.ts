@@ -7552,14 +7552,6 @@ export const SEED_DEVICES = [
     "basePrice": 19040
   },
   {
-    "id": "samsung_100000",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Note 20",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 9270
-  },
-  {
     "id": "samsung_100001",
     "brand": "Samsung",
     "model": "Samsung Galaxy A14 5G",
@@ -7968,30 +7960,6 @@ export const SEED_DEVICES = [
     "basePrice": 6970
   },
   {
-    "id": "samsung_100052",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A6",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 5550
-  },
-  {
-    "id": "samsung_100053",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A6",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 1330
-  },
-  {
-    "id": "samsung_100054",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A6",
-    "storage": "4 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 1460
-  },
-  {
     "id": "samsung_100055",
     "brand": "Samsung",
     "model": "Samsung Galaxy A6 Plus",
@@ -8014,38 +7982,6 @@ export const SEED_DEVICES = [
     "storage": "4 GB/32 GB",
     "color": "Midnight",
     "basePrice": 1640
-  },
-  {
-    "id": "samsung_100058",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A7 2017",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 1410
-  },
-  {
-    "id": "samsung_100059",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A7 2018",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 1820
-  },
-  {
-    "id": "samsung_100060",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A7 2018",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 2010
-  },
-  {
-    "id": "samsung_100061",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A7 2018",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 2150
   },
   {
     "id": "samsung_100062",
@@ -8272,22 +8208,6 @@ export const SEED_DEVICES = [
     "basePrice": 6360
   },
   {
-    "id": "samsung_100090",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F41",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3710
-  },
-  {
-    "id": "samsung_100091",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F41",
-    "storage": "6 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3290
-  },
-  {
     "id": "samsung_100092",
     "brand": "Samsung",
     "model": "Samsung Galaxy S22 Ultra 5G",
@@ -8310,30 +8230,6 @@ export const SEED_DEVICES = [
     "storage": "12 GB/512 GB",
     "color": "Midnight",
     "basePrice": 27950
-  },
-  {
-    "id": "samsung_100095",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S24 Ultra 5G",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 61820
-  },
-  {
-    "id": "samsung_100096",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S24 Ultra 5G",
-    "storage": "12 GB/512 GB",
-    "color": "Midnight",
-    "basePrice": 63910
-  },
-  {
-    "id": "samsung_100097",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S24 Ultra 5G",
-    "storage": "12 GB/1 TB",
-    "color": "Midnight",
-    "basePrice": 64050
   },
   {
     "id": "xiaomi_100098",
@@ -12617,124 +12513,12 @@ export const SEED_DEVICES = [
     "basePrice": 6200
   },
   {
-    "id": "samsung_39006",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A7 (2018)",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "samsung_39007",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A7 (2018)",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6200
-  },
-  {
-    "id": "samsung_100210",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F42 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 7020
-  },
-  {
-    "id": "samsung_100211",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F42 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6420
-  },
-  {
-    "id": "samsung_100212",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F62",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5110
-  },
-  {
-    "id": "samsung_100213",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F62",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4960
-  },
-  {
     "id": "samsung_100214",
     "brand": "Samsung",
     "model": "Samsung Galaxy Fold",
     "storage": "12 GB/512 GB",
     "color": "Midnight",
     "basePrice": 12990
-  },
-  {
-    "id": "samsung_39015",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J2 2016",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "samsung_39016",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J2 2016",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6200
-  },
-  {
-    "id": "samsung_39017",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J2 2017",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "samsung_39018",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J2 2017",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6200
-  },
-  {
-    "id": "samsung_39019",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J2 2018",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "samsung_39020",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J2 2018",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6200
-  },
-  {
-    "id": "samsung_39021",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J2 Ace",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "samsung_39022",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J2 Ace",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6200
   },
   {
     "id": "samsung_39023",
@@ -12801,38 +12585,6 @@ export const SEED_DEVICES = [
     "basePrice": 6200
   },
   {
-    "id": "samsung_39031",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J3 (2017)",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "samsung_39032",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J3 (2017)",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6200
-  },
-  {
-    "id": "samsung_39033",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J3 Pro",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "samsung_39034",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J3 Pro",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6200
-  },
-  {
     "id": "samsung_39035",
     "brand": "Samsung",
     "model": "Samsung Galaxy J4",
@@ -12865,22 +12617,6 @@ export const SEED_DEVICES = [
     "basePrice": 6200
   },
   {
-    "id": "samsung_39039",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J5 2016",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "samsung_39040",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J5 2016",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6200
-  },
-  {
     "id": "samsung_39041",
     "brand": "Samsung",
     "model": "Samsung Galaxy J5 2017",
@@ -12895,94 +12631,6 @@ export const SEED_DEVICES = [
     "storage": "8 GB/128 GB",
     "color": "Midnight",
     "basePrice": 6200
-  },
-  {
-    "id": "samsung_39043",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J5 Prime",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "samsung_39044",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J5 Prime",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6200
-  },
-  {
-    "id": "samsung_100215",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J6",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 1530
-  },
-  {
-    "id": "samsung_100216",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J6",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 1700
-  },
-  {
-    "id": "samsung_100217",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J6 Plus",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 1890
-  },
-  {
-    "id": "samsung_39049",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J7 2016",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "samsung_39050",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J7 2016",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6200
-  },
-  {
-    "id": "samsung_100218",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J7 Duo",
-    "storage": "4 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 1410
-  },
-  {
-    "id": "samsung_100219",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J7 Max",
-    "storage": "4 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 1440
-  },
-  {
-    "id": "samsung_100220",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J7 Nxt",
-    "storage": "2 GB/16 GB",
-    "color": "Midnight",
-    "basePrice": 1190
-  },
-  {
-    "id": "samsung_100221",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J7 Nxt",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 1410
   },
   {
     "id": "samsung_39057",
@@ -13001,30 +12649,6 @@ export const SEED_DEVICES = [
     "basePrice": 6200
   },
   {
-    "id": "samsung_100222",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J7 Pro",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 1000
-  },
-  {
-    "id": "samsung_100223",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J7 Pro",
-    "storage": "3 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 1110
-  },
-  {
-    "id": "samsung_100224",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J8",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2340
-  },
-  {
     "id": "samsung_100225",
     "brand": "Samsung",
     "model": "Samsung Galaxy M01",
@@ -13033,60 +12657,12 @@ export const SEED_DEVICES = [
     "basePrice": 2260
   },
   {
-    "id": "samsung_100226",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M01 Core",
-    "storage": "1 GB/16 GB",
-    "color": "Midnight",
-    "basePrice": 1390
-  },
-  {
-    "id": "samsung_100227",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M01 Core",
-    "storage": "2 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 1650
-  },
-  {
     "id": "samsung_100228",
     "brand": "Samsung",
     "model": "Samsung Galaxy M01s",
     "storage": "3 GB/32 GB",
     "color": "Midnight",
     "basePrice": 2150
-  },
-  {
-    "id": "samsung_100229",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M02",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2760
-  },
-  {
-    "id": "samsung_100230",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M02",
-    "storage": "2 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2540
-  },
-  {
-    "id": "samsung_100231",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M02s",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2340
-  },
-  {
-    "id": "samsung_100232",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M02s",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2920
   },
   {
     "id": "samsung_39073",
@@ -13111,222 +12687,6 @@ export const SEED_DEVICES = [
     "storage": "3 GB/32 GB",
     "color": "Midnight",
     "basePrice": 2230
-  },
-  {
-    "id": "samsung_100234",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M11",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2460
-  },
-  {
-    "id": "samsung_100235",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M11",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3030
-  },
-  {
-    "id": "samsung_100236",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M12",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3860
-  },
-  {
-    "id": "samsung_100237",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M12",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4090
-  },
-  {
-    "id": "samsung_100238",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M20",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2150
-  },
-  {
-    "id": "samsung_100239",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M20",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2310
-  },
-  {
-    "id": "samsung_100240",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M21",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3170
-  },
-  {
-    "id": "samsung_100241",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M21",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3470
-  },
-  {
-    "id": "samsung_100242",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M21 2021 Edition",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3350
-  },
-  {
-    "id": "samsung_100243",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M21 2021 Edition",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3460
-  },
-  {
-    "id": "samsung_100244",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M30",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2760
-  },
-  {
-    "id": "samsung_100245",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M30",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2520
-  },
-  {
-    "id": "samsung_100246",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M30",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3000
-  },
-  {
-    "id": "samsung_100247",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M30s",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 2800
-  },
-  {
-    "id": "samsung_100248",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M30s",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2560
-  },
-  {
-    "id": "samsung_100249",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M30s",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 2960
-  },
-  {
-    "id": "samsung_100250",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M31",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3810
-  },
-  {
-    "id": "samsung_100251",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M31",
-    "storage": "6 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3230
-  },
-  {
-    "id": "samsung_100252",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M31",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3620
-  },
-  {
-    "id": "samsung_100253",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M31s",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4100
-  },
-  {
-    "id": "samsung_100254",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M31s",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3530
-  },
-  {
-    "id": "samsung_100255",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M32",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3520
-  },
-  {
-    "id": "samsung_100256",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M32",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4290
-  },
-  {
-    "id": "samsung_100257",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M32 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6650
-  },
-  {
-    "id": "samsung_100258",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M32 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6300
-  },
-  {
-    "id": "samsung_100259",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M33 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6790
-  },
-  {
-    "id": "samsung_100260",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M33 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6600
   },
   {
     "id": "samsung_100261",
@@ -13537,22 +12897,6 @@ export const SEED_DEVICES = [
     "basePrice": 1520
   },
   {
-    "id": "samsung_39132",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy On Nxt",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "samsung_39133",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy On Nxt",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6200
-  },
-  {
     "id": "samsung_39134",
     "brand": "Samsung",
     "model": "Samsung Galaxy On5 Pro",
@@ -13604,38 +12948,6 @@ export const SEED_DEVICES = [
     "id": "samsung_39141",
     "brand": "Samsung",
     "model": "Samsung Galaxy On7 Pro",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6200
-  },
-  {
-    "id": "samsung_39142",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy On8",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "samsung_39143",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy On8",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6200
-  },
-  {
-    "id": "samsung_39144",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy On8 (2018)",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "samsung_39145",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy On8 (2018)",
     "storage": "8 GB/128 GB",
     "color": "Midnight",
     "basePrice": 6200
@@ -25061,5 +24373,613 @@ export const SEED_DEVICES = [
     "ram": "8GB",
     "color": "White",
     "basePrice": 5000
+  },
+  {
+    "id": "samsung_120000",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy On Nxt",
+    "storage": "3 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1110
+  },
+  {
+    "id": "samsung_120001",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy On Nxt",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1540
+  },
+  {
+    "id": "samsung_120002",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy On Nxt",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1670
+  },
+  {
+    "id": "samsung_120003",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy J5 2016",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 890
+  },
+  {
+    "id": "samsung_130000",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy J7 2016",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1110
+  },
+  {
+    "id": "samsung_140000",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy J3 (2017)",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1170
+  },
+  {
+    "id": "samsung_150000",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy On8",
+    "storage": "3 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1150
+  },
+  {
+    "id": "samsung_160002",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy J6 Plus",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1890
+  },
+  {
+    "id": "samsung_160003",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy J7 Duo",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1410
+  },
+  {
+    "id": "samsung_160004",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy J7 Max",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1440
+  },
+  {
+    "id": "samsung_160009",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy J8",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2340
+  },
+  {
+    "id": "samsung_170000",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy J2 2016",
+    "storage": "1.5 GB/8 GB",
+    "color": "Midnight",
+    "basePrice": 810
+  },
+  {
+    "id": "samsung_180000",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy J2 2017",
+    "storage": "1 GB/8 GB",
+    "color": "Midnight",
+    "basePrice": 700
+  },
+  {
+    "id": "samsung_180001",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy J2 2018",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1190
+  },
+  {
+    "id": "samsung_180002",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy J2 Ace",
+    "storage": "1.5 GB/8 GB",
+    "color": "Midnight",
+    "basePrice": 660
+  },
+  {
+    "id": "samsung_190000",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy On8 2018",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1780
+  },
+  {
+    "id": "samsung_200000",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F41",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3290
+  },
+  {
+    "id": "samsung_200002",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Note 20",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 9270
+  },
+  {
+    "id": "samsung_200003",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F41",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3710
+  },
+  {
+    "id": "samsung_200004",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F42 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6420
+  },
+  {
+    "id": "samsung_200005",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F42 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7020
+  },
+  {
+    "id": "samsung_200006",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F62",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5110
+  },
+  {
+    "id": "samsung_200007",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F62",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4960
+  },
+  {
+    "id": "samsung_200008",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy J6",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1700
+  },
+  {
+    "id": "samsung_200009",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy J6",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1530
+  },
+  {
+    "id": "samsung_200010",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy J7 Nxt",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1190
+  },
+  {
+    "id": "samsung_200011",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy J7 Nxt",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1410
+  },
+  {
+    "id": "samsung_200012",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy J7 Pro",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1110
+  },
+  {
+    "id": "samsung_200013",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy J7 Pro",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1000
+  },
+  {
+    "id": "samsung_200014",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M01 Core",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1650
+  },
+  {
+    "id": "samsung_200015",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M01 Core",
+    "storage": "1 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1390
+  },
+  {
+    "id": "samsung_200016",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M02",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2540
+  },
+  {
+    "id": "samsung_200017",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M02",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2760
+  },
+  {
+    "id": "samsung_200018",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M02s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2920
+  },
+  {
+    "id": "samsung_200019",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M02s",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2340
+  },
+  {
+    "id": "samsung_200020",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M11",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2460
+  },
+  {
+    "id": "samsung_200021",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M11",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3030
+  },
+  {
+    "id": "samsung_200022",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M12",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3860
+  },
+  {
+    "id": "samsung_200023",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M12",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4090
+  },
+  {
+    "id": "samsung_200024",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M20",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2310
+  },
+  {
+    "id": "samsung_200025",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M20",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2150
+  },
+  {
+    "id": "samsung_200026",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M21",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3170
+  },
+  {
+    "id": "samsung_200027",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M21",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3470
+  },
+  {
+    "id": "samsung_200028",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M21 2021 Edition",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3460
+  },
+  {
+    "id": "samsung_200029",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M21 2021 Edition",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3350
+  },
+  {
+    "id": "samsung_200030",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M30",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2520
+  },
+  {
+    "id": "samsung_200031",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M30",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2760
+  },
+  {
+    "id": "samsung_200032",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M30",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3000
+  },
+  {
+    "id": "samsung_200033",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M30s",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2960
+  },
+  {
+    "id": "samsung_200034",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M30s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2560
+  },
+  {
+    "id": "samsung_200035",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M30s",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2800
+  },
+  {
+    "id": "samsung_200036",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M31",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3230
+  },
+  {
+    "id": "samsung_200037",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M31",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3620
+  },
+  {
+    "id": "samsung_200038",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M31",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3810
+  },
+  {
+    "id": "samsung_200039",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M31s",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3530
+  },
+  {
+    "id": "samsung_200040",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M31s",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4100
+  },
+  {
+    "id": "samsung_200041",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M32",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4290
+  },
+  {
+    "id": "samsung_200042",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M32",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3520
+  },
+  {
+    "id": "samsung_200043",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M32 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6300
+  },
+  {
+    "id": "samsung_200044",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M32 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6650
+  },
+  {
+    "id": "samsung_200045",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M33 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6790
+  },
+  {
+    "id": "samsung_200046",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M33 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6600
+  },
+  {
+    "id": "samsung_210000",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy J5 Prime",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1130
+  },
+  {
+    "id": "samsung_210001",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy J5 Prime",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1200
+  },
+  {
+    "id": "samsung_220000",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy J3 Pro",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 890
+  },
+  {
+    "id": "samsung_230000",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A7 2017",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1410
+  },
+  {
+    "id": "samsung_240000",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A7 2016",
+    "storage": "3 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1260
+  },
+  {
+    "id": "samsung_250000",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A7 (2018)",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1820
+  },
+  {
+    "id": "samsung_250001",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A7 (2018)",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2010
+  },
+  {
+    "id": "samsung_250002",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A7 (2018)",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2150
+  },
+  {
+    "id": "samsung_270000",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A6",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1330
+  },
+  {
+    "id": "samsung_270001",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A6",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1460
+  },
+  {
+    "id": "samsung_270002",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A6",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1640
+  },
+  {
+    "id": "samsung_280000",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S24 Ultra 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 61820
+  },
+  {
+    "id": "samsung_280001",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S24 Ultra 5G",
+    "storage": "12 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 63910
+  },
+  {
+    "id": "samsung_280002",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S24 Ultra 5G",
+    "storage": "12 GB/1 TB",
+    "color": "Midnight",
+    "basePrice": 64050
   }
 ];

@@ -18,8 +18,10 @@ async function main() {
   });
 
   // Seed Tech Float
-  await prisma.techFloat.create({
-    data: { techId: 'u-tech-1', cash: 50000, upi: 200000 },
+  await prisma.techFloat.upsert({
+    where: { techId: 'u-tech-1' },
+    update: { cash: 50000, upi: 200000 },
+    create: { techId: 'u-tech-1', cash: 50000, upi: 200000 },
   });
 
   // Seed Devices (Partial for demo)

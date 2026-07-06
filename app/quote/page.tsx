@@ -680,17 +680,36 @@ export default function QuotePage() {
     const storageList = Array.from(new Set(availableVariants.map((d) => d.storage).filter(Boolean)));
     
     const parseStorage = (s: string) => {
-      // s might be "4GB / 128GB" or "128GB"
-      const valStr = s.includes('/') ? s.split('/')[1].trim() : s;
-      const val = parseFloat(valStr);
-      if (isNaN(val)) return -1;
-      if (valStr.includes('TB')) return val * 1024;
-      if (valStr.includes('GB')) return val;
-      if (valStr.includes('MB')) return val / 1024;
-      return val;
+      let ram = 0;
+      let rom = 0;
+      
+      const parseVal = (valStr: string) => {
+        const val = parseFloat(valStr);
+        if (isNaN(val)) return -1;
+        if (valStr.includes('TB')) return val * 1024;
+        if (valStr.includes('GB')) return val;
+        if (valStr.includes('MB')) return val / 1024;
+        return val;
+      };
+
+      if (s.includes('/')) {
+        const parts = s.split('/');
+        ram = parseVal(parts[0]);
+        rom = parseVal(parts[1]);
+      } else {
+        rom = parseVal(s);
+      }
+      return { ram, rom };
     };
     
-    return storageList.sort((a, b) => parseStorage(a) - parseStorage(b));
+    return storageList.sort((a, b) => {
+      const parsedA = parseStorage(a);
+      const parsedB = parseStorage(b);
+      if (parsedA.rom !== parsedB.rom) {
+        return parsedA.rom - parsedB.rom;
+      }
+      return parsedA.ram - parsedB.ram;
+    });
   }, [allDevices, selectedBrand, selectedModel]);
 
   const selectedDevice = useMemo(() => {
