@@ -2321,10 +2321,15 @@ export default function QuotePage() {
             </div>
           </div>
           
-          {isFirstTimeUser && generatedCoupon && !appliedCoupon && marketPriceFetched && (
+          {!appliedCoupon && marketPriceFetched && (
             <div style={{ backgroundColor: 'rgba(76,217,100,0.1)', border: '1px dashed #4CD964', padding: '1.5rem', borderRadius: '8px', marginBottom: '1.5rem' }}>
-              <h3 style={{ fontSize: '1.1rem', fontWeight: 600, color: '#4CD964', marginBottom: '0.5rem' }}>🎉 First Time User Bonus!</h3>
-              <p style={{ color: '#ccc', fontSize: '0.9rem', marginBottom: '1rem' }}>Use code <strong style={{ color: '#fff', backgroundColor: '#333', padding: '0.2rem 0.5rem', borderRadius: '4px' }}>{generatedCoupon}</strong> for an extra ₹299 on your selling price.</p>
+              <h3 style={{ fontSize: '1.1rem', fontWeight: 600, color: '#4CD964', marginBottom: '0.5rem' }}>🎉 Have a Coupon Code?</h3>
+              {isFirstTimeUser && generatedCoupon && (
+                <p style={{ color: '#ccc', fontSize: '0.9rem', marginBottom: '1rem' }}>Use code <strong style={{ color: '#fff', backgroundColor: '#333', padding: '0.2rem 0.5rem', borderRadius: '4px' }}>{generatedCoupon}</strong> for an extra ₹299 on your selling price.</p>
+              )}
+              {!isFirstTimeUser && (
+                <p style={{ color: '#ccc', fontSize: '0.9rem', marginBottom: '1rem' }}>Enter your code below for an extra bonus on your selling price.</p>
+              )}
               <div style={{ display: 'flex', gap: '0.5rem' }}>
                 <input 
                   type="text" 
@@ -2335,7 +2340,7 @@ export default function QuotePage() {
                 />
                 <button 
                   onClick={() => {
-                    if (couponInput === generatedCoupon) {
+                    if (couponInput === generatedCoupon || couponInput === 'WELCOME299' || couponInput === 'FHONEIFY299') {
                       setAppliedCoupon(true);
                     } else {
                       alert('Invalid coupon code');
