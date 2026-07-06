@@ -734,7 +734,14 @@ export default function QuotePage() {
 
   const toggleArrayItem = (key: 'defects' | 'hardware' | 'accessories', val: string) => {
     setDiagnostics(prev => {
-      const arr = prev[key];
+      let arr = prev[key];
+      
+      // Enforce mutual exclusivity for battery options
+      if (key === 'hardware' && !arr.includes(val)) {
+        if (val === 'battery_service') arr = arr.filter(i => i !== 'battery_health');
+        if (val === 'battery_health') arr = arr.filter(i => i !== 'battery_service');
+      }
+
       return { ...prev, [key]: arr.includes(val) ? arr.filter(i => i !== val) : [...arr, val] };
     });
   };
