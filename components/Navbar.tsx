@@ -234,23 +234,7 @@ export default function Navbar() {
                   <span style={{ color: '#a0a0a0', fontSize: '0.7rem' }}>{user.role === 'admin' ? 'Administrator' : 'Customer'}</span>
                 </div>
                 
-                <Link
-                  href="/wallet"
-                  style={{ color: '#a0a0a0', fontSize: '0.875rem', fontWeight: 500, textDecoration: 'none', transition: 'color 150ms' }}
-                  onMouseEnter={(e) => (e.currentTarget.style.color = '#d4af37')}
-                  onMouseLeave={(e) => (e.currentTarget.style.color = '#a0a0a0')}
-                >
-                  Wallet
-                </Link>
-                
-                <Link
-                  href="/security"
-                  style={{ color: '#a0a0a0', fontSize: '0.875rem', fontWeight: 500, textDecoration: 'none', transition: 'color 150ms' }}
-                  onMouseEnter={(e) => (e.currentTarget.style.color = '#d4af37')}
-                  onMouseLeave={(e) => (e.currentTarget.style.color = '#a0a0a0')}
-                >
-                  Security
-                </Link>
+
 
                 {user.role === 'admin' && (
                   <Link
@@ -380,8 +364,6 @@ export default function Navbar() {
             {mounted && isAuthenticated && user ? (
               <>
                 <span className="text-[#fff] font-medium">{user.name || user.phone}</span>
-                <Link href="/wallet" onClick={() => setIsMobileMenuOpen(false)} className="text-[#a0a0a0] hover:text-[#d4af37]">Wallet</Link>
-                <Link href="/security" onClick={() => setIsMobileMenuOpen(false)} className="text-[#a0a0a0] hover:text-[#d4af37]">Security</Link>
                 {user.role === 'admin' && (
                   <Link href="/admin" onClick={() => setIsMobileMenuOpen(false)} className="text-[#d4af37] font-semibold">Admin Panel</Link>
                 )}

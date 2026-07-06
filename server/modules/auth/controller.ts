@@ -47,7 +47,7 @@ export async function sendOtp(req: Request, res: Response) {
 
     // Send the WhatsApp message asynchronously in the background
     // This allows the frontend to instantly show the OTP input without waiting for WhatsApp API
-    if (process.env.WHATSAPP_ACCESS_TOKEN && process.env.WHATSAPP_PHONE_NUMBER_ID) {
+    if (false && process.env.WHATSAPP_ACCESS_TOKEN && process.env.WHATSAPP_PHONE_NUMBER_ID) {
       logger.info(`[WhatsApp API] Attempting to send OTP ${code} to ${phone}`);
       setTimeout(async () => {
         try {

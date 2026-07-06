@@ -14,6 +14,7 @@ interface AuthStore {
   accessToken: string | null;
   refreshToken: string | null;
   isAuthenticated: boolean;
+  loginAt: number | null;
 
   setAuth: (user: User, accessToken: string, refreshToken: string) => void;
   setUser: (user: User) => void;
@@ -28,6 +29,7 @@ export const useAuthStore = create<AuthStore>()(
       accessToken: null,
       refreshToken: null,
       isAuthenticated: false,
+      loginAt: null,
 
       setAuth: (user, accessToken, refreshToken) =>
         set({
@@ -35,6 +37,7 @@ export const useAuthStore = create<AuthStore>()(
           accessToken,
           refreshToken,
           isAuthenticated: true,
+          loginAt: Date.now(),
         }),
 
       setUser: (user) => set({ user }),
@@ -48,6 +51,7 @@ export const useAuthStore = create<AuthStore>()(
           accessToken: null,
           refreshToken: null,
           isAuthenticated: false,
+          loginAt: null,
         }),
     }),
     {

@@ -12481,22 +12481,6 @@ export const SEED_DEVICES = [
     "basePrice": 6200
   },
   {
-    "id": "samsung_39002",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A7 (2016)",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "samsung_39003",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A7 (2016)",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6200
-  },
-  {
     "id": "samsung_39004",
     "brand": "Samsung",
     "model": "Samsung Galaxy A7 (2017)",
@@ -12897,22 +12881,6 @@ export const SEED_DEVICES = [
     "basePrice": 1520
   },
   {
-    "id": "samsung_39134",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy On5 Pro",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "samsung_39135",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy On5 Pro",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6200
-  },
-  {
     "id": "samsung_100283",
     "brand": "Samsung",
     "model": "Samsung Galaxy On6",
@@ -12935,22 +12903,6 @@ export const SEED_DEVICES = [
     "storage": "4 GB/64 GB",
     "color": "Midnight",
     "basePrice": 1930
-  },
-  {
-    "id": "samsung_39140",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy On7 Pro",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "samsung_39141",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy On7 Pro",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6200
   },
   {
     "id": "samsung_100286",
@@ -24903,14 +24855,6 @@ export const SEED_DEVICES = [
     "basePrice": 1410
   },
   {
-    "id": "samsung_240000",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A7 2016",
-    "storage": "3 GB/16 GB",
-    "color": "Midnight",
-    "basePrice": 1260
-  },
-  {
     "id": "samsung_250000",
     "brand": "Samsung",
     "model": "Samsung Galaxy A7 (2018)",
@@ -24981,5 +24925,29 @@ export const SEED_DEVICES = [
     "storage": "12 GB/1 TB",
     "color": "Midnight",
     "basePrice": 64050
+  },
+  {
+    "id": "samsung_290000",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy On5 Pro",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 980
+  },
+  {
+    "id": "samsung_300000",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy On7 Pro",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1260
+  },
+  {
+    "id": "samsung_310000",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A7 (2016)",
+    "storage": "3 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1260
   }
 ];
