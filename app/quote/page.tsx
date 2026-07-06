@@ -1948,13 +1948,13 @@ export default function QuotePage() {
                 <p style={{ color: '#cccccc', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Check physical condition of Display Screen</p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '3rem' }}>
                   {[
-                    'Screen cracked/ glass broken',
-                    'Chipped/cracked outside display area',
-                    'More than 2 scratches on screen',
-                    '1-2 scratches on screen'
+                    { id: 'Screen cracked/ glass broken', label: '💥 Screen cracked/ glass broken' },
+                    { id: 'Chipped/cracked outside display area', label: '📱 Chipped/cracked outside display area' },
+                    { id: 'More than 2 scratches on screen', label: '〰️ More than 2 scratches on screen' },
+                    { id: '1-2 scratches on screen', label: '➖ 1-2 scratches on screen' }
                   ].map((opt) => (
-                    <button key={opt} onClick={() => setDiagnostics({ ...diagnostics, screenCondition: opt })} style={{ textAlign: 'left', padding: '1rem 1.5rem', borderRadius: '8px', border: diagnostics.screenCondition === opt ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.screenCondition === opt ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.screenCondition === opt ? '#4CD964' : '#fff', cursor: 'pointer', fontWeight: 500 }}>
-                      {opt}
+                    <button key={opt.id} onClick={() => setDiagnostics({ ...diagnostics, screenCondition: opt.id })} style={{ textAlign: 'left', padding: '1rem 1.5rem', borderRadius: '8px', border: diagnostics.screenCondition === opt.id ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.screenCondition === opt.id ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.screenCondition === opt.id ? '#4CD964' : '#fff', cursor: 'pointer', fontWeight: 500 }}>
+                      {opt.label}
                     </button>
                   ))}
                 </div>
@@ -1984,12 +1984,12 @@ export default function QuotePage() {
                 <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>1. Scratches on device Body</h3>
                 <div style={{ display: 'flex', gap: '1rem', marginBottom: '2.5rem' }}>
                   {[
-                    'More than 2 scratches',
-                    '1-2 scratches',
-                    'No scratches'
+                    { id: 'More than 2 scratches', label: '〰️ More than 2 scratches' },
+                    { id: '1-2 scratches', label: '➖ 1-2 scratches' },
+                    { id: 'No scratches', label: '✨ No scratches' }
                   ].map((opt) => (
-                    <button key={opt} onClick={() => setDiagnostics({ ...diagnostics, bodyScratches: opt })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.bodyScratches === opt ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.bodyScratches === opt ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.bodyScratches === opt ? '#4CD964' : '#fff', cursor: 'pointer', fontWeight: 500, fontSize: '0.9rem' }}>
-                      {opt}
+                    <button key={opt.id} onClick={() => setDiagnostics({ ...diagnostics, bodyScratches: opt.id })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.bodyScratches === opt.id ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.bodyScratches === opt.id ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.bodyScratches === opt.id ? '#4CD964' : '#fff', cursor: 'pointer', fontWeight: 500, fontSize: '0.9rem' }}>
+                      {opt.label}
                     </button>
                   ))}
                 </div>
@@ -1997,12 +1997,12 @@ export default function QuotePage() {
                 <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>2. Dents on device Body</h3>
                 <div style={{ display: 'flex', gap: '1rem', marginBottom: '3rem' }}>
                   {[
-                    'Major dent(s) or more than 2',
-                    '1-2 minor dents',
-                    'No dents'
+                    { id: 'Major dent(s) or more than 2', label: '🔨 Major dent(s) or more than 2' },
+                    { id: '1-2 minor dents', label: '🔨 1-2 minor dents' },
+                    { id: 'No dents', label: '✨ No dents' }
                   ].map((opt) => (
-                    <button key={opt} onClick={() => setDiagnostics({ ...diagnostics, bodyDents: opt })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.bodyDents === opt ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.bodyDents === opt ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.bodyDents === opt ? '#4CD964' : '#fff', cursor: 'pointer', fontWeight: 500, fontSize: '0.9rem' }}>
-                      {opt}
+                    <button key={opt.id} onClick={() => setDiagnostics({ ...diagnostics, bodyDents: opt.id })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.bodyDents === opt.id ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.bodyDents === opt.id ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.bodyDents === opt.id ? '#4CD964' : '#fff', cursor: 'pointer', fontWeight: 500, fontSize: '0.9rem' }}>
+                      {opt.label}
                     </button>
                   ))}
                 </div>
@@ -2029,9 +2029,9 @@ export default function QuotePage() {
                 <p style={{ color: '#cccccc', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Check your device&apos;s side & back panels</p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2.5rem' }}>
                   {[
-                    { id: 'Cracked/ broken side or back panel', label: 'Cracked/ broken side or back panel' },
-                    { id: 'Missing side or back panel', label: 'Missing side or back panel' },
-                    { id: 'No defect on side or back panel', label: 'No defect on side or back panel' }
+                    { id: 'Cracked/ broken side or back panel', label: '💥 Cracked/ broken side or back panel' },
+                    { id: 'Missing side or back panel', label: '🕳️ Missing side or back panel' },
+                    { id: 'No defect on side or back panel', label: '✨ No defect on side or back panel' }
                   ].map((opt) => (
                     <button key={opt.id} onClick={() => setDiagnostics({ ...diagnostics, bodyPanel: opt.id })} style={{ textAlign: 'left', padding: '1rem 1.5rem', borderRadius: '8px', border: diagnostics.bodyPanel === opt.id ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.bodyPanel === opt.id ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.bodyPanel === opt.id ? '#4CD964' : '#fff', cursor: 'pointer', fontWeight: 500 }}>
                       {opt.label}
@@ -2043,9 +2043,9 @@ export default function QuotePage() {
                 <p style={{ color: '#cccccc', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Check if your device is bent or display screen is loose</p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '3rem' }}>
                   {[
-                    { id: 'Bent/ curved panel', label: 'Bent/ curved panel' },
-                    { id: 'Loose screen (Gap in screen and body)', label: 'Loose screen (Gap in screen and body)' },
-                    { id: 'Phone not bent', label: 'Phone not bent' }
+                    { id: 'Bent/ curved panel', label: '📐 Bent/ curved panel' },
+                    { id: 'Loose screen (Gap in screen and body)', label: '📏 Loose screen (Gap in screen and body)' },
+                    { id: 'Phone not bent', label: '✨ Phone not bent' }
                   ].map((opt) => (
                     <button key={opt.id} onClick={() => setDiagnostics({ ...diagnostics, bodyBent: opt.id })} style={{ textAlign: 'left', padding: '1rem 1.5rem', borderRadius: '8px', border: diagnostics.bodyBent === opt.id ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.bodyBent === opt.id ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.bodyBent === opt.id ? '#4CD964' : '#fff', cursor: 'pointer', fontWeight: 500 }}>
                       {opt.label}
