@@ -2322,35 +2322,63 @@ export default function QuotePage() {
           </div>
           
           {!appliedCoupon && (
-            <div style={{ backgroundColor: 'rgba(76,217,100,0.1)', border: '1px dashed #4CD964', padding: '1.5rem', borderRadius: '8px', marginBottom: '1.5rem' }}>
-              <h3 style={{ fontSize: '1.1rem', fontWeight: 600, color: '#4CD964', marginBottom: '0.5rem' }}>🎉 Have a Coupon Code?</h3>
-              {isFirstTimeUser && generatedCoupon && (
-                <p style={{ color: '#ccc', fontSize: '0.9rem', marginBottom: '1rem' }}>Use code <strong style={{ color: '#fff', backgroundColor: '#333', padding: '0.2rem 0.5rem', borderRadius: '4px' }}>{generatedCoupon}</strong> for an extra ₹299 on your selling price.</p>
-              )}
-              {!isFirstTimeUser && (
-                <p style={{ color: '#ccc', fontSize: '0.9rem', marginBottom: '1rem' }}>Enter your code below for an extra bonus on your selling price.</p>
-              )}
-              <div style={{ display: 'flex', gap: '0.5rem' }}>
-                <input 
-                  type="text" 
-                  value={couponInput}
-                  onChange={(e) => setCouponInput(e.target.value.toUpperCase())}
-                  placeholder="Enter code" 
-                  style={{ flex: 1, padding: '0.75rem', borderRadius: '4px', border: '1px solid #444', backgroundColor: '#222', color: '#fff', outline: 'none' }} 
-                />
-                <button 
-                  onClick={() => {
-                    if (couponInput === generatedCoupon || couponInput === 'WELCOME299' || couponInput === 'FHONEIFY299') {
-                      setAppliedCoupon(true);
-                    } else {
-                      alert('Invalid coupon code');
-                    }
-                  }}
-                  className="btn-primary" 
-                  style={{ padding: '0 1.5rem', borderRadius: '4px', fontWeight: 600, backgroundColor: '#4CD964', color: '#fff' }}
-                >
-                  Apply
-                </button>
+            <div style={{ 
+              position: 'relative',
+              padding: '1px',
+              borderRadius: '12px',
+              background: 'linear-gradient(45deg, #FFB800, #FF3B30, #9C27B0)',
+              marginBottom: '1.5rem',
+              boxShadow: '0 0 20px rgba(255, 184, 0, 0.3)'
+            }}>
+              <div style={{
+                backgroundColor: '#111',
+                padding: '1.5rem',
+                borderRadius: '11px',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '1rem',
+                background: 'linear-gradient(to bottom right, rgba(17,17,17,1), rgba(30,30,30,0.9))'
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                  <span style={{ fontSize: '1.5rem', display: 'inline-block', animation: 'bounce 2s infinite' }}>🎁</span>
+                  <h3 style={{ fontSize: '1.2rem', fontWeight: 700, background: 'linear-gradient(90deg, #FFD700, #FF8C00)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', margin: 0 }}>Special Offer Available</h3>
+                </div>
+                
+                {isFirstTimeUser && generatedCoupon ? (
+                  <p style={{ color: '#ccc', fontSize: '0.95rem', margin: 0, lineHeight: 1.5 }}>
+                    Unlock your first-time user bonus! Use code <strong style={{ color: '#FFD700', backgroundColor: 'rgba(255,215,0,0.1)', padding: '0.3rem 0.6rem', borderRadius: '6px', border: '1px solid rgba(255,215,0,0.3)', letterSpacing: '1px' }}>{generatedCoupon}</strong> for an extra ₹299 on your selling price.
+                  </p>
+                ) : (
+                  <p style={{ color: '#ccc', fontSize: '0.95rem', margin: 0, lineHeight: 1.5 }}>
+                    Got a promo code? Enter it below to boost your final selling price instantly!
+                  </p>
+                )}
+
+                <div style={{ display: 'flex', gap: '0.75rem', marginTop: '0.5rem' }}>
+                  <input 
+                    type="text" 
+                    value={couponInput}
+                    onChange={(e) => setCouponInput(e.target.value.toUpperCase())}
+                    placeholder="Enter promo code" 
+                    style={{ flex: 1, padding: '0.85rem 1rem', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)', backgroundColor: 'rgba(255,255,255,0.05)', color: '#fff', outline: 'none', fontSize: '1rem', transition: 'all 0.3s ease' }} 
+                    onFocus={(e) => { e.currentTarget.style.border = '1px solid #FFD700'; e.currentTarget.style.backgroundColor = 'rgba(255,215,0,0.05)'; }}
+                    onBlur={(e) => { e.currentTarget.style.border = '1px solid rgba(255,255,255,0.1)'; e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)'; }}
+                  />
+                  <button 
+                    onClick={() => {
+                      if (couponInput === generatedCoupon || couponInput === 'WELCOME299' || couponInput === 'FHONEIFY299') {
+                        setAppliedCoupon(true);
+                      } else {
+                        alert('Invalid coupon code');
+                      }
+                    }}
+                    style={{ padding: '0 1.5rem', borderRadius: '8px', fontWeight: 700, background: 'linear-gradient(45deg, #FFB800, #FF8C00)', color: '#000', cursor: 'pointer', border: 'none', boxShadow: '0 4px 10px rgba(255,184,0,0.3)', transition: 'all 0.3s ease', textTransform: 'uppercase', letterSpacing: '1px' }}
+                    onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 6px 15px rgba(255,184,0,0.4)'; }}
+                    onMouseOut={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 4px 10px rgba(255,184,0,0.3)'; }}
+                  >
+                    Apply
+                  </button>
+                </div>
               </div>
             </div>
           )}
