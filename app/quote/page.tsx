@@ -2316,31 +2316,33 @@ export default function QuotePage() {
             </div>
           )}
           
-          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
-            <button 
-              type="button" 
-              onClick={handleGetMarketPrice}
-              disabled={isScraping || marketPriceFetched}
-              className="btn-outline" 
-              style={{ 
-                padding: '10px 24px', 
-                fontSize: '1rem', 
-                display: 'flex', 
-                alignItems: 'center', 
-                gap: '0.5rem',
-                backgroundColor: 'rgba(212, 175, 55, 0.1)',
-                borderColor: '#d4af37',
-                color: '#d4af37',
-                borderRadius: '8px',
-                cursor: (isScraping || marketPriceFetched) ? 'not-allowed' : 'pointer',
-                fontWeight: 600,
-                opacity: marketPriceFetched ? 0.6 : 1
-              }}
-            >
-              <span style={{ fontSize: '1.2rem' }}>✨</span>
-              {isScraping ? 'Generating...' : marketPriceFetched ? 'Market price fetched' : 'Ai generated market price'}
-            </button>
-          </div>
+          {process.env.NODE_ENV === 'development' && (
+            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
+              <button 
+                type="button" 
+                onClick={handleGetMarketPrice}
+                disabled={isScraping || marketPriceFetched}
+                className="btn-outline" 
+                style={{ 
+                  padding: '10px 24px', 
+                  fontSize: '1rem', 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  gap: '0.5rem',
+                  backgroundColor: 'rgba(212, 175, 55, 0.1)',
+                  borderColor: '#d4af37',
+                  color: '#d4af37',
+                  borderRadius: '8px',
+                  cursor: (isScraping || marketPriceFetched) ? 'not-allowed' : 'pointer',
+                  fontWeight: 600,
+                  opacity: marketPriceFetched ? 0.6 : 1
+                }}
+              >
+                <span style={{ fontSize: '1.2rem' }}>✨</span>
+                {isScraping ? 'Generating...' : marketPriceFetched ? 'Market price fetched' : 'Ai generated market price'}
+              </button>
+            </div>
+          )}
           <div style={{
             marginTop: '2.5rem',
             position: 'relative',
