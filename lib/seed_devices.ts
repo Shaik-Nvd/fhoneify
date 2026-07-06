@@ -9248,7 +9248,7 @@ export const SEED_DEVICES = [
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
-    "basePrice": 5000
+    "basePrice": 7840
   },
   {
     "id": "xiaomi_10011",
@@ -9266,7 +9266,7 @@ export const SEED_DEVICES = [
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
-    "basePrice": 5000
+    "basePrice": 2910
   },
   {
     "id": "motorola_10013",

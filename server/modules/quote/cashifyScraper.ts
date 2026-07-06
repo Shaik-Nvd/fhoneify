@@ -78,6 +78,11 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
       if (fs.existsSync(samsungDictPath)) {
         Object.assign(urlDictionary, JSON.parse(fs.readFileSync(samsungDictPath, 'utf8')));
       }
+
+      const xiaomiDictPath = path.join(__dirname, '../../data/xiaomi_urls.json');
+      if (fs.existsSync(xiaomiDictPath)) {
+        Object.assign(urlDictionary, JSON.parse(fs.readFileSync(xiaomiDictPath, 'utf8')));
+      }
     } catch (e) {
       logger.warn('Failed to load url dictionaries');
     }
