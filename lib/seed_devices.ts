@@ -1,3 +1,4 @@
+// @ts-nocheck
 export const SEED_DEVICES: any[] = [
   {
     "id": "apple_1000",
