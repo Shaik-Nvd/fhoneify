@@ -2373,7 +2373,7 @@ export default function QuotePage() {
                   </p>
                 )}
 
-                <div style={{ display: 'flex', gap: '0.75rem', marginTop: '0.5rem' }}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', marginTop: '0.5rem' }}>
                   <input 
                     type="text" 
                     value={couponInput}
