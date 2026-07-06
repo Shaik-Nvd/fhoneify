@@ -1,0 +1,27 @@
+{
+  "Apple iPhone 6": {
+    "Flawless": "FAILED",
+    "Heavy Damage": "FAILED",
+    "Dead Phone": "FAILED"
+  },
+  "Apple iPhone 6 Plus": {
+    "Flawless": "FAILED",
+    "Heavy Damage": "FAILED",
+    "Dead Phone": "FAILED"
+  },
+  "Apple iPhone 6S": {
+    "Flawless": "FAILED",
+    "Heavy Damage": "FAILED",
+    "Dead Phone": "FAILED"
+  },
+  "Apple iPhone 6S Plus": {
+    "Flawless": "FAILED",
+    "Heavy Damage": "FAILED",
+    "Dead Phone": "FAILED"
+  },
+  "Apple iPhone SE 1st Generation": {
+    "Flawless": "FAILED",
+    "Heavy Damage": "FAILED",
+    "Dead Phone": "FAILED"
+  }
+}

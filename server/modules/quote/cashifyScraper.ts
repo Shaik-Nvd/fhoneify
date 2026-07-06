@@ -343,6 +343,7 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
       });
 
     if (!priceText) {
+      await page.screenshot({ path: path.join(__dirname, '../../../cashify_error_screenshot.png') });
       throw new Error('Could not extract price from the page.');
     }
 
