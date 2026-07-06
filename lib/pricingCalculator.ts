@@ -36,7 +36,7 @@ export const getAppleModelParams = (model: string) => {
 
   if (lowerModel.includes('17') || lowerModel.includes('air')) {
     params = {
-      warrantyPenalty: 0.18, gstBillPenalty: 0.10, callsPenalty: 0.45, originalScreenPenalty: 0.60, touchPenalty: 0.25, functionalScale: 1.3, physicalScale: 1.2,
+      warrantyPenalty: 0.15, gstBillPenalty: 0.05, callsPenalty: 0.50, originalScreenPenalty: 0.65, touchPenalty: 0.42, functionalScale: 1.1, physicalScale: 1.1,
     };
   } else if (lowerModel.includes('16')) {
     params = {
@@ -169,6 +169,10 @@ export function calculateFhoneifyPrice(
   calls_multiplier = diagnostics.calls === false ? params.callsPenalty : 1.0;
   touch_multiplier = diagnostics.touch === false ? params.touchPenalty : 1.0;
   screen_orig_mult = diagnostics.originalScreen === false ? params.originalScreenPenalty : 1.0;
+  
+  if (diagnostics.touch === false) {
+    screen_orig_mult = 1.0;
+  }
 
   screen_body_sum = applyGranularDefects(params.physicalScale);
 
