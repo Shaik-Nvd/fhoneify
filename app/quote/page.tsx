@@ -53,6 +53,16 @@ const ArrowRightIcon = () => <svg width="20" height="20" viewBox="0 0 24 24" fil
 
 export default function QuotePage() {
   const isWarrantyEligible = (brand: string, model: string) => {
+    if (brand === 'Apple') {
+      const lowerModel = model.toLowerCase();
+      // Only iPhones 15, 16, 17, and iPhone Air are warranty eligible (released within 1-2 years)
+      return (
+        lowerModel.includes('15') ||
+        lowerModel.includes('16') ||
+        lowerModel.includes('17') ||
+        lowerModel.includes('air')
+      );
+    }
     return true;
   };
 
