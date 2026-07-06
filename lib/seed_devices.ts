@@ -22358,5 +22358,629 @@ export const SEED_DEVICES = [
     "storage": "128 GB",
     "basePrice": 7800,
     "image": "/images/models/oneplus-nord-ce-2-lite-5g-128-gb.png"
+  },
+  {
+    "id": "oppo_600000",
+    "brand": "OPPO",
+    "model": "OPPO A7",
+    "storage": "4 GB/64 GB",
+    "basePrice": 2430,
+    "image": "/images/models/oppo-a7-4-gb-64-gb.png"
+  },
+  {
+    "id": "oppo_600001",
+    "brand": "OPPO",
+    "model": "OPPO A7",
+    "storage": "3 GB/64 GB",
+    "basePrice": 2040,
+    "image": "/images/models/oppo-a7-3-gb-64-gb.png"
+  },
+  {
+    "id": "oppo_600002",
+    "brand": "OPPO",
+    "model": "OPPO F9 Pro",
+    "storage": "6 GB/128 GB",
+    "basePrice": 2970,
+    "image": "/images/models/oppo-f9-pro-6-gb-128-gb.png"
+  },
+  {
+    "id": "oppo_600003",
+    "brand": "OPPO",
+    "model": "OPPO F9 Pro",
+    "storage": "6 GB/64 GB",
+    "basePrice": 2670,
+    "image": "/images/models/oppo-f9-pro-6-gb-64-gb.png"
+  },
+  {
+    "id": "oppo_600004",
+    "brand": "OPPO",
+    "model": "OPPO F9",
+    "storage": "4 GB/64 GB",
+    "basePrice": 2640,
+    "image": "/images/models/oppo-f9-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "oppo_600005",
+    "brand": "OPPO",
+    "model": "OPPO A3s",
+    "storage": "2 GB/16 GB",
+    "basePrice": 1740,
+    "image": "/images/models/oppo-a3s-2-gb-16-gb.png"
+  },
+  {
+    "id": "oppo_600006",
+    "brand": "OPPO",
+    "model": "OPPO A3s",
+    "storage": "3 GB/32 GB",
+    "basePrice": 1930,
+    "image": "/images/models/oppo-a3s-3-gb-32-gb.png"
+  },
+  {
+    "id": "oppo_600007",
+    "brand": "OPPO",
+    "model": "OPPO A3s",
+    "storage": "4 GB/64 GB",
+    "basePrice": 2120,
+    "image": "/images/models/oppo-a3s-4-gb-64-gb.png"
+  },
+  {
+    "id": "oppo_600008",
+    "brand": "OPPO",
+    "model": "OPPO Find X",
+    "storage": "8 GB/256 GB",
+    "basePrice": 6970,
+    "image": "/images/models/oppo-find-x-8-gb-256-gb.jpg"
+  },
+  {
+    "id": "oppo_600009",
+    "brand": "OPPO",
+    "model": "OPPO A5",
+    "storage": "4 GB/32 GB",
+    "basePrice": 2460,
+    "image": "/images/models/oppo-a5-4-gb-32-gb.png"
+  },
+  {
+    "id": "oppo_600010",
+    "brand": "OPPO",
+    "model": "OPPO A5",
+    "storage": "4 GB/64 GB",
+    "basePrice": 2750,
+    "image": "/images/models/oppo-a5-4-gb-64-gb.png"
+  },
+  {
+    "id": "oppo_600011",
+    "brand": "OPPO",
+    "model": "OPPO F7",
+    "storage": "4 GB/64 GB",
+    "basePrice": 2380,
+    "image": "/images/models/oppo-f7-4-gb-64-gb.png"
+  },
+  {
+    "id": "oppo_600012",
+    "brand": "OPPO",
+    "model": "OPPO F7",
+    "storage": "6 GB/128 GB",
+    "basePrice": 2600,
+    "image": "/images/models/oppo-f7-6-gb-128-gb.png"
+  },
+  {
+    "id": "oppo_600013",
+    "brand": "OPPO",
+    "model": "OPPO A83",
+    "storage": "3 GB/32 GB",
+    "basePrice": 1440,
+    "image": "/images/models/oppo-a83-3-gb-32-gb.png"
+  },
+  {
+    "id": "oppo_600014",
+    "brand": "OPPO",
+    "model": "OPPO A83",
+    "storage": "4 GB/64 GB",
+    "basePrice": 1670,
+    "image": "/images/models/oppo-a83-4-gb-64-gb.png"
+  },
+  {
+    "id": "oppo_600015",
+    "brand": "OPPO",
+    "model": "OPPO A83",
+    "storage": "2 GB/16 GB",
+    "basePrice": 1300,
+    "image": "/images/models/oppo-a83-2-gb-16-gb.png"
+  },
+  {
+    "id": "oppo_600016",
+    "brand": "OPPO",
+    "model": "OPPO F5 Youth",
+    "storage": "3 GB/32 GB",
+    "basePrice": 1700,
+    "image": "/images/models/oppo-f5-youth-3-gb-32-gb.jpg"
+  },
+  {
+    "id": "oppo_600017",
+    "brand": "OPPO",
+    "model": "OPPO F5",
+    "storage": "4 GB/32 GB",
+    "basePrice": 1780,
+    "image": "/images/models/oppo-f5-4-gb-32-gb.png"
+  },
+  {
+    "id": "oppo_600018",
+    "brand": "OPPO",
+    "model": "OPPO F5",
+    "storage": "6 GB/64 GB",
+    "basePrice": 1930,
+    "image": "/images/models/oppo-f5-6-gb-64-gb.png"
+  },
+  {
+    "id": "oppo_600019",
+    "brand": "OPPO",
+    "model": "OPPO R11",
+    "storage": "4 GB/64 GB",
+    "basePrice": 2270,
+    "image": "/images/models/oppo-r11-4-gb-64-gb.png"
+  },
+  {
+    "id": "oppo_600020",
+    "brand": "OPPO",
+    "model": "OPPO A77",
+    "storage": "4 GB/64 GB",
+    "basePrice": 1490,
+    "image": "/images/models/oppo-a77-4-gb-64-gb.png"
+  },
+  {
+    "id": "oppo_600021",
+    "brand": "OPPO",
+    "model": "OPPO F3",
+    "storage": "4 GB/64 GB",
+    "basePrice": 1480,
+    "image": "/images/models/oppo-f3-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "oppo_600022",
+    "brand": "OPPO",
+    "model": "OPPO F3 Plus",
+    "storage": "4 GB/64 GB",
+    "basePrice": 1860,
+    "image": "/images/models/oppo-f3-plus-4-gb-64-gb.png"
+  },
+  {
+    "id": "oppo_600023",
+    "brand": "OPPO",
+    "model": "OPPO F3 Plus",
+    "storage": "6 GB/64 GB",
+    "basePrice": 2160,
+    "image": "/images/models/oppo-f3-plus-6-gb-64-gb.png"
+  },
+  {
+    "id": "oppo_600024",
+    "brand": "OPPO",
+    "model": "OPPO A57",
+    "storage": "3 GB/32 GB",
+    "basePrice": 1510,
+    "image": "/images/models/oppo-a57-3-gb-32-gb.jpg"
+  },
+  {
+    "id": "oppo_600025",
+    "brand": "OPPO",
+    "model": "OPPO F1s",
+    "storage": "3 GB/32 GB",
+    "basePrice": 1190,
+    "image": "/images/models/oppo-f1s-3-gb-32-gb.png"
+  },
+  {
+    "id": "oppo_600026",
+    "brand": "OPPO",
+    "model": "OPPO F1s",
+    "storage": "4 GB/64 GB",
+    "basePrice": 1330,
+    "image": "/images/models/oppo-f1s-4-gb-64-gb.png"
+  },
+  {
+    "id": "oppo_600027",
+    "brand": "OPPO",
+    "model": "OPPO F1 plus",
+    "storage": "4 GB/64 GB",
+    "basePrice": 1260,
+    "image": "/images/models/oppo-f1-plus-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "oppo_600028",
+    "brand": "OPPO",
+    "model": "OPPO R17",
+    "storage": "8 GB/128 GB",
+    "basePrice": 4170,
+    "image": "/images/models/oppo-r17-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "oppo_600029",
+    "brand": "OPPO",
+    "model": "OPPO K1",
+    "storage": "6 GB/64 GB",
+    "basePrice": 3180,
+    "image": "/images/models/oppo-k1-6-gb-64-gb.jpg"
+  },
+  {
+    "id": "oppo_600030",
+    "brand": "OPPO",
+    "model": "OPPO K1",
+    "storage": "4 GB/64 GB",
+    "basePrice": 3030,
+    "image": "/images/models/oppo-k1-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "oppo_600031",
+    "brand": "OPPO",
+    "model": "OPPO F11 Pro",
+    "storage": "6 GB/128 GB",
+    "basePrice": 4350,
+    "image": "/images/models/oppo-f11-pro-6-gb-128-gb.png"
+  },
+  {
+    "id": "oppo_600032",
+    "brand": "OPPO",
+    "model": "OPPO F11 Pro",
+    "storage": "6 GB/64 GB",
+    "basePrice": 4040,
+    "image": "/images/models/oppo-f11-pro-6-gb-64-gb.png"
+  },
+  {
+    "id": "oppo_600033",
+    "brand": "OPPO",
+    "model": "OPPO A1K",
+    "storage": "2 GB/32 GB",
+    "basePrice": 2320,
+    "image": "/images/models/oppo-a1k-2-gb-32-gb.jpg"
+  },
+  {
+    "id": "oppo_600034",
+    "brand": "OPPO",
+    "model": "OPPO F11",
+    "storage": "4 GB/128 GB",
+    "basePrice": 3280,
+    "image": "/images/models/oppo-f11-4-gb-128-gb.jpg"
+  },
+  {
+    "id": "oppo_600035",
+    "brand": "OPPO",
+    "model": "OPPO F11",
+    "storage": "6 GB/128 GB",
+    "basePrice": 3680,
+    "image": "/images/models/oppo-f11-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "oppo_600036",
+    "brand": "OPPO",
+    "model": "OPPO Reno",
+    "storage": "8 GB/128 GB",
+    "basePrice": 4920,
+    "image": "/images/models/oppo-reno-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "oppo_600037",
+    "brand": "OPPO",
+    "model": "OPPO Reno 10x Zoom",
+    "storage": "8 GB/256 GB",
+    "basePrice": 5720,
+    "image": "/images/models/oppo-reno-10x-zoom-8-gb-256-gb.png"
+  },
+  {
+    "id": "oppo_600038",
+    "brand": "OPPO",
+    "model": "OPPO Reno 10x Zoom",
+    "storage": "6 GB/128 GB",
+    "basePrice": 5490,
+    "image": "/images/models/oppo-reno-10x-zoom-6-gb-128-gb.png"
+  },
+  {
+    "id": "oppo_600039",
+    "brand": "OPPO",
+    "model": "OPPO K3",
+    "storage": "8 GB/128 GB",
+    "basePrice": 4350,
+    "image": "/images/models/oppo-k3-8-gb-128-gb.png"
+  },
+  {
+    "id": "oppo_600040",
+    "brand": "OPPO",
+    "model": "OPPO K3",
+    "storage": "6 GB/64 GB",
+    "basePrice": 4170,
+    "image": "/images/models/oppo-k3-6-gb-64-gb.png"
+  },
+  {
+    "id": "oppo_600041",
+    "brand": "OPPO",
+    "model": "OPPO A9",
+    "storage": "4 GB/128 GB",
+    "basePrice": 3920,
+    "image": "/images/models/oppo-a9-4-gb-128-gb.jpg"
+  },
+  {
+    "id": "oppo_600042",
+    "brand": "OPPO",
+    "model": "OPPO Reno 2Z",
+    "storage": "8 GB/256 GB",
+    "basePrice": 5800,
+    "image": "/images/models/oppo-reno-2z-8-gb-256-gb.jpg"
+  },
+  {
+    "id": "oppo_600043",
+    "brand": "OPPO",
+    "model": "OPPO Reno 2",
+    "storage": "8 GB/256 GB",
+    "basePrice": 5910,
+    "image": "/images/models/oppo-reno-2-8-gb-256-gb.jpg"
+  },
+  {
+    "id": "oppo_600044",
+    "brand": "OPPO",
+    "model": "OPPO A5 2020",
+    "storage": "6 GB/128 GB",
+    "basePrice": 3520,
+    "image": "/images/models/oppo-a5-2020-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "oppo_600045",
+    "brand": "OPPO",
+    "model": "OPPO A5 2020",
+    "storage": "4 GB/128 GB",
+    "basePrice": 3370,
+    "image": "/images/models/oppo-a5-2020-4-gb-128-gb.jpg"
+  },
+  {
+    "id": "oppo_600046",
+    "brand": "OPPO",
+    "model": "OPPO A5 2020",
+    "storage": "3 GB/64 GB",
+    "basePrice": 3030,
+    "image": "/images/models/oppo-a5-2020-3-gb-64-gb.jpg"
+  },
+  {
+    "id": "oppo_600047",
+    "brand": "OPPO",
+    "model": "OPPO A5 2020",
+    "storage": "4 GB/64 GB",
+    "basePrice": 3230,
+    "image": "/images/models/oppo-a5-2020-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "oppo_600048",
+    "brand": "OPPO",
+    "model": "OPPO A9 2020",
+    "storage": "8 GB/128 GB",
+    "basePrice": 4100,
+    "image": "/images/models/oppo-a9-2020-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "oppo_600049",
+    "brand": "OPPO",
+    "model": "OPPO A9 2020",
+    "storage": "4 GB/128 GB",
+    "basePrice": 3890,
+    "image": "/images/models/oppo-a9-2020-4-gb-128-gb.jpg"
+  },
+  {
+    "id": "oppo_600050",
+    "brand": "OPPO",
+    "model": "OPPO Reno2 F",
+    "storage": "6 GB/256 GB",
+    "basePrice": 5070,
+    "image": "/images/models/oppo-reno2-f-6-gb-256-gb.jpg"
+  },
+  {
+    "id": "oppo_600051",
+    "brand": "OPPO",
+    "model": "OPPO Reno2 F",
+    "storage": "8 GB/128 GB",
+    "basePrice": 5720,
+    "image": "/images/models/oppo-reno2-f-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "oppo_600052",
+    "brand": "OPPO",
+    "model": "OPPO F15",
+    "storage": "4 GB/128 GB",
+    "basePrice": 4640,
+    "image": "/images/models/oppo-f15-4-gb-128-gb.jpg"
+  },
+  {
+    "id": "oppo_600053",
+    "brand": "OPPO",
+    "model": "OPPO F15",
+    "storage": "8 GB/128 GB",
+    "basePrice": 5040,
+    "image": "/images/models/oppo-f15-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "oppo_600054",
+    "brand": "OPPO",
+    "model": "OPPO A71 2018",
+    "storage": "3 GB/16 GB",
+    "basePrice": 1060,
+    "image": "/images/models/oppo-a71-2018-3-gb-16-gb.jpg"
+  },
+  {
+    "id": "oppo_600055",
+    "brand": "OPPO",
+    "model": "OPPO A31",
+    "storage": "4 GB/64 GB",
+    "basePrice": 3830,
+    "image": "/images/models/oppo-a31-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "oppo_600056",
+    "brand": "OPPO",
+    "model": "OPPO A31",
+    "storage": "6 GB/128 GB",
+    "basePrice": 4410,
+    "image": "/images/models/oppo-a31-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "oppo_600057",
+    "brand": "OPPO",
+    "model": "OPPO A12",
+    "storage": "3 GB/32 GB",
+    "basePrice": 2970,
+    "image": "/images/models/oppo-a12-3-gb-32-gb.jpg"
+  },
+  {
+    "id": "oppo_600058",
+    "brand": "OPPO",
+    "model": "OPPO A12",
+    "storage": "4 GB/64 GB",
+    "basePrice": 3290,
+    "image": "/images/models/oppo-a12-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "oppo_600059",
+    "brand": "OPPO",
+    "model": "OPPO A52",
+    "storage": "8 GB/128 GB",
+    "basePrice": 4770,
+    "image": "/images/models/oppo-a52-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "oppo_600060",
+    "brand": "OPPO",
+    "model": "OPPO A52",
+    "storage": "6 GB/128 GB",
+    "basePrice": 4580,
+    "image": "/images/models/oppo-a52-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "oppo_600061",
+    "brand": "OPPO",
+    "model": "OPPO A52",
+    "storage": "4 GB/128 GB",
+    "basePrice": 4280,
+    "image": "/images/models/oppo-a52-4-gb-128-gb.jpg"
+  },
+  {
+    "id": "oppo_600062",
+    "brand": "OPPO",
+    "model": "OPPO Find X2",
+    "storage": "12 GB/256 GB",
+    "basePrice": 11100,
+    "image": "/images/models/oppo-find-x2-12-gb-256-gb.jpg"
+  },
+  {
+    "id": "oppo_600063",
+    "brand": "OPPO",
+    "model": "OPPO A11K",
+    "storage": "2 GB/32 GB",
+    "basePrice": 2500,
+    "image": "/images/models/oppo-a11k-2-gb-32-gb.jpg"
+  },
+  {
+    "id": "oppo_600064",
+    "brand": "OPPO",
+    "model": "OPPO Reno3 Pro",
+    "storage": "8 GB/128 GB",
+    "basePrice": 5720,
+    "image": "/images/models/oppo-reno3-pro-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "oppo_600065",
+    "brand": "OPPO",
+    "model": "OPPO Reno3 Pro",
+    "storage": "8 GB/256 GB",
+    "basePrice": 5760,
+    "image": "/images/models/oppo-reno3-pro-8-gb-256-gb.jpg"
+  },
+  {
+    "id": "oppo_600066",
+    "brand": "OPPO",
+    "model": "OPPO Reno4 Pro",
+    "storage": "8 GB/128 GB",
+    "basePrice": 6890,
+    "image": "/images/models/oppo-reno4-pro-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "oppo_600067",
+    "brand": "OPPO",
+    "model": "OPPO A53",
+    "storage": "4 GB/64 GB",
+    "basePrice": 4440,
+    "image": "/images/models/oppo-a53-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "oppo_600068",
+    "brand": "OPPO",
+    "model": "OPPO A53",
+    "storage": "6 GB/128 GB",
+    "basePrice": 5000,
+    "image": "/images/models/oppo-a53-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "oppo_600069",
+    "brand": "OPPO",
+    "model": "OPPO F17 Pro",
+    "storage": "8 GB/128 GB",
+    "basePrice": 5490,
+    "image": "/images/models/oppo-f17-pro-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "oppo_600070",
+    "brand": "OPPO",
+    "model": "OPPO F17",
+    "storage": "8 GB/128 GB",
+    "basePrice": 5300,
+    "image": "/images/models/oppo-f17-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "oppo_600071",
+    "brand": "OPPO",
+    "model": "OPPO F17",
+    "storage": "6 GB/128 GB",
+    "basePrice": 5110,
+    "image": "/images/models/oppo-f17-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "oppo_600072",
+    "brand": "OPPO",
+    "model": "OPPO A33 2020",
+    "storage": "3 GB/32 GB",
+    "basePrice": 3140,
+    "image": "/images/models/oppo-a33-2020-3-gb-32-gb.jpg"
+  },
+  {
+    "id": "oppo_600073",
+    "brand": "OPPO",
+    "model": "OPPO A15",
+    "storage": "2 GB/32 GB",
+    "basePrice": 3070,
+    "image": "/images/models/oppo-a15-2-gb-32-gb.jpg"
+  },
+  {
+    "id": "oppo_600074",
+    "brand": "OPPO",
+    "model": "OPPO A15",
+    "storage": "3 GB/32 GB",
+    "basePrice": 3370,
+    "image": "/images/models/oppo-a15-3-gb-32-gb.jpg"
+  },
+  {
+    "id": "oppo_600075",
+    "brand": "OPPO",
+    "model": "OPPO A15s",
+    "storage": "4 GB/128 GB",
+    "basePrice": 4090,
+    "image": "/images/models/oppo-a15s-4-gb-128-gb.jpg"
+  },
+  {
+    "id": "oppo_600076",
+    "brand": "OPPO",
+    "model": "OPPO A15s",
+    "storage": "4 GB/64 GB",
+    "basePrice": 3510,
+    "image": "/images/models/oppo-a15s-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "oppo_600077",
+    "brand": "OPPO",
+    "model": "OPPO Reno5 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "basePrice": 9180,
+    "image": "/images/models/oppo-reno5-pro-5g-8-gb-128-gb.jpg"
   }
 ];
