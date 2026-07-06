@@ -1,4 +1,4 @@
-export const SEED_DEVICES: any[] = [
+export const SEED_DEVICES = [
   {
     "id": "apple_1000",
     "brand": "Apple",
@@ -9934,7 +9934,6 @@ export const SEED_DEVICES: any[] = [
     "color": "Midnight",
     "basePrice": 5000
   },
-
   {
     "id": "poco_10088",
     "brand": "POCO",
@@ -15789,8 +15788,7 @@ export const SEED_DEVICES: any[] = [
     "storage": "12 GB/256 GB",
     "color": "Midnight",
     "basePrice": 32000
-  }
-,
+  },
   {
     "id": "xiaomi_batch_1",
     "brand": "Xiaomi",
@@ -16870,8 +16868,7 @@ export const SEED_DEVICES: any[] = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 5000
-  }
-,
+  },
   {
     "id": "vivo_batch_1",
     "brand": "Vivo",
@@ -18572,8 +18569,7 @@ export const SEED_DEVICES: any[] = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 5000
-  }
-,
+  },
   {
     "id": "oneplus_batch_1",
     "brand": "OnePlus",
@@ -19023,8 +19019,7 @@ export const SEED_DEVICES: any[] = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 5000
-  }
-,
+  },
   {
     "id": "oppo_batch_1",
     "brand": "OPPO",
@@ -20347,8 +20342,7 @@ export const SEED_DEVICES: any[] = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 5000
-  }
-,
+  },
   {
     "id": "realme_batch_1",
     "brand": "Realme",
@@ -21842,8 +21836,7 @@ export const SEED_DEVICES: any[] = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 5000
-  }
-,
+  },
   {
     "id": "motorola_batch_1",
     "brand": "Motorola",
@@ -22644,8 +22637,7 @@ export const SEED_DEVICES: any[] = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 5000
-  }
-,
+  },
   {
     "id": "lenovo_batch_1",
     "brand": "Lenovo",
@@ -23095,8 +23087,7 @@ export const SEED_DEVICES: any[] = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 5000
-  }
-,
+  },
   {
     "id": "honor_batch_1",
     "brand": "Honor",
@@ -23357,8 +23348,7 @@ export const SEED_DEVICES: any[] = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 5000
-  }
-,
+  },
   {
     "id": "asus_batch_1",
     "brand": "Asus",
@@ -23421,8 +23411,7 @@ export const SEED_DEVICES: any[] = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 5000
-  }
-,
+  },
   {
     "id": "google_batch_1",
     "brand": "Google",
@@ -23593,8 +23582,7 @@ export const SEED_DEVICES: any[] = [
     "ram": "8GB",
     "color": "Obsidian",
     "basePrice": 5000
-  }
-,
+  },
   {
     "id": "poco_batch_1",
     "brand": "POCO",
@@ -23999,8 +23987,7 @@ export const SEED_DEVICES: any[] = [
     "ram": "4GB",
     "color": "Yellow",
     "basePrice": 5000
-  }
-,
+  },
   {
     "id": "huawei_batch_1",
     "brand": "Huawei",
@@ -24045,8 +24032,7 @@ export const SEED_DEVICES: any[] = [
     "ram": "8GB",
     "color": "Twilight",
     "basePrice": 5000
-  }
-,
+  },
   {
     "id": "lg_batch_1",
     "brand": "LG",
@@ -24109,8 +24095,7 @@ export const SEED_DEVICES: any[] = [
     "ram": "6GB",
     "color": "Aurora",
     "basePrice": 5000
-  }
-,
+  },
   {
     "id": "infinix_batch_1",
     "brand": "Infinix",
@@ -24794,8 +24779,7 @@ export const SEED_DEVICES: any[] = [
     "ram": "4GB",
     "color": "Black",
     "basePrice": 5000
-  }
-,
+  },
   {
     "id": "tecno_batch_1",
     "brand": "Tecno",
@@ -25281,8 +25265,7 @@ export const SEED_DEVICES: any[] = [
     "ram": "8GB",
     "color": "Black",
     "basePrice": 5000
-  }
-,
+  },
   {
     "id": "iqoo_batch_1",
     "brand": "iQOO",
@@ -25624,8 +25607,7 @@ export const SEED_DEVICES: any[] = [
     "ram": "8GB",
     "color": "Black",
     "basePrice": 5000
-  }
-,
+  },
   {
     "id": "nothing_batch_1",
     "brand": "Nothing",

@@ -69,12 +69,17 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
     // Load the URL lookup dictionary (if it exists)
     let urlDictionary: Record<string, string> = {};
     try {
-      const dictPath = path.join(__dirname, '../../data/apple_urls.json');
-      if (fs.existsSync(dictPath)) {
-        urlDictionary = JSON.parse(fs.readFileSync(dictPath, 'utf8'));
+      const appleDictPath = path.join(__dirname, '../../data/apple_urls.json');
+      if (fs.existsSync(appleDictPath)) {
+        Object.assign(urlDictionary, JSON.parse(fs.readFileSync(appleDictPath, 'utf8')));
+      }
+      
+      const samsungDictPath = path.join(__dirname, '../../data/samsung_urls.json');
+      if (fs.existsSync(samsungDictPath)) {
+        Object.assign(urlDictionary, JSON.parse(fs.readFileSync(samsungDictPath, 'utf8')));
       }
     } catch (e) {
-      logger.warn('Failed to load url dictionary');
+      logger.warn('Failed to load url dictionaries');
     }
 
     // Generate or lookup the direct Cashify device URL

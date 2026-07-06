@@ -5090,7 +5090,7 @@ export const SEED_DEVICES = [
   {
     "id": "oppo_18027",
     "brand": "OPPO",
-    "model": "OPPO F1 plus",
+    "model": "OPPO F1 Plus",
     "storage": "4 GB/64 GB",
     "color": "Midnight",
     "basePrice": 1260
@@ -8346,7 +8346,7 @@ export const SEED_DEVICES = [
   {
     "id": "xiaomi_32006",
     "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 6 pro",
+    "model": "Xiaomi Redmi 6 Pro",
     "storage": "3 GB/32 GB",
     "color": "Midnight",
     "basePrice": 2160
@@ -8354,7 +8354,7 @@ export const SEED_DEVICES = [
   {
     "id": "xiaomi_32007",
     "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 6 pro",
+    "model": "Xiaomi Redmi 6 Pro",
     "storage": "4 GB/64 GB",
     "color": "Midnight",
     "basePrice": 2280
@@ -9154,7 +9154,7 @@ export const SEED_DEVICES = [
   {
     "id": "iqoo_10000",
     "brand": "iQOO",
-    "model": "Iqoo 12 5g",
+    "model": "Iqoo 12 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -9163,7 +9163,7 @@ export const SEED_DEVICES = [
   {
     "id": "iqoo_10001",
     "brand": "iQOO",
-    "model": "Iqoo 13 5g",
+    "model": "Iqoo 13 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -9172,7 +9172,7 @@ export const SEED_DEVICES = [
   {
     "id": "iqoo_10002",
     "brand": "iQOO",
-    "model": "Iqoo 15 5g",
+    "model": "Iqoo 15 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -9199,7 +9199,7 @@ export const SEED_DEVICES = [
   {
     "id": "iqoo_10005",
     "brand": "iQOO",
-    "model": "Iqoo Z10 Lite 5g",
+    "model": "Iqoo Z10 Lite 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -9208,7 +9208,7 @@ export const SEED_DEVICES = [
   {
     "id": "iqoo_10006",
     "brand": "iQOO",
-    "model": "Iqoo Z10r 5g",
+    "model": "Iqoo Z10r 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -9217,7 +9217,7 @@ export const SEED_DEVICES = [
   {
     "id": "iqoo_10007",
     "brand": "iQOO",
-    "model": "Iqoo Z10x 5g",
+    "model": "Iqoo Z10x 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -9226,7 +9226,7 @@ export const SEED_DEVICES = [
   {
     "id": "iqoo_10008",
     "brand": "iQOO",
-    "model": "Iqoo Z11x 5g",
+    "model": "Iqoo Z11x 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -9235,7 +9235,7 @@ export const SEED_DEVICES = [
   {
     "id": "iqoo_10009",
     "brand": "iQOO",
-    "model": "Iqoo Z9x 5g",
+    "model": "Iqoo Z9x 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -9415,7 +9415,7 @@ export const SEED_DEVICES = [
   {
     "id": "oneplus_10029",
     "brand": "OnePlus",
-    "model": "Oneplus Nord Ce 6 5g",
+    "model": "Oneplus Nord Ce 6 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -9424,7 +9424,7 @@ export const SEED_DEVICES = [
   {
     "id": "oneplus_10030",
     "brand": "OnePlus",
-    "model": "Oneplus Nord Ce 6 Lite 5g",
+    "model": "Oneplus Nord Ce 6 Lite 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -9432,7 +9432,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10031",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A11k",
     "storage": "128GB",
     "ram": "8GB",
@@ -9441,7 +9441,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10032",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A12",
     "storage": "128GB",
     "ram": "8GB",
@@ -9450,7 +9450,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10033",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A15",
     "storage": "128GB",
     "ram": "8GB",
@@ -9459,7 +9459,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10034",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A15s",
     "storage": "128GB",
     "ram": "8GB",
@@ -9468,7 +9468,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10035",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A1k",
     "storage": "128GB",
     "ram": "8GB",
@@ -9477,7 +9477,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10036",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A31",
     "storage": "128GB",
     "ram": "8GB",
@@ -9486,7 +9486,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10037",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A33 2020",
     "storage": "128GB",
     "ram": "8GB",
@@ -9495,7 +9495,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10038",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A3s",
     "storage": "128GB",
     "ram": "8GB",
@@ -9504,7 +9504,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10039",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A5 2020",
     "storage": "128GB",
     "ram": "8GB",
@@ -9513,7 +9513,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10040",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A5",
     "storage": "128GB",
     "ram": "8GB",
@@ -9522,7 +9522,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10041",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A52",
     "storage": "128GB",
     "ram": "8GB",
@@ -9531,7 +9531,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10042",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A53",
     "storage": "128GB",
     "ram": "8GB",
@@ -9540,7 +9540,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10043",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A57",
     "storage": "128GB",
     "ram": "8GB",
@@ -9549,7 +9549,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10044",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A5s",
     "storage": "128GB",
     "ram": "8GB",
@@ -9558,7 +9558,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10045",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A7",
     "storage": "128GB",
     "ram": "8GB",
@@ -9567,7 +9567,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10046",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A71 2018",
     "storage": "128GB",
     "ram": "8GB",
@@ -9576,7 +9576,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10047",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A77",
     "storage": "128GB",
     "ram": "8GB",
@@ -9585,7 +9585,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10048",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A83",
     "storage": "128GB",
     "ram": "8GB",
@@ -9594,7 +9594,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10049",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A9 2020",
     "storage": "128GB",
     "ram": "8GB",
@@ -9603,7 +9603,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10050",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo A9",
     "storage": "128GB",
     "ram": "8GB",
@@ -9612,7 +9612,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10051",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo F1 Plus",
     "storage": "128GB",
     "ram": "8GB",
@@ -9621,7 +9621,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10052",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo F11 Pro",
     "storage": "128GB",
     "ram": "8GB",
@@ -9630,7 +9630,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10053",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo F11",
     "storage": "128GB",
     "ram": "8GB",
@@ -9639,7 +9639,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10054",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo F15",
     "storage": "128GB",
     "ram": "8GB",
@@ -9648,7 +9648,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10055",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo F17 Pro",
     "storage": "128GB",
     "ram": "8GB",
@@ -9657,7 +9657,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10056",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo F17",
     "storage": "128GB",
     "ram": "8GB",
@@ -9666,7 +9666,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10057",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo F1s",
     "storage": "128GB",
     "ram": "8GB",
@@ -9675,7 +9675,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10058",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo F3 Plus",
     "storage": "128GB",
     "ram": "8GB",
@@ -9684,7 +9684,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10059",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo F3",
     "storage": "128GB",
     "ram": "8GB",
@@ -9693,7 +9693,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10060",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo F5 Youth",
     "storage": "128GB",
     "ram": "8GB",
@@ -9702,7 +9702,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10061",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo F5",
     "storage": "128GB",
     "ram": "8GB",
@@ -9711,7 +9711,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10062",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo F7",
     "storage": "128GB",
     "ram": "8GB",
@@ -9720,7 +9720,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10063",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo F9 Pro",
     "storage": "128GB",
     "ram": "8GB",
@@ -9729,7 +9729,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10064",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo F9",
     "storage": "128GB",
     "ram": "8GB",
@@ -9738,7 +9738,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10065",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo Find X",
     "storage": "128GB",
     "ram": "8GB",
@@ -9747,7 +9747,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10066",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo Find X2",
     "storage": "128GB",
     "ram": "8GB",
@@ -9756,7 +9756,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10067",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo K1",
     "storage": "128GB",
     "ram": "8GB",
@@ -9765,7 +9765,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10068",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo K3",
     "storage": "128GB",
     "ram": "8GB",
@@ -9774,7 +9774,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10069",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo R11",
     "storage": "128GB",
     "ram": "8GB",
@@ -9783,7 +9783,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10070",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo R17",
     "storage": "128GB",
     "ram": "8GB",
@@ -9792,7 +9792,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10071",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo Reno 10x Zoom",
     "storage": "128GB",
     "ram": "8GB",
@@ -9801,7 +9801,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10072",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo Reno 2",
     "storage": "128GB",
     "ram": "8GB",
@@ -9810,7 +9810,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10073",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo Reno 2z",
     "storage": "128GB",
     "ram": "8GB",
@@ -9819,7 +9819,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10074",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo Reno",
     "storage": "128GB",
     "ram": "8GB",
@@ -9828,7 +9828,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10075",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo Reno2 F",
     "storage": "128GB",
     "ram": "8GB",
@@ -9837,7 +9837,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10076",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo Reno3 Pro",
     "storage": "128GB",
     "ram": "8GB",
@@ -9846,7 +9846,7 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10077",
-    "brand": "Oppo",
+    "brand": "OPPO",
     "model": "Oppo Reno4 Pro",
     "storage": "128GB",
     "ram": "8GB",
@@ -9855,8 +9855,8 @@ export const SEED_DEVICES = [
   },
   {
     "id": "oppo_10078",
-    "brand": "Oppo",
-    "model": "Oppo Reno5 Pro 5g",
+    "brand": "OPPO",
+    "model": "Oppo Reno5 Pro 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -9934,11 +9934,10 @@ export const SEED_DEVICES = [
     "color": "Midnight",
     "basePrice": 5000
   },
-
   {
     "id": "poco_10088",
     "brand": "POCO",
-    "model": "POCO C85 5g",
+    "model": "POCO C85 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -9965,7 +9964,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10091",
     "brand": "POCO",
-    "model": "POCO F3 Gt",
+    "model": "POCO F3 GT",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -9974,7 +9973,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10092",
     "brand": "POCO",
-    "model": "POCO F4 5g",
+    "model": "POCO F4 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -9983,7 +9982,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10093",
     "brand": "POCO",
-    "model": "POCO F5 5g",
+    "model": "POCO F5 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -9992,7 +9991,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10094",
     "brand": "POCO",
-    "model": "POCO F6 5g",
+    "model": "POCO F6 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10001,7 +10000,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10095",
     "brand": "POCO",
-    "model": "POCO F7 5g",
+    "model": "POCO F7 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10037,7 +10036,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10099",
     "brand": "POCO",
-    "model": "POCO M3 Pro 5g",
+    "model": "POCO M3 Pro 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10055,7 +10054,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10101",
     "brand": "POCO",
-    "model": "POCO M4 5g",
+    "model": "POCO M4 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10064,7 +10063,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10102",
     "brand": "POCO",
-    "model": "POCO M4 Pro 5g",
+    "model": "POCO M4 Pro 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10091,7 +10090,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10105",
     "brand": "POCO",
-    "model": "POCO M6 5g",
+    "model": "POCO M6 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10100,7 +10099,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10106",
     "brand": "POCO",
-    "model": "POCO M6 Plus 5g",
+    "model": "POCO M6 Plus 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10109,7 +10108,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10107",
     "brand": "POCO",
-    "model": "POCO M6 Pro 5g",
+    "model": "POCO M6 Pro 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10118,7 +10117,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10108",
     "brand": "POCO",
-    "model": "POCO M7 5g",
+    "model": "POCO M7 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10127,7 +10126,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10109",
     "brand": "POCO",
-    "model": "POCO M7 Plus 5g",
+    "model": "POCO M7 Plus 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10136,7 +10135,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10110",
     "brand": "POCO",
-    "model": "POCO M7 Pro 5g",
+    "model": "POCO M7 Pro 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10145,7 +10144,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10111",
     "brand": "POCO",
-    "model": "POCO M8 5g",
+    "model": "POCO M8 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10181,7 +10180,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10115",
     "brand": "POCO",
-    "model": "POCO X4 Pro 5g",
+    "model": "POCO X4 Pro 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10190,7 +10189,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10116",
     "brand": "POCO",
-    "model": "POCO X5 5g",
+    "model": "POCO X5 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10199,7 +10198,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10117",
     "brand": "POCO",
-    "model": "POCO X5 Pro 5g",
+    "model": "POCO X5 Pro 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10208,7 +10207,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10118",
     "brand": "POCO",
-    "model": "POCO X6 5g",
+    "model": "POCO X6 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10217,7 +10216,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10119",
     "brand": "POCO",
-    "model": "POCO X6 Neo 5g",
+    "model": "POCO X6 Neo 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10226,7 +10225,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10120",
     "brand": "POCO",
-    "model": "POCO X6 Pro 5g",
+    "model": "POCO X6 Pro 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10235,7 +10234,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10121",
     "brand": "POCO",
-    "model": "POCO X7 5g",
+    "model": "POCO X7 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -10244,7 +10243,7 @@ export const SEED_DEVICES = [
   {
     "id": "poco_10122",
     "brand": "POCO",
-    "model": "POCO X7 Pro 5g",
+    "model": "POCO X7 Pro 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -11423,12 +11422,1116 @@ export const SEED_DEVICES = [
     "basePrice": 21400
   },
   {
+    "basePrice": 8370
+  },
+  {
+    "id": "poco_add_22085",
+    "brand": "POCO",
+    "model": "POCO C75 5G",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 5190
+  },
+  {
+    "id": "poco_add_22086",
+    "brand": "POCO",
+    "model": "POCO C75 5G",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5700
+  },
+  {
+    "id": "poco_add_22087",
+    "brand": "POCO",
+    "model": "POCO X7 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 14290
+  },
+  {
+    "id": "poco_add_22088",
+    "brand": "POCO",
+    "model": "POCO X7 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 16010
+  },
+  {
+    "id": "poco_add_22089",
+    "brand": "POCO",
+    "model": "POCO M6 Plus 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6750
+  },
+  {
+    "id": "poco_add_22090",
+    "brand": "POCO",
+    "model": "POCO M6 Plus 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6400
+  },
+  {
+    "id": "poco_add_22091",
+    "brand": "POCO",
+    "model": "POCO M7 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6100
+  },
+  {
+    "id": "poco_add_22092",
+    "brand": "POCO",
+    "model": "POCO M7 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6550
+  },
+  {
+    "id": "poco_add_22093",
+    "brand": "POCO",
+    "model": "POCO C71",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3930
+  },
+  {
+    "id": "poco_add_22094",
+    "brand": "POCO",
+    "model": "POCO C71",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4180
+  },
+  {
+    "id": "poco_add_22095",
+    "brand": "POCO",
+    "model": "POCO F7 5G",
+    "storage": "12 GB/512 GB",
+    "color": "Midnight",
+    "basePrice": 20850
+  },
+  {
+    "id": "poco_add_22096",
+    "brand": "POCO",
+    "model": "POCO F7 5G",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 20500
+  },
+  {
+    "id": "poco_add_22097",
+    "brand": "POCO",
+    "model": "POCO M7 Plus 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8750
+  },
+  {
+    "id": "poco_add_22098",
+    "brand": "POCO",
+    "model": "POCO M7 Plus 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 9250
+  },
+  {
+    "id": "poco_add_22099",
+    "brand": "POCO",
+    "model": "POCO M7 Plus 5G",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7850
+  },
+  {
+    "id": "poco_add_22100",
+    "brand": "POCO",
+    "model": "POCO C85 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7910
+  },
+  {
+    "id": "poco_add_22101",
+    "brand": "POCO",
+    "model": "POCO C85 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 9300
+  },
+  {
+    "id": "poco_add_22102",
+    "brand": "POCO",
+    "model": "POCO C85 5G",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7340
+  },
+  {
+    "id": "poco_add_22103",
+    "brand": "POCO",
+    "model": "POCO M8 5G",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 13000
+  },
+  {
+    "id": "poco_add_22104",
+    "brand": "POCO",
+    "model": "POCO M8 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 14000
+  },
+  {
+    "id": "poco_add_22105",
+    "brand": "POCO",
+    "model": "POCO M8 5G",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 15500
+  },
+  {
+    "id": "poco_add_22106",
+    "brand": "POCO",
+    "model": "POCO C85x",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 7450
+  },
+  {
+    "id": "poco_add_22107",
+    "brand": "POCO",
+    "model": "POCO C85x",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8010
+  },
+  {
+    "id": "poco_add_22108",
+    "brand": "POCO",
+    "model": "POCO X8 Pro",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 21400
+  },
+  {
     "id": "poco_add_22109",
     "brand": "POCO",
     "model": "POCO X8 Pro",
     "storage": "12 GB/256 GB",
     "color": "Midnight",
     "basePrice": 23400
+  },
+  {
+    "id": "oppo_custom_713078",
+    "brand": "OPPO",
+    "model": "OPPO A7",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_547238",
+    "brand": "OPPO",
+    "model": "OPPO F9 Pro",
+    "storage": "64GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_949585",
+    "brand": "OPPO",
+    "model": "OPPO F9",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_777973",
+    "brand": "OPPO",
+    "model": "OPPO A3s",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_218111",
+    "brand": "OPPO",
+    "model": "OPPO A3s",
+    "storage": "16GB",
+    "ram": "2GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_750026",
+    "brand": "OPPO",
+    "model": "OPPO A3s",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_96755",
+    "brand": "OPPO",
+    "model": "OPPO Find X",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_144412",
+    "brand": "OPPO",
+    "model": "OPPO A5",
+    "storage": "32GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_608120",
+    "brand": "OPPO",
+    "model": "OPPO A5",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_581487",
+    "brand": "OPPO",
+    "model": "OPPO F7",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_84066",
+    "brand": "OPPO",
+    "model": "OPPO A83",
+    "storage": "16GB",
+    "ram": "2GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_794453",
+    "brand": "OPPO",
+    "model": "OPPO A83",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_947792",
+    "brand": "OPPO",
+    "model": "OPPO A83",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_504973",
+    "brand": "OPPO",
+    "model": "OPPO F5 Youth",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_96899",
+    "brand": "OPPO",
+    "model": "OPPO F5",
+    "storage": "32GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_485952",
+    "brand": "OPPO",
+    "model": "OPPO F5",
+    "storage": "64GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_688565",
+    "brand": "OPPO",
+    "model": "OPPO R11",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_116616",
+    "brand": "OPPO",
+    "model": "OPPO A77",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_552117",
+    "brand": "OPPO",
+    "model": "OPPO F3",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_353262",
+    "brand": "OPPO",
+    "model": "OPPO F3 Plus",
+    "storage": "64GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_795807",
+    "brand": "OPPO",
+    "model": "OPPO A57",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_696093",
+    "brand": "OPPO",
+    "model": "OPPO K1",
+    "storage": "64GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_1888",
+    "brand": "OPPO",
+    "model": "OPPO F11 Pro",
+    "storage": "64GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_520990",
+    "brand": "OPPO",
+    "model": "OPPO A5s",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_107669",
+    "brand": "OPPO",
+    "model": "OPPO A5s",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_677404",
+    "brand": "OPPO",
+    "model": "OPPO A1K",
+    "storage": "32GB",
+    "ram": "2GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_252183",
+    "brand": "OPPO",
+    "model": "OPPO Reno 10x Zoom",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_311042",
+    "brand": "OPPO",
+    "model": "OPPO K3",
+    "storage": "64GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_716106",
+    "brand": "OPPO",
+    "model": "OPPO Reno 2Z",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_913185",
+    "brand": "OPPO",
+    "model": "OPPO Reno 2",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_68749",
+    "brand": "OPPO",
+    "model": "OPPO A5 2020",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_614286",
+    "brand": "OPPO",
+    "model": "OPPO Reno2 F",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_316975",
+    "brand": "OPPO",
+    "model": "OPPO A71 2018",
+    "storage": "16GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_917701",
+    "brand": "OPPO",
+    "model": "OPPO A31",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_606891",
+    "brand": "OPPO",
+    "model": "OPPO A12",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_290540",
+    "brand": "OPPO",
+    "model": "OPPO A12",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_428760",
+    "brand": "OPPO",
+    "model": "OPPO Find X2",
+    "storage": "256GB",
+    "ram": "12GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_466176",
+    "brand": "OPPO",
+    "model": "OPPO A11K",
+    "storage": "32GB",
+    "ram": "2GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_528507",
+    "brand": "OPPO",
+    "model": "OPPO Reno3 Pro",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_910778",
+    "brand": "OPPO",
+    "model": "OPPO A53",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_577758",
+    "brand": "OPPO",
+    "model": "OPPO A33 2020",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_765781",
+    "brand": "OPPO",
+    "model": "OPPO A15",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_916211",
+    "brand": "OPPO",
+    "model": "OPPO A15s",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_185395",
+    "brand": "OPPO",
+    "model": "OPPO F19 Pro",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_751516",
+    "brand": "OPPO",
+    "model": "OPPO F19 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_573732",
+    "brand": "OPPO",
+    "model": "OPPO F19 Pro Plus 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_679106",
+    "brand": "OPPO",
+    "model": "OPPO F19",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_30109",
+    "brand": "OPPO",
+    "model": "OPPO A54",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_50909",
+    "brand": "OPPO",
+    "model": "OPPO A54",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_242113",
+    "brand": "OPPO",
+    "model": "OPPO A53s 5G",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_709049",
+    "brand": "OPPO",
+    "model": "OPPO A74 5G",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_862985",
+    "brand": "OPPO",
+    "model": "OPPO Reno6 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_563821",
+    "brand": "OPPO",
+    "model": "OPPO Reno6 Pro 5G",
+    "storage": "256GB",
+    "ram": "12GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_665815",
+    "brand": "OPPO",
+    "model": "OPPO F19s",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_640782",
+    "brand": "OPPO",
+    "model": "OPPO A55",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_444247",
+    "brand": "OPPO",
+    "model": "OPPO A55",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_82355",
+    "brand": "OPPO",
+    "model": "OPPO A16",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_64195",
+    "brand": "OPPO",
+    "model": "OPPO A16K",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_146281",
+    "brand": "OPPO",
+    "model": "OPPO A16K",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_587581",
+    "brand": "OPPO",
+    "model": "OPPO Reno7 5G",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_686109",
+    "brand": "OPPO",
+    "model": "OPPO Reno7 Pro 5G",
+    "storage": "256GB",
+    "ram": "12GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_281787",
+    "brand": "OPPO",
+    "model": "OPPO A76",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_378041",
+    "brand": "OPPO",
+    "model": "OPPO K10",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_329706",
+    "brand": "OPPO",
+    "model": "OPPO A16e",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_640635",
+    "brand": "OPPO",
+    "model": "OPPO A16e",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_299266",
+    "brand": "OPPO",
+    "model": "OPPO F21 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_580616",
+    "brand": "OPPO",
+    "model": "OPPO F21 Pro 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_444934",
+    "brand": "OPPO",
+    "model": "OPPO A96",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_487571",
+    "brand": "OPPO",
+    "model": "OPPO K10 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_77363",
+    "brand": "OPPO",
+    "model": "OPPO Reno8 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_104273",
+    "brand": "OPPO",
+    "model": "OPPO Reno8 Pro 5G",
+    "storage": "256GB",
+    "ram": "12GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_46138",
+    "brand": "OPPO",
+    "model": "OPPO A57 2022",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_417568",
+    "brand": "OPPO",
+    "model": "OPPO F21s Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_772247",
+    "brand": "OPPO",
+    "model": "OPPO F21s Pro 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_172751",
+    "brand": "OPPO",
+    "model": "OPPO A77 2022",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_757779",
+    "brand": "OPPO",
+    "model": "OPPO A77 2022",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_966693",
+    "brand": "OPPO",
+    "model": "OPPO A17K",
+    "storage": "64GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_805493",
+    "brand": "OPPO",
+    "model": "OPPO A77s",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_558257",
+    "brand": "OPPO",
+    "model": "OPPO A78 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_218058",
+    "brand": "OPPO",
+    "model": "OPPO Reno8T 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_978786",
+    "brand": "OPPO",
+    "model": "OPPO Find N2 Flip 5G",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_130491",
+    "brand": "OPPO",
+    "model": "OPPO F23 5G",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_156098",
+    "brand": "OPPO",
+    "model": "OPPO Reno10 5G",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_237737",
+    "brand": "OPPO",
+    "model": "OPPO Reno10 Pro 5G",
+    "storage": "256GB",
+    "ram": "12GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_404786",
+    "brand": "OPPO",
+    "model": "OPPO Reno10 Pro Plus 5G",
+    "storage": "256GB",
+    "ram": "12GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_662402",
+    "brand": "OPPO",
+    "model": "OPPO A78",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_9904",
+    "brand": "OPPO",
+    "model": "OPPO Find N3 Flip 5G",
+    "storage": "256GB",
+    "ram": "12GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_203967",
+    "brand": "OPPO",
+    "model": "OPPO A58",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_890318",
+    "brand": "OPPO",
+    "model": "OPPO A38",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_605420",
+    "brand": "OPPO",
+    "model": "OPPO A17",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_98209",
+    "brand": "OPPO",
+    "model": "OPPO A18",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_329537",
+    "brand": "OPPO",
+    "model": "OPPO A18",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_203855",
+    "brand": "OPPO",
+    "model": "OPPO A79 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_929004",
+    "brand": "OPPO",
+    "model": "OPPO A59 5G",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_609670",
+    "brand": "OPPO",
+    "model": "OPPO Reno11 5G",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_20385",
+    "brand": "OPPO",
+    "model": "OPPO Reno11 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_390941",
+    "brand": "OPPO",
+    "model": "OPPO Reno11 Pro 5G",
+    "storage": "256GB",
+    "ram": "12GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_588226",
+    "brand": "OPPO",
+    "model": "OPPO F25 Pro 5G",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_376025",
+    "brand": "OPPO",
+    "model": "OPPO F25 Pro 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_531502",
+    "brand": "OPPO",
+    "model": "OPPO F27 Pro Plus 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_732030",
+    "brand": "OPPO",
+    "model": "OPPO F27 Pro Plus 5G",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
   },
   {
     "id": "samsung_39000",
@@ -14685,8 +15788,7 @@ export const SEED_DEVICES = [
     "storage": "12 GB/256 GB",
     "color": "Midnight",
     "basePrice": 32000
-  }
-,
+  },
   {
     "id": "xiaomi_batch_1",
     "brand": "Xiaomi",
@@ -15766,8 +16868,7 @@ export const SEED_DEVICES = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 5000
-  }
-,
+  },
   {
     "id": "vivo_batch_1",
     "brand": "Vivo",
@@ -17468,8 +18569,7 @@ export const SEED_DEVICES = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 5000
-  }
-,
+  },
   {
     "id": "oneplus_batch_1",
     "brand": "OnePlus",
@@ -17919,8 +19019,7 @@ export const SEED_DEVICES = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 5000
-  }
-,
+  },
   {
     "id": "oppo_batch_1",
     "brand": "OPPO",
@@ -19243,8 +20342,7 @@ export const SEED_DEVICES = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 5000
-  }
-,
+  },
   {
     "id": "realme_batch_1",
     "brand": "Realme",
@@ -20738,8 +21836,7 @@ export const SEED_DEVICES = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 5000
-  }
-,
+  },
   {
     "id": "motorola_batch_1",
     "brand": "Motorola",
@@ -21540,8 +22637,7 @@ export const SEED_DEVICES = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 5000
-  }
-,
+  },
   {
     "id": "lenovo_batch_1",
     "brand": "Lenovo",
@@ -21991,8 +23087,7 @@ export const SEED_DEVICES = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 5000
-  }
-,
+  },
   {
     "id": "honor_batch_1",
     "brand": "Honor",
@@ -22253,8 +23348,7 @@ export const SEED_DEVICES = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 5000
-  }
-,
+  },
   {
     "id": "asus_batch_1",
     "brand": "Asus",
@@ -22317,8 +23411,7 @@ export const SEED_DEVICES = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 5000
-  }
-,
+  },
   {
     "id": "google_batch_1",
     "brand": "Google",
@@ -22489,8 +23582,7 @@ export const SEED_DEVICES = [
     "ram": "8GB",
     "color": "Obsidian",
     "basePrice": 5000
-  }
-,
+  },
   {
     "id": "poco_batch_1",
     "brand": "POCO",
@@ -22895,8 +23987,7 @@ export const SEED_DEVICES = [
     "ram": "4GB",
     "color": "Yellow",
     "basePrice": 5000
-  }
-,
+  },
   {
     "id": "huawei_batch_1",
     "brand": "Huawei",
@@ -22941,8 +24032,7 @@ export const SEED_DEVICES = [
     "ram": "8GB",
     "color": "Twilight",
     "basePrice": 5000
-  }
-,
+  },
   {
     "id": "lg_batch_1",
     "brand": "LG",
@@ -23005,8 +24095,7 @@ export const SEED_DEVICES = [
     "ram": "6GB",
     "color": "Aurora",
     "basePrice": 5000
-  }
-,
+  },
   {
     "id": "infinix_batch_1",
     "brand": "Infinix",
@@ -23690,8 +24779,7 @@ export const SEED_DEVICES = [
     "ram": "4GB",
     "color": "Black",
     "basePrice": 5000
-  }
-,
+  },
   {
     "id": "tecno_batch_1",
     "brand": "Tecno",
@@ -24177,8 +25265,7 @@ export const SEED_DEVICES = [
     "ram": "8GB",
     "color": "Black",
     "basePrice": 5000
-  }
-,
+  },
   {
     "id": "iqoo_batch_1",
     "brand": "iQOO",
@@ -24520,8 +25607,7 @@ export const SEED_DEVICES = [
     "ram": "8GB",
     "color": "Black",
     "basePrice": 5000
-  }
-,
+  },
   {
     "id": "nothing_batch_1",
     "brand": "Nothing",
