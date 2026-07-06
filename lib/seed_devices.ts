@@ -16532,7 +16532,7 @@ export const SEED_DEVICES: any[] = [
   {
     "id": "xiaomi_batch_83",
     "brand": "Xiaomi",
-    "model": "13 Pro 5G",
+    "model": "Xiaomi 13 Pro 5G",
     "storage": "4 GB/64 GB",
     "ram": "4GB",
     "color": "Midnight",
@@ -16649,7 +16649,7 @@ export const SEED_DEVICES: any[] = [
   {
     "id": "xiaomi_batch_96",
     "brand": "Xiaomi",
-    "model": "14",
+    "model": "Xiaomi 14",
     "storage": "4 GB/64 GB",
     "ram": "4GB",
     "color": "Midnight",
@@ -16658,7 +16658,7 @@ export const SEED_DEVICES: any[] = [
   {
     "id": "xiaomi_batch_97",
     "brand": "Xiaomi",
-    "model": "14 Ultra",
+    "model": "Xiaomi 14 Ultra",
     "storage": "4 GB/64 GB",
     "ram": "4GB",
     "color": "Midnight",
@@ -16757,7 +16757,7 @@ export const SEED_DEVICES: any[] = [
   {
     "id": "xiaomi_batch_108",
     "brand": "Xiaomi",
-    "model": "15",
+    "model": "Xiaomi 15",
     "storage": "4 GB/64 GB",
     "ram": "4GB",
     "color": "Midnight",
@@ -16766,7 +16766,7 @@ export const SEED_DEVICES: any[] = [
   {
     "id": "xiaomi_batch_109",
     "brand": "Xiaomi",
-    "model": "15 Ultra",
+    "model": "Xiaomi 15 Ultra",
     "storage": "4 GB/64 GB",
     "ram": "4GB",
     "color": "Midnight",
@@ -16829,7 +16829,7 @@ export const SEED_DEVICES: any[] = [
   {
     "id": "xiaomi_batch_116",
     "brand": "Xiaomi",
-    "model": "17 Ultra",
+    "model": "Xiaomi 17 Ultra",
     "storage": "4 GB/64 GB",
     "ram": "4GB",
     "color": "Midnight",
