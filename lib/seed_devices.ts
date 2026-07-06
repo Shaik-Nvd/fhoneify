@@ -23405,5 +23405,1933 @@ export const SEED_DEVICES = [
     "storage": "3 GB/16 GB",
     "color": "Midnight",
     "basePrice": 1260
+  },
+  {
+    "id": "xiaomi_400000",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 6 Pro",
+    "storage": "4 GB/64 GB",
+    "basePrice": 2980,
+    "image": "/images/models/xiaomi-redmi-note-6-pro-4-gb-64-gb.png"
+  },
+  {
+    "id": "xiaomi_400001",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 6 Pro",
+    "storage": "6 GB/64 GB",
+    "basePrice": 3210,
+    "image": "/images/models/xiaomi-redmi-note-6-pro-6-gb-64-gb.png"
+  },
+  {
+    "id": "xiaomi_400002",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi A2",
+    "storage": "6 GB/128 GB",
+    "basePrice": 2920,
+    "image": "/images/models/xiaomi-mi-a2-6-gb-128-gb.png"
+  },
+  {
+    "id": "xiaomi_400003",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi A2",
+    "storage": "4 GB/64 GB",
+    "basePrice": 2570,
+    "image": "/images/models/xiaomi-mi-a2-4-gb-64-gb.png"
+  },
+  {
+    "id": "xiaomi_400004",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 6",
+    "storage": "3 GB/32 GB",
+    "basePrice": 1820,
+    "image": "/images/models/xiaomi-redmi-6-3-gb-32-gb.png"
+  },
+  {
+    "id": "xiaomi_400005",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 6",
+    "storage": "3 GB/64 GB",
+    "basePrice": 1900,
+    "image": "/images/models/xiaomi-redmi-6-3-gb-64-gb.png"
+  },
+  {
+    "id": "xiaomi_400006",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 6 pro",
+    "storage": "3 GB/32 GB",
+    "basePrice": 2230,
+    "image": "/images/models/xiaomi-redmi-6-pro-3-gb-32-gb.png"
+  },
+  {
+    "id": "xiaomi_400007",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 6 pro",
+    "storage": "4 GB/64 GB",
+    "basePrice": 2360,
+    "image": "/images/models/xiaomi-redmi-6-pro-4-gb-64-gb.png"
+  },
+  {
+    "id": "xiaomi_400008",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 6A",
+    "storage": "2 GB/16 GB",
+    "basePrice": 1480,
+    "image": "/images/models/xiaomi-redmi-6a-2-gb-16-gb.png"
+  },
+  {
+    "id": "xiaomi_400009",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 6A",
+    "storage": "2 GB/32 GB",
+    "basePrice": 1590,
+    "image": "/images/models/xiaomi-redmi-6a-2-gb-32-gb.png"
+  },
+  {
+    "id": "xiaomi_400010",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y2",
+    "storage": "3 GB/32 GB",
+    "basePrice": 2200,
+    "image": "/images/models/xiaomi-redmi-y2-3-gb-32-gb.png"
+  },
+  {
+    "id": "xiaomi_400011",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y2",
+    "storage": "4 GB/64 GB",
+    "basePrice": 2270,
+    "image": "/images/models/xiaomi-redmi-y2-4-gb-64-gb.png"
+  },
+  {
+    "id": "xiaomi_400012",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 5",
+    "storage": "3 GB/32 GB",
+    "basePrice": 1780,
+    "image": "/images/models/xiaomi-redmi-5-3-gb-32-gb.png"
+  },
+  {
+    "id": "xiaomi_400013",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 5",
+    "storage": "2 GB/16 GB",
+    "basePrice": 1670,
+    "image": "/images/models/xiaomi-redmi-5-2-gb-16-gb.png"
+  },
+  {
+    "id": "xiaomi_400014",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 5",
+    "storage": "4 GB/64 GB",
+    "basePrice": 2130,
+    "image": "/images/models/xiaomi-redmi-5-4-gb-64-gb.png"
+  },
+  {
+    "id": "xiaomi_400015",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 5 Pro",
+    "storage": "4 GB/64 GB",
+    "basePrice": 2570,
+    "image": "/images/models/xiaomi-redmi-note-5-pro-4-gb-64-gb.png"
+  },
+  {
+    "id": "xiaomi_400016",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 5 Pro",
+    "storage": "6 GB/64 GB",
+    "basePrice": 2780,
+    "image": "/images/models/xiaomi-redmi-note-5-pro-6-gb-64-gb.png"
+  },
+  {
+    "id": "xiaomi_400017",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 5",
+    "storage": "4 GB/64 GB",
+    "basePrice": 2160,
+    "image": "/images/models/xiaomi-redmi-note-5-4-gb-64-gb.png"
+  },
+  {
+    "id": "xiaomi_400018",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 5",
+    "storage": "3 GB/32 GB",
+    "basePrice": 1860,
+    "image": "/images/models/xiaomi-redmi-note-5-3-gb-32-gb.png"
+  },
+  {
+    "id": "xiaomi_400019",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 5A",
+    "storage": "3 GB/32 GB",
+    "basePrice": 1360,
+    "image": "/images/models/xiaomi-redmi-5a-3-gb-32-gb.png"
+  },
+  {
+    "id": "xiaomi_400020",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 5A",
+    "storage": "2 GB/16 GB",
+    "basePrice": 1210,
+    "image": "/images/models/xiaomi-redmi-5a-2-gb-16-gb.png"
+  },
+  {
+    "id": "xiaomi_400021",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y1",
+    "storage": "4 GB/64 GB",
+    "basePrice": 1450,
+    "image": "/images/models/xiaomi-redmi-y1-4-gb-64-gb.png"
+  },
+  {
+    "id": "xiaomi_400022",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y1",
+    "storage": "3 GB/32 GB",
+    "basePrice": 1300,
+    "image": "/images/models/xiaomi-redmi-y1-3-gb-32-gb.png"
+  },
+  {
+    "id": "xiaomi_400023",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y1 Lite",
+    "storage": "2 GB/16 GB",
+    "basePrice": 1060,
+    "image": "/images/models/xiaomi-redmi-y1-lite-2-gb-16-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400024",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi Mix 2",
+    "storage": "6 GB/128 GB",
+    "basePrice": 2910,
+    "image": "/images/models/xiaomi-mi-mix-2-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400025",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi Max 2",
+    "storage": "4 GB/32 GB",
+    "basePrice": 1760,
+    "image": "/images/models/xiaomi-mi-max-2-4-gb-32-gb.png"
+  },
+  {
+    "id": "xiaomi_400026",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi Max 2",
+    "storage": "4 GB/64 GB",
+    "basePrice": 1890,
+    "image": "/images/models/xiaomi-mi-max-2-4-gb-64-gb.png"
+  },
+  {
+    "id": "xiaomi_400027",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi Max 2",
+    "storage": "4 GB/128 GB",
+    "basePrice": 2290,
+    "image": "/images/models/xiaomi-mi-max-2-4-gb-128-gb.png"
+  },
+  {
+    "id": "xiaomi_400028",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7",
+    "storage": "4 GB/64 GB",
+    "basePrice": 3180,
+    "image": "/images/models/xiaomi-redmi-note-7-4-gb-64-gb.png"
+  },
+  {
+    "id": "xiaomi_400029",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7",
+    "storage": "3 GB/32 GB",
+    "basePrice": 2550,
+    "image": "/images/models/xiaomi-redmi-note-7-3-gb-32-gb.png"
+  },
+  {
+    "id": "xiaomi_400030",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7 Pro",
+    "storage": "6 GB/64 GB",
+    "basePrice": 3970,
+    "image": "/images/models/xiaomi-redmi-note-7-pro-6-gb-64-gb.png"
+  },
+  {
+    "id": "xiaomi_400031",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7 Pro",
+    "storage": "4 GB/64 GB",
+    "basePrice": 3830,
+    "image": "/images/models/xiaomi-redmi-note-7-pro-4-gb-64-gb.png"
+  },
+  {
+    "id": "xiaomi_400032",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7 Pro",
+    "storage": "6 GB/128 GB",
+    "basePrice": 4170,
+    "image": "/images/models/xiaomi-redmi-note-7-pro-6-gb-128-gb.png"
+  },
+  {
+    "id": "xiaomi_400033",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Go",
+    "storage": "1 GB/8 GB",
+    "basePrice": 910,
+    "image": "/images/models/xiaomi-redmi-go-1-gb-8-gb.png"
+  },
+  {
+    "id": "xiaomi_400034",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Go",
+    "storage": "1 GB/16 GB",
+    "basePrice": 1110,
+    "image": "/images/models/xiaomi-redmi-go-1-gb-16-gb.png"
+  },
+  {
+    "id": "xiaomi_400035",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7",
+    "storage": "2 GB/32 GB",
+    "basePrice": 2570,
+    "image": "/images/models/xiaomi-redmi-7-2-gb-32-gb.png"
+  },
+  {
+    "id": "xiaomi_400036",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7",
+    "storage": "3 GB/32 GB",
+    "basePrice": 2650,
+    "image": "/images/models/xiaomi-redmi-7-3-gb-32-gb.png"
+  },
+  {
+    "id": "xiaomi_400037",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7",
+    "storage": "2 GB/16 GB",
+    "basePrice": 2420,
+    "image": "/images/models/xiaomi-redmi-7-2-gb-16-gb.png"
+  },
+  {
+    "id": "xiaomi_400038",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7",
+    "storage": "3 GB/64 GB",
+    "basePrice": 2760,
+    "image": "/images/models/xiaomi-redmi-7-3-gb-64-gb.png"
+  },
+  {
+    "id": "xiaomi_400039",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7S",
+    "storage": "4 GB/64 GB",
+    "basePrice": 3520,
+    "image": "/images/models/xiaomi-redmi-note-7s-4-gb-64-gb.png"
+  },
+  {
+    "id": "xiaomi_400040",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7S",
+    "storage": "3 GB/32 GB",
+    "basePrice": 3430,
+    "image": "/images/models/xiaomi-redmi-note-7s-3-gb-32-gb.png"
+  },
+  {
+    "id": "xiaomi_400041",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y3",
+    "storage": "3 GB/32 GB",
+    "basePrice": 2420,
+    "image": "/images/models/xiaomi-redmi-y3-3-gb-32-gb.png"
+  },
+  {
+    "id": "xiaomi_400042",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y3",
+    "storage": "4 GB/64 GB",
+    "basePrice": 2570,
+    "image": "/images/models/xiaomi-redmi-y3-4-gb-64-gb.png"
+  },
+  {
+    "id": "xiaomi_400043",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Black Shark 2",
+    "storage": "6 GB/128 GB",
+    "basePrice": 5000,
+    "image": "/images/models/xiaomi-black-shark-2-6-gb-128-gb.png"
+  },
+  {
+    "id": "xiaomi_400044",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Black Shark 2",
+    "storage": "12 GB/256 GB",
+    "basePrice": 5980,
+    "image": "/images/models/xiaomi-black-shark-2-12-gb-256-gb.png"
+  },
+  {
+    "id": "xiaomi_400045",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi K20",
+    "storage": "6 GB/64 GB",
+    "basePrice": 4700,
+    "image": "/images/models/xiaomi-redmi-k20-6-gb-64-gb.png"
+  },
+  {
+    "id": "xiaomi_400046",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi K20",
+    "storage": "6 GB/128 GB",
+    "basePrice": 5040,
+    "image": "/images/models/xiaomi-redmi-k20-6-gb-128-gb.png"
+  },
+  {
+    "id": "xiaomi_400047",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi K20 Pro",
+    "storage": "8 GB/256 GB",
+    "basePrice": 6200,
+    "image": "/images/models/xiaomi-redmi-k20-pro-8-gb-256-gb.png"
+  },
+  {
+    "id": "xiaomi_400048",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi K20 Pro",
+    "storage": "6 GB/128 GB",
+    "basePrice": 5790,
+    "image": "/images/models/xiaomi-redmi-k20-pro-6-gb-128-gb.png"
+  },
+  {
+    "id": "xiaomi_400049",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7A",
+    "storage": "2 GB/16 GB",
+    "basePrice": 1510,
+    "image": "/images/models/xiaomi-redmi-7a-2-gb-16-gb.png"
+  },
+  {
+    "id": "xiaomi_400050",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7A",
+    "storage": "2 GB/32 GB",
+    "basePrice": 1670,
+    "image": "/images/models/xiaomi-redmi-7a-2-gb-32-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400051",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7A",
+    "storage": "3 GB/32 GB",
+    "basePrice": 1790,
+    "image": "/images/models/xiaomi-redmi-7a-3-gb-32-gb.png"
+  },
+  {
+    "id": "xiaomi_400052",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi A3",
+    "storage": "4 GB/64 GB",
+    "basePrice": 3790,
+    "image": "/images/models/xiaomi-mi-a3-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400053",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi A3",
+    "storage": "6 GB/128 GB",
+    "basePrice": 4200,
+    "image": "/images/models/xiaomi-mi-a3-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400054",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 8A",
+    "storage": "3 GB/32 GB",
+    "basePrice": 2540,
+    "image": "/images/models/xiaomi-redmi-8a-3-gb-32-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400055",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 8A",
+    "storage": "2 GB/32 GB",
+    "basePrice": 2380,
+    "image": "/images/models/xiaomi-redmi-8a-2-gb-32-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400056",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 8",
+    "storage": "4 GB/64 GB",
+    "basePrice": 3450,
+    "image": "/images/models/xiaomi-redmi-8-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400057",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 8",
+    "storage": "3 GB/32 GB",
+    "basePrice": 3640,
+    "image": "/images/models/xiaomi-redmi-note-8-3-gb-32-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400058",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 8",
+    "storage": "4 GB/64 GB",
+    "basePrice": 3860,
+    "image": "/images/models/xiaomi-redmi-note-8-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400059",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 8",
+    "storage": "6 GB/128 GB",
+    "basePrice": 4180,
+    "image": "/images/models/xiaomi-redmi-note-8-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400060",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 8 Pro",
+    "storage": "6 GB/64 GB",
+    "basePrice": 4320,
+    "image": "/images/models/xiaomi-redmi-note-8-pro-6-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400061",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 8 Pro",
+    "storage": "6 GB/128 GB",
+    "basePrice": 4630,
+    "image": "/images/models/xiaomi-redmi-note-8-pro-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400062",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 8 Pro",
+    "storage": "8 GB/128 GB",
+    "basePrice": 4930,
+    "image": "/images/models/xiaomi-redmi-note-8-pro-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400063",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9 Pro",
+    "storage": "4 GB/128 GB",
+    "basePrice": 4910,
+    "image": "/images/models/xiaomi-redmi-note-9-pro-4-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400064",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9 Pro",
+    "storage": "6 GB/128 GB",
+    "basePrice": 5090,
+    "image": "/images/models/xiaomi-redmi-note-9-pro-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400065",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9 Pro",
+    "storage": "4 GB/64 GB",
+    "basePrice": 4510,
+    "image": "/images/models/xiaomi-redmi-note-9-pro-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400066",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 8A Dual",
+    "storage": "3 GB/32 GB",
+    "basePrice": 2880,
+    "image": "/images/models/xiaomi-redmi-8a-dual-3-gb-32-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400067",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 8A Dual",
+    "storage": "2 GB/32 GB",
+    "basePrice": 2780,
+    "image": "/images/models/xiaomi-redmi-8a-dual-2-gb-32-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400068",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 8A Dual",
+    "storage": "3 GB/64 GB",
+    "basePrice": 3130,
+    "image": "/images/models/xiaomi-redmi-8a-dual-3-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400069",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9 Pro Max",
+    "storage": "6 GB/64 GB",
+    "basePrice": 4880,
+    "image": "/images/models/xiaomi-redmi-note-9-pro-max-6-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400070",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9 Pro Max",
+    "storage": "6 GB/128 GB",
+    "basePrice": 5350,
+    "image": "/images/models/xiaomi-redmi-note-9-pro-max-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400071",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9 Pro Max",
+    "storage": "8 GB/128 GB",
+    "basePrice": 5610,
+    "image": "/images/models/xiaomi-redmi-note-9-pro-max-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400072",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9",
+    "storage": "4 GB/64 GB",
+    "basePrice": 4310,
+    "image": "/images/models/xiaomi-redmi-note-9-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400073",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9",
+    "storage": "4 GB/128 GB",
+    "basePrice": 4470,
+    "image": "/images/models/xiaomi-redmi-note-9-4-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400074",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9",
+    "storage": "6 GB/128 GB",
+    "basePrice": 4700,
+    "image": "/images/models/xiaomi-redmi-note-9-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400075",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9 Prime",
+    "storage": "4 GB/64 GB",
+    "basePrice": 3620,
+    "image": "/images/models/xiaomi-redmi-9-prime-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400076",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9 Prime",
+    "storage": "4 GB/128 GB",
+    "basePrice": 3920,
+    "image": "/images/models/xiaomi-redmi-9-prime-4-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400077",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9",
+    "storage": "4 GB/128 GB",
+    "basePrice": 3550,
+    "image": "/images/models/xiaomi-redmi-9-4-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400078",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9",
+    "storage": "4 GB/64 GB",
+    "basePrice": 3200,
+    "image": "/images/models/xiaomi-redmi-9-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400079",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9A",
+    "storage": "3 GB/32 GB",
+    "basePrice": 3030,
+    "image": "/images/models/xiaomi-redmi-9a-3-gb-32-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400080",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9A",
+    "storage": "2 GB/32 GB",
+    "basePrice": 2800,
+    "image": "/images/models/xiaomi-redmi-9a-2-gb-32-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400081",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9i",
+    "storage": "4 GB/64 GB",
+    "basePrice": 3140,
+    "image": "/images/models/xiaomi-redmi-9i-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400082",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9i",
+    "storage": "4 GB/128 GB",
+    "basePrice": 3440,
+    "image": "/images/models/xiaomi-redmi-9i-4-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400083",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10T",
+    "storage": "8 GB/128 GB",
+    "basePrice": 7660,
+    "image": "/images/models/xiaomi-mi-10t-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400084",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10T",
+    "storage": "6 GB/128 GB",
+    "basePrice": 7340,
+    "image": "/images/models/xiaomi-mi-10t-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400085",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10T Pro",
+    "storage": "8 GB/128 GB",
+    "basePrice": 7840,
+    "image": "/images/models/xiaomi-mi-10t-pro-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400086",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10i",
+    "storage": "8 GB/128 GB",
+    "basePrice": 7610,
+    "image": "/images/models/xiaomi-mi-10i-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400087",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10i",
+    "storage": "6 GB/64 GB",
+    "basePrice": 6800,
+    "image": "/images/models/xiaomi-mi-10i-6-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400088",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10i",
+    "storage": "6 GB/128 GB",
+    "basePrice": 7380,
+    "image": "/images/models/xiaomi-mi-10i-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400089",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9 Power",
+    "storage": "6 GB/128 GB",
+    "basePrice": 4090,
+    "image": "/images/models/xiaomi-redmi-9-power-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400090",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9 Power",
+    "storage": "4 GB/64 GB",
+    "basePrice": 3640,
+    "image": "/images/models/xiaomi-redmi-9-power-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400091",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9 Power",
+    "storage": "4 GB/128 GB",
+    "basePrice": 3880,
+    "image": "/images/models/xiaomi-redmi-9-power-4-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400092",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10",
+    "storage": "4 GB/64 GB",
+    "basePrice": 4320,
+    "image": "/images/models/xiaomi-redmi-note-10-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400093",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10",
+    "storage": "6 GB/128 GB",
+    "basePrice": 4700,
+    "image": "/images/models/xiaomi-redmi-note-10-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400094",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Pro",
+    "storage": "8 GB/128 GB",
+    "basePrice": 5840,
+    "image": "/images/models/xiaomi-redmi-note-10-pro-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400095",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Pro",
+    "storage": "6 GB/128 GB",
+    "basePrice": 5260,
+    "image": "/images/models/xiaomi-redmi-note-10-pro-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400096",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Pro",
+    "storage": "6 GB/64 GB",
+    "basePrice": 4620,
+    "image": "/images/models/xiaomi-redmi-note-10-pro-6-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400097",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Pro Max",
+    "storage": "6 GB/128 GB",
+    "basePrice": 5560,
+    "image": "/images/models/xiaomi-redmi-note-10-pro-max-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400098",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Pro Max",
+    "storage": "6 GB/64 GB",
+    "basePrice": 5070,
+    "image": "/images/models/xiaomi-redmi-note-10-pro-max-6-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400099",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Pro Max",
+    "storage": "8 GB/128 GB",
+    "basePrice": 6170,
+    "image": "/images/models/xiaomi-redmi-note-10-pro-max-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400100",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11X Pro",
+    "storage": "8 GB/256 GB",
+    "basePrice": 8260,
+    "image": "/images/models/xiaomi-mi-11x-pro-8-gb-256-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400101",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11X Pro",
+    "storage": "8 GB/128 GB",
+    "basePrice": 7690,
+    "image": "/images/models/xiaomi-mi-11x-pro-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400102",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11 Ultra",
+    "storage": "12 GB/256 GB",
+    "basePrice": 17370,
+    "image": "/images/models/xiaomi-mi-11-ultra-12-gb-256-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400103",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11X",
+    "storage": "6 GB/128 GB",
+    "basePrice": 7630,
+    "image": "/images/models/xiaomi-mi-11x-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400104",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11X",
+    "storage": "8 GB/128 GB",
+    "basePrice": 8330,
+    "image": "/images/models/xiaomi-mi-11x-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400105",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11 Lite",
+    "storage": "6 GB/128 GB",
+    "basePrice": 5730,
+    "image": "/images/models/xiaomi-mi-11-lite-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400106",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11 Lite",
+    "storage": "8 GB/128 GB",
+    "basePrice": 6150,
+    "image": "/images/models/xiaomi-mi-11-lite-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400107",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi Max",
+    "storage": "64 GB",
+    "basePrice": "Not found",
+    "image": "/images/models/xiaomi-default.png"
+  },
+  {
+    "id": "xiaomi_400108",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 5",
+    "storage": "64 GB",
+    "basePrice": "Not found",
+    "image": "/images/models/xiaomi-default.png"
+  },
+  {
+    "id": "xiaomi_400109",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10s",
+    "storage": "6 GB/64 GB",
+    "basePrice": 4710,
+    "image": "/images/models/xiaomi-redmi-note-10s-6-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400110",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10s",
+    "storage": "6 GB/128 GB",
+    "basePrice": 5000,
+    "image": "/images/models/xiaomi-redmi-note-10s-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400111",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10s",
+    "storage": "8 GB/128 GB",
+    "basePrice": 5170,
+    "image": "/images/models/xiaomi-redmi-note-10s-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400112",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10T 5G",
+    "storage": "6 GB/128 GB",
+    "basePrice": 6550,
+    "image": "/images/models/xiaomi-redmi-note-10t-5g-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400113",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10T 5G",
+    "storage": "4 GB/64 GB",
+    "basePrice": 5910,
+    "image": "/images/models/xiaomi-redmi-note-10t-5g-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400114",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10",
+    "storage": "8 GB/256 GB",
+    "basePrice": 10410,
+    "image": "/images/models/xiaomi-mi-10-8-gb-256-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400115",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10",
+    "storage": "8 GB/128 GB",
+    "basePrice": 10070,
+    "image": "/images/models/xiaomi-mi-10-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400116",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 10 Prime",
+    "storage": "4 GB/64 GB",
+    "basePrice": 4140,
+    "image": "/images/models/xiaomi-redmi-10-prime-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400117",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 10 Prime",
+    "storage": "6 GB/128 GB",
+    "basePrice": 4620,
+    "image": "/images/models/xiaomi-redmi-10-prime-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400118",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 11 Lite NE 5G",
+    "storage": "64 GB",
+    "basePrice": "Not found",
+    "image": "/images/models/xiaomi-default.png"
+  },
+  {
+    "id": "xiaomi_400119",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Lite",
+    "storage": "4 GB/64 GB",
+    "basePrice": 4290,
+    "image": "/images/models/xiaomi-redmi-note-10-lite-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400120",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Lite",
+    "storage": "4 GB/128 GB",
+    "basePrice": 4440,
+    "image": "/images/models/xiaomi-redmi-note-10-lite-4-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400121",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Lite",
+    "storage": "6 GB/128 GB",
+    "basePrice": 4740,
+    "image": "/images/models/xiaomi-redmi-note-10-lite-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400122",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11T 5G",
+    "storage": "8 GB/128 GB",
+    "basePrice": 7430,
+    "image": "/images/models/xiaomi-redmi-note-11t-5g-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400123",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11T 5G",
+    "storage": "6 GB/64 GB",
+    "basePrice": 6400,
+    "image": "/images/models/xiaomi-redmi-note-11t-5g-6-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400124",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11T 5G",
+    "storage": "6 GB/128 GB",
+    "basePrice": 7110,
+    "image": "/images/models/xiaomi-redmi-note-11t-5g-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400125",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9 Activ",
+    "storage": "4 GB/64 GB",
+    "basePrice": 3070,
+    "image": "/images/models/xiaomi-redmi-9-activ-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400126",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9 Activ",
+    "storage": "6 GB/128 GB",
+    "basePrice": 3330,
+    "image": "/images/models/xiaomi-redmi-9-activ-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400127",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 11i 5G",
+    "storage": "6 GB/128 GB",
+    "basePrice": 7730,
+    "image": "/images/models/xiaomi-11i-5g-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400128",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 11i 5G",
+    "storage": "8 GB/128 GB",
+    "basePrice": 7880,
+    "image": "/images/models/xiaomi-11i-5g-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400129",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 11i Hypercharge 5G",
+    "storage": "8 GB/128 GB",
+    "basePrice": 8190,
+    "image": "/images/models/xiaomi-11i-hypercharge-5g-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400130",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 11i Hypercharge 5G",
+    "storage": "6 GB/128 GB",
+    "basePrice": 7550,
+    "image": "/images/models/xiaomi-11i-hypercharge-5g-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400131",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 11T Pro 5G",
+    "storage": "64 GB",
+    "basePrice": "Not found",
+    "image": "/images/models/xiaomi-default.png"
+  },
+  {
+    "id": "xiaomi_400132",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11S",
+    "storage": "8 GB/128 GB",
+    "basePrice": 5500,
+    "image": "/images/models/xiaomi-redmi-note-11s-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400133",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11S",
+    "storage": "6 GB/128 GB",
+    "basePrice": 5300,
+    "image": "/images/models/xiaomi-redmi-note-11s-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400134",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11S",
+    "storage": "6 GB/64 GB",
+    "basePrice": 5170,
+    "image": "/images/models/xiaomi-redmi-note-11s-6-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400135",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11 Pro Plus 5G",
+    "storage": "8 GB/128 GB",
+    "basePrice": 8430,
+    "image": "/images/models/xiaomi-redmi-note-11-pro-plus-5g-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400136",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11 Pro Plus 5G",
+    "storage": "6 GB/128 GB",
+    "basePrice": 7810,
+    "image": "/images/models/xiaomi-redmi-note-11-pro-plus-5g-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400137",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11 Pro Plus 5G",
+    "storage": "8 GB/256 GB",
+    "basePrice": 8830,
+    "image": "/images/models/xiaomi-redmi-note-11-pro-plus-5g-8-gb-256-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400138",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 10",
+    "storage": "6 GB/128 GB",
+    "basePrice": 4290,
+    "image": "/images/models/xiaomi-redmi-10-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400139",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 10",
+    "storage": "4 GB/64 GB",
+    "basePrice": 3970,
+    "image": "/images/models/xiaomi-redmi-10-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400140",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 12 Pro 5G",
+    "storage": "64 GB",
+    "basePrice": "Not found",
+    "image": "/images/models/xiaomi-default.png"
+  },
+  {
+    "id": "xiaomi_400141",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 10 Prime 2022",
+    "storage": "4 GB/128 GB",
+    "basePrice": 4390,
+    "image": "/images/models/xiaomi-redmi-10-prime-2022-4-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400142",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 10 Prime 2022",
+    "storage": "4 GB/64 GB",
+    "basePrice": 4200,
+    "image": "/images/models/xiaomi-redmi-10-prime-2022-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400143",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 10A",
+    "storage": "4 GB/64 GB",
+    "basePrice": 3670,
+    "image": "/images/models/xiaomi-redmi-10a-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400144",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 10A",
+    "storage": "3 GB/32 GB",
+    "basePrice": 3030,
+    "image": "/images/models/xiaomi-redmi-10a-3-gb-32-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400145",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi K50i 5G",
+    "storage": "8 GB/256 GB",
+    "basePrice": 8930,
+    "image": "/images/models/xiaomi-redmi-k50i-5g-8-gb-256-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400146",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi K50i 5G",
+    "storage": "6 GB/128 GB",
+    "basePrice": 8490,
+    "image": "/images/models/xiaomi-redmi-k50i-5g-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400147",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 11 Prime 5G",
+    "storage": "4 GB/64 GB",
+    "basePrice": 5560,
+    "image": "/images/models/xiaomi-redmi-11-prime-5g-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400148",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 11 Prime 5G",
+    "storage": "6 GB/128 GB",
+    "basePrice": 5920,
+    "image": "/images/models/xiaomi-redmi-11-prime-5g-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400149",
+    "brand": "Xiaomi",
+    "model": "Redmi 10 Power",
+    "storage": "64 GB",
+    "basePrice": "Not found",
+    "image": "/images/models/xiaomi-default.png"
+  },
+  {
+    "id": "xiaomi_400150",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 11SE",
+    "storage": "64 GB",
+    "basePrice": "Not found",
+    "image": "/images/models/xiaomi-default.png"
+  },
+  {
+    "id": "xiaomi_400151",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 11 Prime",
+    "storage": "6 GB/128 GB",
+    "basePrice": 4730,
+    "image": "/images/models/xiaomi-redmi-11-prime-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400152",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 11 Prime",
+    "storage": "4 GB/64 GB",
+    "basePrice": 4560,
+    "image": "/images/models/xiaomi-redmi-11-prime-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400153",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A1 Plus",
+    "storage": "3 GB/32 GB",
+    "basePrice": 2880,
+    "image": "/images/models/xiaomi-redmi-a1-plus-3-gb-32-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400154",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A1 Plus",
+    "storage": "2 GB/32 GB",
+    "basePrice": 2650,
+    "image": "/images/models/xiaomi-redmi-a1-plus-2-gb-32-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400155",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 12 Pro Plus 5G",
+    "storage": "8 GB/256 GB",
+    "basePrice": 11810,
+    "image": "/images/models/xiaomi-redmi-note-12-pro-plus-5g-8-gb-256-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400156",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 12 Pro Plus 5G",
+    "storage": "12 GB/256 GB",
+    "basePrice": 12510,
+    "image": "/images/models/xiaomi-redmi-note-12-pro-plus-5g-12-gb-256-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400157",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 12 5G",
+    "storage": "4 GB/128 GB",
+    "basePrice": 8300,
+    "image": "/images/models/xiaomi-redmi-note-12-5g-4-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400158",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 12 5G",
+    "storage": "6 GB/128 GB",
+    "basePrice": 8680,
+    "image": "/images/models/xiaomi-redmi-note-12-5g-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400159",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 12 5G",
+    "storage": "8 GB/256 GB",
+    "basePrice": 9370,
+    "image": "/images/models/xiaomi-redmi-note-12-5g-8-gb-256-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400160",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 12 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "basePrice": 11410,
+    "image": "/images/models/xiaomi-redmi-note-12-pro-5g-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400161",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 12 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "basePrice": 12360,
+    "image": "/images/models/xiaomi-redmi-note-12-pro-5g-12-gb-256-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400162",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 12 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "basePrice": 11890,
+    "image": "/images/models/xiaomi-redmi-note-12-pro-5g-8-gb-256-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400163",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 12 Pro 5G",
+    "storage": "6 GB/128 GB",
+    "basePrice": 10640,
+    "image": "/images/models/xiaomi-redmi-note-12-pro-5g-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400164",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A2 Plus",
+    "storage": "4 GB/64 GB",
+    "basePrice": 4030,
+    "image": "/images/models/xiaomi-redmi-a2-plus-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400165",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A2 Plus",
+    "storage": "2 GB/32 GB",
+    "basePrice": 3850,
+    "image": "/images/models/xiaomi-redmi-a2-plus-2-gb-32-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400166",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A2 Plus",
+    "storage": "4 GB/128 GB",
+    "basePrice": 4170,
+    "image": "/images/models/xiaomi-redmi-a2-plus-4-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400167",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A2",
+    "storage": "2 GB/32 GB",
+    "basePrice": 3300,
+    "image": "/images/models/xiaomi-redmi-a2-2-gb-32-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400168",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A2",
+    "storage": "2 GB/64 GB",
+    "basePrice": 3630,
+    "image": "/images/models/xiaomi-redmi-a2-2-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400169",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A2",
+    "storage": "4 GB/64 GB",
+    "basePrice": 3850,
+    "image": "/images/models/xiaomi-redmi-a2-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400170",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 12 5G",
+    "storage": "8 GB/256 GB",
+    "basePrice": 9480,
+    "image": "/images/models/xiaomi-redmi-12-5g-8-gb-256-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400171",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 12 5G",
+    "storage": "4 GB/128 GB",
+    "basePrice": 7560,
+    "image": "/images/models/xiaomi-redmi-12-5g-4-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400172",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 12 5G",
+    "storage": "6 GB/128 GB",
+    "basePrice": 8800,
+    "image": "/images/models/xiaomi-redmi-12-5g-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400173",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 12C",
+    "storage": "4 GB/128 GB",
+    "basePrice": 5430,
+    "image": "/images/models/xiaomi-redmi-12c-4-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400174",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 12C",
+    "storage": "4 GB/64 GB",
+    "basePrice": 5390,
+    "image": "/images/models/xiaomi-redmi-12c-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400175",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 12C",
+    "storage": "6 GB/128 GB",
+    "basePrice": 5850,
+    "image": "/images/models/xiaomi-redmi-12c-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400176",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 12",
+    "storage": "4 GB/128 GB",
+    "basePrice": 5870,
+    "image": "/images/models/xiaomi-redmi-12-4-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400177",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 12",
+    "storage": "6 GB/128 GB",
+    "basePrice": 6310,
+    "image": "/images/models/xiaomi-redmi-12-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400178",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 13C",
+    "storage": "4 GB/128 GB",
+    "basePrice": 5480,
+    "image": "/images/models/xiaomi-redmi-13c-4-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400179",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 13C",
+    "storage": "8 GB/256 GB",
+    "basePrice": 6020,
+    "image": "/images/models/xiaomi-redmi-13c-8-gb-256-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400180",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 13C",
+    "storage": "6 GB/128 GB",
+    "basePrice": 5590,
+    "image": "/images/models/xiaomi-redmi-13c-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400181",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 13C 5G",
+    "storage": "4 GB/128 GB",
+    "basePrice": 7220,
+    "image": "/images/models/xiaomi-redmi-13c-5g-4-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400182",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 13C 5G",
+    "storage": "6 GB/128 GB",
+    "basePrice": 7550,
+    "image": "/images/models/xiaomi-redmi-13c-5g-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400183",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 13C 5G",
+    "storage": "8 GB/256 GB",
+    "basePrice": 8110,
+    "image": "/images/models/xiaomi-redmi-13c-5g-8-gb-256-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400184",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 13 5G",
+    "storage": "6 GB/128 GB",
+    "basePrice": 10050,
+    "image": "/images/models/xiaomi-redmi-note-13-5g-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400185",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 13 5G",
+    "storage": "8 GB/256 GB",
+    "basePrice": 10410,
+    "image": "/images/models/xiaomi-redmi-note-13-5g-8-gb-256-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400186",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 13 5G",
+    "storage": "12 GB/256 GB",
+    "basePrice": 10880,
+    "image": "/images/models/xiaomi-redmi-note-13-5g-12-gb-256-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400187",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 13 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "basePrice": 12030,
+    "image": "/images/models/xiaomi-redmi-note-13-pro-5g-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400188",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 13 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "basePrice": 13410,
+    "image": "/images/models/xiaomi-redmi-note-13-pro-5g-12-gb-256-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400189",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 13 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "basePrice": 13230,
+    "image": "/images/models/xiaomi-redmi-note-13-pro-5g-8-gb-256-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400190",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 13 Pro Plus 5G",
+    "storage": "12 GB/256 GB",
+    "basePrice": 15930,
+    "image": "/images/models/xiaomi-redmi-note-13-pro-plus-5g-12-gb-256-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400191",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 13 Pro Plus 5G",
+    "storage": "8 GB/256 GB",
+    "basePrice": 15220,
+    "image": "/images/models/xiaomi-redmi-note-13-pro-plus-5g-8-gb-256-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400192",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 13 Pro Plus 5G",
+    "storage": "12 GB/512 GB",
+    "basePrice": 16500,
+    "image": "/images/models/xiaomi-redmi-note-13-pro-plus-5g-12-gb-512-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400193",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A3",
+    "storage": "3 GB/64 GB",
+    "basePrice": 4120,
+    "image": "/images/models/xiaomi-redmi-a3-3-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400194",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A3",
+    "storage": "4 GB/128 GB",
+    "basePrice": 4540,
+    "image": "/images/models/xiaomi-redmi-a3-4-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400195",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A3",
+    "storage": "6 GB/128 GB",
+    "basePrice": 4750,
+    "image": "/images/models/xiaomi-redmi-a3-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400196",
+    "brand": "Xiaomi",
+    "model": "Redmi A1",
+    "storage": "64 GB",
+    "basePrice": "Not found",
+    "image": "/images/models/xiaomi-default.png"
+  },
+  {
+    "id": "xiaomi_400197",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 14 CIVI",
+    "storage": "8 GB/256 GB",
+    "basePrice": 18800,
+    "image": "/images/models/xiaomi-14-civi-8-gb-256-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400198",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 14 CIVI",
+    "storage": "12 GB/512 GB",
+    "basePrice": 19450,
+    "image": "/images/models/xiaomi-14-civi-12-gb-512-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400199",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A3x",
+    "storage": "4 GB/128 GB",
+    "basePrice": 4070,
+    "image": "/images/models/xiaomi-redmi-a3x-4-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400200",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A3x",
+    "storage": "3 GB/64 GB",
+    "basePrice": 3860,
+    "image": "/images/models/xiaomi-redmi-a3x-3-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400201",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 13 5G",
+    "storage": "8 GB/128 GB",
+    "basePrice": 8770,
+    "image": "/images/models/xiaomi-redmi-13-5g-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400202",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 13 5G",
+    "storage": "6 GB/128 GB",
+    "basePrice": 8410,
+    "image": "/images/models/xiaomi-redmi-13-5g-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400203",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 14 5G",
+    "storage": "8 GB/256 GB",
+    "basePrice": 11810,
+    "image": "/images/models/xiaomi-redmi-note-14-5g-8-gb-256-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400204",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 14 5G",
+    "storage": "6 GB/128 GB",
+    "basePrice": 10660,
+    "image": "/images/models/xiaomi-redmi-note-14-5g-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400205",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 14 5G",
+    "storage": "8 GB/128 GB",
+    "basePrice": 10990,
+    "image": "/images/models/xiaomi-redmi-note-14-5g-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400206",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 14 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "basePrice": 15050,
+    "image": "/images/models/xiaomi-redmi-note-14-pro-5g-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400207",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 14 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "basePrice": 15740,
+    "image": "/images/models/xiaomi-redmi-note-14-pro-5g-8-gb-256-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400208",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 14 Pro Plus 5G",
+    "storage": "12 GB/512 GB",
+    "basePrice": 19230,
+    "image": "/images/models/xiaomi-redmi-note-14-pro-plus-5g-12-gb-512-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400209",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 14 Pro Plus 5G",
+    "storage": "8 GB/128 GB",
+    "basePrice": 16900,
+    "image": "/images/models/xiaomi-redmi-note-14-pro-plus-5g-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400210",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 14C 5G",
+    "storage": "4 GB/64 GB",
+    "basePrice": 6870,
+    "image": "/images/models/xiaomi-redmi-14c-5g-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400211",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 14C 5G",
+    "storage": "4 GB/128 GB",
+    "basePrice": 7260,
+    "image": "/images/models/xiaomi-redmi-14c-5g-4-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400212",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 14C 5G",
+    "storage": "6 GB/128 GB",
+    "basePrice": 8040,
+    "image": "/images/models/xiaomi-redmi-14c-5g-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400213",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A4 5G",
+    "storage": "4 GB/128 GB",
+    "basePrice": 6100,
+    "image": "/images/models/xiaomi-redmi-a4-5g-4-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400214",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A4 5G",
+    "storage": "4 GB/64 GB",
+    "basePrice": 5820,
+    "image": "/images/models/xiaomi-redmi-a4-5g-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400215",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A4 5G",
+    "storage": "6 GB/128 GB",
+    "basePrice": 6370,
+    "image": "/images/models/xiaomi-redmi-a4-5g-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400216",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A5",
+    "storage": "3 GB/64 GB",
+    "basePrice": 4500,
+    "image": "/images/models/xiaomi-redmi-a5-3-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400217",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A5",
+    "storage": "4 GB/128 GB",
+    "basePrice": 4990,
+    "image": "/images/models/xiaomi-redmi-a5-4-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400218",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 15 5G",
+    "storage": "8 GB/256 GB",
+    "basePrice": 13600,
+    "image": "/images/models/xiaomi-redmi-15-5g-8-gb-256-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400219",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 15 5G",
+    "storage": "8 GB/128 GB",
+    "basePrice": 13000,
+    "image": "/images/models/xiaomi-redmi-15-5g-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400220",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 15 5G",
+    "storage": "6 GB/128 GB",
+    "basePrice": 11500,
+    "image": "/images/models/xiaomi-redmi-15-5g-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400221",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 14 SE 5G",
+    "storage": "64 GB",
+    "basePrice": "Not found",
+    "image": "/images/models/xiaomi-default.png"
+  },
+  {
+    "id": "xiaomi_400222",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 15C 5G",
+    "storage": "6 GB/128 GB",
+    "basePrice": 10500,
+    "image": "/images/models/xiaomi-redmi-15c-5g-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400223",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 15C 5G",
+    "storage": "8 GB/128 GB",
+    "basePrice": 11300,
+    "image": "/images/models/xiaomi-redmi-15c-5g-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400224",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 15C 5G",
+    "storage": "4 GB/128 GB",
+    "basePrice": 9500,
+    "image": "/images/models/xiaomi-redmi-15c-5g-4-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400225",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 15 5G",
+    "storage": "8 GB/128 GB",
+    "basePrice": 16640,
+    "image": "/images/models/xiaomi-redmi-note-15-5g-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400226",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 15 5G",
+    "storage": "8 GB/256 GB",
+    "basePrice": 17830,
+    "image": "/images/models/xiaomi-redmi-note-15-5g-8-gb-256-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400227",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 15 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "basePrice": 22600,
+    "image": "/images/models/xiaomi-redmi-note-15-pro-5g-8-gb-256-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400228",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 15 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "basePrice": 21800,
+    "image": "/images/models/xiaomi-redmi-note-15-pro-5g-8-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400229",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 15 Pro Plus 5G",
+    "storage": "8 GB/256 GB",
+    "basePrice": 25600,
+    "image": "/images/models/xiaomi-redmi-note-15-pro-plus-5g-8-gb-256-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400230",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 15 Pro Plus 5G",
+    "storage": "12 GB/256 GB",
+    "basePrice": 27000,
+    "image": "/images/models/xiaomi-redmi-note-15-pro-plus-5g-12-gb-256-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400231",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 15 Pro Plus 5G",
+    "storage": "12 GB/512 GB",
+    "basePrice": 28500,
+    "image": "/images/models/xiaomi-redmi-note-15-pro-plus-5g-12-gb-512-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400232",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 17",
+    "storage": "12 GB/256 GB",
+    "basePrice": 55150,
+    "image": "/images/models/xiaomi-17-12-gb-256-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400233",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 17",
+    "storage": "12 GB/512 GB",
+    "basePrice": 58500,
+    "image": "/images/models/xiaomi-17-12-gb-512-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400234",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 15A 5G",
+    "storage": "4 GB/128 GB",
+    "basePrice": 10200,
+    "image": "/images/models/xiaomi-redmi-15a-5g-4-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400235",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 15A 5G",
+    "storage": "4 GB/64 GB",
+    "basePrice": 9100,
+    "image": "/images/models/xiaomi-redmi-15a-5g-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400236",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 15A 5G",
+    "storage": "6 GB/128 GB",
+    "basePrice": 11200,
+    "image": "/images/models/xiaomi-redmi-15a-5g-6-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400237",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A7 Pro 5G",
+    "storage": "4 GB/128 GB",
+    "basePrice": 8600,
+    "image": "/images/models/xiaomi-redmi-a7-pro-5g-4-gb-128-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400238",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A7 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "basePrice": 8000,
+    "image": "/images/models/xiaomi-redmi-a7-pro-5g-4-gb-64-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400239",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 17T",
+    "storage": "12 GB/512 GB",
+    "basePrice": 40000,
+    "image": "/images/models/xiaomi-17t-12-gb-512-gb.jpg"
+  },
+  {
+    "id": "xiaomi_400240",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 17T",
+    "storage": "12 GB/256 GB",
+    "basePrice": 37000,
+    "image": "/images/models/xiaomi-17t-12-gb-256-gb.jpg"
   }
 ];
