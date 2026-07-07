@@ -176,7 +176,7 @@ function CalculatorTab({ onSave }: { onSave: (log: any) => void }) {
                   </select>
                 </label>
                 <label style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <span style={{ fontSize: '0.85rem' }}>Phone's screen original?</span>
+                  <span style={{ fontSize: '0.85rem' }}>Phone&apos;s screen original?</span>
                   <select value={diagnostics.originalScreen ? 'yes' : 'no'} onChange={e => setDiagnostics({...diagnostics, originalScreen: e.target.value === 'yes'})} style={{ background: '#222', color: '#fff', border: '1px solid #333', padding: '0.3rem', borderRadius: '4px' }}>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
