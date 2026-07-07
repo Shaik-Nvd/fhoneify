@@ -64,7 +64,7 @@ export const getAppleModelParams = (model: string) => {
     if (isProMax || isPro) {
       params = { warrantyPenalty: 0.0, gstBillPenalty: 0.0, callsPenalty: 0.55, originalScreenPenalty: 0.65, touchPenalty: 0.35, functionalScale: 1.0, physicalScale: 1.0 };
     } else {
-      params = { warrantyPenalty: 0.0, gstBillPenalty: 0.0, callsPenalty: 0.60, originalScreenPenalty: 0.75, touchPenalty: 0.40, functionalScale: 0.8, physicalScale: 0.8 };
+      params = { warrantyPenalty: 0.0, gstBillPenalty: 0.0, callsPenalty: 0.60, originalScreenPenalty: 0.75, touchPenalty: 0.40, functionalScale: 0.5, physicalScale: 0.7 };
     }
   } else if (lowerModel.includes('11') || lowerModel.includes('se (2020') || lowerModel.includes('se 2020')) {
     if (isProMax || isPro) {
@@ -264,10 +264,10 @@ export function calculateFhoneifyPrice(
     * (1 - Math.min(screen_body_sum, 1)) 
     * (1 - Math.min(functional_sum, 1));
 
-  let upliftPercent = 1.04;
-  if (basePrice <= 20000) {
+  let upliftPercent = 1.06;
+  if (rawCalculated <= 20000) {
     upliftPercent = 1.08;
-  } else if (basePrice <= 50000) {
+  } else if (rawCalculated <= 50000) {
     upliftPercent = 1.06;
   }
 
