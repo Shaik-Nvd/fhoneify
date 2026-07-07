@@ -22,7 +22,7 @@ export type DiagnosticsType = {
 };
 
 export const getAppleModelParams = (model: string) => {
-  const lowerModel = model.toLowerCase();
+  const lowerModel = (model || '').toLowerCase();
   
   let params = {
     warrantyPenalty: 0.05,
@@ -86,8 +86,8 @@ export const getAppleModelParams = (model: string) => {
 };
 
 export const getAndroidModelParams = (brand: string, model: string) => {
-  const lowerBrand = brand.toLowerCase();
-  const lowerModel = model.toLowerCase();
+  const lowerBrand = (brand || '').toLowerCase();
+  const lowerModel = (model || '').toLowerCase();
   
   let params = {
     warrantyPenalty: 0.10, gstBillPenalty: 0.05, callsPenalty: 0.50, originalScreenPenalty: 0.60, touchPenalty: 0.40, functionalScale: 0.8, physicalScale: 0.75,
@@ -203,12 +203,14 @@ export function calculateFhoneifyPrice(
     return sum;
   };
 
-  const isApple = brand.toLowerCase() === 'apple';
-  const params = isApple ? getAppleModelParams(model) : getAndroidModelParams(brand, model);
+  const safeBrand = brand || '';
+  const safeModel = model || '';
+  const isApple = safeBrand.toLowerCase() === 'apple';
+  const params = isApple ? getAppleModelParams(safeModel) : getAndroidModelParams(safeBrand, safeModel);
 
   let generationScale = 1.0;
   if (isApple) {
-    const lowerModel = model.toLowerCase();
+    const lowerModel = safeModel.toLowerCase();
     if (lowerModel.includes('17') && !lowerModel.includes('17e')) generationScale = 0.84;
     else if (lowerModel.includes('17e')) generationScale = 0.80;
     else if (lowerModel.includes('16')) generationScale = 0.86;
@@ -219,7 +221,7 @@ export function calculateFhoneifyPrice(
   if (diagnostics.mobileAge) {
     age_multiplier = (config.ageBonus as any)[diagnostics.mobileAge] || 1.0;
     if (isApple) {
-      const lowerModel = model.toLowerCase();
+      const lowerModel = safeModel.toLowerCase();
       // Cashify clamps age for brand new models. A 17-series can't realistically be >11 months yet.
       if (lowerModel.includes('17') && (diagnostics.mobileAge === 'above11' || diagnostics.mobileAge === '6to11')) {
         age_multiplier = (config.ageBonus as any)['below3'] || 1.0;

@@ -223,7 +223,7 @@ function CalculatorTab({ onSave }: { onSave: (log: any) => void }) {
           </div>
 
           <div style={{ marginBottom: '2rem' }}>
-            <label style={{ display: 'block', marginBottom: '0.5rem', color: '#FF9500', fontSize: '0.9rem' }}>Cashify's Real Quote</label>
+            <label style={{ display: 'block', marginBottom: '0.5rem', color: '#FF9500', fontSize: '0.9rem' }}>Cashify&apos;s Real Quote</label>
             <input 
               type="number" 
               value={cashifyPrice} 
