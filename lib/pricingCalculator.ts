@@ -22,7 +22,7 @@ export type DiagnosticsType = {
 };
 
 export const getAppleModelParams = (model: string) => {
-  const lowerModel = (model || '').toLowerCase();
+  const lowerModel = String(model || '').toLowerCase();
   
   let params = {
     warrantyPenalty: 0.05,
@@ -86,8 +86,8 @@ export const getAppleModelParams = (model: string) => {
 };
 
 export const getAndroidModelParams = (brand: string, model: string) => {
-  const lowerBrand = (brand || '').toLowerCase();
-  const lowerModel = (model || '').toLowerCase();
+  const lowerBrand = String(brand || '').toLowerCase();
+  const lowerModel = String(model || '').toLowerCase();
   
   let params = {
     warrantyPenalty: 0.10, gstBillPenalty: 0.05, callsPenalty: 0.50, originalScreenPenalty: 0.60, touchPenalty: 0.40, functionalScale: 0.8, physicalScale: 0.75,
@@ -203,8 +203,8 @@ export function calculateFhoneifyPrice(
     return sum;
   };
 
-  const safeBrand = brand || '';
-  const safeModel = model || '';
+  const safeBrand = String(brand || '');
+  const safeModel = String(model || '');
   const isApple = safeBrand.toLowerCase() === 'apple';
   const params = isApple ? getAppleModelParams(safeModel) : getAndroidModelParams(safeBrand, safeModel);
 
