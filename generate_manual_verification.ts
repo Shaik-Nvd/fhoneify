@@ -112,8 +112,7 @@ async function run() {
       '6to11': '6-11 months',
       'above11': 'Above 11 months'
     };
-
-    md += `| ${i} | **${device.model}**<br>${device.storage} | ${ageMap[diag.mobileAge]} | ${defectSummary} | ${link} | **₹${Math.round(fhoneifyPrice)}** |\\n`;
+    md += `| ${i} | **${device.model}**<br>${device.storage} | ${diag.mobileAge ? ageMap[diag.mobileAge] : ''} | ${defectSummary} | ${link} | **₹${Math.round(fhoneifyPrice)}** |\\n`;
   }
 
   const artifactPath = "C:\\\\Users\\\\Mubeen_Taj\\\\.gemini\\\\antigravity\\\\brain\\\\d2a07608-096a-49bc-986d-65f7fa943d0a\\\\manual_verification_list.md";
