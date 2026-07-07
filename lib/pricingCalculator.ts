@@ -266,6 +266,8 @@ export function calculateFhoneifyPrice(
     * (1 - Math.min(screen_body_sum, 1)) 
     * (1 - Math.min(functional_sum, 1));
 
+  console.log('DEBUG:', { basePrice, age_multiplier, calls_multiplier, touch_multiplier, screen_orig_mult, screen_body_sum, functional_sum, params, generationScale });
+
   let upliftPercent = 1.06;
   if (rawCalculated <= 20000) {
     upliftPercent = 1.08;

@@ -124,7 +124,7 @@ function CalculatorTab({ onSave }: { onSave: (log: any) => void }) {
     });
   };
 
-  const fhoneifyPrice = selectedDevice ? calculateFhoneifyPrice(selectedDevice.basePrice || selectedDevice.price || 0, selectedDevice.brand, selectedDevice.name || selectedDevice.model, diagnostics) : 0;
+  const fhoneifyPrice = selectedDevice ? calculateFhoneifyPrice(selectedDevice.brand, selectedDevice.name || selectedDevice.model, selectedDevice.basePrice || selectedDevice.price || 0, diagnostics) : 0;
   
   const cPrice = parseInt(cashifyPrice) || 0;
   const diff = fhoneifyPrice - cPrice;
