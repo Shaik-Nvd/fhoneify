@@ -843,7 +843,7 @@ export default function QuotePage() {
       { id: 'bluetooth', label: 'Bluetooth not working', icon: '🛜' },
       { id: 'vibrator', label: 'Vibrator is not working', icon: '📳' },
       { id: 'proximity', label: 'Proximity Sensor not working', icon: '🖐' },
-      { id: 'battery_service', label: 'Battery in Service (< 80%)', icon: '🔋' },
+      { id: 'battery_service', label: 'Battery in Service (Health < 80%)', icon: '🔋' },
       { id: 'battery_health', label: 'Battery Health 80-85%', icon: '🔋' },
       ...(hasSPen ? [{ id: 's_pen', label: 'S-Pen Faulty / Missing', icon: '🖊️' }] : []),
       ...(isFoldable ? [{ id: 'hinge', label: 'Hinge / Folding Mechanism Faulty', icon: '📱' }] : [])
@@ -1928,7 +1928,7 @@ export default function QuotePage() {
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(130px, 1fr))', gap: '1rem', marginBottom: '3rem' }}>
                   {[
                     { id: 'screen_scratch', label: 'Broken/scratch on device screen', icon: '📱' },
-                    { id: 'screen_spot', label: 'Dead Spot/Visible line and Discoloration', icon: '📲' },
+                    { id: 'screen_spot', label: 'Dead Spot/Visible line and Discoloration on screen', icon: '📲' },
                     { id: 'body_scratch', label: 'Scratch/Dent on device body', icon: '📏' },
                     { id: 'panel_missing', label: 'Device panel missing/broken', icon: '🔧' }
                   ].map((d) => (

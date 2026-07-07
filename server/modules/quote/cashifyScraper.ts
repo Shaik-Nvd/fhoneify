@@ -202,10 +202,22 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
           const screenScratch = await page.$('text=Broken/scratch on device screen');
           if (screenScratch) await screenScratch.click();
         }
-        
-        if (answers.defects && (answers.defects.includes('body_dent') || answers.defects.includes('body_scratch'))) {
+        if (answers.defects && answers.defects.includes('screen_spot')) {
+          const screenSpot = await page.$('text="Dead Spot/Visible line and Discoloration on screen"');
+          if (!screenSpot) {
+             const screenSpotAlt = await page.$('text="Dead Spot/Visible line and Discoloration"');
+             if (screenSpotAlt) await screenSpotAlt.click();
+          } else {
+             await screenSpot.click();
+          }
+        }
+        if (answers.defects && answers.defects.includes('body_scratch')) {
           const bodyDent = await page.$('text=Scratch/Dent on device body');
           if (bodyDent) await bodyDent.click();
+        }
+        if (answers.defects && answers.defects.includes('panel_missing')) {
+          const panelMissing = await page.$('text=Device panel missing/broken');
+          if (panelMissing) await panelMissing.click();
         }
         
         const continueBtn2 = await page.$('text="Continue"');
@@ -213,39 +225,64 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
 
         // Handle possible SUB-PAGES for Screen/Body defects
         await page.waitForTimeout(2000);
-        const subPageScreen = await page.$('text=Tell us more about your device screen defects');
-        if (subPageScreen) {
-          if (answers.defects && answers.defects.includes('broken_screen')) {
-            const cracked = await page.$('text=Screen cracked/ glass broken');
-            if (cracked) await cracked.click();
-          } else {
-            const scratches = await page.$('text=1-2 scratches on screen');
-            if (scratches) await scratches.click();
+        
+        // Stage 3: Screen Physical Condition
+        if (answers.defects && answers.defects.includes('broken_screen')) {
+          if (answers.screenCondition) {
+            const opt = await page.$(`text="${answers.screenCondition}"`);
+            if (opt) await opt.click();
           }
           const contSub1 = await page.$('text="Continue"');
           if (contSub1) await contSub1.click();
           await page.waitForTimeout(2000);
         }
-
-        const subPageBody = await page.$('text=Tell us more about your device body defects');
-        if (subPageBody) {
-          if (answers.defects && answers.defects.includes('body_dent')) {
-            const dent = await page.$('text=Dent'); // Assuming "Dent" is an option, will fallback to scratch if not
-            if (dent) await dent.click();
-            else {
-              const bodyDented = await page.$$('text=Dent');
-              if (bodyDented.length > 0) await bodyDented[0].click();
-            }
-          } else {
-            const scratches = await page.$('text=1-2 scratches on device body');
-            if (scratches) await scratches.click();
-            else {
-              const genericScratch = await page.$$('text=scratch');
-              if (genericScratch.length > 0) await genericScratch[0].click();
-            }
+        
+        // Stage 4: Dead Spots / Visible Lines / Discoloration
+        if (answers.defects && answers.defects.includes('screen_spot')) {
+          if (answers.screenSpots) {
+            const spotBtn = await page.$(`text="${answers.screenSpots}"`);
+            if (spotBtn) await spotBtn.click();
+          }
+          if (answers.screenLines) {
+            const lineBtn = await page.$(`text="${answers.screenLines}"`);
+            if (lineBtn) await lineBtn.click();
+          }
+          if (answers.screenDiscoloration) {
+            const discBtn = await page.$(`text="${answers.screenDiscoloration}"`);
+            if (discBtn) await discBtn.click();
           }
           const contSub2 = await page.$('text="Continue"');
           if (contSub2) await contSub2.click();
+          await page.waitForTimeout(2000);
+        }
+        
+        // Stage 5: Body Defects (Scratches/Dents)
+        if (answers.defects && answers.defects.includes('body_scratch')) {
+          if (answers.bodyScratches) {
+            const bScratch = await page.$(`text="${answers.bodyScratches}"`);
+            if (bScratch) await bScratch.click();
+          }
+          if (answers.bodyDents) {
+            const bDent = await page.$(`text="${answers.bodyDents}"`);
+            if (bDent) await bDent.click();
+          }
+          const contSub3 = await page.$('text="Continue"');
+          if (contSub3) await contSub3.click();
+          await page.waitForTimeout(2000);
+        }
+        
+        // Stage 6: Body Defects (Panel/Bent)
+        if (answers.defects && answers.defects.includes('panel_missing')) {
+          if (answers.bodyPanel) {
+            const bPanel = await page.$(`text="${answers.bodyPanel}"`);
+            if (bPanel) await bPanel.click();
+          }
+          if (answers.bodyBent) {
+            const bBent = await page.$(`text="${answers.bodyBent}"`);
+            if (bBent) await bBent.click();
+          }
+          const contSub4 = await page.$('text="Continue"');
+          if (contSub4) await contSub4.click();
           await page.waitForTimeout(2000);
         }
 
@@ -269,7 +306,7 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
             'bluetooth': 'Bluetooth not working',
             'vibrator': 'Vibrator is not working',
             'proximity': 'Proximity Sensor not working',
-            'battery_service': 'Battery in Service (Health is less than 80%)',
+            'battery_service': 'Battery in Service (Health < 80%)',
             'battery_health': 'Battery Health 80-85%'
           };
 
