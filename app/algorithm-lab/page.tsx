@@ -154,56 +154,213 @@ function CalculatorTab({ onSave }: { onSave: (log: any) => void }) {
         </div>
 
         <div style={{ background: '#111', padding: '1.5rem', borderRadius: '8px', border: '1px solid #222' }}>
-          <h2 style={{ marginBottom: '1rem', color: '#aaa', fontSize: '0.9rem', textTransform: 'uppercase' }}>2. Diagnostics Config</h2>
+          <h2 style={{ marginBottom: '1rem', color: '#aaa', fontSize: '0.9rem', textTransform: 'uppercase' }}>2. Diagnostics Config (10-Stage)</h2>
           
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            {/* Stage 1 */}
             <div>
-              <h3 style={{ marginBottom: '0.5rem', fontSize: '0.9rem' }}>Basic Checks</h3>
-              <label style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.5rem', cursor: 'pointer' }}>
-                <input type="checkbox" checked={diagnostics.calls === true} onChange={e => setDiagnostics({...diagnostics, calls: e.target.checked})} /> Calls Working
-              </label>
-              <label style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.5rem', cursor: 'pointer' }}>
-                <input type="checkbox" checked={diagnostics.touch === true} onChange={e => setDiagnostics({...diagnostics, touch: e.target.checked})} /> Touch Working
-              </label>
-              <label style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.5rem', cursor: 'pointer' }}>
-                <input type="checkbox" checked={diagnostics.originalScreen === true} onChange={e => setDiagnostics({...diagnostics, originalScreen: e.target.checked})} /> Original Screen
-              </label>
-              
-              <h3 style={{ marginTop: '1.5rem', marginBottom: '0.5rem', fontSize: '0.9rem' }}>Physical</h3>
-              <label style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.5rem', cursor: 'pointer' }}>
-                <input type="checkbox" checked={diagnostics.defects.includes('broken_screen')} onChange={() => toggleArrayItem('defects', 'broken_screen')} /> Broken Screen
-              </label>
-              <label style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.5rem', cursor: 'pointer' }}>
-                <input type="checkbox" checked={diagnostics.defects.includes('broken_body')} onChange={() => toggleArrayItem('defects', 'broken_body')} /> Broken Body/Panel
-              </label>
-            </div>
-            
-            <div>
-              <h3 style={{ marginBottom: '0.5rem', fontSize: '0.9rem' }}>Hardware Issues</h3>
-              {['front_camera', 'back_camera', 'wifi', 'battery_service', 'face_id', 'speaker'].map(hw => (
-                <label key={hw} style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.5rem', cursor: 'pointer' }}>
-                  <input type="checkbox" checked={diagnostics.hardware.includes(hw)} onChange={() => toggleArrayItem('hardware', hw)} /> {hw}
+              <h3 style={{ marginBottom: '0.5rem', fontSize: '0.9rem', color: '#888' }}>Stage 1: Tell us more about your device?</h3>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                <label style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span style={{ fontSize: '0.85rem' }}>Able to make/receive calls?</span>
+                  <select value={diagnostics.calls ? 'yes' : 'no'} onChange={e => setDiagnostics({...diagnostics, calls: e.target.value === 'yes'})} style={{ background: '#222', color: '#fff', border: '1px solid #333', padding: '0.3rem', borderRadius: '4px' }}>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
                 </label>
-              ))}
-              
-              <h3 style={{ marginTop: '1.5rem', marginBottom: '0.5rem', fontSize: '0.9rem' }}>Accessories & Age</h3>
-              <label style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.5rem', cursor: 'pointer' }}>
-                <input type="checkbox" checked={diagnostics.accessories.includes('box')} onChange={() => toggleArrayItem('accessories', 'box')} /> Box
-              </label>
-              <label style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.5rem', cursor: 'pointer' }}>
-                <input type="checkbox" checked={diagnostics.accessories.includes('charger')} onChange={() => toggleArrayItem('accessories', 'charger')} /> Charger
-              </label>
-              <select 
-                value={diagnostics.mobileAge || ''} 
-                onChange={e => setDiagnostics({...diagnostics, mobileAge: e.target.value as any})}
-                style={{ padding: '0.5rem', background: '#222', border: '1px solid #333', color: '#fff', borderRadius: '4px', width: '100%', marginTop: '0.5rem' }}
-              >
-                <option value="below3">0-3 Months</option>
-                <option value="3to6">3-6 Months</option>
-                <option value="6to11">6-11 Months</option>
-                <option value="above11">Above 11 Months</option>
-              </select>
+                <label style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span style={{ fontSize: '0.85rem' }}>Touch screen working properly?</span>
+                  <select value={diagnostics.touch ? 'yes' : 'no'} onChange={e => setDiagnostics({...diagnostics, touch: e.target.value === 'yes'})} style={{ background: '#222', color: '#fff', border: '1px solid #333', padding: '0.3rem', borderRadius: '4px' }}>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                </label>
+                <label style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span style={{ fontSize: '0.85rem' }}>Phone's screen original?</span>
+                  <select value={diagnostics.originalScreen ? 'yes' : 'no'} onChange={e => setDiagnostics({...diagnostics, originalScreen: e.target.value === 'yes'})} style={{ background: '#222', color: '#fff', border: '1px solid #333', padding: '0.3rem', borderRadius: '4px' }}>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                </label>
+                <label style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span style={{ fontSize: '0.85rem' }}>Under manufacturer warranty?</span>
+                  <select value={diagnostics.warranty ? 'yes' : 'no'} onChange={e => setDiagnostics({...diagnostics, warranty: e.target.value === 'yes'})} style={{ background: '#222', color: '#fff', border: '1px solid #333', padding: '0.3rem', borderRadius: '4px' }}>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                </label>
+                <label style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span style={{ fontSize: '0.85rem' }}>GST valid bill with IMEI?</span>
+                  <select value={diagnostics.validBill ? 'yes' : 'no'} onChange={e => setDiagnostics({...diagnostics, validBill: e.target.value === 'yes'})} style={{ background: '#222', color: '#fff', border: '1px solid #333', padding: '0.3rem', borderRadius: '4px' }}>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                </label>
+                <label style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span style={{ fontSize: '0.85rem' }}>How many eSIMs does your device support?</span>
+                  <select value={diagnostics.eSim || 'Single eSIM'} onChange={e => setDiagnostics({...diagnostics, eSim: e.target.value})} style={{ background: '#222', color: '#fff', border: '1px solid #333', padding: '0.3rem', borderRadius: '4px' }}>
+                    <option value="Single eSIM">Single eSIM</option>
+                    <option value="Dual eSIM">Dual eSIM</option>
+                  </select>
+                </label>
+              </div>
             </div>
+
+            {/* Stage 2 */}
+            <div>
+              <h3 style={{ marginBottom: '0.5rem', fontSize: '0.9rem', color: '#888' }}>Stage 2: Select screen/body defects</h3>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                {[
+                  { id: 'screen_scratch', label: 'Broken/scratch on screen' },
+                  { id: 'screen_spot', label: 'Dead Spot/Visible line/Discoloration' },
+                  { id: 'body_scratch', label: 'Scratch/Dent on body' },
+                  { id: 'panel_missing', label: 'Panel missing/broken' },
+                ].map(d => (
+                  <label key={d.id} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: '#222', padding: '0.4rem 0.8rem', borderRadius: '4px', cursor: 'pointer', fontSize: '0.85rem' }}>
+                    <input type="checkbox" checked={diagnostics.defects.includes(d.id)} onChange={() => toggleArrayItem('defects', d.id)} /> {d.label}
+                  </label>
+                ))}
+              </div>
+            </div>
+
+            {/* Stage 3 */}
+            {diagnostics.defects.includes('screen_scratch') && (
+              <div style={{ paddingLeft: '1rem', borderLeft: '2px solid #333' }}>
+                <h3 style={{ marginBottom: '0.5rem', fontSize: '0.9rem', color: '#888' }}>Stage 3: Screen Physical Condition</h3>
+                <select value={diagnostics.screenCondition || ''} onChange={e => setDiagnostics({...diagnostics, screenCondition: e.target.value})} style={{ background: '#222', color: '#fff', border: '1px solid #333', padding: '0.5rem', borderRadius: '4px', width: '100%', fontSize: '0.85rem' }}>
+                  <option value="">Select Condition...</option>
+                  <option value="Screen cracked/ glass broken">Screen cracked/ glass broken</option>
+                  <option value="Chipped/cracked outside display area">Chipped/cracked outside display area</option>
+                  <option value="More than 2 scratches on screen">More than 2 scratches on screen</option>
+                  <option value="1-2 scratches on screen">1-2 scratches on screen</option>
+                </select>
+              </div>
+            )}
+
+            {/* Stage 4 */}
+            {diagnostics.defects.includes('screen_spot') && (
+              <div style={{ paddingLeft: '1rem', borderLeft: '2px solid #333' }}>
+                <h3 style={{ marginBottom: '0.5rem', fontSize: '0.9rem', color: '#888' }}>Stage 4: Screen Spots/Lines</h3>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '0.5rem' }}>
+                  <select value={diagnostics.screenSpots || ''} onChange={e => setDiagnostics({...diagnostics, screenSpots: e.target.value})} style={{ background: '#222', color: '#fff', border: '1px solid #333', padding: '0.5rem', borderRadius: '4px', fontSize: '0.85rem' }}>
+                    <option value="">Spots on Screen...</option>
+                    <option value="Large/ heavy visible spots on screen">Large/ heavy visible spots</option>
+                    <option value="3 or more minor spots on screen">3 or more minor spots</option>
+                    <option value="1-2 minor spots on screen">1-2 minor spots</option>
+                    <option value="No spots on screen">No spots on screen</option>
+                  </select>
+                  <select value={diagnostics.screenLines || ''} onChange={e => setDiagnostics({...diagnostics, screenLines: e.target.value})} style={{ background: '#222', color: '#fff', border: '1px solid #333', padding: '0.5rem', borderRadius: '4px', fontSize: '0.85rem' }}>
+                    <option value="">Lines on Screen...</option>
+                    <option value="Visible line(s) on display">Visible line(s) on display</option>
+                    <option value="Display faded along edges">Display faded along edges</option>
+                    <option value="No line(s) on Display">No line(s) on Display</option>
+                  </select>
+                  <select value={diagnostics.screenDiscoloration || ''} onChange={e => setDiagnostics({...diagnostics, screenDiscoloration: e.target.value})} style={{ background: '#222', color: '#fff', border: '1px solid #333', padding: '0.5rem', borderRadius: '4px', fontSize: '0.85rem' }}>
+                    <option value="">Discoloration on Screen...</option>
+                    <option value="Major Discoloration">Major Discoloration</option>
+                    <option value="Minor Discoloration">Minor Discoloration</option>
+                    <option value="No Discoloration">No Discoloration</option>
+                  </select>
+                </div>
+              </div>
+            )}
+
+            {/* Stage 5 */}
+            {diagnostics.defects.includes('body_scratch') && (
+              <div style={{ paddingLeft: '1rem', borderLeft: '2px solid #333' }}>
+                <h3 style={{ marginBottom: '0.5rem', fontSize: '0.9rem', color: '#888' }}>Stage 5: Scratches & Dents</h3>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '0.5rem' }}>
+                  <select value={diagnostics.bodyScratches || ''} onChange={e => setDiagnostics({...diagnostics, bodyScratches: e.target.value})} style={{ background: '#222', color: '#fff', border: '1px solid #333', padding: '0.5rem', borderRadius: '4px', fontSize: '0.85rem' }}>
+                    <option value="">Scratches on Body...</option>
+                    <option value="More than 2 scratches">More than 2 scratches</option>
+                    <option value="1-2 scratches">1-2 scratches</option>
+                    <option value="No scratches">No scratches</option>
+                  </select>
+                  <select value={diagnostics.bodyDents || ''} onChange={e => setDiagnostics({...diagnostics, bodyDents: e.target.value})} style={{ background: '#222', color: '#fff', border: '1px solid #333', padding: '0.5rem', borderRadius: '4px', fontSize: '0.85rem' }}>
+                    <option value="">Dents on Body...</option>
+                    <option value="Major dent(s) or more than 2">Major dent(s) or more than 2</option>
+                    <option value="1-2 minor dents">1-2 minor dents</option>
+                    <option value="No dents">No dents</option>
+                  </select>
+                </div>
+              </div>
+            )}
+
+            {/* Stage 6 */}
+            {diagnostics.defects.includes('panel_missing') && (
+              <div style={{ paddingLeft: '1rem', borderLeft: '2px solid #333' }}>
+                <h3 style={{ marginBottom: '0.5rem', fontSize: '0.9rem', color: '#888' }}>Stage 6: Panel & Bent</h3>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '0.5rem' }}>
+                  <select value={diagnostics.bodyPanel || ''} onChange={e => setDiagnostics({...diagnostics, bodyPanel: e.target.value})} style={{ background: '#222', color: '#fff', border: '1px solid #333', padding: '0.5rem', borderRadius: '4px', fontSize: '0.85rem' }}>
+                    <option value="">Panel Condition...</option>
+                    <option value="Cracked/ broken side or back panel">Cracked/ broken side or back panel</option>
+                    <option value="Missing side or back panel">Missing side or back panel</option>
+                    <option value="No defect on side or back panel">No defect on side or back panel</option>
+                  </select>
+                  <select value={diagnostics.bodyBent || ''} onChange={e => setDiagnostics({...diagnostics, bodyBent: e.target.value})} style={{ background: '#222', color: '#fff', border: '1px solid #333', padding: '0.5rem', borderRadius: '4px', fontSize: '0.85rem' }}>
+                    <option value="">Bent/Screen Loose...</option>
+                    <option value="Bent/ curved panel">Bent/ curved panel</option>
+                    <option value="Loose screen (Gap in screen and body)">Loose screen (Gap in screen and body)</option>
+                    <option value="Phone not bent">Phone not bent</option>
+                  </select>
+                </div>
+              </div>
+            )}
+
+            {/* Stage 7 */}
+            <div>
+              <h3 style={{ marginBottom: '0.5rem', fontSize: '0.9rem', color: '#888' }}>Stage 7: Hardware/Physical Problems</h3>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                {[
+                  { id: 'front_camera', label: 'Front Camera' },
+                  { id: 'back_camera', label: 'Back Camera' },
+                  { id: 'volume', label: 'Volume Button' },
+                  { id: 'fingerprint', label: 'Finger Touch' },
+                  { id: 'wifi', label: 'WiFi' },
+                  { id: 'speaker', label: 'Speaker' },
+                  { id: 'silent', label: 'Silent Button' },
+                  { id: 'face', label: 'Face Sensor' },
+                  { id: 'power', label: 'Power Button' },
+                  { id: 'charging', label: 'Charging Port' },
+                  { id: 'audio_receiver', label: 'Audio Receiver' },
+                  { id: 'camera_glass', label: 'Camera Glass' },
+                  { id: 'microphone', label: 'Microphone' },
+                  { id: 'bluetooth', label: 'Bluetooth' },
+                  { id: 'vibrator', label: 'Vibrator' },
+                  { id: 'proximity', label: 'Proximity Sensor' },
+                  { id: 'battery_service', label: 'Battery < 80%' },
+                  { id: 'battery_health', label: 'Battery 80-85%' },
+                ].map(hw => (
+                  <label key={hw.id} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: '#222', padding: '0.3rem 0.6rem', borderRadius: '4px', cursor: 'pointer', fontSize: '0.75rem' }}>
+                    <input type="checkbox" checked={diagnostics.hardware.includes(hw.id)} onChange={() => toggleArrayItem('hardware', hw.id)} /> {hw.label}
+                  </label>
+                ))}
+              </div>
+            </div>
+
+            {/* Stage 8 & 9 */}
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+              <div>
+                <h3 style={{ marginBottom: '0.5rem', fontSize: '0.9rem', color: '#888' }}>Stage 8: Accessories</h3>
+                <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: '#222', padding: '0.4rem 0.8rem', borderRadius: '4px', cursor: 'pointer', fontSize: '0.85rem' }}>
+                  <input type="checkbox" checked={diagnostics.accessories.includes('box')} onChange={() => toggleArrayItem('accessories', 'box')} /> Original Box (same IMEI)
+                </label>
+              </div>
+              <div>
+                <h3 style={{ marginBottom: '0.5rem', fontSize: '0.9rem', color: '#888' }}>Stage 9: Mobile Age</h3>
+                <select 
+                  value={diagnostics.mobileAge || ''} 
+                  onChange={e => setDiagnostics({...diagnostics, mobileAge: e.target.value as any})}
+                  style={{ padding: '0.5rem', background: '#222', border: '1px solid #333', color: '#fff', borderRadius: '4px', width: '100%', fontSize: '0.85rem' }}
+                >
+                  <option value="below3">Below 3 months</option>
+                  <option value="3to6">3 months - 6 months</option>
+                  <option value="6to11">6 months - 11 months</option>
+                  <option value="above11">Above 11 months</option>
+                </select>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
