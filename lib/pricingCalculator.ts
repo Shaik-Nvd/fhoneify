@@ -34,34 +34,41 @@ export const getAppleModelParams = (model: string) => {
     physicalScale: 1.0,
   };
 
-  if (lowerModel.includes('17') || lowerModel.includes('air')) {
-    params = {
-      warrantyPenalty: 0.15, gstBillPenalty: 0.05, callsPenalty: 0.50, originalScreenPenalty: 0.65, touchPenalty: 0.42, functionalScale: 1.38, physicalScale: 1.38,
-    };
-  } else if (lowerModel.includes('16')) {
-    params = {
-      warrantyPenalty: 0.12, gstBillPenalty: 0.08, callsPenalty: 0.48, originalScreenPenalty: 0.65, touchPenalty: 0.30, functionalScale: 1.2, physicalScale: 1.1,
-    };
-  } else if (lowerModel.includes('15')) {
-    params = {
-      warrantyPenalty: 0.08, gstBillPenalty: 0.05, callsPenalty: 0.52, originalScreenPenalty: 0.68, touchPenalty: 0.32, functionalScale: 1.1, physicalScale: 1.05,
-    };
-  } else if (lowerModel.includes('14')) {
-    params = {
-      warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.55, originalScreenPenalty: 0.70, touchPenalty: 0.35, functionalScale: 1.0, physicalScale: 1.0,
-    };
+  const isPro = lowerModel.includes('pro');
+  const isProMax = lowerModel.includes('pro max');
+  
+  params = {
+    warrantyPenalty: 0.0, gstBillPenalty: 0.0, callsPenalty: 0.50, originalScreenPenalty: 0.70, touchPenalty: 0.35, functionalScale: 1.0, physicalScale: 1.0,
+  };
+
+  if (lowerModel.includes('15') || lowerModel.includes('14')) {
+    if (isProMax) {
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.55, touchPenalty: 0.25, functionalScale: 1.4, physicalScale: 1.4 };
+    } else if (isPro) {
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.60, touchPenalty: 0.30, functionalScale: 1.25, physicalScale: 1.25 };
+    } else {
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.55, originalScreenPenalty: 0.70, touchPenalty: 0.35, functionalScale: 1.0, physicalScale: 1.0 };
+    }
   } else if (lowerModel.includes('13') || lowerModel.includes('se (2022') || lowerModel.includes('se 2022')) {
-    params = {
-      warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.55, originalScreenPenalty: 0.70, touchPenalty: 0.35, functionalScale: 0.9, physicalScale: 0.9,
-    };
+    if (isProMax) {
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.55, touchPenalty: 0.25, functionalScale: 1.25, physicalScale: 1.25 };
+    } else if (isPro) {
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.60, touchPenalty: 0.30, functionalScale: 1.15, physicalScale: 1.15 };
+    } else {
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.55, originalScreenPenalty: 0.70, touchPenalty: 0.35, functionalScale: 0.9, physicalScale: 0.9 };
+    }
   } else if (lowerModel.includes('12')) {
-    params = {
-      warrantyPenalty: 0.0, gstBillPenalty: 0.0, callsPenalty: 0.60, originalScreenPenalty: 0.75, touchPenalty: 0.40, functionalScale: 0.8, physicalScale: 0.8,
-    };
+    if (isProMax || isPro) {
+      params = { warrantyPenalty: 0.0, gstBillPenalty: 0.0, callsPenalty: 0.55, originalScreenPenalty: 0.65, touchPenalty: 0.35, functionalScale: 1.0, physicalScale: 1.0 };
+    } else {
+      params = { warrantyPenalty: 0.0, gstBillPenalty: 0.0, callsPenalty: 0.60, originalScreenPenalty: 0.75, touchPenalty: 0.40, functionalScale: 0.8, physicalScale: 0.8 };
+    }
   } else if (lowerModel.includes('11') || lowerModel.includes('se (2020') || lowerModel.includes('se 2020')) {
-    params = {
-      warrantyPenalty: 0.0, gstBillPenalty: 0.0, callsPenalty: 0.60, originalScreenPenalty: 0.78, touchPenalty: 0.40, functionalScale: 0.7, physicalScale: 0.7,
-    };
+    if (isProMax || isPro) {
+      params = { warrantyPenalty: 0.0, gstBillPenalty: 0.0, callsPenalty: 0.55, originalScreenPenalty: 0.65, touchPenalty: 0.35, functionalScale: 0.9, physicalScale: 0.9 };
+    } else {
+      params = { warrantyPenalty: 0.0, gstBillPenalty: 0.0, callsPenalty: 0.60, originalScreenPenalty: 0.78, touchPenalty: 0.40, functionalScale: 0.7, physicalScale: 0.7 };
+    }
   } else if (lowerModel.includes('xs') || lowerModel.includes('xr') || lowerModel.includes('x')) {
     params = {
       warrantyPenalty: 0.0, gstBillPenalty: 0.0, callsPenalty: 0.62, originalScreenPenalty: 0.80, touchPenalty: 0.45, functionalScale: 0.6, physicalScale: 0.6,
