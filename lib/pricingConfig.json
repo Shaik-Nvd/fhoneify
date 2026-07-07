@@ -13,6 +13,7 @@
     "above11": 0.7966
   },
   "defects_screen_body": {
+    "broken_screen": 0.40,
     "screen_scratch": 0.35,
     "screen_spot": 0.25,
     "panel_missing": 0.20,
