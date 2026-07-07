@@ -208,7 +208,7 @@ export function calculateFhoneifyPrice(
   const isApple = safeBrand.toLowerCase() === 'apple';
   const params = isApple ? getAppleModelParams(safeModel) : getAndroidModelParams(safeBrand, safeModel);
 
-  let age_multiplier = 1.0;
+  age_multiplier = 1.0;
   
   if (diagnostics.mobileAge) {
     if (diagnostics.mobileAge === 'Below 3 months' || diagnostics.mobileAge === 'below3') {
