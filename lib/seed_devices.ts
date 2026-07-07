@@ -7832,22 +7832,6 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 3260
   },
   {
-    "id": "poco_add_22002",
-    "brand": "POCO",
-    "model": "POCO F1",
-    "storage": "6 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2970
-  },
-  {
-    "id": "poco_add_22003",
-    "brand": "POCO",
-    "model": "POCO X2",
-    "storage": "6 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 4210
-  },
-  {
     "id": "poco_add_22004",
     "brand": "POCO",
     "model": "POCO X2",
@@ -7864,36 +7848,12 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 4750
   },
   {
-    "id": "poco_add_22006",
-    "brand": "POCO",
-    "model": "POCO M2 Pro",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 4280
-  },
-  {
-    "id": "poco_add_22007",
-    "brand": "POCO",
-    "model": "POCO M2 Pro",
-    "storage": "6 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 4750
-  },
-  {
     "id": "poco_add_22008",
     "brand": "POCO",
     "model": "POCO M2 Pro",
     "storage": "6 GB/128 GB",
     "color": "Midnight",
     "basePrice": 4920
-  },
-  {
-    "id": "poco_add_22009",
-    "brand": "POCO",
-    "model": "POCO M2",
-    "storage": "6 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3850
   },
   {
     "id": "poco_add_22010",
@@ -7912,28 +7872,12 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 4350
   },
   {
-    "id": "poco_add_22012",
-    "brand": "POCO",
-    "model": "POCO C3",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3290
-  },
-  {
     "id": "poco_add_22013",
     "brand": "POCO",
     "model": "POCO C3",
     "storage": "3 GB/32 GB",
     "color": "Midnight",
     "basePrice": 3050
-  },
-  {
-    "id": "poco_add_22014",
-    "brand": "POCO",
-    "model": "POCO X3",
-    "storage": "6 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 4600
   },
   {
     "id": "poco_add_22015",
@@ -7960,22 +7904,6 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 4720
   },
   {
-    "id": "poco_add_22018",
-    "brand": "POCO",
-    "model": "POCO M3",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 4090
-  },
-  {
-    "id": "poco_add_22019",
-    "brand": "POCO",
-    "model": "POCO M3",
-    "storage": "6 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 4320
-  },
-  {
     "id": "poco_add_22020",
     "brand": "POCO",
     "model": "POCO X3 Pro",
@@ -7998,14 +7926,6 @@ export const SEED_DEVICES: any[] = [
     "storage": "6 GB/128 GB",
     "color": "Midnight",
     "basePrice": 6400
-  },
-  {
-    "id": "poco_add_22023",
-    "brand": "POCO",
-    "model": "POCO M3 Pro 5G",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 5650
   },
   {
     "id": "poco_add_22024",
@@ -8032,14 +7952,6 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 8520
   },
   {
-    "id": "poco_add_22027",
-    "brand": "POCO",
-    "model": "POCO M2 Reloaded",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3030
-  },
-  {
     "id": "poco_add_22028",
     "brand": "POCO",
     "model": "POCO C31",
@@ -8048,28 +7960,12 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 3200
   },
   {
-    "id": "poco_add_22029",
-    "brand": "POCO",
-    "model": "POCO C31",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3510
-  },
-  {
     "id": "poco_add_22030",
     "brand": "POCO",
     "model": "POCO M4 Pro 5G",
     "storage": "8 GB/128 GB",
     "color": "Midnight",
     "basePrice": 6890
-  },
-  {
-    "id": "poco_add_22031",
-    "brand": "POCO",
-    "model": "POCO M4 Pro 5G",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 6210
   },
   {
     "id": "poco_add_22032",
@@ -8086,14 +7982,6 @@ export const SEED_DEVICES: any[] = [
     "storage": "6 GB/128 GB",
     "color": "Midnight",
     "basePrice": 4960
-  },
-  {
-    "id": "poco_add_22034",
-    "brand": "POCO",
-    "model": "POCO M4 Pro",
-    "storage": "6 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 4540
   },
   {
     "id": "poco_add_22035",
@@ -8118,22 +8006,6 @@ export const SEED_DEVICES: any[] = [
     "storage": "8 GB/128 GB",
     "color": "Midnight",
     "basePrice": 7850
-  },
-  {
-    "id": "poco_add_22038",
-    "brand": "POCO",
-    "model": "POCO X4 Pro 5G",
-    "storage": "6 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 6720
-  },
-  {
-    "id": "poco_add_22039",
-    "brand": "POCO",
-    "model": "POCO M4 5G",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 5460
   },
   {
     "id": "poco_add_22040",
@@ -8166,14 +8038,6 @@ export const SEED_DEVICES: any[] = [
     "storage": "12 GB/256 GB",
     "color": "Midnight",
     "basePrice": 7720
-  },
-  {
-    "id": "poco_add_22044",
-    "brand": "POCO",
-    "model": "POCO M5",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3900
   },
   {
     "id": "poco_add_22045",
@@ -8224,14 +8088,6 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 5050
   },
   {
-    "id": "poco_add_22051",
-    "brand": "POCO",
-    "model": "POCO C55",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 4400
-  },
-  {
     "id": "poco_add_22052",
     "brand": "POCO",
     "model": "POCO X5 5G",
@@ -8256,14 +8112,6 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 4700
   },
   {
-    "id": "poco_add_22055",
-    "brand": "POCO",
-    "model": "POCO C51",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 4360
-  },
-  {
     "id": "poco_add_22056",
     "brand": "POCO",
     "model": "POCO F5 5G",
@@ -8278,14 +8126,6 @@ export const SEED_DEVICES: any[] = [
     "storage": "12 GB/256 GB",
     "color": "Midnight",
     "basePrice": 13230
-  },
-  {
-    "id": "poco_add_22058",
-    "brand": "POCO",
-    "model": "POCO M6 Pro 5G",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 6220
   },
   {
     "id": "poco_add_22059",
@@ -8376,14 +8216,6 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 14670
   },
   {
-    "id": "poco_add_22070",
-    "brand": "POCO",
-    "model": "POCO M6 5G",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 5100
-  },
-  {
     "id": "poco_add_22071",
     "brand": "POCO",
     "model": "POCO M6 5G",
@@ -8406,14 +8238,6 @@ export const SEED_DEVICES: any[] = [
     "storage": "6 GB/128 GB",
     "color": "Midnight",
     "basePrice": 5930
-  },
-  {
-    "id": "poco_add_22074",
-    "brand": "POCO",
-    "model": "POCO C61",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 4450
   },
   {
     "id": "poco_add_22075",
@@ -8496,14 +8320,6 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 8370
   },
   {
-    "id": "poco_add_22085",
-    "brand": "POCO",
-    "model": "POCO C75 5G",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 5190
-  },
-  {
     "id": "poco_add_22086",
     "brand": "POCO",
     "model": "POCO C75 5G",
@@ -8558,14 +8374,6 @@ export const SEED_DEVICES: any[] = [
     "storage": "8 GB/128 GB",
     "color": "Midnight",
     "basePrice": 6550
-  },
-  {
-    "id": "poco_add_22093",
-    "brand": "POCO",
-    "model": "POCO C71",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3930
   },
   {
     "id": "poco_add_22094",
@@ -8662,14 +8470,6 @@ export const SEED_DEVICES: any[] = [
     "storage": "8 GB/256 GB",
     "color": "Midnight",
     "basePrice": 15500
-  },
-  {
-    "id": "poco_add_22106",
-    "brand": "POCO",
-    "model": "POCO C85x",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 7450
   },
   {
     "id": "poco_add_22107",
@@ -8691,14 +8491,6 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 8370
   },
   {
-    "id": "poco_add_22085",
-    "brand": "POCO",
-    "model": "POCO C75 5G",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 5190
-  },
-  {
     "id": "poco_add_22086",
     "brand": "POCO",
     "model": "POCO C75 5G",
@@ -8753,14 +8545,6 @@ export const SEED_DEVICES: any[] = [
     "storage": "8 GB/128 GB",
     "color": "Midnight",
     "basePrice": 6550
-  },
-  {
-    "id": "poco_add_22093",
-    "brand": "POCO",
-    "model": "POCO C71",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3930
   },
   {
     "id": "poco_add_22094",
@@ -8857,14 +8641,6 @@ export const SEED_DEVICES: any[] = [
     "storage": "8 GB/256 GB",
     "color": "Midnight",
     "basePrice": 15500
-  },
-  {
-    "id": "poco_add_22106",
-    "brand": "POCO",
-    "model": "POCO C85x",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 7450
   },
   {
     "id": "poco_add_22107",
@@ -14783,411 +14559,6 @@ export const SEED_DEVICES: any[] = [
     "storage": "4 GB/64 GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_1",
-    "brand": "POCO",
-    "model": "POCO F1",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_2",
-    "brand": "POCO",
-    "model": "POCO X2",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_3",
-    "brand": "POCO",
-    "model": "POCO M2 Pro",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_4",
-    "brand": "POCO",
-    "model": "POCO M2",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_5",
-    "brand": "POCO",
-    "model": "POCO C3",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_6",
-    "brand": "POCO",
-    "model": "POCO X3",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_7",
-    "brand": "POCO",
-    "model": "POCO M3",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_8",
-    "brand": "POCO",
-    "model": "POCO X3 Pro",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_9",
-    "brand": "POCO",
-    "model": "POCO M3 Pro 5G",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_10",
-    "brand": "POCO",
-    "model": "POCO F3 GT",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_11",
-    "brand": "POCO",
-    "model": "POCO M2 Reloaded",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_12",
-    "brand": "POCO",
-    "model": "POCO C31",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_13",
-    "brand": "POCO",
-    "model": "POCO M4 Pro 5G",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_14",
-    "brand": "POCO",
-    "model": "POCO M4 Pro",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_15",
-    "brand": "POCO",
-    "model": "POCO X4 Pro 5G",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_16",
-    "brand": "POCO",
-    "model": "POCO M4 5G",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_17",
-    "brand": "POCO",
-    "model": "POCO F4 5G",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_18",
-    "brand": "POCO",
-    "model": "POCO M5",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_19",
-    "brand": "POCO",
-    "model": "POCO X5 Pro 5G",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_20",
-    "brand": "POCO",
-    "model": "POCO C50",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_21",
-    "brand": "POCO",
-    "model": "POCO C55",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_22",
-    "brand": "POCO",
-    "model": "POCO X5 5G",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_23",
-    "brand": "POCO",
-    "model": "POCO C51",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_24",
-    "brand": "POCO",
-    "model": "POCO F5 5G",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_25",
-    "brand": "POCO",
-    "model": "POCO M6 Pro 5G",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_26",
-    "brand": "POCO",
-    "model": "POCO C65",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_27",
-    "brand": "POCO",
-    "model": "POCO X6 5G",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_28",
-    "brand": "POCO",
-    "model": "POCO X6 Pro 5G",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_29",
-    "brand": "POCO",
-    "model": "POCO M6 5G",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_30",
-    "brand": "POCO",
-    "model": "POCO C61",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_31",
-    "brand": "POCO",
-    "model": "POCO F6 5G",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_32",
-    "brand": "POCO",
-    "model": "POCO X6 Neo 5G",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_33",
-    "brand": "POCO",
-    "model": "POCO X7 5G",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_34",
-    "brand": "POCO",
-    "model": "POCO M7 Pro 5G",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_35",
-    "brand": "POCO",
-    "model": "POCO C75 5G",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_36",
-    "brand": "POCO",
-    "model": "POCO X7 Pro 5G",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_37",
-    "brand": "POCO",
-    "model": "POCO M6 Plus 5G",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_38",
-    "brand": "POCO",
-    "model": "POCO M7 5G",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_39",
-    "brand": "POCO",
-    "model": "POCO C71",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_40",
-    "brand": "POCO",
-    "model": "POCO F7 5G",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_41",
-    "brand": "POCO",
-    "model": "POCO M7 Plus 5G",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_42",
-    "brand": "POCO",
-    "model": "POCO C85 5G",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_43",
-    "brand": "POCO",
-    "model": "POCO M8 5G",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_44",
-    "brand": "POCO",
-    "model": "POCO C85x",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
-    "basePrice": 5000
-  },
-  {
-    "id": "poco_batch_45",
-    "brand": "POCO",
-    "model": "POCO X8 Pro",
-    "storage": "64 GB",
-    "ram": "4GB",
-    "color": "Yellow",
     "basePrice": 5000
   },
   {
