@@ -75,23 +75,24 @@ async function runBenchmark() {
         });
         
         let fhoneifyPrice = calculateFhoneifyPrice(
-          d.basePrice, 
           d.brand, 
           d.model, 
+          d.basePrice, 
           diag
         );
 
-        const diff = fhoneifyPrice - cashifyPrice;
-        const diffPercent = ((diff / cashifyPrice) * 100).toFixed(2);
+        const cPrice = Number(cashifyPrice) || 0;
+        const diff = fhoneifyPrice - cPrice;
+        const diffPercent = ((diff / (cPrice || 1)) * 100).toFixed(2);
         
-        console.log(`--> Fhoneify: ₹${fhoneifyPrice} | Cashify: ₹${cashifyPrice} | Diff: ₹${diff} (${diffPercent}%)`);
+        console.log(`--> Fhoneify: ₹${fhoneifyPrice} | Cashify: ₹${cPrice} | Diff: ₹${diff} (${diffPercent}%)`);
         
         testResults.push({
           brand: d.brand,
           model: d.model,
           storage: d.storage,
           fhoneifyPrice,
-          cashifyPrice,
+          cashifyPrice: cPrice,
           diff,
           diffPercent,
           diag
