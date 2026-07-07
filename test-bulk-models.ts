@@ -116,7 +116,7 @@ async function runAllTests() {
   markdown += `|-------|----------|-----------|---------------|------------|\n`;
   
   for (const r of results) {
-    markdown += `| ${r.model} | ${r.scenario} | ₹${Math.round(r.localPrice)} | ${r.cashifyPrice === 'N/A' ? 'N/A' : '₹' + r.cashifyPrice} | ${r.difference === 'N/A' ? 'N/A' : '₹' + Math.round(r.difference)} |\n`;
+    markdown += `| ${r.model} | ${r.scenario} | ₹${Math.round(r.localPrice)} | ${r.cashifyPrice === 'N/A' ? 'N/A' : '₹' + r.cashifyPrice} | ${r.difference === 'N/A' ? 'N/A' : '₹' + Math.round(Number(r.difference))} |\n`;
   }
 
   fs.writeFileSync('C:\\Users\\Mubeen_Taj\\.gemini\\antigravity\\brain\\d2a07608-096a-49bc-986d-65f7fa943d0a\\test_report.md', markdown);
