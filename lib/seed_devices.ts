@@ -14976,15 +14976,6 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 5000
   },
   {
-    "id": "google_batch_15",
-    "brand": "Google",
-    "model": "Google Pixel 10",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
     "id": "google_batch_16",
     "brand": "Google",
     "model": "Google Pixel 10 Pro",
