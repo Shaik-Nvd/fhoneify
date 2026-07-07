@@ -38,7 +38,7 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
   if (!globalBrowser) {
     logger.info('Launching new persistent Chromium instance...');
     globalBrowser = await chromium.launch({ 
-      headless: true,
+      headless: false,
       args: ['--no-sandbox', '--disable-setuid-sandbox']
     });
   }
@@ -53,10 +53,10 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
       context = await globalBrowser.newContext({ storageState: sessionFile });
       const page = await context.newPage();
 
-      // Block heavy resources (images, css, fonts) for lightning fast loads
+      // Allow images and fonts so the user can see and solve CAPTCHAs if necessary
       await page.route('**/*', route => {
         const type = route.request().resourceType();
-        if (['image', 'media', 'font'].includes(type)) {
+        if (['media'].includes(type)) {
           route.abort();
         } else {
           route.continue();
@@ -88,11 +88,13 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
     }
 
     // Generate or lookup the direct Cashify device URL
-    const cleanModel = deviceDetails.model.toLowerCase().startsWith(deviceDetails.brand.toLowerCase()) 
-      ? deviceDetails.model 
-      : `${deviceDetails.brand} ${deviceDetails.model}`;
-    const modelKey = cleanModel.toLowerCase().trim();
-    const modelSlug = modelKey.replace(/[^a-z0-9]+/g, '-');
+    const brandLower = deviceDetails.brand.toLowerCase();
+    const modelLower = deviceDetails.model.toLowerCase();
+    const cleanModel = modelLower.startsWith(brandLower) 
+      ? modelLower.substring(brandLower.length).trim()
+      : modelLower;
+    const modelKey = (brandLower + ' ' + cleanModel).toLowerCase().trim();
+    const modelSlug = (brandLower + '-' + cleanModel).toLowerCase().replace(/[^a-z0-9]+/g, '-');
     
     // Check if exact URL exists in our dictionary
     let deviceUrl = urlDictionary[modelKey];

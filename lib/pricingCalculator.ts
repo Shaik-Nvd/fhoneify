@@ -50,7 +50,7 @@ export const getAppleModelParams = (model: string) => {
     } else if (isPro || isPlus) {
       params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.60, touchPenalty: 0.30, functionalScale: 1.25, physicalScale: 1.25 };
     } else {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.55, originalScreenPenalty: 0.70, touchPenalty: 0.35, functionalScale: 1.10, physicalScale: 1.10 };
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.55, originalScreenPenalty: 0.65, touchPenalty: 0.35, functionalScale: 1.10, physicalScale: 1.10 };
     }
   } else if (lowerModel.includes('13') || lowerModel.includes('se (2022') || lowerModel.includes('se 2022')) {
     if (isProMax) {
@@ -58,7 +58,7 @@ export const getAppleModelParams = (model: string) => {
     } else if (isPro) {
       params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.60, touchPenalty: 0.30, functionalScale: 1.15, physicalScale: 1.15 };
     } else {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.55, originalScreenPenalty: 0.70, touchPenalty: 0.35, functionalScale: 0.9, physicalScale: 0.9 };
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.55, originalScreenPenalty: 0.70, touchPenalty: 0.35, functionalScale: 0.6, physicalScale: 0.9 };
     }
   } else if (lowerModel.includes('12')) {
     if (isProMax || isPro) {
@@ -85,22 +85,59 @@ export const getAppleModelParams = (model: string) => {
   return params;
 };
 
-export const getAndroidModelParams = (brand: string) => {
+export const getAndroidModelParams = (brand: string, model: string) => {
   const lowerBrand = brand.toLowerCase();
+  const lowerModel = model.toLowerCase();
   
   let params = {
-    warrantyPenalty: 0.10, gstBillPenalty: 0.05, callsPenalty: 0.50, originalScreenPenalty: 0.70, touchPenalty: 0.40, functionalScale: 0.8, physicalScale: 0.8,
+    warrantyPenalty: 0.10, gstBillPenalty: 0.05, callsPenalty: 0.50, originalScreenPenalty: 0.60, touchPenalty: 0.40, functionalScale: 0.8, physicalScale: 0.75,
   };
 
   if (lowerBrand === 'samsung') {
-    params = {
-      warrantyPenalty: 0.10, gstBillPenalty: 0.05, callsPenalty: 0.55, originalScreenPenalty: 0.65, touchPenalty: 0.35, functionalScale: 0.9, physicalScale: 0.85,
-    };
-  } else if (lowerBrand === 'oneplus' || lowerBrand === 'google' || lowerBrand === 'nothing' || lowerBrand === 'asus' || lowerBrand === 'huawei') {
+    const isS = lowerModel.includes('galaxy s') || lowerModel.includes('s2') || lowerModel.includes('s1') || lowerModel.includes('s9') || lowerModel.includes('s8');
+    const isZ = lowerModel.includes('fold') || lowerModel.includes('flip');
+    const isNote = lowerModel.includes('note');
+    if (isS || isZ || isNote) {
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.60, touchPenalty: 0.30, functionalScale: 1.10, physicalScale: 1.10 };
+    } else {
+      params = { warrantyPenalty: 0.10, gstBillPenalty: 0.05, callsPenalty: 0.55, originalScreenPenalty: 0.65, touchPenalty: 0.35, functionalScale: 0.75, physicalScale: 0.75 };
+    }
+  } else if (lowerBrand === 'oneplus') {
+    const isPro = lowerModel.includes('pro');
+    const isFold = lowerModel.includes('open') || lowerModel.includes('fold');
+    const isNord = lowerModel.includes('nord') || lowerModel.includes('ce');
+    if (isPro || isFold) {
+      params = { warrantyPenalty: 0.10, gstBillPenalty: 0.05, callsPenalty: 0.50, originalScreenPenalty: 0.60, touchPenalty: 0.40, functionalScale: 0.95, physicalScale: 0.95 };
+    } else if (isNord) {
+      params = { warrantyPenalty: 0.10, gstBillPenalty: 0.05, callsPenalty: 0.50, originalScreenPenalty: 0.60, touchPenalty: 0.40, functionalScale: 0.65, physicalScale: 0.65 };
+    } else {
+      params = { warrantyPenalty: 0.10, gstBillPenalty: 0.05, callsPenalty: 0.50, originalScreenPenalty: 0.60, touchPenalty: 0.40, functionalScale: 0.85, physicalScale: 0.80 };
+    }
+  } else if (lowerBrand === 'xiaomi' || lowerBrand === 'poco') {
+    const isPremium = lowerModel.includes('pro') || lowerModel.includes('ultra') || lowerModel.includes('fold');
+    const isBudget = lowerModel.includes('redmi') || lowerModel.includes('poco c') || lowerModel.includes('poco m');
+    if (isPremium) {
+      params = { warrantyPenalty: 0.12, gstBillPenalty: 0.08, callsPenalty: 0.45, originalScreenPenalty: 0.55, touchPenalty: 0.45, functionalScale: 0.85, physicalScale: 0.80 };
+    } else if (isBudget) {
+      params = { warrantyPenalty: 0.12, gstBillPenalty: 0.08, callsPenalty: 0.45, originalScreenPenalty: 0.65, touchPenalty: 0.45, functionalScale: 0.55, physicalScale: 0.55 };
+    } else {
+      params = { warrantyPenalty: 0.12, gstBillPenalty: 0.08, callsPenalty: 0.45, originalScreenPenalty: 0.55, touchPenalty: 0.45, functionalScale: 0.70, physicalScale: 0.65 };
+    }
+  } else if (lowerBrand === 'vivo' || lowerBrand === 'oppo' || lowerBrand === 'iqoo') {
+    const isPremium = lowerModel.includes('pro') || lowerModel.includes('find n') || lowerModel.includes('fold') || lowerModel.includes('x-series') || lowerModel.includes(' x');
+    const isBudget = lowerModel.includes(' y') || lowerModel.includes(' a') || lowerModel.includes('a-series');
+    if (isPremium) {
+      params = { warrantyPenalty: 0.12, gstBillPenalty: 0.08, callsPenalty: 0.45, originalScreenPenalty: 0.55, touchPenalty: 0.45, functionalScale: 0.85, physicalScale: 0.80 };
+    } else if (isBudget) {
+      params = { warrantyPenalty: 0.12, gstBillPenalty: 0.08, callsPenalty: 0.45, originalScreenPenalty: 0.60, touchPenalty: 0.45, functionalScale: 0.55, physicalScale: 0.55 };
+    } else {
+      params = { warrantyPenalty: 0.12, gstBillPenalty: 0.08, callsPenalty: 0.45, originalScreenPenalty: 0.55, touchPenalty: 0.45, functionalScale: 0.70, physicalScale: 0.65 };
+    }
+  } else if (lowerBrand === 'google' || lowerBrand === 'nothing' || lowerBrand === 'asus' || lowerBrand === 'huawei') {
     params = {
       warrantyPenalty: 0.10, gstBillPenalty: 0.05, callsPenalty: 0.50, originalScreenPenalty: 0.60, touchPenalty: 0.40, functionalScale: 0.8, physicalScale: 0.75,
     };
-  } else if (lowerBrand === 'vivo' || lowerBrand === 'oppo' || lowerBrand === 'xiaomi' || lowerBrand === 'poco' || lowerBrand === 'realme' || lowerBrand === 'motorola' || lowerBrand === 'iqoo' || lowerBrand === 'infinix' || lowerBrand === 'tecno' || lowerBrand === 'lg') {
+  } else {
     params = {
       warrantyPenalty: 0.12, gstBillPenalty: 0.08, callsPenalty: 0.45, originalScreenPenalty: 0.55, touchPenalty: 0.45, functionalScale: 0.75, physicalScale: 0.70,
     };
@@ -167,13 +204,14 @@ export function calculateFhoneifyPrice(
   };
 
   const isApple = brand.toLowerCase() === 'apple';
-  const params = isApple ? getAppleModelParams(model) : getAndroidModelParams(brand);
+  const params = isApple ? getAppleModelParams(model) : getAndroidModelParams(brand, model);
 
   let generationScale = 1.0;
   if (isApple) {
     const lowerModel = model.toLowerCase();
     if (lowerModel.includes('17') && !lowerModel.includes('17e')) generationScale = 0.84;
-    else if (lowerModel.includes('16')) generationScale = 0.88;
+    else if (lowerModel.includes('17e')) generationScale = 0.80;
+    else if (lowerModel.includes('16')) generationScale = 0.86;
     else if (lowerModel.includes('15')) generationScale = 0.94;
   }
 
