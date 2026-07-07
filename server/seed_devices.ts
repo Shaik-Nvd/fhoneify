@@ -1131,7 +1131,7 @@ export const SEED_DEVICES = [
     "storage": "256GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 88000
+    "basePrice": 87300
   },
   {
     "id": "apple_2112",
@@ -1140,7 +1140,7 @@ export const SEED_DEVICES = [
     "storage": "512GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 91000
+    "basePrice": 90300
   },
   {
     "id": "apple_2113",

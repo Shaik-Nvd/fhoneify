@@ -1,0 +1,48 @@
+{
+  "multipliers": {
+    "calls_no": 0,
+    "touch_no": 0.3170,
+    "originalScreen_no": 0.5587,
+    "warranty_no": 0.7966,
+    "gstBill_no": 1.00
+  },
+  "ageBonus": {
+    "below3": 1.0000,
+    "3to6": 0.9427,
+    "6to11": 0.9114,
+    "above11": 0.7966
+  },
+  "defects_screen_body": {
+    "broken_screen": 0.40,
+    "screen_scratch": 0.35,
+    "screen_spot": 0.25,
+    "panel_missing": 0.20,
+    "body_scratch": 0.08
+  },
+  "defects_functional": {
+    "fingerprint": 0.15,
+    "battery_service": 0.15,
+    "battery_health": 0.10,
+    "front_camera": 0.10,
+    "back_camera": 0.10,
+    "wifi": 0.12,
+    "speaker": 0.10,
+    "audio_receiver": 0.10,
+    "charging": 0.10,
+    "microphone": 0.10,
+    "face": 0.05,
+    "volume": 0.05,
+    "power": 0.05,
+    "camera_glass": 0.05,
+    "bluetooth": 0.05,
+    "silent": 0.02,
+    "vibrator": 0.02,
+    "proximity": 0.02,
+    "s_pen": 0.08,
+    "hinge": 0.20
+  },
+  "bonuses": {
+    "box": 380
+  },
+  "modelFloorPrice": 1200
+}

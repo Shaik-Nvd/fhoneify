@@ -137,8 +137,9 @@ const rawData = [
   { model: 'Apple iPhone 16 Pro', storage: '256GB', price: 77000 },
   { model: 'Apple iPhone 16 Pro', storage: '512GB', price: 79000 },
 
-  { model: 'Apple iPhone 16 Pro Max', storage: '256GB', price: 88000 },
-  { model: 'Apple iPhone 16 Pro Max', storage: '512GB', price: 91000 },
+  { model: 'Apple iPhone 16 Pro Max', storage: '256GB', price: 87300 },
+  { model: 'Apple iPhone 16 Pro Max', storage: '512GB', price: 90300 },
+  { model: 'Apple iPhone 16 Pro Max', storage: '1TB', price: 93500 },
 
   { model: 'Apple iPhone 17e', storage: '256GB', price: 45200 },
   { model: 'Apple iPhone 17e', storage: '512GB', price: 53200 },

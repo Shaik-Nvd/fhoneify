@@ -43,14 +43,14 @@ export const getAppleModelParams = (model: string) => {
   };
 
   if (lowerModel.includes('17e')) {
-    params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.55, originalScreenPenalty: 0.70, touchPenalty: 0.55, functionalScale: 1.50, physicalScale: 1.50 };
+    params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.55, originalScreenPenalty: 0.70, touchPenalty: 0.55, functionalScale: 1.20, physicalScale: 1.20 };
   } else if (lowerModel.includes('17') || lowerModel.includes('16') || lowerModel.includes('15') || lowerModel.includes('14')) {
     if (isProMax || (isPlus && lowerModel.includes('17'))) {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.55, touchPenalty: 0.50, functionalScale: 1.90, physicalScale: 1.90 };
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.55, touchPenalty: 0.50, functionalScale: 1.60, physicalScale: 1.60 };
     } else if (isPro || isPlus) {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.60, touchPenalty: 0.55, functionalScale: 1.80, physicalScale: 1.80 };
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.60, touchPenalty: 0.55, functionalScale: 1.50, physicalScale: 1.50 };
     } else {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.55, originalScreenPenalty: 0.65, touchPenalty: 0.55, functionalScale: 1.70, physicalScale: 1.70 };
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.55, originalScreenPenalty: 0.65, touchPenalty: 0.55, functionalScale: 1.40, physicalScale: 1.40 };
     }
   } else if (lowerModel.includes('13') || lowerModel.includes('se (2022') || lowerModel.includes('se 2022')) {
     if (isProMax) {
@@ -208,26 +208,46 @@ export function calculateFhoneifyPrice(
   const isApple = safeBrand.toLowerCase() === 'apple';
   const params = isApple ? getAppleModelParams(safeModel) : getAndroidModelParams(safeBrand, safeModel);
 
-  let age_multiplier = 1.0;
-  
-  if (diagnostics.mobileAge) {
-    if (diagnostics.mobileAge === 'Below 3 months' || diagnostics.mobileAge === 'below3') {
-      age_multiplier = (config.ageBonus as any)['below3'] || 1.15;
-    } else if (diagnostics.mobileAge === '3 months - 6 months' || diagnostics.mobileAge === '3to6') {
-      age_multiplier = (config.ageBonus as any)['3to6'] || 1.08;
-    } else if (diagnostics.mobileAge === '6 months - 11 months' || diagnostics.mobileAge === '6to11') {
-      age_multiplier = (config.ageBonus as any)['6to11'] || 1.04;
-    } else {
-      age_multiplier = 1.0; // Baseline for >11 months
-    }
+  let generationScale = 1.0;
+  if (isApple) {
+    const lowerModel = safeModel.toLowerCase();
+    if (lowerModel.includes('17') && !lowerModel.includes('17e')) generationScale = 0.84;
+    else if (lowerModel.includes('17e')) generationScale = 0.80;
+    else if (lowerModel.includes('16')) generationScale = 0.86;
+    else if (lowerModel.includes('15')) generationScale = 0.94;
   }
 
-  // Warranty penalty strictly applied if less than 11 months old and no warranty/bill
-  if (age_multiplier > 1.0) {
-    if (!diagnostics.warranty) age_multiplier -= params.warrantyPenalty;
-    const hasValidBill = diagnostics.validBill === true || diagnostics.accessories.includes('bill');
-    if (!hasValidBill) age_multiplier -= params.gstBillPenalty;
+  const hasValidBill = diagnostics.validBill === true || diagnostics.accessories.includes('bill');
+  if (diagnostics.mobileAge) {
+    age_multiplier = (config.ageBonus as any)[diagnostics.mobileAge] || 1.0;
+    
+    const baseAgeBonus = (config.ageBonus as any)['above11'] || 0.7966;
+    if (isApple) {
+      const lowerModel = safeModel.toLowerCase();
+      // Cashify clamps age for brand new models. A 17-series can't realistically be >11 months yet.
+      if (lowerModel.includes('17') && (diagnostics.mobileAge === 'above11' || diagnostics.mobileAge === '6to11')) {
+        age_multiplier = (config.ageBonus as any)['below3'] || 1.0;
+      } else if (lowerModel.includes('16') && diagnostics.mobileAge === 'above11') {
+        age_multiplier = (config.ageBonus as any)['6to11'] || 0.9114;
+      }
+      
+      const isOldModel = !lowerModel.includes('17') && !lowerModel.includes('16');
+      if (isOldModel) {
+        age_multiplier = age_multiplier / baseAgeBonus;
+      }
+    } else {
+      age_multiplier = age_multiplier / baseAgeBonus;
+    }
+
+    // Add extra penalties if they claimed recent age but don't have bill/warranty
+    if (diagnostics.mobileAge !== 'above11' && !hasValidBill) {
+      age_multiplier -= params.gstBillPenalty;
+    }
+  } else {
+    age_multiplier = 1.0 - params.warrantyPenalty - (hasValidBill ? 0 : params.gstBillPenalty);
   }
+  
+  age_multiplier *= generationScale;
 
   calls_multiplier = diagnostics.calls === false ? params.callsPenalty : 1.0;
   touch_multiplier = diagnostics.touch === false ? params.touchPenalty : 1.0;

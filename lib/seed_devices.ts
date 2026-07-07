@@ -1,5 +1,4 @@
-// @ts-nocheck
-export const SEED_DEVICES: any[] = [
+export const SEED_DEVICES = [
   {
     "id": "apple_1000",
     "brand": "Apple",
@@ -278,6 +277,15 @@ export const SEED_DEVICES: any[] = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 62600
+  },
+  {
+    "id": "apple_1033",
+    "brand": "Apple",
+    "model": "Apple iPhone 15 Pro Max",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 10000
   },
   {
     "id": "apple_1034",
@@ -1123,7 +1131,7 @@ export const SEED_DEVICES: any[] = [
     "storage": "256GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 88000
+    "basePrice": 87300
   },
   {
     "id": "apple_2112",
@@ -1132,7 +1140,7 @@ export const SEED_DEVICES: any[] = [
     "storage": "512GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 91000
+    "basePrice": 90300
   },
   {
     "id": "apple_2113",
@@ -1276,7 +1284,7 @@ export const SEED_DEVICES: any[] = [
     "storage": "256GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 44000
+    "basePrice": 45200
   },
   {
     "id": "apple_2130",
@@ -1285,7 +1293,7 @@ export const SEED_DEVICES: any[] = [
     "storage": "512GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 52700
+    "basePrice": 53200
   },
   {
     "id": "oneplus_7000",
@@ -2168,12 +2176,44 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 7330
   },
   {
+    "id": "google_9000",
+    "brand": "Google",
+    "model": "Google Pixel 4A",
+    "storage": "6 GB/128 GB",
+    "color": "Obsidian",
+    "basePrice": 4390
+  },
+  {
+    "id": "google_9001",
+    "brand": "Google",
+    "model": "Google Pixel 6a",
+    "storage": "6 GB/128 GB",
+    "color": "Obsidian",
+    "basePrice": 10080
+  },
+  {
     "id": "google_9002",
     "brand": "Google",
     "model": "Google Pixel 7",
     "storage": "8 GB/256 GB",
     "color": "Obsidian",
     "basePrice": 14160
+  },
+  {
+    "id": "google_9003",
+    "brand": "Google",
+    "model": "Google Pixel 7",
+    "storage": "8 GB/128 GB",
+    "color": "Obsidian",
+    "basePrice": 14240
+  },
+  {
+    "id": "google_9004",
+    "brand": "Google",
+    "model": "Google Pixel 7 Pro",
+    "storage": "12 GB/128 GB",
+    "color": "Obsidian",
+    "basePrice": 18470
   },
   {
     "id": "google_9005",
@@ -2184,6 +2224,14 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 19040
   },
   {
+    "id": "google_9006",
+    "brand": "Google",
+    "model": "Google Pixel 7a",
+    "storage": "8 GB/128 GB",
+    "color": "Obsidian",
+    "basePrice": 17120
+  },
+  {
     "id": "google_9007",
     "brand": "Google",
     "model": "Google Pixel 8",
@@ -2192,12 +2240,28 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 24800
   },
   {
+    "id": "google_9008",
+    "brand": "Google",
+    "model": "Google Pixel 8",
+    "storage": "8 GB/128 GB",
+    "color": "Obsidian",
+    "basePrice": 24390
+  },
+  {
     "id": "google_9009",
     "brand": "Google",
     "model": "Google Pixel 8 Pro",
     "storage": "12 GB/256 GB",
     "color": "Obsidian",
     "basePrice": 33220
+  },
+  {
+    "id": "google_9010",
+    "brand": "Google",
+    "model": "Google Pixel 8 Pro",
+    "storage": "12 GB/128 GB",
+    "color": "Obsidian",
+    "basePrice": 31490
   },
   {
     "id": "google_9011",
@@ -2214,6 +2278,14 @@ export const SEED_DEVICES: any[] = [
     "storage": "8 GB/256 GB",
     "color": "Obsidian",
     "basePrice": 23370
+  },
+  {
+    "id": "google_9013",
+    "brand": "Google",
+    "model": "Google Pixel 8a",
+    "storage": "8 GB/128 GB",
+    "color": "Obsidian",
+    "basePrice": 23080
   },
   {
     "id": "google_9014",
@@ -4800,6 +4872,654 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 29000
   },
   {
+    "id": "oppo_18000",
+    "brand": "OPPO",
+    "model": "OPPO A7",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2380
+  },
+  {
+    "id": "oppo_18001",
+    "brand": "OPPO",
+    "model": "OPPO A7",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2040
+  },
+  {
+    "id": "oppo_18002",
+    "brand": "OPPO",
+    "model": "OPPO F9 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2670
+  },
+  {
+    "id": "oppo_18003",
+    "brand": "OPPO",
+    "model": "OPPO F9 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2970
+  },
+  {
+    "id": "oppo_18004",
+    "brand": "OPPO",
+    "model": "OPPO F9",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2640
+  },
+  {
+    "id": "oppo_18005",
+    "brand": "OPPO",
+    "model": "OPPO A3s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2120
+  },
+  {
+    "id": "oppo_18006",
+    "brand": "OPPO",
+    "model": "OPPO A3s",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1930
+  },
+  {
+    "id": "oppo_18007",
+    "brand": "OPPO",
+    "model": "OPPO A3s",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1740
+  },
+  {
+    "id": "oppo_18008",
+    "brand": "OPPO",
+    "model": "OPPO Find X",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 6970
+  },
+  {
+    "id": "oppo_18009",
+    "brand": "OPPO",
+    "model": "OPPO A5",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2690
+  },
+  {
+    "id": "oppo_18010",
+    "brand": "OPPO",
+    "model": "OPPO A5",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2460
+  },
+  {
+    "id": "oppo_18011",
+    "brand": "OPPO",
+    "model": "OPPO F7",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2600
+  },
+  {
+    "id": "oppo_18012",
+    "brand": "OPPO",
+    "model": "OPPO F7",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2380
+  },
+  {
+    "id": "oppo_18013",
+    "brand": "OPPO",
+    "model": "OPPO A83",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1360
+  },
+  {
+    "id": "oppo_18014",
+    "brand": "OPPO",
+    "model": "OPPO A83",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1440
+  },
+  {
+    "id": "oppo_18015",
+    "brand": "OPPO",
+    "model": "OPPO A83",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1670
+  },
+  {
+    "id": "oppo_18016",
+    "brand": "OPPO",
+    "model": "OPPO F5 Youth",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1700
+  },
+  {
+    "id": "oppo_18017",
+    "brand": "OPPO",
+    "model": "OPPO F5",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1930
+  },
+  {
+    "id": "oppo_18018",
+    "brand": "OPPO",
+    "model": "OPPO F5",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1780
+  },
+  {
+    "id": "oppo_18019",
+    "brand": "OPPO",
+    "model": "OPPO R11",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2270
+  },
+  {
+    "id": "oppo_18020",
+    "brand": "OPPO",
+    "model": "OPPO A77",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1490
+  },
+  {
+    "id": "oppo_18021",
+    "brand": "OPPO",
+    "model": "OPPO F3",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1480
+  },
+  {
+    "id": "oppo_18022",
+    "brand": "OPPO",
+    "model": "OPPO F3 Plus",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2230
+  },
+  {
+    "id": "oppo_18023",
+    "brand": "OPPO",
+    "model": "OPPO F3 Plus",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1860
+  },
+  {
+    "id": "oppo_18024",
+    "brand": "OPPO",
+    "model": "OPPO A57",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1510
+  },
+  {
+    "id": "oppo_18025",
+    "brand": "OPPO",
+    "model": "OPPO F1s",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1190
+  },
+  {
+    "id": "oppo_18026",
+    "brand": "OPPO",
+    "model": "OPPO F1s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1330
+  },
+  {
+    "id": "oppo_18027",
+    "brand": "OPPO",
+    "model": "OPPO F1 Plus",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1260
+  },
+  {
+    "id": "oppo_18028",
+    "brand": "OPPO",
+    "model": "OPPO R17",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4170
+  },
+  {
+    "id": "oppo_18029",
+    "brand": "OPPO",
+    "model": "OPPO K1",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3180
+  },
+  {
+    "id": "oppo_18030",
+    "brand": "OPPO",
+    "model": "OPPO K1",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3030
+  },
+  {
+    "id": "oppo_18031",
+    "brand": "OPPO",
+    "model": "OPPO F11 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4040
+  },
+  {
+    "id": "oppo_18032",
+    "brand": "OPPO",
+    "model": "OPPO F11 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4440
+  },
+  {
+    "id": "oppo_18033",
+    "brand": "OPPO",
+    "model": "OPPO A5s",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2420
+  },
+  {
+    "id": "oppo_18034",
+    "brand": "OPPO",
+    "model": "OPPO A5s",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2200
+  },
+  {
+    "id": "oppo_18035",
+    "brand": "OPPO",
+    "model": "OPPO A5s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2690
+  },
+  {
+    "id": "oppo_18036",
+    "brand": "OPPO",
+    "model": "OPPO A1K",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2320
+  },
+  {
+    "id": "oppo_18037",
+    "brand": "OPPO",
+    "model": "OPPO F11",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3280
+  },
+  {
+    "id": "oppo_18038",
+    "brand": "OPPO",
+    "model": "OPPO F11",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3680
+  },
+  {
+    "id": "oppo_18039",
+    "brand": "OPPO",
+    "model": "OPPO Reno",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4920
+  },
+  {
+    "id": "oppo_18040",
+    "brand": "OPPO",
+    "model": "OPPO Reno 10x Zoom",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5490
+  },
+  {
+    "id": "oppo_18041",
+    "brand": "OPPO",
+    "model": "OPPO Reno 10x Zoom",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5870
+  },
+  {
+    "id": "oppo_18042",
+    "brand": "OPPO",
+    "model": "OPPO K3",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4170
+  },
+  {
+    "id": "oppo_18043",
+    "brand": "OPPO",
+    "model": "OPPO K3",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4350
+  },
+  {
+    "id": "oppo_18044",
+    "brand": "OPPO",
+    "model": "OPPO A9",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3920
+  },
+  {
+    "id": "oppo_18045",
+    "brand": "OPPO",
+    "model": "OPPO Reno 2Z",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5680
+  },
+  {
+    "id": "oppo_18046",
+    "brand": "OPPO",
+    "model": "OPPO Reno 2",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5910
+  },
+  {
+    "id": "oppo_18047",
+    "brand": "OPPO",
+    "model": "OPPO A5 2020",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3450
+  },
+  {
+    "id": "oppo_18048",
+    "brand": "OPPO",
+    "model": "OPPO A5 2020",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3030
+  },
+  {
+    "id": "oppo_18049",
+    "brand": "OPPO",
+    "model": "OPPO A5 2020",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3290
+  },
+  {
+    "id": "oppo_18050",
+    "brand": "OPPO",
+    "model": "OPPO A5 2020",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3180
+  },
+  {
+    "id": "oppo_18051",
+    "brand": "OPPO",
+    "model": "OPPO A9 2020",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4050
+  },
+  {
+    "id": "oppo_18052",
+    "brand": "OPPO",
+    "model": "OPPO A9 2020",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3820
+  },
+  {
+    "id": "oppo_18053",
+    "brand": "OPPO",
+    "model": "OPPO Reno2 F",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5720
+  },
+  {
+    "id": "oppo_18054",
+    "brand": "OPPO",
+    "model": "OPPO Reno2 F",
+    "storage": "6 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5070
+  },
+  {
+    "id": "oppo_18055",
+    "brand": "OPPO",
+    "model": "OPPO F15",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4640
+  },
+  {
+    "id": "oppo_18056",
+    "brand": "OPPO",
+    "model": "OPPO F15",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4960
+  },
+  {
+    "id": "oppo_18057",
+    "brand": "OPPO",
+    "model": "OPPO A71 2018",
+    "storage": "3 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1060
+  },
+  {
+    "id": "oppo_18058",
+    "brand": "OPPO",
+    "model": "OPPO A31",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3830
+  },
+  {
+    "id": "oppo_18059",
+    "brand": "OPPO",
+    "model": "OPPO A31",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4330
+  },
+  {
+    "id": "oppo_18060",
+    "brand": "OPPO",
+    "model": "OPPO A12",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2840
+  },
+  {
+    "id": "oppo_18061",
+    "brand": "OPPO",
+    "model": "OPPO A12",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3290
+  },
+  {
+    "id": "oppo_18062",
+    "brand": "OPPO",
+    "model": "OPPO A52",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4580
+  },
+  {
+    "id": "oppo_18063",
+    "brand": "OPPO",
+    "model": "OPPO A52",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4170
+  },
+  {
+    "id": "oppo_18064",
+    "brand": "OPPO",
+    "model": "OPPO A52",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4660
+  },
+  {
+    "id": "oppo_18065",
+    "brand": "OPPO",
+    "model": "OPPO Find X2",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 10980
+  },
+  {
+    "id": "oppo_18066",
+    "brand": "OPPO",
+    "model": "OPPO A11K",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2500
+  },
+  {
+    "id": "oppo_18067",
+    "brand": "OPPO",
+    "model": "OPPO Reno3 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5720
+  },
+  {
+    "id": "oppo_18068",
+    "brand": "OPPO",
+    "model": "OPPO Reno3 Pro",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5760
+  },
+  {
+    "id": "oppo_18069",
+    "brand": "OPPO",
+    "model": "OPPO Reno4 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6740
+  },
+  {
+    "id": "oppo_18070",
+    "brand": "OPPO",
+    "model": "OPPO A53",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4440
+  },
+  {
+    "id": "oppo_18071",
+    "brand": "OPPO",
+    "model": "OPPO A53",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_18072",
+    "brand": "OPPO",
+    "model": "OPPO F17 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5410
+  },
+  {
+    "id": "oppo_18073",
+    "brand": "OPPO",
+    "model": "OPPO F17",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5020
+  },
+  {
+    "id": "oppo_18074",
+    "brand": "OPPO",
+    "model": "OPPO F17",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5230
+  },
+  {
+    "id": "oppo_18075",
+    "brand": "OPPO",
+    "model": "OPPO A33 2020",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3140
+  },
+  {
+    "id": "oppo_18076",
+    "brand": "OPPO",
+    "model": "OPPO A15",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2990
+  },
+  {
+    "id": "oppo_18077",
+    "brand": "OPPO",
+    "model": "OPPO A15",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3310
+  },
+  {
+    "id": "oppo_18078",
+    "brand": "OPPO",
+    "model": "OPPO A15s",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4090
+  },
+  {
+    "id": "oppo_18079",
+    "brand": "OPPO",
+    "model": "OPPO A15s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3510
+  },
+  {
+    "id": "oppo_18080",
+    "brand": "OPPO",
+    "model": "OPPO Reno5 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8990
+  },
+  {
     "id": "realme_20000",
     "brand": "Realme",
     "model": "Realme 2 Pro",
@@ -6224,6 +6944,614 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 8820
   },
   {
+    "id": "vivo_22000",
+    "brand": "Vivo",
+    "model": "Vivo V9 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3120
+  },
+  {
+    "id": "vivo_22001",
+    "brand": "Vivo",
+    "model": "Vivo V9 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2970
+  },
+  {
+    "id": "vivo_22002",
+    "brand": "Vivo",
+    "model": "Vivo V11 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3600
+  },
+  {
+    "id": "vivo_22003",
+    "brand": "Vivo",
+    "model": "Vivo V11",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3110
+  },
+  {
+    "id": "vivo_22004",
+    "brand": "Vivo",
+    "model": "Vivo Y83 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2650
+  },
+  {
+    "id": "vivo_22005",
+    "brand": "Vivo",
+    "model": "Vivo NEX",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4490
+  },
+  {
+    "id": "vivo_22006",
+    "brand": "Vivo",
+    "model": "Vivo Y71i",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1340
+  },
+  {
+    "id": "vivo_22007",
+    "brand": "Vivo",
+    "model": "Vivo Y81",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1830
+  },
+  {
+    "id": "vivo_22008",
+    "brand": "Vivo",
+    "model": "Vivo Y81",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2140
+  },
+  {
+    "id": "vivo_22009",
+    "brand": "Vivo",
+    "model": "Vivo Y83",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2260
+  },
+  {
+    "id": "vivo_22010",
+    "brand": "Vivo",
+    "model": "Vivo V9 Youth",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2150
+  },
+  {
+    "id": "vivo_22011",
+    "brand": "Vivo",
+    "model": "Vivo Y71",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1720
+  },
+  {
+    "id": "vivo_22012",
+    "brand": "Vivo",
+    "model": "Vivo Y71",
+    "storage": "3 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1380
+  },
+  {
+    "id": "vivo_22013",
+    "brand": "Vivo",
+    "model": "Vivo Y71",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1490
+  },
+  {
+    "id": "vivo_22014",
+    "brand": "Vivo",
+    "model": "Vivo Y53i",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 970
+  },
+  {
+    "id": "vivo_22015",
+    "brand": "Vivo",
+    "model": "Vivo X21",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3640
+  },
+  {
+    "id": "vivo_22016",
+    "brand": "Vivo",
+    "model": "Vivo V9",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2640
+  },
+  {
+    "id": "vivo_22017",
+    "brand": "Vivo",
+    "model": "Vivo V7",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2080
+  },
+  {
+    "id": "vivo_22018",
+    "brand": "Vivo",
+    "model": "Vivo V7 Plus",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2150
+  },
+  {
+    "id": "vivo_22019",
+    "brand": "Vivo",
+    "model": "Vivo Y69",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1530
+  },
+  {
+    "id": "vivo_22020",
+    "brand": "Vivo",
+    "model": "Vivo X9",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2400
+  },
+  {
+    "id": "vivo_22021",
+    "brand": "Vivo",
+    "model": "Vivo X9",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2250
+  },
+  {
+    "id": "vivo_22022",
+    "brand": "Vivo",
+    "model": "Vivo X9s",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2330
+  },
+  {
+    "id": "vivo_22023",
+    "brand": "Vivo",
+    "model": "Vivo X9s Plus",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2550
+  },
+  {
+    "id": "vivo_22024",
+    "brand": "Vivo",
+    "model": "Vivo Y55s",
+    "storage": "3 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1050
+  },
+  {
+    "id": "vivo_22025",
+    "brand": "Vivo",
+    "model": "Vivo Y66",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1490
+  },
+  {
+    "id": "vivo_22026",
+    "brand": "Vivo",
+    "model": "Vivo V5 Plus",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2170
+  },
+  {
+    "id": "vivo_22027",
+    "brand": "Vivo",
+    "model": "Vivo V5 Plus",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1930
+  },
+  {
+    "id": "vivo_22028",
+    "brand": "Vivo",
+    "model": "Vivo V5",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1480
+  },
+  {
+    "id": "vivo_22029",
+    "brand": "Vivo",
+    "model": "Vivo Y95",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2960
+  },
+  {
+    "id": "vivo_22030",
+    "brand": "Vivo",
+    "model": "Vivo Y93",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2420
+  },
+  {
+    "id": "vivo_22031",
+    "brand": "Vivo",
+    "model": "Vivo Y93",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2500
+  },
+  {
+    "id": "vivo_22032",
+    "brand": "Vivo",
+    "model": "Vivo Y81i",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1340
+  },
+  {
+    "id": "vivo_22033",
+    "brand": "Vivo",
+    "model": "Vivo Z10",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2500
+  },
+  {
+    "id": "vivo_22034",
+    "brand": "Vivo",
+    "model": "Vivo Y91",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2270
+  },
+  {
+    "id": "vivo_22035",
+    "brand": "Vivo",
+    "model": "Vivo Y91",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2050
+  },
+  {
+    "id": "vivo_22036",
+    "brand": "Vivo",
+    "model": "Vivo V15 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4570
+  },
+  {
+    "id": "vivo_22037",
+    "brand": "Vivo",
+    "model": "Vivo V15 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4800
+  },
+  {
+    "id": "vivo_22038",
+    "brand": "Vivo",
+    "model": "Vivo Y91i",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1750
+  },
+  {
+    "id": "vivo_22039",
+    "brand": "Vivo",
+    "model": "Vivo Y91i",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1900
+  },
+  {
+    "id": "vivo_22040",
+    "brand": "Vivo",
+    "model": "Vivo Y91i",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1570
+  },
+  {
+    "id": "vivo_22041",
+    "brand": "Vivo",
+    "model": "Vivo V15",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4460
+  },
+  {
+    "id": "vivo_22042",
+    "brand": "Vivo",
+    "model": "Vivo V15",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4240
+  },
+  {
+    "id": "vivo_22043",
+    "brand": "Vivo",
+    "model": "Vivo Y17",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4500
+  },
+  {
+    "id": "vivo_22044",
+    "brand": "Vivo",
+    "model": "Vivo Y15 2019",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3610
+  },
+  {
+    "id": "vivo_22045",
+    "brand": "Vivo",
+    "model": "Vivo Y12",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3480
+  },
+  {
+    "id": "vivo_22046",
+    "brand": "Vivo",
+    "model": "Vivo Y12",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3710
+  },
+  {
+    "id": "vivo_22047",
+    "brand": "Vivo",
+    "model": "Vivo Z1 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3600
+  },
+  {
+    "id": "vivo_22048",
+    "brand": "Vivo",
+    "model": "Vivo Z1 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3940
+  },
+  {
+    "id": "vivo_22049",
+    "brand": "Vivo",
+    "model": "Vivo Z1 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3390
+  },
+  {
+    "id": "vivo_22050",
+    "brand": "Vivo",
+    "model": "Vivo Z1 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3450
+  },
+  {
+    "id": "vivo_22051",
+    "brand": "Vivo",
+    "model": "Vivo S1",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4140
+  },
+  {
+    "id": "vivo_22052",
+    "brand": "Vivo",
+    "model": "Vivo S1",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4010
+  },
+  {
+    "id": "vivo_22053",
+    "brand": "Vivo",
+    "model": "Vivo S1",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4000
+  },
+  {
+    "id": "vivo_22054",
+    "brand": "Vivo",
+    "model": "Vivo Y90",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1980
+  },
+  {
+    "id": "vivo_22055",
+    "brand": "Vivo",
+    "model": "Vivo Z1x",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3750
+  },
+  {
+    "id": "vivo_22056",
+    "brand": "Vivo",
+    "model": "Vivo Z1x",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4320
+  },
+  {
+    "id": "vivo_22057",
+    "brand": "Vivo",
+    "model": "Vivo Z1x",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4090
+  },
+  {
+    "id": "vivo_22058",
+    "brand": "Vivo",
+    "model": "Vivo Z1x",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4010
+  },
+  {
+    "id": "vivo_22059",
+    "brand": "Vivo",
+    "model": "Vivo V17 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5550
+  },
+  {
+    "id": "vivo_22060",
+    "brand": "Vivo",
+    "model": "Vivo U10",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2820
+  },
+  {
+    "id": "vivo_22061",
+    "brand": "Vivo",
+    "model": "Vivo U10",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3260
+  },
+  {
+    "id": "vivo_22062",
+    "brand": "Vivo",
+    "model": "Vivo U10",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3040
+  },
+  {
+    "id": "vivo_22063",
+    "brand": "Vivo",
+    "model": "Vivo Y19",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4240
+  },
+  {
+    "id": "vivo_22064",
+    "brand": "Vivo",
+    "model": "Vivo U20",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3470
+  },
+  {
+    "id": "vivo_22065",
+    "brand": "Vivo",
+    "model": "Vivo U20",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3820
+  },
+  {
+    "id": "vivo_22066",
+    "brand": "Vivo",
+    "model": "Vivo U20",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3560
+  },
+  {
+    "id": "vivo_22067",
+    "brand": "Vivo",
+    "model": "Vivo V17",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5380
+  },
+  {
+    "id": "vivo_22068",
+    "brand": "Vivo",
+    "model": "Vivo S1 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4810
+  },
+  {
+    "id": "vivo_22069",
+    "brand": "Vivo",
+    "model": "Vivo Y11 2019",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2800
+  },
+  {
+    "id": "vivo_22070",
+    "brand": "Vivo",
+    "model": "Vivo V19",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5640
+  },
+  {
+    "id": "vivo_22071",
+    "brand": "Vivo",
+    "model": "Vivo V19",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 6070
+  },
+  {
+    "id": "vivo_22072",
+    "brand": "Vivo",
+    "model": "Vivo Y50",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5170
+  },
+  {
+    "id": "vivo_22073",
+    "brand": "Vivo",
+    "model": "Vivo Y30",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4770
+  },
+  {
+    "id": "vivo_22074",
+    "brand": "Vivo",
+    "model": "Vivo Y30",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4620
+  },
+  {
+    "id": "vivo_22075",
+    "brand": "Vivo",
+    "model": "Vivo V50e",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 19040
+  },
+  {
     "id": "samsung_100001",
     "brand": "Samsung",
     "model": "Samsung Galaxy A14 5G",
@@ -6904,6 +8232,862 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 27950
   },
   {
+    "id": "xiaomi_100098",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 6 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3210
+  },
+  {
+    "id": "xiaomi_100099",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 6 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2980
+  },
+  {
+    "id": "xiaomi_100100",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi A2",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2570
+  },
+  {
+    "id": "xiaomi_100101",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi A2",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2920
+  },
+  {
+    "id": "xiaomi_100102",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 6",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1820
+  },
+  {
+    "id": "xiaomi_100103",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 6",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1900
+  },
+  {
+    "id": "xiaomi_100104",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 6 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2360
+  },
+  {
+    "id": "xiaomi_100105",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 6 Pro",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2230
+  },
+  {
+    "id": "xiaomi_100106",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 6A",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1590
+  },
+  {
+    "id": "xiaomi_100107",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 6A",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1480
+  },
+  {
+    "id": "xiaomi_100108",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y2",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2200
+  },
+  {
+    "id": "xiaomi_100109",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y2",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2270
+  },
+  {
+    "id": "xiaomi_100110",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 5",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1670
+  },
+  {
+    "id": "xiaomi_100111",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 5",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1780
+  },
+  {
+    "id": "xiaomi_100112",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 5",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2130
+  },
+  {
+    "id": "xiaomi_100113",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 5 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2780
+  },
+  {
+    "id": "xiaomi_100114",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 5 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2570
+  },
+  {
+    "id": "xiaomi_100115",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 5",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2160
+  },
+  {
+    "id": "xiaomi_100116",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 5",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1860
+  },
+  {
+    "id": "xiaomi_100117",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 5A",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1210
+  },
+  {
+    "id": "xiaomi_100118",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 5A",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1360
+  },
+  {
+    "id": "xiaomi_100119",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y1",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1300
+  },
+  {
+    "id": "xiaomi_100120",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y1",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1450
+  },
+  {
+    "id": "xiaomi_100121",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y1 Lite",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1060
+  },
+  {
+    "id": "xiaomi_100122",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi Mix 2",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2910
+  },
+  {
+    "id": "xiaomi_100123",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi Max 2",
+    "storage": "4 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1760
+  },
+  {
+    "id": "xiaomi_100124",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi Max 2",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 1890
+  },
+  {
+    "id": "xiaomi_100125",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi Max 2",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2290
+  },
+  {
+    "id": "xiaomi_100126",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3180
+  },
+  {
+    "id": "xiaomi_100127",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2550
+  },
+  {
+    "id": "xiaomi_100128",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3830
+  },
+  {
+    "id": "xiaomi_100129",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3970
+  },
+  {
+    "id": "xiaomi_100130",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4170
+  },
+  {
+    "id": "xiaomi_100131",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Go",
+    "storage": "1 GB/8 GB",
+    "color": "Midnight",
+    "basePrice": 910
+  },
+  {
+    "id": "xiaomi_100132",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Go",
+    "storage": "1 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1110
+  },
+  {
+    "id": "xiaomi_100133",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2570
+  },
+  {
+    "id": "xiaomi_100134",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2760
+  },
+  {
+    "id": "xiaomi_100135",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2650
+  },
+  {
+    "id": "xiaomi_100136",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 2420
+  },
+  {
+    "id": "xiaomi_100137",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7S",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3430
+  },
+  {
+    "id": "xiaomi_100138",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7S",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3520
+  },
+  {
+    "id": "xiaomi_100139",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y3",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2420
+  },
+  {
+    "id": "xiaomi_100140",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y3",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2570
+  },
+  {
+    "id": "xiaomi_100141",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Black Shark 2",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 5980
+  },
+  {
+    "id": "xiaomi_100142",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Black Shark 2",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_100143",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi K20",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5040
+  },
+  {
+    "id": "xiaomi_100144",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi K20",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4700
+  },
+  {
+    "id": "xiaomi_100145",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi K20 Pro",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 6200
+  },
+  {
+    "id": "xiaomi_100146",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi K20 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5790
+  },
+  {
+    "id": "xiaomi_100147",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7A",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1790
+  },
+  {
+    "id": "xiaomi_100148",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7A",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 1670
+  },
+  {
+    "id": "xiaomi_100149",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7A",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1510
+  },
+  {
+    "id": "xiaomi_100150",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi A3",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3790
+  },
+  {
+    "id": "xiaomi_100151",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi A3",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4200
+  },
+  {
+    "id": "xiaomi_100152",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 8A",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2380
+  },
+  {
+    "id": "xiaomi_100153",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 8A",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2540
+  },
+  {
+    "id": "xiaomi_100154",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 8",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3450
+  },
+  {
+    "id": "xiaomi_100155",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 8",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4180
+  },
+  {
+    "id": "xiaomi_100156",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 8",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3640
+  },
+  {
+    "id": "xiaomi_100157",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 8",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3860
+  },
+  {
+    "id": "xiaomi_100158",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 8 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4320
+  },
+  {
+    "id": "xiaomi_100159",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 8 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4630
+  },
+  {
+    "id": "xiaomi_100160",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 8 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4930
+  },
+  {
+    "id": "xiaomi_100161",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4510
+  },
+  {
+    "id": "xiaomi_100162",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9 Pro",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4910
+  },
+  {
+    "id": "xiaomi_100163",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5090
+  },
+  {
+    "id": "xiaomi_100164",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 8A Dual",
+    "storage": "3 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3130
+  },
+  {
+    "id": "xiaomi_100165",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 8A Dual",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2880
+  },
+  {
+    "id": "xiaomi_100166",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 8A Dual",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2780
+  },
+  {
+    "id": "xiaomi_100167",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9 Pro Max",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4880
+  },
+  {
+    "id": "xiaomi_100168",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9 Pro Max",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5610
+  },
+  {
+    "id": "xiaomi_100169",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9 Pro Max",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5350
+  },
+  {
+    "id": "xiaomi_100170",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4310
+  },
+  {
+    "id": "xiaomi_100171",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4700
+  },
+  {
+    "id": "xiaomi_100172",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4470
+  },
+  {
+    "id": "xiaomi_100173",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9 Prime",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3620
+  },
+  {
+    "id": "xiaomi_100174",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9 Prime",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3920
+  },
+  {
+    "id": "xiaomi_100175",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3550
+  },
+  {
+    "id": "xiaomi_100176",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3200
+  },
+  {
+    "id": "xiaomi_100177",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9A",
+    "storage": "3 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 3030
+  },
+  {
+    "id": "xiaomi_100178",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9A",
+    "storage": "2 GB/32 GB",
+    "color": "Midnight",
+    "basePrice": 2800
+  },
+  {
+    "id": "xiaomi_100179",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9i",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3140
+  },
+  {
+    "id": "xiaomi_100180",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9i",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3440
+  },
+  {
+    "id": "xiaomi_100181",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10T",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7660
+  },
+  {
+    "id": "xiaomi_100182",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10T",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7340
+  },
+  {
+    "id": "xiaomi_100183",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10T Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7840
+  },
+  {
+    "id": "xiaomi_100184",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10i",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 6800
+  },
+  {
+    "id": "xiaomi_100185",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10i",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7380
+  },
+  {
+    "id": "xiaomi_100186",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10i",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7610
+  },
+  {
+    "id": "xiaomi_100187",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9 Power",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3640
+  },
+  {
+    "id": "xiaomi_100188",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9 Power",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4090
+  },
+  {
+    "id": "xiaomi_100189",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9 Power",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 3880
+  },
+  {
+    "id": "xiaomi_100190",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4320
+  },
+  {
+    "id": "xiaomi_100191",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 4700
+  },
+  {
+    "id": "xiaomi_100192",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4620
+  },
+  {
+    "id": "xiaomi_100193",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Pro",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5260
+  },
+  {
+    "id": "xiaomi_100194",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5840
+  },
+  {
+    "id": "xiaomi_100195",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Pro Max",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6170
+  },
+  {
+    "id": "xiaomi_100196",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Pro Max",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 5070
+  },
+  {
+    "id": "xiaomi_100197",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Pro Max",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5560
+  },
+  {
+    "id": "xiaomi_100198",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11X Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7690
+  },
+  {
+    "id": "xiaomi_100199",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11X Pro",
+    "storage": "8 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 8260
+  },
+  {
+    "id": "xiaomi_100200",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11 Ultra",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 17370
+  },
+  {
+    "id": "xiaomi_100201",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11X",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7630
+  },
+  {
+    "id": "xiaomi_100202",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11X",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 8330
+  },
+  {
+    "id": "xiaomi_100203",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11 Lite",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 5730
+  },
+  {
+    "id": "xiaomi_100204",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11 Lite",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 6150
+  },
+  {
     "id": "iqoo_10000",
     "brand": "iQOO",
     "model": "Iqoo 12 5G",
@@ -6992,6 +9176,30 @@ export const SEED_DEVICES: any[] = [
     "ram": "8GB",
     "color": "Midnight",
     "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_100205",
+    "brand": "Xiaomi",
+    "model": "Mi 10t Pro",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7840
+  },
+  {
+    "id": "xiaomi_100206",
+    "brand": "Xiaomi",
+    "model": "Mi 11 Ultra",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 17370
+  },
+  {
+    "id": "xiaomi_100207",
+    "brand": "Xiaomi",
+    "model": "Mi Mix 2",
+    "storage": "6 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 2910
   },
   {
     "id": "motorola_10013",
@@ -7150,6 +9358,438 @@ export const SEED_DEVICES: any[] = [
     "id": "oneplus_10030",
     "brand": "OnePlus",
     "model": "Oneplus Nord Ce 6 Lite 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10031",
+    "brand": "OPPO",
+    "model": "Oppo A11k",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10032",
+    "brand": "OPPO",
+    "model": "Oppo A12",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10033",
+    "brand": "OPPO",
+    "model": "Oppo A15",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10034",
+    "brand": "OPPO",
+    "model": "Oppo A15s",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10035",
+    "brand": "OPPO",
+    "model": "Oppo A1k",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10036",
+    "brand": "OPPO",
+    "model": "Oppo A31",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10037",
+    "brand": "OPPO",
+    "model": "Oppo A33 2020",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10038",
+    "brand": "OPPO",
+    "model": "Oppo A3s",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10039",
+    "brand": "OPPO",
+    "model": "Oppo A5 2020",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10040",
+    "brand": "OPPO",
+    "model": "Oppo A5",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10041",
+    "brand": "OPPO",
+    "model": "Oppo A52",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10042",
+    "brand": "OPPO",
+    "model": "Oppo A53",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10043",
+    "brand": "OPPO",
+    "model": "Oppo A57",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10044",
+    "brand": "OPPO",
+    "model": "Oppo A5s",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10045",
+    "brand": "OPPO",
+    "model": "Oppo A7",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10046",
+    "brand": "OPPO",
+    "model": "Oppo A71 2018",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10047",
+    "brand": "OPPO",
+    "model": "Oppo A77",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10048",
+    "brand": "OPPO",
+    "model": "Oppo A83",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10049",
+    "brand": "OPPO",
+    "model": "Oppo A9 2020",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10050",
+    "brand": "OPPO",
+    "model": "Oppo A9",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10051",
+    "brand": "OPPO",
+    "model": "Oppo F1 Plus",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10052",
+    "brand": "OPPO",
+    "model": "Oppo F11 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10053",
+    "brand": "OPPO",
+    "model": "Oppo F11",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10054",
+    "brand": "OPPO",
+    "model": "Oppo F15",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10055",
+    "brand": "OPPO",
+    "model": "Oppo F17 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10056",
+    "brand": "OPPO",
+    "model": "Oppo F17",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10057",
+    "brand": "OPPO",
+    "model": "Oppo F1s",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10058",
+    "brand": "OPPO",
+    "model": "Oppo F3 Plus",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10059",
+    "brand": "OPPO",
+    "model": "Oppo F3",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10060",
+    "brand": "OPPO",
+    "model": "Oppo F5 Youth",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10061",
+    "brand": "OPPO",
+    "model": "Oppo F5",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10062",
+    "brand": "OPPO",
+    "model": "Oppo F7",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10063",
+    "brand": "OPPO",
+    "model": "Oppo F9 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10064",
+    "brand": "OPPO",
+    "model": "Oppo F9",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10065",
+    "brand": "OPPO",
+    "model": "Oppo Find X",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10066",
+    "brand": "OPPO",
+    "model": "Oppo Find X2",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10067",
+    "brand": "OPPO",
+    "model": "Oppo K1",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10068",
+    "brand": "OPPO",
+    "model": "Oppo K3",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10069",
+    "brand": "OPPO",
+    "model": "Oppo R11",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10070",
+    "brand": "OPPO",
+    "model": "Oppo R17",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10071",
+    "brand": "OPPO",
+    "model": "Oppo Reno 10x Zoom",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10072",
+    "brand": "OPPO",
+    "model": "Oppo Reno 2",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10073",
+    "brand": "OPPO",
+    "model": "Oppo Reno 2z",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10074",
+    "brand": "OPPO",
+    "model": "Oppo Reno",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10075",
+    "brand": "OPPO",
+    "model": "Oppo Reno2 F",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10076",
+    "brand": "OPPO",
+    "model": "Oppo Reno3 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10077",
+    "brand": "OPPO",
+    "model": "Oppo Reno4 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_10078",
+    "brand": "OPPO",
+    "model": "Oppo Reno5 Pro 5G",
     "storage": "128GB",
     "ram": "8GB",
     "color": "Midnight",
@@ -7552,6 +10192,31 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 5000
   },
   {
+    "id": "xiaomi_100208",
+    "brand": "Xiaomi",
+    "model": "Redmi 8",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3450
+  },
+  {
+    "id": "xiaomi_100209",
+    "brand": "Xiaomi",
+    "model": "Redmi Y1 Lite",
+    "storage": "2 GB/16 GB",
+    "color": "Midnight",
+    "basePrice": 1060
+  },
+  {
+    "id": "vivo_10126",
+    "brand": "Vivo",
+    "model": "Vivo V50e 8 Gb 256 Gb ",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
     "id": "iqoo_add_11000",
     "brand": "iQOO",
     "model": "iQOO 12 5G",
@@ -7832,6 +10497,22 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 3260
   },
   {
+    "id": "poco_add_22002",
+    "brand": "POCO",
+    "model": "POCO F1",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 2970
+  },
+  {
+    "id": "poco_add_22003",
+    "brand": "POCO",
+    "model": "POCO X2",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4210
+  },
+  {
     "id": "poco_add_22004",
     "brand": "POCO",
     "model": "POCO X2",
@@ -7848,12 +10529,36 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 4750
   },
   {
+    "id": "poco_add_22006",
+    "brand": "POCO",
+    "model": "POCO M2 Pro",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4280
+  },
+  {
+    "id": "poco_add_22007",
+    "brand": "POCO",
+    "model": "POCO M2 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4750
+  },
+  {
     "id": "poco_add_22008",
     "brand": "POCO",
     "model": "POCO M2 Pro",
     "storage": "6 GB/128 GB",
     "color": "Midnight",
     "basePrice": 4920
+  },
+  {
+    "id": "poco_add_22009",
+    "brand": "POCO",
+    "model": "POCO M2",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3850
   },
   {
     "id": "poco_add_22010",
@@ -7872,12 +10577,28 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 4350
   },
   {
+    "id": "poco_add_22012",
+    "brand": "POCO",
+    "model": "POCO C3",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3290
+  },
+  {
     "id": "poco_add_22013",
     "brand": "POCO",
     "model": "POCO C3",
     "storage": "3 GB/32 GB",
     "color": "Midnight",
     "basePrice": 3050
+  },
+  {
+    "id": "poco_add_22014",
+    "brand": "POCO",
+    "model": "POCO X3",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4600
   },
   {
     "id": "poco_add_22015",
@@ -7904,6 +10625,22 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 4720
   },
   {
+    "id": "poco_add_22018",
+    "brand": "POCO",
+    "model": "POCO M3",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4090
+  },
+  {
+    "id": "poco_add_22019",
+    "brand": "POCO",
+    "model": "POCO M3",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4320
+  },
+  {
     "id": "poco_add_22020",
     "brand": "POCO",
     "model": "POCO X3 Pro",
@@ -7926,6 +10663,14 @@ export const SEED_DEVICES: any[] = [
     "storage": "6 GB/128 GB",
     "color": "Midnight",
     "basePrice": 6400
+  },
+  {
+    "id": "poco_add_22023",
+    "brand": "POCO",
+    "model": "POCO M3 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 5650
   },
   {
     "id": "poco_add_22024",
@@ -7952,6 +10697,14 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 8520
   },
   {
+    "id": "poco_add_22027",
+    "brand": "POCO",
+    "model": "POCO M2 Reloaded",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3030
+  },
+  {
     "id": "poco_add_22028",
     "brand": "POCO",
     "model": "POCO C31",
@@ -7960,12 +10713,28 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 3200
   },
   {
+    "id": "poco_add_22029",
+    "brand": "POCO",
+    "model": "POCO C31",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3510
+  },
+  {
     "id": "poco_add_22030",
     "brand": "POCO",
     "model": "POCO M4 Pro 5G",
     "storage": "8 GB/128 GB",
     "color": "Midnight",
     "basePrice": 6890
+  },
+  {
+    "id": "poco_add_22031",
+    "brand": "POCO",
+    "model": "POCO M4 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 6210
   },
   {
     "id": "poco_add_22032",
@@ -7982,6 +10751,14 @@ export const SEED_DEVICES: any[] = [
     "storage": "6 GB/128 GB",
     "color": "Midnight",
     "basePrice": 4960
+  },
+  {
+    "id": "poco_add_22034",
+    "brand": "POCO",
+    "model": "POCO M4 Pro",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4540
   },
   {
     "id": "poco_add_22035",
@@ -8006,6 +10783,22 @@ export const SEED_DEVICES: any[] = [
     "storage": "8 GB/128 GB",
     "color": "Midnight",
     "basePrice": 7850
+  },
+  {
+    "id": "poco_add_22038",
+    "brand": "POCO",
+    "model": "POCO X4 Pro 5G",
+    "storage": "6 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 6720
+  },
+  {
+    "id": "poco_add_22039",
+    "brand": "POCO",
+    "model": "POCO M4 5G",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 5460
   },
   {
     "id": "poco_add_22040",
@@ -8038,6 +10831,14 @@ export const SEED_DEVICES: any[] = [
     "storage": "12 GB/256 GB",
     "color": "Midnight",
     "basePrice": 7720
+  },
+  {
+    "id": "poco_add_22044",
+    "brand": "POCO",
+    "model": "POCO M5",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3900
   },
   {
     "id": "poco_add_22045",
@@ -8088,6 +10889,14 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 5050
   },
   {
+    "id": "poco_add_22051",
+    "brand": "POCO",
+    "model": "POCO C55",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4400
+  },
+  {
     "id": "poco_add_22052",
     "brand": "POCO",
     "model": "POCO X5 5G",
@@ -8112,6 +10921,14 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 4700
   },
   {
+    "id": "poco_add_22055",
+    "brand": "POCO",
+    "model": "POCO C51",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4360
+  },
+  {
     "id": "poco_add_22056",
     "brand": "POCO",
     "model": "POCO F5 5G",
@@ -8126,6 +10943,14 @@ export const SEED_DEVICES: any[] = [
     "storage": "12 GB/256 GB",
     "color": "Midnight",
     "basePrice": 13230
+  },
+  {
+    "id": "poco_add_22058",
+    "brand": "POCO",
+    "model": "POCO M6 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 6220
   },
   {
     "id": "poco_add_22059",
@@ -8216,6 +11041,14 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 14670
   },
   {
+    "id": "poco_add_22070",
+    "brand": "POCO",
+    "model": "POCO M6 5G",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 5100
+  },
+  {
     "id": "poco_add_22071",
     "brand": "POCO",
     "model": "POCO M6 5G",
@@ -8238,6 +11071,14 @@ export const SEED_DEVICES: any[] = [
     "storage": "6 GB/128 GB",
     "color": "Midnight",
     "basePrice": 5930
+  },
+  {
+    "id": "poco_add_22074",
+    "brand": "POCO",
+    "model": "POCO C61",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 4450
   },
   {
     "id": "poco_add_22075",
@@ -8320,6 +11161,14 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 8370
   },
   {
+    "id": "poco_add_22085",
+    "brand": "POCO",
+    "model": "POCO C75 5G",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 5190
+  },
+  {
     "id": "poco_add_22086",
     "brand": "POCO",
     "model": "POCO C75 5G",
@@ -8374,6 +11223,14 @@ export const SEED_DEVICES: any[] = [
     "storage": "8 GB/128 GB",
     "color": "Midnight",
     "basePrice": 6550
+  },
+  {
+    "id": "poco_add_22093",
+    "brand": "POCO",
+    "model": "POCO C71",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3930
   },
   {
     "id": "poco_add_22094",
@@ -8470,6 +11327,14 @@ export const SEED_DEVICES: any[] = [
     "storage": "8 GB/256 GB",
     "color": "Midnight",
     "basePrice": 15500
+  },
+  {
+    "id": "poco_add_22106",
+    "brand": "POCO",
+    "model": "POCO C85x",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 7450
   },
   {
     "id": "poco_add_22107",
@@ -8491,6 +11356,14 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 8370
   },
   {
+    "id": "poco_add_22085",
+    "brand": "POCO",
+    "model": "POCO C75 5G",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 5190
+  },
+  {
     "id": "poco_add_22086",
     "brand": "POCO",
     "model": "POCO C75 5G",
@@ -8545,6 +11418,14 @@ export const SEED_DEVICES: any[] = [
     "storage": "8 GB/128 GB",
     "color": "Midnight",
     "basePrice": 6550
+  },
+  {
+    "id": "poco_add_22093",
+    "brand": "POCO",
+    "model": "POCO C71",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 3930
   },
   {
     "id": "poco_add_22094",
@@ -8641,6 +11522,14 @@ export const SEED_DEVICES: any[] = [
     "storage": "8 GB/256 GB",
     "color": "Midnight",
     "basePrice": 15500
+  },
+  {
+    "id": "poco_add_22106",
+    "brand": "POCO",
+    "model": "POCO C85x",
+    "storage": "4 GB/64 GB",
+    "color": "Midnight",
+    "basePrice": 7450
   },
   {
     "id": "poco_add_22107",
@@ -8665,6 +11554,915 @@ export const SEED_DEVICES: any[] = [
     "storage": "12 GB/256 GB",
     "color": "Midnight",
     "basePrice": 23400
+  },
+  {
+    "id": "oppo_custom_713078",
+    "brand": "OPPO",
+    "model": "OPPO A7",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_547238",
+    "brand": "OPPO",
+    "model": "OPPO F9 Pro",
+    "storage": "64GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_949585",
+    "brand": "OPPO",
+    "model": "OPPO F9",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_777973",
+    "brand": "OPPO",
+    "model": "OPPO A3s",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_218111",
+    "brand": "OPPO",
+    "model": "OPPO A3s",
+    "storage": "16GB",
+    "ram": "2GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_750026",
+    "brand": "OPPO",
+    "model": "OPPO A3s",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_96755",
+    "brand": "OPPO",
+    "model": "OPPO Find X",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_144412",
+    "brand": "OPPO",
+    "model": "OPPO A5",
+    "storage": "32GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_608120",
+    "brand": "OPPO",
+    "model": "OPPO A5",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_581487",
+    "brand": "OPPO",
+    "model": "OPPO F7",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_84066",
+    "brand": "OPPO",
+    "model": "OPPO A83",
+    "storage": "16GB",
+    "ram": "2GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_794453",
+    "brand": "OPPO",
+    "model": "OPPO A83",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_947792",
+    "brand": "OPPO",
+    "model": "OPPO A83",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_504973",
+    "brand": "OPPO",
+    "model": "OPPO F5 Youth",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_96899",
+    "brand": "OPPO",
+    "model": "OPPO F5",
+    "storage": "32GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_485952",
+    "brand": "OPPO",
+    "model": "OPPO F5",
+    "storage": "64GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_688565",
+    "brand": "OPPO",
+    "model": "OPPO R11",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_116616",
+    "brand": "OPPO",
+    "model": "OPPO A77",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_552117",
+    "brand": "OPPO",
+    "model": "OPPO F3",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_353262",
+    "brand": "OPPO",
+    "model": "OPPO F3 Plus",
+    "storage": "64GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_795807",
+    "brand": "OPPO",
+    "model": "OPPO A57",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_696093",
+    "brand": "OPPO",
+    "model": "OPPO K1",
+    "storage": "64GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_1888",
+    "brand": "OPPO",
+    "model": "OPPO F11 Pro",
+    "storage": "64GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_520990",
+    "brand": "OPPO",
+    "model": "OPPO A5s",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_107669",
+    "brand": "OPPO",
+    "model": "OPPO A5s",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_677404",
+    "brand": "OPPO",
+    "model": "OPPO A1K",
+    "storage": "32GB",
+    "ram": "2GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_252183",
+    "brand": "OPPO",
+    "model": "OPPO Reno 10x Zoom",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_311042",
+    "brand": "OPPO",
+    "model": "OPPO K3",
+    "storage": "64GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_716106",
+    "brand": "OPPO",
+    "model": "OPPO Reno 2Z",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_913185",
+    "brand": "OPPO",
+    "model": "OPPO Reno 2",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_68749",
+    "brand": "OPPO",
+    "model": "OPPO A5 2020",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_614286",
+    "brand": "OPPO",
+    "model": "OPPO Reno2 F",
+    "storage": "256GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_316975",
+    "brand": "OPPO",
+    "model": "OPPO A71 2018",
+    "storage": "16GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_917701",
+    "brand": "OPPO",
+    "model": "OPPO A31",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_606891",
+    "brand": "OPPO",
+    "model": "OPPO A12",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_290540",
+    "brand": "OPPO",
+    "model": "OPPO A12",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_428760",
+    "brand": "OPPO",
+    "model": "OPPO Find X2",
+    "storage": "256GB",
+    "ram": "12GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_466176",
+    "brand": "OPPO",
+    "model": "OPPO A11K",
+    "storage": "32GB",
+    "ram": "2GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_528507",
+    "brand": "OPPO",
+    "model": "OPPO Reno3 Pro",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_910778",
+    "brand": "OPPO",
+    "model": "OPPO A53",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_577758",
+    "brand": "OPPO",
+    "model": "OPPO A33 2020",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_765781",
+    "brand": "OPPO",
+    "model": "OPPO A15",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_916211",
+    "brand": "OPPO",
+    "model": "OPPO A15s",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_185395",
+    "brand": "OPPO",
+    "model": "OPPO F19 Pro",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_751516",
+    "brand": "OPPO",
+    "model": "OPPO F19 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_573732",
+    "brand": "OPPO",
+    "model": "OPPO F19 Pro Plus 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_679106",
+    "brand": "OPPO",
+    "model": "OPPO F19",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_30109",
+    "brand": "OPPO",
+    "model": "OPPO A54",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_50909",
+    "brand": "OPPO",
+    "model": "OPPO A54",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_242113",
+    "brand": "OPPO",
+    "model": "OPPO A53s 5G",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_709049",
+    "brand": "OPPO",
+    "model": "OPPO A74 5G",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_862985",
+    "brand": "OPPO",
+    "model": "OPPO Reno6 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_563821",
+    "brand": "OPPO",
+    "model": "OPPO Reno6 Pro 5G",
+    "storage": "256GB",
+    "ram": "12GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_665815",
+    "brand": "OPPO",
+    "model": "OPPO F19s",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_640782",
+    "brand": "OPPO",
+    "model": "OPPO A55",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_444247",
+    "brand": "OPPO",
+    "model": "OPPO A55",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_82355",
+    "brand": "OPPO",
+    "model": "OPPO A16",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_64195",
+    "brand": "OPPO",
+    "model": "OPPO A16K",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_146281",
+    "brand": "OPPO",
+    "model": "OPPO A16K",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_587581",
+    "brand": "OPPO",
+    "model": "OPPO Reno7 5G",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_686109",
+    "brand": "OPPO",
+    "model": "OPPO Reno7 Pro 5G",
+    "storage": "256GB",
+    "ram": "12GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_281787",
+    "brand": "OPPO",
+    "model": "OPPO A76",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_378041",
+    "brand": "OPPO",
+    "model": "OPPO K10",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_329706",
+    "brand": "OPPO",
+    "model": "OPPO A16e",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_640635",
+    "brand": "OPPO",
+    "model": "OPPO A16e",
+    "storage": "32GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_299266",
+    "brand": "OPPO",
+    "model": "OPPO F21 Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_580616",
+    "brand": "OPPO",
+    "model": "OPPO F21 Pro 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_444934",
+    "brand": "OPPO",
+    "model": "OPPO A96",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_487571",
+    "brand": "OPPO",
+    "model": "OPPO K10 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_77363",
+    "brand": "OPPO",
+    "model": "OPPO Reno8 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_104273",
+    "brand": "OPPO",
+    "model": "OPPO Reno8 Pro 5G",
+    "storage": "256GB",
+    "ram": "12GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_46138",
+    "brand": "OPPO",
+    "model": "OPPO A57 2022",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_417568",
+    "brand": "OPPO",
+    "model": "OPPO F21s Pro",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_772247",
+    "brand": "OPPO",
+    "model": "OPPO F21s Pro 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_172751",
+    "brand": "OPPO",
+    "model": "OPPO A77 2022",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_757779",
+    "brand": "OPPO",
+    "model": "OPPO A77 2022",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_966693",
+    "brand": "OPPO",
+    "model": "OPPO A17K",
+    "storage": "64GB",
+    "ram": "3GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_805493",
+    "brand": "OPPO",
+    "model": "OPPO A77s",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_558257",
+    "brand": "OPPO",
+    "model": "OPPO A78 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_218058",
+    "brand": "OPPO",
+    "model": "OPPO Reno8T 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_978786",
+    "brand": "OPPO",
+    "model": "OPPO Find N2 Flip 5G",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_130491",
+    "brand": "OPPO",
+    "model": "OPPO F23 5G",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_156098",
+    "brand": "OPPO",
+    "model": "OPPO Reno10 5G",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_237737",
+    "brand": "OPPO",
+    "model": "OPPO Reno10 Pro 5G",
+    "storage": "256GB",
+    "ram": "12GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_404786",
+    "brand": "OPPO",
+    "model": "OPPO Reno10 Pro Plus 5G",
+    "storage": "256GB",
+    "ram": "12GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_662402",
+    "brand": "OPPO",
+    "model": "OPPO A78",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_9904",
+    "brand": "OPPO",
+    "model": "OPPO Find N3 Flip 5G",
+    "storage": "256GB",
+    "ram": "12GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_203967",
+    "brand": "OPPO",
+    "model": "OPPO A58",
+    "storage": "128GB",
+    "ram": "6GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_890318",
+    "brand": "OPPO",
+    "model": "OPPO A38",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_605420",
+    "brand": "OPPO",
+    "model": "OPPO A17",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_98209",
+    "brand": "OPPO",
+    "model": "OPPO A18",
+    "storage": "64GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_329537",
+    "brand": "OPPO",
+    "model": "OPPO A18",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_203855",
+    "brand": "OPPO",
+    "model": "OPPO A79 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_929004",
+    "brand": "OPPO",
+    "model": "OPPO A59 5G",
+    "storage": "128GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_609670",
+    "brand": "OPPO",
+    "model": "OPPO Reno11 5G",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_20385",
+    "brand": "OPPO",
+    "model": "OPPO Reno11 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_390941",
+    "brand": "OPPO",
+    "model": "OPPO Reno11 Pro 5G",
+    "storage": "256GB",
+    "ram": "12GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_588226",
+    "brand": "OPPO",
+    "model": "OPPO F25 Pro 5G",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_376025",
+    "brand": "OPPO",
+    "model": "OPPO F25 Pro 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_531502",
+    "brand": "OPPO",
+    "model": "OPPO F27 Pro Plus 5G",
+    "storage": "128GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
+  },
+  {
+    "id": "oppo_custom_732030",
+    "brand": "OPPO",
+    "model": "OPPO F27 Pro Plus 5G",
+    "storage": "256GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": null
   },
   {
     "id": "samsung_39000",
@@ -11043,6 +14841,2355 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 32000
   },
   {
+    "id": "xiaomi_batch_15",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 4A",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_16",
+    "brand": "Xiaomi",
+    "model": "Redmi 3S Prime",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_17",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 3S",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_18",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi Max",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_19",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 5",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_20",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 3",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_55",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_56",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10T 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_57",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_58",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 10 Prime",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_59",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 11 Lite NE 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_60",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Lite",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_61",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11T 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_62",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9 Activ",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_63",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 11i 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_64",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 11i HyperCharge 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_65",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 11T Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_66",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_67",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11S",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_68",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11 Pro Plus 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_69",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_70",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 10",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_71",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 12 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_72",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 10 Prime 2022",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_73",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 10A",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_74",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi K50i 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_75",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 11 Prime 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_76",
+    "brand": "Xiaomi",
+    "model": "Redmi 10 Power",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_77",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 11SE",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_78",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 11 Prime",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_79",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A1 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_80",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 12 Pro Plus 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_81",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 12 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_82",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 12 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_83",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 13 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_84",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 12",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_85",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A2 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_86",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A2",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_87",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 12 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_88",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 12C",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_89",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 12",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_90",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 13C",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_91",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 13C 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_92",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 13 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_93",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 13 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_94",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 13 Pro Plus 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_95",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A3",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_96",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 14",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_97",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 14 Ultra",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_98",
+    "brand": "Xiaomi",
+    "model": "Redmi A1",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_99",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 14 CIVI",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_100",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A3x",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_101",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 13 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_102",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 14 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_103",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 14 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_104",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 14 Pro Plus 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_105",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 14C 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_106",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A4 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_107",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A5",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_108",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 15",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_109",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 15 Ultra",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_110",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 15 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_111",
+    "brand": "Xiaomi",
+    "model": "Redmi Note 14 SE 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_112",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 15C 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_113",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 15 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_114",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 15 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_115",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 15 Pro Plus 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_116",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 17 Ultra",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_117",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 17",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_118",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 15A 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_119",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A7 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "xiaomi_batch_120",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 17T",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_1",
+    "brand": "Vivo",
+    "model": "Vivo V9 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_2",
+    "brand": "Vivo",
+    "model": "Vivo V11 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_3",
+    "brand": "Vivo",
+    "model": "Vivo V11",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_4",
+    "brand": "Vivo",
+    "model": "Vivo Y83 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_5",
+    "brand": "Vivo",
+    "model": "Vivo NEX",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_6",
+    "brand": "Vivo",
+    "model": "Vivo Y71i",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_7",
+    "brand": "Vivo",
+    "model": "Vivo Y81",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_8",
+    "brand": "Vivo",
+    "model": "Vivo Y83",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_9",
+    "brand": "Vivo",
+    "model": "Vivo V9 Youth",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_10",
+    "brand": "Vivo",
+    "model": "Vivo Y71",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_11",
+    "brand": "Vivo",
+    "model": "Vivo Y53i",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_12",
+    "brand": "Vivo",
+    "model": "Vivo X21",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_13",
+    "brand": "Vivo",
+    "model": "Vivo V9",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_14",
+    "brand": "Vivo",
+    "model": "Vivo V7",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_15",
+    "brand": "Vivo",
+    "model": "Vivo V7 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_16",
+    "brand": "Vivo",
+    "model": "Vivo Y69",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_17",
+    "brand": "Vivo",
+    "model": "Vivo Y55s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_18",
+    "brand": "Vivo",
+    "model": "Vivo Y66",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_19",
+    "brand": "Vivo",
+    "model": "Vivo V5 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_20",
+    "brand": "Vivo",
+    "model": "Vivo V5",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_21",
+    "brand": "Vivo",
+    "model": "Vivo Y55L",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_22",
+    "brand": "Vivo",
+    "model": "Vivo Y53",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_23",
+    "brand": "Vivo",
+    "model": "Vivo Y31L",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_24",
+    "brand": "Vivo",
+    "model": "Vivo Y21L",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_25",
+    "brand": "Vivo",
+    "model": "Vivo Y21",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_26",
+    "brand": "Vivo",
+    "model": "Vivo V3",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_27",
+    "brand": "Vivo",
+    "model": "Vivo V3 Max",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_28",
+    "brand": "Vivo",
+    "model": "Vivo Y51L",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_29",
+    "brand": "Vivo",
+    "model": "Vivo Y95",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_30",
+    "brand": "Vivo",
+    "model": "Vivo Y93",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_31",
+    "brand": "Vivo",
+    "model": "Vivo Y81i",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_32",
+    "brand": "Vivo",
+    "model": "Vivo Z10",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_33",
+    "brand": "Vivo",
+    "model": "Vivo Y91",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_34",
+    "brand": "Vivo",
+    "model": "Vivo V15 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_35",
+    "brand": "Vivo",
+    "model": "Vivo Y91i",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_36",
+    "brand": "Vivo",
+    "model": "Vivo V15",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_37",
+    "brand": "Vivo",
+    "model": "Vivo Y17",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_38",
+    "brand": "Vivo",
+    "model": "Vivo Y15 2019",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_39",
+    "brand": "Vivo",
+    "model": "Vivo Y12",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_40",
+    "brand": "Vivo",
+    "model": "Vivo Z1 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_41",
+    "brand": "Vivo",
+    "model": "Vivo S1",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_42",
+    "brand": "Vivo",
+    "model": "Vivo Y90",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_43",
+    "brand": "Vivo",
+    "model": "Vivo Z1x",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_44",
+    "brand": "Vivo",
+    "model": "Vivo V17 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_45",
+    "brand": "Vivo",
+    "model": "Vivo U10",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_46",
+    "brand": "Vivo",
+    "model": "Vivo Y19",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_47",
+    "brand": "Vivo",
+    "model": "Vivo U20",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_48",
+    "brand": "Vivo",
+    "model": "Vivo V17",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_49",
+    "brand": "Vivo",
+    "model": "Vivo S1 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_50",
+    "brand": "Vivo",
+    "model": "Vivo Y11 2019",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_51",
+    "brand": "Vivo",
+    "model": "Vivo V19",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_52",
+    "brand": "Vivo",
+    "model": "Vivo Y50",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_53",
+    "brand": "Vivo",
+    "model": "Vivo Y30",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_54",
+    "brand": "Vivo",
+    "model": "Vivo X50",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_55",
+    "brand": "Vivo",
+    "model": "Vivo X50 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_56",
+    "brand": "Vivo",
+    "model": "Vivo V20",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_57",
+    "brand": "Vivo",
+    "model": "Vivo Y20i",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_58",
+    "brand": "Vivo",
+    "model": "Vivo Y20",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_59",
+    "brand": "Vivo",
+    "model": "Vivo V20 SE",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_60",
+    "brand": "Vivo",
+    "model": "Vivo V20 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_61",
+    "brand": "Vivo",
+    "model": "Vivo Y51 2020",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_62",
+    "brand": "Vivo",
+    "model": "Vivo Y20G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_63",
+    "brand": "Vivo",
+    "model": "Vivo V20 2021",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_64",
+    "brand": "Vivo",
+    "model": "Vivo Y51A",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_65",
+    "brand": "Vivo",
+    "model": "Vivo Y20A",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_66",
+    "brand": "Vivo",
+    "model": "Vivo Y31 2021",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_67",
+    "brand": "Vivo",
+    "model": "Vivo X60",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_68",
+    "brand": "Vivo",
+    "model": "Vivo X60 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_69",
+    "brand": "Vivo",
+    "model": "Vivo X60 Pro Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_70",
+    "brand": "Vivo",
+    "model": "Vivo V21 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_71",
+    "brand": "Vivo",
+    "model": "Vivo V21e 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_72",
+    "brand": "Vivo",
+    "model": "Vivo Y73",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_73",
+    "brand": "Vivo",
+    "model": "Vivo Y72 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_74",
+    "brand": "Vivo",
+    "model": "Vivo Y12s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_75",
+    "brand": "Vivo",
+    "model": "Vivo Y1s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_76",
+    "brand": "Vivo",
+    "model": "Vivo Y53s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_77",
+    "brand": "Vivo",
+    "model": "Vivo Y12G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_78",
+    "brand": "Vivo",
+    "model": "Vivo Y33s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_79",
+    "brand": "Vivo",
+    "model": "Vivo Y21 2021",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_80",
+    "brand": "Vivo",
+    "model": "Vivo X70 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_81",
+    "brand": "Vivo",
+    "model": "Vivo Y3s 2021",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_82",
+    "brand": "Vivo",
+    "model": "Vivo Y20T",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_83",
+    "brand": "Vivo",
+    "model": "Vivo V23 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_84",
+    "brand": "Vivo",
+    "model": "Vivo V23 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_85",
+    "brand": "Vivo",
+    "model": "Vivo Y21T",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_86",
+    "brand": "Vivo",
+    "model": "Vivo T1 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_87",
+    "brand": "Vivo",
+    "model": "Vivo V23e 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_88",
+    "brand": "Vivo",
+    "model": "Vivo Y75 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_89",
+    "brand": "Vivo",
+    "model": "Vivo Y21e",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_90",
+    "brand": "Vivo",
+    "model": "Vivo Y21a",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_91",
+    "brand": "Vivo",
+    "model": "Vivo Y33T",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_92",
+    "brand": "Vivo",
+    "model": "Vivo Y15s 2021",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_93",
+    "brand": "Vivo",
+    "model": "Vivo Y21G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_94",
+    "brand": "Vivo",
+    "model": "Vivo X70 Pro Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_95",
+    "brand": "Vivo",
+    "model": "Vivo X80",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_96",
+    "brand": "Vivo",
+    "model": "Vivo X80 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_97",
+    "brand": "Vivo",
+    "model": "Vivo T1 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_98",
+    "brand": "Vivo",
+    "model": "Vivo T1",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_99",
+    "brand": "Vivo",
+    "model": "Vivo Y75",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_100",
+    "brand": "Vivo",
+    "model": "Vivo Y01",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_101",
+    "brand": "Vivo",
+    "model": "Vivo T1x",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_102",
+    "brand": "Vivo",
+    "model": "Vivo V25 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_103",
+    "brand": "Vivo",
+    "model": "Vivo Y22 2022",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_104",
+    "brand": "Vivo",
+    "model": "Vivo V25 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_105",
+    "brand": "Vivo",
+    "model": "Vivo Y16",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_106",
+    "brand": "Vivo",
+    "model": "Vivo Y35",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_107",
+    "brand": "Vivo",
+    "model": "Vivo Y02",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_108",
+    "brand": "Vivo",
+    "model": "Vivo Y100 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_109",
+    "brand": "Vivo",
+    "model": "Vivo Y56 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_110",
+    "brand": "Vivo",
+    "model": "Vivo V27 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_111",
+    "brand": "Vivo",
+    "model": "Vivo V27",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_112",
+    "brand": "Vivo",
+    "model": "Vivo Y01a",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_113",
+    "brand": "Vivo",
+    "model": "Vivo X90",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_114",
+    "brand": "Vivo",
+    "model": "Vivo X90 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_115",
+    "brand": "Vivo",
+    "model": "Vivo Y100A 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_116",
+    "brand": "Vivo",
+    "model": "Vivo Y02T",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_117",
+    "brand": "Vivo",
+    "model": "Vivo T2 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_118",
+    "brand": "Vivo",
+    "model": "Vivo T2x 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_119",
+    "brand": "Vivo",
+    "model": "Vivo V29e",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_120",
+    "brand": "Vivo",
+    "model": "Vivo Y27",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_121",
+    "brand": "Vivo",
+    "model": "Vivo Y36",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_122",
+    "brand": "Vivo",
+    "model": "Vivo V29",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_123",
+    "brand": "Vivo",
+    "model": "Vivo V29 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_124",
+    "brand": "Vivo",
+    "model": "Vivo T2 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_125",
+    "brand": "Vivo",
+    "model": "Vivo Y17S",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_126",
+    "brand": "Vivo",
+    "model": "Vivo Y200 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_127",
+    "brand": "Vivo",
+    "model": "Vivo Y28 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_128",
+    "brand": "Vivo",
+    "model": "Vivo X100",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_129",
+    "brand": "Vivo",
+    "model": "Vivo X100 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_130",
+    "brand": "Vivo",
+    "model": "Vivo V30",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_131",
+    "brand": "Vivo",
+    "model": "Vivo V30 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_132",
+    "brand": "Vivo",
+    "model": "Vivo Y200e 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_133",
+    "brand": "Vivo",
+    "model": "Vivo T3x 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_134",
+    "brand": "Vivo",
+    "model": "Vivo T3 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_135",
+    "brand": "Vivo",
+    "model": "Vivo V30e",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_136",
+    "brand": "Vivo",
+    "model": "Vivo Y18",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_137",
+    "brand": "Vivo",
+    "model": "Vivo Y18e",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_138",
+    "brand": "Vivo",
+    "model": "Vivo Y200 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_139",
+    "brand": "Vivo",
+    "model": "Vivo X Fold 3 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_140",
+    "brand": "Vivo",
+    "model": "Vivo T3 Lite 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_141",
+    "brand": "Vivo",
+    "model": "Vivo Y28s 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_142",
+    "brand": "Vivo",
+    "model": "Vivo Y18i",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_143",
+    "brand": "Vivo",
+    "model": "Vivo Y28e 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_144",
+    "brand": "Vivo",
+    "model": "Vivo V40",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_145",
+    "brand": "Vivo",
+    "model": "Vivo V50 Elite",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_146",
+    "brand": "Vivo",
+    "model": "Vivo V40 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_147",
+    "brand": "Vivo",
+    "model": "Vivo Y58 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_148",
+    "brand": "Vivo",
+    "model": "Vivo T3 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_149",
+    "brand": "Vivo",
+    "model": "Vivo V40e",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_150",
+    "brand": "Vivo",
+    "model": "Vivo T3 Ultra",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_151",
+    "brand": "Vivo",
+    "model": "Vivo Y18T",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_152",
+    "brand": "Vivo",
+    "model": "Vivo X200",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_153",
+    "brand": "Vivo",
+    "model": "Vivo X200 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_154",
+    "brand": "Vivo",
+    "model": "Vivo Y300 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_155",
+    "brand": "Vivo",
+    "model": "Vivo Y300 Plus 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_156",
+    "brand": "Vivo",
+    "model": "Vivo Y29 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_157",
+    "brand": "Vivo",
+    "model": "Vivo V50",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_158",
+    "brand": "Vivo",
+    "model": "Vivo T4X 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_159",
+    "brand": "Vivo",
+    "model": "Vivo V50e",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_160",
+    "brand": "Vivo",
+    "model": "Vivo T4 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_161",
+    "brand": "Vivo",
+    "model": "Vivo T4 Ultra 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_162",
+    "brand": "Vivo",
+    "model": "Vivo Y19 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_163",
+    "brand": "Vivo",
+    "model": "Vivo Y19e",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_164",
+    "brand": "Vivo",
+    "model": "Vivo Y39 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_165",
+    "brand": "Vivo",
+    "model": "Vivo T4 Lite 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_166",
+    "brand": "Vivo",
+    "model": "Vivo Y400 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_167",
+    "brand": "Vivo",
+    "model": "Vivo X200 FE",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_168",
+    "brand": "Vivo",
+    "model": "Vivo Y400 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_169",
+    "brand": "Vivo",
+    "model": "Vivo T4R 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_170",
+    "brand": "Vivo",
+    "model": "Vivo V60",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_171",
+    "brand": "Vivo",
+    "model": "Vivo X Fold 5",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_172",
+    "brand": "Vivo",
+    "model": "Vivo T4 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_173",
+    "brand": "Vivo",
+    "model": "Vivo Y31 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_174",
+    "brand": "Vivo",
+    "model": "Vivo V60e",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_175",
+    "brand": "Vivo",
+    "model": "Vivo Y31 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_176",
+    "brand": "Vivo",
+    "model": "Vivo Y19s 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_177",
+    "brand": "Vivo",
+    "model": "Vivo X300",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_178",
+    "brand": "Vivo",
+    "model": "Vivo X300 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_179",
+    "brand": "Vivo",
+    "model": "Vivo V70",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_180",
+    "brand": "Vivo",
+    "model": "Vivo V70 Elite",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_181",
+    "brand": "Vivo",
+    "model": "Vivo X200T",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_182",
+    "brand": "Vivo",
+    "model": "Vivo Y51 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_183",
+    "brand": "Vivo",
+    "model": "Vivo V70 FE",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_184",
+    "brand": "Vivo",
+    "model": "Vivo T5x 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_185",
+    "brand": "Vivo",
+    "model": "Vivo Y11 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_186",
+    "brand": "Vivo",
+    "model": "Vivo Y21 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_187",
+    "brand": "Vivo",
+    "model": "Vivo X300 FE",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_188",
+    "brand": "Vivo",
+    "model": "Vivo X300 Ultra",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "vivo_batch_189",
+    "brand": "Vivo",
+    "model": "Vivo Y05",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
     "id": "oneplus_batch_1",
     "brand": "OnePlus",
     "model": "OnePlus 6T",
@@ -11487,6 +17634,1329 @@ export const SEED_DEVICES: any[] = [
     "id": "oneplus_batch_50",
     "brand": "OnePlus",
     "model": "OnePlus Nord CE 6 Lite 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_1",
+    "brand": "OPPO",
+    "model": "OPPO A7",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_2",
+    "brand": "OPPO",
+    "model": "OPPO F9 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_3",
+    "brand": "OPPO",
+    "model": "OPPO F9",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_4",
+    "brand": "OPPO",
+    "model": "OPPO A3s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_5",
+    "brand": "OPPO",
+    "model": "OPPO Find X",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_6",
+    "brand": "OPPO",
+    "model": "OPPO A5",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_7",
+    "brand": "OPPO",
+    "model": "OPPO F7",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_8",
+    "brand": "OPPO",
+    "model": "OPPO A83",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_9",
+    "brand": "OPPO",
+    "model": "OPPO F5 Youth",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_10",
+    "brand": "OPPO",
+    "model": "OPPO F5",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_11",
+    "brand": "OPPO",
+    "model": "OPPO A71",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_12",
+    "brand": "OPPO",
+    "model": "OPPO A33",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_13",
+    "brand": "OPPO",
+    "model": "OPPO R11",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_14",
+    "brand": "OPPO",
+    "model": "OPPO A77",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_15",
+    "brand": "OPPO",
+    "model": "OPPO F3",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_16",
+    "brand": "OPPO",
+    "model": "OPPO F3 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_17",
+    "brand": "OPPO",
+    "model": "OPPO A57",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_18",
+    "brand": "OPPO",
+    "model": "OPPO F1s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_19",
+    "brand": "OPPO",
+    "model": "OPPO A37",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_20",
+    "brand": "OPPO",
+    "model": "OPPO A37f",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_21",
+    "brand": "OPPO",
+    "model": "OPPO F1 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_22",
+    "brand": "OPPO",
+    "model": "OPPO F1",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_23",
+    "brand": "OPPO",
+    "model": "OPPO R17 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_24",
+    "brand": "OPPO",
+    "model": "OPPO R17",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_25",
+    "brand": "OPPO",
+    "model": "OPPO K1",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_26",
+    "brand": "OPPO",
+    "model": "OPPO F11 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_27",
+    "brand": "OPPO",
+    "model": "OPPO A5s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_28",
+    "brand": "OPPO",
+    "model": "OPPO A1K",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_29",
+    "brand": "OPPO",
+    "model": "OPPO F11",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_30",
+    "brand": "OPPO",
+    "model": "OPPO Reno",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_31",
+    "brand": "OPPO",
+    "model": "OPPO Reno 10x Zoom",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_32",
+    "brand": "OPPO",
+    "model": "OPPO R15 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_33",
+    "brand": "OPPO",
+    "model": "OPPO K3",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_34",
+    "brand": "OPPO",
+    "model": "OPPO A9",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_35",
+    "brand": "OPPO",
+    "model": "OPPO Reno 2Z",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_36",
+    "brand": "OPPO",
+    "model": "OPPO Reno 2",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_37",
+    "brand": "OPPO",
+    "model": "OPPO A5 2020",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_38",
+    "brand": "OPPO",
+    "model": "OPPO A9 2020",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_39",
+    "brand": "OPPO",
+    "model": "OPPO Reno2 F",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_40",
+    "brand": "OPPO",
+    "model": "OPPO F15",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_41",
+    "brand": "OPPO",
+    "model": "OPPO A71 2018",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_42",
+    "brand": "OPPO",
+    "model": "OPPO A31",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_43",
+    "brand": "OPPO",
+    "model": "OPPO A12",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_44",
+    "brand": "OPPO",
+    "model": "OPPO A52",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_45",
+    "brand": "OPPO",
+    "model": "OPPO Find X2",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_46",
+    "brand": "OPPO",
+    "model": "OPPO A11K",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_47",
+    "brand": "OPPO",
+    "model": "OPPO Reno3 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_48",
+    "brand": "OPPO",
+    "model": "OPPO Reno4 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_49",
+    "brand": "OPPO",
+    "model": "OPPO A53",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_50",
+    "brand": "OPPO",
+    "model": "OPPO F17 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_51",
+    "brand": "OPPO",
+    "model": "OPPO F17",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_52",
+    "brand": "OPPO",
+    "model": "OPPO A33 2020",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_53",
+    "brand": "OPPO",
+    "model": "OPPO A15",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_54",
+    "brand": "OPPO",
+    "model": "OPPO A15s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_55",
+    "brand": "OPPO",
+    "model": "OPPO Reno5 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_56",
+    "brand": "OPPO",
+    "model": "OPPO F19 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_57",
+    "brand": "OPPO",
+    "model": "OPPO F19 Pro Plus 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_58",
+    "brand": "OPPO",
+    "model": "OPPO F19",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_59",
+    "brand": "OPPO",
+    "model": "OPPO A54",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_60",
+    "brand": "OPPO",
+    "model": "OPPO A53s 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_61",
+    "brand": "OPPO",
+    "model": "OPPO A74 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_62",
+    "brand": "OPPO",
+    "model": "OPPO Reno6 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_63",
+    "brand": "OPPO",
+    "model": "OPPO Reno6 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_64",
+    "brand": "OPPO",
+    "model": "OPPO F19s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_65",
+    "brand": "OPPO",
+    "model": "OPPO A55",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_66",
+    "brand": "OPPO",
+    "model": "OPPO A16",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_67",
+    "brand": "OPPO",
+    "model": "OPPO A16K",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_68",
+    "brand": "OPPO",
+    "model": "OPPO Reno7 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_69",
+    "brand": "OPPO",
+    "model": "OPPO Reno7 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_70",
+    "brand": "OPPO",
+    "model": "Oppo A76",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_71",
+    "brand": "OPPO",
+    "model": "OPPO K10",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_72",
+    "brand": "OPPO",
+    "model": "OPPO A16e",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_73",
+    "brand": "OPPO",
+    "model": "OPPO F21 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_74",
+    "brand": "OPPO",
+    "model": "OPPO F21 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_75",
+    "brand": "OPPO",
+    "model": "OPPO A96",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_76",
+    "brand": "OPPO",
+    "model": "OPPO K10 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_77",
+    "brand": "OPPO",
+    "model": "OPPO Reno8 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_78",
+    "brand": "OPPO",
+    "model": "OPPO Reno8 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_79",
+    "brand": "OPPO",
+    "model": "OPPO A57 2022",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_80",
+    "brand": "OPPO",
+    "model": "OPPO F21s Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_81",
+    "brand": "OPPO",
+    "model": "OPPO F21s Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_82",
+    "brand": "OPPO",
+    "model": "OPPO A77 2022",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_83",
+    "brand": "OPPO",
+    "model": "OPPO A17K",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_84",
+    "brand": "OPPO",
+    "model": "OPPO A77s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_85",
+    "brand": "OPPO",
+    "model": "OPPO A78 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_86",
+    "brand": "OPPO",
+    "model": "OPPO Reno8T 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_87",
+    "brand": "OPPO",
+    "model": "OPPO Find N2 Flip 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_88",
+    "brand": "OPPO",
+    "model": "OPPO F23 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_89",
+    "brand": "OPPO",
+    "model": "OPPO Reno10 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_90",
+    "brand": "OPPO",
+    "model": "OPPO Reno10 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_91",
+    "brand": "OPPO",
+    "model": "OPPO Reno10 Pro Plus 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_92",
+    "brand": "OPPO",
+    "model": "OPPO A78",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_93",
+    "brand": "OPPO",
+    "model": "OPPO Find N3 Flip 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_94",
+    "brand": "OPPO",
+    "model": "OPPO A58",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_95",
+    "brand": "OPPO",
+    "model": "OPPO A38",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_96",
+    "brand": "OPPO",
+    "model": "OPPO A17",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_97",
+    "brand": "OPPO",
+    "model": "OPPO A18",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_98",
+    "brand": "OPPO",
+    "model": "OPPO A79 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_99",
+    "brand": "OPPO",
+    "model": "OPPO A59 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_100",
+    "brand": "OPPO",
+    "model": "OPPO Reno11 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_101",
+    "brand": "OPPO",
+    "model": "OPPO Reno11 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_102",
+    "brand": "OPPO",
+    "model": "OPPO F25 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_103",
+    "brand": "OPPO",
+    "model": "OPPO F27 Pro Plus 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_104",
+    "brand": "OPPO",
+    "model": "OPPO A3 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_105",
+    "brand": "OPPO",
+    "model": "OPPO Reno12 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_106",
+    "brand": "OPPO",
+    "model": "OPPO Reno12 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_107",
+    "brand": "OPPO",
+    "model": "OPPO A3x 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_108",
+    "brand": "OPPO",
+    "model": "OPPO K12x 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_109",
+    "brand": "OPPO",
+    "model": "OPPO F27 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_110",
+    "brand": "OPPO",
+    "model": "OPPO A3 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_111",
+    "brand": "OPPO",
+    "model": "OPPO A3x",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_112",
+    "brand": "OPPO",
+    "model": "OPPO Find X8 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_113",
+    "brand": "OPPO",
+    "model": "OPPO Find X8 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_114",
+    "brand": "OPPO",
+    "model": "OPPO Reno13 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_115",
+    "brand": "OPPO",
+    "model": "OPPO Reno13 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_116",
+    "brand": "OPPO",
+    "model": "OPPO F29 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_117",
+    "brand": "OPPO",
+    "model": "OPPO F29 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_118",
+    "brand": "OPPO",
+    "model": "OPPO A5 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_119",
+    "brand": "OPPO",
+    "model": "OPPO A5 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_120",
+    "brand": "OPPO",
+    "model": "OPPO A5x 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_121",
+    "brand": "OPPO",
+    "model": "OPPO K13 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_122",
+    "brand": "OPPO",
+    "model": "OPPO K13x 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_123",
+    "brand": "OPPO",
+    "model": "OPPO Reno14 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_124",
+    "brand": "OPPO",
+    "model": "OPPO Reno14 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_125",
+    "brand": "OPPO",
+    "model": "OPPO A5X",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_126",
+    "brand": "OPPO",
+    "model": "Oppo F31 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_127",
+    "brand": "OPPO",
+    "model": "Oppo K13 Turbo Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_128",
+    "brand": "OPPO",
+    "model": "OPPO K13 Turbo 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_129",
+    "brand": "OPPO",
+    "model": "Oppo F31 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_130",
+    "brand": "OPPO",
+    "model": "Oppo F31 Pro Plus 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_131",
+    "brand": "OPPO",
+    "model": "OPPO Find X9 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_132",
+    "brand": "OPPO",
+    "model": "OPPO Find X9 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_133",
+    "brand": "OPPO",
+    "model": "OPPO A6x 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_134",
+    "brand": "OPPO",
+    "model": "OPPO Reno15 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_135",
+    "brand": "OPPO",
+    "model": "Oppo Reno15 Pro Mini 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_136",
+    "brand": "OPPO",
+    "model": "OPPO Reno15 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_137",
+    "brand": "OPPO",
+    "model": "OPPO A6 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_138",
+    "brand": "OPPO",
+    "model": "OPPO Reno 15c 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_139",
+    "brand": "OPPO",
+    "model": "OPPO K14x 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_140",
+    "brand": "OPPO",
+    "model": "OPPO A6 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_141",
+    "brand": "OPPO",
+    "model": "OPPO K14 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_142",
+    "brand": "OPPO",
+    "model": "OPPO A6s 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_143",
+    "brand": "OPPO",
+    "model": "OPPO F33 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_144",
+    "brand": "OPPO",
+    "model": "OPPO F33 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_145",
+    "brand": "OPPO",
+    "model": "OPPO F11 Pro Avenger Edition",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_146",
+    "brand": "OPPO",
+    "model": "OPPO Find X9s",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
+    "color": "Midnight",
+    "basePrice": 5000
+  },
+  {
+    "id": "oppo_batch_147",
+    "brand": "OPPO",
+    "model": "OPPO Find X9 Ultra",
     "storage": "4 GB/64 GB",
     "ram": "4GB",
     "color": "Midnight",
@@ -14562,6 +22032,582 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 5000
   },
   {
+    "id": "google_batch_1",
+    "brand": "Google",
+    "model": "Google Pixel 3",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Obsidian",
+    "basePrice": 5000
+  },
+  {
+    "id": "google_batch_2",
+    "brand": "Google",
+    "model": "Google Pixel 4A",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Obsidian",
+    "basePrice": 5000
+  },
+  {
+    "id": "google_batch_3",
+    "brand": "Google",
+    "model": "Google Pixel 6a",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Obsidian",
+    "basePrice": 5000
+  },
+  {
+    "id": "google_batch_4",
+    "brand": "Google",
+    "model": "Google Pixel 7",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Obsidian",
+    "basePrice": 5000
+  },
+  {
+    "id": "google_batch_5",
+    "brand": "Google",
+    "model": "Google Pixel 7 Pro",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Obsidian",
+    "basePrice": 5000
+  },
+  {
+    "id": "google_batch_6",
+    "brand": "Google",
+    "model": "Google Pixel 7a",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Obsidian",
+    "basePrice": 5000
+  },
+  {
+    "id": "google_batch_7",
+    "brand": "Google",
+    "model": "Google Pixel 8",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Obsidian",
+    "basePrice": 5000
+  },
+  {
+    "id": "google_batch_8",
+    "brand": "Google",
+    "model": "Google Pixel 8 Pro",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Obsidian",
+    "basePrice": 5000
+  },
+  {
+    "id": "google_batch_9",
+    "brand": "Google",
+    "model": "Google Pixel 8A",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Obsidian",
+    "basePrice": 5000
+  },
+  {
+    "id": "google_batch_10",
+    "brand": "Google",
+    "model": "Google Pixel 9",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Obsidian",
+    "basePrice": 5000
+  },
+  {
+    "id": "google_batch_11",
+    "brand": "Google",
+    "model": "Google Pixel 9 Pro XL",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Obsidian",
+    "basePrice": 5000
+  },
+  {
+    "id": "google_batch_12",
+    "brand": "Google",
+    "model": "Google Pixel 9 Pro Fold",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Obsidian",
+    "basePrice": 5000
+  },
+  {
+    "id": "google_batch_13",
+    "brand": "Google",
+    "model": "Google Pixel 9 Pro",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Obsidian",
+    "basePrice": 5000
+  },
+  {
+    "id": "google_batch_14",
+    "brand": "Google",
+    "model": "Google Pixel 9a",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Obsidian",
+    "basePrice": 5000
+  },
+  {
+    "id": "google_batch_15",
+    "brand": "Google",
+    "model": "Google Pixel 10",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Obsidian",
+    "basePrice": 5000
+  },
+  {
+    "id": "google_batch_16",
+    "brand": "Google",
+    "model": "Google Pixel 10 Pro",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Obsidian",
+    "basePrice": 5000
+  },
+  {
+    "id": "google_batch_17",
+    "brand": "Google",
+    "model": "Google Pixel 10 Pro XL",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Obsidian",
+    "basePrice": 5000
+  },
+  {
+    "id": "google_batch_18",
+    "brand": "Google",
+    "model": "Google Pixel 10 Pro Fold",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Obsidian",
+    "basePrice": 5000
+  },
+  {
+    "id": "google_batch_19",
+    "brand": "Google",
+    "model": "Google Pixel 10a",
+    "storage": "128 GB",
+    "ram": "8GB",
+    "color": "Obsidian",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_1",
+    "brand": "POCO",
+    "model": "POCO F1",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_2",
+    "brand": "POCO",
+    "model": "POCO X2",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_3",
+    "brand": "POCO",
+    "model": "POCO M2 Pro",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_4",
+    "brand": "POCO",
+    "model": "POCO M2",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_5",
+    "brand": "POCO",
+    "model": "POCO C3",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_6",
+    "brand": "POCO",
+    "model": "POCO X3",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_7",
+    "brand": "POCO",
+    "model": "POCO M3",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_8",
+    "brand": "POCO",
+    "model": "POCO X3 Pro",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_9",
+    "brand": "POCO",
+    "model": "POCO M3 Pro 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_10",
+    "brand": "POCO",
+    "model": "POCO F3 GT",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_11",
+    "brand": "POCO",
+    "model": "POCO M2 Reloaded",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_12",
+    "brand": "POCO",
+    "model": "POCO C31",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_13",
+    "brand": "POCO",
+    "model": "POCO M4 Pro 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_14",
+    "brand": "POCO",
+    "model": "POCO M4 Pro",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_15",
+    "brand": "POCO",
+    "model": "POCO X4 Pro 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_16",
+    "brand": "POCO",
+    "model": "POCO M4 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_17",
+    "brand": "POCO",
+    "model": "POCO F4 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_18",
+    "brand": "POCO",
+    "model": "POCO M5",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_19",
+    "brand": "POCO",
+    "model": "POCO X5 Pro 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_20",
+    "brand": "POCO",
+    "model": "POCO C50",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_21",
+    "brand": "POCO",
+    "model": "POCO C55",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_22",
+    "brand": "POCO",
+    "model": "POCO X5 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_23",
+    "brand": "POCO",
+    "model": "POCO C51",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_24",
+    "brand": "POCO",
+    "model": "POCO F5 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_25",
+    "brand": "POCO",
+    "model": "POCO M6 Pro 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_26",
+    "brand": "POCO",
+    "model": "POCO C65",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_27",
+    "brand": "POCO",
+    "model": "POCO X6 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_28",
+    "brand": "POCO",
+    "model": "POCO X6 Pro 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_29",
+    "brand": "POCO",
+    "model": "POCO M6 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_30",
+    "brand": "POCO",
+    "model": "POCO C61",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_31",
+    "brand": "POCO",
+    "model": "POCO F6 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_32",
+    "brand": "POCO",
+    "model": "POCO X6 Neo 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_33",
+    "brand": "POCO",
+    "model": "POCO X7 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_34",
+    "brand": "POCO",
+    "model": "POCO M7 Pro 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_35",
+    "brand": "POCO",
+    "model": "POCO C75 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_36",
+    "brand": "POCO",
+    "model": "POCO X7 Pro 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_37",
+    "brand": "POCO",
+    "model": "POCO M6 Plus 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_38",
+    "brand": "POCO",
+    "model": "POCO M7 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_39",
+    "brand": "POCO",
+    "model": "POCO C71",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_40",
+    "brand": "POCO",
+    "model": "POCO F7 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_41",
+    "brand": "POCO",
+    "model": "POCO M7 Plus 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_42",
+    "brand": "POCO",
+    "model": "POCO C85 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_43",
+    "brand": "POCO",
+    "model": "POCO M8 5G",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_44",
+    "brand": "POCO",
+    "model": "POCO C85x",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
+    "id": "poco_batch_45",
+    "brand": "POCO",
+    "model": "POCO X8 Pro",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Yellow",
+    "basePrice": 5000
+  },
+  {
     "id": "huawei_batch_1",
     "brand": "Huawei",
     "model": "Huawei P20 Pro",
@@ -16903,5221 +24949,5 @@ export const SEED_DEVICES: any[] = [
     "storage": "3 GB/16 GB",
     "color": "Midnight",
     "basePrice": 1260
-  },
-  {
-    "id": "xiaomi_400000",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 6 Pro",
-    "storage": "4 GB/64 GB",
-    "basePrice": 2980,
-    "image": "/images/models/xiaomi-redmi-note-6-pro-4-gb-64-gb.png"
-  },
-  {
-    "id": "xiaomi_400001",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 6 Pro",
-    "storage": "6 GB/64 GB",
-    "basePrice": 3210,
-    "image": "/images/models/xiaomi-redmi-note-6-pro-6-gb-64-gb.png"
-  },
-  {
-    "id": "xiaomi_400002",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Mi A2",
-    "storage": "6 GB/128 GB",
-    "basePrice": 2920,
-    "image": "/images/models/xiaomi-mi-a2-6-gb-128-gb.png"
-  },
-  {
-    "id": "xiaomi_400003",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Mi A2",
-    "storage": "4 GB/64 GB",
-    "basePrice": 2570,
-    "image": "/images/models/xiaomi-mi-a2-4-gb-64-gb.png"
-  },
-  {
-    "id": "xiaomi_400004",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 6",
-    "storage": "3 GB/32 GB",
-    "basePrice": 1820,
-    "image": "/images/models/xiaomi-redmi-6-3-gb-32-gb.png"
-  },
-  {
-    "id": "xiaomi_400005",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 6",
-    "storage": "3 GB/64 GB",
-    "basePrice": 1900,
-    "image": "/images/models/xiaomi-redmi-6-3-gb-64-gb.png"
-  },
-  {
-    "id": "xiaomi_400006",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 6 pro",
-    "storage": "3 GB/32 GB",
-    "basePrice": 2230,
-    "image": "/images/models/xiaomi-redmi-6-pro-3-gb-32-gb.png"
-  },
-  {
-    "id": "xiaomi_400007",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 6 pro",
-    "storage": "4 GB/64 GB",
-    "basePrice": 2360,
-    "image": "/images/models/xiaomi-redmi-6-pro-4-gb-64-gb.png"
-  },
-  {
-    "id": "xiaomi_400008",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 6A",
-    "storage": "2 GB/16 GB",
-    "basePrice": 1480,
-    "image": "/images/models/xiaomi-redmi-6a-2-gb-16-gb.png"
-  },
-  {
-    "id": "xiaomi_400009",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 6A",
-    "storage": "2 GB/32 GB",
-    "basePrice": 1590,
-    "image": "/images/models/xiaomi-redmi-6a-2-gb-32-gb.png"
-  },
-  {
-    "id": "xiaomi_400010",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Y2",
-    "storage": "3 GB/32 GB",
-    "basePrice": 2200,
-    "image": "/images/models/xiaomi-redmi-y2-3-gb-32-gb.png"
-  },
-  {
-    "id": "xiaomi_400011",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Y2",
-    "storage": "4 GB/64 GB",
-    "basePrice": 2270,
-    "image": "/images/models/xiaomi-redmi-y2-4-gb-64-gb.png"
-  },
-  {
-    "id": "xiaomi_400012",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 5",
-    "storage": "3 GB/32 GB",
-    "basePrice": 1780,
-    "image": "/images/models/xiaomi-redmi-5-3-gb-32-gb.png"
-  },
-  {
-    "id": "xiaomi_400013",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 5",
-    "storage": "2 GB/16 GB",
-    "basePrice": 1670,
-    "image": "/images/models/xiaomi-redmi-5-2-gb-16-gb.png"
-  },
-  {
-    "id": "xiaomi_400014",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 5",
-    "storage": "4 GB/64 GB",
-    "basePrice": 2130,
-    "image": "/images/models/xiaomi-redmi-5-4-gb-64-gb.png"
-  },
-  {
-    "id": "xiaomi_400015",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 5 Pro",
-    "storage": "4 GB/64 GB",
-    "basePrice": 2570,
-    "image": "/images/models/xiaomi-redmi-note-5-pro-4-gb-64-gb.png"
-  },
-  {
-    "id": "xiaomi_400016",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 5 Pro",
-    "storage": "6 GB/64 GB",
-    "basePrice": 2780,
-    "image": "/images/models/xiaomi-redmi-note-5-pro-6-gb-64-gb.png"
-  },
-  {
-    "id": "xiaomi_400017",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 5",
-    "storage": "4 GB/64 GB",
-    "basePrice": 2160,
-    "image": "/images/models/xiaomi-redmi-note-5-4-gb-64-gb.png"
-  },
-  {
-    "id": "xiaomi_400018",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 5",
-    "storage": "3 GB/32 GB",
-    "basePrice": 1860,
-    "image": "/images/models/xiaomi-redmi-note-5-3-gb-32-gb.png"
-  },
-  {
-    "id": "xiaomi_400019",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 5A",
-    "storage": "3 GB/32 GB",
-    "basePrice": 1360,
-    "image": "/images/models/xiaomi-redmi-5a-3-gb-32-gb.png"
-  },
-  {
-    "id": "xiaomi_400020",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 5A",
-    "storage": "2 GB/16 GB",
-    "basePrice": 1210,
-    "image": "/images/models/xiaomi-redmi-5a-2-gb-16-gb.png"
-  },
-  {
-    "id": "xiaomi_400021",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Y1",
-    "storage": "4 GB/64 GB",
-    "basePrice": 1450,
-    "image": "/images/models/xiaomi-redmi-y1-4-gb-64-gb.png"
-  },
-  {
-    "id": "xiaomi_400022",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Y1",
-    "storage": "3 GB/32 GB",
-    "basePrice": 1300,
-    "image": "/images/models/xiaomi-redmi-y1-3-gb-32-gb.png"
-  },
-  {
-    "id": "xiaomi_400023",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Y1 Lite",
-    "storage": "2 GB/16 GB",
-    "basePrice": 1060,
-    "image": "/images/models/xiaomi-redmi-y1-lite-2-gb-16-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400024",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Mi Mix 2",
-    "storage": "6 GB/128 GB",
-    "basePrice": 2910,
-    "image": "/images/models/xiaomi-mi-mix-2-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400025",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Mi Max 2",
-    "storage": "4 GB/32 GB",
-    "basePrice": 1760,
-    "image": "/images/models/xiaomi-mi-max-2-4-gb-32-gb.png"
-  },
-  {
-    "id": "xiaomi_400026",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Mi Max 2",
-    "storage": "4 GB/64 GB",
-    "basePrice": 1890,
-    "image": "/images/models/xiaomi-mi-max-2-4-gb-64-gb.png"
-  },
-  {
-    "id": "xiaomi_400027",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Mi Max 2",
-    "storage": "4 GB/128 GB",
-    "basePrice": 2290,
-    "image": "/images/models/xiaomi-mi-max-2-4-gb-128-gb.png"
-  },
-  {
-    "id": "xiaomi_400028",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 7",
-    "storage": "4 GB/64 GB",
-    "basePrice": 3180,
-    "image": "/images/models/xiaomi-redmi-note-7-4-gb-64-gb.png"
-  },
-  {
-    "id": "xiaomi_400029",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 7",
-    "storage": "3 GB/32 GB",
-    "basePrice": 2550,
-    "image": "/images/models/xiaomi-redmi-note-7-3-gb-32-gb.png"
-  },
-  {
-    "id": "xiaomi_400030",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 7 Pro",
-    "storage": "6 GB/64 GB",
-    "basePrice": 3970,
-    "image": "/images/models/xiaomi-redmi-note-7-pro-6-gb-64-gb.png"
-  },
-  {
-    "id": "xiaomi_400031",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 7 Pro",
-    "storage": "4 GB/64 GB",
-    "basePrice": 3830,
-    "image": "/images/models/xiaomi-redmi-note-7-pro-4-gb-64-gb.png"
-  },
-  {
-    "id": "xiaomi_400032",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 7 Pro",
-    "storage": "6 GB/128 GB",
-    "basePrice": 4170,
-    "image": "/images/models/xiaomi-redmi-note-7-pro-6-gb-128-gb.png"
-  },
-  {
-    "id": "xiaomi_400033",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Go",
-    "storage": "1 GB/8 GB",
-    "basePrice": 910,
-    "image": "/images/models/xiaomi-redmi-go-1-gb-8-gb.png"
-  },
-  {
-    "id": "xiaomi_400034",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Go",
-    "storage": "1 GB/16 GB",
-    "basePrice": 1110,
-    "image": "/images/models/xiaomi-redmi-go-1-gb-16-gb.png"
-  },
-  {
-    "id": "xiaomi_400035",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 7",
-    "storage": "2 GB/32 GB",
-    "basePrice": 2570,
-    "image": "/images/models/xiaomi-redmi-7-2-gb-32-gb.png"
-  },
-  {
-    "id": "xiaomi_400036",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 7",
-    "storage": "3 GB/32 GB",
-    "basePrice": 2650,
-    "image": "/images/models/xiaomi-redmi-7-3-gb-32-gb.png"
-  },
-  {
-    "id": "xiaomi_400037",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 7",
-    "storage": "2 GB/16 GB",
-    "basePrice": 2420,
-    "image": "/images/models/xiaomi-redmi-7-2-gb-16-gb.png"
-  },
-  {
-    "id": "xiaomi_400038",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 7",
-    "storage": "3 GB/64 GB",
-    "basePrice": 2760,
-    "image": "/images/models/xiaomi-redmi-7-3-gb-64-gb.png"
-  },
-  {
-    "id": "xiaomi_400039",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 7S",
-    "storage": "4 GB/64 GB",
-    "basePrice": 3520,
-    "image": "/images/models/xiaomi-redmi-note-7s-4-gb-64-gb.png"
-  },
-  {
-    "id": "xiaomi_400040",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 7S",
-    "storage": "3 GB/32 GB",
-    "basePrice": 3430,
-    "image": "/images/models/xiaomi-redmi-note-7s-3-gb-32-gb.png"
-  },
-  {
-    "id": "xiaomi_400041",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Y3",
-    "storage": "3 GB/32 GB",
-    "basePrice": 2420,
-    "image": "/images/models/xiaomi-redmi-y3-3-gb-32-gb.png"
-  },
-  {
-    "id": "xiaomi_400042",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Y3",
-    "storage": "4 GB/64 GB",
-    "basePrice": 2570,
-    "image": "/images/models/xiaomi-redmi-y3-4-gb-64-gb.png"
-  },
-  {
-    "id": "xiaomi_400043",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Black Shark 2",
-    "storage": "6 GB/128 GB",
-    "basePrice": 5000,
-    "image": "/images/models/xiaomi-black-shark-2-6-gb-128-gb.png"
-  },
-  {
-    "id": "xiaomi_400044",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Black Shark 2",
-    "storage": "12 GB/256 GB",
-    "basePrice": 5980,
-    "image": "/images/models/xiaomi-black-shark-2-12-gb-256-gb.png"
-  },
-  {
-    "id": "xiaomi_400045",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi K20",
-    "storage": "6 GB/64 GB",
-    "basePrice": 4700,
-    "image": "/images/models/xiaomi-redmi-k20-6-gb-64-gb.png"
-  },
-  {
-    "id": "xiaomi_400046",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi K20",
-    "storage": "6 GB/128 GB",
-    "basePrice": 5040,
-    "image": "/images/models/xiaomi-redmi-k20-6-gb-128-gb.png"
-  },
-  {
-    "id": "xiaomi_400047",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi K20 Pro",
-    "storage": "8 GB/256 GB",
-    "basePrice": 6200,
-    "image": "/images/models/xiaomi-redmi-k20-pro-8-gb-256-gb.png"
-  },
-  {
-    "id": "xiaomi_400048",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi K20 Pro",
-    "storage": "6 GB/128 GB",
-    "basePrice": 5790,
-    "image": "/images/models/xiaomi-redmi-k20-pro-6-gb-128-gb.png"
-  },
-  {
-    "id": "xiaomi_400049",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 7A",
-    "storage": "2 GB/16 GB",
-    "basePrice": 1510,
-    "image": "/images/models/xiaomi-redmi-7a-2-gb-16-gb.png"
-  },
-  {
-    "id": "xiaomi_400050",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 7A",
-    "storage": "2 GB/32 GB",
-    "basePrice": 1670,
-    "image": "/images/models/xiaomi-redmi-7a-2-gb-32-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400051",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 7A",
-    "storage": "3 GB/32 GB",
-    "basePrice": 1790,
-    "image": "/images/models/xiaomi-redmi-7a-3-gb-32-gb.png"
-  },
-  {
-    "id": "xiaomi_400052",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Mi A3",
-    "storage": "4 GB/64 GB",
-    "basePrice": 3790,
-    "image": "/images/models/xiaomi-mi-a3-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400053",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Mi A3",
-    "storage": "6 GB/128 GB",
-    "basePrice": 4200,
-    "image": "/images/models/xiaomi-mi-a3-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400054",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 8A",
-    "storage": "3 GB/32 GB",
-    "basePrice": 2540,
-    "image": "/images/models/xiaomi-redmi-8a-3-gb-32-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400055",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 8A",
-    "storage": "2 GB/32 GB",
-    "basePrice": 2380,
-    "image": "/images/models/xiaomi-redmi-8a-2-gb-32-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400056",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 8",
-    "storage": "4 GB/64 GB",
-    "basePrice": 3450,
-    "image": "/images/models/xiaomi-redmi-8-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400057",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 8",
-    "storage": "3 GB/32 GB",
-    "basePrice": 3640,
-    "image": "/images/models/xiaomi-redmi-note-8-3-gb-32-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400058",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 8",
-    "storage": "4 GB/64 GB",
-    "basePrice": 3860,
-    "image": "/images/models/xiaomi-redmi-note-8-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400059",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 8",
-    "storage": "6 GB/128 GB",
-    "basePrice": 4180,
-    "image": "/images/models/xiaomi-redmi-note-8-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400060",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 8 Pro",
-    "storage": "6 GB/64 GB",
-    "basePrice": 4320,
-    "image": "/images/models/xiaomi-redmi-note-8-pro-6-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400061",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 8 Pro",
-    "storage": "6 GB/128 GB",
-    "basePrice": 4630,
-    "image": "/images/models/xiaomi-redmi-note-8-pro-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400062",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 8 Pro",
-    "storage": "8 GB/128 GB",
-    "basePrice": 4930,
-    "image": "/images/models/xiaomi-redmi-note-8-pro-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400063",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 9 Pro",
-    "storage": "4 GB/128 GB",
-    "basePrice": 4910,
-    "image": "/images/models/xiaomi-redmi-note-9-pro-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400064",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 9 Pro",
-    "storage": "6 GB/128 GB",
-    "basePrice": 5090,
-    "image": "/images/models/xiaomi-redmi-note-9-pro-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400065",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 9 Pro",
-    "storage": "4 GB/64 GB",
-    "basePrice": 4510,
-    "image": "/images/models/xiaomi-redmi-note-9-pro-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400066",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 8A Dual",
-    "storage": "3 GB/32 GB",
-    "basePrice": 2880,
-    "image": "/images/models/xiaomi-redmi-8a-dual-3-gb-32-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400067",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 8A Dual",
-    "storage": "2 GB/32 GB",
-    "basePrice": 2780,
-    "image": "/images/models/xiaomi-redmi-8a-dual-2-gb-32-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400068",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 8A Dual",
-    "storage": "3 GB/64 GB",
-    "basePrice": 3130,
-    "image": "/images/models/xiaomi-redmi-8a-dual-3-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400069",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 9 Pro Max",
-    "storage": "6 GB/64 GB",
-    "basePrice": 4880,
-    "image": "/images/models/xiaomi-redmi-note-9-pro-max-6-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400070",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 9 Pro Max",
-    "storage": "6 GB/128 GB",
-    "basePrice": 5350,
-    "image": "/images/models/xiaomi-redmi-note-9-pro-max-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400071",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 9 Pro Max",
-    "storage": "8 GB/128 GB",
-    "basePrice": 5610,
-    "image": "/images/models/xiaomi-redmi-note-9-pro-max-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400072",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 9",
-    "storage": "4 GB/64 GB",
-    "basePrice": 4310,
-    "image": "/images/models/xiaomi-redmi-note-9-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400073",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 9",
-    "storage": "4 GB/128 GB",
-    "basePrice": 4470,
-    "image": "/images/models/xiaomi-redmi-note-9-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400074",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 9",
-    "storage": "6 GB/128 GB",
-    "basePrice": 4700,
-    "image": "/images/models/xiaomi-redmi-note-9-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400075",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 9 Prime",
-    "storage": "4 GB/64 GB",
-    "basePrice": 3620,
-    "image": "/images/models/xiaomi-redmi-9-prime-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400076",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 9 Prime",
-    "storage": "4 GB/128 GB",
-    "basePrice": 3920,
-    "image": "/images/models/xiaomi-redmi-9-prime-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400077",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 9",
-    "storage": "4 GB/128 GB",
-    "basePrice": 3550,
-    "image": "/images/models/xiaomi-redmi-9-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400078",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 9",
-    "storage": "4 GB/64 GB",
-    "basePrice": 3200,
-    "image": "/images/models/xiaomi-redmi-9-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400079",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 9A",
-    "storage": "3 GB/32 GB",
-    "basePrice": 3030,
-    "image": "/images/models/xiaomi-redmi-9a-3-gb-32-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400080",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 9A",
-    "storage": "2 GB/32 GB",
-    "basePrice": 2800,
-    "image": "/images/models/xiaomi-redmi-9a-2-gb-32-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400081",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 9i",
-    "storage": "4 GB/64 GB",
-    "basePrice": 3140,
-    "image": "/images/models/xiaomi-redmi-9i-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400082",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 9i",
-    "storage": "4 GB/128 GB",
-    "basePrice": 3440,
-    "image": "/images/models/xiaomi-redmi-9i-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400083",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Mi 10T",
-    "storage": "8 GB/128 GB",
-    "basePrice": 7660,
-    "image": "/images/models/xiaomi-mi-10t-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400084",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Mi 10T",
-    "storage": "6 GB/128 GB",
-    "basePrice": 7340,
-    "image": "/images/models/xiaomi-mi-10t-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400085",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Mi 10T Pro",
-    "storage": "8 GB/128 GB",
-    "basePrice": 7840,
-    "image": "/images/models/xiaomi-mi-10t-pro-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400086",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Mi 10i",
-    "storage": "8 GB/128 GB",
-    "basePrice": 7610,
-    "image": "/images/models/xiaomi-mi-10i-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400087",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Mi 10i",
-    "storage": "6 GB/64 GB",
-    "basePrice": 6800,
-    "image": "/images/models/xiaomi-mi-10i-6-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400088",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Mi 10i",
-    "storage": "6 GB/128 GB",
-    "basePrice": 7380,
-    "image": "/images/models/xiaomi-mi-10i-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400089",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 9 Power",
-    "storage": "6 GB/128 GB",
-    "basePrice": 4090,
-    "image": "/images/models/xiaomi-redmi-9-power-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400090",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 9 Power",
-    "storage": "4 GB/64 GB",
-    "basePrice": 3640,
-    "image": "/images/models/xiaomi-redmi-9-power-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400091",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 9 Power",
-    "storage": "4 GB/128 GB",
-    "basePrice": 3880,
-    "image": "/images/models/xiaomi-redmi-9-power-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400092",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 10",
-    "storage": "4 GB/64 GB",
-    "basePrice": 4320,
-    "image": "/images/models/xiaomi-redmi-note-10-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400093",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 10",
-    "storage": "6 GB/128 GB",
-    "basePrice": 4700,
-    "image": "/images/models/xiaomi-redmi-note-10-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400094",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 10 Pro",
-    "storage": "8 GB/128 GB",
-    "basePrice": 5840,
-    "image": "/images/models/xiaomi-redmi-note-10-pro-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400095",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 10 Pro",
-    "storage": "6 GB/128 GB",
-    "basePrice": 5260,
-    "image": "/images/models/xiaomi-redmi-note-10-pro-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400096",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 10 Pro",
-    "storage": "6 GB/64 GB",
-    "basePrice": 4620,
-    "image": "/images/models/xiaomi-redmi-note-10-pro-6-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400097",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 10 Pro Max",
-    "storage": "6 GB/128 GB",
-    "basePrice": 5560,
-    "image": "/images/models/xiaomi-redmi-note-10-pro-max-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400098",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 10 Pro Max",
-    "storage": "6 GB/64 GB",
-    "basePrice": 5070,
-    "image": "/images/models/xiaomi-redmi-note-10-pro-max-6-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400099",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 10 Pro Max",
-    "storage": "8 GB/128 GB",
-    "basePrice": 6170,
-    "image": "/images/models/xiaomi-redmi-note-10-pro-max-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400100",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Mi 11X Pro",
-    "storage": "8 GB/256 GB",
-    "basePrice": 8260,
-    "image": "/images/models/xiaomi-mi-11x-pro-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400101",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Mi 11X Pro",
-    "storage": "8 GB/128 GB",
-    "basePrice": 7690,
-    "image": "/images/models/xiaomi-mi-11x-pro-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400102",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Mi 11 Ultra",
-    "storage": "12 GB/256 GB",
-    "basePrice": 17370,
-    "image": "/images/models/xiaomi-mi-11-ultra-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400103",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Mi 11X",
-    "storage": "6 GB/128 GB",
-    "basePrice": 7630,
-    "image": "/images/models/xiaomi-mi-11x-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400104",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Mi 11X",
-    "storage": "8 GB/128 GB",
-    "basePrice": 8330,
-    "image": "/images/models/xiaomi-mi-11x-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400105",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Mi 11 Lite",
-    "storage": "6 GB/128 GB",
-    "basePrice": 5730,
-    "image": "/images/models/xiaomi-mi-11-lite-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400106",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Mi 11 Lite",
-    "storage": "8 GB/128 GB",
-    "basePrice": 6150,
-    "image": "/images/models/xiaomi-mi-11-lite-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400107",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Mi Max",
-    "storage": "64 GB",
-    "basePrice": "Not found",
-    "image": "/images/models/xiaomi-default.png"
-  },
-  {
-    "id": "xiaomi_400108",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Mi 5",
-    "storage": "64 GB",
-    "basePrice": "Not found",
-    "image": "/images/models/xiaomi-default.png"
-  },
-  {
-    "id": "xiaomi_400109",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 10s",
-    "storage": "6 GB/64 GB",
-    "basePrice": 4710,
-    "image": "/images/models/xiaomi-redmi-note-10s-6-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400110",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 10s",
-    "storage": "6 GB/128 GB",
-    "basePrice": 5000,
-    "image": "/images/models/xiaomi-redmi-note-10s-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400111",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 10s",
-    "storage": "8 GB/128 GB",
-    "basePrice": 5170,
-    "image": "/images/models/xiaomi-redmi-note-10s-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400112",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 10T 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 6550,
-    "image": "/images/models/xiaomi-redmi-note-10t-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400113",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 10T 5G",
-    "storage": "4 GB/64 GB",
-    "basePrice": 5910,
-    "image": "/images/models/xiaomi-redmi-note-10t-5g-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400114",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Mi 10",
-    "storage": "8 GB/256 GB",
-    "basePrice": 10410,
-    "image": "/images/models/xiaomi-mi-10-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400115",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Mi 10",
-    "storage": "8 GB/128 GB",
-    "basePrice": 10070,
-    "image": "/images/models/xiaomi-mi-10-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400116",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 10 Prime",
-    "storage": "4 GB/64 GB",
-    "basePrice": 4140,
-    "image": "/images/models/xiaomi-redmi-10-prime-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400117",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 10 Prime",
-    "storage": "6 GB/128 GB",
-    "basePrice": 4620,
-    "image": "/images/models/xiaomi-redmi-10-prime-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400118",
-    "brand": "Xiaomi",
-    "model": "Xiaomi 11 Lite NE 5G",
-    "storage": "64 GB",
-    "basePrice": "Not found",
-    "image": "/images/models/xiaomi-default.png"
-  },
-  {
-    "id": "xiaomi_400119",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 10 Lite",
-    "storage": "4 GB/64 GB",
-    "basePrice": 4290,
-    "image": "/images/models/xiaomi-redmi-note-10-lite-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400120",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 10 Lite",
-    "storage": "4 GB/128 GB",
-    "basePrice": 4440,
-    "image": "/images/models/xiaomi-redmi-note-10-lite-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400121",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 10 Lite",
-    "storage": "6 GB/128 GB",
-    "basePrice": 4740,
-    "image": "/images/models/xiaomi-redmi-note-10-lite-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400122",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 11T 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 7430,
-    "image": "/images/models/xiaomi-redmi-note-11t-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400123",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 11T 5G",
-    "storage": "6 GB/64 GB",
-    "basePrice": 6400,
-    "image": "/images/models/xiaomi-redmi-note-11t-5g-6-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400124",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 11T 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 7110,
-    "image": "/images/models/xiaomi-redmi-note-11t-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400125",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 9 Activ",
-    "storage": "4 GB/64 GB",
-    "basePrice": 3070,
-    "image": "/images/models/xiaomi-redmi-9-activ-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400126",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 9 Activ",
-    "storage": "6 GB/128 GB",
-    "basePrice": 3330,
-    "image": "/images/models/xiaomi-redmi-9-activ-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400127",
-    "brand": "Xiaomi",
-    "model": "Xiaomi 11i 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 7730,
-    "image": "/images/models/xiaomi-11i-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400128",
-    "brand": "Xiaomi",
-    "model": "Xiaomi 11i 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 7880,
-    "image": "/images/models/xiaomi-11i-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400129",
-    "brand": "Xiaomi",
-    "model": "Xiaomi 11i Hypercharge 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 8190,
-    "image": "/images/models/xiaomi-11i-hypercharge-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400130",
-    "brand": "Xiaomi",
-    "model": "Xiaomi 11i Hypercharge 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 7550,
-    "image": "/images/models/xiaomi-11i-hypercharge-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400131",
-    "brand": "Xiaomi",
-    "model": "Xiaomi 11T Pro 5G",
-    "storage": "64 GB",
-    "basePrice": "Not found",
-    "image": "/images/models/xiaomi-default.png"
-  },
-  {
-    "id": "xiaomi_400132",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 11S",
-    "storage": "8 GB/128 GB",
-    "basePrice": 5500,
-    "image": "/images/models/xiaomi-redmi-note-11s-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400133",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 11S",
-    "storage": "6 GB/128 GB",
-    "basePrice": 5300,
-    "image": "/images/models/xiaomi-redmi-note-11s-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400134",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 11S",
-    "storage": "6 GB/64 GB",
-    "basePrice": 5170,
-    "image": "/images/models/xiaomi-redmi-note-11s-6-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400135",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 11 Pro Plus 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 8430,
-    "image": "/images/models/xiaomi-redmi-note-11-pro-plus-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400136",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 11 Pro Plus 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 7810,
-    "image": "/images/models/xiaomi-redmi-note-11-pro-plus-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400137",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 11 Pro Plus 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 8830,
-    "image": "/images/models/xiaomi-redmi-note-11-pro-plus-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400138",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 10",
-    "storage": "6 GB/128 GB",
-    "basePrice": 4290,
-    "image": "/images/models/xiaomi-redmi-10-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400139",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 10",
-    "storage": "4 GB/64 GB",
-    "basePrice": 3970,
-    "image": "/images/models/xiaomi-redmi-10-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400140",
-    "brand": "Xiaomi",
-    "model": "Xiaomi 12 Pro 5G",
-    "storage": "64 GB",
-    "basePrice": "Not found",
-    "image": "/images/models/xiaomi-default.png"
-  },
-  {
-    "id": "xiaomi_400141",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 10 Prime 2022",
-    "storage": "4 GB/128 GB",
-    "basePrice": 4390,
-    "image": "/images/models/xiaomi-redmi-10-prime-2022-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400142",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 10 Prime 2022",
-    "storage": "4 GB/64 GB",
-    "basePrice": 4200,
-    "image": "/images/models/xiaomi-redmi-10-prime-2022-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400143",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 10A",
-    "storage": "4 GB/64 GB",
-    "basePrice": 3670,
-    "image": "/images/models/xiaomi-redmi-10a-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400144",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 10A",
-    "storage": "3 GB/32 GB",
-    "basePrice": 3030,
-    "image": "/images/models/xiaomi-redmi-10a-3-gb-32-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400145",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi K50i 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 8930,
-    "image": "/images/models/xiaomi-redmi-k50i-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400146",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi K50i 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 8490,
-    "image": "/images/models/xiaomi-redmi-k50i-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400147",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 11 Prime 5G",
-    "storage": "4 GB/64 GB",
-    "basePrice": 5560,
-    "image": "/images/models/xiaomi-redmi-11-prime-5g-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400148",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 11 Prime 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 5920,
-    "image": "/images/models/xiaomi-redmi-11-prime-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400149",
-    "brand": "Xiaomi",
-    "model": "Redmi 10 Power",
-    "storage": "64 GB",
-    "basePrice": "Not found",
-    "image": "/images/models/xiaomi-default.png"
-  },
-  {
-    "id": "xiaomi_400150",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 11SE",
-    "storage": "64 GB",
-    "basePrice": "Not found",
-    "image": "/images/models/xiaomi-default.png"
-  },
-  {
-    "id": "xiaomi_400151",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 11 Prime",
-    "storage": "6 GB/128 GB",
-    "basePrice": 4730,
-    "image": "/images/models/xiaomi-redmi-11-prime-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400152",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 11 Prime",
-    "storage": "4 GB/64 GB",
-    "basePrice": 4560,
-    "image": "/images/models/xiaomi-redmi-11-prime-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400153",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi A1 Plus",
-    "storage": "3 GB/32 GB",
-    "basePrice": 2880,
-    "image": "/images/models/xiaomi-redmi-a1-plus-3-gb-32-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400154",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi A1 Plus",
-    "storage": "2 GB/32 GB",
-    "basePrice": 2650,
-    "image": "/images/models/xiaomi-redmi-a1-plus-2-gb-32-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400155",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 12 Pro Plus 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 11810,
-    "image": "/images/models/xiaomi-redmi-note-12-pro-plus-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400156",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 12 Pro Plus 5G",
-    "storage": "12 GB/256 GB",
-    "basePrice": 12510,
-    "image": "/images/models/xiaomi-redmi-note-12-pro-plus-5g-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400157",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 12 5G",
-    "storage": "4 GB/128 GB",
-    "basePrice": 8300,
-    "image": "/images/models/xiaomi-redmi-note-12-5g-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400158",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 12 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 8680,
-    "image": "/images/models/xiaomi-redmi-note-12-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400159",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 12 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 9370,
-    "image": "/images/models/xiaomi-redmi-note-12-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400160",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 12 Pro 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 11410,
-    "image": "/images/models/xiaomi-redmi-note-12-pro-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400161",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 12 Pro 5G",
-    "storage": "12 GB/256 GB",
-    "basePrice": 12360,
-    "image": "/images/models/xiaomi-redmi-note-12-pro-5g-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400162",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 12 Pro 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 11890,
-    "image": "/images/models/xiaomi-redmi-note-12-pro-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400163",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 12 Pro 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 10640,
-    "image": "/images/models/xiaomi-redmi-note-12-pro-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400164",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi A2 Plus",
-    "storage": "4 GB/64 GB",
-    "basePrice": 4030,
-    "image": "/images/models/xiaomi-redmi-a2-plus-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400165",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi A2 Plus",
-    "storage": "2 GB/32 GB",
-    "basePrice": 3850,
-    "image": "/images/models/xiaomi-redmi-a2-plus-2-gb-32-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400166",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi A2 Plus",
-    "storage": "4 GB/128 GB",
-    "basePrice": 4170,
-    "image": "/images/models/xiaomi-redmi-a2-plus-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400167",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi A2",
-    "storage": "2 GB/32 GB",
-    "basePrice": 3300,
-    "image": "/images/models/xiaomi-redmi-a2-2-gb-32-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400168",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi A2",
-    "storage": "2 GB/64 GB",
-    "basePrice": 3630,
-    "image": "/images/models/xiaomi-redmi-a2-2-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400169",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi A2",
-    "storage": "4 GB/64 GB",
-    "basePrice": 3850,
-    "image": "/images/models/xiaomi-redmi-a2-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400170",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 12 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 9480,
-    "image": "/images/models/xiaomi-redmi-12-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400171",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 12 5G",
-    "storage": "4 GB/128 GB",
-    "basePrice": 7560,
-    "image": "/images/models/xiaomi-redmi-12-5g-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400172",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 12 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 8800,
-    "image": "/images/models/xiaomi-redmi-12-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400173",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 12C",
-    "storage": "4 GB/128 GB",
-    "basePrice": 5430,
-    "image": "/images/models/xiaomi-redmi-12c-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400174",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 12C",
-    "storage": "4 GB/64 GB",
-    "basePrice": 5390,
-    "image": "/images/models/xiaomi-redmi-12c-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400175",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 12C",
-    "storage": "6 GB/128 GB",
-    "basePrice": 5850,
-    "image": "/images/models/xiaomi-redmi-12c-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400176",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 12",
-    "storage": "4 GB/128 GB",
-    "basePrice": 5870,
-    "image": "/images/models/xiaomi-redmi-12-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400177",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 12",
-    "storage": "6 GB/128 GB",
-    "basePrice": 6310,
-    "image": "/images/models/xiaomi-redmi-12-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400178",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 13C",
-    "storage": "4 GB/128 GB",
-    "basePrice": 5480,
-    "image": "/images/models/xiaomi-redmi-13c-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400179",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 13C",
-    "storage": "8 GB/256 GB",
-    "basePrice": 6020,
-    "image": "/images/models/xiaomi-redmi-13c-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400180",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 13C",
-    "storage": "6 GB/128 GB",
-    "basePrice": 5590,
-    "image": "/images/models/xiaomi-redmi-13c-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400181",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 13C 5G",
-    "storage": "4 GB/128 GB",
-    "basePrice": 7220,
-    "image": "/images/models/xiaomi-redmi-13c-5g-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400182",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 13C 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 7550,
-    "image": "/images/models/xiaomi-redmi-13c-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400183",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 13C 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 8110,
-    "image": "/images/models/xiaomi-redmi-13c-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400184",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 13 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 10050,
-    "image": "/images/models/xiaomi-redmi-note-13-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400185",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 13 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 10410,
-    "image": "/images/models/xiaomi-redmi-note-13-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400186",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 13 5G",
-    "storage": "12 GB/256 GB",
-    "basePrice": 10880,
-    "image": "/images/models/xiaomi-redmi-note-13-5g-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400187",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 13 Pro 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 12030,
-    "image": "/images/models/xiaomi-redmi-note-13-pro-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400188",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 13 Pro 5G",
-    "storage": "12 GB/256 GB",
-    "basePrice": 13410,
-    "image": "/images/models/xiaomi-redmi-note-13-pro-5g-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400189",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 13 Pro 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 13230,
-    "image": "/images/models/xiaomi-redmi-note-13-pro-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400190",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 13 Pro Plus 5G",
-    "storage": "12 GB/256 GB",
-    "basePrice": 15930,
-    "image": "/images/models/xiaomi-redmi-note-13-pro-plus-5g-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400191",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 13 Pro Plus 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 15220,
-    "image": "/images/models/xiaomi-redmi-note-13-pro-plus-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400192",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 13 Pro Plus 5G",
-    "storage": "12 GB/512 GB",
-    "basePrice": 16500,
-    "image": "/images/models/xiaomi-redmi-note-13-pro-plus-5g-12-gb-512-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400193",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi A3",
-    "storage": "3 GB/64 GB",
-    "basePrice": 4120,
-    "image": "/images/models/xiaomi-redmi-a3-3-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400194",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi A3",
-    "storage": "4 GB/128 GB",
-    "basePrice": 4540,
-    "image": "/images/models/xiaomi-redmi-a3-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400195",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi A3",
-    "storage": "6 GB/128 GB",
-    "basePrice": 4750,
-    "image": "/images/models/xiaomi-redmi-a3-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400196",
-    "brand": "Xiaomi",
-    "model": "Redmi A1",
-    "storage": "64 GB",
-    "basePrice": "Not found",
-    "image": "/images/models/xiaomi-default.png"
-  },
-  {
-    "id": "xiaomi_400197",
-    "brand": "Xiaomi",
-    "model": "Xiaomi 14 CIVI",
-    "storage": "8 GB/256 GB",
-    "basePrice": 18800,
-    "image": "/images/models/xiaomi-14-civi-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400198",
-    "brand": "Xiaomi",
-    "model": "Xiaomi 14 CIVI",
-    "storage": "12 GB/512 GB",
-    "basePrice": 19450,
-    "image": "/images/models/xiaomi-14-civi-12-gb-512-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400199",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi A3x",
-    "storage": "4 GB/128 GB",
-    "basePrice": 4070,
-    "image": "/images/models/xiaomi-redmi-a3x-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400200",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi A3x",
-    "storage": "3 GB/64 GB",
-    "basePrice": 3860,
-    "image": "/images/models/xiaomi-redmi-a3x-3-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400201",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 13 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 8770,
-    "image": "/images/models/xiaomi-redmi-13-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400202",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 13 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 8410,
-    "image": "/images/models/xiaomi-redmi-13-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400203",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 14 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 11810,
-    "image": "/images/models/xiaomi-redmi-note-14-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400204",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 14 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 10660,
-    "image": "/images/models/xiaomi-redmi-note-14-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400205",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 14 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 10990,
-    "image": "/images/models/xiaomi-redmi-note-14-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400206",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 14 Pro 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 15050,
-    "image": "/images/models/xiaomi-redmi-note-14-pro-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400207",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 14 Pro 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 15740,
-    "image": "/images/models/xiaomi-redmi-note-14-pro-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400208",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 14 Pro Plus 5G",
-    "storage": "12 GB/512 GB",
-    "basePrice": 19230,
-    "image": "/images/models/xiaomi-redmi-note-14-pro-plus-5g-12-gb-512-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400209",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 14 Pro Plus 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 16900,
-    "image": "/images/models/xiaomi-redmi-note-14-pro-plus-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400210",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 14C 5G",
-    "storage": "4 GB/64 GB",
-    "basePrice": 6870,
-    "image": "/images/models/xiaomi-redmi-14c-5g-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400211",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 14C 5G",
-    "storage": "4 GB/128 GB",
-    "basePrice": 7260,
-    "image": "/images/models/xiaomi-redmi-14c-5g-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400212",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 14C 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 8040,
-    "image": "/images/models/xiaomi-redmi-14c-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400213",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi A4 5G",
-    "storage": "4 GB/128 GB",
-    "basePrice": 6100,
-    "image": "/images/models/xiaomi-redmi-a4-5g-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400214",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi A4 5G",
-    "storage": "4 GB/64 GB",
-    "basePrice": 5820,
-    "image": "/images/models/xiaomi-redmi-a4-5g-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400215",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi A4 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 6370,
-    "image": "/images/models/xiaomi-redmi-a4-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400216",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi A5",
-    "storage": "3 GB/64 GB",
-    "basePrice": 4500,
-    "image": "/images/models/xiaomi-redmi-a5-3-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400217",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi A5",
-    "storage": "4 GB/128 GB",
-    "basePrice": 4990,
-    "image": "/images/models/xiaomi-redmi-a5-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400218",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 15 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 13600,
-    "image": "/images/models/xiaomi-redmi-15-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400219",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 15 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 13000,
-    "image": "/images/models/xiaomi-redmi-15-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400220",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 15 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 11500,
-    "image": "/images/models/xiaomi-redmi-15-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400221",
-    "brand": "Xiaomi",
-    "model": "Redmi Note 14 SE 5G",
-    "storage": "64 GB",
-    "basePrice": "Not found",
-    "image": "/images/models/xiaomi-default.png"
-  },
-  {
-    "id": "xiaomi_400222",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 15C 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 10500,
-    "image": "/images/models/xiaomi-redmi-15c-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400223",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 15C 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 11300,
-    "image": "/images/models/xiaomi-redmi-15c-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400224",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 15C 5G",
-    "storage": "4 GB/128 GB",
-    "basePrice": 9500,
-    "image": "/images/models/xiaomi-redmi-15c-5g-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400225",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 15 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 16640,
-    "image": "/images/models/xiaomi-redmi-note-15-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400226",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 15 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 17830,
-    "image": "/images/models/xiaomi-redmi-note-15-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400227",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 15 Pro 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 22600,
-    "image": "/images/models/xiaomi-redmi-note-15-pro-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400228",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 15 Pro 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 21800,
-    "image": "/images/models/xiaomi-redmi-note-15-pro-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400229",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 15 Pro Plus 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 25600,
-    "image": "/images/models/xiaomi-redmi-note-15-pro-plus-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400230",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 15 Pro Plus 5G",
-    "storage": "12 GB/256 GB",
-    "basePrice": 27000,
-    "image": "/images/models/xiaomi-redmi-note-15-pro-plus-5g-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400231",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 15 Pro Plus 5G",
-    "storage": "12 GB/512 GB",
-    "basePrice": 28500,
-    "image": "/images/models/xiaomi-redmi-note-15-pro-plus-5g-12-gb-512-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400232",
-    "brand": "Xiaomi",
-    "model": "Xiaomi 17",
-    "storage": "12 GB/256 GB",
-    "basePrice": 55150,
-    "image": "/images/models/xiaomi-17-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400233",
-    "brand": "Xiaomi",
-    "model": "Xiaomi 17",
-    "storage": "12 GB/512 GB",
-    "basePrice": 58500,
-    "image": "/images/models/xiaomi-17-12-gb-512-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400234",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 15A 5G",
-    "storage": "4 GB/128 GB",
-    "basePrice": 10200,
-    "image": "/images/models/xiaomi-redmi-15a-5g-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400235",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 15A 5G",
-    "storage": "4 GB/64 GB",
-    "basePrice": 9100,
-    "image": "/images/models/xiaomi-redmi-15a-5g-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400236",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 15A 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 11200,
-    "image": "/images/models/xiaomi-redmi-15a-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400237",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi A7 Pro 5G",
-    "storage": "4 GB/128 GB",
-    "basePrice": 8600,
-    "image": "/images/models/xiaomi-redmi-a7-pro-5g-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400238",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi A7 Pro 5G",
-    "storage": "4 GB/64 GB",
-    "basePrice": 8000,
-    "image": "/images/models/xiaomi-redmi-a7-pro-5g-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400239",
-    "brand": "Xiaomi",
-    "model": "Xiaomi 17T",
-    "storage": "12 GB/512 GB",
-    "basePrice": 40000,
-    "image": "/images/models/xiaomi-17t-12-gb-512-gb.jpg"
-  },
-  {
-    "id": "xiaomi_400240",
-    "brand": "Xiaomi",
-    "model": "Xiaomi 17T",
-    "storage": "12 GB/256 GB",
-    "basePrice": 37000,
-    "image": "/images/models/xiaomi-17t-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500000",
-    "brand": "Vivo",
-    "model": "Vivo V9 Pro",
-    "storage": "6 GB/64 GB",
-    "basePrice": 3200,
-    "image": "/images/models/vivo-v9-pro-6-gb-64-gb.png"
-  },
-  {
-    "id": "vivo_500001",
-    "brand": "Vivo",
-    "model": "Vivo V9 Pro",
-    "storage": "4 GB/64 GB",
-    "basePrice": 3040,
-    "image": "/images/models/vivo-v9-pro-4-gb-64-gb.png"
-  },
-  {
-    "id": "vivo_500002",
-    "brand": "Vivo",
-    "model": "Vivo V11 Pro",
-    "storage": "6 GB/64 GB",
-    "basePrice": 3740,
-    "image": "/images/models/vivo-v11-pro-6-gb-64-gb.png"
-  },
-  {
-    "id": "vivo_500003",
-    "brand": "Vivo",
-    "model": "Vivo V11",
-    "storage": "6 GB/64 GB",
-    "basePrice": 3250,
-    "image": "/images/models/vivo-v11-6-gb-64-gb.png"
-  },
-  {
-    "id": "vivo_500004",
-    "brand": "Vivo",
-    "model": "Vivo Y83 Pro",
-    "storage": "4 GB/64 GB",
-    "basePrice": 2650,
-    "image": "/images/models/vivo-y83-pro-4-gb-64-gb.png"
-  },
-  {
-    "id": "vivo_500005",
-    "brand": "Vivo",
-    "model": "Vivo NEX",
-    "storage": "8 GB/128 GB",
-    "basePrice": 4570,
-    "image": "/images/models/vivo-nex-8-gb-128-gb.png"
-  },
-  {
-    "id": "vivo_500006",
-    "brand": "Vivo",
-    "model": "Vivo Y71i",
-    "storage": "2 GB/16 GB",
-    "basePrice": 1340,
-    "image": "/images/models/vivo-y71i-2-gb-16-gb.png"
-  },
-  {
-    "id": "vivo_500007",
-    "brand": "Vivo",
-    "model": "Vivo Y81",
-    "storage": "3 GB/32 GB",
-    "basePrice": 1830,
-    "image": "/images/models/vivo-y81-3-gb-32-gb.png"
-  },
-  {
-    "id": "vivo_500008",
-    "brand": "Vivo",
-    "model": "Vivo Y81",
-    "storage": "4 GB/32 GB",
-    "basePrice": 2140,
-    "image": "/images/models/vivo-y81-4-gb-32-gb.png"
-  },
-  {
-    "id": "vivo_500009",
-    "brand": "Vivo",
-    "model": "Vivo Y83",
-    "storage": "4 GB/32 GB",
-    "basePrice": 2260,
-    "image": "/images/models/vivo-y83-4-gb-32-gb.png"
-  },
-  {
-    "id": "vivo_500010",
-    "brand": "Vivo",
-    "model": "Vivo V9 Youth",
-    "storage": "4 GB/32 GB",
-    "basePrice": 2230,
-    "image": "/images/models/vivo-v9-youth-4-gb-32-gb.png"
-  },
-  {
-    "id": "vivo_500011",
-    "brand": "Vivo",
-    "model": "Vivo Y71",
-    "storage": "4 GB/32 GB",
-    "basePrice": 1720,
-    "image": "/images/models/vivo-default.png"
-  },
-  {
-    "id": "vivo_500012",
-    "brand": "Vivo",
-    "model": "Vivo Y71",
-    "storage": "3 GB/16 GB",
-    "basePrice": 1380,
-    "image": "/images/models/vivo-y71-3-gb-16-gb.png"
-  },
-  {
-    "id": "vivo_500013",
-    "brand": "Vivo",
-    "model": "Vivo Y53i",
-    "storage": "2 GB/16 GB",
-    "basePrice": 970,
-    "image": "/images/models/vivo-y53i-2-gb-16-gb.png"
-  },
-  {
-    "id": "vivo_500014",
-    "brand": "Vivo",
-    "model": "Vivo X21",
-    "storage": "6 GB/128 GB",
-    "basePrice": 3640,
-    "image": "/images/models/vivo-x21-6-gb-128-gb.png"
-  },
-  {
-    "id": "vivo_500015",
-    "brand": "Vivo",
-    "model": "Vivo V9",
-    "storage": "4 GB/64 GB",
-    "basePrice": 2770,
-    "image": "/images/models/vivo-v9-4-gb-64-gb.png"
-  },
-  {
-    "id": "vivo_500016",
-    "brand": "Vivo",
-    "model": "Vivo V7",
-    "storage": "4 GB/32 GB",
-    "basePrice": 2150,
-    "image": "/images/models/vivo-v7-4-gb-32-gb.png"
-  },
-  {
-    "id": "vivo_500017",
-    "brand": "Vivo",
-    "model": "Vivo V7 Plus",
-    "storage": "4 GB/64 GB",
-    "basePrice": 2230,
-    "image": "/images/models/vivo-v7-plus-4-gb-64-gb.png"
-  },
-  {
-    "id": "vivo_500018",
-    "brand": "Vivo",
-    "model": "Vivo Y69",
-    "storage": "3 GB/32 GB",
-    "basePrice": 1530,
-    "image": "/images/models/vivo-y69-3-gb-32-gb.png"
-  },
-  {
-    "id": "vivo_500019",
-    "brand": "Vivo",
-    "model": "Vivo X9",
-    "storage": "4 GB/64 GB",
-    "basePrice": 2250,
-    "image": "/images/models/vivo-x9-4-gb-64-gb.png"
-  },
-  {
-    "id": "vivo_500020",
-    "brand": "Vivo",
-    "model": "Vivo X9",
-    "storage": "4 GB/128 GB",
-    "basePrice": 2400,
-    "image": "/images/models/vivo-x9-4-gb-128-gb.png"
-  },
-  {
-    "id": "vivo_500021",
-    "brand": "Vivo",
-    "model": "Vivo X9s",
-    "storage": "4 GB/64 GB",
-    "basePrice": 2330,
-    "image": "/images/models/vivo-x9s-4-gb-64-gb.png"
-  },
-  {
-    "id": "vivo_500022",
-    "brand": "Vivo",
-    "model": "Vivo X9s Plus",
-    "storage": "4 GB/64 GB",
-    "basePrice": 2550,
-    "image": "/images/models/vivo-x9s-plus-4-gb-64-gb.png"
-  },
-  {
-    "id": "vivo_500023",
-    "brand": "Vivo",
-    "model": "Vivo Y55s",
-    "storage": "3 GB/16 GB",
-    "basePrice": 1050,
-    "image": "/images/models/vivo-y55s-3-gb-16-gb.png"
-  },
-  {
-    "id": "vivo_500024",
-    "brand": "Vivo",
-    "model": "Vivo Y66",
-    "storage": "3 GB/32 GB",
-    "basePrice": 1490,
-    "image": "/images/models/vivo-y66-3-gb-32-gb.png"
-  },
-  {
-    "id": "vivo_500025",
-    "brand": "Vivo",
-    "model": "Vivo V5 Plus",
-    "storage": "4 GB/32 GB",
-    "basePrice": 2010,
-    "image": "/images/models/vivo-v5-plus-4-gb-32-gb.png"
-  },
-  {
-    "id": "vivo_500026",
-    "brand": "Vivo",
-    "model": "Vivo V5 Plus",
-    "storage": "4 GB/64 GB",
-    "basePrice": 2250,
-    "image": "/images/models/vivo-v5-plus-4-gb-64-gb.png"
-  },
-  {
-    "id": "vivo_500027",
-    "brand": "Vivo",
-    "model": "Vivo V5",
-    "storage": "4 GB/32 GB",
-    "basePrice": 1560,
-    "image": "/images/models/vivo-v5-4-gb-32-gb.png"
-  },
-  {
-    "id": "vivo_500028",
-    "brand": "Vivo",
-    "model": "Vivo Y95",
-    "storage": "4 GB/64 GB",
-    "basePrice": 3110,
-    "image": "/images/models/vivo-y95-4-gb-64-gb.png"
-  },
-  {
-    "id": "vivo_500029",
-    "brand": "Vivo",
-    "model": "Vivo Y93",
-    "storage": "4 GB/32 GB",
-    "basePrice": 2500,
-    "image": "/images/models/vivo-y93-4-gb-32-gb.png"
-  },
-  {
-    "id": "vivo_500030",
-    "brand": "Vivo",
-    "model": "Vivo Y93",
-    "storage": "3 GB/64 GB",
-    "basePrice": 2570,
-    "image": "/images/models/vivo-y93-3-gb-64-gb.png"
-  },
-  {
-    "id": "vivo_500031",
-    "brand": "Vivo",
-    "model": "Vivo Y81i",
-    "storage": "2 GB/16 GB",
-    "basePrice": 1340,
-    "image": "/images/models/vivo-y81i-2-gb-16-gb.png"
-  },
-  {
-    "id": "vivo_500032",
-    "brand": "Vivo",
-    "model": "Vivo Z10",
-    "storage": "4 GB/32 GB",
-    "basePrice": 2500,
-    "image": "/images/models/vivo-z10-4-gb-32-gb.png"
-  },
-  {
-    "id": "vivo_500033",
-    "brand": "Vivo",
-    "model": "Vivo Y91",
-    "storage": "3 GB/32 GB",
-    "basePrice": 2350,
-    "image": "/images/models/vivo-y91-3-gb-32-gb.png"
-  },
-  {
-    "id": "vivo_500034",
-    "brand": "Vivo",
-    "model": "Vivo Y91",
-    "storage": "2 GB/32 GB",
-    "basePrice": 2130,
-    "image": "/images/models/vivo-y91-2-gb-32-gb.png"
-  },
-  {
-    "id": "vivo_500035",
-    "brand": "Vivo",
-    "model": "Vivo V15 Pro",
-    "storage": "8 GB/128 GB",
-    "basePrice": 4880,
-    "image": "/images/models/vivo-v15-pro-8-gb-128-gb.png"
-  },
-  {
-    "id": "vivo_500036",
-    "brand": "Vivo",
-    "model": "Vivo V15 Pro",
-    "storage": "6 GB/128 GB",
-    "basePrice": 4650,
-    "image": "/images/models/vivo-v15-pro-6-gb-128-gb.png"
-  },
-  {
-    "id": "vivo_500037",
-    "brand": "Vivo",
-    "model": "Vivo Y91i",
-    "storage": "3 GB/32 GB",
-    "basePrice": 1980,
-    "image": "/images/models/vivo-y91i-3-gb-32-gb.jpg"
-  },
-  {
-    "id": "vivo_500038",
-    "brand": "Vivo",
-    "model": "Vivo Y91i",
-    "storage": "2 GB/32 GB",
-    "basePrice": 1830,
-    "image": "/images/models/vivo-y91i-2-gb-32-gb.png"
-  },
-  {
-    "id": "vivo_500039",
-    "brand": "Vivo",
-    "model": "Vivo Y91i",
-    "storage": "2 GB/16 GB",
-    "basePrice": 1640,
-    "image": "/images/models/vivo-y91i-2-gb-16-gb.png"
-  },
-  {
-    "id": "vivo_500040",
-    "brand": "Vivo",
-    "model": "Vivo V15",
-    "storage": "6 GB/64 GB",
-    "basePrice": 4320,
-    "image": "/images/models/vivo-v15-6-gb-64-gb.png"
-  },
-  {
-    "id": "vivo_500041",
-    "brand": "Vivo",
-    "model": "Vivo V15",
-    "storage": "6 GB/128 GB",
-    "basePrice": 4540,
-    "image": "/images/models/vivo-v15-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500042",
-    "brand": "Vivo",
-    "model": "Vivo Y17",
-    "storage": "4 GB/128 GB",
-    "basePrice": 4630,
-    "image": "/images/models/vivo-y17-4-gb-128-gb.png"
-  },
-  {
-    "id": "vivo_500043",
-    "brand": "Vivo",
-    "model": "Vivo Y15 2019",
-    "storage": "4 GB/64 GB",
-    "basePrice": 3690,
-    "image": "/images/models/vivo-y15-2019-4-gb-64-gb.png"
-  },
-  {
-    "id": "vivo_500044",
-    "brand": "Vivo",
-    "model": "Vivo Y12",
-    "storage": "3 GB/64 GB",
-    "basePrice": 3560,
-    "image": "/images/models/vivo-y12-3-gb-64-gb.png"
-  },
-  {
-    "id": "vivo_500045",
-    "brand": "Vivo",
-    "model": "Vivo Y12",
-    "storage": "4 GB/32 GB",
-    "basePrice": 3790,
-    "image": "/images/models/vivo-y12-4-gb-32-gb.png"
-  },
-  {
-    "id": "vivo_500046",
-    "brand": "Vivo",
-    "model": "Vivo Z1 Pro",
-    "storage": "6 GB/64 GB",
-    "basePrice": 3450,
-    "image": "/images/models/vivo-z1-pro-6-gb-64-gb.png"
-  },
-  {
-    "id": "vivo_500047",
-    "brand": "Vivo",
-    "model": "Vivo Z1 Pro",
-    "storage": "4 GB/64 GB",
-    "basePrice": 3390,
-    "image": "/images/models/vivo-z1-pro-4-gb-64-gb.png"
-  },
-  {
-    "id": "vivo_500048",
-    "brand": "Vivo",
-    "model": "Vivo Z1 Pro",
-    "storage": "8 GB/128 GB",
-    "basePrice": 3940,
-    "image": "/images/models/vivo-z1-pro-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500049",
-    "brand": "Vivo",
-    "model": "Vivo Z1 Pro",
-    "storage": "6 GB/128 GB",
-    "basePrice": 3600,
-    "image": "/images/models/vivo-z1-pro-6-gb-128-gb.png"
-  },
-  {
-    "id": "vivo_500050",
-    "brand": "Vivo",
-    "model": "Vivo S1",
-    "storage": "6 GB/128 GB",
-    "basePrice": 4310,
-    "image": "/images/models/vivo-s1-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500051",
-    "brand": "Vivo",
-    "model": "Vivo S1",
-    "storage": "6 GB/64 GB",
-    "basePrice": 4080,
-    "image": "/images/models/vivo-s1-6-gb-64-gb.jpg"
-  },
-  {
-    "id": "vivo_500052",
-    "brand": "Vivo",
-    "model": "Vivo S1",
-    "storage": "4 GB/128 GB",
-    "basePrice": 4070,
-    "image": "/images/models/vivo-s1-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500053",
-    "brand": "Vivo",
-    "model": "Vivo Y90",
-    "storage": "2 GB/16 GB",
-    "basePrice": 2050,
-    "image": "/images/models/vivo-y90-2-gb-16-gb.jpg"
-  },
-  {
-    "id": "vivo_500054",
-    "brand": "Vivo",
-    "model": "Vivo Z1x",
-    "storage": "8 GB/128 GB",
-    "basePrice": 4320,
-    "image": "/images/models/vivo-z1x-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500055",
-    "brand": "Vivo",
-    "model": "Vivo Z1x",
-    "storage": "6 GB/128 GB",
-    "basePrice": 4090,
-    "image": "/images/models/vivo-z1x-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500056",
-    "brand": "Vivo",
-    "model": "Vivo Z1x",
-    "storage": "4 GB/128 GB",
-    "basePrice": 3750,
-    "image": "/images/models/vivo-z1x-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500057",
-    "brand": "Vivo",
-    "model": "Vivo Z1x",
-    "storage": "6 GB/64 GB",
-    "basePrice": 4010,
-    "image": "/images/models/vivo-z1x-6-gb-64-gb.jpg"
-  },
-  {
-    "id": "vivo_500058",
-    "brand": "Vivo",
-    "model": "Vivo V17 Pro",
-    "storage": "8 GB/128 GB",
-    "basePrice": 5700,
-    "image": "/images/models/vivo-v17-pro-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500059",
-    "brand": "Vivo",
-    "model": "Vivo U10",
-    "storage": "64 GB",
-    "basePrice": "Not found",
-    "image": "/images/models/vivo-default.png"
-  },
-  {
-    "id": "vivo_500060",
-    "brand": "Vivo",
-    "model": "Vivo Y19",
-    "storage": "4 GB/128 GB",
-    "basePrice": 4320,
-    "image": "/images/models/vivo-y19-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500061",
-    "brand": "Vivo",
-    "model": "Vivo U20",
-    "storage": "6 GB/64 GB",
-    "basePrice": 3640,
-    "image": "/images/models/vivo-u20-6-gb-64-gb.jpg"
-  },
-  {
-    "id": "vivo_500062",
-    "brand": "Vivo",
-    "model": "Vivo U20",
-    "storage": "4 GB/64 GB",
-    "basePrice": 3540,
-    "image": "/images/models/vivo-u20-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "vivo_500063",
-    "brand": "Vivo",
-    "model": "Vivo U20",
-    "storage": "8 GB/128 GB",
-    "basePrice": 3900,
-    "image": "/images/models/vivo-u20-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500064",
-    "brand": "Vivo",
-    "model": "Vivo V17",
-    "storage": "8 GB/128 GB",
-    "basePrice": 5560,
-    "image": "/images/models/vivo-v17-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500065",
-    "brand": "Vivo",
-    "model": "Vivo S1 Pro",
-    "storage": "8 GB/128 GB",
-    "basePrice": 4880,
-    "image": "/images/models/vivo-s1-pro-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500066",
-    "brand": "Vivo",
-    "model": "Vivo Y11 2019",
-    "storage": "3 GB/32 GB",
-    "basePrice": 2880,
-    "image": "/images/models/vivo-y11-2019-3-gb-32-gb.jpg"
-  },
-  {
-    "id": "vivo_500067",
-    "brand": "Vivo",
-    "model": "Vivo V19",
-    "storage": "8 GB/128 GB",
-    "basePrice": 5720,
-    "image": "/images/models/vivo-v19-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500068",
-    "brand": "Vivo",
-    "model": "Vivo V19",
-    "storage": "8 GB/256 GB",
-    "basePrice": 6150,
-    "image": "/images/models/vivo-v19-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500069",
-    "brand": "Vivo",
-    "model": "Vivo Y50",
-    "storage": "8 GB/128 GB",
-    "basePrice": 5240,
-    "image": "/images/models/vivo-y50-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500070",
-    "brand": "Vivo",
-    "model": "Vivo Y30",
-    "storage": "6 GB/128 GB",
-    "basePrice": 4850,
-    "image": "/images/models/vivo-y30-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500071",
-    "brand": "Vivo",
-    "model": "Vivo Y30",
-    "storage": "4 GB/128 GB",
-    "basePrice": 4700,
-    "image": "/images/models/vivo-y30-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500072",
-    "brand": "Vivo",
-    "model": "Vivo X50",
-    "storage": "8 GB/128 GB",
-    "basePrice": 5830,
-    "image": "/images/models/vivo-x50-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500073",
-    "brand": "Vivo",
-    "model": "Vivo X50",
-    "storage": "8 GB/256 GB",
-    "basePrice": 6060,
-    "image": "/images/models/vivo-x50-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500074",
-    "brand": "Vivo",
-    "model": "Vivo X50 Pro",
-    "storage": "8 GB/256 GB",
-    "basePrice": 9130,
-    "image": "/images/models/vivo-x50-pro-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500075",
-    "brand": "Vivo",
-    "model": "Vivo V20",
-    "storage": "8 GB/128 GB",
-    "basePrice": 6040,
-    "image": "/images/models/vivo-v20-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500076",
-    "brand": "Vivo",
-    "model": "Vivo V20",
-    "storage": "8 GB/256 GB",
-    "basePrice": 6300,
-    "image": "/images/models/vivo-v20-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500077",
-    "brand": "Vivo",
-    "model": "Vivo Y20i",
-    "storage": "3 GB/64 GB",
-    "basePrice": 3730,
-    "image": "/images/models/vivo-y20i-3-gb-64-gb.jpg"
-  },
-  {
-    "id": "vivo_500078",
-    "brand": "Vivo",
-    "model": "Vivo Y20",
-    "storage": "4 GB/64 GB",
-    "basePrice": 4290,
-    "image": "/images/models/vivo-y20-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "vivo_500079",
-    "brand": "Vivo",
-    "model": "Vivo Y20",
-    "storage": "6 GB/64 GB",
-    "basePrice": 4570,
-    "image": "/images/models/vivo-y20-6-gb-64-gb.jpg"
-  },
-  {
-    "id": "vivo_500080",
-    "brand": "Vivo",
-    "model": "Vivo V20 SE",
-    "storage": "8 GB/128 GB",
-    "basePrice": 5720,
-    "image": "/images/models/vivo-v20-se-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500081",
-    "brand": "Vivo",
-    "model": "Vivo V20 Pro",
-    "storage": "8 GB/128 GB",
-    "basePrice": 7900,
-    "image": "/images/models/vivo-v20-pro-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500082",
-    "brand": "Vivo",
-    "model": "Vivo Y51 2020",
-    "storage": "8 GB/128 GB",
-    "basePrice": 5420,
-    "image": "/images/models/vivo-y51-2020-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500083",
-    "brand": "Vivo",
-    "model": "Vivo Y20G",
-    "storage": "4 GB/64 GB",
-    "basePrice": 4470,
-    "image": "/images/models/vivo-y20g-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "vivo_500084",
-    "brand": "Vivo",
-    "model": "Vivo Y20G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 5010,
-    "image": "/images/models/vivo-y20g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500085",
-    "brand": "Vivo",
-    "model": "Vivo V20 2021",
-    "storage": "8 GB/128 GB",
-    "basePrice": 5530,
-    "image": "/images/models/vivo-v20-2021-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500086",
-    "brand": "Vivo",
-    "model": "Vivo V20 2021",
-    "storage": "8 GB/256 GB",
-    "basePrice": 5760,
-    "image": "/images/models/vivo-v20-2021-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500087",
-    "brand": "Vivo",
-    "model": "Vivo Y51A",
-    "storage": "8 GB/128 GB",
-    "basePrice": 5060,
-    "image": "/images/models/vivo-y51a-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500088",
-    "brand": "Vivo",
-    "model": "Vivo Y51A",
-    "storage": "6 GB/128 GB",
-    "basePrice": 4650,
-    "image": "/images/models/vivo-y51a-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500089",
-    "brand": "Vivo",
-    "model": "Vivo Y20A",
-    "storage": "3 GB/64 GB",
-    "basePrice": 3940,
-    "image": "/images/models/vivo-y20a-3-gb-64-gb.jpg"
-  },
-  {
-    "id": "vivo_500090",
-    "brand": "Vivo",
-    "model": "Vivo Y31 2021",
-    "storage": "6 GB/128 GB",
-    "basePrice": 4940,
-    "image": "/images/models/vivo-y31-2021-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500091",
-    "brand": "Vivo",
-    "model": "Vivo X60",
-    "storage": "12 GB/256 GB",
-    "basePrice": 10310,
-    "image": "/images/models/vivo-x60-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500092",
-    "brand": "Vivo",
-    "model": "Vivo X60",
-    "storage": "8 GB/128 GB",
-    "basePrice": 9720,
-    "image": "/images/models/vivo-x60-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500093",
-    "brand": "Vivo",
-    "model": "Vivo X60 Pro",
-    "storage": "12 GB/256 GB",
-    "basePrice": 11920,
-    "image": "/images/models/vivo-x60-pro-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500094",
-    "brand": "Vivo",
-    "model": "Vivo X60 Pro Plus",
-    "storage": "64 GB",
-    "basePrice": "Not found",
-    "image": "/images/models/vivo-default.png"
-  },
-  {
-    "id": "vivo_500095",
-    "brand": "Vivo",
-    "model": "Vivo V21 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 8110,
-    "image": "/images/models/vivo-v21-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500096",
-    "brand": "Vivo",
-    "model": "Vivo V21 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 8800,
-    "image": "/images/models/vivo-v21-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500097",
-    "brand": "Vivo",
-    "model": "Vivo V21e 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 7380,
-    "image": "/images/models/vivo-v21e-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500098",
-    "brand": "Vivo",
-    "model": "Vivo V21e 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 7650,
-    "image": "/images/models/vivo-v21e-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500099",
-    "brand": "Vivo",
-    "model": "Vivo Y73",
-    "storage": "8 GB/128 GB",
-    "basePrice": 6000,
-    "image": "/images/models/vivo-y73-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500100",
-    "brand": "Vivo",
-    "model": "Vivo Y72 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 7280,
-    "image": "/images/models/vivo-y72-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500101",
-    "brand": "Vivo",
-    "model": "Vivo Y12s",
-    "storage": "3 GB/32 GB",
-    "basePrice": 3800,
-    "image": "/images/models/vivo-y12s-3-gb-32-gb.jpg"
-  },
-  {
-    "id": "vivo_500102",
-    "brand": "Vivo",
-    "model": "Vivo Y1s",
-    "storage": "3 GB/32 GB",
-    "basePrice": 2610,
-    "image": "/images/models/vivo-y1s-3-gb-32-gb.jpg"
-  },
-  {
-    "id": "vivo_500103",
-    "brand": "Vivo",
-    "model": "Vivo Y1s",
-    "storage": "2 GB/32 GB",
-    "basePrice": 2460,
-    "image": "/images/models/vivo-y1s-2-gb-32-gb.jpg"
-  },
-  {
-    "id": "vivo_500104",
-    "brand": "Vivo",
-    "model": "Vivo Y53s",
-    "storage": "8 GB/128 GB",
-    "basePrice": 5490,
-    "image": "/images/models/vivo-y53s-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500105",
-    "brand": "Vivo",
-    "model": "Vivo Y12G",
-    "storage": "3 GB/32 GB",
-    "basePrice": 3340,
-    "image": "/images/models/vivo-y12g-3-gb-32-gb.jpg"
-  },
-  {
-    "id": "vivo_500106",
-    "brand": "Vivo",
-    "model": "Vivo Y12G",
-    "storage": "3 GB/64 GB",
-    "basePrice": 3610,
-    "image": "/images/models/vivo-y12g-3-gb-64-gb.jpg"
-  },
-  {
-    "id": "vivo_500107",
-    "brand": "Vivo",
-    "model": "Vivo Y33s",
-    "storage": "8 GB/128 GB",
-    "basePrice": 5660,
-    "image": "/images/models/vivo-y33s-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500108",
-    "brand": "Vivo",
-    "model": "Vivo Y21 2021",
-    "storage": "4 GB/64 GB",
-    "basePrice": 4570,
-    "image": "/images/models/vivo-y21-2021-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "vivo_500109",
-    "brand": "Vivo",
-    "model": "Vivo Y21 2021",
-    "storage": "4 GB/128 GB",
-    "basePrice": 4960,
-    "image": "/images/models/vivo-y21-2021-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500110",
-    "brand": "Vivo",
-    "model": "Vivo X70 Pro",
-    "storage": "8 GB/128 GB",
-    "basePrice": 14280,
-    "image": "/images/models/vivo-x70-pro-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500111",
-    "brand": "Vivo",
-    "model": "Vivo X70 Pro",
-    "storage": "8 GB/256 GB",
-    "basePrice": 15000,
-    "image": "/images/models/vivo-x70-pro-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500112",
-    "brand": "Vivo",
-    "model": "Vivo X70 Pro",
-    "storage": "12 GB/256 GB",
-    "basePrice": 16020,
-    "image": "/images/models/vivo-x70-pro-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500113",
-    "brand": "Vivo",
-    "model": "Vivo Y3s 2021",
-    "storage": "2 GB/32 GB",
-    "basePrice": 2820,
-    "image": "/images/models/vivo-y3s-2021-2-gb-32-gb.jpg"
-  },
-  {
-    "id": "vivo_500114",
-    "brand": "Vivo",
-    "model": "Vivo Y20T",
-    "storage": "6 GB/64 GB",
-    "basePrice": 4920,
-    "image": "/images/models/vivo-y20t-6-gb-64-gb.jpg"
-  },
-  {
-    "id": "vivo_500115",
-    "brand": "Vivo",
-    "model": "Vivo V23 5G",
-    "storage": "12 GB/256 GB",
-    "basePrice": 10570,
-    "image": "/images/models/vivo-v23-5g-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500116",
-    "brand": "Vivo",
-    "model": "Vivo V23 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 9430,
-    "image": "/images/models/vivo-v23-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500117",
-    "brand": "Vivo",
-    "model": "Vivo V23 Pro",
-    "storage": "8 GB/128 GB",
-    "basePrice": 10550,
-    "image": "/images/models/vivo-v23-pro-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500118",
-    "brand": "Vivo",
-    "model": "Vivo V23 Pro",
-    "storage": "12 GB/256 GB",
-    "basePrice": 11690,
-    "image": "/images/models/vivo-v23-pro-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500119",
-    "brand": "Vivo",
-    "model": "Vivo Y21T",
-    "storage": "4 GB/128 GB",
-    "basePrice": 4860,
-    "image": "/images/models/vivo-y21t-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500120",
-    "brand": "Vivo",
-    "model": "Vivo T1 5G",
-    "storage": "4 GB/128 GB",
-    "basePrice": 6740,
-    "image": "/images/models/vivo-t1-5g-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500121",
-    "brand": "Vivo",
-    "model": "Vivo T1 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 7610,
-    "image": "/images/models/vivo-t1-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500122",
-    "brand": "Vivo",
-    "model": "Vivo T1 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 7800,
-    "image": "/images/models/vivo-t1-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500123",
-    "brand": "Vivo",
-    "model": "Vivo V23e 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 8450,
-    "image": "/images/models/vivo-v23e-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500124",
-    "brand": "Vivo",
-    "model": "Vivo Y75 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 7750,
-    "image": "/images/models/vivo-y75-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500125",
-    "brand": "Vivo",
-    "model": "Vivo Y21e",
-    "storage": "3 GB/64 GB",
-    "basePrice": 3980,
-    "image": "/images/models/vivo-y21e-3-gb-64-gb.jpg"
-  },
-  {
-    "id": "vivo_500126",
-    "brand": "Vivo",
-    "model": "Vivo Y21a",
-    "storage": "4 GB/64 GB",
-    "basePrice": 4170,
-    "image": "/images/models/vivo-y21a-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "vivo_500127",
-    "brand": "Vivo",
-    "model": "Vivo Y33T",
-    "storage": "8 GB/128 GB",
-    "basePrice": 5620,
-    "image": "/images/models/vivo-y33t-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500128",
-    "brand": "Vivo",
-    "model": "Vivo Y15s 2021",
-    "storage": "3 GB/32 GB",
-    "basePrice": 3090,
-    "image": "/images/models/vivo-y15s-2021-3-gb-32-gb.jpg"
-  },
-  {
-    "id": "vivo_500129",
-    "brand": "Vivo",
-    "model": "Vivo Y21G",
-    "storage": "4 GB/64 GB",
-    "basePrice": 4230,
-    "image": "/images/models/vivo-y21g-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "vivo_500130",
-    "brand": "Vivo",
-    "model": "Vivo X70 Pro Plus",
-    "storage": "12 GB/256 GB",
-    "basePrice": 17760,
-    "image": "/images/models/vivo-x70-pro-plus-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500131",
-    "brand": "Vivo",
-    "model": "Vivo X80",
-    "storage": "12 GB/256 GB",
-    "basePrice": 17000,
-    "image": "/images/models/vivo-x80-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500132",
-    "brand": "Vivo",
-    "model": "Vivo X80",
-    "storage": "8 GB/128 GB",
-    "basePrice": 15330,
-    "image": "/images/models/vivo-x80-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500133",
-    "brand": "Vivo",
-    "model": "Vivo X80 Pro",
-    "storage": "12 GB/256 GB",
-    "basePrice": 19970,
-    "image": "/images/models/vivo-x80-pro-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500134",
-    "brand": "Vivo",
-    "model": "Vivo T1 Pro 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 8570,
-    "image": "/images/models/vivo-t1-pro-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500135",
-    "brand": "Vivo",
-    "model": "Vivo T1 Pro 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 8920,
-    "image": "/images/models/vivo-t1-pro-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500136",
-    "brand": "Vivo",
-    "model": "Vivo T1",
-    "storage": "4 GB/128 GB",
-    "basePrice": 5290,
-    "image": "/images/models/vivo-t1-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500137",
-    "brand": "Vivo",
-    "model": "Vivo T1",
-    "storage": "8 GB/128 GB",
-    "basePrice": 6170,
-    "image": "/images/models/vivo-t1-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500138",
-    "brand": "Vivo",
-    "model": "Vivo T1",
-    "storage": "6 GB/128 GB",
-    "basePrice": 5840,
-    "image": "/images/models/vivo-t1-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500139",
-    "brand": "Vivo",
-    "model": "Vivo Y75",
-    "storage": "8 GB/128 GB",
-    "basePrice": 5920,
-    "image": "/images/models/vivo-y75-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500140",
-    "brand": "Vivo",
-    "model": "Vivo Y01",
-    "storage": "2 GB/32 GB",
-    "basePrice": 2730,
-    "image": "/images/models/vivo-y01-2-gb-32-gb.jpg"
-  },
-  {
-    "id": "vivo_500141",
-    "brand": "Vivo",
-    "model": "Vivo T1x",
-    "storage": "4 GB/64 GB",
-    "basePrice": 4530,
-    "image": "/images/models/vivo-t1x-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "vivo_500142",
-    "brand": "Vivo",
-    "model": "Vivo T1x",
-    "storage": "4 GB/128 GB",
-    "basePrice": 4920,
-    "image": "/images/models/vivo-t1x-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500143",
-    "brand": "Vivo",
-    "model": "Vivo T1x",
-    "storage": "6 GB/128 GB",
-    "basePrice": 5190,
-    "image": "/images/models/vivo-t1x-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500144",
-    "brand": "Vivo",
-    "model": "Vivo V25 Pro 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 11560,
-    "image": "/images/models/vivo-v25-pro-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500145",
-    "brand": "Vivo",
-    "model": "Vivo V25 Pro 5G",
-    "storage": "12 GB/256 GB",
-    "basePrice": 12330,
-    "image": "/images/models/vivo-v25-pro-5g-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500146",
-    "brand": "Vivo",
-    "model": "Vivo Y22 2022",
-    "storage": "4 GB/64 GB",
-    "basePrice": 4570,
-    "image": "/images/models/vivo-y22-2022-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "vivo_500147",
-    "brand": "Vivo",
-    "model": "Vivo Y22 2022",
-    "storage": "4 GB/128 GB",
-    "basePrice": 4970,
-    "image": "/images/models/vivo-y22-2022-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500148",
-    "brand": "Vivo",
-    "model": "Vivo Y22 2022",
-    "storage": "6 GB/128 GB",
-    "basePrice": 5380,
-    "image": "/images/models/vivo-y22-2022-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500149",
-    "brand": "Vivo",
-    "model": "Vivo V25 5G",
-    "storage": "12 GB/256 GB",
-    "basePrice": 10540,
-    "image": "/images/models/vivo-v25-5g-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500150",
-    "brand": "Vivo",
-    "model": "Vivo V25 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 9730,
-    "image": "/images/models/vivo-v25-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500151",
-    "brand": "Vivo",
-    "model": "Vivo Y16",
-    "storage": "3 GB/64 GB",
-    "basePrice": 3940,
-    "image": "/images/models/vivo-y16-3-gb-64-gb.jpg"
-  },
-  {
-    "id": "vivo_500152",
-    "brand": "Vivo",
-    "model": "Vivo Y16",
-    "storage": "4 GB/64 GB",
-    "basePrice": 4190,
-    "image": "/images/models/vivo-y16-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "vivo_500153",
-    "brand": "Vivo",
-    "model": "Vivo Y16",
-    "storage": "3 GB/32 GB",
-    "basePrice": 3610,
-    "image": "/images/models/vivo-y16-3-gb-32-gb.jpg"
-  },
-  {
-    "id": "vivo_500154",
-    "brand": "Vivo",
-    "model": "Vivo Y16",
-    "storage": "4 GB/128 GB",
-    "basePrice": 4580,
-    "image": "/images/models/vivo-y16-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500155",
-    "brand": "Vivo",
-    "model": "Vivo Y35",
-    "storage": "8 GB/128 GB",
-    "basePrice": 5400,
-    "image": "/images/models/vivo-y35-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500156",
-    "brand": "Vivo",
-    "model": "Vivo Y02",
-    "storage": "3 GB/32 GB",
-    "basePrice": 3000,
-    "image": "/images/models/vivo-y02-3-gb-32-gb.jpg"
-  },
-  {
-    "id": "vivo_500157",
-    "brand": "Vivo",
-    "model": "Vivo Y100 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 10490,
-    "image": "/images/models/vivo-y100-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500158",
-    "brand": "Vivo",
-    "model": "Vivo Y56 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 10190,
-    "image": "/images/models/vivo-y56-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500159",
-    "brand": "Vivo",
-    "model": "Vivo Y56 5G",
-    "storage": "4 GB/128 GB",
-    "basePrice": 8880,
-    "image": "/images/models/vivo-y56-5g-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500160",
-    "brand": "Vivo",
-    "model": "Vivo V27 Pro",
-    "storage": "8 GB/128 GB",
-    "basePrice": 18100,
-    "image": "/images/models/vivo-v27-pro-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500161",
-    "brand": "Vivo",
-    "model": "Vivo V27 Pro",
-    "storage": "8 GB/256 GB",
-    "basePrice": 18720,
-    "image": "/images/models/vivo-v27-pro-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500162",
-    "brand": "Vivo",
-    "model": "Vivo V27 Pro",
-    "storage": "12 GB/256 GB",
-    "basePrice": 19050,
-    "image": "/images/models/vivo-v27-pro-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500163",
-    "brand": "Vivo",
-    "model": "Vivo V27",
-    "storage": "12 GB/256 GB",
-    "basePrice": 17810,
-    "image": "/images/models/vivo-v27-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500164",
-    "brand": "Vivo",
-    "model": "Vivo V27",
-    "storage": "8 GB/128 GB",
-    "basePrice": 15810,
-    "image": "/images/models/vivo-v27-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500165",
-    "brand": "Vivo",
-    "model": "Vivo Y01a",
-    "storage": "2 GB/32 GB",
-    "basePrice": 2610,
-    "image": "/images/models/vivo-y01a-2-gb-32-gb.jpg"
-  },
-  {
-    "id": "vivo_500166",
-    "brand": "Vivo",
-    "model": "Vivo X90",
-    "storage": "8 GB/256 GB",
-    "basePrice": 23800,
-    "image": "/images/models/vivo-x90-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500167",
-    "brand": "Vivo",
-    "model": "Vivo X90",
-    "storage": "12 GB/256 GB",
-    "basePrice": 24590,
-    "image": "/images/models/vivo-x90-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500168",
-    "brand": "Vivo",
-    "model": "Vivo X90 Pro",
-    "storage": "12 GB/256 GB",
-    "basePrice": 28660,
-    "image": "/images/models/vivo-x90-pro-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500169",
-    "brand": "Vivo",
-    "model": "Vivo Y100A 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 10930,
-    "image": "/images/models/vivo-y100a-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500170",
-    "brand": "Vivo",
-    "model": "Vivo Y100A 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 10730,
-    "image": "/images/models/vivo-y100a-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500171",
-    "brand": "Vivo",
-    "model": "Vivo Y02T",
-    "storage": "4 GB/64 GB",
-    "basePrice": 4610,
-    "image": "/images/models/vivo-y02t-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "vivo_500172",
-    "brand": "Vivo",
-    "model": "Vivo T2 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 10570,
-    "image": "/images/models/vivo-t2-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500173",
-    "brand": "Vivo",
-    "model": "Vivo T2 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 11170,
-    "image": "/images/models/vivo-t2-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500174",
-    "brand": "Vivo",
-    "model": "Vivo T2x 5G",
-    "storage": "64 GB",
-    "basePrice": "Not found",
-    "image": "/images/models/vivo-default.png"
-  },
-  {
-    "id": "vivo_500175",
-    "brand": "Vivo",
-    "model": "Vivo V29e",
-    "storage": "8 GB/256 GB",
-    "basePrice": 16600,
-    "image": "/images/models/vivo-v29e-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500176",
-    "brand": "Vivo",
-    "model": "Vivo V29e",
-    "storage": "8 GB/128 GB",
-    "basePrice": 15520,
-    "image": "/images/models/vivo-v29e-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500177",
-    "brand": "Vivo",
-    "model": "Vivo Y27",
-    "storage": "6 GB/128 GB",
-    "basePrice": 7040,
-    "image": "/images/models/vivo-y27-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500178",
-    "brand": "Vivo",
-    "model": "Vivo Y36",
-    "storage": "8 GB/128 GB",
-    "basePrice": 8020,
-    "image": "/images/models/vivo-y36-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500179",
-    "brand": "Vivo",
-    "model": "Vivo V29",
-    "storage": "12 GB/256 GB",
-    "basePrice": 18720,
-    "image": "/images/models/vivo-v29-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500180",
-    "brand": "Vivo",
-    "model": "Vivo V29",
-    "storage": "8 GB/128 GB",
-    "basePrice": 17500,
-    "image": "/images/models/vivo-v29-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500181",
-    "brand": "Vivo",
-    "model": "Vivo V29 Pro",
-    "storage": "8 GB/256 GB",
-    "basePrice": 19350,
-    "image": "/images/models/vivo-v29-pro-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500182",
-    "brand": "Vivo",
-    "model": "Vivo V29 Pro",
-    "storage": "12 GB/256 GB",
-    "basePrice": 20250,
-    "image": "/images/models/vivo-v29-pro-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500183",
-    "brand": "Vivo",
-    "model": "Vivo T2 Pro 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 15070,
-    "image": "/images/models/vivo-t2-pro-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500184",
-    "brand": "Vivo",
-    "model": "Vivo T2 Pro 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 15830,
-    "image": "/images/models/vivo-t2-pro-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500185",
-    "brand": "Vivo",
-    "model": "Vivo Y17s",
-    "storage": "4 GB/64 GB",
-    "basePrice": 5510,
-    "image": "/images/models/vivo-y17s-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "vivo_500186",
-    "brand": "Vivo",
-    "model": "Vivo Y17s",
-    "storage": "4 GB/128 GB",
-    "basePrice": 6160,
-    "image": "/images/models/vivo-y17s-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500187",
-    "brand": "Vivo",
-    "model": "Vivo Y200 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 12030,
-    "image": "/images/models/vivo-y200-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500188",
-    "brand": "Vivo",
-    "model": "Vivo Y200 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 12730,
-    "image": "/images/models/vivo-y200-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500189",
-    "brand": "Vivo",
-    "model": "Vivo Y28 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 9470,
-    "image": "/images/models/vivo-y28-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500190",
-    "brand": "Vivo",
-    "model": "Vivo Y28 5G",
-    "storage": "4 GB/128 GB",
-    "basePrice": 8720,
-    "image": "/images/models/vivo-y28-5g-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500191",
-    "brand": "Vivo",
-    "model": "Vivo Y28 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 9980,
-    "image": "/images/models/vivo-y28-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500192",
-    "brand": "Vivo",
-    "model": "Vivo X100",
-    "storage": "12 GB/256 GB",
-    "basePrice": 27150,
-    "image": "/images/models/vivo-x100-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500193",
-    "brand": "Vivo",
-    "model": "Vivo X100",
-    "storage": "16 GB/512 GB",
-    "basePrice": 27930,
-    "image": "/images/models/vivo-x100-16-gb-512-gb.jpg"
-  },
-  {
-    "id": "vivo_500194",
-    "brand": "Vivo",
-    "model": "Vivo X100 Pro",
-    "storage": "16 GB/512 GB",
-    "basePrice": 32830,
-    "image": "/images/models/vivo-x100-pro-16-gb-512-gb.jpg"
-  },
-  {
-    "id": "vivo_500195",
-    "brand": "Vivo",
-    "model": "Vivo V30",
-    "storage": "12 GB/256 GB",
-    "basePrice": 19990,
-    "image": "/images/models/vivo-v30-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500196",
-    "brand": "Vivo",
-    "model": "Vivo V30",
-    "storage": "8 GB/128 GB",
-    "basePrice": 18690,
-    "image": "/images/models/vivo-v30-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500197",
-    "brand": "Vivo",
-    "model": "Vivo V30",
-    "storage": "8 GB/256 GB",
-    "basePrice": 19550,
-    "image": "/images/models/vivo-v30-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500198",
-    "brand": "Vivo",
-    "model": "Vivo V30 Pro",
-    "storage": "12 GB/512 GB",
-    "basePrice": 22630,
-    "image": "/images/models/vivo-v30-pro-12-gb-512-gb.jpg"
-  },
-  {
-    "id": "vivo_500199",
-    "brand": "Vivo",
-    "model": "Vivo V30 Pro",
-    "storage": "8 GB/256 GB",
-    "basePrice": 21150,
-    "image": "/images/models/vivo-v30-pro-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500200",
-    "brand": "Vivo",
-    "model": "Vivo Y200e 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 12060,
-    "image": "/images/models/vivo-y200e-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500201",
-    "brand": "Vivo",
-    "model": "Vivo Y200e 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 11220,
-    "image": "/images/models/vivo-y200e-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500202",
-    "brand": "Vivo",
-    "model": "Vivo T3x 5G",
-    "storage": "4 GB/128 GB",
-    "basePrice": 8840,
-    "image": "/images/models/vivo-t3x-5g-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500203",
-    "brand": "Vivo",
-    "model": "Vivo T3x 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 10110,
-    "image": "/images/models/vivo-t3x-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500204",
-    "brand": "Vivo",
-    "model": "Vivo T3x 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 10500,
-    "image": "/images/models/vivo-t3x-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500205",
-    "brand": "Vivo",
-    "model": "Vivo T3 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 11570,
-    "image": "/images/models/vivo-t3-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500206",
-    "brand": "Vivo",
-    "model": "Vivo T3 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 11890,
-    "image": "/images/models/vivo-t3-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500207",
-    "brand": "Vivo",
-    "model": "Vivo V30e",
-    "storage": "8 GB/128 GB",
-    "basePrice": 17080,
-    "image": "/images/models/vivo-v30e-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500208",
-    "brand": "Vivo",
-    "model": "Vivo V30e",
-    "storage": "8 GB/256 GB",
-    "basePrice": 17590,
-    "image": "/images/models/vivo-v30e-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500209",
-    "brand": "Vivo",
-    "model": "Vivo Y18",
-    "storage": "4 GB/128 GB",
-    "basePrice": 5420,
-    "image": "/images/models/vivo-y18-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500210",
-    "brand": "Vivo",
-    "model": "Vivo Y18",
-    "storage": "4 GB/64 GB",
-    "basePrice": 4970,
-    "image": "/images/models/vivo-y18-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "vivo_500211",
-    "brand": "Vivo",
-    "model": "Vivo Y18e",
-    "storage": "4 GB/64 GB",
-    "basePrice": 5070,
-    "image": "/images/models/vivo-y18e-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "vivo_500212",
-    "brand": "Vivo",
-    "model": "Vivo Y200 Pro 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 13820,
-    "image": "/images/models/vivo-y200-pro-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500213",
-    "brand": "Vivo",
-    "model": "Vivo X Fold 3 Pro",
-    "storage": "16 GB/512 GB",
-    "basePrice": 60070,
-    "image": "/images/models/vivo-x-fold-3-pro-16-gb-512-gb.jpg"
-  },
-  {
-    "id": "vivo_500214",
-    "brand": "Vivo",
-    "model": "Vivo T3 Lite 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 7120,
-    "image": "/images/models/vivo-t3-lite-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500215",
-    "brand": "Vivo",
-    "model": "Vivo T3 Lite 5G",
-    "storage": "4 GB/128 GB",
-    "basePrice": 6310,
-    "image": "/images/models/vivo-t3-lite-5g-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500216",
-    "brand": "Vivo",
-    "model": "Vivo Y28s 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 9900,
-    "image": "/images/models/vivo-y28s-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500217",
-    "brand": "Vivo",
-    "model": "Vivo Y28s 5G",
-    "storage": "4 GB/128 GB",
-    "basePrice": 9030,
-    "image": "/images/models/vivo-y28s-5g-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500218",
-    "brand": "Vivo",
-    "model": "Vivo Y28s 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 9700,
-    "image": "/images/models/vivo-y28s-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500219",
-    "brand": "Vivo",
-    "model": "Vivo Y18i",
-    "storage": "4 GB/64 GB",
-    "basePrice": 4970,
-    "image": "/images/models/vivo-y18i-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "vivo_500220",
-    "brand": "Vivo",
-    "model": "Vivo Y28e 5G",
-    "storage": "4 GB/64 GB",
-    "basePrice": 7370,
-    "image": "/images/models/vivo-y28e-5g-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "vivo_500221",
-    "brand": "Vivo",
-    "model": "Vivo Y28e 5G",
-    "storage": "4 GB/128 GB",
-    "basePrice": 8290,
-    "image": "/images/models/vivo-y28e-5g-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500222",
-    "brand": "Vivo",
-    "model": "Vivo V40",
-    "storage": "8 GB/128 GB",
-    "basePrice": 20280,
-    "image": "/images/models/vivo-v40-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500223",
-    "brand": "Vivo",
-    "model": "Vivo V40",
-    "storage": "8 GB/256 GB",
-    "basePrice": 21470,
-    "image": "/images/models/vivo-v40-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500224",
-    "brand": "Vivo",
-    "model": "Vivo V40",
-    "storage": "12 GB/512 GB",
-    "basePrice": 21830,
-    "image": "/images/models/vivo-v40-12-gb-512-gb.jpg"
-  },
-  {
-    "id": "vivo_500225",
-    "brand": "Vivo",
-    "model": "Vivo V40 Pro",
-    "storage": "12 GB/512 GB",
-    "basePrice": 27300,
-    "image": "/images/models/vivo-v40-pro-12-gb-512-gb.jpg"
-  },
-  {
-    "id": "vivo_500226",
-    "brand": "Vivo",
-    "model": "Vivo V40 Pro",
-    "storage": "8 GB/256 GB",
-    "basePrice": 25480,
-    "image": "/images/models/vivo-v40-pro-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500227",
-    "brand": "Vivo",
-    "model": "Vivo Y58 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 10880,
-    "image": "/images/models/vivo-y58-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500228",
-    "brand": "Vivo",
-    "model": "Vivo T3 Pro 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 14700,
-    "image": "/images/models/vivo-t3-pro-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500229",
-    "brand": "Vivo",
-    "model": "Vivo T3 Pro 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 16290,
-    "image": "/images/models/vivo-t3-pro-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500230",
-    "brand": "Vivo",
-    "model": "Vivo V40e",
-    "storage": "8 GB/256 GB",
-    "basePrice": 18820,
-    "image": "/images/models/vivo-v40e-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500231",
-    "brand": "Vivo",
-    "model": "Vivo V40e",
-    "storage": "8 GB/128 GB",
-    "basePrice": 18050,
-    "image": "/images/models/vivo-v40e-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500232",
-    "brand": "Vivo",
-    "model": "Vivo T3 Ultra",
-    "storage": "8 GB/128 GB",
-    "basePrice": 17060,
-    "image": "/images/models/vivo-t3-ultra-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500233",
-    "brand": "Vivo",
-    "model": "Vivo T3 Ultra",
-    "storage": "8 GB/256 GB",
-    "basePrice": 18750,
-    "image": "/images/models/vivo-t3-ultra-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500234",
-    "brand": "Vivo",
-    "model": "Vivo T3 Ultra",
-    "storage": "12 GB/256 GB",
-    "basePrice": 19440,
-    "image": "/images/models/vivo-t3-ultra-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500235",
-    "brand": "Vivo",
-    "model": "Vivo Y18T",
-    "storage": "4 GB/128 GB",
-    "basePrice": 5280,
-    "image": "/images/models/vivo-y18t-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500236",
-    "brand": "Vivo",
-    "model": "Vivo X200",
-    "storage": "16 GB/512 GB",
-    "basePrice": 35500,
-    "image": "/images/models/vivo-x200-16-gb-512-gb.jpg"
-  },
-  {
-    "id": "vivo_500237",
-    "brand": "Vivo",
-    "model": "Vivo X200",
-    "storage": "12 GB/256 GB",
-    "basePrice": 33000,
-    "image": "/images/models/vivo-x200-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500238",
-    "brand": "Vivo",
-    "model": "Vivo X200",
-    "storage": "16 GB/512 GB",
-    "basePrice": 35500,
-    "image": "/images/models/vivo-x200-16-gb-512-gb.jpg"
-  },
-  {
-    "id": "vivo_500239",
-    "brand": "Vivo",
-    "model": "Vivo Y300 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 14750,
-    "image": "/images/models/vivo-y300-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500240",
-    "brand": "Vivo",
-    "model": "Vivo Y300 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 14710,
-    "image": "/images/models/vivo-y300-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500241",
-    "brand": "Vivo",
-    "model": "Vivo Y300 Plus 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 15950,
-    "image": "/images/models/vivo-y300-plus-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500242",
-    "brand": "Vivo",
-    "model": "Vivo Y29 5G",
-    "storage": "4 GB/128 GB",
-    "basePrice": 10130,
-    "image": "/images/models/vivo-y29-5g-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500243",
-    "brand": "Vivo",
-    "model": "Vivo Y29 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 11860,
-    "image": "/images/models/vivo-y29-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500244",
-    "brand": "Vivo",
-    "model": "Vivo Y29 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 12290,
-    "image": "/images/models/vivo-y29-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500245",
-    "brand": "Vivo",
-    "model": "Vivo Y29 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 10870,
-    "image": "/images/models/vivo-y29-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500246",
-    "brand": "Vivo",
-    "model": "Vivo V50",
-    "storage": "12 GB/512 GB",
-    "basePrice": 23110,
-    "image": "/images/models/vivo-v50-12-gb-512-gb.jpg"
-  },
-  {
-    "id": "vivo_500247",
-    "brand": "Vivo",
-    "model": "Vivo V50",
-    "storage": "8 GB/256 GB",
-    "basePrice": 22570,
-    "image": "/images/models/vivo-v50-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500248",
-    "brand": "Vivo",
-    "model": "Vivo V50",
-    "storage": "8 GB/128 GB",
-    "basePrice": 21010,
-    "image": "/images/models/vivo-v50-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500249",
-    "brand": "Vivo",
-    "model": "Vivo T4x 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 10020,
-    "image": "/images/models/vivo-t4x-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500250",
-    "brand": "Vivo",
-    "model": "Vivo T4x 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 10350,
-    "image": "/images/models/vivo-t4x-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500251",
-    "brand": "Vivo",
-    "model": "Vivo T4x 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 11550,
-    "image": "/images/models/vivo-t4x-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500252",
-    "brand": "Vivo",
-    "model": "Vivo V50e",
-    "storage": "8 GB/256 GB",
-    "basePrice": 19040,
-    "image": "/images/models/vivo-v50e-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500253",
-    "brand": "Vivo",
-    "model": "Vivo V50e",
-    "storage": "8 GB/128 GB",
-    "basePrice": 18950,
-    "image": "/images/models/vivo-v50e-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500254",
-    "brand": "Vivo",
-    "model": "Vivo T4 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 15900,
-    "image": "/images/models/vivo-t4-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500255",
-    "brand": "Vivo",
-    "model": "Vivo T4 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 16550,
-    "image": "/images/models/vivo-t4-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500256",
-    "brand": "Vivo",
-    "model": "Vivo T4 5G",
-    "storage": "12 GB/256 GB",
-    "basePrice": 17190,
-    "image": "/images/models/vivo-t4-5g-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500257",
-    "brand": "Vivo",
-    "model": "Vivo T4 Ultra 5G",
-    "storage": "12 GB/256 GB",
-    "basePrice": 25020,
-    "image": "/images/models/vivo-t4-ultra-5g-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500258",
-    "brand": "Vivo",
-    "model": "Vivo T4 Ultra 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 23800,
-    "image": "/images/models/vivo-t4-ultra-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500259",
-    "brand": "Vivo",
-    "model": "Vivo T4 Ultra 5G",
-    "storage": "12 GB/512 GB",
-    "basePrice": 26340,
-    "image": "/images/models/vivo-t4-ultra-5g-12-gb-512-gb.jpg"
-  },
-  {
-    "id": "vivo_500260",
-    "brand": "Vivo",
-    "model": "Vivo Y19 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 8100,
-    "image": "/images/models/vivo-y19-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500261",
-    "brand": "Vivo",
-    "model": "Vivo Y19 5G",
-    "storage": "4 GB/64 GB",
-    "basePrice": 6860,
-    "image": "/images/models/vivo-y19-5g-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "vivo_500262",
-    "brand": "Vivo",
-    "model": "Vivo Y19 5G",
-    "storage": "4 GB/128 GB",
-    "basePrice": 7840,
-    "image": "/images/models/vivo-y19-5g-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500263",
-    "brand": "Vivo",
-    "model": "Vivo Y19e",
-    "storage": "4 GB/64 GB",
-    "basePrice": 5230,
-    "image": "/images/models/vivo-y19e-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "vivo_500264",
-    "brand": "Vivo",
-    "model": "Vivo Y39 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 12440,
-    "image": "/images/models/vivo-y39-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500265",
-    "brand": "Vivo",
-    "model": "Vivo Y39 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 13690,
-    "image": "/images/models/vivo-y39-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500266",
-    "brand": "Vivo",
-    "model": "Vivo T4 Lite 5G",
-    "storage": "4 GB/64 GB",
-    "basePrice": 6500,
-    "image": "/images/models/vivo-t4-lite-5g-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "vivo_500267",
-    "brand": "Vivo",
-    "model": "Vivo T4 Lite 5G",
-    "storage": "4 GB/128 GB",
-    "basePrice": 7500,
-    "image": "/images/models/vivo-t4-lite-5g-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500268",
-    "brand": "Vivo",
-    "model": "Vivo T4 Lite 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 8200,
-    "image": "/images/models/vivo-t4-lite-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500269",
-    "brand": "Vivo",
-    "model": "Vivo T4 Lite 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 9200,
-    "image": "/images/models/vivo-t4-lite-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500270",
-    "brand": "Vivo",
-    "model": "Vivo Y400 Pro 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 18050,
-    "image": "/images/models/vivo-y400-pro-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500271",
-    "brand": "Vivo",
-    "model": "Vivo Y400 Pro 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 17280,
-    "image": "/images/models/vivo-y400-pro-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500272",
-    "brand": "Vivo",
-    "model": "Vivo X200 FE",
-    "storage": "16 GB/512 GB",
-    "basePrice": 35600,
-    "image": "/images/models/vivo-x200-fe-16-gb-512-gb.jpg"
-  },
-  {
-    "id": "vivo_500273",
-    "brand": "Vivo",
-    "model": "Vivo X200 FE",
-    "storage": "12 GB/256 GB",
-    "basePrice": 34000,
-    "image": "/images/models/vivo-x200-fe-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500274",
-    "brand": "Vivo",
-    "model": "Vivo Y400 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 16650,
-    "image": "/images/models/vivo-y400-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500275",
-    "brand": "Vivo",
-    "model": "Vivo Y400 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 18040,
-    "image": "/images/models/vivo-y400-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500276",
-    "brand": "Vivo",
-    "model": "Vivo T4R 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 14260,
-    "image": "/images/models/vivo-t4r-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500277",
-    "brand": "Vivo",
-    "model": "Vivo T4R 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 15040,
-    "image": "/images/models/vivo-t4r-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500278",
-    "brand": "Vivo",
-    "model": "Vivo T4R 5G",
-    "storage": "12 GB/256 GB",
-    "basePrice": 16390,
-    "image": "/images/models/vivo-t4r-5g-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500279",
-    "brand": "Vivo",
-    "model": "Vivo V60",
-    "storage": "12 GB/256 GB",
-    "basePrice": 25900,
-    "image": "/images/models/vivo-v60-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500280",
-    "brand": "Vivo",
-    "model": "Vivo V60",
-    "storage": "8 GB/128 GB",
-    "basePrice": 23110,
-    "image": "/images/models/vivo-v60-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500281",
-    "brand": "Vivo",
-    "model": "Vivo V60",
-    "storage": "16 GB/512 GB",
-    "basePrice": 28270,
-    "image": "/images/models/vivo-v60-16-gb-512-gb.jpg"
-  },
-  {
-    "id": "vivo_500282",
-    "brand": "Vivo",
-    "model": "Vivo V60",
-    "storage": "8 GB/256 GB",
-    "basePrice": 24120,
-    "image": "/images/models/vivo-v60-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500283",
-    "brand": "Vivo",
-    "model": "Vivo X Fold 5",
-    "storage": "16 GB/512 GB",
-    "basePrice": 79800,
-    "image": "/images/models/vivo-x-fold-5-16-gb-512-gb.jpg"
-  },
-  {
-    "id": "vivo_500284",
-    "brand": "Vivo",
-    "model": "Vivo T4 Pro 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 19650,
-    "image": "/images/models/vivo-t4-pro-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500285",
-    "brand": "Vivo",
-    "model": "Vivo T4 Pro 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 18150,
-    "image": "/images/models/vivo-t4-pro-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500286",
-    "brand": "Vivo",
-    "model": "Vivo T4 Pro 5G",
-    "storage": "12 GB/256 GB",
-    "basePrice": 20450,
-    "image": "/images/models/vivo-t4-pro-5g-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500287",
-    "brand": "Vivo",
-    "model": "Vivo Y31 5G",
-    "storage": "4 GB/128 GB",
-    "basePrice": 11180,
-    "image": "/images/models/vivo-y31-5g-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500288",
-    "brand": "Vivo",
-    "model": "Vivo Y31 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 12530,
-    "image": "/images/models/vivo-y31-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500289",
-    "brand": "Vivo",
-    "model": "Vivo V60e",
-    "storage": "12 GB/256 GB",
-    "basePrice": 22860,
-    "image": "/images/models/vivo-v60e-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500290",
-    "brand": "Vivo",
-    "model": "Vivo V60e",
-    "storage": "8 GB/256 GB",
-    "basePrice": 21180,
-    "image": "/images/models/vivo-v60e-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500291",
-    "brand": "Vivo",
-    "model": "Vivo V60e",
-    "storage": "8 GB/128 GB",
-    "basePrice": 20200,
-    "image": "/images/models/vivo-v60e-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500292",
-    "brand": "Vivo",
-    "model": "Vivo Y31 Pro 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 13880,
-    "image": "/images/models/vivo-y31-pro-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500293",
-    "brand": "Vivo",
-    "model": "Vivo Y31 Pro 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 14750,
-    "image": "/images/models/vivo-y31-pro-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500294",
-    "brand": "Vivo",
-    "model": "Vivo Y19s 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 9440,
-    "image": "/images/models/vivo-y19s-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500295",
-    "brand": "Vivo",
-    "model": "Vivo Y19s 5G",
-    "storage": "4 GB/128 GB",
-    "basePrice": 8420,
-    "image": "/images/models/vivo-y19s-5g-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500296",
-    "brand": "Vivo",
-    "model": "Vivo Y19s 5G",
-    "storage": "4 GB/64 GB",
-    "basePrice": 7510,
-    "image": "/images/models/vivo-y19s-5g-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "vivo_500297",
-    "brand": "Vivo",
-    "model": "Vivo X300",
-    "storage": "12 GB/256 GB",
-    "basePrice": 45000,
-    "image": "/images/models/vivo-x300-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500298",
-    "brand": "Vivo",
-    "model": "Vivo X300",
-    "storage": "12 GB/512 GB",
-    "basePrice": 46500,
-    "image": "/images/models/vivo-x300-12-gb-512-gb.jpg"
-  },
-  {
-    "id": "vivo_500299",
-    "brand": "Vivo",
-    "model": "Vivo X300",
-    "storage": "16 GB/512 GB",
-    "basePrice": 49000,
-    "image": "/images/models/vivo-x300-16-gb-512-gb.jpg"
-  },
-  {
-    "id": "vivo_500300",
-    "brand": "Vivo",
-    "model": "Vivo X300 Pro",
-    "storage": "16 GB/512 GB",
-    "basePrice": 62500,
-    "image": "/images/models/vivo-x300-pro-16-gb-512-gb.jpg"
-  },
-  {
-    "id": "vivo_500301",
-    "brand": "Vivo",
-    "model": "Vivo V70",
-    "storage": "8 GB/256 GB",
-    "basePrice": 32550,
-    "image": "/images/models/vivo-v70-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500302",
-    "brand": "Vivo",
-    "model": "Vivo V70",
-    "storage": "12 GB/256 GB",
-    "basePrice": 34700,
-    "image": "/images/models/vivo-v70-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500303",
-    "brand": "Vivo",
-    "model": "Vivo V70 Elite",
-    "storage": "8 GB/256 GB",
-    "basePrice": 35000,
-    "image": "/images/models/vivo-v70-elite-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500304",
-    "brand": "Vivo",
-    "model": "Vivo V70 Elite",
-    "storage": "12 GB/512 GB",
-    "basePrice": 40650,
-    "image": "/images/models/vivo-v70-elite-12-gb-512-gb.jpg"
-  },
-  {
-    "id": "vivo_500305",
-    "brand": "Vivo",
-    "model": "Vivo V70 Elite",
-    "storage": "12 GB/256 GB",
-    "basePrice": 38650,
-    "image": "/images/models/vivo-v70-elite-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500306",
-    "brand": "Vivo",
-    "model": "Vivo X200T",
-    "storage": "12 GB/256 GB",
-    "basePrice": 37000,
-    "image": "/images/models/vivo-x200t-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500307",
-    "brand": "Vivo",
-    "model": "Vivo X200T",
-    "storage": "12 GB/512 GB",
-    "basePrice": 41000,
-    "image": "/images/models/vivo-x200t-12-gb-512-gb.jpg"
-  },
-  {
-    "id": "vivo_500308",
-    "brand": "Vivo",
-    "model": "Vivo Y51 Pro 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 17540,
-    "image": "/images/models/vivo-y51-pro-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500309",
-    "brand": "Vivo",
-    "model": "Vivo Y51 Pro 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 19450,
-    "image": "/images/models/vivo-y51-pro-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500310",
-    "brand": "Vivo",
-    "model": "Vivo V70 FE",
-    "storage": "12 GB/256 GB",
-    "basePrice": 29050,
-    "image": "/images/models/vivo-v70-fe-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500311",
-    "brand": "Vivo",
-    "model": "Vivo V70 FE",
-    "storage": "8 GB/256 GB",
-    "basePrice": 27150,
-    "image": "/images/models/vivo-v70-fe-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500312",
-    "brand": "Vivo",
-    "model": "Vivo V70 FE",
-    "storage": "8 GB/128 GB",
-    "basePrice": 24800,
-    "image": "/images/models/vivo-v70-fe-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500313",
-    "brand": "Vivo",
-    "model": "Vivo T5x 5G",
-    "storage": "8 GB/256 GB",
-    "basePrice": 16650,
-    "image": "/images/models/vivo-t5x-5g-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500314",
-    "brand": "Vivo",
-    "model": "Vivo T5x 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 14000,
-    "image": "/images/models/vivo-t5x-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500315",
-    "brand": "Vivo",
-    "model": "Vivo T5x 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 15500,
-    "image": "/images/models/vivo-t5x-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500316",
-    "brand": "Vivo",
-    "model": "Vivo Y11 5G",
-    "storage": "4 GB/64 GB",
-    "basePrice": 9670,
-    "image": "/images/models/vivo-y11-5g-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "vivo_500317",
-    "brand": "Vivo",
-    "model": "Vivo Y11 5G",
-    "storage": "4 GB/128 GB",
-    "basePrice": 10640,
-    "image": "/images/models/vivo-y11-5g-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500318",
-    "brand": "Vivo",
-    "model": "Vivo Y21 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 13670,
-    "image": "/images/models/vivo-y21-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500319",
-    "brand": "Vivo",
-    "model": "Vivo Y21 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 15000,
-    "image": "/images/models/vivo-y21-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500320",
-    "brand": "Vivo",
-    "model": "Vivo Y21 5G",
-    "storage": "4 GB/128 GB",
-    "basePrice": 12680,
-    "image": "/images/models/vivo-y21-5g-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500321",
-    "brand": "Vivo",
-    "model": "Vivo X300 FE",
-    "storage": "12 GB/512 GB",
-    "basePrice": 54400,
-    "image": "/images/models/vivo-x300-fe-12-gb-512-gb.jpg"
-  },
-  {
-    "id": "vivo_500322",
-    "brand": "Vivo",
-    "model": "Vivo X300 FE",
-    "storage": "12 GB/256 GB",
-    "basePrice": 50000,
-    "image": "/images/models/vivo-x300-fe-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "vivo_500323",
-    "brand": "Vivo",
-    "model": "Vivo X300 Ultra",
-    "storage": "16 GB/512 GB",
-    "basePrice": 80000,
-    "image": "/images/models/vivo-x300-ultra-16-gb-512-gb.jpg"
-  },
-  {
-    "id": "vivo_500324",
-    "brand": "Vivo",
-    "model": "Vivo Y05",
-    "storage": "4 GB/64 GB",
-    "basePrice": 8500,
-    "image": "/images/models/vivo-y05-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "vivo_500325",
-    "brand": "Vivo",
-    "model": "Vivo T2x 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 10450,
-    "image": "/images/models/vivo-t2x-5g-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500326",
-    "brand": "Vivo",
-    "model": "Vivo T2x 5G",
-    "storage": "4 GB/128 GB",
-    "basePrice": 8890,
-    "image": "/images/models/vivo-t2x-5g-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500327",
-    "brand": "Vivo",
-    "model": "Vivo T2x 5G",
-    "storage": "6 GB/128 GB",
-    "basePrice": 9850,
-    "image": "/images/models/vivo-t2x-5g-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "vivo_500328",
-    "brand": "Vivo",
-    "model": "Vivo Y22",
-    "storage": "64 GB",
-    "basePrice": "Not found",
-    "image": "/images/models/vivo-default.png"
-  },
-  {
-    "id": "samsung_700002",
-    "brand": "Samsung",
-    "model": "Galaxy Note 20",
-    "storage": "256 GB",
-    "basePrice": 9270,
-    "image": "/images/models/samsung-galaxy-note-20-256-gb.png"
-  },
-  {
-    "id": "oneplus_700003",
-    "brand": "OnePlus",
-    "model": "9 Pro 5G",
-    "storage": "256 GB",
-    "basePrice": 13430,
-    "image": "/images/models/oneplus-9-pro-5g-256-gb.png"
-  },
-  {
-    "id": "oneplus_700004",
-    "brand": "OnePlus",
-    "model": "9 Pro 5G",
-    "storage": "128 GB",
-    "basePrice": 12370,
-    "image": "/images/models/oneplus-9-pro-5g-128-gb.png"
-  },
-  {
-    "id": "oneplus_700005",
-    "brand": "OnePlus",
-    "model": "Nord CE 2 Lite 5G",
-    "storage": "128 GB",
-    "basePrice": 7800,
-    "image": "/images/models/oneplus-nord-ce-2-lite-5g-128-gb.png"
-  },
-  {
-    "id": "oppo_600000",
-    "brand": "OPPO",
-    "model": "OPPO A7",
-    "storage": "4 GB/64 GB",
-    "basePrice": 2430,
-    "image": "/images/models/oppo-a7-4-gb-64-gb.png"
-  },
-  {
-    "id": "oppo_600001",
-    "brand": "OPPO",
-    "model": "OPPO A7",
-    "storage": "3 GB/64 GB",
-    "basePrice": 2040,
-    "image": "/images/models/oppo-a7-3-gb-64-gb.png"
-  },
-  {
-    "id": "oppo_600002",
-    "brand": "OPPO",
-    "model": "OPPO F9 Pro",
-    "storage": "6 GB/128 GB",
-    "basePrice": 2970,
-    "image": "/images/models/oppo-f9-pro-6-gb-128-gb.png"
-  },
-  {
-    "id": "oppo_600003",
-    "brand": "OPPO",
-    "model": "OPPO F9 Pro",
-    "storage": "6 GB/64 GB",
-    "basePrice": 2670,
-    "image": "/images/models/oppo-f9-pro-6-gb-64-gb.png"
-  },
-  {
-    "id": "oppo_600004",
-    "brand": "OPPO",
-    "model": "OPPO F9",
-    "storage": "4 GB/64 GB",
-    "basePrice": 2640,
-    "image": "/images/models/oppo-f9-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "oppo_600005",
-    "brand": "OPPO",
-    "model": "OPPO A3s",
-    "storage": "2 GB/16 GB",
-    "basePrice": 1740,
-    "image": "/images/models/oppo-a3s-2-gb-16-gb.png"
-  },
-  {
-    "id": "oppo_600006",
-    "brand": "OPPO",
-    "model": "OPPO A3s",
-    "storage": "3 GB/32 GB",
-    "basePrice": 1930,
-    "image": "/images/models/oppo-a3s-3-gb-32-gb.png"
-  },
-  {
-    "id": "oppo_600007",
-    "brand": "OPPO",
-    "model": "OPPO A3s",
-    "storage": "4 GB/64 GB",
-    "basePrice": 2120,
-    "image": "/images/models/oppo-a3s-4-gb-64-gb.png"
-  },
-  {
-    "id": "oppo_600008",
-    "brand": "OPPO",
-    "model": "OPPO Find X",
-    "storage": "8 GB/256 GB",
-    "basePrice": 6970,
-    "image": "/images/models/oppo-find-x-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "oppo_600009",
-    "brand": "OPPO",
-    "model": "OPPO A5",
-    "storage": "4 GB/32 GB",
-    "basePrice": 2460,
-    "image": "/images/models/oppo-a5-4-gb-32-gb.png"
-  },
-  {
-    "id": "oppo_600010",
-    "brand": "OPPO",
-    "model": "OPPO A5",
-    "storage": "4 GB/64 GB",
-    "basePrice": 2750,
-    "image": "/images/models/oppo-a5-4-gb-64-gb.png"
-  },
-  {
-    "id": "oppo_600011",
-    "brand": "OPPO",
-    "model": "OPPO F7",
-    "storage": "4 GB/64 GB",
-    "basePrice": 2380,
-    "image": "/images/models/oppo-f7-4-gb-64-gb.png"
-  },
-  {
-    "id": "oppo_600012",
-    "brand": "OPPO",
-    "model": "OPPO F7",
-    "storage": "6 GB/128 GB",
-    "basePrice": 2600,
-    "image": "/images/models/oppo-f7-6-gb-128-gb.png"
-  },
-  {
-    "id": "oppo_600013",
-    "brand": "OPPO",
-    "model": "OPPO A83",
-    "storage": "3 GB/32 GB",
-    "basePrice": 1440,
-    "image": "/images/models/oppo-a83-3-gb-32-gb.png"
-  },
-  {
-    "id": "oppo_600014",
-    "brand": "OPPO",
-    "model": "OPPO A83",
-    "storage": "4 GB/64 GB",
-    "basePrice": 1670,
-    "image": "/images/models/oppo-a83-4-gb-64-gb.png"
-  },
-  {
-    "id": "oppo_600015",
-    "brand": "OPPO",
-    "model": "OPPO A83",
-    "storage": "2 GB/16 GB",
-    "basePrice": 1300,
-    "image": "/images/models/oppo-a83-2-gb-16-gb.png"
-  },
-  {
-    "id": "oppo_600016",
-    "brand": "OPPO",
-    "model": "OPPO F5 Youth",
-    "storage": "3 GB/32 GB",
-    "basePrice": 1700,
-    "image": "/images/models/oppo-f5-youth-3-gb-32-gb.jpg"
-  },
-  {
-    "id": "oppo_600017",
-    "brand": "OPPO",
-    "model": "OPPO F5",
-    "storage": "4 GB/32 GB",
-    "basePrice": 1780,
-    "image": "/images/models/oppo-f5-4-gb-32-gb.png"
-  },
-  {
-    "id": "oppo_600018",
-    "brand": "OPPO",
-    "model": "OPPO F5",
-    "storage": "6 GB/64 GB",
-    "basePrice": 1930,
-    "image": "/images/models/oppo-f5-6-gb-64-gb.png"
-  },
-  {
-    "id": "oppo_600019",
-    "brand": "OPPO",
-    "model": "OPPO R11",
-    "storage": "4 GB/64 GB",
-    "basePrice": 2270,
-    "image": "/images/models/oppo-r11-4-gb-64-gb.png"
-  },
-  {
-    "id": "oppo_600020",
-    "brand": "OPPO",
-    "model": "OPPO A77",
-    "storage": "4 GB/64 GB",
-    "basePrice": 1490,
-    "image": "/images/models/oppo-a77-4-gb-64-gb.png"
-  },
-  {
-    "id": "oppo_600021",
-    "brand": "OPPO",
-    "model": "OPPO F3",
-    "storage": "4 GB/64 GB",
-    "basePrice": 1480,
-    "image": "/images/models/oppo-f3-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "oppo_600022",
-    "brand": "OPPO",
-    "model": "OPPO F3 Plus",
-    "storage": "4 GB/64 GB",
-    "basePrice": 1860,
-    "image": "/images/models/oppo-f3-plus-4-gb-64-gb.png"
-  },
-  {
-    "id": "oppo_600023",
-    "brand": "OPPO",
-    "model": "OPPO F3 Plus",
-    "storage": "6 GB/64 GB",
-    "basePrice": 2160,
-    "image": "/images/models/oppo-f3-plus-6-gb-64-gb.png"
-  },
-  {
-    "id": "oppo_600024",
-    "brand": "OPPO",
-    "model": "OPPO A57",
-    "storage": "3 GB/32 GB",
-    "basePrice": 1510,
-    "image": "/images/models/oppo-a57-3-gb-32-gb.jpg"
-  },
-  {
-    "id": "oppo_600025",
-    "brand": "OPPO",
-    "model": "OPPO F1s",
-    "storage": "3 GB/32 GB",
-    "basePrice": 1190,
-    "image": "/images/models/oppo-f1s-3-gb-32-gb.png"
-  },
-  {
-    "id": "oppo_600026",
-    "brand": "OPPO",
-    "model": "OPPO F1s",
-    "storage": "4 GB/64 GB",
-    "basePrice": 1330,
-    "image": "/images/models/oppo-f1s-4-gb-64-gb.png"
-  },
-  {
-    "id": "oppo_600027",
-    "brand": "OPPO",
-    "model": "OPPO F1 plus",
-    "storage": "4 GB/64 GB",
-    "basePrice": 1260,
-    "image": "/images/models/oppo-f1-plus-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "oppo_600028",
-    "brand": "OPPO",
-    "model": "OPPO R17",
-    "storage": "8 GB/128 GB",
-    "basePrice": 4170,
-    "image": "/images/models/oppo-r17-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "oppo_600029",
-    "brand": "OPPO",
-    "model": "OPPO K1",
-    "storage": "6 GB/64 GB",
-    "basePrice": 3180,
-    "image": "/images/models/oppo-k1-6-gb-64-gb.jpg"
-  },
-  {
-    "id": "oppo_600030",
-    "brand": "OPPO",
-    "model": "OPPO K1",
-    "storage": "4 GB/64 GB",
-    "basePrice": 3030,
-    "image": "/images/models/oppo-k1-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "oppo_600031",
-    "brand": "OPPO",
-    "model": "OPPO F11 Pro",
-    "storage": "6 GB/128 GB",
-    "basePrice": 4350,
-    "image": "/images/models/oppo-f11-pro-6-gb-128-gb.png"
-  },
-  {
-    "id": "oppo_600032",
-    "brand": "OPPO",
-    "model": "OPPO F11 Pro",
-    "storage": "6 GB/64 GB",
-    "basePrice": 4040,
-    "image": "/images/models/oppo-f11-pro-6-gb-64-gb.png"
-  },
-  {
-    "id": "oppo_600033",
-    "brand": "OPPO",
-    "model": "OPPO A1K",
-    "storage": "2 GB/32 GB",
-    "basePrice": 2320,
-    "image": "/images/models/oppo-a1k-2-gb-32-gb.jpg"
-  },
-  {
-    "id": "oppo_600034",
-    "brand": "OPPO",
-    "model": "OPPO F11",
-    "storage": "4 GB/128 GB",
-    "basePrice": 3280,
-    "image": "/images/models/oppo-f11-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "oppo_600035",
-    "brand": "OPPO",
-    "model": "OPPO F11",
-    "storage": "6 GB/128 GB",
-    "basePrice": 3680,
-    "image": "/images/models/oppo-f11-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "oppo_600036",
-    "brand": "OPPO",
-    "model": "OPPO Reno",
-    "storage": "8 GB/128 GB",
-    "basePrice": 4920,
-    "image": "/images/models/oppo-reno-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "oppo_600037",
-    "brand": "OPPO",
-    "model": "OPPO Reno 10x Zoom",
-    "storage": "8 GB/256 GB",
-    "basePrice": 5720,
-    "image": "/images/models/oppo-reno-10x-zoom-8-gb-256-gb.png"
-  },
-  {
-    "id": "oppo_600038",
-    "brand": "OPPO",
-    "model": "OPPO Reno 10x Zoom",
-    "storage": "6 GB/128 GB",
-    "basePrice": 5490,
-    "image": "/images/models/oppo-reno-10x-zoom-6-gb-128-gb.png"
-  },
-  {
-    "id": "oppo_600039",
-    "brand": "OPPO",
-    "model": "OPPO K3",
-    "storage": "8 GB/128 GB",
-    "basePrice": 4350,
-    "image": "/images/models/oppo-k3-8-gb-128-gb.png"
-  },
-  {
-    "id": "oppo_600040",
-    "brand": "OPPO",
-    "model": "OPPO K3",
-    "storage": "6 GB/64 GB",
-    "basePrice": 4170,
-    "image": "/images/models/oppo-k3-6-gb-64-gb.png"
-  },
-  {
-    "id": "oppo_600041",
-    "brand": "OPPO",
-    "model": "OPPO A9",
-    "storage": "4 GB/128 GB",
-    "basePrice": 3920,
-    "image": "/images/models/oppo-a9-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "oppo_600042",
-    "brand": "OPPO",
-    "model": "OPPO Reno 2Z",
-    "storage": "8 GB/256 GB",
-    "basePrice": 5800,
-    "image": "/images/models/oppo-reno-2z-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "oppo_600043",
-    "brand": "OPPO",
-    "model": "OPPO Reno 2",
-    "storage": "8 GB/256 GB",
-    "basePrice": 5910,
-    "image": "/images/models/oppo-reno-2-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "oppo_600044",
-    "brand": "OPPO",
-    "model": "OPPO A5 2020",
-    "storage": "6 GB/128 GB",
-    "basePrice": 3520,
-    "image": "/images/models/oppo-a5-2020-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "oppo_600045",
-    "brand": "OPPO",
-    "model": "OPPO A5 2020",
-    "storage": "4 GB/128 GB",
-    "basePrice": 3370,
-    "image": "/images/models/oppo-a5-2020-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "oppo_600046",
-    "brand": "OPPO",
-    "model": "OPPO A5 2020",
-    "storage": "3 GB/64 GB",
-    "basePrice": 3030,
-    "image": "/images/models/oppo-a5-2020-3-gb-64-gb.jpg"
-  },
-  {
-    "id": "oppo_600047",
-    "brand": "OPPO",
-    "model": "OPPO A5 2020",
-    "storage": "4 GB/64 GB",
-    "basePrice": 3230,
-    "image": "/images/models/oppo-a5-2020-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "oppo_600048",
-    "brand": "OPPO",
-    "model": "OPPO A9 2020",
-    "storage": "8 GB/128 GB",
-    "basePrice": 4100,
-    "image": "/images/models/oppo-a9-2020-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "oppo_600049",
-    "brand": "OPPO",
-    "model": "OPPO A9 2020",
-    "storage": "4 GB/128 GB",
-    "basePrice": 3890,
-    "image": "/images/models/oppo-a9-2020-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "oppo_600050",
-    "brand": "OPPO",
-    "model": "OPPO Reno2 F",
-    "storage": "6 GB/256 GB",
-    "basePrice": 5070,
-    "image": "/images/models/oppo-reno2-f-6-gb-256-gb.jpg"
-  },
-  {
-    "id": "oppo_600051",
-    "brand": "OPPO",
-    "model": "OPPO Reno2 F",
-    "storage": "8 GB/128 GB",
-    "basePrice": 5720,
-    "image": "/images/models/oppo-reno2-f-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "oppo_600052",
-    "brand": "OPPO",
-    "model": "OPPO F15",
-    "storage": "4 GB/128 GB",
-    "basePrice": 4640,
-    "image": "/images/models/oppo-f15-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "oppo_600053",
-    "brand": "OPPO",
-    "model": "OPPO F15",
-    "storage": "8 GB/128 GB",
-    "basePrice": 5040,
-    "image": "/images/models/oppo-f15-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "oppo_600054",
-    "brand": "OPPO",
-    "model": "OPPO A71 2018",
-    "storage": "3 GB/16 GB",
-    "basePrice": 1060,
-    "image": "/images/models/oppo-a71-2018-3-gb-16-gb.jpg"
-  },
-  {
-    "id": "oppo_600055",
-    "brand": "OPPO",
-    "model": "OPPO A31",
-    "storage": "4 GB/64 GB",
-    "basePrice": 3830,
-    "image": "/images/models/oppo-a31-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "oppo_600056",
-    "brand": "OPPO",
-    "model": "OPPO A31",
-    "storage": "6 GB/128 GB",
-    "basePrice": 4410,
-    "image": "/images/models/oppo-a31-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "oppo_600057",
-    "brand": "OPPO",
-    "model": "OPPO A12",
-    "storage": "3 GB/32 GB",
-    "basePrice": 2970,
-    "image": "/images/models/oppo-a12-3-gb-32-gb.jpg"
-  },
-  {
-    "id": "oppo_600058",
-    "brand": "OPPO",
-    "model": "OPPO A12",
-    "storage": "4 GB/64 GB",
-    "basePrice": 3290,
-    "image": "/images/models/oppo-a12-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "oppo_600059",
-    "brand": "OPPO",
-    "model": "OPPO A52",
-    "storage": "8 GB/128 GB",
-    "basePrice": 4770,
-    "image": "/images/models/oppo-a52-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "oppo_600060",
-    "brand": "OPPO",
-    "model": "OPPO A52",
-    "storage": "6 GB/128 GB",
-    "basePrice": 4580,
-    "image": "/images/models/oppo-a52-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "oppo_600061",
-    "brand": "OPPO",
-    "model": "OPPO A52",
-    "storage": "4 GB/128 GB",
-    "basePrice": 4280,
-    "image": "/images/models/oppo-a52-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "oppo_600062",
-    "brand": "OPPO",
-    "model": "OPPO Find X2",
-    "storage": "12 GB/256 GB",
-    "basePrice": 11100,
-    "image": "/images/models/oppo-find-x2-12-gb-256-gb.jpg"
-  },
-  {
-    "id": "oppo_600063",
-    "brand": "OPPO",
-    "model": "OPPO A11K",
-    "storage": "2 GB/32 GB",
-    "basePrice": 2500,
-    "image": "/images/models/oppo-a11k-2-gb-32-gb.jpg"
-  },
-  {
-    "id": "oppo_600064",
-    "brand": "OPPO",
-    "model": "OPPO Reno3 Pro",
-    "storage": "8 GB/128 GB",
-    "basePrice": 5720,
-    "image": "/images/models/oppo-reno3-pro-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "oppo_600065",
-    "brand": "OPPO",
-    "model": "OPPO Reno3 Pro",
-    "storage": "8 GB/256 GB",
-    "basePrice": 5760,
-    "image": "/images/models/oppo-reno3-pro-8-gb-256-gb.jpg"
-  },
-  {
-    "id": "oppo_600066",
-    "brand": "OPPO",
-    "model": "OPPO Reno4 Pro",
-    "storage": "8 GB/128 GB",
-    "basePrice": 6890,
-    "image": "/images/models/oppo-reno4-pro-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "oppo_600067",
-    "brand": "OPPO",
-    "model": "OPPO A53",
-    "storage": "4 GB/64 GB",
-    "basePrice": 4440,
-    "image": "/images/models/oppo-a53-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "oppo_600068",
-    "brand": "OPPO",
-    "model": "OPPO A53",
-    "storage": "6 GB/128 GB",
-    "basePrice": 5000,
-    "image": "/images/models/oppo-a53-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "oppo_600069",
-    "brand": "OPPO",
-    "model": "OPPO F17 Pro",
-    "storage": "8 GB/128 GB",
-    "basePrice": 5490,
-    "image": "/images/models/oppo-f17-pro-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "oppo_600070",
-    "brand": "OPPO",
-    "model": "OPPO F17",
-    "storage": "8 GB/128 GB",
-    "basePrice": 5300,
-    "image": "/images/models/oppo-f17-8-gb-128-gb.jpg"
-  },
-  {
-    "id": "oppo_600071",
-    "brand": "OPPO",
-    "model": "OPPO F17",
-    "storage": "6 GB/128 GB",
-    "basePrice": 5110,
-    "image": "/images/models/oppo-f17-6-gb-128-gb.jpg"
-  },
-  {
-    "id": "oppo_600072",
-    "brand": "OPPO",
-    "model": "OPPO A33 2020",
-    "storage": "3 GB/32 GB",
-    "basePrice": 3140,
-    "image": "/images/models/oppo-a33-2020-3-gb-32-gb.jpg"
-  },
-  {
-    "id": "oppo_600073",
-    "brand": "OPPO",
-    "model": "OPPO A15",
-    "storage": "2 GB/32 GB",
-    "basePrice": 3070,
-    "image": "/images/models/oppo-a15-2-gb-32-gb.jpg"
-  },
-  {
-    "id": "oppo_600074",
-    "brand": "OPPO",
-    "model": "OPPO A15",
-    "storage": "3 GB/32 GB",
-    "basePrice": 3370,
-    "image": "/images/models/oppo-a15-3-gb-32-gb.jpg"
-  },
-  {
-    "id": "oppo_600075",
-    "brand": "OPPO",
-    "model": "OPPO A15s",
-    "storage": "4 GB/128 GB",
-    "basePrice": 4090,
-    "image": "/images/models/oppo-a15s-4-gb-128-gb.jpg"
-  },
-  {
-    "id": "oppo_600076",
-    "brand": "OPPO",
-    "model": "OPPO A15s",
-    "storage": "4 GB/64 GB",
-    "basePrice": 3510,
-    "image": "/images/models/oppo-a15s-4-gb-64-gb.jpg"
-  },
-  {
-    "id": "oppo_600077",
-    "brand": "OPPO",
-    "model": "OPPO Reno5 Pro 5G",
-    "storage": "8 GB/128 GB",
-    "basePrice": 9180,
-    "image": "/images/models/oppo-reno5-pro-5g-8-gb-128-gb.jpg"
   }
 ];
