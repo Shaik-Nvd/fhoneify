@@ -2168,44 +2168,12 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 7330
   },
   {
-    "id": "google_9000",
-    "brand": "Google",
-    "model": "Google Pixel 4A",
-    "storage": "6 GB/128 GB",
-    "color": "Obsidian",
-    "basePrice": 4390
-  },
-  {
-    "id": "google_9001",
-    "brand": "Google",
-    "model": "Google Pixel 6a",
-    "storage": "6 GB/128 GB",
-    "color": "Obsidian",
-    "basePrice": 10080
-  },
-  {
     "id": "google_9002",
     "brand": "Google",
     "model": "Google Pixel 7",
     "storage": "8 GB/256 GB",
     "color": "Obsidian",
     "basePrice": 14160
-  },
-  {
-    "id": "google_9003",
-    "brand": "Google",
-    "model": "Google Pixel 7",
-    "storage": "8 GB/128 GB",
-    "color": "Obsidian",
-    "basePrice": 14240
-  },
-  {
-    "id": "google_9004",
-    "brand": "Google",
-    "model": "Google Pixel 7 Pro",
-    "storage": "12 GB/128 GB",
-    "color": "Obsidian",
-    "basePrice": 18470
   },
   {
     "id": "google_9005",
@@ -2216,14 +2184,6 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 19040
   },
   {
-    "id": "google_9006",
-    "brand": "Google",
-    "model": "Google Pixel 7a",
-    "storage": "8 GB/128 GB",
-    "color": "Obsidian",
-    "basePrice": 17120
-  },
-  {
     "id": "google_9007",
     "brand": "Google",
     "model": "Google Pixel 8",
@@ -2232,28 +2192,12 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 24800
   },
   {
-    "id": "google_9008",
-    "brand": "Google",
-    "model": "Google Pixel 8",
-    "storage": "8 GB/128 GB",
-    "color": "Obsidian",
-    "basePrice": 24390
-  },
-  {
     "id": "google_9009",
     "brand": "Google",
     "model": "Google Pixel 8 Pro",
     "storage": "12 GB/256 GB",
     "color": "Obsidian",
     "basePrice": 33220
-  },
-  {
-    "id": "google_9010",
-    "brand": "Google",
-    "model": "Google Pixel 8 Pro",
-    "storage": "12 GB/128 GB",
-    "color": "Obsidian",
-    "basePrice": 31490
   },
   {
     "id": "google_9011",
@@ -2270,14 +2214,6 @@ export const SEED_DEVICES: any[] = [
     "storage": "8 GB/256 GB",
     "color": "Obsidian",
     "basePrice": 23370
-  },
-  {
-    "id": "google_9013",
-    "brand": "Google",
-    "model": "Google Pixel 8a",
-    "storage": "8 GB/128 GB",
-    "color": "Obsidian",
-    "basePrice": 23080
   },
   {
     "id": "google_9014",
@@ -14847,168 +14783,6 @@ export const SEED_DEVICES: any[] = [
     "storage": "4 GB/64 GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_1",
-    "brand": "Google",
-    "model": "Google Pixel 3",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_2",
-    "brand": "Google",
-    "model": "Google Pixel 4A",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_3",
-    "brand": "Google",
-    "model": "Google Pixel 6a",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_4",
-    "brand": "Google",
-    "model": "Google Pixel 7",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_5",
-    "brand": "Google",
-    "model": "Google Pixel 7 Pro",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_6",
-    "brand": "Google",
-    "model": "Google Pixel 7a",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_7",
-    "brand": "Google",
-    "model": "Google Pixel 8",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_8",
-    "brand": "Google",
-    "model": "Google Pixel 8 Pro",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_9",
-    "brand": "Google",
-    "model": "Google Pixel 8A",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_10",
-    "brand": "Google",
-    "model": "Google Pixel 9",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_11",
-    "brand": "Google",
-    "model": "Google Pixel 9 Pro XL",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_12",
-    "brand": "Google",
-    "model": "Google Pixel 9 Pro Fold",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_13",
-    "brand": "Google",
-    "model": "Google Pixel 9 Pro",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_14",
-    "brand": "Google",
-    "model": "Google Pixel 9a",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_16",
-    "brand": "Google",
-    "model": "Google Pixel 10 Pro",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_17",
-    "brand": "Google",
-    "model": "Google Pixel 10 Pro XL",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_18",
-    "brand": "Google",
-    "model": "Google Pixel 10 Pro Fold",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_19",
-    "brand": "Google",
-    "model": "Google Pixel 10a",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
     "basePrice": 5000
   },
   {
