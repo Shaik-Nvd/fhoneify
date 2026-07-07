@@ -42,7 +42,9 @@ export const getAppleModelParams = (model: string) => {
     warrantyPenalty: 0.0, gstBillPenalty: 0.0, callsPenalty: 0.50, originalScreenPenalty: 0.70, touchPenalty: 0.35, functionalScale: 1.0, physicalScale: 1.0,
   };
 
-  if (lowerModel.includes('17') || lowerModel.includes('16') || lowerModel.includes('15') || lowerModel.includes('14')) {
+  if (lowerModel.includes('17e')) {
+    params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.55, originalScreenPenalty: 0.70, touchPenalty: 0.35, functionalScale: 0.55, physicalScale: 0.55 };
+  } else if (lowerModel.includes('17') || lowerModel.includes('16') || lowerModel.includes('15') || lowerModel.includes('14')) {
     if (isProMax || (isPlus && lowerModel.includes('17'))) {
       params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.55, touchPenalty: 0.25, functionalScale: 1.35, physicalScale: 1.35 };
     } else if (isPro || isPlus) {
@@ -170,7 +172,7 @@ export function calculateFhoneifyPrice(
   let generationScale = 1.0;
   if (isApple) {
     const lowerModel = model.toLowerCase();
-    if (lowerModel.includes('17')) generationScale = 0.84;
+    if (lowerModel.includes('17') && !lowerModel.includes('17e')) generationScale = 0.84;
     else if (lowerModel.includes('16')) generationScale = 0.88;
     else if (lowerModel.includes('15')) generationScale = 0.94;
   }
@@ -178,6 +180,16 @@ export function calculateFhoneifyPrice(
   const hasValidBill = diagnostics.validBill === true || diagnostics.accessories.includes('bill');
   if (diagnostics.mobileAge) {
     age_multiplier = (config.ageBonus as any)[diagnostics.mobileAge] || 1.0;
+    if (isApple) {
+      const lowerModel = model.toLowerCase();
+      // Cashify clamps age for brand new models. A 17-series can't realistically be >11 months yet.
+      if (lowerModel.includes('17') && (diagnostics.mobileAge === 'above11' || diagnostics.mobileAge === '6to11')) {
+        age_multiplier = (config.ageBonus as any)['below3'] || 1.0;
+      } else if (lowerModel.includes('16') && diagnostics.mobileAge === 'above11') {
+        age_multiplier = (config.ageBonus as any)['6to11'] || 0.9114;
+      }
+    }
+
     // Add extra penalties if they claimed recent age but don't have bill/warranty
     if (diagnostics.mobileAge !== 'above11' && !hasValidBill) {
       age_multiplier -= params.gstBillPenalty;
@@ -192,7 +204,7 @@ export function calculateFhoneifyPrice(
   touch_multiplier = diagnostics.touch === false ? params.touchPenalty : 1.0;
   screen_orig_mult = diagnostics.originalScreen === false ? params.originalScreenPenalty : 1.0;
   
-  if (diagnostics.touch === false) {
+  if (diagnostics.touch === false || diagnostics.defects.includes('broken_screen')) {
     screen_orig_mult = 1.0;
   }
 

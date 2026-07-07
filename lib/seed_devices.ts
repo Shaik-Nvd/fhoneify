@@ -1276,7 +1276,7 @@ export const SEED_DEVICES: any[] = [
     "storage": "256GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 45200
+    "basePrice": 44000
   },
   {
     "id": "apple_2130",
@@ -1285,7 +1285,7 @@ export const SEED_DEVICES: any[] = [
     "storage": "512GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 53200
+    "basePrice": 52700
   },
   {
     "id": "oneplus_7000",
