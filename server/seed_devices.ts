@@ -9658,51 +9658,6 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 5000
   },
   {
-    "id": "huawei_batch_1",
-    "brand": "Huawei",
-    "model": "Huawei P20 Pro",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Twilight",
-    "basePrice": 5000
-  },
-  {
-    "id": "huawei_batch_2",
-    "brand": "Huawei",
-    "model": "Huawei Mate 20 Pro",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Twilight",
-    "basePrice": 5000
-  },
-  {
-    "id": "huawei_batch_3",
-    "brand": "Huawei",
-    "model": "Huawei P30 Pro",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Twilight",
-    "basePrice": 5000
-  },
-  {
-    "id": "huawei_batch_4",
-    "brand": "Huawei",
-    "model": "Huawei P30 Lite",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Twilight",
-    "basePrice": 5000
-  },
-  {
-    "id": "huawei_batch_5",
-    "brand": "Huawei",
-    "model": "Huawei Mate 30 Pro",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Twilight",
-    "basePrice": 5000
-  },
-  {
     "id": "samsung_120000",
     "brand": "Samsung",
     "model": "Samsung Galaxy On Nxt",
