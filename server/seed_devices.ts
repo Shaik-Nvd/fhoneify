@@ -21141,5 +21141,685 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "basePrice": 6190,
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-hot-30-5g-8-gb-128-gb"
+  },
+  {
+    "id": "041d6d9c-ddcd-4134-b15a-e028f211ec95",
+    "brand": "Tecno",
+    "model": "Tecno Spark 4",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 1970,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-spark-4-4-gb-64-gb"
+  },
+  {
+    "id": "759fdbf1-d35c-4b5a-886a-03c00b5d1ad7",
+    "brand": "Tecno",
+    "model": "Tecno Spark 4",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 1790,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-spark-4-3-gb-32-gb"
+  },
+  {
+    "id": "c8bd702e-8768-48a5-8ce2-27fa1ea0d62e",
+    "brand": "Tecno",
+    "model": "Tecno Camon 12 Air",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2010,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-camon-12-air-3-gb-32-gb"
+  },
+  {
+    "id": "de896260-71be-4ea8-8af0-9ef0a29c9b7d",
+    "brand": "Tecno",
+    "model": "Tecno Camon 12 Air",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2140,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-camon-12-air-4-gb-64-gb"
+  },
+  {
+    "id": "b6c9010d-abcf-4953-87aa-4741dd1dc109",
+    "brand": "Tecno",
+    "model": "Tecno Camon 15 Pro",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3280,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-camon-15-pro-6-gb-128-gb"
+  },
+  {
+    "id": "52682634-c090-4241-9b39-940945856ccb",
+    "brand": "Tecno",
+    "model": "Tecno Camon 15",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2410,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-camon-15-4-gb-64-gb"
+  },
+  {
+    "id": "e6df2de2-c63b-4b20-a720-eeda639bed92",
+    "brand": "Tecno",
+    "model": "Tecno Spark 5",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 1930,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-spark-5-2-gb-32-gb"
+  },
+  {
+    "id": "a08b7d0f-64a6-4fd7-a7ad-e3665736ab9d",
+    "brand": "Tecno",
+    "model": "Tecno Spark 6 Air",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 1670,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-spark-6-air-2-gb-32-gb"
+  },
+  {
+    "id": "e2a61adf-c6ff-4e32-b6a6-5b4c2a7e1f79",
+    "brand": "Tecno",
+    "model": "Tecno Spark 6 Air",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 1840,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-spark-6-air-3-gb-32-gb"
+  },
+  {
+    "id": "d6c93b61-3d2a-4bde-b1cb-2b7329ebd67c",
+    "brand": "Tecno",
+    "model": "Tecno Spark 6 Air",
+    "storage": "3 GB/64 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2010,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-spark-6-air-3-gb-64-gb"
+  },
+  {
+    "id": "eba0c33c-370b-4422-9dde-7e57a2f40c7f",
+    "brand": "Tecno",
+    "model": "Tecno Spark 5 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2390,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-spark-5-pro-4-gb-64-gb"
+  },
+  {
+    "id": "91250190-e400-4a59-bf35-fdc301a3d023",
+    "brand": "Tecno",
+    "model": "Tecno Spark Power 2",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2270,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-spark-power-2-4-gb-64-gb"
+  },
+  {
+    "id": "22bf4a80-61fc-4a50-bd09-bb4f73bf3d5d",
+    "brand": "Tecno",
+    "model": "Tecno Spark Power 2 Air",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2110,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-spark-power-2-air-3-gb-32-gb"
+  },
+  {
+    "id": "2dc2d642-e8f5-407d-8a63-dd9fa27bde2a",
+    "brand": "Tecno",
+    "model": "Tecno Camon 16",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2670,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-camon-16-4-gb-64-gb"
+  },
+  {
+    "id": "94d7625a-58cd-486b-9269-6912bc517643",
+    "brand": "Tecno",
+    "model": "Tecno POVA",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 2760,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pova-6-gb-128-gb"
+  },
+  {
+    "id": "61675be7-c941-4d07-904f-eaea694fec2e",
+    "brand": "Tecno",
+    "model": "Tecno POVA",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2630,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pova-4-gb-64-gb"
+  },
+  {
+    "id": "e3e1f429-c7b4-4467-b848-40d0e1635942",
+    "brand": "Tecno",
+    "model": "Tecno Camon 16 Premier",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 3850,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-camon-16-premier-8-gb-128-gb"
+  },
+  {
+    "id": "16d1ff7b-bb3c-41a2-9b11-8e3519aa4c04",
+    "brand": "Tecno",
+    "model": "Tecno Spark 7 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2540,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-spark-7-pro-4-gb-64-gb"
+  },
+  {
+    "id": "f8a4dda5-ba2f-4fe4-bb27-544171385ef9",
+    "brand": "Tecno",
+    "model": "Tecno Spark 7 Pro",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 2940,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-spark-7-pro-6-gb-64-gb"
+  },
+  {
+    "id": "efb8fee3-3812-4560-82ec-604efbd42bf8",
+    "brand": "Tecno",
+    "model": "Tecno Camon 17",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3360,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-camon-17-6-gb-128-gb"
+  },
+  {
+    "id": "4b5fd9a1-bd88-4c29-9a44-96d10795ee97",
+    "brand": "Tecno",
+    "model": "Tecno Camon 17 Pro",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4170,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-camon-17-pro-6-gb-128-gb"
+  },
+  {
+    "id": "159c0275-b177-40c8-85d8-c37c0f7d0c51",
+    "brand": "Tecno",
+    "model": "Tecno POVA 2",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2900,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pova-2-4-gb-64-gb"
+  },
+  {
+    "id": "d86861b8-6f8b-4758-aca9-efc4d2baa6a7",
+    "brand": "Tecno",
+    "model": "Tecno POVA 2",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3070,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pova-2-6-gb-128-gb"
+  },
+  {
+    "id": "594989de-ee09-4135-b868-ae6bd68da6d4",
+    "brand": "Tecno",
+    "model": "Tecno Spark 8",
+    "storage": "2 GB/64 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 2200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-spark-8-2-gb-64-gb"
+  },
+  {
+    "id": "3d23c4f7-8a7d-45e7-91cc-8bb34357c918",
+    "brand": "Tecno",
+    "model": "Tecno Spark 8T",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2730,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-spark-8t-4-gb-64-gb"
+  },
+  {
+    "id": "2e52495a-32fe-4532-bdc5-83a27ad0caad",
+    "brand": "Tecno",
+    "model": "Tecno Camon 18",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3410,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-camon-18-4-gb-128-gb"
+  },
+  {
+    "id": "09c806e5-0dc4-40a6-9f69-61805e1aef62",
+    "brand": "Tecno",
+    "model": "Tecno Spark 8 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2900,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-spark-8-pro-4-gb-64-gb"
+  },
+  {
+    "id": "7fffe8d1-054f-4829-8d07-e312e1bd0ef2",
+    "brand": "Tecno",
+    "model": "Tecno Spark 8C",
+    "storage": "3 GB/64 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2820,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-spark-8c-3-gb-64-gb"
+  },
+  {
+    "id": "db2888e9-3853-42bc-840a-2e81f2e47d1d",
+    "brand": "Tecno",
+    "model": "Tecno Pova 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 4660,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pova-5g-8-gb-128-gb"
+  },
+  {
+    "id": "510f28ac-c524-434f-9565-7e6a31f2d55b",
+    "brand": "Tecno",
+    "model": "Tecno Pova Neo",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 2950,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pova-neo-6-gb-128-gb"
+  },
+  {
+    "id": "dde4d16c-6d1e-4999-9ea6-6c8b5ac8a079",
+    "brand": "Tecno",
+    "model": "Tecno Phantom X",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5230,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-phantom-x-8-gb-256-gb"
+  },
+  {
+    "id": "21ead4ce-122f-450b-84b5-a9acb343927a",
+    "brand": "Tecno",
+    "model": "Tecno POVA 3",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3480,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pova-3-6-gb-128-gb"
+  },
+  {
+    "id": "43dfe430-73a1-4799-870a-f81ed23c5f82",
+    "brand": "Tecno",
+    "model": "Tecno POVA 3",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3330,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pova-3-4-gb-64-gb"
+  },
+  {
+    "id": "3b61bf7e-7f29-4dab-bbd0-edbdc1466f25",
+    "brand": "Tecno",
+    "model": "Tecno Spark 8P",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2820,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-spark-8p-4-gb-64-gb"
+  },
+  {
+    "id": "fe61547a-fde8-48a2-ae7b-14f46ed0270c",
+    "brand": "Tecno",
+    "model": "Tecno Spark 9",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2640,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-spark-9-4-gb-64-gb"
+  },
+  {
+    "id": "11e6c4f5-b080-4430-887c-9faa7d15880b",
+    "brand": "Tecno",
+    "model": "Tecno Spark 9",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 2900,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-spark-9-6-gb-128-gb"
+  },
+  {
+    "id": "780e5b02-98fe-4207-a7ed-8e3e83202a9e",
+    "brand": "Tecno",
+    "model": "Tecno Camon 19",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3650,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-camon-19-6-gb-128-gb"
+  },
+  {
+    "id": "3f5e44f2-6f93-4061-8320-3fe03d74b421",
+    "brand": "Tecno",
+    "model": "Tecno Camon 19 Neo",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3520,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-camon-19-neo-6-gb-128"
+  },
+  {
+    "id": "f0e0fb50-88a3-4a99-8159-37acd87c7308",
+    "brand": "Tecno",
+    "model": "Tecno Camon 19 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8580,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-camon-19-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "97f0411d-677d-4aa0-89d0-5d0ed2a7aa02",
+    "brand": "Tecno",
+    "model": "Tecno Camon 19 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8150,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-camon-19-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "49708e08-e64a-4756-b56c-afaf46b121b7",
+    "brand": "Tecno",
+    "model": "Tecno Camon 20",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6850,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-camon-20-8-gb-256-gb"
+  },
+  {
+    "id": "544fa2aa-6bc4-4dd4-9de7-95c258e0c9a2",
+    "brand": "Tecno",
+    "model": "Tecno Camon 20 Premier 5G",
+    "storage": "16 GB/512 GB",
+    "ram": "16 GB",
+    "color": "Default",
+    "basePrice": 9800,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-camon-20-premier-5g-16-gb-512-gb"
+  },
+  {
+    "id": "d0a5e455-f0c1-4c00-9da7-19d7046949d0",
+    "brand": "Tecno",
+    "model": "Tecno Camon 20 Premier 5G",
+    "storage": "8 GB/512 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 9000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-camon-20-premier-5g-8-gb-512-gb"
+  },
+  {
+    "id": "651d3ebf-9dc1-458e-8d30-68a02024b695",
+    "brand": "Tecno",
+    "model": "Tecno Camon 20 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 9500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-camon-20-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "ddef2b7a-dce4-4877-b02f-336d7958b5f7",
+    "brand": "Tecno",
+    "model": "Tecno Camon 20 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8720,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-camon-20-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "94e8b338-ad60-4947-9933-f36f719f3482",
+    "brand": "Tecno",
+    "model": "Tecno Phantom V Fold 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 16660,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-phantom-v-fold-5g-12-gb-256-gb"
+  },
+  {
+    "id": "04aee9fe-d320-414d-9ba6-a7bb46e49d90",
+    "brand": "Tecno",
+    "model": "Tecno Phantom V Fold 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 20500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-phantom-v-fold-5g-12-gb-512-gb"
+  },
+  {
+    "id": "11a83a41-bd53-4fe3-ac05-daed844fb8ad",
+    "brand": "Tecno",
+    "model": "Tecno Phantom X2 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-phantom-x2-5g-8-gb-256-gb"
+  },
+  {
+    "id": "1602b303-8c73-4569-8abe-97d07202551a",
+    "brand": "Tecno",
+    "model": "Tecno Phantom X2 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 14200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-phantom-x2-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "5077309b-6d76-4e8d-9bcf-7c2f1bbc7aec",
+    "brand": "Tecno",
+    "model": "Tecno Pova 4",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 3780,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pova-4-8-gb-128-gb"
+  },
+  {
+    "id": "93801e05-1d03-446a-a69a-c703b11eb2cd",
+    "brand": "Tecno",
+    "model": "Tecno Spark 10 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-spark-10-5g-8-gb-128-gb"
+  },
+  {
+    "id": "656d1a48-8e9e-4163-a205-0e2648c5cc81",
+    "brand": "Tecno",
+    "model": "Tecno Spark 10 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7350,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-spark-10-5g-8-gb-256-gb"
+  },
+  {
+    "id": "d7e283e5-3182-4384-b63c-86b11ca1b3dd",
+    "brand": "Tecno",
+    "model": "Tecno Spark 10 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5680,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-spark-10-5g-4-gb-64-gb"
+  },
+  {
+    "id": "f2b0987a-4e74-4293-9797-6160945d23ac",
+    "brand": "Tecno",
+    "model": "Tecno Spark 7P",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2720,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-spark-7p-4-gb-128-gb"
+  },
+  {
+    "id": "04d57292-27da-48b3-a7c2-6d475ecf63e0",
+    "brand": "Tecno",
+    "model": "Tecno Spark Go 2023",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3720,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-spark-go-2023-4-gb-64-gb"
+  },
+  {
+    "id": "95a2e505-84c5-453b-91db-7f171c9365d9",
+    "brand": "Tecno",
+    "model": "Tecno Spark GO 3",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5880,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-spark-go-3-4-gb-64-gb"
+  },
+  {
+    "id": "f95af62b-4ab0-410c-b9f6-cf641e6526db",
+    "brand": "Tecno",
+    "model": "Tecno Camon 30 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12400,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-camon-30-5g-8-gb-256-gb"
+  },
+  {
+    "id": "52a347f0-4cfb-4814-8f78-be76a74e7c8d",
+    "brand": "Tecno",
+    "model": "Tecno Camon 30 Premier 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 14500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-camon-30-premier-5g-12-gb-512-gb"
+  },
+  {
+    "id": "83c32b7a-f7b1-48a1-a9c5-b0997e32d0ae",
+    "brand": "Tecno",
+    "model": "Tecno Pova 7 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7450,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pova-7-5g-8-gb-128-gb"
+  },
+  {
+    "id": "64e40994-6abe-49ce-bc69-ad0a28ff65d2",
+    "brand": "Tecno",
+    "model": "Tecno Pova 7 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8400,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pova-7-5g-8-gb-256-gb"
+  },
+  {
+    "id": "98be6076-bd16-4faa-ba16-0c6c33ec8485",
+    "brand": "Tecno",
+    "model": "Tecno Pova 7 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 10000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pova-7-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "2b994e9f-e5dc-4893-ac70-9a8f7bd83022",
+    "brand": "Tecno",
+    "model": "Tecno Pova 7 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 10500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pova-7-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "9e619a18-5dc7-4bf2-9823-6120d875b63d",
+    "brand": "Tecno",
+    "model": "Tecno Pova Curve 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 8330,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pova-curve-5g-6-gb-128-gb"
+  },
+  {
+    "id": "487d99c9-815e-4b0f-85d3-a5e84336b666",
+    "brand": "Tecno",
+    "model": "Tecno Pova Curve 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 10000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pova-curve-5g-8-gb-128-gb"
+  },
+  {
+    "id": "0609a7ba-6c3a-44ba-a8ce-792acab42361",
+    "brand": "Tecno",
+    "model": "Tecno Pova Curve 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 11000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pova-curve-5g-8-gb-256-gb"
+  },
+  {
+    "id": "d0dc73d3-131f-4b7c-865d-db8e3573ab7d",
+    "brand": "Tecno",
+    "model": "Tecno Spark 30C 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5390,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-spark-30c-5g-4-gb-64-gb"
+  },
+  {
+    "id": "07f842d7-e1b3-48ed-bfe3-7c91d8037982",
+    "brand": "Tecno",
+    "model": "Tecno Spark 30C 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5990,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-spark-30c-5g-4-gb-128-gb"
+  },
+  {
+    "id": "46a4c01f-8110-4835-a0fc-668323c31f98",
+    "brand": "Tecno",
+    "model": "Tecno Camon 20s Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8820,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-camon-20s-pro-5g-8-gb-128-gb"
   }
 ];
