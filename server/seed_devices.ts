@@ -15169,54 +15169,9 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 5000
   },
   {
-    "id": "lg_batch_1",
-    "brand": "LG",
-    "model": "LG G7 Plus ThinQ",
-    "storage": "128 GB",
-    "ram": "6GB",
-    "color": "Aurora",
-    "basePrice": 5000
-  },
-  {
     "id": "lg_batch_2",
     "brand": "LG",
     "model": "LG V40 ThinQ",
-    "storage": "128 GB",
-    "ram": "6GB",
-    "color": "Aurora",
-    "basePrice": 5000
-  },
-  {
-    "id": "lg_batch_3",
-    "brand": "LG",
-    "model": "LG G8S ThinQ",
-    "storage": "128 GB",
-    "ram": "6GB",
-    "color": "Aurora",
-    "basePrice": 5000
-  },
-  {
-    "id": "lg_batch_5",
-    "brand": "LG",
-    "model": "LG Wing",
-    "storage": "128 GB",
-    "ram": "6GB",
-    "color": "Aurora",
-    "basePrice": 5000
-  },
-  {
-    "id": "lg_batch_6",
-    "brand": "LG",
-    "model": "LG Velvet Dual Screen",
-    "storage": "128 GB",
-    "ram": "6GB",
-    "color": "Aurora",
-    "basePrice": 5000
-  },
-  {
-    "id": "lg_batch_7",
-    "brand": "LG",
-    "model": "LG W41",
     "storage": "128 GB",
     "ram": "6GB",
     "color": "Aurora",
