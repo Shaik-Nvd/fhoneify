@@ -2176,206 +2176,6 @@ export const SEED_DEVICES = [
     "basePrice": 7330
   },
   {
-    "id": "google_9000",
-    "brand": "Google",
-    "model": "Google Pixel 4A",
-    "storage": "6 GB/128 GB",
-    "color": "Obsidian",
-    "basePrice": 4390
-  },
-  {
-    "id": "google_9001",
-    "brand": "Google",
-    "model": "Google Pixel 6a",
-    "storage": "6 GB/128 GB",
-    "color": "Obsidian",
-    "basePrice": 10080
-  },
-  {
-    "id": "google_9002",
-    "brand": "Google",
-    "model": "Google Pixel 7",
-    "storage": "8 GB/256 GB",
-    "color": "Obsidian",
-    "basePrice": 14160
-  },
-  {
-    "id": "google_9003",
-    "brand": "Google",
-    "model": "Google Pixel 7",
-    "storage": "8 GB/128 GB",
-    "color": "Obsidian",
-    "basePrice": 14240
-  },
-  {
-    "id": "google_9004",
-    "brand": "Google",
-    "model": "Google Pixel 7 Pro",
-    "storage": "12 GB/128 GB",
-    "color": "Obsidian",
-    "basePrice": 18470
-  },
-  {
-    "id": "google_9005",
-    "brand": "Google",
-    "model": "Google Pixel 7 Pro",
-    "storage": "12 GB/256 GB",
-    "color": "Obsidian",
-    "basePrice": 19040
-  },
-  {
-    "id": "google_9006",
-    "brand": "Google",
-    "model": "Google Pixel 7a",
-    "storage": "8 GB/128 GB",
-    "color": "Obsidian",
-    "basePrice": 17120
-  },
-  {
-    "id": "google_9007",
-    "brand": "Google",
-    "model": "Google Pixel 8",
-    "storage": "8 GB/256 GB",
-    "color": "Obsidian",
-    "basePrice": 24800
-  },
-  {
-    "id": "google_9008",
-    "brand": "Google",
-    "model": "Google Pixel 8",
-    "storage": "8 GB/128 GB",
-    "color": "Obsidian",
-    "basePrice": 24390
-  },
-  {
-    "id": "google_9009",
-    "brand": "Google",
-    "model": "Google Pixel 8 Pro",
-    "storage": "12 GB/256 GB",
-    "color": "Obsidian",
-    "basePrice": 33220
-  },
-  {
-    "id": "google_9010",
-    "brand": "Google",
-    "model": "Google Pixel 8 Pro",
-    "storage": "12 GB/128 GB",
-    "color": "Obsidian",
-    "basePrice": 31490
-  },
-  {
-    "id": "google_9011",
-    "brand": "Google",
-    "model": "Google Pixel 8 Pro",
-    "storage": "12 GB/512 GB",
-    "color": "Obsidian",
-    "basePrice": 33790
-  },
-  {
-    "id": "google_9012",
-    "brand": "Google",
-    "model": "Google Pixel 8a",
-    "storage": "8 GB/256 GB",
-    "color": "Obsidian",
-    "basePrice": 23370
-  },
-  {
-    "id": "google_9013",
-    "brand": "Google",
-    "model": "Google Pixel 8a",
-    "storage": "8 GB/128 GB",
-    "color": "Obsidian",
-    "basePrice": 23080
-  },
-  {
-    "id": "google_9014",
-    "brand": "Google",
-    "model": "Google Pixel 9",
-    "storage": "12 GB/256 GB",
-    "color": "Obsidian",
-    "basePrice": 37630
-  },
-  {
-    "id": "google_9015",
-    "brand": "Google",
-    "model": "Google Pixel 9 Pro XL",
-    "storage": "16 GB/512 GB",
-    "color": "Obsidian",
-    "basePrice": 57120
-  },
-  {
-    "id": "google_9016",
-    "brand": "Google",
-    "model": "Google Pixel 9 Pro XL",
-    "storage": "16 GB/256 GB",
-    "color": "Obsidian",
-    "basePrice": 54620
-  },
-  {
-    "id": "google_9017",
-    "brand": "Google",
-    "model": "Google Pixel 9 Pro Fold",
-    "storage": "16 GB/256 GB",
-    "color": "Obsidian",
-    "basePrice": 69510
-  },
-  {
-    "id": "google_9018",
-    "brand": "Google",
-    "model": "Google Pixel 9 Pro",
-    "storage": "16 GB/256 GB",
-    "color": "Obsidian",
-    "basePrice": 50110
-  },
-  {
-    "id": "google_9019",
-    "brand": "Google",
-    "model": "Google Pixel 9a",
-    "storage": "8 GB/256 GB",
-    "color": "Obsidian",
-    "basePrice": 27700
-  },
-  {
-    "id": "google_9020",
-    "brand": "Google",
-    "model": "Google Pixel 10",
-    "storage": "12 GB/256 GB",
-    "color": "Obsidian",
-    "basePrice": 45500
-  },
-  {
-    "id": "google_9021",
-    "brand": "Google",
-    "model": "Google Pixel 10 Pro",
-    "storage": "16 GB/256 GB",
-    "color": "Obsidian",
-    "basePrice": 64900
-  },
-  {
-    "id": "google_9022",
-    "brand": "Google",
-    "model": "Google Pixel 10 Pro XL",
-    "storage": "16 GB/256 GB",
-    "color": "Obsidian",
-    "basePrice": 73000
-  },
-  {
-    "id": "google_9023",
-    "brand": "Google",
-    "model": "Google Pixel 10 Pro Fold",
-    "storage": "16 GB/256 GB",
-    "color": "Obsidian",
-    "basePrice": 98000
-  },
-  {
-    "id": "google_9024",
-    "brand": "Google",
-    "model": "Google Pixel 10a",
-    "storage": "8 GB/256 GB",
-    "color": "Obsidian",
-    "basePrice": 33200
-  },
-  {
     "id": "honor_10000",
     "brand": "Honor",
     "model": "Honor 8X",
@@ -3678,518 +3478,6 @@ export const SEED_DEVICES = [
     "storage": "3 GB/64 GB",
     "color": "Midnight",
     "basePrice": 2710
-  },
-  {
-    "id": "motorola_15000",
-    "brand": "Motorola",
-    "model": "Motorola One Power",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2270
-  },
-  {
-    "id": "motorola_15001",
-    "brand": "Motorola",
-    "model": "Motorola Moto G6 Plus",
-    "storage": "6 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 1970
-  },
-  {
-    "id": "motorola_15002",
-    "brand": "Motorola",
-    "model": "Motorola Moto Z2 Force",
-    "storage": "6 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 1670
-  },
-  {
-    "id": "motorola_15003",
-    "brand": "Motorola",
-    "model": "Motorola Moto G6",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 1210
-  },
-  {
-    "id": "motorola_15004",
-    "brand": "Motorola",
-    "model": "Motorola Moto G6",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 1690
-  },
-  {
-    "id": "motorola_15005",
-    "brand": "Motorola",
-    "model": "Motorola Moto G7 Power",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 1970
-  },
-  {
-    "id": "motorola_15006",
-    "brand": "Motorola",
-    "model": "Motorola Moto G7",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 1740
-  },
-  {
-    "id": "motorola_15007",
-    "brand": "Motorola",
-    "model": "Motorola Moto One",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 1970
-  },
-  {
-    "id": "motorola_15008",
-    "brand": "Motorola",
-    "model": "Motorola One Vision",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 2270
-  },
-  {
-    "id": "motorola_15009",
-    "brand": "Motorola",
-    "model": "Motorola One Action",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 2540
-  },
-  {
-    "id": "motorola_15010",
-    "brand": "Motorola",
-    "model": "Motorola Moto E6s",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2080
-  },
-  {
-    "id": "motorola_15011",
-    "brand": "Motorola",
-    "model": "Motorola One Macro",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2040
-  },
-  {
-    "id": "motorola_15012",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge Plus",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 8180
-  },
-  {
-    "id": "motorola_15013",
-    "brand": "Motorola",
-    "model": "Motorola Moto G8 Power Lite",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2760
-  },
-  {
-    "id": "motorola_15014",
-    "brand": "Motorola",
-    "model": "Motorola Moto Razr",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 9660
-  },
-  {
-    "id": "motorola_15015",
-    "brand": "Motorola",
-    "model": "Motorola One Fusion Plus",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4510
-  },
-  {
-    "id": "motorola_15016",
-    "brand": "Motorola",
-    "model": "Motorola Moto G9",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2760
-  },
-  {
-    "id": "motorola_15017",
-    "brand": "Motorola",
-    "model": "Motorola Moto E7 Plus",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2800
-  },
-  {
-    "id": "motorola_15018",
-    "brand": "Motorola",
-    "model": "Motorola Moto Razr 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 12870
-  },
-  {
-    "id": "motorola_15019",
-    "brand": "Motorola",
-    "model": "Motorola Moto G9 Power",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2840
-  },
-  {
-    "id": "motorola_15020",
-    "brand": "Motorola",
-    "model": "Motorola Moto G 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4960
-  },
-  {
-    "id": "motorola_15021",
-    "brand": "Motorola",
-    "model": "Motorola Moto G30",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3180
-  },
-  {
-    "id": "motorola_15022",
-    "brand": "Motorola",
-    "model": "Motorola Moto G10 Power",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3030
-  },
-  {
-    "id": "motorola_15023",
-    "brand": "Motorola",
-    "model": "Motorola Moto E7 Power",
-    "storage": "2 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2230
-  },
-  {
-    "id": "motorola_15024",
-    "brand": "Motorola",
-    "model": "Motorola Moto E7 Power",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2710
-  },
-  {
-    "id": "motorola_15025",
-    "brand": "Motorola",
-    "model": "Motorola Moto G60",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5180
-  },
-  {
-    "id": "motorola_15026",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 20 Pro",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 7800
-  },
-  {
-    "id": "motorola_15027",
-    "brand": "Motorola",
-    "model": "Motorola Moto G40 Fusion",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 4050
-  },
-  {
-    "id": "motorola_15028",
-    "brand": "Motorola",
-    "model": "Motorola Moto G40 Fusion",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4880
-  },
-  {
-    "id": "motorola_15029",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 20 Fusion",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6890
-  },
-  {
-    "id": "motorola_15030",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 20 Fusion",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6550
-  },
-  {
-    "id": "motorola_15031",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 20",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6930
-  },
-  {
-    "id": "motorola_15032",
-    "brand": "Motorola",
-    "model": "Motorola Moto G31",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3670
-  },
-  {
-    "id": "motorola_15033",
-    "brand": "Motorola",
-    "model": "Motorola Moto G31",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4050
-  },
-  {
-    "id": "motorola_15034",
-    "brand": "Motorola",
-    "model": "Motorola Moto G51 5G",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 5340
-  },
-  {
-    "id": "motorola_15035",
-    "brand": "Motorola",
-    "model": "Motorola Moto E40",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3590
-  },
-  {
-    "id": "motorola_15036",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 30 Pro",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 9320
-  },
-  {
-    "id": "motorola_15037",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 30",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 8600
-  },
-  {
-    "id": "motorola_15038",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 30",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 8940
-  },
-  {
-    "id": "motorola_15039",
-    "brand": "Motorola",
-    "model": "Motorola Moto G52",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4670
-  },
-  {
-    "id": "motorola_15040",
-    "brand": "Motorola",
-    "model": "Motorola Moto G52",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3980
-  },
-  {
-    "id": "motorola_15041",
-    "brand": "Motorola",
-    "model": "Motorola Moto G71 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6480
-  },
-  {
-    "id": "motorola_15042",
-    "brand": "Motorola",
-    "model": "Motorola Moto G82 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 7910
-  },
-  {
-    "id": "motorola_15043",
-    "brand": "Motorola",
-    "model": "Motorola Moto G82 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 7160
-  },
-  {
-    "id": "motorola_15044",
-    "brand": "Motorola",
-    "model": "Motorola Moto G22",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3750
-  },
-  {
-    "id": "motorola_15045",
-    "brand": "Motorola",
-    "model": "Motorola Moto G42",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3520
-  },
-  {
-    "id": "motorola_15046",
-    "brand": "Motorola",
-    "model": "Motorola Moto G32",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4580
-  },
-  {
-    "id": "motorola_15047",
-    "brand": "Motorola",
-    "model": "Motorola Moto G32",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 4170
-  },
-  {
-    "id": "motorola_15048",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 30 Fusion",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 10150
-  },
-  {
-    "id": "motorola_15049",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 30 Ultra",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 13100
-  },
-  {
-    "id": "motorola_15050",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 30 Ultra",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 12500
-  },
-  {
-    "id": "motorola_15051",
-    "brand": "Motorola",
-    "model": "Motorola Moto G72",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5110
-  },
-  {
-    "id": "motorola_15052",
-    "brand": "Motorola",
-    "model": "Motorola Moto G62 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6830
-  },
-  {
-    "id": "motorola_15053",
-    "brand": "Motorola",
-    "model": "Motorola Moto G62 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6360
-  },
-  {
-    "id": "motorola_15054",
-    "brand": "Motorola",
-    "model": "Motorola Moto e32s",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2990
-  },
-  {
-    "id": "motorola_15055",
-    "brand": "Motorola",
-    "model": "Motorola Moto e32s",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2690
-  },
-  {
-    "id": "motorola_15056",
-    "brand": "Motorola",
-    "model": "Motorola Moto E13",
-    "storage": "2 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3830
-  },
-  {
-    "id": "motorola_15057",
-    "brand": "Motorola",
-    "model": "Motorola Moto E13",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4270
-  },
-  {
-    "id": "motorola_15058",
-    "brand": "Motorola",
-    "model": "Motorola Moto E13",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 4070
-  },
-  {
-    "id": "motorola_15059",
-    "brand": "Motorola",
-    "model": "Motorola Moto e32",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3220
-  },
-  {
-    "id": "motorola_15060",
-    "brand": "Motorola",
-    "model": "Motorola Moto G73 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 7270
-  },
-  {
-    "id": "motorola_15061",
-    "brand": "Motorola",
-    "model": "Motorola Moto e22s",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3200
-  },
-  {
-    "id": "motorola_15062",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 50 Fusion",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 13960
-  },
-  {
-    "id": "motorola_15063",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 50 Fusion",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 15070
   },
   {
     "id": "nokia_16000",
@@ -5518,886 +4806,6 @@ export const SEED_DEVICES = [
     "storage": "8 GB/128 GB",
     "color": "Midnight",
     "basePrice": 8990
-  },
-  {
-    "id": "realme_20000",
-    "brand": "Realme",
-    "model": "Realme 2 Pro",
-    "storage": "6 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2700
-  },
-  {
-    "id": "realme_20001",
-    "brand": "Realme",
-    "model": "Realme 2 Pro",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2470
-  },
-  {
-    "id": "realme_20002",
-    "brand": "Realme",
-    "model": "Realme 2 Pro",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 2940
-  },
-  {
-    "id": "realme_20003",
-    "brand": "Realme",
-    "model": "Realme C1 2019",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2010
-  },
-  {
-    "id": "realme_20004",
-    "brand": "Realme",
-    "model": "Realme C1 2019",
-    "storage": "2 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 1820
-  },
-  {
-    "id": "realme_20005",
-    "brand": "Realme",
-    "model": "Realme C1",
-    "storage": "2 GB/16 GB",
-    "color": "Midnight",
-    "basePrice": 1740
-  },
-  {
-    "id": "realme_20006",
-    "brand": "Realme",
-    "model": "Realme 2",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2080
-  },
-  {
-    "id": "realme_20007",
-    "brand": "Realme",
-    "model": "Realme 2",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2670
-  },
-  {
-    "id": "realme_20008",
-    "brand": "Realme",
-    "model": "Realme 1",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 2960
-  },
-  {
-    "id": "realme_20009",
-    "brand": "Realme",
-    "model": "Realme 1",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2010
-  },
-  {
-    "id": "realme_20010",
-    "brand": "Realme",
-    "model": "Realme 1",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2240
-  },
-  {
-    "id": "realme_20011",
-    "brand": "Realme",
-    "model": "Realme U1",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2630
-  },
-  {
-    "id": "realme_20012",
-    "brand": "Realme",
-    "model": "Realme U1",
-    "storage": "3 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2360
-  },
-  {
-    "id": "realme_20013",
-    "brand": "Realme",
-    "model": "Realme U1",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2240
-  },
-  {
-    "id": "realme_20014",
-    "brand": "Realme",
-    "model": "Realme 3",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2320
-  },
-  {
-    "id": "realme_20015",
-    "brand": "Realme",
-    "model": "Realme 3",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2860
-  },
-  {
-    "id": "realme_20016",
-    "brand": "Realme",
-    "model": "Realme 3",
-    "storage": "3 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2630
-  },
-  {
-    "id": "realme_20017",
-    "brand": "Realme",
-    "model": "Realme 3 Pro",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3290
-  },
-  {
-    "id": "realme_20018",
-    "brand": "Realme",
-    "model": "Realme 3 Pro",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3820
-  },
-  {
-    "id": "realme_20019",
-    "brand": "Realme",
-    "model": "Realme 3 Pro",
-    "storage": "6 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3480
-  },
-  {
-    "id": "realme_20020",
-    "brand": "Realme",
-    "model": "Realme C2",
-    "storage": "2 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2200
-  },
-  {
-    "id": "realme_20021",
-    "brand": "Realme",
-    "model": "Realme C2",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2310
-  },
-  {
-    "id": "realme_20022",
-    "brand": "Realme",
-    "model": "Realme C2",
-    "storage": "2 GB/16 GB",
-    "color": "Midnight",
-    "basePrice": 2010
-  },
-  {
-    "id": "realme_20023",
-    "brand": "Realme",
-    "model": "Realme X",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5130
-  },
-  {
-    "id": "realme_20024",
-    "brand": "Realme",
-    "model": "Realme X",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4710
-  },
-  {
-    "id": "realme_20025",
-    "brand": "Realme",
-    "model": "Realme 3i",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2360
-  },
-  {
-    "id": "realme_20026",
-    "brand": "Realme",
-    "model": "Realme 3i",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2780
-  },
-  {
-    "id": "realme_20027",
-    "brand": "Realme",
-    "model": "Realme 5",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2800
-  },
-  {
-    "id": "realme_20028",
-    "brand": "Realme",
-    "model": "Realme 5",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3180
-  },
-  {
-    "id": "realme_20029",
-    "brand": "Realme",
-    "model": "Realme 5",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3510
-  },
-  {
-    "id": "realme_20030",
-    "brand": "Realme",
-    "model": "Realme 5 Pro",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4060
-  },
-  {
-    "id": "realme_20031",
-    "brand": "Realme",
-    "model": "Realme 5 Pro",
-    "storage": "6 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3820
-  },
-  {
-    "id": "realme_20032",
-    "brand": "Realme",
-    "model": "Realme 5 Pro",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3660
-  },
-  {
-    "id": "realme_20033",
-    "brand": "Realme",
-    "model": "Realme XT",
-    "storage": "6 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 4580
-  },
-  {
-    "id": "realme_20034",
-    "brand": "Realme",
-    "model": "Realme XT",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4960
-  },
-  {
-    "id": "realme_20035",
-    "brand": "Realme",
-    "model": "Realme XT",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 4290
-  },
-  {
-    "id": "realme_20036",
-    "brand": "Realme",
-    "model": "Realme 5s",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3130
-  },
-  {
-    "id": "realme_20037",
-    "brand": "Realme",
-    "model": "Realme 5s",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3520
-  },
-  {
-    "id": "realme_20038",
-    "brand": "Realme",
-    "model": "Realme X2 Pro",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 5480
-  },
-  {
-    "id": "realme_20039",
-    "brand": "Realme",
-    "model": "Realme X2 Pro",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5170
-  },
-  {
-    "id": "realme_20040",
-    "brand": "Realme",
-    "model": "Realme X2 Pro",
-    "storage": "6 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 4750
-  },
-  {
-    "id": "realme_20041",
-    "brand": "Realme",
-    "model": "Realme X2",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 5260
-  },
-  {
-    "id": "realme_20042",
-    "brand": "Realme",
-    "model": "Realme X2",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5020
-  },
-  {
-    "id": "realme_20043",
-    "brand": "Realme",
-    "model": "Realme X2",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4600
-  },
-  {
-    "id": "realme_20044",
-    "brand": "Realme",
-    "model": "Realme X2",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 4140
-  },
-  {
-    "id": "realme_20045",
-    "brand": "Realme",
-    "model": "Realme 5i",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3780
-  },
-  {
-    "id": "realme_20046",
-    "brand": "Realme",
-    "model": "Realme 5i",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4010
-  },
-  {
-    "id": "realme_20047",
-    "brand": "Realme",
-    "model": "Realme C3",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 3140
-  },
-  {
-    "id": "realme_20048",
-    "brand": "Realme",
-    "model": "Realme C3",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3450
-  },
-  {
-    "id": "realme_20049",
-    "brand": "Realme",
-    "model": "Realme X50 Pro",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6640
-  },
-  {
-    "id": "realme_20050",
-    "brand": "Realme",
-    "model": "Realme X50 Pro",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6880
-  },
-  {
-    "id": "realme_20051",
-    "brand": "Realme",
-    "model": "Realme X50 Pro",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 7410
-  },
-  {
-    "id": "realme_20052",
-    "brand": "Realme",
-    "model": "Realme 6",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5020
-  },
-  {
-    "id": "realme_20053",
-    "brand": "Realme",
-    "model": "Realme 6",
-    "storage": "6 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 4630
-  },
-  {
-    "id": "realme_20054",
-    "brand": "Realme",
-    "model": "Realme 6",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 4190
-  },
-  {
-    "id": "realme_20055",
-    "brand": "Realme",
-    "model": "Realme 6",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4850
-  },
-  {
-    "id": "realme_20056",
-    "brand": "Realme",
-    "model": "Realme 6 Pro",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4950
-  },
-  {
-    "id": "realme_20057",
-    "brand": "Realme",
-    "model": "Realme 6 Pro",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5130
-  },
-  {
-    "id": "realme_20058",
-    "brand": "Realme",
-    "model": "Realme 6 Pro",
-    "storage": "6 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 4520
-  },
-  {
-    "id": "realme_20059",
-    "brand": "Realme",
-    "model": "Realme Narzo 10",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3850
-  },
-  {
-    "id": "realme_20060",
-    "brand": "Realme",
-    "model": "Realme Narzo 10A",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 3240
-  },
-  {
-    "id": "realme_20061",
-    "brand": "Realme",
-    "model": "Realme Narzo 10A",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3510
-  },
-  {
-    "id": "realme_20062",
-    "brand": "Realme",
-    "model": "Realme X3",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5410
-  },
-  {
-    "id": "realme_20063",
-    "brand": "Realme",
-    "model": "Realme X3",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5830
-  },
-  {
-    "id": "realme_20064",
-    "brand": "Realme",
-    "model": "Realme X3 SuperZoom",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 5760
-  },
-  {
-    "id": "realme_20065",
-    "brand": "Realme",
-    "model": "Realme X3 SuperZoom",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5260
-  },
-  {
-    "id": "realme_20066",
-    "brand": "Realme",
-    "model": "Realme X3 SuperZoom",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 5990
-  },
-  {
-    "id": "realme_20067",
-    "brand": "Realme",
-    "model": "Realme C11",
-    "storage": "2 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2770
-  },
-  {
-    "id": "realme_20068",
-    "brand": "Realme",
-    "model": "Realme C12",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 3150
-  },
-  {
-    "id": "realme_20069",
-    "brand": "Realme",
-    "model": "Realme C12",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3590
-  },
-  {
-    "id": "realme_20070",
-    "brand": "Realme",
-    "model": "Realme 6i",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 4010
-  },
-  {
-    "id": "realme_20071",
-    "brand": "Realme",
-    "model": "Realme 6i",
-    "storage": "6 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 4480
-  },
-  {
-    "id": "realme_20072",
-    "brand": "Realme",
-    "model": "Realme 7 Pro",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5680
-  },
-  {
-    "id": "realme_20073",
-    "brand": "Realme",
-    "model": "Realme 7 Pro",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5380
-  },
-  {
-    "id": "realme_20074",
-    "brand": "Realme",
-    "model": "Realme C15",
-    "storage": "3 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3480
-  },
-  {
-    "id": "realme_20075",
-    "brand": "Realme",
-    "model": "Realme C15",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 3130
-  },
-  {
-    "id": "realme_20076",
-    "brand": "Realme",
-    "model": "Realme C15",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3790
-  },
-  {
-    "id": "realme_20077",
-    "brand": "Realme",
-    "model": "Realme 7",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5230
-  },
-  {
-    "id": "realme_20078",
-    "brand": "Realme",
-    "model": "Realme 7",
-    "storage": "6 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 4580
-  },
-  {
-    "id": "realme_20079",
-    "brand": "Realme",
-    "model": "Realme Narzo 20 Pro",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4670
-  },
-  {
-    "id": "realme_20080",
-    "brand": "Realme",
-    "model": "Realme Narzo 20 Pro",
-    "storage": "6 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 4200
-  },
-  {
-    "id": "realme_20081",
-    "brand": "Realme",
-    "model": "Realme Narzo 20",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 4090
-  },
-  {
-    "id": "realme_20082",
-    "brand": "Realme",
-    "model": "Realme Narzo 20",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4390
-  },
-  {
-    "id": "realme_20083",
-    "brand": "Realme",
-    "model": "Realme Narzo 20A",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3750
-  },
-  {
-    "id": "realme_20084",
-    "brand": "Realme",
-    "model": "Realme Narzo 20A",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 3320
-  },
-  {
-    "id": "realme_20085",
-    "brand": "Realme",
-    "model": "Realme 7i",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3820
-  },
-  {
-    "id": "realme_20086",
-    "brand": "Realme",
-    "model": "Realme 7i",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4450
-  },
-  {
-    "id": "realme_20087",
-    "brand": "Realme",
-    "model": "Realme C15 Qualcomm Edition",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 3130
-  },
-  {
-    "id": "realme_20088",
-    "brand": "Realme",
-    "model": "Realme C15 Qualcomm Edition",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3400
-  },
-  {
-    "id": "realme_20089",
-    "brand": "Realme",
-    "model": "Realme X7",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 7420
-  },
-  {
-    "id": "realme_20090",
-    "brand": "Realme",
-    "model": "Realme X7",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 7120
-  },
-  {
-    "id": "realme_20091",
-    "brand": "Realme",
-    "model": "Realme X7 Pro",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 7690
-  },
-  {
-    "id": "realme_20092",
-    "brand": "Realme",
-    "model": "Realme Narzo 30A",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 3480
-  },
-  {
-    "id": "realme_20093",
-    "brand": "Realme",
-    "model": "Realme Narzo 30A",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3940
-  },
-  {
-    "id": "realme_20094",
-    "brand": "Realme",
-    "model": "Realme Narzo 30 Pro 5G",
-    "storage": "6 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 6550
-  },
-  {
-    "id": "realme_20095",
-    "brand": "Realme",
-    "model": "Realme Narzo 30 Pro 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6910
-  },
-  {
-    "id": "realme_20096",
-    "brand": "Realme",
-    "model": "Realme 8",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5380
-  },
-  {
-    "id": "realme_20097",
-    "brand": "Realme",
-    "model": "Realme 8",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5800
-  },
-  {
-    "id": "realme_20098",
-    "brand": "Realme",
-    "model": "Realme 8",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5140
-  },
-  {
-    "id": "realme_20099",
-    "brand": "Realme",
-    "model": "Realme 8 Pro",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6290
-  },
-  {
-    "id": "realme_20100",
-    "brand": "Realme",
-    "model": "Realme 8 Pro",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5900
-  },
-  {
-    "id": "realme_20101",
-    "brand": "Realme",
-    "model": "Realme C21",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 3200
-  },
-  {
-    "id": "realme_20102",
-    "brand": "Realme",
-    "model": "Realme C21",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3400
-  },
-  {
-    "id": "realme_20103",
-    "brand": "Realme",
-    "model": "Realme C20",
-    "storage": "2 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2630
-  },
-  {
-    "id": "realme_20104",
-    "brand": "Realme",
-    "model": "Realme C25",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3670
-  },
-  {
-    "id": "realme_20105",
-    "brand": "Realme",
-    "model": "Realme C25",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3400
-  },
-  {
-    "id": "realme_20106",
-    "brand": "Realme",
-    "model": "Realme X7 Max 5G",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 8670
-  },
-  {
-    "id": "realme_20107",
-    "brand": "Realme",
-    "model": "Realme X7 Max 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 8140
-  },
-  {
-    "id": "realme_20108",
-    "brand": "Realme",
-    "model": "Realme C25s",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4060
-  },
-  {
-    "id": "realme_20109",
-    "brand": "Realme",
-    "model": "Realme C25s",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3750
   },
   {
     "id": "tecno_21000",
@@ -9202,24 +7610,6 @@ export const SEED_DEVICES = [
     "basePrice": 2910
   },
   {
-    "id": "motorola_10013",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 50 Fusion 12 Gb 256 Gb ",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_10014",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 50 Fusion 8 Gb 128 Gb ",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
     "id": "nokia_10015",
     "brand": "Nokia",
     "model": "Nokia 2 2",
@@ -10471,14 +8861,6 @@ export const SEED_DEVICES = [
     "storage": "8 GB/128 GB",
     "color": "Midnight",
     "basePrice": 8490
-  },
-  {
-    "id": "motorola_add_16000",
-    "brand": "Motorola",
-    "model": "Motorola Moto G85 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 12150
   },
   {
     "id": "poco_add_22000",
@@ -18963,2301 +17345,6 @@ export const SEED_DEVICES = [
     "basePrice": 5000
   },
   {
-    "id": "realme_batch_1",
-    "brand": "Realme",
-    "model": "Realme 2 Pro",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_2",
-    "brand": "Realme",
-    "model": "Realme C1 2019",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_3",
-    "brand": "Realme",
-    "model": "Realme C1",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_4",
-    "brand": "Realme",
-    "model": "Realme 2",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_5",
-    "brand": "Realme",
-    "model": "Realme 1",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_6",
-    "brand": "Realme",
-    "model": "Realme U1",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_7",
-    "brand": "Realme",
-    "model": "Realme 3",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_8",
-    "brand": "Realme",
-    "model": "Realme 3 Pro",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_9",
-    "brand": "Realme",
-    "model": "Realme C2",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_10",
-    "brand": "Realme",
-    "model": "Realme X",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_11",
-    "brand": "Realme",
-    "model": "Realme 3i",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_12",
-    "brand": "Realme",
-    "model": "Realme 5",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_13",
-    "brand": "Realme",
-    "model": "Realme 5 Pro",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_14",
-    "brand": "Realme",
-    "model": "Realme XT",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_15",
-    "brand": "Realme",
-    "model": "Realme 5s",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_16",
-    "brand": "Realme",
-    "model": "Realme X2 Pro",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_17",
-    "brand": "Realme",
-    "model": "Realme X2",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_18",
-    "brand": "Realme",
-    "model": "Realme 5i",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_19",
-    "brand": "Realme",
-    "model": "Realme C3",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_20",
-    "brand": "Realme",
-    "model": "Realme X50 Pro",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_21",
-    "brand": "Realme",
-    "model": "Realme 6",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_22",
-    "brand": "Realme",
-    "model": "Realme 6 Pro",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_23",
-    "brand": "Realme",
-    "model": "Realme Narzo 10",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_24",
-    "brand": "Realme",
-    "model": "Realme Narzo 10A",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_25",
-    "brand": "Realme",
-    "model": "Realme X3",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_26",
-    "brand": "Realme",
-    "model": "Realme X3 SuperZoom",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_27",
-    "brand": "Realme",
-    "model": "Realme C11",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_28",
-    "brand": "Realme",
-    "model": "Realme C12",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_29",
-    "brand": "Realme",
-    "model": "Realme 6i",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_30",
-    "brand": "Realme",
-    "model": "Realme 7 Pro",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_31",
-    "brand": "Realme",
-    "model": "Realme C15",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_32",
-    "brand": "Realme",
-    "model": "Realme 7",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_33",
-    "brand": "Realme",
-    "model": "Realme Narzo 20 Pro",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_34",
-    "brand": "Realme",
-    "model": "Realme Narzo 20",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_35",
-    "brand": "Realme",
-    "model": "Realme Narzo 20A",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_36",
-    "brand": "Realme",
-    "model": "Realme 7i",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_37",
-    "brand": "Realme",
-    "model": "Realme C15 Qualcomm Edition",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_38",
-    "brand": "Realme",
-    "model": "Realme X7",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_39",
-    "brand": "Realme",
-    "model": "Realme X7 Pro",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_40",
-    "brand": "Realme",
-    "model": "Realme Narzo 30A",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_41",
-    "brand": "Realme",
-    "model": "Realme Narzo 30 Pro 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_42",
-    "brand": "Realme",
-    "model": "Realme 8",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_43",
-    "brand": "Realme",
-    "model": "Realme 8 Pro",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_44",
-    "brand": "Realme",
-    "model": "Realme C21",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_45",
-    "brand": "Realme",
-    "model": "Realme C20",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_46",
-    "brand": "Realme",
-    "model": "Realme C25",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_47",
-    "brand": "Realme",
-    "model": "Realme X7 Max 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_48",
-    "brand": "Realme",
-    "model": "Realme C25s",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_49",
-    "brand": "Realme",
-    "model": "Realme Narzo 30",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_50",
-    "brand": "Realme",
-    "model": "Realme Narzo 30 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_51",
-    "brand": "Realme",
-    "model": "Realme 8 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_52",
-    "brand": "Realme",
-    "model": "Realme C11 2021",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_53",
-    "brand": "Realme",
-    "model": "Realme GT 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_54",
-    "brand": "Realme",
-    "model": "Realme GT Master Edition",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_55",
-    "brand": "Realme",
-    "model": "Realme C21Y",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_56",
-    "brand": "Realme",
-    "model": "Realme 8i",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_57",
-    "brand": "Realme",
-    "model": "Realme 8s 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_58",
-    "brand": "Realme",
-    "model": "Realme C25Y",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_59",
-    "brand": "Realme",
-    "model": "Realme Narzo 50A",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_60",
-    "brand": "Realme",
-    "model": "Realme Narzo 50i",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_61",
-    "brand": "Realme",
-    "model": "Realme GT Neo 2",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_62",
-    "brand": "Realme",
-    "model": "Realme 9i",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_63",
-    "brand": "Realme",
-    "model": "Realme 9 Pro 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_64",
-    "brand": "Realme",
-    "model": "Realme 9 Pro Plus 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_65",
-    "brand": "Realme",
-    "model": "Realme Narzo 50",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_66",
-    "brand": "Realme",
-    "model": "Realme C35",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_67",
-    "brand": "Realme",
-    "model": "Realme 9 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_68",
-    "brand": "Realme",
-    "model": "Realme 9 5G Speed Edition",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_69",
-    "brand": "Realme",
-    "model": "Realme C31",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_70",
-    "brand": "Realme",
-    "model": "Realme GT 2",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_71",
-    "brand": "Realme",
-    "model": "Realme GT 2 Pro",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_72",
-    "brand": "Realme",
-    "model": "Realme 9",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_73",
-    "brand": "Realme",
-    "model": "Realme GT Neo 3",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_74",
-    "brand": "Realme",
-    "model": "Realme Narzo 50A Prime",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_75",
-    "brand": "Realme",
-    "model": "Realme C30",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_76",
-    "brand": "Realme",
-    "model": "Realme 9i 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_77",
-    "brand": "Realme",
-    "model": "Realme GT NEO 3 150W",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_78",
-    "brand": "Realme",
-    "model": "Realme GT Neo 3T",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_79",
-    "brand": "Realme",
-    "model": "Realme C33",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_80",
-    "brand": "Realme",
-    "model": "Realme C30s",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_81",
-    "brand": "Realme",
-    "model": "Realme Narzo 50 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_82",
-    "brand": "Realme",
-    "model": "Realme Narzo 50 Pro 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_83",
-    "brand": "Realme",
-    "model": "Realme Narzo 50i Prime",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_84",
-    "brand": "Realme",
-    "model": "Realme 10 Pro 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_85",
-    "brand": "Realme",
-    "model": "Realme 10 Pro Plus 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_86",
-    "brand": "Realme",
-    "model": "Realme 10",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_87",
-    "brand": "Realme",
-    "model": "Realme C55",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_88",
-    "brand": "Realme",
-    "model": "Realme C33 2023",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_89",
-    "brand": "Realme",
-    "model": "Realme Narzo N53",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_90",
-    "brand": "Realme",
-    "model": "Realme 11 Pro 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_91",
-    "brand": "Realme",
-    "model": "Realme 11 Pro Plus 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_92",
-    "brand": "Realme",
-    "model": "Realme Narzo N55",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_93",
-    "brand": "Realme",
-    "model": "Realme C53",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_94",
-    "brand": "Realme",
-    "model": "Realme Narzo 60 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_95",
-    "brand": "Realme",
-    "model": "Realme Narzo 60 Pro 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_96",
-    "brand": "Realme",
-    "model": "Realme 11x 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_97",
-    "brand": "Realme",
-    "model": "Realme 11 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_98",
-    "brand": "Realme",
-    "model": "Realme Narzo 60X 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_99",
-    "brand": "Realme",
-    "model": "Realme C67 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_100",
-    "brand": "Realme",
-    "model": "Realme C51",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_101",
-    "brand": "Realme",
-    "model": "Realme 12 Pro 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_102",
-    "brand": "Realme",
-    "model": "Realme 12 Pro Plus 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_103",
-    "brand": "Realme",
-    "model": "Realme 12 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_104",
-    "brand": "Realme",
-    "model": "Realme 12 Plus 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_105",
-    "brand": "Realme",
-    "model": "Realme 12x 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_106",
-    "brand": "Realme",
-    "model": "Realme P1 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_107",
-    "brand": "Realme",
-    "model": "Realme P1 Pro 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_108",
-    "brand": "Realme",
-    "model": "Realme Narzo 70 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_109",
-    "brand": "Realme",
-    "model": "Realme Narzo 70 Pro 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_110",
-    "brand": "Realme",
-    "model": "Realme Narzo 70X 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_111",
-    "brand": "Realme",
-    "model": "Realme GT 6T 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_112",
-    "brand": "Realme",
-    "model": "Realme Narzo N65 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_113",
-    "brand": "Realme",
-    "model": "Realme GT 6",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_114",
-    "brand": "Realme",
-    "model": "Realme C65 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_115",
-    "brand": "Realme",
-    "model": "Realme C61",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_116",
-    "brand": "Realme",
-    "model": "Realme Narzo N61",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_117",
-    "brand": "Realme",
-    "model": "Realme C63",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_118",
-    "brand": "Realme",
-    "model": "Realme C63 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_119",
-    "brand": "Realme",
-    "model": "Realme P2 Pro 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_120",
-    "brand": "Realme",
-    "model": "Realme 13 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_121",
-    "brand": "Realme",
-    "model": "Realme 13 Plus 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_122",
-    "brand": "Realme",
-    "model": "Realme 13 Pro 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_123",
-    "brand": "Realme",
-    "model": "Realme 13 Pro Plus 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_124",
-    "brand": "Realme",
-    "model": "Realme Narzo 70 Turbo 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_125",
-    "brand": "Realme",
-    "model": "Realme P1 Speed 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_126",
-    "brand": "Realme",
-    "model": "Realme 14x 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_127",
-    "brand": "Realme",
-    "model": "Realme 14 Pro 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_128",
-    "brand": "Realme",
-    "model": "Realme 14 Pro Plus 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_129",
-    "brand": "Realme",
-    "model": "Realme Narzo N63",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_130",
-    "brand": "Realme",
-    "model": "Realme P3x 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_131",
-    "brand": "Realme",
-    "model": "Realme P3 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_132",
-    "brand": "Realme",
-    "model": "Realme P3 Pro 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_133",
-    "brand": "Realme",
-    "model": "Realme P3 Ultra 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_134",
-    "brand": "Realme",
-    "model": "Realme 14 Pro Lite 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_135",
-    "brand": "Realme",
-    "model": "Realme C75 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_136",
-    "brand": "Realme",
-    "model": "Realme Narzo 80x 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_137",
-    "brand": "Realme",
-    "model": "Realme C73 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_138",
-    "brand": "Realme",
-    "model": "Realme 14T 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_139",
-    "brand": "Realme",
-    "model": "Realme GT 7",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_140",
-    "brand": "Realme",
-    "model": "Realme GT 7 Pro 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_141",
-    "brand": "Realme",
-    "model": "Realme GT 7T",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_142",
-    "brand": "Realme",
-    "model": "Realme Narzo 80 Pro 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_143",
-    "brand": "Realme",
-    "model": "Realme Narzo 80 Lite 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_144",
-    "brand": "Realme",
-    "model": "Realme C71",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_145",
-    "brand": "Realme",
-    "model": "Realme 15 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_146",
-    "brand": "Realme",
-    "model": "Realme 15 Pro 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_147",
-    "brand": "Realme",
-    "model": "Realme 15T 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_148",
-    "brand": "Realme",
-    "model": "Realme Narzo 80 Lite 4G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_149",
-    "brand": "Realme",
-    "model": "Realme P3 Lite 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_150",
-    "brand": "Realme",
-    "model": "Realme P4 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_151",
-    "brand": "Realme",
-    "model": "Realme P4 Pro 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_152",
-    "brand": "Realme",
-    "model": "Realme 15x 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_153",
-    "brand": "Realme",
-    "model": "Realme C85 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_154",
-    "brand": "Realme",
-    "model": "Realme GT 8 Pro",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_155",
-    "brand": "Realme",
-    "model": "Realme 16 Pro 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_156",
-    "brand": "Realme",
-    "model": "Realme Narzo 90x 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_157",
-    "brand": "Realme",
-    "model": "Realme P4x 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_158",
-    "brand": "Realme",
-    "model": "Realme P4 Power 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_159",
-    "brand": "Realme",
-    "model": "Realme 16 Pro Plus 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_160",
-    "brand": "Realme",
-    "model": "Realme C83 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_161",
-    "brand": "Realme",
-    "model": "Realme Narzo 90 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_162",
-    "brand": "Realme",
-    "model": "Realme Narzo Power 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_163",
-    "brand": "Realme",
-    "model": "Realme P4 Lite",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_164",
-    "brand": "Realme",
-    "model": "Realme 16 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_165",
-    "brand": "Realme",
-    "model": "Realme P4 Lite 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "realme_batch_166",
-    "brand": "Realme",
-    "model": "Realme Narzo 100 Lite 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_1",
-    "brand": "Motorola",
-    "model": "Motorola One Power",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_2",
-    "brand": "Motorola",
-    "model": "Motorola Moto E5 Plus",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_3",
-    "brand": "Motorola",
-    "model": "Motorola Moto G6 Plus",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_4",
-    "brand": "Motorola",
-    "model": "Motorola Moto E5",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_5",
-    "brand": "Motorola",
-    "model": "Motorola Moto Z2 Force",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_6",
-    "brand": "Motorola",
-    "model": "Motorola Moto G6",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_7",
-    "brand": "Motorola",
-    "model": "Motorola Moto G6 Play",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_8",
-    "brand": "Motorola",
-    "model": "Motorola Moto G7 Power",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_9",
-    "brand": "Motorola",
-    "model": "Motorola Moto G7",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_10",
-    "brand": "Motorola",
-    "model": "Motorola Moto One",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_11",
-    "brand": "Motorola",
-    "model": "Motorola One Vision",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_12",
-    "brand": "Motorola",
-    "model": "Motorola One Action",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_13",
-    "brand": "Motorola",
-    "model": "Motorola Moto E6s",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_14",
-    "brand": "Motorola",
-    "model": "Motorola One Macro",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_15",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge Plus",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_16",
-    "brand": "Motorola",
-    "model": "Motorola Moto G8 Power Lite",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_17",
-    "brand": "Motorola",
-    "model": "Motorola Moto Razr",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_18",
-    "brand": "Motorola",
-    "model": "Motorola One Fusion Plus",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_19",
-    "brand": "Motorola",
-    "model": "Motorola Moto G9",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_20",
-    "brand": "Motorola",
-    "model": "Motorola Moto E7 Plus",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_21",
-    "brand": "Motorola",
-    "model": "Motorola Moto Razr 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_22",
-    "brand": "Motorola",
-    "model": "Motorola Moto G9 Power",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_23",
-    "brand": "Motorola",
-    "model": "Motorola Moto G 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_24",
-    "brand": "Motorola",
-    "model": "Motorola Moto G30",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_25",
-    "brand": "Motorola",
-    "model": "Motorola Moto G10 Power",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_26",
-    "brand": "Motorola",
-    "model": "Motorola Moto E7 Power",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_27",
-    "brand": "Motorola",
-    "model": "Motorola Moto G60",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_28",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 20 Pro",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_29",
-    "brand": "Motorola",
-    "model": "Motorola Moto G40 Fusion",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_30",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 20 Fusion",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_31",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 20",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_32",
-    "brand": "Motorola",
-    "model": "Motorola Moto G31",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_33",
-    "brand": "Motorola",
-    "model": "Motorola Moto G51 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_34",
-    "brand": "Motorola",
-    "model": "Motorola Moto E40",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_35",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 30 Pro",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_36",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 30",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_37",
-    "brand": "Motorola",
-    "model": "Motorola Moto G52",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_38",
-    "brand": "Motorola",
-    "model": "Motorola Moto G71 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_39",
-    "brand": "Motorola",
-    "model": "Motorola Moto G82 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_40",
-    "brand": "Motorola",
-    "model": "Motorola Moto G22",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_41",
-    "brand": "Motorola",
-    "model": "Motorola Moto G42",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_42",
-    "brand": "Motorola",
-    "model": "Motorola Moto G32",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_43",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 30 Fusion",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_44",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 30 Ultra",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_45",
-    "brand": "Motorola",
-    "model": "Motorola Moto G72",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_46",
-    "brand": "Motorola",
-    "model": "Motorola Moto G62 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_47",
-    "brand": "Motorola",
-    "model": "Motorola Moto E32s",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_48",
-    "brand": "Motorola",
-    "model": "Motorola Moto E13",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_49",
-    "brand": "Motorola",
-    "model": "Motorola Moto G8 Plus",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_50",
-    "brand": "Motorola",
-    "model": "Motorola Moto e32",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_51",
-    "brand": "Motorola",
-    "model": "Motorola Moto G73 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_52",
-    "brand": "Motorola",
-    "model": "Motorola Moto e22s",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_53",
-    "brand": "Motorola",
-    "model": "Motorola Moto G13",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_54",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 40",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_55",
-    "brand": "Motorola",
-    "model": "Motorola Moto Razr 40 Ultra",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_56",
-    "brand": "Motorola",
-    "model": "Motorola Moto G14",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_57",
-    "brand": "Motorola",
-    "model": "Motorola Moto G54 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_58",
-    "brand": "Motorola",
-    "model": "Motorola Moto G84 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_59",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 40 Neo",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_60",
-    "brand": "Motorola",
-    "model": "Motorola Moto G34 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_61",
-    "brand": "Motorola",
-    "model": "Motorola Moto G64 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_62",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 50 Pro",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_63",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 50 Fusion",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_64",
-    "brand": "Motorola",
-    "model": "Motorola Moto G04",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_65",
-    "brand": "Motorola",
-    "model": "Motorola Moto G24 Power",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_66",
-    "brand": "Motorola",
-    "model": "Motorola Moto G85 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_67",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 50 Ultra",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_68",
-    "brand": "Motorola",
-    "model": "Motorola Moto Razr 50 Ultra",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_69",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 50",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_70",
-    "brand": "Motorola",
-    "model": "Motorola Moto G04s",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_71",
-    "brand": "Motorola",
-    "model": "Motorola Moto G45 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_72",
-    "brand": "Motorola",
-    "model": "Motorola Moto Razr 50",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_73",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 50 Neo",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_74",
-    "brand": "Motorola",
-    "model": "Motorola Moto G35 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_75",
-    "brand": "Motorola",
-    "model": "Motorola Moto G05",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_76",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 60 Pro",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_77",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 60 Fusion",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_78",
-    "brand": "Motorola",
-    "model": "Motorola Moto Razr 60",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_79",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 60 Stylus",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_80",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 60",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_81",
-    "brand": "Motorola",
-    "model": "Motorola Moto G96 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_82",
-    "brand": "Motorola",
-    "model": "Motorola Moto G86 Power 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_83",
-    "brand": "Motorola",
-    "model": "Motorola Moto Razr 60 Ultra",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_84",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 70",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_85",
-    "brand": "Motorola",
-    "model": "Motorola Moto G57 Power 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_86",
-    "brand": "Motorola",
-    "model": "Motorola Moto G06 Power",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_87",
-    "brand": "Motorola",
-    "model": "Motorola Moto Signature",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_88",
-    "brand": "Motorola",
-    "model": "Motorola Moto G67 Power 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "motorola_batch_89",
-    "brand": "Motorola",
-    "model": "Motorola Moto Edge 70 Fusion",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
     "id": "lenovo_batch_1",
     "brand": "Lenovo",
     "model": "Lenovo K9 Note",
@@ -22029,177 +18116,6 @@ export const SEED_DEVICES = [
     "storage": "4 GB/64 GB",
     "ram": "4GB",
     "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_1",
-    "brand": "Google",
-    "model": "Google Pixel 3",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_2",
-    "brand": "Google",
-    "model": "Google Pixel 4A",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_3",
-    "brand": "Google",
-    "model": "Google Pixel 6a",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_4",
-    "brand": "Google",
-    "model": "Google Pixel 7",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_5",
-    "brand": "Google",
-    "model": "Google Pixel 7 Pro",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_6",
-    "brand": "Google",
-    "model": "Google Pixel 7a",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_7",
-    "brand": "Google",
-    "model": "Google Pixel 8",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_8",
-    "brand": "Google",
-    "model": "Google Pixel 8 Pro",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_9",
-    "brand": "Google",
-    "model": "Google Pixel 8A",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_10",
-    "brand": "Google",
-    "model": "Google Pixel 9",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_11",
-    "brand": "Google",
-    "model": "Google Pixel 9 Pro XL",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_12",
-    "brand": "Google",
-    "model": "Google Pixel 9 Pro Fold",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_13",
-    "brand": "Google",
-    "model": "Google Pixel 9 Pro",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_14",
-    "brand": "Google",
-    "model": "Google Pixel 9a",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_15",
-    "brand": "Google",
-    "model": "Google Pixel 10",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_16",
-    "brand": "Google",
-    "model": "Google Pixel 10 Pro",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_17",
-    "brand": "Google",
-    "model": "Google Pixel 10 Pro XL",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_18",
-    "brand": "Google",
-    "model": "Google Pixel 10 Pro Fold",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
-    "basePrice": 5000
-  },
-  {
-    "id": "google_batch_19",
-    "brand": "Google",
-    "model": "Google Pixel 10a",
-    "storage": "128 GB",
-    "ram": "8GB",
-    "color": "Obsidian",
     "basePrice": 5000
   },
   {
@@ -24949,5 +20865,3525 @@ export const SEED_DEVICES = [
     "storage": "3 GB/16 GB",
     "color": "Midnight",
     "basePrice": 1260
+  },
+  {
+    "id": "google_batch_1",
+    "brand": "Google",
+    "model": "Google Pixel 4A",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Obsidian",
+    "basePrice": 4320,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-4a-6-gb-128-gb"
+  },
+  {
+    "id": "google_batch_2",
+    "brand": "Google",
+    "model": "Google Pixel 6a",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Obsidian",
+    "basePrice": 10080,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-6a-6-gb-128-gb"
+  },
+  {
+    "id": "google_batch_3",
+    "brand": "Google",
+    "model": "Google Pixel 7",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Obsidian",
+    "basePrice": 14360,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-7-8-gb-128-gb"
+  },
+  {
+    "id": "google_batch_4",
+    "brand": "Google",
+    "model": "Google Pixel 7",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Obsidian",
+    "basePrice": 14520,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-7-8-gb-256-gb"
+  },
+  {
+    "id": "google_batch_5",
+    "brand": "Google",
+    "model": "Google Pixel 7 Pro",
+    "storage": "12 GB/128 GB",
+    "ram": "12 GB",
+    "color": "Obsidian",
+    "basePrice": 18800,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-7-pro-12-gb-128-gb"
+  },
+  {
+    "id": "google_batch_6",
+    "brand": "Google",
+    "model": "Google Pixel 7 Pro",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Obsidian",
+    "basePrice": 19200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-7-pro-12-gb-256-gb"
+  },
+  {
+    "id": "google_batch_7",
+    "brand": "Google",
+    "model": "Google Pixel 7a",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Obsidian",
+    "basePrice": 17310,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-7a-8-gb-128-gb"
+  },
+  {
+    "id": "google_batch_8",
+    "brand": "Google",
+    "model": "Google Pixel 8",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Obsidian",
+    "basePrice": 24730,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-8-8-gb-128-gb"
+  },
+  {
+    "id": "google_batch_9",
+    "brand": "Google",
+    "model": "Google Pixel 8",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Obsidian",
+    "basePrice": 25010,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-8-8-gb-256-gb"
+  },
+  {
+    "id": "google_batch_10",
+    "brand": "Google",
+    "model": "Google Pixel 8 Pro",
+    "storage": "12 GB/128 GB",
+    "ram": "12 GB",
+    "color": "Obsidian",
+    "basePrice": 31490,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-8-pro-12-gb-128-gb"
+  },
+  {
+    "id": "google_batch_11",
+    "brand": "Google",
+    "model": "Google Pixel 8 Pro",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Obsidian",
+    "basePrice": 33220,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-8-pro-12-gb-256-gb"
+  },
+  {
+    "id": "google_batch_12",
+    "brand": "Google",
+    "model": "Google Pixel 8 Pro",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Obsidian",
+    "basePrice": 33410,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-8-pro-12-gb-512-gb"
+  },
+  {
+    "id": "google_batch_13",
+    "brand": "Google",
+    "model": "Google Pixel 8a",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Obsidian",
+    "basePrice": 23620,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-8a-8-gb-256-gb"
+  },
+  {
+    "id": "google_batch_14",
+    "brand": "Google",
+    "model": "Google Pixel 8a",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Obsidian",
+    "basePrice": 23280,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-8a-8-gb-128-gb"
+  },
+  {
+    "id": "google_batch_15",
+    "brand": "Google",
+    "model": "Google Pixel 9",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Obsidian",
+    "basePrice": 37410,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-9-12-gb-256-gb"
+  },
+  {
+    "id": "google_batch_16",
+    "brand": "Google",
+    "model": "Google Pixel 9 Pro XL",
+    "storage": "16 GB/256 GB",
+    "ram": "16 GB",
+    "color": "Obsidian",
+    "basePrice": 54620,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-9-pro-xl-16-gb-256-gb"
+  },
+  {
+    "id": "google_batch_17",
+    "brand": "Google",
+    "model": "Google Pixel 9 Pro XL",
+    "storage": "16 GB/512 GB",
+    "ram": "16 GB",
+    "color": "Obsidian",
+    "basePrice": 57120,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-9-pro-xl-16-gb-512-gb"
+  },
+  {
+    "id": "google_batch_18",
+    "brand": "Google",
+    "model": "Google Pixel 9 Pro Fold",
+    "storage": "16 GB/256 GB",
+    "ram": "16 GB",
+    "color": "Obsidian",
+    "basePrice": 69120,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-9-pro-fold-16-gb-256-gb"
+  },
+  {
+    "id": "google_batch_19",
+    "brand": "Google",
+    "model": "Google Pixel 9 Pro",
+    "storage": "16 GB/256 GB",
+    "ram": "16 GB",
+    "color": "Obsidian",
+    "basePrice": 50110,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-9-pro-16-gb-256-gb"
+  },
+  {
+    "id": "google_batch_20",
+    "brand": "Google",
+    "model": "Google Pixel 9a",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Obsidian",
+    "basePrice": 28200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-9a-8-gb-256-gb"
+  },
+  {
+    "id": "google_batch_21",
+    "brand": "Google",
+    "model": "Google Pixel 10",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Obsidian",
+    "basePrice": 46070,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-10-12-gb-256-gb"
+  },
+  {
+    "id": "google_batch_22",
+    "brand": "Google",
+    "model": "Google Pixel 10 Pro",
+    "storage": "16 GB/256 GB",
+    "ram": "16 GB",
+    "color": "Obsidian",
+    "basePrice": 64900,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-10-pro-16-gb-256-gb"
+  },
+  {
+    "id": "google_batch_23",
+    "brand": "Google",
+    "model": "Google Pixel 10 Pro XL",
+    "storage": "16 GB/256 GB",
+    "ram": "16 GB",
+    "color": "Obsidian",
+    "basePrice": 73000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-10-pro-xl-16-gb-256-gb"
+  },
+  {
+    "id": "google_batch_24",
+    "brand": "Google",
+    "model": "Google Pixel 10 Pro Fold",
+    "storage": "16 GB/256 GB",
+    "ram": "16 GB",
+    "color": "Obsidian",
+    "basePrice": 98000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-10-pro-fold-16-gb-256-gb"
+  },
+  {
+    "id": "google_batch_25",
+    "brand": "Google",
+    "model": "Google Pixel 10a",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Obsidian",
+    "basePrice": 32810,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-10a-8-gb-256-gb"
+  },
+  {
+    "id": "37d06139-0eef-4ba4-8e3c-a6eb5ea3cef4",
+    "brand": "Realme",
+    "model": "Realme 2 Pro",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 2780,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-2-pro-6-gb-64-gb"
+  },
+  {
+    "id": "66e1ada8-1137-42fc-8cac-0c3864766250",
+    "brand": "Realme",
+    "model": "Realme 2 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 3010,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-2-pro-8-gb-128-gb"
+  },
+  {
+    "id": "badbade0-208d-4e33-869d-a7f2a86a440c",
+    "brand": "Realme",
+    "model": "Realme 2 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 2540,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-2-pro-4-gb-64-gb"
+  },
+  {
+    "id": "4c014fcb-a798-4033-8da8-be427ae8dc88",
+    "brand": "Realme",
+    "model": "Realme C1 2019",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Black",
+    "basePrice": 2010,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c1-2019-3-gb-32-gb"
+  },
+  {
+    "id": "7a8f4739-6cae-4a8a-8bb8-bc91524d744c",
+    "brand": "Realme",
+    "model": "Realme C1 2019",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Black",
+    "basePrice": 1820,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c1-2019-2-gb-32-gb"
+  },
+  {
+    "id": "593e8104-e84d-4290-8ee2-c5bc16b840db",
+    "brand": "Realme",
+    "model": "Realme 2",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 2740,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-2-4-gb-64-gb"
+  },
+  {
+    "id": "2d5c15e5-731d-4d8c-a566-d88aef964525",
+    "brand": "Realme",
+    "model": "Realme 2",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Black",
+    "basePrice": 2160,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-2-3-gb-32-gb"
+  },
+  {
+    "id": "0fdcfb7e-9491-45db-b95e-350384712812",
+    "brand": "Realme",
+    "model": "Realme 1",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Black",
+    "basePrice": 2080,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-1-3-gb-32-gb"
+  },
+  {
+    "id": "8671991d-c3a9-4289-8533-b6f7c0f3b6a7",
+    "brand": "Realme",
+    "model": "Realme 1",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 3090,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-1-6-gb-128-gb"
+  },
+  {
+    "id": "4d6bede3-4437-4e4c-8cf1-11668f542b4d",
+    "brand": "Realme",
+    "model": "Realme 1",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 2320,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-1-4-gb-64-gb"
+  },
+  {
+    "id": "97a26cb8-2cbc-40c3-8f1a-127c441c86b2",
+    "brand": "Realme",
+    "model": "Realme U1",
+    "storage": "3 GB/64 GB",
+    "ram": "3 GB",
+    "color": "Black",
+    "basePrice": 2430,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-u1-3-gb-64-gb"
+  },
+  {
+    "id": "cf188bc4-f127-4eb2-9887-189eb6f4c18d",
+    "brand": "Realme",
+    "model": "Realme U1",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 2700,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-u1-4-gb-64-gb"
+  },
+  {
+    "id": "52d46211-3810-496f-bdde-3d92469bb18f",
+    "brand": "Realme",
+    "model": "Realme U1",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Black",
+    "basePrice": 2320,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-u1-3-gb-32-gb"
+  },
+  {
+    "id": "698bb693-7f3f-4195-9a7c-579eec318237",
+    "brand": "Realme",
+    "model": "Realme 3",
+    "storage": "3 GB/64 GB",
+    "ram": "3 GB",
+    "color": "Black",
+    "basePrice": 2700,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-3-3-gb-64-gb"
+  },
+  {
+    "id": "1be5e4fd-bc1f-4240-bd60-f50e84995a36",
+    "brand": "Realme",
+    "model": "Realme 3",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 2930,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-3-4-gb-64-gb"
+  },
+  {
+    "id": "aae860e8-9005-405e-994e-3b67bdb61dd2",
+    "brand": "Realme",
+    "model": "Realme 3",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Black",
+    "basePrice": 2390,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-3-3-gb-32-gb"
+  },
+  {
+    "id": "cc710f68-fe21-4f91-9297-77d6ad23dfec",
+    "brand": "Realme",
+    "model": "Realme 3 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 3430,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-3-pro-4-gb-64-gb"
+  },
+  {
+    "id": "fdcbb5be-f0b7-43de-b7b0-27572c6cb099",
+    "brand": "Realme",
+    "model": "Realme 3 Pro",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 3900,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-3-pro-6-gb-128-gb"
+  },
+  {
+    "id": "03c5dab7-b2ff-4087-acb7-5e691764da9a",
+    "brand": "Realme",
+    "model": "Realme 3 Pro",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 3620,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-3-pro-6-gb-64-gb"
+  },
+  {
+    "id": "8e5f3c2f-3266-4de4-bf85-e49df837ddee",
+    "brand": "Realme",
+    "model": "Realme C2",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Black",
+    "basePrice": 2390,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c2-3-gb-32-gb"
+  },
+  {
+    "id": "9670ba46-a173-4407-82de-dfa718a3d104",
+    "brand": "Realme",
+    "model": "Realme C2",
+    "storage": "2 GB/16 GB",
+    "ram": "2 GB",
+    "color": "Black",
+    "basePrice": 2010,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c2-2-gb-16-gb"
+  },
+  {
+    "id": "f0655fc1-34c0-4f34-8825-76beae564e1a",
+    "brand": "Realme",
+    "model": "Realme C2",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Black",
+    "basePrice": 2250,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c2-2-gb-32-gb"
+  },
+  {
+    "id": "4b14f8c2-992f-409d-94b3-ab0b4ae9d25b",
+    "brand": "Realme",
+    "model": "Realme 3i",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Black",
+    "basePrice": 2440,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-3i-3-gb-32-gb"
+  },
+  {
+    "id": "9549d057-1e24-483c-a016-294f37a989d6",
+    "brand": "Realme",
+    "model": "Realme 3i",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 2860,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-3i-4-gb-64-gb"
+  },
+  {
+    "id": "28c9b3e8-3af3-476e-b14a-bfb56fda4167",
+    "brand": "Realme",
+    "model": "Realme 5",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 3590,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-5-4-gb-128-gb"
+  },
+  {
+    "id": "0bf961c4-a9b2-40ff-b9cc-1c926874e2cb",
+    "brand": "Realme",
+    "model": "Realme 5",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 3260,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-5-4-gb-64-gb"
+  },
+  {
+    "id": "24098ec7-cb8f-4776-9e93-24be54326e7f",
+    "brand": "Realme",
+    "model": "Realme 5",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Black",
+    "basePrice": 2880,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-5-3-gb-32-gb"
+  },
+  {
+    "id": "03a9700e-c3b6-44be-9c62-8dc8e0b7d189",
+    "brand": "Realme",
+    "model": "Realme 5 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 4140,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-5-pro-8-gb-128-gb"
+  },
+  {
+    "id": "8caa96a3-d5c8-49c2-b007-e8da7a922656",
+    "brand": "Realme",
+    "model": "Realme Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 3820,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-5-pro-4-gb-64-gb"
+  },
+  {
+    "id": "885d3b2f-efe8-4c74-a83e-5c2102908606",
+    "brand": "Realme",
+    "model": "Realme 5 Pro",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 3980,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-5-pro-6-gb-64-gb"
+  },
+  {
+    "id": "be3c578e-1106-4de7-af1e-ac403c9bb159",
+    "brand": "Realme",
+    "model": "Realme XT",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 4660,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-xt-6-gb-64-gb"
+  },
+  {
+    "id": "a469e784-3448-4d6b-979a-d3c89d5d785a",
+    "brand": "Realme",
+    "model": "Realme XT",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 4430,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-xt-4-gb-64-gb"
+  },
+  {
+    "id": "56ebe540-2b51-4109-a5c4-4931be3386ab",
+    "brand": "Realme",
+    "model": "Realme XT",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 5040,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-xt-8-gb-128-gb"
+  },
+  {
+    "id": "c9d0c08a-237d-4236-b051-7ee55f30b43e",
+    "brand": "Realme",
+    "model": "Realme 5s",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 3600,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-5s-4-gb-128-gb"
+  },
+  {
+    "id": "8ef3a823-03de-42db-8cfd-a2beaa082c5a",
+    "brand": "Realme",
+    "model": "Realme 5s",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 3200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-5s-4-gb-64-gb"
+  },
+  {
+    "id": "267ad6e0-5987-46bb-a914-87a9532910af",
+    "brand": "Realme",
+    "model": "Realme X2 Pro",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 4660,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-x2-pro-6-gb-64-gb"
+  },
+  {
+    "id": "a87c7775-ddca-43b9-b8fa-458e49239d59",
+    "brand": "Realme",
+    "model": "Realme X2 Pro",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Black",
+    "basePrice": 5560,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-x2-pro-12-gb-256-gb"
+  },
+  {
+    "id": "59baf431-2b0f-4b6b-9dc6-ca21165eae54",
+    "brand": "Realme",
+    "model": "Realme X2 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 5250,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-x2-pro-8-gb-128-gb"
+  },
+  {
+    "id": "a559808b-02a2-49e2-91b0-37684000d78b",
+    "brand": "Realme",
+    "model": "Realme X2",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 5330,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-x2-8-gb-256-gb"
+  },
+  {
+    "id": "8c76f1c2-43c8-419c-b15c-750092c57f62",
+    "brand": "Realme",
+    "model": "Realme X2",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 4670,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-x2-6-gb-128-gb"
+  },
+  {
+    "id": "1289d2e9-aeef-4674-b91e-17a617a1b481",
+    "brand": "Realme",
+    "model": "Realme X2",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 5100,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-x2-8-gb-128-gb"
+  },
+  {
+    "id": "92488342-e0ce-4766-809c-abc4f0eb89a7",
+    "brand": "Realme",
+    "model": "Realme X2",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 4210,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-x2-4-gb-64-gb"
+  },
+  {
+    "id": "74101872-aa66-4e12-84b6-d26366378bb1",
+    "brand": "Realme",
+    "model": "Realme 5i",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 3860,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-5i-4-gb-64-gb"
+  },
+  {
+    "id": "6aa5867a-5dea-4fb3-a833-c315d264ffc3",
+    "brand": "Realme",
+    "model": "Realme 5i",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 4090,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-5i-4-gb-128-gb"
+  },
+  {
+    "id": "ac679147-b503-4db8-91c1-709a32448310",
+    "brand": "Realme",
+    "model": "Realme C3",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 3520,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c3-4-gb-64-gb"
+  },
+  {
+    "id": "c9d2510f-be57-4cea-850f-8f8df6653690",
+    "brand": "Realme",
+    "model": "Realme C3",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Black",
+    "basePrice": 3140,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c3-3-gb-32-gb"
+  },
+  {
+    "id": "416ff142-4839-4f03-8deb-767853db78ae",
+    "brand": "Realme",
+    "model": "Realme X50 Pro",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 6640,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-x50-pro-6-gb-128-gb"
+  },
+  {
+    "id": "4c460ea4-902e-496b-889e-967c0532d067",
+    "brand": "Realme",
+    "model": "Realme X50 Pro",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Black",
+    "basePrice": 7410,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-x50-pro-12-gb-256-gb"
+  },
+  {
+    "id": "32fffea8-fb1d-4caa-8378-d0c457b73d06",
+    "brand": "Realme",
+    "model": "Realme X50 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 6880,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-x50-pro-8-gb-128-gb"
+  },
+  {
+    "id": "b01a2702-81fc-4b38-a096-6a8e5df60511",
+    "brand": "Realme",
+    "model": "Realme 6",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 4920,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-6-6-gb-128-gb"
+  },
+  {
+    "id": "2ac57781-7013-42df-9c69-834f5737fde3",
+    "brand": "Realme",
+    "model": "Realme 6",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 4320,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-6-4-gb-64-gb"
+  },
+  {
+    "id": "1536f530-a6bd-46fe-b3fe-1025684ee2e7",
+    "brand": "Realme",
+    "model": "Realme 6",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 4760,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-6-gb-64-gb"
+  },
+  {
+    "id": "a88826aa-3796-425a-8634-3a2330fbefbb",
+    "brand": "Realme",
+    "model": "Realme 6",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 5100,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-6-8-gb-128-gb"
+  },
+  {
+    "id": "0957a77f-5c5c-4e09-aeea-782c74667a61",
+    "brand": "Realme",
+    "model": "Realme 6 Pro",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 5020,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-6-pro-6-gb-128-gb"
+  },
+  {
+    "id": "9ae947d4-c4e5-44e2-b60a-c88d72a4a87f",
+    "brand": "Realme",
+    "model": "Realme 6 Pro",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 4600,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-6-pro-6-gb-64-gb"
+  },
+  {
+    "id": "fb31393d-0fd1-487b-8271-8c85c53289e0",
+    "brand": "Realme",
+    "model": "Realme 6 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 5210,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-6-pro-8-gb-128-gb"
+  },
+  {
+    "id": "f59e2642-dd7d-49ac-b14f-c6df485afbf1",
+    "brand": "Realme",
+    "model": "Realme Narzo 10A",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 3590,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-10a-4-gb-64-gb"
+  },
+  {
+    "id": "b7703728-96d9-44c6-8026-b84856e4fced",
+    "brand": "Realme",
+    "model": "Realme Narzo 10A",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Black",
+    "basePrice": 3320,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-10a-3-gb-32-gb"
+  },
+  {
+    "id": "b5e76ac7-e96a-44e2-adac-74d52c464d6d",
+    "brand": "Realme",
+    "model": "Realme X3",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 5910,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-x3-8-gb-128-gb"
+  },
+  {
+    "id": "e1d62963-0bcc-4d6c-ad78-5f71f8650aed",
+    "brand": "Realme",
+    "model": "Realme X3",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 5480,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-x3-6-gb-128-gb"
+  },
+  {
+    "id": "06f55f2d-3342-4df6-98da-c36f2ab7e3ce",
+    "brand": "Realme",
+    "model": "Realme X3 SuperZoom",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 5760,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-x3-superzoom-8-gb-256-gb"
+  },
+  {
+    "id": "6641974c-21ba-463c-9e5d-ba76dc9500c6",
+    "brand": "Realme",
+    "model": "Realme X3 SuperZoom",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 5190,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-x3-superzoom-8-gb-128-gb"
+  },
+  {
+    "id": "fdfd6118-3b53-4524-b987-b00848c47913",
+    "brand": "Realme",
+    "model": "Realme X3 SuperZoom",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Black",
+    "basePrice": 5910,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-x3-superzoom-12-gb-256-gb"
+  },
+  {
+    "id": "17b117dd-bcb8-4ccf-b231-af0c5c6ab7c2",
+    "brand": "Realme",
+    "model": "Realme C12",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Black",
+    "basePrice": 3150,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c12-3-gb-32-gb"
+  },
+  {
+    "id": "4a533df6-2c7d-498a-95c6-5f7b2a868ecc",
+    "brand": "Realme",
+    "model": "Realme C12",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 3590,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c12-4-gb-64-gb"
+  },
+  {
+    "id": "33d06b0d-56d3-4168-82c7-eaf218d7e4b0",
+    "brand": "Realme",
+    "model": "Realme 6i",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 4090,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-6i-4-gb-64-gb"
+  },
+  {
+    "id": "c172a6e7-bb57-45ec-a2cd-400f6af5d842",
+    "brand": "Realme",
+    "model": "Realme 6i",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 4560,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-6i-6-gb-64-gb"
+  },
+  {
+    "id": "25caca1b-1ad3-48b5-beb5-c47adb891573",
+    "brand": "Realme",
+    "model": "Realme 7 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 5760,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-7-pro-8-gb-128-gb"
+  },
+  {
+    "id": "229b61ab-8c1b-49c5-a3da-38d95e4a8834",
+    "brand": "Realme",
+    "model": "Realme 7 Pro",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 5540,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-7-pro-6-gb-128-gb"
+  },
+  {
+    "id": "17535050-a78d-48cb-b319-7e90d38d7a8b",
+    "brand": "Realme",
+    "model": "Realme C15",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 3790,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c15-4-gb-64-gb"
+  },
+  {
+    "id": "719e1cce-3b71-4ae1-b79b-58f37385baf7",
+    "brand": "Realme",
+    "model": "Realme C15",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Black",
+    "basePrice": 3200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c15-3-gb-32-gb"
+  },
+  {
+    "id": "0ac7b0a6-9d7a-4622-a90c-cd16366dd40d",
+    "brand": "Realme",
+    "model": "Realme C15",
+    "storage": "3 GB/64 GB",
+    "ram": "3 GB",
+    "color": "Black",
+    "basePrice": 3480,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c15-3-gb-64-gb"
+  },
+  {
+    "id": "13b5c744-02cf-4eae-9f7c-7132b061c8d8",
+    "brand": "Realme",
+    "model": "Realme 7",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 5350,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-7-8-gb-128-gb"
+  },
+  {
+    "id": "7042b738-0744-40ee-ad8f-b76f1de2902c",
+    "brand": "Realme",
+    "model": "Realme 7",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 4750,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-7-6-gb-64-gb"
+  },
+  {
+    "id": "3cdf6660-fa0e-48ca-821d-80b43e821019",
+    "brand": "Realme",
+    "model": "Realme Narzo 20 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 4750,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-20-pro-8-gb-128-gb"
+  },
+  {
+    "id": "3733942e-67f5-4d10-9489-01aa811e07be",
+    "brand": "Realme",
+    "model": "Realme Narzo 20 Pro",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 4280,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-20-pro-6-gb-64-gb"
+  },
+  {
+    "id": "69120b05-f0a2-4852-8cb6-49503d44db93",
+    "brand": "Realme",
+    "model": "Realme Narzo 20",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 4170,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-20-4-gb-64-gb"
+  },
+  {
+    "id": "07859f03-b973-497d-99c3-a0cbaceb221e",
+    "brand": "Realme",
+    "model": "Realme Narzo 20",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 4550,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-20-4-gb-128-gb"
+  },
+  {
+    "id": "fb4dc422-0294-4b3b-96dd-1f4e52e54dea",
+    "brand": "Realme",
+    "model": "Realme Narzo 20A",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 3900,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-20a-4-gb-64-gb"
+  },
+  {
+    "id": "355fd6da-2b4e-4158-8b11-2b17fa85e4f4",
+    "brand": "Realme",
+    "model": "Realme Narzo 20A",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Black",
+    "basePrice": 3400,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-20a-3-gb-32-gb"
+  },
+  {
+    "id": "629cee10-5f75-4ea8-b22f-656b49cb32d3",
+    "brand": "Realme",
+    "model": "Realme 7i",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 3960,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-7i-4-gb-64-gb"
+  },
+  {
+    "id": "32d8eda1-cbba-439c-b29d-cc24469b043a",
+    "brand": "Realme",
+    "model": "Realme 7i",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 4520,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-7i-4-gb-128-gb"
+  },
+  {
+    "id": "304da310-29ac-4197-b1aa-7a4c6641168f",
+    "brand": "Realme",
+    "model": "Realme C15 Qualcomm Edition",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 3400,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c15-qualcomm-edition-4-gb-64-gb"
+  },
+  {
+    "id": "08fa45cf-b8a6-43f9-aa57-ea9724ecfd74",
+    "brand": "Realme",
+    "model": "Realme C15 Qualcomm Edition",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Black",
+    "basePrice": 3130,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c15-qualcomm-edition-3-gb-32-gb"
+  },
+  {
+    "id": "f6f83f4b-8ff7-4b1c-ae6e-2f707ee06b38",
+    "brand": "Realme",
+    "model": "Realme X7",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 7190,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-x7-6-gb-128-gb"
+  },
+  {
+    "id": "2326aae5-a7e3-4a3c-92b6-79bfc6b0e9fa",
+    "brand": "Realme",
+    "model": "Realme X7",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 7500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-x7-8-gb-128-gb"
+  },
+  {
+    "id": "7c6771da-3438-4067-bb2e-1875e7887594",
+    "brand": "Realme",
+    "model": "Realme Narzo 30A",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 4070,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-30a-4-gb-64-gb"
+  },
+  {
+    "id": "d1a1b61d-cc7b-4ed8-9a32-a4f59d176144",
+    "brand": "Realme",
+    "model": "Realme Narzo 30A",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Black",
+    "basePrice": 3560,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-30a-3-gb-32-gb"
+  },
+  {
+    "id": "f61a0c65-b964-4f6b-8f4e-0db098a8cb3b",
+    "brand": "Realme",
+    "model": "Realme Narzo 30 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 6990,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-30-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "2c45efd8-bc48-4f2b-85d4-206bdc668ece",
+    "brand": "Realme",
+    "model": "Realme Narzo 30 Pro 5G",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 6690,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-30-pro-5g-6-gb-64-gb"
+  },
+  {
+    "id": "100ba778-d31d-4091-9775-9156a1728d2d",
+    "brand": "Realme",
+    "model": "Realme 8",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 5450,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-8-6-gb-128-gb"
+  },
+  {
+    "id": "2f84c704-fbd3-4b20-b0b1-59d7877495eb",
+    "brand": "Realme",
+    "model": "Realme 8",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 5320,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-8-4-gb-128-gb"
+  },
+  {
+    "id": "7cdf092f-d950-476f-a5f0-7bb8f89419d4",
+    "brand": "Realme",
+    "model": "Realme 8",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 5880,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-8-8-gb-128-gb"
+  },
+  {
+    "id": "1a3b0928-d497-48b4-b236-fed9cd81b64a",
+    "brand": "Realme",
+    "model": "Realme 8 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 6180,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-8-5g-4-gb-64-gb"
+  },
+  {
+    "id": "5938ac48-19c4-43e6-8cfc-0c502fa3c6bf",
+    "brand": "Realme",
+    "model": "Realme 8 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 6660,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-8-5g-4-gb-128-gb"
+  },
+  {
+    "id": "bdf4e4f0-f12e-4d54-8faa-c805e4fd9dfa",
+    "brand": "Realme",
+    "model": "Realme 8 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 7350,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-8-5g-8-gb-128-gb"
+  },
+  {
+    "id": "aadade41-b273-4a6d-a874-e1b22652083b",
+    "brand": "Realme",
+    "model": "Realme 8 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 6360,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-8-pro-8-gb-128-gb"
+  },
+  {
+    "id": "3d4a7d81-48c5-47c9-9c39-6f10cd64b20f",
+    "brand": "Realme",
+    "model": "Realme 8 Pro",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 5980,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-8-pro-6-gb-128-gb"
+  },
+  {
+    "id": "98213566-eda8-4f99-9150-74b8cee6fcd8",
+    "brand": "Realme",
+    "model": "Realme C21",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 3400,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c21-4-gb-64-gb"
+  },
+  {
+    "id": "5f004433-c153-4a3c-bd6a-58aaf3d8c00d",
+    "brand": "Realme",
+    "model": "Realme C21",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Black",
+    "basePrice": 3200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c21-3-gb-32-gb"
+  },
+  {
+    "id": "d50367e9-4587-4d35-b76e-8b1b80e4005a",
+    "brand": "Realme",
+    "model": "Realme C25",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 3330,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c25-4-gb-64-gb"
+  },
+  {
+    "id": "9222a8e8-6a98-4ca9-a5ff-12928bdefebb",
+    "brand": "Realme",
+    "model": "Realme C25",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 3670,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c25-4-gb-128-gb"
+  },
+  {
+    "id": "2c4f4474-52a3-4617-a0bc-8feaf7000c52",
+    "brand": "Realme",
+    "model": "Realme X7 Max 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 8220,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-x7-max-5g-8-gb-128-gb"
+  },
+  {
+    "id": "860220b5-b3c8-4c41-a25e-7cf9d5f1c172",
+    "brand": "Realme",
+    "model": "Realme X7 Max 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Black",
+    "basePrice": 8840,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-x7-max-5g-12-gb-256-gb"
+  },
+  {
+    "id": "ae13650c-37ae-4156-a90d-b793ff39c00c",
+    "brand": "Realme",
+    "model": "Realme C25s",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 4060,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c25s-4-gb-128-gb"
+  },
+  {
+    "id": "a70aa878-77aa-4c68-b78d-fa599c448e17",
+    "brand": "Realme",
+    "model": "Realme C25s",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 3750,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c25s-4-gb-64-gb"
+  },
+  {
+    "id": "40e96ddc-9ad5-45c0-974a-12f3cf8ffe8a",
+    "brand": "Realme",
+    "model": "Realme Narzo 30",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 4410,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-30-4-gb-64-gb"
+  },
+  {
+    "id": "70b57c99-7892-4e58-ae72-7ac462e0a97e",
+    "brand": "Realme",
+    "model": "Realme Narzo 30",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 4520,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-30-6-gb-64-gb"
+  },
+  {
+    "id": "1c5868fb-cadb-4fe4-b4e6-ca155e0026b2",
+    "brand": "Realme",
+    "model": "Realme Narzo 30",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 5000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-30-6-gb-128-gb"
+  },
+  {
+    "id": "f4a00b9a-3f77-4db6-861c-1238af4c8d9d",
+    "brand": "Realme",
+    "model": "Realme Narzo 30 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 6960,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-30-5g-6-gb-128-gb"
+  },
+  {
+    "id": "bfdcc236-df1d-4794-bdb7-cb9286660084",
+    "brand": "Realme",
+    "model": "Realme Narzo 30 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 5830,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-30-5g-4-gb-64-gb"
+  },
+  {
+    "id": "d14e752d-7116-40dc-a19d-78767dd88f84",
+    "brand": "Realme",
+    "model": "Realme C11 2021",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 3440,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c11-2021-4-gb-64-gb"
+  },
+  {
+    "id": "fe9b407b-da91-4c47-b684-a1096035d43a",
+    "brand": "Realme",
+    "model": "Realme C11 2021",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Black",
+    "basePrice": 2830,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c11-2021-2-gb-32-gb"
+  },
+  {
+    "id": "842607a9-76c6-4e16-af08-d4bad613d2ff",
+    "brand": "Realme",
+    "model": "Realme GT 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Black",
+    "basePrice": 8790,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-5g-12-gb-256-gb"
+  },
+  {
+    "id": "c31e3dd8-a119-4ec5-8e76-5d98acad65b4",
+    "brand": "Realme",
+    "model": "Realme GT 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 8260,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-5g-8-gb-128-gb"
+  },
+  {
+    "id": "d205b2d3-6010-4347-89e1-917ebb3c2666",
+    "brand": "Realme",
+    "model": "Realme GT Master Edition",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 7940,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-master-edition-6-gb-128-gb"
+  },
+  {
+    "id": "1516b592-88e8-431c-a56d-c1757e8a62e8",
+    "brand": "Realme",
+    "model": "Realme GT Master Edition",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 8240,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-master-edition-8-gb-128-gb"
+  },
+  {
+    "id": "525e91ff-10c0-4d63-9bc2-74ee154f8672",
+    "brand": "Realme",
+    "model": "Realme GT Master Edition",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 8660,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-master-edition-8-gb-256-gb"
+  },
+  {
+    "id": "e0c611ca-f054-406c-84e9-97764c6171e7",
+    "brand": "Realme",
+    "model": "Realme C21Y",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Black",
+    "basePrice": 3090,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c21y-3-gb-32-gb"
+  },
+  {
+    "id": "9e4e372a-4cf2-48b3-9f8a-7a003a194191",
+    "brand": "Realme",
+    "model": "Realme C21Y",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 3420,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c21y-4-gb-64-gb"
+  },
+  {
+    "id": "c99ebec6-b3b4-423d-be19-2cfacdd5c0e0",
+    "brand": "Realme",
+    "model": "Realme 8i",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 4520,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-8i-4-gb-64-gb"
+  },
+  {
+    "id": "ebd8d47d-4744-4878-a9bf-d733d3bf5b23",
+    "brand": "Realme",
+    "model": "Realme 8i",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 4940,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-8i-6-gb-128-gb"
+  },
+  {
+    "id": "06fe6fe2-1e7a-4e39-a7dd-cd00ba29474a",
+    "brand": "Realme",
+    "model": "Realme 8s 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 7650,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-8s-5g-8-gb-128-gb"
+  },
+  {
+    "id": "e2e91fb0-9672-4ca3-9414-49be40e51535",
+    "brand": "Realme",
+    "model": "Realme 8s 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 7360,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-8s-5g-6-gb-128-gb"
+  },
+  {
+    "id": "6e68bb20-3fdb-4ba6-9764-b7f22abe8522",
+    "brand": "Realme",
+    "model": "Realme C25Y",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 3930,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c25y-4-gb-64-gb"
+  },
+  {
+    "id": "44969262-e6c2-4003-bd1d-c9f4ec97f7c0",
+    "brand": "Realme",
+    "model": "Realme C25Y",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 4400,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c25y-4-gb-128-gb"
+  },
+  {
+    "id": "4f601fd7-7afc-4406-9f4b-fff9da7ceabf",
+    "brand": "Realme",
+    "model": "Realme Narzo 50A",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 4060,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-50a-4-gb-64-gb"
+  },
+  {
+    "id": "5450530b-7377-41da-ae59-8d0a6c93e4d3",
+    "brand": "Realme",
+    "model": "Realme Narzo 50A",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 4410,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-50a-4-gb-128-gb"
+  },
+  {
+    "id": "f93fbba6-2a16-4497-a62e-63ebce09ae6b",
+    "brand": "Realme",
+    "model": "Realme Narzo 50i",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 3670,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-50i-4-gb-64-gb"
+  },
+  {
+    "id": "1fcad481-a13c-43dc-9293-2705f57b4356",
+    "brand": "Realme",
+    "model": "Realme Narzo 50i",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Black",
+    "basePrice": 3230,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-50i-2-gb-32-gb"
+  },
+  {
+    "id": "672347f9-ba47-48b3-a53e-26f40b25700e",
+    "brand": "Realme",
+    "model": "Realme GT NEO 2",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Black",
+    "basePrice": 9140,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-neo-2-12-gb-256-gb"
+  },
+  {
+    "id": "c1953c47-5fc1-4810-b20b-a0053e45a7a8",
+    "brand": "Realme",
+    "model": "Realme GT NEO 2",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 8590,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-neo-2-8-gb-128-gb"
+  },
+  {
+    "id": "825d84fc-958f-40bf-9039-87f132db2e00",
+    "brand": "Realme",
+    "model": "Realme 9i",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 4560,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-9i-4-gb-64-gb"
+  },
+  {
+    "id": "3b85c69f-d609-42db-9cb1-9c1de3793ceb",
+    "brand": "Realme",
+    "model": "Realme 9i",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 5140,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-9i-6-gb-128-gb"
+  },
+  {
+    "id": "518d2b8a-5bfb-4cb9-833e-c79a05a60daa",
+    "brand": "Realme",
+    "model": "Realme 9i",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 4980,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-9i-4-gb-128-gb"
+  },
+  {
+    "id": "2fe149c2-c1f3-4860-91e7-29e9082fc1dd",
+    "brand": "Realme",
+    "model": "Realme 9i 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 5150,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-9i-5g-4-gb-64-gb"
+  },
+  {
+    "id": "eb04d7ce-8800-4f65-894a-d0dc892a33ed",
+    "brand": "Realme",
+    "model": "Realme 9i 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 6290,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-9i-5g-6-gb-128-gb"
+  },
+  {
+    "id": "f9f597b0-e737-4c64-88df-4ca702914113",
+    "brand": "Realme",
+    "model": "Realme 9 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 7990,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-9-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "c63766d8-05dc-4a79-85bc-8855fdc22302",
+    "brand": "Realme",
+    "model": "Realme 9 Pro 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 7540,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-9-pro-5g-6-gb-128-gb"
+  },
+  {
+    "id": "5cdf507d-bcf5-4dbe-8532-fdd73138b1fd",
+    "brand": "Realme",
+    "model": "Realme 9 Pro Plus 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 8590,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-9-pro-plus-5g-8-gb-128-gb"
+  },
+  {
+    "id": "0d8e90ab-2355-41fc-b809-64b5e7341bc4",
+    "brand": "Realme",
+    "model": "Realme 9 Pro Plus 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 8880,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-9-pro-plus-5g-8-gb-256-gb"
+  },
+  {
+    "id": "b8933271-ecf7-4c7a-991f-df0af2baf9a0",
+    "brand": "Realme",
+    "model": "Realme 9 Pro Plus 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 7940,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-9-pro-plus-5g-6-gb-128-gb"
+  },
+  {
+    "id": "11b06483-2a0d-4abb-a735-b3783890f5bc",
+    "brand": "Realme",
+    "model": "Realme Narzo 50",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 4670,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-50-4-gb-64-gb"
+  },
+  {
+    "id": "4f517f6b-41b1-4b33-b9a2-c96f77af08d9",
+    "brand": "Realme",
+    "model": "Realme Narzo 50",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 4990,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-50-6-gb-128-gb"
+  },
+  {
+    "id": "7ea3d4c7-3da2-4e72-a7e0-8f34c90bddea",
+    "brand": "Realme",
+    "model": "Realme Narzo 50 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 5210,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-50-5g-4-gb-64-gb"
+  },
+  {
+    "id": "5e89589d-1252-4d65-a99d-e4ebabb84fdf",
+    "brand": "Realme",
+    "model": "Realme Narzo 50 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 5630,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-50-5g-4-gb-128-gb"
+  },
+  {
+    "id": "eeb91dae-e328-4a82-a54d-6fde327f915d",
+    "brand": "Realme",
+    "model": "Realme Narzo 50 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 6410,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-50-5g-6-gb-128-gb"
+  },
+  {
+    "id": "c70cc844-fdcf-45e0-8199-c4f1dc5d602f",
+    "brand": "Realme",
+    "model": "Realme C35",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 4920,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c35-6-gb-128-gb"
+  },
+  {
+    "id": "4edeac11-83e1-44a9-885e-68933e148695",
+    "brand": "Realme",
+    "model": "Realme C35",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 4510,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c35-4-gb-128-gb"
+  },
+  {
+    "id": "4a1aedb9-113f-47f4-bebe-2771020cf58e",
+    "brand": "Realme",
+    "model": "Realme C35",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 3820,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c35-4-gb-64-gb"
+  },
+  {
+    "id": "fb82747d-9cef-4a5c-8e5c-4933282bb1eb",
+    "brand": "Realme",
+    "model": "Realme 9 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 7440,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-9-5g-6-gb-128-gb"
+  },
+  {
+    "id": "24dc8040-586b-4ae6-af4a-7c9ddef4035c",
+    "brand": "Realme",
+    "model": "Realme 9 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 6630,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-9-5g-4-gb-64-gb"
+  },
+  {
+    "id": "71623474-86bc-4bde-b176-c81eb0dda2c9",
+    "brand": "Realme",
+    "model": "Realme 9",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 5760,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-9-6-gb-128-gb"
+  },
+  {
+    "id": "c74b9724-a785-4dec-b7b4-1359aa88cfbf",
+    "brand": "Realme",
+    "model": "Realme 9",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 6060,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-9i-8-gb-128-gb"
+  },
+  {
+    "id": "5712fc10-0840-40ad-9246-8aea17254632",
+    "brand": "Realme",
+    "model": "Realme 9 5G Speed Edition",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 7610,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-9-5g-speed-edition-8-gb-128-gb"
+  },
+  {
+    "id": "e5c7eb74-516e-4e94-8071-46d323cc42cf",
+    "brand": "Realme",
+    "model": "Realme 9 5G Speed Edition",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 7430,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-9-5g-speed-edition-6-gb-128-gb"
+  },
+  {
+    "id": "85e34fbe-83b6-4e02-a5ff-aca9805139da",
+    "brand": "Realme",
+    "model": "Realme C31",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 3340,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c31-4-gb-64-gb"
+  },
+  {
+    "id": "c5858f80-4d07-4157-adaf-ded831068ef9",
+    "brand": "Realme",
+    "model": "Realme C31",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Black",
+    "basePrice": 2730,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c31-3-gb-32-gb"
+  },
+  {
+    "id": "1a03a916-f96d-446f-8ff6-048528c015c0",
+    "brand": "Realme",
+    "model": "Realme GT 2",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Black",
+    "basePrice": 9730,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-2-12-gb-256-gb"
+  },
+  {
+    "id": "318d767d-fb6a-4552-8624-eb2606cfeb8b",
+    "brand": "Realme",
+    "model": "Realme GT 2",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 9470,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-2-8-gb-128-gb"
+  },
+  {
+    "id": "884c2af9-6725-4015-a147-11c479301e79",
+    "brand": "Realme",
+    "model": "Realme GT 2 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 9730,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-2-pro-8-gb-128-gb"
+  },
+  {
+    "id": "adfab41d-9702-43e1-8f6e-c67f2edb43ba",
+    "brand": "Realme",
+    "model": "Realme GT 2 Pro",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Black",
+    "basePrice": 10120,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-2-pro-12-gb-256-gb"
+  },
+  {
+    "id": "b32d1660-4b7a-4640-a879-c93dadaf6240",
+    "brand": "Realme",
+    "model": "Realme GT Neo 3",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 9470,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-neo-3-8-gb-128-gb"
+  },
+  {
+    "id": "85a5a36d-9622-46f0-b855-807275fbb555",
+    "brand": "Realme",
+    "model": "Realme GT Neo 3",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 9580,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-neo-3-8-gb-256-gb"
+  },
+  {
+    "id": "5e4ba1de-a052-47a3-8af8-94aa63723e66",
+    "brand": "Realme",
+    "model": "Realme Narzo 50A Prime",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 3980,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-50a-prime-4-gb-64-gb"
+  },
+  {
+    "id": "ec773873-ea64-4ba7-9261-f2c07ec448ef",
+    "brand": "Realme",
+    "model": "Realme Narzo 50A Prime",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 4440,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-50a-prime-4-gb-128-gb"
+  },
+  {
+    "id": "c4902a51-915b-45c4-84b9-2286a6f0b223",
+    "brand": "Realme",
+    "model": "Realme C30",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Black",
+    "basePrice": 3110,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c30-3-gb-32-gb"
+  },
+  {
+    "id": "30c835c7-ff77-408a-873f-fca551a80b19",
+    "brand": "Realme",
+    "model": "Realme C30",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Black",
+    "basePrice": 2740,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c30-2-gb-32-gb"
+  },
+  {
+    "id": "47458ef1-1e27-4164-982f-1c60a1d19b58",
+    "brand": "Realme",
+    "model": "Realme GT NEO 3T",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 9080,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-neo-3t-8-gb-128-gb"
+  },
+  {
+    "id": "aca29494-dbd3-4fa5-ac8c-5f027c775c19",
+    "brand": "Realme",
+    "model": "Realme GT NEO 3T",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 8710,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-neo-3t-6-gb-128-gb"
+  },
+  {
+    "id": "34e6423c-3e39-4eec-93ca-660364a42bfd",
+    "brand": "Realme",
+    "model": "Realme GT NEO 3T",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 9270,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-neo-3t-8-gb-256-gb"
+  },
+  {
+    "id": "c02531ff-bcd2-4399-96a4-204cbd495201",
+    "brand": "Realme",
+    "model": "Realme C33",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Black",
+    "basePrice": 3060,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c33-3-gb-32-gb"
+  },
+  {
+    "id": "b8a9139f-cf26-4918-b529-1db5b48e1790",
+    "brand": "Realme",
+    "model": "Realme C33",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 3990,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c33-4-gb-64-gb"
+  },
+  {
+    "id": "4219c28f-6c28-4ee1-8272-45e12f3ecf63",
+    "brand": "Realme",
+    "model": "Realme C30s",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Black",
+    "basePrice": 3030,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c30s-2-gb-32-gb"
+  },
+  {
+    "id": "7689002b-1651-46e9-a12c-d72c2713c692",
+    "brand": "Realme",
+    "model": "Realme C30s",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 3330,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c30s-4-gb-64-gb"
+  },
+  {
+    "id": "9f0e4260-535c-40aa-bc6e-f11e3bbcdb24",
+    "brand": "Realme",
+    "model": "Realme Narzo 50 Pro 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 8030,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-50-pro-5g-6-gb-128-gb"
+  },
+  {
+    "id": "1917952c-ee78-4614-a62c-6400c632c991",
+    "brand": "Realme",
+    "model": "Realme Narzo 50 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 8180,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-50-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "873e9ac5-0dd8-47c6-a344-c2c420600647",
+    "brand": "Realme",
+    "model": "Realme Narzo 50i Prime",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 3590,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-50i-prime-4-gb-64-gb"
+  },
+  {
+    "id": "5229b3e7-ad05-41e1-9cc8-eaa5c459fa28",
+    "brand": "Realme",
+    "model": "Realme Narzo 50i Prime",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Black",
+    "basePrice": 3280,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-50i-prime-3-gb-32-gb"
+  },
+  {
+    "id": "b3c48d78-3d5d-4491-8722-328ba3a0c996",
+    "brand": "Realme",
+    "model": "Realme 10 Pro 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 7790,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-10-pro-5g-6-gb-128-gb"
+  },
+  {
+    "id": "5a1c7152-39d6-4333-9145-c296a0ab2159",
+    "brand": "Realme",
+    "model": "Realme 10 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 8110,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-10-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "ed60049a-517b-4878-a275-8cc4451a686a",
+    "brand": "Realme",
+    "model": "Realme 10 Pro Plus 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 9530,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-10-pro-plus-5g-6-gb-128-gb"
+  },
+  {
+    "id": "2b18764f-91b2-47fc-a167-304dfb1bcade",
+    "brand": "Realme",
+    "model": "Realme 10 Pro Plus 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 10120,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-10-pro-plus-5g-8-gb-256-gb"
+  },
+  {
+    "id": "507a6202-a585-4130-98e0-b2a38a7200d1",
+    "brand": "Realme",
+    "model": "Realme 10 Pro Plus 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 9850,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-10-pro-plus-5g-8-gb-128-gb"
+  },
+  {
+    "id": "9e8fab4b-0f63-4295-ba1a-655b3febbd20",
+    "brand": "Realme",
+    "model": "Realme 10",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 4950,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-10-4-gb-64-gb"
+  },
+  {
+    "id": "9a291ec1-a9a4-4a1f-ac5b-d1acb7b8c978",
+    "brand": "Realme",
+    "model": "Realme 10",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 5680,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-10-8-gb-128-gb"
+  },
+  {
+    "id": "1ade6906-ba9f-4065-b2a6-a8fc542dd06c",
+    "brand": "Realme",
+    "model": "Realme C55",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 6590,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c55-6-gb-64-gb"
+  },
+  {
+    "id": "63a26228-5110-4e12-bfbe-24b41a46e46b",
+    "brand": "Realme",
+    "model": "Realme C55",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 7160,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c55-8-gb-128-gb"
+  },
+  {
+    "id": "86c848b3-0e74-4b9f-8494-0d6c27ce0c9b",
+    "brand": "Realme",
+    "model": "Realme C55",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 5440,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c55-4-gb-64-gb"
+  },
+  {
+    "id": "2ae0047f-4c93-4a51-b4d2-3cd37ce4c8cf",
+    "brand": "Realme",
+    "model": "Realme C33 2023",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 5050,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c33-2023-4-gb-128-gb"
+  },
+  {
+    "id": "f211c5b5-8261-4412-8112-b888bee6ad2e",
+    "brand": "Realme",
+    "model": "Realme C33 2023",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 4300,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c33-2023-4-gb-64-gb"
+  },
+  {
+    "id": "77b0d84a-ef3c-4274-aeb7-4d42bb0acc00",
+    "brand": "Realme",
+    "model": "Realme Narzo N53",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 6350,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-n53-8-gb-128-gb"
+  },
+  {
+    "id": "02ecff2c-b4ba-415b-9d18-ffd14a1af07b",
+    "brand": "Realme",
+    "model": "Realme Narzo N53",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 5510,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-n53-4-gb-64-gb"
+  },
+  {
+    "id": "b020efc2-62d4-43d3-9d50-652f5958ab17",
+    "brand": "Realme",
+    "model": "Realme Narzo N53",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 6050,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-n53-6-gb-128-gb"
+  },
+  {
+    "id": "25976b88-9721-4ad4-a828-6c78d25756c3",
+    "brand": "Realme",
+    "model": "Realme 11 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 13460,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-11-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "a1e0040d-6150-4601-9310-819e43a0d2a9",
+    "brand": "Realme",
+    "model": "Realme 11 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 14410,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-11-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "828fc05f-53ab-4393-8474-7e0470b7f243",
+    "brand": "Realme",
+    "model": "Realme 11 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Black",
+    "basePrice": 14700,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-11-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "8011ac57-10ff-4006-8724-907de844721b",
+    "brand": "Realme",
+    "model": "Realme 11 Pro Plus 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 15250,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-11-pro-plus-5g-8-gb-256-gb"
+  },
+  {
+    "id": "048dd757-0a40-4330-af5c-c79b81b36cc9",
+    "brand": "Realme",
+    "model": "Realme 11 Pro Plus 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Black",
+    "basePrice": 15880,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-11-pro-plus-5g-12-gb-256-gb"
+  },
+  {
+    "id": "ca49c379-83a8-4888-bb73-2fe89445f48f",
+    "brand": "Realme",
+    "model": "Realme Narzo N55",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 6420,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-n55-6-gb-128-gb"
+  },
+  {
+    "id": "75ad5875-afdd-4a65-a51b-2dcc43791a35",
+    "brand": "Realme",
+    "model": "Realme Narzo N55",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 6110,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-n55-4-gb-64-gb"
+  },
+  {
+    "id": "8629360b-bf1d-49a3-a05b-cff38e313c1b",
+    "brand": "Realme",
+    "model": "Realme C53",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 5540,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c53-6-gb-128-gb"
+  },
+  {
+    "id": "8f19c2ee-398a-4321-bdc2-7bc4390c0811",
+    "brand": "Realme",
+    "model": "Realme C53",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 5210,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c53-4-gb-128gb"
+  },
+  {
+    "id": "c498d379-5cdf-4b54-9213-5912ed60dd0f",
+    "brand": "Realme",
+    "model": "Realme C53",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 5140,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c53-6-gb-64-gb"
+  },
+  {
+    "id": "b6cb006e-4f0f-4c9e-b111-0f1940fe4bff",
+    "brand": "Realme",
+    "model": "Realme Narzo 60 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 10770,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-60-5g-8-gb-256-gb"
+  },
+  {
+    "id": "49b2414e-0b89-493b-8cc1-a4b8f5769a73",
+    "brand": "Realme",
+    "model": "Realme Narzo 60 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 10230,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-60-5g-8-gb-128-gb"
+  },
+  {
+    "id": "62b2a4c0-3e6f-48ac-99fb-3c19dfe0c596",
+    "brand": "Realme",
+    "model": "Realme Narzo 60 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Black",
+    "basePrice": 15190,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-60-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "5e78e500-6cb5-4be2-8324-e5ec7a8ab4a1",
+    "brand": "Realme",
+    "model": "Realme Narzo 60 Pro 5G",
+    "storage": "12 GB/1 TB",
+    "ram": "12 GB",
+    "color": "Black",
+    "basePrice": 16090,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-60-pro-5g-12-gb-1-tb"
+  },
+  {
+    "id": "981e8319-6baf-4a65-b278-c7e1d22ffe1f",
+    "brand": "Realme",
+    "model": "Realme Narzo 60 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 14290,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-60-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "91b84873-618c-49c6-84c5-3619972f4b0a",
+    "brand": "Realme",
+    "model": "Realme 11x 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 8990,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-11x-5g-8-gb-128-gb"
+  },
+  {
+    "id": "95833e37-7943-454b-be4e-5dc16b1ae351",
+    "brand": "Realme",
+    "model": "Realme 11x 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 8890,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-11x-5g-6-gb-128-gb"
+  },
+  {
+    "id": "f71d045f-718a-4d30-b0ef-0b7634a64cfe",
+    "brand": "Realme",
+    "model": "Realme 11 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 9580,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-11-5g-8-gb-128-gb"
+  },
+  {
+    "id": "bf33f911-ff9d-480d-8b09-fdb460ad56d3",
+    "brand": "Realme",
+    "model": "Realme 11 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 10960,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-11-5g-8-gb-256-gb"
+  },
+  {
+    "id": "601d37b8-f13c-42f8-8e2b-e55a5887c0ee",
+    "brand": "Realme",
+    "model": "Realme Narzo 60X 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 8320,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-60x-5g-4-gb-128-gb"
+  },
+  {
+    "id": "0713c3e4-ea33-446a-9c66-7c7277b8fd6b",
+    "brand": "Realme",
+    "model": "Realme Narzo 60X 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 8990,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-60x-5g-6-gb-128-gb"
+  },
+  {
+    "id": "db93862f-9f39-4392-8138-26c5c91ecc9e",
+    "brand": "Realme",
+    "model": "Realme C67 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 6970,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c67-5g-4-gb-128-gb"
+  },
+  {
+    "id": "0f0ba3cf-5133-4ff0-af29-534edec03b8a",
+    "brand": "Realme",
+    "model": "Realme C67 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 7820,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c67-5g-6-gb-128-gb"
+  },
+  {
+    "id": "9b7aaaaa-a218-45d4-a745-3f83b9a303c0",
+    "brand": "Realme",
+    "model": "Realme C51",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 4900,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c51-4-gb-64-gb"
+  },
+  {
+    "id": "4977b946-f799-44c5-aa65-84a2c2d64ea0",
+    "brand": "Realme",
+    "model": "Realme C51",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 5290,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c51-4-gb-128-gb"
+  },
+  {
+    "id": "30f2633d-a7ff-4e3f-93c8-839135f9efdc",
+    "brand": "Realme",
+    "model": "Realme 12 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 13520,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-12-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "32b1f749-a755-4ff5-aee1-80c2f2b34eb3",
+    "brand": "Realme",
+    "model": "Realme 12 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 14910,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-12-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "0cff4088-cfdb-499c-84af-1670f2068a70",
+    "brand": "Realme",
+    "model": "Realme 12 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Black",
+    "basePrice": 15070,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-12-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "599deaeb-032f-44ba-bb6b-b0ea51346f72",
+    "brand": "Realme",
+    "model": "Realme 12 Pro Plus 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 14740,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-12-pro-plus-5g-8-gb-128-gb"
+  },
+  {
+    "id": "6235cb1e-f4fa-4697-9f8a-c16d959474e6",
+    "brand": "Realme",
+    "model": "Realme 12 Pro Plus 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 15310,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-12-pro-plus-5g-8-gb-256-gb"
+  },
+  {
+    "id": "7a5fb4e4-10fb-4e63-9c41-13002f999373",
+    "brand": "Realme",
+    "model": "Realme 12 Pro Plus 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Black",
+    "basePrice": 16300,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-12-pro-plus-5g-12-gb-256-gb"
+  },
+  {
+    "id": "ce507772-a6ef-4c76-86a5-712031008a26",
+    "brand": "Realme",
+    "model": "Realme 12 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 9800,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-12-5g-6-gb-128-gb"
+  },
+  {
+    "id": "a51bda1e-d200-4906-9d4b-cf9b42b1e717",
+    "brand": "Realme",
+    "model": "Realme 12 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 10550,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-12-5g-8-gb-128-gb"
+  },
+  {
+    "id": "6867931e-b535-4385-880a-b699583919c2",
+    "brand": "Realme",
+    "model": "Realme 12 Plus 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 12090,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-12-plus-5g-8-gb-256-gb"
+  },
+  {
+    "id": "ef32f5b1-36ca-416b-a5f5-4d52aa65a1e4",
+    "brand": "Realme",
+    "model": "Realme 12 Plus 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 10900,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-12-plus-5g-8-gb-128-gb"
+  },
+  {
+    "id": "4f97b06e-8a16-4616-94cb-309efac6ed34",
+    "brand": "Realme",
+    "model": "Realme 12x 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 7400,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-12x-5g-4-gb-128-gb"
+  },
+  {
+    "id": "f20a6e4b-c3c5-4f35-8622-50259712479e",
+    "brand": "Realme",
+    "model": "Realme 12x 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 9820,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-12x-5g-6-gb-128-gb"
+  },
+  {
+    "id": "ba9abdaf-ced7-4b36-bf4e-3c9d9513ce51",
+    "brand": "Realme",
+    "model": "Realme 12x 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 10220,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-12x-5g-8-gb-128-gb"
+  },
+  {
+    "id": "87155f40-51a9-4cdd-a4d7-d3226940ba89",
+    "brand": "Realme",
+    "model": "Realme P1 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 9420,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p1-5g-6-gb-128-gb"
+  },
+  {
+    "id": "35a0f55f-6ea2-4895-bab7-d0c365a964b4",
+    "brand": "Realme",
+    "model": "Realme P1 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 10140,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p1-5g-8-gb-256-gb"
+  },
+  {
+    "id": "4cacac16-2409-4e94-b4cf-ca0e0ddef9d1",
+    "brand": "Realme",
+    "model": "Realme P1 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 9990,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p1-5g-8-gb-128-gb"
+  },
+  {
+    "id": "f2be4cae-41f0-4c82-b236-d5011727dbf3",
+    "brand": "Realme",
+    "model": "Realme P1 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 9000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p1-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "8299727e-15e0-42b3-9506-5b19370af0d1",
+    "brand": "Realme",
+    "model": "Realme P1 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Black",
+    "basePrice": 9800,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p1-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "fac2283f-c666-4048-a6cb-5d46eaa849fe",
+    "brand": "Realme",
+    "model": "Realme P1 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 9500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p1-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "0468be1f-c393-4422-a06d-2069bfd0b2f5",
+    "brand": "Realme",
+    "model": "Realme Narzo 70 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 8670,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-70-5g-8-gb-128-gb"
+  },
+  {
+    "id": "b3c3d859-e520-43bf-9d8e-d3660901e583",
+    "brand": "Realme",
+    "model": "Realme Narzo 70 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 7690,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-70-5g-6-gb-128-gb"
+  },
+  {
+    "id": "39b2c893-4bb6-4cd1-bbd4-4fca52352332",
+    "brand": "Realme",
+    "model": "Realme Narzo 70 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 11070,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-7-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "55b71b85-5e09-4851-85e0-dd9bdd1732e1",
+    "brand": "Realme",
+    "model": "Realme Narzo 70 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 10190,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-70-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "3c689b62-5b62-4643-95ee-602477810fd8",
+    "brand": "Realme",
+    "model": "Realme Narzo 70x 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 6240,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-70x-5g-4-gb-128-gb"
+  },
+  {
+    "id": "935eba9a-f172-4f53-9c98-95829653c220",
+    "brand": "Realme",
+    "model": "Realme Narzo 70x 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 7190,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-70x-5g-6-gb-128-gb"
+  },
+  {
+    "id": "20485b0e-89ad-4dbe-af47-f91ec41e1d0b",
+    "brand": "Realme",
+    "model": "Realme Narzo 70x 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 7690,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-70x-5g-8-gb-128-gb"
+  },
+  {
+    "id": "00f425a2-2961-4da2-9fdb-ae28fe4153f4",
+    "brand": "Realme",
+    "model": "Realme GT 6T 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 14690,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-6t-5g-8-gb-128-gb"
+  },
+  {
+    "id": "e8a278c6-7f98-4fe3-b7d0-3623d09e41b3",
+    "brand": "Realme",
+    "model": "Realme GT 6T 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 15880,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-6t-5g-8-gb-256-gb"
+  },
+  {
+    "id": "b64a9a19-248a-4dec-8182-296f85bb0f3a",
+    "brand": "Realme",
+    "model": "Realme GT 6T 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Black",
+    "basePrice": 16460,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-6t-5g-12-gb-256-gb"
+  },
+  {
+    "id": "7c30e0d3-b8f9-4cc5-9945-5b031fcc75d5",
+    "brand": "Realme",
+    "model": "Realme GT 6T 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Black",
+    "basePrice": 18190,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-6t-5g-12-gb-512-gb"
+  },
+  {
+    "id": "9413a8c9-7ce6-4c31-be18-81dc06bf6e10",
+    "brand": "Realme",
+    "model": "Realme Narzo N65 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 5950,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-n65-5g-4-gb-128-gb"
+  },
+  {
+    "id": "dd21814e-781f-4a73-983a-b5a066fea32e",
+    "brand": "Realme",
+    "model": "Realme Narzo N65 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 6740,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-n65-5g-8-gb-128-gb"
+  },
+  {
+    "id": "5a829306-3305-4771-89b0-c001040b08ed",
+    "brand": "Realme",
+    "model": "Realme Narzo N65 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 6350,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-n65-5g-6-gb-128-gb"
+  },
+  {
+    "id": "c9bab55d-728f-4cab-879e-bcfe9cb1dd4d",
+    "brand": "Realme",
+    "model": "Realme GT 6",
+    "storage": "16 GB/512 GB",
+    "ram": "16 GB",
+    "color": "Black",
+    "basePrice": 20690,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-6-16-gb-512-gb"
+  },
+  {
+    "id": "655f05d8-3500-48be-9455-4057aa50c841",
+    "brand": "Realme",
+    "model": "Realme GT 6",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 16760,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-6-8-gb-256-gb"
+  },
+  {
+    "id": "48dbbcf9-d5e9-466d-b01e-41ef4e188f66",
+    "brand": "Realme",
+    "model": "Realme GT 6",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Black",
+    "basePrice": 17300,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-6-12-gb-256-gb"
+  },
+  {
+    "id": "2fb517c3-a809-4fe3-90d2-71f9c176d2b4",
+    "brand": "Realme",
+    "model": "Realme C65 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 5760,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c65-5g-6-gb-128-gb"
+  },
+  {
+    "id": "4b70899b-7046-40ba-8763-d421ec0bdad8",
+    "brand": "Realme",
+    "model": "Realme C65 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 4400,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c65-5g-4-gb-64-gb"
+  },
+  {
+    "id": "961d2dd4-2946-4046-b9c6-71db5ab458e1",
+    "brand": "Realme",
+    "model": "Realme C65 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 5130,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c65-5g-4-gb-128-gb"
+  },
+  {
+    "id": "d21ff8e1-fe20-4321-8114-dde2ee8e9629",
+    "brand": "Realme",
+    "model": "Realme C65 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Black",
+    "basePrice": 7790,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c65-5g-8-gb-128-gb"
+  },
+  {
+    "id": "fbe5697d-b3b6-4475-ae9c-aee83bff7ab1",
+    "brand": "Realme",
+    "model": "Realme C61",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Black",
+    "basePrice": 4750,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c61-6-gb-128-gb"
+  },
+  {
+    "id": "f34677af-d147-4fc4-b96b-47cc92b71b36",
+    "brand": "Realme",
+    "model": "Realme C61",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 4120,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c61-4-gb-64-gb"
+  },
+  {
+    "id": "ef68e104-d8f0-4cb0-a37b-591f5a4c2cb0",
+    "brand": "Realme",
+    "model": "Realme C61",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 4460,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c61-4-gb-128-gb"
+  },
+  {
+    "id": "d2ba6aeb-0b2f-43f0-8d8f-579e01173444",
+    "brand": "Realme",
+    "model": "Realme Narzo N61",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Black",
+    "basePrice": 3690,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-n61-4-gb-64-gb"
+  },
+  {
+    "id": "motorola_batch_1",
+    "brand": "Motorola",
+    "model": "Motorola One Power",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-one-power-4-gb-64-gb"
+  },
+  {
+    "id": "motorola_batch_2",
+    "brand": "Motorola",
+    "model": "Motorola Moto G6 Plus",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 1970,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-moto-g6-plus-6-gb-64-gb"
+  },
+  {
+    "id": "motorola_batch_3",
+    "brand": "Motorola",
+    "model": "Motorola Moto Z2 Force",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 1670,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-z2-force-6-gb-64-gb"
+  },
+  {
+    "id": "motorola_batch_4",
+    "brand": "Motorola",
+    "model": "Motorola Moto G6",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 1210,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-g6-3-gb-32-gb"
+  },
+  {
+    "id": "motorola_batch_5",
+    "brand": "Motorola",
+    "model": "Motorola Moto G6",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 1690,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-g6-4-gb-64-gb"
+  },
+  {
+    "id": "motorola_batch_6",
+    "brand": "Motorola",
+    "model": "Motorola Moto G7 Power",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 1970,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-g7-power-4-gb-64-gb"
+  },
+  {
+    "id": "motorola_batch_7",
+    "brand": "Motorola",
+    "model": "Motorola Moto G7",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 1740,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-g7-4-gb-64-gb"
+  },
+  {
+    "id": "motorola_batch_8",
+    "brand": "Motorola",
+    "model": "Motorola Moto One",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 1970,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-one-4-gb-64-gb"
+  },
+  {
+    "id": "motorola_batch_9",
+    "brand": "Motorola",
+    "model": "Motorola One Vision",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-one-vision-4-gb-128-gb"
+  },
+  {
+    "id": "motorola_batch_10",
+    "brand": "Motorola",
+    "model": "Motorola One Action",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2540,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-one-action-4-gb-128-gb"
+  },
+  {
+    "id": "motorola_batch_11",
+    "brand": "Motorola",
+    "model": "Motorola Moto E6s",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2080,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-e6s-4-gb-64-gb"
+  },
+  {
+    "id": "motorola_batch_12",
+    "brand": "Motorola",
+    "model": "Motorola One Macro",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2040,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-one-macro-4-gb-64-gb"
+  },
+  {
+    "id": "motorola_batch_13",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge Plus",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 7950,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-edge-plus-12-gb-256-gb"
+  },
+  {
+    "id": "motorola_batch_14",
+    "brand": "Motorola",
+    "model": "Motorola Moto G8 Power Lite",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2690,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-g8-power-lite-4-gb-64-gb"
+  },
+  {
+    "id": "motorola_batch_15",
+    "brand": "Motorola",
+    "model": "Motorola Moto Razr",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 9660,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-razr-6-gb-128-gb"
+  },
+  {
+    "id": "motorola_batch_16",
+    "brand": "Motorola",
+    "model": "Motorola One Fusion Plus",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4510,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-one-fusion-plus-6-gb-128-gb"
+  },
+  {
+    "id": "motorola_batch_17",
+    "brand": "Motorola",
+    "model": "Motorola Moto G9",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2760,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-g9-4-gb-64-gb"
+  },
+  {
+    "id": "motorola_batch_18",
+    "brand": "Motorola",
+    "model": "Motorola Moto E7 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2730,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-e7-plus-4-gb-64-gb"
+  },
+  {
+    "id": "motorola_batch_19",
+    "brand": "Motorola",
+    "model": "Motorola Moto Razr 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12870,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-razr-5g-8-gb-256-gb"
+  },
+  {
+    "id": "motorola_batch_20",
+    "brand": "Motorola",
+    "model": "Motorola Moto G9 Power",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2840,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-g9-power-4-gb-64-gb"
+  },
+  {
+    "id": "motorola_batch_21",
+    "brand": "Motorola",
+    "model": "Motorola Moto G 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4960,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-g-5g-6-gb-128-gb"
+  },
+  {
+    "id": "motorola_batch_22",
+    "brand": "Motorola",
+    "model": "Motorola Moto G30",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3180,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-g30-4-gb-64-gb"
+  },
+  {
+    "id": "motorola_batch_23",
+    "brand": "Motorola",
+    "model": "Motorola Moto G10 Power",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3030,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-g10-power-4-gb-64-gb"
+  },
+  {
+    "id": "motorola_batch_24",
+    "brand": "Motorola",
+    "model": "Motorola Moto E7 Power",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2710,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-e7-power-4-gb-64-gb"
+  },
+  {
+    "id": "motorola_batch_25",
+    "brand": "Motorola",
+    "model": "Motorola Moto E7 Power",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 2230,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-e7-power-2-gb-32-gb"
+  },
+  {
+    "id": "motorola_batch_26",
+    "brand": "Motorola",
+    "model": "Motorola Moto G60",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5280,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-g60-6-gb-128-gb"
+  },
+  {
+    "id": "motorola_batch_27",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 20 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7950,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-edge-20-pro-8-gb-128-gb"
+  },
+  {
+    "id": "motorola_batch_28",
+    "brand": "Motorola",
+    "model": "Motorola Moto G40 Fusion",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5100,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-g40-fusion-6-gb-128-gb"
+  },
+  {
+    "id": "motorola_batch_29",
+    "brand": "Motorola",
+    "model": "Motorola Moto G40 Fusion",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4170,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-g40-fusion-4-gb-64-gb"
+  },
+  {
+    "id": "motorola_batch_30",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 20 Fusion",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6970,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-edge-20-fusion-8-gb-128-gb"
+  },
+  {
+    "id": "motorola_batch_31",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 20 Fusion",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 6630,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-edge-20-fusion-6-gb-128-gb"
+  },
+  {
+    "id": "motorola_batch_32",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 20",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7010,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-edge-20-8-gb-128-gb"
+  },
+  {
+    "id": "motorola_batch_33",
+    "brand": "Motorola",
+    "model": "Motorola Moto G31",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3670,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-g31-4-gb-64-gb"
+  },
+  {
+    "id": "motorola_batch_34",
+    "brand": "Motorola",
+    "model": "Motorola Moto G31",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4050,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-g31-6-gb-128-gb"
+  },
+  {
+    "id": "motorola_batch_35",
+    "brand": "Motorola",
+    "model": "Motorola Moto G51 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5340,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-g51-5g-4-gb-64-gb"
+  },
+  {
+    "id": "motorola_batch_36",
+    "brand": "Motorola",
+    "model": "Motorola Moto E40",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3590,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-e40-4-gb-64-gb"
+  },
+  {
+    "id": "motorola_batch_37",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 30 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 9160,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-edge-30-pro-8-gb-128-gb"
+  },
+  {
+    "id": "motorola_batch_38",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 30",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 9090,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-edge-30-8-gb-128-gb"
+  },
+  {
+    "id": "motorola_batch_39",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 30",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 8600,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-edge-30-6-gb-128-gb"
+  },
+  {
+    "id": "motorola_batch_40",
+    "brand": "Motorola",
+    "model": "Motorola Moto G52",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3980,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-g52-4-gb-64-gb"
+  },
+  {
+    "id": "motorola_batch_41",
+    "brand": "Motorola",
+    "model": "Motorola Moto G52",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4910,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-g52-6-gb-128-gb"
+  },
+  {
+    "id": "motorola_batch_42",
+    "brand": "Motorola",
+    "model": "Motorola Moto G71 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 6380,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-g71-5g-6-gb-128-gb"
+  },
+  {
+    "id": "motorola_batch_43",
+    "brand": "Motorola",
+    "model": "Motorola Moto G82 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 7160,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-g82-5g-6-gb-128-gb"
+  },
+  {
+    "id": "motorola_batch_44",
+    "brand": "Motorola",
+    "model": "Motorola Moto G82 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7910,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-g82-5g-8-gb-128-gb"
+  },
+  {
+    "id": "motorola_batch_45",
+    "brand": "Motorola",
+    "model": "Motorola Moto G22",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3750,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-g22-4-gb-64-gb"
+  },
+  {
+    "id": "motorola_batch_46",
+    "brand": "Motorola",
+    "model": "Motorola Moto G42",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3520,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-g42-4-gb-64-gb"
+  },
+  {
+    "id": "motorola_batch_47",
+    "brand": "Motorola",
+    "model": "Motorola Moto G32",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 4640,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-g32-8-gb-128-gb"
+  },
+  {
+    "id": "motorola_batch_48",
+    "brand": "Motorola",
+    "model": "Motorola Moto G32",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4170,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-g32-4-gb-64-gb"
+  },
+  {
+    "id": "motorola_batch_49",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 30 Fusion",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 10150,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-edge-30-fusion-8-gb-128-gb"
+  },
+  {
+    "id": "motorola_batch_50",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 30 Ultra",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 13100,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-edge-30-ultra-12-gb-256-gb"
+  },
+  {
+    "id": "motorola_batch_51",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 30 Ultra",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-edge-30-ultra-8-gb-128-gb"
+  },
+  {
+    "id": "motorola_batch_52",
+    "brand": "Motorola",
+    "model": "Motorola Moto G72",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-g72-6-gb-128-gb"
+  },
+  {
+    "id": "motorola_batch_53",
+    "brand": "Motorola",
+    "model": "Motorola Moto G62 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 6570,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-g62-5g-6-gb-128-gb"
+  },
+  {
+    "id": "motorola_batch_54",
+    "brand": "Motorola",
+    "model": "Motorola Moto G62 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7060,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-g62-5g-8-gb-128-gb"
+  },
+  {
+    "id": "motorola_batch_55",
+    "brand": "Motorola",
+    "model": "Motorola Moto e32s",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2610,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-e32s-3-gb-32-gb"
+  },
+  {
+    "id": "motorola_batch_56",
+    "brand": "Motorola",
+    "model": "Motorola Moto e32s",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2880,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-e32s-4-gb-64-gb"
+  },
+  {
+    "id": "motorola_batch_57",
+    "brand": "Motorola",
+    "model": "Motorola Moto E13",
+    "storage": "2 GB/64 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 3830,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-e13-2-gb-64-gb"
+  },
+  {
+    "id": "motorola_batch_58",
+    "brand": "Motorola",
+    "model": "Motorola Moto E13",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 4370,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-e13-8-gb-128-gb"
+  },
+  {
+    "id": "motorola_batch_59",
+    "brand": "Motorola",
+    "model": "Motorola Moto E13",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4170,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-e13-4-gb-64-gb"
+  },
+  {
+    "id": "motorola_batch_60",
+    "brand": "Motorola",
+    "model": "Motorola Moto e32",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3220,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-e32-4-gb-64-gb"
+  },
+  {
+    "id": "motorola_batch_61",
+    "brand": "Motorola",
+    "model": "Motorola Moto G73 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7400,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-g73-5g-8-gb-128-gb"
+  },
+  {
+    "id": "motorola_batch_62",
+    "brand": "Motorola",
+    "model": "Motorola Moto e22s",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-e22s-4-gb-64-gb"
+  },
+  {
+    "id": "motorola_batch_63",
+    "brand": "Motorola",
+    "model": "Motorola Moto G85 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12400,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-g85-5g-8-gb-128-gb"
+  },
+  {
+    "id": "motorola_batch_64",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 50 Fusion",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 14270,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-edge-50-fusion-8-gb-128-gb"
   }
 ];
