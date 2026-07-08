@@ -16592,42 +16592,6 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 5000
   },
   {
-    "id": "asus_batch_1",
-    "brand": "Asus",
-    "model": "Asus ZenFone 5Z",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "asus_batch_2",
-    "brand": "Asus",
-    "model": "Asus Zenfone Max Pro M1",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "asus_batch_3",
-    "brand": "Asus",
-    "model": "Asus ZenFone Max Pro M2",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "asus_batch_4",
-    "brand": "Asus",
-    "model": "Asus ROG Phone ZS600KL",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
     "id": "poco_batch_1",
     "brand": "POCO",
     "model": "POCO F1",
