@@ -21216,5 +21216,305 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "basePrice": 15700,
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z11x-5g-8-gb-256-gb"
+  },
+  {
+    "id": "6d372ecd-db6b-4813-9e5b-228b352ef5dc",
+    "brand": "Nothing",
+    "model": "Nothing Phone 1",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12650,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-1-8-gb-128-gb"
+  },
+  {
+    "id": "65d0c466-acc0-4f37-b844-8b01dfcb5cdf",
+    "brand": "Nothing",
+    "model": "Nothing Phone 1",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 13490,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-1-12-gb-256-gb"
+  },
+  {
+    "id": "7be2ca49-3782-412c-b949-3641992188ed",
+    "brand": "Nothing",
+    "model": "Nothing Phone 1",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 13240,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-1-8-gb-256-gb"
+  },
+  {
+    "id": "46b51000-0faa-4aba-9046-cbd14daab26f",
+    "brand": "Nothing",
+    "model": "Nothing Phone 2",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 18760,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-2-8-gb-128-gb"
+  },
+  {
+    "id": "3d861b63-caa2-4f66-a7e2-e23f1d08aeca",
+    "brand": "Nothing",
+    "model": "Nothing Phone 2",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 19590,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-2-12-gb-256-gb"
+  },
+  {
+    "id": "8ac322b2-0ddd-491c-bcc9-484ecd95bb17",
+    "brand": "Nothing",
+    "model": "Nothing Phone 2",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 20300,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-2-12-gb-512-gb"
+  },
+  {
+    "id": "28e5d610-c9c7-42b7-9e67-f23474ecbb26",
+    "brand": "Nothing",
+    "model": "Nothing Phone 2a 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 15630,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-2a-5g-8-gb-128-gb"
+  },
+  {
+    "id": "a7f5fc38-3eae-412e-bfc0-1ec999433c27",
+    "brand": "Nothing",
+    "model": "Nothing Phone 2a 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 16110,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-2a-5g-8-gb-256-gb"
+  },
+  {
+    "id": "23223c7e-7867-4aaf-8cec-ab4a329b849d",
+    "brand": "Nothing",
+    "model": "Nothing Phone 2a 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 16500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-2a-5g-12-gb-256-gb"
+  },
+  {
+    "id": "da0333ec-4611-4147-b5e5-210d1d375f1a",
+    "brand": "Nothing",
+    "model": "CMF by Nothing Phone 1",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 10130,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-cmf-by-nothing-phone-1-6-gb-128-gb"
+  },
+  {
+    "id": "23f39c67-c34e-4f0f-a1d3-732d14f95abe",
+    "brand": "Nothing",
+    "model": "CMF by Nothing Phone 1",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 11250,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-cmf-by-nothing-phone-1-8-gb-128-gb"
+  },
+  {
+    "id": "4f9acaf1-f167-4235-bf94-54f4e0094f87",
+    "brand": "Nothing",
+    "model": "Nothing Phone 2a Plus",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 17170,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-2a-plus-8-gb-256-gb"
+  },
+  {
+    "id": "ba1beff5-13f5-4db2-8116-d7848f30e7d1",
+    "brand": "Nothing",
+    "model": "Nothing Phone 2a Plus",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 17450,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-2a-plus-12-gb-256-gb"
+  },
+  {
+    "id": "aa622b7e-02d5-4b14-b70e-b4e8073e79bf",
+    "brand": "Nothing",
+    "model": "Nothing Phone 3a",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 20040,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-3a-8-gb-256-gb"
+  },
+  {
+    "id": "b075d2d0-8346-4227-8706-96fedf0a80f2",
+    "brand": "Nothing",
+    "model": "Nothing Phone 3a",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 18430,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-3a-8-gb-128-gb"
+  },
+  {
+    "id": "05bd01a2-b79b-4bd5-9efb-1120e258200e",
+    "brand": "Nothing",
+    "model": "Nothing Phone 3a Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 20550,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-3a-pro-8-gb-128-gb"
+  },
+  {
+    "id": "803f3ee7-f4b5-481b-a290-cb28da63bccf",
+    "brand": "Nothing",
+    "model": "Nothing Phone 3a Pro",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 21840,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-3a-pro-8-gb-256-gb"
+  },
+  {
+    "id": "3ccc5d97-b2fc-4ff7-917b-f0a5edb7cfec",
+    "brand": "Nothing",
+    "model": "Nothing Phone 3a Pro",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 22320,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-3a-pro-12-gb-256-gb"
+  },
+  {
+    "id": "48341bcc-c943-4e0d-a627-03f08005c2a5",
+    "brand": "Nothing",
+    "model": "CMF by Nothing Phone 2 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 14020,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-cmf-by-nothing-phone-2-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "1b31219a-81d4-46b7-a772-68cfc3acb554",
+    "brand": "Nothing",
+    "model": "CMF by Nothing Phone 2 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12940,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-cmf-by-nothing-phoe-2-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "6c1adc19-901c-470d-8bfe-1ee863c6b0f9",
+    "brand": "Nothing",
+    "model": "Nothing Phone 3",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 30500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-3-12-gb-256-gb"
+  },
+  {
+    "id": "7475643d-10c2-44b2-8cd0-bb8f0eec4033",
+    "brand": "Nothing",
+    "model": "Nothing Phone 3",
+    "storage": "16 GB/512 GB",
+    "ram": "16 GB",
+    "color": "Default",
+    "basePrice": 32550,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-3-16-gb-512-gb"
+  },
+  {
+    "id": "b07f27be-3f2e-4463-88c0-ab8c8b39171b",
+    "brand": "Nothing",
+    "model": "Nothing Phone 3a Lite",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 14410,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-3a-lite-8-gb-128-gb"
+  },
+  {
+    "id": "f217bb68-99fc-4d9f-a8be-6ee8bacf5398",
+    "brand": "Nothing",
+    "model": "Nothing Phone 3a Lite",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 15420,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-3a-lite-8-gb-256-gb"
+  },
+  {
+    "id": "b4d43fa8-c9af-41ce-b50a-097e69621bf4",
+    "brand": "Nothing",
+    "model": "Nothing Phone 4a",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 23000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-4a-8-gb-128-gb"
+  },
+  {
+    "id": "16a0dafe-76c7-4757-aeb8-80260155f07a",
+    "brand": "Nothing",
+    "model": "Nothing Phone 4a",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 25500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-4a-8-gb-256-gb"
+  },
+  {
+    "id": "267aad73-c670-4ad3-841f-16fdf8d2ddb8",
+    "brand": "Nothing",
+    "model": "Nothing Phone 4a",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 26200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-4a-12-gb-256-gb"
+  },
+  {
+    "id": "9265968f-5b1f-4c3a-9fd4-76128e100ccd",
+    "brand": "Nothing",
+    "model": "Nothing Phone 4a Pro",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 32000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-4a-pro-12-gb-256-gb"
+  },
+  {
+    "id": "0a9a5f70-7b9e-4c1c-8b0e-f6494a5b557f",
+    "brand": "Nothing",
+    "model": "Nothing Phone 4a Pro",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 29700,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-4a-pro-8-gb-256-gb"
+  },
+  {
+    "id": "d2675435-cd8c-4ebb-95a1-5882e5d9b1e0",
+    "brand": "Nothing",
+    "model": "Nothing Phone 4a Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 28000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-4a-pro-8-gb-128-gb"
   }
 ];
