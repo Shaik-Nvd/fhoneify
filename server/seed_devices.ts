@@ -17355,24 +17355,6 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 5000
   },
   {
-    "id": "lenovo_batch_2",
-    "brand": "Lenovo",
-    "model": "Lenovo A5",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "lenovo_batch_3",
-    "brand": "Lenovo",
-    "model": "Lenovo A6 Note",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
     "id": "lenovo_batch_4",
     "brand": "Lenovo",
     "model": "Lenovo K10 Note",
