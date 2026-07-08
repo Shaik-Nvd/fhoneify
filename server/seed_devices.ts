@@ -21551,5 +21551,625 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "basePrice": 23400,
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-x8-pro-12-gb-256-gb"
+  },
+  {
+    "id": "54544122-0ef0-4447-998a-6cbe7fb95d94",
+    "brand": "Infinix",
+    "model": "Infinix Hot 7 Pro",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 2040,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-hot-7-pro-6-gb-64-gb"
+  },
+  {
+    "id": "cc130c3f-ac09-43e6-98be-d610019a5294",
+    "brand": "Infinix",
+    "model": "Infinix Zero 5 Pro",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 2240,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-zero-5-pro-6-GB-128-GB"
+  },
+  {
+    "id": "e009ac58-c010-4479-9d5f-80b087e29766",
+    "brand": "Infinix",
+    "model": "Infinix Hot 8",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2380,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-hot-8-4-gb-64-gb"
+  },
+  {
+    "id": "272daccb-737e-443e-8342-14c06c212f21",
+    "brand": "Infinix",
+    "model": "Infinix S5",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 1990,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-s5-4-gb-64-gb"
+  },
+  {
+    "id": "0075d8fd-4495-4b29-91b1-2f5afbfac729",
+    "brand": "Infinix",
+    "model": "Infinix S5 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2560,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-s5-pro-4-gb-64-gb"
+  },
+  {
+    "id": "17817ebd-4e18-49ec-b343-f906d1207617",
+    "brand": "Infinix",
+    "model": "Infinix Hot 9 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2820,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-hot-9-pro-4-gb-64-gb"
+  },
+  {
+    "id": "f2ccadb3-48ab-4ffc-a430-bd377fcf8030",
+    "brand": "Infinix",
+    "model": "Infinix Note 7",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2790,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-note-7-4-gb-64-gb"
+  },
+  {
+    "id": "6fbf98ec-aef4-4d55-b981-91f0c00ef434",
+    "brand": "Infinix",
+    "model": "Infinix Smart HD 2021",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 1780,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-smart-hd-2-gb-32-gb"
+  },
+  {
+    "id": "cdc5e1df-9157-47e1-8fca-74970634e09f",
+    "brand": "Infinix",
+    "model": "Infinix Hot 10",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3520,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-hot-10-6-gb-128-gb"
+  },
+  {
+    "id": "1fe0a233-4a87-41a8-a80c-4222a6e4454a",
+    "brand": "Infinix",
+    "model": "Infinix Hot 10",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2910,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-hot-10-4-gb-64-gb"
+  },
+  {
+    "id": "a8d1ae5e-a2eb-4f22-a8a7-fc39c533ccfa",
+    "brand": "Infinix",
+    "model": "Infinix Zero 8i",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 3930,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-zero-8i-8-gb-128-gb"
+  },
+  {
+    "id": "3d1cf731-8d2e-4932-a774-2193cf340fd9",
+    "brand": "Infinix",
+    "model": "Infinix Smart 5",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 2130,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-smart-5-2-gb-32-gb"
+  },
+  {
+    "id": "92b7d04d-75c1-40b2-b13f-4e6a28f92902",
+    "brand": "Infinix",
+    "model": "Infinix Hot 10 Play",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2910,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-hot-10-play-4-gb-64-gb"
+  },
+  {
+    "id": "b003b2c6-79f8-4ae3-984c-c08baa3efb37",
+    "brand": "Infinix",
+    "model": "Infinix Hot 10 Play",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2480,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-hot-10-play-3-gb-32-gb"
+  },
+  {
+    "id": "100dd8a4-1da3-40ff-b98b-b27a05d42a94",
+    "brand": "Infinix",
+    "model": "Infinix Hot 10s",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2750,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-hot-10s-4-gb-64-gb"
+  },
+  {
+    "id": "15fbd7e2-69da-4c68-978c-1c5bb1bb73a2",
+    "brand": "Infinix",
+    "model": "Infinix Hot 10s",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 2970,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-hot-10s-6-gb-64-gb"
+  },
+  {
+    "id": "e615fe49-780e-4270-ab2c-6c900ff25177",
+    "brand": "Infinix",
+    "model": "Infinix Note 10",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3120,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-note-10-6-gb-128-gb"
+  },
+  {
+    "id": "5f5568ea-ca07-4ac0-b01e-45dde71cc5d2",
+    "brand": "Infinix",
+    "model": "Infinix Note 10",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2860,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-note-10-4-gb-64-gb"
+  },
+  {
+    "id": "c072ba54-4a61-4265-9a07-01860aa7bc31",
+    "brand": "Infinix",
+    "model": "Infinix Note 10 Pro",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 4210,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-note-10-pro-8-gb-256-gb"
+  },
+  {
+    "id": "d6f792d2-7711-4b19-a74b-c4d93e3715c5",
+    "brand": "Infinix",
+    "model": "Infinix Hot 11",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2930,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-hot-11-4-gb-64-gb"
+  },
+  {
+    "id": "d5c7eab7-7b4e-4017-8f64-8be44d109729",
+    "brand": "Infinix",
+    "model": "Infinix Hot 11S",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3150,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-hot-11s-4-gb-64-gb"
+  },
+  {
+    "id": "178016b9-6084-4ac6-800e-4ae44af19710",
+    "brand": "Infinix",
+    "model": "Infinix Hot 11S",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3300,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-hot-11s-4-gb-128-gb"
+  },
+  {
+    "id": "5548762d-933a-4434-aa27-2f51ece51bc3",
+    "brand": "Infinix",
+    "model": "Infinix Note 11s",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3190,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-note-11s-6-gb-64-gb"
+  },
+  {
+    "id": "844ee5bf-87b5-4dc7-befd-6689a3229500",
+    "brand": "Infinix",
+    "model": "Infinix Note 11s",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 3400,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-note-11s-8-gb-128-gb"
+  },
+  {
+    "id": "d4030298-1601-4f77-94cf-c77fb10d1978",
+    "brand": "Infinix",
+    "model": "Infinix Note 11",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3190,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-note-11-4-gb-64-gb"
+  },
+  {
+    "id": "cc7bfc1f-e372-46ea-829c-7831b91c0a5a",
+    "brand": "Infinix",
+    "model": "Infinix Note 11",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3560,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-note-11-6-gb-128-gb"
+  },
+  {
+    "id": "9ece37b3-edee-4eed-8cbe-d89b63543e17",
+    "brand": "Infinix",
+    "model": "Infinix Zero 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5420,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-zero-5g-8-gb-128-gb"
+  },
+  {
+    "id": "b3be054e-b770-43c1-a9c3-f0cd4ac23d1e",
+    "brand": "Infinix",
+    "model": "Infinix Smart 4 Plus",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2150,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-smart-4-plus-3-gb-32-gb"
+  },
+  {
+    "id": "965df85d-f001-4ed8-af64-99f4c0edfc32",
+    "brand": "Infinix",
+    "model": "Infinix HOT 12 Play",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-hot-12-play-4-gb-64-gb"
+  },
+  {
+    "id": "6a9a02a9-26ab-4064-9cd4-daf88f2e4a1a",
+    "brand": "Infinix",
+    "model": "Infinix Hot 9",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2600,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-hot-9-4-gb-64-gb"
+  },
+  {
+    "id": "7aa2ba89-2d9b-48e7-b08e-9f1bde621140",
+    "brand": "Infinix",
+    "model": "Infinix Note 11s Free Fire Edition",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 3900,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-note-11s-free-fire-edition-8-gb-128-gb"
+  },
+  {
+    "id": "6cdc9e60-e886-4a31-a2ad-331d00290faa",
+    "brand": "Infinix",
+    "model": "Infinix Hot 11 2022",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2670,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-hot-11-2022-4-gb-64-gb"
+  },
+  {
+    "id": "487f5e59-f1a5-43e8-8f30-72e84632a180",
+    "brand": "Infinix",
+    "model": "Infinix Note 12 Turbo",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 3790,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-note-12-turbo-8-gb-128-gb"
+  },
+  {
+    "id": "45007905-b063-4f2d-a749-31dba6ff5357",
+    "brand": "Infinix",
+    "model": "Infinix Note 12",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4240,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-note-12-6-gb-128-gb"
+  },
+  {
+    "id": "c7607b4c-7ed0-4e6a-bf4c-585d5fe9af79",
+    "brand": "Infinix",
+    "model": "Infinix Note 12",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4050,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-note-12-4-gb-64-gb"
+  },
+  {
+    "id": "ce3a275c-cb00-4a80-8c23-bedfcfb1ee6a",
+    "brand": "Infinix",
+    "model": "Infinix Note 12 Pro 4G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 4820,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-note-12-pro-4g-8-gb-256-gb"
+  },
+  {
+    "id": "e19de648-e930-4df4-9ef0-73e89ea21893",
+    "brand": "Infinix",
+    "model": "Infinix Note 12 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5900,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-note-12-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "5bba2354-77f7-40d1-a239-b226ca3e2e3a",
+    "brand": "Infinix",
+    "model": "Infinix Hot 12",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3260,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-hot-12-4-gb-64-gb"
+  },
+  {
+    "id": "10c52281-6c05-447c-9eab-b544ee4eccdf",
+    "brand": "Infinix",
+    "model": "Infinix Smart 6",
+    "storage": "2 GB/64 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 2360,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-smart-6-2-gb-64-gb"
+  },
+  {
+    "id": "351f66ef-91a4-4110-a9e0-882838cb848d",
+    "brand": "Infinix",
+    "model": "Infinix Note 12 5G",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-note-12-5g-6-gb-64-gb"
+  },
+  {
+    "id": "e439bceb-635c-4a2a-800c-109da1b87e61",
+    "brand": "Infinix",
+    "model": "Infinix Smart 6 Plus",
+    "storage": "3 GB/64 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2390,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-smart-6-plus-3-gb-64-gb"
+  },
+  {
+    "id": "d1825345-dc10-4fb0-a5b5-954659441bf7",
+    "brand": "Infinix",
+    "model": "Infinix Hot 12 Pro",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3190,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-hot-12-pro-6-gb-64-gb"
+  },
+  {
+    "id": "ba313fe6-53df-4bd7-8db6-af6ace3d520a",
+    "brand": "Infinix",
+    "model": "Infinix Hot 12 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 3530,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-hot-12-pro-8-gb-128-gb"
+  },
+  {
+    "id": "f959a2b3-e4b3-41bd-b060-0a01d1eec373",
+    "brand": "Infinix",
+    "model": "Infinix Smart 6 HD",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 2080,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-smart-6-hd-2-gb-32-gb"
+  },
+  {
+    "id": "edae6730-130d-4465-b1c1-15f216b1a383",
+    "brand": "Infinix",
+    "model": "Infinix Zero Ultra",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8540,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-zero-ultra-8-gb-256-gb"
+  },
+  {
+    "id": "cc49994f-9d7b-4d6e-9b55-00f5ea5313a4",
+    "brand": "Infinix",
+    "model": "Infinix Zero 20",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 4490,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-zero-20-8-gb-128-gb"
+  },
+  {
+    "id": "6d860b41-ebf3-450b-9f1e-ff20e1646a8d",
+    "brand": "Infinix",
+    "model": "Infinix Hot 20 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4080,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-hot-20-5g-4-gb-64-gb"
+  },
+  {
+    "id": "8777bf00-816a-4964-95c8-7ea06aac9102",
+    "brand": "Infinix",
+    "model": "Infinix Hot 20 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4380,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-hot-20-5g-6-gb-128-gb"
+  },
+  {
+    "id": "9b65f7cd-8e3a-49a7-b6bc-736d86259a0a",
+    "brand": "Infinix",
+    "model": "Infinix Hot 20 Play",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2890,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-hot-20-play-4-gb-64-gb"
+  },
+  {
+    "id": "acfc8a0d-0e7c-4f76-b422-59333268db4e",
+    "brand": "Infinix",
+    "model": "Infinix Note 12i",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2890,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-note-12i-4-gb-64-gb"
+  },
+  {
+    "id": "8caed0ef-3d2f-499e-aa77-ba36444793f5",
+    "brand": "Infinix",
+    "model": "Infinix Smart 7",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2300,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-smart-7-4-gb-128-gb"
+  },
+  {
+    "id": "9da8b3e9-fc5f-4839-a0bc-a4e52fc20fec",
+    "brand": "Infinix",
+    "model": "Infinix Smart 7",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2080,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-smart-7-4-gb-64-gb"
+  },
+  {
+    "id": "0ddcf3b2-8b88-458c-ac83-aa3545af7472",
+    "brand": "Infinix",
+    "model": "Infinix Zero 5G 2023",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5420,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-zero-5g-2023-8-gb-128-gb"
+  },
+  {
+    "id": "0571f5fd-7ab0-4d56-bf92-45a8067e9a55",
+    "brand": "Infinix",
+    "model": "Infinix Zero 5G 2023 Turbo",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5940,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-zero-5g-2023-turbo-8-gb-256-gb"
+  },
+  {
+    "id": "06134a65-3a84-4f4e-855a-cc6c6fd73cd6",
+    "brand": "Infinix",
+    "model": "Infinix Smart 7 HD",
+    "storage": "2 GB/64 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 1850,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-smart-7-hd-2-gb-64-gb"
+  },
+  {
+    "id": "6dc3fcb9-124d-4863-9358-57a6f00ea274",
+    "brand": "Infinix",
+    "model": "Infinix Hot 30i",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 4970,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-hot-30i-8-gb-128-gb"
+  },
+  {
+    "id": "d62b9728-66c3-4adf-9fa9-8d3462f1d2f0",
+    "brand": "Infinix",
+    "model": "Infinix Hot 30i",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3260,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-hot-30i-4-gb-64-gb"
+  },
+  {
+    "id": "7750c769-ce60-43d3-beae-1af8973650ac",
+    "brand": "Infinix",
+    "model": "Infinix GT 10 Pro",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 9390,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-gt-10-pro-8-gb-256-gb"
+  },
+  {
+    "id": "c203a948-3227-4428-b9bf-2173524b9f4b",
+    "brand": "Infinix",
+    "model": "Infinix Note 30 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 6100,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-note-30-5g-4-gb-128-gb"
+  },
+  {
+    "id": "5ffd2f70-b33d-42e0-905b-d8d9c9ac0dd8",
+    "brand": "Infinix",
+    "model": "Infinix Note 30 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7840,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-note-30-5g-8-gb-256-gb"
+  },
+  {
+    "id": "d154b813-17a5-4bf5-81df-b250a36db4e1",
+    "brand": "Infinix",
+    "model": "Infinix Hot 30 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5150,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-hot-30-5g-4-gb-128-gb"
+  },
+  {
+    "id": "9aeeca9a-5ae0-40a4-8f5a-b496bb57a515",
+    "brand": "Infinix",
+    "model": "Infinix Hot 30 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6190,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-hot-30-5g-8-gb-128-gb"
   }
 ];
