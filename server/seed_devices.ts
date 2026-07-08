@@ -15196,15 +15196,6 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 5000
   },
   {
-    "id": "lg_batch_4",
-    "brand": "LG",
-    "model": "LG G8X ThinQ",
-    "storage": "128 GB",
-    "ram": "6GB",
-    "color": "Aurora",
-    "basePrice": 5000
-  },
-  {
     "id": "lg_batch_5",
     "brand": "LG",
     "model": "LG Wing",
