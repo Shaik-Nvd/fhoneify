@@ -20531,7 +20531,7 @@ export const SEED_DEVICES: any[] = [
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-find-x9-ultra-12-gb-512-gb"
   },
   {
-    "id": "7236be3f-4eab-4bc4-a01e-2a3b14bba45d",
+    "id": "f708917c-aa5f-4c4f-8ee4-06ef9e49b437",
     "brand": "Huawei",
     "model": "Huawei P30 Pro",
     "storage": "8 GB/256 GB",
@@ -20541,7 +20541,7 @@ export const SEED_DEVICES: any[] = [
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-huawei-p30-pro-8-gb-256-gb"
   },
   {
-    "id": "346bc4f6-447e-4e4f-80ef-56cb6a9e915b",
+    "id": "833b8b7d-a632-498c-bc75-f11b25a9ec73",
     "brand": "Huawei",
     "model": "Huawei P30 Lite",
     "storage": "6 GB/128 GB",
@@ -20551,7 +20551,7 @@ export const SEED_DEVICES: any[] = [
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-huawei-p30-lite-6-gb-128-gb"
   },
   {
-    "id": "45829b83-9962-4b9e-aa30-78a713d425ed",
+    "id": "bb2041f4-cd24-48c0-8cc0-b7fc7a54867b",
     "brand": "Huawei",
     "model": "Huawei Mate 20 Pro",
     "storage": "6 GB/128 GB",
@@ -20561,7 +20561,7 @@ export const SEED_DEVICES: any[] = [
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-huawei-mate-20-pro-6-gb-128-gb"
   },
   {
-    "id": "25a25536-f164-4a55-828f-78a394ba959d",
+    "id": "09741a7c-5e40-41a9-bac3-60112db99e44",
     "brand": "Huawei",
     "model": "Huawei P20 Pro",
     "storage": "6 GB/128 GB",
@@ -20571,7 +20571,7 @@ export const SEED_DEVICES: any[] = [
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-huawei-p20-pro-6-gb-128-gb"
   },
   {
-    "id": "3017d5b9-3b00-4d60-93c1-3c689f269800",
+    "id": "5fee0c58-e0eb-437c-82f8-a9cd1f97e469",
     "brand": "Huawei",
     "model": "Huawei Mate 30 Pro",
     "storage": "8 GB/256 GB",

@@ -59,8 +59,7 @@ async function main() {
                     model: device.model,
                     storage: device.storage,
                     ram: device.ram,
-                    color: 'Default',
-                    basePrice: device.basePrice
+                    color: 'Default'
                 }
             });
             console.log(`Inserted ${device.model} into DB`);
