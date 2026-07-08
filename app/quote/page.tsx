@@ -1807,9 +1807,30 @@ export default function QuotePage() {
             <h2 style={{ fontSize: '1.4rem', fontWeight: 500 }}>Sell Old {getDisplayModelName(selectedBrand, selectedModel)} ({selectedStorage})</h2>
             <p style={{ color: '#666', fontSize: '1rem', marginTop: '1rem' }}>Get Upto</p>
             <p style={{ fontSize: '3rem', fontWeight: 700, color: '#FF4C4C' }}>{formatCurrency(basePrice || 0)}</p>
-            <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 3)} className="btn-primary" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', background: '#4CD964', color: '#fff', fontWeight: 600, marginTop: '1.5rem', width: 'fit-content', padding: '1rem 2rem', borderRadius: '8px' }}>
-              Get Exact Value <ArrowRightIcon />
-            </button>
+            <div style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem', width: '100%', flexWrap: 'wrap', justifyContent: 'flex-start' }}>
+              <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 3)} className="btn-primary" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 2rem', borderRadius: '8px', flex: '1', minWidth: '200px' }}>
+                Get Exact Value <ArrowRightIcon />
+              </button>
+              
+              <button 
+                onClick={() => {
+                   setFinalPrice(basePrice);
+                   navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', isAuthenticated ? 11 : 10);
+                }}
+                className="btn-primary schedule-pickup-btn" 
+                style={{ 
+                  display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', 
+                  background: 'linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%)', 
+                  color: '#000', fontWeight: 700, padding: '1rem 2rem', borderRadius: '8px', flex: '1', minWidth: '200px',
+                  boxShadow: '0 4px 15px rgba(212, 175, 55, 0.4)',
+                  transition: 'all 0.3s ease',
+                  border: 'none',
+                  cursor: 'pointer'
+                }}
+              >
+                Schedule Pickup 🚚
+              </button>
+            </div>
           </div>
         </div>
       )}      {/* STAGES 3-9: MULTI-STEP QUESTIONNAIRE (2 COLUMN LAYOUT) */}
