@@ -21694,5 +21694,1105 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "basePrice": 12350,
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-honor-90-12-gb-512-gb"
+  },
+  {
+    "id": "0f216d07-1a90-4de5-b310-cb821c461107",
+    "brand": "POCO",
+    "model": "POCO F1",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3020,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-poco-f1-6-gb-64-gb"
+  },
+  {
+    "id": "b403dd7a-81e8-40e9-9559-ad1140e9c916",
+    "brand": "POCO",
+    "model": "POCO F1",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 3600,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-poco-f1-8-gb-256-gb"
+  },
+  {
+    "id": "5c07b6ea-3a1e-4c92-919f-8b903819597a",
+    "brand": "POCO",
+    "model": "POCO F1",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3320,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-poco-f1-6-gb-128-gb"
+  },
+  {
+    "id": "e30de8b4-6fef-4658-abf9-75d174ea9178",
+    "brand": "POCO",
+    "model": "POCO X2",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4620,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-poco-x2-6-gb-128-gb"
+  },
+  {
+    "id": "da60b8d9-df57-4743-a5d6-12b1fb3bee37",
+    "brand": "POCO",
+    "model": "POCO X2",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 4850,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-poco-x2-8-gb-256-gb"
+  },
+  {
+    "id": "6060ba06-6485-4b01-b769-f13166435c7e",
+    "brand": "POCO",
+    "model": "POCO X2",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4320,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-poco-x2-6-gb-64-gb"
+  },
+  {
+    "id": "40c91c50-897e-47fa-a423-5782d9fc0787",
+    "brand": "POCO",
+    "model": "POCO M2 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4330,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m2-pro-4-gb-64-gb"
+  },
+  {
+    "id": "1d88e7f9-ea21-4f86-8c3c-e8b8b7363712",
+    "brand": "POCO",
+    "model": "POCO M2 Pro",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4750,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m2-pro-6-gb-64-gb"
+  },
+  {
+    "id": "45ce8685-a5fe-4281-9a22-03a28201c057",
+    "brand": "POCO",
+    "model": "POCO M2 Pro",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4920,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m2-pro-6-gb-128-gb"
+  },
+  {
+    "id": "4dfe27dd-18cb-4869-b059-e06e0789731a",
+    "brand": "POCO",
+    "model": "POCO M2",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 4350,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m2-8-gb-128-gb"
+  },
+  {
+    "id": "32655746-ed91-4931-a3d4-8e69acde07c1",
+    "brand": "POCO",
+    "model": "POCO M2",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m2-6-gb-128-gb"
+  },
+  {
+    "id": "65c2083c-73f2-48f3-a4e9-925601c36b20",
+    "brand": "POCO",
+    "model": "POCO M2",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3850,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m2-6-gb-64-gb"
+  },
+  {
+    "id": "fca35cf5-67e6-45ab-b452-fed8730a4954",
+    "brand": "POCO",
+    "model": "POCO C3",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 3100,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-c3-3-gb-32-gb"
+  },
+  {
+    "id": "60078b31-7528-47ab-85d3-3b79c679fcf4",
+    "brand": "POCO",
+    "model": "POCO C3",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3360,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-c3-4-gb-64-gb"
+  },
+  {
+    "id": "268082b9-ef16-4249-b502-1d58cff93d24",
+    "brand": "POCO",
+    "model": "POCO X3",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4920,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-x3-6-gb-128-gb"
+  },
+  {
+    "id": "57e30436-caa5-41e6-804a-e852b6fc1cc0",
+    "brand": "POCO",
+    "model": "POCO X3",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5230,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-x3-8-gb-128-gb"
+  },
+  {
+    "id": "01993534-047c-43b5-91cb-934e7cc06a21",
+    "brand": "POCO",
+    "model": "POCO X3",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4600,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-x3-6-gb-64-gb"
+  },
+  {
+    "id": "34c7c5c3-fbe7-4e48-be40-848af1372c86",
+    "brand": "POCO",
+    "model": "POCO M3",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4160,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m3-4-gb-64-gb"
+  },
+  {
+    "id": "ff34fc3b-3d28-49d7-be71-da45aedf636b",
+    "brand": "POCO",
+    "model": "POCO M3",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4520,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m3-6-gb-64-gb"
+  },
+  {
+    "id": "3b18752a-011a-4d35-b9a2-049e49415054",
+    "brand": "POCO",
+    "model": "POCO M3",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4720,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m3-6-gb-128-gb"
+  },
+  {
+    "id": "e8dc68de-85cb-4716-9a44-aef245f402ae",
+    "brand": "POCO",
+    "model": "POCO X3 Pro",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5090,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-x3-pro-6-gb-128-gb"
+  },
+  {
+    "id": "5532fe6f-e8db-4489-897c-7146b02c090f",
+    "brand": "POCO",
+    "model": "POCO X3 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5470,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-x3-pro-8-gb-128-gb"
+  },
+  {
+    "id": "0b3c5f6d-fdc6-4a04-81d4-9bcc75d0b55e",
+    "brand": "POCO",
+    "model": "POCO M3 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5760,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m3-pro-5g-4-gb-64-gb"
+  },
+  {
+    "id": "a9750ae8-360b-4510-b88d-6b85e7885f0b",
+    "brand": "POCO",
+    "model": "POCO M3 Pro 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 6530,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m3-pro-5g-6-gb-128-gb"
+  },
+  {
+    "id": "a544d93a-5e0f-4bb6-b952-c4135ce272bb",
+    "brand": "POCO",
+    "model": "POCO F3 GT",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8630,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-fe-gt-8-gb-256-gb"
+  },
+  {
+    "id": "70c9b823-a325-4a11-bd5c-2d47e49cd0a8",
+    "brand": "POCO",
+    "model": "POCO F3 GT",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 7880,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-f3-gt-6-gb-128-gb"
+  },
+  {
+    "id": "b734d99d-e409-4302-b443-42f3d577398f",
+    "brand": "POCO",
+    "model": "POCO F3 GT",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8140,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-f3-gt-8-gb-128-gb"
+  },
+  {
+    "id": "effb97de-ad31-4672-a87d-17b2d5b1434b",
+    "brand": "POCO",
+    "model": "POCO M2 Reloaded",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3030,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m2-reloaded-4-gb-64-gb"
+  },
+  {
+    "id": "2eac9b48-6a7b-4382-b04c-66aea6f0c9d3",
+    "brand": "POCO",
+    "model": "POCO C31",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3510,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-c31-4-gb-64-gb"
+  },
+  {
+    "id": "02143d0d-5800-42eb-a940-f1c2bf7c4658",
+    "brand": "POCO",
+    "model": "POCO C31",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 3200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-c31-3-gb-32-gb"
+  },
+  {
+    "id": "9a4f6d22-8cdb-424d-8a69-f41c8aff9367",
+    "brand": "POCO",
+    "model": "POCO M4 Pro 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 6800,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m4-pro-5g-6-gb-128-gb"
+  },
+  {
+    "id": "25e9816e-4a4e-4c34-8afb-48934440c902",
+    "brand": "POCO",
+    "model": "POCO M4 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 6340,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m4-pro-5g-4-gb-64-gb"
+  },
+  {
+    "id": "3796a4f1-b7ac-4f9d-8c9c-cb42b415d06e",
+    "brand": "POCO",
+    "model": "POCO M4 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6890,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m4-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "6e667451-f95a-491a-a9e4-fcf444a059a7",
+    "brand": "POCO",
+    "model": "POCO M4 Pro",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4960,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m4-pro-6-gb-128-gb"
+  },
+  {
+    "id": "becdf6e8-1eaf-459a-a164-7e7fe7f72281",
+    "brand": "POCO",
+    "model": "POCO M4 Pro",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4620,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m4-pro-6-gb-64-gb"
+  },
+  {
+    "id": "51ca18eb-e00d-43e3-b3b3-77c4fcaa9d09",
+    "brand": "POCO",
+    "model": "POCO M4 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5110,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m4-pro-8-gb-128-gb"
+  },
+  {
+    "id": "37ff85af-a9b3-4d47-ba56-bbd14efd4ee4",
+    "brand": "POCO",
+    "model": "POCO X4 Pro 5G",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 6820,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-x4-pro-5g-6-gb-64-gb"
+  },
+  {
+    "id": "49773b2e-c44b-427d-9e4e-c59e9115934e",
+    "brand": "POCO",
+    "model": "POCO X4 Pro 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 7340,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-x4-pro-5g-6-gb-128-gb"
+  },
+  {
+    "id": "5ea8d7c5-f22c-48ac-a63d-e5f53f321e84",
+    "brand": "POCO",
+    "model": "POCO X4 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7850,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-x4-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "acba1c3c-67bb-4ba5-b658-c49b4eefd42a",
+    "brand": "POCO",
+    "model": "POCO M4 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5640,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m4-5g-4-gb-64-gb"
+  },
+  {
+    "id": "d28d85e0-6a32-4eb1-a080-533b9e75a06f",
+    "brand": "POCO",
+    "model": "POCO M4 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5840,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m4-5g-6-gb-128-gb"
+  },
+  {
+    "id": "d92957ec-a24d-432f-abea-4dde814dcf6d",
+    "brand": "POCO",
+    "model": "POCO F4 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7380,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-f4-5g-8-gb-128-gb"
+  },
+  {
+    "id": "150aab16-2617-4653-887e-bd856658094f",
+    "brand": "POCO",
+    "model": "POCO F4 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 7840,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-f4-5g-12-gb-256-gb"
+  },
+  {
+    "id": "673db25a-864f-497a-9091-de769e90bb6d",
+    "brand": "POCO",
+    "model": "POCO F4 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 7040,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-f4-5g-6-gb-128-gb"
+  },
+  {
+    "id": "330cf456-4973-4247-b18e-82d23c679b51",
+    "brand": "POCO",
+    "model": "POCO M5",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4090,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m5-6-gb-128-gb"
+  },
+  {
+    "id": "a99e65d9-885c-46ee-a7c2-1e7900e8804a",
+    "brand": "POCO",
+    "model": "POCO M5",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3820,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m5-4-gb-64-gb"
+  },
+  {
+    "id": "a6c2538b-71a2-46bf-956c-a0a7423d8aab",
+    "brand": "POCO",
+    "model": "POCO X5 Pro 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 10790,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-x5-pro-5g-6-gb-128-gb"
+  },
+  {
+    "id": "b016598e-97eb-4ce4-b623-4e6379a92068",
+    "brand": "POCO",
+    "model": "POCO X5 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 11260,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-x5-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "0f799459-7f38-4e81-828d-b6307f7393e0",
+    "brand": "POCO",
+    "model": "POCO C50",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 4750,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-c50-3-gb-32-gb"
+  },
+  {
+    "id": "2924156c-f45e-452c-89f8-66d761be4866",
+    "brand": "POCO",
+    "model": "POCO C50",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 4250,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-c50-2-gb-32-gb"
+  },
+  {
+    "id": "30bd142e-f80c-48fd-9306-7405cd626793",
+    "brand": "POCO",
+    "model": "POCO C55",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5240,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-c55-6-gb-128-gb"
+  },
+  {
+    "id": "ed1077ce-95d3-487d-a47a-b1a899585998",
+    "brand": "POCO",
+    "model": "POCO C55",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4570,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-c55-4-gb-64-gb"
+  },
+  {
+    "id": "2ab75c32-70ec-40ba-83ea-2f046a1c5472",
+    "brand": "POCO",
+    "model": "POCO X5 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 9720,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-x5-5g-6-gb-128-gb"
+  },
+  {
+    "id": "42b4166c-3213-4ec6-ade5-15a5ce35901c",
+    "brand": "POCO",
+    "model": "POCO X5 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 10140,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-x5-5g-8-gb-256-gb"
+  },
+  {
+    "id": "7cf5f59f-c322-4600-bd00-c10805b4ff06",
+    "brand": "POCO",
+    "model": "POCO C51",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4700,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-c51-6-gb-128-gb"
+  },
+  {
+    "id": "e44ca04d-835e-4619-a125-2926f5de80b8",
+    "brand": "POCO",
+    "model": "POCO C51",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4360,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-c51-4-gb-64-gb"
+  },
+  {
+    "id": "38baaa64-cf8a-43f8-a016-46b45bb84699",
+    "brand": "POCO",
+    "model": "POCO F5 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 13230,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-f5-5g-12-gb-256-gb"
+  },
+  {
+    "id": "5a32e922-0105-4551-9f6a-44ed63189525",
+    "brand": "POCO",
+    "model": "POCO F5 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12250,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-f5-5g-8-gb-256-gb"
+  },
+  {
+    "id": "45374fe3-6217-481d-9ad1-58b1b06e4f52",
+    "brand": "POCO",
+    "model": "POCO M6 Pro 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 7500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m6-pro-5g-4-gb-128-gb"
+  },
+  {
+    "id": "ad911be6-1975-4403-ac23-d596d55b8b8c",
+    "brand": "POCO",
+    "model": "POCO M6 Pro 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 8050,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m6-pro-5g-6-gb-128-gb"
+  },
+  {
+    "id": "39e58e22-beb5-43aa-9f4c-11aa0b8794f3",
+    "brand": "POCO",
+    "model": "POCO M6 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 6370,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m6-pro-5g-4-gb-64-gb"
+  },
+  {
+    "id": "c16edb30-7c13-4244-a014-459493435ade",
+    "brand": "POCO",
+    "model": "POCO M6 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8480,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m6-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "bfa745d0-6677-4e52-af83-f1ca5dd830b9",
+    "brand": "POCO",
+    "model": "POCO C65",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5050,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-c65-6-gb-128-gb"
+  },
+  {
+    "id": "90562837-1e7a-4e52-bf43-7af2a855b0aa",
+    "brand": "POCO",
+    "model": "POCO C65",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4700,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-c65-4-gb-128-gb"
+  },
+  {
+    "id": "d2fb4b33-f904-4949-bc44-a170c19abd61",
+    "brand": "POCO",
+    "model": "POCO C65",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5490,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-c65-8-gb-256-gb"
+  },
+  {
+    "id": "6292b03d-1149-464d-aade-679386fe7a2d",
+    "brand": "POCO",
+    "model": "POCO X6 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 10680,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-x6-5g-8-gb-256-gb"
+  },
+  {
+    "id": "6941303a-d2e9-47cc-911f-b1811065e9f2",
+    "brand": "POCO",
+    "model": "POCO X6 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 11270,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-x6-5g-12-gb-256-gb"
+  },
+  {
+    "id": "1d16f978-5be8-48a8-a50e-e2c13a830f5e",
+    "brand": "POCO",
+    "model": "POCO X6 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 12590,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-x6-5g-12-gb-512-gb"
+  },
+  {
+    "id": "52a367d3-5a6e-40cb-a74f-fc2ac72924f1",
+    "brand": "POCO",
+    "model": "POCO X6 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 14490,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-x6-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "35a00d80-11d8-48e5-af17-c6e5e280cc20",
+    "brand": "POCO",
+    "model": "POCO X6 Pro 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 14800,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-x6-pro-5g-12-gb-512-gb"
+  },
+  {
+    "id": "804b6170-c319-43b3-94d4-0a71d06d42ce",
+    "brand": "POCO",
+    "model": "POCO M6 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m6-5g-4-gb-64-gb"
+  },
+  {
+    "id": "c98a32ec-f06d-45d7-a6f2-f9600d37f56c",
+    "brand": "POCO",
+    "model": "POCO M6 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5540,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m6-5g-4-gb-128-gb"
+  },
+  {
+    "id": "7d88fcd0-83c3-4b0b-b29d-07c6e06afda4",
+    "brand": "POCO",
+    "model": "POCO M6 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6320,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m6-5g-8-gb-256-gb"
+  },
+  {
+    "id": "e6ef481f-70f5-4281-8ac5-ed10fb07a629",
+    "brand": "POCO",
+    "model": "POCO M6 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5930,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m6-5g-6-gb-128-gb"
+  },
+  {
+    "id": "b5684066-3092-4249-92a7-c12cd38c3e5d",
+    "brand": "POCO",
+    "model": "POCO C61",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4540,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-c61-4-gb-64-gb"
+  },
+  {
+    "id": "e5968180-6832-4321-b3ce-93238f13d144",
+    "brand": "POCO",
+    "model": "POCO C61",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4750,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-c61-6-gb-128-gb"
+  },
+  {
+    "id": "1b8c53b2-eaf7-42b3-a9e0-2d19a4897138",
+    "brand": "POCO",
+    "model": "POCO F6 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 14600,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-f6-5g-12-gb-256-gb"
+  },
+  {
+    "id": "99f76240-eab5-4c1e-8fe2-a772347627f9",
+    "brand": "POCO",
+    "model": "POCO F6 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 13720,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-f6-5g-8-gb-256-gb"
+  },
+  {
+    "id": "2c7b2ed3-d227-489e-9834-3743d83b3e98",
+    "brand": "POCO",
+    "model": "POCO F6 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 14990,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-f6-5g-12-gb-512-gb"
+  },
+  {
+    "id": "8a0bf401-ab60-4389-920f-cdd31a9a140c",
+    "brand": "POCO",
+    "model": "POCO X6 Neo 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 8920,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-x6--neo-5g-12-gb-256-gb"
+  },
+  {
+    "id": "8279cb85-087d-44bc-8b62-556f6342c8f2",
+    "brand": "POCO",
+    "model": "POCO X6 Neo 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8580,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-x6-neo-5g-8-gb-128-gb"
+  },
+  {
+    "id": "e78b361d-1caf-4da8-b1a2-c0938e71dee9",
+    "brand": "POCO",
+    "model": "POCO X7 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-x7-5g-8-gb-256-gb"
+  },
+  {
+    "id": "0e3a3018-8d41-4558-9670-b6c7abafb91e",
+    "brand": "POCO",
+    "model": "POCO X7 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 11500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-x7-5g-8-gb-128-gb"
+  },
+  {
+    "id": "2656cd66-2500-4d5b-a9d0-16a07436c5b1",
+    "brand": "POCO",
+    "model": "POCO M7 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8850,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m7-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "960687ab-b3d2-405d-84fc-4538de01663e",
+    "brand": "POCO",
+    "model": "POCO M7 Pro 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 8370,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m7-pro-5g-6-gb-128-gb"
+  },
+  {
+    "id": "43f1d71c-6c30-4651-9e3f-a4735ddfa43b",
+    "brand": "POCO",
+    "model": "POCO C75 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5300,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-c75-5g-4-gb-64-gb"
+  },
+  {
+    "id": "5860ee12-e877-42ee-8b36-2306235c4340",
+    "brand": "POCO",
+    "model": "POCO C75 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5820,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-c75-5g-4-gb-128-gb"
+  },
+  {
+    "id": "86606941-1f48-4094-9be7-afc1aab155c0",
+    "brand": "POCO",
+    "model": "POCO X7 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 16010,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-x7-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "1cc66dc0-48f9-458c-99be-7709271cbddd",
+    "brand": "POCO",
+    "model": "POCO X7 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 14290,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-x7-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "0d437e4e-744d-4209-b0aa-e1631f147179",
+    "brand": "POCO",
+    "model": "POCO M6 Plus 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6750,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m6-plus-5g-8-gb-128-gb"
+  },
+  {
+    "id": "9f8c6d06-e7f7-40d5-9d4d-779ab947127c",
+    "brand": "POCO",
+    "model": "POCO M6 Plus 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 6500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m6-plus-5g-6-gb-128-gb"
+  },
+  {
+    "id": "8c8c898f-f96e-49b0-877d-0ccaae540f61",
+    "brand": "POCO",
+    "model": "POCO M7 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6550,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m7-5g-8-gb-128-gb"
+  },
+  {
+    "id": "998782c2-3915-405a-9baa-d3beb0464b30",
+    "brand": "POCO",
+    "model": "POCO M7 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 6100,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m7-5g-6-gb-128-gb"
+  },
+  {
+    "id": "15b67de8-b4a8-4f72-8757-1f055b890d14",
+    "brand": "POCO",
+    "model": "POCO C71",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4010,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-c71-4-gb-64-gb"
+  },
+  {
+    "id": "7994f5ec-e445-4066-8ef6-bb9b29e79429",
+    "brand": "POCO",
+    "model": "POCO C71",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4250,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-c71-6-gb-128-gb"
+  },
+  {
+    "id": "3f582d2a-e3cc-4042-ba51-bfe631337919",
+    "brand": "POCO",
+    "model": "POCO F7 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 20800,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-f7-5g-12-gb-256-gb"
+  },
+  {
+    "id": "401df493-2cc6-4efb-ba8c-f2fdd5573459",
+    "brand": "POCO",
+    "model": "POCO F7 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 21000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-f7-5g-12-gb-512-gb"
+  },
+  {
+    "id": "b158af36-2ad8-4e35-9ce8-c9ca13cb9f6b",
+    "brand": "POCO",
+    "model": "POCO M7 Plus 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 8900,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m7-plus-5g-6-gb-128-gb"
+  },
+  {
+    "id": "54c8b6ba-b963-4ebc-a781-9a3c7eb07767",
+    "brand": "POCO",
+    "model": "POCO M7 Plus 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 9150,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m7-plus-5g-8-gb-128-gb"
+  },
+  {
+    "id": "8c6cd2e2-b759-4b98-9d3f-b374327f01c4",
+    "brand": "POCO",
+    "model": "POCO M7 Plus 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 8020,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m7-plus-5g-4-gb-128-gb"
+  },
+  {
+    "id": "8cb02ca6-d5ec-4096-a7bc-7948fdb944a3",
+    "brand": "POCO",
+    "model": "POCO C85 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 9300,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-c85-5g-8-gb-128-gb"
+  },
+  {
+    "id": "c055595b-d893-46ed-933e-b717ce5acd34",
+    "brand": "POCO",
+    "model": "POCO C85 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 8500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-c85-5g-6-gb-128-gb"
+  },
+  {
+    "id": "739d4d36-c07b-4d43-9484-86884d461fa2",
+    "brand": "POCO",
+    "model": "POCO C85 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 7800,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-c85-5g-4-gb-128-gb"
+  },
+  {
+    "id": "cc374901-30cf-406f-9919-eb9b0bd7d84d",
+    "brand": "POCO",
+    "model": "POCO M8 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 13000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m8-5g-6-gb-128-gb"
+  },
+  {
+    "id": "46870165-4d6d-457b-b2de-ec666e74f447",
+    "brand": "POCO",
+    "model": "POCO M8 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 14000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m8-5g-8-gb-128-gb"
+  },
+  {
+    "id": "51debff2-2da3-41cf-a053-eb7d997a0cde",
+    "brand": "POCO",
+    "model": "POCO M8 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 15500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-m8-5g-8-gb-256-gb"
+  },
+  {
+    "id": "d203c02c-e8b9-43ad-9075-450de27cfb20",
+    "brand": "POCO",
+    "model": "POCO C85x",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 7450,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-c85x-4-gb-64-gb"
+  },
+  {
+    "id": "6c55b414-32ad-4f87-8ad9-50b647d7d70f",
+    "brand": "POCO",
+    "model": "POCO C85x",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 8200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-c85x-4-gb-128-gb"
+  },
+  {
+    "id": "07f1ff44-cb83-4d35-9abc-c1524bbaa156",
+    "brand": "POCO",
+    "model": "POCO X8 Pro",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 21400,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-x8-pro-8-gb-256-gb"
+  },
+  {
+    "id": "af2ad7db-deea-4678-ba69-1a23549c6228",
+    "brand": "POCO",
+    "model": "POCO X8 Pro",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 23400,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-x8-pro-12-gb-256-gb"
   }
 ];
