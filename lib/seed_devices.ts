@@ -20629,5 +20629,955 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "basePrice": 8820,
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-camon-20s-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "04209594-aab3-49df-8d38-6b1f6a6ae42b",
+    "brand": "iQOO",
+    "model": "iQOO 3",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6400,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-3-8-gb-256-gb"
+  },
+  {
+    "id": "2e381249-4625-4ca2-b4f6-c46d8f786283",
+    "brand": "iQOO",
+    "model": "iQOO 3",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6170,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-3-8-gb-128-gb"
+  },
+  {
+    "id": "fbd494ce-e220-4e04-a11c-c1c115a0077d",
+    "brand": "iQOO",
+    "model": "iQOO 7 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8940,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-7-5g-8-gb-128-gb"
+  },
+  {
+    "id": "41fdc781-8ec8-404a-8a50-590655801611",
+    "brand": "iQOO",
+    "model": "iQOO 7 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 9390,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-7-5g-12-gb-256-gb"
+  },
+  {
+    "id": "4f44528e-f39d-4ce4-a429-0d4c7f14424b",
+    "brand": "iQOO",
+    "model": "iQOO 7 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 9160,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-7-5g-8-gb-256-gb"
+  },
+  {
+    "id": "8764603f-72d1-4778-a271-d2987dc09c8f",
+    "brand": "iQOO",
+    "model": "iQOO 7 Legend 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 10750,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-7-legend-5g-8-gb-128-gb"
+  },
+  {
+    "id": "a49ad302-03ca-4a3d-b1dc-6330458cdd6c",
+    "brand": "iQOO",
+    "model": "iQOO 7 Legend 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 11060,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-7-legend-5g-12-gb-256-gb"
+  },
+  {
+    "id": "077560c0-850e-46ab-9191-649d847ae8bd",
+    "brand": "iQOO",
+    "model": "iQOO Z3 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7810,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z3-5g-8-gb-128-gb"
+  },
+  {
+    "id": "b56f7c7a-b510-442a-b660-288b61207314",
+    "brand": "iQOO",
+    "model": "iQOO Z3 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 7220,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z3-5g-6-gb-128-gb"
+  },
+  {
+    "id": "6412fb0e-67eb-4df9-9c4e-b8343c2ea7a3",
+    "brand": "iQOO",
+    "model": "iQOO Z3 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7950,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z3-5g-8-gb-256-gb"
+  },
+  {
+    "id": "a3864c10-45cc-4f5c-a26e-30423fb9cfbd",
+    "brand": "iQOO",
+    "model": "iQOO Z5 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 7760,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z5-5g-12-gb-256-gb"
+  },
+  {
+    "id": "16bbf310-1f75-4d1e-972e-08f291cb67f0",
+    "brand": "iQOO",
+    "model": "iQOO Z5 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7460,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z5-5g-8-gb-128-gb"
+  },
+  {
+    "id": "05235c78-1aaa-45f0-90e0-4273ca51f69a",
+    "brand": "iQOO",
+    "model": "iQOO 9 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 10720,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-9-5g-8-gb-128-gb"
+  },
+  {
+    "id": "26d9ab59-1d89-41f4-aaec-d6dfc6d0bba6",
+    "brand": "iQOO",
+    "model": "iQOO 9 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 11280,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-9-5g-12-gb-256-gb"
+  },
+  {
+    "id": "302a09d4-87ba-4727-9a1f-5fbee758ba80",
+    "brand": "iQOO",
+    "model": "iQOO 9 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 16210,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-9-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "2c9a94aa-31f4-4285-a402-7f1c68ac1a41",
+    "brand": "iQOO",
+    "model": "iQOO 9 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 15830,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-9-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "8afcf2cb-6408-49e5-b3e4-f98a8db46e53",
+    "brand": "iQOO",
+    "model": "iQOO 9 SE 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 10980,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-9-se-5g-12-gb-256-gb"
+  },
+  {
+    "id": "9c5aba9c-ed85-4c1e-90ff-b5d535922519",
+    "brand": "iQOO",
+    "model": "iQOO 9 SE 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 10750,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-9-se-5g-8-gb-128-gb"
+  },
+  {
+    "id": "e6f85c62-d3f7-43a1-b0d1-4b91b819a6a5",
+    "brand": "iQOO",
+    "model": "iQOO Z6 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 8290,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z6-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "c353b4dd-00b1-42fc-b225-cef7bced0842",
+    "brand": "iQOO",
+    "model": "iQOO Z6 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7880,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z6-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "88c863dc-aacd-4d44-a4c6-e37140b21431",
+    "brand": "iQOO",
+    "model": "iQOO Z6 Pro 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 7540,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z6-pro-5g-6-gb-128-gb"
+  },
+  {
+    "id": "81d2e7b6-0d96-42c5-b4cb-98a3686d6fab",
+    "brand": "iQOO",
+    "model": "iQOO Z6 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 7310,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z6-5g-6-gb-128-gb"
+  },
+  {
+    "id": "7a801766-3336-4f1a-a7f5-a859379d23c9",
+    "brand": "iQOO",
+    "model": "iQOO Z6 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 7010,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z6-5g-4-gb-128-gb"
+  },
+  {
+    "id": "d0b21eb8-6377-4f1f-abaa-5d23ec52223c",
+    "brand": "iQOO",
+    "model": "iQOO Z6 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7720,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z6-5g-8-gb-128-gb"
+  },
+  {
+    "id": "89821f6a-77c8-47b5-bf59-14df6ec64f13",
+    "brand": "iQOO",
+    "model": "iQOO Z6",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5230,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z6-4-gb-128-gb"
+  },
+  {
+    "id": "558ef39c-6361-4fbe-886c-9339cdf2ee00",
+    "brand": "iQOO",
+    "model": "iQOO Z6",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5720,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z6-6-gb-128-gb"
+  },
+  {
+    "id": "86996fe2-f767-40ec-a872-e1e24f91d243",
+    "brand": "iQOO",
+    "model": "iQOO Z6",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6100,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z6-8-gb-128-gb"
+  },
+  {
+    "id": "f95f65f7-8c84-419d-ac60-4731b3ff5d48",
+    "brand": "iQOO",
+    "model": "iQOO Neo 6 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 10530,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-neo-6-5g-12-gb-256-gb"
+  },
+  {
+    "id": "82b95672-f9b0-4c27-ab17-731fc3bef16c",
+    "brand": "iQOO",
+    "model": "iQOO Neo 6 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 10200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-neo-6-5g-8-gb-128-gb"
+  },
+  {
+    "id": "1606b169-550b-412d-9c78-83459584ec9a",
+    "brand": "iQOO",
+    "model": "iQOO 9T 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 15150,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-9t-5g-12-gb-256-gb"
+  },
+  {
+    "id": "4ac31824-81b7-4e79-8659-ff9d6b1e6446",
+    "brand": "iQOO",
+    "model": "iQOO 9T 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 13970,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-9t-5g-8-gb-128-gb"
+  },
+  {
+    "id": "4637b0b4-4f3e-461e-a481-a3748e79018a",
+    "brand": "iQOO",
+    "model": "iQOO 3 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 7120,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-3-12-gb-256-gb"
+  },
+  {
+    "id": "5b853339-9260-4167-a585-b1e724e0c82a",
+    "brand": "iQOO",
+    "model": "iQOO Z6 Lite 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5570,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z6-lite-5g-4gb-64-gb"
+  },
+  {
+    "id": "06408d97-c908-4182-adfc-3683e95dd239",
+    "brand": "iQOO",
+    "model": "iQOO Z6 Lite 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 6560,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z6-lite-5g-6-gb-128-gb"
+  },
+  {
+    "id": "8b3c2111-9e92-4152-bba6-28d4ed4bf281",
+    "brand": "iQOO",
+    "model": "iQOO 11 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 17650,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-11-5g-8-gb-256-gb"
+  },
+  {
+    "id": "bbe968a8-67d5-453f-86ff-6d4b7c97df8f",
+    "brand": "iQOO",
+    "model": "iQOO 11 5G",
+    "storage": "16 GB/256 GB",
+    "ram": "16 GB",
+    "color": "Default",
+    "basePrice": 18020,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-11-5g-16-gb-256-gb"
+  },
+  {
+    "id": "d68caf1f-6f5a-4820-98f9-56a1359a229c",
+    "brand": "iQOO",
+    "model": "iQOO Neo 7 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 11000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-neo-7-5g-8-gb-128-gb"
+  },
+  {
+    "id": "3a44e142-ccf8-4159-be64-ce6c887bcf06",
+    "brand": "iQOO",
+    "model": "iQOO Neo 7 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 11440,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-neo-7-5g-12-gb-256-gb"
+  },
+  {
+    "id": "d49d54eb-1507-432e-ad2a-12a2de2c9a69",
+    "brand": "iQOO",
+    "model": "iQOO Z7 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 9280,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z7-5g-8-gb-128-gb"
+  },
+  {
+    "id": "6b73f774-7f42-430e-a753-c9618cb5ec91",
+    "brand": "iQOO",
+    "model": "iQOO Z7 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 8520,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z7-5g-6-gb-128-gb"
+  },
+  {
+    "id": "c551e9ab-00d7-4b0c-b962-772ed6514d68",
+    "brand": "iQOO",
+    "model": "iQOO Z7s 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 7540,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z7s-5g-6-gb-128-gb"
+  },
+  {
+    "id": "954cd7ca-edc7-47e5-965f-e9351979234e",
+    "brand": "iQOO",
+    "model": "iQOO Z7s 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8220,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z7s-5g-8-gb-128-gb"
+  },
+  {
+    "id": "02798459-5f0b-4514-a54b-32bf356a10d5",
+    "brand": "iQOO",
+    "model": "iQOO Neo 7 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 16170,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-neo-7-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "ee987618-9c52-486c-8d1d-eec78906bb5c",
+    "brand": "iQOO",
+    "model": "iQOO Neo 7 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 16660,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-neo-7-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "4b1be926-e1bf-4146-a000-632afadd8ac3",
+    "brand": "iQOO",
+    "model": "iQOO Z7 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 14500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z7-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "bae0295f-9f18-414e-984f-c2b38c62a433",
+    "brand": "iQOO",
+    "model": "iQOO Z7 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12480,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z7-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "cddcca59-0920-439f-ae0b-e0ebbed47770",
+    "brand": "iQOO",
+    "model": "iQOO 12 5G",
+    "storage": "16 GB/512 GB",
+    "ram": "16 GB",
+    "color": "Default",
+    "basePrice": 28130,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-12-5g-16-gb-512-gb"
+  },
+  {
+    "id": "e170c476-9730-4255-9c1b-69e766955957",
+    "brand": "iQOO",
+    "model": "iQOO 12 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 25480,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-12-5g-12-gb-256-gb"
+  },
+  {
+    "id": "e8b5bd8f-302d-457c-a87e-1ffa9c6cecd8",
+    "brand": "iQOO",
+    "model": "iQOO 12 5G",
+    "storage": "16 GB/256 GB",
+    "ram": "16 GB",
+    "color": "Default",
+    "basePrice": 26850,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-12-5g-16-gb-256-gb"
+  },
+  {
+    "id": "c06d224f-b668-4b7f-8875-a5d616fd5c4e",
+    "brand": "iQOO",
+    "model": "iQOO Neo 9 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 16660,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-neo-9-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "83f2bf9b-40e2-480d-a23b-331399d2e04e",
+    "brand": "iQOO",
+    "model": "iQOO Neo 9 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 20140,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-neo-9-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "919097d4-574f-486e-aa71-5dda048306c8",
+    "brand": "iQOO",
+    "model": "iQOO Neo 9 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 19310,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-neo-9-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "1ffbcce8-d0d4-432e-a511-a6238750c6e5",
+    "brand": "iQOO",
+    "model": "iQOO Z9 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8070,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z9-5g-8-gb-256-gb"
+  },
+  {
+    "id": "c21b3507-a0ad-4ec5-8d8d-3513d59a14b5",
+    "brand": "iQOO",
+    "model": "iQOO Z9 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7570,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z9-5g-8-gb-128-gb"
+  },
+  {
+    "id": "2df0ff19-5f3e-4b9b-91be-3006b2535bd2",
+    "brand": "iQOO",
+    "model": "iQOO Z9x 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8380,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z9x-5g-8-gb-128-gb"
+  },
+  {
+    "id": "84329c77-944a-4c81-a933-ed9055e10629",
+    "brand": "iQOO",
+    "model": "iQOO Z9x 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 7550,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z9x-5g-4-gb-128-gb"
+  },
+  {
+    "id": "5fcfc876-3797-4779-b2bf-a75e2fab3fbc",
+    "brand": "iQOO",
+    "model": "iQOO Z9x 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 7840,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z9x-5g-6-gb-128-gb"
+  },
+  {
+    "id": "fea49d14-6a0f-4985-8c1d-ded40bbe5cf5",
+    "brand": "iQOO",
+    "model": "iQOO Z9 Lite 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 7060,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z9-lite-5g-4-gb-128-gb"
+  },
+  {
+    "id": "193227cd-2a6d-4e70-8ee2-a11e86e3a5fe",
+    "brand": "iQOO",
+    "model": "iQOO Z9 Lite 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 7600,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z9-lite-5g-6-gb-128-gb"
+  },
+  {
+    "id": "4c804894-de46-44d9-a962-38bc96a354d3",
+    "brand": "iQOO",
+    "model": "iQOO Z9s 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 12840,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z9s-5g-12-gb-256-gb"
+  },
+  {
+    "id": "036e88b3-eeff-43e7-81e6-a750576b6801",
+    "brand": "iQOO",
+    "model": "iQOO Z9s 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12310,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z9s-5g-8-gb-128-gb"
+  },
+  {
+    "id": "7a7d7bf1-7826-4c4d-b412-e0b7c5b8ce07",
+    "brand": "iQOO",
+    "model": "iQOO Z9s 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12590,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z9s-5g-8-gb-256-gb"
+  },
+  {
+    "id": "b7dade50-2201-4195-8821-35979c768776",
+    "brand": "iQOO",
+    "model": "iQOO Z9s Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 13920,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z9s-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "396f0dc4-923d-4d5b-90c7-a9d67c0edf41",
+    "brand": "iQOO",
+    "model": "iQOO Z9s Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 13130,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z9s-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "503c94b9-e5da-407b-8a25-8055b1c24025",
+    "brand": "iQOO",
+    "model": "iQOO Z9s Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12890,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z9s-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "eb8bab68-4d11-45d3-8eb0-f472daf1dc90",
+    "brand": "iQOO",
+    "model": "iQOO 13 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 30000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-13-5g-12-gb-256-gb"
+  },
+  {
+    "id": "412fbfb8-cf3a-4933-9017-3338992f766f",
+    "brand": "iQOO",
+    "model": "iQOO 13 5G",
+    "storage": "16 GB/512 GB",
+    "ram": "16 GB",
+    "color": "Default",
+    "basePrice": 31200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-13-5g-16-gb-512-gb"
+  },
+  {
+    "id": "ef43e3df-32ea-4d4f-9eec-a53a438bbc84",
+    "brand": "iQOO",
+    "model": "iQOO Neo 10R 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 17000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-neo-10r-5g-8-gb-128-gb"
+  },
+  {
+    "id": "931f1d6b-2cc3-4333-8982-874fec07f26b",
+    "brand": "iQOO",
+    "model": "iQOO Neo 10R 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 19500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-neo-10r-5g-8-gb-256-gb"
+  },
+  {
+    "id": "36b68ac2-b91b-46d2-a576-6fc52048c04e",
+    "brand": "iQOO",
+    "model": "iQOO Neo 10R 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 19750,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-neo-10r-5g-12-gb-256-gb"
+  },
+  {
+    "id": "f19abcd6-fb8a-429f-9d0a-5c877dcf7dd6",
+    "brand": "iQOO",
+    "model": "iQOO Z10 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 18000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z10-5g-12-gb-256-gb"
+  },
+  {
+    "id": "078ede12-4308-4d9f-8990-5fd7ed523da3",
+    "brand": "iQOO",
+    "model": "iQOO Z10 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 15710,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z10-5g-8-gb-128-gb"
+  },
+  {
+    "id": "c3455fa3-5d87-46b7-9b39-c2a931e34d21",
+    "brand": "iQOO",
+    "model": "iQOO Z10 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 16800,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z10-5g-8-gb-256-gb"
+  },
+  {
+    "id": "0b83a3dc-bd99-4986-a9b8-cdd77f90f8c7",
+    "brand": "iQOO",
+    "model": "iQOO Z10x 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 11100,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z10x-5g-8-gb-256-gb"
+  },
+  {
+    "id": "9270babe-029e-45c4-8be8-862fa7308165",
+    "brand": "iQOO",
+    "model": "iQOO Z10x 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 9800,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z10x-5g-6-gb-128-gb"
+  },
+  {
+    "id": "b9445665-6db5-4c4d-b70f-d0ca6a3ecb7a",
+    "brand": "iQOO",
+    "model": "iQOO Z10x 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 10500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z10x-5g-8-gb-128-gb"
+  },
+  {
+    "id": "de96bc10-8bad-42b5-a591-d3d00e0e2884",
+    "brand": "iQOO",
+    "model": "iQOO Neo 10",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 24500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-neo-10-8-gb-256-gb"
+  },
+  {
+    "id": "b74bcd13-cb25-45a3-9916-22f646d80fe9",
+    "brand": "iQOO",
+    "model": "iQOO Neo 10",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 20450,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-neo-10-8-gb-128-gb"
+  },
+  {
+    "id": "7581527e-45d2-41f2-af05-bb3c32a735ae",
+    "brand": "iQOO",
+    "model": "iQOO Neo 10",
+    "storage": "16 GB/512 GB",
+    "ram": "16 GB",
+    "color": "Default",
+    "basePrice": 26500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-neo-10-16-gb-512-gb"
+  },
+  {
+    "id": "bb2ffb30-4566-4453-9ecc-8e15f0aa267f",
+    "brand": "iQOO",
+    "model": "iQOO Neo 10",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 25500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-neo-10-12-gb-256-gb"
+  },
+  {
+    "id": "6b570400-2f86-414f-8af0-ad5bc7458f5d",
+    "brand": "iQOO",
+    "model": "iQOO Z10 Lite 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 6860,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z10-lite-5g-4-gb-64-gb"
+  },
+  {
+    "id": "031baa7a-594d-4db0-8e78-53f031e54c30",
+    "brand": "iQOO",
+    "model": "iQOO Z10 Lite 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8650,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z10-lite-5g-8-gb-256-gb"
+  },
+  {
+    "id": "2bf3a893-a380-45df-85d5-4fbabdec89be",
+    "brand": "iQOO",
+    "model": "iQOO Z10 Lite 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 7350,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z10-lite-5g-4-gb-128-gb"
+  },
+  {
+    "id": "c1ab33bd-4d92-485a-a056-a234514e3e12",
+    "brand": "iQOO",
+    "model": "iQOO Z10 Lite 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 8200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z10-lite-5g-6-gb-128-gb"
+  },
+  {
+    "id": "c9b40c3c-6581-44e0-8225-59db1e6944c0",
+    "brand": "iQOO",
+    "model": "iQOO Z10R 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 16000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z10r-5g-12-gb-256-gb"
+  },
+  {
+    "id": "79735bff-050a-42cb-bfc2-f77fc899685a",
+    "brand": "iQOO",
+    "model": "iQOO Z10R 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 15000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z10r-5g-8-gb-256-gb"
+  },
+  {
+    "id": "a00c5dc8-4e61-4271-8a73-62339b0a0acf",
+    "brand": "iQOO",
+    "model": "iQOO Z10R 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 14130,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z10r-5g-8-gb-128-gb"
+  },
+  {
+    "id": "166dbf89-d2ff-46f3-9c14-28c744384093",
+    "brand": "iQOO",
+    "model": "iQOO 15 5G",
+    "storage": "16 GB/512 GB",
+    "ram": "16 GB",
+    "color": "Default",
+    "basePrice": 42000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-15-5g-16-gb-512-gb"
+  },
+  {
+    "id": "1ea15193-b024-45ed-b561-4415893b6726",
+    "brand": "iQOO",
+    "model": "iQOO 15 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 40000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-15-5g-12-gb-256-gb"
+  },
+  {
+    "id": "92354c98-e783-4b41-bc7d-d4b5abfe399a",
+    "brand": "iQOO",
+    "model": "iQOO 15R",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 31500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-15r-12-gb-256-gb"
+  },
+  {
+    "id": "f9a8ed5f-767a-473d-b596-d3a72025596e",
+    "brand": "iQOO",
+    "model": "iQOO 15R",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 33000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-15r-12-gb-512-gb"
+  },
+  {
+    "id": "19a7fa8f-def8-471c-b0ae-1fa9806cfd24",
+    "brand": "iQOO",
+    "model": "iQOO 15R",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 29500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-15r-8-gb-256-gb"
+  },
+  {
+    "id": "83f1a5b4-dc99-4746-aad5-f7edc117799e",
+    "brand": "iQOO",
+    "model": "iQOO Z11x 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 14750,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z11x-5g-8-gb-128-gb"
+  },
+  {
+    "id": "af2b13fd-ded4-449d-9028-4fc18b9315a1",
+    "brand": "iQOO",
+    "model": "iQOO Z11x 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 14000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z11x-5g-6-gb-128-gb"
+  },
+  {
+    "id": "221c6c3c-afa0-45cf-aa77-c4ac283eb946",
+    "brand": "iQOO",
+    "model": "iQOO Z11x 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 15700,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z11x-5g-8-gb-256-gb"
   }
 ];
