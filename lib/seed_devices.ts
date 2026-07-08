@@ -3441,14 +3441,6 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 1940
   },
   {
-    "id": "lenovo_13005",
-    "brand": "Lenovo",
-    "model": "Lenovo Z6 Pro",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5260
-  },
-  {
     "id": "lg_14000",
     "brand": "LG",
     "model": "LG W10",
@@ -17373,15 +17365,6 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 5000
   },
   {
-    "id": "lenovo_batch_6",
-    "brand": "Lenovo",
-    "model": "Lenovo Z6 Pro",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
     "id": "nokia_batch_1",
     "brand": "Nokia",
     "model": "Nokia 2.1",
@@ -24368,5 +24351,14 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "basePrice": 14270,
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-edge-50-fusion-8-gb-128-gb"
+  },
+  {
+    "brand": "Lenovo",
+    "model": "Lenovo Z6 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8GB",
+    "color": "Midnight",
+    "basePrice": 5260,
+    "id": "lenovo_z6_pro_8gb"
   }
 ];
