@@ -18204,5 +18204,2375 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "basePrice": 28000,
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-4a-pro-8-gb-128-gb"
+  },
+  {
+    "id": "e89e5499-ce03-48b4-8132-5a3b4728dd30",
+    "brand": "Oppo",
+    "model": "OPPO A7",
+    "storage": "3 GB/64 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2040,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a7-3-gb-64-gb"
+  },
+  {
+    "id": "003de332-021e-46ac-81e7-00256ba5fa8e",
+    "brand": "Oppo",
+    "model": "OPPO A7",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2430,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a7-4-gb-64-gb"
+  },
+  {
+    "id": "1550c119-9998-49ad-a0f8-9c3c57ec63e3",
+    "brand": "Oppo",
+    "model": "OPPO F9 Pro",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 2970,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f9-pro-6-gb-128-gb"
+  },
+  {
+    "id": "7f5626f0-2ef6-4236-9f6b-72fd06241e2c",
+    "brand": "Oppo",
+    "model": "OPPO F9 Pro",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 2670,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f9-pro-6-gb-64-gb"
+  },
+  {
+    "id": "6fe4fc6a-3a6d-4906-9d63-d602070693cf",
+    "brand": "Oppo",
+    "model": "OPPO F9",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2640,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f9-4-gb-64-gb"
+  },
+  {
+    "id": "b17028da-8cfb-4f00-bfdb-daae4fb732da",
+    "brand": "Oppo",
+    "model": "OPPO A3s",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 1930,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a3s-3-gb-32-gb"
+  },
+  {
+    "id": "fe5e9dce-cfee-45a2-8974-65e9cc0491aa",
+    "brand": "Oppo",
+    "model": "OPPO A3s",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2120,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a3s-4-gb-64-gb"
+  },
+  {
+    "id": "249a8e60-d397-4261-92a4-0abf0d392389",
+    "brand": "Oppo",
+    "model": "OPPO A3s",
+    "storage": "2 GB/16 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 1740,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a3s-2-gb-16-gb"
+  },
+  {
+    "id": "f5031ee4-0546-4218-b0a1-01eb693b9563",
+    "brand": "Oppo",
+    "model": "OPPO Find X",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6970,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-find-x-8-gb-256-gb"
+  },
+  {
+    "id": "0656296c-fdd6-4c0c-93ea-4b81a072d2a6",
+    "brand": "Oppo",
+    "model": "OPPO A5",
+    "storage": "4 GB/32 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2460,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a5-4-gb-32-gb"
+  },
+  {
+    "id": "10678741-da46-42c9-ae36-580173f8437b",
+    "brand": "Oppo",
+    "model": "OPPO A5",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2750,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a5-4-gb-64-gb"
+  },
+  {
+    "id": "7ce8c3f7-d06d-4cce-a13c-13f3144edfa3",
+    "brand": "Oppo",
+    "model": "OPPO F7",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2380,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f7-4-gb-64-gb"
+  },
+  {
+    "id": "ae0a271d-2a65-4a23-9aac-c1a0dfe94eb8",
+    "brand": "Oppo",
+    "model": "OPPO F7",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 2600,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f7-6-gb-128-gb"
+  },
+  {
+    "id": "138dba37-0c2d-4630-a869-b1db21b9216d",
+    "brand": "Oppo",
+    "model": "OPPO A83",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 1440,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a83-3-gb-32-gb"
+  },
+  {
+    "id": "24fca27f-1384-4c81-94db-4ce30418ba29",
+    "brand": "Oppo",
+    "model": "OPPO A83",
+    "storage": "2 GB/16 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 1300,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a83-2-gb-16-gb"
+  },
+  {
+    "id": "cee5dbde-32a5-4343-ab40-77bf47ebf1d4",
+    "brand": "Oppo",
+    "model": "OPPO A83",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 1670,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a83-4-gb-64-gb"
+  },
+  {
+    "id": "0c4acde1-8ed3-4d61-8ba0-d3a130f73bf7",
+    "brand": "Oppo",
+    "model": "OPPO F5 Youth",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 1700,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f5-youth-3-gb-32-gb"
+  },
+  {
+    "id": "9e22a08b-9b0c-476a-97d6-6630d4b04639",
+    "brand": "Oppo",
+    "model": "OPPO F5",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 1930,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f5-6-gb-64-gb"
+  },
+  {
+    "id": "c246f0d4-4983-4c62-afd9-5187b0753242",
+    "brand": "Oppo",
+    "model": "OPPO F5",
+    "storage": "4 GB/32 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 1780,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f5-4-gb-32-gb"
+  },
+  {
+    "id": "7427ae53-901e-4249-a69b-a9ae7f661eea",
+    "brand": "Oppo",
+    "model": "OPPO R11",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2270,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-r11-4-gb-64-gb"
+  },
+  {
+    "id": "131b9d9c-2f98-4f73-81cc-7c62caaad862",
+    "brand": "Oppo",
+    "model": "OPPO A77",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 1490,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a77-4-gb-64-gb"
+  },
+  {
+    "id": "caab5aa6-89d7-4301-8725-547276446def",
+    "brand": "Oppo",
+    "model": "OPPO F3",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 1480,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f3-4-gb-64-gb"
+  },
+  {
+    "id": "c27a9c6c-f87c-4e47-93e9-bebc40d73b46",
+    "brand": "Oppo",
+    "model": "OPPO F3 Plus",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 2160,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f3-plus-6-gb-64-gb"
+  },
+  {
+    "id": "362b1b0e-f409-4062-a106-45708989061e",
+    "brand": "Oppo",
+    "model": "OPPO F3 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 1860,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f3-plus-4-gb-64-gb"
+  },
+  {
+    "id": "e4105be4-7b98-4e1c-81dc-93c1dc80ced6",
+    "brand": "Oppo",
+    "model": "OPPO A57",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 1510,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a57-3-gb-32-gb"
+  },
+  {
+    "id": "f4d5b617-0bb9-4ef0-b414-8b0226689928",
+    "brand": "Oppo",
+    "model": "OPPO F1s",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 1330,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f1s-4-gb-64-gb"
+  },
+  {
+    "id": "f9ce6add-be89-4197-86f2-aa133c76052e",
+    "brand": "Oppo",
+    "model": "OPPO F1s",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 1190,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f1s-3-gb-32-gb"
+  },
+  {
+    "id": "140f1443-5d38-4254-9b05-f0ec367b13b2",
+    "brand": "Oppo",
+    "model": "OPPO F1 plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 1260,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f1-plus-4-gb-64-gb"
+  },
+  {
+    "id": "f3f8d1c1-beaf-4408-969a-d6c8c182ca4f",
+    "brand": "Oppo",
+    "model": "OPPO R17",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 4170,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-r17-8-gb-128-gb"
+  },
+  {
+    "id": "f2827f2d-31d0-4f55-a4bd-f6d560922417",
+    "brand": "Oppo",
+    "model": "OPPO K1",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3180,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-k1-6-gb-64-gb"
+  },
+  {
+    "id": "b465ec62-fb0c-4913-841e-4bcbc6f7c8b4",
+    "brand": "Oppo",
+    "model": "OPPO K1",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3030,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-k1-4-gb-64-gb"
+  },
+  {
+    "id": "b11d064e-24a7-4c25-ae01-cf8bbf10dff4",
+    "brand": "Oppo",
+    "model": "OPPO F11 Pro",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4040,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f11-pro-6-gb-64-gb"
+  },
+  {
+    "id": "e3154381-b8a6-4b2b-8369-09ddbda858b8",
+    "brand": "Oppo",
+    "model": "OPPO F11 Pro",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4350,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f11-pro-6-gb-128-gb"
+  },
+  {
+    "id": "e07beaf2-e507-4dcd-86a0-2c943204b7c9",
+    "brand": "Oppo",
+    "model": "OPPO A5s",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2470,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a5s-3-gb-32-gb"
+  },
+  {
+    "id": "deb629de-348c-4cc2-a0e8-097a887c1275",
+    "brand": "Oppo",
+    "model": "OPPO A5s",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 2200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a5s-2-gb-32-gb"
+  },
+  {
+    "id": "4abfea00-edd6-4536-ae5a-723c20d1e6c2",
+    "brand": "Oppo",
+    "model": "OPPO A5s",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2690,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a5s-4-gb-64-gb"
+  },
+  {
+    "id": "35733244-2395-45c3-b637-edbbbf1c89c5",
+    "brand": "Oppo",
+    "model": "OPPO A1K",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 2320,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a1k-2-gb-32-gb"
+  },
+  {
+    "id": "9173abeb-2032-40ad-8865-8e74a2815c6b",
+    "brand": "Oppo",
+    "model": "OPPO F11",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3280,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f11-4-gb-128-gb"
+  },
+  {
+    "id": "1155eba6-453a-4798-b3ec-4dbee3d820a1",
+    "brand": "Oppo",
+    "model": "OPPO F11",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3680,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f11-6-gb-128-gb"
+  },
+  {
+    "id": "071a50ea-f8fd-4945-912f-a8e81016e908",
+    "brand": "Oppo",
+    "model": "OPPO Reno",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 4920,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno-8-gb-128-gb"
+  },
+  {
+    "id": "1f97bea7-030b-45e7-8dcd-a3200dc46d2f",
+    "brand": "Oppo",
+    "model": "OPPO Reno 10x Zoom",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5490,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno-10x-zoom-6-gb-128-gb"
+  },
+  {
+    "id": "73f95948-bbde-4bbe-b24e-8400b86aafb8",
+    "brand": "Oppo",
+    "model": "OPPO Reno 10x Zoom",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5720,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno-10x-zoom-8-gb-256-gb"
+  },
+  {
+    "id": "8c9fdaa4-07b5-4111-91fc-f352b8fd11f1",
+    "brand": "Oppo",
+    "model": "OPPO K3",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 4350,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-k3-8-gb-128-gb"
+  },
+  {
+    "id": "7fc914a1-b779-4fa7-9e31-7b327d708597",
+    "brand": "Oppo",
+    "model": "OPPO K3",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4170,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-k3-6-gb-64-gb"
+  },
+  {
+    "id": "47081b7a-5ddc-4a41-861c-3226d4de881f",
+    "brand": "Oppo",
+    "model": "OPPO A9",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3920,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a9-4-gb-128-gb"
+  },
+  {
+    "id": "4038c63c-7c90-416d-9d81-80c017a1deb5",
+    "brand": "Oppo",
+    "model": "OPPO Reno 2Z",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5800,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno2z-8-gb-256-gb"
+  },
+  {
+    "id": "d391fa4a-12b9-41ac-80f8-987090af1727",
+    "brand": "Oppo",
+    "model": "OPPO Reno 2",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5910,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno-2-8-gb-256-gb"
+  },
+  {
+    "id": "d1ff282e-5670-4884-b0d8-24861744896a",
+    "brand": "Oppo",
+    "model": "OPPO A5 2020",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3230,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a5-2020-4-gb-64-gb"
+  },
+  {
+    "id": "3082952e-053e-4f06-8b0a-a951d4a3071a",
+    "brand": "Oppo",
+    "model": "OPPO A5 2020",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3370,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a5-2020-4-gb-128-gb"
+  },
+  {
+    "id": "b0f8699f-ea9b-45af-8b01-3285ee7315e4",
+    "brand": "Oppo",
+    "model": "OPPO A5 2020",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3520,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a5-2020-6-gb-128-gb"
+  },
+  {
+    "id": "d6df29d4-acdb-4035-a76e-5ceeb2fe5c10",
+    "brand": "Oppo",
+    "model": "OPPO A5 2020",
+    "storage": "3 GB/64 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 3030,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a5-2020-3-gb-64-gb"
+  },
+  {
+    "id": "bb4b3593-241f-4fd6-a1c6-5e4b6a33b258",
+    "brand": "Oppo",
+    "model": "OPPO A9 2020",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 4100,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a9-2020-8-gb-128-gb"
+  },
+  {
+    "id": "61a093a3-2d89-4660-832d-5f1f0e1e77d7",
+    "brand": "Oppo",
+    "model": "OPPO A9 2020",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3890,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a9-2020-4-gb-128-gb"
+  },
+  {
+    "id": "e3c48c68-8733-439a-b121-f4cf58f616dc",
+    "brand": "Oppo",
+    "model": "OPPO Reno2 F",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5720,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno2-f-8-gb-128-gb"
+  },
+  {
+    "id": "e600b85e-de70-4e1c-805a-65a71883c814",
+    "brand": "Oppo",
+    "model": "OPPO Reno2 F",
+    "storage": "6 GB/256 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5070,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno2-f-6-gb-256-gb"
+  },
+  {
+    "id": "8bc9840b-bc33-48a6-8fdb-75acea1839f7",
+    "brand": "Oppo",
+    "model": "OPPO F15",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5040,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f15-8-gb-128-gb"
+  },
+  {
+    "id": "25660c5c-2c4f-4549-b406-4ce81b6f095b",
+    "brand": "Oppo",
+    "model": "OPPO F15",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4640,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f15-4-gb-128-gb"
+  },
+  {
+    "id": "c3930af6-c75d-448c-8203-9b6074d0a80c",
+    "brand": "Oppo",
+    "model": "OPPO A71 2018",
+    "storage": "3 GB/16 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 1060,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a71-2018-3-gb-16-gb"
+  },
+  {
+    "id": "1c054575-7d21-4838-a3af-fe0a79fa7661",
+    "brand": "Oppo",
+    "model": "OPPO A31",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3830,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a31-4-gb-64-gb"
+  },
+  {
+    "id": "2de29b24-b61c-4e3b-9926-f973cf9f464b",
+    "brand": "Oppo",
+    "model": "OPPO A31",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4410,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a31-6-gb-128-gb"
+  },
+  {
+    "id": "aa94e6d7-66d6-4bf5-8335-f81dfdda6449",
+    "brand": "Oppo",
+    "model": "OPPO A12",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2970,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a12-3-gb-32-gb"
+  },
+  {
+    "id": "ebeaf430-6977-46f9-9437-8a997bdcbb4b",
+    "brand": "Oppo",
+    "model": "OPPO A12",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3290,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a12-4-gb-64-gb"
+  },
+  {
+    "id": "04eb5ad7-0273-43a8-9d8c-9a9408352d18",
+    "brand": "Oppo",
+    "model": "OPPO A52",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4280,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a52-4-gb-128-gb"
+  },
+  {
+    "id": "30d6f070-a32c-4a7e-910c-96c62ffae8f0",
+    "brand": "Oppo",
+    "model": "OPPO A52",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 4770,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a52-8-gb-128-gb"
+  },
+  {
+    "id": "9fc5e0e7-34af-4b4f-a093-3f5f452d6dd0",
+    "brand": "Oppo",
+    "model": "OPPO A52",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4580,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a52-6-gb-128-gb"
+  },
+  {
+    "id": "114d562a-df46-49ea-aa9f-a96c6f5b1a29",
+    "brand": "Oppo",
+    "model": "OPPO Find X2",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 11100,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-find-x2-12-gb-256-gb"
+  },
+  {
+    "id": "b9d180e1-5dcb-4679-8fe6-855a40b48a57",
+    "brand": "Oppo",
+    "model": "OPPO A11K",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 2500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a11k-2-gb-32-gb"
+  },
+  {
+    "id": "19130caa-7fd3-4f6f-9c8f-fec1ada16781",
+    "brand": "Oppo",
+    "model": "OPPO Reno3 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5720,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno3-pro-8-gb-128-gb"
+  },
+  {
+    "id": "d3c3bed6-abe4-471f-8c93-d7ff14121bb2",
+    "brand": "Oppo",
+    "model": "OPPO Reno3 Pro",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5760,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno3-pro-8-gb-256-gb"
+  },
+  {
+    "id": "ee063042-319b-42ed-adda-f4cb114cf1f9",
+    "brand": "Oppo",
+    "model": "OPPO Reno4 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6890,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno-4-pro-8-gb-128-gb"
+  },
+  {
+    "id": "b84278ea-a6c9-4f34-974c-ff840772726b",
+    "brand": "Oppo",
+    "model": "OPPO A53",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a53-6-gb-128-gb"
+  },
+  {
+    "id": "f0b8ae1e-8f76-4a91-a45b-2da564eb012c",
+    "brand": "Oppo",
+    "model": "OPPO A53",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4440,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a53-4-gb-64-gb"
+  },
+  {
+    "id": "65c25f9a-168f-4940-8d8b-d3c01648d228",
+    "brand": "Oppo",
+    "model": "OPPO F17 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5490,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f17-pro-8-gb-128-gb"
+  },
+  {
+    "id": "264ee449-f4d4-4c7b-a11a-24788ec8ca5f",
+    "brand": "Oppo",
+    "model": "OPPO F17",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5110,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f17-6-gb-128-gb"
+  },
+  {
+    "id": "c128b8d8-2e29-4756-908c-5c8dc7527265",
+    "brand": "Oppo",
+    "model": "OPPO F17",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5300,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f17-8-gb-128-gb"
+  },
+  {
+    "id": "5d859d78-16d4-4ab3-9e8a-514b633df7f5",
+    "brand": "Oppo",
+    "model": "OPPO A33 2020",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 3140,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a33-2020-3-gb-32-gb"
+  },
+  {
+    "id": "ed637059-93e2-4b2c-b6a6-6565b1d88075",
+    "brand": "Oppo",
+    "model": "OPPO A15",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 3070,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a15-2-gb-32-gb"
+  },
+  {
+    "id": "190411af-efea-4a85-9b15-321b16430c25",
+    "brand": "Oppo",
+    "model": "OPPO A15",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 3370,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a15-3-gb-32-gb"
+  },
+  {
+    "id": "e688efec-d6ce-4bd8-898d-693a7ad044bd",
+    "brand": "Oppo",
+    "model": "OPPO A15s",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3510,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a15s-4-gb-64-gb"
+  },
+  {
+    "id": "8b442ac1-778d-41ee-8a60-eba7a877784d",
+    "brand": "Oppo",
+    "model": "OPPO A15s",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4090,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a15s-4-gb-128-gb"
+  },
+  {
+    "id": "0e583445-6f0c-40d2-b732-fa065deac753",
+    "brand": "Oppo",
+    "model": "OPPO Reno5 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 9180,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno5-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "97bff753-c55f-4bf3-b615-81bf3005588b",
+    "brand": "Oppo",
+    "model": "Oppo F19 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5910,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f19-pro-8-gb-128-gb"
+  },
+  {
+    "id": "d91e52e6-38e5-4527-ab94-9cb522aaca57",
+    "brand": "Oppo",
+    "model": "OPPO F19 Pro",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6130,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f19-pro-8-gb-256-gb"
+  },
+  {
+    "id": "10a48da3-83f5-4d8b-b5ff-6807f0a02673",
+    "brand": "Oppo",
+    "model": "OPPO F19 Pro Plus 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7460,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f19-pro-plus-5g-8-gb-128-gb"
+  },
+  {
+    "id": "cf85c942-a1b0-4a6d-b3dc-57d7663353a3",
+    "brand": "Oppo",
+    "model": "OPPO F19",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5640,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f19-6-gb-128-gb"
+  },
+  {
+    "id": "c9854694-64f3-40d1-86b0-646abbaf1793",
+    "brand": "Oppo",
+    "model": "OPPO A54",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4350,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a54-4-gb-64-gb"
+  },
+  {
+    "id": "621031c9-eab3-40df-92c9-ae9dd820c374",
+    "brand": "Oppo",
+    "model": "OPPO A54",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4750,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a54-4-gb-128-gb"
+  },
+  {
+    "id": "742a770e-e633-427c-8c6f-e13212d10198",
+    "brand": "Oppo",
+    "model": "OPPO A54",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5040,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a54-6-gb-128-gb"
+  },
+  {
+    "id": "595f6430-a735-4dbf-9436-6f405c424851",
+    "brand": "Oppo",
+    "model": "OPPO A53s 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 6960,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a53s-5g-6-gb-128-gb"
+  },
+  {
+    "id": "e9463caf-a7f4-40bd-a88a-0780c041e42f",
+    "brand": "Oppo",
+    "model": "OPPO A53s 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7310,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a53s-5g-8-gb-128-gb"
+  },
+  {
+    "id": "ea82784c-0a20-4922-9ddf-b7f58a406c36",
+    "brand": "Oppo",
+    "model": "OPPO A74 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 7570,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a74-5g-6-gb-128-gb"
+  },
+  {
+    "id": "2b58e76e-b8bb-4972-b4a9-16ad9a823f97",
+    "brand": "Oppo",
+    "model": "OPPO Reno6 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8330,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno6-5g-8-gb-128-gb"
+  },
+  {
+    "id": "5480f30d-4136-41f9-bc23-595857f2bb68",
+    "brand": "Oppo",
+    "model": "OPPO Reno6 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 9920,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno6-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "65d913d4-916c-496d-a5f4-d0685e50a285",
+    "brand": "Oppo",
+    "model": "OPPO F19s",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5130,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f19s-6-gb-128-gb"
+  },
+  {
+    "id": "3fe6000e-d13b-46bb-8518-af78b2e35ce1",
+    "brand": "Oppo",
+    "model": "OPPO A55",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4640,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a55-4-gb-64-gb"
+  },
+  {
+    "id": "60192a5e-6fcd-4595-8712-cda3648b743d",
+    "brand": "Oppo",
+    "model": "OPPO A55",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4790,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a55-4-gb-128-gb"
+  },
+  {
+    "id": "d2660a0e-e051-484a-9056-332f362af76e",
+    "brand": "Oppo",
+    "model": "OPPO A55",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5190,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a55-6-gb-128-gb"
+  },
+  {
+    "id": "56f26e7a-ba21-43bb-872d-f816a66ffc02",
+    "brand": "Oppo",
+    "model": "OPPO A16",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4490,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a16-4-gb-64-gb"
+  },
+  {
+    "id": "9d9532ef-31d8-4a38-8532-817eb980b807",
+    "brand": "Oppo",
+    "model": "OPPO A16K",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2920,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a16k-3-gb-32-gb"
+  },
+  {
+    "id": "1235c82f-c66c-46d1-a64b-bfee46a10a66",
+    "brand": "Oppo",
+    "model": "OPPO A16K",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3520,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a16k-4-gb-64-gb"
+  },
+  {
+    "id": "ca8bdfcc-5de3-415c-8deb-9239cef832e2",
+    "brand": "Oppo",
+    "model": "OPPO Reno7 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8740,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno7-5g-8-gb-256-gb"
+  },
+  {
+    "id": "e44d1aa6-f39e-41b3-8836-67411b0210cc",
+    "brand": "Oppo",
+    "model": "OPPO Reno7 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 10410,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno7-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "28781fc7-e62d-4ad9-bda7-50a9d65ae001",
+    "brand": "Oppo",
+    "model": "Oppo A76",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5100,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a76-6-gb-128-gb"
+  },
+  {
+    "id": "c8bebb19-5b72-401a-8da1-8fc58211dcb8",
+    "brand": "Oppo",
+    "model": "OPPO K10",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5040,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-k10-8-gb-128-gb"
+  },
+  {
+    "id": "d9a7f736-a8ad-4e73-b5d9-f0d7c1b1e34d",
+    "brand": "Oppo",
+    "model": "OPPO K10",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4800,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-k10-6-gb-128-gb"
+  },
+  {
+    "id": "b6df370c-3ac9-4a31-8c60-944d702eac16",
+    "brand": "Oppo",
+    "model": "OPPO A16e",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 3220,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a16e-3-gb-32-gb"
+  },
+  {
+    "id": "aaa0fce1-3f3e-4d31-9784-a847a908af63",
+    "brand": "Oppo",
+    "model": "OPPO A16e",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3940,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a16e-4-gb-64-gb"
+  },
+  {
+    "id": "a1a9c970-28bc-4b42-b23c-c6a2c23c0305",
+    "brand": "Oppo",
+    "model": "OPPO F21 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6470,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f21-pro-8-gb-128-gb"
+  },
+  {
+    "id": "e0527799-2dc2-4f4f-9fed-0264f1f847b2",
+    "brand": "Oppo",
+    "model": "OPPO F21 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7990,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f21-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "4ed363f8-5f12-4e24-9aa4-70b7b103181d",
+    "brand": "Oppo",
+    "model": "OPPO A96",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5410,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a96-8-gb-128-gb"
+  },
+  {
+    "id": "d22b76be-cb7d-4020-957f-f5d15bde1d3e",
+    "brand": "Oppo",
+    "model": "OPPO K10 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7290,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-k10-5g-8-gb-128-gb"
+  },
+  {
+    "id": "e71bc579-dde3-480c-bd2a-401d635d7c15",
+    "brand": "Oppo",
+    "model": "OPPO K10 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 6480,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-k10-5g-6-gb-128-gb"
+  },
+  {
+    "id": "b82c2bfb-7fc0-4ad8-8708-e68b74968b8d",
+    "brand": "Oppo",
+    "model": "OPPO Reno8 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 9390,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno8-5g-128-gb"
+  },
+  {
+    "id": "5bff6e79-55d1-4157-9eb6-acacc6ad7482",
+    "brand": "Oppo",
+    "model": "OPPO Reno8 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 10980,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno8-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "ef6f3e6a-5eed-4160-bfd7-af77a77bf9a6",
+    "brand": "Oppo",
+    "model": "OPPO A57 2022",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4290,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a57-2022-4-gb-64-gb"
+  },
+  {
+    "id": "f256a99c-68a6-436e-990c-4a3641a23e48",
+    "brand": "Oppo",
+    "model": "OPPO F21s Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6440,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f21s-pro-8-gb-128-gb"
+  },
+  {
+    "id": "ecc6ae75-73b6-4ef0-b61f-cc35875ec73b",
+    "brand": "Oppo",
+    "model": "OPPO F21s Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7510,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f21s-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "d9b02e48-1d7e-4474-9e1c-1d21954d7cf5",
+    "brand": "Oppo",
+    "model": "OPPO A77 2022",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3140,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a77-2022-4-gb-64-gb"
+  },
+  {
+    "id": "c251171d-d283-46aa-9826-6e67cb94295d",
+    "brand": "Oppo",
+    "model": "OPPO A77 2022",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4130,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a77-2022-4-gb-128-gb"
+  },
+  {
+    "id": "44988ded-4c5c-49bb-987e-aa4a90b92cef",
+    "brand": "Oppo",
+    "model": "OPPO A17K",
+    "storage": "3 GB/64 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 3570,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a17k-3-gb-64-gb"
+  },
+  {
+    "id": "14a184e5-39f1-4c2e-8e8a-21ed04ad7cae",
+    "brand": "Oppo",
+    "model": "OPPO A77s",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5320,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a77s-8-gb-128-gb"
+  },
+  {
+    "id": "f384877b-c30e-49aa-88ba-817de27bfc37",
+    "brand": "Oppo",
+    "model": "OPPO A78 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 10420,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a78-5g-8-gb-128-gb"
+  },
+  {
+    "id": "10ac11b7-0c55-42f5-bb96-39e3c8960587",
+    "brand": "Oppo",
+    "model": "OPPO Reno8T 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 11320,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno8t-5g-8-gb-128-gb"
+  },
+  {
+    "id": "039afde1-0f6e-4d10-990e-4e8c4105baf1",
+    "brand": "Oppo",
+    "model": "OPPO Find N2 Flip 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 18480,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-find-n2-flip-5g-8-gb-256-gb"
+  },
+  {
+    "id": "215d096d-4b45-4160-9fe1-dd74c7472965",
+    "brand": "Oppo",
+    "model": "OPPO F23 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12010,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f23-5g-8-gb-256-gb"
+  },
+  {
+    "id": "35094ce3-15b5-40e5-b594-5ad427f81cb6",
+    "brand": "Oppo",
+    "model": "OPPO Reno10 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 16110,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno10-5g-8-gb-256-gb"
+  },
+  {
+    "id": "fdeaf2dd-48a4-4b4d-8c51-170dce4b7807",
+    "brand": "Oppo",
+    "model": "OPPO Reno10 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 18400,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno10-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "66541f0a-ed95-4336-8be5-9dd0e617a86d",
+    "brand": "Oppo",
+    "model": "OPPO Reno10 Pro Plus 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 20290,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno10-pro-plus-5g-12-gb-256-gb"
+  },
+  {
+    "id": "247f1429-586c-4a25-a406-96c467970f4c",
+    "brand": "Oppo",
+    "model": "OPPO A78",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7630,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a78-8-gb-128-gb"
+  },
+  {
+    "id": "17643805-b27f-4796-8b91-e22c0fa2c08c",
+    "brand": "Oppo",
+    "model": "OPPO Find N3 Flip 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 24210,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-find-n3-flip-5g-12-gb-256-gb"
+  },
+  {
+    "id": "7b29009e-94a3-45c5-995f-f608cc6e9c31",
+    "brand": "Oppo",
+    "model": "OPPO A58",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 6530,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a58-6-gb-128-gb"
+  },
+  {
+    "id": "790c6fbc-4063-4edb-a634-1337d7571304",
+    "brand": "Oppo",
+    "model": "OPPO A38",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5710,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a38-4-gb-128-gb"
+  },
+  {
+    "id": "d632d183-507b-42a3-ab1d-4e78f1152946",
+    "brand": "Oppo",
+    "model": "OPPO A17",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3930,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a17-4-gb-64-gb"
+  },
+  {
+    "id": "7ad40ccd-7183-43bf-bbf0-b80892a73b3c",
+    "brand": "Oppo",
+    "model": "Oppo A18",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4590,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a18-4-gb-64-gb"
+  },
+  {
+    "id": "5d210d1a-9bf2-4f40-95cc-a093c4957bcf",
+    "brand": "Oppo",
+    "model": "Oppo A18",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4850,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a18-4-gb-128-gb"
+  },
+  {
+    "id": "2081086c-961b-43e5-832a-760d779fb748",
+    "brand": "Oppo",
+    "model": "OPPO A79 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 10370,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a79-5g-8-gb-128-gb"
+  },
+  {
+    "id": "4e6f8a62-2b06-46b7-9d7f-39290dad2ea0",
+    "brand": "Oppo",
+    "model": "OPPO A59 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 8940,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a59-5g-4-gb-128-gb"
+  },
+  {
+    "id": "8d3c7dd5-5cd3-432c-9ed3-f02de5686805",
+    "brand": "Oppo",
+    "model": "OPPO A59 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 9570,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a59-5g-6-gb-128-gb"
+  },
+  {
+    "id": "0fa710e2-146c-495e-a7b7-c589d4b4a952",
+    "brand": "Oppo",
+    "model": "OPPO Reno11 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 15220,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno11-5g-8-gb-128-gb"
+  },
+  {
+    "id": "afd9a1bb-c2f5-4862-b9ca-49b69b7fa26f",
+    "brand": "Oppo",
+    "model": "OPPO Reno11 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 15930,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno11-5g-8-gb-256-gb"
+  },
+  {
+    "id": "aa215e08-36dd-4bd1-b886-8c8ffe8c4acc",
+    "brand": "Oppo",
+    "model": "OPPO Reno11 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 18810,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno11-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "c196c8c6-70ea-411a-82fa-df3504e1e237",
+    "brand": "Oppo",
+    "model": "OPPO F25 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12680,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f25-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "88a297ec-ee3a-4921-8bd4-0604570105f5",
+    "brand": "Oppo",
+    "model": "OPPO F25 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 13220,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f25-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "2a8033e5-07f0-407c-865d-d327d0b3b8f5",
+    "brand": "Oppo",
+    "model": "OPPO F27 Pro Plus 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 14360,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f27-pro-plus-5g-8-gb-128-gb"
+  },
+  {
+    "id": "20d0390a-3073-451f-881a-b361accce819",
+    "brand": "Oppo",
+    "model": "OPPO F27 Pro Plus 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 15370,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f27-pro-plus-5g-8-gb-256-gb"
+  },
+  {
+    "id": "e55374d6-a7a4-47b4-a842-d397db14a8bc",
+    "brand": "Oppo",
+    "model": "OPPO F11 Pro Avenger Edition",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4390,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f11-pro-avenger-edition-6-gb-128-gb"
+  },
+  {
+    "id": "6401d49c-752e-48cc-b2f8-1642ed85a3b0",
+    "brand": "Oppo",
+    "model": "OPPO A3 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 11000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a3-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "1a9f013e-5ea3-43ff-afe7-04aed7647e8d",
+    "brand": "Oppo",
+    "model": "OPPO A3 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 11780,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a3-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "4df98a29-82a8-4f0e-becb-c20eb105d095",
+    "brand": "Oppo",
+    "model": "OPPO Reno12 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 16910,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno12-5g-8-gb-256-gb"
+  },
+  {
+    "id": "c717d970-41b0-4860-b28c-73e86bd96bef",
+    "brand": "Oppo",
+    "model": "OPPO Reno12 Pro 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 19990,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno-12-pro-5g-12-gb-512-gb"
+  },
+  {
+    "id": "58d0bec0-1f36-457e-bd19-b83ec0a83108",
+    "brand": "Oppo",
+    "model": "OPPO Reno12 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 19440,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno12-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "46789d72-efbe-4148-be94-22e53c4bdf42",
+    "brand": "Oppo",
+    "model": "OPPO A3x 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 8110,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a3x-5g-4-gb-64-gb"
+  },
+  {
+    "id": "ee4dab32-1588-4a8b-a105-4db2d0a80027",
+    "brand": "Oppo",
+    "model": "OPPO A3x 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 8620,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a3x-5g-4-gb-128-gb"
+  },
+  {
+    "id": "b7341833-71f8-46c0-927c-16c1fdf3c62d",
+    "brand": "Oppo",
+    "model": "OPPO K12x 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 9160,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-k12x-5g-8-gb-256-gb"
+  },
+  {
+    "id": "d6697fe5-450e-479e-bc1d-3dc9ed19d64b",
+    "brand": "Oppo",
+    "model": "OPPO K12x 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 8930,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-k12x-5g-6-gb-128-gb"
+  },
+  {
+    "id": "860f53ac-239d-46fb-8189-f6ba24362f92",
+    "brand": "Oppo",
+    "model": "OPPO F27 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 14180,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f27-5g-8-gb-256-gb"
+  },
+  {
+    "id": "229a52df-9f8a-419f-9e47-772643c141d3",
+    "brand": "Oppo",
+    "model": "OPPO F27 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 13160,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f27-5g-8-gb-128-gb"
+  },
+  {
+    "id": "704599ef-cd4a-405d-a65d-09a0ea471f6b",
+    "brand": "Oppo",
+    "model": "OPPO A3 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 9700,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a3-5g-6-gb-128-gb"
+  },
+  {
+    "id": "6a7ca11c-3077-4672-8d3b-562fc459f39f",
+    "brand": "Oppo",
+    "model": "OPPO A3x",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4900,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a3x-4-gb-64-gb"
+  },
+  {
+    "id": "1af22efe-7f9b-4b21-9eee-e2eefd9309d7",
+    "brand": "Oppo",
+    "model": "OPPO A3x",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5290,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a3x-4-gb-128-gb"
+  },
+  {
+    "id": "afc52402-7728-4de3-a976-70e9309cdbd7",
+    "brand": "Oppo",
+    "model": "OPPO Find X8 Pro 5G",
+    "storage": "16 GB/512 GB",
+    "ram": "16 GB",
+    "color": "Default",
+    "basePrice": 46060,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-find-x8-pro-5g-16-gb-512-gb"
+  },
+  {
+    "id": "7d11a325-ef71-44ff-8c5b-2c433fd2246a",
+    "brand": "Oppo",
+    "model": "OPPO Reno13 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 18710,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno13-5g-8-gb-128-gb"
+  },
+  {
+    "id": "80365925-8aa3-4148-833e-11fb48bb0cf9",
+    "brand": "Oppo",
+    "model": "OPPO Reno13 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 19560,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno13-5g-8-gb-256-gb"
+  },
+  {
+    "id": "3f0cc4e0-0eb3-450b-b644-d1d58c4360a0",
+    "brand": "Oppo",
+    "model": "OPPO Reno13 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 20200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno13-5g-12-gb-512-gb"
+  },
+  {
+    "id": "09167884-7062-4e05-9c69-4b70e83a65e5",
+    "brand": "Oppo",
+    "model": "OPPO Reno13 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 24000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno13-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "fe24a0d5-9236-4086-8818-208fba01ea05",
+    "brand": "Oppo",
+    "model": "OPPO Reno13 Pro 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 25400,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno13-pro-5g-12-gb-512-gb"
+  },
+  {
+    "id": "fcd8f9a8-15e8-43b0-84b3-606efbf11441",
+    "brand": "Oppo",
+    "model": "OPPO F29 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 15550,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f29-5g-8-gb-128-gb"
+  },
+  {
+    "id": "756d24e0-80ff-4e99-b688-918ac586c1ca",
+    "brand": "Oppo",
+    "model": "OPPO F29 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 16600,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f29-5g-8-gb-256-gb"
+  },
+  {
+    "id": "a970f3e1-32af-4e04-852b-c1dbf2425b47",
+    "brand": "Oppo",
+    "model": "OPPO F29 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 16070,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f29-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "600ed24b-5aa2-4f65-a120-463a9549c7b5",
+    "brand": "Oppo",
+    "model": "OPPO F29 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 16620,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f29-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "1774f90f-eae2-47ee-86b0-13eb3326522e",
+    "brand": "Oppo",
+    "model": "OPPO F29 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 18160,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f29-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "71a53164-5419-454d-ad63-b8afa94286f6",
+    "brand": "Oppo",
+    "model": "OPPO A5 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 13200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a5-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "84453cbe-1e44-49fb-815f-6dad9b704f45",
+    "brand": "Oppo",
+    "model": "OPPO A5 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12400,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a5-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "f8a24fb6-654a-4ee5-a387-4a4f3cebc193",
+    "brand": "Oppo",
+    "model": "OPPO A5 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 10720,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a5-5g-8-gb-128-gb"
+  },
+  {
+    "id": "fb0342e6-9027-45e4-aafb-d076f36c2b13",
+    "brand": "Oppo",
+    "model": "OPPO A5 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 10460,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a5-5g-6-gb-128-gb"
+  },
+  {
+    "id": "0e8ce3a1-9f47-4024-9cde-a4f39a509b36",
+    "brand": "Oppo",
+    "model": "OPPO A5x 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 7400,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a5x-5g-4-gb-64-gb"
+  },
+  {
+    "id": "e0f6712f-9aab-4def-adcb-68cdc9c60c8c",
+    "brand": "Oppo",
+    "model": "OPPO A5x 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 8600,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a5x-5g-4-gb-128-gb"
+  },
+  {
+    "id": "91083318-fd25-49ee-9cd0-287fa9d89a55",
+    "brand": "Oppo",
+    "model": "OPPO A5x 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 9240,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a5x-5g-6-gb-128-gb"
+  },
+  {
+    "id": "caac8e16-fdf0-487c-a1d9-b0a8f7ae769e",
+    "brand": "Oppo",
+    "model": "OPPO K13 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12410,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-k13-5g-8-gb-128-gb"
+  },
+  {
+    "id": "64cd6371-018f-4c11-bffc-4c7b87e94926",
+    "brand": "Oppo",
+    "model": "OPPO K13 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 13610,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-k13-5g-8-gb-256-gb"
+  },
+  {
+    "id": "903ba3f7-6706-4341-aa37-1bf5bdc2426e",
+    "brand": "Oppo",
+    "model": "OPPO K13x 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 8700,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-k13x-5g-6-gb-128-gb"
+  },
+  {
+    "id": "753a99ad-3824-4a42-81aa-05bcc899b5ac",
+    "brand": "Oppo",
+    "model": "OPPO K13x 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 9100,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-k13x-5g-8-gb-128-gb"
+  },
+  {
+    "id": "ba09f7fa-c079-49ce-9c8b-d1946a6469e3",
+    "brand": "Oppo",
+    "model": "OPPO K13x 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 7450,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-k13x-5g-4-gb-128-gb"
+  },
+  {
+    "id": "a66a809a-bbde-4347-a2ab-fd7f8a0f1a69",
+    "brand": "Oppo",
+    "model": "OPPO Reno14 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 25000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno14-5g-8-gb-256-gb"
+  },
+  {
+    "id": "6a44d8fe-c6d9-4587-b20d-b11ac4c5e677",
+    "brand": "Oppo",
+    "model": "OPPO Reno14 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 28500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno14-5g-12-gb-512-gb"
+  },
+  {
+    "id": "5eddea58-473e-4131-b060-9af15db5da08",
+    "brand": "Oppo",
+    "model": "OPPO Reno14 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 26000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno14-5g-12-gb-256-gb"
+  },
+  {
+    "id": "03d749f4-4827-43ce-9f27-28cdcca04f07",
+    "brand": "Oppo",
+    "model": "OPPO Reno14 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 31500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno14-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "f9e03e5f-ceed-4e7c-a7eb-d1e798bc0310",
+    "brand": "Oppo",
+    "model": "OPPO Reno14 Pro 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 34500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno14-pro-5g-12-gb-512-gb"
+  },
+  {
+    "id": "8bbbc7ad-f01e-47bd-999b-8dfe226c3617",
+    "brand": "Oppo",
+    "model": "OPPO A5X",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5900,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a5x-4-gb-64-gb"
+  },
+  {
+    "id": "003bc7a9-86d5-415a-86a7-1d04c47ddc57",
+    "brand": "Oppo",
+    "model": "OPPO A5X",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 6350,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a5x-4-gb-128-gb"
+  },
+  {
+    "id": "8e31a329-eadf-4a16-8bc4-66eb0514aff1",
+    "brand": "Oppo",
+    "model": "OPPO F31 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 20560,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f31-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "86200cea-6a96-49b3-87aa-0b76127ceaf7",
+    "brand": "Oppo",
+    "model": "OPPO F31 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 17790,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f31-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "a89a8437-cef4-42c8-903c-2af5f1d4f253",
+    "brand": "Oppo",
+    "model": "OPPO F31 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 19740,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f31-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "e832c9ac-59f9-4de1-b1f0-86e5542b1f60",
+    "brand": "Oppo",
+    "model": "OPPO K13 Turbo Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 20500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-k13-turbo-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "03700b8f-6bb0-4564-8621-353ef6cbe677",
+    "brand": "Oppo",
+    "model": "OPPO K13 Turbo Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 21500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-k13-turbo-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "7641b832-db8c-4d66-aec4-f788e5d4fb54",
+    "brand": "Oppo",
+    "model": "OPPO K13 Turbo 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 17000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-k13-turbo-5g-8-gb-128-gb"
+  },
+  {
+    "id": "27d0167d-4b3b-4255-9c0c-a09af2e5f634",
+    "brand": "Oppo",
+    "model": "OPPO K13 Turbo 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 18000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-k13-turbo-5g-8-gb-256-gb"
+  },
+  {
+    "id": "d3a82829-0a3c-46c5-8220-94c0350ffc2e",
+    "brand": "Oppo",
+    "model": "OPPO F31 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 16720,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f31-5g-8-gb-128-gb"
+  },
+  {
+    "id": "84dd6f6e-8632-4577-a740-a874b40d37f9",
+    "brand": "Oppo",
+    "model": "OPPO F31 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 17570,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f31-5g-8-gb-256-gb"
+  },
+  {
+    "id": "26103101-f1f2-420e-b39f-c259502619e1",
+    "brand": "Oppo",
+    "model": "OPPO F31 Pro Plus 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 22210,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f31-pro-plus-5g-12-gb-256-gb"
+  },
+  {
+    "id": "79c7d966-85d9-47b3-bb49-0c92f4b055d5",
+    "brand": "Oppo",
+    "model": "OPPO F31 Pro Plus 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 21650,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f31-pro-plus-5g-8-gb-256-gb"
+  },
+  {
+    "id": "feccc1b7-02ab-4825-b310-63f41b61ca05",
+    "brand": "Oppo",
+    "model": "OPPO Find X9 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 43300,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-find-x9-5g-12-gb-256-gb"
+  },
+  {
+    "id": "e573e93e-52d5-4492-aa85-b7bf94d40f28",
+    "brand": "Oppo",
+    "model": "OPPO Find X9 5G",
+    "storage": "16 GB/512 GB",
+    "ram": "16 GB",
+    "color": "Default",
+    "basePrice": 47500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-find-x9-5g-16-gb-512-gb"
+  },
+  {
+    "id": "78d1477f-0367-450b-a4c0-5d6c23bd1aef",
+    "brand": "Oppo",
+    "model": "OPPO Find X9 Pro",
+    "storage": "16 GB/512 GB",
+    "ram": "16 GB",
+    "color": "Default",
+    "basePrice": 62500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-find-x9-pro-16-gb-512-gb"
+  },
+  {
+    "id": "cb245fa2-d8cd-405c-890c-60f5a55c7e7e",
+    "brand": "Oppo",
+    "model": "OPPO A6x 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 8910,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a6x-5g-4-gb-64-gb"
+  },
+  {
+    "id": "25d98982-9a2e-46be-9ded-68ad1b8616e2",
+    "brand": "Oppo",
+    "model": "OPPO A6x 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 9190,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a6x-5g-4-gb-128-gb"
+  },
+  {
+    "id": "f108d350-b845-45cf-94f3-200df735caaf",
+    "brand": "Oppo",
+    "model": "OPPO A6x 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 9930,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a6x-5g-6-gb-128-gb"
+  },
+  {
+    "id": "a87ef053-19c6-434a-b5bb-a770dd8795b4",
+    "brand": "Oppo",
+    "model": "OPPO Reno15 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 31400,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno15-5g-12-gb-256-gb"
+  },
+  {
+    "id": "e66f52a7-d185-4151-bfad-177d86eeac5a",
+    "brand": "Oppo",
+    "model": "OPPO Reno15 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 29800,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno-15-5g-8-gb-256-gb"
+  },
+  {
+    "id": "1c44f1e7-e95f-4a75-a259-dde21fc22dc1",
+    "brand": "Oppo",
+    "model": "OPPO Reno15 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 32600,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno15-5g-12-gb-512-gb"
+  },
+  {
+    "id": "0b025199-0f24-4e79-b695-84a7b4dab1da",
+    "brand": "Oppo",
+    "model": "OPPO Reno15 Pro Mini 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 39000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno15-pro-mini-5g-12-gb-512-gb"
+  },
+  {
+    "id": "02767f4b-1e6c-4454-8e60-cf2617a2a8b1",
+    "brand": "Oppo",
+    "model": "OPPO Reno15 Pro Mini 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 36020,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno15-pro-mini-5g-12-gb-256-gb"
+  },
+  {
+    "id": "c6025c36-5c62-47b1-9353-604a9d44b64d",
+    "brand": "Oppo",
+    "model": "OPPO Reno15 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 41500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno15-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "74d453e1-76c9-40f0-b66b-39e11d2192d4",
+    "brand": "Oppo",
+    "model": "OPPO Reno15 Pro 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 44000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno15-pro-5g-12-gb-512-gb"
+  },
+  {
+    "id": "63e5f19c-3470-4ca5-bdd6-26f1d13293ef",
+    "brand": "Oppo",
+    "model": "OPPO A6 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 15600,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a6-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "2f2a2fb4-2ec8-44b6-a1f0-657c170b2762",
+    "brand": "Oppo",
+    "model": "OPPO A6 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 14500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a6-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "4e6fcb07-f340-47a3-a0dc-c5c505170845",
+    "brand": "Oppo",
+    "model": "OPPO Reno 15c 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 22080,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno-15c-5g-8-gb-256-gb"
+  },
+  {
+    "id": "ecc734b2-f191-4fab-86d8-58b6ba7093be",
+    "brand": "Oppo",
+    "model": "OPPO Reno 15c 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 22700,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno-15c-5g-12-gb-256-gb"
+  },
+  {
+    "id": "cfd66d71-e0dd-482d-81fd-8cc3c518b21e",
+    "brand": "Oppo",
+    "model": "OPPO K14x 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 9500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-k14x-5g-4-gb-64-gb"
+  },
+  {
+    "id": "6716f302-09c1-4ec4-8fc0-c27da291445b",
+    "brand": "Oppo",
+    "model": "OPPO K14x 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 10600,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-k14x-5g-4-gb-128-gb"
+  },
+  {
+    "id": "43c6c0ad-590a-4d3e-a364-71434b33ae50",
+    "brand": "Oppo",
+    "model": "OPPO K14x 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 11600,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-k14x-5g-6-gb-128-gb"
+  },
+  {
+    "id": "6c60ea71-97f3-4568-b637-ee94d7bbf45c",
+    "brand": "Oppo",
+    "model": "OPPO A6 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 13000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a6-5g-4-gb-128-gb"
+  },
+  {
+    "id": "5c6a68fa-a57c-4bbc-acc1-012002e9b379",
+    "brand": "Oppo",
+    "model": "OPPO A6 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 14000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a6-5g-6-gb-128-gb"
+  },
+  {
+    "id": "8522b3b6-9cc5-4edd-b83e-d7fe38331f08",
+    "brand": "Oppo",
+    "model": "OPPO A6 5G",
+    "storage": "6 GB/256 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 15300,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a6-5g-6-gb-256-gb"
+  },
+  {
+    "id": "6696ddc9-6da2-4af1-9e3c-4a99bb1ada34",
+    "brand": "Oppo",
+    "model": "OPPO K14 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 14500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-k14-5g-8-gb-256-gb"
+  },
+  {
+    "id": "97f67a9e-6ae0-45aa-a40e-78947a7a9874",
+    "brand": "Oppo",
+    "model": "OPPO K14 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 12200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-k14-5g-6-gb-128-gb"
+  },
+  {
+    "id": "03871109-c4fc-4d47-9b2e-2875069a1b8e",
+    "brand": "Oppo",
+    "model": "OPPO K14 5G",
+    "storage": "6 GB/256 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 13000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-k14-5g-6-gb-256-gb"
+  },
+  {
+    "id": "afb56b54-8293-41df-aa8e-a174c523b004",
+    "brand": "Oppo",
+    "model": "OPPO A6s 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 12300,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a6s-5g-4-gb-128-gb"
+  },
+  {
+    "id": "02300737-1329-45bd-8891-14e124c05a75",
+    "brand": "Oppo",
+    "model": "OPPO A6s 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 14000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a6s-5g-6-gb-128-gb"
+  },
+  {
+    "id": "3a367488-0903-444f-a480-d0d5080d9bac",
+    "brand": "Oppo",
+    "model": "OPPO F33 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 21180,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f33-5g-6-gb-128-gb"
+  },
+  {
+    "id": "d3139f55-34d7-46eb-bc32-02f90f701130",
+    "brand": "Oppo",
+    "model": "OPPO F33 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 24700,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f33-5g-8-gb-256-gb"
+  },
+  {
+    "id": "0ad364ec-f2e6-46e1-863a-fdc2dc1ba6a6",
+    "brand": "Oppo",
+    "model": "OPPO F33 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 22800,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f33-5g-8-gb-128-gb"
+  },
+  {
+    "id": "245f5c6a-190b-4762-b413-ca570c21e629",
+    "brand": "Oppo",
+    "model": "OPPO F33 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 23000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f33-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "f68a11b9-466b-4ac0-bfb2-d5b08123dbc6",
+    "brand": "Oppo",
+    "model": "OPPO F33 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 25660,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-f33-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "907e4479-2e9c-4cf0-bc34-9b63fe2c218f",
+    "brand": "Oppo",
+    "model": "OPPO Find X9s",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 42000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-find-x9s-12-gb-256-gb"
+  },
+  {
+    "id": "f00ce11c-796d-47ec-80b8-5da313cb3340",
+    "brand": "Oppo",
+    "model": "OPPO Find X9s",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 45000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-find-x9s-12-gb-512-gb"
+  },
+  {
+    "id": "b58a2f74-f204-4b9e-9aac-a7330a889a15",
+    "brand": "Oppo",
+    "model": "OPPO Find X9 Ultra",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 80000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-find-x9-ultra-12-gb-512-gb"
   }
 ];
