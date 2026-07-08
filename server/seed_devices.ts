@@ -15169,15 +15169,6 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 5000
   },
   {
-    "id": "lg_batch_2",
-    "brand": "LG",
-    "model": "LG V40 ThinQ",
-    "storage": "128 GB",
-    "ram": "6GB",
-    "color": "Aurora",
-    "basePrice": 5000
-  },
-  {
     "id": "infinix_batch_1",
     "brand": "Infinix",
     "model": "Infinix Hot S3X",
