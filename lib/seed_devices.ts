@@ -16628,15 +16628,6 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 5000
   },
   {
-    "id": "asus_batch_7",
-    "brand": "Asus",
-    "model": "Asus 8z",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
     "id": "poco_batch_1",
     "brand": "POCO",
     "model": "POCO F1",
