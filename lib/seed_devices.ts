@@ -23407,5 +23407,435 @@ export const SEED_DEVICES: any[] = [
     "color": "Midnight",
     "basePrice": 5260,
     "id": "lenovo_z6_pro_8gb"
+  },
+  {
+    "id": "9b2e75d8-fc81-4e86-b5fb-5662d0e2192d",
+    "brand": "Nokia",
+    "model": "Nokia 6.1 Plus",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Default",
+    "basePrice": 2380,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-6-1-plus-6-gb-64-gb"
+  },
+  {
+    "id": "f4aea7f0-a2af-407a-bf94-2f37f5ab010d",
+    "brand": "Nokia",
+    "model": "Nokia 5.1 Plus",
+    "storage": "64 GB",
+    "ram": "6GB",
+    "color": "Default",
+    "basePrice": 2130,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-5-1-plus-4-gb-64-gb"
+  },
+  {
+    "id": "73474bff-b02d-4c22-89a3-450a5201b5f3",
+    "brand": "Nokia",
+    "model": "Nokia 5.1 Plus",
+    "storage": "32 GB",
+    "ram": "3GB",
+    "color": "Default",
+    "basePrice": 1750,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-5-1-plus-3-gb-32-gb"
+  },
+  {
+    "id": "516de334-4cae-4f86-97ac-52a6cb670492",
+    "brand": "Nokia",
+    "model": "Nokia 8 Sirocco",
+    "storage": "128 GB",
+    "ram": "6GB",
+    "color": "Default",
+    "basePrice": 3710,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-8-sirocco-6-gb-128-gb"
+  },
+  {
+    "id": "b9d9db98-13d6-4dd6-92c3-9c5a2a834e76",
+    "brand": "Nokia",
+    "model": "Nokia 7 Plus",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Default",
+    "basePrice": 2150,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-7-plus-4-gb-64-gb"
+  },
+  {
+    "id": "9d13563b-c07f-404f-9f26-51b72e1da07f",
+    "brand": "Nokia",
+    "model": "Nokia 8.1",
+    "storage": "128 GB",
+    "ram": "6GB",
+    "color": "Default",
+    "basePrice": 2670,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-8-1-6-gb-128-gb"
+  },
+  {
+    "id": "50c5c88d-1cea-49d1-9dd4-69469db8db67",
+    "brand": "Nokia",
+    "model": "Nokia 8.1",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Default",
+    "basePrice": 2230,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-8-1-4-gb-64-gb"
+  },
+  {
+    "id": "9e88de2a-7fb1-48ef-add7-871b0577218f",
+    "brand": "Nokia",
+    "model": "Nokia 7.1",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Default",
+    "basePrice": 2010,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-7-1-4-gb-64-gb"
+  },
+  {
+    "id": "6b1da14f-8487-401f-aff8-7ca479f94da3",
+    "brand": "Nokia",
+    "model": "Nokia 3.2",
+    "storage": "32 GB",
+    "ram": "3GB",
+    "color": "Default",
+    "basePrice": 1560,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-3-2-3-gb-32-gb"
+  },
+  {
+    "id": "4786c69f-c007-4c1a-8194-4d882906b782",
+    "brand": "Nokia",
+    "model": "Nokia 3.2",
+    "storage": "16 GB",
+    "ram": "2GB",
+    "color": "Default",
+    "basePrice": 1410,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-3-2-2-gb-16-gb"
+  },
+  {
+    "id": "3baa57ad-3215-47a5-81fd-27b419fd6013",
+    "brand": "Nokia",
+    "model": "Nokia 4.2",
+    "storage": "32 GB",
+    "ram": "3GB",
+    "color": "Default",
+    "basePrice": 1670,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-4-2-3-gb-32-gb"
+  },
+  {
+    "id": "607c06f5-5bfa-48f2-a1cc-f9dd982e619f",
+    "brand": "Nokia",
+    "model": "Nokia 2.2",
+    "storage": "16 GB",
+    "ram": "2GB",
+    "color": "Default",
+    "basePrice": 860,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-2-2-2-gb-16-gb"
+  },
+  {
+    "id": "0e7be185-3504-4d81-b97b-a4fa6df2482c",
+    "brand": "Nokia",
+    "model": "Nokia 2.2",
+    "storage": "32 GB",
+    "ram": "3GB",
+    "color": "Default",
+    "basePrice": 1040,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-2-2-3-gb-32-gb"
+  },
+  {
+    "id": "12a70291-caf3-4b71-9121-e85cdd1504d7",
+    "brand": "Nokia",
+    "model": "Nokia 7.2",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Default",
+    "basePrice": 2710,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-7-2-6-gb-64-gb"
+  },
+  {
+    "id": "63dd0b51-87ed-4f2a-97ea-8af3d2e62bcc",
+    "brand": "Nokia",
+    "model": "Nokia 6.2",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Default",
+    "basePrice": 2190,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-6-2-4-gb-64-gb"
+  },
+  {
+    "id": "5bf7fcf5-d0bc-40fe-b0b2-ccc3c5925903",
+    "brand": "Nokia",
+    "model": "Nokia 5.3",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Default",
+    "basePrice": 3070,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-5-3-6-gb-64-gb"
+  },
+  {
+    "id": "f558e8f2-5b0b-4316-859c-7b53bda5b1d2",
+    "brand": "Nokia",
+    "model": "Nokia 2.4",
+    "storage": "64 GB",
+    "ram": "3GB",
+    "color": "Default",
+    "basePrice": 2300,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-2-4-3-gb-64-gb"
+  },
+  {
+    "id": "26a31a38-5691-46b1-a345-86a8be1c4878",
+    "brand": "Nokia",
+    "model": "Nokia 3.4",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Default",
+    "basePrice": 2380,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-3-4-4-gb-64-gb"
+  },
+  {
+    "id": "aa483d20-3756-406d-a0b7-1ad0d4db7a10",
+    "brand": "Nokia",
+    "model": "Nokia 5.4",
+    "storage": "64 GB",
+    "ram": "6GB",
+    "color": "Default",
+    "basePrice": 2640,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-5-4-4-gb-64-gb"
+  },
+  {
+    "id": "0df5cae3-168f-477a-81c7-01007807b7db",
+    "brand": "Nokia",
+    "model": "Nokia G20",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Default",
+    "basePrice": 2710,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-g20-4-gb-64-gb"
+  },
+  {
+    "id": "1960b0a2-039a-4427-a3c1-d55fb533adce",
+    "brand": "Nokia",
+    "model": "Nokia C20 Plus",
+    "storage": "32 GB",
+    "ram": "3GB",
+    "color": "Default",
+    "basePrice": 1670,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-c20-plus-2-gb-32-gb"
+  },
+  {
+    "id": "8a53cecc-1a81-4d22-b156-6270205709f6",
+    "brand": "Nokia",
+    "model": "Nokia C01 Plus",
+    "storage": "16 GB",
+    "ram": "2GB",
+    "color": "Default",
+    "basePrice": 1260,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-c01-plus-2-gb-16-gb"
+  },
+  {
+    "id": "e551ae78-8eaa-4c0b-8239-4774b02b8d9a",
+    "brand": "Nokia",
+    "model": "Nokia C01 Plus",
+    "storage": "32 GB",
+    "ram": "2GB",
+    "color": "Default",
+    "basePrice": 1520,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-c01-plus-2-gb-32-gb"
+  },
+  {
+    "id": "259605f8-45d8-4d20-a70b-eb0b36b6eed2",
+    "brand": "Nokia",
+    "model": "Nokia G10",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Default",
+    "basePrice": 2510,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-g10-4-gb-64-gb"
+  },
+  {
+    "id": "094f99e6-0ac2-4085-990e-ae1f6fcdb72e",
+    "brand": "Nokia",
+    "model": "Nokia C30",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Default",
+    "basePrice": 2520,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-c30-4-gb-64-gb"
+  },
+  {
+    "id": "57aec266-f183-4ba0-9a9a-4bb19c7701e3",
+    "brand": "Nokia",
+    "model": "Nokia C30",
+    "storage": "32 GB",
+    "ram": "3GB",
+    "color": "Default",
+    "basePrice": 2240,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-c30-3-gb-32-gb"
+  },
+  {
+    "id": "1fbff2a0-d669-4d75-941c-632a5130cfee",
+    "brand": "Nokia",
+    "model": "Nokia XR20",
+    "storage": "128 GB",
+    "ram": "6GB",
+    "color": "Default",
+    "basePrice": 6940,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-xr20-6-gb-128-gb"
+  },
+  {
+    "id": "48fff690-8999-4275-91b2-25f088b95738",
+    "brand": "Nokia",
+    "model": "Nokia G21",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Default",
+    "basePrice": 2750,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-g21-4-gb-64-gb"
+  },
+  {
+    "id": "5034a35b-d70d-4a51-a3a1-481a578f73b2",
+    "brand": "Nokia",
+    "model": "Nokia G21",
+    "storage": "128 GB",
+    "ram": "6GB",
+    "color": "Default",
+    "basePrice": 3490,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-g21-6-gb-128-gb"
+  },
+  {
+    "id": "319a0bad-d925-42d3-a38d-5dbf0ef592ea",
+    "brand": "Nokia",
+    "model": "Nokia C21 Plus",
+    "storage": "32 GB",
+    "ram": "3GB",
+    "color": "Default",
+    "basePrice": 2480,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-c21-plus-3-gb-32-gb"
+  },
+  {
+    "id": "a3e87f01-0a2a-4bf9-b206-f91dbfb62f63",
+    "brand": "Nokia",
+    "model": "Nokia C21 Plus",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Default",
+    "basePrice": 2670,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-c21-plus-4-gb-64-gb"
+  },
+  {
+    "id": "a8f21f66-f920-4302-978b-ad0373478af1",
+    "brand": "Nokia",
+    "model": "Nokia G60 5G",
+    "storage": "128 GB",
+    "ram": "6GB",
+    "color": "Default",
+    "basePrice": 6310,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-g60-5g-6-gb-128-gb"
+  },
+  {
+    "id": "b061d19d-4973-421f-8d7d-7e77a18f0b3d",
+    "brand": "Nokia",
+    "model": "Nokia C12",
+    "storage": "64 GB",
+    "ram": "2GB",
+    "color": "Default",
+    "basePrice": 2010,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-c12-2-gb-64-gb"
+  },
+  {
+    "id": "c1366f91-7420-4412-8fa7-3de117618b43",
+    "brand": "Nokia",
+    "model": "Nokia X30 5G",
+    "storage": "256 GB",
+    "ram": "8GB",
+    "color": "Default",
+    "basePrice": 7790,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-x30-5g-8-gb-256-gb"
+  },
+  {
+    "id": "6205e659-68bd-47e5-b8ca-1c547f6ba9a8",
+    "brand": "Nokia",
+    "model": "Nokia C12 Pro",
+    "storage": "64 GB",
+    "ram": "2GB",
+    "color": "Default",
+    "basePrice": 2300,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-c12-pro-3-gb-64-gb"
+  },
+  {
+    "id": "fe92351e-28ee-4388-a263-94db939a12b4",
+    "brand": "Nokia",
+    "model": "Nokia C31",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Default",
+    "basePrice": 2600,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-c31-4-gb-64-gb"
+  },
+  {
+    "id": "a05cd86d-94bc-4ad2-80bf-5fedc1c26b2f",
+    "brand": "Nokia",
+    "model": "Nokia C31",
+    "storage": "32 GB",
+    "ram": "3GB",
+    "color": "Default",
+    "basePrice": 2230,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-c31-3-gb-32-gb"
+  },
+  {
+    "id": "0a1e2b3d-4776-46d6-9cc4-65660236ce76",
+    "brand": "Nokia",
+    "model": "Nokia C32",
+    "storage": "128 GB",
+    "ram": "6GB",
+    "color": "Default",
+    "basePrice": 2600,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-c32-4-gb-128-gb"
+  },
+  {
+    "id": "eb475ef3-cbbe-4da3-8591-1fecabbcc911",
+    "brand": "Nokia",
+    "model": "Nokia C32",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Default",
+    "basePrice": 2380,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-c32-4-gb-64-gb"
+  },
+  {
+    "id": "a538ebe5-7880-47ce-b46f-ed4fd7c14b89",
+    "brand": "Nokia",
+    "model": "Nokia C22",
+    "storage": "64 GB",
+    "ram": "6GB",
+    "color": "Default",
+    "basePrice": 2380,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-c22-4-gb-64-gb"
+  },
+  {
+    "id": "b39a2339-a908-4aab-be76-2e0f2a15a5c6",
+    "brand": "Nokia",
+    "model": "Nokia G42 5G",
+    "storage": "128 GB",
+    "ram": "6GB",
+    "color": "Default",
+    "basePrice": 3660,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-g42-5g-4-gb-128-gb"
+  },
+  {
+    "id": "b96646cf-d5d0-403e-a721-9c9715b52c31",
+    "brand": "Nokia",
+    "model": "Nokia G42 5G",
+    "storage": "256 GB",
+    "ram": "8GB",
+    "color": "Default",
+    "basePrice": 5230,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-g42-5g-8-gb-256-gb"
+  },
+  {
+    "id": "2632d6e9-6870-4113-99a9-a50b90a9089b",
+    "brand": "Nokia",
+    "model": "Nokia G11 Plus",
+    "storage": "64 GB",
+    "ram": "4GB",
+    "color": "Default",
+    "basePrice": 2600,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-g11-plus-4-gb-64-gb"
   }
 ];
