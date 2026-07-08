@@ -23360,5 +23360,275 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "basePrice": 2600,
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-g11-plus-4-gb-64-gb"
+  },
+  {
+    "id": "10b1654c-4e2e-4deb-a17e-6437624cbcc4",
+    "brand": "Honor",
+    "model": "Honor 8X",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 2450,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-huawei-honor-8x-6-gb-64-gb"
+  },
+  {
+    "id": "0e909e6f-ede2-4042-8f1f-48c0385c1530",
+    "brand": "Honor",
+    "model": "Honor 8X",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2150,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-huawei-honor-8x-4-gb-64-gb"
+  },
+  {
+    "id": "38eb0b16-74b2-421a-91b3-778bdd4204b5",
+    "brand": "Honor",
+    "model": "Honor 8X",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 2560,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-huawei-honor-8x-6-gb-128-gb"
+  },
+  {
+    "id": "b581463a-1c3d-4a47-a48e-40e7bc52bc1d",
+    "brand": "Honor",
+    "model": "Honor Play",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 2110,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-huawei-honor-play-6-gb-64-gb"
+  },
+  {
+    "id": "3b6b78cb-ad93-48b6-a16c-8b046b21a76f",
+    "brand": "Honor",
+    "model": "Honor Play",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2040,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-huawei-honor-play-4-gb-64-gb"
+  },
+  {
+    "id": "f71e4c74-8180-43a5-ac40-138aabc993a1",
+    "brand": "Honor",
+    "model": "Honor 9N",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 1860,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-huawei-honor-9n-3-gb-32-gb"
+  },
+  {
+    "id": "4392328f-28d1-4042-8302-9379fe4a6212",
+    "brand": "Honor",
+    "model": "Honor 9N",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2010,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-huawei-honor-9n-4-gb-64-gb"
+  },
+  {
+    "id": "7e19e6b3-89be-418b-a3e5-a5228a9c9e2c",
+    "brand": "Honor",
+    "model": "Honor 9N",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2300,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-huawei-honor-9n-4-gb-128-gb"
+  },
+  {
+    "id": "53d1d592-54e5-4c16-aaf4-b142cc00de4b",
+    "brand": "Honor",
+    "model": "Honor 10",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 2520,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-huawei-honor-10-6-gb-128-gb"
+  },
+  {
+    "id": "e87ab57c-8989-4c91-8b27-23f5eb0f6223",
+    "brand": "Honor",
+    "model": "Honor 7A",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 1640,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-huawei-honor-7a-3-gb-32-gb"
+  },
+  {
+    "id": "37bd52b1-e7eb-4c2f-8ad9-71198934c349",
+    "brand": "Honor",
+    "model": "Honor 9 Lite",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 1600,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-huawei-honor-9-lite-3-gb-32-gb"
+  },
+  {
+    "id": "852812e2-374d-4834-a7b9-f90a2bce751e",
+    "brand": "Honor",
+    "model": "Honor 9 Lite",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 1860,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-huawei-honor-9-lite-4-gb-64-gb"
+  },
+  {
+    "id": "2962c687-5a80-4307-a87e-2d6671878b25",
+    "brand": "Honor",
+    "model": "Honor 7X",
+    "storage": "4 GB/32 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 1360,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-honor-7x-4-gb-32-gb"
+  },
+  {
+    "id": "2b577305-a9c4-4b87-884e-6176fc71836e",
+    "brand": "Honor",
+    "model": "Honor 7X",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 1560,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-honor-7x-4-gb-64-gb"
+  },
+  {
+    "id": "2c8e72b0-02e9-4fa0-90b7-efc27b87b95a",
+    "brand": "Honor",
+    "model": "Honor 8C",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 1520,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-huawei-honor-8c-4-gb-64-gb"
+  },
+  {
+    "id": "87508c9a-6bdc-4584-a5b6-98720bd1cc16",
+    "brand": "Honor",
+    "model": "Honor 8C",
+    "storage": "4 GB/32 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 1410,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-huawei-honor-8c-4-gb-32-gb"
+  },
+  {
+    "id": "103e1515-2032-4010-90e5-9fe1e086dcef",
+    "brand": "Honor",
+    "model": "Honor 20i",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2480,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-huawei-honor-20i-4-gb-128-gb"
+  },
+  {
+    "id": "a727df7a-7da5-4c16-8c52-2e071510c216",
+    "brand": "Honor",
+    "model": "Honor 20",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 2750,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-huawei-honor-20-6-gb-128-gb"
+  },
+  {
+    "id": "38912bd1-8b82-4a17-ae74-d4b8bcf82226",
+    "brand": "Honor",
+    "model": "Honor 9x Pro",
+    "storage": "6 GB/256 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3160,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-honor-9x-pro-6-gb-256-gb"
+  },
+  {
+    "id": "5c74ae74-3341-42d9-8e77-856a415167ca",
+    "brand": "Honor",
+    "model": "Honor 9A",
+    "storage": "3 GB/64 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2080,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-honor-9a-3-gb-64-gb"
+  },
+  {
+    "id": "4ee76481-d5d2-4664-b975-439abc43213e",
+    "brand": "Honor",
+    "model": "Honor 200 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 14410,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-honor-200-5g-12-gb-512-gb"
+  },
+  {
+    "id": "bb64c539-53f0-4b49-a497-42e4507ee8f0",
+    "brand": "Honor",
+    "model": "Honor 200 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12050,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-honor-200-5g-8-gb-256-gb"
+  },
+  {
+    "id": "75adf716-72a7-44da-9aab-c75294b2aa02",
+    "brand": "Honor",
+    "model": "Honor 200 Pro 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 21020,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-honor-200-pro-5g-12-gb-512-gb"
+  },
+  {
+    "id": "33602de7-a3c9-4780-839d-ba0dad0296e9",
+    "brand": "Honor",
+    "model": "Honor 200 Lite 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8120,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-honor-200-lite-5g-8-gb-256-gb"
+  },
+  {
+    "id": "b27f6b11-26a2-407f-96ac-602872599aeb",
+    "brand": "Honor",
+    "model": "Honor 90",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 10390,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-honor-90-8-gb-256-gb"
+  },
+  {
+    "id": "1e63c3e8-235e-4bd7-aa8c-283eda212adb",
+    "brand": "Honor",
+    "model": "Honor 90",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 11470,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-honor-90-12-gb-256-gb"
+  },
+  {
+    "id": "436a1e25-09aa-4bf5-b56b-a0a4be33de8d",
+    "brand": "Honor",
+    "model": "Honor 90",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 12350,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-honor-90-12-gb-512-gb"
   }
 ];
