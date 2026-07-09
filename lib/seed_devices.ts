@@ -18261,5 +18261,3245 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "basePrice": 8210,
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-huawei-mate-30-pro-8-gb-256-gb"
+  },
+  {
+    "id": "5f667d7f-cec8-4939-938e-6a812d804e24",
+    "brand": "Vivo",
+    "model": "Vivo V9 Pro",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v9-pro-6-gb-64-gb"
+  },
+  {
+    "id": "0d7a162d-0f8e-493c-abaa-ea1d30ab867a",
+    "brand": "Vivo",
+    "model": "Vivo V9 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3040,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v9-pro-4-gb-64-gb"
+  },
+  {
+    "id": "910b3613-c7fc-4a02-8ad0-4f3025c435d4",
+    "brand": "Vivo",
+    "model": "Vivo V11 Pro",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3740,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v11-pro-6-gb-64-gb"
+  },
+  {
+    "id": "4edd85d2-b0aa-4a5c-9996-db7b0574b505",
+    "brand": "Vivo",
+    "model": "Vivo V11",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3250,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v11-6-gb-64-gb"
+  },
+  {
+    "id": "b0bd74b7-c17c-44be-bb7e-39be1e564cd2",
+    "brand": "Vivo",
+    "model": "Vivo Y83 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2650,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y83-pro-4-gb-64-gb"
+  },
+  {
+    "id": "4fa070ae-de15-49e3-a79d-bcaea633ea27",
+    "brand": "Vivo",
+    "model": "Vivo NEX",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 4570,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-nex-8-gb-128-gb"
+  },
+  {
+    "id": "98135eba-0bc6-444d-a0ae-db38606933f2",
+    "brand": "Vivo",
+    "model": "Vivo Y71i",
+    "storage": "2 GB/16 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 1340,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y71i-2-gb-16-gb"
+  },
+  {
+    "id": "5fd75762-9ed8-401b-9d16-66d961e000a2",
+    "brand": "Vivo",
+    "model": "Vivo Y81",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 1830,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y81-3-gb-32-gb"
+  },
+  {
+    "id": "123ea1a1-eda4-4aa4-a168-0bbea3c4f76d",
+    "brand": "Vivo",
+    "model": "Vivo Y81",
+    "storage": "4 GB/32 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2140,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y81-4-gb-32-gb"
+  },
+  {
+    "id": "fac88df0-edf9-4d50-83b2-a6d9a41b0c2e",
+    "brand": "Vivo",
+    "model": "Vivo Y83",
+    "storage": "4 GB/32 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2260,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y83-4-gb-32-gb"
+  },
+  {
+    "id": "7eeccd0f-525d-492c-a476-9ac53a8fe5ab",
+    "brand": "Vivo",
+    "model": "Vivo V9 Youth",
+    "storage": "4 GB/32 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2230,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v9-youth-4-gb-32-gb"
+  },
+  {
+    "id": "3c00c225-315d-4771-9af4-f2b9cbe508c9",
+    "brand": "Vivo",
+    "model": "Vivo Y71",
+    "storage": "4 GB/32 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 1720,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y71-4-gb-32-gb"
+  },
+  {
+    "id": "45ad1274-3b1b-4ff8-baa5-14718f31df83",
+    "brand": "Vivo",
+    "model": "Vivo Y71",
+    "storage": "3 GB/16 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 1380,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y71-3-gb-16-gb"
+  },
+  {
+    "id": "6cd17567-efb2-43a8-837a-0e82e5ff6bd2",
+    "brand": "Vivo",
+    "model": "Vivo Y53i",
+    "storage": "2 GB/16 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 970,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y53i-2-gb-16-gb"
+  },
+  {
+    "id": "20d1d65e-9c7e-45d2-9930-deb826299a6d",
+    "brand": "Vivo",
+    "model": "Vivo X21",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3640,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x21-6-gb-128-gb"
+  },
+  {
+    "id": "a86b0dc7-ee35-4b66-9a37-8662e0fdc938",
+    "brand": "Vivo",
+    "model": "Vivo V9",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2770,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v9-4-gb-64-gb"
+  },
+  {
+    "id": "6daecd26-35fe-4c63-9f3f-60739cddc6e3",
+    "brand": "Vivo",
+    "model": "Vivo V7",
+    "storage": "4 GB/32 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2150,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v7-4-gb-32-gb"
+  },
+  {
+    "id": "e48dce0d-c01e-4e81-a88e-5d185ca08d3f",
+    "brand": "Vivo",
+    "model": "Vivo V7 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2230,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v7-plus-4-gb-64-gb"
+  },
+  {
+    "id": "0cc13d59-dacd-4d5b-bfba-450d84d710bf",
+    "brand": "Vivo",
+    "model": "Vivo Y69",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 1530,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y69-3-gb-32-gb"
+  },
+  {
+    "id": "faf7e5d8-783c-44db-aa11-e821bb67e16c",
+    "brand": "Vivo",
+    "model": "Vivo X9",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2250,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x9-4-gb-64-gb"
+  },
+  {
+    "id": "cdec571f-b272-44de-9e32-03c767561ce8",
+    "brand": "Vivo",
+    "model": "Vivo X9",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2400,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x9-4-gb-128-gb"
+  },
+  {
+    "id": "21b46291-a7e7-44a9-9ec3-8cdb10fad32c",
+    "brand": "Vivo",
+    "model": "Vivo X9s",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2330,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x9s-4-gb-64-gb"
+  },
+  {
+    "id": "5b0be439-3363-49e0-9e05-a19af9fb5e6b",
+    "brand": "Vivo",
+    "model": "Vivo X9s Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2550,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x9s-plus-4-gb-64-gb"
+  },
+  {
+    "id": "5376d51f-46ea-4c03-8d58-f9d7a591b49a",
+    "brand": "Vivo",
+    "model": "Vivo Y55s",
+    "storage": "3 GB/16 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 1050,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y55s-3-gb-16-gb"
+  },
+  {
+    "id": "66ed2740-0de0-4c97-b5be-d3001e9428fd",
+    "brand": "Vivo",
+    "model": "Vivo Y66",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 1490,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y66-3-gb-32-gb"
+  },
+  {
+    "id": "d36eaa73-4d39-4b20-a9d1-f85cafebe352",
+    "brand": "Vivo",
+    "model": "Vivo V5 Plus",
+    "storage": "4 GB/32 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2010,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v5-plus-4-gb-32-gb"
+  },
+  {
+    "id": "520656f7-e6f9-425c-bb4d-b38446c28d41",
+    "brand": "Vivo",
+    "model": "Vivo V5 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2250,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v5-plus-4-gb-64-gb"
+  },
+  {
+    "id": "7631fc76-cd18-4268-84b4-d0b63c2842fb",
+    "brand": "Vivo",
+    "model": "Vivo V5",
+    "storage": "4 GB/32 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 1560,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v5-4-gb-32-gb"
+  },
+  {
+    "id": "4b1ddb67-7237-493f-93ab-337f9c1d3886",
+    "brand": "Vivo",
+    "model": "Vivo Y95",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3110,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y95-4-gb-64-gb"
+  },
+  {
+    "id": "2ce44d43-37fa-4c14-8a8f-2a5f455696c4",
+    "brand": "Vivo",
+    "model": "Vivo Y93",
+    "storage": "4 GB/32 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y93-4-gb-32-gb"
+  },
+  {
+    "id": "a5947b11-5dce-44ce-ae98-1fab67ce9ddb",
+    "brand": "Vivo",
+    "model": "Vivo Y93",
+    "storage": "3 GB/64 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2570,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y93-3-gb-64-gb"
+  },
+  {
+    "id": "e43a116a-4ed4-4724-ad84-511398c45e0d",
+    "brand": "Vivo",
+    "model": "Vivo Y81i",
+    "storage": "2 GB/16 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 1340,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y81i-2-gb-16gb"
+  },
+  {
+    "id": "8ab5f8b8-32e4-430d-a568-9bd337ab87d6",
+    "brand": "Vivo",
+    "model": "Vivo Z10",
+    "storage": "4 GB/32 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-z10-4-gb-32-gb"
+  },
+  {
+    "id": "f8c34834-74e7-4f49-add2-6a19512030a7",
+    "brand": "Vivo",
+    "model": "Vivo Y91",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2350,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y91-3-gb-32-gb"
+  },
+  {
+    "id": "83e1a2db-ad0b-4378-b327-bafbdff299c8",
+    "brand": "Vivo",
+    "model": "Vivo Y91",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 2130,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y91-2-gb-32-gb"
+  },
+  {
+    "id": "891f07b7-f1df-4306-9dd2-f520894ddd94",
+    "brand": "Vivo",
+    "model": "Vivo V15 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 4880,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v15-pro-8-gb-128-gb"
+  },
+  {
+    "id": "61d2e9cf-1bd9-435b-9b76-a6c163529575",
+    "brand": "Vivo",
+    "model": "Vivo V15 Pro",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4650,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v15-pro-6-gb-128-gb"
+  },
+  {
+    "id": "fa310065-acfd-4480-8f60-4b624f37f1b1",
+    "brand": "Vivo",
+    "model": "Vivo Y91i",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 1980,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y91i-3-gb-32-gb"
+  },
+  {
+    "id": "abb0b25a-5d07-46bc-9fd5-fffb94959291",
+    "brand": "Vivo",
+    "model": "Vivo Y91i",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 1830,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y91i-2-gb-32-gb"
+  },
+  {
+    "id": "9d8eba28-ae01-452b-85e8-11bb501728de",
+    "brand": "Vivo",
+    "model": "Vivo Y91i",
+    "storage": "2 GB/16 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 1640,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y91i-2-gb-16-gb"
+  },
+  {
+    "id": "2dc40c7e-efc1-4d91-aa91-d578f6444213",
+    "brand": "Vivo",
+    "model": "Vivo V15",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4320,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v15-6-gb-64-gb"
+  },
+  {
+    "id": "4f9af7b8-b97c-4685-83f7-35b9fce5f7a1",
+    "brand": "Vivo",
+    "model": "Vivo V15",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4540,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v15-6-gb-128-gb"
+  },
+  {
+    "id": "7595595e-3887-487c-b284-ca4ecbbaa995",
+    "brand": "Vivo",
+    "model": "Vivo Y17",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4630,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y17-4-gb-128-gb"
+  },
+  {
+    "id": "6b71696b-e90f-4936-8f71-ac2be16f0457",
+    "brand": "Vivo",
+    "model": "Vivo Y15 2019",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3690,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y15-2019-4-gb-64-gb"
+  },
+  {
+    "id": "7d8f7072-e683-4707-a5a7-bef027b63a62",
+    "brand": "Vivo",
+    "model": "Vivo Y12",
+    "storage": "3 GB/64 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 3560,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y12-3-gb-64-gb"
+  },
+  {
+    "id": "9398af7c-2b56-43bb-b785-73e594b55b57",
+    "brand": "Vivo",
+    "model": "Vivo Y12",
+    "storage": "4 GB/32 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3790,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y12-4-gb-32-gb"
+  },
+  {
+    "id": "2020971e-6cee-456b-ac87-e5fdc0e91e5f",
+    "brand": "Vivo",
+    "model": "Vivo Z1 Pro",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3450,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-z1-pro-6-gb-64-gb"
+  },
+  {
+    "id": "6abe169a-0573-431a-aff7-5c47c04b058b",
+    "brand": "Vivo",
+    "model": "Vivo Z1 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3390,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-z1-pro-4-gb-64-gb"
+  },
+  {
+    "id": "c2da495e-faad-42a9-9a0b-073f089727b1",
+    "brand": "Vivo",
+    "model": "Vivo Z1 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 3940,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-z1-pro-8-gb-128-gb"
+  },
+  {
+    "id": "88875e10-79a2-4279-8993-72026fa5df0d",
+    "brand": "Vivo",
+    "model": "Vivo Z1 Pro",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3600,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-z1-pro-6-gb-128-gb"
+  },
+  {
+    "id": "1b8e64b5-6140-4c9a-b969-c989343da482",
+    "brand": "Vivo",
+    "model": "Vivo S1",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4310,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-s1-6-gb-128-gb"
+  },
+  {
+    "id": "e01e4c0e-2e6b-4c2e-abe7-aff3457d72f8",
+    "brand": "Vivo",
+    "model": "Vivo S1",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4080,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-s1-6-gb-64-gb"
+  },
+  {
+    "id": "ce28da4d-a17a-45f4-aeea-5b3f760aa745",
+    "brand": "Vivo",
+    "model": "Vivo S1",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4070,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-s1-4-gb-128-gb"
+  },
+  {
+    "id": "498f2464-895f-42e8-acaf-6bf01af3c627",
+    "brand": "Vivo",
+    "model": "Vivo Y90",
+    "storage": "2 GB/16 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 2050,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y90-2-gb-16-gb"
+  },
+  {
+    "id": "9ea90263-6bcc-47b7-b768-a9e70586917e",
+    "brand": "Vivo",
+    "model": "Vivo Z1x",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 4320,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-z1x-8-gb-128-gb"
+  },
+  {
+    "id": "b4d43314-4aa3-4a3a-b049-e1d4e257bcc9",
+    "brand": "Vivo",
+    "model": "Vivo Z1x",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4090,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-z1x-6-gb-128-gb"
+  },
+  {
+    "id": "64544172-c63c-49cf-be5c-de171e6b94f3",
+    "brand": "Vivo",
+    "model": "Vivo Z1x",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3750,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-z1x-4-gb-128-gb"
+  },
+  {
+    "id": "6e7aacf0-32fc-48a3-80c1-499d2f634fe3",
+    "brand": "Vivo",
+    "model": "Vivo Z1x",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4010,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-z1x-6-gb-64-gb"
+  },
+  {
+    "id": "40219a75-1702-4ab7-bc83-7d133f52c5d2",
+    "brand": "Vivo",
+    "model": "Vivo V17 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5700,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v17-pro-8-gb-128-gb"
+  },
+  {
+    "id": "5207fcd9-5512-4fbc-b46e-f32df1991cd3",
+    "brand": "Vivo",
+    "model": "Vivo Y19",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4320,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y19-4-gb-128-gb"
+  },
+  {
+    "id": "edf1c80b-f24a-4ff4-96fa-ac08ce10d85a",
+    "brand": "Vivo",
+    "model": "Vivo U20",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3640,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-u20-6-gb-64-gb"
+  },
+  {
+    "id": "884e3bee-0279-49c0-87e5-c637e1c4af7c",
+    "brand": "Vivo",
+    "model": "Vivo U20",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3540,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-u20-4-gb-64-gb"
+  },
+  {
+    "id": "d1daae7d-158e-429d-877a-7c5a2534b414",
+    "brand": "Vivo",
+    "model": "Vivo U20",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 3900,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-u20-8-gb-128-gb"
+  },
+  {
+    "id": "79c02741-074d-497f-b5b1-92493763aced",
+    "brand": "Vivo",
+    "model": "Vivo V17",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5560,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v17-8-gb-128-gb"
+  },
+  {
+    "id": "73f63ebd-e0cf-4c9a-b294-a80b565ae1b9",
+    "brand": "Vivo",
+    "model": "Vivo S1 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 4880,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-s1-pro-8-gb-128-gb"
+  },
+  {
+    "id": "03470638-50d5-41f7-a578-ebc7752e32d0",
+    "brand": "Vivo",
+    "model": "Vivo Y11 2019",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2880,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y11-2019-3-gb-32-gb"
+  },
+  {
+    "id": "e09a57a6-6c93-4663-b579-82555b44ec38",
+    "brand": "Vivo",
+    "model": "Vivo V19",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5720,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v19-8-gb-128-gb"
+  },
+  {
+    "id": "c83ca8d8-6680-4a19-9cee-8ade7d4faabc",
+    "brand": "Vivo",
+    "model": "Vivo V19",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6150,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v19-8-gb-256-gb"
+  },
+  {
+    "id": "267ea65a-a1c7-4ae7-aa37-fd599f800f34",
+    "brand": "Vivo",
+    "model": "Vivo Y50",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5240,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y50-8-gb-128-gb"
+  },
+  {
+    "id": "2b357e49-87cb-46fe-bd41-e24e8c4fba28",
+    "brand": "Vivo",
+    "model": "Vivo Y30",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4850,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y30-6-gb-128-gb"
+  },
+  {
+    "id": "26277298-630a-4d66-ba00-3788b5288e3e",
+    "brand": "Vivo",
+    "model": "Vivo Y30",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4700,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y30-4-gb-128-gb"
+  },
+  {
+    "id": "0ce6347d-524a-4d9a-b277-70491035ff70",
+    "brand": "Vivo",
+    "model": "Vivo X50",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5830,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x50-8-gb-128-gb"
+  },
+  {
+    "id": "0191973a-6c54-42f1-ab12-e92ea66cde13",
+    "brand": "Vivo",
+    "model": "Vivo X50",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6060,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x50-8-gb-256-gb"
+  },
+  {
+    "id": "dc930102-9e2e-49c4-8525-4df29e8c4124",
+    "brand": "Vivo",
+    "model": "Vivo X50 Pro",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 9130,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x50-pro-8-gb-256-gb"
+  },
+  {
+    "id": "a25f11b8-bb79-42c1-b057-2d5410d770bd",
+    "brand": "Vivo",
+    "model": "Vivo V20",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6040,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v20-8-gb-128-gb"
+  },
+  {
+    "id": "1ca8623c-0ad4-43a3-aaaf-288008aff627",
+    "brand": "Vivo",
+    "model": "Vivo V20",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6300,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v20-8-gb-256-gb"
+  },
+  {
+    "id": "eed15a01-cba8-4f8d-88d0-1ea46019e2f1",
+    "brand": "Vivo",
+    "model": "Vivo Y20i",
+    "storage": "3 GB/64 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 3730,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y20i-3-gb-64-gb"
+  },
+  {
+    "id": "5a68c81e-7c23-4cc5-abae-333323e9b204",
+    "brand": "Vivo",
+    "model": "Vivo Y20",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4290,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y20-4-gb-64-gb"
+  },
+  {
+    "id": "dfa8e414-0190-4f97-9f8c-746d6b28002d",
+    "brand": "Vivo",
+    "model": "Vivo Y20",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4570,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y20-6-gb-64-gb"
+  },
+  {
+    "id": "a2162748-00d3-4871-8184-898635144296",
+    "brand": "Vivo",
+    "model": "Vivo V20 SE",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5720,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v20-se-8-gb-128-gb"
+  },
+  {
+    "id": "ac51a1f9-3665-4576-b537-e38d0b67e182",
+    "brand": "Vivo",
+    "model": "Vivo V20 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7900,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v20-pro-8-gb-128-gb"
+  },
+  {
+    "id": "bd7a0d75-f356-432e-8d71-df17a02d26ab",
+    "brand": "Vivo",
+    "model": "Vivo Y51 2020",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5420,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y51-2020-8-gb-128-gb"
+  },
+  {
+    "id": "0d5f442a-023e-4a1d-8b68-5c71d80cb57c",
+    "brand": "Vivo",
+    "model": "Vivo Y20G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4470,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y20g-4-gb-64-gb"
+  },
+  {
+    "id": "b106d9a4-07ff-4301-a43e-e7ea76088ee9",
+    "brand": "Vivo",
+    "model": "Vivo Y20G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5010,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y20g-6-gb-128-gb"
+  },
+  {
+    "id": "b4961962-50be-4d31-94d0-88ac51952adb",
+    "brand": "Vivo",
+    "model": "Vivo V20 2021",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5530,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v20-2021-8-gb-128-gb"
+  },
+  {
+    "id": "d0c98c92-c749-4fe9-be88-5b3d3a95a23a",
+    "brand": "Vivo",
+    "model": "Vivo V20 2021",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5760,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v20-2021-8-gb-256-gb"
+  },
+  {
+    "id": "5a45495c-18ec-4c9a-afbd-f01b86e1b272",
+    "brand": "Vivo",
+    "model": "Vivo Y51A",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5060,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y51a-8-gb-128-gb"
+  },
+  {
+    "id": "efd88c05-343f-4233-84b6-68688bfb02c7",
+    "brand": "Vivo",
+    "model": "Vivo Y51A",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4650,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y51a-6-gb-128-gb"
+  },
+  {
+    "id": "9d51e783-9ba4-4ccf-9e17-dec4d50b367f",
+    "brand": "Vivo",
+    "model": "Vivo Y20A",
+    "storage": "3 GB/64 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 3940,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y20a-3-gb-64-gb"
+  },
+  {
+    "id": "9e52c420-2f61-4231-b346-953ef8f9b487",
+    "brand": "Vivo",
+    "model": "Vivo Y31 2021",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4940,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y31-2021-6-gb-128-gb"
+  },
+  {
+    "id": "2ad473b0-4524-4d44-adff-c1631979f646",
+    "brand": "Vivo",
+    "model": "Vivo X60",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 10310,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x60-12-gb-256-gb"
+  },
+  {
+    "id": "a198100f-c82b-41cf-a6e4-d1efc610b455",
+    "brand": "Vivo",
+    "model": "Vivo X60",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 9720,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x60-8-gb-128-gb"
+  },
+  {
+    "id": "bbce5d76-8826-4cb6-8905-73c3081c8ad3",
+    "brand": "Vivo",
+    "model": "Vivo X60 Pro",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 11920,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x60-pro-12-gb-256-gb"
+  },
+  {
+    "id": "422c8681-4a30-43ed-bd88-1886ba52e86d",
+    "brand": "Vivo",
+    "model": "Vivo V21 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8110,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v21-5g-8-gb-128-gb"
+  },
+  {
+    "id": "758fd59d-58fc-4225-9c83-63f0ecb27eca",
+    "brand": "Vivo",
+    "model": "Vivo V21 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8800,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v21-5g-8-gb-256-gb"
+  },
+  {
+    "id": "1d81786d-a83a-4b05-a651-4506a23ffe4c",
+    "brand": "Vivo",
+    "model": "Vivo V21e 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7380,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v21e-5g-8-gb-128-gb"
+  },
+  {
+    "id": "d30a60b4-7c7a-4e58-a8f7-a3b67ed76d3f",
+    "brand": "Vivo",
+    "model": "Vivo V21e 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7650,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v21e-5g-8-gb-256-gb"
+  },
+  {
+    "id": "d515620d-a7b6-4af3-ba5e-46cc1dd5a6fb",
+    "brand": "Vivo",
+    "model": "Vivo Y73",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y73-8-gb-128-gb"
+  },
+  {
+    "id": "1a3a0f09-09eb-45cc-bced-1c65bc16efbc",
+    "brand": "Vivo",
+    "model": "Vivo Y72 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7280,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y72-5g-8-gb-128-gb"
+  },
+  {
+    "id": "3872741c-266c-4e3f-b54f-381517cce73f",
+    "brand": "Vivo",
+    "model": "Vivo Y12s",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 3800,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y12s-3-gb-32-gb"
+  },
+  {
+    "id": "e5b32d3f-ed8b-462f-ae55-6b24224fa8a6",
+    "brand": "Vivo",
+    "model": "Vivo Y1s",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2610,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y1s-3-gb-32-gb"
+  },
+  {
+    "id": "34e2990b-63a3-4544-a768-7436b4f43b16",
+    "brand": "Vivo",
+    "model": "Vivo Y1s",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 2460,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y1s-2-gb-32-gb"
+  },
+  {
+    "id": "8f0983a1-cd77-47a6-9686-1cb69c7348a1",
+    "brand": "Vivo",
+    "model": "Vivo Y53s",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5490,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y53s-8-gb-128-gb"
+  },
+  {
+    "id": "6c84f97b-a322-4edf-97c3-9ec4e7428605",
+    "brand": "Vivo",
+    "model": "Vivo Y12G",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 3340,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y12g-3-gb-32-gb"
+  },
+  {
+    "id": "b0af7ff4-0825-4502-85a9-9ffe0fe778b2",
+    "brand": "Vivo",
+    "model": "Vivo Y12G",
+    "storage": "3 GB/64 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 3610,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y12g-3-gb-64-gb"
+  },
+  {
+    "id": "4760a9c8-b5f1-4f0e-a3fa-34b233f974fe",
+    "brand": "Vivo",
+    "model": "Vivo Y33s",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5660,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y33s-8-gb-128-gb"
+  },
+  {
+    "id": "74958207-a204-4a2f-b809-82210a27fd6d",
+    "brand": "Vivo",
+    "model": "Vivo Y21 2021",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4570,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y21-2021-4-gb-64-gb"
+  },
+  {
+    "id": "62beaca9-1046-4211-8a48-c0c0ab4ea9c9",
+    "brand": "Vivo",
+    "model": "Vivo Y21 2021",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4960,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y21-2021-4-gb-128-gb"
+  },
+  {
+    "id": "e0e35f08-6021-46fb-8b40-db5854b7bd68",
+    "brand": "Vivo",
+    "model": "Vivo X70 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 14280,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x70-pro-8-gb-128-gb"
+  },
+  {
+    "id": "9ff1ce4b-b61a-456c-8925-6f54998df08a",
+    "brand": "Vivo",
+    "model": "Vivo X70 Pro",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 15000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x70-pro-8-gb-256-gb"
+  },
+  {
+    "id": "c54dac5e-ee79-4b33-ab99-df301c62604c",
+    "brand": "Vivo",
+    "model": "Vivo X70 Pro",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 16020,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x70-pro-12-gb-256-gb"
+  },
+  {
+    "id": "4eceecb1-de51-40e2-986e-b1cec95bdb11",
+    "brand": "Vivo",
+    "model": "Vivo Y3s 2021",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 2820,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y3s-2021-2-gb-32-gb"
+  },
+  {
+    "id": "b07c49cb-6e1d-44cf-a747-753ab0dc49ad",
+    "brand": "Vivo",
+    "model": "Vivo Y20T",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4920,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y20t-6-gb-64-gb"
+  },
+  {
+    "id": "fd939b94-4ed8-4fe4-8db6-e6d2759ae2a6",
+    "brand": "Vivo",
+    "model": "Vivo V23 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 10570,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v23-5g-12-gb-256-gb"
+  },
+  {
+    "id": "1230bd48-0826-4b2c-a315-184b8cb18cf4",
+    "brand": "Vivo",
+    "model": "Vivo V23 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 9430,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v23-5g-8-gb-128-gb"
+  },
+  {
+    "id": "2318f692-6855-46e7-a7da-d7c803ec4a63",
+    "brand": "Vivo",
+    "model": "Vivo V23 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 10550,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v23-pro-8-gb-128-gb"
+  },
+  {
+    "id": "38869864-d33a-4b65-9763-667a09c78c95",
+    "brand": "Vivo",
+    "model": "Vivo V23 Pro",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 11690,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v23-pro-12-gb-256-gb"
+  },
+  {
+    "id": "c1f79f94-4a9d-4116-8eb8-c24229123857",
+    "brand": "Vivo",
+    "model": "Vivo Y21T",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4860,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y21t-4-gb-128-gb"
+  },
+  {
+    "id": "54e26b46-3779-4867-88e5-b68238c83438",
+    "brand": "Vivo",
+    "model": "Vivo T1 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 6740,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t1-5g-4-gb-128-gb"
+  },
+  {
+    "id": "1607e679-8b71-4fad-ad49-fe67aa64c0d3",
+    "brand": "Vivo",
+    "model": "Vivo T1 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 7610,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t1-5g-6-gb-128-gb"
+  },
+  {
+    "id": "d07c1595-e18d-4296-b690-c2fb37b07dd1",
+    "brand": "Vivo",
+    "model": "Vivo T1 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7800,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t1-5g-8-gb-128-gb"
+  },
+  {
+    "id": "4452046d-3c38-4fd9-8592-0da4f5c04160",
+    "brand": "Vivo",
+    "model": "Vivo V23e 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8450,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v23e-5g-8-gb-128-gb"
+  },
+  {
+    "id": "c3593c3b-423a-4e55-980f-28b52cbaae1d",
+    "brand": "Vivo",
+    "model": "Vivo Y75 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7750,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y75-5g-8-gb-128-gb"
+  },
+  {
+    "id": "c5c42856-f65a-4d27-b888-2b48f4d49de8",
+    "brand": "Vivo",
+    "model": "Vivo Y21e",
+    "storage": "3 GB/64 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 3980,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y21e-3-gb-64-gb"
+  },
+  {
+    "id": "e3ad3656-4de1-45b9-a479-ac0d342a7f50",
+    "brand": "Vivo",
+    "model": "Vivo Y21a",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4170,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y21a-4-gb-64-gb"
+  },
+  {
+    "id": "449905e7-4e70-4c07-8459-c1b72f994c27",
+    "brand": "Vivo",
+    "model": "Vivo Y33T",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5620,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y33t-8-gb-128-gb"
+  },
+  {
+    "id": "10bd83db-5aff-47a0-847f-7f5d74674535",
+    "brand": "Vivo",
+    "model": "Vivo Y15s 2021",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 3090,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y15s-2021-3-gb-32-gb"
+  },
+  {
+    "id": "1bffed74-8f13-4c88-9379-47e233574414",
+    "brand": "Vivo",
+    "model": "Vivo Y21G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4230,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y21g-4-gb-64-gb"
+  },
+  {
+    "id": "060c6eeb-7032-40a2-ba81-0e4b9653542b",
+    "brand": "Vivo",
+    "model": "Vivo X70 Pro Plus",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 17760,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x70-pro-plus-12-gb-256-gb"
+  },
+  {
+    "id": "30aaa02b-2956-4de9-b2be-8da0324a5655",
+    "brand": "Vivo",
+    "model": "Vivo X80",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 17000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x80-12-gb-256-gb"
+  },
+  {
+    "id": "0079f59f-ff8e-47af-b2da-27492de6cfb6",
+    "brand": "Vivo",
+    "model": "Vivo X80",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 15330,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x80-8-gb-128-gb"
+  },
+  {
+    "id": "6baf3d3c-02b1-4200-a84c-8ea0c7e97106",
+    "brand": "Vivo",
+    "model": "Vivo X80 Pro",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 19970,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x80-pro-12-gb-256-gb"
+  },
+  {
+    "id": "847cc212-1f96-4bfc-a292-b17c587489a1",
+    "brand": "Vivo",
+    "model": "Vivo T1 Pro 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 8570,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t1-pro-5g-6-gb-128-gb"
+  },
+  {
+    "id": "3860a849-1282-4818-8378-49fc7f63fc10",
+    "brand": "Vivo",
+    "model": "Vivo T1 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8920,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t1-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "67bb11db-273a-4f4f-90b1-a89dd2f2a218",
+    "brand": "Vivo",
+    "model": "Vivo T1",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5290,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t1-4-gb-128-gb"
+  },
+  {
+    "id": "a2bdc192-855a-4103-8ecf-b0507a319ec8",
+    "brand": "Vivo",
+    "model": "Vivo T1",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6170,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t1-8-gb-128-gb"
+  },
+  {
+    "id": "45a6b2a5-1798-40ae-b967-5492f8d4ba15",
+    "brand": "Vivo",
+    "model": "Vivo T1",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5840,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t1-6-gb-128-gb"
+  },
+  {
+    "id": "9365f456-678d-44c7-ad52-c9fff9db6657",
+    "brand": "Vivo",
+    "model": "Vivo Y75",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5920,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y75-8-gb-128-gb"
+  },
+  {
+    "id": "19933361-1911-4732-8207-63fc6e04847a",
+    "brand": "Vivo",
+    "model": "Vivo Y01",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 2730,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y01-2-gb-32-gb"
+  },
+  {
+    "id": "10b3857f-b397-425f-84a7-acc8582b27f9",
+    "brand": "Vivo",
+    "model": "Vivo T1x",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4530,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t1x-4-gb-64-gb"
+  },
+  {
+    "id": "59833b45-0759-4ed4-80cc-4dad7f528174",
+    "brand": "Vivo",
+    "model": "Vivo T1x",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4920,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t1x-4-gb-128-gb"
+  },
+  {
+    "id": "02bedff9-a3ee-45fd-a0b6-757b00a08e29",
+    "brand": "Vivo",
+    "model": "Vivo T1x",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5190,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t1x-6-gb-128-gb"
+  },
+  {
+    "id": "455e6ead-1046-4a1b-b66c-a051c7e1a5af",
+    "brand": "Vivo",
+    "model": "Vivo V25 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 11560,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v25-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "11992d96-e189-49a3-bf5d-9b7eb1fbc481",
+    "brand": "Vivo",
+    "model": "Vivo V25 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 12330,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v25-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "c14f077d-bc38-4753-827d-e9ddf0ad648a",
+    "brand": "Vivo",
+    "model": "Vivo Y22 2022",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4570,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y22-2022-4-gb-64-gb"
+  },
+  {
+    "id": "4d156970-3b47-4dd8-a854-473225013743",
+    "brand": "Vivo",
+    "model": "Vivo Y22 2022",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4970,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y22-2022-4-gb-128-gb"
+  },
+  {
+    "id": "8e14a114-97d0-4a7a-a9bf-299716a4838f",
+    "brand": "Vivo",
+    "model": "Vivo Y22 2022",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5380,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y22-2022-6-gb-128-gb"
+  },
+  {
+    "id": "ba017d08-01d9-452e-aade-c565be8794eb",
+    "brand": "Vivo",
+    "model": "Vivo V25 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 10540,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v25-5g-12-gb-256-gb"
+  },
+  {
+    "id": "dff5f323-2019-46fe-9217-26f8f05b4b26",
+    "brand": "Vivo",
+    "model": "Vivo V25 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 9730,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v25-5g-8-gb-128-gb"
+  },
+  {
+    "id": "76db78eb-3006-4434-9040-1ac1c3b7d4ee",
+    "brand": "Vivo",
+    "model": "Vivo Y16",
+    "storage": "3 GB/64 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 3940,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y16-3-gb-64-gb"
+  },
+  {
+    "id": "2ed9055c-0218-47c2-935b-34b24c35f5eb",
+    "brand": "Vivo",
+    "model": "Vivo Y16",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4190,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y16-4-gb-64-gb"
+  },
+  {
+    "id": "e19dc9bf-488a-48a3-b4f7-bdec29db8403",
+    "brand": "Vivo",
+    "model": "Vivo Y16",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 3610,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y16-3-gb-32-gb"
+  },
+  {
+    "id": "0b88978b-a07d-499c-b77e-b19979ac6203",
+    "brand": "Vivo",
+    "model": "Vivo Y16",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4580,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y16-4-gb-128-gb"
+  },
+  {
+    "id": "9a674932-1432-404b-ac69-7912532be809",
+    "brand": "Vivo",
+    "model": "Vivo Y35",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5400,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y35-8-gb-128-gb"
+  },
+  {
+    "id": "9d7344b4-e5a9-45dc-9676-2671588d15d7",
+    "brand": "Vivo",
+    "model": "Vivo Y02",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 3000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y02-3-gb-32-gb"
+  },
+  {
+    "id": "d172b6fd-53d7-45a7-85e0-b2d711b5ade5",
+    "brand": "Vivo",
+    "model": "Vivo Y100 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 10490,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y100-5g-8-gb-128-gb"
+  },
+  {
+    "id": "f5d50648-d337-4eb1-a099-b2de4010507f",
+    "brand": "Vivo",
+    "model": "Vivo Y56 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 10190,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y56-5g-8-gb-128-gb"
+  },
+  {
+    "id": "88d35496-e97f-4f82-b9db-e52370f277e1",
+    "brand": "Vivo",
+    "model": "Vivo Y56 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 8880,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y56-5g-4-gb-128-gb"
+  },
+  {
+    "id": "15ebe4e0-7d52-478c-8a75-bbf0d383fef9",
+    "brand": "Vivo",
+    "model": "Vivo V27 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 18100,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v27-pro-8-gb-128-gb"
+  },
+  {
+    "id": "a194ea52-2d58-4306-8a9e-fe0bef33677f",
+    "brand": "Vivo",
+    "model": "Vivo V27 Pro",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 18720,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v27-pro-8-gb-256-gb"
+  },
+  {
+    "id": "e4e1df25-82dd-44ac-9c3a-4816da46d3c2",
+    "brand": "Vivo",
+    "model": "Vivo V27 Pro",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 19050,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v27-pro-12-gb-256-gb"
+  },
+  {
+    "id": "fe106c60-dd1e-447b-82f0-0e430e32f7f6",
+    "brand": "Vivo",
+    "model": "Vivo V27",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 17810,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v27-12-gb-256-gb"
+  },
+  {
+    "id": "3f3c70f9-9566-443c-bbe5-6157806f0ecc",
+    "brand": "Vivo",
+    "model": "Vivo V27",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 15810,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v27-8-gb-128-gb"
+  },
+  {
+    "id": "da7cfaf7-8bf4-4986-8091-9c45817e6a11",
+    "brand": "Vivo",
+    "model": "Vivo Y01a",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 2610,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y01a-2-gb-32-gb"
+  },
+  {
+    "id": "0e09c0ac-bd23-4af8-ac97-6e4587438f7b",
+    "brand": "Vivo",
+    "model": "Vivo X90",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 23800,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x90-8-gb-256-gb"
+  },
+  {
+    "id": "b4bfc5e7-99fd-4938-ab5d-f1a310fa3297",
+    "brand": "Vivo",
+    "model": "Vivo X90",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 24590,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x90-12-gb-256-gb"
+  },
+  {
+    "id": "a9184d1e-47fd-45f3-bf30-e40679e0e37e",
+    "brand": "Vivo",
+    "model": "Vivo X90 Pro",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 28660,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x90-pro-12-gb-256-gb"
+  },
+  {
+    "id": "aff1bf4d-7a3c-4097-b7c0-83b143254c6d",
+    "brand": "Vivo",
+    "model": "Vivo Y100A 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 10930,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y100a-5g-8-gb-256-gb"
+  },
+  {
+    "id": "8909cb30-8f59-4231-9a67-82009bdb30e7",
+    "brand": "Vivo",
+    "model": "Vivo Y100A 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 10730,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y100a-5g-8-gb-128-gb"
+  },
+  {
+    "id": "fccf4b9c-5bed-4df3-83a8-fd4cb045579a",
+    "brand": "Vivo",
+    "model": "Vivo Y02T",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4610,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y02t-4-gb-64-gb"
+  },
+  {
+    "id": "21d5d738-3a55-46c0-9ba1-6f6c2d8450b7",
+    "brand": "Vivo",
+    "model": "Vivo T2 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 10570,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t2-5g-6-gb-128-gb"
+  },
+  {
+    "id": "b1086099-e9e6-4523-882f-0fa85e2d09a2",
+    "brand": "Vivo",
+    "model": "Vivo T2 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 11170,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t2-5g-8-gb-128-gb"
+  },
+  {
+    "id": "d589f31f-05e1-441b-9bb8-e622a15e0473",
+    "brand": "Vivo",
+    "model": "Vivo V29e",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 16600,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v29e-8-gb-256-gb"
+  },
+  {
+    "id": "632e7848-820e-4c81-802d-b1e7e38608cd",
+    "brand": "Vivo",
+    "model": "Vivo V29e",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 15520,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v29e-8-gb-128-gb"
+  },
+  {
+    "id": "31cf192f-97e5-4f29-b6fd-73e38ad2cba4",
+    "brand": "Vivo",
+    "model": "Vivo Y27",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 7040,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y27-6-gb-128-gb"
+  },
+  {
+    "id": "67a09428-f04e-4ae9-b766-7951d224f52f",
+    "brand": "Vivo",
+    "model": "Vivo Y36",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8020,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y36-8-gb-128-gb"
+  },
+  {
+    "id": "bfe9962a-cf4b-483a-adfd-687bd7151169",
+    "brand": "Vivo",
+    "model": "Vivo V29",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 18720,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v29-12-gb-256-gb"
+  },
+  {
+    "id": "b174ffd6-23d2-424b-a8c8-cc97814758e6",
+    "brand": "Vivo",
+    "model": "Vivo V29",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 17500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v29-8-gb-128-gb"
+  },
+  {
+    "id": "4a4d5e60-3b2a-4d02-86c7-9abf1ae423d7",
+    "brand": "Vivo",
+    "model": "Vivo V29 Pro",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 19350,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v29-pro-8-gb-256-gb"
+  },
+  {
+    "id": "af6dcda7-aae3-4c9b-bb14-521924292527",
+    "brand": "Vivo",
+    "model": "Vivo V29 Pro",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 20250,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v29-pro-12-gb-256-gb"
+  },
+  {
+    "id": "b94b1441-49ea-4436-8974-0d1c76b8c4e5",
+    "brand": "Vivo",
+    "model": "Vivo T2 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 15070,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t2-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "836517ba-5d0c-4565-bf38-677b1a07eb5e",
+    "brand": "Vivo",
+    "model": "Vivo T2 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 15830,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t2-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "96ac855a-b93d-41f9-a046-306613e252c1",
+    "brand": "Vivo",
+    "model": "Vivo Y17s",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5510,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y17s-4-gb-64-gb"
+  },
+  {
+    "id": "a12765b0-5bc7-422c-8162-47c85f010a1f",
+    "brand": "Vivo",
+    "model": "Vivo Y17s",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 6160,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y17s-4-gb-128-gb"
+  },
+  {
+    "id": "d65137cf-8d5f-4a90-b0fa-1877469e0022",
+    "brand": "Vivo",
+    "model": "Vivo Y200 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12030,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y200-5g-8-gb-128-gb"
+  },
+  {
+    "id": "3af353c4-43ba-4026-8c4a-9d0829abe31d",
+    "brand": "Vivo",
+    "model": "Vivo Y200 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12730,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y200-5g-8-gb-256-gb"
+  },
+  {
+    "id": "655b61fd-b76a-4b90-910c-7adf0de8c54c",
+    "brand": "Vivo",
+    "model": "Vivo Y28 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 9470,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y28-5g-6-gb-128-gb"
+  },
+  {
+    "id": "c8ee8770-f80c-4ba0-8725-fdf7cfc6758f",
+    "brand": "Vivo",
+    "model": "Vivo Y28 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 8720,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y28-5g-4-gb-128-gb"
+  },
+  {
+    "id": "28477318-0283-4cc7-ab87-644cbb683387",
+    "brand": "Vivo",
+    "model": "Vivo Y28 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 9980,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y28-5g-8-gb-128-gb"
+  },
+  {
+    "id": "3a7c7091-1a86-4e2a-9898-c8ea538bd08d",
+    "brand": "Vivo",
+    "model": "Vivo X100",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 27150,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x100-12-gb-256-gb"
+  },
+  {
+    "id": "bc1ce339-bfda-4faa-b386-df305bd0e7a5",
+    "brand": "Vivo",
+    "model": "Vivo X100",
+    "storage": "16 GB/512 GB",
+    "ram": "16 GB",
+    "color": "Default",
+    "basePrice": 27930,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x100-16-gb-512-gb"
+  },
+  {
+    "id": "5052bb4b-0412-4dd9-9d06-cb92e7c16d86",
+    "brand": "Vivo",
+    "model": "Vivo X100 Pro",
+    "storage": "16 GB/512 GB",
+    "ram": "16 GB",
+    "color": "Default",
+    "basePrice": 32830,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x100-pro-16-gb-512-gb"
+  },
+  {
+    "id": "015b39b6-fd0a-41ab-8ecf-57abba2c2b42",
+    "brand": "Vivo",
+    "model": "Vivo V30",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 19990,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v30-12-gb-256-gb"
+  },
+  {
+    "id": "5b86d47f-497f-44c4-a543-a23b4ddef6d9",
+    "brand": "Vivo",
+    "model": "Vivo V30",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 18690,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v30-8-gb-128-gb"
+  },
+  {
+    "id": "d74a777c-40c4-491b-bdec-ab166d0fca33",
+    "brand": "Vivo",
+    "model": "Vivo V30",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 19550,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v30-8-gb-256-gb"
+  },
+  {
+    "id": "d5eaf04d-a348-4019-b740-0f67291c5155",
+    "brand": "Vivo",
+    "model": "Vivo V30 Pro",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 22630,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v30-pro-12-gb-512-gb"
+  },
+  {
+    "id": "de5b566c-f11e-4945-b79b-df1fa1e7ede3",
+    "brand": "Vivo",
+    "model": "Vivo V30 Pro",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 21150,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v30-pro-8-gb-256-gb"
+  },
+  {
+    "id": "7e2bce0e-cd69-40ea-83be-3c7e1bd0e584",
+    "brand": "Vivo",
+    "model": "Vivo Y200e 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12060,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y200e-5g-8-gb-128-gb"
+  },
+  {
+    "id": "f7e8e78d-a536-44f0-b923-51af260188ab",
+    "brand": "Vivo",
+    "model": "Vivo Y200e 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 11220,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y200e-5g-6-gb-128-gb"
+  },
+  {
+    "id": "17107c19-c20e-4230-b932-3db1fd720b49",
+    "brand": "Vivo",
+    "model": "Vivo T3x 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 8840,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t3x-5g-4-gb-128-gb"
+  },
+  {
+    "id": "bdbb4488-0942-4071-91bb-3a6b1d3d4317",
+    "brand": "Vivo",
+    "model": "Vivo T3x 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 10110,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t3x-5g-6-gb-128-gb"
+  },
+  {
+    "id": "7467b7d8-dd37-4f05-8e2c-19b61c33195c",
+    "brand": "Vivo",
+    "model": "Vivo T3x 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 10500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t3x-5g-8-gb-128-gb"
+  },
+  {
+    "id": "fcdbd130-57af-4046-9eba-3d8066fa0654",
+    "brand": "Vivo",
+    "model": "Vivo T3 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 11570,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t3-5g-8-gb-128-gb"
+  },
+  {
+    "id": "8742d190-c343-4bad-be17-c8da2a6c25c1",
+    "brand": "Vivo",
+    "model": "Vivo T3 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 11890,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t3-5g-8-gb-256-gb"
+  },
+  {
+    "id": "0c217cb2-bca2-4736-bdd3-cc9288d511ff",
+    "brand": "Vivo",
+    "model": "Vivo V30e",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 17080,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v30e-8-gb-128-gb"
+  },
+  {
+    "id": "62b66967-aebe-4ee0-99bf-a74f4e6c7033",
+    "brand": "Vivo",
+    "model": "Vivo V30e",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 17590,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v30e-8-gb-256-gb"
+  },
+  {
+    "id": "30317db5-6f0d-4e33-877f-b3770095672e",
+    "brand": "Vivo",
+    "model": "Vivo Y18",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5420,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y18-4-gb-128-gb"
+  },
+  {
+    "id": "9196d1cf-7f8e-499e-93b4-a3d4f92615c4",
+    "brand": "Vivo",
+    "model": "Vivo Y18",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4970,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y18-4-gb-64-gb"
+  },
+  {
+    "id": "91311f6d-1108-4514-a2ec-fe333c946e16",
+    "brand": "Vivo",
+    "model": "Vivo Y18e",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5070,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y18e-4-gb-64-gb"
+  },
+  {
+    "id": "d26fd447-a325-4683-8f60-befcbed19179",
+    "brand": "Vivo",
+    "model": "Vivo Y200 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 13820,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y200-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "6fc84aa5-b917-41fd-a0e9-0030fee0aa1d",
+    "brand": "Vivo",
+    "model": "Vivo X Fold 3 Pro",
+    "storage": "16 GB/512 GB",
+    "ram": "16 GB",
+    "color": "Default",
+    "basePrice": 60070,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x-fold-3-pro-16-gb-512-gb"
+  },
+  {
+    "id": "7c7bbaca-1ddf-4a1d-8968-206d630ba6dd",
+    "brand": "Vivo",
+    "model": "Vivo T3 Lite 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 7120,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t3-lite-5g-6-gb-128-gb"
+  },
+  {
+    "id": "da4e709c-0334-4d64-8bdc-1e200ea76117",
+    "brand": "Vivo",
+    "model": "Vivo T3 Lite 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 6310,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t3-lite-5g-4-gb-128-gb"
+  },
+  {
+    "id": "5735e833-e074-425a-a407-6fb443ae9e92",
+    "brand": "Vivo",
+    "model": "Vivo Y28s 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 9900,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y28s-5g-8-gb-128-gb"
+  },
+  {
+    "id": "05ada70e-ae1e-470a-948a-48a5ae5d2919",
+    "brand": "Vivo",
+    "model": "Vivo Y28s 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 9030,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y28s-5g-4-gb-128-gb"
+  },
+  {
+    "id": "67848e82-3c69-488b-8ea3-1ee604fda565",
+    "brand": "Vivo",
+    "model": "Vivo Y28s 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 9700,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y28s-5g-6-gb-128-gb"
+  },
+  {
+    "id": "0e4bbe1b-19cf-4b21-9b3c-1e84adb78243",
+    "brand": "Vivo",
+    "model": "Vivo Y18i",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4970,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y18i-4-gb-64-gb"
+  },
+  {
+    "id": "bb7dacf2-b5d1-4712-a55a-ffaecba58fe8",
+    "brand": "Vivo",
+    "model": "Vivo Y28e 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 7370,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y28e-5g-4gb-64-gb"
+  },
+  {
+    "id": "64fcb654-1471-4f52-8816-ef02a8da376e",
+    "brand": "Vivo",
+    "model": "Vivo Y28e 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 8290,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y28e-5g-4-gb-128-gb"
+  },
+  {
+    "id": "f0df6c1f-f12d-40f1-b8f8-b106cebff4dd",
+    "brand": "Vivo",
+    "model": "Vivo V40",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 20280,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v40-8-gb-128-gb"
+  },
+  {
+    "id": "dd7c5fa1-637d-434b-9bfb-73fc93d6a2c2",
+    "brand": "Vivo",
+    "model": "Vivo V40",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 21470,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v40-8-gb-256-gb"
+  },
+  {
+    "id": "ac0eb0b9-b260-493e-8e02-3302eaff8174",
+    "brand": "Vivo",
+    "model": "Vivo V40",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 21830,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v40-12-gb-512-gb"
+  },
+  {
+    "id": "9fe8c7a6-692b-4bfd-bc96-52bf1b25dd4d",
+    "brand": "Vivo",
+    "model": "Vivo V40 Pro",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 27300,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v40-pro-12-gb-512-gb"
+  },
+  {
+    "id": "97c66dc6-6594-4015-a91b-429665818357",
+    "brand": "Vivo",
+    "model": "Vivo V40 Pro",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 25480,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v40-pro-8-gb-256-gb"
+  },
+  {
+    "id": "f8414d92-79bc-448e-8516-eedca5057b1c",
+    "brand": "Vivo",
+    "model": "Vivo Y58 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 10880,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y58-5g-8-gb-128-gb"
+  },
+  {
+    "id": "99f8b163-916b-4353-8ad6-6bb2936c6ad4",
+    "brand": "Vivo",
+    "model": "Vivo T3 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 14700,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t3-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "a517b3b8-587b-4f12-8fdb-eecfeb230301",
+    "brand": "Vivo",
+    "model": "Vivo T3 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 16290,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t3-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "8e826cfb-012d-4007-802e-ae8628d9e735",
+    "brand": "Vivo",
+    "model": "Vivo V40e",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 18820,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v40e-8-gb-256-gb"
+  },
+  {
+    "id": "1b942546-f5ac-441a-9854-b0f06a5130f6",
+    "brand": "Vivo",
+    "model": "Vivo V40e",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 18050,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v40e-8-gb-128-gb"
+  },
+  {
+    "id": "59028930-b0f5-4794-bb05-c842c92ac307",
+    "brand": "Vivo",
+    "model": "Vivo T3 Ultra",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 17060,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t3-ultra-8-gb-128-gb"
+  },
+  {
+    "id": "67d27d59-4180-4d9d-b96f-2744729d8400",
+    "brand": "Vivo",
+    "model": "Vivo T3 Ultra",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 18750,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t3-ultra-8-gb-256-gb"
+  },
+  {
+    "id": "8ac2f480-f720-4df9-bc1e-bf6373713efb",
+    "brand": "Vivo",
+    "model": "Vivo T3 Ultra",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 19440,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t3-ultra-12-gb-256-gb"
+  },
+  {
+    "id": "3c2e2096-250f-4ef8-bf12-4870ca91db47",
+    "brand": "Vivo",
+    "model": "Vivo Y18T",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5280,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y18t-4-gb-128-gb"
+  },
+  {
+    "id": "3ed4bbf3-906c-4ad3-901a-e3ca6bbde1ae",
+    "brand": "Vivo",
+    "model": "Vivo X200",
+    "storage": "16 GB/512 GB",
+    "ram": "16 GB",
+    "color": "Default",
+    "basePrice": 35500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x200-16-gb-512-gb"
+  },
+  {
+    "id": "b2946eba-6015-4184-b10f-0308563d6922",
+    "brand": "Vivo",
+    "model": "Vivo X200",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 33000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x200-12-gb-256-gb"
+  },
+  {
+    "id": "1fee6274-434b-45af-b875-7f5d73468335",
+    "brand": "Vivo",
+    "model": "Vivo Y300 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 14750,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y300-5g-8-gb-256-gb"
+  },
+  {
+    "id": "b105ed8b-31c4-4509-b879-c4d7d9de2d24",
+    "brand": "Vivo",
+    "model": "Vivo Y300 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 14710,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y300-5g-8-gb-128-gb"
+  },
+  {
+    "id": "1c35b903-2a24-481d-8202-e28e861f6c5b",
+    "brand": "Vivo",
+    "model": "Vivo Y300 Plus 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 15950,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y300-plus-5g-8-gb-128-gb"
+  },
+  {
+    "id": "405e022d-43b7-464f-9bfc-0fa7d9aed501",
+    "brand": "Vivo",
+    "model": "Vivo Y29 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 10130,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y29-5g-4-gb-128-gb"
+  },
+  {
+    "id": "9894c680-88cf-4962-bedf-c4b5db066f14",
+    "brand": "Vivo",
+    "model": "Vivo Y29 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 11860,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y29-5g-8-gb-128-gb"
+  },
+  {
+    "id": "36594118-c786-4ab9-aabe-2780fc2bb447",
+    "brand": "Vivo",
+    "model": "Vivo Y29 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12290,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y29-5g-8-gb-256-gb"
+  },
+  {
+    "id": "a6c86190-3e8b-43d4-a9c8-eaf77232c694",
+    "brand": "Vivo",
+    "model": "Vivo Y29 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 10870,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y29-5g-6-gb-128-gb"
+  },
+  {
+    "id": "efed48bf-0f2b-4032-b29c-ec94f7c1d8f7",
+    "brand": "Vivo",
+    "model": "Vivo V50",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 23110,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v50-12-gb-512-gb"
+  },
+  {
+    "id": "25c4bf53-94a8-4005-9483-b81c53d8b5f1",
+    "brand": "Vivo",
+    "model": "Vivo V50",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 22570,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v50-8-gb-256-gb"
+  },
+  {
+    "id": "a04cbd15-f166-4232-964d-f7ae1616653b",
+    "brand": "Vivo",
+    "model": "Vivo V50",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 21010,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v50-8-gb-128-gb"
+  },
+  {
+    "id": "d6d57792-179d-429e-916f-66a456c694a1",
+    "brand": "Vivo",
+    "model": "Vivo T4x 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 10020,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t4x-5g-6-gb-128-gb"
+  },
+  {
+    "id": "f1857bbb-5ddb-4c42-84b5-d1355b72c78b",
+    "brand": "Vivo",
+    "model": "Vivo T4x 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 10350,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t4x-5g-8-gb-128-gb"
+  },
+  {
+    "id": "ef4b23c2-de95-41eb-804c-0ba4bfa03225",
+    "brand": "Vivo",
+    "model": "Vivo T4x 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 11550,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t4x-5g-8-gb-256-gb"
+  },
+  {
+    "id": "660ed85a-e4a8-4256-a806-2cca4aac5a74",
+    "brand": "Vivo",
+    "model": "Vivo V50e",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 19040,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v50e-8-gb-256-gb"
+  },
+  {
+    "id": "c1e0311f-b23d-42b3-85d9-c23747a34da8",
+    "brand": "Vivo",
+    "model": "Vivo V50e",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 18950,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v50e-8-gb-128-gb"
+  },
+  {
+    "id": "d13e826a-5ab3-4e93-83ec-77a5b4e29f3c",
+    "brand": "Vivo",
+    "model": "Vivo T4 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 15900,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t4-5g-8-gb-128-gb"
+  },
+  {
+    "id": "eceb5270-b3a6-4614-a4cc-77a21ea719e7",
+    "brand": "Vivo",
+    "model": "Vivo T4 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 16550,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t4-5g-8-gb-256-gb"
+  },
+  {
+    "id": "da2cd314-5708-4966-93c6-665ded4a8d39",
+    "brand": "Vivo",
+    "model": "Vivo T4 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 17190,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t4-5g-12-gb-256-gb"
+  },
+  {
+    "id": "1edd5d66-c126-4e9e-afec-344bcdb2cc66",
+    "brand": "Vivo",
+    "model": "Vivo T4 Ultra 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 25020,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t4-ultra-5g-12-gb-256-gb"
+  },
+  {
+    "id": "9356d7ec-1e50-4620-995f-962835e3e714",
+    "brand": "Vivo",
+    "model": "Vivo T4 Ultra 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 23800,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t4-ultra-5g-8-gb-256-gb"
+  },
+  {
+    "id": "ac917985-0a55-4bda-beb0-5777f4ff9152",
+    "brand": "Vivo",
+    "model": "Vivo T4 Ultra 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 26340,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t4-ultra-5g-12-gb-512-gb"
+  },
+  {
+    "id": "819d138d-82b1-4eb5-a8d2-aef0bb46b9a4",
+    "brand": "Vivo",
+    "model": "Vivo Y19 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 8100,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y19-5g-6-gb-128-gb"
+  },
+  {
+    "id": "18663b42-658e-4b96-8fe6-df3620d36163",
+    "brand": "Vivo",
+    "model": "Vivo Y19 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 6860,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y19-5g-4-gb-64-gb"
+  },
+  {
+    "id": "0860fa8e-f90d-43f3-9dcd-593c6c6256e4",
+    "brand": "Vivo",
+    "model": "Vivo Y19 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 7840,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y19-5g-4-gb-128-gb"
+  },
+  {
+    "id": "7b375abf-0e5c-4090-ab68-53d96df4d1e3",
+    "brand": "Vivo",
+    "model": "Vivo Y19e",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5230,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y19e-4-gb-64-gb"
+  },
+  {
+    "id": "e8e68263-7e1b-4c8f-a931-eee8d2955be0",
+    "brand": "Vivo",
+    "model": "Vivo Y39 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12440,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y39-5g-8-gb-128-gb"
+  },
+  {
+    "id": "1359e69e-49a0-4fa5-b1ab-6d092c4bfde1",
+    "brand": "Vivo",
+    "model": "Vivo Y39 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 13690,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y39-5g-8-gb-256-gb"
+  },
+  {
+    "id": "b9517657-85b4-4b0a-b9b9-5ce43dff8666",
+    "brand": "Vivo",
+    "model": "Vivo T4 Lite 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 6500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t4-lite-5g-4-gb-64-gb"
+  },
+  {
+    "id": "7b9d7425-fa3c-4192-a72a-4c937d590f9e",
+    "brand": "Vivo",
+    "model": "Vivo T4 Lite 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 7500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t4-lite-5g-4-gb-128-gb"
+  },
+  {
+    "id": "19f825a2-32f3-4992-ae1e-81f5ac1fccbb",
+    "brand": "Vivo",
+    "model": "Vivo T4 Lite 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 8200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t4-lite-5g-6-gb-128-gb"
+  },
+  {
+    "id": "a14c46e4-208e-429b-9a17-fbfa8baa1f7e",
+    "brand": "Vivo",
+    "model": "Vivo T4 Lite 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 9200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t4-lite-5g-8-gb-256-gb"
+  },
+  {
+    "id": "963aeac9-7f7a-4293-9e7f-957c7d04301b",
+    "brand": "Vivo",
+    "model": "Vivo Y400 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 18050,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y400-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "a01384b7-e050-4bb5-ae9f-258927930be3",
+    "brand": "Vivo",
+    "model": "Vivo Y400 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 17280,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y400-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "e50aa801-0734-4d48-b6c7-fd915b490698",
+    "brand": "Vivo",
+    "model": "Vivo X200 FE",
+    "storage": "16 GB/512 GB",
+    "ram": "16 GB",
+    "color": "Default",
+    "basePrice": 35600,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x200-fe-16-gb-512-gb"
+  },
+  {
+    "id": "08c120d2-42ed-4e59-8748-a39e86a7007a",
+    "brand": "Vivo",
+    "model": "Vivo X200 FE",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 34000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x200-fe-12-gb-256-gb"
+  },
+  {
+    "id": "df76603f-3945-4b69-85ba-8c2b589a2f8e",
+    "brand": "Vivo",
+    "model": "Vivo Y400 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 16650,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y400-5g-8-gb-128-gb"
+  },
+  {
+    "id": "a1d2ff57-ca42-4b0d-8b87-f1ba8f5ca843",
+    "brand": "Vivo",
+    "model": "Vivo Y400 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 18040,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y400-5g-8-gb-256-gb"
+  },
+  {
+    "id": "3137554a-e7d1-4c67-ba10-fd215c3c5a71",
+    "brand": "Vivo",
+    "model": "Vivo T4R 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 14260,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t4r-5g-8-gb-128-gb"
+  },
+  {
+    "id": "d3f5f180-4c94-4d74-9194-5e864b374cec",
+    "brand": "Vivo",
+    "model": "Vivo T4R 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 15040,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t4r-5g-8-gb-256-gb"
+  },
+  {
+    "id": "8efd5f82-0386-466a-9fd3-14f6d2ac325e",
+    "brand": "Vivo",
+    "model": "Vivo T4R 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 16390,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t4r-5g-12-gb-256-gb"
+  },
+  {
+    "id": "1e66e428-404f-4cca-87c5-a8ec4c572573",
+    "brand": "Vivo",
+    "model": "Vivo V60",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 25900,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v60-12-gb-256-gb"
+  },
+  {
+    "id": "b31cf97a-c948-4ac8-b382-230b1c0ff287",
+    "brand": "Vivo",
+    "model": "Vivo V60",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 23110,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v60-8-gb-128-gb"
+  },
+  {
+    "id": "7f6b637f-22e0-49e2-b1c8-7ffa5eeac5fa",
+    "brand": "Vivo",
+    "model": "Vivo V60",
+    "storage": "16 GB/512 GB",
+    "ram": "16 GB",
+    "color": "Default",
+    "basePrice": 28270,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v60-16-gb-512-gb"
+  },
+  {
+    "id": "ab0975e2-c5a5-482e-93ec-8d773eadfdcf",
+    "brand": "Vivo",
+    "model": "Vivo V60",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 24120,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v60-8-gb-256-gb"
+  },
+  {
+    "id": "0a5dc14f-940b-4c1a-be73-73685efc07c5",
+    "brand": "Vivo",
+    "model": "Vivo X Fold 5",
+    "storage": "16 GB/512 GB",
+    "ram": "16 GB",
+    "color": "Default",
+    "basePrice": 79800,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x-fold-5-16-gb-512-gb"
+  },
+  {
+    "id": "ea884cbb-abfa-4495-86f8-bac8f5be4071",
+    "brand": "Vivo",
+    "model": "Vivo T4 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 19650,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t4-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "b9f6bcc4-83d4-470a-8ef9-7c006857ab92",
+    "brand": "Vivo",
+    "model": "Vivo T4 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 18150,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t4-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "69ec6a58-c7e3-405b-af3d-e91c31ce225c",
+    "brand": "Vivo",
+    "model": "Vivo T4 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 20450,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t4-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "a59dd1b0-2156-4637-9dc4-9e3ab39341d9",
+    "brand": "Vivo",
+    "model": "Vivo Y31 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 11180,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y31-5g-4-gb-128-gb"
+  },
+  {
+    "id": "9cb091d5-01e9-49a8-a2d5-ee9bd0aead55",
+    "brand": "Vivo",
+    "model": "Vivo Y31 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 12530,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y31-5g-6-gb-128-gb"
+  },
+  {
+    "id": "a130663d-cb01-4106-8931-3b8416631123",
+    "brand": "Vivo",
+    "model": "Vivo V60e",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 22860,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v60e-12-gb-256-gb"
+  },
+  {
+    "id": "b5c09cb6-8e6a-41fb-bb1b-17d98c55c8a1",
+    "brand": "Vivo",
+    "model": "Vivo V60e",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 21180,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v60e-8-gb-256-gb"
+  },
+  {
+    "id": "239fa14f-d4f7-4bb4-8350-53dee71262e1",
+    "brand": "Vivo",
+    "model": "Vivo V60e",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 20200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v60e-8-gb-128-gb"
+  },
+  {
+    "id": "fba19873-bad7-4be1-b9d0-6fc64994fe60",
+    "brand": "Vivo",
+    "model": "Vivo Y31 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 13880,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y31-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "e5900de6-7e4d-4986-9f91-d241c5e374a7",
+    "brand": "Vivo",
+    "model": "Vivo Y31 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 14750,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y31-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "48943cb9-1bac-40cd-9ce4-f05c331b0dff",
+    "brand": "Vivo",
+    "model": "Vivo Y19s 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 9440,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y19s-5g-6-gb-128-gb"
+  },
+  {
+    "id": "5a8a8107-d68f-40da-94c4-1392f9958644",
+    "brand": "Vivo",
+    "model": "Vivo Y19s 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 8420,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y19s-5g-4-gb-128-gb"
+  },
+  {
+    "id": "637ca8c0-42a3-4034-a3d6-6a80be484efc",
+    "brand": "Vivo",
+    "model": "Vivo Y19s 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 7510,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y19s-5g-4-gb-64-gb"
+  },
+  {
+    "id": "89571850-597a-41f0-940f-29e8543fecce",
+    "brand": "Vivo",
+    "model": "Vivo X300",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 45000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x300-12-gb-256-gb"
+  },
+  {
+    "id": "86e3ade7-fe71-4354-af61-3a2bcee78bff",
+    "brand": "Vivo",
+    "model": "Vivo X300",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 46500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x300-12-gb-512-gb"
+  },
+  {
+    "id": "cdb4377e-3d95-4aa7-bf83-3668d20a30f7",
+    "brand": "Vivo",
+    "model": "Vivo X300",
+    "storage": "16 GB/512 GB",
+    "ram": "16 GB",
+    "color": "Default",
+    "basePrice": 49000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x300-16-gb-512-gb"
+  },
+  {
+    "id": "c1b0596f-6a40-4d90-84c7-d4732c8e85f0",
+    "brand": "Vivo",
+    "model": "Vivo X300 Pro",
+    "storage": "16 GB/512 GB",
+    "ram": "16 GB",
+    "color": "Default",
+    "basePrice": 62500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x300-pro-16-gb-512-gb"
+  },
+  {
+    "id": "fb5712c9-8642-44a3-807d-8412dcba280f",
+    "brand": "Vivo",
+    "model": "Vivo V70",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 32550,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v70-8-gb-256-gb"
+  },
+  {
+    "id": "88eb0810-e989-4958-8a87-9f3b86911ae2",
+    "brand": "Vivo",
+    "model": "Vivo V70",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 34700,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v70-12-gb-256-gb"
+  },
+  {
+    "id": "8d886cba-417c-45ce-a94e-5ec7929b8a8a",
+    "brand": "Vivo",
+    "model": "Vivo V70 Elite",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 35000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v70-elite-8-gb-256-gb"
+  },
+  {
+    "id": "8429dcee-e3f8-47e2-b6d8-11a14e0d4781",
+    "brand": "Vivo",
+    "model": "Vivo V70 Elite",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 40650,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v70-elite-12-gb-512-gb"
+  },
+  {
+    "id": "3bf218eb-8c74-4a97-95db-a39c4322126c",
+    "brand": "Vivo",
+    "model": "Vivo V70 Elite",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 38650,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v70-elite-12-gb-256-gb"
+  },
+  {
+    "id": "7be8c34e-0f30-4fab-8f6c-6b5878c52bce",
+    "brand": "Vivo",
+    "model": "Vivo X200T",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 37000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x200t-12-gb-256-gb"
+  },
+  {
+    "id": "0cce2ba9-9299-426b-b939-151ebd50f190",
+    "brand": "Vivo",
+    "model": "Vivo X200T",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 41000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x200t-12-gb-512-gb"
+  },
+  {
+    "id": "a72a098a-2315-4c26-a121-829bc412db67",
+    "brand": "Vivo",
+    "model": "Vivo Y51 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 17540,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y51-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "0d62fd6d-b660-409b-9fab-1a608f2465cd",
+    "brand": "Vivo",
+    "model": "Vivo Y51 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 19450,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y51-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "cc80d3a3-e5e7-4469-a084-34d68499c83f",
+    "brand": "Vivo",
+    "model": "Vivo V70 FE",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 29050,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v70-fe-12-gb-256-gb"
+  },
+  {
+    "id": "bc5c037a-5440-4d6f-b9dc-794c887cae1d",
+    "brand": "Vivo",
+    "model": "Vivo V70 FE",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 27150,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v70-fe-8-gb-256-gb"
+  },
+  {
+    "id": "d87343c7-6f5c-467b-aa91-54e349d925a5",
+    "brand": "Vivo",
+    "model": "Vivo V70 FE",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 24800,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v70-fe-8-gb-128-gb"
+  },
+  {
+    "id": "21e88420-50c0-4c8e-9f38-52ef21a973f9",
+    "brand": "Vivo",
+    "model": "Vivo T5x 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 16650,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t5x-5g-8-gb-256-gb"
+  },
+  {
+    "id": "9046d7ce-fb9f-4729-8110-baf5f8ece508",
+    "brand": "Vivo",
+    "model": "Vivo T5x 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 14000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t5x-5g-6-gb-128-gb"
+  },
+  {
+    "id": "f5a93fe4-de8e-4c07-834b-ad58b550699d",
+    "brand": "Vivo",
+    "model": "Vivo T5x 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 15500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t5x-5g-8-gb-128-gb"
+  },
+  {
+    "id": "a34b215c-1c39-40ae-aec6-c8d93b21a613",
+    "brand": "Vivo",
+    "model": "Vivo Y11 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 9670,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y11-5g-4-gb-64-gb"
+  },
+  {
+    "id": "3cb1c0fd-6c08-4a1b-a856-5a0c9aaefc9b",
+    "brand": "Vivo",
+    "model": "Vivo Y11 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 10640,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y11-5g-4-gb-128-gb"
+  },
+  {
+    "id": "df358e32-1dd9-46ae-93ae-56e9bec120ab",
+    "brand": "Vivo",
+    "model": "Vivo Y21 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 13670,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y21-5g-6-gb-128-gb"
+  },
+  {
+    "id": "138251e2-c99e-4411-bcf6-ef6411984c1b",
+    "brand": "Vivo",
+    "model": "Vivo Y21 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 15000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y21-5g-8-gb-128-gb"
+  },
+  {
+    "id": "ac8145f7-7017-46a0-82b5-ef7e64da685e",
+    "brand": "Vivo",
+    "model": "Vivo Y21 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 12680,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y21-5g-4-gb-128-gb"
+  },
+  {
+    "id": "bdda128a-a0cc-47eb-a3c3-6b4c1fb6cb56",
+    "brand": "Vivo",
+    "model": "Vivo X300 FE",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 54400,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x300-fe-12-gb-512-gb"
+  },
+  {
+    "id": "de653556-3011-422c-8fdb-343fd3e1ca59",
+    "brand": "Vivo",
+    "model": "Vivo X300 FE",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 50000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x300-fe-12-gb-256-gb"
+  },
+  {
+    "id": "482e10c8-750d-42ae-b94f-b94f7bb7a0b1",
+    "brand": "Vivo",
+    "model": "Vivo X300 Ultra",
+    "storage": "16 GB/512 GB",
+    "ram": "16 GB",
+    "color": "Default",
+    "basePrice": 80000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x300-ultra-16-gb-512-gb"
+  },
+  {
+    "id": "57339445-f98e-4a44-b8d0-4b7143e04315",
+    "brand": "Vivo",
+    "model": "Vivo Y05",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 8500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-y05-4-gb-64-gb"
+  },
+  {
+    "id": "4b83ab46-5bbc-4ec3-8f62-c8b49e5ad312",
+    "brand": "Vivo",
+    "model": "Vivo T2x 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 10450,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t2x-5g-8-gb-128-gb"
+  },
+  {
+    "id": "1e2dafa3-9abd-4d2a-ad3f-922ddb7d76e4",
+    "brand": "Vivo",
+    "model": "Vivo T2x 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 8890,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t2x-5g-4-gb-128-gb"
+  },
+  {
+    "id": "e02c4ae5-7ffa-4fce-8493-b93240e044d2",
+    "brand": "Vivo",
+    "model": "Vivo T2x 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 9850,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t2x-5g-6-gb-128-gb"
   }
 ];
