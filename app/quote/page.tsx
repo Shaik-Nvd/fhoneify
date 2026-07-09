@@ -8,7 +8,7 @@ import { useAuthStore } from '@/lib/authStore';
 import { useHydratedAuth } from '@/lib/useHydratedAuth';
 
 
-import { BRAND_LOGOS, getBrandLogoStyle } from '@/lib/brands';
+import { BRAND_LOGOS, getBrandLogoStyle, sortBrands } from '@/lib/brands';
 import config from '@/lib/pricingConfig.json';
 import { SEED_DEVICES } from '@/lib/seed_devices';
 import { calculateFhoneifyPrice, DiagnosticsType } from '@/lib/pricingCalculator';
@@ -264,7 +264,7 @@ export default function QuotePage() {
   const brands = useMemo(() => {
     const extracted = [...new Set(allDevices.map((d) => d.brand).filter(Boolean))];
     const allBrands = [...new Set([...Object.keys(BRAND_LOGOS), ...extracted])];
-    return allBrands.sort();
+    return sortBrands(allBrands);
   }, [allDevices]);
   const matchSamsungSeries = (modelName: string, series: string): boolean => {
     const normalized = modelName.toLowerCase();

@@ -64,3 +64,19 @@ export const getBrandLogoStyle = (brand: string) => {
 
   return baseStyle;
 };
+
+export const sortBrands = (brandsList: string[]) => {
+  return [...brandsList].sort((a, b) => {
+    const normalize = (name: string) => name.trim().toLowerCase();
+    
+    const preferredOrder = BRANDS.map(normalize);
+    
+    const indexA = preferredOrder.indexOf(normalize(a));
+    const indexB = preferredOrder.indexOf(normalize(b));
+    
+    if (indexA !== -1 && indexB !== -1) return indexA - indexB;
+    if (indexA !== -1) return -1;
+    if (indexB !== -1) return 1;
+    return a.localeCompare(b);
+  });
+};

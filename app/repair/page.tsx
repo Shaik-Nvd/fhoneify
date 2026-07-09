@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import api from '@/lib/api';
 import { useAuthStore } from '@/lib/authStore';
+import { sortBrands } from '@/lib/brands';
 
 interface Device {
   id: string;
@@ -44,7 +45,7 @@ export default function RepairPage() {
     api.get('/api/quote/devices').then(res => setDevices(res.data.data)).catch(console.error);
   }, []);
 
-  const brands = Array.from(new Set(devices.map(d => d.brand)));
+  const brands = sortBrands(Array.from(new Set(devices.map(d => d.brand))));
   const models = devices.filter(d => d.brand === selectedBrand);
 
   const handleGetQuote = async (e: React.FormEvent) => {

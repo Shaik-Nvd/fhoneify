@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { calculateFhoneifyPrice, DiagnosticsType } from '@/lib/pricingCalculator';
 import { SEED_DEVICES } from '@/lib/seed_devices';
+import { sortBrands } from '@/lib/brands';
 
 interface TestLog {
   id: string;
@@ -79,7 +80,7 @@ export default function AlgorithmLab() {
 
 function CalculatorTab({ onSave }: { onSave: (log: any) => void }) {
   // We'll extract unique brands
-  const brands = Array.from(new Set(SEED_DEVICES.map(d => d.brand).filter(Boolean))).sort();
+  const brands = sortBrands(Array.from(new Set(SEED_DEVICES.map(d => d.brand).filter(Boolean))) as string[]);
   
   const [selectedBrand, setSelectedBrand] = useState('');
   const [selectedModel, setSelectedModel] = useState('');
