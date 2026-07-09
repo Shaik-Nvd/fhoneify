@@ -846,8 +846,15 @@ export default function QuotePage() {
       { id: 'bluetooth', label: 'Bluetooth not working', icon: '🛜' },
       { id: 'vibrator', label: 'Vibrator is not working', icon: '📳' },
       { id: 'proximity', label: 'Proximity Sensor not working', icon: '🖐' },
-      { id: 'battery_service', label: 'Battery in Service (Health < 80%)', icon: '🔋' },
-      { id: 'battery_health', label: 'Battery Health 80-85%', icon: '🔋' },
+      ...(isApple 
+        ? [
+            { id: 'battery_service', label: 'Battery in Service (Health < 80%)', icon: '🔋' },
+            { id: 'battery_health', label: 'Battery Health 80-85%', icon: '🔋' }
+          ]
+        : [
+            { id: 'battery_service', label: 'Battery Faulty', icon: '🔋' }
+          ]
+      ),
       ...(hasSPen ? [{ id: 's_pen', label: 'S-Pen Faulty / Missing', icon: '🖊️' }] : []),
       ...(isFoldable ? [{ id: 'hinge', label: 'Hinge / Folding Mechanism Faulty', icon: '📱' }] : [])
     ];

@@ -332,8 +332,15 @@ function CalculatorTab({ onSave }: { onSave: (log: any) => void }) {
                   { id: 'bluetooth', label: 'Bluetooth' },
                   { id: 'vibrator', label: 'Vibrator' },
                   { id: 'proximity', label: 'Proximity Sensor' },
-                  { id: 'battery_service', label: 'Battery < 80%' },
-                  { id: 'battery_health', label: 'Battery 80-85%' },
+                  ...(selectedBrand.toLowerCase() === 'apple' 
+                    ? [
+                        { id: 'battery_service', label: 'Battery < 80%' },
+                        { id: 'battery_health', label: 'Battery 80-85%' },
+                      ]
+                    : [
+                        { id: 'battery_service', label: 'Battery Faulty' }
+                      ]
+                  )
                 ].map(hw => (
                   <label key={hw.id} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: '#222', padding: '0.3rem 0.6rem', borderRadius: '4px', cursor: 'pointer', fontSize: '0.75rem' }}>
                     <input type="checkbox" checked={diagnostics.hardware.includes(hw.id)} onChange={() => toggleArrayItem('hardware', hw.id)} /> {hw.label}

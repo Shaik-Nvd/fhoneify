@@ -236,8 +236,13 @@ export function calculateFhoneifyPrice(
   if (diagnostics.touch === false || diagnostics.defects.includes('broken_screen')) {
     screen_orig_mult = 1.0;
   }
-
   screen_body_sum = applyGranularDefects(params.physicalScale);
+
+  const isFoldable = safeModel.toLowerCase().includes('fold') || safeModel.toLowerCase().includes('flip') || safeModel.toLowerCase().includes('open');
+  if (isFoldable && diagnostics.originalScreen === false) {
+    screen_orig_mult = Math.min(screen_orig_mult, 0.35);
+  }
+
 
   diagnostics.hardware.forEach(h => { 
     if (h in config.defects_functional) {
