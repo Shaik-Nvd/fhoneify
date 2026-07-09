@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import MobileBottomNav from '@/components/MobileBottomNav';
 import WhatsAppFloatingBtn from '@/components/WhatsAppFloatingBtn';
 import { Analytics } from "@vercel/analytics/next";
+import KeepAlivePing from '@/components/KeepAlivePing';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -46,6 +47,7 @@ export default function RootLayout({
         <MobileBottomNav />
         <WhatsAppFloatingBtn />
         <Analytics />
+        <KeepAlivePing />
         <script dangerouslySetInnerHTML={{
           __html: `
             let mouseX = 0, mouseY = 0;
