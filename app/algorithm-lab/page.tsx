@@ -200,13 +200,15 @@ function CalculatorTab({ onSave }: { onSave: (log: any) => void }) {
                     <option value="no">No</option>
                   </select>
                 </label>
-                <label style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <span style={{ fontSize: '0.85rem' }}>How many eSIMs does your device support?</span>
-                  <select value={diagnostics.eSim || 'Single eSIM'} onChange={e => setDiagnostics({...diagnostics, eSim: e.target.value})} style={{ background: '#222', color: '#fff', border: '1px solid #333', padding: '0.3rem', borderRadius: '4px' }}>
-                    <option value="Single eSIM">Single eSIM</option>
-                    <option value="Dual eSIM">Dual eSIM</option>
-                  </select>
-                </label>
+                {selectedBrand.toLowerCase() === 'apple' && (
+                  <label style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <span style={{ fontSize: '0.85rem' }}>How many eSIMs does your device support?</span>
+                    <select value={diagnostics.eSim || 'Single eSIM'} onChange={e => setDiagnostics({...diagnostics, eSim: e.target.value})} style={{ background: '#222', color: '#fff', border: '1px solid #333', padding: '0.3rem', borderRadius: '4px' }}>
+                      <option value="Single eSIM">Single eSIM</option>
+                      <option value="Dual eSIM">Dual eSIM</option>
+                    </select>
+                  </label>
+                )}
               </div>
             </div>
 
