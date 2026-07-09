@@ -39,7 +39,7 @@ async function main() {
         try {
             const devices = JSON.parse(jsonStr);
             const originalLength = devices.length;
-            const filteredDevices = devices.filter(d => d.brand.toLowerCase() !== 'vivo');
+            const filteredDevices = devices.filter(d => !d.brand || d.brand.toLowerCase() !== 'vivo');
             
             if (filteredDevices.length < originalLength) {
                 const newContent = header + JSON.stringify(filteredDevices, null, 2) + ';\n';
