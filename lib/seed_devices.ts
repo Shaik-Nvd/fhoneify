@@ -2249,686 +2249,6 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 2710
   },
   {
-    "id": "samsung_100001",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A14 5G",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 7160
-  },
-  {
-    "id": "samsung_100002",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A14 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 8390
-  },
-  {
-    "id": "samsung_100003",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A14 5G",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 7940
-  },
-  {
-    "id": "samsung_100004",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A14 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 8970
-  },
-  {
-    "id": "samsung_100005",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A13",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4840
-  },
-  {
-    "id": "samsung_100006",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A13",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3820
-  },
-  {
-    "id": "samsung_100007",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A13",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4240
-  },
-  {
-    "id": "samsung_100008",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A03",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2320
-  },
-  {
-    "id": "samsung_100009",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A03",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2760
-  },
-  {
-    "id": "samsung_100010",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A03 Core",
-    "storage": "2 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2230
-  },
-  {
-    "id": "samsung_100011",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A03s",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2230
-  },
-  {
-    "id": "samsung_100012",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A03s",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3060
-  },
-  {
-    "id": "samsung_100013",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A10",
-    "storage": "2 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 1920
-  },
-  {
-    "id": "samsung_100014",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A10s",
-    "storage": "2 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2000
-  },
-  {
-    "id": "samsung_100015",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A10s",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2080
-  },
-  {
-    "id": "samsung_100016",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A12",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3570
-  },
-  {
-    "id": "samsung_100017",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A12",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3870
-  },
-  {
-    "id": "samsung_100018",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A12",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4130
-  },
-  {
-    "id": "samsung_100019",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A20",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2610
-  },
-  {
-    "id": "samsung_100020",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A20s",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2510
-  },
-  {
-    "id": "samsung_100021",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A20s",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2810
-  },
-  {
-    "id": "samsung_100022",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A21s",
-    "storage": "6 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3660
-  },
-  {
-    "id": "samsung_100023",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A21s",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3420
-  },
-  {
-    "id": "samsung_100024",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A21s",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3820
-  },
-  {
-    "id": "samsung_100025",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A22",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3920
-  },
-  {
-    "id": "samsung_100026",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A22",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4390
-  },
-  {
-    "id": "samsung_100027",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A22 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6100
-  },
-  {
-    "id": "samsung_100028",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A22 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6720
-  },
-  {
-    "id": "samsung_100029",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A23",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5120
-  },
-  {
-    "id": "samsung_100030",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A23",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4600
-  },
-  {
-    "id": "samsung_100031",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A30",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2750
-  },
-  {
-    "id": "samsung_100032",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A30s",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 2800
-  },
-  {
-    "id": "samsung_100033",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A30s",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2700
-  },
-  {
-    "id": "samsung_100034",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A31",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3660
-  },
-  {
-    "id": "samsung_100035",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A32",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5420
-  },
-  {
-    "id": "samsung_100036",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A32",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4890
-  },
-  {
-    "id": "samsung_100037",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A5 2017",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 1080
-  },
-  {
-    "id": "samsung_100038",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A50",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3480
-  },
-  {
-    "id": "samsung_100039",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A50",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3040
-  },
-  {
-    "id": "samsung_100040",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A50",
-    "storage": "6 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3290
-  },
-  {
-    "id": "samsung_100041",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A50s",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 2990
-  },
-  {
-    "id": "samsung_100042",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A50s",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3110
-  },
-  {
-    "id": "samsung_100043",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A51",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4050
-  },
-  {
-    "id": "samsung_100044",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A51",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4250
-  },
-  {
-    "id": "samsung_100045",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A52",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5530
-  },
-  {
-    "id": "samsung_100046",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A52",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5990
-  },
-  {
-    "id": "samsung_100047",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A52s 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 7780
-  },
-  {
-    "id": "samsung_100048",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A52s 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 8300
-  },
-  {
-    "id": "samsung_100049",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A53 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 7710
-  },
-  {
-    "id": "samsung_100050",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A53 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 7370
-  },
-  {
-    "id": "samsung_100051",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A53 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6970
-  },
-  {
-    "id": "samsung_100055",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A6 Plus",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 1510
-  },
-  {
-    "id": "samsung_100056",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A6 Plus",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 1820
-  },
-  {
-    "id": "samsung_100057",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A6 Plus",
-    "storage": "4 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 1640
-  },
-  {
-    "id": "samsung_100062",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A70",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3840
-  },
-  {
-    "id": "samsung_100063",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A70s",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3760
-  },
-  {
-    "id": "samsung_100064",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A70s",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3540
-  },
-  {
-    "id": "samsung_100065",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A71",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4150
-  },
-  {
-    "id": "samsung_100066",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A71",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4510
-  },
-  {
-    "id": "samsung_100067",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A72",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 6990
-  },
-  {
-    "id": "samsung_100068",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A72",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6440
-  },
-  {
-    "id": "samsung_100069",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A73 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 9690
-  },
-  {
-    "id": "samsung_100070",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A73 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 9110
-  },
-  {
-    "id": "samsung_100071",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A8 Plus",
-    "storage": "6 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2300
-  },
-  {
-    "id": "samsung_100072",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A8 Star",
-    "storage": "6 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 1780
-  },
-  {
-    "id": "samsung_100073",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A80",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5110
-  },
-  {
-    "id": "samsung_100074",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A9 2018",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 2480
-  },
-  {
-    "id": "samsung_100075",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A9 2018",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 2260
-  },
-  {
-    "id": "samsung_100076",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A9 Pro",
-    "storage": "4 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 1480
-  },
-  {
-    "id": "samsung_100077",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy C5 Pro",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2040
-  },
-  {
-    "id": "samsung_100078",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy C7 Pro",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2110
-  },
-  {
-    "id": "samsung_100079",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy C9 Pro",
-    "storage": "6 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2150
-  },
-  {
-    "id": "samsung_100080",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F02s",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2820
-  },
-  {
-    "id": "samsung_100081",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F02s",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2970
-  },
-  {
-    "id": "samsung_100082",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F12",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3300
-  },
-  {
-    "id": "samsung_100083",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F12",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3730
-  },
-  {
-    "id": "samsung_100084",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F13",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4130
-  },
-  {
-    "id": "samsung_100085",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F13",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3900
-  },
-  {
-    "id": "samsung_100086",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F22",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3890
-  },
-  {
-    "id": "samsung_100087",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F22",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3620
-  },
-  {
-    "id": "samsung_100088",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F23 5G",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6090
-  },
-  {
-    "id": "samsung_100089",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F23 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6360
-  },
-  {
-    "id": "samsung_100092",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S22 Ultra 5G",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 26760
-  },
-  {
-    "id": "samsung_100093",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S22 Ultra 5G",
-    "storage": "12 GB/1 TB",
-    "color": "Midnight",
-    "basePrice": 28540
-  },
-  {
-    "id": "samsung_100094",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S22 Ultra 5G",
-    "storage": "12 GB/512 GB",
-    "color": "Midnight",
-    "basePrice": 27950
-  },
-  {
     "id": "oneplus_10028",
     "brand": "OnePlus",
     "model": "Oneplus Nord Ce 2 Lite 5g 6 Gb 128 Gb ",
@@ -2965,2358 +2285,6 @@ export const SEED_DEVICES: any[] = [
   },
   {
     "basePrice": 8370
-  },
-  {
-    "id": "samsung_39000",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A2 Core",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "samsung_39001",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A2 Core",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6200
-  },
-  {
-    "id": "samsung_39004",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A7 (2017)",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "samsung_39005",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A7 (2017)",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6200
-  },
-  {
-    "id": "samsung_100214",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Fold",
-    "storage": "12 GB/512 GB",
-    "color": "Midnight",
-    "basePrice": 12990
-  },
-  {
-    "id": "samsung_39023",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J2 Core",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "samsung_39024",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J2 Core",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6200
-  },
-  {
-    "id": "samsung_39025",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J2 Core 2020",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "samsung_39026",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J2 Core 2020",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6200
-  },
-  {
-    "id": "samsung_39027",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J2 pro",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "samsung_39028",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J2 pro",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6200
-  },
-  {
-    "id": "samsung_39029",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J3",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "samsung_39030",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J3",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6200
-  },
-  {
-    "id": "samsung_39035",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J4",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "samsung_39036",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J4",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6200
-  },
-  {
-    "id": "samsung_39037",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J4 Plus",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "samsung_39038",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J4 Plus",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6200
-  },
-  {
-    "id": "samsung_39041",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J5 2017",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "samsung_39042",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J5 2017",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6200
-  },
-  {
-    "id": "samsung_39057",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J7 Prime",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "samsung_39058",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J7 Prime",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6200
-  },
-  {
-    "id": "samsung_100225",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M01",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2260
-  },
-  {
-    "id": "samsung_100228",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M01s",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2150
-  },
-  {
-    "id": "samsung_39073",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M10",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "samsung_39074",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M10",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6200
-  },
-  {
-    "id": "samsung_100233",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M10s",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2230
-  },
-  {
-    "id": "samsung_100261",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M40",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3230
-  },
-  {
-    "id": "samsung_100262",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M42 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6400
-  },
-  {
-    "id": "samsung_100263",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M42 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6730
-  },
-  {
-    "id": "samsung_100264",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M51",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4540
-  },
-  {
-    "id": "samsung_100265",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M51",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4680
-  },
-  {
-    "id": "samsung_100266",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M52 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 7250
-  },
-  {
-    "id": "samsung_100267",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M52 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 7140
-  },
-  {
-    "id": "samsung_100268",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M53 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 7560
-  },
-  {
-    "id": "samsung_100269",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M53 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 7410
-  },
-  {
-    "id": "samsung_39111",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Note 5",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 12000
-  },
-  {
-    "id": "samsung_39112",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Note 5",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 13200
-  },
-  {
-    "id": "samsung_100270",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Note 8",
-    "storage": "6 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 6090
-  },
-  {
-    "id": "samsung_100271",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Note 8",
-    "storage": "6 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 4900
-  },
-  {
-    "id": "samsung_100272",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Note 8",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5570
-  },
-  {
-    "id": "samsung_100273",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Note 9",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5940
-  },
-  {
-    "id": "samsung_100274",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Note 9",
-    "storage": "8 GB/512 GB",
-    "color": "Midnight",
-    "basePrice": 6380
-  },
-  {
-    "id": "samsung_100275",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Note 10",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 9020
-  },
-  {
-    "id": "samsung_100276",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Note 10 Lite",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5640
-  },
-  {
-    "id": "samsung_100277",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Note 10 Lite",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6010
-  },
-  {
-    "id": "samsung_100278",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Note 10 Plus",
-    "storage": "12 GB/512 GB",
-    "color": "Midnight",
-    "basePrice": 9870
-  },
-  {
-    "id": "samsung_100279",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Note 10 Plus",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 9740
-  },
-  {
-    "id": "samsung_100280",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Note 10 Plus 5G",
-    "storage": "12 GB/512 GB",
-    "color": "Midnight",
-    "basePrice": 11130
-  },
-  {
-    "id": "samsung_100281",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Note 20 Ultra 5G",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 14370
-  },
-  {
-    "id": "samsung_39128",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Note Fan Edition",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 12000
-  },
-  {
-    "id": "samsung_39129",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Note Fan Edition",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 13200
-  },
-  {
-    "id": "samsung_100282",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy On Max",
-    "storage": "4 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 1520
-  },
-  {
-    "id": "samsung_100283",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy On6",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 1110
-  },
-  {
-    "id": "samsung_100284",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy On7 Prime",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 1640
-  },
-  {
-    "id": "samsung_100285",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy On7 Prime",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 1930
-  },
-  {
-    "id": "samsung_100286",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S10",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 7270
-  },
-  {
-    "id": "samsung_100287",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S10",
-    "storage": "8 GB/512 GB",
-    "color": "Midnight",
-    "basePrice": 7570
-  },
-  {
-    "id": "samsung_100288",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S10e",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5900
-  },
-  {
-    "id": "samsung_100289",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S10 Lite",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6040
-  },
-  {
-    "id": "samsung_100290",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S10 Lite",
-    "storage": "8 GB/512 GB",
-    "color": "Midnight",
-    "basePrice": 6460
-  },
-  {
-    "id": "samsung_100291",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S10 Plus",
-    "storage": "8 GB/512 GB",
-    "color": "Midnight",
-    "basePrice": 7910
-  },
-  {
-    "id": "samsung_100292",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S10 Plus",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 7540
-  },
-  {
-    "id": "samsung_100293",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S10 Plus",
-    "storage": "12 GB/1 TB",
-    "color": "Midnight",
-    "basePrice": 9440
-  },
-  {
-    "id": "samsung_100294",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S20",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 9150
-  },
-  {
-    "id": "samsung_100295",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S20 FE",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 7220
-  },
-  {
-    "id": "samsung_100296",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S20 FE",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 8070
-  },
-  {
-    "id": "samsung_100297",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S20 FE 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 8560
-  },
-  {
-    "id": "samsung_100298",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S20 Plus",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 10440
-  },
-  {
-    "id": "samsung_100299",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S20 Ultra",
-    "storage": "12 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 13470
-  },
-  {
-    "id": "samsung_100300",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S20 Ultra 5G",
-    "storage": "12 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 14190
-  },
-  {
-    "id": "samsung_100301",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S21 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 12430
-  },
-  {
-    "id": "samsung_100302",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S21 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 13370
-  },
-  {
-    "id": "samsung_100303",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S21 FE 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 10920
-  },
-  {
-    "id": "samsung_100304",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S21 FE 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 11590
-  },
-  {
-    "id": "samsung_100305",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S21 Plus 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 13110
-  },
-  {
-    "id": "samsung_100306",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S21 Plus 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 14300
-  },
-  {
-    "id": "samsung_100307",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S21 Ultra 5G",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 17280
-  },
-  {
-    "id": "samsung_100308",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S21 Ultra 5G",
-    "storage": "16 GB/512 GB",
-    "color": "Midnight",
-    "basePrice": 19920
-  },
-  {
-    "id": "samsung_100309",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S22 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 17100
-  },
-  {
-    "id": "samsung_100310",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S22 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 16090
-  },
-  {
-    "id": "samsung_100311",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S22 Plus 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 18070
-  },
-  {
-    "id": "samsung_100312",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S22 Plus 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 17120
-  },
-  {
-    "id": "samsung_39190",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S7",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "samsung_39191",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S7",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6200
-  },
-  {
-    "id": "samsung_39192",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S7 Edge",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "samsung_39193",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S7 Edge",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6200
-  },
-  {
-    "id": "samsung_100313",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S8",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3520
-  },
-  {
-    "id": "samsung_100314",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S8 Plus",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4040
-  },
-  {
-    "id": "samsung_100315",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S8 Plus",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3850
-  },
-  {
-    "id": "samsung_100316",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S9",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 4450
-  },
-  {
-    "id": "samsung_100317",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S9",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4600
-  },
-  {
-    "id": "samsung_100318",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S9",
-    "storage": "4 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 4860
-  },
-  {
-    "id": "samsung_100319",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S9 Plus",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4970
-  },
-  {
-    "id": "samsung_100320",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S9 Plus",
-    "storage": "6 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 4530
-  },
-  {
-    "id": "samsung_100321",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S9 Plus",
-    "storage": "6 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 5120
-  },
-  {
-    "id": "samsung_100322",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Z Flip",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 8840
-  },
-  {
-    "id": "samsung_100323",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Z Flip3 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 12380
-  },
-  {
-    "id": "samsung_100324",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Z Flip3 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 12980
-  },
-  {
-    "id": "samsung_100325",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Z Fold2 5G",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 17300
-  },
-  {
-    "id": "samsung_100326",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Z Fold3 5G",
-    "storage": "12 GB/512 GB",
-    "color": "Midnight",
-    "basePrice": 21660
-  },
-  {
-    "id": "samsung_100327",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Z Fold3 5G",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 21530
-  },
-  {
-    "id": "samsung_100328",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A33 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6660
-  },
-  {
-    "id": "samsung_100329",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A33 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 7080
-  },
-  {
-    "id": "samsung_100330",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M13",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 4150
-  },
-  {
-    "id": "samsung_100331",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M13",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4550
-  },
-  {
-    "id": "samsung_100332",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M13 5G",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 5300
-  },
-  {
-    "id": "samsung_100333",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M13 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6350
-  },
-  {
-    "id": "samsung_100334",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Z Fold4",
-    "storage": "12 GB/512 GB",
-    "color": "Midnight",
-    "basePrice": 30120
-  },
-  {
-    "id": "samsung_100335",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Z Fold4",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 28690
-  },
-  {
-    "id": "samsung_100336",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Z Fold4",
-    "storage": "12 GB/1 TB",
-    "color": "Midnight",
-    "basePrice": 32990
-  },
-  {
-    "id": "samsung_100337",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Z Flip4",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 15720
-  },
-  {
-    "id": "samsung_100338",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Z Flip4",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 15450
-  },
-  {
-    "id": "samsung_100339",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A04s",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3300
-  },
-  {
-    "id": "samsung_100340",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A04s",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3480
-  },
-  {
-    "id": "samsung_100341",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M32 Prime Edition",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 5050
-  },
-  {
-    "id": "samsung_100342",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M32 Prime Edition",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5230
-  },
-  {
-    "id": "samsung_100343",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A04",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3070
-  },
-  {
-    "id": "samsung_100344",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A04",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3730
-  },
-  {
-    "id": "samsung_100345",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A04",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2460
-  },
-  {
-    "id": "samsung_100346",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S23 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 23720
-  },
-  {
-    "id": "samsung_100347",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S23 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 23080
-  },
-  {
-    "id": "samsung_100348",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S23 Plus 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 26310
-  },
-  {
-    "id": "samsung_100349",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S23 Plus 5G",
-    "storage": "8 GB/512 GB",
-    "color": "Midnight",
-    "basePrice": 27490
-  },
-  {
-    "id": "samsung_100350",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S23 Ultra 5G",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 37040
-  },
-  {
-    "id": "samsung_100351",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S23 Ultra 5G",
-    "storage": "12 GB/1 TB",
-    "color": "Midnight",
-    "basePrice": 39900
-  },
-  {
-    "id": "samsung_100352",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S23 Ultra 5G",
-    "storage": "12 GB/512 GB",
-    "color": "Midnight",
-    "basePrice": 38160
-  },
-  {
-    "id": "samsung_100353",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A23 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 8750
-  },
-  {
-    "id": "samsung_100354",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A23 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 9220
-  },
-  {
-    "id": "samsung_100355",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M04",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3470
-  },
-  {
-    "id": "samsung_100356",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M04",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3600
-  },
-  {
-    "id": "samsung_100357",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A34 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 11040
-  },
-  {
-    "id": "samsung_100358",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A34 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 10220
-  },
-  {
-    "id": "samsung_100359",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A34 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 10490
-  },
-  {
-    "id": "samsung_100360",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F14 5G",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6890
-  },
-  {
-    "id": "samsung_100361",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F14 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 7190
-  },
-  {
-    "id": "samsung_100362",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F04",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2910
-  },
-  {
-    "id": "samsung_100363",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A54 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 13690
-  },
-  {
-    "id": "samsung_100364",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A54 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 14260
-  },
-  {
-    "id": "samsung_100365",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M14 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 7570
-  },
-  {
-    "id": "samsung_100366",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M14 5G",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 7480
-  },
-  {
-    "id": "samsung_100367",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A14",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6550
-  },
-  {
-    "id": "samsung_100368",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A14",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 6050
-  },
-  {
-    "id": "samsung_100369",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Z Flip5",
-    "storage": "8 GB/512 GB",
-    "color": "Midnight",
-    "basePrice": 28940
-  },
-  {
-    "id": "samsung_100370",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Z Flip5",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 27230
-  },
-  {
-    "id": "samsung_100371",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Z Fold5",
-    "storage": "12 GB/512 GB",
-    "color": "Midnight",
-    "basePrice": 50590
-  },
-  {
-    "id": "samsung_100372",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Z Fold5",
-    "storage": "12 GB/1 TB",
-    "color": "Midnight",
-    "basePrice": 54770
-  },
-  {
-    "id": "samsung_100373",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Z Fold5",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 50160
-  },
-  {
-    "id": "samsung_100374",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F54 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 10760
-  },
-  {
-    "id": "samsung_100375",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M34 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 9250
-  },
-  {
-    "id": "samsung_100376",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M34 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 9020
-  },
-  {
-    "id": "samsung_100377",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M34 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 8590
-  },
-  {
-    "id": "samsung_100378",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S23 FE 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 17260
-  },
-  {
-    "id": "samsung_100379",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S23 FE 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 17940
-  },
-  {
-    "id": "samsung_100380",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F34 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 9400
-  },
-  {
-    "id": "samsung_100381",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F34 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 8990
-  },
-  {
-    "id": "samsung_100382",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A25 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 10290
-  },
-  {
-    "id": "samsung_100383",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A25 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 11910
-  },
-  {
-    "id": "samsung_100384",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A25 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 11620
-  },
-  {
-    "id": "samsung_100385",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A15 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 9130
-  },
-  {
-    "id": "samsung_100386",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A15 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 9340
-  },
-  {
-    "id": "samsung_100387",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A15 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 9670
-  },
-  {
-    "id": "samsung_100388",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A05s",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5360
-  },
-  {
-    "id": "samsung_100389",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A05s",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5860
-  },
-  {
-    "id": "samsung_100390",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A05",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "samsung_100391",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A05",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5360
-  },
-  {
-    "id": "samsung_100392",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S24 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 29720
-  },
-  {
-    "id": "samsung_100393",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S24 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 35110
-  },
-  {
-    "id": "samsung_100394",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S24 5G",
-    "storage": "8 GB/512 GB",
-    "color": "Midnight",
-    "basePrice": 35780
-  },
-  {
-    "id": "samsung_100395",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S24 Plus 5G",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 36430
-  },
-  {
-    "id": "samsung_100396",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S24 Plus 5G",
-    "storage": "12 GB/512 GB",
-    "color": "Midnight",
-    "basePrice": 36740
-  },
-  {
-    "id": "samsung_100397",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F15 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 9190
-  },
-  {
-    "id": "samsung_100398",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F15 5G",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 7430
-  },
-  {
-    "id": "samsung_100399",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F15 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 8560
-  },
-  {
-    "id": "samsung_100400",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A55 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 16450
-  },
-  {
-    "id": "samsung_100401",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A55 5G",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 18560
-  },
-  {
-    "id": "samsung_100402",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A55 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 17250
-  },
-  {
-    "id": "samsung_100403",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A35 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 12640
-  },
-  {
-    "id": "samsung_100404",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A35 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 13560
-  },
-  {
-    "id": "samsung_100405",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M55 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 13030
-  },
-  {
-    "id": "samsung_100406",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M55 5G",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 15020
-  },
-  {
-    "id": "samsung_100407",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M55 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 14020
-  },
-  {
-    "id": "samsung_100408",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M15 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 7690
-  },
-  {
-    "id": "samsung_100409",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M15 5G",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 7260
-  },
-  {
-    "id": "samsung_100410",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M15 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 8060
-  },
-  {
-    "id": "samsung_100411",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M14 4G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5920
-  },
-  {
-    "id": "samsung_100412",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M14 4G",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 5020
-  },
-  {
-    "id": "samsung_100413",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F55 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 12370
-  },
-  {
-    "id": "samsung_100414",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F55 5G",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 13330
-  },
-  {
-    "id": "samsung_100415",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F55 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 11150
-  },
-  {
-    "id": "samsung_100416",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Z Flip6 5G",
-    "storage": "12 GB/512 GB",
-    "color": "Midnight",
-    "basePrice": 41040
-  },
-  {
-    "id": "samsung_100417",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Z Flip6 5G",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 36860
-  },
-  {
-    "id": "samsung_100418",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Z Fold6 5G",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 69580
-  },
-  {
-    "id": "samsung_100419",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Z Fold6 5G",
-    "storage": "12 GB/1 TB",
-    "color": "Midnight",
-    "basePrice": 73870
-  },
-  {
-    "id": "samsung_100420",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Z Fold6 5G",
-    "storage": "12 GB/512 GB",
-    "color": "Midnight",
-    "basePrice": 70370
-  },
-  {
-    "id": "samsung_100421",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F14",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 4920
-  },
-  {
-    "id": "samsung_100422",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M35 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 9860
-  },
-  {
-    "id": "samsung_100423",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M35 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 10190
-  },
-  {
-    "id": "samsung_100424",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M35 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 10140
-  },
-  {
-    "id": "samsung_100425",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S24 FE 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 25550
-  },
-  {
-    "id": "samsung_100426",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S24 FE 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 22690
-  },
-  {
-    "id": "samsung_100427",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M55s 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 11340
-  },
-  {
-    "id": "samsung_100428",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M55s 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 12530
-  },
-  {
-    "id": "samsung_100429",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M05",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 4680
-  },
-  {
-    "id": "samsung_100430",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A06",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 4770
-  },
-  {
-    "id": "samsung_100431",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A06",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5130
-  },
-  {
-    "id": "samsung_100432",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A16 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 9870
-  },
-  {
-    "id": "samsung_100433",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A16 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 10610
-  },
-  {
-    "id": "samsung_100434",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A16 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 11350
-  },
-  {
-    "id": "samsung_100435",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F05",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 4190
-  },
-  {
-    "id": "samsung_100436",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S25 5G",
-    "storage": "12 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 40320
-  },
-  {
-    "id": "samsung_100437",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S25 5G",
-    "storage": "12 GB/512 GB",
-    "color": "Midnight",
-    "basePrice": 43750
-  },
-  {
-    "id": "samsung_100438",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S25 5G",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 41840
-  },
-  {
-    "id": "samsung_100439",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S25 Plus 5G",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 48030
-  },
-  {
-    "id": "samsung_100440",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S25 Plus 5G",
-    "storage": "12 GB/512 GB",
-    "color": "Midnight",
-    "basePrice": 52310
-  },
-  {
-    "id": "samsung_100441",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S25 Ultra 5G",
-    "storage": "12 GB/1 TB",
-    "color": "Midnight",
-    "basePrice": 74650
-  },
-  {
-    "id": "samsung_100442",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S25 Ultra 5G",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 65140
-  },
-  {
-    "id": "samsung_100443",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S25 Ultra 5G",
-    "storage": "12 GB/512 GB",
-    "color": "Midnight",
-    "basePrice": 71330
-  },
-  {
-    "id": "samsung_100444",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A56 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 25500
-  },
-  {
-    "id": "samsung_100445",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A56 5G",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 26500
-  },
-  {
-    "id": "samsung_100446",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A56 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 23500
-  },
-  {
-    "id": "samsung_100447",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F06 5G",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 5180
-  },
-  {
-    "id": "samsung_100448",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F06 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6390
-  },
-  {
-    "id": "samsung_100449",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F06 5G",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5680
-  },
-  {
-    "id": "samsung_100450",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A36 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 18100
-  },
-  {
-    "id": "samsung_100451",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A36 5G",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 19840
-  },
-  {
-    "id": "samsung_100452",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A36 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 18920
-  },
-  {
-    "id": "samsung_100453",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A26 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 11700
-  },
-  {
-    "id": "samsung_100454",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A26 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 12700
-  },
-  {
-    "id": "samsung_100455",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A26 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 13400
-  },
-  {
-    "id": "samsung_100456",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F16 5G",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 8780
-  },
-  {
-    "id": "samsung_100457",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F16 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 9790
-  },
-  {
-    "id": "samsung_100458",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F16 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 9070
-  },
-  {
-    "id": "samsung_100459",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M06 5G",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5940
-  },
-  {
-    "id": "samsung_100460",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M06 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6290
-  },
-  {
-    "id": "samsung_100461",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M06 5G",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 5330
-  },
-  {
-    "id": "samsung_100462",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M16 5G",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 8220
-  },
-  {
-    "id": "samsung_100463",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M16 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 9740
-  },
-  {
-    "id": "samsung_100464",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M16 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 8780
-  },
-  {
-    "id": "samsung_100465",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A06 5G",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6800
-  },
-  {
-    "id": "samsung_100466",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A06 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 7670
-  },
-  {
-    "id": "samsung_100467",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A06 5G",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 6000
-  },
-  {
-    "id": "samsung_100468",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M56 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 17100
-  },
-  {
-    "id": "samsung_100469",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M56 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 14850
-  },
-  {
-    "id": "samsung_100470",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S25 Edge",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 45170
-  },
-  {
-    "id": "samsung_100471",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S25 Edge",
-    "storage": "12 GB/512 GB",
-    "color": "Midnight",
-    "basePrice": 51350
-  },
-  {
-    "id": "samsung_100472",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Z Fold 7",
-    "storage": "12 GB/512 GB",
-    "color": "Midnight",
-    "basePrice": 97050
-  },
-  {
-    "id": "samsung_100473",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Z Fold 7",
-    "storage": "16 GB/1 TB",
-    "color": "Midnight",
-    "basePrice": 100250
-  },
-  {
-    "id": "samsung_100474",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Z Fold 7",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 95050
-  },
-  {
-    "id": "samsung_100475",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M36 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 12600
-  },
-  {
-    "id": "samsung_100476",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M36 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 12100
-  },
-  {
-    "id": "samsung_100477",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M36 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 10600
-  },
-  {
-    "id": "samsung_100478",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F36 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 11600
-  },
-  {
-    "id": "samsung_100479",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F36 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 12700
-  },
-  {
-    "id": "samsung_100480",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F36 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 13800
-  },
-  {
-    "id": "samsung_100481",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Z Flip 7",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 58750
-  },
-  {
-    "id": "samsung_100482",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Z Flip 7",
-    "storage": "12 GB/512 GB",
-    "color": "Midnight",
-    "basePrice": 59440
-  },
-  {
-    "id": "samsung_100483",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Z Flip7 FE 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 53150
-  },
-  {
-    "id": "samsung_100484",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F56 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 16060
-  },
-  {
-    "id": "samsung_100485",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F56 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 18570
-  },
-  {
-    "id": "samsung_100486",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A17 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 13670
-  },
-  {
-    "id": "samsung_100487",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A17 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 11700
-  },
-  {
-    "id": "samsung_100488",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A17 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 12450
-  },
-  {
-    "id": "samsung_100489",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M15 5G Prime Edition",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 7000
-  },
-  {
-    "id": "samsung_100490",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M15 5G Prime Edition",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 8730
-  },
-  {
-    "id": "samsung_100491",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M15 5G Prime Edition",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 7710
-  },
-  {
-    "id": "samsung_100492",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A07",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 5590
-  },
-  {
-    "id": "samsung_100493",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M07",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 5050
-  },
-  {
-    "id": "samsung_100494",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F07",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 5200
-  },
-  {
-    "id": "samsung_100495",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F17 5G",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 8850
-  },
-  {
-    "id": "samsung_100496",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F17 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 10030
-  },
-  {
-    "id": "samsung_100497",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S25 FE",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 36250
-  },
-  {
-    "id": "samsung_100498",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S25 FE",
-    "storage": "8 GB/512 GB",
-    "color": "Midnight",
-    "basePrice": 40250
-  },
-  {
-    "id": "samsung_100499",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S25 FE",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 33000
-  },
-  {
-    "id": "samsung_100500",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M17 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 10600
-  },
-  {
-    "id": "samsung_100501",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M17 5G",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 9300
-  },
-  {
-    "id": "samsung_100502",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M17 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 11200
-  },
-  {
-    "id": "samsung_100503",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S26",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 55720
-  },
-  {
-    "id": "samsung_100504",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S26",
-    "storage": "12 GB/512 GB",
-    "color": "Midnight",
-    "basePrice": 61250
-  },
-  {
-    "id": "samsung_100505",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S26 Plus",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 73250
-  },
-  {
-    "id": "samsung_100506",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S26 Plus",
-    "storage": "12 GB/512 GB",
-    "color": "Midnight",
-    "basePrice": 78250
-  },
-  {
-    "id": "samsung_100507",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S26 Ultra",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 83250
-  },
-  {
-    "id": "samsung_100508",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S26 Ultra",
-    "storage": "16 GB/1 TB",
-    "color": "Midnight",
-    "basePrice": 105250
-  },
-  {
-    "id": "samsung_100509",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S26 Ultra",
-    "storage": "12 GB/512 GB",
-    "color": "Midnight",
-    "basePrice": 88750
-  },
-  {
-    "id": "samsung_100510",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A07 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 11630
-  },
-  {
-    "id": "samsung_100511",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A07 5G",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 10710
-  },
-  {
-    "id": "samsung_100512",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F70e 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 9700
-  },
-  {
-    "id": "samsung_100513",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F70e 5G",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 8700
-  },
-  {
-    "id": "samsung_100514",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A57 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 36350
-  },
-  {
-    "id": "samsung_100515",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A57 5G",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 39770
-  },
-  {
-    "id": "samsung_100516",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A37 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 25300
-  },
-  {
-    "id": "samsung_100517",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A37 5G",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 33150
-  },
-  {
-    "id": "samsung_100518",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A37 5G",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 29510
-  },
-  {
-    "id": "samsung_100519",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M17e 5G",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 9000
-  },
-  {
-    "id": "samsung_100520",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M17e 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 10500
   },
   {
     "id": "oneplus_batch_1",
@@ -5794,630 +2762,6 @@ export const SEED_DEVICES: any[] = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 5000
-  },
-  {
-    "id": "samsung_120000",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy On Nxt",
-    "storage": "3 GB/16 GB",
-    "color": "Midnight",
-    "basePrice": 1110
-  },
-  {
-    "id": "samsung_120001",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy On Nxt",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 1540
-  },
-  {
-    "id": "samsung_120002",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy On Nxt",
-    "storage": "3 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 1670
-  },
-  {
-    "id": "samsung_120003",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J5 2016",
-    "storage": "2 GB/16 GB",
-    "color": "Midnight",
-    "basePrice": 890
-  },
-  {
-    "id": "samsung_130000",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J7 2016",
-    "storage": "2 GB/16 GB",
-    "color": "Midnight",
-    "basePrice": 1110
-  },
-  {
-    "id": "samsung_140000",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J3 (2017)",
-    "storage": "2 GB/16 GB",
-    "color": "Midnight",
-    "basePrice": 1170
-  },
-  {
-    "id": "samsung_150000",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy On8",
-    "storage": "3 GB/16 GB",
-    "color": "Midnight",
-    "basePrice": 1150
-  },
-  {
-    "id": "samsung_160002",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J6 Plus",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 1890
-  },
-  {
-    "id": "samsung_160003",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J7 Duo",
-    "storage": "4 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 1410
-  },
-  {
-    "id": "samsung_160004",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J7 Max",
-    "storage": "4 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 1440
-  },
-  {
-    "id": "samsung_160009",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J8",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2340
-  },
-  {
-    "id": "samsung_170000",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J2 2016",
-    "storage": "1.5 GB/8 GB",
-    "color": "Midnight",
-    "basePrice": 810
-  },
-  {
-    "id": "samsung_180000",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J2 2017",
-    "storage": "1 GB/8 GB",
-    "color": "Midnight",
-    "basePrice": 700
-  },
-  {
-    "id": "samsung_180001",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J2 2018",
-    "storage": "2 GB/16 GB",
-    "color": "Midnight",
-    "basePrice": 1190
-  },
-  {
-    "id": "samsung_180002",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J2 Ace",
-    "storage": "1.5 GB/8 GB",
-    "color": "Midnight",
-    "basePrice": 660
-  },
-  {
-    "id": "samsung_190000",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy On8 2018",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 1780
-  },
-  {
-    "id": "samsung_200000",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F41",
-    "storage": "6 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3290
-  },
-  {
-    "id": "samsung_200002",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Note 20",
-    "storage": "8 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 9270
-  },
-  {
-    "id": "samsung_200003",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F41",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3710
-  },
-  {
-    "id": "samsung_200004",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F42 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6420
-  },
-  {
-    "id": "samsung_200005",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F42 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 7020
-  },
-  {
-    "id": "samsung_200006",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F62",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 5110
-  },
-  {
-    "id": "samsung_200007",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy F62",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4960
-  },
-  {
-    "id": "samsung_200008",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J6",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 1700
-  },
-  {
-    "id": "samsung_200009",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J6",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 1530
-  },
-  {
-    "id": "samsung_200010",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J7 Nxt",
-    "storage": "2 GB/16 GB",
-    "color": "Midnight",
-    "basePrice": 1190
-  },
-  {
-    "id": "samsung_200011",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J7 Nxt",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 1410
-  },
-  {
-    "id": "samsung_200012",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J7 Pro",
-    "storage": "3 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 1110
-  },
-  {
-    "id": "samsung_200013",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J7 Pro",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 1000
-  },
-  {
-    "id": "samsung_200014",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M01 Core",
-    "storage": "2 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 1650
-  },
-  {
-    "id": "samsung_200015",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M01 Core",
-    "storage": "1 GB/16 GB",
-    "color": "Midnight",
-    "basePrice": 1390
-  },
-  {
-    "id": "samsung_200016",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M02",
-    "storage": "2 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2540
-  },
-  {
-    "id": "samsung_200017",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M02",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2760
-  },
-  {
-    "id": "samsung_200018",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M02s",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2920
-  },
-  {
-    "id": "samsung_200019",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M02s",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2340
-  },
-  {
-    "id": "samsung_200020",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M11",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2460
-  },
-  {
-    "id": "samsung_200021",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M11",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3030
-  },
-  {
-    "id": "samsung_200022",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M12",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3860
-  },
-  {
-    "id": "samsung_200023",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M12",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4090
-  },
-  {
-    "id": "samsung_200024",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M20",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2310
-  },
-  {
-    "id": "samsung_200025",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M20",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2150
-  },
-  {
-    "id": "samsung_200026",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M21",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3170
-  },
-  {
-    "id": "samsung_200027",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M21",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3470
-  },
-  {
-    "id": "samsung_200028",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M21 2021 Edition",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3460
-  },
-  {
-    "id": "samsung_200029",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M21 2021 Edition",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3350
-  },
-  {
-    "id": "samsung_200030",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M30",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 2520
-  },
-  {
-    "id": "samsung_200031",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M30",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2760
-  },
-  {
-    "id": "samsung_200032",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M30",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3000
-  },
-  {
-    "id": "samsung_200033",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M30s",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 2960
-  },
-  {
-    "id": "samsung_200034",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M30s",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 2560
-  },
-  {
-    "id": "samsung_200035",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M30s",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 2800
-  },
-  {
-    "id": "samsung_200036",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M31",
-    "storage": "6 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3230
-  },
-  {
-    "id": "samsung_200037",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M31",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3620
-  },
-  {
-    "id": "samsung_200038",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M31",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3810
-  },
-  {
-    "id": "samsung_200039",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M31s",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 3530
-  },
-  {
-    "id": "samsung_200040",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M31s",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4100
-  },
-  {
-    "id": "samsung_200041",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M32",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 4290
-  },
-  {
-    "id": "samsung_200042",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M32",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 3520
-  },
-  {
-    "id": "samsung_200043",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M32 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6300
-  },
-  {
-    "id": "samsung_200044",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M32 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6650
-  },
-  {
-    "id": "samsung_200045",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M33 5G",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6790
-  },
-  {
-    "id": "samsung_200046",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy M33 5G",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 6600
-  },
-  {
-    "id": "samsung_210000",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J5 Prime",
-    "storage": "2 GB/16 GB",
-    "color": "Midnight",
-    "basePrice": 1130
-  },
-  {
-    "id": "samsung_210001",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J5 Prime",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 1200
-  },
-  {
-    "id": "samsung_220000",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy J3 Pro",
-    "storage": "2 GB/16 GB",
-    "color": "Midnight",
-    "basePrice": 890
-  },
-  {
-    "id": "samsung_230000",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A7 2017",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 1410
-  },
-  {
-    "id": "samsung_250000",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A7 (2018)",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 1820
-  },
-  {
-    "id": "samsung_250001",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A7 (2018)",
-    "storage": "4 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 2010
-  },
-  {
-    "id": "samsung_250002",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A7 (2018)",
-    "storage": "6 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 2150
-  },
-  {
-    "id": "samsung_270000",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A6",
-    "storage": "3 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 1330
-  },
-  {
-    "id": "samsung_270001",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A6",
-    "storage": "4 GB/32 GB",
-    "color": "Midnight",
-    "basePrice": 1460
-  },
-  {
-    "id": "samsung_270002",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A6",
-    "storage": "4 GB/64 GB",
-    "color": "Midnight",
-    "basePrice": 1640
-  },
-  {
-    "id": "samsung_280000",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S24 Ultra 5G",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 61820
-  },
-  {
-    "id": "samsung_280001",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S24 Ultra 5G",
-    "storage": "12 GB/512 GB",
-    "color": "Midnight",
-    "basePrice": 63910
-  },
-  {
-    "id": "samsung_280002",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S24 Ultra 5G",
-    "storage": "12 GB/1 TB",
-    "color": "Midnight",
-    "basePrice": 64050
-  },
-  {
-    "id": "samsung_290000",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy On5 Pro",
-    "storage": "2 GB/16 GB",
-    "color": "Midnight",
-    "basePrice": 980
-  },
-  {
-    "id": "samsung_300000",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy On7 Pro",
-    "storage": "2 GB/16 GB",
-    "color": "Midnight",
-    "basePrice": 1260
-  },
-  {
-    "id": "samsung_310000",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A7 (2016)",
-    "storage": "3 GB/16 GB",
-    "color": "Midnight",
-    "basePrice": 1260
   },
   {
     "id": "google_batch_1",
@@ -22277,5 +18621,2775 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "basePrice": 37000,
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-17t-12-gb-256-gb"
+  },
+  {
+    "id": "5cf631f9-11e2-4339-a33d-88933c1605b9",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A14 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 7160,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a14-5g-4-gb-64-gb"
+  },
+  {
+    "id": "c079611e-17a8-4b26-9750-d5b0456e37de",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A14 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 7940,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a14-5g-4-gb-128-gb"
+  },
+  {
+    "id": "2189c468-c0eb-48a3-a692-a3b83960c462",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A14 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 8390,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a14-5g-6-gb-128-gb"
+  },
+  {
+    "id": "c03565d1-1e82-46ac-9a2f-7bc7ec6b6810",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A14 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8970,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a14-5g-8-gb-128-gb"
+  },
+  {
+    "id": "730fb29a-a89f-43d0-ad20-996f535f8920",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A13",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4240,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a13-4-gb-128-gb"
+  },
+  {
+    "id": "63b157d5-d907-4c1b-93af-b027478f5db9",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A13",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3820,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a13-4-gb-64-gb"
+  },
+  {
+    "id": "7ef78ee4-aa60-43f0-b414-f06ab102b3ba",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A13",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4840,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a13-6-gb-128-gb"
+  },
+  {
+    "id": "d58d14f6-b850-4e79-a7fc-6f120490454f",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A03",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2320,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a03-3-gb-32-gb"
+  },
+  {
+    "id": "de40d1d1-5c6a-46b6-8ef6-e9854afe789f",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A03",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2760,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a03-4-gb-64-gb"
+  },
+  {
+    "id": "296b0522-4a3a-4962-9f0e-4c4853e8d57a",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A03s",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3060,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a03s-4-gb-64-gb"
+  },
+  {
+    "id": "bc3607f9-34fa-4bf1-893f-01bd2f930741",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A03s",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2230,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a03s-3-gb-32-gb"
+  },
+  {
+    "id": "bfc73dd8-b566-4c99-b4d6-8ff2bec90c45",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A10s",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 2000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a10s-2-gb-32-gb"
+  },
+  {
+    "id": "a2240260-2b46-49cf-bd7c-865ac95f1052",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A10s",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2080,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a10s-3-gb-32-gb"
+  },
+  {
+    "id": "6eeedda8-76e6-41e1-9487-c75919c45d44",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A12",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3870,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a12-4-gb-128-gb"
+  },
+  {
+    "id": "4e785f15-b0a6-4611-9d00-cc9825f5137e",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A12",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3570,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a12-4-gb-64-gb"
+  },
+  {
+    "id": "a35b0278-3d06-40cc-ad52-b1523930a285",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A12",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4130,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a12-6-gb-128-gb"
+  },
+  {
+    "id": "49ca31ac-844f-4300-b861-9a9815ac7edf",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A20s",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2510,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a20s-3-gb-32-gb"
+  },
+  {
+    "id": "038e2da3-3c8f-42bd-a8ae-9430f14edfd9",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A20s",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2810,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a20s-4-gb-64-gb"
+  },
+  {
+    "id": "f06e17e1-f1d8-47cf-83b6-2dae16718960",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A21s",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3420,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a21s-4-gb-64-gb"
+  },
+  {
+    "id": "36d454c6-ee3e-46ff-b021-692a81a2388f",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A21s",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3820,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a21s-6-gb-128-gb"
+  },
+  {
+    "id": "549b9f2c-e980-4cdb-97a9-10c88d7bc818",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A21s",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3660,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a21s-6-gb-64-gb"
+  },
+  {
+    "id": "3c8edf1e-843b-42d3-84da-fa98a6a72698",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A22",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3920,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a22-4-gb-128-gb"
+  },
+  {
+    "id": "9f55bff8-042d-42a0-b920-e1ea81bb4000",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A22",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4390,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a22-6-gb-128-gb"
+  },
+  {
+    "id": "b047b870-0978-4a2e-91da-253cac2ff7ce",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A22 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6720,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a22-5g-8-gb-128-gb"
+  },
+  {
+    "id": "e1f2aad0-18a6-4976-8db0-93e1400c1ba2",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A22 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 6100,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a22-5g-6-gb-128-gb"
+  },
+  {
+    "id": "55c355b0-3a81-448e-bbd3-e18cc37c8e38",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A23",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5120,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a23-8-gb-128-gb"
+  },
+  {
+    "id": "2770d4ca-7aef-47d1-8276-361f7b389e99",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Note 20",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 9270,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-note-20-8-gb-256-gb"
+  },
+  {
+    "id": "75270c0d-01bc-43a7-a007-66c2d65e41de",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A23",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4600,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a23-6-gb-128-gb"
+  },
+  {
+    "id": "60656e0b-ae12-43e3-a784-389ab8871c8f",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S23 Ultra 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 37040,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s23-ultra-5g-12-gb-256-gb"
+  },
+  {
+    "id": "65e07e5d-22af-49a3-99de-2e55ea3ab821",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S24 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 35110,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s24-5g-8-gb-256-gb"
+  },
+  {
+    "id": "72f7af25-55cf-4023-b3a6-e36c8d847607",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A30s",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2700,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a30s-4-gb-64-gb"
+  },
+  {
+    "id": "3b715e53-bb06-470d-84f7-280c8a446715",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A30s",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2800,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a30s-4-gb-128-gb"
+  },
+  {
+    "id": "17ef7871-6fbc-4bda-b755-d86696d08612",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A32",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4890,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a32-6-gb-128-gb"
+  },
+  {
+    "id": "e2af81f8-d576-4082-8cf2-cb02cccdaad9",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A32",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5420,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a32-8-gb-128-gb"
+  },
+  {
+    "id": "6aca67b8-7da1-4baa-8967-ff68bfa58599",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A50",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3290,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a50-6-gb-64-gb"
+  },
+  {
+    "id": "7e18e51a-f26a-4bdf-af30-7fbc3cae3513",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A50",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3040,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a50-4-gb-64-gb"
+  },
+  {
+    "id": "70b8e76a-dc77-4b7a-ad5a-07d02a6380f9",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A50",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3480,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a50-6-gb-128-gb"
+  },
+  {
+    "id": "31a1c8b0-5865-4e5c-afe0-0bf64c72d6a5",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A50s",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3110,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a50s-6-gb-128-gb"
+  },
+  {
+    "id": "8c1bb600-8e06-407f-ac9d-0ef2b93ea834",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A50s",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2990,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a50s-4-gb-128-gb"
+  },
+  {
+    "id": "026ab0a0-b177-4af6-8420-9b7d4972da81",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A51",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4050,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a51-6-gb-128-gb"
+  },
+  {
+    "id": "007e8815-941b-4f51-9a05-6a4bbec47e73",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A51",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 4250,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a51-8-gb-128-gb"
+  },
+  {
+    "id": "4bebac39-7529-4df9-b37d-a4386005c435",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A52",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5530,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a52-6-gb-128-gb"
+  },
+  {
+    "id": "d3602a09-939a-42f5-8cb8-6a93554760fe",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A52",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5990,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a522-8-gb-128-gb"
+  },
+  {
+    "id": "df167a24-65b3-4249-bb1e-e72a918d83fa",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A52s 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8300,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a52s-5g-8-gb-128-gb"
+  },
+  {
+    "id": "f6d07e81-9d93-406c-8674-74154d0c7dd0",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A52s 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 7780,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a52s-5g-6-gb-128-gb"
+  },
+  {
+    "id": "8e3892ab-2e8f-453e-a4d8-5f3950edf836",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A53 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 6970,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a53-5g-6-gb-128-gb"
+  },
+  {
+    "id": "3345163c-5722-49c3-9dae-ff4ee90b63da",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A53 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7710,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a53-5g-8-gb-256-gb"
+  },
+  {
+    "id": "fda6cf6e-12a6-4837-afcc-66ab7a95dfe7",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A53 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7370,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a53-5g-8-gb-128-gb"
+  },
+  {
+    "id": "8690fad2-e65c-4462-8a17-88fb158f7c3f",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A6",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5550,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a6-4-gb-64-gb"
+  },
+  {
+    "id": "66e08506-5dd9-452d-9cfc-975e4f559a63",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A6",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 1330,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a6-3-gb-32-gb"
+  },
+  {
+    "id": "a657b4f3-07dc-4477-9c8f-a6bf8ff645fe",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A6",
+    "storage": "4 GB/32 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 1460,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a6-4-gb-32-gb"
+  },
+  {
+    "id": "b9063f3c-9544-46dc-b85b-b402ad63b777",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A6 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 1820,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a6-plus-4-gb-64-gb"
+  },
+  {
+    "id": "c9f71e2a-8fe2-4b76-a94e-bf76b2f16b2f",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A6 Plus",
+    "storage": "4 GB/32 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 1640,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a6-plus-4-gb-32-gb"
+  },
+  {
+    "id": "46d7c76c-27e4-4bed-b644-4289f8e87be3",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A6 Plus",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 1510,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a6-plus-3-gb-32-gb"
+  },
+  {
+    "id": "81dfb32c-41d4-4f5d-8dee-f64988c214be",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A7 2018",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2010,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a7-2018-4-gb-128-gb"
+  },
+  {
+    "id": "7e0b016c-e9b6-4420-b83c-04f834116995",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A7 2018",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 1820,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a7-2018-4-gb-64-gb"
+  },
+  {
+    "id": "1d10d5d6-3c2b-4b03-b589-c94a75442f92",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A7 2018",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 2150,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a7-2018-6-gb-128-gb"
+  },
+  {
+    "id": "894ea000-1145-4c6a-8db3-4bb724135f1d",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A70s",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 3760,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a70s-8-gb-128-gb"
+  },
+  {
+    "id": "f649bd18-ef32-4815-9ce5-0301545caf10",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A70s",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3540,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a70s-6-gb-128-gb"
+  },
+  {
+    "id": "ca0297bd-e1d8-41ac-8ab1-8a84e9cab56c",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A71",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4150,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a71-6-gb-128-gb"
+  },
+  {
+    "id": "4d686860-7ee2-4729-8628-c5dd146b7e2b",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A71",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 4510,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a71-8-gb-128-gb"
+  },
+  {
+    "id": "15489366-9c32-40fb-a1dd-006e49ff4b27",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A72",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6440,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a72-8-gb-128-gb"
+  },
+  {
+    "id": "b4cb969e-ed81-491a-8d32-d7c7e523ed14",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A72",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6990,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a72-8-gb-256-gb"
+  },
+  {
+    "id": "3e81a1db-895f-44f0-941f-39d5ddc9c101",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A73 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 9110,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a73-5g-8-gb-128-gb"
+  },
+  {
+    "id": "248bba5e-fffd-4ba7-96bd-ba87894e2f86",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A73 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 9690,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a73-5g-8-gb-256-gb"
+  },
+  {
+    "id": "050b47bc-0ab5-4f3b-9419-efcd7b0e8702",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A9 2018",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 2480,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a9-2018-8-gb-128-gb"
+  },
+  {
+    "id": "2a79cbf9-6a40-425d-80f6-b54bedb801e6",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A9 2018",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 2260,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a9-2018-6-gb-128-GB"
+  },
+  {
+    "id": "1cc2f472-d6e6-49b8-a430-b119cc28f4a2",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F02s",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2970,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f02s-4-gb-64-gb"
+  },
+  {
+    "id": "0055e07d-d7e1-4f4f-84c2-e442c0c449c5",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F02s",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2820,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f02s-3-gb-32-gb"
+  },
+  {
+    "id": "23fd990b-34d2-4853-ac19-6d71f390713f",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F12",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3300,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f12-4-gb-64-gb"
+  },
+  {
+    "id": "55e368ec-4809-4274-acac-97a9898550e4",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F12",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3730,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f12-4-gb-128-gb"
+  },
+  {
+    "id": "437dfa2c-f156-464e-9483-d76d51da96d4",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F13",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4130,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f13-4-gb-128-gb"
+  },
+  {
+    "id": "394a31f2-71a9-4853-99ce-5659589f960d",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F13",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3900,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f13-4-gb-64-gb"
+  },
+  {
+    "id": "dc6c26ab-a275-41bf-b103-fe5a1cff70d4",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F22",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3620,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f22-4-gb-64-gb"
+  },
+  {
+    "id": "8c6aa707-d6ac-4199-94ec-0a4092fa1e72",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F22",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3890,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f22-6-gb-128-gb"
+  },
+  {
+    "id": "aab35617-8bc3-468f-8d4c-c4b8ec92298f",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F23 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 6360,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f23-5g-6-gb-128-gb"
+  },
+  {
+    "id": "0a44c187-a853-453a-9ea6-f60928ad962a",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F23 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 6090,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f23-5g-4-gb-128-gb"
+  },
+  {
+    "id": "580ee032-792a-43f8-9973-2cd1a5b61696",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F41",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3710,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f41-6-gb-128-gb"
+  },
+  {
+    "id": "aea683c8-99d3-407d-8bab-e44dfcabe4a4",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F41",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3290,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f41-6-gb-64-gb"
+  },
+  {
+    "id": "b52db72e-6bc0-40ff-8a33-e0818cf2cc61",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F42 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 6420,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f42-5g-6-gb-128-gb"
+  },
+  {
+    "id": "1b0ce17a-a4c0-43b1-bb93-5a45c4007f02",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F42 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7020,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f42-5g-8-gb-128-gb"
+  },
+  {
+    "id": "a9900748-835a-4023-83c5-c7ee53b58487",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F62",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4960,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f62-6-gb-128-gb"
+  },
+  {
+    "id": "4f4e8b1e-40ae-49d3-aa60-87a3d427271b",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F62",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5110,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f62-8-gb-128-gb"
+  },
+  {
+    "id": "e202fb16-2d64-4d4d-a9e1-c9f8a36814e2",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy J6",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 1530,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-j6-3-gb-32-gb"
+  },
+  {
+    "id": "4b981b34-5d22-4a2e-9184-38986308f5c3",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy J6",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 1700,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-j6-4-gb-64-gb"
+  },
+  {
+    "id": "691b5552-760d-45d0-bed7-4768b93a453e",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy J7 Nxt",
+    "storage": "2 GB/16 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 1190,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-j7-nxt-2-gb-16-gb"
+  },
+  {
+    "id": "ad504d51-6724-47b7-9068-af2ae24fefb0",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy J7 Nxt",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 1410,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-j7-nxt-3-gb-32-gb"
+  },
+  {
+    "id": "3632dd36-ae16-4c7f-a620-c6e1f394ca07",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy J7 Pro",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 1000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-j7-pro-3-gb-32-gb"
+  },
+  {
+    "id": "5ec0d788-8ed3-46e8-88d5-f7055d199f45",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy J7 Pro",
+    "storage": "3 GB/64 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 1110,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-j7-pro-3-gb-64-gb"
+  },
+  {
+    "id": "04623280-4d32-4dcb-a6a6-1384f5331983",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M01 Core",
+    "storage": "1 GB/16 GB",
+    "ram": "1 GB",
+    "color": "Default",
+    "basePrice": 1390,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m01-core-1-gb-16-gb"
+  },
+  {
+    "id": "3cbd91b2-dd9f-4f5e-9531-0df81829f0b6",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M01 Core",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 1650,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m01-core-2-gb-32-gb"
+  },
+  {
+    "id": "b0c2fd3b-19ee-4eb1-a953-1e4e18f0e3f7",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M02",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 2540,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m02-2-gb-32-gb"
+  },
+  {
+    "id": "00698481-043e-4a23-a1a5-947fbd8c4b44",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M02",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2760,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m02-3-gb-32-gb"
+  },
+  {
+    "id": "d1324daa-84bb-4c85-b39c-b5df160a507d",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M02s",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2920,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m02s-4-gb-64-gb"
+  },
+  {
+    "id": "082730da-313a-4344-90be-c7b0e6d0e8f6",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M02s",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2340,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m02s-3-gb-32-gb"
+  },
+  {
+    "id": "e9607278-50c6-4b89-87c8-fafc4dcab697",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M11",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3030,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m11-4-gb-64-gb"
+  },
+  {
+    "id": "824c8318-98ad-4cef-9208-ab782cf74e18",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M11",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2460,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m11-3-gb-32-gb"
+  },
+  {
+    "id": "61cef942-3d49-471b-b52b-e5ad5b44fc3f",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M12",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3860,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m12-4-gb-64-gb"
+  },
+  {
+    "id": "cdd0c942-427b-4c43-856c-220f22709dc2",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M12",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4090,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m12-6-gb-128-gb"
+  },
+  {
+    "id": "cf9522db-7a61-4f06-9290-ec26d65dfd7c",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M20",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2310,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m20-4-gb-64-gb"
+  },
+  {
+    "id": "61cb24f6-8359-483a-920d-904ac4b68c61",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M20",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2150,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m20-3-gb-32-gb"
+  },
+  {
+    "id": "efc9fe1a-6b44-4640-83f0-35d63128c7bf",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M21",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3470,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m21-6-gb-128-gb"
+  },
+  {
+    "id": "b3fa239d-af48-4c51-b07c-eeabf04678e5",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M21",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3170,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m21-4-gb-64-gb"
+  },
+  {
+    "id": "2ad7b4b7-6b1b-411c-a776-5dd11bc9add1",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M21 2021 Edition",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3460,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m21-2021-edition-6-gb-128-gb"
+  },
+  {
+    "id": "af16fdc3-5f0f-4e6c-a7e1-9771213c13aa",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M21 2021 Edition",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3350,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m21-2021-edition-4-gb-64-gb"
+  },
+  {
+    "id": "f2b1ff46-099f-41a6-a34f-aea8371e4428",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M30",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m30-6-gb-128-gb"
+  },
+  {
+    "id": "28a56a27-9eaa-4800-b861-159e7cffe073",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M30",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2760,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m30-4-gb-64-gb"
+  },
+  {
+    "id": "106d14da-e9e0-4160-ad42-6a0aef21eeb1",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M30",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2520,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m30-3-gb-32-gb"
+  },
+  {
+    "id": "878240df-2fde-42fc-a53b-ba010edf51c9",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M30s",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2560,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m30s-4-gb-64-gb"
+  },
+  {
+    "id": "fc8e9628-743b-498d-9da9-af7ae9a9c9cf",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M30s",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 2960,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m30s-6-gb-128-gb"
+  },
+  {
+    "id": "5c670585-01b3-485f-835c-917cf2adfab7",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M30s",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2800,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m30s-4-gb-128-gb"
+  },
+  {
+    "id": "21ed8f58-ca21-498d-ad12-aa2edcad1392",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M31",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3230,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m31-6-gb-64-gb"
+  },
+  {
+    "id": "57a9af40-c7fd-4dc5-9057-6e623606027e",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M31",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3620,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m31-6-gb-128-gb"
+  },
+  {
+    "id": "926fd21c-68c7-4c0e-abf5-8deb90eb9cb0",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M31",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 3810,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m31-8-gb-128-gb"
+  },
+  {
+    "id": "755cbe0c-202f-4b8f-9101-2295422a9656",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M31s",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3530,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m31s-6-gb-128-gb"
+  },
+  {
+    "id": "31a84a11-a595-4167-a1d6-fa85b605e82f",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M31s",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 4100,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m31s-8-gb-128-gb"
+  },
+  {
+    "id": "8d8f50c4-d31a-4684-b112-8c5e28a60837",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M32",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3520,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m32-4-gb-64-gb"
+  },
+  {
+    "id": "b0cbc5b9-4146-4aeb-9b52-e84675f9d26f",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M32",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4290,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m32-6-gb-128-gb"
+  },
+  {
+    "id": "1c1f1903-5cb0-4652-b43d-e2e20ce6a677",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M32 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 6300,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m32-5g-6-gb-128-gb"
+  },
+  {
+    "id": "321b1b77-eaf7-4ca6-8e0e-71023921d38b",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M32 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6650,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m32-5g-8-gb-128-gb"
+  },
+  {
+    "id": "8e6fac59-dd74-4e3d-94d6-0e4fac786b8e",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M33 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 6600,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m33-5g-6-gb-128-gb"
+  },
+  {
+    "id": "5e3a486e-114a-4f07-b455-f4ed5306bde0",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M33 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6790,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m33-5g-8-gb-128-gb"
+  },
+  {
+    "id": "3fb4e29e-ad96-4d44-aac1-3e0597772491",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M42 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6730,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m42-5g-8-gb-128-gb"
+  },
+  {
+    "id": "be080278-605d-437b-b63b-6c6afca7bf34",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M42 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 6400,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m42-5g-6-gb-128-gb"
+  },
+  {
+    "id": "e74797d6-df0f-406e-92eb-267b41e4db78",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M51",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4540,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m51-6-gb-128-gb"
+  },
+  {
+    "id": "9ece8ffb-28bc-44b6-a855-3bb5574b0e68",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M51",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 4680,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m51-8-gb-128-gb"
+  },
+  {
+    "id": "6679531c-ebba-43ce-a6e7-3c32a05580d6",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M52 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 7140,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m52-5g-6-gb-128-gb"
+  },
+  {
+    "id": "d5852b9a-ffc0-4ef1-8190-4bb55cd92b3c",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M52 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7250,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m52-5g-8-gb-128-gb"
+  },
+  {
+    "id": "6cbe0df2-71d8-4b7a-b313-d1c6a7f35ab4",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M53 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 7410,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m53-5g-6-gb-128-gb"
+  },
+  {
+    "id": "00e0d5f5-cd9c-4e26-818d-f45523a8837b",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M53 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7560,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m53-5g-8-gb-128-gb"
+  },
+  {
+    "id": "4b1858b5-db55-4e38-816d-74a6f8805be3",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Note 10 Lite",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5640,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-note-10-lite-6-gb-128-gb"
+  },
+  {
+    "id": "94653013-d77e-44d7-92bb-be1971cc2b87",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Note 10 Lite",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6010,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-note-10-lite-8-gb-128-gb"
+  },
+  {
+    "id": "4a99344d-bcdf-4c27-9130-ce966c034516",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Note 10 Plus",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 9740,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-note-10-plus-12-gb-256-gb"
+  },
+  {
+    "id": "4ca6423e-7861-4775-afb1-78d461a6b559",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Note 10 Plus",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 9870,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-note-10-plus-12-gb-512-gb"
+  },
+  {
+    "id": "202560be-119e-447f-8215-77e07bfeee07",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy On7 Prime",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 1640,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-on7-prime-3-gb-32-gb"
+  },
+  {
+    "id": "341a9293-ca8e-4ec8-982a-96ba216b1167",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy On7 Prime",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 1930,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-on7-prime-4-gb-64-gb"
+  },
+  {
+    "id": "01452648-857d-413e-a273-e259cdcd1ce3",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S10",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7270,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s10-8-gb-128-gb"
+  },
+  {
+    "id": "7b9e4bea-f637-415b-a1b9-204b24b7e312",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S10",
+    "storage": "8 GB/512 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7570,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s10-8-gb-512-gb"
+  },
+  {
+    "id": "224401d3-74e4-4315-81a3-9200812ce493",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S10 Lite",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6040,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s10-lite-8-gb-128-gb"
+  },
+  {
+    "id": "42b66f4b-1913-4c17-aa02-97c3935c81e4",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S10 Lite",
+    "storage": "8 GB/512 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6460,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s10-lite-8-gb-512-gb"
+  },
+  {
+    "id": "4db1aa18-b6c5-4d3d-88e6-803635360a5b",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S10 Plus",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7540,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s10-plus-8-gb-128-gb"
+  },
+  {
+    "id": "952b4c2b-9012-44f6-8499-8dbb75da354e",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S10 Plus",
+    "storage": "8 GB/512 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7910,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s10-plus-8-gb-512-gb"
+  },
+  {
+    "id": "ac8cded3-5080-45bd-9dfa-817b6ba458c4",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S10 Plus",
+    "storage": "12 GB/1 TB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 9440,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s10-plus-12-gb-1-tb"
+  },
+  {
+    "id": "69f435a4-ca62-45f0-ad4e-1a43cac75059",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S20 FE",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8070,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s20-fe-8-gb-256-gb"
+  },
+  {
+    "id": "140e9143-cdff-4ce2-b6a9-9816c0f6efe3",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S20 FE",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7220,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s20-fe-8-gb-128-gb"
+  },
+  {
+    "id": "77b386c7-8bba-44c6-b1e8-18a5a1d43ee1",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S21 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 13370,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s21-5g-8-gb-256-gb"
+  },
+  {
+    "id": "014b697e-5767-446c-835f-7d9c6d3b78f0",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S21 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12430,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s21-5g-8-gb-128-gb"
+  },
+  {
+    "id": "1afbd6fd-ad66-4ef3-b558-bb91911b72c4",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S21 Plus 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 14300,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s21-plus-5g-8-gb-256-gb"
+  },
+  {
+    "id": "9a611148-a7f1-4f22-ac3a-1e589128b8e2",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S21 Plus 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 13110,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s21-plus-5g-8-gb-128-gb"
+  },
+  {
+    "id": "499d8c32-f903-4f82-be11-cb812c45585f",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S21 Ultra 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 17280,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s21-ultra-5g-12-gb-256-gb"
+  },
+  {
+    "id": "b4e1e9c5-004f-4aa0-8f39-91192672f5f3",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S21 Ultra 5G",
+    "storage": "16 GB/512 GB",
+    "ram": "16 GB",
+    "color": "Default",
+    "basePrice": 19920,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s21-ultra-5g-16-gb-512-gb"
+  },
+  {
+    "id": "d4eb12af-e4fa-4da6-a0ed-7da9672dca65",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S8 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3850,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s8-plus-4-gb-64-gb"
+  },
+  {
+    "id": "37834903-e38d-43c1-99b9-a6658461953a",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S8 Plus",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4040,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s8-plus-6-gb-128-gb"
+  },
+  {
+    "id": "728e3f95-59e6-4494-8881-90ea25e7d831",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S9",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4450,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s9-4-gb-64-gb"
+  },
+  {
+    "id": "aa727d73-5602-4492-81c2-23207e66d16c",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S9",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4600,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s9-4-gb-128-gb"
+  },
+  {
+    "id": "297b6cac-2b17-400b-8d87-ef78816b71cd",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S9",
+    "storage": "4 GB/256 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4860,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s9-4-gb-256-gb"
+  },
+  {
+    "id": "0b7532eb-665b-4d5f-a6b0-29f2dd1de235",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S9 Plus",
+    "storage": "6 GB/256 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5120,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s9-plus-6-gb-256-gb"
+  },
+  {
+    "id": "1108aeda-d779-4825-91bc-666932f1ecee",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S9 Plus",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4970,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s9-plus-6-gb-128-gb"
+  },
+  {
+    "id": "b5084731-dd12-4b71-af19-6184c6e46a78",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S9 Plus",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4530,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s9-plus-6-gb-64-gb"
+  },
+  {
+    "id": "1e20e64a-54cd-4ffd-ad95-e137fb06c795",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Flip3 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12980,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-z-flip3-5g-8-gb-256-gb"
+  },
+  {
+    "id": "5b85e09b-e43b-4dde-9354-dc741d55c3cc",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Flip3 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12380,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-z-flip3-5g-8-gb-128-gb"
+  },
+  {
+    "id": "9e558deb-b6fe-45b0-8711-d53c7a69b032",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Fold3 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 21530,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-z-fold3-5g-12-gb-256-gb"
+  },
+  {
+    "id": "bf0c49ef-ebc6-405d-bb64-4f1584dc456c",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Fold3 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 21660,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-z-fold3-5g-12-gb-512-gb"
+  },
+  {
+    "id": "1385d8ea-5269-408c-9447-66a3197e7b02",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A33 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 6660,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a33-5g-6-gb-128-gb"
+  },
+  {
+    "id": "99743dbc-2dfa-4428-be24-23650fdbf58e",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A33 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7080,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a33-5g-8-gb-128-gb"
+  },
+  {
+    "id": "ea0f77ea-0003-4cfa-ad40-2874a4701c94",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M13",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4150,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m13-4-gb-64-gb"
+  },
+  {
+    "id": "f4e82dce-89e6-4c22-b958-5fed43b108d5",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M13",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4550,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m13-6-gb-128-gb"
+  },
+  {
+    "id": "809066c5-675d-471e-8b14-41cb30b72a82",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M13 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 6350,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m13-5g-6-gb-128-gb"
+  },
+  {
+    "id": "2fdc140c-b491-4cc1-a000-e5e41d5dfc1c",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M13 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5300,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m13-5g-4-gb-64-gb"
+  },
+  {
+    "id": "7865a70a-c49e-405e-9624-3b29548e4af7",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A04s",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3300,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a04s-4-gb-64-gb"
+  },
+  {
+    "id": "00e32a6e-367e-43ab-b1c2-9a0a3c449b01",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A04s",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3480,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a04s-4-gb-128-gb"
+  },
+  {
+    "id": "2cf6f90a-b245-4c39-b48b-7cd065895265",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M32 Prime Edition",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5050,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m32-prime-edition-4-gb-64-gb"
+  },
+  {
+    "id": "060a643a-9b2b-4e43-bc83-16a8887281ce",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M32 Prime Edition",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5230,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m32-prime-edition-6-gb-128-gb"
+  },
+  {
+    "id": "b5923d01-c926-4ca9-83d4-40e7d5b8a30c",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A04",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3730,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a04-4-gb-128-gb"
+  },
+  {
+    "id": "09a8751b-6af2-43c0-8f99-9d8e34a8939c",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A04",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2460,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a04-3-gb-32-gb"
+  },
+  {
+    "id": "74bdbdcf-c54f-4990-9a1c-439aa4d7c572",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A04",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3070,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a04-4-gb-64-gb"
+  },
+  {
+    "id": "33dc27e9-54d1-4397-b3dc-e5791683f492",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S23 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 23720,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s23-5g-8-gb-256-gb"
+  },
+  {
+    "id": "906c004c-246a-4c26-80d6-1a150fb98397",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S23 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 23080,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s23-5g-8-gb-128-gb"
+  },
+  {
+    "id": "eb84dade-adee-4750-a44b-b6c0f9a823d8",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S23 Plus 5G",
+    "storage": "8 GB/512 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 27490,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s23-plus-5g-8-gb-512-gb"
+  },
+  {
+    "id": "6c3813a5-4622-407a-bd17-e687d15dc90d",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S23 Plus 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 26310,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s23-plus-8-gb-256-gb"
+  },
+  {
+    "id": "cedb0653-f084-4e7e-884e-bfc44b634a24",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S23 Ultra 5G",
+    "storage": "12 GB/1 TB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 39900,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s23-ultra-5g-12-gb-1-tb"
+  },
+  {
+    "id": "8bb0890f-db11-40aa-92cf-6b4eb56e8fc5",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S23 Ultra 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 38160,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s23-ultra-5g-12-gb-512-gb"
+  },
+  {
+    "id": "d18d4d56-e44b-4e0b-a130-c6e99fb7a3c5",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A23 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 8750,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a23-5g-6-gb-128-gb"
+  },
+  {
+    "id": "184423e3-2d83-417b-946b-be7808f18d27",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A23 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 9220,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a23-5g-8-gb-128-gb"
+  },
+  {
+    "id": "9288a589-648c-49d6-9dad-5d3048e18b95",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M04",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3470,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m04-4-gb-64-gb"
+  },
+  {
+    "id": "629edd65-be59-45d4-943f-266c5a8d3901",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M04",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3600,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m04-4-gb-128-gb"
+  },
+  {
+    "id": "05a2d3fe-160a-497b-abcd-b537251c9f9f",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F14 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 6890,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f14-5g-4-gb-128-gb"
+  },
+  {
+    "id": "abb55570-250a-4645-a71e-548fc2b29e9d",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F14 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 7190,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f14-5g-6-gb-128-gb"
+  },
+  {
+    "id": "26a5aab7-a76b-4190-bd19-e93a2debd94b",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A54 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 13690,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a54-5g-8-gb-128-gb"
+  },
+  {
+    "id": "1883520e-83d6-4304-88eb-24959470dc6a",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A54 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 14260,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a54-5g-8-gb-256-gb"
+  },
+  {
+    "id": "8fb82747-3f00-4781-baee-fbc62c94b3e0",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A14",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 6550,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a14-4-gb-128-gb"
+  },
+  {
+    "id": "7ffeafb6-42c2-40e9-9676-3a71563b9b1c",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A14",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 6050,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a14-4-gb-64-gb"
+  },
+  {
+    "id": "e40791a9-9caa-4130-ada6-d1a94ba6c680",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S23 FE 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 17940,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s23-fe-5g-8-gb-256-gb"
+  },
+  {
+    "id": "d4a3e1ca-ea82-4676-ae6f-6989e89df0ba",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S23 FE 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 17260,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s23-fe-5g-8-gb-128-gb"
+  },
+  {
+    "id": "c17136f6-d51f-48ce-ade6-c57b058955e1",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A25 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 11620,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a25-5g-8-gb-128-gb"
+  },
+  {
+    "id": "858fd998-a3f7-4048-816c-1ee134fc0497",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A25 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 11910,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a25-5g-8-gb-256-gb"
+  },
+  {
+    "id": "c0c8999d-3340-43ae-b2b6-734a2f3473ce",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A25 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 10290,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a25-5g-6-gb-128-gb"
+  },
+  {
+    "id": "fcaf3d50-14bf-4fcd-8fbb-fa7f4790aa28",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A15 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 9130,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a15-5g-6-gb-128-gb"
+  },
+  {
+    "id": "d4c9b6eb-f51e-497e-951f-f346c9162fcd",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A15 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 9340,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a15-5g-8-gb-128-gb"
+  },
+  {
+    "id": "49590c8c-c89e-4108-abba-e7761b9d3618",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A15 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 9670,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a15-5g-8-gb-256-gb"
+  },
+  {
+    "id": "b5a1acf1-1673-4076-b8f6-921c331f4705",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A05s",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5860,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a05s-6-gb-128-gb"
+  },
+  {
+    "id": "952d2f90-8633-486a-8405-76b7058bea5f",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A05s",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5360,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a05s-4-gb-128-gb"
+  },
+  {
+    "id": "23c0a242-f4ca-4ee4-9670-f086748dc8da",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A05",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5360,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a05-6-gb-128-gb"
+  },
+  {
+    "id": "d4073ed6-5db4-4c60-b0c8-be6e01536e91",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A05",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a05-4-gb-64-gb"
+  },
+  {
+    "id": "d819152d-f749-4799-b4bc-fbcb09e79b6b",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S24 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 29720,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s24-5g-8-gb-128-gb"
+  },
+  {
+    "id": "6f299ecf-f113-4ba8-a4c2-7ccfff784867",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S24 5G",
+    "storage": "8 GB/512 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 35780,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s24-5g-8-gb-512-gb"
+  },
+  {
+    "id": "e649b2c9-0b67-4562-b217-f3767bd3476a",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S24 Plus 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 36740,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s24-plus-5g-12-gb-512-gb"
+  },
+  {
+    "id": "281f18e9-e416-45fa-9519-201d94639658",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S24 Plus 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 36430,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s24-plus-5g-12-gb-256-gb"
+  },
+  {
+    "id": "6816bd91-4ee5-4f52-a492-0c577c99135d",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M55 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 13030,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m55-5g-8-gb-128-gb"
+  },
+  {
+    "id": "ad831397-18d6-4aa3-8de6-b50839d831b6",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M55 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 14020,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m55-5g-8-gb-256-gb"
+  },
+  {
+    "id": "65be9341-f1c6-44e7-ac6f-03ea29d8c5dd",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M55 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 15020,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m55-5g-12-gb-256-gb"
+  },
+  {
+    "id": "dcc03e79-4bef-42d5-b2ac-ff48db8ae5d4",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M14 4G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5020,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m14-4g-4-gb-64-gb"
+  },
+  {
+    "id": "bab35897-4546-4462-bb01-7fa4f0b7a867",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M14 4G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5920,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m14-4g-6-gb-128-gb"
+  },
+  {
+    "id": "dbfe2258-c95a-4dd6-8dfb-b2780e572f9b",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F55 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12370,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f55-5g-8-gb-256-gb"
+  },
+  {
+    "id": "6d7d851b-21d5-4889-8856-17de9f5f2416",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F55 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 11150,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f55-5g-8-gb-128-gb"
+  },
+  {
+    "id": "3d88feb6-b0ef-4754-8c48-e5b45091a481",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F55 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 13330,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f55-5g-12-gb-256-gb"
+  },
+  {
+    "id": "7a8a1df8-6736-425c-84c3-b497c9159ac8",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M55s 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 11340,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m55s-5g-8-gb-128-gb"
+  },
+  {
+    "id": "68fa7476-fcbf-4644-976e-076a4ec6bb2d",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M55s 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12530,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m55s-5g-8-gb-256-gb"
+  },
+  {
+    "id": "013f37a0-5953-4237-8f24-c64e4ac4c5c9",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A06",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4770,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a06-4-gb-64-gb"
+  },
+  {
+    "id": "7b56123e-51e7-4f05-b31c-b4ce0781b0ec",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A06",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5130,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxya-a06-4-gb-128-gb"
+  },
+  {
+    "id": "f85f1f21-e9e8-4673-9077-f6d1ec186b3d",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A16 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 11350,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a16-5g-8-gb-256-gb"
+  },
+  {
+    "id": "9c6d7df5-6a69-47b5-b090-47a6261f4f55",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A16 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 10610,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a16-5g-8-gb-128-gb"
+  },
+  {
+    "id": "d03ef6a4-c880-4968-810c-46ec106038cb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A16 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 9870,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a16-5g-6-gb-128-gb"
+  },
+  {
+    "id": "2a76cc49-64c6-43a7-b825-128ec7992b89",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A36 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 18100,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a36-5g-8-gb-128-gb"
+  },
+  {
+    "id": "cb0c8360-a197-4267-99bf-3b09f762f06b",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A36 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 18920,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a36-5g-8-gb-256-gb"
+  },
+  {
+    "id": "06aa2283-cb70-436e-b788-7db81f47f01d",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A36 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 19840,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a36-5g-12-gb-256-gb"
+  },
+  {
+    "id": "87bea4ef-0a50-4a29-a8b3-a83f00a0e8f1",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A26 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 11700,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a26-5g-6-gb-128-gb"
+  },
+  {
+    "id": "35a2cfc8-8ffa-4957-8673-32bb46c0976e",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A26 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12700,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a26-5g-8-gb-128-gb"
+  },
+  {
+    "id": "f9e845d0-80b5-41cf-84a3-944f83e73236",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A26 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 13400,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a26-5g-8-gb-256-gb"
+  },
+  {
+    "id": "97c926de-81cb-4809-a6d5-09ed9db3b5a2",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F16 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 8780,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f16-5g-4-gb-128-gb"
+  },
+  {
+    "id": "7276e4f9-c3c9-474d-a883-d128813fe694",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F16 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 9070,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f16-5g-6-gb-128-gb"
+  },
+  {
+    "id": "9931b814-0ed8-46f2-accc-4d64f7c1229e",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F16 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 9790,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f16-5g-8-gb-128-gb"
+  },
+  {
+    "id": "c5902566-dc37-4286-a7bb-72db5775d224",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A06 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 6800,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a06-5g-4-gb-128-gb"
+  },
+  {
+    "id": "146f7989-5d08-49d4-8ea8-b0e1cbce212e",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A06 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 7670,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a06-5g-6-gb-128-gb"
+  },
+  {
+    "id": "74fc8397-e40c-471a-84e8-ba5f835233c5",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A06 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 6000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a06-5g-4-gb-64-gb"
+  },
+  {
+    "id": "2b3a39a6-8ce7-4db4-9429-8978bf42f307",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S25 Edge",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 51350,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s25-edge-12-gb-512-gb"
+  },
+  {
+    "id": "8250f1e4-957a-4f97-ad41-a7dd82a1e79e",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S25 Edge",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 45170,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s25-edge-12-gb-256-gb"
+  },
+  {
+    "id": "c6e10e36-ddf8-4a79-b901-5cfca56b4070",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Fold 7",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 95050,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-z-fold-7-12-gb-256-gb"
+  },
+  {
+    "id": "963ab755-6b56-4e47-b125-9e127f4a449a",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Fold 7",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 97050,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-fold-7-12-gb-512-gb"
+  },
+  {
+    "id": "f5e30b65-5702-49be-ab58-5064fe0412c3",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Fold 7",
+    "storage": "16 GB/1 TB",
+    "ram": "16 GB",
+    "color": "Default",
+    "basePrice": 100250,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-z-fold-7-16-gb-1-tb"
+  },
+  {
+    "id": "ec5a060c-4d09-4e64-8006-eee50a389cf3",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M36 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12600,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m36-5g-8-gb-256-gb"
+  },
+  {
+    "id": "9aa3a6d2-1230-42e1-aa59-de335cbd40fe",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M36 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12100,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m36-5g-8-gb-128-gb"
+  },
+  {
+    "id": "0e21ac3e-7bb3-4717-8abd-df0aa25ceb9b",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M36 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 10600,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m36-5g-6-gb-128-gb"
+  },
+  {
+    "id": "23754f8f-1376-4de8-b981-6d1300281cb6",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Flip 7",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 58750,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-z-flip-7-12-gb-256-gb"
+  },
+  {
+    "id": "76b2c46b-4bb5-4835-8135-cfb4526f6c9d",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Flip 7",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 59440,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-z-flip-7-12-gb-512-gb"
+  },
+  {
+    "id": "ba0101f5-fb72-400e-8b8e-227192b15928",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Flip7 FE 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 51250,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-z-flip7-fe-5g"
+  },
+  {
+    "id": "d43f7fc9-b186-4a13-8997-ae12a7d9fd60",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F56 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 16060,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f56-5g-8-gb-128-gb"
+  },
+  {
+    "id": "d31cc10e-41c9-4e99-802b-f1d56ec6a10d",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F56 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 18570,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f56-5g-8-gb-256-gb"
+  },
+  {
+    "id": "6b3d3798-27d8-4278-a39e-bce08fd05208",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A17 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 13670,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a17-5g-8-gb-256-gb"
+  },
+  {
+    "id": "a3d6133f-b1d9-4bd7-8397-501d4e4493c1",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A17 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12450,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a17-5g-8-gb-128-gb"
+  },
+  {
+    "id": "7f4f5f5d-2e1b-4fb5-91d3-936bbec17dcb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A17 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 11700,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a17-5g-6-gb-128-gb"
+  },
+  {
+    "id": "571644d8-3c51-4ffa-9cb5-f66c78b84b9c",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M15 5G Prime Edition",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 7710,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m15-5g-prime-edition-6-gb-128-gb"
+  },
+  {
+    "id": "7e4a0d71-9f8e-46a7-84ac-84c7c53e0d6d",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M15 5G Prime Edition",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 7000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m15-5g-prime-edition-4-gb-128-gb"
+  },
+  {
+    "id": "a958a715-879c-43d4-9b8c-fcfad283e681",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M15 5G Prime Edition",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8730,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m15-5g-prime-edition-8-gb-128-gb"
+  },
+  {
+    "id": "d244456e-9dbe-41d9-80b9-b3d67363b98a",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F17 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 8850,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f17-5g-4-gb-128-gb"
+  },
+  {
+    "id": "5a186c27-1905-4135-ac20-4ab412cbea0a",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F17 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 10030,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f17-5g-6-gb-128-gb"
+  },
+  {
+    "id": "9576cbf0-2ddc-4e18-a31c-e4d230a3d6b2",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S25 FE",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 33000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s25-fe-8-gb-128-gb"
+  },
+  {
+    "id": "41b30605-9ecc-4d3e-84e7-abca5d14e10b",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S25 FE",
+    "storage": "8 GB/512 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 40250,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s25-fe-8-gb-512-gb"
+  },
+  {
+    "id": "006e938f-a848-4b0a-b937-d378a9217f9b",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S25 FE",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 36250,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s25-fe-8-gb-256-gb"
+  },
+  {
+    "id": "f2e47a1a-9c21-4739-8557-bcd8da7c7303",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S26",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 61250,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s26-12-gb-512-gb"
+  },
+  {
+    "id": "7c9eabe2-9ebe-4fb0-82f1-909af61fbbcb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S26",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 55720,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s26-12-gb-256-gb"
+  },
+  {
+    "id": "c9e15e6f-5154-4f91-a767-22a4d3cda5a5",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S26 Plus",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 73250,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s26-plus-12-gb-256-gb"
+  },
+  {
+    "id": "1b64ed55-5fb0-4465-9a2c-4207944b2496",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S26 Plus",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 78250,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s26-plus-12-gb-512-gb"
+  },
+  {
+    "id": "a9c3ddfa-7f3f-4553-82fd-a108e430e708",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S26 Ultra",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 83250,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s26-ultra-12-gb-256-gb"
+  },
+  {
+    "id": "89c37f15-ac1f-4cee-a144-8d8873d95fea",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S26 Ultra",
+    "storage": "16 GB/1 TB",
+    "ram": "16 GB",
+    "color": "Default",
+    "basePrice": 105250,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s26-ultra-16-gb-1-tb"
+  },
+  {
+    "id": "a187f32e-66eb-4547-9d38-bc6deab8ea00",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S26 Ultra",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 88750,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s26-ultra-12-gb-512-gb"
+  },
+  {
+    "id": "de783ec9-cb1c-4468-aa7c-e20f7d3ffc46",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A07 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 11630,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a07-5g-6-gb-128-gb"
+  },
+  {
+    "id": "4888d87e-7471-4f56-9a30-4cf60de7544d",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A07 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 10710,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a07-5g-4-gb-128-gb"
+  },
+  {
+    "id": "e2b1dd91-1329-4ebf-8db4-245c485ef2d7",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F70e 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 8700,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f70e-5g-4-gb-128-gb"
+  },
+  {
+    "id": "469104e1-e6bc-4a77-85ab-284750e7b30d",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F70e 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 9700,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f70e-5g-6-gb-128-gb"
+  },
+  {
+    "id": "7d972fe5-5b3f-4c68-afbe-ca657a1fcd86",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A57 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 36350,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a57-5g-8-gb-256-gb"
+  },
+  {
+    "id": "61316a9d-a863-4365-be18-48930e38ec06",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A57 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 39770,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a57-5g-12-gb-256-gb"
+  },
+  {
+    "id": "18c44e01-41a5-4a09-9af4-926eafdd9901",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A37 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 25300,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a37-5g-8-gb-128-gb"
+  },
+  {
+    "id": "0d842e82-3264-4610-8b59-284393186cf5",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A37 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 29510,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a37-5g-8-gb-256-gb"
+  },
+  {
+    "id": "5a2514f1-f00a-44c2-b2d3-ee5448719205",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A37 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 33150,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a37-5g-12-gb-256-gb"
+  },
+  {
+    "id": "8152a72c-5f31-471f-b320-81fda8d78418",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M17e 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 9000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m17e-5g-4-gb-128-gb"
+  },
+  {
+    "id": "216866d2-ebbb-49fa-8dae-98b11734e408",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M17e 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 10500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m17e-5g-6-gb-128-gb"
   }
 ];
