@@ -1197,6 +1197,47 @@ export default function QuotePage() {
                 </div>
               )}
 
+              {selectedBrand === 'Vivo' && (
+                <div style={{ marginBottom: '2rem' }}>
+                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
+                    {[
+                      "V Series",
+                      "X Series",
+                      "Y Series",
+                      "Nex Series",
+                      "Z Series",
+                      "S Series",
+                      "U Series",
+                      "T Series"
+                    ].map((series) => {
+                      const isSelected = selectedVivoSeries === series;
+                      return (
+                        <button
+                          key={series}
+                          type="button"
+                          onClick={() => setSelectedVivoSeries(isSelected ? null : series)}
+                          style={{
+                            padding: '0.75rem 1rem',
+                            borderRadius: '8px',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
+                            color: isSelected ? '#4CD964' : '#fff',
+                            cursor: 'pointer',
+                            fontSize: '0.85rem',
+                            fontWeight: 500,
+                            textAlign: 'center',
+                            transition: 'all 200ms'
+                          }}
+                        >
+                          {series}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
               {selectedBrand === 'OPPO' && (
                 <div style={{ marginBottom: '2rem' }}>
                   <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
