@@ -2593,15 +2593,6 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 5000
   },
   {
-    "id": "oneplus_batch_35",
-    "brand": "OnePlus",
-    "model": "Oneplus Open",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
     "id": "oneplus_batch_36",
     "brand": "OnePlus",
     "model": "OnePlus 12",
