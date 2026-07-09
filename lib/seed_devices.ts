@@ -21392,4 +21392,15 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 10500,
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m17e-5g-6-gb-128-gb"
   }
+,
+  {
+    "id": "b5c87300-ee9d-440a-acd0-b4f09a2e8cca",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 17 Ultra",
+    "storage": "16 GB/512 GB",
+    "ram": "16 GB",
+    "color": "Default",
+    "basePrice": 77150,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-17-ultra-16-gb-512-gb"
+  }
 ];
