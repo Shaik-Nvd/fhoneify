@@ -23,7 +23,6 @@ const TOP_MODELS: TopModel[] = [
   { id: '6', brand: 'Apple', model: 'iPhone 12', ram: '4 GB', storage: '128 GB', price: 17580, image: 'https://m.media-amazon.com/images/I/711wsjBtWeL._SX679_.jpg' },
   { id: '7', brand: 'Apple', model: 'iPhone 12', ram: '4 GB', storage: '64 GB', price: 16850, image: 'https://m.media-amazon.com/images/I/711wsjBtWeL._SX679_.jpg' },
   { id: '8', brand: 'Apple', model: 'iPhone 11', ram: '4 GB', storage: '128 GB', price: 14020, image: 'https://m.media-amazon.com/images/I/71tpxtLD0aL._SX679_.jpg' },
-  { id: '9', brand: 'Motorola', model: 'Edge 50 Fusion', ram: '8 GB', storage: '128 GB', price: 13960, image: 'https://m.media-amazon.com/images/I/71yY-5t98DL._SX679_.jpg' },
   { id: '10', brand: 'Apple', model: 'iPhone 11', ram: '4 GB', storage: '64 GB', price: 13220, image: 'https://m.media-amazon.com/images/I/71tpxtLD0aL._SX679_.jpg' },
 ];
 
