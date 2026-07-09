@@ -19957,5 +19957,2325 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "basePrice": 9850,
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t2x-5g-6-gb-128-gb"
+  },
+  {
+    "id": "e31f8426-9b6a-48fd-ab7d-60020990195f",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 6 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2980,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-6-pro-4-gb-64-gb"
+  },
+  {
+    "id": "f2c80eaa-1665-4d53-aa30-47483be60d6a",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 6 Pro",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3210,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-6-pro-6-gb-64gb"
+  },
+  {
+    "id": "16bab203-0588-4af9-afab-704c15ad15b8",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi A2",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 2920,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-mi-a2-6-gb-128-gb"
+  },
+  {
+    "id": "703a45fc-3472-4c6b-b0e5-93ff9b292e8b",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi A2",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2570,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-mi-a2-4-gb-64-gb"
+  },
+  {
+    "id": "2654fb86-6fbf-4c3a-bc49-8d9aaa290783",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 6",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 1820,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-6-3-gb-32-gb"
+  },
+  {
+    "id": "a12a1abe-540d-48a7-9f7a-02db6430cedc",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 6",
+    "storage": "3 GB/64 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 1900,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-6-3-gb-64-gb"
+  },
+  {
+    "id": "631b0431-2e98-48ef-a5cf-b95fed6b7bbd",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 6 pro",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2230,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-6-pro-3-gb-32-gb"
+  },
+  {
+    "id": "bdc3c757-b5d2-4023-8729-c74c2acb1d3f",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 6 pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2360,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-6-pro-4-gb-64-gb"
+  },
+  {
+    "id": "6f2f0f75-89b3-4c4a-9916-73207512a7d9",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 6A",
+    "storage": "2 GB/16 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 1480,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-6a-2-gb-16-gb"
+  },
+  {
+    "id": "aa76e6ef-b433-48f1-8545-7f3f19e7c04a",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 6A",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 1590,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-6a-2-gb-32-gb"
+  },
+  {
+    "id": "1d20d314-1594-43ba-89cf-c1884a923097",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y2",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-y2-3-gb-32-gb"
+  },
+  {
+    "id": "a61557bd-2da5-4c86-bb7c-b4c797c0b1e5",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y2",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2270,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-y2-4-gb-64-gb"
+  },
+  {
+    "id": "93d0a9b8-1291-4d5b-819e-46efe5b727a5",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 5",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 1780,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-5-3-gb-32-gb"
+  },
+  {
+    "id": "df92ae8c-4f78-4950-b394-327395015e52",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 5",
+    "storage": "2 GB/16 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 1670,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-5-2-gb-16-gb"
+  },
+  {
+    "id": "73bfc3d8-bcef-4982-96fe-3559eb0d4fa9",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 5",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2130,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-5-4-gb-64-gb"
+  },
+  {
+    "id": "a7ac2cb2-c159-4eb1-bd43-5db0387e5d87",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 5 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2570,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-5-pro-4-gb-64-gb"
+  },
+  {
+    "id": "7183203f-73d0-4c73-9aa6-51a986cd80ce",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 5 Pro",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 2780,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-5-pro-6-gb-64-gb"
+  },
+  {
+    "id": "c9a3c19e-bc73-4146-9353-c6d9733060d2",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 5",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2160,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-5-4-gb-64-gb"
+  },
+  {
+    "id": "2979b1aa-55a4-4a40-be27-9e8b1473d1d7",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 5",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 1860,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-5-3-gb-32-gb"
+  },
+  {
+    "id": "1f33e717-9eb4-42bd-b14d-4277e368b8e0",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 5A",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 1360,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-5a-3-gb-32-gb"
+  },
+  {
+    "id": "65f73796-678a-414d-86e4-803beee927ae",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 5A",
+    "storage": "2 GB/16 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 1210,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-5a-2-gb-16-gb"
+  },
+  {
+    "id": "9a42da7d-509c-4c6d-898d-bdb10a0ec501",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y1",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 1450,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-y1-4-gb-64-gb"
+  },
+  {
+    "id": "f4dd058a-3647-4c2d-bdae-7217815a9d2b",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y1",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 1300,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-y1-3-gb-32-gb"
+  },
+  {
+    "id": "2686f267-403d-43df-a029-99980f5df46c",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y1 Lite",
+    "storage": "2 GB/16 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 1060,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-y1-lite-2-gb-16-gb"
+  },
+  {
+    "id": "ac3bf4fe-bbb3-4f5d-8a02-b2484a46bab8",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi Mix 2",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 2910,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-mi-mix-2-6-gb-128-gb"
+  },
+  {
+    "id": "1d12494c-8276-443c-b606-fd9ef81cf61b",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi Max 2",
+    "storage": "4 GB/32 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 1760,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-mi-max-2-4-gb-32-gb"
+  },
+  {
+    "id": "338634cf-6a83-4123-bb9d-e18dc7288b1e",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi Max 2",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 1890,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-mi-max-2-4-gb-64-gb"
+  },
+  {
+    "id": "b8ff2cd5-d2e5-4fc9-9df0-43358eac6b32",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi Max 2",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2290,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-mi-max-2-4-gb-128-gb"
+  },
+  {
+    "id": "0ebf74ad-61d4-472b-ab4a-0b3eae46c1d0",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3180,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-7-4-gb-64-gb"
+  },
+  {
+    "id": "2e3f09d4-c32a-4a7a-8aa4-00020a9b1b45",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2550,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-7-3-gb-32-gb"
+  },
+  {
+    "id": "381119df-3184-4d21-bb0f-02cf26069f89",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7 Pro",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3970,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-7-pro-6-gb-64-gb"
+  },
+  {
+    "id": "19a06013-afb9-48ef-b2f4-1b2b29d2a0ab",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3830,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-7-pro-4-gb-64-gb"
+  },
+  {
+    "id": "40a774fe-d145-45bb-94c3-fb7ab5a1a4bf",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7 Pro",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4170,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-7-pro-6-gb-128-gb"
+  },
+  {
+    "id": "c54a2c7e-6a2e-4dc7-9657-5ba2092cdb27",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Go",
+    "storage": "1 GB/8 GB",
+    "ram": "1 GB",
+    "color": "Default",
+    "basePrice": 910,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-go-1-gb-8-gb"
+  },
+  {
+    "id": "8d52d97f-978f-470a-a239-979054c508ef",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Go",
+    "storage": "1 GB/16 GB",
+    "ram": "1 GB",
+    "color": "Default",
+    "basePrice": 1110,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-go-1-gb-16-gb"
+  },
+  {
+    "id": "08f39d93-8b45-4beb-a126-9ad27e8f16e1",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 2570,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-7-2-gb-32-gb"
+  },
+  {
+    "id": "1cc1ba4a-cafb-4707-849d-0dbd7bf7b8b3",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2650,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-7-3-gb-32-gb"
+  },
+  {
+    "id": "467dc80e-f420-4cea-8131-5662cadf75b9",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7",
+    "storage": "2 GB/16 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 2420,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-7-2-gb-16-gb"
+  },
+  {
+    "id": "d96f3b4a-c572-4428-b433-7dccf1470145",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7",
+    "storage": "3 GB/64 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2760,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-7-3-gb-64-gb"
+  },
+  {
+    "id": "8543b08e-be04-4ff6-a98a-2ae25aecd301",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7S",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3520,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-7s-4-gb-64-gb"
+  },
+  {
+    "id": "b409e68b-71bd-4085-8722-41f4034cc1d1",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 7S",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 3430,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-7s-3-gb-32-gb"
+  },
+  {
+    "id": "fa76cb06-3e13-4621-a77d-6d4aa0d98bc4",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y3",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2420,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-y3-3-gb-32-gb"
+  },
+  {
+    "id": "c8430f16-72e6-47b7-b0e5-58c294c50f18",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Y3",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2570,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-y3-4-gb-64-gb"
+  },
+  {
+    "id": "c13073b7-13f8-4840-b106-15e21bec5fc5",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Black Shark 2",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-black-shark-2-6-gb-128-gb"
+  },
+  {
+    "id": "323707de-ea53-46e9-beda-d44be8ed6c58",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Black Shark 2",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 5980,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-black-shark-2-12-gb-256-gb"
+  },
+  {
+    "id": "782d17e9-7ce6-4416-be0a-03a98dfeebae",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi K20",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4700,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-k20-6-gb-64-gb"
+  },
+  {
+    "id": "706543b0-47e5-4858-8ae7-fc983bf84ee1",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi K20",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5040,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-k20-6-gb-128-gb"
+  },
+  {
+    "id": "e2eda72b-5fef-419b-b1b3-29a0f04482b4",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi K20 Pro",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-k20-pro-8-gb-256-gb"
+  },
+  {
+    "id": "ae6b3998-36ad-4ad3-921f-c6a0b2b01eab",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi K20 Pro",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5790,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-k20-pro-6-gb-128-gb"
+  },
+  {
+    "id": "4cb0a026-0b73-43c2-a3b2-390e6672191c",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7A",
+    "storage": "2 GB/16 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 1510,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-7a-2-gb-16-gb"
+  },
+  {
+    "id": "942de17b-1dce-4071-8b43-32c8a7f456a4",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7A",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 1670,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-7a-2-gb-32-gb"
+  },
+  {
+    "id": "21970309-6409-4ef2-a574-090439bc1b6a",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 7A",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 1790,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-7a-3-gb-32-gb"
+  },
+  {
+    "id": "c6468cac-1505-4970-838a-5e03dfbd371b",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi A3",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3790,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-mi-a3-4-gb-64-gb"
+  },
+  {
+    "id": "76bbe67e-9c7a-485a-ad3b-6166b0965720",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi A3",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-mi-a3-6-gb-128-gb"
+  },
+  {
+    "id": "39ca0dbb-3783-43cb-aeeb-0f272d9d3a06",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 8A",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2540,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-8a-3-gb-32-gb"
+  },
+  {
+    "id": "a0f4e4e1-f9e8-482e-be7c-835ab6c0b47f",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 8A",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 2380,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-8a-2-gb-32-gb"
+  },
+  {
+    "id": "db378e7a-6be0-4d3e-a1ab-0a75dd1cdfdb",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 8",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3450,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-8-4-gb-64-gb"
+  },
+  {
+    "id": "bba18f9d-1156-46dc-8395-5b881f808dea",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 8",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 3640,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-8-3-gb-32-gb"
+  },
+  {
+    "id": "9904283b-c4ae-44fd-9d87-929cf669eb42",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 8",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3860,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-8-4-gb-64-gb"
+  },
+  {
+    "id": "6756fccf-056f-4f39-af7e-525b17cd24df",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 8",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4180,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-8-6-gb-128-gb"
+  },
+  {
+    "id": "c5269fb5-9d30-48df-adb7-f25a5e726b87",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 8 Pro",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4320,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-8-pro-6-gb-64-gb"
+  },
+  {
+    "id": "306839ca-4fb2-4210-800d-fd8284be5a83",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 8 Pro",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4630,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-8-pro-6-gb-128-gb"
+  },
+  {
+    "id": "0a0d3e03-8186-45a9-897c-9e7a47e4c71c",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 8 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 4930,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-8-pro-8-gb-128-gb"
+  },
+  {
+    "id": "f358c2d5-7e26-4993-bbcb-c00a0328bcd0",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9 Pro",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4910,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-9-pro-4-gb-128-gb"
+  },
+  {
+    "id": "de1fb59b-af71-4dc2-9ad8-80416643b723",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9 Pro",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5090,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-9-pro-6-gb-128-gb"
+  },
+  {
+    "id": "6e5349a1-b60c-4c8f-8637-134196390a32",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4510,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-9-pro-4-gb-64-gb"
+  },
+  {
+    "id": "85f2ea72-f648-46ac-8d08-58c37c98786d",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 8A Dual",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2880,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-8a-dual-3-gb-32-gb"
+  },
+  {
+    "id": "aafb662d-d24a-4449-839a-cf9fc4a12a7b",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 8A Dual",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 2780,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-8a-dual-2-gb-32-gb"
+  },
+  {
+    "id": "8efde84a-cf11-4f75-bcab-4fb1fb5302d8",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 8A Dual",
+    "storage": "3 GB/64 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 3130,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-8a-dual-3-gb-64-gb"
+  },
+  {
+    "id": "71947d2d-d0ac-47a7-b7e2-1effc8e9a99a",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9 Pro Max",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4880,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-9-pro-max-6-gb-64-gb"
+  },
+  {
+    "id": "46a884a0-f9d1-4e2e-b10f-c8b4c538e42d",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9 Pro Max",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5350,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-9-pro-max-6-gb-128-gb"
+  },
+  {
+    "id": "1ad4d9d3-ca3a-4bac-b9b2-2ac89c202e52",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9 Pro Max",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5610,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-9-pro-max-8-gb-128-gb"
+  },
+  {
+    "id": "69cca259-5f54-4036-8b4d-d4f85c6dcb99",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4310,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-9-4-gb-64-gb"
+  },
+  {
+    "id": "5305ba8d-049e-4c59-8d51-151761b4c7cd",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4470,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-9-4-gb-128-gb"
+  },
+  {
+    "id": "5dc2fc98-13a9-4847-b8da-1655f1617299",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 9",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4700,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-9-6-gb-128-gb"
+  },
+  {
+    "id": "243742db-2f87-4ee7-bf41-ad7893a39a87",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9 Prime",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3620,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-9-prime-4-gb-64-gb"
+  },
+  {
+    "id": "b4fcb84d-f798-44be-ba6c-7f12e4ac86ec",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9 Prime",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3920,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-9-prime-4-gb-128-gb"
+  },
+  {
+    "id": "dd6084df-2319-4a4b-bb4c-9f96539f5de6",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3550,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-9-4-gb-128-gb"
+  },
+  {
+    "id": "ec864cc0-7044-4eb1-a9b0-aa1342ffa2de",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-9-4-gb-64-gb"
+  },
+  {
+    "id": "c8989d20-d40a-4aa4-97d6-cdaa307b88b8",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9A",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 3030,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-9a-3-gb-32-gb"
+  },
+  {
+    "id": "dd81e6f2-75f6-40c3-a74c-78af981fe081",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9A",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 2800,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-9a-2-gb-32-gb"
+  },
+  {
+    "id": "0056a95a-496b-437d-b8c9-a9955d7266e8",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9i",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3140,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-9i-4-gb-64-gb"
+  },
+  {
+    "id": "49f9e8b8-4728-45d2-b228-2882e98402a4",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9i",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3440,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-9i-4-gb-128-gb"
+  },
+  {
+    "id": "dc9422bf-70f0-4e15-9c1a-af6bc0554c4f",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10T",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7660,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-mi-10t-8-gb-128-gb"
+  },
+  {
+    "id": "ee565d60-3f66-40c0-bbb2-cd88b8a58cdc",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10T",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 7340,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-mi-10t-6-gb-128-gb"
+  },
+  {
+    "id": "fcfe05e8-4cf9-4089-a1f0-5d89ed1378fa",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10T Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7840,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-mi-10t-pro-8-gb-128-gb"
+  },
+  {
+    "id": "197990a1-8e09-4a4a-91b0-0318ee973b8f",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10i",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7610,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-mi-10i-8-gb-128-gb"
+  },
+  {
+    "id": "6442c16e-8fa9-41d0-b53b-9e077a6f37b8",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10i",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 6800,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-mi-10i-6-gb-64-gb"
+  },
+  {
+    "id": "05c9bf88-8ede-4365-a224-8b2ac1f589e3",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10i",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 7380,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-mi-10i-6-gb-128-gb"
+  },
+  {
+    "id": "b0db9c8e-eed0-4424-a5a4-1657889bc13a",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9 Power",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4090,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-9-power-6-gb-128-gb"
+  },
+  {
+    "id": "67bab340-2b33-4b75-b774-8956f1b9b235",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9 Power",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3640,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-9-power-4-gb-64-gb"
+  },
+  {
+    "id": "66c8aebd-adc5-4541-a6a0-d18cad8e90b0",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9 Power",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3880,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-9-power-4-gb-128-gb"
+  },
+  {
+    "id": "83d010a5-9f18-426a-9f53-f1fd55856023",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4320,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-10-4-gb-64-gb"
+  },
+  {
+    "id": "d43e5b0e-135f-4bae-b197-55e02cc3160c",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4700,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-10-6-gb-128-gb"
+  },
+  {
+    "id": "4a18a6da-c95b-4a9c-a750-cdd66db6323e",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5840,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-10-pro-8-gb-128-gb"
+  },
+  {
+    "id": "db4e0758-b852-4a3e-ab11-4a676bb479bf",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Pro",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5260,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-10-pro-6-gb-128-gb"
+  },
+  {
+    "id": "09f4d345-4eb1-4e3f-a85e-a90868c001f3",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Pro",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4620,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-10-pro-6-gb-64-gb"
+  },
+  {
+    "id": "0b1014c1-b2ea-4975-a91a-582f734c9a5b",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Pro Max",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5560,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-10-pro-max-6-gb-128-gb"
+  },
+  {
+    "id": "65e478b6-32f4-4cf5-bf1d-105b641ad9ae",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Pro Max",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5070,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-10-pro-max-6-gb-64-gb"
+  },
+  {
+    "id": "eadd2216-c723-40b0-b26f-61d4dd9c17dc",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Pro Max",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6170,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-10-pro-max-8-gb-128-gb"
+  },
+  {
+    "id": "dc7610db-5e25-4352-9e4b-26abeb911359",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11X Pro",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8260,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-mi-11x-pro-8-gb-256-gb"
+  },
+  {
+    "id": "9a799a10-f637-44dc-9d40-6b1907b294cd",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11X Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7690,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-mi-11x-pro-8-gb-128-gb"
+  },
+  {
+    "id": "12b320b4-b247-45a8-ac5e-09c7d4967f67",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11 Ultra",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 17370,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-mi-11-ultra-12-gb-256-gb"
+  },
+  {
+    "id": "a386796c-abab-4426-99f4-5e2b823854e8",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11X",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 7630,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-mi-11x-6-gb-128-gb"
+  },
+  {
+    "id": "0d5e4a31-be4f-492e-84d1-a97e745a4854",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11X",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8330,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-mi-11x-8-gb-128-gb"
+  },
+  {
+    "id": "ce28c565-ac09-4a41-a2b5-0b6075a98122",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11 Lite",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5730,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-mi-11-lite-6-gb-128-gb"
+  },
+  {
+    "id": "2acc7110-4753-4e04-a3eb-9551bf33dac2",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 11 Lite",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6150,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-mi-11-lite-8-gb-128-gb"
+  },
+  {
+    "id": "6e913ffd-1f47-44cb-b9ff-12f610dda0c1",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10s",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4710,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-10s-6-gb-64-gb"
+  },
+  {
+    "id": "20b511a1-4935-40ca-bccd-a158e7e07bfa",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10s",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-10s-6-gb-128-gb"
+  },
+  {
+    "id": "79d1337f-afa3-42e8-ae3f-8ff4e2a24422",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10s",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5170,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-10s-8-gb-128-gb"
+  },
+  {
+    "id": "8a273a00-7ac1-4208-b61f-22a1b91a4b9c",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10T 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 6550,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-10t-5g-6-gb-128-gb"
+  },
+  {
+    "id": "7da2bed9-ca4e-440e-95b4-ead90344d198",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10T 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5910,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-10t-5g-4-gb-64-gb"
+  },
+  {
+    "id": "1f3de0c2-7f85-4b57-994e-3e2ae398bbd7",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 10410,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-mi-10-8-gb-256-gb"
+  },
+  {
+    "id": "ad678d51-1e8f-456b-adc4-14a24fd35a10",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Mi 10",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 10070,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-mi-10-8-gb-1280gb"
+  },
+  {
+    "id": "8e287ec8-7522-46a8-b3ad-55179c1b4622",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 10 Prime",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4140,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-10-prime-4-gb-64-gb"
+  },
+  {
+    "id": "e24d80d8-b0fe-4c66-9674-810290161898",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 10 Prime",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4620,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-10-prime-6-gb-128-gb"
+  },
+  {
+    "id": "eca51b76-e8c4-4fd0-9aed-9cf6127c0b9c",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Lite",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4290,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-10-lite-4-gb-64-gb"
+  },
+  {
+    "id": "2137591d-607b-474b-8930-1d75f9b041c5",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Lite",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4440,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-10-lite-4-gb-128-gb"
+  },
+  {
+    "id": "77809c9a-ebec-4905-ad80-98dd6cab7dec",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10 Lite",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4740,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-10-lite-6-gb-128-gb"
+  },
+  {
+    "id": "0e607279-e9f7-43a6-958c-e20ea11e2fe1",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11T 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7430,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-11t-5g-8-gb-128-gb"
+  },
+  {
+    "id": "48536652-7556-463b-80e1-6822f838514b",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11T 5G",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 6400,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-11t-5g-6-gb-64-gb"
+  },
+  {
+    "id": "bdfaff32-2874-4f77-a3e5-ed2274506478",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11T 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 7110,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-11t-5g-6-gb-128-gb"
+  },
+  {
+    "id": "10ffeb1a-d136-475b-8ce6-a9b846292f2d",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9 Activ",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3070,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-9-activ-4-gb-64-gb"
+  },
+  {
+    "id": "dc53a4d9-593e-47b6-a05b-d0e21a878355",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 9 Activ",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 3330,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-9-activ-6-gb-128-gb"
+  },
+  {
+    "id": "d44022e9-ee5a-4533-8c7f-2a3a4defade9",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 11i 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 7730,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-11i-5g-6-gb-128-gb"
+  },
+  {
+    "id": "a4de4771-609a-465b-95e5-7a94d959b683",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 11i 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7880,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-11i-8-gb-128-gb"
+  },
+  {
+    "id": "7278d0cc-042c-41fe-8e0b-717bf9f02903",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 11i Hypercharge 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8190,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-11i-hypercharge-5g-8-gb-128-gb"
+  },
+  {
+    "id": "f00d7bf1-333f-40fd-b3de-40ff329a1549",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 11i Hypercharge 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 7550,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-11i-hypercharge-5g-6-gb-128-gb"
+  },
+  {
+    "id": "e5e697e0-a267-454a-a8f0-5d06793acf11",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11S",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-11s-8-gb-128-gb"
+  },
+  {
+    "id": "b21c6b04-9c76-40c8-86d4-f675c993faf4",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11S",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5300,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-11s-6-gb-128-gb"
+  },
+  {
+    "id": "6cdfd4e1-7767-423a-9469-3ebb0555c144",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11S",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5170,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-11s-6-gb-64-gb"
+  },
+  {
+    "id": "cae53bb8-295b-4c66-a2cb-fade6ea526ab",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11 Pro Plus 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8430,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-11-pro-plus-5g-8-gb-128-gb"
+  },
+  {
+    "id": "85fee8ed-03d2-4915-a1c1-65e77a8bfabd",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11 Pro Plus 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 7810,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-11-pro-plus-5g-6-gb-128-gb"
+  },
+  {
+    "id": "d1ab972d-05cb-4630-93e9-ac31cb51516a",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11 Pro Plus 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8830,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-11-pro-plus-5g-8-gb-256-gb"
+  },
+  {
+    "id": "7af32044-1fbb-4416-b60d-e51ec13ed6b5",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 10",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4290,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-10-6-gb-128-gb"
+  },
+  {
+    "id": "f29e881a-0c7b-4061-ab4b-5937e594467c",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 10",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3970,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-10-4-gb-64-gb"
+  },
+  {
+    "id": "aa042856-42a8-429f-8ba7-bc4f53e02fb6",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 10 Prime 2022",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4390,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-10-prime-2022-4-gb-128-gb"
+  },
+  {
+    "id": "105bba86-9b9f-414a-ad06-8b8e5f40679c",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 10 Prime 2022",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-10-prime-2022-4-gb-64-gb"
+  },
+  {
+    "id": "45a00b5e-345e-4a0a-bad9-5066c38bb28a",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 10A",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3670,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-10a-4-gb-64-gb"
+  },
+  {
+    "id": "2a5613d7-abf4-48b6-820a-8c8c821ffca4",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 10A",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 3030,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-10a-3-gb-32-gb"
+  },
+  {
+    "id": "cc289252-d9d9-442c-a67e-00b202b3a209",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi K50i 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8930,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-k50i-8-gb-256-gb"
+  },
+  {
+    "id": "e751cad7-e32a-4526-ba3a-98568dadced2",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi K50i 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 8490,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi--k50i-6-gb-128-gb"
+  },
+  {
+    "id": "198b6318-8337-43a9-b573-f088625ce52e",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 11 Prime 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5560,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-11-prime-5g-4-gb-64-gb"
+  },
+  {
+    "id": "aa48d743-de31-4411-8236-ace6b6e9dd52",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 11 Prime 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5920,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-11-prime-5g-6-gb-128-gb"
+  },
+  {
+    "id": "4a7fc8f4-68d7-448d-b505-f965c027782f",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 11 Prime",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4730,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-11-prime-6-gb-128-gb"
+  },
+  {
+    "id": "58027092-c93a-41c7-8966-b9cbb4fb2702",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 11 Prime",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4560,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-11-prime-4-gb-64-gb"
+  },
+  {
+    "id": "d08e57fb-d990-487d-aa0e-fc3875465b01",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A1 Plus",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 2880,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-a1-plus-3-gb-32-gb"
+  },
+  {
+    "id": "422e21a2-ee6b-4bc7-a552-cd8c1a8558d4",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A1 Plus",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 2650,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-a1-plus-2-gb-32-gb"
+  },
+  {
+    "id": "dba8b52f-5f22-441b-8112-613a72aedf9d",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 12 Pro Plus 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 11810,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-12-pro-plus-5g-8-gb-256-gb"
+  },
+  {
+    "id": "b8c44e6d-3f83-4544-b11b-f853626d6caa",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 12 Pro Plus 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 12510,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-12-pro-plus-5g-12-gb-256-gb"
+  },
+  {
+    "id": "b38c4673-d2e5-48eb-af35-a1f892c4ef6a",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 12 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 8300,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-12-5g-4-gb-128-gb"
+  },
+  {
+    "id": "433e2776-407b-445a-b58d-0563022364c9",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 12 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 8680,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-12-5g-6-gb-128-gb"
+  },
+  {
+    "id": "fc8e4da6-74b8-4363-8f50-492055761f7f",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 12 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 9370,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-12-5g-8-gb-256-gb"
+  },
+  {
+    "id": "d3f16b59-69ea-4a3a-a785-e8a6166c66b5",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 12 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 11410,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-12-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "47d48d57-a571-4743-a638-e1babdf28fe3",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 12 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 12360,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-12-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "530cb2ea-5397-40ad-98f8-21ef0933e91b",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 12 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 11890,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-12-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "c0f708f5-3fb1-4bdb-bf5d-501048e28ed8",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 12 Pro 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 10640,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-12-pro-5g-6-gb-128-gb"
+  },
+  {
+    "id": "12a1d9da-9453-41da-897d-a9c7eade87ad",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A2 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4030,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-a2-plus-4-gb-64-gb"
+  },
+  {
+    "id": "b8ab9e7f-dc09-4539-928d-4ac83ee92450",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A2 Plus",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 3850,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-a2-plus-2-gb-32-gb"
+  },
+  {
+    "id": "325e4e40-6d6a-43bc-acc5-c00b1f44ad9e",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A2 Plus",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4170,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-a2-plus-4-gb-128-gb"
+  },
+  {
+    "id": "1529c1a7-b9fa-4523-be57-05e1d56c6619",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A2",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 3300,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-a2-2-gb-32-gb"
+  },
+  {
+    "id": "1c868e4c-44bf-43cc-9501-fc9e6e2434d3",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A2",
+    "storage": "2 GB/64 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 3630,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-a2-2-gb-64-gb"
+  },
+  {
+    "id": "7793c8d5-35bf-4c92-be24-83d369d525b7",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A2",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3850,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-a2-4-gb-64-gb"
+  },
+  {
+    "id": "0df8da7f-6d36-46c3-a80b-6e44bf93a58f",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 12 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 9480,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-12-5g-8-gb-256-gb"
+  },
+  {
+    "id": "a0bdf645-9748-44e1-9b21-d10f4005bebb",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 12 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 7560,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-12-5g-4-gb-128-gb"
+  },
+  {
+    "id": "6044b200-87ef-4924-a38c-ae19861676df",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 12 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 8800,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-12-5g-6-gb-128-gb"
+  },
+  {
+    "id": "2d665689-b284-47c8-8e7b-0cb836fa20af",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 12C",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5430,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-12-c-4-gb-128-gb"
+  },
+  {
+    "id": "8624d114-0eaa-49a6-9e0d-30029b2dc5b6",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 12C",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5390,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-12c-4-gb-64-gb"
+  },
+  {
+    "id": "cf3a2e71-f89a-4645-b57d-333d82771fb4",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 12C",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5850,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-12-c-6-gb-128-gb"
+  },
+  {
+    "id": "25d3acc1-d87c-4823-ba5a-be29ab736477",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 12",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5870,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-12-4-gb-128-gb"
+  },
+  {
+    "id": "63ccbb5d-a168-4301-a940-12e160a20562",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 12",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 6310,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-12-6-gb-128-gb"
+  },
+  {
+    "id": "e16f2c3c-71c7-474d-a8ef-41b284e1ccb9",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 13C",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5480,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-13c-4-gb-128-gb"
+  },
+  {
+    "id": "fe326a08-3472-4f0c-a48a-c77bc2426e10",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 13C",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 6020,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-13c-8-gb-256-gb"
+  },
+  {
+    "id": "4b6c0f8c-1d42-48fe-b525-a4e07f36f5ea",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 13C",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5590,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-13c-6-gb-128-gb"
+  },
+  {
+    "id": "1626f189-c652-41c6-b167-b62a65c70d05",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 13C 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 7220,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-13c-5g-4-gb-128-gb"
+  },
+  {
+    "id": "66d425bf-be94-43ee-a680-579a54fafaa1",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 13C 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 7550,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-13c-5g-6-gb-128-gb"
+  },
+  {
+    "id": "fae7c4b7-33fa-483a-81ef-c1b83aa03e30",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 13C 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8110,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-13c-5g-8-gb-256-gb"
+  },
+  {
+    "id": "9c927af0-c6ea-45e1-9a67-c62fad273111",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 13 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 10050,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-13-5g-6-gb-128-gb"
+  },
+  {
+    "id": "6f8b0a98-29dd-4c6a-92aa-847e7b5ba698",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 13 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 10410,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-13-5g-8-gb-256-gb"
+  },
+  {
+    "id": "b722a612-3067-4a62-89c4-61575cc0a6f5",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 13 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 10880,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-13-5g-12-gb-256-gb"
+  },
+  {
+    "id": "b59eec62-3991-437c-8589-09942219f1d6",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 13 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12030,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-13-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "6fe49d36-211e-4eab-9708-088dbf606a4b",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 13 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 13410,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-13-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "46e752c1-81be-49cc-add4-6c7858a6c306",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 13 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 13230,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-13-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "36a31363-aee1-4934-9411-188a799e307c",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 13 Pro Plus 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 15930,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-13-pro-plus-5g-12-gb-256-gb"
+  },
+  {
+    "id": "10d40990-1d51-4e8c-818a-27388aa67f74",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 13 Pro Plus 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 15220,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-13-pro-plus-5g-8-gb-256-gb"
+  },
+  {
+    "id": "38fd14dc-fa79-4198-bbf8-61634e41eaf7",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 13 Pro Plus 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 16500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-13-pro-plus-5g-12-gb-512-gb"
+  },
+  {
+    "id": "56f79e0c-9229-4c00-965e-5d99cb27d6f2",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A3",
+    "storage": "3 GB/64 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 4120,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-a3-3-gb-64-gb"
+  },
+  {
+    "id": "96b5eaa9-8d3b-447e-b728-69e7db382dc5",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A3",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4540,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-a3-4-gb-128-gb"
+  },
+  {
+    "id": "fc44bdff-e802-47c7-bb55-3537cb5da9c4",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A3",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4750,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-a3-6-gb-128-gb"
+  },
+  {
+    "id": "3ea92151-08e3-49d1-b456-1902a7d12a99",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 14 CIVI",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 18800,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-14-civi-8-gb-256-gb"
+  },
+  {
+    "id": "a495ac18-8847-4009-8cd8-898cac1ac533",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 14 CIVI",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 19450,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-14-civi-12-gb-512-gb"
+  },
+  {
+    "id": "ca55348d-90a5-4498-903a-5619559d412a",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A3x",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4070,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-a3x-4-gb-128-gb"
+  },
+  {
+    "id": "8e31f4c1-d027-4dea-b868-1641d5ff3dc0",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A3x",
+    "storage": "3 GB/64 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 3860,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-a3x-3-gb-64-gb"
+  },
+  {
+    "id": "4623f889-5b1c-4de1-957e-736fdb182bf4",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 13 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8770,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-13-5g-8-gb-128-gb"
+  },
+  {
+    "id": "35fe5e9a-eebf-430f-a9bd-14a71504baff",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 13 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 8410,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-13-5g-6-gb-128-gb"
+  },
+  {
+    "id": "da6c5ebc-559d-4b8e-b593-abf54795603f",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 14 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 11810,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-14-5g-8-gb-256-gb"
+  },
+  {
+    "id": "e17aea1b-77fc-4311-a885-1fc71baa6d02",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 14 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 10660,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-14-5g-6-gb-128-gb"
+  },
+  {
+    "id": "fecc9bef-3b0c-4a48-a880-535909764241",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 14 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 10990,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-14-5g-8-gb-128-gb"
+  },
+  {
+    "id": "78a38d19-ceeb-47f5-82cb-959afc2c67dd",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 14 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 15050,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-14-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "79c49cbe-f42b-496b-bf59-c89771cd85b4",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 14 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 15740,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-14-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "28d9f15e-3b35-4842-9d55-37683f2cf9e5",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 14 Pro Plus 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 19230,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-14-pro-plus-5g-12-gb-512-gb"
+  },
+  {
+    "id": "9ae54659-8938-4952-81a1-f2d41d100f85",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 14 Pro Plus 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 16900,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-14-pro-plus-5g-8-gb-128-gb"
+  },
+  {
+    "id": "28fdb82a-60e9-4cdf-939d-0ed013f679e8",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 14C 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 6870,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-14c-5g-4-gb-64-gb"
+  },
+  {
+    "id": "17d13bce-ac8b-422b-8e43-2b53ed4f9a44",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 14C 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 7260,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-14c-5g-4-gb-128-gb"
+  },
+  {
+    "id": "c0ad3d21-f59d-45de-b857-12df725b9ce9",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 14C 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 8040,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-14c-5g-6-gb-128-gb"
+  },
+  {
+    "id": "52aecd47-bf20-4975-ad4f-739a40a6118a",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A4 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 6100,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-a4-5g-4-gb-128-gb"
+  },
+  {
+    "id": "c4c54c9d-c9cb-42f7-8a20-40db3cc98830",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A4 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5820,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-a4-5g-4-gb-64-gb"
+  },
+  {
+    "id": "aec3adde-8e93-4bd9-a3e3-ec7006dd1947",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A4 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 6370,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-a4-5g-6-gb-128-gb"
+  },
+  {
+    "id": "0644f91f-7b3e-49e4-a7e9-39a683419b81",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A5",
+    "storage": "3 GB/64 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 4500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-a5-3-gb-64-gb"
+  },
+  {
+    "id": "a98168dd-f9a4-443a-930e-cb35dbfd06dd",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A5",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4990,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-a5-4-gb-128-gb"
+  },
+  {
+    "id": "4618a252-2232-49be-8559-11afa8d33ced",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 15 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 13600,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-15-5g-8-gb-256-gb"
+  },
+  {
+    "id": "728d389e-c87b-4730-8055-a896f1a89f53",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 15 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 13000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-15-5g-8-gb-128-gb"
+  },
+  {
+    "id": "4c45a72f-fd60-4be3-88ba-8f4d70f8bfe5",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 15 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 11500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-15-5g-6-gb-128-gb"
+  },
+  {
+    "id": "9945f5db-1022-40be-9e65-522b5f3985c4",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 15C 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 10500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-15c-5g-6-gb-128-gb"
+  },
+  {
+    "id": "c024621e-1c97-416a-bbbd-40536b5cb95b",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 15C 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 11300,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-15c-5g-8-gb-128-gb"
+  },
+  {
+    "id": "41023be8-b9c5-4511-9805-ebd10ae59be4",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 15C 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 9500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-15c-5g-4-gb-128-gb"
+  },
+  {
+    "id": "8874af4f-3573-477a-a5d9-17a5b55317b9",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 15 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 16640,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-15-5g-8-gb-128-gb"
+  },
+  {
+    "id": "cd10f498-99b3-4a4c-b895-8534d4b8c07a",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 15 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 17830,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-15-5g-8-gb-256-gb"
+  },
+  {
+    "id": "fc846974-39c7-4192-ad06-7d5da36a5236",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 15 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 22600,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-15-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "c930902d-75ca-4c72-ae5e-3d896b590433",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 15 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 21800,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-15-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "435a2571-b57d-4a46-9308-ab0d8b146333",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 15 Pro Plus 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 25600,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-15-pro-plus-5g-8-gb-256-gb"
+  },
+  {
+    "id": "f7d69d9d-9aad-4e13-9725-1a8347526e8f",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 15 Pro Plus 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 27000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-15-pro-plus-5g-12-gb-256-gb"
+  },
+  {
+    "id": "b3b72f25-b1b3-486e-9511-95c435d3ce50",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 15 Pro Plus 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 28500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-15-pro-plus-5g-12-gb-512-gb"
+  },
+  {
+    "id": "82fe7d73-babd-46c7-a37d-ff6abead0e37",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 17",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 55150,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-17-12-gb-256-gb"
+  },
+  {
+    "id": "af3edef5-8677-49a6-a873-e41fb9021997",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 17",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 58500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-17-12-gb-512-gb"
+  },
+  {
+    "id": "534ffc9e-be67-4cca-8747-d969c686f929",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 15A 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 10200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-15a-5g-4-gb-128-gb"
+  },
+  {
+    "id": "b6d04cf8-ebb7-4704-9c53-c512d43f5752",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 15A 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 9100,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-15a-5g-4-gb-64-gb"
+  },
+  {
+    "id": "f6d316ce-0b3f-4eaf-9340-fdf36da199a8",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 15A 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 11200,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-15a-5g-6-gb-128-gb"
+  },
+  {
+    "id": "593fb68c-820c-4e8c-96e5-d5666270790d",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A7 Pro 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 8600,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-a7-pro-5g-4-gb-128-gb"
+  },
+  {
+    "id": "20392fe7-50b4-4076-a643-11be2f0f96d8",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A7 Pro 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 8000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-a7-pro-5g-4-gb-64-gb"
+  },
+  {
+    "id": "3b57935d-0eaf-436c-b21d-2742979b7111",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 17T",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 40000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-17t-12-gb-512-gb"
+  },
+  {
+    "id": "cd4d50c0-ba76-4642-bf81-468b5932c87e",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 17T",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 37000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-17t-12-gb-256-gb"
   }
 ];
