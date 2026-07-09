@@ -668,6 +668,9 @@ export default function QuotePage() {
         return indexA - indexB;
       });
     }
+    if (selectedBrand === 'Xiaomi' || selectedBrand === 'Samsung') {
+      return brandModels;
+    }
     return brandModels.sort();
   }, [allDevices, selectedBrand, modelSearchQuery, selectedSamsungSeries, selectedXiaomiSeries, selectedVivoSeries, selectedOppoSeries, selectedRealmeSeries, selectedMotorolaSeries, selectedLenovoSeries, selectedNokiaSeries, selectedHonorSeries, selectedAsusSeries, selectedGoogleSeries, selectedPocoSeries, selectedHuaweiSeries, selectedLgSeries, selectedInfinixSeries, selectedTecnoSeries, selectedIqooSeries]);
   const storageOptions = useMemo(() => {

@@ -86,7 +86,10 @@ function CalculatorTab({ onSave }: { onSave: (log: any) => void }) {
   const [selectedModel, setSelectedModel] = useState('');
   const [selectedStorage, setSelectedStorage] = useState('');
   
-  const models = SEED_DEVICES.filter(d => d.brand === selectedBrand).map(d => d.name || d.model).filter((v, i, a) => a.indexOf(v) === i).sort();
+  let models = SEED_DEVICES.filter(d => d.brand === selectedBrand).map(d => d.name || d.model).filter((v, i, a) => a.indexOf(v) === i);
+  if (selectedBrand !== 'Xiaomi' && selectedBrand !== 'Samsung') {
+    models = models.sort();
+  }
   
   const variants = SEED_DEVICES.filter(d => d.brand === selectedBrand && (d.name === selectedModel || d.model === selectedModel));
   // If the data structure is flat (each object is a variant)
