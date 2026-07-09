@@ -162,14 +162,23 @@ export function calculateFhoneifyPrice(
   let screen_body_sum = 0;
   let functional_sum = 0;
 
+  const safeBrand = String(brand || '');
+  const safeModel = String(model || '');
+  const isApple = safeBrand.toLowerCase() === 'apple';
+  const isFoldable = safeModel.toLowerCase().includes('fold') || safeModel.toLowerCase().includes('flip') || safeModel.toLowerCase().includes('open');
+  const params = isApple ? getAppleModelParams(safeModel) : getAndroidModelParams(safeBrand, safeModel);
+
   const applyGranularDefects = (scale: number) => {
     let sum = 0;
     diagnostics.defects.forEach(d => {
       let penalty = (config.defects_screen_body as any)[d] || 0;
+      
+      const foldableScreenMult = isFoldable ? 3.0 : 1.0;
+
       if (d === 'screen_scratch' && diagnostics.screenCondition) {
-        if (diagnostics.screenCondition === 'Chipped/cracked outside display area') penalty = 0.20;
-        else if (diagnostics.screenCondition === 'More than 2 scratches on screen') penalty = 0.15;
-        else if (diagnostics.screenCondition === '1-2 scratches on screen') penalty = 0.08;
+        if (diagnostics.screenCondition === 'Chipped/cracked outside display area') penalty = 0.20 * foldableScreenMult;
+        else if (diagnostics.screenCondition === 'More than 2 scratches on screen') penalty = 0.15 * foldableScreenMult;
+        else if (diagnostics.screenCondition === '1-2 scratches on screen') penalty = 0.08 * foldableScreenMult;
       }
       if (d === 'screen_spot') {
         let spotPenalty = penalty;
@@ -180,7 +189,7 @@ export function calculateFhoneifyPrice(
         else if (diagnostics.screenLines === 'Display faded along edges') spotPenalty = Math.max(spotPenalty, 0.20);
         if (diagnostics.screenDiscoloration === 'Major Discoloration') spotPenalty = Math.max(spotPenalty, 0.25);
         else if (diagnostics.screenDiscoloration === 'Minor Discoloration') spotPenalty = Math.max(spotPenalty, 0.10);
-        penalty = spotPenalty;
+        penalty = spotPenalty * foldableScreenMult;
       }
       if (d === 'body_scratch') {
         let bPenalty = 0;
@@ -202,11 +211,6 @@ export function calculateFhoneifyPrice(
     });
     return sum;
   };
-
-  const safeBrand = String(brand || '');
-  const safeModel = String(model || '');
-  const isApple = safeBrand.toLowerCase() === 'apple';
-  const params = isApple ? getAppleModelParams(safeModel) : getAndroidModelParams(safeBrand, safeModel);
 
   age_multiplier = 1.0;
   
@@ -238,11 +242,9 @@ export function calculateFhoneifyPrice(
   }
   screen_body_sum = applyGranularDefects(params.physicalScale);
 
-  const isFoldable = safeModel.toLowerCase().includes('fold') || safeModel.toLowerCase().includes('flip') || safeModel.toLowerCase().includes('open');
   if (isFoldable && diagnostics.originalScreen === false) {
     screen_orig_mult = Math.min(screen_orig_mult, 0.35);
   }
-
 
   diagnostics.hardware.forEach(h => { 
     if (h in config.defects_functional) {
