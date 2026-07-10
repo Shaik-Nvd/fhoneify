@@ -259,6 +259,9 @@ export function calculateFhoneifyPrice(
   const hardwareList = diagnostics.hardware || [];
   hardwareList.forEach(h => { 
     if (h in config.defects_functional) {
+      if (h === 'battery_health' && diagnostics.warranty === true) {
+        return; // Cashify waives the battery health penalty if the phone is under warranty
+      }
       functional_sum += (config.defects_functional as any)[h] * params.functionalScale;
     }
   });

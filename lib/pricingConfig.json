@@ -9,7 +9,7 @@
   "ageBonus": {
     "below3": 1.0000,
     "3to6": 0.9427,
-    "6to11": 0.9114,
+    "6to11": 0.9335,
     "above11": 0.7966
   },
   "defects_screen_body": {
