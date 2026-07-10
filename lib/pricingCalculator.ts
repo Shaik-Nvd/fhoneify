@@ -43,7 +43,7 @@ export const getAppleModelParams = (model: string) => {
   };
 
   if (lowerModel.includes('17e')) {
-    params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.55, originalScreenPenalty: 0.70, touchPenalty: 0.55, functionalScale: 1.50, physicalScale: 1.50 };
+    params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.25, originalScreenPenalty: 0.45, touchPenalty: 0.215, functionalScale: 1.50, physicalScale: 1.50 };
   } else if (lowerModel.includes('17')) {
     if (isProMax || isPlus) {
       params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.45, originalScreenPenalty: 0.55, touchPenalty: 0.45, functionalScale: 1.25, physicalScale: 1.25 };
@@ -216,9 +216,9 @@ export function calculateFhoneifyPrice(
     if (!hasValidBill) age_multiplier -= params.gstBillPenalty;
   }
 
-  calls_multiplier = diagnostics.calls === false ? (config.multipliers as any)['calls_no'] : 1.0;
-  touch_multiplier = diagnostics.touch === false ? (config.multipliers as any)['touch_no'] : 1.0;
-  screen_orig_mult = diagnostics.originalScreen === false ? (config.multipliers as any)['originalScreen_no'] : 1.0;
+  calls_multiplier = diagnostics.calls === false ? params.callsPenalty : 1.0;
+  touch_multiplier = diagnostics.touch === false ? params.touchPenalty : 1.0;
+  screen_orig_mult = diagnostics.originalScreen === false ? params.originalScreenPenalty : 1.0;
   
   if (diagnostics.touch === false || (diagnostics.defects || []).includes('broken_screen')) {
     screen_orig_mult = 1.0;

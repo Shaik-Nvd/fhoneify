@@ -173,7 +173,24 @@ export default function QuotePage() {
     setModelSearchQuery('');
     setSelectedStorage(newStorage);
     setSelectionStage(newStage as any);
-    setStep(newStep);
+    
+    setStep((currentStep) => {
+      if (newStep !== currentStep) {
+        setStepHistory(prev => [...prev, currentStep]);
+      }
+      return newStep;
+    });
+  };
+
+  const handleBack = () => {
+    setStepHistory(prev => {
+      const newHistory = [...prev];
+      const previousStep = newHistory.pop();
+      if (previousStep !== undefined) {
+        setStep(previousStep);
+      }
+      return newHistory;
+    });
   };
 
   useEffect(() => {
@@ -188,6 +205,7 @@ export default function QuotePage() {
 
   // New 8-stage flow: 1: Select, 2: BasePrice, 3: BasicQ, 4: Defects, 5: Hardware, 6: Accessories, 7: LeadCapture, 8: FinalPrice
   const [step, setStep] = useState(1);
+  const [stepHistory, setStepHistory] = useState<number[]>([]);
   const [basePrice, setBasePrice] = useState<number | null>(null);
   const [rawBasePrice, setRawBasePrice] = useState<number | null>(null);
   const [finalPrice, setFinalPrice] = useState<number | null>(null);
@@ -1075,6 +1093,14 @@ export default function QuotePage() {
       
       <div id="quote-recaptcha-container"></div>
       
+      {stepHistory.length > 0 && step !== 10 && step !== 11 && step !== 12 && (
+        <div style={{ marginBottom: '1rem', width: '100%' }}>
+          <button type="button" onClick={handleBack} style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', background: '#fff', color: '#333', border: '1px solid #e0e0e0', borderRadius: '8px', fontSize: '0.9rem', fontWeight: 500, cursor: 'pointer', boxShadow: '0 2px 4px rgba(0,0,0,0.05)' }}>
+            <span style={{ fontSize: '1.2rem' }}>←</span> Back
+          </button>
+        </div>
+      )}
+
       {error && <div className="alert-error" style={{ marginBottom: '1rem' }}>{error}</div>}
 
       {/* STAGE 1: DEVICE SELECTION */}
