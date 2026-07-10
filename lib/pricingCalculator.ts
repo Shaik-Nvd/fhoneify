@@ -44,8 +44,16 @@ export const getAppleModelParams = (model: string) => {
 
   if (lowerModel.includes('17e')) {
     params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.55, originalScreenPenalty: 0.70, touchPenalty: 0.55, functionalScale: 1.50, physicalScale: 1.50 };
-  } else if (lowerModel.includes('17') || lowerModel.includes('16') || lowerModel.includes('15') || lowerModel.includes('14')) {
-    if (isProMax || (isPlus && lowerModel.includes('17'))) {
+  } else if (lowerModel.includes('17')) {
+    if (isProMax || isPlus) {
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.45, originalScreenPenalty: 0.55, touchPenalty: 0.45, functionalScale: 1.25, physicalScale: 1.25 };
+    } else if (isPro) {
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.45, originalScreenPenalty: 0.60, touchPenalty: 0.50, functionalScale: 1.20, physicalScale: 1.20 };
+    } else {
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.65, touchPenalty: 0.50, functionalScale: 1.15, physicalScale: 1.15 };
+    }
+  } else if (lowerModel.includes('16') || lowerModel.includes('15') || lowerModel.includes('14')) {
+    if (isProMax) {
       params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.60, touchPenalty: 0.50, functionalScale: 1.09, physicalScale: 1.09 };
     } else if (isPro || isPlus) {
       params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.65, touchPenalty: 0.55, functionalScale: 1.05, physicalScale: 1.05 };
@@ -245,7 +253,21 @@ export function calculateFhoneifyPrice(
     upliftPercent = 1.06;
   }
 
-  const calculated = (rawCalculated * upliftPercent) + box_bonus;
+  // Handle Cashify's AI-Generated Market Price Edge Case
+  let eSim_multiplier = 1.0;
+  let final_box_bonus = box_bonus;
+  
+  if (isApple && safeModel.toLowerCase().includes('17')) {
+    upliftPercent = 1.0; // Do not apply standard 6-8% margin uplift on AI generated prices
+    final_box_bonus = 0; // Box is expected by default for these brand new models in the base price
+    
+    // Penalize Dual eSIM (imported models without physical SIM trays typically sell for less in India)
+    if (diagnostics.eSim === 'Dual eSIM') {
+       eSim_multiplier = 0.95; // 5% deduction for imported Dual eSIM
+    }
+  }
+
+  const calculated = (rawCalculated * upliftPercent * eSim_multiplier) + final_box_bonus;
     
   return Math.max(Math.round(calculated), floor_price);
 }
