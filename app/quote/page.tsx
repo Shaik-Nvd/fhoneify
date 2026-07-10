@@ -70,7 +70,12 @@ export default function QuotePage() {
     if (brand.toLowerCase() !== 'apple') return false;
     const lower = model.toLowerCase();
     
-    // iPhone 14, 15, 16, and 17 series (ALL models)
+    // The iPhone 17e (Slim/Air) does not have the Dual eSIM question in Cashify's flow
+    if (lower.includes('17e')) {
+      return false;
+    }
+    
+    // iPhone 14, 15, 16, and 17 series (ALL models except 17e)
     if (lower.includes('14') || lower.includes('15') || lower.includes('16') || lower.includes('17')) {
       return true;
     }
