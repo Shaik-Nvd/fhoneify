@@ -203,7 +203,11 @@ export function calculateFhoneifyPrice(
   age_multiplier = (config.ageBonus as any)['above11'] || 0.7966; // Default to above11
   
   if (diagnostics.warranty === false) {
-    age_multiplier = (config.ageBonus as any)['above11'] || 0.7966;
+    if (isApple && (safeModel.toLowerCase().includes('16e') || safeModel.toLowerCase().includes('17e'))) {
+      age_multiplier = 0.75305; // Cashify strictly applies a harsher ~75.3% retention for out-of-warranty brand new models
+    } else {
+      age_multiplier = (config.ageBonus as any)['above11'] || 0.7966;
+    }
   } else if (diagnostics.mobileAge) {
     if (diagnostics.mobileAge === 'Below 3 months' || diagnostics.mobileAge === 'below3') {
       age_multiplier = (config.ageBonus as any)['below3'] || 1.0;
