@@ -75,13 +75,13 @@ export default function QuotePage() {
       return false;
     }
     
-    // iPhone 14, 15, 16, and 17 series (ALL models except 17e)
-    if (lower.includes('14') || lower.includes('15') || lower.includes('16') || lower.includes('17')) {
+    // iPhone 17 series (ALL models except 17e) have the eSIM question
+    if (lower.includes('17')) {
       return true;
     }
     
-    // For older generation like iPhone 13, it typically only applies to Pro/Pro Max in this context
-    if (lower.includes('13') && (lower.includes('pro') || lower.includes('max'))) {
+    // For older generations (13, 14, 15, 16), it ONLY applies to Pro and Pro Max models
+    if ((lower.includes('13') || lower.includes('14') || lower.includes('15') || lower.includes('16')) && (lower.includes('pro') || lower.includes('max'))) {
       return true;
     }
     
