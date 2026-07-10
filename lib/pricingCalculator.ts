@@ -285,9 +285,9 @@ export function calculateFhoneifyPrice(
   let final_box_bonus = box_bonus;
   
   if (isApple) {
-    // If the box is missing on an iPhone, strictly deduct exactly 1,200
+    // If the box is missing on an iPhone, strictly deduct exactly 1,000
     if (!diagnostics.accessories?.includes('box')) {
-       final_box_bonus = -1200;
+       final_box_bonus = -1000;
     } else {
        final_box_bonus = 0; // Box is expected by default for iPhones in the base price
     }
