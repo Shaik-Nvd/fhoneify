@@ -69,15 +69,18 @@ export default function QuotePage() {
   const isESimEligible = (brand: string, model: string) => {
     if (brand.toLowerCase() !== 'apple') return false;
     const lower = model.toLowerCase();
-    // eSIM question is only asked for Pro and Pro Max variants of iPhone 13, 14, 15, 16, 17
-    const isProOrProMax = lower.includes('pro') || lower.includes('max');
-    const isRecentGeneration = 
-      lower.includes('13') || 
-      lower.includes('14') || 
-      lower.includes('15') || 
-      lower.includes('16') || 
-      lower.includes('17');
-    return isProOrProMax && isRecentGeneration;
+    
+    // iPhone 14, 15, 16, and 17 series (ALL models)
+    if (lower.includes('14') || lower.includes('15') || lower.includes('16') || lower.includes('17')) {
+      return true;
+    }
+    
+    // For older generation like iPhone 13, it typically only applies to Pro/Pro Max in this context
+    if (lower.includes('13') && (lower.includes('pro') || lower.includes('max'))) {
+      return true;
+    }
+    
+    return false;
   };
 
   const hasChargerInBox = (brand: string, model: string) => {
