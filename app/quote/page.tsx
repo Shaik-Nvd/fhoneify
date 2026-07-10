@@ -2261,7 +2261,20 @@ export default function QuotePage() {
                     const isEligible = isWarrantyEligible(selectedBrand, selectedModel);
                     const hasWarrantyAndBill = diagnostics.warranty === true && diagnostics.validBill === true;
                     if (isEligible && hasWarrantyAndBill) {
-                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 9);
+                      // Cashify skips the age question entirely for the brand new 17e
+                      if (selectedBrand === 'Apple' && selectedModel.toLowerCase().includes('17e')) {
+                         const updatedDiag = { ...diagnostics, mobileAge: 'below3' as const };
+                         setDiagnostics(updatedDiag);
+                         if (isAuthenticated) { 
+                           calculateFinalPrice(updatedDiag); 
+                           setMarketPriceFetched(false);
+                           navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11); 
+                         } else { 
+                           navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 10); 
+                         }
+                      } else {
+                        navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 9);
+                      }
                     } else {
                       const updatedDiag = {
                         ...diagnostics,
@@ -2294,7 +2307,12 @@ export default function QuotePage() {
                     { id: '3to6', label: '3 months - 6 months', sub: 'Valid bill mandatory' },
                     { id: '6to11', label: '6 months - 11 months', sub: 'Valid bill mandatory' },
                     { id: 'above11', label: 'Above 11 months', sub: '' }
-                  ].map((age) => (
+                  ].filter(age => {
+                    const lower = selectedModel.toLowerCase();
+                    const isRecent = selectedBrand === 'Apple' && (lower.includes('16') || lower.includes('17'));
+                    if (isRecent && age.id === 'above11') return false;
+                    return true;
+                  }).map((age) => (
                     <button key={age.id} onClick={() => setDiagnostics({ ...diagnostics, mobileAge: age.id as any })} style={{ display: 'flex', flexDirection: 'column', padding: '1.5rem', borderRadius: '8px', border: diagnostics.mobileAge === age.id ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.mobileAge === age.id ? 'rgba(76,217,100,0.1)' : '#1a1a1a', cursor: 'pointer', color: diagnostics.mobileAge === age.id ? '#4CD964' : '#fff', textAlign: 'left' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: age.sub ? '0.25rem' : '0' }}>
                         <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.mobileAge === age.id ? '1px solid #4CD964' : '1px solid #444', backgroundColor: diagnostics.mobileAge === age.id ? '#4CD964' : 'transparent', flexShrink: 0 }} />
