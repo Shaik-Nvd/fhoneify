@@ -2287,16 +2287,20 @@ export default function QuotePage() {
                     const isEligible = isWarrantyEligible(selectedBrand, selectedModel);
                     const hasWarrantyAndBill = diagnostics.warranty === true && diagnostics.validBill === true;
                     if (isEligible && hasWarrantyAndBill) {
-                      // Cashify skips the age question entirely for the brand new 17e and 16e
+                      // Cashify skips the age question entirely for the brand new 17e and 16e if the box is missing
                       if (selectedBrand === 'Apple' && (selectedModel.toLowerCase().includes('17e') || selectedModel.toLowerCase().includes('16e'))) {
-                         const updatedDiag = { ...diagnostics, mobileAge: 'below3' as const };
-                         setDiagnostics(updatedDiag);
-                         if (isAuthenticated) { 
-                           calculateFinalPrice(updatedDiag); 
-                           setMarketPriceFetched(false);
-                           navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11); 
-                         } else { 
-                           navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 10); 
+                         if (!diagnostics.accessories.includes('box')) {
+                           const updatedDiag = { ...diagnostics, mobileAge: 'below3' as const };
+                           setDiagnostics(updatedDiag);
+                           if (isAuthenticated) { 
+                             calculateFinalPrice(updatedDiag); 
+                             setMarketPriceFetched(false);
+                             navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11); 
+                           } else { 
+                             navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 10); 
+                           }
+                         } else {
+                           navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 9);
                          }
                       } else {
                         navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 9);
