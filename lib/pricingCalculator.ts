@@ -201,17 +201,22 @@ export function calculateFhoneifyPrice(
   age_multiplier = (config.ageBonus as any)['above11'] || 0.7966; // Default to above11
   
   if (diagnostics.warranty === false) {
-    age_multiplier = (config.ageBonus as any)['above11'] || 0.7966;
+    age_multiplier = model.toLowerCase().includes('iphone') ? 0.9338 : ((config.ageBonus as any)['above11'] || 0.7966);
   } else if (diagnostics.mobileAge) {
     if (diagnostics.mobileAge === 'Below 3 months' || diagnostics.mobileAge === 'below3') {
       age_multiplier = (config.ageBonus as any)['below3'] || 1.0;
     } else if (diagnostics.mobileAge === '3 months - 6 months' || diagnostics.mobileAge === '3to6') {
-      age_multiplier = (config.ageBonus as any)['3to6'] || 0.9427;
+      age_multiplier = model.toLowerCase().includes('iphone') ? 0.975 : ((config.ageBonus as any)['3to6'] || 0.9427);
     } else if (diagnostics.mobileAge === '6 months - 11 months' || diagnostics.mobileAge === '6to11') {
-      age_multiplier = (config.ageBonus as any)['6to11'] || 0.9114;
+      age_multiplier = model.toLowerCase().includes('iphone') ? 0.955 : ((config.ageBonus as any)['6to11'] || 0.9114);
     } else {
-      age_multiplier = (config.ageBonus as any)['above11'] || 0.7966; // Baseline for >11 months
+      age_multiplier = model.toLowerCase().includes('iphone') ? 0.9338 : ((config.ageBonus as any)['above11'] || 0.7966);
     }
+  }
+
+  // Ensure default fallback uses iPhone multiplier if age was missing but it's an iPhone
+  if (!diagnostics.mobileAge && diagnostics.warranty !== false && model.toLowerCase().includes('iphone')) {
+      age_multiplier = 0.9338;
   }
 
   // Warranty penalty strictly applied if less than 11 months old and no warranty/bill
