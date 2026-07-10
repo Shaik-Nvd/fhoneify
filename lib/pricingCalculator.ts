@@ -264,15 +264,16 @@ export function calculateFhoneifyPrice(
   let final_box_bonus = box_bonus;
   
   if (isApple) {
-    upliftPercent = 1.0; // Do not apply standard margin uplift on iPhones to match Cashify base closely
-    final_box_bonus = 0; // Box is expected by default for iPhones in the base price
-    
-    // If the box is missing on an iPhone, Cashify strictly deducts exactly 1,200
+    // If the box is missing on an iPhone, strictly deduct exactly 1,200
     if (!diagnostics.accessories?.includes('box')) {
        final_box_bonus = -1200;
+    } else {
+       final_box_bonus = 0; // Box is expected by default for iPhones in the base price
     }
 
     if (safeModel.toLowerCase().includes('17')) {
+      upliftPercent = 1.0; // Do not apply standard 6-8% margin uplift on AI generated prices
+      
       // Penalize Dual eSIM (imported models without physical SIM trays typically sell for less in India)
       if (diagnostics.eSim === 'Dual eSIM') {
          eSim_multiplier = 0.95; // 5% deduction for imported Dual eSIM
