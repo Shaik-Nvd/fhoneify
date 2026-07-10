@@ -201,22 +201,17 @@ export function calculateFhoneifyPrice(
   age_multiplier = (config.ageBonus as any)['above11'] || 0.7966; // Default to above11
   
   if (diagnostics.warranty === false) {
-    age_multiplier = model.toLowerCase().includes('iphone') ? 0.9338 : ((config.ageBonus as any)['above11'] || 0.7966);
+    age_multiplier = (config.ageBonus as any)['above11'] || 0.7966;
   } else if (diagnostics.mobileAge) {
     if (diagnostics.mobileAge === 'Below 3 months' || diagnostics.mobileAge === 'below3') {
       age_multiplier = (config.ageBonus as any)['below3'] || 1.0;
     } else if (diagnostics.mobileAge === '3 months - 6 months' || diagnostics.mobileAge === '3to6') {
-      age_multiplier = model.toLowerCase().includes('iphone') ? 0.975 : ((config.ageBonus as any)['3to6'] || 0.9427);
+      age_multiplier = (config.ageBonus as any)['3to6'] || 0.9427;
     } else if (diagnostics.mobileAge === '6 months - 11 months' || diagnostics.mobileAge === '6to11') {
-      age_multiplier = model.toLowerCase().includes('iphone') ? 0.955 : ((config.ageBonus as any)['6to11'] || 0.9114);
+      age_multiplier = (config.ageBonus as any)['6to11'] || 0.9114;
     } else {
-      age_multiplier = model.toLowerCase().includes('iphone') ? 0.9338 : ((config.ageBonus as any)['above11'] || 0.7966);
+      age_multiplier = (config.ageBonus as any)['above11'] || 0.7966; // Baseline for >11 months
     }
-  }
-
-  // Ensure default fallback uses iPhone multiplier if age was missing but it's an iPhone
-  if (!diagnostics.mobileAge && diagnostics.warranty !== false && model.toLowerCase().includes('iphone')) {
-      age_multiplier = 0.9338;
   }
 
   // Warranty penalty strictly applied if less than 11 months old and no warranty/bill
@@ -268,13 +263,20 @@ export function calculateFhoneifyPrice(
   let eSim_multiplier = 1.0;
   let final_box_bonus = box_bonus;
   
-  if (isApple && safeModel.toLowerCase().includes('17')) {
-    upliftPercent = 1.0; // Do not apply standard 6-8% margin uplift on AI generated prices
-    final_box_bonus = 0; // Box is expected by default for these brand new models in the base price
+  if (isApple) {
+    upliftPercent = 1.0; // Do not apply standard margin uplift on iPhones to match Cashify base closely
+    final_box_bonus = 0; // Box is expected by default for iPhones in the base price
     
-    // Penalize Dual eSIM (imported models without physical SIM trays typically sell for less in India)
-    if (diagnostics.eSim === 'Dual eSIM') {
-       eSim_multiplier = 0.95; // 5% deduction for imported Dual eSIM
+    // If the box is missing on an iPhone, Cashify strictly deducts exactly 1,200
+    if (!diagnostics.accessories?.includes('box')) {
+       final_box_bonus = -1200;
+    }
+
+    if (safeModel.toLowerCase().includes('17')) {
+      // Penalize Dual eSIM (imported models without physical SIM trays typically sell for less in India)
+      if (diagnostics.eSim === 'Dual eSIM') {
+         eSim_multiplier = 0.95; // 5% deduction for imported Dual eSIM
+      }
     }
   }
 
