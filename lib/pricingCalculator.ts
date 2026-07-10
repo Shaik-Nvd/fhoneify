@@ -74,7 +74,7 @@ export const getAppleModelParams = (model: string) => {
     } else if (isPro) {
       params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.60, touchPenalty: 0.52, functionalScale: 0.80, physicalScale: 0.80 };
     } else {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.55, originalScreenPenalty: 0.70, touchPenalty: 0.60, functionalScale: 0.75, physicalScale: 0.75 };
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.55, originalScreenPenalty: 0.8297, touchPenalty: 0.60, functionalScale: 0.75, physicalScale: 0.75 };
     }
   } else if (lowerModel.includes('12')) {
     if (isProMax || isPro) {
