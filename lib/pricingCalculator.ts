@@ -74,7 +74,7 @@ export const getAppleModelParams = (model: string) => {
     } else if (isPro) {
       params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.60, touchPenalty: 0.52, functionalScale: 0.80, physicalScale: 0.80 };
     } else {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.55, originalScreenPenalty: 0.8297, touchPenalty: 0.60, functionalScale: 0.75, physicalScale: 0.75 };
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.55, originalScreenPenalty: 0.6610, touchPenalty: 0.4781, functionalScale: 0.75, physicalScale: 0.75 };
     }
   } else if (lowerModel.includes('12')) {
     if (isProMax || isPro) {
@@ -182,6 +182,15 @@ export function calculateFhoneifyPrice(
   const safeModel = String(model || '');
   const isApple = safeBrand.toLowerCase() === 'apple';
   const isFoldable = safeModel.toLowerCase().includes('fold') || safeModel.toLowerCase().includes('flip') || safeModel.toLowerCase().includes('open');
+  
+  const isWarrantyEligible = (brandStr: string, modelStr: string) => {
+    if (brandStr.toLowerCase() === 'apple') {
+      const lower = modelStr.toLowerCase();
+      return lower.includes('15') || lower.includes('16') || lower.includes('17') || lower.includes('air');
+    }
+    return true; // For Androids, assume they are eligible for now unless proven otherwise
+  };
+
   const params = isApple ? getAppleModelParams(safeModel) : getAndroidModelParams(safeBrand, safeModel);
 
   const applyGranularDefects = (scale: number) => {
@@ -200,32 +209,38 @@ export function calculateFhoneifyPrice(
     return sum;
   };
 
-  age_multiplier = (config.ageBonus as any)['above11'] || 0.7966; // Default to above11
-  
-  if (diagnostics.warranty === false) {
-    if (isApple && (safeModel.toLowerCase().includes('16e') || safeModel.toLowerCase().includes('17e'))) {
-      age_multiplier = 0.75305; // Cashify strictly applies a harsher ~75.3% retention for out-of-warranty brand new models
-    } else {
-      age_multiplier = (config.ageBonus as any)['above11'] || 0.7966;
+  if (!isWarrantyEligible(safeBrand, safeModel)) {
+    // If not warranty eligible, the scraped base price is ALREADY the >11 months price!
+    age_multiplier = 1.0;
+  } else {
+    // It is warranty eligible (e.g. iPhone 15/16/17), so DB price is the flawless "Below 3 months" price
+    age_multiplier = (config.ageBonus as any)['above11'] || 0.7966; // Default to above11
+    
+    if (diagnostics.warranty === false) {
+      if (isApple && (safeModel.toLowerCase().includes('16e') || safeModel.toLowerCase().includes('17e'))) {
+        age_multiplier = 0.75305;
+      } else {
+        age_multiplier = (config.ageBonus as any)['above11'] || 0.7966;
+      }
+    } else if (diagnostics.mobileAge) {
+      if (diagnostics.mobileAge === 'Below 3 months' || diagnostics.mobileAge === 'below3') {
+        age_multiplier = (config.ageBonus as any)['below3'] || 1.0;
+      } else if (diagnostics.mobileAge === '3 months - 6 months' || diagnostics.mobileAge === '3to6') {
+        age_multiplier = (config.ageBonus as any)['3to6'] || 0.9427;
+      } else if (diagnostics.mobileAge === '6 months - 11 months' || diagnostics.mobileAge === '6to11') {
+        age_multiplier = (config.ageBonus as any)['6to11'] || 0.9114;
+      } else {
+        age_multiplier = (config.ageBonus as any)['above11'] || 0.7966;
+      }
     }
-  } else if (diagnostics.mobileAge) {
-    if (diagnostics.mobileAge === 'Below 3 months' || diagnostics.mobileAge === 'below3') {
-      age_multiplier = (config.ageBonus as any)['below3'] || 1.0;
-    } else if (diagnostics.mobileAge === '3 months - 6 months' || diagnostics.mobileAge === '3to6') {
-      age_multiplier = (config.ageBonus as any)['3to6'] || 0.9427;
-    } else if (diagnostics.mobileAge === '6 months - 11 months' || diagnostics.mobileAge === '6to11') {
-      age_multiplier = (config.ageBonus as any)['6to11'] || 0.9114;
-    } else {
-      age_multiplier = (config.ageBonus as any)['above11'] || 0.7966; // Baseline for >11 months
-    }
-  }
 
-  // Warranty penalty strictly applied if less than 11 months old and no warranty/bill
-  const isLessThan11Months = diagnostics.warranty !== false && diagnostics.mobileAge !== 'Above 11 months' && diagnostics.mobileAge !== 'above11';
-  if (isLessThan11Months) {
-    if (!diagnostics.warranty) age_multiplier -= params.warrantyPenalty;
-    const hasValidBill = diagnostics.validBill === true || (diagnostics.accessories || []).includes('bill');
-    if (!hasValidBill) age_multiplier -= params.gstBillPenalty;
+    // Warranty penalty strictly applied if less than 11 months old and no warranty/bill
+    const isLessThan11Months = diagnostics.warranty !== false && diagnostics.mobileAge !== 'Above 11 months' && diagnostics.mobileAge !== 'above11';
+    if (isLessThan11Months) {
+      if (!diagnostics.warranty) age_multiplier -= params.warrantyPenalty;
+      const hasValidBill = diagnostics.validBill === true || (diagnostics.accessories || []).includes('bill');
+      if (!hasValidBill) age_multiplier -= params.gstBillPenalty;
+    }
   }
 
   calls_multiplier = diagnostics.calls === false ? params.callsPenalty : 1.0;
