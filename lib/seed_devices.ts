@@ -280,15 +280,6 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 62600
   },
   {
-    "id": "apple_1033",
-    "brand": "Apple",
-    "model": "Apple iPhone 15 Pro Max",
-    "storage": "128GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 10000
-  },
-  {
     "id": "apple_1034",
     "brand": "Apple",
     "model": "Apple iPhone 16",

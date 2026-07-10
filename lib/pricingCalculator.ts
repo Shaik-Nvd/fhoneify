@@ -170,74 +170,49 @@ export function calculateFhoneifyPrice(
 
   const applyGranularDefects = (scale: number) => {
     let sum = 0;
-    diagnostics.defects.forEach(d => {
+    const defectsList = diagnostics.defects || [];
+    defectsList.forEach(d => {
       let penalty = (config.defects_screen_body as any)[d] || 0;
-      
       const foldableScreenMult = isFoldable ? 3.0 : 1.0;
 
-      if (d === 'screen_scratch' && diagnostics.screenCondition) {
-        if (diagnostics.screenCondition === 'Chipped/cracked outside display area') penalty = 0.20 * foldableScreenMult;
-        else if (diagnostics.screenCondition === 'More than 2 scratches on screen') penalty = 0.15 * foldableScreenMult;
-        else if (diagnostics.screenCondition === '1-2 scratches on screen') penalty = 0.08 * foldableScreenMult;
+      if (d === 'screen_scratch' || d === 'screen_spot' || d === 'panel_missing') {
+        penalty *= foldableScreenMult;
       }
-      if (d === 'screen_spot') {
-        let spotPenalty = penalty;
-        if (diagnostics.screenSpots === '3 or more minor spots on screen') spotPenalty = 0.25;
-        else if (diagnostics.screenSpots === '1-2 minor spots on screen') spotPenalty = 0.15;
-        else if (diagnostics.screenSpots === 'No spots on screen') spotPenalty = 0;
-        if (diagnostics.screenLines === 'Visible line(s) on display') spotPenalty = Math.max(spotPenalty, 0.30);
-        else if (diagnostics.screenLines === 'Display faded along edges') spotPenalty = Math.max(spotPenalty, 0.20);
-        if (diagnostics.screenDiscoloration === 'Major Discoloration') spotPenalty = Math.max(spotPenalty, 0.25);
-        else if (diagnostics.screenDiscoloration === 'Minor Discoloration') spotPenalty = Math.max(spotPenalty, 0.10);
-        penalty = spotPenalty * foldableScreenMult;
-      }
-      if (d === 'body_scratch') {
-        let bPenalty = 0;
-        if (diagnostics.bodyScratches === 'More than 2 scratches') bPenalty += 0.08;
-        else if (diagnostics.bodyScratches === '1-2 scratches') bPenalty += 0.03;
-        if (diagnostics.bodyDents === 'Major dent(s) or more than 2') bPenalty += 0.12;
-        else if (diagnostics.bodyDents === '1-2 minor dents') bPenalty += 0.05;
-        if (bPenalty > 0) penalty = bPenalty;
-      }
-      if (d === 'panel_missing') {
-        let pPenalty = 0;
-        if (diagnostics.bodyPanel === 'Missing side or back panel') pPenalty = 0.20;
-        else if (diagnostics.bodyPanel === 'Cracked/ broken side or back panel') pPenalty = 0.15;
-        if (diagnostics.bodyBent === 'Bent/ curved panel') pPenalty = Math.max(pPenalty, 0.25);
-        else if (diagnostics.bodyBent === 'Loose screen (Gap in screen and body)') pPenalty = Math.max(pPenalty, 0.15);
-        if (pPenalty > 0) penalty = pPenalty;
-      }
+      
       sum += penalty * scale;
     });
     return sum;
   };
 
-  age_multiplier = 1.0;
+  age_multiplier = (config.ageBonus as any)['above11'] || 0.7966; // Default to above11
   
-  if (diagnostics.mobileAge) {
+  if (diagnostics.warranty === false) {
+    age_multiplier = (config.ageBonus as any)['above11'] || 0.7966;
+  } else if (diagnostics.mobileAge) {
     if (diagnostics.mobileAge === 'Below 3 months' || diagnostics.mobileAge === 'below3') {
-      age_multiplier = (config.ageBonus as any)['below3'] || 1.15;
+      age_multiplier = (config.ageBonus as any)['below3'] || 1.0;
     } else if (diagnostics.mobileAge === '3 months - 6 months' || diagnostics.mobileAge === '3to6') {
-      age_multiplier = (config.ageBonus as any)['3to6'] || 1.08;
+      age_multiplier = (config.ageBonus as any)['3to6'] || 0.9427;
     } else if (diagnostics.mobileAge === '6 months - 11 months' || diagnostics.mobileAge === '6to11') {
-      age_multiplier = (config.ageBonus as any)['6to11'] || 1.04;
+      age_multiplier = (config.ageBonus as any)['6to11'] || 0.9114;
     } else {
-      age_multiplier = 1.0; // Baseline for >11 months
+      age_multiplier = (config.ageBonus as any)['above11'] || 0.7966; // Baseline for >11 months
     }
   }
 
   // Warranty penalty strictly applied if less than 11 months old and no warranty/bill
-  if (age_multiplier > 1.0) {
+  const isLessThan11Months = diagnostics.warranty !== false && diagnostics.mobileAge !== 'Above 11 months' && diagnostics.mobileAge !== 'above11';
+  if (isLessThan11Months) {
     if (!diagnostics.warranty) age_multiplier -= params.warrantyPenalty;
-    const hasValidBill = diagnostics.validBill === true || diagnostics.accessories.includes('bill');
+    const hasValidBill = diagnostics.validBill === true || (diagnostics.accessories || []).includes('bill');
     if (!hasValidBill) age_multiplier -= params.gstBillPenalty;
   }
 
-  calls_multiplier = diagnostics.calls === false ? params.callsPenalty : 1.0;
-  touch_multiplier = diagnostics.touch === false ? params.touchPenalty : 1.0;
-  screen_orig_mult = diagnostics.originalScreen === false ? params.originalScreenPenalty : 1.0;
+  calls_multiplier = diagnostics.calls === false ? (config.multipliers as any)['calls_no'] : 1.0;
+  touch_multiplier = diagnostics.touch === false ? (config.multipliers as any)['touch_no'] : 1.0;
+  screen_orig_mult = diagnostics.originalScreen === false ? (config.multipliers as any)['originalScreen_no'] : 1.0;
   
-  if (diagnostics.touch === false || diagnostics.defects.includes('broken_screen')) {
+  if (diagnostics.touch === false || (diagnostics.defects || []).includes('broken_screen')) {
     screen_orig_mult = 1.0;
   }
   screen_body_sum = applyGranularDefects(params.physicalScale);
@@ -246,29 +221,22 @@ export function calculateFhoneifyPrice(
     screen_orig_mult = Math.min(screen_orig_mult, 0.35);
   }
 
-  diagnostics.hardware.forEach(h => { 
+  const hardwareList = diagnostics.hardware || [];
+  hardwareList.forEach(h => { 
     if (h in config.defects_functional) {
       functional_sum += (config.defects_functional as any)[h] * params.functionalScale;
     }
   });
 
-  const box_bonus = diagnostics.accessories.includes('box') ? config.bonuses.box : 0;
-  
-  let esim_multiplier = 1.0;
-  if (diagnostics.eSim === 'Dual eSIM' && isApple) {
-    esim_multiplier = 0.94;
-  }
+  const box_bonus = (diagnostics.accessories || []).includes('box') ? config.bonuses.box : 0;
 
   const rawCalculated = basePrice 
     * age_multiplier 
     * calls_multiplier 
     * touch_multiplier 
     * screen_orig_mult 
-    * esim_multiplier
     * (1 - Math.min(screen_body_sum, 1)) 
     * (1 - Math.min(functional_sum, 1));
-
-  console.log('DEBUG:', { basePrice, age_multiplier, calls_multiplier, touch_multiplier, screen_orig_mult, screen_body_sum, functional_sum, params });
 
   let upliftPercent = 1.06;
   if (rawCalculated <= 20000) {
