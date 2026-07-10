@@ -43,7 +43,7 @@ export const getAppleModelParams = (model: string) => {
   };
 
   if (lowerModel.includes('17e')) {
-    params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.25, originalScreenPenalty: 0.45, touchPenalty: 0.215, functionalScale: 1.50, physicalScale: 1.50 };
+    params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.25, originalScreenPenalty: 0.4554, touchPenalty: 0.215, functionalScale: 1.50, physicalScale: 1.50 };
   } else if (lowerModel.includes('17')) {
     if (isProMax || isPlus) {
       params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.45, originalScreenPenalty: 0.55, touchPenalty: 0.45, functionalScale: 1.25, physicalScale: 1.25 };
