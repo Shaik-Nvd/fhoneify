@@ -680,9 +680,9 @@
   "nothing-phone-4a-8-gb-256-gb": 24300,
   "nothing-phone-4a-12-gb-256-gb": 25600,
   "nothing-phone-4a-8-gb-128-gb": 22500,
-  "nothing-phone-4a-pro-8-gb-128-gb": 27400,
-  "nothing-phone-4a-pro-12-gb-256-gb": 31200,
-  "nothing-phone-4a-pro-8-gb-256-gb": 29000,
+  "nothing-phone-4a-pro-8-gb-128-gb": 28000,
+  "nothing-phone-4a-pro-12-gb-256-gb": 32000,
+  "nothing-phone-4a-pro-8-gb-256-gb": 29700,
   "oppo-a7-4-gb-64-gb": 2380,
   "oppo-a7-3-gb-64-gb": 2040,
   "oppo-f9-pro-6-gb-64-gb": 2670,
@@ -1454,7 +1454,5 @@
   "oppo-f25-pro-5g-128gb": 12680,
   "oppo-f27-pro-plus-5g-128gb": 14360,
   "oppo-f27-pro-plus-5g-256gb": 15370,
-  "nothing-phone-4a-pro-8-gb-128-gb": 28000,
-  "nothing-phone-4a-pro-8-gb-256-gb": 29700,
-  "nothing-phone-4a-pro-12-gb-256-gb": 32000
+  "samsung-galaxy-z-flip7-fe-5g-256gb": 53150
 }
