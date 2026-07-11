@@ -287,7 +287,19 @@ export function calculateFhoneifyPrice(
       }
 
       if (h === 'face' && isApple) {
-        penalty = 0.37; // Face ID is crucial for iPhones, Cashify heavily penalizes broken Face ID (~37%)
+        const isTouchIDOnly = safeModel.toLowerCase().includes('se') || safeModel.toLowerCase().match(/[678]/);
+        if (isTouchIDOnly) {
+          penalty = 0.0; // Touch ID phones don't have Face ID
+        } else {
+          penalty = 0.37; // Face ID is crucial for iPhones, Cashify heavily penalizes broken Face ID (~37%)
+        }
+      }
+
+      if (h === 'fingerprint' && isApple) {
+        const isTouchIDOnly = safeModel.toLowerCase().includes('se') || safeModel.toLowerCase().match(/[678]/);
+        if (!isTouchIDOnly) {
+          penalty = 0.0; // Face ID phones don't have Touch ID, Cashify ignores this defect
+        }
       }
       
       functional_sum += penalty;
