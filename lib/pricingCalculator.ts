@@ -209,7 +209,7 @@ export function calculateFhoneifyPrice(
       // Granularize screen_scratch penalty based on screenCondition severity
       if (d === 'screen_scratch' && diagnostics.screenCondition) {
         if (diagnostics.screenCondition === 'More than 2 scratches on screen' || diagnostics.screenCondition === 'More than 2 scratches') {
-          penalty = 0.2685; // Calibrated to exactly mirror Cashify's ~16% penalty on iPhone X
+          penalty = 0.2635; // Calibrated to exactly mirror Cashify's penalty
         } else if (diagnostics.screenCondition === '1-2 scratches on screen' || diagnostics.screenCondition === '1-2 scratches') {
           penalty = 0.15;
         } else {
@@ -362,13 +362,15 @@ export function calculateFhoneifyPrice(
 
   const box_bonus = (diagnostics.accessories || []).includes('box') ? config.bonuses.box : 0;
 
+  const calls_penalty_val = 1.0 - calls_multiplier;
+  const touch_penalty_val = 1.0 - touch_multiplier;
+  const screen_orig_penalty_val = 1.0 - screen_orig_mult;
+  
+  const total_penalty_sum = calls_penalty_val + touch_penalty_val + screen_orig_penalty_val + screen_body_sum + functional_sum;
+
   const rawCalculated = basePrice 
     * age_multiplier 
-    * calls_multiplier 
-    * touch_multiplier 
-    * screen_orig_mult 
-    * (1 - Math.min(screen_body_sum, 1)) 
-    * (1 - Math.min(functional_sum, 1));
+    * Math.max(0, 1 - total_penalty_sum);
 
   let upliftPercent = 1.0;
 
