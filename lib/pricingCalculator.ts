@@ -61,7 +61,7 @@ export const getAppleModelParams = (model: string) => {
       params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.65, touchPenalty: 0.50, functionalScale: 1.15, physicalScale: 1.15 };
     }
   } else if (lowerModel.includes('16') || lowerModel.includes('15') || lowerModel.includes('14')) {
-    if (lowerModel === 'apple iphone 16 pro max' || lowerModel === 'iphone 16 pro max') {
+    if (lowerModel.includes('16 pro max')) {
       // Highly specialized logic for the newest 16 Pro Max (higher penalty for 3rd party screen)
       params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.782, touchPenalty: 0.635, functionalScale: 1.09, physicalScale: 0.39895, bodyScale: 0.9806, facePenalty: 0.257307 };
     } else if (isProMax) {
@@ -356,7 +356,7 @@ export function calculateFhoneifyPrice(
       }
 
       if (h === 'face' && isApple) {
-        const isTouchIDOnly = safeModel.toLowerCase().includes('se') || safeModel.toLowerCase().match(/[678]/);
+        const isTouchIDOnly = safeModel.toLowerCase().includes('se') || safeModel.toLowerCase().match(/iphone\s*[678]\b/);
         if (isTouchIDOnly) {
           penalty = 0.0; // Touch ID phones don't have Face ID
         } else {
@@ -365,7 +365,7 @@ export function calculateFhoneifyPrice(
       }
 
       if (h === 'fingerprint' && isApple) {
-        const isTouchIDOnly = safeModel.toLowerCase().includes('se') || safeModel.toLowerCase().match(/[678]/);
+        const isTouchIDOnly = safeModel.toLowerCase().includes('se') || safeModel.toLowerCase().match(/iphone\s*[678]\b/);
         if (!isTouchIDOnly) {
           penalty = 0.0; // Face ID phones don't have Touch ID, Cashify ignores this defect
         }
