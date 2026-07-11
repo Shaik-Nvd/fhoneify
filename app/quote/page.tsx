@@ -2298,21 +2298,24 @@ export default function QuotePage() {
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
                   <button onClick={() => { 
                     const isEligible = isWarrantyEligible(selectedBrand, selectedModel);
-                    const hasWarrantyAndBill = diagnostics.warranty === true && diagnostics.validBill === true;
+                    
+                    // Major physical/functional defects void the manufacturer warranty
+                    const warrantyVoided = diagnostics.calls === false || 
+                                           diagnostics.touch === false || 
+                                           diagnostics.originalScreen === false || 
+                                           diagnostics.defects.includes('screen_scratch') || 
+                                           diagnostics.defects.includes('screen_spot') ||
+                                           diagnostics.defects.includes('panel_missing');
+                                           
+                    const hasWarrantyAndBill = diagnostics.warranty === true && diagnostics.validBill === true && !warrantyVoided;
                     
                     if (isEligible && hasWarrantyAndBill) {
                       // Cashify skips the age question entirely for brand new phones (17e, 16e, Z Flip7 FE)
                       const isBrandNewApple = selectedBrand === 'Apple' && (selectedModel.toLowerCase().includes('17e') || selectedModel.toLowerCase().includes('16e'));
                       const isBrandNewSamsung = selectedBrand === 'Samsung' && selectedModel.toLowerCase().includes('flip7 fe');
                       
-                      // Cashify specifically skips the Mobile Age question for 1TB variants of the iPhone 15 Pro Max
-                      const isProMax1TB = selectedModel.toLowerCase().includes('15 pro max') && selectedStorage.toLowerCase().includes('1tb');
-                      
-                      if ((isBrandNewApple && !diagnostics.accessories.includes('box')) || isBrandNewSamsung || isProMax1TB) {
-                         // For 1TB Pro Max, Cashify behaves as if it's "above 11 months" (out of warranty bonus)
-                         // For brand new phones, it behaves as "below 3 months"
-                         const autoAge = isProMax1TB ? 'above11' : 'below3';
-                         const updatedDiag = { ...diagnostics, mobileAge: autoAge as any };
+                      if ((isBrandNewApple && !diagnostics.accessories.includes('box')) || isBrandNewSamsung) {
+                         const updatedDiag = { ...diagnostics, mobileAge: 'below3' as const };
                          setDiagnostics(updatedDiag);
                          if (isAuthenticated) { 
                            calculateFinalPrice(updatedDiag); 
@@ -2327,8 +2330,8 @@ export default function QuotePage() {
                     } else {
                       const updatedDiag = {
                         ...diagnostics,
-                        validBill: isEligible ? !!diagnostics.validBill : false,
-                        warranty: isEligible ? !!diagnostics.warranty : false,
+                        validBill: (isEligible && !warrantyVoided) ? !!diagnostics.validBill : false,
+                        warranty: (isEligible && !warrantyVoided) ? !!diagnostics.warranty : false,
                         mobileAge: 'above11' as const
                       };
                       setDiagnostics(updatedDiag);
