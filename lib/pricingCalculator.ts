@@ -250,6 +250,12 @@ export function calculateFhoneifyPrice(
         penalty *= foldableScreenMult;
       }
       
+      // If the screen is not original, Cashify waives physical screen penalties (except body defects)
+      // because they already heavily penalize the 3rd party screen
+      if (diagnostics.originalScreen === false && d !== 'body_scratch' && d !== 'panel_missing') {
+        penalty = 0;
+      }
+      
       sum += penalty * scale;
     });
     return sum;
@@ -312,7 +318,13 @@ export function calculateFhoneifyPrice(
       
       if (h === 'battery_health' && isApple) {
         const isNewerSeries = safeModel.toLowerCase().includes('15') || safeModel.toLowerCase().includes('16') || safeModel.toLowerCase().includes('17');
-        if (isNewerSeries) {
+        const isOlderThan11Months = diagnostics.mobileAge === 'Above 11 months' || diagnostics.mobileAge === 'above11' || diagnostics.warranty === false;
+        
+        if (isOlderThan11Months) {
+          // Cashify WAIVES the 80-85% battery health penalty for phones older than 11 months,
+          // because natural lithium-ion degradation to this level is EXPECTED after a year!
+          penalty = 0.0;
+        } else if (isNewerSeries) {
           penalty = 0.01729 * params.functionalScale; // Scaled ~1.7% deduction for newer series
         } else {
           penalty = 0.0; // Cashify waives the 80-85% battery health penalty entirely for older iPhones (like iPhone X, 11, 12, etc.)
