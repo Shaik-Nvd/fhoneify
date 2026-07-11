@@ -198,6 +198,19 @@ export function calculateFhoneifyPrice(
     const defectsList = diagnostics.defects || [];
     defectsList.forEach(d => {
       let penalty = (config.defects_screen_body as any)[d] || 0;
+      
+      // Granularize screen_scratch penalty based on screenCondition severity
+      if (d === 'screen_scratch' && diagnostics.screenCondition) {
+        if (diagnostics.screenCondition === 'More than 2 scratches on screen' || diagnostics.screenCondition === 'More than 2 scratches') {
+          penalty = 0.2685; // Calibrated to exactly mirror Cashify's ~16% penalty on iPhone X
+        } else if (diagnostics.screenCondition === '1-2 scratches on screen' || diagnostics.screenCondition === '1-2 scratches') {
+          penalty = 0.15;
+        } else {
+          // Default for "Screen cracked/ glass broken" or "Chipped/cracked outside display area"
+          penalty = 0.35; 
+        }
+      }
+
       const foldableScreenMult = isFoldable ? 3.0 : 1.0;
 
       if (d === 'screen_scratch' || d === 'screen_spot' || d === 'panel_missing') {
