@@ -11,4 +11,4 @@ const diagnostics = {
   hardware: ['face', 'battery_health'],
   accessories: ['box']
 };
-console.log(calculateFhoneifyPrice('Apple', 'iPhone 15 Pro Max (8 GB/1 TB)', 79070, diagnostics));
+console.log(calculateFhoneifyPrice('Apple', 'iPhone 15 Pro Max (8 GB/1 TB)', 79070, diagnostics as any));

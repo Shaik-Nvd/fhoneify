@@ -1,5 +1,16 @@
 import config from './pricingConfig.json';
 
+export interface ModelParams {
+  warrantyPenalty: number;
+  gstBillPenalty: number;
+  callsPenalty: number;
+  originalScreenPenalty: number;
+  touchPenalty: number;
+  functionalScale: number;
+  physicalScale: number;
+  bodyScale?: number;
+  facePenalty?: number;
+}
 export type DiagnosticsType = {
   calls: boolean | null;
   touch: boolean | null;
@@ -24,7 +35,7 @@ export type DiagnosticsType = {
 export const getAppleModelParams = (model: string) => {
   const lowerModel = String(model || '').toLowerCase();
   
-  let params = {
+  let params: ModelParams = {
     warrantyPenalty: 0.05,
     gstBillPenalty: 0.02,
     callsPenalty: 0.55,
@@ -108,7 +119,7 @@ export const getAndroidModelParams = (brand: string, model: string) => {
   const lowerBrand = String(brand || '').toLowerCase();
   const lowerModel = String(model || '').toLowerCase();
   
-  let params = {
+  let params: ModelParams = {
     warrantyPenalty: 0.10, gstBillPenalty: 0.05, callsPenalty: 0.50, originalScreenPenalty: 0.60, touchPenalty: 0.40, functionalScale: 0.8, physicalScale: 0.75,
   };
 
@@ -191,6 +202,7 @@ export function calculateFhoneifyPrice(
   }
   
   const isFoldable = safeModel.toLowerCase().includes('fold') || safeModel.toLowerCase().includes('flip') || safeModel.toLowerCase().includes('open');
+  const isProMax = safeModel.toLowerCase().includes('pro max');
   
   const isWarrantyEligible = (brandStr: string, modelStr: string) => {
     if (brandStr.toLowerCase() === 'apple') {
