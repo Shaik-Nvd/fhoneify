@@ -2584,7 +2584,9 @@ export default function QuotePage() {
               
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem', color: '#ccc', fontSize: '0.9rem', ...(appliedCoupon ? {} : { borderBottom: '1px solid #2a2a2a', paddingBottom: '1.5rem' }) }}>
                 <span>Processing Fee</span>
-                <span>{finalPrice === 1200 ? '₹0' : '-₹99'}</span>
+                <span>{finalPrice === 1200 ? (
+                  <span>-<span style={{ textDecoration: 'line-through', color: '#777', marginRight: '4px' }}>₹100</span>₹49</span>
+                ) : '-₹99'}</span>
               </div>
 
               {appliedCoupon && (
@@ -2596,7 +2598,7 @@ export default function QuotePage() {
               
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '2rem', color: '#fff', fontSize: '1.1rem', fontWeight: 700 }}>
                 <span>Total Amount</span>
-                <span>{formatCurrency((finalPrice || 0) - (finalPrice === 1200 ? 0 : 99) + (appliedCoupon ? 299 : 0))}</span>
+                <span>{formatCurrency((finalPrice || 0) - (finalPrice === 1200 ? 49 : 99) + (appliedCoupon ? 299 : 0))}</span>
               </div>
             </div>
           )}

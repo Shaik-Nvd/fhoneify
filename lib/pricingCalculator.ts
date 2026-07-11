@@ -181,6 +181,12 @@ export function calculateFhoneifyPrice(
   const safeBrand = String(brand || '');
   const safeModel = String(model || '');
   const isApple = safeBrand.toLowerCase() === 'apple';
+  
+  // Cashify sets a flat scrap price of exactly ₹1,200 for any iPhone that cannot make or receive calls
+  if (isApple && diagnostics.calls === false) {
+    return 1200;
+  }
+  
   const isFoldable = safeModel.toLowerCase().includes('fold') || safeModel.toLowerCase().includes('flip') || safeModel.toLowerCase().includes('open');
   
   const isWarrantyEligible = (brandStr: string, modelStr: string) => {
