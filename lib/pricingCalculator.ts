@@ -399,8 +399,6 @@ export function calculateFhoneifyPrice(
     * age_multiplier 
     * Math.max(0, 1 - total_penalty_sum);
 
-  let upliftPercent = 1.0;
-
   // Handle Cashify's AI-Generated Market Price Edge Case
   let eSim_multiplier = 1.0;
   let accessories_multiplier = 1.0;
@@ -420,7 +418,18 @@ export function calculateFhoneifyPrice(
     }
   }
 
-  const calculated = (rawCalculated * upliftPercent * eSim_multiplier * accessories_multiplier) + final_box_bonus;
+  const cashifyPrice = (rawCalculated * eSim_multiplier * accessories_multiplier) + final_box_bonus;
+
+  let upliftPercent = 1.0;
+  if (cashifyPrice <= 20000) {
+    upliftPercent = 1.08;
+  } else if (cashifyPrice <= 50000) {
+    upliftPercent = 1.06;
+  } else {
+    upliftPercent = 1.04;
+  }
+
+  const calculated = cashifyPrice * upliftPercent;
     
   return Math.max(Math.round(calculated), floor_price);
 }
