@@ -360,6 +360,11 @@ export function calculateFhoneifyPrice(
       if (diagnostics.eSim === 'Dual eSIM') {
          eSim_multiplier = 0.95; // 5% deduction for imported Dual eSIM
       }
+    } else {
+      // Older imported Dual eSIM iPhones (like 15 series) suffer a much heavier depreciation
+      if (diagnostics.eSim === 'Dual eSIM') {
+         eSim_multiplier = 0.80908; // ~19.1% deduction exactly matching Cashify's logic
+      }
     }
   }
 
