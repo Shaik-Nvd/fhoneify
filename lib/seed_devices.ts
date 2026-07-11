@@ -1605,7 +1605,7 @@ export const SEED_DEVICES: any[] = [
     "model": "OnePlus Nord CE 5G",
     "storage": "12 GB/256 GB",
     "color": "Midnight",
-    "basePrice": 8000
+    "basePrice": 8160
   },
   {
     "id": "oneplus_7040",
@@ -1613,7 +1613,7 @@ export const SEED_DEVICES: any[] = [
     "model": "OnePlus Nord CE 5G",
     "storage": "6 GB/128 GB",
     "color": "Midnight",
-    "basePrice": 7260
+    "basePrice": 7410
   },
   {
     "id": "oneplus_7041",
@@ -1621,7 +1621,7 @@ export const SEED_DEVICES: any[] = [
     "model": "OnePlus Nord CE 5G",
     "storage": "8 GB/128 GB",
     "color": "Midnight",
-    "basePrice": 7590
+    "basePrice": 7680
   },
   {
     "id": "oneplus_7042",
@@ -2240,33 +2240,6 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 2710
   },
   {
-    "id": "oneplus_10028",
-    "brand": "OnePlus",
-    "model": "Oneplus Nord Ce 2 Lite 5g 6 Gb 128 Gb ",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_10029",
-    "brand": "OnePlus",
-    "model": "Oneplus Nord Ce 6 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_10030",
-    "brand": "OnePlus",
-    "model": "Oneplus Nord Ce 6 Lite 5G",
-    "storage": "128GB",
-    "ram": "8GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
     "id": "oneplus_add_13000",
     "brand": "OnePlus",
     "model": "OnePlus Nord",
@@ -2276,474 +2249,6 @@ export const SEED_DEVICES: any[] = [
   },
   {
     "basePrice": 8370
-  },
-  {
-    "id": "oneplus_batch_1",
-    "brand": "OnePlus",
-    "model": "OnePlus 6T",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_2",
-    "brand": "OnePlus",
-    "model": "OnePlus 6",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_3",
-    "brand": "OnePlus",
-    "model": "OnePlus 5T",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_4",
-    "brand": "OnePlus",
-    "model": "OnePlus 5",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_5",
-    "brand": "OnePlus",
-    "model": "OnePlus 3T",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_6",
-    "brand": "OnePlus",
-    "model": "OnePlus 3",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_7",
-    "brand": "OnePlus",
-    "model": "OnePlus 6T McLaren",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_8",
-    "brand": "OnePlus",
-    "model": "OnePlus 7",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_9",
-    "brand": "OnePlus",
-    "model": "OnePlus 7 Pro",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_10",
-    "brand": "OnePlus",
-    "model": "OnePlus 7T",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_11",
-    "brand": "OnePlus",
-    "model": "OnePlus 7T Pro",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_12",
-    "brand": "OnePlus",
-    "model": "OnePlus 8",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_13",
-    "brand": "OnePlus",
-    "model": "OnePlus 8 Pro",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_14",
-    "brand": "OnePlus",
-    "model": "OnePlus 7T Pro McLaren Edition",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_15",
-    "brand": "OnePlus",
-    "model": "OnePlus Nord",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_16",
-    "brand": "OnePlus",
-    "model": "OnePlus 8T",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_17",
-    "brand": "OnePlus",
-    "model": "OnePlus 9 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_18",
-    "brand": "OnePlus",
-    "model": "OnePlus 9R 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_19",
-    "brand": "OnePlus",
-    "model": "OnePlus 9 Pro 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_20",
-    "brand": "OnePlus",
-    "model": "OnePlus Nord CE 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_21",
-    "brand": "OnePlus",
-    "model": "OnePlus Nord 2 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_22",
-    "brand": "OnePlus",
-    "model": "OnePlus 9RT 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_23",
-    "brand": "OnePlus",
-    "model": "OnePlus Nord CE 2 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_24",
-    "brand": "OnePlus",
-    "model": "OnePlus 10 Pro 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_25",
-    "brand": "OnePlus",
-    "model": "OnePlus Nord CE 2 Lite 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_26",
-    "brand": "OnePlus",
-    "model": "OnePlus 10R 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_27",
-    "brand": "OnePlus",
-    "model": "OnePlus Nord 2T 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_28",
-    "brand": "OnePlus",
-    "model": "OnePlus 10T 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_29",
-    "brand": "OnePlus",
-    "model": "OnePlus 11 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_30",
-    "brand": "OnePlus",
-    "model": "Oneplus 11 5G Marble Edition",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_31",
-    "brand": "OnePlus",
-    "model": "OnePlus 11R 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_32",
-    "brand": "OnePlus",
-    "model": "OnePlus Nord CE 3 Lite 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_33",
-    "brand": "OnePlus",
-    "model": "OnePlus Nord 3 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_34",
-    "brand": "OnePlus",
-    "model": "OnePlus Nord CE 3 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_36",
-    "brand": "OnePlus",
-    "model": "OnePlus 12",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_37",
-    "brand": "OnePlus",
-    "model": "OnePlus 12R",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_38",
-    "brand": "OnePlus",
-    "model": "OnePlus Nord CE4 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_39",
-    "brand": "OnePlus",
-    "model": "OnePlus Nord CE4 Lite 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_40",
-    "brand": "OnePlus",
-    "model": "OnePlus Nord 4",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_41",
-    "brand": "OnePlus",
-    "model": "OnePlus 13",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_42",
-    "brand": "OnePlus",
-    "model": "OnePlus 13R",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_43",
-    "brand": "OnePlus",
-    "model": "OnePlus 13s",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_44",
-    "brand": "OnePlus",
-    "model": "OnePlus Nord 5",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_45",
-    "brand": "OnePlus",
-    "model": "OnePlus Nord CE 5",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_46",
-    "brand": "OnePlus",
-    "model": "OnePlus 15",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_47",
-    "brand": "OnePlus",
-    "model": "OnePlus 15R",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_48",
-    "brand": "OnePlus",
-    "model": "OnePlus Nord 6 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_49",
-    "brand": "OnePlus",
-    "model": "OnePlus Nord CE 6 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "oneplus_batch_50",
-    "brand": "OnePlus",
-    "model": "OnePlus Nord CE 6 Lite 5G",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "lenovo_batch_1",
-    "brand": "Lenovo",
-    "model": "Lenovo K9 Note",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "lenovo_batch_4",
-    "brand": "Lenovo",
-    "model": "Lenovo K10 Note",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
-  },
-  {
-    "id": "lenovo_batch_5",
-    "brand": "Lenovo",
-    "model": "Lenovo K10 Plus",
-    "storage": "4 GB/64 GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 5000
   },
   {
     "id": "google_batch_1",
@@ -4074,16 +3579,6 @@ export const SEED_DEVICES: any[] = [
     "color": "Black",
     "basePrice": 4520,
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-30-6-gb-64-gb"
-  },
-  {
-    "id": "1c5868fb-cadb-4fe4-b4e6-ca155e0026b2",
-    "brand": "Realme",
-    "model": "Realme Narzo 30",
-    "storage": "6 GB/128 GB",
-    "ram": "6 GB",
-    "color": "Black",
-    "basePrice": 5000,
-    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-30-6-gb-128-gb"
   },
   {
     "id": "f4a00b9a-3f77-4db6-861c-1238af4c8d9d",
@@ -6134,16 +5629,6 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "basePrice": 12500,
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-edge-30-ultra-8-gb-128-gb"
-  },
-  {
-    "id": "motorola_batch_52",
-    "brand": "Motorola",
-    "model": "Motorola Moto G72",
-    "storage": "6 GB/128 GB",
-    "ram": "6 GB",
-    "color": "Default",
-    "basePrice": 5000,
-    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-g72-6-gb-128-gb"
   },
   {
     "id": "motorola_batch_53",
@@ -11323,16 +10808,6 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "basePrice": 6890,
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno-4-pro-8-gb-128-gb"
-  },
-  {
-    "id": "b84278ea-a6c9-4f34-974c-ff840772726b",
-    "brand": "Oppo",
-    "model": "OPPO A53",
-    "storage": "6 GB/128 GB",
-    "ram": "6 GB",
-    "color": "Default",
-    "basePrice": 5000,
-    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a53-6-gb-128-gb"
   },
   {
     "id": "f0b8ae1e-8f76-4a91-a45b-2da564eb012c",
@@ -16715,16 +16190,6 @@ export const SEED_DEVICES: any[] = [
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-y3-4-gb-64-gb"
   },
   {
-    "id": "c13073b7-13f8-4840-b106-15e21bec5fc5",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Black Shark 2",
-    "storage": "6 GB/128 GB",
-    "ram": "6 GB",
-    "color": "Default",
-    "basePrice": 5000,
-    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-black-shark-2-6-gb-128-gb"
-  },
-  {
     "id": "323707de-ea53-46e9-beda-d44be8ed6c58",
     "brand": "Xiaomi",
     "model": "Xiaomi Black Shark 2",
@@ -17363,16 +16828,6 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "basePrice": 4710,
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-10s-6-gb-64-gb"
-  },
-  {
-    "id": "20b511a1-4935-40ca-bccd-a158e7e07bfa",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi Note 10s",
-    "storage": "6 GB/128 GB",
-    "ram": "6 GB",
-    "color": "Default",
-    "basePrice": 5000,
-    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-10s-6-gb-128-gb"
   },
   {
     "id": "79d1337f-afa3-42e8-ae3f-8ff4e2a24422",
@@ -20635,16 +20090,6 @@ export const SEED_DEVICES: any[] = [
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a05-6-gb-128-gb"
   },
   {
-    "id": "d4073ed6-5db4-4c60-b0c8-be6e01536e91",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A05",
-    "storage": "4 GB/64 GB",
-    "ram": "4 GB",
-    "color": "Default",
-    "basePrice": 5000,
-    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a05-4-gb-64-gb"
-  },
-  {
     "id": "d819152d-f749-4799-b4bc-fbcb09e79b6b",
     "brand": "Samsung",
     "model": "Samsung Galaxy S24 5G",
@@ -21373,8 +20818,7 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "basePrice": 10500,
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m17e-5g-6-gb-128-gb"
-  }
-,
+  },
   {
     "id": "b5c87300-ee9d-440a-acd0-b4f09a2e8cca",
     "brand": "Xiaomi",
