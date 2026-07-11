@@ -333,6 +333,13 @@ export function calculateFhoneifyPrice(
         }
       }
 
+      if (h === 'back_camera' && isApple) {
+        const isNewerSeries = safeModel.toLowerCase().includes('15') || safeModel.toLowerCase().includes('16') || safeModel.toLowerCase().includes('17');
+        if (isNewerSeries) {
+          penalty = 0.066813 * params.functionalScale; // Scaled ~7.28% deduction for newer series
+        }
+      }
+
       if (h === 'face' && isApple) {
         const isTouchIDOnly = safeModel.toLowerCase().includes('se') || safeModel.toLowerCase().match(/[678]/);
         if (isTouchIDOnly) {
