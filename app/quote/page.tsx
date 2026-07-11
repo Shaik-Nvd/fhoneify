@@ -210,6 +210,10 @@ export default function QuotePage() {
   const [rawBasePrice, setRawBasePrice] = useState<number | null>(null);
   const [finalPrice, setFinalPrice] = useState<number | null>(null);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [step]);
+
   const [diagnostics, setDiagnostics] = useState({
     calls: null as boolean | null,
     touch: null as boolean | null,
@@ -2456,13 +2460,13 @@ export default function QuotePage() {
 
       {/* STAGE 11: FINAL EXACT PRICE */}
       {step === 11 && finalPrice != null && (
-        <div className="card flex flex-col gap-4 bg-[#111] border border-[#2a2a2a] p-6 md:p-8 rounded-xl max-w-[600px] mx-auto text-left">
-          <div style={{ display: 'flex', gap: '2rem', alignItems: 'flex-start', borderBottom: '1px solid #2a2a2a', paddingBottom: '2rem', marginBottom: '1rem' }}>
-            <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} style={{ width: '80px', height: 'auto', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
+        <div className="card flex flex-col gap-2 md:gap-4 bg-[#111] border border-[#2a2a2a] p-4 md:p-8 rounded-xl max-w-[600px] mx-auto text-left">
+          <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', borderBottom: '1px solid #2a2a2a', paddingBottom: '1rem', marginBottom: '0.5rem' }}>
+            <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} style={{ width: '60px', height: 'auto', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
             <div>
               <h2 style={{ fontSize: '1.25rem', fontWeight: 600, color: '#fff', marginBottom: '0.25rem' }}>{getDisplayModelName(selectedBrand, selectedModel)} ({selectedStorage})</h2>
               <p style={{ color: '#a0a0a0', fontSize: '0.85rem', marginBottom: '0.5rem' }}>Estimated value :</p>
-              <p style={{ fontSize: '2.5rem', fontWeight: 700, color: '#FF3B30', lineHeight: 1 }}>
+              <p style={{ fontSize: '2rem', fontWeight: 700, color: '#FF3B30', lineHeight: 1 }}>
                 {formatCurrency((finalPrice || 0) - (finalPrice === 1200 ? 0 : 99) + (appliedCoupon ? 299 : 0))}
               </p>
               <button 
@@ -2495,21 +2499,21 @@ export default function QuotePage() {
               padding: '1px',
               borderRadius: '12px',
               background: 'linear-gradient(45deg, #FFB800, #FF3B30, #9C27B0)',
-              marginBottom: '1.5rem',
+              marginBottom: '1rem',
               boxShadow: '0 0 20px rgba(255, 184, 0, 0.3)'
             }}>
               <div style={{
                 backgroundColor: '#111',
-                padding: '1.5rem',
+                padding: '1rem',
                 borderRadius: '11px',
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '1rem',
+                gap: '0.5rem',
                 background: 'linear-gradient(to bottom right, rgba(17,17,17,1), rgba(30,30,30,0.9))'
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                   <span style={{ fontSize: '1.5rem', display: 'inline-block', animation: 'bounce 2s infinite' }}>🎁</span>
-                  <h3 style={{ fontSize: '1.2rem', fontWeight: 700, background: 'linear-gradient(90deg, #FFD700, #FF8C00)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', margin: 0 }}>Special Offer Available</h3>
+                  <h3 style={{ fontSize: '1.1rem', fontWeight: 700, background: 'linear-gradient(90deg, #FFD700, #FF8C00)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', margin: 0 }}>Special Offer Available</h3>
                 </div>
                 
                 {isFirstTimeUser && generatedCoupon ? (
@@ -2517,7 +2521,7 @@ export default function QuotePage() {
                     Unlock your first-time user bonus! Use code <strong style={{ color: '#FFD700', backgroundColor: 'rgba(255,215,0,0.1)', padding: '0.3rem 0.6rem', borderRadius: '6px', border: '1px solid rgba(255,215,0,0.3)', letterSpacing: '1px' }}>{generatedCoupon}</strong> for an extra ₹299 on your selling price.
                   </p>
                 ) : (
-                  <p style={{ color: '#ccc', fontSize: '0.95rem', margin: 0, lineHeight: 1.5 }}>
+                  <p style={{ color: '#ccc', fontSize: '0.85rem', margin: 0, lineHeight: 1.4 }}>
                     Got a promo code? Enter it below to boost your final selling price instantly!
                   </p>
                 )}
@@ -2528,7 +2532,7 @@ export default function QuotePage() {
                     value={couponInput}
                     onChange={(e) => setCouponInput(e.target.value.toUpperCase())}
                     placeholder="Enter promo code" 
-                    style={{ flex: 1, padding: '0.85rem 1rem', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)', backgroundColor: 'rgba(255,255,255,0.05)', color: '#fff', outline: 'none', fontSize: '1rem', transition: 'all 0.3s ease' }} 
+                    style={{ flex: 1, padding: '0.6rem 0.8rem', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)', backgroundColor: 'rgba(255,255,255,0.05)', color: '#fff', outline: 'none', fontSize: '0.9rem', transition: 'all 0.3s ease' }} 
                     onFocus={(e) => { e.currentTarget.style.border = '1px solid #FFD700'; e.currentTarget.style.backgroundColor = 'rgba(255,215,0,0.05)'; }}
                     onBlur={(e) => { e.currentTarget.style.border = '1px solid rgba(255,255,255,0.1)'; e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)'; }}
                   />
@@ -2580,7 +2584,7 @@ export default function QuotePage() {
           )}
           
           {(typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) && (
-            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem' }}>
               <button 
                 type="button" 
                 onClick={handleGetMarketPrice}
@@ -2607,15 +2611,15 @@ export default function QuotePage() {
             </div>
           )}
           <div style={{
-            marginTop: '2.5rem',
+            marginTop: '1rem',
             position: 'relative',
-            padding: '1.25rem 1.5rem',
+            padding: '0.75rem 1rem',
             background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.12) 0%, rgba(212, 175, 55, 0.02) 100%)',
             border: '1px solid rgba(212, 175, 55, 0.2)',
-            borderRadius: '16px',
+            borderRadius: '12px',
             display: 'flex',
             alignItems: 'center',
-            gap: '1.25rem',
+            gap: '1rem',
             boxShadow: '0 8px 32px rgba(212, 175, 55, 0.08), inset 0 0 20px rgba(212, 175, 55, 0.03)',
             backdropFilter: 'blur(16px)',
             WebkitBackdropFilter: 'blur(16px)',
@@ -2644,8 +2648,8 @@ export default function QuotePage() {
 
             <div style={{
               background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.25), rgba(212, 175, 55, 0.05))',
-              padding: '12px',
-              borderRadius: '14px',
+              padding: '8px',
+              borderRadius: '10px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -2660,22 +2664,22 @@ export default function QuotePage() {
               </svg>
             </div>
             
-            <p style={{ color: '#e0e0e0', fontSize: '0.95rem', margin: 0, fontWeight: 400, letterSpacing: '0.3px', lineHeight: 1.6, position: 'relative', zIndex: 1 }}>
+            <p style={{ color: '#e0e0e0', fontSize: '0.8rem', margin: 0, fontWeight: 400, letterSpacing: '0.3px', lineHeight: 1.4, position: 'relative', zIndex: 1 }}>
               <span style={{ 
                 color: '#d4af37', 
                 fontWeight: 700, 
-                marginRight: '8px',
+                marginRight: '6px',
                 textTransform: 'uppercase',
-                letterSpacing: '1.5px',
-                fontSize: '0.8rem'
+                letterSpacing: '1px',
+                fontSize: '0.75rem'
               }}>Note:</span> 
               Final pricing and verification will be confirmed following the physical inspection.
             </p>
           </div>
           
-          <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', width: '100%' }}>
-            <button type="button" onClick={() => { navigateToState('', '', '', 'brand', 1); setFinalPrice(null); setMarketPriceFetched(false); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], screenCondition: null, screenSpots: null, screenLines: null, screenDiscoloration: null, bodyScratches: null, bodyDents: null, bodyPanel: null, bodyBent: null, hardware: [], accessories: [], warranty: null, validBill: null, eSim: null, mobileAge: null }); }} className="btn-outline" style={{ flex: 1, padding: '16px', fontSize: '1.1rem' }}>Start Over</button>
-            <button type="button" onClick={() => setStep(12)} className="btn-primary" style={{ flex: 2, padding: '16px', background: '#4CD964', color: '#fff', fontSize: '1.1rem', fontWeight: 600, cursor: 'pointer' }}>Schedule Pickup</button>
+          <div style={{ display: 'flex', gap: '0.75rem', marginTop: '1rem', width: '100%' }}>
+            <button type="button" onClick={() => { navigateToState('', '', '', 'brand', 1); setFinalPrice(null); setMarketPriceFetched(false); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], screenCondition: null, screenSpots: null, screenLines: null, screenDiscoloration: null, bodyScratches: null, bodyDents: null, bodyPanel: null, bodyBent: null, hardware: [], accessories: [], warranty: null, validBill: null, eSim: null, mobileAge: null }); }} className="btn-outline" style={{ flex: 1, padding: '12px', fontSize: '1rem' }}>Start Over</button>
+            <button type="button" onClick={() => setStep(12)} className="btn-primary" style={{ flex: 2, padding: '12px', background: '#4CD964', color: '#fff', fontSize: '1rem', fontWeight: 600, cursor: 'pointer' }}>Schedule Pickup</button>
           </div>
         </div>
       )}

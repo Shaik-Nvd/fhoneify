@@ -262,7 +262,14 @@ export function calculateFhoneifyPrice(
       if (h === 'battery_health' && diagnostics.warranty === true) {
         return; // Cashify waives the battery health penalty if the phone is under warranty
       }
-      functional_sum += (config.defects_functional as any)[h] * params.functionalScale;
+      let penalty = (config.defects_functional as any)[h] * params.functionalScale;
+      
+      // Cashify only deducts a tiny flat amount (~900 INR, approx 1.6%) for battery health on iPhone 15 series
+      if (h === 'battery_health' && isApple && safeModel.toLowerCase().includes('15')) {
+        penalty = 0.016; 
+      }
+      
+      functional_sum += penalty;
     }
   });
 
@@ -276,11 +283,13 @@ export function calculateFhoneifyPrice(
     * (1 - Math.min(screen_body_sum, 1)) 
     * (1 - Math.min(functional_sum, 1));
 
-  let upliftPercent = 1.06;
-  if (rawCalculated <= 20000) {
+  let upliftPercent = 1.04;
+  if (basePrice <= 20000) {
     upliftPercent = 1.08;
-  } else if (rawCalculated <= 50000) {
+  } else if (basePrice <= 50000) {
     upliftPercent = 1.06;
+  } else {
+    upliftPercent = 1.04;
   }
 
   // Handle Cashify's AI-Generated Market Price Edge Case
