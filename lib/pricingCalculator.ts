@@ -62,7 +62,7 @@ export const getAppleModelParams = (model: string) => {
     }
   } else if (lowerModel.includes('16') || lowerModel.includes('15') || lowerModel.includes('14')) {
     if (isProMax) {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.8176, touchPenalty: 0.635, functionalScale: 1.09, physicalScale: 0.39895 };
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.8176, touchPenalty: 0.635, functionalScale: 1.09, physicalScale: 0.39895, bodyScale: 0.9806 };
     } else if (isPro || isPlus) {
       params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.65, touchPenalty: 0.55, functionalScale: 1.05, physicalScale: 1.05 };
     } else {
@@ -198,8 +198,9 @@ export function calculateFhoneifyPrice(
   };
 
   const params = isApple ? getAppleModelParams(safeModel) : getAndroidModelParams(safeBrand, safeModel);
+  const bodyScale = (params as any).bodyScale || params.physicalScale;
 
-  const applyGranularDefects = (scale: number) => {
+  const applyGranularDefects = (scale: number, bScale: number) => {
     let sum = 0;
     const defectsList = diagnostics.defects || [];
     defectsList.forEach(d => {
@@ -239,7 +240,8 @@ export function calculateFhoneifyPrice(
         if (diagnostics.bodyScratches === 'No scratches') scratchPenalty = 0;
         if (diagnostics.bodyDents === 'No dents') dentPenalty = 0;
 
-        penalty = scratchPenalty + dentPenalty;
+        // Apply bodyScale specifically for body defects
+        penalty = (scratchPenalty + dentPenalty) * (bScale / scale);
       }
 
       const foldableScreenMult = isFoldable ? 3.0 : 1.0;
@@ -294,7 +296,7 @@ export function calculateFhoneifyPrice(
   if (diagnostics.touch === false || (diagnostics.defects || []).includes('broken_screen')) {
     screen_orig_mult = 1.0;
   }
-  screen_body_sum = applyGranularDefects(params.physicalScale);
+  screen_body_sum = applyGranularDefects(params.physicalScale, bodyScale);
 
   if (isFoldable && diagnostics.originalScreen === false) {
     screen_orig_mult = Math.min(screen_orig_mult, 0.35);
