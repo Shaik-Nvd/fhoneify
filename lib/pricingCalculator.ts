@@ -313,7 +313,7 @@ export function calculateFhoneifyPrice(
       if (h === 'battery_health' && isApple) {
         const isNewerSeries = safeModel.toLowerCase().includes('15') || safeModel.toLowerCase().includes('16') || safeModel.toLowerCase().includes('17');
         if (isNewerSeries) {
-          penalty = 0.016; // Tiny ~1.6% deduction for newer series
+          penalty = 0.01729 * params.functionalScale; // Scaled ~1.7% deduction for newer series
         } else {
           penalty = 0.0; // Cashify waives the 80-85% battery health penalty entirely for older iPhones (like iPhone X, 11, 12, etc.)
         }
