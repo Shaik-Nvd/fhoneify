@@ -347,14 +347,7 @@ export function calculateFhoneifyPrice(
     * (1 - Math.min(screen_body_sum, 1)) 
     * (1 - Math.min(functional_sum, 1));
 
-  let upliftPercent = 1.04;
-  if (basePrice <= 20000) {
-    upliftPercent = 1.08;
-  } else if (basePrice <= 50000) {
-    upliftPercent = 1.06;
-  } else {
-    upliftPercent = 1.04;
-  }
+  let upliftPercent = 1.0;
 
   // Handle Cashify's AI-Generated Market Price Edge Case
   let eSim_multiplier = 1.0;
@@ -362,15 +355,6 @@ export function calculateFhoneifyPrice(
   let final_box_bonus = box_bonus;
   
   if (isApple) {
-    // iPhones assume box and charger in the base price. Missing them scales the penalty.
-    if (!diagnostics.accessories?.includes('box')) {
-       accessories_multiplier -= 0.010; // ~1% penalty for missing box
-    }
-    if (!diagnostics.accessories?.includes('charger')) {
-       accessories_multiplier -= 0.0066; // ~0.66% penalty for missing charger
-    }
-    final_box_bonus = 0; // Flat bonuses disabled, rely purely on percentage
-
     if (safeModel.toLowerCase().includes('17')) {
       // Penalize Dual eSIM (imported models without physical SIM trays typically sell for less in India)
       if (diagnostics.eSim === 'Dual eSIM') {

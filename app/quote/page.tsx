@@ -788,13 +788,6 @@ export default function QuotePage() {
       const baseMarketPrice = (cashifyPrices as Record<string, number>)[lookupKey] || (device as any).basePrice || 1000;
       
       let upliftedBasePrice = baseMarketPrice;
-      if (baseMarketPrice <= 20000) {
-        upliftedBasePrice = baseMarketPrice * 1.08;
-      } else if (baseMarketPrice <= 50000) {
-        upliftedBasePrice = baseMarketPrice * 1.06;
-      } else {
-        upliftedBasePrice = baseMarketPrice * 1.04;
-      }
 
       const realStartPrice = Math.round(upliftedBasePrice);
       // The "Get Upto" price displayed to the user follows the algorithm strictly
