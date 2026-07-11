@@ -53,8 +53,9 @@ const ArrowRightIcon = () => <svg width="20" height="20" viewBox="0 0 24 24" fil
 
 export default function QuotePage() {
   const isWarrantyEligible = (brand: string, model: string) => {
+    const lowerModel = model.toLowerCase();
+    
     if (brand === 'Apple') {
-      const lowerModel = model.toLowerCase();
       // Only iPhones 15, 16, 17, and iPhone Air are warranty eligible (released within 1-2 years)
       return (
         lowerModel.includes('15') ||
@@ -63,6 +64,28 @@ export default function QuotePage() {
         lowerModel.includes('air')
       );
     }
+    
+    if (brand === 'OnePlus') {
+      // Recent OnePlus models (12, 13, Nord 4, CE4, Open)
+      return (
+        lowerModel.includes('12') ||
+        lowerModel.includes('13') ||
+        lowerModel.includes('14') ||
+        lowerModel.includes('15') ||
+        lowerModel.includes('nord 4') ||
+        lowerModel.includes('ce4') ||
+        lowerModel.includes('ce 4') ||
+        lowerModel.includes('open')
+      );
+    }
+    
+    if (brand === 'Samsung') {
+      // Exclude older Samsung flagships
+      if (lowerModel.includes('s20') || lowerModel.includes('s21') || lowerModel.includes('s22') || lowerModel.includes('note')) {
+        return false;
+      }
+    }
+
     return true;
   };
 
@@ -788,6 +811,13 @@ export default function QuotePage() {
       const baseMarketPrice = (cashifyPrices as Record<string, number>)[lookupKey] || (device as any).basePrice || 1000;
       
       let upliftedBasePrice = baseMarketPrice;
+      if (baseMarketPrice <= 20000) {
+        upliftedBasePrice = baseMarketPrice * 1.08;
+      } else if (baseMarketPrice <= 50000) {
+        upliftedBasePrice = baseMarketPrice * 1.06;
+      } else {
+        upliftedBasePrice = baseMarketPrice * 1.04;
+      }
 
       const realStartPrice = Math.round(upliftedBasePrice);
       // The "Get Upto" price displayed to the user follows the algorithm strictly
