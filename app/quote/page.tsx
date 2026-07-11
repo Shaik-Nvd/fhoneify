@@ -211,7 +211,23 @@ export default function QuotePage() {
   const [finalPrice, setFinalPrice] = useState<number | null>(null);
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (step === 11) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if ((step >= 3 && step <= 9) || step === 13 || step === 14) {
+      // Small delay to ensure the DOM is rendered before calculating position
+      setTimeout(() => {
+        const el = document.getElementById('questionnaire-container');
+        if (el) {
+          const yOffset = -20; // Slight padding from top
+          const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }, 50);
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   }, [step]);
 
   const [diagnostics, setDiagnostics] = useState({
@@ -1924,7 +1940,7 @@ export default function QuotePage() {
         </div>
       )}      {/* STAGES 3-9: MULTI-STEP QUESTIONNAIRE (2 COLUMN LAYOUT) */}
       {((step >= 3 && step <= 9) || step === 13 || step === 14) && (
-        <div className="flex flex-col-reverse md:flex-row gap-8 items-start w-full" style={{ marginTop: '2.5rem' }}>
+        <div id="questionnaire-container" className="flex flex-col-reverse md:flex-row gap-8 items-start w-full" style={{ marginTop: '2.5rem' }}>
           
           <div className="flex-1 w-full min-w-0 flex flex-col gap-6">
             
