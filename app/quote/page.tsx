@@ -216,9 +216,10 @@ export default function QuotePage() {
     } else if ((step >= 3 && step <= 9) || step === 13 || step === 14) {
       // Small delay to ensure the DOM is rendered before calculating position
       setTimeout(() => {
-        const el = document.getElementById('questionnaire-container');
+        const el = document.getElementById('questions-area');
         if (el) {
-          const yOffset = -20; // Slight padding from top
+          // Scroll so the questions start slightly below the top of the screen
+          const yOffset = - (window.innerHeight * 0.15); // 15% from top
           const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
           window.scrollTo({ top: y, behavior: 'smooth' });
         } else {
@@ -1940,9 +1941,9 @@ export default function QuotePage() {
         </div>
       )}      {/* STAGES 3-9: MULTI-STEP QUESTIONNAIRE (2 COLUMN LAYOUT) */}
       {((step >= 3 && step <= 9) || step === 13 || step === 14) && (
-        <div id="questionnaire-container" className="flex flex-col-reverse md:flex-row gap-8 items-start w-full" style={{ marginTop: '2.5rem' }}>
+        <div className="flex flex-col-reverse md:flex-row gap-8 items-start w-full" style={{ marginTop: '2.5rem' }}>
           
-          <div className="flex-1 w-full min-w-0 flex flex-col gap-6">
+          <div id="questions-area" className="flex-1 w-full min-w-0 flex flex-col gap-6">
             
             {/* STAGE 3: BASIC YES/NO */}
             {step === 3 && (
