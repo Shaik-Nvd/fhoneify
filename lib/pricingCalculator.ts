@@ -62,7 +62,7 @@ export const getAppleModelParams = (model: string) => {
     }
   } else if (lowerModel.includes('16') || lowerModel.includes('15') || lowerModel.includes('14')) {
     if (isProMax) {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.8176, touchPenalty: 0.635, functionalScale: 1.09, physicalScale: 0.39895, bodyScale: 0.9806 };
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.8176, touchPenalty: 0.635, functionalScale: 1.09, physicalScale: 0.39895, bodyScale: 0.9806, facePenalty: 0.257307 };
     } else if (isPro || isPlus) {
       params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.65, touchPenalty: 0.55, functionalScale: 1.05, physicalScale: 1.05 };
     } else {
@@ -324,7 +324,7 @@ export function calculateFhoneifyPrice(
         if (isTouchIDOnly) {
           penalty = 0.0; // Touch ID phones don't have Face ID
         } else {
-          penalty = 0.37; // Face ID is crucial for iPhones, Cashify heavily penalizes broken Face ID (~37%)
+          penalty = (params as any).facePenalty !== undefined ? (params as any).facePenalty : 0.37;
         }
       }
 
