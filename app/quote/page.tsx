@@ -2323,8 +2323,6 @@ export default function QuotePage() {
                     } else {
                       const updatedDiag = {
                         ...diagnostics,
-                        validBill: (isEligible && !warrantyVoided) ? !!diagnostics.validBill : false,
-                        warranty: (isEligible && !warrantyVoided) ? !!diagnostics.warranty : false,
                         mobileAge: 'above11' as const
                       };
                       setDiagnostics(updatedDiag);
