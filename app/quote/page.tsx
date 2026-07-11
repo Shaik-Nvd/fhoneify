@@ -183,14 +183,7 @@ export default function QuotePage() {
   };
 
   const handleBack = () => {
-    setStepHistory(prev => {
-      const newHistory = [...prev];
-      const previousStep = newHistory.pop();
-      if (previousStep !== undefined) {
-        setStep(previousStep);
-      }
-      return newHistory;
-    });
+    window.history.back();
   };
 
   useEffect(() => {
