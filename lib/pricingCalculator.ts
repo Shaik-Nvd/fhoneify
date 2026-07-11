@@ -285,6 +285,10 @@ export function calculateFhoneifyPrice(
           penalty = 0.0; // Cashify waives the 80-85% battery health penalty entirely for older iPhones (like iPhone X, 11, 12, etc.)
         }
       }
+
+      if (h === 'face' && isApple) {
+        penalty = 0.37; // Face ID is crucial for iPhones, Cashify heavily penalizes broken Face ID (~37%)
+      }
       
       functional_sum += penalty;
     }
