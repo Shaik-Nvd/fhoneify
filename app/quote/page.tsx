@@ -2301,20 +2301,19 @@ export default function QuotePage() {
                     const isEligible = isWarrantyEligible(selectedBrand, selectedModel);
                     const hasWarrantyAndBill = diagnostics.warranty === true && diagnostics.validBill === true;
                     if (isEligible && hasWarrantyAndBill) {
-                      // Cashify skips the age question entirely for the brand new 17e and 16e if the box is missing
-                      if (selectedBrand === 'Apple' && (selectedModel.toLowerCase().includes('17e') || selectedModel.toLowerCase().includes('16e'))) {
-                         if (!diagnostics.accessories.includes('box')) {
-                           const updatedDiag = { ...diagnostics, mobileAge: 'below3' as const };
-                           setDiagnostics(updatedDiag);
-                           if (isAuthenticated) { 
-                             calculateFinalPrice(updatedDiag); 
-                             setMarketPriceFetched(false);
-                             navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11); 
-                           } else { 
-                             navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 10); 
-                           }
-                         } else {
-                           navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 9);
+                      // Cashify skips the age question entirely for brand new phones (17e, 16e, Z Flip7 FE)
+                      const isBrandNewApple = selectedBrand === 'Apple' && (selectedModel.toLowerCase().includes('17e') || selectedModel.toLowerCase().includes('16e'));
+                      const isBrandNewSamsung = selectedBrand === 'Samsung' && selectedModel.toLowerCase().includes('flip7 fe');
+                      
+                      if ((isBrandNewApple && !diagnostics.accessories.includes('box')) || isBrandNewSamsung) {
+                         const updatedDiag = { ...diagnostics, mobileAge: 'below3' as const };
+                         setDiagnostics(updatedDiag);
+                         if (isAuthenticated) { 
+                           calculateFinalPrice(updatedDiag); 
+                           setMarketPriceFetched(false);
+                           navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11); 
+                         } else { 
+                           navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 10); 
                          }
                       } else {
                         navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 9);
