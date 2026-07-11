@@ -825,7 +825,7 @@ export default function QuotePage() {
     const isApple = brand.toLowerCase() === 'apple';
     
     // Determine Touch ID vs Face ID for Apple
-    const hasFaceId = isApple && (
+    const hasFaceId = !isApple || (
       lowerModel.includes('iphone x') ||
       lowerModel.includes('iphone 11') ||
       lowerModel.includes('iphone 12') ||
@@ -869,7 +869,7 @@ export default function QuotePage() {
       { id: 'front_camera', label: 'Front Camera not working', icon: '📸' },
       { id: 'back_camera', label: 'Back Camera not working', icon: '📷' },
       { id: 'volume', label: 'Volume Button not working', icon: '🔉' },
-      ...(hasFingerprint ? [{ id: 'fingerprint', label: 'Finger Touch (Touch ID) not working', icon: '👆' }] : []),
+      ...(hasFingerprint ? [{ id: 'fingerprint', label: isApple ? 'Finger Touch (Touch ID) not working' : 'Finger Touch not working', icon: '👆' }] : []),
       { id: 'wifi', label: 'WiFi not working', icon: '📶' },
       { id: 'speaker', label: 'Speaker Faulty', icon: '🔊' },
       { 
@@ -877,7 +877,7 @@ export default function QuotePage() {
         label: hasActionButton ? 'Action Button not working' : 'Silent Button not working', 
         icon: '🔕' 
       },
-      ...(hasFaceId ? [{ id: 'face', label: 'Face ID / Face Sensor not working', icon: '👱' }] : []),
+      ...(hasFaceId ? [{ id: 'face', label: isApple ? 'Face ID / Face Sensor not working' : 'Face Sensor not working', icon: '👱' }] : []),
       { id: 'power', label: 'Power Button not working', icon: '⏻' },
       { id: 'charging', label: 'Charging Port not working', icon: '🔌' },
       { id: 'audio_receiver', label: 'Audio Receiver not working', icon: '📞' },
@@ -895,8 +895,7 @@ export default function QuotePage() {
             { id: 'battery_service', label: 'Battery Faulty', icon: '🔋' }
           ]
       ),
-      ...(hasSPen ? [{ id: 's_pen', label: 'S-Pen Faulty / Missing', icon: '🖊️' }] : []),
-      ...(isFoldable ? [{ id: 'hinge', label: 'Hinge / Folding Mechanism Faulty', icon: '📱' }] : [])
+      ...(hasSPen ? [{ id: 's_pen', label: 'S-Pen Faulty / Missing', icon: '🖊️' }] : [])
     ];
 
     return baseList;
