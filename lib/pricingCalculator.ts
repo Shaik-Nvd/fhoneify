@@ -61,7 +61,10 @@ export const getAppleModelParams = (model: string) => {
       params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.65, touchPenalty: 0.50, functionalScale: 1.15, physicalScale: 1.15 };
     }
   } else if (lowerModel.includes('16') || lowerModel.includes('15') || lowerModel.includes('14')) {
-    if (isProMax) {
+    if (lowerModel === 'apple iphone 16 pro max' || lowerModel === 'iphone 16 pro max') {
+      // Highly specialized logic for the newest 16 Pro Max (higher penalty for 3rd party screen)
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.782, touchPenalty: 0.635, functionalScale: 1.09, physicalScale: 0.39895, bodyScale: 0.9806, facePenalty: 0.257307 };
+    } else if (isProMax) {
       params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.8176, touchPenalty: 0.635, functionalScale: 1.09, physicalScale: 0.39895, bodyScale: 0.9806, facePenalty: 0.257307 };
     } else if (isPro || isPlus) {
       params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.65, touchPenalty: 0.55, functionalScale: 1.05, physicalScale: 1.05 };
