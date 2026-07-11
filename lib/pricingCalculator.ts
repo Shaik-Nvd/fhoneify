@@ -277,9 +277,13 @@ export function calculateFhoneifyPrice(
       }
       let penalty = (config.defects_functional as any)[h] * params.functionalScale;
       
-      // Cashify only deducts a tiny flat amount (~900 INR, approx 1.6%) for battery health on iPhone 15 series
-      if (h === 'battery_health' && isApple && safeModel.toLowerCase().includes('15')) {
-        penalty = 0.016; 
+      if (h === 'battery_health' && isApple) {
+        const isNewerSeries = safeModel.toLowerCase().includes('15') || safeModel.toLowerCase().includes('16') || safeModel.toLowerCase().includes('17');
+        if (isNewerSeries) {
+          penalty = 0.016; // Tiny ~1.6% deduction for newer series
+        } else {
+          penalty = 0.0; // Cashify waives the 80-85% battery health penalty entirely for older iPhones (like iPhone X, 11, 12, etc.)
+        }
       }
       
       functional_sum += penalty;
