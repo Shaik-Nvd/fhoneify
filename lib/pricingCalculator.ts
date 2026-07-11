@@ -225,9 +225,9 @@ export function calculateFhoneifyPrice(
         }
 
         if (diagnostics.bodyDents === 'Major dent(s) or more than 2') {
-          dentPenalty = 0.15;
+          dentPenalty = 0.04232; // Calibrated to exactly mirror Cashify's ~2.54% penalty on iPhone X
         } else if (diagnostics.bodyDents === '1-2 minor dents') {
-          dentPenalty = 0.08;
+          dentPenalty = 0.02; // Extrapolated from major dents
         }
 
         if (diagnostics.bodyScratches === 'No scratches') scratchPenalty = 0;
