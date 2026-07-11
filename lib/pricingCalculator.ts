@@ -319,6 +319,13 @@ export function calculateFhoneifyPrice(
         }
       }
 
+      if (h === 'battery_service' && isApple) {
+        const isNewerSeries = safeModel.toLowerCase().includes('15') || safeModel.toLowerCase().includes('16') || safeModel.toLowerCase().includes('17');
+        if (isNewerSeries) {
+          penalty = 0.058074 * params.functionalScale; // Scaled ~6.33% deduction for newer series
+        }
+      }
+
       if (h === 'face' && isApple) {
         const isTouchIDOnly = safeModel.toLowerCase().includes('se') || safeModel.toLowerCase().match(/[678]/);
         if (isTouchIDOnly) {
