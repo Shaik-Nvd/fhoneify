@@ -90,7 +90,7 @@ export const getAppleModelParams = (model: string) => {
     }
   } else if (lowerModel.includes('xs') || lowerModel.includes('xr') || lowerModel.includes('x')) {
     params = {
-      warrantyPenalty: 0.0, gstBillPenalty: 0.0, callsPenalty: 0.62, originalScreenPenalty: 0.80, touchPenalty: 0.45, functionalScale: 0.6, physicalScale: 0.6,
+      warrantyPenalty: 0.0, gstBillPenalty: 0.0, callsPenalty: 0.62, originalScreenPenalty: 0.80, touchPenalty: 0.40, functionalScale: 0.6, physicalScale: 0.6,
     };
   } else if (lowerModel.includes('8') || lowerModel.includes('7') || lowerModel.includes('6') || lowerModel.includes('se')) {
     params = {
