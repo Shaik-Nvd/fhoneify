@@ -211,6 +211,31 @@ export function calculateFhoneifyPrice(
         }
       }
 
+      // Granularize body_scratch penalty based on bodyScratches and bodyDents severity
+      if (d === 'body_scratch') {
+        let scratchPenalty = 0;
+        let dentPenalty = 0;
+
+        if (diagnostics.bodyScratches === 'More than 2 scratches') {
+          scratchPenalty = 0.02116; // Calibrated to exactly mirror Cashify's ~1.27% penalty on iPhone X
+        } else if (diagnostics.bodyScratches === '1-2 scratches') {
+          scratchPenalty = 0.01;
+        } else {
+          scratchPenalty = 0.05; // Fallback if no specific condition provided
+        }
+
+        if (diagnostics.bodyDents === 'Major dent(s) or more than 2') {
+          dentPenalty = 0.15;
+        } else if (diagnostics.bodyDents === '1-2 minor dents') {
+          dentPenalty = 0.08;
+        }
+
+        if (diagnostics.bodyScratches === 'No scratches') scratchPenalty = 0;
+        if (diagnostics.bodyDents === 'No dents') dentPenalty = 0;
+
+        penalty = scratchPenalty + dentPenalty;
+      }
+
       const foldableScreenMult = isFoldable ? 3.0 : 1.0;
 
       if (d === 'screen_scratch' || d === 'screen_spot' || d === 'panel_missing') {
