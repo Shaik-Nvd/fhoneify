@@ -65,11 +65,11 @@ export const getAppleModelParams = (model: string) => {
     }
   } else if (lowerModel.includes('17')) {
     if (isProMax || isPlus) {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.45, originalScreenPenalty: 0.55, touchPenalty: 0.45, functionalScale: 1.15, physicalScale: 1.11392 };
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.45, originalScreenPenalty: 0.55, touchPenalty: 0.61485, functionalScale: 1.15, physicalScale: 1.11392 };
     } else if (isPro) {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.45, originalScreenPenalty: 0.60, touchPenalty: 0.50, functionalScale: 1.15, physicalScale: 1.05 };
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.45, originalScreenPenalty: 0.60, touchPenalty: 0.61485, functionalScale: 1.15, physicalScale: 1.05 };
     } else {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.65, touchPenalty: 0.50, functionalScale: 1.10, physicalScale: 1.05 };
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.65, touchPenalty: 0.61485, functionalScale: 1.10, physicalScale: 1.05 };
     }
   } else if (lowerModel.includes('16') || lowerModel.includes('15') || lowerModel.includes('14')) {
     if (lowerModel.includes('16 pro max')) {
@@ -301,6 +301,8 @@ export function calculateFhoneifyPrice(
       } else {
         age_multiplier = (config.ageBonus as any)['above11'] || 0.7966;
       }
+    } else {
+      age_multiplier = 0.83;
     }
 
     // Warranty penalty strictly applied if less than 11 months old and no warranty/bill
