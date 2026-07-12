@@ -187,17 +187,18 @@ export function calculateFhoneifyPrice(
   if (!basePrice) return 0;
   
   const floor_price = config.modelFloorPrice; 
-  let age_multiplier = 1.0;\n  const is16Series = safeModel.toLowerCase().includes(\'16\');
+  let age_multiplier = 1.0;
+
+  const safeBrand = String(brand || '');
+  const safeModel = String(model || '');
+  const isApple = safeBrand.toLowerCase() === 'apple';
+  const is16Series = safeModel.toLowerCase().includes('16');
+
   let calls_multiplier = 1.0;
   let touch_multiplier = 1.0;
   let screen_orig_mult = 1.0;
   let screen_body_sum = 0;
   let functional_sum = 0;
-
-  const safeBrand = String(brand || '');
-  const safeModel = String(model || '');
-  const isApple = safeBrand.toLowerCase() === 'apple';
-  
   // Cashify sets a flat scrap price of exactly ₹1,200 for any iPhone that cannot make or receive calls
   if (isApple && diagnostics.calls === false) {
     return 1200;
