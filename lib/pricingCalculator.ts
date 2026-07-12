@@ -226,7 +226,11 @@ export function calculateFhoneifyPrice(
       // Granularize screen_scratch penalty based on screenCondition severity
       if (d === 'screen_scratch' && diagnostics.screenCondition) {
         if (diagnostics.screenCondition === 'More than 2 scratches on screen' || diagnostics.screenCondition === 'More than 2 scratches') {
-          penalty = 0.2635; // Calibrated to exactly mirror Cashify's penalty
+          if (safeModel.toLowerCase().includes('17')) {
+            penalty = 0.12856; // Reduced penalty specifically observed for 17 series
+          } else {
+            penalty = 0.2635; // Calibrated to exactly mirror Cashify's penalty
+          }
         } else if (diagnostics.screenCondition === '1-2 scratches on screen' || diagnostics.screenCondition === '1-2 scratches') {
           penalty = 0.15;
         } else {
