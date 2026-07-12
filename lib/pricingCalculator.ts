@@ -239,6 +239,10 @@ export function calculateFhoneifyPrice(
         }
       }
 
+      if (d === 'screen_spot' && safeModel.toLowerCase().includes('17')) {
+        penalty = 0.21385; // Reduced penalty specifically observed for 17 series
+      }
+
       // Granularize body_scratch penalty based on bodyScratches and bodyDents severity
       if (d === 'body_scratch') {
         let scratchPenalty = 0;
