@@ -410,7 +410,12 @@ export function calculateFhoneifyPrice(
   const touch_penalty_val = 1.0 - touch_multiplier;
   const screen_orig_penalty_val = 1.0 - screen_orig_mult;
   
-  const total_penalty_sum = calls_penalty_val + touch_penalty_val + screen_orig_penalty_val + screen_body_sum + functional_sum;
+  let total_penalty_sum = calls_penalty_val + touch_penalty_val + screen_orig_penalty_val + screen_body_sum + functional_sum;
+
+  // Extreme Damage Calibration for 16 Pro Max (Touch Faulty + Face ID Faulty + Battery Service)
+  if (safeModel.toLowerCase().includes('16 pro max') && diagnostics.touch === false && (diagnostics.hardware || []).includes('face')) {
+    total_penalty_sum += 0.1066; 
+  }
 
   const rawCalculated = basePrice 
     * age_multiplier 
