@@ -423,15 +423,25 @@ export function calculateFhoneifyPrice(
   const cashifyPrice = (rawCalculated * eSim_multiplier * accessories_multiplier) + final_box_bonus;
 
   let upliftPercent = 1.0;
-  if (cashifyPrice <= 20000) {
+  if (basePrice <= 20000) {
     upliftPercent = 1.08;
-  } else if (cashifyPrice <= 50000) {
+  } else if (basePrice <= 50000) {
     upliftPercent = 1.06;
   } else {
     upliftPercent = 1.04;
   }
 
-  const calculated = cashifyPrice * upliftPercent;
+  let fhoneifyExtra = cashifyPrice * (upliftPercent - 1.0);
+  
+  // Cap the extra bonus between ₹100 and ₹2000
+  if (fhoneifyExtra > 2000) {
+    fhoneifyExtra = 2000;
+  }
+  if (fhoneifyExtra < 100 && cashifyPrice > 1200) {
+    fhoneifyExtra = 100;
+  }
+
+  const calculated = cashifyPrice + fhoneifyExtra;
     
   return Math.max(Math.round(calculated), floor_price);
 }
