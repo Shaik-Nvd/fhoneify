@@ -65,11 +65,11 @@ export const getAppleModelParams = (model: string) => {
     }
   } else if (lowerModel.includes('17')) {
     if (isProMax || isPlus) {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.45, originalScreenPenalty: 0.55, touchPenalty: 0.45, functionalScale: 1.25, physicalScale: 1.25 };
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.45, originalScreenPenalty: 0.55, touchPenalty: 0.45, functionalScale: 1.15, physicalScale: 1.11392 };
     } else if (isPro) {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.45, originalScreenPenalty: 0.60, touchPenalty: 0.50, functionalScale: 1.20, physicalScale: 1.20 };
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.45, originalScreenPenalty: 0.60, touchPenalty: 0.50, functionalScale: 1.15, physicalScale: 1.05 };
     } else {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.65, touchPenalty: 0.50, functionalScale: 1.15, physicalScale: 1.15 };
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.65, touchPenalty: 0.50, functionalScale: 1.10, physicalScale: 1.05 };
     }
   } else if (lowerModel.includes('16') || lowerModel.includes('15') || lowerModel.includes('14')) {
     if (lowerModel.includes('16 pro max')) {
