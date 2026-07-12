@@ -128,6 +128,15 @@ function CalculatorTab({ onSave }: { onSave: (log: any) => void }) {
     });
   };
 
+  const isESimEligible = (brand: string, model: string) => {
+    if (brand.toLowerCase() !== 'apple') return false;
+    const lower = model.toLowerCase();
+    if (lower.includes('17e')) return false;
+    if (lower.includes('17')) return true;
+    if ((lower.includes('13') || lower.includes('14') || lower.includes('15') || lower.includes('16')) && (lower.includes('pro') || lower.includes('max'))) return true;
+    return false;
+  };
+
   const fhoneifyPrice = selectedDevice ? calculateFhoneifyPrice(selectedDevice.brand, selectedDevice.name || selectedDevice.model, selectedDevice.basePrice || selectedDevice.price || 0, diagnostics) : 0;
   
   const cPrice = parseInt(cashifyPrice) || 0;
@@ -200,7 +209,15 @@ function CalculatorTab({ onSave }: { onSave: (log: any) => void }) {
                     <option value="no">No</option>
                   </select>
                 </label>
-
+                {isESimEligible(selectedBrand, selectedModel) && (
+                  <label style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <span style={{ fontSize: '0.85rem' }}>eSIM Support?</span>
+                    <select value={diagnostics.eSim || 'Single eSIM'} onChange={e => setDiagnostics({...diagnostics, eSim: e.target.value as any})} style={{ background: '#222', color: '#fff', border: '1px solid #333', padding: '0.3rem', borderRadius: '4px' }}>
+                      <option value="Single eSIM">Single eSIM</option>
+                      <option value="Dual eSIM">Dual eSIM</option>
+                    </select>
+                  </label>
+                )}
               </div>
             </div>
 

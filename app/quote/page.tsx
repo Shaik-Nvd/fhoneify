@@ -285,6 +285,7 @@ export default function QuotePage() {
   const [scrapingStatus, setScrapingStatus] = useState('Connecting to market...');
   const [timerError, setTimerError] = useState<string | null>(null);
   const [marketPriceFetched, setMarketPriceFetched] = useState(false);
+  const [cashifyPrice, setCashifyPrice] = useState<number | null>(null);
   const [selectedSamsungSeries, setSelectedSamsungSeries] = useState<string | null>(null);
   const [selectedXiaomiSeries, setSelectedXiaomiSeries] = useState<string | null>(null);
   const [selectedVivoSeries, setSelectedVivoSeries] = useState<string | null>(null);
@@ -1041,7 +1042,7 @@ export default function QuotePage() {
       clearTimeout(timeoutId);
       
       if (res.data && res.data.success) {
-        setFinalPrice(res.data.data);
+        setCashifyPrice(res.data.data);
         setIsScraping(false);
         setMarketPriceFetched(true);
         if (timerRef.current) clearInterval(timerRef.current);
@@ -2587,31 +2588,25 @@ export default function QuotePage() {
             </div>
           )}
 
-          {marketPriceFetched && (
-            <div>
-              <h3 style={{ fontSize: '1.1rem', fontWeight: 600, color: '#fff', marginBottom: '1.5rem' }}>Price Summary</h3>
-              
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem', color: '#ccc', fontSize: '0.9rem' }}>
-                <span>Base Price</span>
-                <span>{formatCurrency(finalPrice)}</span>
-              </div>
-              
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem', color: '#ccc', fontSize: '0.9rem', ...(appliedCoupon ? {} : { borderBottom: '1px solid #2a2a2a', paddingBottom: '1.5rem' }) }}>
-                <span>Processing Fee</span>
-                <span>{finalPrice === 1200 ? '₹0' : '-₹99'}</span>
-              </div>
-
-              {appliedCoupon && (
-                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem', color: '#4CD964', fontSize: '0.9rem', borderBottom: '1px solid #2a2a2a', paddingBottom: '1.5rem' }}>
-                  <span>First Time User Bonus</span>
-                  <span>+₹299</span>
-                </div>
-              )}
-              
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '2rem', color: '#fff', fontSize: '1.1rem', fontWeight: 700 }}>
-                <span>Total Amount</span>
-                <span>{formatCurrency((finalPrice || 0) - (finalPrice === 1200 ? 0 : 99) + (appliedCoupon ? 299 : 0))}</span>
-              </div>
+          {marketPriceFetched && (typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) && (
+            <div style={{
+              marginTop: '1.5rem',
+              marginBottom: '1rem',
+              padding: '1rem 1.25rem',
+              background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.12) 0%, rgba(212, 175, 55, 0.02) 100%)',
+              border: '1px solid rgba(212, 175, 55, 0.3)',
+              borderRadius: '12px',
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              boxShadow: '0 8px 32px rgba(212, 175, 55, 0.08)'
+            }}>
+              <span style={{ fontSize: '1rem', fontWeight: 600, color: '#d4af37', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <span>✨</span> Cashify's price
+              </span>
+              <span style={{ color: '#fff', fontSize: '1.25rem', fontWeight: 800 }}>
+                {formatCurrency(cashifyPrice)}
+              </span>
             </div>
           )}
           
