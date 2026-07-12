@@ -2330,9 +2330,11 @@ export default function QuotePage() {
                       // Cashify skips the age question entirely for brand new phones (17e, 16e, Z Flip7 FE)
                       const isBrandNewApple = selectedBrand === 'Apple' && (selectedModel.toLowerCase().includes('17e') || selectedModel.toLowerCase().includes('16e'));
                       const isBrandNewSamsung = selectedBrand === 'Samsung' && selectedModel.toLowerCase().includes('flip7 fe');
+                      const isApple15ProMax = selectedBrand === 'Apple' && selectedModel.toLowerCase().includes('15 pro max');
                       
-                      if ((isBrandNewApple && !diagnostics.accessories.includes('box')) || isBrandNewSamsung) {
-                         const updatedDiag = { ...diagnostics, mobileAge: 'below3' as const };
+                      if ((isBrandNewApple && !diagnostics.accessories.includes('box')) || isBrandNewSamsung || isApple15ProMax) {
+                         const assignedAge = isApple15ProMax ? '6to11' : 'below3';
+                         const updatedDiag = { ...diagnostics, mobileAge: assignedAge as const };
                          setDiagnostics(updatedDiag);
                          if (isAuthenticated) { 
                            calculateFinalPrice(updatedDiag); 
