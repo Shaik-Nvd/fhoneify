@@ -2333,7 +2333,7 @@ export default function QuotePage() {
                       const isApple15ProMax = selectedBrand === 'Apple' && selectedModel.toLowerCase().includes('15 pro max');
                       
                       if ((isBrandNewApple && !diagnostics.accessories.includes('box')) || isBrandNewSamsung || isApple15ProMax) {
-                         const assignedAge = isApple15ProMax ? '6to11' : 'below3';
+                         const assignedAge = isApple15ProMax ? 'above11' : 'below3';
                          const updatedDiag = { ...diagnostics, mobileAge: assignedAge as const };
                          setDiagnostics(updatedDiag);
                          if (isAuthenticated) { 
