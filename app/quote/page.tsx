@@ -2599,7 +2599,7 @@ export default function QuotePage() {
               boxShadow: '0 8px 32px rgba(212, 175, 55, 0.08)'
             }}>
               <span style={{ fontSize: '1rem', fontWeight: 600, color: '#d4af37', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <span>✨</span> Cashify's price
+                <span>✨</span> Cashify&apos;s price
               </span>
               <span style={{ color: '#fff', fontSize: '1.25rem', fontWeight: 800 }}>
                 {formatCurrency(cashifyPrice)}
