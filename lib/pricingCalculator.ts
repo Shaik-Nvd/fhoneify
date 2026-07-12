@@ -319,6 +319,11 @@ export function calculateFhoneifyPrice(
       if (!diagnostics.warranty) age_multiplier -= params.warrantyPenalty;
       const hasValidBill = diagnostics.validBill === true || (diagnostics.accessories || []).includes('bill');
       if (!hasValidBill) age_multiplier -= params.gstBillPenalty;
+    } else {
+      // Specialized algorithm for aggressive Cashify penalties on 16 series above 11 months
+      if (safeModel.toLowerCase().includes('16') && (diagnostics.mobileAge === 'Above 11 months' || diagnostics.mobileAge === 'above11')) {
+        age_multiplier -= 0.0177;
+      }
     }
   }
 
