@@ -20828,5 +20828,176 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "basePrice": 77150,
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-17-ultra-16-gb-512-gb"
+  },
+  {
+    "id": "f89e6616-be08-451b-a06a-09d6510c5578",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Fold",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 12990
+  },
+  {
+    "id": "b612ddee-0204-43b2-83e6-5b7349945d85",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Fold2 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 17300
+  },
+  {
+    "id": "d09e3b52-6ac9-4342-b852-64c30b31543d",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Fold6 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 69580
+  },
+  {
+    "id": "d3a8190c-a641-405c-b6e8-c37056080c4c",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Fold6 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 70370
+  },
+  {
+    "id": "4ad62ecc-bf1c-4e4a-9b16-b53291500487",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Fold6 5G",
+    "storage": "12 GB/1 TB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 73870
+  },
+  {
+    "id": "c6d8e9a8-d589-4d09-a736-e3e546d6c2f0",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Fold4",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 28690
+  },
+  {
+    "id": "74f19df8-e456-4744-9a2d-0074fb6999ab",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Fold4",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 30120
+  },
+  {
+    "id": "601b5781-2d8b-4a57-9db7-b93f5338921f",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Fold5",
+    "storage": "12 GB/1 TB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 54770
+  },
+  {
+    "id": "0acda701-77bb-45e1-98eb-36e76e234551",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Fold4",
+    "storage": "12 GB/1 TB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 32990
+  },
+  {
+    "id": "10c0cba3-38e9-428f-a2b8-1950e97a3179",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Fold5",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 50160
+  },
+  {
+    "id": "c61ea875-c796-4c6f-99d3-7f4be48f418b",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Fold5",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 50590
+  },
+  {
+    "id": "11faafa6-d5d1-4adc-a9ef-c7a3a0f33e69",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Flip",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8840
+  },
+  {
+    "id": "f7d67a7c-79b5-46c3-83d2-a7e8c6dadf60",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Flip4",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 15450
+  },
+  {
+    "id": "e7f17d65-8bb5-4e8e-84b0-6bba72d92460",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Flip4",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 15720
+  },
+  {
+    "id": "7b2e487b-3815-4b8e-ac70-1e8efd3d50f6",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Flip5",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 27230
+  },
+  {
+    "id": "751dce6c-4ab7-4feb-98f4-c1d8bd384873",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Flip5",
+    "storage": "8 GB/512 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 28940
+  },
+  {
+    "id": "0c6748fc-b787-4682-a089-76bfe837da57",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Flip6 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 36860
+  },
+  {
+    "id": "be1fe442-9449-4447-bee6-83159624b237",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Flip6 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 41040
+  },
+  {
+    "id": "6cc3f1bc-133b-4d0f-87a1-b2c6c1700199",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Flip7 FE 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 53150
   }
 ];
