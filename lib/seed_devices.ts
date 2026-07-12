@@ -1240,7 +1240,7 @@ export const SEED_DEVICES: any[] = [
     "storage": "256GB",
     "ram": "12GB",
     "color": "Midnight",
-    "basePrice": 107500
+    "basePrice": 110000
   },
   {
     "id": "apple_2127",
@@ -1249,7 +1249,7 @@ export const SEED_DEVICES: any[] = [
     "storage": "512GB",
     "ram": "12GB",
     "color": "Midnight",
-    "basePrice": 114500
+    "basePrice": 117000
   },
   {
     "id": "apple_2128",
@@ -1258,7 +1258,7 @@ export const SEED_DEVICES: any[] = [
     "storage": "1TB",
     "ram": "12GB",
     "color": "Midnight",
-    "basePrice": 117000
+    "basePrice": 124000
   },
   {
     "id": "apple_2128_2tb",
@@ -1267,7 +1267,7 @@ export const SEED_DEVICES: any[] = [
     "storage": "2TB",
     "ram": "12GB",
     "color": "Midnight",
-    "basePrice": 124000
+    "basePrice": 135000
   },
   {
     "id": "apple_2129",
