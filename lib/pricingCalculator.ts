@@ -267,9 +267,9 @@ export function calculateFhoneifyPrice(
         penalty *= foldableScreenMult;
       }
       
-      // If the screen is not original, Cashify waives physical screen penalties (except body defects)
-      // because they already heavily penalize the 3rd party screen
-      if (diagnostics.originalScreen === false && d !== 'body_scratch' && d !== 'panel_missing') {
+      // If the screen is not original, or the touch is faulty, Cashify waives physical screen penalties (except body defects)
+      // because they already heavily penalize the 3rd party screen or the broken touch (both require full replacement)
+      if ((diagnostics.originalScreen === false || diagnostics.touch === false) && d !== 'body_scratch' && d !== 'panel_missing') {
         penalty = 0;
       }
       
