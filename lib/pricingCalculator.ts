@@ -231,7 +231,7 @@ export function calculateFhoneifyPrice(
           penalty = 0.15;
         } else {
           // Default for "Screen cracked/ glass broken" or "Chipped/cracked outside display area"
-          penalty = 0.35; 
+          penalty = 0.25; 
         }
       }
 
