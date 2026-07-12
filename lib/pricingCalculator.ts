@@ -314,16 +314,13 @@ export function calculateFhoneifyPrice(
     }
 
     // Warranty penalty strictly applied if less than 11 months old and no warranty/bill
-    const isLessThan11Months = diagnostics.warranty !== false && diagnostics.mobileAge !== 'Above 11 months' && diagnostics.mobileAge !== 'above11';
-    if (isLessThan11Months) {
-      if (!diagnostics.warranty) age_multiplier -= params.warrantyPenalty;
-      const hasValidBill = diagnostics.validBill === true || (diagnostics.accessories || []).includes('bill');
-      if (!hasValidBill) age_multiplier -= params.gstBillPenalty;
-    } else {
-      // Specialized algorithm for aggressive Cashify penalties on 16 series above 11 months
-      if (safeModel.toLowerCase().includes('16') && (diagnostics.mobileAge === 'Above 11 months' || diagnostics.mobileAge === 'above11')) {
-        age_multiplier -= 0.0177;
-      }
+    if (diagnostics.warranty === false) age_multiplier -= params.warrantyPenalty;
+    const hasValidBill = diagnostics.validBill === true || (diagnostics.accessories || []).includes('bill');
+    if (!hasValidBill) age_multiplier -= params.gstBillPenalty;
+    
+    // Specialized algorithm for aggressive Cashify penalties on 16 series above 11 months
+    if (safeModel.toLowerCase().includes('16') && (diagnostics.mobileAge === 'Above 11 months' || diagnostics.mobileAge === 'above11' || diagnostics.warranty === false)) {
+      age_multiplier -= 0.035; // Calibrated for safer margins across extreme condition combos
     }
   }
 
