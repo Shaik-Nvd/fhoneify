@@ -2333,8 +2333,8 @@ export default function QuotePage() {
                       const isApple15ProMax = selectedBrand === 'Apple' && selectedModel.toLowerCase().includes('15 pro max');
                       
                       if ((isBrandNewApple && !diagnostics.accessories.includes('box')) || isBrandNewSamsung || isApple15ProMax) {
-                         const assignedAge = isApple15ProMax ? 'above11' : 'below3';
-                         const updatedDiag = { ...diagnostics, mobileAge: assignedAge as const };
+                         const assignedAge = isApple15ProMax ? 'above11' as const : 'below3' as const;
+                         const updatedDiag = { ...diagnostics, mobileAge: assignedAge };
                          setDiagnostics(updatedDiag);
                          if (isAuthenticated) { 
                            calculateFinalPrice(updatedDiag); 
@@ -2602,7 +2602,7 @@ export default function QuotePage() {
                 <span>✨</span> Cashify&apos;s price
               </span>
               <span style={{ color: '#fff', fontSize: '1.25rem', fontWeight: 800 }}>
-                {formatCurrency(cashifyPrice)}
+                {formatCurrency(cashifyPrice ?? 0)}
               </span>
             </div>
           )}
