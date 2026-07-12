@@ -236,6 +236,91 @@ function CalculatorTab({ onSave }: { onSave: (log: any) => void }) {
                   </label>
                 ))}
               </div>
+              
+              {/* Insider Questions for Stage 2 */}
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginTop: '1rem' }}>
+                {diagnostics.defects.includes('screen_scratch') && (
+                  <label style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <span style={{ fontSize: '0.85rem', color: '#ccc' }}>Screen Condition:</span>
+                    <select value={diagnostics.screenCondition || 'flawless'} onChange={e => setDiagnostics({...diagnostics, screenCondition: e.target.value})} style={{ background: '#222', color: '#fff', border: '1px solid #333', padding: '0.3rem', borderRadius: '4px', maxWidth: '200px' }}>
+                      <option value="flawless">Flawless</option>
+                      <option value="1-2 scratches on screen">1-2 scratches on screen</option>
+                      <option value="More than 2 scratches on screen">More than 2 scratches on screen</option>
+                      <option value="Chipped/cracked outside display area">Chipped/cracked outside display area</option>
+                      <option value="Screen cracked/ glass broken">Screen cracked/ glass broken</option>
+                    </select>
+                  </label>
+                )}
+                
+                {diagnostics.defects.includes('screen_spot') && (
+                  <>
+                    <label style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <span style={{ fontSize: '0.85rem', color: '#ccc' }}>Screen Spots:</span>
+                      <select value={diagnostics.screenSpots || 'No spots on screen'} onChange={e => setDiagnostics({...diagnostics, screenSpots: e.target.value})} style={{ background: '#222', color: '#fff', border: '1px solid #333', padding: '0.3rem', borderRadius: '4px', maxWidth: '200px' }}>
+                        <option value="No spots on screen">No spots on screen</option>
+                        <option value="1-2 minor spots on screen">1-2 minor spots on screen</option>
+                        <option value="3 or more minor spots on screen">3 or more minor spots on screen</option>
+                        <option value="Large/ heavy visible spots on screen">Large/ heavy visible spots on screen</option>
+                      </select>
+                    </label>
+                    <label style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <span style={{ fontSize: '0.85rem', color: '#ccc' }}>Screen Lines:</span>
+                      <select value={diagnostics.screenLines || 'No line(s) on Display'} onChange={e => setDiagnostics({...diagnostics, screenLines: e.target.value})} style={{ background: '#222', color: '#fff', border: '1px solid #333', padding: '0.3rem', borderRadius: '4px', maxWidth: '200px' }}>
+                        <option value="No line(s) on Display">No line(s) on Display</option>
+                        <option value="Display faded along edges">Display faded along edges</option>
+                        <option value="Visible line(s) on display">Visible line(s) on display</option>
+                      </select>
+                    </label>
+                    <label style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <span style={{ fontSize: '0.85rem', color: '#ccc' }}>Discoloration:</span>
+                      <select value={diagnostics.screenDiscoloration || 'No Discoloration'} onChange={e => setDiagnostics({...diagnostics, screenDiscoloration: e.target.value})} style={{ background: '#222', color: '#fff', border: '1px solid #333', padding: '0.3rem', borderRadius: '4px', maxWidth: '200px' }}>
+                        <option value="No Discoloration">No Discoloration</option>
+                        <option value="Minor Discoloration">Minor Discoloration</option>
+                        <option value="Major Discoloration">Major Discoloration</option>
+                      </select>
+                    </label>
+                  </>
+                )}
+
+                {diagnostics.defects.includes('body_scratch') && (
+                  <>
+                    <label style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <span style={{ fontSize: '0.85rem', color: '#ccc' }}>Body Scratches:</span>
+                      <select value={diagnostics.bodyScratches || 'No scratches'} onChange={e => setDiagnostics({...diagnostics, bodyScratches: e.target.value})} style={{ background: '#222', color: '#fff', border: '1px solid #333', padding: '0.3rem', borderRadius: '4px', maxWidth: '200px' }}>
+                        <option value="No scratches">No scratches</option>
+                        <option value="1-2 scratches">1-2 scratches</option>
+                        <option value="More than 2 scratches">More than 2 scratches</option>
+                      </select>
+                    </label>
+                    <label style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <span style={{ fontSize: '0.85rem', color: '#ccc' }}>Body Dents:</span>
+                      <select value={diagnostics.bodyDents || 'No dents'} onChange={e => setDiagnostics({...diagnostics, bodyDents: e.target.value})} style={{ background: '#222', color: '#fff', border: '1px solid #333', padding: '0.3rem', borderRadius: '4px', maxWidth: '200px' }}>
+                        <option value="No dents">No dents</option>
+                        <option value="1-2 minor dents">1-2 minor dents</option>
+                        <option value="Major dent(s) or more than 2">Major dent(s) or more than 2</option>
+                      </select>
+                    </label>
+                    <label style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <span style={{ fontSize: '0.85rem', color: '#ccc' }}>Body Bent:</span>
+                      <select value={diagnostics.bodyBent || 'Phone not bent'} onChange={e => setDiagnostics({...diagnostics, bodyBent: e.target.value})} style={{ background: '#222', color: '#fff', border: '1px solid #333', padding: '0.3rem', borderRadius: '4px', maxWidth: '200px' }}>
+                        <option value="Phone not bent">Phone not bent</option>
+                        <option value="Phone bent">Phone bent</option>
+                      </select>
+                    </label>
+                  </>
+                )}
+
+                {diagnostics.defects.includes('panel_missing') && (
+                  <label style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <span style={{ fontSize: '0.85rem', color: '#ccc' }}>Body Panel:</span>
+                    <select value={diagnostics.bodyPanel || 'No defect on side or back panel'} onChange={e => setDiagnostics({...diagnostics, bodyPanel: e.target.value})} style={{ background: '#222', color: '#fff', border: '1px solid #333', padding: '0.3rem', borderRadius: '4px', maxWidth: '200px' }}>
+                      <option value="No defect on side or back panel">No defect on side or back panel</option>
+                      <option value="Missing side or back panel">Missing side or back panel</option>
+                      <option value="Cracked/ broken side or back panel">Cracked/ broken side or back panel</option>
+                    </select>
+                  </label>
+                )}
+              </div>
             </div>
 
 
