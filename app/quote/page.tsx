@@ -2324,7 +2324,14 @@ export default function QuotePage() {
                     const isEligible = isWarrantyEligible(selectedBrand, selectedModel);
                     
                     // Major physical/functional defects void the manufacturer warranty
-                    const hasWarrantyAndBill = diagnostics.warranty === true && diagnostics.validBill === true;
+                    const hasWarrantyVoidingDefects = 
+                      diagnostics.originalScreen === false ||
+                      diagnostics.calls === false ||
+                      diagnostics.touch === false ||
+                      (diagnostics.defects && diagnostics.defects.length > 0) ||
+                      (diagnostics.hardware && diagnostics.hardware.length > 0);
+                      
+                    const hasWarrantyAndBill = diagnostics.warranty === true && diagnostics.validBill === true && !hasWarrantyVoidingDefects;
                     
                     if (isEligible && hasWarrantyAndBill) {
                       // Cashify skips the age question entirely for brand new phones (17e, 16e, Z Flip7 FE)
