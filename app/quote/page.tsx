@@ -401,6 +401,12 @@ export default function QuotePage() {
         return normalized.includes('redmi k');
       case 'Redmi A Series':
         return normalized.includes('redmi a') && !isRedmiNote;
+      case 'Redmi 11 Series':
+        return normalized.includes('redmi 11') && !isRedmiNote;
+      case 'Redmi 12 Series':
+        return (normalized.includes('redmi 12') || normalized.includes('redmi 12c')) && !isRedmiNote;
+      case 'Redmi 13 Series':
+        return normalized.includes('redmi 13') && !isRedmiNote;
       case 'Redmi 14 Series':
         return normalized.includes('redmi 14') && !isRedmiNote;
       case 'Redmi 15 Series':
@@ -418,7 +424,7 @@ export default function QuotePage() {
       case '17 Series':
         return normalized.includes('xiaomi 17');
       case 'Other Xiaomi Smartphones':
-        return ![' mi ', 'redmi 3', 'redmi 4', 'redmi pro', 'redmi 5', 'redmi 6', 'redmi 7', 'redmi 8', 'redmi 9', 'redmi 10', 'redmi 14', 'redmi 15', 'redmi note', 'redmi y', 'redmi k', 'redmi a', 'xiaomi 11', 'xiaomi 12', 'xiaomi 13', 'xiaomi 14', 'xiaomi 15', 'xiaomi 17'].some(key => normalized.includes(key)) && !normalized.startsWith('mi ') && !normalized.startsWith('xiaomi mi');
+        return ![' mi ', 'redmi 3', 'redmi 4', 'redmi pro', 'redmi 5', 'redmi 6', 'redmi 7', 'redmi 8', 'redmi 9', 'redmi 10', 'redmi 11', 'redmi 12', 'redmi 13', 'redmi 14', 'redmi 15', 'redmi note', 'redmi y', 'redmi k', 'redmi a', 'xiaomi 11', 'xiaomi 12', 'xiaomi 13', 'xiaomi 14', 'xiaomi 15', 'xiaomi 17'].some(key => normalized.includes(key)) && !normalized.startsWith('mi ') && !normalized.startsWith('xiaomi mi');
       default:
         return false;
     }
@@ -1253,6 +1259,9 @@ export default function QuotePage() {
                       "Redmi 8 Series",
                       "Redmi 9 Series",
                       "Redmi 10 Series",
+                      "Redmi 11 Series",
+                      "Redmi 12 Series",
+                      "Redmi 13 Series",
                       "11 Series",
                       "12 Series",
                       "Redmi A Series",
