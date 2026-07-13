@@ -901,7 +901,7 @@ export default function QuotePage() {
         label: hasActionButton ? 'Action Button not working' : 'Silent Button not working', 
         icon: '🔕' 
       },
-      ...(hasFaceId ? [{ id: 'face', label: isApple ? 'Face ID / Face Sensor not working' : 'Face Sensor not working', icon: '👱' }] : []),
+      ...(hasFaceId ? [{ id: 'face', label: isApple ? 'Face ID / Face Sensor not working' : 'Face Sensor not working', icon: '👤' }] : []),
       { id: 'power', label: 'Power Button not working', icon: '⏻' },
       { id: 'charging', label: 'Charging Port not working', icon: '🔌' },
       { id: 'audio_receiver', label: 'Audio Receiver not working', icon: '📞' },
