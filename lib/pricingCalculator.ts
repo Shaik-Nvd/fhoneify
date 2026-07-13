@@ -198,9 +198,9 @@ export function calculateFhoneifyPrice(
   const safeModel = String(model || '');
   const isApple = safeBrand.toLowerCase() === 'apple';
   
-  // Cashify sets a flat scrap price of exactly ₹1,200 for any iPhone that cannot make or receive calls
-  // However, modern high-end iPhones like the 16 series retain significant value even if they can't make calls
-  if (isApple && diagnostics.calls === false && !safeModel.toLowerCase().includes('16')) {
+  // Cashify sets a flat scrap price of exactly ₹1,200 for any device that cannot make or receive calls
+  // However, modern high-end devices like the iPhone 16 series retain significant value even if they can't make calls
+  if (diagnostics.calls === false && !safeModel.toLowerCase().includes('16')) {
     return 1200;
   }
   
