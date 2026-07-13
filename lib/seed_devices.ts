@@ -21238,4 +21238,23 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "basePrice": 810
   }
+,
+  {
+    "id": "xiaomi_15_12_512",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 15",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 37770
+  },
+  {
+    "id": "xiaomi_15_ultra_16_512",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 15 Ultra",
+    "storage": "16 GB/512 GB",
+    "ram": "16 GB",
+    "color": "Default",
+    "basePrice": 60170
+  }
 ];
