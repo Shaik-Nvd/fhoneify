@@ -423,8 +423,10 @@ export default function QuotePage() {
         return normalized.includes('xiaomi 15') && !normalized.includes('redmi');
       case '17 Series':
         return normalized.includes('xiaomi 17');
+      case 'Turbo Series':
+        return normalized.includes('turbo');
       case 'Other Xiaomi Smartphones':
-        return ![' mi ', 'redmi 3', 'redmi 4', 'redmi pro', 'redmi 5', 'redmi 6', 'redmi 7', 'redmi 8', 'redmi 9', 'redmi 10', 'redmi 11', 'redmi 12', 'redmi 13', 'redmi 14', 'redmi 15', 'redmi note', 'redmi y', 'redmi k', 'redmi a', 'xiaomi 11', 'xiaomi 12', 'xiaomi 13', 'xiaomi 14', 'xiaomi 15', 'xiaomi 17'].some(key => normalized.includes(key)) && !normalized.startsWith('mi ') && !normalized.startsWith('xiaomi mi');
+        return ![' mi ', 'redmi 3', 'redmi 4', 'redmi pro', 'redmi 5', 'redmi 6', 'redmi 7', 'redmi 8', 'redmi 9', 'redmi 10', 'redmi 11', 'redmi 12', 'redmi 13', 'redmi 14', 'redmi 15', 'redmi note', 'redmi y', 'redmi k', 'redmi a', 'turbo', 'xiaomi 11', 'xiaomi 12', 'xiaomi 13', 'xiaomi 14', 'xiaomi 15', 'xiaomi 17'].some(key => normalized.includes(key)) && !normalized.startsWith('mi ') && !normalized.startsWith('xiaomi mi');
       default:
         return false;
     }
@@ -1270,7 +1272,8 @@ export default function QuotePage() {
                       "Redmi 14 Series",
                       "15 Series",
                       "Redmi 15 Series",
-                      "17 Series"
+                      "17 Series",
+                      "Turbo Series"
                     ].map((series) => {
                       const isSelected = selectedXiaomiSeries === series;
                       return (

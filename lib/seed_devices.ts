@@ -21191,4 +21191,23 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "basePrice": 4350
   }
+,
+  {
+    "id": "xiaomi_redmi_turbo_5_8_256",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Turbo 5",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 24120
+  },
+  {
+    "id": "xiaomi_redmi_turbo_5_12_256",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Turbo 5",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 26120
+  }
 ];
