@@ -401,22 +401,16 @@ export default function QuotePage() {
         return normalized.includes('redmi k');
       case 'Redmi A Series':
         return normalized.includes('redmi a') && !isRedmiNote;
-      case 'Redmi 11 Series':
-        return normalized.includes('redmi 11') && !isRedmiNote;
-      case 'Redmi 12 Series':
-        return (normalized.includes('redmi 12') || normalized.includes('redmi 12c')) && !isRedmiNote;
-      case 'Redmi 13 Series':
-        return normalized.includes('redmi 13') && !isRedmiNote;
       case 'Redmi 14 Series':
         return normalized.includes('redmi 14') && !isRedmiNote;
       case 'Redmi 15 Series':
         return normalized.includes('redmi 15') && !isRedmiNote;
       case '11 Series':
-        return normalized.includes('xiaomi 11');
+        return (normalized.includes('xiaomi 11') || normalized.includes('redmi 11')) && !isRedmiNote;
       case '12 Series':
-        return normalized.includes('xiaomi 12');
+        return (normalized.includes('xiaomi 12') || normalized.includes('redmi 12') || normalized.includes('redmi 12c')) && !isRedmiNote;
       case '13 Series':
-        return normalized.includes('xiaomi 13');
+        return (normalized.includes('xiaomi 13') || normalized.includes('redmi 13')) && !isRedmiNote;
       case '14 Series':
         return normalized.includes('xiaomi 14') && !normalized.includes('redmi');
       case '15 Series':
@@ -1261,9 +1255,6 @@ export default function QuotePage() {
                       "Redmi 8 Series",
                       "Redmi 9 Series",
                       "Redmi 10 Series",
-                      "Redmi 11 Series",
-                      "Redmi 12 Series",
-                      "Redmi 13 Series",
                       "11 Series",
                       "12 Series",
                       "Redmi A Series",
