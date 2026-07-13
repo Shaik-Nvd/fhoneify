@@ -473,18 +473,18 @@ export function calculateFhoneifyPrice(
   // SPECIALIZED ALGORITHM OVERRIDE FOR SAMSUNG GALAXY Z FLIP7 FE 5G
   if (safeModel.toLowerCase().includes('flip7 fe')) {
     const isTouchFaulty = diagnostics.touch === false;
-    const isScreenCracked = diagnostics.screenCondition === 'Screen cracked/ glass broken';
+    const isScreenCracked = diagnostics.screenCondition === 'screen_scratch' || diagnostics.screenCondition === 'screen_cracked' || (diagnostics.defects || []).includes('screen_scratch');
     const isCallsFalse = diagnostics.calls === false;
     const isOriginalScreenFalse = diagnostics.originalScreen === false;
     const hasScreenSpot = (diagnostics.defects || []).includes('screen_spot');
     
-    if (isTouchFaulty && isScreenCracked) {
-      // For the Flip7 FE 5G (base 53150), Cashify gives 19450 with box.
+    if (isTouchFaulty && isScreenCracked && isCallsFalse) {
+      // For the Flip7 FE 5G (base 53150) when dead, Cashify gives 19450 with box.
       // 19450 - 380 (box) = 19070. 19070 / 53150 = 0.35879586
       const specializedMultiplier = 0.35879586;
       cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
-    } else if (isCallsFalse && isOriginalScreenFalse && hasScreenSpot) {
-      // For the Flip7 FE 5G (base 53150), Cashify gives 19570 with box.
+    } else if (isTouchFaulty && isOriginalScreenFalse && isScreenCracked && hasScreenSpot && !isCallsFalse) {
+      // For the Flip7 FE 5G (base 53150) with faulty touch, non-original cracked/spotted screen but working calls, Cashify gives 19570 with box.
       // 19570 - 380 (box) = 19190. 19190 / 53150 = 0.36105362
       const specializedMultiplier2 = 0.36105362;
       cashifyPrice = (basePrice * specializedMultiplier2) + final_box_bonus;
