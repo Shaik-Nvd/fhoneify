@@ -21000,4 +21000,95 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "basePrice": 53150
   }
+,
+  {
+    "id": "xiaomi_12_pro_5g_8_256",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 12 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 13230
+  },
+  {
+    "id": "xiaomi_12_pro_5g_12_256",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 12 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 14400
+  },
+  {
+    "id": "xiaomi_redmi_12_5g_4_128",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 12 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 7180
+  },
+  {
+    "id": "xiaomi_redmi_12_5g_6_128",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 12 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 8420
+  },
+  {
+    "id": "xiaomi_redmi_12_5g_8_256",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 12 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 9100
+  },
+  {
+    "id": "xiaomi_redmi_12c_4_64",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 12C",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5010
+  },
+  {
+    "id": "xiaomi_redmi_12c_4_128",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 12C",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5050
+  },
+  {
+    "id": "xiaomi_redmi_12c_6_128",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 12C",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5470
+  },
+  {
+    "id": "xiaomi_redmi_12_4_128",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 12",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5490
+  },
+  {
+    "id": "xiaomi_redmi_12_6_128",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 12",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5930
+  }
 ];
