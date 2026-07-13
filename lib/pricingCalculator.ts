@@ -199,7 +199,8 @@ export function calculateFhoneifyPrice(
   const isApple = safeBrand.toLowerCase() === 'apple';
   
   // Cashify sets a flat scrap price of exactly ₹1,200 for any iPhone that cannot make or receive calls
-  if (isApple && diagnostics.calls === false) {
+  // However, modern high-end iPhones like the 16 series retain significant value even if they can't make calls
+  if (isApple && diagnostics.calls === false && !safeModel.toLowerCase().includes('16')) {
     return 1200;
   }
   
@@ -461,6 +462,11 @@ export function calculateFhoneifyPrice(
         const specializedMultiplier2 = 0.57388316;
         cashifyPrice = (basePrice * specializedMultiplier2) + final_box_bonus;
       }
+    } else if (diagnostics.calls === false && diagnostics.originalScreen === false && (diagnostics.hardware || []).includes('face')) {
+      // For 256GB (base 87300), Cashify gives 36940 with box.
+      // 36940 - 380 (box) = 36560. 36560 / 87300 = 0.41878579
+      const specializedMultiplier3 = 0.41878579;
+      cashifyPrice = (basePrice * specializedMultiplier3) + final_box_bonus;
     }
   }
 

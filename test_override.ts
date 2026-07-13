@@ -3,11 +3,11 @@ import { calculateFhoneifyPrice, DiagnosticsType } from './lib/pricingCalculator
 const basePrice = 87300; // 256GB base price
 
 const testDiagnostics: DiagnosticsType = {
-  calls: true,
+  calls: false,
   touch: true,
-  originalScreen: true,
-  defects: ['broken_scratch_screen'], 
-  screenCondition: 'Screen cracked/ glass broken',
+  originalScreen: false,
+  defects: [], 
+  screenCondition: null,
   screenSpots: null,
   screenLines: null,
   screenDiscoloration: null,
@@ -15,7 +15,7 @@ const testDiagnostics: DiagnosticsType = {
   bodyDents: null,
   bodyPanel: null,
   bodyBent: null,
-  hardware: ['battery_health'],
+  hardware: ['face'],
   accessories: ['box'],
   warranty: true,
   validBill: true,
