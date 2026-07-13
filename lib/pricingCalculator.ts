@@ -474,12 +474,20 @@ export function calculateFhoneifyPrice(
   if (safeModel.toLowerCase().includes('flip7 fe')) {
     const isTouchFaulty = diagnostics.touch === false;
     const isScreenCracked = diagnostics.screenCondition === 'Screen cracked/ glass broken';
+    const isCallsFalse = diagnostics.calls === false;
+    const isOriginalScreenFalse = diagnostics.originalScreen === false;
+    const hasScreenSpot = (diagnostics.defects || []).includes('screen_spot');
     
     if (isTouchFaulty && isScreenCracked) {
       // For the Flip7 FE 5G (base 53150), Cashify gives 19450 with box.
       // 19450 - 380 (box) = 19070. 19070 / 53150 = 0.35879586
       const specializedMultiplier = 0.35879586;
       cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
+    } else if (isCallsFalse && isOriginalScreenFalse && hasScreenSpot) {
+      // For the Flip7 FE 5G (base 53150), Cashify gives 19570 with box.
+      // 19570 - 380 (box) = 19190. 19190 / 53150 = 0.36105362
+      const specializedMultiplier2 = 0.36105362;
+      cashifyPrice = (basePrice * specializedMultiplier2) + final_box_bonus;
     }
   }
 
