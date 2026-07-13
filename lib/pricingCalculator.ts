@@ -198,12 +198,6 @@ export function calculateFhoneifyPrice(
   const safeModel = String(model || '');
   const isApple = safeBrand.toLowerCase() === 'apple';
   
-  // Cashify sets a flat scrap price of exactly ₹1,200 for any device that cannot make or receive calls
-  // However, modern high-end devices like the iPhone 16 series retain significant value even if they can't make calls
-  if (diagnostics.calls === false && !safeModel.toLowerCase().includes('16')) {
-    return 1200;
-  }
-  
   const isFoldable = safeModel.toLowerCase().includes('fold') || safeModel.toLowerCase().includes('flip') || safeModel.toLowerCase().includes('open');
   const isProMax = safeModel.toLowerCase().includes('pro max');
   
@@ -439,6 +433,12 @@ export function calculateFhoneifyPrice(
   }
 
   let cashifyPrice = (rawCalculated * eSim_multiplier * accessories_multiplier) + final_box_bonus;
+
+  // Scrap Rule: Devices that cannot make or receive calls are classified as Scrap
+  // iPhones / High-end Androids default to ₹1,200 scrap value, whereas budget Androids default to ₹200.
+  if (diagnostics.calls === false && !safeModel.toLowerCase().includes('16')) {
+    cashifyPrice = isApple ? 1200 : (basePrice <= 5000 ? 200 : 1200);
+  }
 
   console.log(`[DEBUG] Pricing for: ${safeModel}`);
   console.log(`[DEBUG] Diagnostics:`, JSON.stringify(diagnostics, null, 2));
