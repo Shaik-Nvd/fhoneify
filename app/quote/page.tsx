@@ -825,16 +825,29 @@ export default function QuotePage() {
       }
       const baseMarketPrice = (cashifyPrices as Record<string, number>)[lookupKey] || (device as any).basePrice || 1000;
       
-      let upliftedBasePrice = baseMarketPrice;
-      if (baseMarketPrice <= 20000) {
-        upliftedBasePrice = baseMarketPrice * 1.08;
-      } else if (baseMarketPrice <= 50000) {
-        upliftedBasePrice = baseMarketPrice * 1.06;
-      } else {
-        upliftedBasePrice = baseMarketPrice * 1.04;
-      }
+      const perfectDiagnostics: DiagnosticsType = {
+        calls: true,
+        touch: true,
+        originalScreen: true,
+        defects: [],
+        screenCondition: null,
+        screenSpots: null,
+        screenLines: null,
+        screenDiscoloration: null,
+        bodyScratches: 'No scratches',
+        bodyDents: 'No dents',
+        bodyPanel: null,
+        bodyBent: null,
+        hardware: [],
+        accessories: ['box', 'bill', 'charger'],
+        warranty: true,
+        validBill: true,
+        eSim: null,
+        mobileAge: 'Below 3 months'
+      };
 
-      const realStartPrice = Math.round(upliftedBasePrice);
+      const realStartPrice = calculateFhoneifyPrice(selectedBrand, selectedModel, baseMarketPrice, perfectDiagnostics);
+      
       // The "Get Upto" price displayed to the user follows the algorithm strictly
       setBasePrice(realStartPrice);
       setRawBasePrice(baseMarketPrice);
