@@ -21210,4 +21210,32 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "basePrice": 26120
   }
+,
+  {
+    "id": "xiaomi_redmi_3s_prime_3_32",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 3S Prime",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 1100
+  },
+  {
+    "id": "xiaomi_redmi_3s_2_16",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 3S",
+    "storage": "2 GB/16 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 760
+  },
+  {
+    "id": "xiaomi_redmi_3s_3_32",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 3S",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 810
+  }
 ];
