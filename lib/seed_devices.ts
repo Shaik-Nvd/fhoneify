@@ -21091,4 +21091,104 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "basePrice": 5930
   }
+,
+  {
+    "id": "xiaomi_11_lite_ne_5g_6_128",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 11 Lite NE 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 7900
+  },
+  {
+    "id": "xiaomi_11_lite_ne_5g_8_128",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 11 Lite NE 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8310
+  },
+  {
+    "id": "xiaomi_11i_hypercharge_5g_6_128",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 11i Hypercharge 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 7170
+  },
+  {
+    "id": "xiaomi_11i_hypercharge_5g_8_128",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 11i Hypercharge 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 7810
+  },
+  {
+    "id": "xiaomi_11t_pro_5g_8_128",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 11T Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8500
+  },
+  {
+    "id": "xiaomi_11t_pro_5g_8_256",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 11T Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8780
+  },
+  {
+    "id": "xiaomi_11t_pro_5g_12_256",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 11T Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 9160
+  },
+  {
+    "id": "xiaomi_redmi_11_prime_5g_4_64",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 11 Prime 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 5180
+  },
+  {
+    "id": "xiaomi_redmi_11_prime_5g_6_128",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 11 Prime 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5540
+  },
+  {
+    "id": "xiaomi_redmi_11_prime_4_64",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 11 Prime",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 4180
+  },
+  {
+    "id": "xiaomi_redmi_11_prime_6_128",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 11 Prime",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 4350
+  }
 ];
