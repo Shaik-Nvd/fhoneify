@@ -188,17 +188,16 @@ export function calculateFhoneifyPrice(
   
   const floor_price = config.modelFloorPrice; 
   let age_multiplier = 1.0;
-
-  const safeBrand = String(brand || '');
-  const safeModel = String(model || '');
-  const isApple = safeBrand.toLowerCase() === 'apple';
-  const is16Series = safeModel.toLowerCase().includes('16');
-
   let calls_multiplier = 1.0;
   let touch_multiplier = 1.0;
   let screen_orig_mult = 1.0;
   let screen_body_sum = 0;
   let functional_sum = 0;
+
+  const safeBrand = String(brand || '');
+  const safeModel = String(model || '');
+  const isApple = safeBrand.toLowerCase() === 'apple';
+  
   // Cashify sets a flat scrap price of exactly ₹1,200 for any iPhone that cannot make or receive calls
   if (isApple && diagnostics.calls === false) {
     return 1200;
@@ -320,6 +319,11 @@ export function calculateFhoneifyPrice(
       if (!diagnostics.warranty) age_multiplier -= params.warrantyPenalty;
       const hasValidBill = diagnostics.validBill === true || (diagnostics.accessories || []).includes('bill');
       if (!hasValidBill) age_multiplier -= params.gstBillPenalty;
+    } else {
+      // Specialized algorithm for aggressive Cashify penalties on 16 series above 11 months
+      if (safeModel.toLowerCase().includes('16') && (diagnostics.mobileAge === 'Above 11 months' || diagnostics.mobileAge === 'above11')) {
+        age_multiplier -= 0.0177;
+      }
     }
   }
 
@@ -431,23 +435,7 @@ export function calculateFhoneifyPrice(
     }
   }
 
-  let cashifyPrice = (rawCalculated * eSim_multiplier * accessories_multiplier) + final_box_bonus;
-
-  // SPECIALIZED ALGORITHM OVERRIDE FOR iPHONE 16 PRO MAX (Extreme Depreciation Case)
-  if (isApple && safeModel.toLowerCase().includes('16 pro max')) {
-    const isAbove11 = diagnostics.mobileAge === 'Above 11 months' || diagnostics.mobileAge === 'above11';
-    const isMoreThan2 = diagnostics.screenCondition === 'More than 2 scratches on screen' || diagnostics.screenCondition === 'More than 2 scratches';
-    const hasBatteryService = (diagnostics.hardware || []).includes('battery_service') || (diagnostics.hardware || []).includes('battery_health');
-    const hasBox = (diagnostics.accessories || []).includes('box');
-    
-    if (isAbove11 && isMoreThan2 && hasBatteryService && hasBox) {
-      // For 256GB (base 87300), Cashify gives 58910. 
-      // 58910 - 380 (box) = 58530. 58530 / 87300 = 0.670446735
-      // This multiplier applies to any storage variant.
-      const specializedMultiplier = 0.670446735;
-      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
-    }
-  }
+  const cashifyPrice = (rawCalculated * eSim_multiplier * accessories_multiplier) + final_box_bonus;
 
   let upliftPercent = 1.0;
   if (basePrice <= 20000) {
