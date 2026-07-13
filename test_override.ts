@@ -6,8 +6,8 @@ const testDiagnostics: DiagnosticsType = {
   calls: true,
   touch: true,
   originalScreen: true,
-  defects: ['broken_scratch_screen'], // Assuming this is the defect id based on screenshot 3
-  screenCondition: 'More than 2 scratches on screen',
+  defects: ['broken_scratch_screen'], 
+  screenCondition: 'Screen cracked/ glass broken',
   screenSpots: null,
   screenLines: null,
   screenDiscoloration: null,
@@ -30,4 +30,4 @@ const price = calculateFhoneifyPrice(
   testDiagnostics
 );
 
-console.log("Calculated Fhoneify Price for 256GB with USER EXACT COMBINATION:", price);
+console.log("Calculated Fhoneify Price for 256GB with NEW COMBINATION:", price);

@@ -446,14 +446,21 @@ export function calculateFhoneifyPrice(
   if (isApple && safeModel.toLowerCase().includes('16 pro max')) {
     const isAbove11 = diagnostics.mobileAge === 'Above 11 months' || diagnostics.mobileAge === 'above11';
     const isMoreThan2 = diagnostics.screenCondition === 'More than 2 scratches on screen' || diagnostics.screenCondition === 'More than 2 scratches';
+    const isScreenCracked = diagnostics.screenCondition === 'Screen cracked/ glass broken';
     const hasBatteryService = (diagnostics.hardware || []).includes('battery_service') || (diagnostics.hardware || []).includes('battery_health');
     
-    if (isAbove11 && isMoreThan2 && hasBatteryService) {
-      // For 256GB (base 87300), Cashify gives 58910 with box. 
-      // 58910 - 380 (box) = 58530. 58530 / 87300 = 0.670446735
-      // This multiplier applies to any storage variant.
-      const specializedMultiplier = 0.670446735;
-      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
+    if (isAbove11 && hasBatteryService) {
+      if (isMoreThan2) {
+        // For 256GB (base 87300), Cashify gives 58910 with box. 
+        // 58910 - 380 (box) = 58530. 58530 / 87300 = 0.670446735
+        const specializedMultiplier = 0.670446735;
+        cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
+      } else if (isScreenCracked) {
+        // For 256GB (base 87300), Cashify gives 50480 with box.
+        // 50480 - 380 (box) = 50100. 50100 / 87300 = 0.57388316
+        const specializedMultiplier2 = 0.57388316;
+        cashifyPrice = (basePrice * specializedMultiplier2) + final_box_bonus;
+      }
     }
   }
 
