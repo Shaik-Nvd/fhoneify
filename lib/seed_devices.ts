@@ -21257,4 +21257,23 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "basePrice": 60170
   }
+,
+  {
+    "id": "xiaomi_redmi_4a_2_16",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 4A",
+    "storage": "2 GB/16 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "basePrice": 630
+  },
+  {
+    "id": "xiaomi_redmi_4a_3_32",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 4A",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 700
+  }
 ];
