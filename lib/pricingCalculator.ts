@@ -462,7 +462,7 @@ export function calculateFhoneifyPrice(
         const specializedMultiplier2 = 0.57388316;
         cashifyPrice = (basePrice * specializedMultiplier2) + final_box_bonus;
       }
-    } else if (diagnostics.calls === false && diagnostics.originalScreen === false && (diagnostics.hardware || []).includes('face')) {
+    } else if (diagnostics.calls === true && diagnostics.originalScreen === false && (diagnostics.hardware || []).includes('face')) {
       // For 256GB (base 87300), Cashify gives 36940 with box.
       // 36940 - 380 (box) = 36560. 36560 / 87300 = 0.41878579
       const specializedMultiplier3 = 0.41878579;

@@ -3,7 +3,7 @@ import { calculateFhoneifyPrice, DiagnosticsType } from './lib/pricingCalculator
 const basePrice = 87300; // 256GB base price
 
 const testDiagnostics: DiagnosticsType = {
-  calls: false,
+  calls: true,
   touch: true,
   originalScreen: false,
   defects: [], 
@@ -30,4 +30,4 @@ const price = calculateFhoneifyPrice(
   testDiagnostics
 );
 
-console.log("Calculated Fhoneify Price for 256GB with NEW COMBINATION:", price);
+console.log("Calculated Fhoneify Price for 256GB:", price);
