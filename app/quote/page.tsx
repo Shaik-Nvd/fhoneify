@@ -50,6 +50,18 @@ function extractDevices(payload: unknown): Device[] {
 
 // Icons for the UI using basic SVGs
 const ArrowRightIcon = () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>;
+const FaceIdIcon = () => (
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ display: 'inline-block' }}>
+    <path d="M4 8V6a2 2 0 0 1 2-2h2" />
+    <path d="M16 4h2a2 2 0 0 1 2 2v2" />
+    <path d="M20 16v2a2 2 0 0 1-2 2h-2" />
+    <path d="M8 20H6a2 2 0 0 1-2-2v-2" />
+    <path d="M9 10v2" />
+    <path d="M15 10v2" />
+    <path d="M12 10v4.5a1.5 1.5 0 0 1-1.5 1.5" />
+    <path d="M8 16s1.5 2 4 2 4-2 4-2" />
+  </svg>
+);
 
 export default function QuotePage() {
   const isWarrantyEligible = (brand: string, model: string) => {
@@ -901,7 +913,7 @@ export default function QuotePage() {
         label: hasActionButton ? 'Action Button not working' : 'Silent Button not working', 
         icon: '🔕' 
       },
-      ...(hasFaceId ? [{ id: 'face', label: isApple ? 'Face ID / Face Sensor not working' : 'Face Sensor not working', icon: '👤' }] : []),
+      ...(hasFaceId ? [{ id: 'face', label: isApple ? 'Face ID / Face Sensor not working' : 'Face Sensor not working', icon: <FaceIdIcon /> }] : []),
       { id: 'power', label: 'Power Button not working', icon: '⏻' },
       { id: 'charging', label: 'Charging Port not working', icon: '🔌' },
       { id: 'audio_receiver', label: 'Audio Receiver not working', icon: '📞' },
