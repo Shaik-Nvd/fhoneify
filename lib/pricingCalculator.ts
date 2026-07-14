@@ -459,10 +459,19 @@ export function calculateFhoneifyPrice(
 
   // SPECIALIZED ALGORITHM OVERRIDE FOR iPHONE 17 (BASE)
   if (isApple && safeModel.toLowerCase() === 'apple iphone 17') {
+    const isAbove11 = diagnostics.mobileAge === 'Above 11 months' || diagnostics.mobileAge === 'above11';
+    const hasBatteryHealth = (diagnostics.hardware || []).includes('battery_health');
+    const isFlawlessPhysical = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.touch !== false && diagnostics.originalScreen !== false && (diagnostics.defects || []).length === 0;
+    
     const isScreenCracked = (diagnostics.defects || []).includes('screen_scratch') && (diagnostics.screenCondition === 'Screen cracked/ glass broken' || diagnostics.screenCondition === 'screen_cracked');
     const isFlawlessFunctional = diagnostics.calls !== false && diagnostics.touch !== false && diagnostics.originalScreen !== false && (diagnostics.hardware || []).length === 0;
 
-    if (isScreenCracked && isFlawlessFunctional) {
+    if (isAbove11 && hasBatteryHealth && isFlawlessPhysical) {
+      // For iPhone 17 512GB (base 65000), Cashify gives 47970 with box for >11 months + Battery Health 80-85%
+      // 47970 - 380 (box) = 47590. 47590 / 65000 = 0.73215384615
+      const specializedMultiplier = 0.73215384615;
+      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
+    } else if (isScreenCracked && isFlawlessFunctional) {
       // For iPhone 17 512GB (base 65000), Cashify gives 30120 with box for cracked screen
       // 30120 - 380 (box) = 29740. 29740 / 65000 = 0.4575384615
       const specializedMultiplier = 0.4575384615;
