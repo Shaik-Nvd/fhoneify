@@ -447,10 +447,14 @@ export function calculateFhoneifyPrice(
   if (!isApple && safeModel.toLowerCase() === 'samsung galaxy z flip 7') {
     const isTouchFaulty = diagnostics.touch === false;
     const isLocalScreen = diagnostics.originalScreen === false;
-    
+    const isScreenCracked = (diagnostics.defects || []).includes('screen_scratch') && (diagnostics.screenCondition === 'Screen cracked/ glass broken' || diagnostics.screenCondition === 'cracked');
+
     // Check if everything else is flawless except the specific issue
     const isOtherwiseFlawlessTouch = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.originalScreen !== false && (diagnostics.defects || []).length === 0 && (diagnostics.hardware || []).length === 0;
     const isOtherwiseFlawlessScreen = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.touch !== false && (diagnostics.defects || []).length === 0 && (diagnostics.hardware || []).length === 0;
+    
+    // For cracked screen, the screen_scratch defect is present, so length is 1, and hardware is 0.
+    const isOtherwiseFlawlessCracked = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.touch !== false && diagnostics.originalScreen !== false && (diagnostics.defects || []).length === 1 && (diagnostics.hardware || []).length === 0;
 
     if (isTouchFaulty && isOtherwiseFlawlessTouch) {
       // For Z Flip 7 512GB (base 59440), Cashify gives 20610 with box for Touch Faulty
@@ -461,6 +465,11 @@ export function calculateFhoneifyPrice(
       // For Z Flip 7 512GB (base 59440), Cashify gives 33110 with box for Local Screen
       // 33110 - 380 (box) = 32730. 32730 / 59440 = 0.550639299
       const specializedMultiplier = 0.550639299;
+      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
+    } else if (isScreenCracked && isOtherwiseFlawlessCracked) {
+      // For Z Flip 7 512GB (base 59440), Cashify gives 30730 with box for Cracked Screen
+      // 30730 - 380 (box) = 30350. 30350 / 59440 = 0.510602287
+      const specializedMultiplier = 0.510602287;
       cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
     }
   }
