@@ -124,18 +124,26 @@ export default function QuotePage() {
   };
 
   const hasChargerInBox = (brand: string, model: string) => {
-    if (brand.toLowerCase() !== 'apple') return true;
-    const lower = model.toLowerCase();
+    const lowerBrand = brand.toLowerCase();
+    const lowerModel = model.toLowerCase();
+    
+    // Samsung flagships like the Z Flip 7 do not have a charger in the box
+    if (lowerBrand === 'samsung' && lowerModel.includes('z flip 7')) {
+      return false;
+    }
+
+    if (lowerBrand !== 'apple') return true;
+    
     return !(
-      lower.includes('12') ||
-      lower.includes('13') ||
-      lower.includes('14') ||
-      lower.includes('15') ||
-      lower.includes('16') ||
-      lower.includes('17') ||
-      lower.includes('air') ||
-      lower.includes('se 2022') ||
-      (lower.includes('se') && lower.includes('2022'))
+      lowerModel.includes('12') ||
+      lowerModel.includes('13') ||
+      lowerModel.includes('14') ||
+      lowerModel.includes('15') ||
+      lowerModel.includes('16') ||
+      lowerModel.includes('17') ||
+      lowerModel.includes('air') ||
+      lowerModel.includes('se 2022') ||
+      (lowerModel.includes('se') && lowerModel.includes('2022'))
     );
   };
   
