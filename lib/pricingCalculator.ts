@@ -443,6 +443,19 @@ export function calculateFhoneifyPrice(
   console.log(`[DEBUG] Pricing for: ${safeModel}`);
   console.log(`[DEBUG] Diagnostics:`, JSON.stringify(diagnostics, null, 2));
 
+  // SPECIALIZED ALGORITHM OVERRIDE FOR XIAOMI REDMI TURBO 5
+  if (!isApple && safeModel.toLowerCase() === 'xiaomi redmi turbo 5') {
+    const isAbove11 = diagnostics.mobileAge === 'Above 11 months' || diagnostics.mobileAge === 'above11';
+    const isFlawlessPhysical = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.touch !== false && diagnostics.originalScreen !== false && (diagnostics.defects || []).length === 0 && (diagnostics.hardware || []).length === 0;
+
+    if (isAbove11 && isFlawlessPhysical) {
+      // For Redmi Turbo 5 (base 26120), Cashify gives 18070 with box for >11 months flawless
+      // 18070 - 380 (box) = 17690. 17690 / 26120 = 0.6772588055
+      const specializedMultiplier = 0.6772588055;
+      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
+    }
+  }
+
   // SPECIALIZED ALGORITHM OVERRIDE FOR iPHONE 16 (BASE)
   if (isApple && safeModel.toLowerCase() === 'apple iphone 16') {
     const isAbove11 = diagnostics.mobileAge === 'Above 11 months' || diagnostics.mobileAge === 'above11';
