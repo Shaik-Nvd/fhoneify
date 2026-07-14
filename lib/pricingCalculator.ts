@@ -454,7 +454,7 @@ export function calculateFhoneifyPrice(
     const isOtherwiseFlawlessScreen = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.touch !== false && (diagnostics.defects || []).length === 0 && (diagnostics.hardware || []).length === 0;
     
     // For cracked screen, the screen_scratch defect is present, so length is 1, and hardware is 0.
-    const isOtherwiseFlawlessCracked = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.touch !== false && diagnostics.originalScreen !== false && (diagnostics.defects || []).length === 1 && (diagnostics.hardware || []).length === 0;
+    const isOtherwiseFlawlessCracked = diagnostics.calls !== false && diagnostics.touch !== false && diagnostics.originalScreen !== false && (diagnostics.defects || []).length === 1 && (diagnostics.defects || [])[0] === 'screen_scratch' && (diagnostics.hardware || []).length === 0;
 
     if (isTouchFaulty && isOtherwiseFlawlessTouch) {
       // For Z Flip 7 512GB (base 59440), Cashify gives 20610 with box for Touch Faulty
