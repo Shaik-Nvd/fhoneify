@@ -446,12 +446,21 @@ export function calculateFhoneifyPrice(
   // SPECIALIZED ALGORITHM OVERRIDE FOR SAMSUNG GALAXY Z FLIP 7
   if (!isApple && safeModel.toLowerCase() === 'samsung galaxy z flip 7') {
     const isTouchFaulty = diagnostics.touch === false;
-    const isOtherwiseFlawless = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.originalScreen !== false && (diagnostics.defects || []).length === 0 && (diagnostics.hardware || []).length === 0;
+    const isLocalScreen = diagnostics.originalScreen === false;
+    
+    // Check if everything else is flawless except the specific issue
+    const isOtherwiseFlawlessTouch = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.originalScreen !== false && (diagnostics.defects || []).length === 0 && (diagnostics.hardware || []).length === 0;
+    const isOtherwiseFlawlessScreen = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.touch !== false && (diagnostics.defects || []).length === 0 && (diagnostics.hardware || []).length === 0;
 
-    if (isTouchFaulty && isOtherwiseFlawless) {
+    if (isTouchFaulty && isOtherwiseFlawlessTouch) {
       // For Z Flip 7 512GB (base 59440), Cashify gives 20610 with box for Touch Faulty
       // 20610 - 380 (box) = 20230. 20230 / 59440 = 0.3403432032
       const specializedMultiplier = 0.3403432032;
+      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
+    } else if (isLocalScreen && isOtherwiseFlawlessScreen) {
+      // For Z Flip 7 512GB (base 59440), Cashify gives 33110 with box for Local Screen
+      // 33110 - 380 (box) = 32730. 32730 / 59440 = 0.550639299
+      const specializedMultiplier = 0.550639299;
       cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
     }
   }
