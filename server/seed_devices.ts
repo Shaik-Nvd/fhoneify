@@ -6323,6 +6323,16 @@ export const SEED_DEVICES: any[] = [
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-5-1-plus-3-gb-32-gb"
   },
   {
+    "id": "nokia_5_1_3_32",
+    "brand": "Nokia",
+    "model": "Nokia 5.1",
+    "storage": "3 GB/32 GB",
+    "ram": "3GB",
+    "color": "Default",
+    "basePrice": 1540,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-5-1-3-gb-32-gb"
+  },
+  {
     "id": "516de334-4cae-4f86-97ac-52a6cb670492",
     "brand": "Nokia",
     "model": "Nokia 8 Sirocco",
