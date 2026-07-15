@@ -478,6 +478,18 @@ export function calculateFhoneifyPrice(
     }
   }
 
+  // SPECIALIZED ALGORITHM OVERRIDE FOR NOKIA 5.1 PLUS
+  if (!isApple && safeModel.toLowerCase() === 'nokia 5.1 plus') {
+    const isLocalScreen = diagnostics.originalScreen === false;
+    const isOtherwiseFlawlessScreen = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.touch !== false && (diagnostics.defects || []).length === 0 && (diagnostics.hardware || []).length === 0;
+    
+    if (isLocalScreen && isOtherwiseFlawlessScreen) {
+      // 1590 / 2390 = 0.6652719665
+      const specializedMultiplier = 0.6652719665;
+      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
+    }
+  }
+
   // SPECIALIZED ALGORITHM OVERRIDE FOR XIAOMI REDMI TURBO 5
   if (!isApple && safeModel.toLowerCase() === 'xiaomi redmi turbo 5') {
     const isAbove11 = diagnostics.mobileAge === 'Above 11 months' || diagnostics.mobileAge === 'above11';
