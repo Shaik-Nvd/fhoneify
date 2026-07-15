@@ -6306,8 +6306,8 @@ export const SEED_DEVICES: any[] = [
     "id": "f4aea7f0-a2af-407a-bf94-2f37f5ab010d",
     "brand": "Nokia",
     "model": "Nokia 5.1 Plus",
-    "storage": "6 GB/64 GB",
-    "ram": "6GB",
+    "storage": "4 GB/64 GB",
+    "ram": "4GB",
     "color": "Default",
     "basePrice": 2130,
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-5-1-plus-4-gb-64-gb"
