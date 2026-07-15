@@ -98,6 +98,10 @@ export default function QuotePage() {
       }
     }
 
+    if (brand.toLowerCase() === 'nokia') {
+      return false; // Nokia phones are typically older and out of warranty on Cashify
+    }
+
     return true;
   };
 
