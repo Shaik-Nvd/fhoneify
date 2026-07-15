@@ -202,11 +202,15 @@ export function calculateFhoneifyPrice(
   const isProMax = safeModel.toLowerCase().includes('pro max');
   
   const isWarrantyEligible = (brandStr: string, modelStr: string) => {
-    if (brandStr.toLowerCase() === 'apple') {
+    const lowerBrand = brandStr.toLowerCase();
+    if (lowerBrand === 'apple') {
       const lower = modelStr.toLowerCase();
       return lower.includes('15') || lower.includes('16') || lower.includes('17') || lower.includes('air');
     }
-    return true; // For Androids, assume they are eligible for now unless proven otherwise
+    if (lowerBrand === 'nokia') {
+      return false; // Nokia phones are no longer eligible for warranty questions
+    }
+    return true; // For other Androids, assume they are eligible for now unless proven otherwise
   };
 
   const params = isApple ? getAppleModelParams(safeModel) : getAndroidModelParams(safeBrand, safeModel);
