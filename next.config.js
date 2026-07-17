@@ -12,6 +12,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: '**.gstatic.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'm.media-amazon.com',
+      },
     ],
   },
   env: {
