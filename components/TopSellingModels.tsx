@@ -125,39 +125,22 @@ export default function TopSellingModels() {
       const trigger = ScrollTrigger.create({
         trigger: containerRef.current,
         start: "top top",
+        end: "+=2000",
+        pin: true,
         onUpdate(self) {
-          let scroll = self.scroll();
-          if (scroll > self.end - 1) {
-            wrap(1, self.start + 1);
-          } else if (scroll < self.start + 1 && self.direction < 0) {
-            wrap(-1, self.end - 1);
-          } else {
-            scrub.vars.offset = (iteration + self.progress) * seamlessLoop.duration();
-            scrub.invalidate().restart();
-          }
-        },
-        end: "+=3000",
-        pin: ".gallery-container",
+          scrub.vars.offset = self.progress * seamlessLoop.duration() * 3; // Loop 3 times over 2000px
+          scrub.invalidate().restart();
+        }
       });
-
-      const progressToScroll = (progress: number) => gsap.utils.clamp(trigger.start + 1, trigger.end - 1, gsap.utils.wrap(0, 1, progress) * (trigger.end - trigger.start) + trigger.start);
-      
-      const wrap = (iterationDelta: number, scrollTo: number) => {
-        iteration += iterationDelta;
-        trigger.scroll(scrollTo);
-        trigger.update();
-      };
-
-      ScrollTrigger.addEventListener("scrollEnd", () => scrollToOffset(scrub.vars.offset));
 
       function scrollToOffset(offset: number) {
         let snappedTime = snapTime(offset),
-          progress = (snappedTime - seamlessLoop.duration() * iteration) / seamlessLoop.duration(),
-          scroll = progressToScroll(progress);
-        if (progress >= 1 || progress < 0) {
-          return wrap(Math.floor(progress), scroll);
+          progress = (snappedTime) / (seamlessLoop.duration() * 3);
+        
+        // Only scroll if within bounds
+        if (progress >= 0 && progress <= 1) {
+          trigger.scroll(trigger.start + progress * (trigger.end - trigger.start));
         }
-        trigger.scroll(scroll);
       }
 
       if (nextBtnRef.current && prevBtnRef.current) {
