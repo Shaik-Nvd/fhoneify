@@ -44,7 +44,7 @@ export default function CartPage() {
     try {
       setLoading(true);
       setError(null);
-      const res = await api.post('/api/buy/order', {
+      const res = await api.post('/api/buy/orders', {
         address,
         couponCode: couponCode || undefined
       });
