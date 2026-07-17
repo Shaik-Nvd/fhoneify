@@ -21304,5 +21304,32 @@ export const SEED_DEVICES: any[] = [
     "ram": "8 GB",
     "color": "Default",
     "basePrice": 5120
+  },
+  {
+    "id": "xiaomi-14-12-512",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 14",
+    "storage": "512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 27210
+  },
+  {
+    "id": "xiaomi-14-ultra-16-512",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 14 Ultra",
+    "storage": "512 GB",
+    "ram": "16 GB",
+    "color": "Default",
+    "basePrice": 37780
+  },
+  {
+    "id": "xiaomi-13-pro-5g-12-256",
+    "brand": "Xiaomi",
+    "model": "Xiaomi 13 Pro 5G",
+    "storage": "256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 25190
   }
 ];
