@@ -198,7 +198,7 @@ export default function BrandGSAPSlider() {
                     width: '80px', 
                     height: '80px', 
                     objectFit: 'contain',
-                    filter: 'drop-shadow(0px 10px 15px rgba(0,0,0,0.5))',
+                    filter: 'brightness(0) invert(1) drop-shadow(0px 10px 15px rgba(255,255,255,0.2))',
                     transform: 'translateZ(30px)' // Pops out of the glass
                   }}
                 />
