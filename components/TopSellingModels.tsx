@@ -123,13 +123,14 @@ export default function TopSellingModels() {
       });
 
       const trigger = ScrollTrigger.create({
-        start: 0,
+        trigger: containerRef.current,
+        start: "top top",
         onUpdate(self) {
           let scroll = self.scroll();
           if (scroll > self.end - 1) {
-            wrap(1, 2);
-          } else if (scroll < 1 && self.direction < 0) {
-            wrap(-1, self.end - 2);
+            wrap(1, self.start + 1);
+          } else if (scroll < self.start + 1 && self.direction < 0) {
+            wrap(-1, self.end - 1);
           } else {
             scrub.vars.offset = (iteration + self.progress) * seamlessLoop.duration();
             scrub.invalidate().restart();
@@ -139,7 +140,7 @@ export default function TopSellingModels() {
         pin: ".gallery-container",
       });
 
-      const progressToScroll = (progress: number) => gsap.utils.clamp(1, trigger.end - 1, gsap.utils.wrap(0, 1, progress) * trigger.end);
+      const progressToScroll = (progress: number) => gsap.utils.clamp(trigger.start + 1, trigger.end - 1, gsap.utils.wrap(0, 1, progress) * (trigger.end - trigger.start) + trigger.start);
       
       const wrap = (iterationDelta: number, scrollTo: number) => {
         iteration += iterationDelta;
