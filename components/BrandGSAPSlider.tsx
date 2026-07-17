@@ -99,7 +99,7 @@ export default function BrandGSAPSlider() {
       });
 
       // 4. Animate the progress bar
-      const progressBar = containerRef.current.querySelector('.progress-bar');
+      const progressBar = containerRef.current?.querySelector('.progress-bar');
       if (progressBar) {
         tl.to(progressBar, {
           width: '100%',
