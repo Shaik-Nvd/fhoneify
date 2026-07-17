@@ -47,23 +47,12 @@ export default function CustomerStories() {
     if (!containerRef.current || !scrollWrapperRef.current || typeof window === 'undefined') return;
 
     const ctx = gsap.context(() => {
-      // Calculate how far we need to translate horizontally
-      // We want to translate left by the total width of the wrapper minus the viewport width
-      const totalWidth = scrollWrapperRef.current!.scrollWidth;
-      const viewportWidth = window.innerWidth;
-      const scrollDistance = totalWidth - viewportWidth + (window.innerWidth > 768 ? 200 : 100); // Add some padding at the end
-
-      // Create the horizontal scroll animation
+      // Infinite horizontal marquee
       gsap.to(scrollWrapperRef.current, {
-        x: -scrollDistance,
+        xPercent: -50,
         ease: "none",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 20%", // Pin when the section hits 20% from the top
-          end: `+=${scrollDistance}`, // Scroll for exactly the distance we need to translate
-          pin: true,
-          scrub: 1, // Smooth scrubbing
-        }
+        duration: 30, // Adjust speed here
+        repeat: -1
       });
     }, containerRef);
 
@@ -78,15 +67,16 @@ export default function CustomerStories() {
       
       {/* 
         This wrapper holds all the cards in a horizontal row.
-        We translate this wrapper to the left on scroll.
+        We duplicate the testimonials array to create a seamless infinite loop.
       */}
       <div 
         ref={scrollWrapperRef}
         className="flex gap-6 md:gap-8 px-4 md:px-8 w-max"
+        style={{ paddingLeft: '1rem' }}
       >
-        {TESTIMONIALS.map((item) => (
+        {[...TESTIMONIALS, ...TESTIMONIALS].map((item, idx) => (
           <div 
-            key={item.id} 
+            key={`${item.id}-${idx}`} 
             className="w-[320px] md:w-[450px] bg-[#111] border border-[#2a2a2a] rounded-3xl p-8 md:p-10 shadow-2xl flex flex-col justify-between"
           >
             <div className="mb-6 text-[#38b2ac]">
