@@ -1,4 +1,12 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 const FEATURES = [
   {
@@ -16,7 +24,7 @@ const FEATURES = [
     desc: 'Instant Money Transfer in your preferred mode at time of pick up or store drop off',
     icon: (
       <svg fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-[#38b2ac]">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
       </svg>
     )
   },
@@ -59,18 +67,66 @@ const FEATURES = [
 ];
 
 export default function WhyUs() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+    const ctx = gsap.context(() => {
+      // Title animation
+      gsap.fromTo('.section-title', 
+        { opacity: 0, y: 50 },
+        { 
+          opacity: 1, 
+          y: 0, 
+          duration: 1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top 80%",
+            toggleActions: "play none none reverse"
+          }
+        }
+      );
+
+      // Stagger items in on scroll (Bento Gallery style)
+      gsap.fromTo('.feature-card', 
+        { opacity: 0, y: 100, scale: 0.9, rotationX: 15 },
+        { 
+          opacity: 1, 
+          y: 0, 
+          scale: 1, 
+          rotationX: 0,
+          duration: 0.8,
+          ease: 'power3.out',
+          stagger: 0.15,
+          scrollTrigger: {
+            trigger: '.feature-grid',
+            start: "top 85%",
+            toggleActions: "play none none reverse"
+          }
+        }
+      );
+    }, containerRef);
+    
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <div className="w-full">
-      <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">Why Us</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="w-full" ref={containerRef} style={{ perspective: '1000px' }}>
+      <h2 className="section-title text-2xl md:text-3xl font-bold text-white mb-8 text-center md:text-left">Why Us</h2>
+      <div className="feature-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {FEATURES.map((feat, idx) => (
-          <div key={idx} className="flex gap-4 items-start p-4 bg-[#111] rounded-xl border border-[#2a2a2a] hover:border-[#38b2ac] transition-colors">
-            <div className="p-2 bg-[#38b2ac]/10 rounded-lg shrink-0">
+          <div 
+            key={idx} 
+            className="feature-card flex gap-4 items-start p-6 bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] rounded-2xl border border-[#2a2a2a] hover:border-[#38b2ac] transition-all shadow-xl hover:shadow-[#38b2ac]/20"
+            style={{ transformStyle: 'preserve-3d' }}
+          >
+            <div className="p-3 bg-[#38b2ac]/10 rounded-xl shrink-0 text-[#38b2ac]">
               {feat.icon}
             </div>
             <div>
-              <h3 className="text-white font-semibold text-lg mb-1">{feat.title}</h3>
-              <p className="text-[#a0a0a0] text-sm leading-relaxed">{feat.desc}</p>
+              <h3 className="text-white font-bold text-lg mb-2">{feat.title}</h3>
+              <p className="text-[#888] text-sm leading-relaxed">{feat.desc}</p>
             </div>
           </div>
         ))}

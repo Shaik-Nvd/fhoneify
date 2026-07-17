@@ -7,11 +7,7 @@ import { LazyMotion, domAnimation, m, useScroll, useTransform, useMotionValue, u
 
 import { BRANDS, BRAND_LOGOS, getBrandLogoStyle } from '@/lib/brands';
 
-const STEPS = [
-  { num: '01', title: 'Get a Quote', desc: 'Select your device and condition to receive an instant valuation.' },
-  { num: '02', title: 'Schedule Pickup', desc: 'We come to your doorstep. Free pickup, zero hassle.' },
-  { num: '03', title: 'Get Paid', desc: 'Instant payment via UPI once your device is verified.' },
-];
+// Extracted to HowItWorks component
 
 const STATS = [
   { value: '50K+', label: 'Phones Sold' },
@@ -295,6 +291,7 @@ import CustomerStories from '@/components/CustomerStories';
 import FAQs from '@/components/FAQs';
 import WarrantyClaim from '@/components/WarrantyClaim';
 import BrandGSAPSlider from '@/components/BrandGSAPSlider';
+import HowItWorks from '@/components/HowItWorks';
 
 export default function LandingPage() {
   const [mounted, setMounted] = useState(false);
@@ -447,38 +444,7 @@ export default function LandingPage() {
       {/* How it works */}
       <section style={{ backgroundColor: '#0a0a0a', padding: '8rem 0' }}>
         <div style={{ maxWidth: '64rem', margin: '0 auto', padding: '0 1.5rem' }}>
-          <m.div variants={wordRevealVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            <p className="eyebrow" style={{ textAlign: 'center', marginBottom: '0.75rem' }}>HOW IT WORKS</p>
-            <h2 style={{ textAlign: 'center', fontSize: '2.5rem', fontWeight: 300, color: '#fff', marginBottom: '4rem', display: 'flex', justifyContent: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
-              {"Three simple steps".split(" ").map((word, i) => (
-                <m.span key={i} variants={{ hidden: { opacity: 0.2, y: 10 }, visible: { opacity: 1, y: 0, transition: { duration: 0.4 } } }}>
-                  {word}
-                </m.span>
-              ))}
-            </h2>
-          </m.div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '3rem' }}>
-            {STEPS.map((s, i) => (
-              <m.div key={s.num} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.2 }} style={{ textAlign: 'center' }} className="glass-card">
-                <div style={{
-                  width: '64px',
-                  height: '64px',
-                  borderRadius: '50%',
-                  background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.05))',
-                  border: '1px solid rgba(212, 175, 55, 0.3)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  margin: '0 auto 1.5rem',
-                  color: '#d4af37',
-                  fontWeight: 700,
-                  fontSize: '1.2rem',
-                }}>{s.num}</div>
-                <h3 style={{ color: '#fff', fontWeight: 600, marginBottom: '1rem', fontSize: '1.25rem' }}>{s.title}</h3>
-                <p style={{ color: '#a0a0a0', fontSize: '0.95rem', lineHeight: 1.6 }}>{s.desc}</p>
-              </m.div>
-            ))}
-          </div>
+          <HowItWorks />
         </div>
       </section>
 
