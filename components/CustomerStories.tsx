@@ -124,7 +124,7 @@ export default function CustomerStories() {
               </svg>
             </div>
             <p className="text-white text-lg md:text-xl flex-1 mb-8 leading-relaxed font-light">
-              "{item.quote}"
+              &quot;{item.quote}&quot;
             </p>
             <div className="flex items-center gap-4">
               <img src={item.avatar} alt={item.author} className="w-12 h-12 rounded-full object-cover border-2 border-[#38b2ac]" />
