@@ -41,59 +41,28 @@ const TESTIMONIALS = [
 
 export default function CustomerStories() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const scrollWrapperRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!containerRef.current || typeof window === 'undefined') return;
+    if (!containerRef.current || !scrollWrapperRef.current || typeof window === 'undefined') return;
 
     const ctx = gsap.context(() => {
-      const cards = cardsRef.current.filter(Boolean);
-      
-      // Initialize cards
-      cards.forEach((card, i) => {
-        gsap.set(card, {
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          zIndex: cards.length - i,
-          y: i === 0 ? 0 : '150vh', // Send all but first below viewport
-          opacity: i === 0 ? 1 : 0,
-          scale: i === 0 ? 1 : 0.8,
-        });
-      });
+      // Calculate how far we need to translate horizontally
+      // We want to translate left by the total width of the wrapper minus the viewport width
+      const totalWidth = scrollWrapperRef.current!.scrollWidth;
+      const viewportWidth = window.innerWidth;
+      const scrollDistance = totalWidth - viewportWidth + (window.innerWidth > 768 ? 200 : 100); // Add some padding at the end
 
-      // Pin the entire container and scrub the stack
-      const tl = gsap.timeline({
+      // Create the horizontal scroll animation
+      gsap.to(scrollWrapperRef.current, {
+        x: -scrollDistance,
+        ease: "none",
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top 15%",
-          end: `+=${cards.length * 100}%`,
+          start: "top 20%", // Pin when the section hits 20% from the top
+          end: `+=${scrollDistance}`, // Scroll for exactly the distance we need to translate
           pin: true,
-          scrub: 1, // Smooth scrub
-        }
-      });
-
-      // Animate cards into the stack
-      cards.forEach((card, i) => {
-        if (i === 0) return;
-        
-        // 1. Bring the new card up
-        tl.to(card, {
-          y: 0,
-          opacity: 1,
-          scale: 1,
-          ease: 'power1.inOut',
-        }, i); // Use 'i' as the timeline position
-        
-        // 2. Push all previous cards back (scale down, move up slightly, fade slightly)
-        for (let j = 0; j < i; j++) {
-          tl.to(cards[j], {
-            y: -30 * (i - j), // Move up slightly
-            scale: 1 - 0.05 * (i - j), // Scale down
-            opacity: 1 - 0.2 * (i - j), // Fade out
-            ease: 'power1.inOut'
-          }, i);
+          scrub: 1, // Smooth scrubbing
         }
       });
     }, containerRef);
@@ -102,21 +71,23 @@ export default function CustomerStories() {
   }, []);
 
   return (
-    <div className="w-full relative" ref={containerRef}>
+    <div className="w-full relative overflow-hidden" ref={containerRef}>
       <h2 className="text-3xl md:text-5xl font-bold text-white mb-16 text-center">
         Customer Stories
       </h2>
       
+      {/* 
+        This wrapper holds all the cards in a horizontal row.
+        We translate this wrapper to the left on scroll.
+      */}
       <div 
-        className="relative w-full max-w-2xl mx-auto" 
-        style={{ height: '350px', perspective: '1000px' }}
+        ref={scrollWrapperRef}
+        className="flex gap-6 md:gap-8 px-4 md:px-8 w-max"
       >
-        {TESTIMONIALS.map((item, i) => (
+        {TESTIMONIALS.map((item) => (
           <div 
             key={item.id} 
-            ref={(el) => { cardsRef.current[i] = el; }}
-            className="bg-gradient-to-br from-[#111] to-[#0a0a0a] border border-[#2a2a2a] rounded-3xl p-8 md:p-12 shadow-[0_30px_60px_rgba(0,0,0,0.8)] flex flex-col justify-between h-full"
-            style={{ transformStyle: 'preserve-3d' }}
+            className="w-[320px] md:w-[450px] bg-[#111] border border-[#2a2a2a] rounded-3xl p-8 md:p-10 shadow-2xl flex flex-col justify-between"
           >
             <div className="mb-6 text-[#38b2ac]">
               <svg fill="currentColor" viewBox="0 0 24 24" className="w-12 h-12 opacity-40">
