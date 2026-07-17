@@ -2,7 +2,6 @@
 
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export default function WarrantyClaim() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -12,46 +11,8 @@ export default function WarrantyClaim() {
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    gsap.registerPlugin(ScrollTrigger);
 
     const ctx = gsap.context(() => {
-      // Entrance animation
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 95%",
-          toggleActions: "play none none reverse",
-        }
-      });
-
-      tl.from(containerRef.current, {
-        y: 50,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power3.out",
-        boxShadow: "0px 0px 0px rgba(56, 178, 172, 0)"
-      })
-      .from(titleRef.current, {
-        y: 20,
-        opacity: 0,
-        duration: 0.5,
-        ease: "power2.out"
-      }, "-=0.4")
-      .from(itemsRef.current, {
-        x: -30,
-        opacity: 0,
-        duration: 0.6,
-        stagger: 0.15,
-        ease: "back.out(1.2)"
-      }, "-=0.3")
-      .from(shieldRef.current, {
-        scale: 0.5,
-        rotation: -15,
-        opacity: 0,
-        duration: 0.8,
-        ease: "elastic.out(1, 0.5)"
-      }, "-=0.8");
-
       // Continuous floating animation for the shield
       gsap.to(shieldRef.current, {
         y: -15,
@@ -60,7 +21,6 @@ export default function WarrantyClaim() {
         repeat: -1,
         ease: "sine.inOut"
       });
-
     }, containerRef);
 
     return () => ctx.revert();
