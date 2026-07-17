@@ -19,7 +19,7 @@ export default function WarrantyClaim() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top 80%",
+          start: "top 95%",
           toggleActions: "play none none reverse",
         }
       });
