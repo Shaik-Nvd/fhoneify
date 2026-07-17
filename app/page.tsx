@@ -424,6 +424,11 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Top Selling Models */}
+      <section style={{ backgroundColor: '#0a0a0a', padding: '4rem 0', position: 'relative', zIndex: 10 }}>
+        <TopSellingModels />
+      </section>
+
       {/* Brands - Fullscreen GSAP Slider */}
       <BrandGSAPSlider />
 
@@ -448,14 +453,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Top Selling Models */}
-      <section style={{ backgroundColor: '#0a0a0a', padding: '0 0 8rem 0' }}>
-        <div style={{ maxWidth: '64rem', margin: '0 auto', padding: '0 1.5rem' }}>
-          <m.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <TopSellingModels />
-          </m.div>
-        </div>
-      </section>
+
 
       {/* Why Us */}
       <section style={{ backgroundColor: '#0a0a0a', padding: '0 0 8rem 0' }}>
