@@ -21582,5 +21582,14 @@ export const SEED_DEVICES: any[] = [
     "ram": "8 GB",
     "color": "Default",
     "basePrice": 53150
+  },
+  {
+    "id": "xiaomi-redmi-10-power-8-128",
+    "brand": "Xiaomi",
+    "model": "Redmi 10 Power",
+    "storage": "128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 5120
   }
 ];
