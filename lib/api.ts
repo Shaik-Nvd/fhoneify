@@ -38,6 +38,7 @@ api.interceptors.response.use(
       
       // Do not globally redirect if it's an OTP error (like "Invalid OTP") or if we are on the Quote page (which has its own modal)
       if (!configUrl.includes('/api/auth/otp') && !path.startsWith('/auth') && !path.startsWith('/quote')) {
+        localStorage.removeItem('fhoneify-auth');
         window.location.href = '/auth';
       }
     }

@@ -33,10 +33,17 @@ export async function requireAuth(req: AuthenticatedRequest, res: Response, next
     const decoded = jwt.verify(token, config.JWT_SECRET) as { userId: string; role: string };
     
     // Find user in db/in-memory users list
-    const user = users.find((u) => u.id === decoded.userId);
+    let user = users.find((u) => u.id === decoded.userId);
     if (!user) {
-      logger.warn(`Auth failed: user with id ${decoded.userId} not found`);
-      return res.status(401).json({ success: false, error: 'Unauthorized' });
+      // Vercel serverless workaround: In-memory array might have reset. 
+      // If the JWT is valid, we auto-recreate the user in the mock array.
+      user = {
+        id: decoded.userId,
+        phone: 'restored-session', // Phone is not stored in JWT, so we mock it
+        role: decoded.role as any || 'buyer',
+      };
+      users.push(user);
+      logger.info(`Auto-restored user ${decoded.userId} from valid JWT`);
     }
 
     req.user = user;
