@@ -294,6 +294,7 @@ import WhyUs from '@/components/WhyUs';
 import CustomerStories from '@/components/CustomerStories';
 import FAQs from '@/components/FAQs';
 import WarrantyClaim from '@/components/WarrantyClaim';
+import BrandGSAPSlider from '@/components/BrandGSAPSlider';
 
 export default function LandingPage() {
   const [mounted, setMounted] = useState(false);
@@ -426,6 +427,9 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Brands - Fullscreen GSAP Slider */}
+      <BrandGSAPSlider />
+
       {/* Stats - Glass Bar */}
       <section style={{ backgroundColor: '#0a0a0a', padding: '2rem 0', position: 'relative', zIndex: 20 }}>
         <m.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} style={{ maxWidth: '64rem', margin: '0 auto', padding: '0 1.5rem' }}>
@@ -518,38 +522,8 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
-
-      {/* Brands */}
-      <section style={{ backgroundColor: '#0a0a0a', padding: '0 0 8rem 0', position: 'relative' }}>
-        <div className="perspective-container" style={{ maxWidth: '64rem', margin: '0 auto', padding: '0 1.5rem' }}>
-          <m.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <p className="eyebrow" style={{ textAlign: 'center', marginBottom: '0.75rem' }}>SELECT YOUR DEVICE</p>
-            <h2 style={{ textAlign: 'center', fontSize: '2.5rem', fontWeight: 300, color: '#fff', marginBottom: '4rem' }}>
-              We buy all major brands
-            </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1.5rem' }}>
-              {BRANDS.map((brand) => (
-                <TiltCard key={brand} href={`/quote?brand=${brand}`}>
-                  <div style={{ padding: '2rem 1rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', height: '100%' }}>
-                    <img 
-                      src={BRAND_LOGOS[brand]} 
-                      alt={brand} 
-                      style={{ 
-                        ...getBrandLogoStyle(brand),
-                        height: '40px', 
-                        width: 'auto', 
-                        maxWidth: '80px',
-                      }} 
-                      onError={(e) => { e.currentTarget.style.display = 'none'; }}
-                    />
-                    <p style={{ fontWeight: 600, color: '#fff', fontSize: '1rem', letterSpacing: '0.5px' }}>{brand}</p>
-                  </div>
-                </TiltCard>
-              ))}
-            </div>
-          </m.div>
-        </div>
-      </section>
+      
+      {/* Removed Brands GSAP slider from here as it moved below Hero */}
       </div>
     </div>
     </LazyMotion>
