@@ -13,28 +13,28 @@ const TESTIMONIALS = [
     id: 1,
     quote: "I loved that Fhoneify picked up my phone from my home and paid me instantly. It was super convenient since I'm always busy.",
     author: "Ratikant Gokhale",
-    location: "Gurgaon",
+    location: "Koramangala",
     avatar: "https://i.pravatar.cc/150?u=a042581f4e29026024d"
   },
   {
     id: 2,
     quote: "I tried selling my phone locally, but didn't have any luck as everyone was trying to exploit the price. Fhoneify helped me sell it in just minutes without any stress.",
     author: "Harpreet Singh",
-    location: "Haldwani",
+    location: "Indiranagar",
     avatar: "https://i.pravatar.cc/150?u=a04258a2462d826712d"
   },
   {
     id: 3,
     quote: "My phone was in good condition, and I was surprised that Fhoneify offered me more than I expected. Really happy with the deal.",
     author: "Bagesh Kumar",
-    location: "Agra",
+    location: "Whitefield",
     avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704d"
   },
   {
     id: 4,
     quote: "I was nervous about selling my phone online as the condition was really good but Fhoneify made it simple with no hassles and great customer support.",
     author: "Shubham Ghunawat",
-    location: "Delhi",
+    location: "Jayanagar",
     avatar: "https://i.pravatar.cc/150?u=a048581f4e29026701d"
   }
 ];

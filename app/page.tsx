@@ -434,7 +434,7 @@ export default function LandingPage() {
 
       {/* Stats - Glass Bar */}
       <section style={{ backgroundColor: '#0a0a0a', padding: '2rem 0', position: 'relative', zIndex: 20 }}>
-        <m.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} style={{ maxWidth: '64rem', margin: '0 auto', padding: '0 1.5rem' }}>
+        <m.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} style={{ maxWidth: '90rem', margin: '0 auto', padding: '0 1.5rem' }}>
           <div className="glass-panel grid grid-cols-2 md:grid-cols-4 gap-6 text-center rounded-2xl p-6 md:p-10">
             {STATS.map((s) => (
               <div key={s.label}>
@@ -448,7 +448,7 @@ export default function LandingPage() {
 
       {/* How it works */}
       <section style={{ backgroundColor: '#0a0a0a', padding: '8rem 0' }}>
-        <div style={{ maxWidth: '64rem', margin: '0 auto', padding: '0 1.5rem' }}>
+        <div style={{ maxWidth: '90rem', margin: '0 auto', padding: '0 1.5rem' }}>
           <HowItWorks />
         </div>
       </section>
@@ -457,7 +457,7 @@ export default function LandingPage() {
 
       {/* Why Us */}
       <section style={{ backgroundColor: '#0a0a0a', padding: '0 0 8rem 0' }}>
-        <div style={{ maxWidth: '64rem', margin: '0 auto', padding: '0 1.5rem' }}>
+        <div style={{ maxWidth: '90rem', margin: '0 auto', padding: '0 1.5rem' }}>
           <m.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <WhyUs />
           </m.div>
@@ -465,17 +465,15 @@ export default function LandingPage() {
       </section>
 
       {/* Customer Stories */}
-      <section style={{ backgroundColor: '#0a0a0a', padding: '0 0 8rem 0', overflow: 'hidden' }}>
-        <div style={{ maxWidth: '64rem', margin: '0 auto', padding: '0 1.5rem' }}>
-          <m.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <CustomerStories />
-          </m.div>
-        </div>
+      <section style={{ backgroundColor: '#0a0a0a', padding: '0 0 8rem 0', overflow: 'hidden', width: '100%' }}>
+        <m.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="w-full">
+          <CustomerStories />
+        </m.div>
       </section>
 
       {/* FAQs */}
       <section style={{ backgroundColor: '#0a0a0a', padding: '0 0 8rem 0' }}>
-        <div style={{ maxWidth: '64rem', margin: '0 auto', padding: '0 1.5rem' }}>
+        <div style={{ maxWidth: '90rem', margin: '0 auto', padding: '0 1.5rem' }}>
           <m.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <FAQs />
           </m.div>
