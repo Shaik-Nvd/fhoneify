@@ -192,6 +192,7 @@ model Lead {
   pincode     String?
   city        String?
   status      String   @default("pending")
+  answers     Json?
   createdAt   DateTime @default(now())
 }
 

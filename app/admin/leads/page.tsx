@@ -233,26 +233,56 @@ export default function AdminLeadsPage() {
                       )}
                     </td>
                     <td className="px-6 py-5">
-                      <div className="relative">
-                        <select 
-                          disabled={updatingId === l.id}
-                          value={l.status || 'pending'} 
-                          onChange={(e) => handleStatusChange(l.id, e.target.value)}
-                          className={`appearance-none w-full min-w-[140px] px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider border cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background transition-all duration-300 ${getStatusStyles(l.status || 'pending')} ${updatingId === l.id ? 'opacity-50 cursor-not-allowed animate-pulse' : 'hover:scale-[1.02] active:scale-95'}`}
-                        >
-                          {LEAD_STATUSES.map(s => (
-                            <option key={s} value={s} className="bg-surface text-white capitalize font-medium">
-                              {s}
-                            </option>
-                          ))}
-                        </select>
-                        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3">
-                          {updatingId === l.id ? (
-                            <div className="w-3 h-3 border-2 border-current border-t-transparent rounded-full animate-spin"></div>
-                          ) : (
-                            <svg className="w-3 h-3 fill-current opacity-70" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" fillRule="evenodd"></path></svg>
-                          )}
+                      <div className="flex items-center gap-2">
+                        <div className="relative">
+                          <select 
+                            disabled={updatingId === l.id}
+                            value={l.status || 'pending'} 
+                            onChange={(e) => handleStatusChange(l.id, e.target.value)}
+                            className={`appearance-none w-full min-w-[140px] px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider border cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background transition-all duration-300 ${getStatusStyles(l.status || 'pending')} ${updatingId === l.id ? 'opacity-50 cursor-not-allowed animate-pulse' : 'hover:scale-[1.02] active:scale-95'}`}
+                          >
+                            {LEAD_STATUSES.map(s => (
+                              <option key={s} value={s} className="bg-surface text-white capitalize font-medium">
+                                {s}
+                              </option>
+                            ))}
+                          </select>
+                          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3">
+                            {updatingId === l.id ? (
+                              <div className="w-3 h-3 border-2 border-current border-t-transparent rounded-full animate-spin"></div>
+                            ) : (
+                              <svg className="w-3 h-3 fill-current opacity-70" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" fillRule="evenodd"></path></svg>
+                            )}
+                          </div>
                         </div>
+                        
+                        {/* Download PDF Button */}
+                        <button
+                          onClick={() => {
+                            const token = localStorage.getItem('accessToken');
+                            const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+                            fetch(`${apiUrl}/api/admin/leads/${l.id}/pdf`, {
+                              headers: { 'Authorization': `Bearer ${token}` }
+                            })
+                            .then(res => res.blob())
+                            .then(blob => {
+                              const url = window.URL.createObjectURL(blob);
+                              const a = document.createElement('a');
+                              const safeName = (l.name || 'Unknown').replace(/[^a-zA-Z0-9]/g, '_');
+                              a.href = url;
+                              a.download = `${safeName}_${l.phone}_Report.pdf`;
+                              document.body.appendChild(a);
+                              a.click();
+                              a.remove();
+                              window.URL.revokeObjectURL(url);
+                            })
+                            .catch(err => alert('Failed to download PDF'));
+                          }}
+                          className="p-2 rounded-lg bg-blue-500/10 text-blue-400 hover:bg-blue-500/20 transition-colors"
+                          title="Download Questionnaire PDF"
+                        >
+                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                        </button>
                       </div>
                     </td>
                   </tr>

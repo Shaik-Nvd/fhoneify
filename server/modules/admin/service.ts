@@ -67,6 +67,12 @@ export async function getLeads() {
   });
 }
 
+export async function getLeadById(id: string) {
+  return await prisma.lead.findUnique({
+    where: { id }
+  });
+}
+
 export async function updateLeadStatus(id: string, status: string) {
   const lead = await prisma.lead.update({
     where: { id },

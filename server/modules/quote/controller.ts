@@ -21,6 +21,7 @@ const CreateLeadSchema = z.object({
   address: z.string().optional(),
   pincode: z.string().optional(),
   city: z.string().optional(),
+  answers: z.any().optional(),
 });
 
 export function listDevices(req: Request, res: Response) {

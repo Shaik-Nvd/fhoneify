@@ -2781,7 +2781,8 @@ export default function QuotePage() {
                   pickupTime: pickupTime || '',
                   address: address || '',
                   pincode: pincode || '',
-                  city: city || ''
+                  city: city || '',
+                  answers: diagnostics
                 })
               });
               
