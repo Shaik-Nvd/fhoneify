@@ -106,6 +106,14 @@ export async function updateLeadStatus(req: AuthenticatedRequest, res: Response)
 
 import { chromium } from 'playwright';
 
+let browserInstance: any = null;
+async function getBrowser() {
+  if (!browserInstance) {
+    browserInstance = await chromium.launch();
+  }
+  return browserInstance;
+}
+
 export async function generateLeadPdf(req: AuthenticatedRequest, res: Response) {
   try {
     const { id } = req.params;
@@ -304,11 +312,11 @@ export async function generateLeadPdf(req: AuthenticatedRequest, res: Response) 
     </html>
     `;
 
-    const browser = await chromium.launch();
+    const browser = await getBrowser();
     const page = await browser.newPage();
     await page.setContent(htmlContent, { waitUntil: 'networkidle' });
     const pdfBuffer = await page.pdf({ format: 'A4', printBackground: true });
-    await browser.close();
+    await page.close(); // Close only the page to prevent memory leaks
 
     const safeName = (lead.name || 'Unknown').replace(/[^a-zA-Z0-9]/g, '_');
     const filename = `${safeName}_${lead.phone}_Report.pdf`;
