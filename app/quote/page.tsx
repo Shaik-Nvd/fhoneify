@@ -2767,16 +2767,16 @@ export default function QuotePage() {
               const headers: any = { 'Content-Type': 'application/json' };
               if (token) headers['Authorization'] = `Bearer ${token}`;
               
-              const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'}/api/quote/leads`, {
+              const res = await fetch('/api/quote/leads', {
                 method: 'POST',
-                headers,
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                  name: userName || user?.name || '',
-                  phone: userPhone || user?.phone || '',
-                  brand: selectedBrand || '',
-                  model: selectedModel || '',
-                  storage: selectedStorage || '',
-                  quotedPrice: finalPrice || 0,
+                  brand: selectedBrand,
+                  model: selectedModel,
+                  storage: selectedStorage,
+                  quotedPrice: Number(finalPrice),
+                  name: userName || '',
+                  phone: userPhone || '',
                   pickupDate: pickupDate || '',
                   pickupTime: pickupTime || '',
                   address: address || '',
@@ -2798,7 +2798,7 @@ export default function QuotePage() {
               alert("Something went wrong: " + (err.message || "Please try again."));
             }
           }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem' }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
               <div>
                 <label style={{ display: 'block', fontSize: '0.85rem', color: '#a0a0a0', marginBottom: '0.5rem' }}>Preferred Date</label>
                 <input type="date" required value={pickupDate} onChange={(e) => setPickupDate(e.target.value)} style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000', color: '#fff' }} />
@@ -2819,7 +2819,7 @@ export default function QuotePage() {
               <input type="text" required value={address} onChange={(e) => setAddress(e.target.value)} placeholder="e.g. 101, Fhoneify Apartments" style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000', color: '#fff' }} />
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '2rem' }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               <div>
                 <label style={{ display: 'block', fontSize: '0.85rem', color: '#a0a0a0', marginBottom: '0.5rem' }}>Pincode</label>
                 <input type="text" required value={pincode} onChange={(e) => setPincode(e.target.value.replace(/\D/g, '').slice(0, 6))} placeholder="6 Digit Pincode" style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000', color: '#fff' }} />
