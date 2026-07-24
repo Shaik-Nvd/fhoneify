@@ -536,6 +536,11 @@ export function calculateFhoneifyPrice(
       // 17860 / 37040 = 0.48218142548596
       const specializedMultiplier = 0.48218142548596;
       cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
+    } else if (isTouchFaultyOtherwiseFlawless && hasBox && hasSPen) {
+      // Base Price = 39900 (1TB). Target Price = 23900.
+      // 23900 - 380 (box bonus) = 23520. 23520 / 39900 = 0.5894736842105263
+      const specializedMultiplier = 0.5894736842105263;
+      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
     } else if (isBatteryFaultyOnly && missingBox && missingSPen) {
       // Base Price = 37040. Target Price = 31260.
       // 31260 / 37040 = 0.8439524838
