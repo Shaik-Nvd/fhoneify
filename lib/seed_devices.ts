@@ -18366,7 +18366,7 @@ export const SEED_DEVICES: any[] = [
     "storage": "12 GB/256 GB",
     "ram": "12 GB",
     "color": "Default",
-    "basePrice": 37040,
+    "basePrice": 36210,
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s23-ultra-5g-12-gb-256-gb"
   },
   {
@@ -19896,7 +19896,7 @@ export const SEED_DEVICES: any[] = [
     "storage": "12 GB/512 GB",
     "ram": "12 GB",
     "color": "Default",
-    "basePrice": 38160,
+    "basePrice": 37430,
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s23-ultra-5g-12-gb-512-gb"
   },
   {
