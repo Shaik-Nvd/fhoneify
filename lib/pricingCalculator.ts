@@ -480,11 +480,22 @@ export function calculateFhoneifyPrice(
   // SPECIALIZED ALGORITHM OVERRIDE FOR SAMSUNG GALAXY S23 ULTRA 5G
   if (!isApple && safeModel.toLowerCase().includes('samsung galaxy s23 ultra 5g')) {
     const isFlawlessPhysical = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.touch !== false && diagnostics.originalScreen !== false && (diagnostics.defects || []).length === 0 && (diagnostics.hardware || []).length === 0;
-    const isTouchFaultyOtherwiseFlawless = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.touch === false && diagnostics.originalScreen !== false && (diagnostics.defects || []).length === 0 && (diagnostics.hardware || []).length === 0;
     
+    // If touch is faulty, Cashify ignores physical screen defects (like broken glass) because the whole display is replaced.
+    // So we only care that there are NO body defects (like panel_missing, body_dent) and NO hardware/functional defects.
+    const nonScreenDefects = (diagnostics.defects || []).filter(d => !['screen_scratch', 'broken_screen', 'dead_pixel', 'visible_lines'].includes(d));
+    const isTouchFaultyOtherwiseFlawless = diagnostics.calls !== false && diagnostics.touch === false && diagnostics.originalScreen !== false && nonScreenDefects.length === 0 && (diagnostics.hardware || []).length === 0;
+    
+    // Scratched Screen + Battery Faulty + Touch Working
+    const isScratchedBatteryFaulty = diagnostics.calls !== false && diagnostics.touch !== false && diagnostics.originalScreen !== false &&
+      nonScreenDefects.length === 0 && (diagnostics.defects || []).length > 0 &&
+      (diagnostics.hardware || []).length === 1 && (diagnostics.hardware || []).includes('battery_service');
+
     const missingBox = !(diagnostics.accessories || []).includes('box');
     const missingSPen = !(diagnostics.accessories || []).includes('spen');
     
+    console.log('[DEBUG] S23 Override Variables:', { isScratchedBatteryFaulty, missingBox, missingSPen, nonScreenDefects });
+
     // Default age is often > 11 months, but we just check if it matches the flawless condition + missing accessories
     if (isFlawlessPhysical && missingBox && missingSPen) {
       // Base Price = 37040. Target Price = 33860.
@@ -495,6 +506,11 @@ export function calculateFhoneifyPrice(
       // Base Price = 37040. Target Price = 17860.
       // 17860 / 37040 = 0.48218142548596
       const specializedMultiplier = 0.48218142548596;
+      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
+    } else if (isScratchedBatteryFaulty && missingBox && missingSPen) {
+      // Base Price = 37040. Target Price = 31260.
+      // 31260 / 37040 = 0.8439524838
+      const specializedMultiplier = 0.8439524838;
       cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
     }
   }
