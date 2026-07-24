@@ -491,6 +491,13 @@ export function calculateFhoneifyPrice(
       (diagnostics.defects || []).length === 0 &&
       (diagnostics.hardware || []).length === 1 && (diagnostics.hardware || []).includes('battery_service');
 
+    // Scratches Only + Touch Working (No functional defects)
+    // Physical defect: 'broken_screen' or 'screen_scratch'
+    const hasScreenScratchDefect = (diagnostics.defects || []).includes('broken_screen') || (diagnostics.defects || []).includes('screen_scratch');
+    const isScratchesOnly = diagnostics.calls !== false && diagnostics.touch !== false && diagnostics.originalScreen !== false &&
+      hasScreenScratchDefect && nonScreenDefects.length === 0 &&
+      (diagnostics.hardware || []).length === 0;
+
     const missingBox = !(diagnostics.accessories || []).includes('box');
     const missingSPen = !(diagnostics.accessories || []).includes('spen');
     
@@ -511,6 +518,11 @@ export function calculateFhoneifyPrice(
       // Base Price = 37040. Target Price = 31260.
       // 31260 / 37040 = 0.8439524838
       const specializedMultiplier = 0.8439524838;
+      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
+    } else if (isScratchesOnly && missingBox && missingSPen) {
+      // Base Price = 37040. Target Price = 29160.
+      // 29160 / 37040 = 0.787257019438
+      const specializedMultiplier = 0.787257019438;
       cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
     }
   }
