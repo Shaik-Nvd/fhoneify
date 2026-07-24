@@ -93,7 +93,7 @@ export default function QuotePage() {
     
     if (brand === 'Samsung') {
       // Exclude older Samsung flagships
-      if (lowerModel.includes('s20') || lowerModel.includes('s21') || lowerModel.includes('s22') || lowerModel.includes('note')) {
+      if (lowerModel.includes('s20') || lowerModel.includes('s21') || lowerModel.includes('s22') || lowerModel.includes('s23') || lowerModel.includes('note')) {
         return false;
       }
     }
@@ -125,6 +125,12 @@ export default function QuotePage() {
     }
     
     return false;
+  };
+
+  const hasSPen = (brand: string, model: string) => {
+    if (brand.toLowerCase() !== 'samsung') return false;
+    const lower = model.toLowerCase();
+    return lower.includes('note') || (lower.includes('s') && lower.includes('ultra'));
   };
 
   const hasChargerInBox = (brand: string, model: string) => {
@@ -2351,7 +2357,8 @@ export default function QuotePage() {
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem', marginBottom: '3rem' }}>
                   {[
                     {id: 'box', label: 'Original Box with same IMEI', icon: '📦'},
-                    ...(hasChargerInBox(selectedBrand, selectedModel) ? [{ id: 'charger', label: 'Original Charger', icon: '🔌' }] : [])
+                    ...(hasChargerInBox(selectedBrand, selectedModel) ? [{ id: 'charger', label: 'Original Charger', icon: '🔌' }] : []),
+                    ...(hasSPen(selectedBrand, selectedModel) ? [{ id: 'spen', label: 'Original S Pen', icon: '🖊️' }] : [])
                   ].map((a) => (
                     <button key={a.id} onClick={() => toggleArrayItem('accessories', a.id)} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem', padding: '3rem 1rem', borderRadius: '8px', border: diagnostics.accessories.includes(a.id) ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.accessories.includes(a.id) ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.accessories.includes(a.id) ? '#4CD964' : '#fff', cursor: 'pointer' }}>
                       <span style={{ fontSize: '4rem' }}>{a.icon}</span>
