@@ -500,14 +500,21 @@ export function calculateFhoneifyPrice(
 
     const missingBox = !(diagnostics.accessories || []).includes('box');
     const missingSPen = !(diagnostics.accessories || []).includes('spen');
+    const hasBox = (diagnostics.accessories || []).includes('box');
+    const hasSPen = (diagnostics.accessories || []).includes('spen');
     
-    console.log('[DEBUG] S23 Override Variables:', { isBatteryFaultyOnly, missingBox, missingSPen, nonScreenDefects });
+    console.log('[DEBUG] S23 Override Variables:', { isBatteryFaultyOnly, missingBox, missingSPen, nonScreenDefects, hasBox, hasSPen });
 
     // Default age is often > 11 months, but we just check if it matches the flawless condition + missing accessories
     if (isFlawlessPhysical && missingBox && missingSPen) {
       // Base Price = 37040. Target Price = 33860.
       // 33860 / 37040 = 0.91414686825054
       const specializedMultiplier = 0.91414686825054;
+      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
+    } else if (isFlawlessPhysical && hasBox && hasSPen) {
+      // Flawless with BOTH Box and S-Pen. Target Price = 35910.
+      // 35910 - 380 (box bonus) = 35530. 35530 / 37040 = 0.959233261339
+      const specializedMultiplier = 0.959233261339;
       cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
     } else if (isTouchFaultyOtherwiseFlawless && missingBox && missingSPen) {
       // Base Price = 37040. Target Price = 17860.
