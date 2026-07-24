@@ -866,7 +866,7 @@ export default function QuotePage() {
         bodyPanel: null,
         bodyBent: null,
         hardware: [],
-        accessories: ['box', 'bill', 'charger'],
+        accessories: ['box', 'bill', 'charger', 'spen'],
         warranty: true,
         validBill: true,
         eSim: null,
