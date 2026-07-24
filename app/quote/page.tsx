@@ -943,12 +943,63 @@ export default function QuotePage() {
       lowerModel.includes('razr') || 
       lowerModel.includes('open');
 
-    const baseList = [
+    // Samsung Ultra (S-Pen) Layout
+    if (hasSPen) {
+      return [
+        { id: 'front_camera', label: 'Front Camera not working', icon: '📸' },
+        { id: 'back_camera', label: 'Back Camera not working', icon: '📷' },
+        { id: 'volume', label: 'Volume Button not working', icon: '🔉' },
+        ...(hasFingerprint ? [{ id: 'fingerprint', label: isApple ? 'Finger Touch (Touch ID) not working' : 'Finger Touch not working', icon: '👆' }] : []),
+        { id: 'wifi', label: 'WiFi not working', icon: '📶' },
+        ...(isApple 
+          ? [
+              { id: 'battery_service', label: 'Battery in Service (Health < 80%)', icon: '🔋' },
+              { id: 'battery_health', label: 'Battery Health 80-85%', icon: '🔋' }
+            ]
+          : [
+              { id: 'battery_service', label: 'Battery Faulty', icon: '🔋' }
+            ]
+        ),
+        { id: 'speaker', label: 'Speaker Faulty', icon: '🔊' },
+        { id: 'power', label: 'Power Button not working', icon: '⏻' },
+        { id: 'charging', label: 'Charging Port not working', icon: '🔌' },
+        ...(hasFaceId ? [{ id: 'face', label: isApple ? 'Face ID / Face Sensor not working' : 'Face Sensor not working', icon: <FaceIdIcon /> }] : []),
+        { 
+          id: 'silent', 
+          label: hasActionButton ? 'Action Button not working' : 'Silent Button not working', 
+          icon: '🔕' 
+        },
+        { id: 'audio_receiver', label: 'Audio Receiver not working', icon: '📞' },
+        { id: 'camera_glass', label: 'Camera Glass Broken', icon: '🔍' },
+        { id: 'bluetooth', label: 'Bluetooth not working', icon: '🛜' },
+        { id: 'vibrator', label: 'Vibrator is not working', icon: '📳' },
+        { id: 'microphone', label: 'Microphone not working', icon: '🎤' },
+        { id: 'proximity', label: 'Proximity Sensor not working', icon: '🖐' }
+      ];
+    }
+
+    // Original Global Layout for all other phones
+    return [
       { id: 'front_camera', label: 'Front Camera not working', icon: '📸' },
       { id: 'back_camera', label: 'Back Camera not working', icon: '📷' },
       { id: 'volume', label: 'Volume Button not working', icon: '🔉' },
       ...(hasFingerprint ? [{ id: 'fingerprint', label: isApple ? 'Finger Touch (Touch ID) not working' : 'Finger Touch not working', icon: '👆' }] : []),
       { id: 'wifi', label: 'WiFi not working', icon: '📶' },
+      { id: 'speaker', label: 'Speaker Faulty', icon: '🔊' },
+      { 
+        id: 'silent', 
+        label: hasActionButton ? 'Action Button not working' : 'Silent Button not working', 
+        icon: '🔕' 
+      },
+      ...(hasFaceId ? [{ id: 'face', label: isApple ? 'Face ID / Face Sensor not working' : 'Face Sensor not working', icon: <FaceIdIcon /> }] : []),
+      { id: 'power', label: 'Power Button not working', icon: '⏻' },
+      { id: 'charging', label: 'Charging Port not working', icon: '🔌' },
+      { id: 'audio_receiver', label: 'Audio Receiver not working', icon: '📞' },
+      { id: 'camera_glass', label: 'Camera Glass Broken', icon: '🔍' },
+      { id: 'microphone', label: 'Microphone not working', icon: '🎤' },
+      { id: 'bluetooth', label: 'Bluetooth not working', icon: '🛜' },
+      { id: 'vibrator', label: 'Vibrator is not working', icon: '📳' },
+      { id: 'proximity', label: 'Proximity Sensor not working', icon: '🖐' },
       ...(isApple 
         ? [
             { id: 'battery_service', label: 'Battery in Service (Health < 80%)', icon: '🔋' },
@@ -957,25 +1008,8 @@ export default function QuotePage() {
         : [
             { id: 'battery_service', label: 'Battery Faulty', icon: '🔋' }
           ]
-      ),
-      { id: 'speaker', label: 'Speaker Faulty', icon: '🔊' },
-      { id: 'power', label: 'Power Button not working', icon: '⏻' },
-      { id: 'charging', label: 'Charging Port not working', icon: '🔌' },
-      ...(hasFaceId ? [{ id: 'face', label: isApple ? 'Face ID / Face Sensor not working' : 'Face Sensor not working', icon: <FaceIdIcon /> }] : []),
-      { 
-        id: 'silent', 
-        label: hasActionButton ? 'Action Button not working' : 'Silent Button not working', 
-        icon: '🔕' 
-      },
-      { id: 'audio_receiver', label: 'Audio Receiver not working', icon: '📞' },
-      { id: 'camera_glass', label: 'Camera Glass Broken', icon: '🔍' },
-      { id: 'bluetooth', label: 'Bluetooth not working', icon: '🛜' },
-      { id: 'vibrator', label: 'Vibrator is not working', icon: '📳' },
-      { id: 'microphone', label: 'Microphone not working', icon: '🎤' },
-      { id: 'proximity', label: 'Proximity Sensor not working', icon: '🖐' }
+      )
     ];
-
-    return baseList;
   };
 
   // Model params moved to lib/pricingCalculator.ts
