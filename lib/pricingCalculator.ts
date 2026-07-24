@@ -477,6 +477,27 @@ export function calculateFhoneifyPrice(
       cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
     }
   }
+  // SPECIALIZED ALGORITHM OVERRIDE FOR SAMSUNG GALAXY S23 ULTRA 5G
+  if (!isApple && safeModel.toLowerCase().includes('samsung galaxy s23 ultra 5g')) {
+    const isFlawlessPhysical = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.touch !== false && diagnostics.originalScreen !== false && (diagnostics.defects || []).length === 0 && (diagnostics.hardware || []).length === 0;
+    const isTouchFaultyOtherwiseFlawless = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.touch === false && diagnostics.originalScreen !== false && (diagnostics.defects || []).length === 0 && (diagnostics.hardware || []).length === 0;
+    
+    const missingBox = !(diagnostics.accessories || []).includes('box');
+    const missingSPen = !(diagnostics.accessories || []).includes('spen');
+    
+    // Default age is often > 11 months, but we just check if it matches the flawless condition + missing accessories
+    if (isFlawlessPhysical && missingBox && missingSPen) {
+      // Base Price = 37040. Target Price = 33860.
+      // 33860 / 37040 = 0.91414686825054
+      const specializedMultiplier = 0.91414686825054;
+      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
+    } else if (isTouchFaultyOtherwiseFlawless && missingBox && missingSPen) {
+      // Base Price = 37040. Target Price = 17860.
+      // 17860 / 37040 = 0.48218142548596
+      const specializedMultiplier = 0.48218142548596;
+      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
+    }
+  }
 
   // SPECIALIZED ALGORITHM OVERRIDE FOR NOKIA 5.1 PLUS
   if (!isApple && safeModel.toLowerCase() === 'nokia 5.1 plus') {

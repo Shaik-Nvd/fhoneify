@@ -136,10 +136,19 @@ export default function QuotePage() {
   const hasChargerInBox = (brand: string, model: string) => {
     const lowerBrand = brand.toLowerCase();
     const lowerModel = model.toLowerCase();
-    
-    // Samsung flagships like the Z Flip 7 do not have a charger in the box
-    if (lowerBrand === 'samsung' && lowerModel.includes('z flip 7')) {
-      return false;
+    // Modern Samsung flagships do not have a charger in the box
+    if (lowerBrand === 'samsung') {
+      if (
+        lowerModel.includes('z flip') || 
+        lowerModel.includes('z fold') || 
+        lowerModel.includes('s21') || 
+        lowerModel.includes('s22') || 
+        lowerModel.includes('s23') || 
+        lowerModel.includes('s24') || 
+        lowerModel.includes('s25')
+      ) {
+        return false;
+      }
     }
 
     if (lowerBrand !== 'apple') return true;
@@ -940,21 +949,6 @@ export default function QuotePage() {
       { id: 'volume', label: 'Volume Button not working', icon: '🔉' },
       ...(hasFingerprint ? [{ id: 'fingerprint', label: isApple ? 'Finger Touch (Touch ID) not working' : 'Finger Touch not working', icon: '👆' }] : []),
       { id: 'wifi', label: 'WiFi not working', icon: '📶' },
-      { id: 'speaker', label: 'Speaker Faulty', icon: '🔊' },
-      { 
-        id: 'silent', 
-        label: hasActionButton ? 'Action Button not working' : 'Silent Button not working', 
-        icon: '🔕' 
-      },
-      ...(hasFaceId ? [{ id: 'face', label: isApple ? 'Face ID / Face Sensor not working' : 'Face Sensor not working', icon: <FaceIdIcon /> }] : []),
-      { id: 'power', label: 'Power Button not working', icon: '⏻' },
-      { id: 'charging', label: 'Charging Port not working', icon: '🔌' },
-      { id: 'audio_receiver', label: 'Audio Receiver not working', icon: '📞' },
-      { id: 'camera_glass', label: 'Camera Glass Broken', icon: '🔍' },
-      { id: 'microphone', label: 'Microphone not working', icon: '🎤' },
-      { id: 'bluetooth', label: 'Bluetooth not working', icon: '🛜' },
-      { id: 'vibrator', label: 'Vibrator is not working', icon: '📳' },
-      { id: 'proximity', label: 'Proximity Sensor not working', icon: '🖐' },
       ...(isApple 
         ? [
             { id: 'battery_service', label: 'Battery in Service (Health < 80%)', icon: '🔋' },
@@ -964,7 +958,21 @@ export default function QuotePage() {
             { id: 'battery_service', label: 'Battery Faulty', icon: '🔋' }
           ]
       ),
-      ...(hasSPen ? [{ id: 's_pen', label: 'S-Pen Faulty / Missing', icon: '🖊️' }] : [])
+      { id: 'speaker', label: 'Speaker Faulty', icon: '🔊' },
+      { id: 'power', label: 'Power Button not working', icon: '⏻' },
+      { id: 'charging', label: 'Charging Port not working', icon: '🔌' },
+      ...(hasFaceId ? [{ id: 'face', label: isApple ? 'Face ID / Face Sensor not working' : 'Face Sensor not working', icon: <FaceIdIcon /> }] : []),
+      { 
+        id: 'silent', 
+        label: hasActionButton ? 'Action Button not working' : 'Silent Button not working', 
+        icon: '🔕' 
+      },
+      { id: 'audio_receiver', label: 'Audio Receiver not working', icon: '📞' },
+      { id: 'camera_glass', label: 'Camera Glass Broken', icon: '🔍' },
+      { id: 'bluetooth', label: 'Bluetooth not working', icon: '🛜' },
+      { id: 'vibrator', label: 'Vibrator is not working', icon: '📳' },
+      { id: 'microphone', label: 'Microphone not working', icon: '🎤' },
+      { id: 'proximity', label: 'Proximity Sensor not working', icon: '🖐' }
     ];
 
     return baseList;
