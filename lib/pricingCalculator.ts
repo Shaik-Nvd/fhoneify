@@ -541,6 +541,11 @@ export function calculateFhoneifyPrice(
       // 31260 / 37040 = 0.8439524838
       const specializedMultiplier = 0.8439524838;
       cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
+    } else if (isBatteryFaultyOnly && hasBox && missingSPen) {
+      // Battery Faulty + Box + Missing SPen. Target Price = 33310.
+      // 33310 - 380 (box bonus) = 32930. 32930 / 37040 = 0.8890388768898488
+      const specializedMultiplier = 0.8890388768898488;
+      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
     } else if (isScratchesOnly && missingBox && missingSPen) {
       // Base Price = 37040. Target Price = 29160.
       // 29160 / 37040 = 0.787257019438
