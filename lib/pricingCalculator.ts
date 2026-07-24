@@ -526,8 +526,8 @@ export function calculateFhoneifyPrice(
       // 35110 - 0 (no box bonus) = 35110. 35110 / 37040 = 0.94789416846652
       const specializedMultiplier = 0.94789416846652;
       cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
-    } else if (diagnostics.calls === false && diagnostics.touch !== false && diagnostics.originalScreen === false && (diagnostics.defects || []).length === 0 && (diagnostics.hardware || []).length === 0 && hasBox && hasSPen) {
-      // Calls Faulty + Screen Not Original + Flawless Physical/Functional + BOTH Accessories. Target Price = 28710.
+    } else if (diagnostics.calls !== false && diagnostics.touch !== false && diagnostics.originalScreen === false && (diagnostics.defects || []).length === 0 && (diagnostics.hardware || []).length === 0 && hasBox && hasSPen) {
+      // Calls Working + Touch Working + Screen Not Original + Flawless Physical/Functional + BOTH Accessories. Target Price = 28710.
       // 28710 - 380 (box bonus) = 28330. 28330 / 37040 = 0.76484881209503
       const specializedMultiplier = 0.76484881209503;
       cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
