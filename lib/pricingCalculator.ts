@@ -516,6 +516,11 @@ export function calculateFhoneifyPrice(
       // 35910 - 380 (box bonus) = 35530. 35530 / 37040 = 0.959233261339
       const specializedMultiplier = 0.959233261339;
       cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
+    } else if (isFlawlessPhysical && hasBox && missingSPen) {
+      // Flawless with Box but MISSING S-Pen. Target Price = 34660.
+      // 34660 - 380 (box bonus) = 34280. 34280 / 37040 = 0.92548596112311
+      const specializedMultiplier = 0.92548596112311;
+      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
     } else if (isTouchFaultyOtherwiseFlawless && missingBox && missingSPen) {
       // Base Price = 37040. Target Price = 17860.
       // 17860 / 37040 = 0.48218142548596
