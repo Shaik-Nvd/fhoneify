@@ -609,8 +609,8 @@ export function calculateFhoneifyPrice(
     }
   }
 
-  // EXACT UI MATCHING FOR SAMSUNG GALAXY S23 ULTRA 5G (FLAWLESS "GET UPTO" PRICING)
-  if (!isApple && safeModel.toLowerCase() === 'samsung galaxy s23 ultra 5g') {
+  // EXACT UI MATCHING FOR SAMSUNG GALAXY S23 & S25 ULTRA 5G (FLAWLESS "GET UPTO" PRICING)
+  if (!isApple && (safeModel.toLowerCase() === 'samsung galaxy s23 ultra 5g' || safeModel.toLowerCase() === 'samsung galaxy s25 ultra 5g')) {
     const isFlawlessPhysical = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.touch !== false && diagnostics.originalScreen !== false && (diagnostics.defects || []).length === 0 && (diagnostics.hardware || []).length === 0;
     const hasBox = (diagnostics.accessories || []).includes('box');
     const hasSPen = (diagnostics.accessories || []).includes('spen');
