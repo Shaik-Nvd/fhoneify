@@ -773,7 +773,63 @@ export default function QuotePage() {
         return indexA - indexB;
       });
     }
-    if (selectedBrand === 'Xiaomi' || selectedBrand === 'Samsung') {
+    if (selectedBrand === 'Samsung') {
+      const samsungSOrder = [
+        "Samsung Galaxy S7",
+        "Samsung Galaxy S7 Edge",
+        "Samsung Galaxy S8",
+        "Samsung Galaxy S8 Plus",
+        "Samsung Galaxy S9",
+        "Samsung Galaxy S9 Plus",
+        "Samsung Galaxy S10e",
+        "Samsung Galaxy S10 Lite",
+        "Samsung Galaxy S10",
+        "Samsung Galaxy S10 Plus",
+        "Samsung Galaxy S20",
+        "Samsung Galaxy S20 FE",
+        "Samsung Galaxy S20 FE 5G",
+        "Samsung Galaxy S20 Plus",
+        "Samsung Galaxy S20 Ultra",
+        "Samsung Galaxy S20 Ultra 5G",
+        "Samsung Galaxy S21 5G",
+        "Samsung Galaxy S21 FE 5G",
+        "Samsung Galaxy S21 Plus 5G",
+        "Samsung Galaxy S21 Ultra 5G",
+        "Samsung Galaxy S22 5G",
+        "Samsung Galaxy S22 Plus 5G",
+        "Samsung Galaxy S22 Ultra 5G",
+        "Samsung Galaxy S23 FE 5G",
+        "Samsung Galaxy S23 5G",
+        "Samsung Galaxy S23 Plus 5G",
+        "Samsung Galaxy S23 Ultra 5G",
+        "Samsung Galaxy S24 FE 5G",
+        "Samsung Galaxy S24 5G",
+        "Samsung Galaxy S24 Plus 5G",
+        "Samsung Galaxy S24 Ultra 5G",
+        "Samsung Galaxy S25 FE",
+        "Samsung Galaxy S25 Edge",
+        "Samsung Galaxy S25 5G",
+        "Samsung Galaxy S25 Plus 5G",
+        "Samsung Galaxy S25 Ultra 5G",
+        "Samsung Galaxy S26",
+        "Samsung Galaxy S26 Plus",
+        "Samsung Galaxy S26 Ultra"
+      ];
+      
+      return brandModels.sort((a, b) => {
+        if (selectedSamsungSeries === 'Galaxy S Series') {
+          const indexA = samsungSOrder.indexOf(a);
+          const indexB = samsungSOrder.indexOf(b);
+          if (indexA === -1 && indexB === -1) return a.localeCompare(b);
+          if (indexA === -1) return 1;
+          if (indexB === -1) return -1;
+          return indexA - indexB; // Match exact chronological order from oldest to newest
+        }
+        return a.localeCompare(b);
+      });
+    }
+
+    if (selectedBrand === 'Xiaomi') {
       return brandModels;
     }
     return brandModels.sort();
