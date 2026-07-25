@@ -512,9 +512,20 @@ export function calculateFhoneifyPrice(
       const specializedMultiplier = 0.91414686825054;
       cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
     } else if (isFlawlessPhysical && hasBox && hasSPen) {
-      // Flawless with BOTH Box and S-Pen. Target Price = 35910.
-      // 35910 - 380 (box bonus) = 35530. 35530 / 37040 = 0.959233261339
-      const specializedMultiplier = 0.959233261339;
+      // EXACT UI MATCHING FOR SAMSUNG GALAXY S23 ULTRA 5G (FLAWLESS "GET UPTO" PRICING)
+      // The user wants the final Fhoneify price to be EXACTLY the base price (39900, 37430, 36210).
+      // Fhoneify adds a markup: extra = Math.min(cashifyPrice * 0.06, 2000).
+      // We solve for cashifyPrice to perfectly hit the target basePrice.
+      const targetFinalFhoneifyPrice = basePrice;
+      
+      let requiredCashifyPrice = 0;
+      if (targetFinalFhoneifyPrice > 35333) {
+        requiredCashifyPrice = targetFinalFhoneifyPrice - 2000;
+      } else {
+        requiredCashifyPrice = targetFinalFhoneifyPrice / 1.06;
+      }
+      
+      const specializedMultiplier = (requiredCashifyPrice - final_box_bonus) / basePrice;
       cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
     } else if (isFlawlessPhysical && hasBox && missingSPen) {
       // Flawless with Box but MISSING S-Pen. Target Price = 34660.
@@ -601,6 +612,9 @@ export function calculateFhoneifyPrice(
   // EXACT UI MATCHING FOR SAMSUNG GALAXY S23 ULTRA 5G (FLAWLESS "GET UPTO" PRICING)
   if (!isApple && safeModel.toLowerCase() === 'samsung galaxy s23 ultra 5g') {
     const isFlawlessPhysical = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.touch !== false && diagnostics.originalScreen !== false && (diagnostics.defects || []).length === 0 && (diagnostics.hardware || []).length === 0;
+    const hasBox = (diagnostics.accessories || []).includes('box');
+    const hasSPen = (diagnostics.accessories || []).includes('spen');
+    
     if (isFlawlessPhysical && hasBox && hasSPen) {
       // The user wants the final Fhoneify price to be EXACTLY the base price (39900, 37430, 36210).
       // Fhoneify adds a markup: extra = Math.min(cashifyPrice * 0.06, 2000).
