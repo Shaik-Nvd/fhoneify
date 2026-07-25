@@ -598,6 +598,28 @@ export function calculateFhoneifyPrice(
     }
   }
 
+  // EXACT UI MATCHING FOR SAMSUNG GALAXY S23 ULTRA 5G (FLAWLESS "GET UPTO" PRICING)
+  if (!isApple && safeModel.toLowerCase() === 'samsung galaxy s23 ultra 5g') {
+    const isFlawlessPhysical = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.touch !== false && diagnostics.originalScreen !== false && (diagnostics.defects || []).length === 0 && (diagnostics.hardware || []).length === 0;
+    if (isFlawlessPhysical && hasBox && hasSPen) {
+      // The user wants the final Fhoneify price to be EXACTLY the base price (39900, 37430, 36210).
+      // Fhoneify adds a markup: extra = Math.min(cashifyPrice * 0.06, 2000).
+      // We solve for cashifyPrice to perfectly hit the target basePrice.
+      const targetFinalFhoneifyPrice = basePrice;
+      
+      let requiredCashifyPrice = 0;
+      // If target > 35333, the 6% markup exceeds 2000, meaning it gets capped at 2000.
+      if (targetFinalFhoneifyPrice > 35333) {
+        requiredCashifyPrice = targetFinalFhoneifyPrice - 2000;
+      } else {
+        requiredCashifyPrice = targetFinalFhoneifyPrice / 1.06;
+      }
+      
+      const specializedMultiplier = (requiredCashifyPrice - final_box_bonus) / basePrice;
+      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
+    }
+  }
+
   // SPECIALIZED ALGORITHM OVERRIDE FOR iPHONE 17 (BASE)
   if (isApple && safeModel.toLowerCase() === 'apple iphone 17') {
     const isAbove11 = diagnostics.mobileAge === 'Above 11 months' || diagnostics.mobileAge === 'above11';
