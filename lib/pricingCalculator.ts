@@ -721,8 +721,8 @@ export function calculateFhoneifyPrice(
     return specializedPrice + 99;
   }
 
-  // COMPREHENSIVE SPECIALIZED ALGORITHM OVERRIDE FOR SAMSUNG GALAXY S26 ULTRA 5G
-  if (!isApple && safeModel.toLowerCase() === 'samsung galaxy s26 ultra 5g') {
+  // COMPREHENSIVE SPECIALIZED ALGORITHM OVERRIDE FOR SAMSUNG GALAXY S26 ULTRA
+  if (!isApple && safeModel.toLowerCase().includes('s26 ultra')) {
     let specializedPrice = 105250; // Max Theoretical Price for Flawless
     
     // Administrative & Age Deductions
