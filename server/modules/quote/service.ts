@@ -153,6 +153,103 @@ export function generateQuote(deviceId: string, condition: string, aiPriceAdjust
       // Safeguard against going below zero
       estimatedPrice = Math.max(specializedPrice, 5000);
     }
+  } else if (device.model.includes('S26 Ultra')) {
+    if (answers) {
+      let specializedPrice = 105250; // Max Theoretical Price for Flawless
+      
+      // Administrative & Age Deductions
+      if (answers.mobileAge === '6 months - 11 months' || answers.mobileAge === '6to11') specializedPrice -= 9320;
+      else if (answers.mobileAge === '3 months - 6 months' || answers.mobileAge === '3to6') specializedPrice -= 6000;
+      else if (answers.warranty === false || answers.mobileAge === 'Above 11 months' || answers.mobileAge === 'above11') specializedPrice -= 13600;
+      
+      if (answers.validBill === false) specializedPrice -= 5400;
+
+      // Accessories
+      if (answers.accessories && !answers.accessories.includes('box')) specializedPrice -= 2100;
+      if (answers.accessories && !answers.accessories.includes('spen')) specializedPrice -= 2500;
+
+      // Basic Functional / Screen Originality
+      if (answers.calls === false) specializedPrice -= 21000;
+      if (answers.touch === false) specializedPrice -= 17000;
+      if (answers.originalScreen === false) specializedPrice -= 21000;
+
+      // Defects
+      if (answers.defects && Array.isArray(answers.defects)) {
+        // Screen Defects
+        if (answers.defects.includes('broken_screen') || answers.screenCondition?.includes('More than 2')) {
+          specializedPrice -= 7400; 
+        } else if (answers.screenCondition?.includes('Cracked')) {
+          specializedPrice -= 17000;
+        }
+
+        if (answers.defects.includes('screen_spot')) {
+          specializedPrice -= 14000;
+        }
+
+        // Body Defects
+        if (answers.defects.includes('body_scratch')) {
+          let bodyDeduction = 0;
+          if (answers.bodyScratches?.includes('1-2')) bodyDeduction += 3500;
+          else if (answers.bodyScratches?.includes('More than')) bodyDeduction += 3500;
+
+          if (answers.bodyDents?.includes('1-2')) bodyDeduction += 3400;
+          else if (answers.bodyDents?.includes('More than')) bodyDeduction += 4900;
+          
+          if (bodyDeduction === 0) bodyDeduction = 3500; // Fallback
+          specializedPrice -= bodyDeduction;
+        }
+
+        // Panel Defects
+        if (answers.defects.includes('panel_missing')) {
+          specializedPrice -= 11000;
+        }
+      }
+
+      // Hardware / Functional Defects
+      if (answers.hardware && Array.isArray(answers.hardware)) {
+        const hardwarePenalties: Record<string, number> = {
+          'front_camera': 5600,
+          'back_camera': 11000,
+          'volume': 2100,
+          'fingerprint': 7000,
+          'wifi': 5600,
+          'speaker': 2800,
+          'silent': 2100,
+          'face': 7000,
+          'power': 2100,
+          'charging': 3500,
+          'audio_receiver': 2800,
+          'camera_glass': 2800,
+          'microphone': 2800,
+          'bluetooth': 5600,
+          'vibrator': 2100,
+          'proximity': 2100,
+          'battery_service': 4900,
+          'battery_health': 2100
+        };
+
+        for (const hw of answers.hardware) {
+          if (hardwarePenalties[hw]) {
+            specializedPrice -= hardwarePenalties[hw];
+          }
+        }
+      }
+
+      // Calculate Fhoneify Inflated Markup
+      let upliftPercent = 1.0;
+      if (baseMarketPrice <= 20000) upliftPercent = 1.08;
+      else if (baseMarketPrice <= 50000) upliftPercent = 1.06;
+      else upliftPercent = 1.04;
+
+      let fhoneifyExtra = specializedPrice * (upliftPercent - 1.0);
+      if (fhoneifyExtra > 2000) fhoneifyExtra = 2000;
+      if (fhoneifyExtra < 100 && specializedPrice > 1200) fhoneifyExtra = 100;
+      
+      specializedPrice += fhoneifyExtra;
+
+      // Safeguard against going below zero
+      estimatedPrice = Math.max(specializedPrice, 5000);
+    }
   }
 
   // Dynamic Market Depreciation Engine (Optional legacy logic, can be kept)

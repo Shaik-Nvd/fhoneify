@@ -721,6 +721,75 @@ export function calculateFhoneifyPrice(
     return specializedPrice + 99;
   }
 
+  // COMPREHENSIVE SPECIALIZED ALGORITHM OVERRIDE FOR SAMSUNG GALAXY S26 ULTRA 5G
+  if (!isApple && safeModel.toLowerCase() === 'samsung galaxy s26 ultra 5g') {
+    let specializedPrice = 105250; // Max Theoretical Price for Flawless
+    
+    // Administrative & Age Deductions
+    if (diagnostics.mobileAge === '6 months - 11 months' || diagnostics.mobileAge === '6to11') specializedPrice -= 9320;
+    else if (diagnostics.mobileAge === '3 months - 6 months' || diagnostics.mobileAge === '3to6') specializedPrice -= 6000;
+    else if (diagnostics.warranty === false || diagnostics.mobileAge === 'Above 11 months' || diagnostics.mobileAge === 'above11') specializedPrice -= 13600;
+    
+    if (diagnostics.validBill === false) specializedPrice -= 5400;
+    
+    // Accessories
+    if (diagnostics.accessories && !diagnostics.accessories.includes('box')) specializedPrice -= 2100;
+    if (diagnostics.accessories && !diagnostics.accessories.includes('spen')) specializedPrice -= 2500;
+    
+    // Basic Functional / Screen Originality
+    if (diagnostics.calls === false) specializedPrice -= 21000;
+    if (diagnostics.touch === false) specializedPrice -= 17000;
+    if (diagnostics.originalScreen === false) specializedPrice -= 21000;
+    
+    // Defects
+    if (diagnostics.defects && Array.isArray(diagnostics.defects)) {
+      if (diagnostics.defects.includes('broken_screen') || diagnostics.screenCondition?.includes('More than 2')) {
+        specializedPrice -= 7400; 
+      } else if (diagnostics.screenCondition?.includes('Cracked')) {
+        specializedPrice -= 17000;
+      }
+      if (diagnostics.defects.includes('screen_spot')) specializedPrice -= 14000;
+      if (diagnostics.defects.includes('body_scratch')) {
+        let bodyDeduction = 0;
+        if (diagnostics.bodyScratches?.includes('1-2')) bodyDeduction += 3500;
+        else if (diagnostics.bodyScratches?.includes('More than')) bodyDeduction += 3500;
+        if (diagnostics.bodyDents?.includes('1-2')) bodyDeduction += 3400;
+        else if (diagnostics.bodyDents?.includes('More than')) bodyDeduction += 4900;
+        if (bodyDeduction === 0) bodyDeduction = 3500; // Fallback
+        specializedPrice -= bodyDeduction;
+      }
+      if (diagnostics.defects.includes('panel_missing')) specializedPrice -= 11000;
+    }
+    
+    // Hardware / Functional Defects
+    if (diagnostics.hardware && Array.isArray(diagnostics.hardware)) {
+      const hwPenalties: Record<string, number> = {
+        'front_camera': 5600, 'back_camera': 11000, 'volume': 2100, 'fingerprint': 7000,
+        'wifi': 5600, 'speaker': 2800, 'silent': 2100, 'face': 7000, 'power': 2100,
+        'charging': 3500, 'audio_receiver': 2800, 'camera_glass': 2800, 'microphone': 2800,
+        'bluetooth': 5600, 'vibrator': 2100, 'proximity': 2100, 'battery_service': 4900, 'battery_health': 2100
+      };
+      for (const hw of diagnostics.hardware) {
+        if (hwPenalties[hw]) specializedPrice -= hwPenalties[hw];
+      }
+    }
+    
+    // Calculate Fhoneify Inflated Markup
+    let upliftPercent = 1.04;
+    if (basePrice <= 20000) upliftPercent = 1.08;
+    else if (basePrice <= 50000) upliftPercent = 1.06;
+    
+    let fhoneifyExtra = specializedPrice * (upliftPercent - 1.0);
+    if (fhoneifyExtra > 2000) fhoneifyExtra = 2000;
+    if (fhoneifyExtra < 100 && specializedPrice > 1200) fhoneifyExtra = 100;
+    
+    specializedPrice += fhoneifyExtra;
+    specializedPrice = Math.max(Math.round(specializedPrice), 5000);
+    
+    // Return immediately to bypass the standard logic. Add 99 so the UI subtracts 99 cleanly.
+    return specializedPrice + 99;
+  }
+
   // SPECIALIZED ALGORITHM OVERRIDE FOR iPHONE 17 (BASE)
   if (isApple && safeModel.toLowerCase() === 'apple iphone 17') {
     const isAbove11 = diagnostics.mobileAge === 'Above 11 months' || diagnostics.mobileAge === 'above11';
