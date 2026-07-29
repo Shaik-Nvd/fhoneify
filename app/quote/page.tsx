@@ -145,7 +145,8 @@ export default function QuotePage() {
         lowerModel.includes('s22') || 
         lowerModel.includes('s23') || 
         lowerModel.includes('s24') || 
-        lowerModel.includes('s25')
+        lowerModel.includes('s25') ||
+        lowerModel.includes('s26')
       ) {
         return false;
       }
