@@ -21538,5 +21538,14 @@ export const SEED_DEVICES: any[] = [
     "ram": "12 GB",
     "color": "Default",
     "basePrice": 14190
+  },
+  {
+    "id": "samsung-galaxy-s20-ultra-12-128",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S20 Ultra",
+    "storage": "128 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 13470
   }
 ];
