@@ -21547,5 +21547,14 @@ export const SEED_DEVICES: any[] = [
     "ram": "12 GB",
     "color": "Default",
     "basePrice": 13470
+  },
+  {
+    "id": "samsung-galaxy-s20-plus-8-128",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S20 Plus",
+    "storage": "128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 10570
   }
 ];
