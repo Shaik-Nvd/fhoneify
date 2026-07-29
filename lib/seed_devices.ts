@@ -21421,5 +21421,32 @@ export const SEED_DEVICES: any[] = [
     "ram": "8 GB",
     "color": "Default",
     "basePrice": 22690
+  },
+  {
+    "id": "samsung-galaxy-s24-ultra-5g-12-1tb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S24 Ultra 5G",
+    "storage": "1 TB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 64050
+  },
+  {
+    "id": "samsung-galaxy-s24-ultra-5g-12-512",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S24 Ultra 5G",
+    "storage": "512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 63620
+  },
+  {
+    "id": "samsung-galaxy-s24-ultra-5g-12-256",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S24 Ultra 5G",
+    "storage": "256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 62290
   }
 ];
