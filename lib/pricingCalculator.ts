@@ -609,8 +609,8 @@ export function calculateFhoneifyPrice(
     }
   }
 
-  // EXACT UI MATCHING FOR SAMSUNG GALAXY S25 PLUS 5G & S25 5G (FLAWLESS "GET UPTO" PRICING)
-  if (!isApple && (safeModel.toLowerCase() === 'samsung galaxy s25 plus 5g' || safeModel.toLowerCase() === 'samsung galaxy s25 5g')) {
+  // EXACT UI MATCHING FOR NON-ULTRA SAMSUNG GALAXY MODELS (FLAWLESS "GET UPTO" PRICING)
+  if (!isApple && (safeModel.toLowerCase() === 'samsung galaxy s25 plus 5g' || safeModel.toLowerCase() === 'samsung galaxy s25 5g' || safeModel.toLowerCase() === 'samsung galaxy s24 fe 5g')) {
     const isFlawlessPhysical = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.touch !== false && diagnostics.originalScreen !== false && (diagnostics.defects || []).length === 0 && (diagnostics.hardware || []).length === 0;
     const hasBox = (diagnostics.accessories || []).includes('box');
     

@@ -21403,5 +21403,23 @@ export const SEED_DEVICES: any[] = [
     "ram": "12 GB",
     "color": "Default",
     "basePrice": 43120
+  },
+  {
+    "id": "samsung-galaxy-s24-fe-5g-8-256",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S24 FE 5G",
+    "storage": "256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 24730
+  },
+  {
+    "id": "samsung-galaxy-s24-fe-5g-8-128",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S24 FE 5G",
+    "storage": "128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 22690
   }
 ];
