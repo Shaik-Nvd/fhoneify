@@ -159,10 +159,10 @@ export function generateQuote(deviceId: string, condition: string, aiPriceAdjust
       
       // Administrative & Age Deductions
       if (answers.mobileAge === '6 months - 11 months' || answers.mobileAge === '6to11') specializedPrice -= 9320;
-      else if (answers.mobileAge === '3 months - 6 months' || answers.mobileAge === '3to6') specializedPrice -= 6000;
+      else if (answers.mobileAge === '3 months - 6 months' || answers.mobileAge === '3to6') specializedPrice -= 7760;
       else if (answers.warranty === false || answers.mobileAge === 'Above 11 months' || answers.mobileAge === 'above11') specializedPrice -= 13600;
       
-      if (answers.validBill === false) specializedPrice -= 5400;
+      if (answers.validBill === false) specializedPrice -= 15040;
 
       // Accessories
       if (answers.accessories && !answers.accessories.includes('box')) specializedPrice -= 2100;
