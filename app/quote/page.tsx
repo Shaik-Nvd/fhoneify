@@ -2521,7 +2521,7 @@ export default function QuotePage() {
                       diagnostics.originalScreen === false ||
                       diagnostics.calls === false ||
                       diagnostics.touch === false ||
-                      (diagnostics.defects && diagnostics.defects.length > 0) ||
+                      (diagnostics.defects && diagnostics.defects.filter(d => d !== 'body_scratch').length > 0) ||
                       (diagnostics.hardware && diagnostics.hardware.length > 0);
                       
                     const hasWarrantyAndBill = diagnostics.warranty === true && diagnostics.validBill === true && !hasWarrantyVoidingDefects;
