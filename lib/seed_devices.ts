@@ -21376,5 +21376,32 @@ export const SEED_DEVICES: any[] = [
     "ram": "12 GB",
     "color": "Default",
     "basePrice": 49980
+  },
+  {
+    "id": "samsung-galaxy-s25-5g-12-512",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S25 5G",
+    "storage": "512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 44220
+  },
+  {
+    "id": "samsung-galaxy-s25-5g-12-256",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S25 5G",
+    "storage": "256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 43270
+  },
+  {
+    "id": "samsung-galaxy-s25-5g-12-128",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S25 5G",
+    "storage": "128 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 43120
   }
 ];
