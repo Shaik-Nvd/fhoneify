@@ -21592,5 +21592,14 @@ export const SEED_DEVICES: any[] = [
     "ram": "6 GB",
     "color": "Default",
     "basePrice": 5900
+  },
+  {
+    "id": "samsung-galaxy-s8-4-64",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S8",
+    "storage": "64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3520
   }
 ];
