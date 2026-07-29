@@ -21511,5 +21511,23 @@ export const SEED_DEVICES: any[] = [
     "ram": "8 GB",
     "color": "Default",
     "basePrice": 16090
+  },
+  {
+    "id": "samsung-galaxy-s21-fe-5g-8-256",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S21 FE 5G",
+    "storage": "256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 11810
+  },
+  {
+    "id": "samsung-galaxy-s21-fe-5g-8-128",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S21 FE 5G",
+    "storage": "128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 11040
   }
 ];
