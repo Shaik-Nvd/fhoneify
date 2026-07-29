@@ -21556,5 +21556,14 @@ export const SEED_DEVICES: any[] = [
     "ram": "8 GB",
     "color": "Default",
     "basePrice": 10570
+  },
+  {
+    "id": "samsung-galaxy-s20-fe-5g-8-128",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S20 FE 5G",
+    "storage": "128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 8720
   }
 ];
