@@ -1272,6 +1272,24 @@ export default function QuotePage() {
           <p style={{ color: '#4CD964', fontSize: '0.85rem', fontWeight: 600 }}>• {diagnostics.originalScreen ? 'Yes' : 'No'}</p>
         </div>
       )}
+      {diagnostics.warranty !== null && (
+        <div style={{ marginBottom: '0.75rem' }}>
+          <p style={{ color: '#888', fontSize: '0.75rem' }}>Under Warranty</p>
+          <p style={{ color: '#4CD964', fontSize: '0.85rem', fontWeight: 600 }}>• {diagnostics.warranty ? 'Yes' : 'No'}</p>
+        </div>
+      )}
+      {diagnostics.validBill !== null && (
+        <div style={{ marginBottom: '0.75rem' }}>
+          <p style={{ color: '#888', fontSize: '0.75rem' }}>Valid GST Bill</p>
+          <p style={{ color: '#4CD964', fontSize: '0.85rem', fontWeight: 600 }}>• {diagnostics.validBill ? 'Yes' : 'No'}</p>
+        </div>
+      )}
+      {diagnostics.mobileAge !== null && (
+        <div style={{ marginBottom: '0.75rem' }}>
+          <p style={{ color: '#888', fontSize: '0.75rem' }}>Mobile Age</p>
+          <p style={{ color: '#4CD964', fontSize: '0.85rem', fontWeight: 600 }}>• {diagnostics.mobileAge}</p>
+        </div>
+      )}
       {diagnostics.defects.length > 0 && (
         <div style={{ marginBottom: '0.75rem' }}>
           <p style={{ color: '#888', fontSize: '0.75rem' }}>Defects</p>
