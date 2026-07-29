@@ -21448,5 +21448,32 @@ export const SEED_DEVICES: any[] = [
     "ram": "12 GB",
     "color": "Default",
     "basePrice": 62290
+  },
+  {
+    "id": "samsung-galaxy-s22-ultra-5g-12-1tb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S22 Ultra 5G",
+    "storage": "1 TB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 28540
+  },
+  {
+    "id": "samsung-galaxy-s22-ultra-5g-12-512",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S22 Ultra 5G",
+    "storage": "512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 27730
+  },
+  {
+    "id": "samsung-galaxy-s22-ultra-5g-12-256",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S22 Ultra 5G",
+    "storage": "256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 26520
   }
 ];
