@@ -21601,5 +21601,32 @@ export const SEED_DEVICES: any[] = [
     "ram": "4 GB",
     "color": "Default",
     "basePrice": 3520
+  },
+  {
+    "id": "samsung-galaxy-s7-edge-4-128",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S7 Edge",
+    "storage": "128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 3020
+  },
+  {
+    "id": "samsung-galaxy-s7-edge-4-64",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S7 Edge",
+    "storage": "64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2730
+  },
+  {
+    "id": "samsung-galaxy-s7-edge-4-32",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S7 Edge",
+    "storage": "32 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2480
   }
 ];
