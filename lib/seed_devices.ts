@@ -21583,5 +21583,14 @@ export const SEED_DEVICES: any[] = [
     "ram": "8 GB",
     "color": "Default",
     "basePrice": 7310
+  },
+  {
+    "id": "samsung-galaxy-s10e-6-128",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S10e",
+    "storage": "128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "basePrice": 5900
   }
 ];
