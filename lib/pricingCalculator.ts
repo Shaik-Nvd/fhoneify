@@ -726,9 +726,10 @@ export function calculateFhoneifyPrice(
     let specializedPrice = 105250; // Max Theoretical Price for Flawless
     
     // Administrative & Age Deductions
-    if (diagnostics.mobileAge === '6 months - 11 months' || diagnostics.mobileAge === '6to11') specializedPrice -= 9320;
-    else if (diagnostics.mobileAge === '3 months - 6 months' || diagnostics.mobileAge === '3to6') specializedPrice -= 7760;
-    else if (diagnostics.warranty === false || diagnostics.mobileAge === 'Above 11 months' || diagnostics.mobileAge === 'above11') specializedPrice -= 13600;
+    const age = diagnostics.mobileAge;
+    if (age === '6 months - 11 months' || age === '6to11') specializedPrice -= 9320;
+    else if (age === '3 months - 6 months' || age === '3to6') specializedPrice -= 7760;
+    else if (diagnostics.warranty === false || age === 'Above 11 months' || age === 'above11') specializedPrice -= 13600;
     
     if (diagnostics.validBill === false) specializedPrice -= 15040;
     
