@@ -28,7 +28,7 @@ export function listDevices(): Device[] {
   return SEED_DEVICES;
 }
 
-export function generateQuote(deviceId: string, condition: string, aiPriceAdjustment?: number) {
+export function generateQuote(deviceId: string, condition: string, aiPriceAdjustment?: number, answers?: any) {
   const device = SEED_DEVICES.find((d) => d.id === deviceId);
   if (!device) return null;
 
@@ -53,6 +53,108 @@ export function generateQuote(deviceId: string, condition: string, aiPriceAdjust
   // 3. Apply Condition Multiplier to the Uplifted Base
   let estimatedPrice = Math.round(upliftedBasePrice * multiplier);
   
+  // Specialized Algorithm for Samsung Galaxy S25 Ultra 5G
+  if (device.model.includes('S25 Ultra')) {
+    if (answers) {
+      let specializedPrice = 74650; // Max Theoretical Price for Flawless
+      
+      // Administrative Deductions
+      if (answers.warranty === false) {
+        specializedPrice -= 9650; 
+      }
+      if (answers.validBill === false) {
+        specializedPrice -= 3860;
+      }
+      
+      // Accessories
+      if (answers.accessories && !answers.accessories.includes('box')) {
+        specializedPrice -= 1500;
+      }
+
+      // Basic Functional / Screen Originality
+      if (answers.calls === false) specializedPrice -= 15000;
+      if (answers.touch === false) specializedPrice -= 12000;
+      if (answers.originalScreen === false) specializedPrice -= 15000;
+
+      // Defects
+      if (answers.defects && Array.isArray(answers.defects)) {
+        // Screen Defects
+        if (answers.defects.includes('broken_screen') || answers.screenCondition?.includes('More than 2')) {
+          specializedPrice -= 5260; 
+        } else if (answers.screenCondition?.includes('Cracked')) {
+          specializedPrice -= 12000;
+        }
+
+        if (answers.defects.includes('screen_spot')) {
+          specializedPrice -= 10000;
+        }
+
+        // Body Defects
+        if (answers.defects.includes('body_scratch')) {
+          let bodyDeduction = 0;
+          if (answers.bodyScratches?.includes('1-2')) bodyDeduction += 2500;
+          else if (answers.bodyScratches?.includes('More than')) bodyDeduction += 3500;
+
+          if (answers.bodyDents?.includes('1-2')) bodyDeduction += 2460;
+          else if (answers.bodyDents?.includes('More than')) bodyDeduction += 3500;
+          
+          if (bodyDeduction === 0) bodyDeduction = 4960; // Fallback
+          specializedPrice -= bodyDeduction;
+        }
+
+        // Panel Defects
+        if (answers.defects.includes('panel_missing')) {
+          specializedPrice -= 8000;
+        }
+      }
+
+      // Hardware / Functional Defects
+      if (answers.hardware && Array.isArray(answers.hardware)) {
+        const hardwarePenalties: Record<string, number> = {
+          'front_camera': 4000,
+          'back_camera': 8000,
+          'volume': 1500,
+          'fingerprint': 5000,
+          'wifi': 4000,
+          'speaker': 2000,
+          'silent': 1500,
+          'face': 5000,
+          'power': 1500,
+          'charging': 2500,
+          'audio_receiver': 2000,
+          'camera_glass': 2000,
+          'microphone': 2000,
+          'bluetooth': 4000,
+          'vibrator': 1500,
+          'proximity': 1500,
+          'battery_service': 3500,
+          'battery_health': 1500
+        };
+
+        for (const hw of answers.hardware) {
+          if (hardwarePenalties[hw]) {
+            specializedPrice -= hardwarePenalties[hw];
+          }
+        }
+      }
+
+      // Calculate Fhoneify Inflated Markup
+      let upliftPercent = 1.0;
+      if (baseMarketPrice <= 20000) upliftPercent = 1.08;
+      else if (baseMarketPrice <= 50000) upliftPercent = 1.06;
+      else upliftPercent = 1.04;
+
+      let fhoneifyExtra = specializedPrice * (upliftPercent - 1.0);
+      if (fhoneifyExtra > 2000) fhoneifyExtra = 2000;
+      if (fhoneifyExtra < 100 && specializedPrice > 1200) fhoneifyExtra = 100;
+      
+      specializedPrice += fhoneifyExtra;
+
+      // Safeguard against going below zero
+      estimatedPrice = Math.max(specializedPrice, 5000);
+    }
+  }
+
   // Dynamic Market Depreciation Engine (Optional legacy logic, can be kept)
   if (device.model.includes('13') || device.model.includes('14') || device.model.includes('S22')) {
     estimatedPrice = Math.round(estimatedPrice * 0.85); // 15% depreciation

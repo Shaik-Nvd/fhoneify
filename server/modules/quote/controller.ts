@@ -7,6 +7,7 @@ const CreateQuoteSchema = z.object({
   deviceId: z.string().min(1, 'deviceId is required'),
   condition: z.string().min(1, 'condition is required'),
   storage: z.string().optional(),
+  answers: z.any().optional(),
 });
 
 const CreateLeadSchema = z.object({
@@ -40,8 +41,8 @@ export function createQuote(req: Request, res: Response) {
     if (!result.success) {
       return res.status(400).json({ success: false, error: result.error.issues[0].message });
     }
-    const { deviceId, condition } = result.data;
-    const quoteResult = quoteService.generateQuote(deviceId, condition);
+    const { deviceId, condition, answers } = result.data;
+    const quoteResult = quoteService.generateQuote(deviceId, condition, undefined, answers);
     if (!quoteResult) {
       return res.status(404).json({ success: false, error: 'Device not found' });
     }

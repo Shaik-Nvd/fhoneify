@@ -631,8 +631,8 @@ export function calculateFhoneifyPrice(
     }
   }
 
-  // EXACT UI MATCHING FOR SAMSUNG GALAXY S22, S23, S24 & S25 ULTRA 5G (FLAWLESS "GET UPTO" PRICING)
-  if (!isApple && (safeModel.toLowerCase() === 'samsung galaxy s22 ultra 5g' || safeModel.toLowerCase() === 'samsung galaxy s23 ultra 5g' || safeModel.toLowerCase() === 'samsung galaxy s24 ultra 5g' || safeModel.toLowerCase() === 'samsung galaxy s25 ultra 5g')) {
+  // EXACT UI MATCHING FOR SAMSUNG GALAXY S22, S23, S24 ULTRA 5G (FLAWLESS "GET UPTO" PRICING)
+  if (!isApple && (safeModel.toLowerCase() === 'samsung galaxy s22 ultra 5g' || safeModel.toLowerCase() === 'samsung galaxy s23 ultra 5g' || safeModel.toLowerCase() === 'samsung galaxy s24 ultra 5g')) {
     const isFlawlessPhysical = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.touch !== false && diagnostics.originalScreen !== false && (diagnostics.defects || []).length === 0 && (diagnostics.hardware || []).length === 0;
     const hasBox = (diagnostics.accessories || []).includes('box');
     const hasSPen = (diagnostics.accessories || []).includes('spen');
@@ -654,6 +654,71 @@ export function calculateFhoneifyPrice(
       const specializedMultiplier = (requiredCashifyPrice - final_box_bonus) / basePrice;
       cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
     }
+  }
+
+  // COMPREHENSIVE SPECIALIZED ALGORITHM OVERRIDE FOR SAMSUNG GALAXY S25 ULTRA 5G
+  if (!isApple && safeModel.toLowerCase() === 'samsung galaxy s25 ultra 5g') {
+    let specializedPrice = 74650; // Max Theoretical Price for Flawless
+    
+    // Administrative Deductions
+    if (diagnostics.warranty === false) specializedPrice -= 9650;
+    if (diagnostics.validBill === false) specializedPrice -= 3860;
+    
+    // Accessories
+    if (diagnostics.accessories && !diagnostics.accessories.includes('box')) specializedPrice -= 1500;
+    
+    // Basic Functional / Screen Originality
+    if (diagnostics.calls === false) specializedPrice -= 15000;
+    if (diagnostics.touch === false) specializedPrice -= 12000;
+    if (diagnostics.originalScreen === false) specializedPrice -= 15000;
+    
+    // Defects
+    if (diagnostics.defects && Array.isArray(diagnostics.defects)) {
+      if (diagnostics.defects.includes('broken_screen') || diagnostics.screenCondition?.includes('More than 2')) {
+        specializedPrice -= 5260; 
+      } else if (diagnostics.screenCondition?.includes('Cracked')) {
+        specializedPrice -= 12000;
+      }
+      if (diagnostics.defects.includes('screen_spot')) specializedPrice -= 10000;
+      if (diagnostics.defects.includes('body_scratch')) {
+        let bodyDeduction = 0;
+        if (diagnostics.bodyScratches?.includes('1-2')) bodyDeduction += 2500;
+        else if (diagnostics.bodyScratches?.includes('More than')) bodyDeduction += 3500;
+        if (diagnostics.bodyDents?.includes('1-2')) bodyDeduction += 2460;
+        else if (diagnostics.bodyDents?.includes('More than')) bodyDeduction += 3500;
+        if (bodyDeduction === 0) bodyDeduction = 4960; // Fallback
+        specializedPrice -= bodyDeduction;
+      }
+      if (diagnostics.defects.includes('panel_missing')) specializedPrice -= 8000;
+    }
+    
+    // Hardware / Functional Defects
+    if (diagnostics.hardware && Array.isArray(diagnostics.hardware)) {
+      const hwPenalties: Record<string, number> = {
+        'front_camera': 4000, 'back_camera': 8000, 'volume': 1500, 'fingerprint': 5000,
+        'wifi': 4000, 'speaker': 2000, 'silent': 1500, 'face': 5000, 'power': 1500,
+        'charging': 2500, 'audio_receiver': 2000, 'camera_glass': 2000, 'microphone': 2000,
+        'bluetooth': 4000, 'vibrator': 1500, 'proximity': 1500, 'battery_service': 3500, 'battery_health': 1500
+      };
+      for (const hw of diagnostics.hardware) {
+        if (hwPenalties[hw]) specializedPrice -= hwPenalties[hw];
+      }
+    }
+    
+    // Calculate Fhoneify Inflated Markup
+    let upliftPercent = 1.04;
+    if (basePrice <= 20000) upliftPercent = 1.08;
+    else if (basePrice <= 50000) upliftPercent = 1.06;
+    
+    let fhoneifyExtra = specializedPrice * (upliftPercent - 1.0);
+    if (fhoneifyExtra > 2000) fhoneifyExtra = 2000;
+    if (fhoneifyExtra < 100 && specializedPrice > 1200) fhoneifyExtra = 100;
+    
+    specializedPrice += fhoneifyExtra;
+    specializedPrice = Math.max(Math.round(specializedPrice), 5000);
+    
+    // Return immediately to bypass the standard logic. Add 99 so the UI subtracts 99 cleanly.
+    return specializedPrice + 99;
   }
 
   // SPECIALIZED ALGORITHM OVERRIDE FOR iPHONE 17 (BASE)
