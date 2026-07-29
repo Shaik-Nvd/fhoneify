@@ -21475,5 +21475,23 @@ export const SEED_DEVICES: any[] = [
     "ram": "12 GB",
     "color": "Default",
     "basePrice": 26520
+  },
+  {
+    "id": "samsung-galaxy-s22-plus-5g-8-256",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S22 Plus 5G",
+    "storage": "256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 18210
+  },
+  {
+    "id": "samsung-galaxy-s22-plus-5g-8-128",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S22 Plus 5G",
+    "storage": "128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 17120
   }
 ];
