@@ -21628,5 +21628,23 @@ export const SEED_DEVICES: any[] = [
     "ram": "4 GB",
     "color": "Default",
     "basePrice": 2480
+  },
+  {
+    "id": "samsung-galaxy-s7-4-64",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S7",
+    "storage": "64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2590
+  },
+  {
+    "id": "samsung-galaxy-s7-4-32",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S7",
+    "storage": "32 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "basePrice": 2300
   }
 ];
