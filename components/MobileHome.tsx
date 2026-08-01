@@ -92,7 +92,7 @@ export default function MobileHome() {
 
   const handleSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter' && searchTerm.trim() !== '') {
-      router.push(`/buy?q=${encodeURIComponent(searchTerm.trim())}`);
+      router.push(`/quote?q=${encodeURIComponent(searchTerm.trim())}`);
     }
   };
 
@@ -110,7 +110,7 @@ export default function MobileHome() {
           </div>
           <input 
             type="text" 
-            placeholder="Search for mobiles (e.g. iPhone 13)..." 
+            placeholder="Search to sell phones of all brands..." 
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             onKeyDown={handleSearch}
