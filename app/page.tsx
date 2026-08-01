@@ -406,11 +406,6 @@ export default function LandingPage() {
                   </MagneticButton>
                 </Link>
               </m.div>
-
-              {/* Google Reviews Trust Badge */}
-              <m.div variants={itemVariants} style={{ marginTop: '2.5rem' }} className="flex justify-center md:justify-start">
-                <GoogleReviewBanner />
-              </m.div>
             </m.div>
 
             {/* Right Content - 3D CSS Phone */}
@@ -433,6 +428,13 @@ export default function LandingPage() {
       {/* Top Selling Models */}
       <section style={{ backgroundColor: '#0a0a0a', padding: '4rem 0', position: 'relative', zIndex: 10 }}>
         <TopSellingModels />
+      </section>
+
+      {/* Google Reviews Trust Badge - Moved Down */}
+      <section style={{ backgroundColor: '#0a0a0a', padding: '0 0 4rem 0', display: 'flex', justifyContent: 'center' }}>
+        <m.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+          <GoogleReviewBanner />
+        </m.div>
       </section>
 
       {/* Brands - Fullscreen GSAP Slider */}

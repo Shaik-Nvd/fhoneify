@@ -152,11 +152,6 @@ export default function MobileHome() {
         </div>
       </div>
 
-      {/* Google Reviews Trust Badge */}
-      <div className="px-4 mt-6 flex justify-center">
-        <GoogleReviewBanner />
-      </div>
-
       {/* Our Services Section */}
       <div className="px-4 mt-6">
         <h3 className="text-white font-bold text-lg mb-4">Our Services</h3>
@@ -271,6 +266,13 @@ export default function MobileHome() {
       {/* Top Selling Models */}
       <div className="px-4 mt-8 mb-8">
         <TopSellingModels />
+      </div>
+
+      {/* Google Reviews Trust Badge - Moved down */}
+      <div className="px-4 mb-8 flex justify-center">
+        <m.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+          <GoogleReviewBanner />
+        </m.div>
       </div>
 
       {/* Why Us */}
