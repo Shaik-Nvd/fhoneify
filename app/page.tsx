@@ -292,6 +292,7 @@ import FAQs from '@/components/FAQs';
 import WarrantyClaim from '@/components/WarrantyClaim';
 import BrandGSAPSlider from '@/components/BrandGSAPSlider';
 import HowItWorks from '@/components/HowItWorks';
+import GoogleReviewBanner from '@/components/GoogleReviewBanner';
 
 export default function LandingPage() {
   const [mounted, setMounted] = useState(false);
@@ -404,6 +405,11 @@ export default function LandingPage() {
                     Buy Phone
                   </MagneticButton>
                 </Link>
+              </m.div>
+
+              {/* Google Reviews Trust Badge */}
+              <m.div variants={itemVariants} style={{ marginTop: '2.5rem' }} className="flex justify-center md:justify-start">
+                <GoogleReviewBanner />
               </m.div>
             </m.div>
 

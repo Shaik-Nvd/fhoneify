@@ -10,6 +10,7 @@ import WarrantyClaim from '@/components/WarrantyClaim';
 import { useState, useEffect } from 'react';
 import { m, useScroll, useTransform } from 'framer-motion';
 import { BRANDS, BRAND_LOGOS, getBrandLogoStyle } from '@/lib/brands';
+import GoogleReviewBanner from '@/components/GoogleReviewBanner';
 
 const MOBILE_SLIDES = [
   {
@@ -149,6 +150,11 @@ export default function MobileHome() {
             ))}
           </div>
         </div>
+      </div>
+
+      {/* Google Reviews Trust Badge */}
+      <div className="px-4 mt-6 flex justify-center">
+        <GoogleReviewBanner />
       </div>
 
       {/* Our Services Section */}
