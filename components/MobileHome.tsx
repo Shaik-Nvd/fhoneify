@@ -110,7 +110,7 @@ export default function MobileHome() {
           </div>
           <input 
             type="text" 
-            placeholder="Search to sell phones of all brands..." 
+            placeholder="Search for phones, brands, or models..." 
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             onKeyDown={handleSearch}
