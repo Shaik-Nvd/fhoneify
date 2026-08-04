@@ -630,12 +630,16 @@ export function calculateFhoneifyPrice(
   if (isApple && safeModel.toLowerCase().includes('iphone 16 pro max')) {
     const isAbove11 = diagnostics.mobileAge === 'Above 11 months' || diagnostics.mobileAge === 'above11' || diagnostics.warranty === false;
     const hasBatteryService = (diagnostics.hardware || []).includes('battery_service');
+    const hasBatteryHealth = (diagnostics.hardware || []).includes('battery_health');
     const isFlawlessPhysical = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.touch !== false && diagnostics.originalScreen !== false && (diagnostics.defects || []).length === 0;
     
-    if (isAbove11 && hasBatteryService && isFlawlessPhysical) {
-      // User requested exact final Fhoneify price of 69630 for 1TB (basePrice ~93500)
+    if (isAbove11 && (hasBatteryService || hasBatteryHealth) && isFlawlessPhysical) {
+      // User requested exact final Fhoneify prices for 1TB (basePrice ~93500)
       if (basePrice > 93000) {
-        const targetFinalFhoneifyPrice = 69630;
+        let targetFinalFhoneifyPrice = 69630; // default for battery_service
+        if (hasBatteryHealth) {
+          targetFinalFhoneifyPrice = 72570; // for battery_health (80-85%)
+        }
         let requiredCashifyPrice = 0;
         if (targetFinalFhoneifyPrice > 35333) {
           requiredCashifyPrice = targetFinalFhoneifyPrice - 2000;
