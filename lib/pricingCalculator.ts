@@ -631,10 +631,9 @@ export function calculateFhoneifyPrice(
     const hasScreenScratch = (diagnostics.defects || []).includes('screen_scratch');
     
     if (isLocalScreen && hasBatteryService && hasScreenScratch) {
-      // User requested Cashify inflated price of 15880 for 512GB (basePrice ~27620). Fhoneify inflation adds ~6%.
-      // 15880 / 1.06 = ~14981
+      // User provided Cashify price of 15880 for 512GB (basePrice ~27620). Fhoneify inflation should be added on top.
       if (basePrice > 27000) {
-        const targetCashifyPrice = 14981;
+        const targetCashifyPrice = 15880;
         const specializedMultiplier = (targetCashifyPrice - final_box_bonus) / basePrice;
         cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
       }
