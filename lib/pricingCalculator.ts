@@ -629,12 +629,27 @@ export function calculateFhoneifyPrice(
     const isAbove11 = diagnostics.mobileAge === 'Above 11 months' || diagnostics.mobileAge === 'above11' || diagnostics.warranty === false;
     const hasBatteryService = (diagnostics.hardware || []).includes('battery_service');
     const hasBatteryHealth = (diagnostics.hardware || []).includes('battery_health');
-    const isFlawlessPhysical = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.touch !== false && diagnostics.originalScreen !== false && (diagnostics.defects || []).length === 0;
+    const hasNoHardwareDefects = (diagnostics.hardware || []).length === 0;
+    const isLocalScreen = diagnostics.originalScreen === false;
     
-    if (isAbove11 && (hasBatteryService || hasBatteryHealth) && isFlawlessPhysical) {
+    // Flawless physical body, calls and touch work.
+    const isFlawlessBodyAndFunctional = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.touch !== false && (diagnostics.defects || []).length === 0;
+    
+    // Scenario 1: Original Screen, Battery Service/Health, Out of Warranty
+    if (isAbove11 && !isLocalScreen && (hasBatteryService || hasBatteryHealth) && isFlawlessBodyAndFunctional) {
       // User requested Cashify prices for 1TB (basePrice ~93500). Fhoneify inflation will apply on top.
       if (basePrice > 93000) {
         const targetCashifyPrice = hasBatteryHealth ? 72570 : 69630;
+        const specializedMultiplier = (targetCashifyPrice - final_box_bonus) / basePrice;
+        cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
+      }
+    }
+    
+    // Scenario 2: Local Screen, No Hardware Defects, Out of Warranty
+    if (isAbove11 && isLocalScreen && hasNoHardwareDefects && isFlawlessBodyAndFunctional) {
+      // User requested Cashify prices for 1TB (basePrice ~93500). Fhoneify inflation will apply on top.
+      if (basePrice > 93000) {
+        const targetCashifyPrice = 59830;
         const specializedMultiplier = (targetCashifyPrice - final_box_bonus) / basePrice;
         cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
       }
