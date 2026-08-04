@@ -624,6 +624,23 @@ export function calculateFhoneifyPrice(
     }
   }
 
+  // SPECIALIZED ALGORITHM OVERRIDE FOR APPLE iPHONE 12 PRO MAX
+  if (isApple && safeModel.toLowerCase().includes('iphone 12 pro max')) {
+    const isLocalScreen = diagnostics.originalScreen === false;
+    const hasBatteryService = (diagnostics.hardware || []).includes('battery_service');
+    const hasScreenScratch = (diagnostics.defects || []).includes('screen_scratch');
+    
+    if (isLocalScreen && hasBatteryService && hasScreenScratch) {
+      // User requested Cashify inflated price of 15880 for 512GB (basePrice ~27620). Fhoneify inflation adds ~6%.
+      // 15880 / 1.06 = ~14981
+      if (basePrice > 27000) {
+        const targetCashifyPrice = 14981;
+        const specializedMultiplier = (targetCashifyPrice - final_box_bonus) / basePrice;
+        cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
+      }
+    }
+  }
+
   // SPECIALIZED ALGORITHM OVERRIDE FOR APPLE iPHONE 16 PRO MAX
   if (isApple && safeModel.toLowerCase().includes('iphone 16 pro max')) {
     const isAbove11 = diagnostics.mobileAge === 'Above 11 months' || diagnostics.mobileAge === 'above11' || diagnostics.warranty === false;
