@@ -92,17 +92,34 @@ export default function QuotePage() {
     }
     
     if (brand === 'Samsung') {
-      // Exclude older Samsung flagships
-      if (lowerModel.includes('s20') || lowerModel.includes('s21') || lowerModel.includes('s22') || lowerModel.includes('s23') || lowerModel.includes('note')) {
-        return false;
-      }
+      // Only recent Samsung models are warranty eligible (released within 1-2 years)
+      return (
+        lowerModel.includes('s24') ||
+        lowerModel.includes('s25') ||
+        lowerModel.includes('fold5') ||
+        lowerModel.includes('fold 5') ||
+        lowerModel.includes('fold6') ||
+        lowerModel.includes('fold 6') ||
+        lowerModel.includes('flip5') ||
+        lowerModel.includes('flip 5') ||
+        lowerModel.includes('flip6') ||
+        lowerModel.includes('flip 6') ||
+        lowerModel.includes('a55') ||
+        lowerModel.includes('a35') ||
+        lowerModel.includes('a15') ||
+        lowerModel.includes('a25') ||
+        lowerModel.includes('m55') ||
+        lowerModel.includes('m35') ||
+        lowerModel.includes('m15')
+      );
     }
 
     if (brand.toLowerCase() === 'nokia') {
       return false; // Nokia phones are typically older and out of warranty on Cashify
     }
 
-    return true;
+    // Default to false for all other models since most traded-in phones are > 1 year old
+    return false;
   };
 
   const isESimEligible = (brand: string, model: string) => {
