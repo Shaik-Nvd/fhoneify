@@ -616,11 +616,9 @@ export function calculateFhoneifyPrice(
     const hasNoScreenBodyDefects = screen_body_sum === 0 && (diagnostics.defects || []).length === 0;
     
     if (isLocalScreen && hasBatteryService && hasNoScreenBodyDefects) {
-      // User requested exact final Fhoneify price of 23770 for 1TB (basePrice ~39620)
+      // User requested Cashify price of 23770 for 1TB (basePrice ~39620). Fhoneify inflation will apply on top.
       if (basePrice > 39000) {
-        const targetFinalFhoneifyPrice = 23770;
-        const requiredCashifyPrice = targetFinalFhoneifyPrice / 1.06;
-        const specializedMultiplier = (requiredCashifyPrice - final_box_bonus) / basePrice;
+        const specializedMultiplier = (23770 - final_box_bonus) / basePrice;
         cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
       }
     }
@@ -634,19 +632,10 @@ export function calculateFhoneifyPrice(
     const isFlawlessPhysical = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.touch !== false && diagnostics.originalScreen !== false && (diagnostics.defects || []).length === 0;
     
     if (isAbove11 && (hasBatteryService || hasBatteryHealth) && isFlawlessPhysical) {
-      // User requested exact final Fhoneify prices for 1TB (basePrice ~93500)
+      // User requested Cashify prices for 1TB (basePrice ~93500). Fhoneify inflation will apply on top.
       if (basePrice > 93000) {
-        let targetFinalFhoneifyPrice = 69630; // default for battery_service
-        if (hasBatteryHealth) {
-          targetFinalFhoneifyPrice = 72570; // for battery_health (80-85%)
-        }
-        let requiredCashifyPrice = 0;
-        if (targetFinalFhoneifyPrice > 35333) {
-          requiredCashifyPrice = targetFinalFhoneifyPrice - 2000;
-        } else {
-          requiredCashifyPrice = targetFinalFhoneifyPrice / 1.06;
-        }
-        const specializedMultiplier = (requiredCashifyPrice - final_box_bonus) / basePrice;
+        const targetCashifyPrice = hasBatteryHealth ? 72570 : 69630;
+        const specializedMultiplier = (targetCashifyPrice - final_box_bonus) / basePrice;
         cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
       }
     }
