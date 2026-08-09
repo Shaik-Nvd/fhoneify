@@ -2620,7 +2620,7 @@ export default function QuotePage() {
                     } else {
                       const updatedDiag = {
                         ...diagnostics,
-                        mobileAge: 'above11' as const
+                        mobileAge: 'below3' as const
                       };
                       setDiagnostics(updatedDiag);
                       if (isAuthenticated) { 
