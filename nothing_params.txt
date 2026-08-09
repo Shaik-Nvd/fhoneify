@@ -1,0 +1,110 @@
+    } else if (isNothing1) {
+      params = {
+        warrantyPenalty: 0.1,
+        gstBillPenalty: 0.223828345567476,
+        callsPenalty: 0.5,
+        originalScreenPenalty: 0.022030538834238778,
+        touchPenalty: 0.39673322566436653,
+        functionalScale: 1.0,
+        physicalScale: 1.0
+      };
+      // Nothing1 scratchGt2: 0.049686740549166705
+    } else if (isNothing2) {
+      params = {
+        warrantyPenalty: 0.1,
+        gstBillPenalty: 0.223828345567476,
+        callsPenalty: 0.5,
+        originalScreenPenalty: 0.5458307490868997,
+        touchPenalty: 0.3686026364235999,
+        functionalScale: 1.0,
+        physicalScale: 1.0
+      };
+      // Nothing2 scratchGt2: 0.20207833404501002
+    } else if (isNothing2a) {
+      params = {
+        warrantyPenalty: 0.1,
+        gstBillPenalty: 0.223828345567476,
+        callsPenalty: 0.5,
+        originalScreenPenalty: 0.49065960658684715,
+        touchPenalty: 0.346821811728644,
+        functionalScale: 1.0,
+        physicalScale: 1.0
+      };
+      // Nothing2a scratchGt2: 0.2579347063128183
+    } else if (isCMF1) {
+      params = {
+        warrantyPenalty: 0.1,
+        gstBillPenalty: 0.223828345567476,
+        callsPenalty: 0.5,
+        originalScreenPenalty: 0.4252209545235417,
+        touchPenalty: 0.33426268145053306,
+        functionalScale: 1.0,
+        physicalScale: 1.0
+      };
+      // CMF1 scratchGt2: 0.34801287626722693
+    } else if (isNothing2aPlus) {
+      params = {
+        warrantyPenalty: 0.1,
+        gstBillPenalty: 0.223828345567476,
+        callsPenalty: 0.5,
+        originalScreenPenalty: 0.5001307642443615,
+        touchPenalty: 0.34709636318930637,
+        functionalScale: 1.0,
+        physicalScale: 1.0
+      };
+      // Nothing2aPlus scratchGt2: 0.24857949397914242
+    } else if (isNothing3a) {
+      params = {
+        warrantyPenalty: 0.1,
+        gstBillPenalty: 0.223828345567476,
+        callsPenalty: 0.5,
+        originalScreenPenalty: 0.4828766585923173,
+        touchPenalty: 0.34324500583510675,
+        functionalScale: 1.0,
+        physicalScale: 1.0
+      };
+      // Nothing3a scratchGt2: 0.9742121023961539
+    } else if (isNothing3) {
+      params = {
+        warrantyPenalty: 0.1,
+        gstBillPenalty: 0.223828345567476,
+        callsPenalty: 0.5,
+        originalScreenPenalty: 0.5526803348067337,
+        touchPenalty: 0.4530502523590082,
+        functionalScale: 1.0,
+        physicalScale: 1.0
+      };
+      // Nothing3 scratchGt2: 0.1908196509916918
+    } else if (isNothing3aPro) {
+      params = {
+        warrantyPenalty: 0.1,
+        gstBillPenalty: 0.223828345567476,
+        callsPenalty: 0.5,
+        originalScreenPenalty: 0.5076784478652756,
+        touchPenalty: 0.3448705505980464,
+        functionalScale: 1.0,
+        physicalScale: 1.0
+      };
+      // Nothing3aPro scratchGt2: 0.24422691537239322
+    } else if (isNothing4a) {
+      params = {
+        warrantyPenalty: 0.1,
+        gstBillPenalty: 0.223828345567476,
+        callsPenalty: 0.5,
+        originalScreenPenalty: 0.5508314436885866,
+        touchPenalty: 0.4155328798185941,
+        functionalScale: 1.0,
+        physicalScale: 1.0
+      };
+      // Nothing4a scratchGt2: 0.20619475267618165
+    } else if (isNothing4aPro) {
+      params = {
+        warrantyPenalty: 0.1,
+        gstBillPenalty: 0.223828345567476,
+        callsPenalty: 0.5,
+        originalScreenPenalty: 0.5893092621664051,
+        touchPenalty: 0.4937990580847723,
+        functionalScale: 1.0,
+        physicalScale: 1.0
+      };
+      // Nothing4aPro scratchGt2: 0.17235809054220314
