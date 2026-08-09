@@ -122,6 +122,10 @@ export default function QuotePage() {
       return false; // Nokia phones are typically older and out of warranty on Cashify
     }
 
+    if (brand.toLowerCase() === 'nothing' || brand.toLowerCase() === 'cmf') {
+      return true; // Nothing and CMF are recent brands
+    }
+
     // Default to false for all other models since most traded-in phones are > 1 year old
     return false;
   };

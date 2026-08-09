@@ -9,6 +9,7 @@ export interface ModelParams {
   bodyScale?: number;
   facePenalty?: number;
 }
+
 export type DiagnosticsType = {
   calls: boolean | null;
   touch: boolean | null;
@@ -33,7 +34,7 @@ export type DiagnosticsType = {
 
 /**
  * Fhoneify Production Pricing Engine Algorithm
- * Calibrated against Cashify reverse logic for standard, flagship, and foldable devices.
+ * Calibrated against Cashify reverse logic for Apple, Samsung, Nothing, CMF, and Nothing 4a Pro devices.
  */
 
 export const pricingConfig = {
@@ -74,6 +75,66 @@ export const pricingConfig = {
     above11: 0.7966
   },
   // Specialized Series Multipliers
+  nothing4aProSeriesAgeBonus: {
+    below3: 0.98,
+    "3to6": 0.95,
+    "6to11": 0.92,
+    above11: 0.88
+  },
+  nothing4aSeriesAgeBonus: {
+    below3: 0.98,
+    "3to6": 0.95,
+    "6to11": 0.92,
+    above11: 0.88
+  },
+  nothing3aProSeriesAgeBonus: {
+    below3: 0.98,
+    "3to6": 0.95,
+    "6to11": 0.92,
+    above11: 0.88
+  },
+  nothing3SeriesAgeBonus: {
+    below3: 0.98,
+    "3to6": 0.95,
+    "6to11": 0.92,
+    above11: 0.88
+  },
+  nothing3aSeriesAgeBonus: {
+    below3: 0.98,
+    "3to6": 0.95,
+    "6to11": 0.92,
+    above11: 0.88
+  },
+  nothing2aPlusSeriesAgeBonus: {
+    below3: 0.98,
+    "3to6": 0.95,
+    "6to11": 0.92,
+    above11: 0.88
+  },
+  cmfSeriesAgeBonus: {
+    below3: 0.98,
+    "3to6": 0.95,
+    "6to11": 0.92,
+    above11: 0.88
+  },
+  nothing2aSeriesAgeBonus: {
+    below3: 0.98,
+    "3to6": 0.95,
+    "6to11": 0.92,
+    above11: 0.88
+  },
+  nothing2SeriesAgeBonus: {
+    below3: 0.98,
+    "3to6": 0.95,
+    "6to11": 0.92,
+    above11: 0.88
+  },
+  nothing1SeriesAgeBonus: {
+    below3: 0.98,
+    "3to6": 0.93,
+    "6to11": 0.90,
+    above11: 0.8805755395683453
+  },
   foldableAgeBonus: {
     below3: 0.98,
     "3to6": 0.925,
@@ -195,7 +256,109 @@ export const getAndroidModelParams = (brand: string, model: string): ModelParams
     physicalScale: 0.75
   };
   
-  if (lowerBrand === "samsung") {
+  if (lowerBrand === "cmf" || lowerModel.includes("cmf")) {
+    params = {
+      warrantyPenalty: 0.1,
+      gstBillPenalty: 0.223828345567476,
+      callsPenalty: 0.5,
+      originalScreenPenalty: 0.5189093754585025,
+      touchPenalty: 0.3804469105394575,
+      functionalScale: 1.0,
+      physicalScale: 1.0
+    };
+  } else if (lowerBrand === "nothing" || lowerModel.includes("nothing")) {
+    if (lowerModel.includes("4a pro") || lowerModel.includes("phone (4a) pro") || lowerModel.includes("phone 4a pro")) {
+      params = {
+        warrantyPenalty: 0.1,
+        gstBillPenalty: 0.223828345567476,
+        callsPenalty: 0.5,
+        originalScreenPenalty: 0.6501399221896116,
+        touchPenalty: 0.5598015320084772,
+        functionalScale: 1.0,
+        physicalScale: 1.0
+      };
+    } else if (lowerModel.includes("4a") || lowerModel.includes("phone (4a)") || lowerModel.includes("phone 4a")) {
+      params = {
+        warrantyPenalty: 0.1,
+        gstBillPenalty: 0.223828345567476,
+        callsPenalty: 0.5,
+        originalScreenPenalty: 0.6119458411383877,
+        touchPenalty: 0.4793958514456538,
+        functionalScale: 1.0,
+        physicalScale: 1.0
+      };
+    } else if (lowerModel.includes("3a pro") || lowerModel.includes("phone (3a) pro") || lowerModel.includes("phone 3a pro")) {
+      params = {
+        warrantyPenalty: 0.1,
+        gstBillPenalty: 0.223828345567476,
+        callsPenalty: 0.5,
+        originalScreenPenalty: 0.5690781142736803,
+        touchPenalty: 0.3903079632447254,
+        functionalScale: 1.0,
+        physicalScale: 1.0
+      };
+    } else if (lowerModel.includes("phone 3") || lowerModel.includes("phone (3)") || lowerModel.includes("nothing 3")) {
+      params = {
+        warrantyPenalty: 0.1,
+        gstBillPenalty: 0.223828345567476,
+        callsPenalty: 0.5,
+        originalScreenPenalty: 0.6113101541959202,
+        touchPenalty: 0.5046752924591304,
+        functionalScale: 1.0,
+        physicalScale: 1.0
+      };
+    } else if (lowerModel.includes("3a") || lowerModel.includes("phone (3a)") || lowerModel.includes("phone 3a")) {
+      params = {
+        warrantyPenalty: 0.1,
+        gstBillPenalty: 0.223828345567476,
+        callsPenalty: 0.5,
+        originalScreenPenalty: 0.5444153316843525,
+        touchPenalty: 0.3886663741135816,
+        functionalScale: 1.0,
+        physicalScale: 1.0
+      };
+    } else if (lowerModel.includes("2a plus") || lowerModel.includes("phone (2a) plus") || lowerModel.includes("phone 2a plus")) {
+      params = {
+        warrantyPenalty: 0.1,
+        gstBillPenalty: 0.223828345567476,
+        callsPenalty: 0.5,
+        originalScreenPenalty: 0.5847432190648534,
+        touchPenalty: 0.4130173545680177,
+        functionalScale: 1.0,
+        physicalScale: 1.0
+      };
+    } else if (lowerModel.includes("2a") || lowerModel.includes("phone (2a)") || lowerModel.includes("phone 2a")) {
+      params = {
+        warrantyPenalty: 0.1,
+        gstBillPenalty: 0.223828345567476,
+        callsPenalty: 0.5,
+        originalScreenPenalty: 0.575381140609825,
+        touchPenalty: 0.4127611518915867,
+        functionalScale: 1.0,
+        physicalScale: 1.0
+      };
+    } else if (lowerModel.includes("phone 2") || lowerModel.includes("phone (2)") || lowerModel.includes("nothing 2")) {
+      params = {
+        warrantyPenalty: 0.1,
+        gstBillPenalty: 0.2238302026049204,
+        callsPenalty: 0.5,
+        originalScreenPenalty: 0.6198745779064158,
+        touchPenalty: 0.4307766521948866,
+        functionalScale: 1.0,
+        physicalScale: 1.0
+      };
+    } else {
+      params = {
+        warrantyPenalty: 0.1,
+        gstBillPenalty: 0.05,
+        callsPenalty: 0.5,
+        originalScreenPenalty: 0.8129496402877698,
+        touchPenalty: 0.5179856115107914,
+        functionalScale: 1.0,
+        physicalScale: 1.0
+      };
+    }
+  } else if (lowerBrand === "samsung") {
     const isUltra = lowerModel.includes("ultra");
     const isS = lowerModel.includes("galaxy s") || lowerModel.includes("s2") || lowerModel.includes("s1") || lowerModel.includes("s9") || lowerModel.includes("s8");
     const isZ = lowerModel.includes("fold") || lowerModel.includes("flip");
@@ -245,7 +408,19 @@ export function calculateFhoneifyPrice(brand: string, model: string, basePrice: 
   const safeBrand = String(brand || "");
   const safeModel = String(model || "");
   const lowerModel = safeModel.toLowerCase();
-  const isApple = safeBrand.toLowerCase() === "apple";
+  const lowerBrand = safeBrand.toLowerCase();
+  const isApple = lowerBrand === "apple";
+  const isCmf = lowerBrand === "cmf" || lowerModel.includes("cmf");
+  const isNothing = lowerBrand === "nothing" || lowerModel.includes("nothing");
+  const isNothing4aPro = isNothing && !isCmf && (lowerModel.includes("4a pro") || lowerModel.includes("phone (4a) pro") || lowerModel.includes("phone 4a pro"));
+  const isNothing4a = isNothing && !isCmf && !isNothing4aPro && (lowerModel.includes("4a") || lowerModel.includes("phone (4a)") || lowerModel.includes("phone 4a"));
+  const isNothing3aPro = isNothing && !isCmf && !isNothing4aPro && !isNothing4a && (lowerModel.includes("3a pro") || lowerModel.includes("phone (3a) pro") || lowerModel.includes("phone 3a pro"));
+  const isNothing3 = isNothing && !isCmf && !isNothing4aPro && !isNothing4a && !isNothing3aPro && (lowerModel.includes("phone 3") || lowerModel.includes("phone (3)") || lowerModel.includes("nothing 3"));
+  const isNothing3a = isNothing && !isCmf && !isNothing4aPro && !isNothing4a && !isNothing3aPro && !isNothing3 && (lowerModel.includes("3a") || lowerModel.includes("phone (3a)") || lowerModel.includes("phone 3a"));
+  const isNothing2aPlus = isNothing && !isCmf && !isNothing4aPro && !isNothing4a && !isNothing3aPro && !isNothing3 && !isNothing3a && (lowerModel.includes("2a plus") || lowerModel.includes("phone (2a) plus") || lowerModel.includes("phone 2a plus"));
+  const isNothing2a = isNothing && !isCmf && !isNothing4aPro && !isNothing4a && !isNothing3aPro && !isNothing3 && !isNothing3a && !isNothing2aPlus && (lowerModel.includes("2a") || lowerModel.includes("phone (2a)") || lowerModel.includes("phone 2a"));
+  const isNothing2 = isNothing && !isCmf && !isNothing4aPro && !isNothing4a && !isNothing3aPro && !isNothing3 && !isNothing3a && !isNothing2aPlus && !isNothing2a && (lowerModel.includes("phone 2") || lowerModel.includes("phone (2)") || lowerModel.includes("nothing 2"));
+  const isNothing1 = isNothing && !isCmf && !isNothing4aPro && !isNothing4a && !isNothing3aPro && !isNothing3 && !isNothing3a && !isNothing2aPlus && !isNothing2a && !isNothing2;
   const isFoldable = lowerModel.includes("fold") || lowerModel.includes("flip") || lowerModel.includes("open");
   const isUltra = lowerModel.includes("ultra");
   const isFE = lowerModel.includes("fe");
@@ -260,7 +435,17 @@ export function calculateFhoneifyPrice(brand: string, model: string, basePrice: 
 
   // Determine appropriate age configuration map
   let ageConfig: Record<string, number> = pricingConfig.ageBonus;
-  if (isFoldable) ageConfig = pricingConfig.foldableAgeBonus;
+  if (isNothing4aPro) ageConfig = pricingConfig.nothing4aProSeriesAgeBonus;
+  else if (isNothing4a) ageConfig = pricingConfig.nothing4aSeriesAgeBonus;
+  else if (isNothing3aPro) ageConfig = pricingConfig.nothing3aProSeriesAgeBonus;
+  else if (isNothing3) ageConfig = pricingConfig.nothing3SeriesAgeBonus;
+  else if (isNothing3a) ageConfig = pricingConfig.nothing3aSeriesAgeBonus;
+  else if (isNothing2aPlus) ageConfig = pricingConfig.nothing2aPlusSeriesAgeBonus;
+  else if (isCmf) ageConfig = pricingConfig.cmfSeriesAgeBonus;
+  else if (isNothing2a) ageConfig = pricingConfig.nothing2aSeriesAgeBonus;
+  else if (isNothing2) ageConfig = pricingConfig.nothing2SeriesAgeBonus;
+  else if (isNothing1) ageConfig = pricingConfig.nothing1SeriesAgeBonus;
+  else if (isFoldable) ageConfig = pricingConfig.foldableAgeBonus;
   else if (isS26Ultra) ageConfig = pricingConfig.s26UltraSeriesAgeBonus;
   else if (isS24Ultra) ageConfig = pricingConfig.s24UltraSeriesAgeBonus;
   else if (isSUltra) ageConfig = pricingConfig.sUltraSeriesAgeBonus;
@@ -280,9 +465,9 @@ export function calculateFhoneifyPrice(brand: string, model: string, basePrice: 
       let penalty = (pricingConfig.defects_screen_body as any)[d] || 0;
       if (d === "screen_scratch" && diagnostics.screenCondition) {
         if (diagnostics.screenCondition.includes("More than 2")) {
-          penalty = lowerModel.includes("17") ? 0.12856 : isSUltra ? 0.018754186202277293 : 0.2635;
+          penalty = isNothing4aPro ? 0.11273520779030486 : isNothing4a ? 0.14839240521691046 : isNothing3aPro ? 0.18849750425029136 : isNothing3 ? 0.13228553599888876 : isNothing3a ? 0.21158221565307447 : isNothing2aPlus ? 0.11963658133380492 : isCmf ? 0.19980314960629921 : isNothing2a ? 0.12721626200000000 : isNothing2 ? 0.09358417752050169 : isNothing1 ? 0.09352517985611511 : lowerModel.includes("17") ? 0.12856 : isSUltra ? 0.018754186202277293 : 0.2635;
         } else if (diagnostics.screenCondition.includes("1-2")) {
-          penalty = 0.15;
+          penalty = (isNothing || isCmf) ? 0.05 : 0.15;
         } else {
           penalty = 0.25;
         }
@@ -338,7 +523,7 @@ export function calculateFhoneifyPrice(brand: string, model: string, basePrice: 
     else if (ageKey.includes("6") && ageKey.includes("11")) age_multiplier = ageConfig["6to11"];
     else age_multiplier = ageConfig["above11"];
   } else {
-    age_multiplier = ageConfig["above11"];
+    age_multiplier = ageConfig["below3"] || ageConfig["above11"];
   }
   
   // Apply GST Bill Penalty
@@ -365,7 +550,19 @@ export function calculateFhoneifyPrice(brand: string, model: string, basePrice: 
   // Functional Hardware Checks
   const hardwareList = diagnostics.hardware || [];
   hardwareList.forEach((h) => {
-    if (h in pricingConfig.defects_functional) {
+    if (isNothing4aPro || isNothing4a || isNothing3aPro || isNothing3 || isNothing3a || isNothing2aPlus || isCmf || isNothing2a) {
+      if (h === "front_camera") functional_sum += 0.06583850931677018;
+      else if (h === "back_camera") functional_sum += 0.18272162620000000;
+      else if (h === "battery_health" || h === "battery_service" || h === "battery") functional_sum += 0.06205533596837944;
+    } else if (isNothing2) {
+      if (h === "front_camera") functional_sum += 0.06538350217076699;
+      else if (h === "back_camera") functional_sum += 0.18263386396526773;
+      else if (h === "battery_health" || h === "battery_service" || h === "battery") functional_sum += 0.06200675349734684;
+    } else if (isNothing1) {
+      if (h === "front_camera") functional_sum += 0.05899280575539568;
+      else if (h === "back_camera") functional_sum += 0.13525179856115108;
+      else if (h === "battery_health" || h === "battery_service" || h === "battery") functional_sum += 0.04964028776978417;
+    } else if (h in pricingConfig.defects_functional) {
       let penalty = (pricingConfig.defects_functional as any)[h] * params.functionalScale;
       functional_sum += penalty;
     }
