@@ -2249,7 +2249,7 @@ export default function QuotePage() {
                 ))}
                 
                 {/* Newer model flow: Warranty and GST Bill Questions */}
-                {isWarrantyEligible(selectedBrand, selectedModel) && (
+                {isWarrantyEligible(selectedBrand, selectedModel) && diagnostics.originalScreen !== false && (
                   <>
                     <div style={{ marginBottom: '2.5rem' }}>
                       <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>Is your device under manufacturer warranty?</h3>
