@@ -161,6 +161,12 @@ export default function QuotePage() {
   const hasChargerInBox = (brand: string, model: string) => {
     const lowerBrand = brand.toLowerCase();
     const lowerModel = model.toLowerCase();
+    
+    // Nothing and CMF phones do not give chargers in the box
+    if (lowerBrand === 'nothing' || lowerBrand === 'cmf') {
+      return false;
+    }
+
     // Modern Samsung flagships do not have a charger in the box
     if (lowerBrand === 'samsung') {
       if (
