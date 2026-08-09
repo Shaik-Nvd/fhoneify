@@ -359,9 +359,9 @@ export const getAndroidModelParams = (brand: string, model: string): ModelParams
     } else if (lowerModel.includes("15")) {
       params = {
         warrantyPenalty: 0.1,
-        gstBillPenalty: 0.14065271875340522,
+        gstBillPenalty: 0.1840908062034098,
         callsPenalty: 0.5,
-        originalScreenPenalty: 0.6099500728104847,
+        originalScreenPenalty: 0.5797424107983113,
         touchPenalty: 0.4,
         functionalScale: 1.0,
         physicalScale: 1.0
@@ -724,7 +724,11 @@ export function calculateFhoneifyPrice(brand: string, model: string, basePrice: 
   let cashifyPrice = rawCalculated + box_bonus;
 
   if (diagnostics.calls === false && !lowerModel.includes("16")) {
-    cashifyPrice = isApple ? 1200 : basePrice <= 5000 ? 200 : 1200;
+    const deadPrice = isApple ? 1200 : basePrice <= 5000 ? 200 : 1200;
+    return {
+      cashifyBasePrice: deadPrice,
+      fhoneifyPrice: deadPrice
+    };
   }
 
   const exactCashifyPrice = Math.round(cashifyPrice);
