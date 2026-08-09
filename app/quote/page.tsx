@@ -96,6 +96,7 @@ export default function QuotePage() {
       return (
         lowerModel.includes('s24') ||
         lowerModel.includes('s25') ||
+        lowerModel.includes('s26') ||
         lowerModel.includes('fold5') ||
         lowerModel.includes('fold 5') ||
         lowerModel.includes('fold6') ||

@@ -427,6 +427,7 @@ export function calculateFhoneifyPrice(brand: string, model: string, basePrice: 
   const isEdge = lowerModel.includes("edge");
   const isPlus = lowerModel.includes("plus") || lowerModel.includes("+");
   const isS26Ultra = lowerModel.includes("s26 ultra");
+  const isS26 = lowerModel.includes("s26") && !isS26Ultra;
   const isS24Ultra = lowerModel.includes("s24 ultra");
   const isSPlus = (lowerModel.includes("galaxy s") || lowerModel.includes("s2")) && isPlus;
   const isSUltra = (lowerModel.includes("galaxy s") || lowerModel.includes("s2")) && isUltra;
@@ -479,7 +480,7 @@ export function calculateFhoneifyPrice(brand: string, model: string, basePrice: 
         if (diagnostics.bodyScratches === "More than 2 scratches" || diagnostics.bodyScratches === "More than 2") {
           scratchPenalty = isS26Ultra ? 0.016152018998218527 : isS24Ultra ? 0.005932864949258392 : isSPlus ? 0.01041666667 : 0.02116;
         } else if (diagnostics.bodyScratches === "1-2 scratches" || diagnostics.bodyScratches === "1-2") {
-          scratchPenalty = isFoldable ? 0.01979899 : isS24Ultra ? 0.01873536300078064 : isSUltra ? 0.0150167448 : isEdge ? 0.011100292112956 : isSPlus ? 0.0168489583333333 : isSSeries ? 0.0167718 : 0.01;
+          scratchPenalty = isFoldable ? 0.01979899 : isS24Ultra ? 0.01873536300078064 : isSUltra ? 0.0150167448 : isEdge ? 0.011100292112956 : isSPlus ? 0.0168489583333333 : isS26 ? 0.018677685950413223 : isSSeries ? 0.0167718 : 0.01;
         } else {
           scratchPenalty = 0.05;
         }
@@ -530,7 +531,7 @@ export function calculateFhoneifyPrice(brand: string, model: string, basePrice: 
   
   // Apply GST Bill Penalty
   if (!hasValidBill) {
-    if (!isOutOfWarranty) {
+    if (diagnostics.warranty !== false) {
       if (isSUltra) age_multiplier -= 0.1265558194774347;
       else age_multiplier -= params.gstBillPenalty;
     }
