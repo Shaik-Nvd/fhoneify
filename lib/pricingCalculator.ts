@@ -34,7 +34,7 @@ export type DiagnosticsType = {
 
 /**
  * Fhoneify Production Pricing Engine Algorithm
- * Calibrated against Cashify reverse logic for Apple, Samsung, Nothing, CMF, and Nothing 4a Pro devices.
+ * Calibrated against Cashify reverse logic for standard, flagship, foldable, Nothing, and CMF devices.
  */
 
 export const pricingConfig = {
@@ -261,8 +261,8 @@ export const getAndroidModelParams = (brand: string, model: string): ModelParams
       warrantyPenalty: 0.1,
       gstBillPenalty: 0.223828345567476,
       callsPenalty: 0.5,
-      originalScreenPenalty: 0.4410,
-      touchPenalty: 0.3670,
+      originalScreenPenalty: 0.5189093754585025,
+      touchPenalty: 0.3804469105394575,
       functionalScale: 1.0,
       physicalScale: 1.0
     };
@@ -272,8 +272,8 @@ export const getAndroidModelParams = (brand: string, model: string): ModelParams
         warrantyPenalty: 0.1,
         gstBillPenalty: 0.223828345567476,
         callsPenalty: 0.5,
-        originalScreenPenalty: 0.6170,
-        touchPenalty: 0.5270,
+        originalScreenPenalty: 0.6501399221896116,
+        touchPenalty: 0.5598015320084772,
         functionalScale: 1.0,
         physicalScale: 1.0
       };
@@ -282,8 +282,8 @@ export const getAndroidModelParams = (brand: string, model: string): ModelParams
         warrantyPenalty: 0.1,
         gstBillPenalty: 0.223828345567476,
         callsPenalty: 0.5,
-        originalScreenPenalty: 0.5810,
-        touchPenalty: 0.4480,
+        originalScreenPenalty: 0.6119458411383877,
+        touchPenalty: 0.4793958514456538,
         functionalScale: 1.0,
         physicalScale: 1.0
       };
@@ -292,18 +292,8 @@ export const getAndroidModelParams = (brand: string, model: string): ModelParams
         warrantyPenalty: 0.1,
         gstBillPenalty: 0.223828345567476,
         callsPenalty: 0.5,
-        originalScreenPenalty: 0.5240,
-        touchPenalty: 0.3780,
-        functionalScale: 1.0,
-        physicalScale: 1.0
-      };
-    } else if (lowerModel.includes("3a") || lowerModel.includes("phone (3a)") || lowerModel.includes("phone 3a")) {
-      params = {
-        warrantyPenalty: 0.1,
-        gstBillPenalty: 0.223828345567476,
-        callsPenalty: 0.5,
-        originalScreenPenalty: 0.4990,
-        touchPenalty: 0.3760,
+        originalScreenPenalty: 0.5690781142736803,
+        touchPenalty: 0.3903079632447254,
         functionalScale: 1.0,
         physicalScale: 1.0
       };
@@ -312,8 +302,18 @@ export const getAndroidModelParams = (brand: string, model: string): ModelParams
         warrantyPenalty: 0.1,
         gstBillPenalty: 0.223828345567476,
         callsPenalty: 0.5,
-        originalScreenPenalty: 0.5690,
-        touchPenalty: 0.4860,
+        originalScreenPenalty: 0.6113101541959202,
+        touchPenalty: 0.5046752924591304,
+        functionalScale: 1.0,
+        physicalScale: 1.0
+      };
+    } else if (lowerModel.includes("3a") || lowerModel.includes("phone (3a)") || lowerModel.includes("phone 3a")) {
+      params = {
+        warrantyPenalty: 0.1,
+        gstBillPenalty: 0.223828345567476,
+        callsPenalty: 0.5,
+        originalScreenPenalty: 0.5444153316843525,
+        touchPenalty: 0.3886663741135816,
         functionalScale: 1.0,
         physicalScale: 1.0
       };
@@ -322,8 +322,8 @@ export const getAndroidModelParams = (brand: string, model: string): ModelParams
         warrantyPenalty: 0.1,
         gstBillPenalty: 0.223828345567476,
         callsPenalty: 0.5,
-        originalScreenPenalty: 0.5160,
-        touchPenalty: 0.3800,
+        originalScreenPenalty: 0.5847432190648534,
+        touchPenalty: 0.4130173545680177,
         functionalScale: 1.0,
         physicalScale: 1.0
       };
@@ -332,8 +332,8 @@ export const getAndroidModelParams = (brand: string, model: string): ModelParams
         warrantyPenalty: 0.1,
         gstBillPenalty: 0.223828345567476,
         callsPenalty: 0.5,
-        originalScreenPenalty: 0.5060,
-        touchPenalty: 0.3800,
+        originalScreenPenalty: 0.575381140609825,
+        touchPenalty: 0.4127611518915867,
         functionalScale: 1.0,
         physicalScale: 1.0
       };
@@ -342,8 +342,8 @@ export const getAndroidModelParams = (brand: string, model: string): ModelParams
         warrantyPenalty: 0.1,
         gstBillPenalty: 0.2238302026049204,
         callsPenalty: 0.5,
-        originalScreenPenalty: 0.5620,
-        touchPenalty: 0.4010,
+        originalScreenPenalty: 0.6198745779064158,
+        touchPenalty: 0.4307766521948866,
         functionalScale: 1.0,
         physicalScale: 1.0
       };
@@ -352,8 +352,8 @@ export const getAndroidModelParams = (brand: string, model: string): ModelParams
         warrantyPenalty: 0.1,
         gstBillPenalty: 0.05,
         callsPenalty: 0.5,
-        originalScreenPenalty: 0.6560,
-        touchPenalty: 0.3820,
+        originalScreenPenalty: 0.8129496402877698,
+        touchPenalty: 0.5179856115107914,
         functionalScale: 1.0,
         physicalScale: 1.0
       };
@@ -415,12 +415,12 @@ export function calculateFhoneifyPrice(brand: string, model: string, basePrice: 
   const isNothing4aPro = isNothing && !isCmf && (lowerModel.includes("4a pro") || lowerModel.includes("phone (4a) pro") || lowerModel.includes("phone 4a pro"));
   const isNothing4a = isNothing && !isCmf && !isNothing4aPro && (lowerModel.includes("4a") || lowerModel.includes("phone (4a)") || lowerModel.includes("phone 4a"));
   const isNothing3aPro = isNothing && !isCmf && !isNothing4aPro && !isNothing4a && (lowerModel.includes("3a pro") || lowerModel.includes("phone (3a) pro") || lowerModel.includes("phone 3a pro"));
-  const isNothing3a = isNothing && !isCmf && !isNothing4aPro && !isNothing4a && !isNothing3aPro && (lowerModel.includes("3a") || lowerModel.includes("phone (3a)") || lowerModel.includes("phone 3a"));
-  const isNothing3 = isNothing && !isCmf && !isNothing4aPro && !isNothing4a && !isNothing3aPro && !isNothing3a && (lowerModel.includes("phone 3") || lowerModel.includes("phone (3)") || lowerModel.includes("nothing 3"));
-  const isNothing2aPlus = isNothing && !isCmf && !isNothing4aPro && !isNothing4a && !isNothing3aPro && !isNothing3a && !isNothing3 && (lowerModel.includes("2a plus") || lowerModel.includes("phone (2a) plus") || lowerModel.includes("phone 2a plus"));
-  const isNothing2a = isNothing && !isCmf && !isNothing4aPro && !isNothing4a && !isNothing3aPro && !isNothing3a && !isNothing3 && !isNothing2aPlus && (lowerModel.includes("2a") || lowerModel.includes("phone (2a)") || lowerModel.includes("phone 2a"));
-  const isNothing2 = isNothing && !isCmf && !isNothing4aPro && !isNothing4a && !isNothing3aPro && !isNothing3a && !isNothing3 && !isNothing2aPlus && !isNothing2a && (lowerModel.includes("phone 2") || lowerModel.includes("phone (2)") || lowerModel.includes("nothing 2"));
-  const isNothing1 = isNothing && !isCmf && !isNothing4aPro && !isNothing4a && !isNothing3aPro && !isNothing3a && !isNothing3 && !isNothing2aPlus && !isNothing2a && !isNothing2;
+  const isNothing3 = isNothing && !isCmf && !isNothing4aPro && !isNothing4a && !isNothing3aPro && (lowerModel.includes("phone 3") || lowerModel.includes("phone (3)") || lowerModel.includes("nothing 3"));
+  const isNothing3a = isNothing && !isCmf && !isNothing4aPro && !isNothing4a && !isNothing3aPro && !isNothing3 && (lowerModel.includes("3a") || lowerModel.includes("phone (3a)") || lowerModel.includes("phone 3a"));
+  const isNothing2aPlus = isNothing && !isCmf && !isNothing4aPro && !isNothing4a && !isNothing3aPro && !isNothing3 && !isNothing3a && (lowerModel.includes("2a plus") || lowerModel.includes("phone (2a) plus") || lowerModel.includes("phone 2a plus"));
+  const isNothing2a = isNothing && !isCmf && !isNothing4aPro && !isNothing4a && !isNothing3aPro && !isNothing3 && !isNothing3a && !isNothing2aPlus && (lowerModel.includes("2a") || lowerModel.includes("phone (2a)") || lowerModel.includes("phone 2a"));
+  const isNothing2 = isNothing && !isCmf && !isNothing4aPro && !isNothing4a && !isNothing3aPro && !isNothing3 && !isNothing3a && !isNothing2aPlus && !isNothing2a && (lowerModel.includes("phone 2") || lowerModel.includes("phone (2)") || lowerModel.includes("nothing 2"));
+  const isNothing1 = isNothing && !isCmf && !isNothing4aPro && !isNothing4a && !isNothing3aPro && !isNothing3 && !isNothing3a && !isNothing2aPlus && !isNothing2a && !isNothing2;
   const isFoldable = lowerModel.includes("fold") || lowerModel.includes("flip") || lowerModel.includes("open");
   const isUltra = lowerModel.includes("ultra");
   const isFE = lowerModel.includes("fe");
@@ -465,7 +465,7 @@ export function calculateFhoneifyPrice(brand: string, model: string, basePrice: 
       let penalty = (pricingConfig.defects_screen_body as any)[d] || 0;
       if (d === "screen_scratch" && diagnostics.screenCondition) {
         if (diagnostics.screenCondition.includes("More than 2")) {
-          penalty = isNothing4aPro ? 0.1600 : isNothing4a ? 0.1940 : isNothing3aPro ? 0.2320 : isNothing3 ? 0.1790 : isNothing3a ? 0.2540 : isNothing2aPlus ? 0.2370 : isCmf ? 0.3360 : isNothing2a ? 0.2460 : isNothing2 ? 0.1900 : isNothing1 ? 0.0500 : lowerModel.includes("17") ? 0.12856 : isSUltra ? 0.018754186202277293 : 0.2635;
+          penalty = isNothing4aPro ? 0.11273520779030486 : isNothing4a ? 0.14839240521691046 : isNothing3aPro ? 0.18849750425029136 : isNothing3 ? 0.13228553599888876 : isNothing3a ? 0.21158221565307447 : isNothing2aPlus ? 0.11963658133380492 : isCmf ? 0.19980314960629921 : isNothing2a ? 0.12721626200000000 : isNothing2 ? 0.09358417752050169 : isNothing1 ? 0.09352517985611511 : lowerModel.includes("17") ? 0.12856 : isSUltra ? 0.018754186202277293 : 0.2635;
         } else if (diagnostics.screenCondition.includes("1-2")) {
           penalty = (isNothing || isCmf) ? 0.05 : 0.15;
         } else {
@@ -510,7 +510,9 @@ export function calculateFhoneifyPrice(brand: string, model: string, basePrice: 
   // Age & Document Deductions
   const hasValidBill = diagnostics.validBill === true || (diagnostics.accessories || []).includes("bill");
 
-  if (diagnostics.warranty === false) {
+  const isOutOfWarranty = diagnostics.warranty === false || diagnostics.mobileAge === 'above11';
+
+  if (isOutOfWarranty) {
     if (isS24Ultra) {
       age_multiplier = hasValidBill ? ageConfig["above11_bill"] : ageConfig["above11_nobill"];
     } else {
@@ -528,7 +530,7 @@ export function calculateFhoneifyPrice(brand: string, model: string, basePrice: 
   
   // Apply GST Bill Penalty
   if (!hasValidBill) {
-    if (diagnostics.warranty !== false) {
+    if (!isOutOfWarranty) {
       if (isSUltra) age_multiplier -= 0.1265558194774347;
       else age_multiplier -= params.gstBillPenalty;
     }

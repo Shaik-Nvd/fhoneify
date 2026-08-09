@@ -2658,16 +2658,9 @@ export default function QuotePage() {
 
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
                   <button onClick={() => { 
-                    const isUnderWarranty = diagnostics.mobileAge !== 'above11' ? diagnostics.warranty : false;
-                    const isValidBill = diagnostics.mobileAge !== 'above11' ? diagnostics.validBill : false;
-                    const updatedDiag = {
-                      ...diagnostics,
-                      warranty: isUnderWarranty,
-                      validBill: isValidBill
-                    };
-                    setDiagnostics(updatedDiag);
+
                     if (isAuthenticated) { 
-                      calculateFinalPrice(updatedDiag); 
+                      calculateFinalPrice(diagnostics); 
                       setMarketPriceFetched(false);
                       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11); 
                     } else { 
