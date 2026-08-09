@@ -162,8 +162,11 @@ export default function QuotePage() {
     const lowerBrand = brand.toLowerCase();
     const lowerModel = model.toLowerCase();
     
-    // Nothing and CMF phones do not give chargers in the box
+    // Nothing and CMF phones do not give chargers in the box (except Nothing Phone 3)
     if (lowerBrand === 'nothing' || lowerBrand === 'cmf') {
+      if (lowerModel === 'nothing phone 3') {
+        return true;
+      }
       return false;
     }
 
@@ -2582,13 +2585,11 @@ export default function QuotePage() {
                   <button onClick={() => { 
                     const isEligible = isWarrantyEligible(selectedBrand, selectedModel);
                     
-                    // Major physical/functional defects void the manufacturer warranty
+                    // Major physical defects void the manufacturer warranty.
+                    // Note: Cashify does not void warranty purely for non-original screen or faulty touch for age pricing.
                     const hasWarrantyVoidingDefects = 
-                      diagnostics.originalScreen === false ||
                       diagnostics.calls === false ||
-                      diagnostics.touch === false ||
-                      (diagnostics.defects && diagnostics.defects.filter(d => d !== 'body_scratch').length > 0) ||
-                      (diagnostics.hardware && diagnostics.hardware.length > 0);
+                      (diagnostics.defects && diagnostics.defects.some(d => ['broken_screen', 'screen_spot', 'panel_missing', 'screen_lines', 'screen_discoloration', 'body_bent'].includes(d)));
                       
                     // Even if validBill is false, Cashify still asks for the mobile age and applies an age deduction 
                     // in addition to the missing bill deduction.
@@ -2971,6 +2972,7 @@ export default function QuotePage() {
           </div>
           
           <div style={{ display: 'flex', gap: '0.75rem', marginTop: '1rem', width: '100%' }}>
+            <button type="button" onClick={handleBack} className="btn-outline" style={{ flex: 1, padding: '12px', fontSize: '1rem' }}>Back</button>
             <button type="button" onClick={() => { navigateToState('', '', '', 'brand', 1); setFinalPrice(null); setMarketPriceFetched(false); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], screenCondition: null, screenSpots: null, screenLines: null, screenDiscoloration: null, bodyScratches: null, bodyDents: null, bodyPanel: null, bodyBent: null, hardware: [], accessories: [], warranty: null, validBill: null, eSim: null, mobileAge: null }); }} className="btn-outline" style={{ flex: 1, padding: '12px', fontSize: '1rem' }}>Start Over</button>
             <button type="button" onClick={() => setStep(12)} className="btn-primary" style={{ flex: 2, padding: '12px', background: '#4CD964', color: '#fff', fontSize: '1rem', fontWeight: 600, cursor: 'pointer' }}>Schedule Pickup</button>
           </div>

@@ -272,7 +272,7 @@ export const getAndroidModelParams = (brand: string, model: string): ModelParams
         warrantyPenalty: 0.1,
         gstBillPenalty: 0.223828345567476,
         callsPenalty: 0.5,
-        originalScreenPenalty: 0.6050,
+        originalScreenPenalty: 0.6170,
         touchPenalty: 0.5270,
         functionalScale: 1.0,
         physicalScale: 1.0
@@ -282,7 +282,7 @@ export const getAndroidModelParams = (brand: string, model: string): ModelParams
         warrantyPenalty: 0.1,
         gstBillPenalty: 0.223828345567476,
         callsPenalty: 0.5,
-        originalScreenPenalty: 0.5670,
+        originalScreenPenalty: 0.5810,
         touchPenalty: 0.4480,
         functionalScale: 1.0,
         physicalScale: 1.0
