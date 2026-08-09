@@ -41,7 +41,7 @@ for (let basePrice of baseOpts) {
                   mobileAge,
                   accessories: ['box', 'charger']
                 };
-                const price = calculateFhoneifyPrice('Samsung', 'Samsung Galaxy Z Flip7 FE 5G', basePrice, diag as any);
+                const price = calculateFhoneifyPrice('Samsung', 'Samsung Galaxy Z Flip7 FE 5G', basePrice, diag as any).fhoneifyPrice;
                 if (Math.abs(price - 13286) < 1000) {
                   console.log("CLOSE MATCH:", price, JSON.stringify(diag));
                 }

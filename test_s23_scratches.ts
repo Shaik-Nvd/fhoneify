@@ -10,5 +10,5 @@ const diag: Partial<DiagnosticsType> = {
   hardware: ['battery_service']
 };
 
-const price = calculateFhoneifyPrice('Samsung', 'Samsung Galaxy S23 Ultra 5G', 37040, diag as DiagnosticsType);
+const price = calculateFhoneifyPrice('Samsung', 'Samsung Galaxy S23 Ultra 5G', 37040, diag as DiagnosticsType).fhoneifyPrice;
 console.log('Price with scratches and battery faulty:', Math.round(price));

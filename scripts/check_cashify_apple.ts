@@ -39,7 +39,7 @@ const run = async () => {
       calls: true, touch: true, originalScreen: true, warranty: true, validBill: true,
       mobileAge: 'below3', accessories: ['box', 'charger', 'bill'], defects: [], hardware: []
     };
-    const fhoneifyPrice = calculateFhoneifyPrice(device.brand, device.model, device.basePrice || 0, flawlessDiagnostics as any);
+    const fhoneifyPrice = calculateFhoneifyPrice(device.brand, device.model, device.basePrice || 0, flawlessDiagnostics as any).fhoneifyPrice;
     
     console.log(`Cashify Extracted Base Price: ${cashifyPrice ? 'Rs. ' + cashifyPrice : 'Not Found/Blocked'}`);
     console.log(`Fhoneify Calculated Price (Flawless): Rs. ${fhoneifyPrice}`);

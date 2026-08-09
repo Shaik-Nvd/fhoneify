@@ -100,10 +100,14 @@ export default function QuotePage() {
         lowerModel.includes('fold 5') ||
         lowerModel.includes('fold6') ||
         lowerModel.includes('fold 6') ||
+        lowerModel.includes('fold7') ||
+        lowerModel.includes('fold 7') ||
         lowerModel.includes('flip5') ||
         lowerModel.includes('flip 5') ||
         lowerModel.includes('flip6') ||
         lowerModel.includes('flip 6') ||
+        lowerModel.includes('flip7') ||
+        lowerModel.includes('flip 7') ||
         lowerModel.includes('a55') ||
         lowerModel.includes('a35') ||
         lowerModel.includes('a15') ||
@@ -976,7 +980,7 @@ export default function QuotePage() {
         mobileAge: 'Below 3 months'
       };
 
-      const realStartPrice = calculateFhoneifyPrice(selectedBrand, selectedModel, baseMarketPrice, perfectDiagnostics);
+      const realStartPrice = calculateFhoneifyPrice(selectedBrand, selectedModel, baseMarketPrice, perfectDiagnostics).fhoneifyPrice;
       
       // The "Get Upto" price displayed to the user follows the algorithm strictly
       setBasePrice(realStartPrice);
@@ -1046,6 +1050,38 @@ export default function QuotePage() {
       lowerModel.includes('razr') || 
       lowerModel.includes('open');
 
+    // Foldable Layout
+    if (isFoldable) {
+      return [
+        { id: 'front_camera', label: 'Front Camera not working', icon: '📸' },
+        { id: 'back_camera', label: 'Back Camera not working', icon: '📷' },
+        { id: 'volume', label: 'Volume Button not working', icon: '🔉' },
+        ...(hasFingerprint ? [{ id: 'fingerprint', label: isApple ? 'Finger Touch (Touch ID) not working' : 'Finger Touch not working', icon: '👆' }] : []),
+        { id: 'wifi', label: 'WiFi not working', icon: '📶' },
+        { id: 'speaker', label: 'Speaker Faulty', icon: '🔊' },
+        { id: 'hinge', label: 'Hinge damaged / not folding properly', icon: '📱' },
+        { id: 'silent', label: hasActionButton ? 'Action Button not working' : 'Silent Button not working', icon: '🔕' },
+        ...(hasFaceId ? [{ id: 'face', label: isApple ? 'Face ID / Face Sensor not working' : 'Face Sensor not working', icon: <FaceIdIcon /> }] : []),
+        { id: 'power', label: 'Power Button not working', icon: '⏻' },
+        { id: 'charging', label: 'Charging Port not working', icon: '🔌' },
+        { id: 'audio_receiver', label: 'Audio Receiver not working', icon: '📞' },
+        { id: 'camera_glass', label: 'Camera Glass Broken', icon: '🔍' },
+        { id: 'microphone', label: 'Microphone not working', icon: '🎤' },
+        { id: 'bluetooth', label: 'Bluetooth not working', icon: '🛜' },
+        { id: 'vibrator', label: 'Vibrator is not working', icon: '📳' },
+        { id: 'proximity', label: 'Proximity Sensor not working', icon: '🖐' },
+        ...(isApple 
+          ? [
+              { id: 'battery_service', label: 'Battery in Service (Health < 80%)', icon: '🔋' },
+              { id: 'battery_health', label: 'Battery Health 80-85%', icon: '🔋' }
+            ]
+          : [
+              { id: 'battery_service', label: 'Battery Faulty', icon: '🔋' }
+            ]
+        )
+      ];
+    }
+
     // Samsung Ultra (S-Pen) Layout
     if (hasSPen) {
       return [
@@ -1077,7 +1113,8 @@ export default function QuotePage() {
         { id: 'bluetooth', label: 'Bluetooth not working', icon: '🛜' },
         { id: 'vibrator', label: 'Vibrator is not working', icon: '📳' },
         { id: 'microphone', label: 'Microphone not working', icon: '🎤' },
-        { id: 'proximity', label: 'Proximity Sensor not working', icon: '🖐' }
+        { id: 'proximity', label: 'Proximity Sensor not working', icon: '🖐' },
+        { id: 's_pen', label: 'S-Pen not working / missing', icon: '🖊️' }
       ];
     }
 
@@ -1135,7 +1172,7 @@ export default function QuotePage() {
       selectedModel,
       rawBasePrice || internal_base,
       diag as DiagnosticsType
-    );
+    ).fhoneifyPrice;
     
     console.log('[DEBUG] Final Price Calculated:', calculated, 'Diag:', diag);
       

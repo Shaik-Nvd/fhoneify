@@ -55,7 +55,7 @@ const runEvaluation = () => {
     
     for (const testCase of testCases) {
       try {
-        const price = calculateFhoneifyPrice(device.brand, device.model, device.basePrice, testCase.diagnostics as any);
+        const price = calculateFhoneifyPrice(device.brand, device.model, device.basePrice, testCase.diagnostics as any).fhoneifyPrice;
         
         let anomalyType = null;
         if (isNaN(price)) {

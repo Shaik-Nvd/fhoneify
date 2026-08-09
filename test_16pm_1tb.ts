@@ -13,13 +13,13 @@ const diagnostics: any = {
   bodyDents: null,
   bodyPanel: null,
   bodyBent: null,
-  hardware: ['battery_service'],
+  hardware: ['battery_health'],
   accessories: ['box'],
   warranty: false,
   validBill: true,
   eSim: 'Single eSIM',
-  mobileAge: 'above11' // default for out of warranty
+  mobileAge: 'above11'
 };
 
-const price = calculateFhoneifyPrice('Apple', 'Apple iPhone 12 Pro Max', 27620, diagnostics).fhoneifyPrice;
-console.log('Calculated Price:', Math.round(price));
+const price = calculateFhoneifyPrice('Apple', 'Apple iPhone 16 Pro Max', 93500, diagnostics);
+console.log('Calculated Price:', price);

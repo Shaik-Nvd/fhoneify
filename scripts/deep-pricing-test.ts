@@ -113,7 +113,7 @@ async function main() {
     for (const scenario of SCENARIOS) {
       console.log(`\nTesting ${device.model} | Scenario: ${scenario.name}`);
       
-      const fhoneifyPrice = calculateFhoneifyPrice(device.brand, device.model, basePrice, scenario.diagnostics as DiagnosticsType);
+      const fhoneifyPrice = calculateFhoneifyPrice(device.brand, device.model, basePrice, scenario.diagnostics as DiagnosticsType).fhoneifyPrice;
       console.log(`Fhoneify Price: ₹${fhoneifyPrice}`);
 
       let cashifyPrice = 0;

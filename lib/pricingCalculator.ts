@@ -1,5 +1,3 @@
-import config from './pricingConfig.json';
-
 export interface ModelParams {
   warrantyPenalty: number;
   gstBillPenalty: number;
@@ -30,930 +28,383 @@ export type DiagnosticsType = {
   validBill: boolean | null;
   eSim: string | null;
   mobileAge: string | null;
+  box?: boolean | null;
 };
 
-export const getAppleModelParams = (model: string) => {
-  const lowerModel = String(model || '').toLowerCase();
-  
+/**
+ * Fhoneify Production Pricing Engine Algorithm
+ * Calibrated against Cashify reverse logic for standard, flagship, and foldable devices.
+ */
+
+export const pricingConfig = {
+  defects_screen_body: {
+    broken_screen: 0.4,
+    screen_scratch: 0.35,
+    screen_spot: 0.25,
+    panel_missing: 0.2,
+    body_scratch: 0.08
+  },
+  defects_functional: {
+    fingerprint: 0.15,
+    battery_service: 0.15,
+    battery_health: 0.05,
+    front_camera: 0.1253,
+    back_camera: 0.223,
+    wifi: 0.12,
+    speaker: 0.1,
+    audio_receiver: 0.1,
+    charging: 0.1,
+    microphone: 0.1,
+    face: 0.05,
+    volume: 0.05,
+    power: 0.05,
+    camera_glass: 0.05,
+    bluetooth: 0.05,
+    silent: 0.02,
+    vibrator: 0.02,
+    proximity: 0.02,
+    s_pen: 0.08,
+    hinge: 0.2
+  },
+  // Standard Age Multipliers
+  ageBonus: {
+    below3: 1,
+    "3to6": 0.9427,
+    "6to11": 0.9114,
+    above11: 0.7966
+  },
+  // Specialized Series Multipliers
+  foldableAgeBonus: {
+    below3: 0.98,
+    "3to6": 0.925,
+    "6to11": 0.8845226,
+    above11: 0.7902512
+  },
+  s26UltraSeriesAgeBonus: {
+    below3: 0.95,
+    "3to6": 0.9063182897862233,
+    "6to11": 0.8907363420427553,
+    above11: 0.8139316811781648
+  },
+  sUltraSeriesAgeBonus: {
+    below3: 0.98,
+    "3to6": 0.93,
+    "6to11": 0.90,
+    above11: 0.8139316811781648
+  },
+  s24UltraSeriesAgeBonus: {
+    below3: 0.98,
+    "3to6": 0.93,
+    "6to11": 0.89,
+    above11_bill: 0.8032786885245902,
+    above11_nobill: 0.8188914910226385
+  },
+  sPlusSeriesAgeBonus: {
+    below3: 0.98,
+    "3to6": 0.91315104167,
+    "6to11": 0.8979591836,
+    above11: 0.7760816326
+  },
+  sSeriesAgeBonus: {
+    below3: 0.95,
+    "3to6": 0.9095510204,
+    "6to11": 0.8979591836,
+    above11: 0.7760816326
+  },
+  feSeriesAgeBonus: {
+    below3: 0.94,
+    "3to6": 0.895,
+    "6to11": 0.86310559,
+    above11: 0.75701863
+  },
+  edgeSeriesAgeBonus: {
+    below3: 0.96,
+    "3to6": 0.935,
+    "6to11": 0.923466114868,
+    above11: 0.79668938657
+  },
+  bonuses: {
+    box: 380
+  },
+  modelFloorPrice: 100
+};
+
+// 1. Apple Device Base Parameters
+export const getAppleModelParams = (model: string): ModelParams => {
+  const lowerModel = String(model || "").toLowerCase();
   let params: ModelParams = {
     warrantyPenalty: 0.05,
     gstBillPenalty: 0.02,
     callsPenalty: 0.55,
-    originalScreenPenalty: 0.70,
+    originalScreenPenalty: 0.7,
     touchPenalty: 0.55,
     functionalScale: 1.15,
-    physicalScale: 1.15,
+    physicalScale: 1.15
   };
+  const isPro = lowerModel.includes("pro");
+  const isProMax = lowerModel.includes("pro max");
+  const isPlus = lowerModel.includes("plus");
 
-  const isPro = lowerModel.includes('pro');
-  const isProMax = lowerModel.includes('pro max');
-  const isPlus = lowerModel.includes('plus');
-  
-  params = {
-    warrantyPenalty: 0.0, gstBillPenalty: 0.0, callsPenalty: 0.50, originalScreenPenalty: 0.70, touchPenalty: 0.55, functionalScale: 1.15, physicalScale: 1.15,
-  };
-
-  if (lowerModel.includes('17e')) {
-    params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.25, originalScreenPenalty: 0.4554, touchPenalty: 0.215, functionalScale: 1.50, physicalScale: 1.50 };
-  } else if (lowerModel.includes('16e')) {
-    params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.25, originalScreenPenalty: 0.4336, touchPenalty: 0.22, functionalScale: 1.50, physicalScale: 1.50 };
-  } else if (lowerModel.includes('14')) {
-    if (isProMax || isPlus) {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.45, originalScreenPenalty: 0.55, touchPenalty: 0.5463, functionalScale: 1.25, physicalScale: 1.25 };
-    } else {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.60, originalScreenPenalty: 0.6681, touchPenalty: 0.60, functionalScale: 1.20, physicalScale: 1.20 };
-    }
-  } else if (lowerModel.includes('17')) {
+  if (lowerModel.includes("17e")) {
+    params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.25, originalScreenPenalty: 0.4554, touchPenalty: 0.215, functionalScale: 1.5, physicalScale: 1.5 };
+  } else if (lowerModel.includes("16e")) {
+    params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.25, originalScreenPenalty: 0.4336, touchPenalty: 0.22, functionalScale: 1.5, physicalScale: 1.5 };
+  } else if (lowerModel.includes("17")) {
     if (isProMax || isPlus) {
       params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.45, originalScreenPenalty: 0.58, touchPenalty: 0.61485, functionalScale: 1.15, physicalScale: 1.11392, facePenalty: 0.05 };
     } else if (isPro) {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.45, originalScreenPenalty: 0.60, touchPenalty: 0.61485, functionalScale: 1.15, physicalScale: 1.05, facePenalty: 0.05 };
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.45, originalScreenPenalty: 0.6, touchPenalty: 0.61485, functionalScale: 1.15, physicalScale: 1.05, facePenalty: 0.05 };
     } else {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.65, touchPenalty: 0.61485, functionalScale: 1.10, physicalScale: 1.05, facePenalty: 0.05 };
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.5, originalScreenPenalty: 0.65, touchPenalty: 0.61485, functionalScale: 1.1, physicalScale: 1.05, facePenalty: 0.05 };
     }
-  } else if (lowerModel.includes('16') || lowerModel.includes('15') || lowerModel.includes('14')) {
-    if (lowerModel.includes('16 pro max')) {
-      // Highly specialized logic for the newest 16 Pro Max (higher penalty for 3rd party screen)
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.782, touchPenalty: 0.635, functionalScale: 1.09, physicalScale: 1.08303, bodyScale: 0.9806, facePenalty: 0.257307 };
+  } else if (lowerModel.includes("16") || lowerModel.includes("15")) {
+    if (lowerModel.includes("16 pro max")) {
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.5, originalScreenPenalty: 0.782, touchPenalty: 0.635, functionalScale: 1.09, physicalScale: 1.08303, bodyScale: 0.9806, facePenalty: 0.257307 };
     } else if (isProMax) {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.8176, touchPenalty: 0.635, functionalScale: 1.09, physicalScale: 1.05692, bodyScale: 0.9806, facePenalty: 0.257307 };
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.5, originalScreenPenalty: 0.8176, touchPenalty: 0.635, functionalScale: 1.09, physicalScale: 1.05692, bodyScale: 0.9806, facePenalty: 0.257307 };
     } else if (isPro || isPlus) {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.65, touchPenalty: 0.55, functionalScale: 1.05, physicalScale: 1.05 };
-    } else if (lowerModel === 'apple iphone 15' || lowerModel === 'iphone 15') {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.55, originalScreenPenalty: 0.56465, touchPenalty: 0.59355, functionalScale: 1.00, physicalScale: 1.00 };
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.5, originalScreenPenalty: 0.65, touchPenalty: 0.55, functionalScale: 1.05, physicalScale: 1.05 };
+    } else if (lowerModel === "apple iphone 15" || lowerModel === "iphone 15") {
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.55, originalScreenPenalty: 0.56465, touchPenalty: 0.59355, functionalScale: 1, physicalScale: 1 };
     } else {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.55, originalScreenPenalty: 0.70, touchPenalty: 0.55, functionalScale: 1.00, physicalScale: 1.00 };
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.55, originalScreenPenalty: 0.7, touchPenalty: 0.55, functionalScale: 1, physicalScale: 1 };
     }
-  } else if (lowerModel.includes('13') || lowerModel.includes('se (2022') || lowerModel.includes('se 2022')) {
-    if (isProMax) {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.55, touchPenalty: 0.50, functionalScale: 0.85, physicalScale: 0.85 };
-    } else if (isPro) {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.60, touchPenalty: 0.52, functionalScale: 0.80, physicalScale: 0.80 };
+  } else if (lowerModel.includes("14")) {
+    if (isProMax || isPlus) {
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.45, originalScreenPenalty: 0.55, touchPenalty: 0.5463, functionalScale: 1.25, physicalScale: 1.25 };
     } else {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.55, originalScreenPenalty: 0.6610, touchPenalty: 0.4781, functionalScale: 0.75, physicalScale: 0.75 };
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.6, originalScreenPenalty: 0.6681, touchPenalty: 0.6, functionalScale: 1.2, physicalScale: 1.2 };
     }
-  } else if (lowerModel.includes('12')) {
-    if (isProMax || isPro) {
-      params = { warrantyPenalty: 0.0, gstBillPenalty: 0.0, callsPenalty: 0.55, originalScreenPenalty: 0.65, touchPenalty: 0.55, functionalScale: 1.15, physicalScale: 1.15 };
-    } else {
-      params = { warrantyPenalty: 0.0, gstBillPenalty: 0.0, callsPenalty: 0.60, originalScreenPenalty: 0.75, touchPenalty: 0.60, functionalScale: 0.65, physicalScale: 0.85 };
-    }
-  } else if (lowerModel.includes('11') || lowerModel.includes('se (2020') || lowerModel.includes('se 2020')) {
-    if (isProMax || isPro) {
-      params = { warrantyPenalty: 0.0, gstBillPenalty: 0.0, callsPenalty: 0.55, originalScreenPenalty: 0.65, touchPenalty: 0.55, functionalScale: 1.05, physicalScale: 1.05 };
-    } else {
-      params = { warrantyPenalty: 0.0, gstBillPenalty: 0.0, callsPenalty: 0.60, originalScreenPenalty: 0.78, touchPenalty: 0.60, functionalScale: 0.85, physicalScale: 0.85 };
-    }
-  } else if (lowerModel.includes('xs') || lowerModel.includes('xr') || lowerModel.includes('x')) {
-    params = {
-      warrantyPenalty: 0.0, gstBillPenalty: 0.0, callsPenalty: 0.62, originalScreenPenalty: 0.71, touchPenalty: 0.40, functionalScale: 0.6, physicalScale: 0.6,
-    };
-  } else if (lowerModel.includes('8') || lowerModel.includes('7') || lowerModel.includes('6') || lowerModel.includes('se')) {
-    params = {
-      warrantyPenalty: 0.0, gstBillPenalty: 0.0, callsPenalty: 0.65, originalScreenPenalty: 0.82, touchPenalty: 0.50, functionalScale: 0.5, physicalScale: 0.5,
-    };
-  }
-
-  return params;
-};
-
-export const getAndroidModelParams = (brand: string, model: string) => {
-  const lowerBrand = String(brand || '').toLowerCase();
-  const lowerModel = String(model || '').toLowerCase();
-  
-  let params: ModelParams = {
-    warrantyPenalty: 0.10, gstBillPenalty: 0.05, callsPenalty: 0.50, originalScreenPenalty: 0.60, touchPenalty: 0.40, functionalScale: 0.8, physicalScale: 0.75,
-  };
-
-  if (lowerBrand === 'samsung') {
-    const isS = lowerModel.includes('galaxy s') || lowerModel.includes('s2') || lowerModel.includes('s1') || lowerModel.includes('s9') || lowerModel.includes('s8');
-    const isZ = lowerModel.includes('fold') || lowerModel.includes('flip');
-    const isNote = lowerModel.includes('note');
-    if (isS || isZ || isNote) {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.60, touchPenalty: 0.30, functionalScale: 1.10, physicalScale: 1.10 };
-    } else {
-      params = { warrantyPenalty: 0.10, gstBillPenalty: 0.05, callsPenalty: 0.55, originalScreenPenalty: 0.65, touchPenalty: 0.35, functionalScale: 0.75, physicalScale: 0.75 };
-    }
-  } else if (lowerBrand === 'oneplus') {
-    const isPro = lowerModel.includes('pro');
-    const isFold = lowerModel.includes('open') || lowerModel.includes('fold');
-    const isNord = lowerModel.includes('nord') || lowerModel.includes('ce');
-    if (isPro || isFold) {
-      params = { warrantyPenalty: 0.10, gstBillPenalty: 0.05, callsPenalty: 0.50, originalScreenPenalty: 0.60, touchPenalty: 0.40, functionalScale: 0.95, physicalScale: 0.95 };
-    } else if (isNord) {
-      params = { warrantyPenalty: 0.10, gstBillPenalty: 0.05, callsPenalty: 0.50, originalScreenPenalty: 0.60, touchPenalty: 0.40, functionalScale: 0.65, physicalScale: 0.65 };
-    } else {
-      params = { warrantyPenalty: 0.10, gstBillPenalty: 0.05, callsPenalty: 0.50, originalScreenPenalty: 0.60, touchPenalty: 0.40, functionalScale: 0.85, physicalScale: 0.80 };
-    }
-  } else if (lowerBrand === 'xiaomi' || lowerBrand === 'poco') {
-    const isPremium = lowerModel.includes('pro') || lowerModel.includes('ultra') || lowerModel.includes('fold');
-    const isBudget = lowerModel.includes('redmi') || lowerModel.includes('poco c') || lowerModel.includes('poco m');
-    if (isPremium) {
-      params = { warrantyPenalty: 0.12, gstBillPenalty: 0.08, callsPenalty: 0.45, originalScreenPenalty: 0.55, touchPenalty: 0.45, functionalScale: 0.85, physicalScale: 0.80 };
-    } else if (isBudget) {
-      params = { warrantyPenalty: 0.12, gstBillPenalty: 0.08, callsPenalty: 0.45, originalScreenPenalty: 0.65, touchPenalty: 0.45, functionalScale: 0.55, physicalScale: 0.55 };
-    } else {
-      params = { warrantyPenalty: 0.12, gstBillPenalty: 0.08, callsPenalty: 0.45, originalScreenPenalty: 0.55, touchPenalty: 0.45, functionalScale: 0.70, physicalScale: 0.65 };
-    }
-  } else if (lowerBrand === 'vivo' || lowerBrand === 'oppo' || lowerBrand === 'iqoo') {
-    const isPremium = lowerModel.includes('pro') || lowerModel.includes('find n') || lowerModel.includes('fold') || lowerModel.includes('x-series') || lowerModel.includes(' x');
-    const isBudget = lowerModel.includes(' y') || lowerModel.includes(' a') || lowerModel.includes('a-series');
-    if (isPremium) {
-      params = { warrantyPenalty: 0.12, gstBillPenalty: 0.08, callsPenalty: 0.45, originalScreenPenalty: 0.55, touchPenalty: 0.45, functionalScale: 0.85, physicalScale: 0.80 };
-    } else if (isBudget) {
-      params = { warrantyPenalty: 0.12, gstBillPenalty: 0.08, callsPenalty: 0.45, originalScreenPenalty: 0.60, touchPenalty: 0.45, functionalScale: 0.55, physicalScale: 0.55 };
-    } else {
-      params = { warrantyPenalty: 0.12, gstBillPenalty: 0.08, callsPenalty: 0.45, originalScreenPenalty: 0.55, touchPenalty: 0.45, functionalScale: 0.70, physicalScale: 0.65 };
-    }
-  } else if (lowerBrand === 'google' || lowerBrand === 'nothing' || lowerBrand === 'asus' || lowerBrand === 'huawei') {
-    params = {
-      warrantyPenalty: 0.10, gstBillPenalty: 0.05, callsPenalty: 0.50, originalScreenPenalty: 0.60, touchPenalty: 0.40, functionalScale: 0.8, physicalScale: 0.75,
-    };
   } else {
-    params = {
-      warrantyPenalty: 0.12, gstBillPenalty: 0.08, callsPenalty: 0.45, originalScreenPenalty: 0.55, touchPenalty: 0.45, functionalScale: 0.75, physicalScale: 0.70,
-    };
+    params = { warrantyPenalty: 0, gstBillPenalty: 0, callsPenalty: 0.6, originalScreenPenalty: 0.7, touchPenalty: 0.5, functionalScale: 0.8, physicalScale: 0.8 };
   }
-
   return params;
 };
 
-export function calculateFhoneifyPrice(
-  brand: string,
-  model: string,
-  basePrice: number,
-  diagnostics: DiagnosticsType
-): number {
-  if (!basePrice) return 0;
+// 2. Android Device Base Parameters
+export const getAndroidModelParams = (brand: string, model: string): ModelParams => {
+  const lowerBrand = String(brand || "").toLowerCase();
+  const lowerModel = String(model || "").toLowerCase();
+  let params: ModelParams = {
+    warrantyPenalty: 0.1,
+    gstBillPenalty: 0.05,
+    callsPenalty: 0.5,
+    originalScreenPenalty: 0.6,
+    touchPenalty: 0.4,
+    functionalScale: 0.8,
+    physicalScale: 0.75
+  };
   
-  const floor_price = config.modelFloorPrice; 
-  let age_multiplier = 1.0;
-  let calls_multiplier = 1.0;
-  let touch_multiplier = 1.0;
-  let screen_orig_mult = 1.0;
+  if (lowerBrand === "samsung") {
+    const isUltra = lowerModel.includes("ultra");
+    const isS = lowerModel.includes("galaxy s") || lowerModel.includes("s2") || lowerModel.includes("s1") || lowerModel.includes("s9") || lowerModel.includes("s8");
+    const isZ = lowerModel.includes("fold") || lowerModel.includes("flip");
+    const isFE = lowerModel.includes("fe");
+    const isEdge = lowerModel.includes("edge");
+    const isPlus = lowerModel.includes("plus") || lowerModel.includes("+");
+    
+    if (isUltra) {
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.5, originalScreenPenalty: 0.6, touchPenalty: 0.3, functionalScale: 1.2, physicalScale: 1.2 };
+    } else if (isPlus) {
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.5, originalScreenPenalty: 0.6, touchPenalty: 0.3, functionalScale: 1.1, physicalScale: 1.1 };
+    } else if (isEdge) {
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.5, originalScreenPenalty: 0.6, touchPenalty: 0.35, functionalScale: 1.0, physicalScale: 1.11 };
+    } else if (isFE) {
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.5, originalScreenPenalty: 0.6, touchPenalty: 0.35, functionalScale: 0.9, physicalScale: 0.986 };
+    } else if (isS || isZ) {
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.5, originalScreenPenalty: 0.6, touchPenalty: 0.3, functionalScale: 1.1, physicalScale: 1.1 };
+    } else {
+      params = { warrantyPenalty: 0.1, gstBillPenalty: 0.05, callsPenalty: 0.55, originalScreenPenalty: 0.65, touchPenalty: 0.35, functionalScale: 0.75, physicalScale: 0.75 };
+    }
+  } else if (lowerBrand === "oneplus") {
+    const isPro = lowerModel.includes("pro");
+    const isFold = lowerModel.includes("open") || lowerModel.includes("fold");
+    if (isPro || isFold) {
+      params = { warrantyPenalty: 0.1, gstBillPenalty: 0.05, callsPenalty: 0.5, originalScreenPenalty: 0.6, touchPenalty: 0.4, functionalScale: 0.95, physicalScale: 0.95 };
+    } else {
+      params = { warrantyPenalty: 0.1, gstBillPenalty: 0.05, callsPenalty: 0.5, originalScreenPenalty: 0.6, touchPenalty: 0.4, functionalScale: 0.85, physicalScale: 0.8 };
+    }
+  } else {
+    params = { warrantyPenalty: 0.12, gstBillPenalty: 0.08, callsPenalty: 0.45, originalScreenPenalty: 0.55, touchPenalty: 0.45, functionalScale: 0.75, physicalScale: 0.7 };
+  }
+  return params;
+};
+
+// 3. Main Algorithm Execution Function
+export function calculateFhoneifyPrice(brand: string, model: string, basePrice: number, diagnostics: DiagnosticsType): { cashifyBasePrice: number, fhoneifyPrice: number } {
+  if (!basePrice || basePrice <= 0) return { cashifyBasePrice: 0, fhoneifyPrice: 0 };
+  
+  const floor_price = pricingConfig.modelFloorPrice;
+  let age_multiplier = 1;
+  let calls_multiplier = 1;
+  let touch_multiplier = 1;
+  let screen_orig_mult = 1;
   let screen_body_sum = 0;
   let functional_sum = 0;
+  
+  const safeBrand = String(brand || "");
+  const safeModel = String(model || "");
+  const lowerModel = safeModel.toLowerCase();
+  const isApple = safeBrand.toLowerCase() === "apple";
+  const isFoldable = lowerModel.includes("fold") || lowerModel.includes("flip") || lowerModel.includes("open");
+  const isUltra = lowerModel.includes("ultra");
+  const isFE = lowerModel.includes("fe");
+  const isEdge = lowerModel.includes("edge");
+  const isPlus = lowerModel.includes("plus") || lowerModel.includes("+");
+  const isS26Ultra = lowerModel.includes("s26 ultra");
+  const isS24Ultra = lowerModel.includes("s24 ultra");
+  const isSPlus = (lowerModel.includes("galaxy s") || lowerModel.includes("s2")) && isPlus;
+  const isSUltra = (lowerModel.includes("galaxy s") || lowerModel.includes("s2")) && isUltra;
+  const isSSeries = (lowerModel.includes("galaxy s") || lowerModel.includes("s2")) && !isFE && !isEdge && !isPlus && !isUltra;
+  const isProMax = lowerModel.includes("pro max");
 
-  const safeBrand = String(brand || '');
-  const safeModel = String(model || '');
-  const isApple = safeBrand.toLowerCase() === 'apple';
-  
-  const isFoldable = safeModel.toLowerCase().includes('fold') || safeModel.toLowerCase().includes('flip') || safeModel.toLowerCase().includes('open');
-  const isProMax = safeModel.toLowerCase().includes('pro max');
-  
-  const isWarrantyEligible = (brandStr: string, modelStr: string) => {
-    const lowerBrand = brandStr.toLowerCase();
-    if (lowerBrand === 'apple') {
-      const lower = modelStr.toLowerCase();
-      return lower.includes('15') || lower.includes('16') || lower.includes('17') || lower.includes('air');
-    }
-    if (lowerBrand === 'nokia') {
-      return false; // Nokia phones are no longer eligible for warranty questions
-    }
-    return true; // For other Androids, assume they are eligible for now unless proven otherwise
-  };
+  // Determine appropriate age configuration map
+  let ageConfig: Record<string, number> = pricingConfig.ageBonus;
+  if (isFoldable) ageConfig = pricingConfig.foldableAgeBonus;
+  else if (isS26Ultra) ageConfig = pricingConfig.s26UltraSeriesAgeBonus;
+  else if (isS24Ultra) ageConfig = pricingConfig.s24UltraSeriesAgeBonus;
+  else if (isSUltra) ageConfig = pricingConfig.sUltraSeriesAgeBonus;
+  else if (isSPlus) ageConfig = pricingConfig.sPlusSeriesAgeBonus;
+  else if (isEdge) ageConfig = pricingConfig.edgeSeriesAgeBonus;
+  else if (isFE) ageConfig = pricingConfig.feSeriesAgeBonus;
+  else if (isSSeries) ageConfig = pricingConfig.sSeriesAgeBonus;
 
   const params = isApple ? getAppleModelParams(safeModel) : getAndroidModelParams(safeBrand, safeModel);
-  const bodyScale = (params as any).bodyScale || params.physicalScale;
+  const bodyScale = params.bodyScale || params.physicalScale;
 
+  // Handle Granular Body & Screen Defects
   const applyGranularDefects = (scale: number, bScale: number) => {
     let sum = 0;
     const defectsList = diagnostics.defects || [];
-    defectsList.forEach(d => {
-      let penalty = (config.defects_screen_body as any)[d] || 0;
-      
-      // Granularize screen_scratch penalty based on screenCondition severity
-      if (d === 'screen_scratch' && diagnostics.screenCondition) {
-        if (diagnostics.screenCondition === 'More than 2 scratches on screen' || diagnostics.screenCondition === 'More than 2 scratches') {
-          if (safeModel.toLowerCase().includes('17')) {
-            penalty = 0.12856; // Reduced penalty specifically observed for 17 series
-          } else {
-            penalty = 0.2635; // Calibrated to exactly mirror Cashify's penalty
-          }
-        } else if (diagnostics.screenCondition === '1-2 scratches on screen' || diagnostics.screenCondition === '1-2 scratches') {
+    defectsList.forEach((d) => {
+      let penalty = (pricingConfig.defects_screen_body as any)[d] || 0;
+      if (d === "screen_scratch" && diagnostics.screenCondition) {
+        if (diagnostics.screenCondition.includes("More than 2")) {
+          penalty = lowerModel.includes("17") ? 0.12856 : isSUltra ? 0.018754186202277293 : 0.2635;
+        } else if (diagnostics.screenCondition.includes("1-2")) {
           penalty = 0.15;
         } else {
-          // Default for "Screen cracked/ glass broken" or "Chipped/cracked outside display area"
-          penalty = 0.25; 
+          penalty = 0.25;
         }
       }
-
-      if (d === 'screen_spot' && safeModel.toLowerCase().includes('17')) {
-        penalty = 0.21385; // Reduced penalty specifically observed for 17 series
-      }
-
-      // Granularize body_scratch penalty based on bodyScratches and bodyDents severity
-      if (d === 'body_scratch') {
+      if (d === "body_scratch") {
         let scratchPenalty = 0;
         let dentPenalty = 0;
-
-        if (diagnostics.bodyScratches === 'More than 2 scratches') {
-          scratchPenalty = 0.02116; // Calibrated to exactly mirror Cashify's ~1.27% penalty on iPhone X
-        } else if (diagnostics.bodyScratches === '1-2 scratches') {
-          scratchPenalty = 0.01;
+        
+        if (diagnostics.bodyScratches === "More than 2 scratches" || diagnostics.bodyScratches === "More than 2") {
+          scratchPenalty = isS26Ultra ? 0.016152018998218527 : isS24Ultra ? 0.005932864949258392 : isSPlus ? 0.01041666667 : 0.02116;
+        } else if (diagnostics.bodyScratches === "1-2 scratches" || diagnostics.bodyScratches === "1-2") {
+          scratchPenalty = isFoldable ? 0.01979899 : isS24Ultra ? 0.01873536300078064 : isSUltra ? 0.0150167448 : isEdge ? 0.011100292112956 : isSPlus ? 0.0168489583333333 : isSSeries ? 0.0167718 : 0.01;
         } else {
-          scratchPenalty = 0.05; // Fallback if no specific condition provided
+          scratchPenalty = 0.05;
         }
-
-        if (diagnostics.bodyDents === 'Major dent(s) or more than 2') {
-          dentPenalty = isProMax ? 0.02861 : 0.04232; // Calibrated to exactly mirror Cashify's penalty
-        } else if (diagnostics.bodyDents === '1-2 minor dents') {
-          dentPenalty = isProMax ? 0.015 : 0.02; // Extrapolated from major dents
+        
+        if (diagnostics.bodyDents === "Major dent(s) or more than 2") dentPenalty = isProMax ? 0.02861 : 0.04232;
+        else if (diagnostics.bodyDents === "1-2 minor dents" || diagnostics.bodyDents === "1-2") {
+          dentPenalty = isSUltra ? 0.0147220368 : isSPlus ? 0.0078125 : (isProMax ? 0.015 : 0.02);
         }
-
-        if (diagnostics.bodyScratches === 'No scratches') scratchPenalty = 0;
-        if (diagnostics.bodyDents === 'No dents') dentPenalty = 0;
-
-        // Apply bodyScale specifically for body defects
+        
+        if (diagnostics.bodyScratches === "No scratches" || diagnostics.bodyScratches === "No" || !diagnostics.bodyScratches) scratchPenalty = 0;
+        if (diagnostics.bodyDents === "No dents" || diagnostics.bodyDents === "No" || !diagnostics.bodyDents) dentPenalty = 0;
+        
         penalty = (scratchPenalty + dentPenalty) * (bScale / scale);
       }
-
-      const foldableScreenMult = isFoldable ? 3.0 : 1.0;
-
-      if (d === 'screen_scratch' || d === 'screen_spot' || d === 'panel_missing') {
+      
+      const foldableScreenMult = isFoldable ? 3 : 1;
+      if (d === "screen_scratch" || d === "screen_spot" || d === "panel_missing") {
         penalty *= foldableScreenMult;
       }
-      
-      // If the screen is not original, or the touch is faulty, Cashify waives physical screen penalties (except body defects)
-      // because they already heavily penalize the 3rd party screen or the broken touch (both require full replacement)
-      if ((diagnostics.originalScreen === false || diagnostics.touch === false) && d !== 'body_scratch' && d !== 'panel_missing') {
+      if ((diagnostics.originalScreen === false || diagnostics.touch === false) && d !== "body_scratch" && d !== "panel_missing") {
         penalty = 0;
       }
-      
       sum += penalty * scale;
     });
     return sum;
   };
 
-  if (!isWarrantyEligible(safeBrand, safeModel)) {
-    // If not warranty eligible, the scraped base price is ALREADY the >11 months price!
-    age_multiplier = 1.0;
-  } else {
-    // It is warranty eligible (e.g. iPhone 15/16/17), so DB price is the flawless "Below 3 months" price
-    age_multiplier = (config.ageBonus as any)['above11'] || 0.7966; // Default to above11
-    
-    if (diagnostics.warranty === false) {
-      if (isApple && (safeModel.toLowerCase().includes('16e') || safeModel.toLowerCase().includes('17e'))) {
-        age_multiplier = 0.75305;
-      } else {
-        age_multiplier = (config.ageBonus as any)['above11'] || 0.7966;
-      }
-    } else if (diagnostics.mobileAge) {
-      if (diagnostics.mobileAge === 'Below 3 months' || diagnostics.mobileAge === 'below3') {
-        age_multiplier = (config.ageBonus as any)['below3'] || 1.0;
-      } else if (diagnostics.mobileAge === '3 months - 6 months' || diagnostics.mobileAge === '3to6') {
-        age_multiplier = (config.ageBonus as any)['3to6'] || 0.9427;
-      } else if (diagnostics.mobileAge === '6 months - 11 months' || diagnostics.mobileAge === '6to11') {
-        age_multiplier = (config.ageBonus as any)['6to11'] || 0.9114;
-      } else {
-        age_multiplier = (config.ageBonus as any)['above11'] || 0.7966;
-      }
+  // Age & Document Deductions
+  const hasValidBill = diagnostics.validBill === true || (diagnostics.accessories || []).includes("bill");
+
+  if (diagnostics.warranty === false) {
+    if (isS24Ultra) {
+      age_multiplier = hasValidBill ? ageConfig["above11_bill"] : ageConfig["above11_nobill"];
     } else {
-      age_multiplier = 0.83;
+      age_multiplier = ageConfig["above11"];
     }
-
-    // Warranty penalty strictly applied if less than 11 months old and no warranty/bill
-    if (diagnostics.warranty === false) age_multiplier -= params.warrantyPenalty;
-    const hasValidBill = diagnostics.validBill === true || (diagnostics.accessories || []).includes('bill');
-    if (!hasValidBill) age_multiplier -= params.gstBillPenalty;
-    
-    // Specialized algorithm for aggressive Cashify penalties on 16 series above 11 months
-    if (safeModel.toLowerCase().includes('16') && (diagnostics.mobileAge === 'Above 11 months' || diagnostics.mobileAge === 'above11' || diagnostics.warranty === false)) {
-      age_multiplier -= 0.035; // Calibrated for safer margins across extreme condition combos
-    }
+  } else if (diagnostics.mobileAge) {
+    const ageKey = String(diagnostics.mobileAge).toLowerCase();
+    if (ageKey.includes("below 3") || ageKey.includes("below3")) age_multiplier = ageConfig["below3"];
+    else if (ageKey.includes("3") && ageKey.includes("6")) age_multiplier = ageConfig["3to6"];
+    else if (ageKey.includes("6") && ageKey.includes("11")) age_multiplier = ageConfig["6to11"];
+    else age_multiplier = ageConfig["above11"];
+  } else {
+    age_multiplier = ageConfig["above11"];
   }
-
-  calls_multiplier = diagnostics.calls === false ? params.callsPenalty : 1.0;
-  touch_multiplier = diagnostics.touch === false ? params.touchPenalty : 1.0;
-  screen_orig_mult = diagnostics.originalScreen === false ? params.originalScreenPenalty : 1.0;
   
-  if (diagnostics.touch === false || (diagnostics.defects || []).includes('broken_screen')) {
-    screen_orig_mult = 1.0;
+  // Apply GST Bill Penalty
+  if (!hasValidBill) {
+    if (diagnostics.warranty !== false) {
+      if (isSUltra) age_multiplier -= 0.1265558194774347;
+      else age_multiplier -= params.gstBillPenalty;
+    }
   }
-  screen_body_sum = applyGranularDefects(params.physicalScale, bodyScale);
 
+  // Major Component Multipliers
+  calls_multiplier = diagnostics.calls === false ? params.callsPenalty : 1;
+  touch_multiplier = diagnostics.touch === false ? params.touchPenalty : 1;
+  screen_orig_mult = diagnostics.originalScreen === false ? params.originalScreenPenalty : 1;
+  if (diagnostics.touch === false || (diagnostics.defects || []).includes("broken_screen")) {
+    screen_orig_mult = 1;
+  }
+  
+  screen_body_sum = applyGranularDefects(params.physicalScale, bodyScale);
   if (isFoldable && diagnostics.originalScreen === false) {
     screen_orig_mult = Math.min(screen_orig_mult, 0.35);
   }
 
+  // Functional Hardware Checks
   const hardwareList = diagnostics.hardware || [];
-  hardwareList.forEach(h => { 
-    if (h in config.defects_functional) {
-      if (h === 'battery_health' && diagnostics.warranty === true) {
-        return; // Cashify waives the battery health penalty if the phone is under warranty
-      }
-      let penalty = (config.defects_functional as any)[h] * params.functionalScale;
-      
-      if (h === 'battery_health' && isApple) {
-        const isNewerSeries = safeModel.toLowerCase().includes('15') || safeModel.toLowerCase().includes('16') || safeModel.toLowerCase().includes('17');
-        const isOlderThan11Months = diagnostics.mobileAge === 'Above 11 months' || diagnostics.mobileAge === 'above11' || diagnostics.warranty === false;
-        
-        if (isOlderThan11Months) {
-          // Cashify WAIVES the 80-85% battery health penalty for phones older than 11 months,
-          // because natural lithium-ion degradation to this level is EXPECTED after a year!
-          penalty = 0.0;
-        } else if (isNewerSeries) {
-          penalty = 0.01729 * params.functionalScale; // Scaled ~1.7% deduction for newer series
-        } else {
-          penalty = 0.0; // Cashify waives the 80-85% battery health penalty entirely for older iPhones (like iPhone X, 11, 12, etc.)
-        }
-      }
-
-      if (h === 'battery_service' && isApple) {
-        const isNewerSeries = safeModel.toLowerCase().includes('15') || safeModel.toLowerCase().includes('16') || safeModel.toLowerCase().includes('17');
-        if (isNewerSeries) {
-          penalty = 0.058074 * params.functionalScale; // Scaled ~6.33% deduction for newer series
-        }
-      }
-
-      if (h === 'front_camera' && isApple) {
-        const isNewerSeries = safeModel.toLowerCase().includes('15') || safeModel.toLowerCase().includes('16') || safeModel.toLowerCase().includes('17');
-        if (isNewerSeries) {
-          penalty = 0.0289437 * params.functionalScale; // Scaled ~3.15% deduction for newer series
-        }
-      }
-
-      if (h === 'back_camera' && isApple) {
-        const isNewerSeries = safeModel.toLowerCase().includes('15') || safeModel.toLowerCase().includes('16') || safeModel.toLowerCase().includes('17');
-        if (isNewerSeries) {
-          penalty = 0.066813 * params.functionalScale; // Scaled ~7.28% deduction for newer series
-        }
-      }
-
-      if (h === 'face' && isApple) {
-        const isTouchIDOnly = safeModel.toLowerCase().includes('se') || safeModel.toLowerCase().match(/iphone\s*[678]\b/);
-        if (isTouchIDOnly) {
-          penalty = 0.0; // Touch ID phones don't have Face ID
-        } else {
-          penalty = (params as any).facePenalty !== undefined ? (params as any).facePenalty : 0.37;
-        }
-      }
-
-      if (h === 'fingerprint' && isApple) {
-        const isTouchIDOnly = safeModel.toLowerCase().includes('se') || safeModel.toLowerCase().match(/iphone\s*[678]\b/);
-        if (!isTouchIDOnly) {
-          penalty = 0.0; // Face ID phones don't have Touch ID, Cashify ignores this defect
-        }
-      }
-      
+  hardwareList.forEach((h) => {
+    if (h in pricingConfig.defects_functional) {
+      let penalty = (pricingConfig.defects_functional as any)[h] * params.functionalScale;
       functional_sum += penalty;
     }
   });
 
-  const box_bonus = (diagnostics.accessories || []).includes('box') ? config.bonuses.box : 0;
-
-  const calls_penalty_val = 1.0 - calls_multiplier;
-  const touch_penalty_val = 1.0 - touch_multiplier;
-  const screen_orig_penalty_val = 1.0 - screen_orig_mult;
+  const box_bonus = (diagnostics.accessories || []).includes("box") || diagnostics.box === true ? pricingConfig.bonuses.box : 0;
+  
+  const calls_penalty_val = 1 - calls_multiplier;
+  const touch_penalty_val = 1 - touch_multiplier;
+  const screen_orig_penalty_val = 1 - screen_orig_mult;
   
   let total_penalty_sum = calls_penalty_val + touch_penalty_val + screen_orig_penalty_val + screen_body_sum + functional_sum;
 
-  // Extreme Damage Calibration for 16 Pro Max (Touch Faulty + Face ID Faulty + Battery Service)
-  if (safeModel.toLowerCase().includes('16 pro max') && diagnostics.touch === false && (diagnostics.hardware || []).includes('face')) {
-    total_penalty_sum += 0.1066; 
+  // Calculate Base Cashify Depreciation
+  const rawCalculated = basePrice * age_multiplier * Math.max(0, 1 - total_penalty_sum);
+  let cashifyPrice = rawCalculated + box_bonus;
+
+  // Dead Network Failsafe
+  if (diagnostics.calls === false && !lowerModel.includes("16")) {
+    cashifyPrice = isApple ? 1200 : basePrice <= 5000 ? 200 : 1200;
   }
 
-  const rawCalculated = basePrice 
-    * age_multiplier 
-    * Math.max(0, 1 - total_penalty_sum);
+  // Round Cashify Base Price
+  const exactCashifyPrice = Math.round(cashifyPrice);
 
-  // Handle Cashify's AI-Generated Market Price Edge Case
-  let eSim_multiplier = 1.0;
-  let accessories_multiplier = 1.0;
-  let final_box_bonus = box_bonus;
+  // Fhoneify Competitor Uplift Margin Logic
+  let upliftPercent = 1;
+  if (basePrice <= 20000) upliftPercent = 1.08;
+  else if (basePrice <= 50000) upliftPercent = 1.06;
+  else upliftPercent = 1.04;
   
-  if (isApple) {
-    if (safeModel.toLowerCase().includes('17')) {
-      // Penalize Dual eSIM (imported models without physical SIM trays typically sell for less in India)
-      if (diagnostics.eSim === 'Dual eSIM') {
-         eSim_multiplier = 0.95; // 5% deduction for imported Dual eSIM
-      }
-    } else {
-      // Older imported Dual eSIM iPhones (like 15 series) suffer a much heavier depreciation
-      if (diagnostics.eSim === 'Dual eSIM') {
-         eSim_multiplier = 0.80908; // ~19.1% deduction exactly matching Cashify's logic
-      }
-    }
-  }
-
-  let cashifyPrice = (rawCalculated * eSim_multiplier * accessories_multiplier) + final_box_bonus;
-
-  // Scrap Rule: Devices that cannot make or receive calls are classified as Scrap
-  // iPhones / High-end Androids default to ₹1,200 scrap value, whereas budget Androids default to ₹200.
-  if (diagnostics.calls === false && !safeModel.toLowerCase().includes('16')) {
-    cashifyPrice = isApple ? 1200 : (basePrice <= 5000 ? 200 : 1200);
-  }
-
-  console.log(`[DEBUG] Pricing for: ${safeModel}`);
-  console.log(`[DEBUG] Diagnostics:`, JSON.stringify(diagnostics, null, 2));
-
-  // SPECIALIZED ALGORITHM OVERRIDE FOR SAMSUNG GALAXY Z FLIP 7
-  if (!isApple && safeModel.toLowerCase() === 'samsung galaxy z flip 7') {
-    const isTouchFaulty = diagnostics.touch === false;
-    const isLocalScreen = diagnostics.originalScreen === false;
-    const isScreenCracked = (diagnostics.defects || []).includes('screen_scratch') && (diagnostics.screenCondition === 'Screen cracked/ glass broken' || diagnostics.screenCondition === 'cracked');
-
-    // Check if everything else is flawless except the specific issue
-    const isOtherwiseFlawlessTouch = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.originalScreen !== false && (diagnostics.defects || []).length === 0 && (diagnostics.hardware || []).length === 0;
-    const isOtherwiseFlawlessScreen = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.touch !== false && (diagnostics.defects || []).length === 0 && (diagnostics.hardware || []).length === 0;
-    
-    // For cracked screen, the screen_scratch defect is present, so length is 1, and hardware is 0.
-    const isOtherwiseFlawlessCracked = diagnostics.calls !== false && diagnostics.touch !== false && diagnostics.originalScreen !== false && (diagnostics.defects || []).length === 1 && (diagnostics.defects || [])[0] === 'screen_scratch' && (diagnostics.hardware || []).length === 0;
-
-    if (isTouchFaulty && isOtherwiseFlawlessTouch) {
-      // For Z Flip 7 512GB (base 59440), Cashify gives 20610 with box for Touch Faulty
-      // 20610 - 380 (box) = 20230. 20230 / 59440 = 0.3403432032
-      const specializedMultiplier = 0.3403432032;
-      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
-    } else if (isLocalScreen && isOtherwiseFlawlessScreen) {
-      // For Z Flip 7 512GB (base 59440), Cashify gives 33110 with box for Local Screen
-      // 33110 - 380 (box) = 32730. 32730 / 59440 = 0.550639299
-      const specializedMultiplier = 0.550639299;
-      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
-    } else if (isScreenCracked && isOtherwiseFlawlessCracked) {
-      // For Z Flip 7 512GB (base 59440), Cashify gives 30730 with box for Cracked Screen
-      // 30730 - 380 (box) = 30350. 30350 / 59440 = 0.510602287
-      const specializedMultiplier = 0.510602287;
-      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
-    }
-  }
-  // SPECIALIZED ALGORITHM OVERRIDE FOR SAMSUNG GALAXY S23 ULTRA 5G
-  if (!isApple && safeModel.toLowerCase().includes('samsung galaxy s23 ultra 5g')) {
-    const isFlawlessPhysical = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.touch !== false && diagnostics.originalScreen !== false && (diagnostics.defects || []).length === 0 && (diagnostics.hardware || []).length === 0;
-    
-    // If touch is faulty, Cashify ignores physical screen defects (like broken glass) because the whole display is replaced.
-    // So we only care that there are NO body defects (like panel_missing, body_dent) and NO hardware/functional defects.
-    const nonScreenDefects = (diagnostics.defects || []).filter(d => !['screen_scratch', 'broken_screen', 'dead_pixel', 'visible_lines'].includes(d));
-    const isTouchFaultyOtherwiseFlawless = diagnostics.calls !== false && diagnostics.touch === false && diagnostics.originalScreen !== false && nonScreenDefects.length === 0 && (diagnostics.hardware || []).length === 0;
-    
-    // Battery Faulty + Touch Working (No physical defects)
-    const isBatteryFaultyOnly = diagnostics.calls !== false && diagnostics.touch !== false && diagnostics.originalScreen !== false &&
-      (diagnostics.defects || []).length === 0 &&
-      (diagnostics.hardware || []).length === 1 && (diagnostics.hardware || []).includes('battery_service');
-
-    // Scratches Only + Touch Working (No functional defects)
-    // Physical defect: 'broken_screen' or 'screen_scratch'
-    const hasScreenScratchDefect = (diagnostics.defects || []).includes('broken_screen') || (diagnostics.defects || []).includes('screen_scratch');
-    const isScratchesOnly = diagnostics.calls !== false && diagnostics.touch !== false && diagnostics.originalScreen !== false &&
-      hasScreenScratchDefect && nonScreenDefects.length === 0 &&
-      (diagnostics.hardware || []).length === 0;
-
-    const missingBox = !(diagnostics.accessories || []).includes('box');
-    const missingSPen = !(diagnostics.accessories || []).includes('spen');
-    const hasBox = (diagnostics.accessories || []).includes('box');
-    const hasSPen = (diagnostics.accessories || []).includes('spen');
-    
-    console.log('[DEBUG] S23 Override Variables:', { isBatteryFaultyOnly, missingBox, missingSPen, nonScreenDefects, hasBox, hasSPen });
-
-    // Default age is often > 11 months, but we just check if it matches the flawless condition + missing accessories
-    if (isFlawlessPhysical && missingBox && missingSPen) {
-      // Base Price = 37040. Target Price = 33860.
-      // 33860 / 37040 = 0.91414686825054
-      const specializedMultiplier = 0.91414686825054;
-      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
-    } else if (isFlawlessPhysical && hasBox && hasSPen) {
-      // EXACT UI MATCHING FOR SAMSUNG GALAXY S23 ULTRA 5G (FLAWLESS "GET UPTO" PRICING)
-      // The user wants the final Fhoneify price to be EXACTLY the base price (39900, 37430, 36210).
-      // Fhoneify adds a markup: extra = Math.min(cashifyPrice * 0.06, 2000).
-      // We solve for cashifyPrice to perfectly hit the target basePrice.
-      const targetFinalFhoneifyPrice = basePrice;
-      
-      let requiredCashifyPrice = 0;
-      if (targetFinalFhoneifyPrice > 35333) {
-        requiredCashifyPrice = targetFinalFhoneifyPrice - 2000;
-      } else {
-        requiredCashifyPrice = targetFinalFhoneifyPrice / 1.06;
-      }
-      
-      const specializedMultiplier = (requiredCashifyPrice - final_box_bonus) / basePrice;
-      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
-    } else if (isFlawlessPhysical && hasBox && missingSPen) {
-      // Flawless with Box but MISSING S-Pen. Target Price = 34660.
-      // 34660 - 380 (box bonus) = 34280. 34280 / 37040 = 0.92548596112311
-      const specializedMultiplier = 0.92548596112311;
-      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
-    } else if (isFlawlessPhysical && missingBox && hasSPen) {
-      // Flawless with S-Pen but MISSING Box. Target Price = 35110.
-      // 35110 - 0 (no box bonus) = 35110. 35110 / 37040 = 0.94789416846652
-      const specializedMultiplier = 0.94789416846652;
-      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
-    } else if (diagnostics.calls !== false && diagnostics.touch !== false && diagnostics.originalScreen === false && (diagnostics.defects || []).length === 0 && (diagnostics.hardware || []).length === 0 && hasBox && hasSPen) {
-      // Calls Working + Touch Working + Screen Not Original + Flawless Physical/Functional + BOTH Accessories. Target Price = 28710.
-      // 28710 - 380 (box bonus) = 28330. 28330 / 37040 = 0.76484881209503
-      const specializedMultiplier = 0.76484881209503;
-      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
-    } else if (isTouchFaultyOtherwiseFlawless && missingBox && missingSPen) {
-      // Base Price = 37040. Target Price = 17860.
-      // 17860 / 37040 = 0.48218142548596
-      const specializedMultiplier = 0.48218142548596;
-      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
-    } else if (isTouchFaultyOtherwiseFlawless && hasBox && hasSPen) {
-      // Base Price = 39900 (1TB). Target Price = 23900.
-      // 23900 - 380 (box bonus) = 23520. 23520 / 39900 = 0.5894736842105263
-      const specializedMultiplier = 0.5894736842105263;
-      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
-    } else if (isBatteryFaultyOnly && missingBox && missingSPen) {
-      // Base Price = 37040. Target Price = 31260.
-      // 31260 / 37040 = 0.8439524838
-      const specializedMultiplier = 0.8439524838;
-      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
-    } else if (isBatteryFaultyOnly && hasBox && hasSPen) {
-      // Battery Faulty + Box + SPen. Target Price = 33310.
-      // 33310 - 380 (box bonus) = 32930. 32930 / 37040 = 0.8890388768898488
-      const specializedMultiplier = 0.8890388768898488;
-      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
-    } else if (isScratchesOnly && missingBox && missingSPen) {
-      // Base Price = 37040. Target Price = 29160.
-      // 29160 / 37040 = 0.787257019438
-      const specializedMultiplier = 0.787257019438;
-      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
-    }
-  }
-
-  // SPECIALIZED ALGORITHM OVERRIDE FOR NOKIA 5.1 PLUS
-  if (!isApple && safeModel.toLowerCase() === 'nokia 5.1 plus') {
-    const isLocalScreen = diagnostics.originalScreen === false;
-    const isOtherwiseFlawlessScreen = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.touch !== false && (diagnostics.defects || []).length === 0 && (diagnostics.hardware || []).length === 0;
-    
-    if (isLocalScreen && isOtherwiseFlawlessScreen) {
-      // 1590 / 2390 = 0.6652719665
-      const specializedMultiplier = 0.6652719665;
-      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
-    }
-  }
-
-  // SPECIALIZED ALGORITHM OVERRIDE FOR XIAOMI REDMI TURBO 5
-  if (!isApple && safeModel.toLowerCase() === 'xiaomi redmi turbo 5') {
-    const isAbove11 = diagnostics.mobileAge === 'Above 11 months' || diagnostics.mobileAge === 'above11';
-    const isFlawlessPhysical = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.touch !== false && diagnostics.originalScreen !== false && (diagnostics.defects || []).length === 0 && (diagnostics.hardware || []).length === 0;
-
-    if (isAbove11 && isFlawlessPhysical) {
-      // For Redmi Turbo 5 (base 26120), Cashify gives 18070 with box for >11 months flawless
-      // 18070 - 380 (box) = 17690. 17690 / 26120 = 0.6772588055
-      const specializedMultiplier = 0.6772588055;
-      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
-    }
-  }
-
-  // SPECIALIZED ALGORITHM OVERRIDE FOR iPHONE 16 (BASE)
-  if (isApple && safeModel.toLowerCase() === 'apple iphone 16') {
-    const isAbove11 = diagnostics.mobileAge === 'Above 11 months' || diagnostics.mobileAge === 'above11';
-    const hasBatteryHealth = (diagnostics.hardware || []).includes('battery_health');
-    const isFlawlessPhysical = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.touch !== false && diagnostics.originalScreen !== false && (diagnostics.defects || []).length === 0;
-    
-    if (isAbove11 && hasBatteryHealth && isFlawlessPhysical) {
-      // For iPhone 16 512GB (base 52470), Cashify gives 39660 with box for >11 months + Battery Health 80-85%
-      // 39660 - 380 (box) = 39280. 39280 / 52470 = 0.748618258
-      const specializedMultiplier = 0.748618258;
-      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
-    }
-  }
-
-  // SPECIALIZED ALGORITHM OVERRIDE FOR APPLE iPHONE 13 PRO MAX
-  if (isApple && safeModel.toLowerCase().includes('iphone 13 pro max')) {
-    const isLocalScreen = diagnostics.originalScreen === false;
-    const hasBatteryService = (diagnostics.hardware || []).includes('battery_service');
-    const hasNoScreenBodyDefects = screen_body_sum === 0 && (diagnostics.defects || []).length === 0;
-    
-    if (isLocalScreen && hasBatteryService && hasNoScreenBodyDefects) {
-      // User requested Cashify price of 23770 for 1TB (basePrice ~39620). Fhoneify inflation will apply on top.
-      if (basePrice > 39000) {
-        const specializedMultiplier = (23770 - final_box_bonus) / basePrice;
-        cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
-      }
-    }
-  }
-
-  // SPECIALIZED ALGORITHM OVERRIDE FOR APPLE iPHONE 12 PRO MAX
-  if (isApple && safeModel.toLowerCase().includes('iphone 12 pro max')) {
-    const isLocalScreen = diagnostics.originalScreen === false;
-    const hasBatteryService = (diagnostics.hardware || []).includes('battery_service');
-    const hasScreenScratch = (diagnostics.defects || []).includes('screen_scratch');
-    
-    if (isLocalScreen && hasBatteryService && hasScreenScratch) {
-      // User provided Cashify price of 15880 for 512GB (basePrice ~27620). Fhoneify inflation should be added on top.
-      if (basePrice > 27000) {
-        const targetCashifyPrice = 15880;
-        const specializedMultiplier = (targetCashifyPrice - final_box_bonus) / basePrice;
-        cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
-      }
-    }
-  }
-
-  // SPECIALIZED ALGORITHM OVERRIDE FOR APPLE iPHONE 16 PRO MAX
-  if (isApple && safeModel.toLowerCase().includes('iphone 16 pro max')) {
-    const isAbove11 = diagnostics.mobileAge === 'Above 11 months' || diagnostics.mobileAge === 'above11' || diagnostics.warranty === false;
-    const hasBatteryService = (diagnostics.hardware || []).includes('battery_service');
-    const hasBatteryHealth = (diagnostics.hardware || []).includes('battery_health');
-    const hasNoHardwareDefects = (diagnostics.hardware || []).length === 0;
-    const isLocalScreen = diagnostics.originalScreen === false;
-    
-    // Flawless physical body, calls and touch work.
-    const isFlawlessBodyAndFunctional = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.touch !== false && (diagnostics.defects || []).length === 0;
-    
-    // Scenario 1: Original Screen, Battery Service/Health, Out of Warranty
-    if (isAbove11 && !isLocalScreen && (hasBatteryService || hasBatteryHealth) && isFlawlessBodyAndFunctional) {
-      // User requested Cashify prices for 1TB (basePrice ~93500). Fhoneify inflation will apply on top.
-      if (basePrice > 93000) {
-        const targetCashifyPrice = hasBatteryHealth ? 72570 : 69630;
-        const specializedMultiplier = (targetCashifyPrice - final_box_bonus) / basePrice;
-        cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
-      }
-    }
-    
-    // Scenario 2: Local Screen, No Hardware Defects, Out of Warranty
-    if (isAbove11 && isLocalScreen && hasNoHardwareDefects && isFlawlessBodyAndFunctional) {
-      // User requested Cashify prices for 1TB (basePrice ~93500). Fhoneify inflation will apply on top.
-      if (basePrice > 93000) {
-        const targetCashifyPrice = 59830;
-        const specializedMultiplier = (targetCashifyPrice - final_box_bonus) / basePrice;
-        cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
-      }
-    }
-    
-    // Scenario 3: Local Screen, Battery Health (80-85%), Screen Scratch, Out of Warranty
-    const isFlawlessExceptScreenScratch = diagnostics.calls !== false && diagnostics.touch !== false && (diagnostics.defects || []).length === 1 && (diagnostics.defects || [])[0] === 'screen_scratch';
-    if (isAbove11 && isLocalScreen && hasBatteryHealth && isFlawlessExceptScreenScratch) {
-      if (basePrice > 93000) {
-        const targetCashifyPrice = 64340;
-        const specializedMultiplier = (targetCashifyPrice - final_box_bonus) / basePrice;
-        cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
-      }
-    }
-  }
-
-  // EXACT UI MATCHING FOR NON-ULTRA SAMSUNG GALAXY MODELS (FLAWLESS "GET UPTO" PRICING)
-  if (!isApple && (safeModel.toLowerCase() === 'samsung galaxy s25 plus 5g' || safeModel.toLowerCase() === 'samsung galaxy s25 5g' || safeModel.toLowerCase() === 'samsung galaxy s24 fe 5g' || safeModel.toLowerCase() === 'samsung galaxy s22 plus 5g' || safeModel.toLowerCase() === 'samsung galaxy s22 5g' || safeModel.toLowerCase() === 'samsung galaxy s21 fe 5g' || safeModel.toLowerCase() === 'samsung galaxy s20 ultra 5g' || safeModel.toLowerCase() === 'samsung galaxy s20 ultra' || safeModel.toLowerCase() === 'samsung galaxy s20 plus' || safeModel.toLowerCase() === 'samsung galaxy s20 fe 5g' || safeModel.toLowerCase() === 'samsung galaxy s20 fe' || safeModel.toLowerCase() === 'samsung galaxy s10e' || safeModel.toLowerCase() === 'samsung galaxy s8' || safeModel.toLowerCase() === 'samsung galaxy s7 edge' || safeModel.toLowerCase() === 'samsung galaxy s7')) {
-    const isFlawlessPhysical = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.touch !== false && diagnostics.originalScreen !== false && (diagnostics.defects || []).length === 0 && (diagnostics.hardware || []).length === 0;
-    const hasBox = (diagnostics.accessories || []).includes('box');
-    
-    if (isFlawlessPhysical && hasBox) {
-      // The user wants the final Fhoneify price to be EXACTLY the base price.
-      // Fhoneify adds a markup: extra = Math.min(cashifyPrice * 0.06, 2000).
-      const targetFinalFhoneifyPrice = basePrice;
-      
-      let requiredCashifyPrice = 0;
-      if (targetFinalFhoneifyPrice > 35333) {
-        requiredCashifyPrice = targetFinalFhoneifyPrice - 2000;
-      } else {
-        requiredCashifyPrice = targetFinalFhoneifyPrice / 1.06;
-      }
-      
-      const specializedMultiplier = (requiredCashifyPrice - final_box_bonus) / basePrice;
-      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
-    }
-  }
-
-  // EXACT UI MATCHING FOR SAMSUNG GALAXY S22, S23, S24 ULTRA 5G (FLAWLESS "GET UPTO" PRICING)
-  if (!isApple && (safeModel.toLowerCase() === 'samsung galaxy s22 ultra 5g' || safeModel.toLowerCase() === 'samsung galaxy s23 ultra 5g' || safeModel.toLowerCase() === 'samsung galaxy s24 ultra 5g')) {
-    const isFlawlessPhysical = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.touch !== false && diagnostics.originalScreen !== false && (diagnostics.defects || []).length === 0 && (diagnostics.hardware || []).length === 0;
-    const hasBox = (diagnostics.accessories || []).includes('box');
-    const hasSPen = (diagnostics.accessories || []).includes('spen');
-    
-    if (isFlawlessPhysical && hasBox && hasSPen) {
-      // The user wants the final Fhoneify price to be EXACTLY the base price (39900, 37430, 36210).
-      // Fhoneify adds a markup: extra = Math.min(cashifyPrice * 0.06, 2000).
-      // We solve for cashifyPrice to perfectly hit the target basePrice.
-      const targetFinalFhoneifyPrice = basePrice;
-      
-      let requiredCashifyPrice = 0;
-      // If target > 35333, the 6% markup exceeds 2000, meaning it gets capped at 2000.
-      if (targetFinalFhoneifyPrice > 35333) {
-        requiredCashifyPrice = targetFinalFhoneifyPrice - 2000;
-      } else {
-        requiredCashifyPrice = targetFinalFhoneifyPrice / 1.06;
-      }
-      
-      const specializedMultiplier = (requiredCashifyPrice - final_box_bonus) / basePrice;
-      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
-    }
-  }
-
-  // COMPREHENSIVE SPECIALIZED ALGORITHM OVERRIDE FOR SAMSUNG GALAXY S25 ULTRA 5G
-  if (!isApple && safeModel.toLowerCase() === 'samsung galaxy s25 ultra 5g') {
-    let specializedPrice = 74650; // Max Theoretical Price for Flawless
-    
-    // Administrative Deductions
-    if (diagnostics.warranty === false) specializedPrice -= 9650;
-    if (diagnostics.validBill === false) specializedPrice -= 3860;
-    
-    // Accessories
-    if (diagnostics.accessories && !diagnostics.accessories.includes('box')) specializedPrice -= 1500;
-    
-    // Basic Functional / Screen Originality
-    if (diagnostics.calls === false) specializedPrice -= 15000;
-    if (diagnostics.touch === false) specializedPrice -= 12000;
-    if (diagnostics.originalScreen === false) specializedPrice -= 15000;
-    
-    // Defects
-    if (diagnostics.defects && Array.isArray(diagnostics.defects)) {
-      if (diagnostics.defects.includes('broken_screen') || diagnostics.screenCondition?.includes('More than 2')) {
-        specializedPrice -= 5260; 
-      } else if (diagnostics.screenCondition?.includes('Cracked')) {
-        specializedPrice -= 12000;
-      }
-      if (diagnostics.defects.includes('screen_spot')) specializedPrice -= 10000;
-      if (diagnostics.defects.includes('body_scratch')) {
-        let bodyDeduction = 0;
-        if (diagnostics.bodyScratches?.includes('1-2')) bodyDeduction += 2500;
-        else if (diagnostics.bodyScratches?.includes('More than')) bodyDeduction += 3500;
-        if (diagnostics.bodyDents?.includes('1-2')) bodyDeduction += 2460;
-        else if (diagnostics.bodyDents?.includes('More than')) bodyDeduction += 3500;
-        if (bodyDeduction === 0) bodyDeduction = 4960; // Fallback
-        specializedPrice -= bodyDeduction;
-      }
-      if (diagnostics.defects.includes('panel_missing')) specializedPrice -= 8000;
-    }
-    
-    // Hardware / Functional Defects
-    if (diagnostics.hardware && Array.isArray(diagnostics.hardware)) {
-      const hwPenalties: Record<string, number> = {
-        'front_camera': 4000, 'back_camera': 8000, 'volume': 1500, 'fingerprint': 5000,
-        'wifi': 4000, 'speaker': 2000, 'silent': 1500, 'face': 5000, 'power': 1500,
-        'charging': 2500, 'audio_receiver': 2000, 'camera_glass': 2000, 'microphone': 2000,
-        'bluetooth': 4000, 'vibrator': 1500, 'proximity': 1500, 'battery_service': 3500, 'battery_health': 1500
-      };
-      for (const hw of diagnostics.hardware) {
-        if (hwPenalties[hw]) specializedPrice -= hwPenalties[hw];
-      }
-    }
-    
-    // Calculate Fhoneify Inflated Markup
-    let upliftPercent = 1.04;
-    if (basePrice <= 20000) upliftPercent = 1.08;
-    else if (basePrice <= 50000) upliftPercent = 1.06;
-    
-    let fhoneifyExtra = specializedPrice * (upliftPercent - 1.0);
-    if (fhoneifyExtra > 2000) fhoneifyExtra = 2000;
-    if (fhoneifyExtra < 100 && specializedPrice > 1200) fhoneifyExtra = 100;
-    
-    specializedPrice += fhoneifyExtra;
-    specializedPrice = Math.max(Math.round(specializedPrice), 5000);
-    
-    // Return immediately to bypass the standard logic. Add 99 so the UI subtracts 99 cleanly.
-    return specializedPrice + 99;
-  }
-
-  // COMPREHENSIVE SPECIALIZED ALGORITHM OVERRIDE FOR SAMSUNG GALAXY S26 ULTRA
-  if (!isApple && safeModel.toLowerCase().includes('s26 ultra')) {
-    let specializedPrice = 105250; // Max Theoretical Price for Flawless
-    
-    // Administrative & Age Deductions
-    const age = diagnostics.mobileAge;
-    if (age === '6 months - 11 months' || age === '6to11') specializedPrice -= 9320;
-    else if (age === '3 months - 6 months' || age === '3to6') specializedPrice -= 7760;
-    else if (diagnostics.warranty === false || age === 'Above 11 months' || age === 'above11') specializedPrice -= 13600;
-    
-    if (diagnostics.validBill === false) specializedPrice -= 15040;
-    
-    // Accessories
-    if (diagnostics.accessories && !diagnostics.accessories.includes('box')) specializedPrice -= 2100;
-    if (diagnostics.accessories && !diagnostics.accessories.includes('spen')) specializedPrice -= 2500;
-    
-    // Basic Functional / Screen Originality
-    if (diagnostics.calls === false) specializedPrice -= 21000;
-    if (diagnostics.touch === false) specializedPrice -= 17000;
-    if (diagnostics.originalScreen === false) specializedPrice -= 21000;
-    
-    // Defects
-    if (diagnostics.defects && Array.isArray(diagnostics.defects)) {
-      if (diagnostics.defects.includes('broken_screen') || diagnostics.screenCondition?.includes('More than 2')) {
-        specializedPrice -= 7400; 
-      } else if (diagnostics.screenCondition?.includes('Cracked')) {
-        specializedPrice -= 17000;
-      }
-      if (diagnostics.defects.includes('screen_spot')) specializedPrice -= 14000;
-      if (diagnostics.defects.includes('body_scratch')) {
-        let bodyDeduction = 0;
-        if (diagnostics.bodyScratches?.includes('1-2')) bodyDeduction += 3500;
-        else if (diagnostics.bodyScratches?.includes('More than')) bodyDeduction += 3500;
-        if (diagnostics.bodyDents?.includes('1-2')) bodyDeduction += 3400;
-        else if (diagnostics.bodyDents?.includes('More than')) bodyDeduction += 4900;
-        if (bodyDeduction === 0) bodyDeduction = 3500; // Fallback
-        specializedPrice -= bodyDeduction;
-      }
-      if (diagnostics.defects.includes('panel_missing')) specializedPrice -= 11000;
-    }
-    
-    // Hardware / Functional Defects
-    if (diagnostics.hardware && Array.isArray(diagnostics.hardware)) {
-      const hwPenalties: Record<string, number> = {
-        'front_camera': 5600, 'back_camera': 11000, 'volume': 2100, 'fingerprint': 7000,
-        'wifi': 5600, 'speaker': 2800, 'silent': 2100, 'face': 7000, 'power': 2100,
-        'charging': 3500, 'audio_receiver': 2800, 'camera_glass': 2800, 'microphone': 2800,
-        'bluetooth': 5600, 'vibrator': 2100, 'proximity': 2100, 'battery_service': 4900, 'battery_health': 2100
-      };
-      for (const hw of diagnostics.hardware) {
-        if (hwPenalties[hw]) specializedPrice -= hwPenalties[hw];
-      }
-    }
-    
-    // Calculate Fhoneify Inflated Markup
-    let upliftPercent = 1.04;
-    if (basePrice <= 20000) upliftPercent = 1.08;
-    else if (basePrice <= 50000) upliftPercent = 1.06;
-    
-    let fhoneifyExtra = specializedPrice * (upliftPercent - 1.0);
-    if (fhoneifyExtra > 2000) fhoneifyExtra = 2000;
-    if (fhoneifyExtra < 100 && specializedPrice > 1200) fhoneifyExtra = 100;
-    
-    specializedPrice += fhoneifyExtra;
-    specializedPrice = Math.max(Math.round(specializedPrice), 5000);
-    
-    // Return immediately to bypass the standard logic. Add 99 so the UI subtracts 99 cleanly.
-    return specializedPrice + 99;
-  }
-
-  // SPECIALIZED ALGORITHM OVERRIDE FOR iPHONE 17 (BASE)
-  if (isApple && safeModel.toLowerCase() === 'apple iphone 17') {
-    const isAbove11 = diagnostics.mobileAge === 'Above 11 months' || diagnostics.mobileAge === 'above11';
-    const hasBatteryHealth = (diagnostics.hardware || []).includes('battery_health');
-    const isFlawlessPhysical = screen_body_sum === 0 && diagnostics.calls !== false && diagnostics.touch !== false && diagnostics.originalScreen !== false && (diagnostics.defects || []).length === 0;
-    
-    const isScreenCracked = (diagnostics.defects || []).includes('screen_scratch') && (diagnostics.screenCondition === 'Screen cracked/ glass broken' || diagnostics.screenCondition === 'screen_cracked');
-    const isFlawlessFunctional = diagnostics.calls !== false && diagnostics.touch !== false && diagnostics.originalScreen !== false && (diagnostics.hardware || []).length === 0;
-
-    if (isAbove11 && hasBatteryHealth && isFlawlessPhysical) {
-      // For iPhone 17 512GB (base 65000), Cashify gives 47970 with box for >11 months + Battery Health 80-85%
-      // 47970 - 380 (box) = 47590. 47590 / 65000 = 0.73215384615
-      const specializedMultiplier = 0.73215384615;
-      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
-    } else if (isScreenCracked && isFlawlessFunctional) {
-      // For iPhone 17 512GB (base 65000), Cashify gives 30120 with box for cracked screen
-      // 30120 - 380 (box) = 29740. 29740 / 65000 = 0.4575384615
-      const specializedMultiplier = 0.4575384615;
-      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
-    }
-  }
-
-  // SPECIALIZED ALGORITHM OVERRIDE FOR iPHONE 16 PRO MAX (Extreme Depreciation Case)
-  if (isApple && safeModel.toLowerCase().includes('16 pro max')) {
-    const isAbove11 = diagnostics.mobileAge === 'Above 11 months' || diagnostics.mobileAge === 'above11';
-    const isMoreThan2 = diagnostics.screenCondition === 'More than 2 scratches on screen' || diagnostics.screenCondition === 'More than 2 scratches';
-    const isScreenCracked = diagnostics.screenCondition === 'Screen cracked/ glass broken';
-    const hasBatteryService = (diagnostics.hardware || []).includes('battery_service') || (diagnostics.hardware || []).includes('battery_health');
-    
-    if (isAbove11 && hasBatteryService) {
-      if (isMoreThan2) {
-        // For 256GB (base 87300), Cashify gives 58910 with box. 
-        // 58910 - 380 (box) = 58530. 58530 / 87300 = 0.670446735
-        const specializedMultiplier = 0.670446735;
-        cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
-      } else if (isScreenCracked) {
-        // For 256GB (base 87300), Cashify gives 50480 with box.
-        // 50480 - 380 (box) = 50100. 50100 / 87300 = 0.57388316
-        const specializedMultiplier2 = 0.57388316;
-        cashifyPrice = (basePrice * specializedMultiplier2) + final_box_bonus;
-      }
-    } else if (diagnostics.calls === true && diagnostics.originalScreen === false && (diagnostics.hardware || []).includes('face')) {
-      // For 256GB (base 87300), Cashify gives 36940 with box.
-      // 36940 - 380 (box) = 36560. 36560 / 87300 = 0.41878579
-      const specializedMultiplier3 = 0.41878579;
-      cashifyPrice = (basePrice * specializedMultiplier3) + final_box_bonus;
-    }
-  }
-
-  // SPECIALIZED ALGORITHM OVERRIDE FOR SAMSUNG GALAXY Z FLIP7 FE 5G
-  if (safeModel.toLowerCase().includes('flip7 fe')) {
-    const isTouchFaulty = diagnostics.touch === false;
-    const isScreenCracked = diagnostics.screenCondition === 'screen_scratch' || diagnostics.screenCondition === 'screen_cracked' || (diagnostics.defects || []).includes('screen_scratch');
-    const isCallsFalse = diagnostics.calls === false;
-    const isOriginalScreenFalse = diagnostics.originalScreen === false;
-    const hasScreenSpot = (diagnostics.defects || []).includes('screen_spot');
-    
-    if (isTouchFaulty && isScreenCracked && isCallsFalse) {
-      // For the Flip7 FE 5G (base 53150) when dead, Cashify gives 19450 with box.
-      // 19450 - 380 (box) = 19070. 19070 / 53150 = 0.35879586
-      const specializedMultiplier = 0.35879586;
-      cashifyPrice = (basePrice * specializedMultiplier) + final_box_bonus;
-    } else if (isTouchFaulty && isOriginalScreenFalse && isScreenCracked && hasScreenSpot && !isCallsFalse) {
-      // For the Flip7 FE 5G (base 53150) with faulty touch, non-original cracked/spotted screen but working calls, Cashify gives 19570 with box.
-      // 19570 - 380 (box) = 19190. 19190 / 53150 = 0.36105362
-      const specializedMultiplier2 = 0.36105362;
-      cashifyPrice = (basePrice * specializedMultiplier2) + final_box_bonus;
-    }
-  }
-
-  let upliftPercent = 1.0;
-  if (basePrice <= 20000) {
-    upliftPercent = 1.08;
-  } else if (basePrice <= 50000) {
-    upliftPercent = 1.06;
-  } else {
-    upliftPercent = 1.04;
-  }
-
-  let fhoneifyExtra = cashifyPrice * (upliftPercent - 1.0);
+  let fhoneifyExtra = exactCashifyPrice * (upliftPercent - 1);
+  if (fhoneifyExtra > 2000) fhoneifyExtra = 2000;
+  if (fhoneifyExtra < 100 && exactCashifyPrice > 1200) fhoneifyExtra = 100;
   
-  // Cap the extra bonus between ₹100 and ₹2000
-  if (fhoneifyExtra > 2000) {
-    fhoneifyExtra = 2000;
-  }
-  if (fhoneifyExtra < 100 && cashifyPrice > 1200) {
-    fhoneifyExtra = 100;
-  }
+  const fhoneifyPrice = Math.max(Math.round(exactCashifyPrice + fhoneifyExtra), floor_price);
 
-  const calculated = cashifyPrice + fhoneifyExtra;
-    
-  return Math.max(Math.round(calculated), floor_price);
+  return {
+    cashifyBasePrice: exactCashifyPrice,
+    fhoneifyPrice: fhoneifyPrice
+  };
 }

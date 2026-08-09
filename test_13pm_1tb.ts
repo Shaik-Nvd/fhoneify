@@ -1,11 +1,11 @@
 import { calculateFhoneifyPrice } from './lib/pricingCalculator';
 
-const diagnostics: any = {
+const diagnostics = {
   calls: true,
   touch: true,
   originalScreen: false,
-  defects: ['screen_scratch'],
-  screenCondition: 'scratches',
+  defects: [],
+  screenCondition: null,
   screenSpots: null,
   screenLines: null,
   screenDiscoloration: null,
@@ -16,10 +16,10 @@ const diagnostics: any = {
   hardware: ['battery_service'],
   accessories: ['box'],
   warranty: false,
-  validBill: true,
+  validBill: null,
   eSim: 'Single eSIM',
-  mobileAge: 'above11' // default for out of warranty
+  mobileAge: 'above11'
 };
 
-const price = calculateFhoneifyPrice('Apple', 'Apple iPhone 12 Pro Max', 27620, diagnostics).fhoneifyPrice;
-console.log('Calculated Price:', Math.round(price));
+const price = calculateFhoneifyPrice('Apple', 'Apple iPhone 13 Pro Max', 39620, diagnostics);
+console.log('Calculated Price:', price);
