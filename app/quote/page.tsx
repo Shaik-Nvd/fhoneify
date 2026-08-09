@@ -2249,7 +2249,7 @@ export default function QuotePage() {
                 ))}
                 
                 {/* Newer model flow: Warranty and GST Bill Questions */}
-                {isWarrantyEligible(selectedBrand, selectedModel) && diagnostics.originalScreen !== false && (
+                {isWarrantyEligible(selectedBrand, selectedModel) && (
                   <>
                     <div style={{ marginBottom: '2.5rem' }}>
                       <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>Is your device under manufacturer warranty?</h3>
@@ -2590,6 +2590,7 @@ export default function QuotePage() {
                     // Note: Cashify does not void warranty purely for non-original screen or faulty touch for age pricing.
                     const hasWarrantyVoidingDefects = 
                       diagnostics.calls === false ||
+                      diagnostics.originalScreen === false ||
                       (diagnostics.defects && diagnostics.defects.some(d => ['broken_screen', 'screen_spot', 'panel_missing', 'screen_lines', 'screen_discoloration', 'body_bent'].includes(d)));
                       
                     // Even if validBill is false, Cashify still asks for the mobile age and applies an age deduction 
