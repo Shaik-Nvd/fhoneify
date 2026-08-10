@@ -2886,7 +2886,7 @@ export default function QuotePage() {
                   alignItems: 'center', 
                   gap: '0.5rem',
                   backgroundColor: 'rgba(212, 175, 55, 0.1)',
-                  bordercolor: 'var(--gold)',
+                  borderColor: 'var(--gold)',
                   color: 'var(--gold)',
                   borderRadius: '8px',
                   cursor: (isScraping || marketPriceFetched) ? 'not-allowed' : 'pointer',

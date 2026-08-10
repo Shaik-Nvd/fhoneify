@@ -73,7 +73,7 @@ export default function WalletPage() {
               type="text" 
               readOnly 
               value={data?.referralCode || 'Not generated yet'} 
-              style={{ flex: 1, minWidth: '150px', fontFamily: 'monospace', fontSize: '1rem', letterSpacing: '2px', color: 'var(--gold)', fontWeight: 700, backgroundColor: 'rgba(212,175,55,0.05)', bordercolor: 'var(--gold)' }}
+              style={{ flex: 1, minWidth: '150px', fontFamily: 'monospace', fontSize: '1rem', letterSpacing: '2px', color: 'var(--gold)', fontWeight: 700, backgroundColor: 'rgba(212,175,55,0.05)', borderColor: 'var(--gold)' }}
             />
             <button 
               className="btn-secondary" 
