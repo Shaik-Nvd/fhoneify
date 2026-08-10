@@ -1393,7 +1393,7 @@ export default function QuotePage() {
       
       {stepHistory.length > 0 && step !== 10 && step !== 11 && step !== 12 && (
         <div style={{ marginBottom: '1rem', width: '100%' }}>
-          <button type="button" onClick={handleBack} style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', background: 'var(--surface)', color: 'var(--foreground)', border: '1px solid var(--border)', borderRadius: '8px', fontSize: '0.9rem', fontWeight: 500, cursor: 'pointer', boxShadow: '0 2px 4px rgba(0,0,0,0.05)' }}>
+          <button type="button" onClick={handleBack} style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: '8px', fontSize: '0.9rem', fontWeight: 500, cursor: 'pointer', boxShadow: '0 2px 4px rgba(0,0,0,0.05)' }}>
             <span style={{ fontSize: '1.2rem' }}>←</span> Back
           </button>
         </div>
@@ -1404,12 +1404,12 @@ export default function QuotePage() {
       {/* STAGE 1: DEVICE SELECTION */}
       {step === 1 && (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-          <h1 style={{ textAlign: 'center', fontSize: '1.75rem', fontWeight: 300, color: 'var(--foreground)', marginBottom: '0.5rem' }}>Get Your Quote</h1>
+          <h1 style={{ textAlign: 'center', fontSize: '1.75rem', fontWeight: 300, marginBottom: '0.5rem' }}>Get Your Quote</h1>
           <p style={{ textAlign: 'center', color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '2rem' }}>Select your device to get an instant price estimate</p>
 
           {selectionStage === 'brand' && (
             <>
-              <h2 style={{ color: 'var(--foreground)', fontWeight: 600, fontSize: '1.25rem', textAlign: 'center', marginBottom: '1rem' }}>Select Brand</h2>
+              <h2 style={{ fontWeight: 600, fontSize: '1.25rem', textAlign: 'center', marginBottom: '1rem' }}>Select Brand</h2>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))', gap: '1rem' }}>
                 {brands.length === 0 ? (
                   Array.from({ length: 12 }).map((_, i) => (
@@ -1419,7 +1419,7 @@ export default function QuotePage() {
                   brands.map((b) => (
                     <button key={b} onClick={() => handleBrandSelect(b)} className="card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', padding: '1.5rem 1rem', border: '1px solid var(--border)', backgroundColor: 'var(--surface)', borderRadius: '12px', cursor: 'pointer', transition: 'all 200ms' }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = '#4CD964'; e.currentTarget.style.transform = 'translateY(-2px)'; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.transform = 'translateY(0)'; }}>
                       <img src={BRAND_LOGOS[b] || '/images/placeholder-phone.svg'} alt={b} style={getBrandLogoStyle(b)} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; }} />
-                      <span style={{ fontSize: '0.85rem', fontWeight: 500, color: 'var(--foreground)' }}>{b}</span>
+                      <span style={{ fontSize: '0.85rem', fontWeight: 500 }}>{b}</span>
                     </button>
                   ))
                 )}
@@ -1430,13 +1430,13 @@ export default function QuotePage() {
           {selectionStage === 'model' && (
             <>
               <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', gap: '1rem' }}>
-                <h2 style={{ color: 'var(--foreground)', fontWeight: 600, fontSize: '1.25rem' }}>Select Model</h2>
+                <h2 style={{ fontWeight: 600, fontSize: '1.25rem' }}>Select Model</h2>
                 <input 
                   type="text" 
                   placeholder="Search model..." 
                   value={modelSearchQuery}
                   onChange={(e) => setModelSearchQuery(e.target.value)}
-                  style={{ flex: 1, minWidth: '200px', maxWidth: '300px', padding: '0.75rem 1rem', borderRadius: '8px', border: '1px solid var(--border)', backgroundColor: 'var(--surface)', color: 'var(--foreground)', fontSize: '0.9rem' }}
+                  style={{ flex: 1, minWidth: '200px', maxWidth: '300px', padding: '0.75rem 1rem', borderRadius: '8px', border: '1px solid var(--border)', backgroundColor: 'var(--surface)', fontSize: '0.9rem' }}
                 />
                 <button onClick={() => navigateToState('', '', '', 'brand', 1)} style={{ color: 'var(--gold)', background: 'none', border: 'none', cursor: 'pointer', whiteSpace: 'nowrap' }}>Change Brand</button>
               </div>
@@ -2134,7 +2134,7 @@ export default function QuotePage() {
               {models.length === 0 && !loading ? (
                 <div style={{ textAlign: 'center', padding: '4rem 1rem', color: 'var(--muted)' }}>
                   <span style={{ fontSize: '3rem', display: 'block', marginBottom: '1rem' }}>🚧</span>
-                  <h3 style={{ color: 'var(--foreground)', fontSize: '1.25rem', fontWeight: 500, marginBottom: '0.5rem' }}>Coming Soon</h3>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: 500, marginBottom: '0.5rem' }}>Coming Soon</h3>
                   <p>We are coming soon! Mobile phones for this brand are under processing and uploading.</p>
                 </div>
               ) : (
@@ -2142,7 +2142,7 @@ export default function QuotePage() {
                   {models.map((m) => (
                     <button key={m} onClick={() => handleModelSelect(m)} className="card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem', padding: '1rem', border: '1px solid var(--border)', backgroundColor: 'var(--surface)', borderRadius: '12px', cursor: 'pointer' }}>
                       <img src={`/images/models/${m.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={m} style={{ width: '70px', height: '100px', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
-                      <span style={{ fontSize: '0.8rem', color: 'var(--foreground)', textAlign: 'center' }}>{m}</span>
+                      <span style={{ fontSize: '0.8rem', textAlign: 'center' }}>{m}</span>
                     </button>
                   ))}
                 </div>
@@ -2153,19 +2153,19 @@ export default function QuotePage() {
           {selectionStage === 'storage' && (
             <>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
-                <h2 style={{ color: 'var(--foreground)', fontWeight: 600, fontSize: '1.25rem' }}>Choose a variant</h2>
+                <h2 style={{ fontWeight: 600, fontSize: '1.25rem' }}>Choose a variant</h2>
                 <button onClick={() => navigateToState(selectedBrand, '', '', 'model', 1)} style={{ color: 'var(--gold)', background: 'none', border: 'none', cursor: 'pointer' }}>Change Model</button>
               </div>
               <div className="card" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', border: '1px solid var(--border)', backgroundColor: 'var(--surface)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
                   <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} style={{ width: '60px', height: '80px', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
-                  <div><p style={{ color: 'var(--muted)', fontSize: '0.8rem' }}>{selectedBrand}</p><h3 style={{ color: 'var(--foreground)', fontSize: '1.2rem', fontWeight: 600 }}>{selectedModel}</h3></div>
+                  <div><p style={{ color: 'var(--muted)', fontSize: '0.8rem' }}>{selectedBrand}</p><h3 style={{ fontSize: '1.2rem', fontWeight: 600 }}>{selectedModel}</h3></div>
                 </div>
                 
                 {storageOptions.length === 0 && !loading ? (
                   <div style={{ textAlign: 'center', padding: '2rem 1rem', color: 'var(--muted)' }}>
                     <span style={{ fontSize: '2.5rem', display: 'block', marginBottom: '1rem' }}>📱</span>
-                    <h3 style={{ color: 'var(--foreground)', fontSize: '1.1rem', fontWeight: 500, marginBottom: '0.5rem' }}>Model configuration not found</h3>
+                    <h3 style={{ fontSize: '1.1rem', fontWeight: 500, marginBottom: '0.5rem' }}>Model configuration not found</h3>
                     <p style={{ fontSize: '0.9rem' }}>We couldn&apos;t find the storage variants for this model. It might be under process.</p>
                     <button onClick={() => navigateToState(selectedBrand, '', '', 'model', 1)} style={{ marginTop: '1.5rem', padding: '0.5rem 1rem', backgroundColor: 'var(--gold)', color: '#000', borderRadius: '6px', fontWeight: 600, border: 'none', cursor: 'pointer' }}>View All {selectedBrand} Models</button>
                   </div>
@@ -2192,7 +2192,7 @@ export default function QuotePage() {
             <p style={{ color: '#666', fontSize: '1rem', marginTop: '1rem' }}>Get Upto</p>
             <p style={{ fontSize: '3rem', fontWeight: 700, color: 'var(--gold)' }}>{formatCurrency(basePrice || 0)}</p>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem', width: '100%', flexWrap: 'wrap', justifyContent: 'flex-start' }}>
-              <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 3)} className="btn-primary" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', background: 'var(--gold)', color: 'var(--foreground)', fontWeight: 600, padding: '1rem 2rem', borderRadius: '8px', flex: '1', minWidth: '200px' }}>
+              <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 3)} className="btn-primary" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', fontWeight: 600, padding: '1rem 2rem', borderRadius: '8px', flex: '1', minWidth: '200px' }}>
                 Get Exact Value <ArrowRightIcon />
               </button>
               
@@ -2226,7 +2226,7 @@ export default function QuotePage() {
             {/* STAGE 3: BASIC YES/NO */}
             {step === 3 && (
               <div className="card p-6 md:p-12 rounded-lg border border-border bg-surface text-foreground">
-                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: 'var(--foreground)' }}>Tell us more about your device?</h2>
+                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem' }}>Tell us more about your device?</h2>
                 <p style={{ textAlign: 'center', color: 'var(--muted)', fontSize: '0.85rem', marginBottom: '3rem' }}>Please answer a few questions about your device.</p>
                 
                 {[
@@ -2235,7 +2235,7 @@ export default function QuotePage() {
                   { id: 'originalScreen', title: 'Is your phone\'s screen original?', desc: 'Pick "Yes" if screen was never changed or was changed by Authorized Service Center. Pick "No" if screen was changed at local shop.' }
                 ].map((q) => (
                   <div key={q.id} style={{ marginBottom: '2.5rem' }}>
-                    <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: 'var(--foreground)' }}>{q.title}</h3>
+                    <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem' }}>{q.title}</h3>
                     <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>{q.desc}</p>
                     <div style={{ display: 'flex', gap: '1rem' }}>
                       <button onClick={() => setDiagnostics({ ...diagnostics, [q.id]: true })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics[q.id as keyof typeof diagnostics] === true ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics[q.id as keyof typeof diagnostics] === true ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics[q.id as keyof typeof diagnostics] === true ? '#4CD964' : 'var(--foreground)' }}>
@@ -2252,7 +2252,7 @@ export default function QuotePage() {
                 {isWarrantyEligible(selectedBrand, selectedModel) && (
                   <>
                     <div style={{ marginBottom: '2.5rem' }}>
-                      <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: 'var(--foreground)' }}>Is your device under manufacturer warranty?</h3>
+                      <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem' }}>Is your device under manufacturer warranty?</h3>
                       <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>You can get a better price for your device if it&apos;s under manufacturer warranty with a GST valid bill.</p>
                       <div style={{ display: 'flex', gap: '1rem' }}>
                         <button onClick={() => setDiagnostics({ ...diagnostics, warranty: true })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.warranty === true ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.warranty === true ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.warranty === true ? '#4CD964' : 'var(--foreground)' }}>
@@ -2265,7 +2265,7 @@ export default function QuotePage() {
                     </div>
 
                     <div style={{ marginBottom: '2.5rem' }}>
-                      <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: 'var(--foreground)' }}>Do you have GST valid bill with the same IMEI?</h3>
+                      <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem' }}>Do you have GST valid bill with the same IMEI?</h3>
                       <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Make sure your bill has device IMEI mentioned on it.</p>
                       <div style={{ display: 'flex', gap: '1rem' }}>
                         <button onClick={() => setDiagnostics({ ...diagnostics, validBill: true })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.validBill === true ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.validBill === true ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.validBill === true ? '#4CD964' : 'var(--foreground)' }}>
@@ -2282,7 +2282,7 @@ export default function QuotePage() {
                 {/* eSIM Question (if eligible) */}
                 {isESimEligible(selectedBrand, selectedModel) && (
                   <div style={{ marginBottom: '2.5rem' }}>
-                    <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: 'var(--foreground)' }}>How many eSIMs does your device support?</h3>
+                    <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem' }}>How many eSIMs does your device support?</h3>
                     <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Please select &quot;Dual eSIM&quot; if your device supports dual eSIMs. Otherwise, select &quot;Single eSIM&quot;.</p>
                     <div style={{ display: 'flex', gap: '1rem' }}>
                       <button onClick={() => setDiagnostics({ ...diagnostics, eSim: 'Single eSIM' })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.eSim === 'Single eSIM' ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.eSim === 'Single eSIM' ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.eSim === 'Single eSIM' ? '#4CD964' : 'var(--foreground)' }}>
@@ -2314,7 +2314,7 @@ export default function QuotePage() {
                     diagnostics.originalScreen === null || 
                     (isWarrantyEligible(selectedBrand, selectedModel) && (diagnostics.warranty === null || diagnostics.validBill === null)) ||
                     (isESimEligible(selectedBrand, selectedModel) && diagnostics.eSim === null)
-                  } className="btn-primary" style={{ background: 'var(--gold)', color: 'var(--foreground)', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (
+                  } className="btn-primary" style={{ fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (
                     diagnostics.calls !== null && 
                     diagnostics.touch !== null && 
                     diagnostics.originalScreen !== null && 
@@ -2328,7 +2328,7 @@ export default function QuotePage() {
             {/* STAGE 4: PHYSICAL DEFECTS */}
             {step === 4 && (
               <div className="card p-6 md:p-12 rounded-lg border border-border bg-surface text-foreground">
-                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: 'var(--foreground)' }}>Select screen/body defects that are applicable!</h2>
+                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem' }}>Select screen/body defects that are applicable!</h2>
                 <p style={{ textAlign: 'center', color: 'var(--muted)', fontSize: '0.85rem', marginBottom: '3rem' }}>Please provide correct details</p>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(130px, 1fr))', gap: '1rem', marginBottom: '3rem' }}>
                   {[
@@ -2357,7 +2357,7 @@ export default function QuotePage() {
                     } else {
                       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 7);
                     }
-                  }} className="btn-primary" style={{ background: 'var(--gold)', color: 'var(--foreground)', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px' }}>Continue <ArrowRightIcon /></button>
+                  }} className="btn-primary" style={{ fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px' }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
             )}
@@ -2365,10 +2365,10 @@ export default function QuotePage() {
             {/* STAGE 5: SCREEN DEFECT SUB-PAGE */}
             {step === 5 && (
               <div className="card p-6 md:p-12 rounded-lg border border-border bg-surface text-foreground">
-                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: 'var(--foreground)' }}>Tell us more about your device screen defects?</h2>
+                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem' }}>Tell us more about your device screen defects?</h2>
                 <p style={{ textAlign: 'center', color: 'var(--muted)', fontSize: '0.85rem', marginBottom: '3rem' }}>(Because you selected screen defect)</p>
                 
-                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: 'var(--foreground)' }}>Screen Physical Condition</h3>
+                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem' }}>Screen Physical Condition</h3>
                 <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Check physical condition of Display Screen</p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '3rem' }}>
                   {[
@@ -2394,7 +2394,7 @@ export default function QuotePage() {
                     } else {
                       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 7);
                     }
-                  }} disabled={!diagnostics.screenCondition} className="btn-primary" style={{ background: 'var(--gold)', color: 'var(--foreground)', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: diagnostics.screenCondition ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
+                  }} disabled={!diagnostics.screenCondition} className="btn-primary" style={{ fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: diagnostics.screenCondition ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
             )}
@@ -2402,10 +2402,10 @@ export default function QuotePage() {
             {/* STAGE 6: BODY DEFECT SUB-PAGE */}
             {step === 6 && (
               <div className="card p-6 md:p-12 rounded-lg border border-border bg-surface text-foreground">
-                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: 'var(--foreground)' }}>Tell us more about your device&apos;s body defects?</h2>
+                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem' }}>Tell us more about your device&apos;s body defects?</h2>
                 <p style={{ textAlign: 'center', color: 'var(--muted)', fontSize: '0.85rem', marginBottom: '3rem' }}>(Because you selected device&apos;s body defect)</p>
                 
-                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: 'var(--foreground)' }}>1. Scratches on device Body</h3>
+                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem' }}>1. Scratches on device Body</h3>
                 <div style={{ display: 'flex', gap: '1rem', marginBottom: '2.5rem' }}>
                   {[
                     { id: 'More than 2 scratches', label: '〰️ More than 2 scratches' },
@@ -2418,7 +2418,7 @@ export default function QuotePage() {
                   ))}
                 </div>
 
-                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: 'var(--foreground)' }}>2. Dents on device Body</h3>
+                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem' }}>2. Dents on device Body</h3>
                 <div style={{ display: 'flex', gap: '1rem', marginBottom: '3rem' }}>
                   {[
                     { id: 'Major dent(s) or more than 2', label: '🔨 Major dent(s) or more than 2' },
@@ -2438,7 +2438,7 @@ export default function QuotePage() {
                     } else {
                       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 7);
                     }
-                  }} disabled={!diagnostics.bodyScratches || !diagnostics.bodyDents} className="btn-primary" style={{ background: 'var(--gold)', color: 'var(--foreground)', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (diagnostics.bodyScratches && diagnostics.bodyDents) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
+                  }} disabled={!diagnostics.bodyScratches || !diagnostics.bodyDents} className="btn-primary" style={{ fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (diagnostics.bodyScratches && diagnostics.bodyDents) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
             )}
@@ -2446,10 +2446,10 @@ export default function QuotePage() {
             {/* STAGE 13: PANEL & BENT DEFECT SUB-PAGE */}
             {step === 13 && (
               <div className="card p-6 md:p-12 rounded-lg border border-border bg-surface text-foreground">
-                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: 'var(--foreground)' }}>Tell us more about your device&apos;s body defects?</h2>
+                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem' }}>Tell us more about your device&apos;s body defects?</h2>
                 <p style={{ textAlign: 'center', color: 'var(--muted)', fontSize: '0.85rem', marginBottom: '3rem' }}>(Because you selected device&apos;s body defect)</p>
                 
-                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: 'var(--foreground)' }}>1. Device Side/Back Panel Condition</h3>
+                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem' }}>1. Device Side/Back Panel Condition</h3>
                 <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Check your device&apos;s side & back panels</p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2.5rem' }}>
                   {[
@@ -2463,7 +2463,7 @@ export default function QuotePage() {
                   ))}
                 </div>
 
-                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: 'var(--foreground)' }}>2. Device Bent/Screen loose</h3>
+                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem' }}>2. Device Bent/Screen loose</h3>
                 <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Check if your device is bent or display screen is loose</p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '3rem' }}>
                   {[
@@ -2478,7 +2478,7 @@ export default function QuotePage() {
                 </div>
 
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
-                  <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 7)} disabled={!diagnostics.bodyPanel || !diagnostics.bodyBent} className="btn-primary" style={{ background: 'var(--gold)', color: 'var(--foreground)', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (diagnostics.bodyPanel && diagnostics.bodyBent) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
+                  <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 7)} disabled={!diagnostics.bodyPanel || !diagnostics.bodyBent} className="btn-primary" style={{ fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (diagnostics.bodyPanel && diagnostics.bodyBent) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
             )}
@@ -2486,10 +2486,10 @@ export default function QuotePage() {
             {/* STAGE 14: SCREEN SPOTS/LINES/DISCOLORATION DEFECT SUB-PAGE */}
             {step === 14 && (
               <div className="card p-6 md:p-12 rounded-lg border border-border bg-surface text-foreground">
-                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: 'var(--foreground)' }}>Tell us more about your device&apos;s screen defects?</h2>
+                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem' }}>Tell us more about your device&apos;s screen defects?</h2>
                 <p style={{ textAlign: 'center', color: 'var(--muted)', fontSize: '0.85rem', marginBottom: '3rem' }}>(because you selected defective screen)</p>
                 
-                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: 'var(--foreground)' }}>1. Dead Pixels/Spots on Screen</h3>
+                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem' }}>1. Dead Pixels/Spots on Screen</h3>
                 <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Check your device&apos;s screen for visible spots</p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2.5rem' }}>
                   {[
@@ -2504,7 +2504,7 @@ export default function QuotePage() {
                   ))}
                 </div>
 
-                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: 'var(--foreground)' }}>2. Visible Lines on Screen</h3>
+                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem' }}>2. Visible Lines on Screen</h3>
                 <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Check your device&apos;s screen for visible lines</p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2.5rem' }}>
                   {[
@@ -2518,7 +2518,7 @@ export default function QuotePage() {
                   ))}
                 </div>
 
-                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: 'var(--foreground)' }}>3. Discoloration on Screen</h3>
+                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem' }}>3. Discoloration on Screen</h3>
                 <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Check your device&apos;s screen for discoloration</p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '3rem' }}>
                   {[
@@ -2541,7 +2541,7 @@ export default function QuotePage() {
                     } else {
                       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 7);
                     }
-                  }} disabled={!diagnostics.screenSpots || !diagnostics.screenLines || !diagnostics.screenDiscoloration} className="btn-primary" style={{ background: 'var(--gold)', color: 'var(--foreground)', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (diagnostics.screenSpots && diagnostics.screenLines && diagnostics.screenDiscoloration) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
+                  }} disabled={!diagnostics.screenSpots || !diagnostics.screenLines || !diagnostics.screenDiscoloration} className="btn-primary" style={{ fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (diagnostics.screenSpots && diagnostics.screenLines && diagnostics.screenDiscoloration) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
             )}
@@ -2549,7 +2549,7 @@ export default function QuotePage() {
             {/* STAGE 7: HARDWARE / FUNCTIONAL */}
             {step === 7 && (
               <div className="card p-6 md:p-12 rounded-lg border border-border bg-surface text-foreground">
-                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: 'var(--foreground)' }}>Functional or Physical Problems</h2>
+                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem' }}>Functional or Physical Problems</h2>
                 <p style={{ textAlign: 'center', color: 'var(--muted)', fontSize: '0.85rem', marginBottom: '3rem' }}>Please choose appropriate condition to get accurate quote</p>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(130px, 1fr))', gap: '1rem', marginBottom: '3rem' }}>
                   {getFunctionalProblems(selectedBrand, selectedModel).map((h) => (
@@ -2560,7 +2560,7 @@ export default function QuotePage() {
                   ))}
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
-                  <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 8)} className="btn-primary" style={{ background: 'var(--gold)', color: 'var(--foreground)', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px' }}>Continue <ArrowRightIcon /></button>
+                  <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 8)} className="btn-primary" style={{ fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px' }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
             )}
@@ -2568,7 +2568,7 @@ export default function QuotePage() {
             {/* STAGE 8: ACCESSORIES */}
             {step === 8 && (
               <div className="card p-6 md:p-12 rounded-lg border border-border bg-surface text-foreground">
-                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: 'var(--foreground)' }}>Do you have the following?</h2>
+                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem' }}>Do you have the following?</h2>
                 <p style={{ textAlign: 'center', color: 'var(--muted)', fontSize: '0.85rem', marginBottom: '3rem' }}>Please select accessories which are available</p>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem', marginBottom: '3rem' }}>
                   {[
@@ -2631,7 +2631,7 @@ export default function QuotePage() {
                         navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 10); 
                       }
                     }
-                  }} className="btn-primary" style={{ background: 'var(--gold)', color: 'var(--foreground)', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px' }}>Continue <ArrowRightIcon /></button>
+                  }} className="btn-primary" style={{ fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px' }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
             )}
@@ -2639,7 +2639,7 @@ export default function QuotePage() {
             {/* STAGE 9: MOBILE AGE */}
             {step === 9 && (
               <div className="card p-6 md:p-12 rounded-lg border border-border bg-surface text-foreground">
-                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: 'var(--foreground)' }}>What is your mobile age?</h2>
+                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem' }}>What is your mobile age?</h2>
                 <p style={{ textAlign: 'center', color: 'var(--muted)', fontSize: '0.85rem', marginBottom: '3rem' }}>Please select the age of your device from the purchase date.</p>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginBottom: '3rem' }}>
                   {[
@@ -2668,7 +2668,7 @@ export default function QuotePage() {
                     } else { 
                       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 10); 
                     } 
-                  }} disabled={!diagnostics.mobileAge} className="btn-primary" style={{ background: 'var(--gold)', color: 'var(--foreground)', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: diagnostics.mobileAge ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
+                  }} disabled={!diagnostics.mobileAge} className="btn-primary" style={{ fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: diagnostics.mobileAge ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
             )}
@@ -2759,7 +2759,7 @@ export default function QuotePage() {
           <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', borderBottom: '1px solid var(--border)', paddingBottom: '1rem', marginBottom: '0.5rem' }}>
             <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} style={{ width: '60px', height: 'auto', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
             <div>
-              <h2 style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--foreground)', marginBottom: '0.25rem' }}>{getDisplayModelName(selectedBrand, selectedModel)} ({selectedStorage})</h2>
+              <h2 style={{ fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.25rem' }}>{getDisplayModelName(selectedBrand, selectedModel)} ({selectedStorage})</h2>
               <p style={{ color: 'var(--muted)', fontSize: '0.85rem', marginBottom: '0.5rem' }}>Estimated value :</p>
               <p style={{ fontSize: '2rem', fontWeight: 700, color: 'var(--gold)', lineHeight: 1 }}>
                 {formatCurrency((finalPrice || 0) - (finalPrice === 1200 ? 0 : 99) + (appliedCoupon ? 299 : 0))}
@@ -2827,7 +2827,7 @@ export default function QuotePage() {
                     value={couponInput}
                     onChange={(e) => setCouponInput(e.target.value.toUpperCase())}
                     placeholder="Enter promo code" 
-                    style={{ flex: 1, padding: '0.6rem 0.8rem', borderRadius: '8px', border: '1px solid var(--border)', backgroundColor: 'var(--surface)', color: 'var(--foreground)', outline: 'none', fontSize: '0.9rem', transition: 'all 0.3s ease' }} 
+                    style={{ flex: 1, padding: '0.6rem 0.8rem', borderRadius: '8px', border: '1px solid var(--border)', backgroundColor: 'var(--surface)', outline: 'none', fontSize: '0.9rem', transition: 'all 0.3s ease' }} 
                     onFocus={(e) => { e.currentTarget.style.border = '1px solid var(--gold)'; e.currentTarget.style.backgroundColor = 'rgba(255,215,0,0.05)'; }}
                     onBlur={(e) => { e.currentTarget.style.border = '1px solid rgba(255,255,255,0.1)'; e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)'; }}
                   />
@@ -2866,7 +2866,7 @@ export default function QuotePage() {
               <span style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--gold)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <span>✨</span> Cashify&apos;s price
               </span>
-              <span style={{ color: 'var(--foreground)', fontSize: '1.25rem', fontWeight: 800 }}>
+              <span style={{ fontSize: '1.25rem', fontWeight: 800 }}>
                 {formatCurrency(cashifyPrice ?? 0)}
               </span>
             </div>
@@ -2969,7 +2969,7 @@ export default function QuotePage() {
           <div style={{ display: 'flex', gap: '0.75rem', marginTop: '1rem', width: '100%' }}>
             <button type="button" onClick={handleBack} className="btn-outline" style={{ flex: 1, padding: '12px', fontSize: '1rem' }}>Back</button>
             <button type="button" onClick={() => { navigateToState('', '', '', 'brand', 1); setFinalPrice(null); setMarketPriceFetched(false); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], screenCondition: null, screenSpots: null, screenLines: null, screenDiscoloration: null, bodyScratches: null, bodyDents: null, bodyPanel: null, bodyBent: null, hardware: [], accessories: [], warranty: null, validBill: null, eSim: null, mobileAge: null }); }} className="btn-outline" style={{ flex: 1, padding: '12px', fontSize: '1rem' }}>Start Over</button>
-            <button type="button" onClick={() => setStep(12)} className="btn-primary" style={{ flex: 2, padding: '12px', background: 'var(--gold)', color: 'var(--foreground)', fontSize: '1rem', fontWeight: 600, cursor: 'pointer' }}>Schedule Pickup</button>
+            <button type="button" onClick={() => setStep(12)} className="btn-primary" style={{ flex: 2, padding: '12px', fontSize: '1rem', fontWeight: 600, cursor: 'pointer' }}>Schedule Pickup</button>
           </div>
         </div>
       )}
@@ -3020,11 +3020,11 @@ export default function QuotePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
               <div>
                 <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem' }}>Preferred Date</label>
-                <input type="date" required value={pickupDate} onChange={(e) => setPickupDate(e.target.value)} style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000', color: 'var(--foreground)' }} />
+                <input type="date" required value={pickupDate} onChange={(e) => setPickupDate(e.target.value)} style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000' }} />
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem' }}>Preferred Time</label>
-                <select required value={pickupTime} onChange={(e) => setPickupTime(e.target.value)} style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000', color: 'var(--foreground)' }}>
+                <select required value={pickupTime} onChange={(e) => setPickupTime(e.target.value)} style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000' }}>
                   <option value="">Select Time Slot</option>
                   <option value="10:00 AM - 1:00 PM">10:00 AM - 1:00 PM</option>
                   <option value="1:00 PM - 4:00 PM">1:00 PM - 4:00 PM</option>
@@ -3035,23 +3035,23 @@ export default function QuotePage() {
 
             <div style={{ marginBottom: '1rem' }}>
               <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem' }}>Flat / House No / Building Name</label>
-              <input type="text" required value={address} onChange={(e) => setAddress(e.target.value)} placeholder="e.g. 101, Fhoneify Apartments" style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000', color: 'var(--foreground)' }} />
+              <input type="text" required value={address} onChange={(e) => setAddress(e.target.value)} placeholder="e.g. 101, Fhoneify Apartments" style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000' }} />
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               <div>
                 <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem' }}>Pincode</label>
-                <input type="text" required value={pincode} onChange={(e) => setPincode(e.target.value.replace(/\D/g, '').slice(0, 6))} placeholder="6 Digit Pincode" style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000', color: 'var(--foreground)' }} />
+                <input type="text" required value={pincode} onChange={(e) => setPincode(e.target.value.replace(/\D/g, '').slice(0, 6))} placeholder="6 Digit Pincode" style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000' }} />
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem' }}>City</label>
-                <input type="text" required value={city} onChange={(e) => setCity(e.target.value)} placeholder="e.g. Bengaluru" style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000', color: 'var(--foreground)' }} />
+                <input type="text" required value={city} onChange={(e) => setCity(e.target.value)} placeholder="e.g. Bengaluru" style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000' }} />
               </div>
             </div>
 
             <div style={{ display: 'flex', gap: '1rem', width: '100%' }}>
               <button type="button" onClick={() => setStep(8)} className="btn-outline" style={{ flex: 1, padding: '16px', fontSize: '1.1rem' }}>Back</button>
-              <button type="submit" className="btn-primary" style={{ flex: 2, padding: '16px', background: 'var(--gold)', color: 'var(--foreground)', fontSize: '1.1rem', fontWeight: 600 }}>Confirm Pickup</button>
+              <button type="submit" className="btn-primary" style={{ flex: 2, padding: '16px', fontSize: '1.1rem', fontWeight: 600 }}>Confirm Pickup</button>
             </div>
           </form>
         </div>
@@ -3084,7 +3084,7 @@ export default function QuotePage() {
                   <line x1="12" y1="16" x2="12.01" y2="16"></line>
                 </svg>
               </div>
-              <h2 style={{ color: 'var(--foreground)', fontSize: '1.5rem', fontWeight: 600, marginBottom: '0.75rem' }}>Price Unavailable</h2>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '0.75rem' }}>Price Unavailable</h2>
               <p style={{ color: 'var(--gold)', fontSize: '1.1rem', maxWidth: '350px' }}>{timerError}</p>
             </div>
           ) : (
@@ -3114,13 +3114,13 @@ export default function QuotePage() {
                 <div style={{ 
                   position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, 
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontSize: '2.5rem', fontWeight: 700, color: 'var(--foreground)'
+                  fontSize: '2.5rem', fontWeight: 700
                 }}>
                   {timerCount}s
                 </div>
               </div>
               <h2 style={{ 
-                color: 'var(--foreground)', fontSize: '1.5rem', fontWeight: 600, marginBottom: '0.5rem',
+                fontSize: '1.5rem', fontWeight: 600, marginBottom: '0.5rem',
                 background: 'linear-gradient(90deg, #4CD964, #34A853)',
                 WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
                 animation: 'pulse 2s infinite'
