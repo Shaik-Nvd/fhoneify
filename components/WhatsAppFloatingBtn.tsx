@@ -66,11 +66,7 @@ export default function WhatsAppFloatingBtn() {
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${prefilledMessage}`;
 
   const handleClick = (e: React.MouseEvent) => {
-    if (isMobile) {
-      // On mobile, let the anchor tag act normally (open whatsapp)
-      return;
-    }
-    // On desktop, toggle the widget
+    // Toggle the widget on both desktop and mobile
     e.preventDefault();
     setIsOpen(!isOpen);
   };
@@ -78,8 +74,8 @@ export default function WhatsAppFloatingBtn() {
   return (
     <div className="fixed z-50 whatsapp-container" style={{ right: '1.5rem' }}>
       
-      {/* Expanded Widget (Desktop primarily) */}
-      {!isMobile && isOpen && (
+      {/* Expanded Widget */}
+      {isOpen && (
         <div className="absolute bottom-16 right-0 w-64 bg-white rounded-xl shadow-2xl overflow-hidden flex flex-col mb-3 transform transition-all duration-300 origin-bottom-right" style={{ border: '1px solid #e5e7eb' }}>
           {/* Header */}
           <div className="bg-[#25D366] p-3 flex items-center justify-between">
@@ -135,7 +131,7 @@ export default function WhatsAppFloatingBtn() {
         }}
         aria-label="Chat with us on WhatsApp"
       >
-        {isOpen && !isMobile ? (
+        {isOpen ? (
           <svg viewBox="0 0 24 24" width="16" height="16" stroke="white" strokeWidth="2" fill="none"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         ) : (
           <svg
