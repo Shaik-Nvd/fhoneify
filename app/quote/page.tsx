@@ -2167,7 +2167,7 @@ export default function QuotePage() {
                     <span style={{ fontSize: '2.5rem', display: 'block', marginBottom: '1rem' }}>📱</span>
                     <h3 style={{ color: 'var(--foreground)', fontSize: '1.1rem', fontWeight: 500, marginBottom: '0.5rem' }}>Model configuration not found</h3>
                     <p style={{ fontSize: '0.9rem' }}>We couldn&apos;t find the storage variants for this model. It might be under process.</p>
-                    <button onClick={() => navigateToState(selectedBrand, '', '', 'model', 1)} style={{ marginTop: '1.5rem', padding: '0.5rem 1rem', backgroundcolor: 'var(--gold)', color: '#000', borderRadius: '6px', fontWeight: 600, border: 'none', cursor: 'pointer' }}>View All {selectedBrand} Models</button>
+                    <button onClick={() => navigateToState(selectedBrand, '', '', 'model', 1)} style={{ marginTop: '1.5rem', padding: '0.5rem 1rem', backgroundColor: 'var(--gold)', color: '#000', borderRadius: '6px', fontWeight: 600, border: 'none', cursor: 'pointer' }}>View All {selectedBrand} Models</button>
                   </div>
                 ) : (
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
