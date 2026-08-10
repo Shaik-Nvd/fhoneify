@@ -224,7 +224,7 @@ export default function MobileHome() {
               Fhoneify Assured
             </div>
             <div className="h-[120px] w-full flex items-center justify-center mt-6 mb-2">
-              <img src="https://m.media-amazon.com/images/I/71xb2xkN5qL._SX679_.jpg" alt="iPhone 13" className="max-h-full max-w-full object-contain mix-blend-screen" />
+              <img src="https://m.media-amazon.com/images/I/71xb2xkN5qL._SX679_.jpg" alt="iPhone 13" className="max-h-full max-w-full object-contain dark:mix-blend-screen mix-blend-multiply" />
             </div>
             <div className="bg-[#4ade80]/10 text-[#4ade80] text-xs font-semibold px-2 py-1 rounded inline-block mb-2">
               ₹12,000 OFF
@@ -238,7 +238,7 @@ export default function MobileHome() {
               Fhoneify Assured
             </div>
             <div className="h-[120px] w-full flex items-center justify-center mt-6 mb-2">
-              <img src="https://m.media-amazon.com/images/I/51L8W6d-DNL._SX300_SY300_QL70_FMwebp_.jpg" alt="Samsung S23" className="max-h-full max-w-full object-contain mix-blend-screen" />
+              <img src="https://m.media-amazon.com/images/I/51L8W6d-DNL._SX300_SY300_QL70_FMwebp_.jpg" alt="Samsung S23" className="max-h-full max-w-full object-contain dark:mix-blend-screen mix-blend-multiply" />
             </div>
             <div className="bg-[#4ade80]/10 text-[#4ade80] text-xs font-semibold px-2 py-1 rounded inline-block mb-2">
               ₹18,500 OFF
@@ -252,7 +252,7 @@ export default function MobileHome() {
               Fhoneify Assured
             </div>
             <div className="h-[120px] w-full flex items-center justify-center mt-6 mb-2">
-              <img src="https://m.media-amazon.com/images/I/61bK6PMOC3L._SX679_.jpg" alt="iPhone 14" className="max-h-full max-w-full object-contain mix-blend-screen" />
+              <img src="https://m.media-amazon.com/images/I/61bK6PMOC3L._SX679_.jpg" alt="iPhone 14" className="max-h-full max-w-full object-contain dark:mix-blend-screen mix-blend-multiply" />
             </div>
             <div className="bg-[#4ade80]/10 text-[#4ade80] text-xs font-semibold px-2 py-1 rounded inline-block mb-2">
               ₹15,000 OFF
