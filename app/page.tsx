@@ -97,7 +97,7 @@ function SlidingBanner() {
     <div style={{ position: 'relative', width: '100%', overflow: 'hidden', borderRadius: '16px', marginBottom: '4rem', marginTop: '4rem' }} className="glass-panel">
       <div style={{ display: 'flex', transition: 'transform 0.6s cubic-bezier(0.22, 1, 0.36, 1)', transform: `translateX(-${currentIndex * 100}%)` }}>
         {BANNER_ITEMS.map((item) => (
-          <div key={item.id} className="flex flex-col md:flex-row items-center justify-between" style={{ minWidth: '100%', padding: '2rem md:3rem', gap: '2rem' }}>
+          <div key={item.id} className="flex flex-col md:flex-row items-center justify-between p-8 md:p-12" style={{ minWidth: '100%', gap: '2rem' }}>
             <div style={{ maxWidth: '100%' }} className="md:max-w-[60%] text-center md:text-left">
               <h2 className="text-gradient-animated" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 700, marginBottom: '1rem', letterSpacing: '-0.02em', display: 'inline-block' }}>{item.title}</h2>
               <p style={{ fontSize: '1.1rem', marginBottom: '2rem', fontWeight: 500, color: 'var(--muted)' }}>{item.desc}</p>
