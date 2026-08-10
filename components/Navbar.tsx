@@ -5,6 +5,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { useAuthStore } from '@/lib/authStore';
 import { useCartStore } from '@/lib/cartStore';
 import { useEffect, useState } from 'react';
+import { ThemeToggle } from './ThemeToggle';
 
 export default function Navbar() {
   const router = useRouter();
@@ -68,8 +69,8 @@ export default function Navbar() {
       position: 'sticky',
       top: 0,
       zIndex: 50,
-      backgroundColor: '#0a0a0a',
-      borderBottom: '1px solid #2a2a2a',
+      backgroundColor: 'var(--background)',
+      borderBottom: '1px solid var(--border)',
       backdropFilter: 'blur(12px)',
     }}>
       <div style={{
@@ -86,7 +87,7 @@ export default function Navbar() {
           style={{
             fontSize: '1.25rem',
             fontWeight: 700,
-            color: '#d4af37',
+            color: 'var(--gold)',
             letterSpacing: '3px',
             textDecoration: 'none',
             textTransform: 'uppercase',
@@ -108,13 +109,13 @@ export default function Navbar() {
                 <Link
                   href={category.href}
                   style={{
-                    color: hoveredMenu === category.id ? '#d4af37' : '#a0a0a0',
+                    color: hoveredMenu === category.id ? 'var(--gold)' : '#a0a0a0',
                     fontSize: '0.875rem',
                     fontWeight: 500,
                     textDecoration: 'none',
                     transition: 'color 150ms',
                   }}
-                  onMouseEnter={(e) => { e.currentTarget.style.color = '#fff'; }}
+                  onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--foreground)'; }}
                   onMouseLeave={(e) => { e.currentTarget.style.color = '#a0a0a0'; }}
                 >
                   {category.title}
@@ -123,7 +124,7 @@ export default function Navbar() {
                 <span 
                   onClick={() => setHoveredMenu(hoveredMenu === category.id ? null : category.id)}
                   style={{ 
-                    color: hoveredMenu === category.id ? '#d4af37' : '#a0a0a0', 
+                    color: hoveredMenu === category.id ? 'var(--gold)' : '#a0a0a0', 
                     fontSize: '0.875rem', 
                     fontWeight: 500, 
                     cursor: 'pointer', 
@@ -153,8 +154,8 @@ export default function Navbar() {
                   width: '180px' 
                 }}>
                   <div style={{ 
-                    backgroundColor: '#0a0a0a', 
-                    border: '1px solid #2a2a2a', 
+                    backgroundColor: 'var(--background)', 
+                    border: '1px solid var(--border)', 
                     borderRadius: '12px', 
                     padding: '0.5rem', 
                     display: 'flex', 
@@ -167,7 +168,7 @@ export default function Navbar() {
                         key={item.href} 
                         href={item.href}
                         style={{ 
-                          color: '#a0a0a0', 
+                          color: 'var(--muted)', 
                           textDecoration: 'none', 
                           padding: '0.6rem 0.75rem', 
                           borderRadius: '8px', 
@@ -176,8 +177,8 @@ export default function Navbar() {
                           transition: 'all 150ms' 
                         }}
                         onMouseEnter={(e) => { 
-                          e.currentTarget.style.backgroundColor = '#1a1a1a'; 
-                          e.currentTarget.style.color = '#fff'; 
+                          e.currentTarget.style.backgroundColor = 'var(--surface-elevated)'; 
+                          e.currentTarget.style.color = 'var(--foreground)'; 
                         }}
                         onMouseLeave={(e) => { 
                           e.currentTarget.style.backgroundColor = 'transparent'; 
@@ -197,10 +198,11 @@ export default function Navbar() {
         {/* Right Section: Auth & Cart */}
         {mounted && !isMobile && (
           <div className="flex items-center gap-6">
+            <ThemeToggle />
             <Link
               href="/cart"
-              style={{ color: '#a0a0a0', fontSize: '1rem', fontWeight: 500, textDecoration: 'none', transition: 'color 150ms', position: 'relative' }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = '#d4af37')}
+              style={{ color: 'var(--muted)', fontSize: '1rem', fontWeight: 500, textDecoration: 'none', transition: 'color 150ms', position: 'relative' }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--gold)')}
               onMouseLeave={(e) => (e.currentTarget.style.color = '#a0a0a0')}
             >
               🛒
@@ -209,8 +211,8 @@ export default function Navbar() {
                   position: 'absolute',
                   top: '-8px',
                   right: '-12px',
-                  backgroundColor: '#d4af37',
-                  color: '#0a0a0a',
+                  backgroundcolor: 'var(--gold)',
+                  color: 'var(--background)',
                   fontSize: '10px',
                   fontWeight: 700,
                   width: '18px',
@@ -230,8 +232,8 @@ export default function Navbar() {
             {isAuthenticated && user ? (
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
-                  <span style={{ color: '#fff', fontSize: '0.8rem', fontWeight: 600 }}>{user.name || user.phone}</span>
-                  <span style={{ color: '#a0a0a0', fontSize: '0.7rem' }}>{user.role === 'admin' ? 'Administrator' : 'Customer'}</span>
+                  <span style={{ color: 'var(--foreground)', fontSize: '0.8rem', fontWeight: 600 }}>{user.name || user.phone}</span>
+                  <span style={{ color: 'var(--muted)', fontSize: '0.7rem' }}>{user.role === 'admin' ? 'Administrator' : 'Customer'}</span>
                 </div>
                 
 
@@ -239,9 +241,9 @@ export default function Navbar() {
                 {user.role === 'admin' && (
                   <Link
                     href="/admin"
-                    style={{ color: '#d4af37', fontSize: '0.875rem', fontWeight: 600, textDecoration: 'none', transition: 'color 150ms' }}
+                    style={{ color: 'var(--gold)', fontSize: '0.875rem', fontWeight: 600, textDecoration: 'none', transition: 'color 150ms' }}
                     onMouseEnter={(e) => (e.currentTarget.style.color = '#f0c040')}
-                    onMouseLeave={(e) => (e.currentTarget.style.color = '#d4af37')}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--gold)')}
                   >
                     Admin
                   </Link>
@@ -275,13 +277,13 @@ export default function Navbar() {
                   fontSize: '0.8rem',
                   fontWeight: 600,
                   borderRadius: '8px',
-                  backgroundColor: '#d4af37',
-                  color: '#0a0a0a',
+                  backgroundcolor: 'var(--gold)',
+                  color: 'var(--background)',
                   textDecoration: 'none',
                   transition: 'all 150ms',
                 }}
                 onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#f0c040'; e.currentTarget.style.transform = 'scale(1.02)'; }}
-                onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = '#d4af37'; e.currentTarget.style.transform = 'scale(1)'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'var(--gold)'; e.currentTarget.style.transform = 'scale(1)'; }}
               >
                 Login
               </Link>
@@ -292,17 +294,18 @@ export default function Navbar() {
         {/* Mobile Hamburger Icon */}
         {mounted && isMobile && (
           <div className="flex items-center gap-4">
-            <Link href="/cart" className="relative text-[#a0a0a0]">
+            <ThemeToggle />
+            <Link href="/cart" className="relative text-muted">
               🛒
               {cartCount > 0 && (
-                <span className="absolute -top-2 -right-3 bg-[#d4af37] text-[#0a0a0a] text-[10px] font-bold w-[18px] h-[18px] rounded-full flex items-center justify-center">
+                <span className="absolute -top-2 -right-3 bg-[var(--gold)] text-[#0a0a0a] text-[10px] font-bold w-[18px] h-[18px] rounded-full flex items-center justify-center">
                   {cartCount}
                 </span>
               )}
             </Link>
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-[#d4af37] p-2 focus:outline-none"
+              className="text-gold p-2 focus:outline-none"
             >
               <div className="space-y-1.5">
                 <span className={`block w-6 h-0.5 bg-current transition-transform ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
@@ -316,7 +319,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-[#0a0a0a] border-t border-[#2a2a2a] px-4 py-6 flex flex-col gap-4 absolute w-full left-0 max-h-[80vh] overflow-y-auto shadow-2xl">
+        <div className="md:hidden bg-background border-t border-border px-4 py-6 flex flex-col gap-4 absolute w-full left-0 max-h-[80vh] overflow-y-auto shadow-2xl">
           {navCategories.map((cat) => {
             const isExpanded = hoveredMenu === cat.id; // Reusing hoveredMenu state for mobile accordion
             return (
@@ -327,7 +330,7 @@ export default function Navbar() {
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="flex justify-between items-center w-full text-left py-2"
                   >
-                    <span className="text-[#d4af37] font-semibold text-sm tracking-wider uppercase">{cat.title}</span>
+                    <span className="text-gold font-semibold text-sm tracking-wider uppercase">{cat.title}</span>
                   </Link>
                 ) : (
                   <>
@@ -335,8 +338,8 @@ export default function Navbar() {
                       onClick={() => setHoveredMenu(isExpanded ? null : cat.id)}
                       className="flex justify-between items-center w-full text-left py-2"
                     >
-                      <span className="text-[#d4af37] font-semibold text-sm tracking-wider uppercase">{cat.title}</span>
-                      <span className={`text-[#d4af37] text-xs transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}>▼</span>
+                      <span className="text-gold font-semibold text-sm tracking-wider uppercase">{cat.title}</span>
+                      <span className={`text-gold text-xs transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}>▼</span>
                     </button>
                     
                     {isExpanded && cat.items && (
@@ -346,9 +349,9 @@ export default function Navbar() {
                             key={item.href} 
                             href={item.href} 
                             onClick={() => { setIsMobileMenuOpen(false); setHoveredMenu(null); }} 
-                            className="text-[#a0a0a0] hover:text-[#fff] transition-colors py-1 flex items-center gap-2"
+                            className="text-muted hover:text-foreground transition-colors py-1 flex items-center gap-2"
                           >
-                            <span className="w-1 h-1 bg-[#d4af37] rounded-full opacity-50"></span>
+                            <span className="w-1 h-1 bg-[var(--gold)] rounded-full opacity-50"></span>
                             {item.label}
                           </Link>
                         ))}
@@ -360,17 +363,17 @@ export default function Navbar() {
             );
           })}
           
-          <div className="border-t border-[#2a2a2a] pt-6 flex flex-col gap-4">
+          <div className="border-t border-border pt-6 flex flex-col gap-4">
             {mounted && isAuthenticated && user ? (
               <>
-                <span className="text-[#fff] font-medium">{user.name || user.phone}</span>
+                <span className="text-foreground font-medium">{user.name || user.phone}</span>
                 {user.role === 'admin' && (
-                  <Link href="/admin" onClick={() => setIsMobileMenuOpen(false)} className="text-[#d4af37] font-semibold">Admin Panel</Link>
+                  <Link href="/admin" onClick={() => setIsMobileMenuOpen(false)} className="text-gold font-semibold">Admin Panel</Link>
                 )}
                 <button onClick={() => { handleLogout(); setIsMobileMenuOpen(false); }} className="text-left text-[#FF3B30] font-semibold pt-2">Logout</button>
               </>
             ) : (
-              <Link href="/auth" onClick={() => setIsMobileMenuOpen(false)} className="bg-[#d4af37] text-[#0a0a0a] text-center font-bold py-3 rounded-lg">
+              <Link href="/auth" onClick={() => setIsMobileMenuOpen(false)} className="bg-[var(--gold)] text-[#0a0a0a] text-center font-bold py-3 rounded-lg">
                 Login / Register
               </Link>
             )}

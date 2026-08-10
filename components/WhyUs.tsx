@@ -113,20 +113,20 @@ export default function WhyUs() {
 
   return (
     <div className="w-full" ref={containerRef} style={{ perspective: '1000px' }}>
-      <h2 className="section-title text-2xl md:text-3xl font-bold text-white mb-8 text-center md:text-left">Why Us</h2>
+      <h2 className="section-title text-2xl md:text-3xl font-bold text-foreground mb-8 text-center md:text-left">Why Us</h2>
       <div className="feature-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {FEATURES.map((feat, idx) => (
           <div 
             key={idx} 
-            className="feature-card flex gap-4 items-start p-6 bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] rounded-2xl border border-[#2a2a2a] hover:border-[#38b2ac] transition-all shadow-xl hover:shadow-[#38b2ac]/20"
+            className="feature-card flex gap-4 items-start p-6 bg-surface rounded-2xl border border-border hover:border-[#38b2ac] transition-all shadow-xl hover:shadow-[#38b2ac]/20"
             style={{ transformStyle: 'preserve-3d' }}
           >
-            <div className="p-3 bg-[#38b2ac]/10 rounded-xl shrink-0 text-[#38b2ac]">
+            <div className="p-3 bg-surface-elevated rounded-xl shrink-0 text-[#38b2ac]">
               {feat.icon}
             </div>
             <div>
-              <h3 className="text-white font-bold text-lg mb-2">{feat.title}</h3>
-              <p className="text-[#888] text-sm leading-relaxed">{feat.desc}</p>
+              <h3 className="text-foreground font-bold text-lg mb-2">{feat.title}</h3>
+              <p className="text-muted text-sm leading-relaxed">{feat.desc}</p>
             </div>
           </div>
         ))}

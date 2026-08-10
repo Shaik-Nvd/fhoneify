@@ -100,7 +100,7 @@ function SlidingBanner() {
           <div key={item.id} className="flex flex-col md:flex-row items-center justify-between" style={{ minWidth: '100%', padding: '2rem md:3rem', gap: '2rem' }}>
             <div style={{ maxWidth: '100%' }} className="md:max-w-[60%] text-center md:text-left">
               <h2 className="text-gradient-animated" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 700, marginBottom: '1rem', letterSpacing: '-0.02em', display: 'inline-block' }}>{item.title}</h2>
-              <p style={{ fontSize: '1.1rem', marginBottom: '2rem', fontWeight: 500, color: '#a0a0a0' }}>{item.desc}</p>
+              <p style={{ fontSize: '1.1rem', marginBottom: '2rem', fontWeight: 500, color: 'var(--muted)' }}>{item.desc}</p>
               <Link href={item.link} className="btn-primary" style={{ padding: '12px 32px', fontSize: '1rem', borderRadius: '8px', fontWeight: 600, textDecoration: 'none' }}>
                 {item.cta}
               </Link>
@@ -113,7 +113,7 @@ function SlidingBanner() {
       </div>
       <div style={{ position: 'absolute', bottom: '1.5rem', left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: '0.5rem' }}>
         {BANNER_ITEMS.map((_, idx) => (
-          <button key={idx} onClick={() => setCurrentIndex(idx)} style={{ width: idx === currentIndex ? '32px' : '8px', height: '8px', borderRadius: '4px', backgroundColor: idx === currentIndex ? '#d4af37' : 'rgba(255,255,255,0.2)', border: 'none', transition: 'all 0.3s ease', cursor: 'pointer' }} aria-label={`Go to slide ${idx + 1}`} />
+          <button key={idx} onClick={() => setCurrentIndex(idx)} style={{ width: idx === currentIndex ? '32px' : '8px', height: '8px', borderRadius: '4px', backgroundColor: idx === currentIndex ? 'var(--gold)' : 'var(--border)', border: 'none', transition: 'all 0.3s ease', cursor: 'pointer' }} aria-label={`Go to slide ${idx + 1}`} />
         ))}
       </div>
     </div>
@@ -161,7 +161,7 @@ function FloatingPhone({ mouseX, mouseY }: { mouseX: any, mouseY: any }) {
   const glareY = useTransform(mouseY, [0, 1], [0, 100]);
   const glareBackground = useTransform(
     [glareX, glareY],
-    ([gx, gy]: any) => `radial-gradient(circle at ${gx || 50}% ${gy || 50}%, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 50%)`
+    ([gx, gy]: any) => `radial-gradient(circle at ${gx || 50}% ${gy || 50}%, var(--border) 0%, rgba(255,255,255,0) 50%)`
   );
 
   return (
@@ -169,7 +169,7 @@ function FloatingPhone({ mouseX, mouseY }: { mouseX: any, mouseY: any }) {
       
       {/* Orbiting Glow Particles */}
       <m.div animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 15, ease: "linear" }} style={{ position: 'absolute', width: '150%', height: '150%', zIndex: 0, pointerEvents: 'none' }}>
-        <m.div animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.8, 0.3] }} transition={{ repeat: Infinity, duration: 2 }} style={{ position: 'absolute', top: '20%', left: '20%', width: '10px', height: '10px', background: '#d4af37', borderRadius: '50%', filter: 'blur(2px)' }} />
+        <m.div animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.8, 0.3] }} transition={{ repeat: Infinity, duration: 2 }} style={{ position: 'absolute', top: '20%', left: '20%', width: '10px', height: '10px', background: 'var(--gold)', borderRadius: '50%', filter: 'blur(2px)' }} />
         <m.div animate={{ scale: [1, 1.5, 1], opacity: [0.4, 1, 0.4] }} transition={{ repeat: Infinity, duration: 3, delay: 1 }} style={{ position: 'absolute', bottom: '30%', right: '15%', width: '8px', height: '8px', background: '#8a2be2', borderRadius: '50%', filter: 'blur(2px)' }} />
         <m.div animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.7, 0.2] }} transition={{ repeat: Infinity, duration: 2.5, delay: 0.5 }} style={{ position: 'absolute', top: '50%', left: '80%', width: '12px', height: '12px', background: '#10b981', borderRadius: '50%', filter: 'blur(3px)' }} />
       </m.div>
@@ -193,8 +193,8 @@ function FloatingPhone({ mouseX, mouseY }: { mouseX: any, mouseY: any }) {
       <m.div style={{ position: 'absolute', top: '15%', left: '-5%', y: badge1Y, zIndex: 20 }} className="glass-card p-3 md:p-4 rounded-xl flex items-center gap-3 shadow-2xl">
         <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'linear-gradient(135deg, #221f15, #0f0d08)', border: '1px solid rgba(212,175,55,0.4)', boxShadow: '0 4px 15px rgba(212,175,55,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem' }}>✨</div>
         <div>
-          <p style={{ color: '#fff', fontWeight: 700, fontSize: '0.9rem', margin: 0 }}>Instant</p>
-          <p style={{ color: '#a0a0a0', fontSize: '0.75rem', margin: 0 }}>Valuation</p>
+          <p style={{ color: 'var(--foreground)', fontWeight: 700, fontSize: '0.9rem', margin: 0 }}>Instant</p>
+          <p style={{ color: 'var(--muted)', fontSize: '0.75rem', margin: 0 }}>Valuation</p>
         </div>
       </m.div>
 
@@ -202,15 +202,15 @@ function FloatingPhone({ mouseX, mouseY }: { mouseX: any, mouseY: any }) {
       <m.div style={{ position: 'absolute', bottom: '15%', right: '-15%', y: badge2Y, zIndex: 20 }} className="glass-card p-3 md:p-4 rounded-xl flex items-center gap-3 shadow-2xl">
         <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'linear-gradient(135deg, #221f15, #0f0d08)', border: '1px solid rgba(212,175,55,0.4)', boxShadow: '0 4px 15px rgba(212,175,55,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem' }}>💰</div>
         <div>
-          <p style={{ color: '#fff', fontWeight: 700, fontSize: '0.9rem', margin: 0 }}>Highest</p>
-          <p style={{ color: '#a0a0a0', fontSize: '0.75rem', margin: 0 }}>Market Price</p>
+          <p style={{ color: 'var(--foreground)', fontWeight: 700, fontSize: '0.9rem', margin: 0 }}>Highest</p>
+          <p style={{ color: 'var(--muted)', fontSize: '0.75rem', margin: 0 }}>Market Price</p>
         </div>
       </m.div>
 
       {/* Floating Badge 3 */}
       <m.div style={{ position: 'absolute', top: '60%', left: '-20%', y: badge3Y, zIndex: -1, opacity: 0.8 }} className="glass-card p-2 md:p-3 rounded-xl flex items-center gap-2 shadow-2xl">
         <span style={{ fontSize: '1.2rem' }}>🔒</span>
-        <span style={{ color: '#fff', fontWeight: 600, fontSize: '0.85rem' }}>Secure Wipe</span>
+        <span style={{ color: 'var(--foreground)', fontWeight: 600, fontSize: '0.85rem' }}>Secure Wipe</span>
       </m.div>
 
       <m.div 
@@ -230,7 +230,7 @@ function FloatingPhone({ mouseX, mouseY }: { mouseX: any, mouseY: any }) {
         <div className="css-phone" style={{ boxShadow: '0 50px 100px -20px rgba(212,175,55,0.25), 0 30px 60px -30px rgba(0,0,0,0.5), inset 0 0 20px rgba(255,255,255,0.1)' }}>
           <div className="css-phone-screen">
             <h1 className="text-gradient-animated" style={{ fontSize: '1.8rem', fontWeight: 800, marginBottom: '1rem', letterSpacing: '1px' }}>Fhoneify</h1>
-            <p style={{ color: '#a0a0a0', fontSize: '0.85rem', textAlign: 'center', maxWidth: '85%', lineHeight: 1.4 }}>AI-Powered Valuation Engine</p>
+            <p style={{ color: 'var(--muted)', fontSize: '0.85rem', textAlign: 'center', maxWidth: '85%', lineHeight: 1.4 }}>AI-Powered Valuation Engine</p>
             <div style={{ marginTop: '3rem', display: 'flex', gap: '0.8rem' }}>
               <m.div animate={{ y: [0, -5, 0] }} transition={{ repeat: Infinity, duration: 2, delay: 0 }} style={{ width: '45px', height: '45px', borderRadius: '12px', background: 'linear-gradient(135deg, rgba(212,175,55,0.3), rgba(212,175,55,0.1))', boxShadow: 'inset 0 0 10px rgba(212,175,55,0.2)' }} />
               <m.div animate={{ y: [0, -5, 0] }} transition={{ repeat: Infinity, duration: 2, delay: 0.2 }} style={{ width: '45px', height: '45px', borderRadius: '12px', background: 'linear-gradient(135deg, rgba(212,175,55,0.3), rgba(212,175,55,0.1))', boxShadow: 'inset 0 0 10px rgba(212,175,55,0.2)' }} />
@@ -352,7 +352,7 @@ export default function LandingPage() {
           {/* 3D Hero Parallax Section */}
           <section style={{
         position: 'relative',
-        backgroundColor: '#0a0a0a',
+        backgroundColor: 'var(--background)',
         padding: '6rem 0 4rem',
         minHeight: '90vh',
         display: 'flex',
@@ -376,7 +376,7 @@ export default function LandingPage() {
               <m.h1 variants={itemVariants} style={{
                 fontSize: 'clamp(2.2rem, 8vw, 4.5rem)',
                 fontWeight: 300,
-                color: '#ffffff',
+                color: 'var(--foreground)',
                 lineHeight: 1.1,
                 marginBottom: '1rem',
                 letterSpacing: '-0.04em',
@@ -385,7 +385,7 @@ export default function LandingPage() {
                 <span className="text-gradient-animated" style={{ fontStyle: 'italic', paddingRight: '0.2em' }}>Buy Smarter.</span>
               </m.h1>
               <m.p variants={itemVariants} style={{
-                color: '#a0a0a0',
+                color: 'var(--muted)',
                 fontSize: '1.25rem',
                 maxWidth: '36rem',
                 marginBottom: '3rem',
@@ -401,7 +401,7 @@ export default function LandingPage() {
                   </MagneticButton>
                 </Link>
                 <Link href="/buy" style={{ textDecoration: 'none' }} className="w-full sm:w-auto">
-                  <MagneticButton className="glass-panel w-full sm:w-auto" style={{ padding: '16px 40px', fontSize: '1.1rem', color: '#fff', borderRadius: '8px', fontWeight: 600, width: '100%', justifyContent: 'center' }}>
+                  <MagneticButton className="glass-panel w-full sm:w-auto" style={{ padding: '16px 40px', fontSize: '1.1rem', color: 'var(--foreground)', borderRadius: '8px', fontWeight: 600, width: '100%', justifyContent: 'center' }}>
                     Buy Phone
                   </MagneticButton>
                 </Link>
@@ -426,12 +426,12 @@ export default function LandingPage() {
       </section>
 
       {/* Top Selling Models */}
-      <section style={{ backgroundColor: '#0a0a0a', padding: '4rem 0', position: 'relative', zIndex: 10 }}>
+      <section style={{ backgroundColor: 'var(--background)', padding: '4rem 0', position: 'relative', zIndex: 10 }}>
         <TopSellingModels />
       </section>
 
       {/* Google Reviews Trust Badge - Moved Down */}
-      <section style={{ backgroundColor: '#0a0a0a', padding: '0 0 4rem 0', display: 'flex', justifyContent: 'center' }}>
+      <section style={{ backgroundColor: 'var(--background)', padding: '0 0 4rem 0', display: 'flex', justifyContent: 'center' }}>
         <m.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <GoogleReviewBanner />
         </m.div>
@@ -441,13 +441,13 @@ export default function LandingPage() {
       <BrandGSAPSlider />
 
       {/* Stats - Glass Bar */}
-      <section style={{ backgroundColor: '#0a0a0a', padding: '2rem 0', position: 'relative', zIndex: 20 }}>
+      <section style={{ backgroundColor: 'var(--background)', padding: '2rem 0', position: 'relative', zIndex: 20 }}>
         <m.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} style={{ maxWidth: '90rem', margin: '0 auto', padding: '0 1.5rem' }}>
           <div className="glass-panel grid grid-cols-2 md:grid-cols-4 gap-6 text-center rounded-2xl p-6 md:p-10">
             {STATS.map((s) => (
               <div key={s.label}>
                 <p className="text-gradient-animated" style={{ fontSize: s.value.length > 6 ? '1.8rem' : '2.5rem', fontWeight: 700, marginBottom: '0.5rem', display: 'inline-block' }}>{s.value}</p>
-                <p style={{ fontSize: '0.85rem', color: '#a0a0a0', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 600 }}>{s.label}</p>
+                <p style={{ fontSize: '0.85rem', color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 600 }}>{s.label}</p>
               </div>
             ))}
           </div>
@@ -455,7 +455,7 @@ export default function LandingPage() {
       </section>
 
       {/* How it works */}
-      <section style={{ backgroundColor: '#0a0a0a', padding: '8rem 0' }}>
+      <section style={{ backgroundColor: 'var(--background)', padding: '8rem 0' }}>
         <div style={{ maxWidth: '90rem', margin: '0 auto', padding: '0 1.5rem' }}>
           <HowItWorks />
         </div>
@@ -464,7 +464,7 @@ export default function LandingPage() {
 
 
       {/* Why Us */}
-      <section style={{ backgroundColor: '#0a0a0a', padding: '0 0 8rem 0' }}>
+      <section style={{ backgroundColor: 'var(--background)', padding: '0 0 8rem 0' }}>
         <div style={{ maxWidth: '90rem', margin: '0 auto', padding: '0 1.5rem' }}>
           <m.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <WhyUs />
@@ -473,14 +473,14 @@ export default function LandingPage() {
       </section>
 
       {/* Customer Stories */}
-      <section style={{ backgroundColor: '#0a0a0a', padding: '0 0 8rem 0', overflow: 'hidden', width: '100%' }}>
+      <section style={{ backgroundColor: 'var(--background)', padding: '0 0 8rem 0', overflow: 'hidden', width: '100%' }}>
         <m.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="w-full">
           <CustomerStories />
         </m.div>
       </section>
 
       {/* FAQs */}
-      <section style={{ backgroundColor: '#0a0a0a', padding: '0 0 8rem 0' }}>
+      <section style={{ backgroundColor: 'var(--background)', padding: '0 0 8rem 0' }}>
         <div style={{ maxWidth: '90rem', margin: '0 auto', padding: '0 1.5rem' }}>
           <m.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <FAQs />

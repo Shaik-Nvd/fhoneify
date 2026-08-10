@@ -52,13 +52,13 @@ export default function HowItWorks() {
   return (
     <div className="w-full" ref={containerRef} style={{ perspective: '1000px' }}>
       <p className="eyebrow" style={{ textAlign: 'center', marginBottom: '0.75rem' }}>HOW IT WORKS</p>
-      <h2 style={{ textAlign: 'center', fontSize: '2.5rem', fontWeight: 300, color: '#fff', marginBottom: '4rem' }}>
+      <h2 style={{ textAlign: 'center', fontSize: '2.5rem', fontWeight: 300, color: 'var(--foreground)', marginBottom: '4rem' }}>
         Three simple steps
       </h2>
       
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '3rem' }}>
         {STEPS.map((s) => (
-          <div key={s.num} className="step-card glass-card p-8 rounded-2xl border border-[#2a2a2a]" style={{ textAlign: 'center', transformStyle: 'preserve-3d' }}>
+          <div key={s.num} className="step-card glass-card p-8 rounded-2xl border border-border" style={{ textAlign: 'center', transformStyle: 'preserve-3d' }}>
             <div style={{
               width: '80px',
               height: '80px',
@@ -69,15 +69,15 @@ export default function HowItWorks() {
               alignItems: 'center',
               justifyContent: 'center',
               margin: '0 auto 1.5rem',
-              color: '#d4af37',
+              color: 'var(--gold)',
               fontWeight: 800,
               fontSize: '1.5rem',
               boxShadow: '0 10px 30px rgba(212,175,55,0.1)'
             }}>
               {s.num}
             </div>
-            <h3 style={{ color: '#fff', fontWeight: 600, marginBottom: '1rem', fontSize: '1.5rem' }}>{s.title}</h3>
-            <p style={{ color: '#a0a0a0', fontSize: '1rem', lineHeight: 1.6 }}>{s.desc}</p>
+            <h3 style={{ color: 'var(--foreground)', fontWeight: 600, marginBottom: '1rem', fontSize: '1.5rem' }}>{s.title}</h3>
+            <p style={{ color: 'var(--muted)', fontSize: '1rem', lineHeight: 1.6 }}>{s.desc}</p>
           </div>
         ))}
       </div>

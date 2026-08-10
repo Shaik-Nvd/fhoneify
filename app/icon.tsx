@@ -20,10 +20,10 @@ export default function Icon() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          color: '#d4af37',
+          color: 'var(--gold)',
           fontWeight: 800,
           borderRadius: '20%',
-          border: '1px solid #d4af37',
+          border: '1px solid var(--gold)',
           fontFamily: 'sans-serif',
         }}
       >

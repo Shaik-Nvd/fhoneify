@@ -91,8 +91,8 @@ export default function AdminCMSPage() {
     <div className="page-animate" style={{ maxWidth: '64rem', margin: '0 auto', padding: '2rem 1rem' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
         <div>
-          <Link href="/admin" style={{ color: '#a0a0a0', fontSize: '0.85rem', textDecoration: 'none', marginBottom: '0.5rem', display: 'inline-block' }}>← Back to Dashboard</Link>
-          <h1 style={{ fontSize: '1.75rem', fontWeight: 300, color: '#fff' }}>Blog CMS</h1>
+          <Link href="/admin" style={{ color: 'var(--muted)', fontSize: '0.85rem', textDecoration: 'none', marginBottom: '0.5rem', display: 'inline-block' }}>← Back to Dashboard</Link>
+          <h1 style={{ fontSize: '1.75rem', fontWeight: 300, color: 'var(--foreground)' }}>Blog CMS</h1>
         </div>
         {!showEditor && (
           <button onClick={() => setShowEditor(true)} className="btn-primary">
@@ -103,44 +103,44 @@ export default function AdminCMSPage() {
 
       {showEditor ? (
         <form onSubmit={handleSave} className="card" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #2a2a2a', paddingBottom: '1rem' }}>
-            <h2 style={{ fontSize: '1.25rem', color: '#fff' }}>{editingId ? 'Edit Post' : 'Create New Post'}</h2>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--border)', paddingBottom: '1rem' }}>
+            <h2 style={{ fontSize: '1.25rem', color: 'var(--foreground)' }}>{editingId ? 'Edit Post' : 'Create New Post'}</h2>
             <button type="button" onClick={resetForm} className="btn-outline" style={{ padding: '6px 12px' }}>Cancel</button>
           </div>
 
           <div style={{ display: 'flex', gap: '1rem' }}>
             <div style={{ flex: 2 }}>
-              <label style={{ display: 'block', fontSize: '0.85rem', color: '#a0a0a0', marginBottom: '0.5rem' }}>Title</label>
+              <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem' }}>Title</label>
               <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} required style={{ width: '100%' }} />
             </div>
             <div style={{ flex: 1 }}>
-              <label style={{ display: 'block', fontSize: '0.85rem', color: '#a0a0a0', marginBottom: '0.5rem' }}>URL Slug</label>
+              <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem' }}>URL Slug</label>
               <input type="text" value={slug} onChange={(e) => setSlug(e.target.value)} required style={{ width: '100%' }} placeholder="e.g. why-refurbished" />
             </div>
           </div>
 
           <div>
-            <label style={{ display: 'block', fontSize: '0.85rem', color: '#a0a0a0', marginBottom: '0.5rem' }}>Markdown Content</label>
+            <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem' }}>Markdown Content</label>
             <textarea value={content} onChange={(e) => setContent(e.target.value)} required rows={12} style={{ width: '100%', fontFamily: 'monospace' }} />
           </div>
 
           <div style={{ display: 'flex', gap: '1rem' }}>
             <div style={{ flex: 1 }}>
-              <label style={{ display: 'block', fontSize: '0.85rem', color: '#a0a0a0', marginBottom: '0.5rem' }}>SEO Title (Optional)</label>
+              <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem' }}>SEO Title (Optional)</label>
               <input type="text" value={seoTitle} onChange={(e) => setSeoTitle(e.target.value)} style={{ width: '100%' }} />
             </div>
             <div style={{ flex: 2 }}>
-              <label style={{ display: 'block', fontSize: '0.85rem', color: '#a0a0a0', marginBottom: '0.5rem' }}>SEO Meta Description</label>
+              <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem' }}>SEO Meta Description</label>
               <input type="text" value={seoDesc} onChange={(e) => setSeoDesc(e.target.value)} style={{ width: '100%' }} maxLength={160} />
             </div>
           </div>
 
           <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
             <div style={{ flex: 1 }}>
-              <label style={{ display: 'block', fontSize: '0.85rem', color: '#a0a0a0', marginBottom: '0.5rem' }}>Tags (comma separated)</label>
+              <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem' }}>Tags (comma separated)</label>
               <input type="text" value={tags} onChange={(e) => setTags(e.target.value)} style={{ width: '100%' }} placeholder="Guide, Tips" />
             </div>
-            <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', marginTop: '1.5rem', color: '#fff' }}>
+            <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', marginTop: '1.5rem', color: 'var(--foreground)' }}>
               <input type="checkbox" checked={published} onChange={(e) => setPublished(e.target.checked)} style={{ width: '1.2rem', height: '1.2rem' }} />
               Publish immediately
             </label>
@@ -156,18 +156,18 @@ export default function AdminCMSPage() {
         <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
           <table style={{ width: '100%', textAlign: 'left', borderCollapse: 'collapse' }}>
             <thead>
-              <tr style={{ borderBottom: '1px solid #2a2a2a', backgroundColor: '#0a0a0a' }}>
-                <th style={{ padding: '1rem', color: '#a0a0a0', fontSize: '0.85rem', fontWeight: 500 }}>Title</th>
-                <th style={{ padding: '1rem', color: '#a0a0a0', fontSize: '0.85rem', fontWeight: 500 }}>Slug</th>
-                <th style={{ padding: '1rem', color: '#a0a0a0', fontSize: '0.85rem', fontWeight: 500 }}>Status</th>
-                <th style={{ padding: '1rem', color: '#a0a0a0', fontSize: '0.85rem', fontWeight: 500 }}>Actions</th>
+              <tr style={{ borderBottom: '1px solid var(--border)', backgroundColor: 'var(--background)' }}>
+                <th style={{ padding: '1rem', color: 'var(--muted)', fontSize: '0.85rem', fontWeight: 500 }}>Title</th>
+                <th style={{ padding: '1rem', color: 'var(--muted)', fontSize: '0.85rem', fontWeight: 500 }}>Slug</th>
+                <th style={{ padding: '1rem', color: 'var(--muted)', fontSize: '0.85rem', fontWeight: 500 }}>Status</th>
+                <th style={{ padding: '1rem', color: 'var(--muted)', fontSize: '0.85rem', fontWeight: 500 }}>Actions</th>
               </tr>
             </thead>
             <tbody>
               {posts.map(post => (
-                <tr key={post.id} style={{ borderBottom: '1px solid #2a2a2a' }}>
-                  <td style={{ padding: '1rem', color: '#fff', fontSize: '0.9rem' }}>{post.title}</td>
-                  <td style={{ padding: '1rem', color: '#a0a0a0', fontSize: '0.85rem', fontFamily: 'monospace' }}>/{post.slug}</td>
+                <tr key={post.id} style={{ borderBottom: '1px solid var(--border)' }}>
+                  <td style={{ padding: '1rem', color: 'var(--foreground)', fontSize: '0.9rem' }}>{post.title}</td>
+                  <td style={{ padding: '1rem', color: 'var(--muted)', fontSize: '0.85rem', fontFamily: 'monospace' }}>/{post.slug}</td>
                   <td style={{ padding: '1rem' }}>
                     <span className={`badge ${post.published ? 'badge-success' : 'badge-muted'}`}>
                       {post.published ? 'PUBLISHED' : 'DRAFT'}

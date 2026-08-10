@@ -178,7 +178,7 @@ export default function AdminLeadsPage() {
               <div className="w-10 h-10 rounded-full bg-success/10 flex items-center justify-center">
                 <svg className="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
               </div>
-              <h2 className="text-xl font-bold text-white tracking-wide">Active Leads <span className="ml-2 text-sm font-medium px-2.5 py-0.5 rounded-full bg-success/20 text-success">{leads.length}</span></h2>
+              <h2 className="text-xl font-bold text-foreground tracking-wide">Active Leads <span className="ml-2 text-sm font-medium px-2.5 py-0.5 rounded-full bg-success/20 text-success">{leads.length}</span></h2>
             </div>
           </div>
           
@@ -202,7 +202,7 @@ export default function AdminLeadsPage() {
                     </td>
                     <td className="px-6 py-5">
                       <div className="flex flex-col">
-                        <span className="font-medium text-white">{l.name || 'Unknown'}</span>
+                        <span className="font-medium text-foreground">{l.name || 'Unknown'}</span>
                         <span className="text-xs text-muted mt-1 font-mono">{l.phone}</span>
                       </div>
                     </td>
@@ -212,7 +212,7 @@ export default function AdminLeadsPage() {
                           <svg className="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
                         </div>
                         <div className="flex flex-col">
-                          <span className="text-sm font-medium text-white">{l.brand} {l.model}</span>
+                          <span className="text-sm font-medium text-foreground">{l.brand} {l.model}</span>
                           <span className="text-xs text-muted mt-0.5">{l.storage}</span>
                         </div>
                       </div>
@@ -225,7 +225,7 @@ export default function AdminLeadsPage() {
                     <td className="px-6 py-5 text-sm">
                       {l.pickupDate ? (
                         <div className="flex flex-col">
-                          <span className="text-white">{l.pickupDate}</span>
+                          <span className="text-foreground">{l.pickupDate}</span>
                           <span className="text-xs text-muted mt-1">{l.pickupTime} • {l.city || 'N/A'}</span>
                         </div>
                       ) : (
@@ -242,7 +242,7 @@ export default function AdminLeadsPage() {
                             className={`appearance-none w-full min-w-[140px] px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider border cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background transition-all duration-300 ${getStatusStyles(l.status || 'pending')} ${updatingId === l.id ? 'opacity-50 cursor-not-allowed animate-pulse' : 'hover:scale-[1.02] active:scale-95'}`}
                           >
                             {LEAD_STATUSES.map(s => (
-                              <option key={s} value={s} className="bg-surface text-white capitalize font-medium">
+                              <option key={s} value={s} className="bg-surface text-foreground capitalize font-medium">
                                 {s}
                               </option>
                             ))}
@@ -312,7 +312,7 @@ export default function AdminLeadsPage() {
               <div className="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center">
                 <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
               </div>
-              <h2 className="text-xl font-bold text-white tracking-wide">System Accounts <span className="ml-2 text-sm font-medium px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-400">{users.length}</span></h2>
+              <h2 className="text-xl font-bold text-foreground tracking-wide">System Accounts <span className="ml-2 text-sm font-medium px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-400">{users.length}</span></h2>
             </div>
           </div>
           
@@ -330,7 +330,7 @@ export default function AdminLeadsPage() {
                 {users.map(u => (
                   <tr key={u.id} className="hover:bg-surface-elevated/40 transition-colors duration-200">
                     <td className="px-6 py-4 text-sm font-mono text-muted">{u.id}</td>
-                    <td className="px-6 py-4 font-medium text-white">{u.phone}</td>
+                    <td className="px-6 py-4 font-medium text-foreground">{u.phone}</td>
                     <td className="px-6 py-4">
                       <span className={`inline-flex px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider ${
                         u.role === 'admin' ? 'bg-gold/20 text-gold border border-gold/30 shadow-[0_0_10px_rgba(212,175,55,0.1)]' : 

@@ -176,14 +176,14 @@ export default function TopSellingModels() {
     <div ref={containerRef} className="w-full relative gallery-container h-[650px] md:h-[750px] bg-transparent flex flex-col items-center justify-start py-12 px-4 md:px-8">
       {/* Immersive Background Glows - optimized for mobile (less blur, no blend mode on small screens) */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-[-10%] left-[20%] w-[40vw] h-[40vw] bg-[#d4af37]/10 md:bg-[#d4af37]/5 blur-3xl md:blur-[100px] rounded-full md:mix-blend-screen will-change-transform" />
+        <div className="absolute top-[-10%] left-[20%] w-[40vw] h-[40vw] bg-[var(--gold)]/10 md:bg-[var(--gold)]/5 blur-3xl md:blur-[100px] rounded-full md:mix-blend-screen will-change-transform" />
         <div className="absolute bottom-[-10%] right-[20%] w-[30vw] h-[30vw] bg-[#8a2be2]/15 md:bg-[#8a2be2]/10 blur-3xl md:blur-[100px] rounded-full md:mix-blend-screen will-change-transform" />
       </div>
 
-      <h2 className="text-3xl md:text-5xl font-black text-white mb-4 text-center relative z-10 tracking-tight drop-shadow-md md:drop-shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+      <h2 className="text-3xl md:text-5xl font-black text-foreground mb-4 text-center relative z-10 tracking-tight drop-shadow-md md:drop-shadow-[0_0_20px_rgba(212,175,55,0.3)]">
         Top Selling Mobile Phones
       </h2>
-      <p className="text-[#a0a0a0] text-center max-w-2xl mx-auto mb-12 relative z-10">Discover the most sought-after devices at unbeatable resale values.</p>
+      <p className="text-muted text-center max-w-2xl mx-auto mb-12 relative z-10">Discover the most sought-after devices at unbeatable resale values.</p>
 
       <div className="relative w-full flex-1 flex items-center justify-center">
         <ul className="cards-list relative w-[280px] h-[400px] md:w-[320px] md:h-[460px] m-0 p-0 perspective-1000 will-change-transform" style={{ transformStyle: 'preserve-3d' }}>
@@ -191,7 +191,7 @@ export default function TopSellingModels() {
             <li 
               key={item.id} 
               ref={(el) => { cardsRef.current[i] = el; }}
-              className="absolute top-0 left-0 w-full h-full list-none bg-gradient-to-br from-[#1c1c1c] to-[#0a0a0a] border border-[#d4af37]/20 rounded-3xl p-6 flex flex-col justify-between items-center shadow-xl md:shadow-[0_20px_50px_rgba(0,0,0,0.8),inset_0_1px_1px_rgba(255,255,255,0.1)] transition-transform duration-300 md:hover:border-[#d4af37]/50 will-change-transform"
+              className="absolute top-0 left-0 w-full h-full list-none bg-surface border border-[var(--gold)]/20 rounded-3xl p-6 flex flex-col justify-between items-center shadow-xl md:shadow-[0_20px_50px_rgba(0,0,0,0.8),inset_0_1px_1px_rgba(255,255,255,0.1)] transition-transform duration-300 md:hover:border-[var(--gold)]/50 will-change-transform"
               style={{ transformStyle: 'preserve-3d', backfaceVisibility: 'hidden' }}
             >
               <div className="relative w-24 h-24 md:w-32 md:h-32 bg-gradient-to-b from-white to-[#f0f0f0] rounded-2xl flex items-center justify-center p-3 overflow-hidden mb-4 shrink-0 shadow-inner ring-1 ring-black/5">
@@ -205,16 +205,16 @@ export default function TopSellingModels() {
                 />
               </div>
               <div className="text-center mb-2">
-                <div className="text-white font-bold text-xl md:text-2xl mb-1 tracking-tight">{item.brand} {item.model}</div>
-                <div className="text-[#a0a0a0] text-sm">({item.storage})</div>
+                <div className="text-foreground font-bold text-xl md:text-2xl mb-1 tracking-tight">{item.brand} {item.model}</div>
+                <div className="text-muted text-sm">({item.storage})</div>
               </div>
               <div className="text-center mb-6">
-                <div className="text-[#a0a0a0] text-xs uppercase tracking-wider mb-1">Get Upto</div>
-                <div className="text-[#FFD700] font-black text-2xl md:text-3xl">₹{calculateFhoneifyPrice(item.price).toLocaleString('en-IN')}</div>
+                <div className="text-muted text-xs uppercase tracking-wider mb-1">Get Upto</div>
+                <div className="text-[var(--gold)] font-black text-2xl md:text-3xl">₹{calculateFhoneifyPrice(item.price).toLocaleString('en-IN')}</div>
               </div>
               <button 
                 onClick={() => handleSellClick(item.brand, item.model)}
-                className="w-full bg-[#d4af37] hover:bg-[#f0c040] text-[#0a0a0a] font-bold py-3 px-6 rounded-xl transition-colors text-base"
+                className="w-full bg-[var(--gold)] hover:bg-[#f0c040] text-white font-bold py-3 px-6 rounded-xl transition-colors text-base"
               >
                 Sell Now
               </button>
@@ -224,12 +224,12 @@ export default function TopSellingModels() {
 
         {/* Navigation Buttons */}
         <div className="absolute -bottom-16 left-1/2 -translate-x-1/2 flex items-center gap-6 z-50">
-          <button ref={prevBtnRef} className="w-14 h-14 rounded-full bg-gradient-to-tr from-[#1a1a1a] to-[#2a2a2a] hover:from-[#d4af37] hover:to-[#f0c040] hover:text-black border border-[#333] hover:border-transparent text-white flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] hover:-translate-y-1">
+          <button ref={prevBtnRef} className="w-14 h-14 rounded-full bg-surface hover:from-[var(--gold)] hover:to-[#f0c040] hover:text-black border border-border hover:border-transparent text-foreground flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] hover:-translate-y-1">
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
-          <button ref={nextBtnRef} className="w-14 h-14 rounded-full bg-gradient-to-tr from-[#1a1a1a] to-[#2a2a2a] hover:from-[#d4af37] hover:to-[#f0c040] hover:text-black border border-[#333] hover:border-transparent text-white flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] hover:-translate-y-1">
+          <button ref={nextBtnRef} className="w-14 h-14 rounded-full bg-surface hover:from-[var(--gold)] hover:to-[#f0c040] hover:text-black border border-border hover:border-transparent text-foreground flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] hover:-translate-y-1">
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
             </svg>

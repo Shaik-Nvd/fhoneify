@@ -80,12 +80,12 @@ export default function GoogleReviewBanner() {
           
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <span style={{ color: '#fff', fontWeight: 800, fontSize: '1.2rem', lineHeight: '1' }}>4.9</span>
+              <span style={{ color: 'var(--foreground)', fontWeight: 800, fontSize: '1.2rem', lineHeight: '1' }}>4.9</span>
               <div style={{ display: 'flex', color: '#FBBC05', fontSize: '1.1rem', letterSpacing: '1px' }}>
                 ★★★★★
               </div>
             </div>
-            <span style={{ color: '#a0a0a0', fontSize: '0.85rem', fontWeight: 500, marginTop: '2px' }}>37 Google reviews</span>
+            <span style={{ color: 'var(--muted)', fontSize: '0.85rem', fontWeight: 500, marginTop: '2px' }}>37 Google reviews</span>
           </div>
         </div>
       </m.div>

@@ -80,7 +80,7 @@ export default function AuthPage() {
   };
 
   return (
-    <div className="min-h-[85vh] flex items-center justify-center p-4 relative overflow-hidden bg-[#0a0a0a]">
+    <div className="min-h-[85vh] flex items-center justify-center p-4 relative overflow-hidden bg-background">
       {/* Background glowing orbs */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-[120px] pointer-events-none" />
@@ -102,7 +102,7 @@ export default function AuthPage() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
             </svg>
           </motion.div>
-          <h1 className="text-3xl font-bold text-white tracking-tight">Secure Login</h1>
+          <h1 className="text-3xl font-bold text-foreground tracking-tight">Secure Login</h1>
           <p className="text-gray-400 mt-3 text-sm font-medium">Verify your identity with WhatsApp</p>
         </div>
 
@@ -152,7 +152,7 @@ export default function AuthPage() {
                     value={phone} 
                     onChange={e => setPhone(e.target.value)} 
                     placeholder="+1 (234) 567-8900" 
-                    className="w-full pl-12 pr-4 py-4 bg-black/40 border border-white/10 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500/50 transition-all shadow-inner" 
+                    className="w-full pl-12 pr-4 py-4 bg-black/40 border border-white/10 rounded-xl text-foreground placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500/50 transition-all shadow-inner" 
                     required 
                   />
                 </div>
@@ -160,7 +160,7 @@ export default function AuthPage() {
               <button 
                 type="submit" 
                 disabled={isLoading}
-                className="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-semibold py-4 rounded-xl hover:from-emerald-400 hover:to-emerald-500 focus:ring-4 focus:ring-emerald-500/20 transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_25px_rgba(16,185,129,0.5)] flex items-center justify-center gap-3 group disabled:opacity-70 disabled:cursor-not-allowed"
+                className="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 text-foreground font-semibold py-4 rounded-xl hover:from-emerald-400 hover:to-emerald-500 focus:ring-4 focus:ring-emerald-500/20 transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_25px_rgba(16,185,129,0.5)] flex items-center justify-center gap-3 group disabled:opacity-70 disabled:cursor-not-allowed"
               >
                 <span>{isLoading ? 'Processing...' : 'Send WhatsApp OTP'}</span>
                 {isLoading ? (
@@ -193,7 +193,7 @@ export default function AuthPage() {
                   value={code} 
                   onChange={e => setCode(e.target.value.replace(/\D/g, ''))} 
                   placeholder="000000" 
-                  className="w-full py-5 bg-black/40 border border-white/10 rounded-xl text-white text-center tracking-[1em] text-3xl font-mono focus:outline-none focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500/50 transition-all shadow-inner placeholder-gray-700/50" 
+                  className="w-full py-5 bg-black/40 border border-white/10 rounded-xl text-foreground text-center tracking-[1em] text-3xl font-mono focus:outline-none focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500/50 transition-all shadow-inner placeholder-gray-700/50" 
                   required 
                 />
               </div>

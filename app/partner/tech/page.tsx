@@ -67,33 +67,33 @@ export default function FieldTechDashboard() {
     }
   };
 
-  if (loading) return <div style={{ color: '#fff', padding: '2rem', textAlign: 'center' }}>Loading Fleet Dashboard...</div>;
+  if (loading) return <div style={{ color: 'var(--foreground)', padding: '2rem', textAlign: 'center' }}>Loading Fleet Dashboard...</div>;
 
   return (
     <div style={{ backgroundColor: '#000', minHeight: '100vh', padding: '2rem' }}>
       <div style={{ maxWidth: '48rem', margin: '0 auto' }}>
-        <h1 style={{ color: '#d4af37', fontSize: '1.5rem', marginBottom: '2rem' }}>Fhoneify Tech App</h1>
+        <h1 style={{ color: 'var(--gold)', fontSize: '1.5rem', marginBottom: '2rem' }}>Fhoneify Tech App</h1>
 
         {/* Tech Float Ledger */}
         <div className="card" style={{ marginBottom: '2rem', display: 'flex', gap: '2rem' }}>
           <div>
             <p className="eyebrow">TECH FLOAT (CASH)</p>
-            <p style={{ fontSize: '2rem', fontWeight: 700, color: '#fff' }}>{formatCurrency(float?.cash || 0)}</p>
+            <p style={{ fontSize: '2rem', fontWeight: 700, color: 'var(--foreground)' }}>{formatCurrency(float?.cash || 0)}</p>
           </div>
           <div>
             <p className="eyebrow">TECH FLOAT (UPI)</p>
-            <p style={{ fontSize: '2rem', fontWeight: 700, color: '#fff' }}>{formatCurrency(float?.upi || 0)}</p>
+            <p style={{ fontSize: '2rem', fontWeight: 700, color: 'var(--foreground)' }}>{formatCurrency(float?.upi || 0)}</p>
           </div>
         </div>
 
         {/* Pickups */}
-        <h2 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1rem' }}>Today&apos;s Pickups</h2>
+        <h2 style={{ color: 'var(--foreground)', fontSize: '1.2rem', marginBottom: '1rem' }}>Today&apos;s Pickups</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
           {pickups.map(p => (
             <div key={p.id} className="card" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', opacity: p.status === 'completed' ? 0.5 : 1 }}>
               <div>
-                <h3 style={{ color: '#fff', fontSize: '1.1rem', marginBottom: '0.25rem' }}>{p.device}</h3>
-                <p style={{ color: '#a0a0a0', fontSize: '0.85rem', marginBottom: '0.5rem' }}>{p.customerName} • {p.address}</p>
+                <h3 style={{ color: 'var(--foreground)', fontSize: '1.1rem', marginBottom: '0.25rem' }}>{p.device}</h3>
+                <p style={{ color: 'var(--muted)', fontSize: '0.85rem', marginBottom: '0.5rem' }}>{p.customerName} • {p.address}</p>
                 <div style={{ display: 'flex', gap: '1rem' }}>
                   <span className="badge-info">Declared: {p.declaredCondition.toUpperCase()}</span>
                   <span className="badge-gold">Quote: {formatCurrency(p.originalQuote)}</span>
@@ -116,16 +116,16 @@ export default function FieldTechDashboard() {
       {/* Requote Modal */}
       {showRequote && (
         <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0,0,0,0.8)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 100 }}>
-          <div className="card" style={{ width: '100%', maxWidth: '28rem', backgroundColor: '#111' }}>
-            <h2 style={{ color: '#fff', marginBottom: '1rem' }}>Re-evaluate Device</h2>
-            <p style={{ color: '#a0a0a0', fontSize: '0.9rem', marginBottom: '1.5rem' }}>
+          <div className="card" style={{ width: '100%', maxWidth: '28rem', backgroundColor: 'var(--surface)' }}>
+            <h2 style={{ color: 'var(--foreground)', marginBottom: '1rem' }}>Re-evaluate Device</h2>
+            <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.5rem' }}>
               If {selectedPickup?.device} is in worse condition than &quot;{selectedPickup?.declaredCondition}&quot;, issue a lower quote. The customer must approve via OTP.
             </p>
 
             {!otpSent ? (
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.8rem', color: '#a0a0a0', marginBottom: '0.5rem' }}>Original Quote: {formatCurrency(selectedPickup?.originalQuote)}</label>
+                  <label style={{ display: 'block', fontSize: '0.8rem', color: 'var(--muted)', marginBottom: '0.5rem' }}>Original Quote: {formatCurrency(selectedPickup?.originalQuote)}</label>
                   <input 
                     type="number" 
                     placeholder="Enter revised lower amount" 
@@ -143,7 +143,7 @@ export default function FieldTechDashboard() {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 <div className="alert-info">Demo Note: Customer received OTP <strong>{generatedOtp}</strong></div>
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.8rem', color: '#a0a0a0', marginBottom: '0.5rem' }}>Ask customer for OTP to approve {formatCurrency(Number(newQuote))}</label>
+                  <label style={{ display: 'block', fontSize: '0.8rem', color: 'var(--muted)', marginBottom: '0.5rem' }}>Ask customer for OTP to approve {formatCurrency(Number(newQuote))}</label>
                   <input 
                     type="text" 
                     placeholder="Enter 4-digit OTP" 

@@ -34,18 +34,18 @@ export default function FAQs() {
 
   return (
     <div className="w-full">
-      <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">FAQs</h2>
+      <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8">FAQs</h2>
       
       <div className="flex flex-col gap-3">
         {FAQ_ITEMS.map((item, idx) => {
           const isOpen = openIdx === idx;
           return (
-            <div key={idx} className="bg-[#111] border border-[#2a2a2a] rounded-xl overflow-hidden transition-all duration-300">
+            <div key={idx} className="bg-surface border border-border rounded-xl overflow-hidden transition-all duration-300">
               <button 
                 onClick={() => toggle(idx)} 
                 className="w-full text-left px-5 py-4 flex justify-between items-center hover:bg-[#151515] transition-colors"
               >
-                <span className="text-white font-medium pr-4">{item.q}</span>
+                <span className="text-foreground font-medium pr-4">{item.q}</span>
                 <svg 
                   className={`w-5 h-5 text-[#38b2ac] transform transition-transform duration-300 shrink-0 ${isOpen ? 'rotate-180' : ''}`} 
                   fill="none" 
@@ -60,7 +60,7 @@ export default function FAQs() {
               <div 
                 className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}
               >
-                <div className="px-5 pb-5 pt-1 text-[#a0a0a0] text-sm leading-relaxed border-t border-[#1a1a1a]">
+                <div className="px-5 pb-5 pt-1 text-muted text-sm leading-relaxed border-t border-[#1a1a1a]">
                   {item.a}
                 </div>
               </div>
@@ -70,7 +70,7 @@ export default function FAQs() {
       </div>
       
       <div className="mt-6 flex justify-center md:justify-start">
-        <button className="text-[#38b2ac] font-medium hover:text-white transition-colors">
+        <button className="text-[#38b2ac] font-medium hover:text-foreground transition-colors">
           Load More FAQs
         </button>
       </div>

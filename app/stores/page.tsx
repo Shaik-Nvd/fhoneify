@@ -95,7 +95,7 @@ export default function StoresPage() {
         <div className="card" style={{ padding: '3rem 2rem' }}>
           <div style={{ fontSize: '4rem', marginBottom: '1rem' }}>✅</div>
           <h1 className="page-title" style={{ marginBottom: '1rem' }}>Appointment Confirmed!</h1>
-          <p style={{ color: '#a0a0a0', marginBottom: '2rem' }}>
+          <p style={{ color: 'var(--muted)', marginBottom: '2rem' }}>
             We look forward to seeing you at {selectedStore?.name} on {new Date(date).toLocaleDateString()} at {time}.
           </p>
           <button onClick={() => setSuccess(false)} className="btn-primary" style={{ width: '100%', padding: '14px' }}>
@@ -140,19 +140,19 @@ export default function StoresPage() {
                 onClick={() => setSelectedStore(store)}
                 style={{ 
                   cursor: 'pointer', 
-                  border: selectedStore?.id === store.id ? '2px solid #d4af37' : '1px solid #2a2a2a',
-                  backgroundColor: selectedStore?.id === store.id ? 'rgba(212,175,55,0.05)' : '#111'
+                  border: selectedStore?.id === store.id ? '2px solid var(--gold)' : '1px solid var(--border)',
+                  backgroundColor: selectedStore?.id === store.id ? 'rgba(212,175,55,0.05)' : 'var(--surface)'
                 }}
               >
-                <h3 style={{ fontSize: '1.25rem', color: '#fff', marginBottom: '0.5rem' }}>{store.name}</h3>
-                <p style={{ color: '#a0a0a0', fontSize: '0.875rem', marginBottom: '0.5rem' }}>{store.address}</p>
-                <div style={{ display: 'inline-block', padding: '4px 8px', backgroundColor: 'rgba(212,175,55,0.1)', border: '1px solid #d4af37', borderRadius: '4px', color: '#d4af37', fontSize: '0.75rem', fontWeight: 600, marginBottom: '0.5rem' }}>
+                <h3 style={{ fontSize: '1.25rem', color: 'var(--foreground)', marginBottom: '0.5rem' }}>{store.name}</h3>
+                <p style={{ color: 'var(--muted)', fontSize: '0.875rem', marginBottom: '0.5rem' }}>{store.address}</p>
+                <div style={{ display: 'inline-block', padding: '4px 8px', backgroundColor: 'rgba(212,175,55,0.1)', border: '1px solid var(--gold)', borderRadius: '4px', color: 'var(--gold)', fontSize: '0.75rem', fontWeight: 600, marginBottom: '0.5rem' }}>
                   {stockCounts[store.id] || 0} Devices in Stock
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}>
                   <div>
-                    <span style={{ color: '#d4af37', fontSize: '0.85rem', display: 'block', marginBottom: '0.25rem' }}>{store.workingHours}</span>
-                    <span style={{ color: '#a0a0a0', fontSize: '0.85rem' }}>{store.phone}</span>
+                    <span style={{ color: 'var(--gold)', fontSize: '0.85rem', display: 'block', marginBottom: '0.25rem' }}>{store.workingHours}</span>
+                    <span style={{ color: 'var(--muted)', fontSize: '0.85rem' }}>{store.phone}</span>
                   </div>
                   {store.mapLink && (
                     <a 
@@ -181,17 +181,17 @@ export default function StoresPage() {
         <div>
           {selectedStore ? (
             <form onSubmit={handleBook} className="card" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', position: 'sticky', top: '100px' }}>
-              <h2 style={{ fontSize: '1.5rem', color: '#fff', borderBottom: '1px solid #2a2a2a', paddingBottom: '1rem' }}>
+              <h2 style={{ fontSize: '1.5rem', color: 'var(--foreground)', borderBottom: '1px solid var(--border)', paddingBottom: '1rem' }}>
                 Book Appointment
               </h2>
-              <p style={{ color: '#a0a0a0', fontSize: '0.875rem' }}>
-                At <strong style={{ color: '#fff' }}>{selectedStore.name}</strong>
+              <p style={{ color: 'var(--muted)', fontSize: '0.875rem' }}>
+                At <strong style={{ color: 'var(--foreground)' }}>{selectedStore.name}</strong>
               </p>
 
               {error && <div className="alert-error">{error}</div>}
 
               <div>
-                <label style={{ display: 'block', fontSize: '0.85rem', color: '#a0a0a0', marginBottom: '0.5rem', fontWeight: 500 }}>Purpose of Visit</label>
+                <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem', fontWeight: 500 }}>Purpose of Visit</label>
                 <select value={purpose} onChange={(e) => setPurpose(e.target.value as any)} style={{ width: '100%' }}>
                   <option value="repair">Device Repair</option>
                   <option value="sell">Sell Old Phone</option>
@@ -201,11 +201,11 @@ export default function StoresPage() {
 
               <div style={{ display: 'flex', gap: '1rem' }}>
                 <div style={{ flex: 1 }}>
-                  <label style={{ display: 'block', fontSize: '0.85rem', color: '#a0a0a0', marginBottom: '0.5rem', fontWeight: 500 }}>Date</label>
+                  <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem', fontWeight: 500 }}>Date</label>
                   <input type="date" value={date} onChange={(e) => setDate(e.target.value)} style={{ width: '100%' }} required />
                 </div>
                 <div style={{ flex: 1 }}>
-                  <label style={{ display: 'block', fontSize: '0.85rem', color: '#a0a0a0', marginBottom: '0.5rem', fontWeight: 500 }}>Time</label>
+                  <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem', fontWeight: 500 }}>Time</label>
                   <select value={time} onChange={(e) => setTime(e.target.value)} style={{ width: '100%' }} required>
                     <option value="">Select Time</option>
                     <option value="10:00 AM">10:00 AM</option>

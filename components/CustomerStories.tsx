@@ -61,7 +61,7 @@ export default function CustomerStories() {
 
   return (
     <div className="w-full relative overflow-hidden" ref={containerRef}>
-      <h2 className="text-3xl md:text-5xl font-bold text-white mb-16 text-center">
+      <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-16 text-center">
         Customer Stories
       </h2>
       
@@ -77,21 +77,21 @@ export default function CustomerStories() {
         {[...TESTIMONIALS, ...TESTIMONIALS].map((item, idx) => (
           <div 
             key={`${item.id}-${idx}`} 
-            className="w-[320px] md:w-[450px] bg-[#111] border border-[#2a2a2a] rounded-3xl p-8 md:p-10 shadow-2xl flex flex-col justify-between"
+            className="w-[320px] md:w-[450px] bg-surface border border-border rounded-3xl p-8 md:p-10 shadow-2xl flex flex-col justify-between"
           >
             <div className="mb-6 text-[#38b2ac]">
               <svg fill="currentColor" viewBox="0 0 24 24" className="w-12 h-12 opacity-40">
                 <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"></path>
               </svg>
             </div>
-            <p className="text-white text-lg md:text-xl flex-1 mb-8 leading-relaxed font-light">
+            <p className="text-foreground text-lg md:text-xl flex-1 mb-8 leading-relaxed font-light">
               &quot;{item.quote}&quot;
             </p>
             <div className="flex items-center gap-4">
               <img src={item.avatar} alt={item.author} className="w-12 h-12 rounded-full object-cover border-2 border-[#38b2ac]" />
               <div>
-                <div className="text-white font-bold text-base">{item.author}</div>
-                <div className="text-[#888] text-sm tracking-widest uppercase">{item.location}</div>
+                <div className="text-foreground font-bold text-base">{item.author}</div>
+                <div className="text-muted text-sm tracking-widest uppercase">{item.location}</div>
               </div>
             </div>
           </div>

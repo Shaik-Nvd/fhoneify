@@ -97,10 +97,10 @@ export default function MobileHome() {
   };
 
   return (
-    <div className="w-full bg-[#0a0a0a] min-h-screen pb-6">
+    <div className="w-full bg-background min-h-screen pb-6">
       
       {/* Mobile Search Bar */}
-      <div className="px-4 py-3 bg-[#0a0a0a]">
+      <div className="px-4 py-3 bg-background">
         <div className="relative w-full">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
             <svg viewBox="0 0 24 24" width="18" height="18" stroke="#666" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -114,7 +114,7 @@ export default function MobileHome() {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             onKeyDown={handleSearch}
-            className="w-full bg-[#111] border border-[#2a2a2a] text-white rounded-lg pl-10 pr-4 py-3 focus:border-[#d4af37] focus:outline-none focus:ring-1 focus:ring-[#d4af37] text-sm"
+            className="w-full bg-surface border border-border text-foreground rounded-lg pl-10 pr-4 py-3 focus:border-[var(--gold)] focus:outline-none focus:ring-1 focus:ring-[var(--gold)] text-sm"
           />
         </div>
       </div>
@@ -126,8 +126,8 @@ export default function MobileHome() {
             {MOBILE_SLIDES.map((slide) => (
               <div key={slide.id} className="w-full h-full flex-shrink-0 relative" style={{ background: slide.bg }}>
                 <div className="absolute inset-0 p-5 flex flex-col justify-center w-[65%]">
-                  <h2 className="text-white font-bold text-xl mb-1 leading-tight">{slide.title}</h2>
-                  <p className="text-white/80 text-xs mb-3 leading-snug">{slide.desc}</p>
+                  <h2 className="text-foreground font-bold text-xl mb-1 leading-tight">{slide.title}</h2>
+                  <p className="text-foreground/80 text-xs mb-3 leading-snug">{slide.desc}</p>
                   <Link href={slide.btnLink}>
                     <button className="bg-white text-black font-semibold text-xs py-2 px-4 rounded-md shadow-sm w-max">
                       {slide.btnText}
@@ -154,21 +154,21 @@ export default function MobileHome() {
 
       {/* Our Services Section */}
       <div className="px-4 mt-6">
-        <h3 className="text-white font-bold text-lg mb-4">Our Services</h3>
+        <h3 className="text-foreground font-bold text-lg mb-4">Our Services</h3>
         <div className="grid grid-cols-2 gap-3">
           
-          <Link href="/quote" className="bg-[#151c1a] rounded-xl py-5 px-2 flex flex-col items-center justify-center border border-[#1e2a26]">
+          <Link href="/quote" className="bg-surface rounded-xl py-5 px-2 flex flex-col items-center justify-center border border-border">
             <div className="w-24 h-24 relative mb-2 flex items-center justify-center rounded-full overflow-hidden">
               <img src="/images/sell_phone.png" alt="Sell Phone" className="w-full h-full object-cover" />
             </div>
-            <span className="text-sm text-white font-medium mt-1">Sell Phones</span>
+            <span className="text-sm text-foreground font-medium mt-1">Sell Phones</span>
           </Link>
 
-          <Link href="/buy" className="bg-[#15191c] rounded-xl py-5 px-2 flex flex-col items-center justify-center border border-[#1e262a]">
+          <Link href="/buy" className="bg-surface rounded-xl py-5 px-2 flex flex-col items-center justify-center border border-border">
             <div className="w-24 h-24 relative mb-2 flex items-center justify-center rounded-full overflow-hidden">
               <img src="/images/buy_phone.png" alt="Buy Phone" className="w-full h-full object-cover" />
             </div>
-            <span className="text-sm text-white font-medium mt-1">Buy Phones</span>
+            <span className="text-sm text-foreground font-medium mt-1">Buy Phones</span>
           </Link>
 
         </div>
@@ -176,13 +176,13 @@ export default function MobileHome() {
 
       {/* Top Brands Section */}
       <div className="px-4 mt-8">
-        <h3 className="text-white font-bold text-lg mb-4">Top Brands</h3>
+        <h3 className="text-foreground font-bold text-lg mb-4">Top Brands</h3>
         <div className="flex overflow-x-auto gap-3 pb-2 hide-scrollbar">
           {BRANDS.slice(0, 10).map((brand) => (
             <Link 
               key={brand} 
               href={`/quote?brand=${encodeURIComponent(brand)}`}
-              className="bg-[#111] rounded-xl p-3 border border-[#2a2a2a] flex flex-col items-center shrink-0 w-24 hover:border-[#38b2ac] transition-colors"
+              className="bg-surface rounded-xl p-3 border border-border flex flex-col items-center shrink-0 w-24 hover:border-[#38b2ac] transition-colors"
             >
               <div className="h-10 w-full flex items-center justify-center mb-2">
                 <img 
@@ -197,14 +197,14 @@ export default function MobileHome() {
                   onError={(e) => { e.currentTarget.style.display = 'none'; }}
                 />
               </div>
-              <span className="text-xs text-[#a0a0a0] font-medium text-center w-full truncate">{brand}</span>
+              <span className="text-xs text-muted font-medium text-center w-full truncate">{brand}</span>
             </Link>
           ))}
           <Link 
             href="/quote"
-            className="bg-[#111] rounded-xl p-3 border border-[#2a2a2a] flex flex-col items-center justify-center shrink-0 w-24 hover:border-[#38b2ac] transition-colors"
+            className="bg-surface rounded-xl p-3 border border-border flex flex-col items-center justify-center shrink-0 w-24 hover:border-[#38b2ac] transition-colors"
           >
-            <span className="text-xs text-[#d4af37] font-medium">View All</span>
+            <span className="text-xs text-gold font-medium">View All</span>
           </Link>
         </div>
       </div>
@@ -212,13 +212,13 @@ export default function MobileHome() {
       {/* Buy Refurbished Devices Section */}
       <div className="px-4 mt-8">
         <div className="flex justify-between items-center mb-4">
-          <h3 className="text-white font-bold text-lg">Buy Refurbished Devices</h3>
-          <Link href="/buy" className="text-[#d4af37] text-sm font-medium">View All</Link>
+          <h3 className="text-foreground font-bold text-lg">Buy Refurbished Devices</h3>
+          <Link href="/buy" className="text-gold text-sm font-medium">View All</Link>
         </div>
         
         <div className="flex overflow-x-auto gap-4 pb-4 -mx-4 px-4 snap-x hide-scrollbar">
           
-          <div className="min-w-[180px] bg-[#111] border border-[#2a2a2a] rounded-xl p-3 snap-start relative">
+          <div className="min-w-[180px] bg-surface border border-border rounded-xl p-3 snap-start relative">
             <div className="absolute top-3 left-3 bg-[#1A9386]/20 text-[#1A9386] text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1">
               <svg viewBox="0 0 24 24" width="10" height="10" stroke="currentColor" strokeWidth="2" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
               Fhoneify Assured
@@ -229,10 +229,10 @@ export default function MobileHome() {
             <div className="bg-[#4ade80]/10 text-[#4ade80] text-xs font-semibold px-2 py-1 rounded inline-block mb-2">
               ₹12,000 OFF
             </div>
-            <p className="text-white text-sm font-medium line-clamp-1">Apple iPhone 13</p>
+            <p className="text-foreground text-sm font-medium line-clamp-1">Apple iPhone 13</p>
           </div>
 
-          <div className="min-w-[180px] bg-[#111] border border-[#2a2a2a] rounded-xl p-3 snap-start relative">
+          <div className="min-w-[180px] bg-surface border border-border rounded-xl p-3 snap-start relative">
             <div className="absolute top-3 left-3 bg-[#1A9386]/20 text-[#1A9386] text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1">
               <svg viewBox="0 0 24 24" width="10" height="10" stroke="currentColor" strokeWidth="2" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
               Fhoneify Assured
@@ -243,10 +243,10 @@ export default function MobileHome() {
             <div className="bg-[#4ade80]/10 text-[#4ade80] text-xs font-semibold px-2 py-1 rounded inline-block mb-2">
               ₹18,500 OFF
             </div>
-            <p className="text-white text-sm font-medium line-clamp-1">Samsung Galaxy S23</p>
+            <p className="text-foreground text-sm font-medium line-clamp-1">Samsung Galaxy S23</p>
           </div>
 
-          <div className="min-w-[180px] bg-[#111] border border-[#2a2a2a] rounded-xl p-3 snap-start relative">
+          <div className="min-w-[180px] bg-surface border border-border rounded-xl p-3 snap-start relative">
             <div className="absolute top-3 left-3 bg-[#1A9386]/20 text-[#1A9386] text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1">
               <svg viewBox="0 0 24 24" width="10" height="10" stroke="currentColor" strokeWidth="2" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
               Fhoneify Assured
@@ -257,7 +257,7 @@ export default function MobileHome() {
             <div className="bg-[#4ade80]/10 text-[#4ade80] text-xs font-semibold px-2 py-1 rounded inline-block mb-2">
               ₹15,000 OFF
             </div>
-            <p className="text-white text-sm font-medium line-clamp-1">Apple iPhone 14</p>
+            <p className="text-foreground text-sm font-medium line-clamp-1">Apple iPhone 14</p>
           </div>
 
         </div>

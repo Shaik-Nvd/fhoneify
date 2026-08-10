@@ -40,7 +40,7 @@ export default function SellDashboardPage() {
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
         <div>
           <p className="eyebrow" style={{ marginBottom: '0.5rem' }}>SELLER DASHBOARD</p>
-          <h1 style={{ fontSize: '1.75rem', fontWeight: 300, color: '#fff' }}>Welcome back{user?.phone ? `, ${user.phone}` : ''}</h1>
+          <h1 style={{ fontSize: '1.75rem', fontWeight: 300, color: 'var(--foreground)' }}>Welcome back{user?.phone ? `, ${user.phone}` : ''}</h1>
         </div>
         <Link href="/sell/create" className="btn-primary" style={{ padding: '10px 20px' }}>
           Sell New Device
@@ -60,34 +60,34 @@ export default function SellDashboardPage() {
         <>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginTop: '2rem', marginBottom: '2rem' }}>
             <div className="card" style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              <p style={{ color: '#a0a0a0', fontSize: '0.8rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '1px' }}>Wallet Balance</p>
-              <p style={{ fontSize: '2rem', fontWeight: 700, color: '#d4af37', lineHeight: 1 }}>{formatCurrency(data.walletBalance)}</p>
+              <p style={{ color: 'var(--muted)', fontSize: '0.8rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '1px' }}>Wallet Balance</p>
+              <p style={{ fontSize: '2rem', fontWeight: 700, color: 'var(--gold)', lineHeight: 1 }}>{formatCurrency(data.walletBalance)}</p>
             </div>
             <div className="card" style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              <p style={{ color: '#a0a0a0', fontSize: '0.8rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '1px' }}>Active Listings</p>
-              <p style={{ fontSize: '2rem', fontWeight: 700, color: '#fff', lineHeight: 1 }}>{data.activeCount}</p>
+              <p style={{ color: 'var(--muted)', fontSize: '0.8rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '1px' }}>Active Listings</p>
+              <p style={{ fontSize: '2rem', fontWeight: 700, color: 'var(--foreground)', lineHeight: 1 }}>{data.activeCount}</p>
             </div>
             <div className="card" style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              <p style={{ color: '#a0a0a0', fontSize: '0.8rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '1px' }}>Pending Approvals</p>
-              <p style={{ fontSize: '2rem', fontWeight: 700, color: '#fff', lineHeight: 1 }}>{data.pendingCount}</p>
+              <p style={{ color: 'var(--muted)', fontSize: '0.8rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '1px' }}>Pending Approvals</p>
+              <p style={{ fontSize: '2rem', fontWeight: 700, color: 'var(--foreground)', lineHeight: 1 }}>{data.pendingCount}</p>
             </div>
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2rem' }}>
             <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-              <div style={{ padding: '1.25rem 1.5rem', borderBottom: '1px solid #2a2a2a', backgroundColor: 'rgba(26,26,26,0.5)' }}>
-                <h2 style={{ fontSize: '1rem', fontWeight: 600, color: '#fff' }}>Your Listings</h2>
+              <div style={{ padding: '1.25rem 1.5rem', borderBottom: '1px solid var(--border)', backgroundColor: 'rgba(26,26,26,0.5)' }}>
+                <h2 style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--foreground)' }}>Your Listings</h2>
               </div>
               <div style={{ padding: '1.5rem' }}>
                 {data.listings.length === 0 ? (
-                  <p style={{ color: '#a0a0a0', fontSize: '0.9rem', textAlign: 'center', padding: '2rem 0' }}>You have no listings yet.</p>
+                  <p style={{ color: 'var(--muted)', fontSize: '0.9rem', textAlign: 'center', padding: '2rem 0' }}>You have no listings yet.</p>
                 ) : (
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                     {data.listings.map((l) => (
-                      <div key={l.id} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1rem', border: '1px solid #2a2a2a', borderRadius: '8px', backgroundColor: '#0a0a0a' }}>
+                      <div key={l.id} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1rem', border: '1px solid var(--border)', borderRadius: '8px', backgroundColor: 'var(--background)' }}>
                         <div>
-                          <p style={{ fontWeight: 600, color: '#fff', marginBottom: '0.25rem' }}>{l.brand} {l.model}</p>
-                          <p style={{ fontSize: '0.8rem', color: '#a0a0a0' }}>{l.city} · {formatCurrency(l.price)}</p>
+                          <p style={{ fontWeight: 600, color: 'var(--foreground)', marginBottom: '0.25rem' }}>{l.brand} {l.model}</p>
+                          <p style={{ fontSize: '0.8rem', color: 'var(--muted)' }}>{l.city} · {formatCurrency(l.price)}</p>
                         </div>
                         <span className={`badge ${l.status === 'active' ? 'badge-success' : l.status === 'pending' ? 'badge-pending' : 'badge-muted'}`}>
                           {l.status}
@@ -100,19 +100,19 @@ export default function SellDashboardPage() {
             </div>
 
             <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-              <div style={{ padding: '1.25rem 1.5rem', borderBottom: '1px solid #2a2a2a', backgroundColor: 'rgba(26,26,26,0.5)' }}>
-                <h2 style={{ fontSize: '1rem', fontWeight: 600, color: '#fff' }}>Scheduled Pickups</h2>
+              <div style={{ padding: '1.25rem 1.5rem', borderBottom: '1px solid var(--border)', backgroundColor: 'rgba(26,26,26,0.5)' }}>
+                <h2 style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--foreground)' }}>Scheduled Pickups</h2>
               </div>
               <div style={{ padding: '1.5rem' }}>
                 {data.pickups.length === 0 ? (
-                  <p style={{ color: '#a0a0a0', fontSize: '0.9rem', textAlign: 'center', padding: '2rem 0' }}>No pending pickups.</p>
+                  <p style={{ color: 'var(--muted)', fontSize: '0.9rem', textAlign: 'center', padding: '2rem 0' }}>No pending pickups.</p>
                 ) : (
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                     {data.pickups.map((p) => (
-                      <div key={p.id} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1rem', border: '1px solid #2a2a2a', borderRadius: '8px', backgroundColor: '#0a0a0a' }}>
+                      <div key={p.id} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1rem', border: '1px solid var(--border)', borderRadius: '8px', backgroundColor: 'var(--background)' }}>
                         <div>
-                          <p style={{ fontWeight: 600, color: '#fff', marginBottom: '0.25rem' }}>Listing #{p.listingId}</p>
-                          <p style={{ fontSize: '0.8rem', color: '#a0a0a0' }}>{new Date(p.pickupDate).toLocaleString()}</p>
+                          <p style={{ fontWeight: 600, color: 'var(--foreground)', marginBottom: '0.25rem' }}>Listing #{p.listingId}</p>
+                          <p style={{ fontSize: '0.8rem', color: 'var(--muted)' }}>{new Date(p.pickupDate).toLocaleString()}</p>
                         </div>
                         <span className={`badge ${p.status === 'completed' ? 'badge-success' : p.status === 'pending' ? 'badge-pending' : 'badge-danger'}`}>
                           {p.status}

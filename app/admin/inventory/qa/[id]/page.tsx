@@ -60,13 +60,13 @@ export default function QAGradingPage({ params }: { params: { id: string } }) {
 
   return (
     <div className="page-animate" style={{ maxWidth: '48rem', margin: '0 auto', padding: '2rem 1rem' }}>
-      <Link href="/admin/inventory" style={{ color: '#a0a0a0', fontSize: '0.85rem', textDecoration: 'none', marginBottom: '1rem', display: 'inline-block' }}>← Back to Inventory</Link>
+      <Link href="/admin/inventory" style={{ color: 'var(--muted)', fontSize: '0.85rem', textDecoration: 'none', marginBottom: '1rem', display: 'inline-block' }}>← Back to Inventory</Link>
       
       <div className="card" style={{ marginBottom: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <div>
           <p className="eyebrow" style={{ marginBottom: '0.25rem' }}>QA TESTING</p>
-          <h1 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#fff' }}>{item.device.brand} {item.device.model}</h1>
-          <p style={{ color: '#a0a0a0', fontSize: '0.85rem', marginTop: '0.25rem', fontFamily: 'monospace' }}>IMEI: {item.imei}</p>
+          <h1 style={{ fontSize: '1.5rem', fontWeight: 600, color: 'var(--foreground)' }}>{item.device.brand} {item.device.model}</h1>
+          <p style={{ color: 'var(--muted)', fontSize: '0.85rem', marginTop: '0.25rem', fontFamily: 'monospace' }}>IMEI: {item.imei}</p>
         </div>
         <div style={{ textAlign: 'right' }}>
           <span className="badge badge-warning">IN PROGRESS</span>
@@ -74,32 +74,32 @@ export default function QAGradingPage({ params }: { params: { id: string } }) {
       </div>
 
       <form onSubmit={handleSubmit} className="card" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-        <h2 style={{ fontSize: '1.25rem', color: '#fff', borderBottom: '1px solid #2a2a2a', paddingBottom: '1rem' }}>Hardware Checklist</h2>
+        <h2 style={{ fontSize: '1.25rem', color: 'var(--foreground)', borderBottom: '1px solid var(--border)', paddingBottom: '1rem' }}>Hardware Checklist</h2>
         
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
           <div>
-            <label style={{ display: 'block', color: '#a0a0a0', fontSize: '0.85rem', marginBottom: '0.5rem' }}>Screen Condition</label>
+            <label style={{ display: 'block', color: 'var(--muted)', fontSize: '0.85rem', marginBottom: '0.5rem' }}>Screen Condition</label>
             <div style={{ display: 'flex', gap: '0.5rem' }}>
               <button type="button" onClick={() => setScreen('pass')} className={screen === 'pass' ? 'btn-primary' : 'btn-outline'} style={{ flex: 1, padding: '8px' }}>Pass</button>
               <button type="button" onClick={() => setScreen('fail')} className={screen === 'fail' ? 'btn-danger' : 'btn-outline'} style={{ flex: 1, padding: '8px' }}>Fail</button>
             </div>
           </div>
           <div>
-            <label style={{ display: 'block', color: '#a0a0a0', fontSize: '0.85rem', marginBottom: '0.5rem' }}>Battery Health (&gt;80%)</label>
+            <label style={{ display: 'block', color: 'var(--muted)', fontSize: '0.85rem', marginBottom: '0.5rem' }}>Battery Health (&gt;80%)</label>
             <div style={{ display: 'flex', gap: '0.5rem' }}>
               <button type="button" onClick={() => setBattery('pass')} className={battery === 'pass' ? 'btn-primary' : 'btn-outline'} style={{ flex: 1, padding: '8px' }}>Pass</button>
               <button type="button" onClick={() => setBattery('fail')} className={battery === 'fail' ? 'btn-danger' : 'btn-outline'} style={{ flex: 1, padding: '8px' }}>Fail</button>
             </div>
           </div>
           <div>
-            <label style={{ display: 'block', color: '#a0a0a0', fontSize: '0.85rem', marginBottom: '0.5rem' }}>Camera (Front & Back)</label>
+            <label style={{ display: 'block', color: 'var(--muted)', fontSize: '0.85rem', marginBottom: '0.5rem' }}>Camera (Front & Back)</label>
             <div style={{ display: 'flex', gap: '0.5rem' }}>
               <button type="button" onClick={() => setCamera('pass')} className={camera === 'pass' ? 'btn-primary' : 'btn-outline'} style={{ flex: 1, padding: '8px' }}>Pass</button>
               <button type="button" onClick={() => setCamera('fail')} className={camera === 'fail' ? 'btn-danger' : 'btn-outline'} style={{ flex: 1, padding: '8px' }}>Fail</button>
             </div>
           </div>
           <div>
-            <label style={{ display: 'block', color: '#a0a0a0', fontSize: '0.85rem', marginBottom: '0.5rem' }}>Physical Buttons</label>
+            <label style={{ display: 'block', color: 'var(--muted)', fontSize: '0.85rem', marginBottom: '0.5rem' }}>Physical Buttons</label>
             <div style={{ display: 'flex', gap: '0.5rem' }}>
               <button type="button" onClick={() => setButtons('pass')} className={buttons === 'pass' ? 'btn-primary' : 'btn-outline'} style={{ flex: 1, padding: '8px' }}>Pass</button>
               <button type="button" onClick={() => setButtons('fail')} className={buttons === 'fail' ? 'btn-danger' : 'btn-outline'} style={{ flex: 1, padding: '8px' }}>Fail</button>
@@ -108,7 +108,7 @@ export default function QAGradingPage({ params }: { params: { id: string } }) {
         </div>
 
         <div>
-          <label style={{ display: 'block', color: '#a0a0a0', fontSize: '0.85rem', marginBottom: '0.5rem' }}>Technician Notes</label>
+          <label style={{ display: 'block', color: 'var(--muted)', fontSize: '0.85rem', marginBottom: '0.5rem' }}>Technician Notes</label>
           <textarea 
             value={notes} 
             onChange={(e) => setNotes(e.target.value)} 

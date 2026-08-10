@@ -1316,66 +1316,66 @@ export default function QuotePage() {
 
 
   const SidebarSummary = () => (
-    <div className="w-full md:max-w-[300px] shrink-0 bg-[#111] border border-[#2a2a2a] rounded-xl p-6 md:sticky md:top-8 text-white mb-8 md:mb-0">
-      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', borderBottom: '1px solid #2a2a2a', paddingBottom: '1rem', marginBottom: '1rem' }}>
+    <div className="w-full md:max-w-[300px] shrink-0 bg-surface border border-border rounded-xl p-6 md:sticky md:top-8 text-foreground mb-8 md:mb-0">
+      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', borderBottom: '1px solid var(--border)', paddingBottom: '1rem', marginBottom: '1rem' }}>
         <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} style={{ width: '40px', height: '60px', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
         <span style={{ fontWeight: 600, fontSize: '0.9rem' }}>{getDisplayModelName(selectedBrand, selectedModel)} ({selectedStorage})</span>
       </div>
       
-      <h3 style={{ color: '#a0a0a0', fontSize: '0.85rem', marginBottom: '1rem', fontWeight: 500 }}>Device Evaluation</h3>
+      <h3 style={{ color: 'var(--muted)', fontSize: '0.85rem', marginBottom: '1rem', fontWeight: 500 }}>Device Evaluation</h3>
       
       {diagnostics.calls !== null && (
         <div style={{ marginBottom: '0.75rem' }}>
-          <p style={{ color: '#888', fontSize: '0.75rem' }}>Make/Receive Calls</p>
-          <p style={{ color: '#4CD964', fontSize: '0.85rem', fontWeight: 600 }}>• {diagnostics.calls ? 'Yes' : 'No'}</p>
+          <p style={{ color: 'var(--muted)', fontSize: '0.75rem' }}>Make/Receive Calls</p>
+          <p style={{ color: 'var(--gold)', fontSize: '0.85rem', fontWeight: 600 }}>• {diagnostics.calls ? 'Yes' : 'No'}</p>
         </div>
       )}
       {diagnostics.touch !== null && (
         <div style={{ marginBottom: '0.75rem' }}>
-          <p style={{ color: '#888', fontSize: '0.75rem' }}>Touch Working</p>
-          <p style={{ color: '#4CD964', fontSize: '0.85rem', fontWeight: 600 }}>• {diagnostics.touch ? 'Yes' : 'No'}</p>
+          <p style={{ color: 'var(--muted)', fontSize: '0.75rem' }}>Touch Working</p>
+          <p style={{ color: 'var(--gold)', fontSize: '0.85rem', fontWeight: 600 }}>• {diagnostics.touch ? 'Yes' : 'No'}</p>
         </div>
       )}
       {diagnostics.originalScreen !== null && (
         <div style={{ marginBottom: '0.75rem' }}>
-          <p style={{ color: '#888', fontSize: '0.75rem' }}>Screen Original</p>
-          <p style={{ color: '#4CD964', fontSize: '0.85rem', fontWeight: 600 }}>• {diagnostics.originalScreen ? 'Yes' : 'No'}</p>
+          <p style={{ color: 'var(--muted)', fontSize: '0.75rem' }}>Screen Original</p>
+          <p style={{ color: 'var(--gold)', fontSize: '0.85rem', fontWeight: 600 }}>• {diagnostics.originalScreen ? 'Yes' : 'No'}</p>
         </div>
       )}
       {diagnostics.warranty !== null && (
         <div style={{ marginBottom: '0.75rem' }}>
-          <p style={{ color: '#888', fontSize: '0.75rem' }}>Under Warranty</p>
-          <p style={{ color: '#4CD964', fontSize: '0.85rem', fontWeight: 600 }}>• {diagnostics.warranty ? 'Yes' : 'No'}</p>
+          <p style={{ color: 'var(--muted)', fontSize: '0.75rem' }}>Under Warranty</p>
+          <p style={{ color: 'var(--gold)', fontSize: '0.85rem', fontWeight: 600 }}>• {diagnostics.warranty ? 'Yes' : 'No'}</p>
         </div>
       )}
       {diagnostics.validBill !== null && (
         <div style={{ marginBottom: '0.75rem' }}>
-          <p style={{ color: '#888', fontSize: '0.75rem' }}>Valid GST Bill</p>
-          <p style={{ color: '#4CD964', fontSize: '0.85rem', fontWeight: 600 }}>• {diagnostics.validBill ? 'Yes' : 'No'}</p>
+          <p style={{ color: 'var(--muted)', fontSize: '0.75rem' }}>Valid GST Bill</p>
+          <p style={{ color: 'var(--gold)', fontSize: '0.85rem', fontWeight: 600 }}>• {diagnostics.validBill ? 'Yes' : 'No'}</p>
         </div>
       )}
       {diagnostics.mobileAge !== null && (
         <div style={{ marginBottom: '0.75rem' }}>
-          <p style={{ color: '#888', fontSize: '0.75rem' }}>Mobile Age</p>
-          <p style={{ color: '#4CD964', fontSize: '0.85rem', fontWeight: 600 }}>• {diagnostics.mobileAge}</p>
+          <p style={{ color: 'var(--muted)', fontSize: '0.75rem' }}>Mobile Age</p>
+          <p style={{ color: 'var(--gold)', fontSize: '0.85rem', fontWeight: 600 }}>• {diagnostics.mobileAge}</p>
         </div>
       )}
       {diagnostics.defects.length > 0 && (
         <div style={{ marginBottom: '0.75rem' }}>
-          <p style={{ color: '#888', fontSize: '0.75rem' }}>Defects</p>
-          <p style={{ color: '#FF3B30', fontSize: '0.85rem', fontWeight: 600 }}>• {diagnostics.defects.length} selected</p>
+          <p style={{ color: 'var(--muted)', fontSize: '0.75rem' }}>Defects</p>
+          <p style={{ color: 'var(--gold)', fontSize: '0.85rem', fontWeight: 600 }}>• {diagnostics.defects.length} selected</p>
         </div>
       )}
       {diagnostics.hardware.length > 0 && (
         <div style={{ marginBottom: '0.75rem' }}>
-          <p style={{ color: '#888', fontSize: '0.75rem' }}>Hardware Issues</p>
-          <p style={{ color: '#FF3B30', fontSize: '0.85rem', fontWeight: 600 }}>• {diagnostics.hardware.length} selected</p>
+          <p style={{ color: 'var(--muted)', fontSize: '0.75rem' }}>Hardware Issues</p>
+          <p style={{ color: 'var(--gold)', fontSize: '0.85rem', fontWeight: 600 }}>• {diagnostics.hardware.length} selected</p>
         </div>
       )}
       {diagnostics.accessories.length > 0 && (
         <div style={{ marginBottom: '0.75rem' }}>
-          <p style={{ color: '#888', fontSize: '0.75rem' }}>Accessories</p>
-          <p style={{ color: '#4CD964', fontSize: '0.85rem', fontWeight: 600 }}>• {diagnostics.accessories.length} available</p>
+          <p style={{ color: 'var(--muted)', fontSize: '0.75rem' }}>Accessories</p>
+          <p style={{ color: 'var(--gold)', fontSize: '0.85rem', fontWeight: 600 }}>• {diagnostics.accessories.length} available</p>
         </div>
       )}
     </div>
@@ -1393,7 +1393,7 @@ export default function QuotePage() {
       
       {stepHistory.length > 0 && step !== 10 && step !== 11 && step !== 12 && (
         <div style={{ marginBottom: '1rem', width: '100%' }}>
-          <button type="button" onClick={handleBack} style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', background: '#fff', color: '#333', border: '1px solid #e0e0e0', borderRadius: '8px', fontSize: '0.9rem', fontWeight: 500, cursor: 'pointer', boxShadow: '0 2px 4px rgba(0,0,0,0.05)' }}>
+          <button type="button" onClick={handleBack} style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', background: 'var(--surface)', color: 'var(--foreground)', border: '1px solid var(--border)', borderRadius: '8px', fontSize: '0.9rem', fontWeight: 500, cursor: 'pointer', boxShadow: '0 2px 4px rgba(0,0,0,0.05)' }}>
             <span style={{ fontSize: '1.2rem' }}>←</span> Back
           </button>
         </div>
@@ -1404,22 +1404,22 @@ export default function QuotePage() {
       {/* STAGE 1: DEVICE SELECTION */}
       {step === 1 && (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-          <h1 style={{ textAlign: 'center', fontSize: '1.75rem', fontWeight: 300, color: '#fff', marginBottom: '0.5rem' }}>Get Your Quote</h1>
-          <p style={{ textAlign: 'center', color: '#a0a0a0', fontSize: '0.9rem', marginBottom: '2rem' }}>Select your device to get an instant price estimate</p>
+          <h1 style={{ textAlign: 'center', fontSize: '1.75rem', fontWeight: 300, color: 'var(--foreground)', marginBottom: '0.5rem' }}>Get Your Quote</h1>
+          <p style={{ textAlign: 'center', color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '2rem' }}>Select your device to get an instant price estimate</p>
 
           {selectionStage === 'brand' && (
             <>
-              <h2 style={{ color: '#fff', fontWeight: 600, fontSize: '1.25rem', textAlign: 'center', marginBottom: '1rem' }}>Select Brand</h2>
+              <h2 style={{ color: 'var(--foreground)', fontWeight: 600, fontSize: '1.25rem', textAlign: 'center', marginBottom: '1rem' }}>Select Brand</h2>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))', gap: '1rem' }}>
                 {brands.length === 0 ? (
                   Array.from({ length: 12 }).map((_, i) => (
-                    <div key={i} className="card skeleton" style={{ height: '110px', borderRadius: '12px', border: '1px solid #2a2a2a' }}></div>
+                    <div key={i} className="card skeleton" style={{ height: '110px', borderRadius: '12px', border: '1px solid var(--border)' }}></div>
                   ))
                 ) : (
                   brands.map((b) => (
-                    <button key={b} onClick={() => handleBrandSelect(b)} className="card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', padding: '1.5rem 1rem', border: '1px solid #2a2a2a', backgroundColor: '#111', borderRadius: '12px', cursor: 'pointer', transition: 'all 200ms' }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = '#4CD964'; e.currentTarget.style.transform = 'translateY(-2px)'; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = '#2a2a2a'; e.currentTarget.style.transform = 'translateY(0)'; }}>
+                    <button key={b} onClick={() => handleBrandSelect(b)} className="card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', padding: '1.5rem 1rem', border: '1px solid var(--border)', backgroundColor: 'var(--surface)', borderRadius: '12px', cursor: 'pointer', transition: 'all 200ms' }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = '#4CD964'; e.currentTarget.style.transform = 'translateY(-2px)'; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.transform = 'translateY(0)'; }}>
                       <img src={BRAND_LOGOS[b] || '/images/placeholder-phone.svg'} alt={b} style={getBrandLogoStyle(b)} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; }} />
-                      <span style={{ fontSize: '0.85rem', fontWeight: 500, color: '#fff' }}>{b}</span>
+                      <span style={{ fontSize: '0.85rem', fontWeight: 500, color: 'var(--foreground)' }}>{b}</span>
                     </button>
                   ))
                 )}
@@ -1430,20 +1430,20 @@ export default function QuotePage() {
           {selectionStage === 'model' && (
             <>
               <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', gap: '1rem' }}>
-                <h2 style={{ color: '#fff', fontWeight: 600, fontSize: '1.25rem' }}>Select Model</h2>
+                <h2 style={{ color: 'var(--foreground)', fontWeight: 600, fontSize: '1.25rem' }}>Select Model</h2>
                 <input 
                   type="text" 
                   placeholder="Search model..." 
                   value={modelSearchQuery}
                   onChange={(e) => setModelSearchQuery(e.target.value)}
-                  style={{ flex: 1, minWidth: '200px', maxWidth: '300px', padding: '0.75rem 1rem', borderRadius: '8px', border: '1px solid #2a2a2a', backgroundColor: '#111', color: '#fff', fontSize: '0.9rem' }}
+                  style={{ flex: 1, minWidth: '200px', maxWidth: '300px', padding: '0.75rem 1rem', borderRadius: '8px', border: '1px solid var(--border)', backgroundColor: 'var(--surface)', color: 'var(--foreground)', fontSize: '0.9rem' }}
                 />
-                <button onClick={() => navigateToState('', '', '', 'brand', 1)} style={{ color: '#4CD964', background: 'none', border: 'none', cursor: 'pointer', whiteSpace: 'nowrap' }}>Change Brand</button>
+                <button onClick={() => navigateToState('', '', '', 'brand', 1)} style={{ color: 'var(--gold)', background: 'none', border: 'none', cursor: 'pointer', whiteSpace: 'nowrap' }}>Change Brand</button>
               </div>
 
               {selectedBrand === 'Samsung' && (
                 <div style={{ marginBottom: '2rem' }}>
-                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <h3 style={{ color: 'var(--muted)', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
                     {[
                       "Galaxy A Series",
@@ -1466,9 +1466,9 @@ export default function QuotePage() {
                           style={{
                             padding: '0.75rem 1rem',
                             borderRadius: '8px',
-                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
-                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
-                            color: isSelected ? '#4CD964' : '#fff',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid var(--border)',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : 'var(--surface)',
+                            color: isSelected ? '#4CD964' : 'var(--foreground)',
                             cursor: 'pointer',
                             fontSize: '0.85rem',
                             fontWeight: 500,
@@ -1486,7 +1486,7 @@ export default function QuotePage() {
 
               {selectedBrand === 'Xiaomi' && (
                 <div style={{ marginBottom: '2rem' }}>
-                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <h3 style={{ color: 'var(--muted)', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
                     {[
                       "Mi Series",
@@ -1522,9 +1522,9 @@ export default function QuotePage() {
                           style={{
                             padding: '0.75rem 1rem',
                             borderRadius: '8px',
-                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
-                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
-                            color: isSelected ? '#4CD964' : '#fff',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid var(--border)',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : 'var(--surface)',
+                            color: isSelected ? '#4CD964' : 'var(--foreground)',
                             cursor: 'pointer',
                             fontSize: '0.85rem',
                             fontWeight: 500,
@@ -1542,7 +1542,7 @@ export default function QuotePage() {
 
               {selectedBrand === 'Vivo' && (
                 <div style={{ marginBottom: '2rem' }}>
-                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <h3 style={{ color: 'var(--muted)', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
                     {[
                       "V Series",
@@ -1563,9 +1563,9 @@ export default function QuotePage() {
                           style={{
                             padding: '0.75rem 1rem',
                             borderRadius: '8px',
-                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
-                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
-                            color: isSelected ? '#4CD964' : '#fff',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid var(--border)',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : 'var(--surface)',
+                            color: isSelected ? '#4CD964' : 'var(--foreground)',
                             cursor: 'pointer',
                             fontSize: '0.85rem',
                             fontWeight: 500,
@@ -1583,7 +1583,7 @@ export default function QuotePage() {
 
               {selectedBrand === 'OPPO' && (
                 <div style={{ marginBottom: '2rem' }}>
-                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <h3 style={{ color: 'var(--muted)', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
                     {[
                       "F Series",
@@ -1602,9 +1602,9 @@ export default function QuotePage() {
                           style={{
                             padding: '0.75rem 1rem',
                             borderRadius: '8px',
-                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
-                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
-                            color: isSelected ? '#4CD964' : '#fff',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid var(--border)',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : 'var(--surface)',
+                            color: isSelected ? '#4CD964' : 'var(--foreground)',
                             cursor: 'pointer',
                             fontSize: '0.85rem',
                             fontWeight: 500,
@@ -1622,7 +1622,7 @@ export default function QuotePage() {
 
               {selectedBrand === 'Realme' && (
                 <div style={{ marginBottom: '2rem' }}>
-                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <h3 style={{ color: 'var(--muted)', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
                     {[
                       "Realme 2 Series",
@@ -1656,9 +1656,9 @@ export default function QuotePage() {
                           style={{
                             padding: '0.75rem 1rem',
                             borderRadius: '8px',
-                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
-                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
-                            color: isSelected ? '#4CD964' : '#fff',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid var(--border)',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : 'var(--surface)',
+                            color: isSelected ? '#4CD964' : 'var(--foreground)',
                             cursor: 'pointer',
                             fontSize: '0.85rem',
                             fontWeight: 500,
@@ -1676,7 +1676,7 @@ export default function QuotePage() {
 
               {selectedBrand === 'Motorola' && (
                 <div style={{ marginBottom: '2rem' }}>
-                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <h3 style={{ color: 'var(--muted)', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
                     {[
                       "Moto E Series",
@@ -1696,9 +1696,9 @@ export default function QuotePage() {
                           style={{
                             padding: '0.75rem 1rem',
                             borderRadius: '8px',
-                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
-                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
-                            color: isSelected ? '#4CD964' : '#fff',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid var(--border)',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : 'var(--surface)',
+                            color: isSelected ? '#4CD964' : 'var(--foreground)',
                             cursor: 'pointer',
                             fontSize: '0.85rem',
                             fontWeight: 500,
@@ -1716,7 +1716,7 @@ export default function QuotePage() {
 
               {selectedBrand === 'Lenovo' && (
                 <div style={{ marginBottom: '2rem' }}>
-                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <h3 style={{ color: 'var(--muted)', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
                     {[
                       "A Series",
@@ -1732,9 +1732,9 @@ export default function QuotePage() {
                           style={{
                             padding: '0.75rem 1rem',
                             borderRadius: '8px',
-                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
-                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
-                            color: isSelected ? '#4CD964' : '#fff',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid var(--border)',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : 'var(--surface)',
+                            color: isSelected ? '#4CD964' : 'var(--foreground)',
                             cursor: 'pointer',
                             fontSize: '0.85rem',
                             fontWeight: 500,
@@ -1752,7 +1752,7 @@ export default function QuotePage() {
 
               {selectedBrand === 'Nokia' && (
                 <div style={{ marginBottom: '2rem' }}>
-                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <h3 style={{ color: 'var(--muted)', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
                     {[
                       "Nokia 2 Series",
@@ -1775,9 +1775,9 @@ export default function QuotePage() {
                           style={{
                             padding: '0.75rem 1rem',
                             borderRadius: '8px',
-                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
-                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
-                            color: isSelected ? '#4CD964' : '#fff',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid var(--border)',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : 'var(--surface)',
+                            color: isSelected ? '#4CD964' : 'var(--foreground)',
                             cursor: 'pointer',
                             fontSize: '0.85rem',
                             fontWeight: 500,
@@ -1795,7 +1795,7 @@ export default function QuotePage() {
 
               {selectedBrand === 'Honor' && (
                 <div style={{ marginBottom: '2rem' }}>
-                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <h3 style={{ color: 'var(--muted)', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
                     {[
                       "Honor 7 Series",
@@ -1818,9 +1818,9 @@ export default function QuotePage() {
                           style={{
                             padding: '0.75rem 1rem',
                             borderRadius: '8px',
-                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
-                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
-                            color: isSelected ? '#4CD964' : '#fff',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid var(--border)',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : 'var(--surface)',
+                            color: isSelected ? '#4CD964' : 'var(--foreground)',
                             cursor: 'pointer',
                             fontSize: '0.85rem',
                             fontWeight: 500,
@@ -1838,7 +1838,7 @@ export default function QuotePage() {
 
               {selectedBrand === 'Asus' && (
                 <div style={{ marginBottom: '2rem' }}>
-                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <h3 style={{ color: 'var(--muted)', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
                     {[
                       "Zenfone 5 Series",
@@ -1855,9 +1855,9 @@ export default function QuotePage() {
                           style={{
                             padding: '0.75rem 1rem',
                             borderRadius: '8px',
-                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
-                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
-                            color: isSelected ? '#4CD964' : '#fff',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid var(--border)',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : 'var(--surface)',
+                            color: isSelected ? '#4CD964' : 'var(--foreground)',
                             cursor: 'pointer',
                             fontSize: '0.85rem',
                             fontWeight: 500,
@@ -1875,7 +1875,7 @@ export default function QuotePage() {
 
               {selectedBrand === 'Google' && (
                 <div style={{ marginBottom: '2rem' }}>
-                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <h3 style={{ color: 'var(--muted)', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
                     {[
                       "Pixel 3 Series",
@@ -1895,9 +1895,9 @@ export default function QuotePage() {
                           style={{
                             padding: '0.75rem 1rem',
                             borderRadius: '8px',
-                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
-                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
-                            color: isSelected ? '#4CD964' : '#fff',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid var(--border)',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : 'var(--surface)',
+                            color: isSelected ? '#4CD964' : 'var(--foreground)',
                             cursor: 'pointer',
                             fontSize: '0.85rem',
                             fontWeight: 500,
@@ -1915,7 +1915,7 @@ export default function QuotePage() {
 
               {selectedBrand === 'POCO' && (
                 <div style={{ marginBottom: '2rem' }}>
-                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <h3 style={{ color: 'var(--muted)', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
                     {[
                       "POCO X Series",
@@ -1932,9 +1932,9 @@ export default function QuotePage() {
                           style={{
                             padding: '0.75rem 1rem',
                             borderRadius: '8px',
-                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
-                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
-                            color: isSelected ? '#4CD964' : '#fff',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid var(--border)',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : 'var(--surface)',
+                            color: isSelected ? '#4CD964' : 'var(--foreground)',
                             cursor: 'pointer',
                             fontSize: '0.85rem',
                             fontWeight: 500,
@@ -1952,7 +1952,7 @@ export default function QuotePage() {
 
               {selectedBrand === 'Huawei' && (
                 <div style={{ marginBottom: '2rem' }}>
-                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <h3 style={{ color: 'var(--muted)', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
                     {[
                       "Huawei P Series",
@@ -1967,9 +1967,9 @@ export default function QuotePage() {
                           style={{
                             padding: '0.75rem 1rem',
                             borderRadius: '8px',
-                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
-                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
-                            color: isSelected ? '#4CD964' : '#fff',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid var(--border)',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : 'var(--surface)',
+                            color: isSelected ? '#4CD964' : 'var(--foreground)',
                             cursor: 'pointer',
                             fontSize: '0.85rem',
                             fontWeight: 500,
@@ -1987,7 +1987,7 @@ export default function QuotePage() {
 
               {selectedBrand === 'LG' && (
                 <div style={{ marginBottom: '2rem' }}>
-                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <h3 style={{ color: 'var(--muted)', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
                     {[
                       "G Series",
@@ -2003,9 +2003,9 @@ export default function QuotePage() {
                           style={{
                             padding: '0.75rem 1rem',
                             borderRadius: '8px',
-                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
-                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
-                            color: isSelected ? '#4CD964' : '#fff',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid var(--border)',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : 'var(--surface)',
+                            color: isSelected ? '#4CD964' : 'var(--foreground)',
                             cursor: 'pointer',
                             fontSize: '0.85rem',
                             fontWeight: 500,
@@ -2023,7 +2023,7 @@ export default function QuotePage() {
 
               {selectedBrand === 'Infinix' && (
                 <div style={{ marginBottom: '2rem' }}>
-                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <h3 style={{ color: 'var(--muted)', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
                     {[
                       "S Series",
@@ -2041,9 +2041,9 @@ export default function QuotePage() {
                           style={{
                             padding: '0.75rem 1rem',
                             borderRadius: '8px',
-                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
-                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
-                            color: isSelected ? '#4CD964' : '#fff',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid var(--border)',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : 'var(--surface)',
+                            color: isSelected ? '#4CD964' : 'var(--foreground)',
                             cursor: 'pointer',
                             fontSize: '0.85rem',
                             fontWeight: 500,
@@ -2061,7 +2061,7 @@ export default function QuotePage() {
 
               {selectedBrand === 'Tecno' && (
                 <div style={{ marginBottom: '2rem' }}>
-                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <h3 style={{ color: 'var(--muted)', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
                     {[
                       "Camon Series",
@@ -2079,9 +2079,9 @@ export default function QuotePage() {
                           style={{
                             padding: '0.75rem 1rem',
                             borderRadius: '8px',
-                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
-                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
-                            color: isSelected ? '#4CD964' : '#fff',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid var(--border)',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : 'var(--surface)',
+                            color: isSelected ? '#4CD964' : 'var(--foreground)',
                             cursor: 'pointer',
                             fontSize: '0.85rem',
                             fontWeight: 500,
@@ -2099,7 +2099,7 @@ export default function QuotePage() {
 
               {selectedBrand === 'iQOO' && (
                 <div style={{ marginBottom: '2rem' }}>
-                  <h3 style={{ color: '#aaa', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
+                  <h3 style={{ color: 'var(--muted)', fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.75rem', letterSpacing: '0.5px' }}>Select Series</h3>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.75rem' }}>
                     {[
                       "iQOO Series"
@@ -2113,9 +2113,9 @@ export default function QuotePage() {
                           style={{
                             padding: '0.75rem 1rem',
                             borderRadius: '8px',
-                            border: isSelected ? '1px solid #4CD964' : '1px solid #2a2a2a',
-                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : '#111',
-                            color: isSelected ? '#4CD964' : '#fff',
+                            border: isSelected ? '1px solid #4CD964' : '1px solid var(--border)',
+                            backgroundColor: isSelected ? 'rgba(76,217,100,0.1)' : 'var(--surface)',
+                            color: isSelected ? '#4CD964' : 'var(--foreground)',
                             cursor: 'pointer',
                             fontSize: '0.85rem',
                             fontWeight: 500,
@@ -2132,17 +2132,17 @@ export default function QuotePage() {
               )}
 
               {models.length === 0 && !loading ? (
-                <div style={{ textAlign: 'center', padding: '4rem 1rem', color: '#a0a0a0' }}>
+                <div style={{ textAlign: 'center', padding: '4rem 1rem', color: 'var(--muted)' }}>
                   <span style={{ fontSize: '3rem', display: 'block', marginBottom: '1rem' }}>🚧</span>
-                  <h3 style={{ color: '#fff', fontSize: '1.25rem', fontWeight: 500, marginBottom: '0.5rem' }}>Coming Soon</h3>
+                  <h3 style={{ color: 'var(--foreground)', fontSize: '1.25rem', fontWeight: 500, marginBottom: '0.5rem' }}>Coming Soon</h3>
                   <p>We are coming soon! Mobile phones for this brand are under processing and uploading.</p>
                 </div>
               ) : (
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '1rem' }}>
                   {models.map((m) => (
-                    <button key={m} onClick={() => handleModelSelect(m)} className="card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem', padding: '1rem', border: '1px solid #2a2a2a', backgroundColor: '#111', borderRadius: '12px', cursor: 'pointer' }}>
+                    <button key={m} onClick={() => handleModelSelect(m)} className="card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem', padding: '1rem', border: '1px solid var(--border)', backgroundColor: 'var(--surface)', borderRadius: '12px', cursor: 'pointer' }}>
                       <img src={`/images/models/${m.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={m} style={{ width: '70px', height: '100px', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
-                      <span style={{ fontSize: '0.8rem', color: '#fff', textAlign: 'center' }}>{m}</span>
+                      <span style={{ fontSize: '0.8rem', color: 'var(--foreground)', textAlign: 'center' }}>{m}</span>
                     </button>
                   ))}
                 </div>
@@ -2153,30 +2153,30 @@ export default function QuotePage() {
           {selectionStage === 'storage' && (
             <>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
-                <h2 style={{ color: '#fff', fontWeight: 600, fontSize: '1.25rem' }}>Choose a variant</h2>
-                <button onClick={() => navigateToState(selectedBrand, '', '', 'model', 1)} style={{ color: '#4CD964', background: 'none', border: 'none', cursor: 'pointer' }}>Change Model</button>
+                <h2 style={{ color: 'var(--foreground)', fontWeight: 600, fontSize: '1.25rem' }}>Choose a variant</h2>
+                <button onClick={() => navigateToState(selectedBrand, '', '', 'model', 1)} style={{ color: 'var(--gold)', background: 'none', border: 'none', cursor: 'pointer' }}>Change Model</button>
               </div>
-              <div className="card" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', border: '1px solid #2a2a2a', backgroundColor: '#111' }}>
+              <div className="card" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', border: '1px solid var(--border)', backgroundColor: 'var(--surface)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
                   <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} style={{ width: '60px', height: '80px', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
-                  <div><p style={{ color: '#a0a0a0', fontSize: '0.8rem' }}>{selectedBrand}</p><h3 style={{ color: '#fff', fontSize: '1.2rem', fontWeight: 600 }}>{selectedModel}</h3></div>
+                  <div><p style={{ color: 'var(--muted)', fontSize: '0.8rem' }}>{selectedBrand}</p><h3 style={{ color: 'var(--foreground)', fontSize: '1.2rem', fontWeight: 600 }}>{selectedModel}</h3></div>
                 </div>
                 
                 {storageOptions.length === 0 && !loading ? (
-                  <div style={{ textAlign: 'center', padding: '2rem 1rem', color: '#a0a0a0' }}>
+                  <div style={{ textAlign: 'center', padding: '2rem 1rem', color: 'var(--muted)' }}>
                     <span style={{ fontSize: '2.5rem', display: 'block', marginBottom: '1rem' }}>📱</span>
-                    <h3 style={{ color: '#fff', fontSize: '1.1rem', fontWeight: 500, marginBottom: '0.5rem' }}>Model configuration not found</h3>
+                    <h3 style={{ color: 'var(--foreground)', fontSize: '1.1rem', fontWeight: 500, marginBottom: '0.5rem' }}>Model configuration not found</h3>
                     <p style={{ fontSize: '0.9rem' }}>We couldn&apos;t find the storage variants for this model. It might be under process.</p>
-                    <button onClick={() => navigateToState(selectedBrand, '', '', 'model', 1)} style={{ marginTop: '1.5rem', padding: '0.5rem 1rem', backgroundColor: '#d4af37', color: '#000', borderRadius: '6px', fontWeight: 600, border: 'none', cursor: 'pointer' }}>View All {selectedBrand} Models</button>
+                    <button onClick={() => navigateToState(selectedBrand, '', '', 'model', 1)} style={{ marginTop: '1.5rem', padding: '0.5rem 1rem', backgroundcolor: 'var(--gold)', color: '#000', borderRadius: '6px', fontWeight: 600, border: 'none', cursor: 'pointer' }}>View All {selectedBrand} Models</button>
                   </div>
                 ) : (
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
                     {storageOptions.map((s) => (
-                      <button key={s} onClick={() => handleStorageSelect(s)} style={{ padding: '0.75rem 1.5rem', borderRadius: '8px', border: selectedStorage === s ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: selectedStorage === s ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: selectedStorage === s ? '#4CD964' : '#fff', cursor: 'pointer' }}>{s}</button>
+                      <button key={s} onClick={() => handleStorageSelect(s)} style={{ padding: '0.75rem 1.5rem', borderRadius: '8px', border: selectedStorage === s ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: selectedStorage === s ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', color: selectedStorage === s ? '#4CD964' : 'var(--foreground)', cursor: 'pointer' }}>{s}</button>
                     ))}
                   </div>
                 )}
-                {loading && <p style={{ color: '#4CD964', textAlign: 'center', marginTop: '1rem', fontWeight: 600 }}>Loading...</p>}
+                {loading && <p style={{ color: 'var(--gold)', textAlign: 'center', marginTop: '1rem', fontWeight: 600 }}>Loading...</p>}
               </div>
             </>
           )}
@@ -2185,14 +2185,14 @@ export default function QuotePage() {
 
       {/* STAGE 2: BASE PRICE SCREEN */}
       {step === 2 && (
-        <div className="card flex flex-col md:flex-row items-center gap-6 md:gap-12 p-6 md:p-12 bg-[#111] border border-[#2a2a2a] rounded-xl max-w-[700px] mx-auto text-center md:text-left">
+        <div className="card flex flex-col md:flex-row items-center gap-6 md:gap-12 p-6 md:p-12 bg-surface border border-border rounded-xl max-w-[700px] mx-auto text-center md:text-left">
           <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} style={{ width: '120px', height: '180px', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
-          <div className="flex flex-col gap-2 flex-1 w-full text-white items-center md:items-start">
+          <div className="flex flex-col gap-2 flex-1 w-full text-foreground items-center md:items-start">
             <h2 style={{ fontSize: '1.4rem', fontWeight: 500 }}>Sell Old {getDisplayModelName(selectedBrand, selectedModel)} ({selectedStorage})</h2>
             <p style={{ color: '#666', fontSize: '1rem', marginTop: '1rem' }}>Get Upto</p>
-            <p style={{ fontSize: '3rem', fontWeight: 700, color: '#FF4C4C' }}>{formatCurrency(basePrice || 0)}</p>
+            <p style={{ fontSize: '3rem', fontWeight: 700, color: 'var(--gold)' }}>{formatCurrency(basePrice || 0)}</p>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem', width: '100%', flexWrap: 'wrap', justifyContent: 'flex-start' }}>
-              <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 3)} className="btn-primary" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 2rem', borderRadius: '8px', flex: '1', minWidth: '200px' }}>
+              <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 3)} className="btn-primary" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', background: 'var(--gold)', color: 'var(--foreground)', fontWeight: 600, padding: '1rem 2rem', borderRadius: '8px', flex: '1', minWidth: '200px' }}>
                 Get Exact Value <ArrowRightIcon />
               </button>
               
@@ -2204,7 +2204,7 @@ export default function QuotePage() {
                 className="btn-primary schedule-pickup-btn" 
                 style={{ 
                   display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', 
-                  background: 'linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%)', 
+                  background: 'linear-gradient(135deg, var(--gold) 0%, #aa8c2c 100%)', 
                   color: '#000', fontWeight: 700, padding: '1rem 2rem', borderRadius: '8px', flex: '1', minWidth: '200px',
                   boxShadow: '0 4px 15px rgba(212, 175, 55, 0.4)',
                   transition: 'all 0.3s ease',
@@ -2225,9 +2225,9 @@ export default function QuotePage() {
             
             {/* STAGE 3: BASIC YES/NO */}
             {step === 3 && (
-              <div className="card p-6 md:p-12 rounded-lg border border-[#2a2a2a] bg-[#111] text-white">
-                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: '#ffffff' }}>Tell us more about your device?</h2>
-                <p style={{ textAlign: 'center', color: '#cccccc', fontSize: '0.85rem', marginBottom: '3rem' }}>Please answer a few questions about your device.</p>
+              <div className="card p-6 md:p-12 rounded-lg border border-border bg-surface text-foreground">
+                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: 'var(--foreground)' }}>Tell us more about your device?</h2>
+                <p style={{ textAlign: 'center', color: 'var(--muted)', fontSize: '0.85rem', marginBottom: '3rem' }}>Please answer a few questions about your device.</p>
                 
                 {[
                   { id: 'calls', title: 'Are you able to make and receive calls?', desc: 'Check your device for cellular network connectivity issues.' },
@@ -2235,14 +2235,14 @@ export default function QuotePage() {
                   { id: 'originalScreen', title: 'Is your phone\'s screen original?', desc: 'Pick "Yes" if screen was never changed or was changed by Authorized Service Center. Pick "No" if screen was changed at local shop.' }
                 ].map((q) => (
                   <div key={q.id} style={{ marginBottom: '2.5rem' }}>
-                    <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>{q.title}</h3>
-                    <p style={{ color: '#cccccc', fontSize: '0.9rem', marginBottom: '1.25rem' }}>{q.desc}</p>
+                    <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: 'var(--foreground)' }}>{q.title}</h3>
+                    <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>{q.desc}</p>
                     <div style={{ display: 'flex', gap: '1rem' }}>
-                      <button onClick={() => setDiagnostics({ ...diagnostics, [q.id]: true })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics[q.id as keyof typeof diagnostics] === true ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics[q.id as keyof typeof diagnostics] === true ? 'rgba(76,217,100,0.1)' : '#1a1a1a', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics[q.id as keyof typeof diagnostics] === true ? '#4CD964' : '#fff' }}>
-                        <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics[q.id as keyof typeof diagnostics] === true ? '1px solid #4CD964' : '1px solid #444', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: diagnostics[q.id as keyof typeof diagnostics] === true ? '#4CD964' : 'transparent' }} /> Yes
+                      <button onClick={() => setDiagnostics({ ...diagnostics, [q.id]: true })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics[q.id as keyof typeof diagnostics] === true ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics[q.id as keyof typeof diagnostics] === true ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics[q.id as keyof typeof diagnostics] === true ? '#4CD964' : 'var(--foreground)' }}>
+                        <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics[q.id as keyof typeof diagnostics] === true ? '1px solid #4CD964' : '1px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: diagnostics[q.id as keyof typeof diagnostics] === true ? '#4CD964' : 'transparent' }} /> Yes
                       </button>
-                      <button onClick={() => setDiagnostics({ ...diagnostics, [q.id]: false })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics[q.id as keyof typeof diagnostics] === false ? '1px solid #FF3B30' : '1px solid #2a2a2a', backgroundColor: diagnostics[q.id as keyof typeof diagnostics] === false ? 'rgba(255,59,48,0.1)' : '#1a1a1a', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics[q.id as keyof typeof diagnostics] === false ? '#FF3B30' : '#fff' }}>
-                        <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics[q.id as keyof typeof diagnostics] === false ? '1px solid #FF3B30' : '1px solid #444', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: diagnostics[q.id as keyof typeof diagnostics] === false ? '#FF3B30' : 'transparent' }} /> No
+                      <button onClick={() => setDiagnostics({ ...diagnostics, [q.id]: false })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics[q.id as keyof typeof diagnostics] === false ? '1px solid #FF3B30' : '1px solid var(--border)', backgroundColor: diagnostics[q.id as keyof typeof diagnostics] === false ? 'rgba(255,59,48,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics[q.id as keyof typeof diagnostics] === false ? '#FF3B30' : 'var(--foreground)' }}>
+                        <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics[q.id as keyof typeof diagnostics] === false ? '1px solid #FF3B30' : '1px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: diagnostics[q.id as keyof typeof diagnostics] === false ? '#FF3B30' : 'transparent' }} /> No
                       </button>
                     </div>
                   </div>
@@ -2252,27 +2252,27 @@ export default function QuotePage() {
                 {isWarrantyEligible(selectedBrand, selectedModel) && (
                   <>
                     <div style={{ marginBottom: '2.5rem' }}>
-                      <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>Is your device under manufacturer warranty?</h3>
-                      <p style={{ color: '#cccccc', fontSize: '0.9rem', marginBottom: '1.25rem' }}>You can get a better price for your device if it&apos;s under manufacturer warranty with a GST valid bill.</p>
+                      <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: 'var(--foreground)' }}>Is your device under manufacturer warranty?</h3>
+                      <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>You can get a better price for your device if it&apos;s under manufacturer warranty with a GST valid bill.</p>
                       <div style={{ display: 'flex', gap: '1rem' }}>
-                        <button onClick={() => setDiagnostics({ ...diagnostics, warranty: true })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.warranty === true ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.warranty === true ? 'rgba(76,217,100,0.1)' : '#1a1a1a', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.warranty === true ? '#4CD964' : '#fff' }}>
-                          <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.warranty === true ? '1px solid #4CD964' : '1px solid #444', backgroundColor: diagnostics.warranty === true ? '#4CD964' : '#transparent' }} /> Yes
+                        <button onClick={() => setDiagnostics({ ...diagnostics, warranty: true })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.warranty === true ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.warranty === true ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.warranty === true ? '#4CD964' : 'var(--foreground)' }}>
+                          <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.warranty === true ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.warranty === true ? '#4CD964' : '#transparent' }} /> Yes
                         </button>
-                        <button onClick={() => setDiagnostics({ ...diagnostics, warranty: false, mobileAge: 'above11' })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.warranty === false ? '1px solid #FF3B30' : '1px solid #2a2a2a', backgroundColor: diagnostics.warranty === false ? 'rgba(255,59,48,0.1)' : '#1a1a1a', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.warranty === false ? '#FF3B30' : '#fff' }}>
-                          <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.warranty === false ? '1px solid #FF3B30' : '1px solid #444', backgroundColor: diagnostics.warranty === false ? '#FF3B30' : '#transparent' }} /> No
+                        <button onClick={() => setDiagnostics({ ...diagnostics, warranty: false, mobileAge: 'above11' })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.warranty === false ? '1px solid #FF3B30' : '1px solid var(--border)', backgroundColor: diagnostics.warranty === false ? 'rgba(255,59,48,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.warranty === false ? '#FF3B30' : 'var(--foreground)' }}>
+                          <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.warranty === false ? '1px solid #FF3B30' : '1px solid var(--border)', backgroundColor: diagnostics.warranty === false ? '#FF3B30' : '#transparent' }} /> No
                         </button>
                       </div>
                     </div>
 
                     <div style={{ marginBottom: '2.5rem' }}>
-                      <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>Do you have GST valid bill with the same IMEI?</h3>
-                      <p style={{ color: '#cccccc', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Make sure your bill has device IMEI mentioned on it.</p>
+                      <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: 'var(--foreground)' }}>Do you have GST valid bill with the same IMEI?</h3>
+                      <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Make sure your bill has device IMEI mentioned on it.</p>
                       <div style={{ display: 'flex', gap: '1rem' }}>
-                        <button onClick={() => setDiagnostics({ ...diagnostics, validBill: true })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.validBill === true ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.validBill === true ? 'rgba(76,217,100,0.1)' : '#1a1a1a', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.validBill === true ? '#4CD964' : '#fff' }}>
-                          <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.validBill === true ? '1px solid #4CD964' : '1px solid #444', backgroundColor: diagnostics.validBill === true ? '#4CD964' : '#transparent' }} /> Yes
+                        <button onClick={() => setDiagnostics({ ...diagnostics, validBill: true })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.validBill === true ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.validBill === true ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.validBill === true ? '#4CD964' : 'var(--foreground)' }}>
+                          <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.validBill === true ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.validBill === true ? '#4CD964' : '#transparent' }} /> Yes
                         </button>
-                        <button onClick={() => setDiagnostics({ ...diagnostics, validBill: false })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.validBill === false ? '1px solid #FF3B30' : '1px solid #2a2a2a', backgroundColor: diagnostics.validBill === false ? 'rgba(255,59,48,0.1)' : '#1a1a1a', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.validBill === false ? '#FF3B30' : '#fff' }}>
-                          <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.validBill === false ? '1px solid #FF3B30' : '1px solid #444', backgroundColor: diagnostics.validBill === false ? '#FF3B30' : '#transparent' }} /> No
+                        <button onClick={() => setDiagnostics({ ...diagnostics, validBill: false })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.validBill === false ? '1px solid #FF3B30' : '1px solid var(--border)', backgroundColor: diagnostics.validBill === false ? 'rgba(255,59,48,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.validBill === false ? '#FF3B30' : 'var(--foreground)' }}>
+                          <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.validBill === false ? '1px solid #FF3B30' : '1px solid var(--border)', backgroundColor: diagnostics.validBill === false ? '#FF3B30' : '#transparent' }} /> No
                         </button>
                       </div>
                     </div>
@@ -2282,14 +2282,14 @@ export default function QuotePage() {
                 {/* eSIM Question (if eligible) */}
                 {isESimEligible(selectedBrand, selectedModel) && (
                   <div style={{ marginBottom: '2.5rem' }}>
-                    <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>How many eSIMs does your device support?</h3>
-                    <p style={{ color: '#cccccc', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Please select &quot;Dual eSIM&quot; if your device supports dual eSIMs. Otherwise, select &quot;Single eSIM&quot;.</p>
+                    <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: 'var(--foreground)' }}>How many eSIMs does your device support?</h3>
+                    <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Please select &quot;Dual eSIM&quot; if your device supports dual eSIMs. Otherwise, select &quot;Single eSIM&quot;.</p>
                     <div style={{ display: 'flex', gap: '1rem' }}>
-                      <button onClick={() => setDiagnostics({ ...diagnostics, eSim: 'Single eSIM' })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.eSim === 'Single eSIM' ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.eSim === 'Single eSIM' ? 'rgba(76,217,100,0.1)' : '#1a1a1a', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.eSim === 'Single eSIM' ? '#4CD964' : '#fff' }}>
-                        <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.eSim === 'Single eSIM' ? '1px solid #4CD964' : '1px solid #444', backgroundColor: diagnostics.eSim === 'Single eSIM' ? '#4CD964' : '#transparent' }} /> Single eSIM
+                      <button onClick={() => setDiagnostics({ ...diagnostics, eSim: 'Single eSIM' })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.eSim === 'Single eSIM' ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.eSim === 'Single eSIM' ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.eSim === 'Single eSIM' ? '#4CD964' : 'var(--foreground)' }}>
+                        <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.eSim === 'Single eSIM' ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.eSim === 'Single eSIM' ? '#4CD964' : '#transparent' }} /> Single eSIM
                       </button>
-                      <button onClick={() => setDiagnostics({ ...diagnostics, eSim: 'Dual eSIM' })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.eSim === 'Dual eSIM' ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.eSim === 'Dual eSIM' ? 'rgba(76,217,100,0.1)' : '#1a1a1a', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.eSim === 'Dual eSIM' ? '#4CD964' : '#fff' }}>
-                        <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.eSim === 'Dual eSIM' ? '1px solid #4CD964' : '1px solid #444', backgroundColor: diagnostics.eSim === 'Dual eSIM' ? '#4CD964' : '#transparent' }} /> Dual eSIM
+                      <button onClick={() => setDiagnostics({ ...diagnostics, eSim: 'Dual eSIM' })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.eSim === 'Dual eSIM' ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.eSim === 'Dual eSIM' ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.eSim === 'Dual eSIM' ? '#4CD964' : 'var(--foreground)' }}>
+                        <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.eSim === 'Dual eSIM' ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.eSim === 'Dual eSIM' ? '#4CD964' : '#transparent' }} /> Dual eSIM
                       </button>
                     </div>
                   </div>
@@ -2314,7 +2314,7 @@ export default function QuotePage() {
                     diagnostics.originalScreen === null || 
                     (isWarrantyEligible(selectedBrand, selectedModel) && (diagnostics.warranty === null || diagnostics.validBill === null)) ||
                     (isESimEligible(selectedBrand, selectedModel) && diagnostics.eSim === null)
-                  } className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (
+                  } className="btn-primary" style={{ background: 'var(--gold)', color: 'var(--foreground)', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (
                     diagnostics.calls !== null && 
                     diagnostics.touch !== null && 
                     diagnostics.originalScreen !== null && 
@@ -2327,9 +2327,9 @@ export default function QuotePage() {
 
             {/* STAGE 4: PHYSICAL DEFECTS */}
             {step === 4 && (
-              <div className="card p-6 md:p-12 rounded-lg border border-[#2a2a2a] bg-[#111] text-white">
-                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: '#ffffff' }}>Select screen/body defects that are applicable!</h2>
-                <p style={{ textAlign: 'center', color: '#cccccc', fontSize: '0.85rem', marginBottom: '3rem' }}>Please provide correct details</p>
+              <div className="card p-6 md:p-12 rounded-lg border border-border bg-surface text-foreground">
+                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: 'var(--foreground)' }}>Select screen/body defects that are applicable!</h2>
+                <p style={{ textAlign: 'center', color: 'var(--muted)', fontSize: '0.85rem', marginBottom: '3rem' }}>Please provide correct details</p>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(130px, 1fr))', gap: '1rem', marginBottom: '3rem' }}>
                   {[
                     { id: 'screen_scratch', label: 'Broken/scratch on device screen', icon: '📱' },
@@ -2337,7 +2337,7 @@ export default function QuotePage() {
                     { id: 'body_scratch', label: 'Scratch/Dent on device body', icon: '📏' },
                     { id: 'panel_missing', label: 'Device panel missing/broken', icon: '🔧' }
                   ].map((d) => (
-                    <button key={d.id} onClick={() => toggleArrayItem('defects', d.id)} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem', padding: '2rem 1rem', borderRadius: '8px', border: diagnostics.defects.includes(d.id) ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.defects.includes(d.id) ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.defects.includes(d.id) ? '#4CD964' : '#fff', cursor: 'pointer' }}>
+                    <button key={d.id} onClick={() => toggleArrayItem('defects', d.id)} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem', padding: '2rem 1rem', borderRadius: '8px', border: diagnostics.defects.includes(d.id) ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.defects.includes(d.id) ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', color: diagnostics.defects.includes(d.id) ? '#4CD964' : 'var(--foreground)', cursor: 'pointer' }}>
                       <span style={{ fontSize: '3rem' }}>{d.icon}</span>
                       <span style={{ fontSize: '0.8rem', textAlign: 'center', fontWeight: 500, lineHeight: 1.4 }}>{d.label}</span>
                     </button>
@@ -2357,19 +2357,19 @@ export default function QuotePage() {
                     } else {
                       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 7);
                     }
-                  }} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px' }}>Continue <ArrowRightIcon /></button>
+                  }} className="btn-primary" style={{ background: 'var(--gold)', color: 'var(--foreground)', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px' }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
             )}
 
             {/* STAGE 5: SCREEN DEFECT SUB-PAGE */}
             {step === 5 && (
-              <div className="card p-6 md:p-12 rounded-lg border border-[#2a2a2a] bg-[#111] text-white">
-                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: '#ffffff' }}>Tell us more about your device screen defects?</h2>
-                <p style={{ textAlign: 'center', color: '#cccccc', fontSize: '0.85rem', marginBottom: '3rem' }}>(Because you selected screen defect)</p>
+              <div className="card p-6 md:p-12 rounded-lg border border-border bg-surface text-foreground">
+                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: 'var(--foreground)' }}>Tell us more about your device screen defects?</h2>
+                <p style={{ textAlign: 'center', color: 'var(--muted)', fontSize: '0.85rem', marginBottom: '3rem' }}>(Because you selected screen defect)</p>
                 
-                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>Screen Physical Condition</h3>
-                <p style={{ color: '#cccccc', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Check physical condition of Display Screen</p>
+                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: 'var(--foreground)' }}>Screen Physical Condition</h3>
+                <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Check physical condition of Display Screen</p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '3rem' }}>
                   {[
                     { id: 'Screen cracked/ glass broken', label: '💥 Screen cracked/ glass broken' },
@@ -2377,7 +2377,7 @@ export default function QuotePage() {
                     { id: 'More than 2 scratches on screen', label: '〰️ More than 2 scratches on screen' },
                     { id: '1-2 scratches on screen', label: '➖ 1-2 scratches on screen' }
                   ].map((opt) => (
-                    <button key={opt.id} onClick={() => setDiagnostics({ ...diagnostics, screenCondition: opt.id })} style={{ textAlign: 'left', padding: '1rem 1.5rem', borderRadius: '8px', border: diagnostics.screenCondition === opt.id ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.screenCondition === opt.id ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.screenCondition === opt.id ? '#4CD964' : '#fff', cursor: 'pointer', fontWeight: 500 }}>
+                    <button key={opt.id} onClick={() => setDiagnostics({ ...diagnostics, screenCondition: opt.id })} style={{ textAlign: 'left', padding: '1rem 1.5rem', borderRadius: '8px', border: diagnostics.screenCondition === opt.id ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.screenCondition === opt.id ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', color: diagnostics.screenCondition === opt.id ? '#4CD964' : 'var(--foreground)', cursor: 'pointer', fontWeight: 500 }}>
                       {opt.label}
                     </button>
                   ))}
@@ -2394,38 +2394,38 @@ export default function QuotePage() {
                     } else {
                       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 7);
                     }
-                  }} disabled={!diagnostics.screenCondition} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: diagnostics.screenCondition ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
+                  }} disabled={!diagnostics.screenCondition} className="btn-primary" style={{ background: 'var(--gold)', color: 'var(--foreground)', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: diagnostics.screenCondition ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
             )}
 
             {/* STAGE 6: BODY DEFECT SUB-PAGE */}
             {step === 6 && (
-              <div className="card p-6 md:p-12 rounded-lg border border-[#2a2a2a] bg-[#111] text-white">
-                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: '#ffffff' }}>Tell us more about your device&apos;s body defects?</h2>
-                <p style={{ textAlign: 'center', color: '#cccccc', fontSize: '0.85rem', marginBottom: '3rem' }}>(Because you selected device&apos;s body defect)</p>
+              <div className="card p-6 md:p-12 rounded-lg border border-border bg-surface text-foreground">
+                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: 'var(--foreground)' }}>Tell us more about your device&apos;s body defects?</h2>
+                <p style={{ textAlign: 'center', color: 'var(--muted)', fontSize: '0.85rem', marginBottom: '3rem' }}>(Because you selected device&apos;s body defect)</p>
                 
-                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>1. Scratches on device Body</h3>
+                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: 'var(--foreground)' }}>1. Scratches on device Body</h3>
                 <div style={{ display: 'flex', gap: '1rem', marginBottom: '2.5rem' }}>
                   {[
                     { id: 'More than 2 scratches', label: '〰️ More than 2 scratches' },
                     { id: '1-2 scratches', label: '➖ 1-2 scratches' },
                     { id: 'No scratches', label: '✨ No scratches' }
                   ].map((opt) => (
-                    <button key={opt.id} onClick={() => setDiagnostics({ ...diagnostics, bodyScratches: opt.id })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.bodyScratches === opt.id ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.bodyScratches === opt.id ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.bodyScratches === opt.id ? '#4CD964' : '#fff', cursor: 'pointer', fontWeight: 500, fontSize: '0.9rem' }}>
+                    <button key={opt.id} onClick={() => setDiagnostics({ ...diagnostics, bodyScratches: opt.id })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.bodyScratches === opt.id ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.bodyScratches === opt.id ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', color: diagnostics.bodyScratches === opt.id ? '#4CD964' : 'var(--foreground)', cursor: 'pointer', fontWeight: 500, fontSize: '0.9rem' }}>
                       {opt.label}
                     </button>
                   ))}
                 </div>
 
-                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>2. Dents on device Body</h3>
+                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: 'var(--foreground)' }}>2. Dents on device Body</h3>
                 <div style={{ display: 'flex', gap: '1rem', marginBottom: '3rem' }}>
                   {[
                     { id: 'Major dent(s) or more than 2', label: '🔨 Major dent(s) or more than 2' },
                     { id: '1-2 minor dents', label: '🔨 1-2 minor dents' },
                     { id: 'No dents', label: '✨ No dents' }
                   ].map((opt) => (
-                    <button key={opt.id} onClick={() => setDiagnostics({ ...diagnostics, bodyDents: opt.id })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.bodyDents === opt.id ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.bodyDents === opt.id ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.bodyDents === opt.id ? '#4CD964' : '#fff', cursor: 'pointer', fontWeight: 500, fontSize: '0.9rem' }}>
+                    <button key={opt.id} onClick={() => setDiagnostics({ ...diagnostics, bodyDents: opt.id })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.bodyDents === opt.id ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.bodyDents === opt.id ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', color: diagnostics.bodyDents === opt.id ? '#4CD964' : 'var(--foreground)', cursor: 'pointer', fontWeight: 500, fontSize: '0.9rem' }}>
                       {opt.label}
                     </button>
                   ))}
@@ -2438,59 +2438,59 @@ export default function QuotePage() {
                     } else {
                       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 7);
                     }
-                  }} disabled={!diagnostics.bodyScratches || !diagnostics.bodyDents} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (diagnostics.bodyScratches && diagnostics.bodyDents) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
+                  }} disabled={!diagnostics.bodyScratches || !diagnostics.bodyDents} className="btn-primary" style={{ background: 'var(--gold)', color: 'var(--foreground)', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (diagnostics.bodyScratches && diagnostics.bodyDents) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
             )}
 
             {/* STAGE 13: PANEL & BENT DEFECT SUB-PAGE */}
             {step === 13 && (
-              <div className="card p-6 md:p-12 rounded-lg border border-[#2a2a2a] bg-[#111] text-white">
-                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: '#ffffff' }}>Tell us more about your device&apos;s body defects?</h2>
-                <p style={{ textAlign: 'center', color: '#cccccc', fontSize: '0.85rem', marginBottom: '3rem' }}>(Because you selected device&apos;s body defect)</p>
+              <div className="card p-6 md:p-12 rounded-lg border border-border bg-surface text-foreground">
+                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: 'var(--foreground)' }}>Tell us more about your device&apos;s body defects?</h2>
+                <p style={{ textAlign: 'center', color: 'var(--muted)', fontSize: '0.85rem', marginBottom: '3rem' }}>(Because you selected device&apos;s body defect)</p>
                 
-                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>1. Device Side/Back Panel Condition</h3>
-                <p style={{ color: '#cccccc', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Check your device&apos;s side & back panels</p>
+                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: 'var(--foreground)' }}>1. Device Side/Back Panel Condition</h3>
+                <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Check your device&apos;s side & back panels</p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2.5rem' }}>
                   {[
                     { id: 'Cracked/ broken side or back panel', label: '💥 Cracked/ broken side or back panel' },
                     { id: 'Missing side or back panel', label: '🕳️ Missing side or back panel' },
                     { id: 'No defect on side or back panel', label: '✨ No defect on side or back panel' }
                   ].map((opt) => (
-                    <button key={opt.id} onClick={() => setDiagnostics({ ...diagnostics, bodyPanel: opt.id })} style={{ textAlign: 'left', padding: '1rem 1.5rem', borderRadius: '8px', border: diagnostics.bodyPanel === opt.id ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.bodyPanel === opt.id ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.bodyPanel === opt.id ? '#4CD964' : '#fff', cursor: 'pointer', fontWeight: 500 }}>
+                    <button key={opt.id} onClick={() => setDiagnostics({ ...diagnostics, bodyPanel: opt.id })} style={{ textAlign: 'left', padding: '1rem 1.5rem', borderRadius: '8px', border: diagnostics.bodyPanel === opt.id ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.bodyPanel === opt.id ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', color: diagnostics.bodyPanel === opt.id ? '#4CD964' : 'var(--foreground)', cursor: 'pointer', fontWeight: 500 }}>
                       {opt.label}
                     </button>
                   ))}
                 </div>
 
-                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>2. Device Bent/Screen loose</h3>
-                <p style={{ color: '#cccccc', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Check if your device is bent or display screen is loose</p>
+                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: 'var(--foreground)' }}>2. Device Bent/Screen loose</h3>
+                <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Check if your device is bent or display screen is loose</p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '3rem' }}>
                   {[
                     { id: 'Bent/ curved panel', label: '📐 Bent/ curved panel' },
                     { id: 'Loose screen (Gap in screen and body)', label: '📏 Loose screen (Gap in screen and body)' },
                     { id: 'Phone not bent', label: '✨ Phone not bent' }
                   ].map((opt) => (
-                    <button key={opt.id} onClick={() => setDiagnostics({ ...diagnostics, bodyBent: opt.id })} style={{ textAlign: 'left', padding: '1rem 1.5rem', borderRadius: '8px', border: diagnostics.bodyBent === opt.id ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.bodyBent === opt.id ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.bodyBent === opt.id ? '#4CD964' : '#fff', cursor: 'pointer', fontWeight: 500 }}>
+                    <button key={opt.id} onClick={() => setDiagnostics({ ...diagnostics, bodyBent: opt.id })} style={{ textAlign: 'left', padding: '1rem 1.5rem', borderRadius: '8px', border: diagnostics.bodyBent === opt.id ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.bodyBent === opt.id ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', color: diagnostics.bodyBent === opt.id ? '#4CD964' : 'var(--foreground)', cursor: 'pointer', fontWeight: 500 }}>
                       {opt.label}
                     </button>
                   ))}
                 </div>
 
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
-                  <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 7)} disabled={!diagnostics.bodyPanel || !diagnostics.bodyBent} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (diagnostics.bodyPanel && diagnostics.bodyBent) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
+                  <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 7)} disabled={!diagnostics.bodyPanel || !diagnostics.bodyBent} className="btn-primary" style={{ background: 'var(--gold)', color: 'var(--foreground)', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (diagnostics.bodyPanel && diagnostics.bodyBent) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
             )}
 
             {/* STAGE 14: SCREEN SPOTS/LINES/DISCOLORATION DEFECT SUB-PAGE */}
             {step === 14 && (
-              <div className="card p-6 md:p-12 rounded-lg border border-[#2a2a2a] bg-[#111] text-white">
-                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: '#ffffff' }}>Tell us more about your device&apos;s screen defects?</h2>
-                <p style={{ textAlign: 'center', color: '#cccccc', fontSize: '0.85rem', marginBottom: '3rem' }}>(because you selected defective screen)</p>
+              <div className="card p-6 md:p-12 rounded-lg border border-border bg-surface text-foreground">
+                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: 'var(--foreground)' }}>Tell us more about your device&apos;s screen defects?</h2>
+                <p style={{ textAlign: 'center', color: 'var(--muted)', fontSize: '0.85rem', marginBottom: '3rem' }}>(because you selected defective screen)</p>
                 
-                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>1. Dead Pixels/Spots on Screen</h3>
-                <p style={{ color: '#cccccc', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Check your device&apos;s screen for visible spots</p>
+                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: 'var(--foreground)' }}>1. Dead Pixels/Spots on Screen</h3>
+                <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Check your device&apos;s screen for visible spots</p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2.5rem' }}>
                   {[
                     { id: 'Large/ heavy visible spots on screen', label: 'Large/ heavy visible spots on screen' },
@@ -2498,35 +2498,35 @@ export default function QuotePage() {
                     { id: '1-2 minor spots on screen', label: '1-2 minor spots on screen' },
                     { id: 'No spots on screen', label: 'No spots on screen' }
                   ].map((opt) => (
-                    <button key={opt.id} onClick={() => setDiagnostics({ ...diagnostics, screenSpots: opt.id })} style={{ textAlign: 'left', padding: '1rem 1.5rem', borderRadius: '8px', border: diagnostics.screenSpots === opt.id ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.screenSpots === opt.id ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.screenSpots === opt.id ? '#4CD964' : '#fff', cursor: 'pointer', fontWeight: 500 }}>
+                    <button key={opt.id} onClick={() => setDiagnostics({ ...diagnostics, screenSpots: opt.id })} style={{ textAlign: 'left', padding: '1rem 1.5rem', borderRadius: '8px', border: diagnostics.screenSpots === opt.id ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.screenSpots === opt.id ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', color: diagnostics.screenSpots === opt.id ? '#4CD964' : 'var(--foreground)', cursor: 'pointer', fontWeight: 500 }}>
                       {opt.label}
                     </button>
                   ))}
                 </div>
 
-                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>2. Visible Lines on Screen</h3>
-                <p style={{ color: '#cccccc', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Check your device&apos;s screen for visible lines</p>
+                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: 'var(--foreground)' }}>2. Visible Lines on Screen</h3>
+                <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Check your device&apos;s screen for visible lines</p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2.5rem' }}>
                   {[
                     { id: 'Visible line(s) on display', label: 'Visible line(s) on display' },
                     { id: 'Display faded along edges', label: 'Display faded along edges' },
                     { id: 'No line(s) on Display', label: 'No line(s) on Display' }
                   ].map((opt) => (
-                    <button key={opt.id} onClick={() => setDiagnostics({ ...diagnostics, screenLines: opt.id })} style={{ textAlign: 'left', padding: '1rem 1.5rem', borderRadius: '8px', border: diagnostics.screenLines === opt.id ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.screenLines === opt.id ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.screenLines === opt.id ? '#4CD964' : '#fff', cursor: 'pointer', fontWeight: 500 }}>
+                    <button key={opt.id} onClick={() => setDiagnostics({ ...diagnostics, screenLines: opt.id })} style={{ textAlign: 'left', padding: '1rem 1.5rem', borderRadius: '8px', border: diagnostics.screenLines === opt.id ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.screenLines === opt.id ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', color: diagnostics.screenLines === opt.id ? '#4CD964' : 'var(--foreground)', cursor: 'pointer', fontWeight: 500 }}>
                       {opt.label}
                     </button>
                   ))}
                 </div>
 
-                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: '#ffffff' }}>3. Discoloration on Screen</h3>
-                <p style={{ color: '#cccccc', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Check your device&apos;s screen for discoloration</p>
+                <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem', color: 'var(--foreground)' }}>3. Discoloration on Screen</h3>
+                <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Check your device&apos;s screen for discoloration</p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '3rem' }}>
                   {[
                     { id: 'Major Discoloration', label: 'Major Discoloration' },
                     { id: 'Minor Discoloration', label: 'Minor Discoloration' },
                     { id: 'No Discoloration', label: 'No Discoloration' }
                   ].map((opt) => (
-                    <button key={opt.id} onClick={() => setDiagnostics({ ...diagnostics, screenDiscoloration: opt.id })} style={{ textAlign: 'left', padding: '1rem 1.5rem', borderRadius: '8px', border: diagnostics.screenDiscoloration === opt.id ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.screenDiscoloration === opt.id ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.screenDiscoloration === opt.id ? '#4CD964' : '#fff', cursor: 'pointer', fontWeight: 500 }}>
+                    <button key={opt.id} onClick={() => setDiagnostics({ ...diagnostics, screenDiscoloration: opt.id })} style={{ textAlign: 'left', padding: '1rem 1.5rem', borderRadius: '8px', border: diagnostics.screenDiscoloration === opt.id ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.screenDiscoloration === opt.id ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', color: diagnostics.screenDiscoloration === opt.id ? '#4CD964' : 'var(--foreground)', cursor: 'pointer', fontWeight: 500 }}>
                       {opt.label}
                     </button>
                   ))}
@@ -2541,42 +2541,42 @@ export default function QuotePage() {
                     } else {
                       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 7);
                     }
-                  }} disabled={!diagnostics.screenSpots || !diagnostics.screenLines || !diagnostics.screenDiscoloration} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (diagnostics.screenSpots && diagnostics.screenLines && diagnostics.screenDiscoloration) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
+                  }} disabled={!diagnostics.screenSpots || !diagnostics.screenLines || !diagnostics.screenDiscoloration} className="btn-primary" style={{ background: 'var(--gold)', color: 'var(--foreground)', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (diagnostics.screenSpots && diagnostics.screenLines && diagnostics.screenDiscoloration) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
             )}
 
             {/* STAGE 7: HARDWARE / FUNCTIONAL */}
             {step === 7 && (
-              <div className="card p-6 md:p-12 rounded-lg border border-[#2a2a2a] bg-[#111] text-white">
-                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: '#ffffff' }}>Functional or Physical Problems</h2>
-                <p style={{ textAlign: 'center', color: '#cccccc', fontSize: '0.85rem', marginBottom: '3rem' }}>Please choose appropriate condition to get accurate quote</p>
+              <div className="card p-6 md:p-12 rounded-lg border border-border bg-surface text-foreground">
+                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: 'var(--foreground)' }}>Functional or Physical Problems</h2>
+                <p style={{ textAlign: 'center', color: 'var(--muted)', fontSize: '0.85rem', marginBottom: '3rem' }}>Please choose appropriate condition to get accurate quote</p>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(130px, 1fr))', gap: '1rem', marginBottom: '3rem' }}>
                   {getFunctionalProblems(selectedBrand, selectedModel).map((h) => (
-                    <button key={h.id} onClick={() => toggleArrayItem('hardware', h.id)} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem', padding: '1.5rem 0.5rem', borderRadius: '8px', border: diagnostics.hardware.includes(h.id) ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.hardware.includes(h.id) ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.hardware.includes(h.id) ? '#4CD964' : '#fff', cursor: 'pointer' }}>
+                    <button key={h.id} onClick={() => toggleArrayItem('hardware', h.id)} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem', padding: '1.5rem 0.5rem', borderRadius: '8px', border: diagnostics.hardware.includes(h.id) ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.hardware.includes(h.id) ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', color: diagnostics.hardware.includes(h.id) ? '#4CD964' : 'var(--foreground)', cursor: 'pointer' }}>
                       <span style={{ fontSize: '2.5rem' }}>{h.icon}</span>
                       <span style={{ fontSize: '0.75rem', textAlign: 'center', fontWeight: 500 }}>{h.label}</span>
                     </button>
                   ))}
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
-                  <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 8)} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px' }}>Continue <ArrowRightIcon /></button>
+                  <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 8)} className="btn-primary" style={{ background: 'var(--gold)', color: 'var(--foreground)', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px' }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
             )}
 
             {/* STAGE 8: ACCESSORIES */}
             {step === 8 && (
-              <div className="card p-6 md:p-12 rounded-lg border border-[#2a2a2a] bg-[#111] text-white">
-                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: '#ffffff' }}>Do you have the following?</h2>
-                <p style={{ textAlign: 'center', color: '#cccccc', fontSize: '0.85rem', marginBottom: '3rem' }}>Please select accessories which are available</p>
+              <div className="card p-6 md:p-12 rounded-lg border border-border bg-surface text-foreground">
+                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: 'var(--foreground)' }}>Do you have the following?</h2>
+                <p style={{ textAlign: 'center', color: 'var(--muted)', fontSize: '0.85rem', marginBottom: '3rem' }}>Please select accessories which are available</p>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem', marginBottom: '3rem' }}>
                   {[
                     {id: 'box', label: 'Original Box with same IMEI', icon: '📦'},
                     ...(hasChargerInBox(selectedBrand, selectedModel) ? [{ id: 'charger', label: 'Original Charger', icon: '🔌' }] : []),
                     ...(hasSPen(selectedBrand, selectedModel) ? [{ id: 'spen', label: 'Original S Pen', icon: '🖊️' }] : [])
                   ].map((a) => (
-                    <button key={a.id} onClick={() => toggleArrayItem('accessories', a.id)} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem', padding: '3rem 1rem', borderRadius: '8px', border: diagnostics.accessories.includes(a.id) ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.accessories.includes(a.id) ? 'rgba(76,217,100,0.1)' : '#1a1a1a', color: diagnostics.accessories.includes(a.id) ? '#4CD964' : '#fff', cursor: 'pointer' }}>
+                    <button key={a.id} onClick={() => toggleArrayItem('accessories', a.id)} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem', padding: '3rem 1rem', borderRadius: '8px', border: diagnostics.accessories.includes(a.id) ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.accessories.includes(a.id) ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', color: diagnostics.accessories.includes(a.id) ? '#4CD964' : 'var(--foreground)', cursor: 'pointer' }}>
                       <span style={{ fontSize: '4rem' }}>{a.icon}</span>
                       <span style={{ fontSize: '0.9rem', textAlign: 'center', fontWeight: 500 }}>{a.label}</span>
                     </button>
@@ -2631,16 +2631,16 @@ export default function QuotePage() {
                         navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 10); 
                       }
                     }
-                  }} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px' }}>Continue <ArrowRightIcon /></button>
+                  }} className="btn-primary" style={{ background: 'var(--gold)', color: 'var(--foreground)', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px' }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
             )}
 
             {/* STAGE 9: MOBILE AGE */}
             {step === 9 && (
-              <div className="card p-6 md:p-12 rounded-lg border border-[#2a2a2a] bg-[#111] text-white">
-                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: '#ffffff' }}>What is your mobile age?</h2>
-                <p style={{ textAlign: 'center', color: '#cccccc', fontSize: '0.85rem', marginBottom: '3rem' }}>Please select the age of your device from the purchase date.</p>
+              <div className="card p-6 md:p-12 rounded-lg border border-border bg-surface text-foreground">
+                <h2 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem', color: 'var(--foreground)' }}>What is your mobile age?</h2>
+                <p style={{ textAlign: 'center', color: 'var(--muted)', fontSize: '0.85rem', marginBottom: '3rem' }}>Please select the age of your device from the purchase date.</p>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginBottom: '3rem' }}>
                   {[
                     { id: 'below3', label: 'Below 3 months', sub: 'Valid bill mandatory' },
@@ -2648,12 +2648,12 @@ export default function QuotePage() {
                     { id: '6to11', label: '6 months - 11 months', sub: 'Valid bill mandatory' },
                     { id: 'above11', label: 'Above 11 months', sub: '' }
                   ].map((age) => (
-                    <button key={age.id} onClick={() => setDiagnostics({ ...diagnostics, mobileAge: age.id as any })} style={{ display: 'flex', flexDirection: 'column', padding: '1.5rem', borderRadius: '8px', border: diagnostics.mobileAge === age.id ? '1px solid #4CD964' : '1px solid #2a2a2a', backgroundColor: diagnostics.mobileAge === age.id ? 'rgba(76,217,100,0.1)' : '#1a1a1a', cursor: 'pointer', color: diagnostics.mobileAge === age.id ? '#4CD964' : '#fff', textAlign: 'left' }}>
+                    <button key={age.id} onClick={() => setDiagnostics({ ...diagnostics, mobileAge: age.id as any })} style={{ display: 'flex', flexDirection: 'column', padding: '1.5rem', borderRadius: '8px', border: diagnostics.mobileAge === age.id ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.mobileAge === age.id ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', cursor: 'pointer', color: diagnostics.mobileAge === age.id ? '#4CD964' : 'var(--foreground)', textAlign: 'left' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: age.sub ? '0.25rem' : '0' }}>
-                        <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.mobileAge === age.id ? '1px solid #4CD964' : '1px solid #444', backgroundColor: diagnostics.mobileAge === age.id ? '#4CD964' : 'transparent', flexShrink: 0 }} />
+                        <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.mobileAge === age.id ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.mobileAge === age.id ? '#4CD964' : 'transparent', flexShrink: 0 }} />
                         <span style={{ fontWeight: 500, fontSize: '1rem' }}>{age.label}</span>
                       </div>
-                      {age.sub && <span style={{ color: '#a0a0a0', fontSize: '0.75rem', paddingLeft: '1.5rem' }}>{age.sub}</span>}
+                      {age.sub && <span style={{ color: 'var(--muted)', fontSize: '0.75rem', paddingLeft: '1.5rem' }}>{age.sub}</span>}
                     </button>
                   ))}
                 </div>
@@ -2668,7 +2668,7 @@ export default function QuotePage() {
                     } else { 
                       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 10); 
                     } 
-                  }} disabled={!diagnostics.mobileAge} className="btn-primary" style={{ background: '#4CD964', color: '#fff', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: diagnostics.mobileAge ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
+                  }} disabled={!diagnostics.mobileAge} className="btn-primary" style={{ background: 'var(--gold)', color: 'var(--foreground)', fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: diagnostics.mobileAge ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
             )}
@@ -2684,7 +2684,7 @@ export default function QuotePage() {
         <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-[1000] backdrop-blur-sm p-4">
           <div className="bg-white text-black rounded-xl w-full max-w-4xl flex flex-col md:flex-row overflow-hidden shadow-2xl max-h-[90vh] overflow-y-auto">
             
-            <div className="flex-1 bg-[#d4af37] p-8 md:p-12 flex flex-col justify-center items-center text-[#000] text-center">
+            <div className="flex-1 bg-[var(--gold)] p-8 md:p-12 flex flex-col justify-center items-center text-[#000] text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#000]">Login/Signup</h2>
               <span className="text-6xl md:text-8xl">🔐</span>
               <p className="mt-6 font-medium text-lg md:text-xl">Unlock the best price for your device instantly.</p>
@@ -2692,11 +2692,11 @@ export default function QuotePage() {
 
             <div className="flex-[1.5] p-6 md:p-12">
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '2rem' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', border: '1px solid #e0e0e0', padding: '1rem 1.5rem', borderRadius: '8px', width: '100%' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', border: '1px solid var(--border)', padding: '1rem 1.5rem', borderRadius: '8px', width: '100%' }}>
                   <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} style={{ width: '40px', height: '60px', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
                   <div>
                     <p style={{ fontSize: '0.85rem', fontWeight: 600, color: '#666' }}>{getDisplayModelName(selectedBrand, selectedModel)} ({selectedStorage})</p>
-                    <p style={{ color: '#FF4C4C', fontSize: '1.75rem', fontWeight: 700 }}>₹ XX,XXX</p>
+                    <p style={{ color: 'var(--gold)', fontSize: '1.75rem', fontWeight: 700 }}>₹ XX,XXX</p>
                   </div>
                 </div>
                 <button onClick={() => { 
@@ -2706,12 +2706,12 @@ export default function QuotePage() {
                 }} style={{ background: 'none', border: 'none', fontSize: '2rem', cursor: 'pointer', paddingLeft: '1rem', color: '#999', lineHeight: 1 }}>×</button>
               </div>
 
-              <div style={{ backgroundColor: 'rgba(212, 175, 55, 0.1)', color: '#d4af37', padding: '1rem', borderRadius: '8px', textAlign: 'center', fontWeight: 600, marginBottom: '2.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', border: '1px solid rgba(212, 175, 55, 0.3)' }}>
+              <div style={{ backgroundColor: 'rgba(212, 175, 55, 0.1)', color: 'var(--gold)', padding: '1rem', borderRadius: '8px', textAlign: 'center', fontWeight: 600, marginBottom: '2.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', border: '1px solid rgba(212, 175, 55, 0.3)' }}>
                 <span style={{ fontSize: '1.2rem' }}>🔒</span> Login to unlock the best price
               </div>
 
               <form onSubmit={showOtpInput ? handleOtpVerify : handleSendOtp}>
-                {authError && <div style={{ color: '#FF4C4C', fontSize: '0.85rem', marginBottom: '1rem', textAlign: 'center' }}>{authError}</div>}
+                {authError && <div style={{ color: 'var(--gold)', fontSize: '0.85rem', marginBottom: '1rem', textAlign: 'center' }}>{authError}</div>}
                 
                 {!showOtpInput ? (
                   <>
@@ -2740,11 +2740,11 @@ export default function QuotePage() {
                 )}
 
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '2rem' }}>
-                  <input type="checkbox" required id="terms" style={{ width: '16px', height: '16px', accentColor: '#d4af37' }} />
-                  <label htmlFor="terms" style={{ fontSize: '0.85rem', color: '#666' }}>I agree to the <a href="/terms" target="_blank" rel="noopener noreferrer" style={{ color: '#d4af37', textDecoration: 'none' }}>Terms and Conditions</a> & <a href="/privacy" target="_blank" rel="noopener noreferrer" style={{ color: '#d4af37', textDecoration: 'none' }}>Privacy Policy</a></label>
+                  <input type="checkbox" required id="terms" style={{ width: '16px', height: '16px', accentcolor: 'var(--gold)' }} />
+                  <label htmlFor="terms" style={{ fontSize: '0.85rem', color: '#666' }}>I agree to the <a href="/terms" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gold)', textDecoration: 'none' }}>Terms and Conditions</a> & <a href="/privacy" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gold)', textDecoration: 'none' }}>Privacy Policy</a></label>
                 </div>
 
-                <button type="submit" disabled={isAuthLoading} style={{ width: '100%', padding: '16px', backgroundColor: userPhone.length >= 10 ? '#d4af37' : '#e0e0e0', color: userPhone.length >= 10 ? '#000' : '#999', border: 'none', borderRadius: '8px', fontWeight: 700, fontSize: '1.1rem', cursor: userPhone.length >= 10 ? 'pointer' : 'not-allowed', transition: 'all 200ms', opacity: isAuthLoading ? 0.6 : 1 }}>
+                <button type="submit" disabled={isAuthLoading} style={{ width: '100%', padding: '16px', backgroundColor: userPhone.length >= 10 ? 'var(--gold)' : '#e0e0e0', color: userPhone.length >= 10 ? '#000' : '#999', border: 'none', borderRadius: '8px', fontWeight: 700, fontSize: '1.1rem', cursor: userPhone.length >= 10 ? 'pointer' : 'not-allowed', transition: 'all 200ms', opacity: isAuthLoading ? 0.6 : 1 }}>
                   {isAuthLoading ? 'PROCESSING...' : (showOtpInput ? 'VERIFY & SEE PRICE' : 'GET EXACT PRICE')}
                 </button>
               </form>
@@ -2755,13 +2755,13 @@ export default function QuotePage() {
 
       {/* STAGE 11: FINAL EXACT PRICE */}
       {step === 11 && finalPrice != null && (
-        <div className="card flex flex-col gap-2 md:gap-4 bg-[#111] border border-[#2a2a2a] p-4 md:p-8 rounded-xl max-w-[600px] mx-auto text-left">
-          <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', borderBottom: '1px solid #2a2a2a', paddingBottom: '1rem', marginBottom: '0.5rem' }}>
+        <div className="card flex flex-col gap-2 md:gap-4 bg-surface border border-border p-4 md:p-8 rounded-xl max-w-[600px] mx-auto text-left">
+          <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', borderBottom: '1px solid var(--border)', paddingBottom: '1rem', marginBottom: '0.5rem' }}>
             <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} style={{ width: '60px', height: 'auto', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
             <div>
-              <h2 style={{ fontSize: '1.25rem', fontWeight: 600, color: '#fff', marginBottom: '0.25rem' }}>{getDisplayModelName(selectedBrand, selectedModel)} ({selectedStorage})</h2>
-              <p style={{ color: '#a0a0a0', fontSize: '0.85rem', marginBottom: '0.5rem' }}>Estimated value :</p>
-              <p style={{ fontSize: '2rem', fontWeight: 700, color: '#FF3B30', lineHeight: 1 }}>
+              <h2 style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--foreground)', marginBottom: '0.25rem' }}>{getDisplayModelName(selectedBrand, selectedModel)} ({selectedStorage})</h2>
+              <p style={{ color: 'var(--muted)', fontSize: '0.85rem', marginBottom: '0.5rem' }}>Estimated value :</p>
+              <p style={{ fontSize: '2rem', fontWeight: 700, color: 'var(--gold)', lineHeight: 1 }}>
                 {formatCurrency((finalPrice || 0) - (finalPrice === 1200 ? 0 : 99) + (appliedCoupon ? 299 : 0))}
               </p>
               <button 
@@ -2774,8 +2774,8 @@ export default function QuotePage() {
                 style={{
                   background: 'none',
                   border: 'none',
-                  borderBottom: '1px solid #26a69a',
-                  color: '#26a69a',
+                  borderBottom: '1px solid var(--gold)',
+                  color: 'var(--gold)',
                   cursor: 'pointer',
                   padding: '2px 0',
                   marginTop: '0.75rem',
@@ -2798,25 +2798,25 @@ export default function QuotePage() {
               boxShadow: '0 0 20px rgba(255, 184, 0, 0.3)'
             }}>
               <div style={{
-                backgroundColor: '#111',
+                backgroundColor: 'var(--surface)',
                 padding: '1rem',
                 borderRadius: '11px',
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '0.5rem',
-                background: 'linear-gradient(to bottom right, rgba(17,17,17,1), rgba(30,30,30,0.9))'
+                background: 'var(--surface-elevated)'
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                   <span style={{ fontSize: '1.5rem', display: 'inline-block', animation: 'bounce 2s infinite' }}>🎁</span>
-                  <h3 style={{ fontSize: '1.1rem', fontWeight: 700, background: 'linear-gradient(90deg, #FFD700, #FF8C00)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', margin: 0 }}>Special Offer Available</h3>
+                  <h3 style={{ fontSize: '1.1rem', fontWeight: 700, background: 'linear-gradient(90deg, var(--gold), #FF8C00)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', margin: 0 }}>Special Offer Available</h3>
                 </div>
                 
                 {isFirstTimeUser && generatedCoupon ? (
-                  <p style={{ color: '#ccc', fontSize: '0.95rem', margin: 0, lineHeight: 1.5 }}>
-                    Unlock your first-time user bonus! Use code <strong style={{ color: '#FFD700', backgroundColor: 'rgba(255,215,0,0.1)', padding: '0.3rem 0.6rem', borderRadius: '6px', border: '1px solid rgba(255,215,0,0.3)', letterSpacing: '1px' }}>{generatedCoupon}</strong> for an extra ₹299 on your selling price.
+                  <p style={{ color: 'var(--muted)', fontSize: '0.95rem', margin: 0, lineHeight: 1.5 }}>
+                    Unlock your first-time user bonus! Use code <strong style={{ color: 'var(--gold)', backgroundColor: 'rgba(255,215,0,0.1)', padding: '0.3rem 0.6rem', borderRadius: '6px', border: '1px solid rgba(255,215,0,0.3)', letterSpacing: '1px' }}>{generatedCoupon}</strong> for an extra ₹299 on your selling price.
                   </p>
                 ) : (
-                  <p style={{ color: '#ccc', fontSize: '0.85rem', margin: 0, lineHeight: 1.4 }}>
+                  <p style={{ color: 'var(--muted)', fontSize: '0.85rem', margin: 0, lineHeight: 1.4 }}>
                     Got a promo code? Enter it below to boost your final selling price instantly!
                   </p>
                 )}
@@ -2827,8 +2827,8 @@ export default function QuotePage() {
                     value={couponInput}
                     onChange={(e) => setCouponInput(e.target.value.toUpperCase())}
                     placeholder="Enter promo code" 
-                    style={{ flex: 1, padding: '0.6rem 0.8rem', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)', backgroundColor: 'rgba(255,255,255,0.05)', color: '#fff', outline: 'none', fontSize: '0.9rem', transition: 'all 0.3s ease' }} 
-                    onFocus={(e) => { e.currentTarget.style.border = '1px solid #FFD700'; e.currentTarget.style.backgroundColor = 'rgba(255,215,0,0.05)'; }}
+                    style={{ flex: 1, padding: '0.6rem 0.8rem', borderRadius: '8px', border: '1px solid var(--border)', backgroundColor: 'var(--surface)', color: 'var(--foreground)', outline: 'none', fontSize: '0.9rem', transition: 'all 0.3s ease' }} 
+                    onFocus={(e) => { e.currentTarget.style.border = '1px solid var(--gold)'; e.currentTarget.style.backgroundColor = 'rgba(255,215,0,0.05)'; }}
                     onBlur={(e) => { e.currentTarget.style.border = '1px solid rgba(255,255,255,0.1)'; e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)'; }}
                   />
                   <button 
@@ -2863,10 +2863,10 @@ export default function QuotePage() {
               alignItems: 'center',
               boxShadow: '0 8px 32px rgba(212, 175, 55, 0.08)'
             }}>
-              <span style={{ fontSize: '1rem', fontWeight: 600, color: '#d4af37', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <span style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--gold)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <span>✨</span> Cashify&apos;s price
               </span>
-              <span style={{ color: '#fff', fontSize: '1.25rem', fontWeight: 800 }}>
+              <span style={{ color: 'var(--foreground)', fontSize: '1.25rem', fontWeight: 800 }}>
                 {formatCurrency(cashifyPrice ?? 0)}
               </span>
             </div>
@@ -2886,8 +2886,8 @@ export default function QuotePage() {
                   alignItems: 'center', 
                   gap: '0.5rem',
                   backgroundColor: 'rgba(212, 175, 55, 0.1)',
-                  borderColor: '#d4af37',
-                  color: '#d4af37',
+                  bordercolor: 'var(--gold)',
+                  color: 'var(--gold)',
                   borderRadius: '8px',
                   cursor: (isScraping || marketPriceFetched) ? 'not-allowed' : 'pointer',
                   fontWeight: 600,
@@ -2946,16 +2946,16 @@ export default function QuotePage() {
               flexShrink: 0,
               border: '1px solid rgba(212, 175, 55, 0.3)'
             }}>
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="12" r="10"></circle>
                 <line x1="12" y1="16" x2="12" y2="12"></line>
                 <line x1="12" y1="8" x2="12.01" y2="8"></line>
               </svg>
             </div>
             
-            <p style={{ color: '#e0e0e0', fontSize: '0.8rem', margin: 0, fontWeight: 400, letterSpacing: '0.3px', lineHeight: 1.4, position: 'relative', zIndex: 1 }}>
+            <p style={{ color: 'var(--muted)', fontSize: '0.8rem', margin: 0, fontWeight: 400, letterSpacing: '0.3px', lineHeight: 1.4, position: 'relative', zIndex: 1 }}>
               <span style={{ 
-                color: '#d4af37', 
+                color: 'var(--gold)', 
                 fontWeight: 700, 
                 marginRight: '6px',
                 textTransform: 'uppercase',
@@ -2969,15 +2969,15 @@ export default function QuotePage() {
           <div style={{ display: 'flex', gap: '0.75rem', marginTop: '1rem', width: '100%' }}>
             <button type="button" onClick={handleBack} className="btn-outline" style={{ flex: 1, padding: '12px', fontSize: '1rem' }}>Back</button>
             <button type="button" onClick={() => { navigateToState('', '', '', 'brand', 1); setFinalPrice(null); setMarketPriceFetched(false); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], screenCondition: null, screenSpots: null, screenLines: null, screenDiscoloration: null, bodyScratches: null, bodyDents: null, bodyPanel: null, bodyBent: null, hardware: [], accessories: [], warranty: null, validBill: null, eSim: null, mobileAge: null }); }} className="btn-outline" style={{ flex: 1, padding: '12px', fontSize: '1rem' }}>Start Over</button>
-            <button type="button" onClick={() => setStep(12)} className="btn-primary" style={{ flex: 2, padding: '12px', background: '#4CD964', color: '#fff', fontSize: '1rem', fontWeight: 600, cursor: 'pointer' }}>Schedule Pickup</button>
+            <button type="button" onClick={() => setStep(12)} className="btn-primary" style={{ flex: 2, padding: '12px', background: 'var(--gold)', color: 'var(--foreground)', fontSize: '1rem', fontWeight: 600, cursor: 'pointer' }}>Schedule Pickup</button>
           </div>
         </div>
       )}
 
       {/* STAGE 12: PICKUP DETAILS FORM */}
       {step === 12 && (
-        <div className="card flex flex-col gap-4 bg-[#111] border border-[#333] p-6 md:p-8 rounded-xl max-w-[600px] mx-auto text-left">
-          <p className="eyebrow" style={{ color: '#d4af37', fontSize: '1rem', letterSpacing: '2px', textAlign: 'center', marginBottom: '1.5rem' }}>SCHEDULE PICKUP</p>
+        <div className="card flex flex-col gap-4 bg-surface border border-border p-6 md:p-8 rounded-xl max-w-[600px] mx-auto text-left">
+          <p className="eyebrow" style={{ color: 'var(--gold)', fontSize: '1rem', letterSpacing: '2px', textAlign: 'center', marginBottom: '1.5rem' }}>SCHEDULE PICKUP</p>
           
           <form onSubmit={async (e) => {
             e.preventDefault();
@@ -3019,12 +3019,12 @@ export default function QuotePage() {
           }}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
               <div>
-                <label style={{ display: 'block', fontSize: '0.85rem', color: '#a0a0a0', marginBottom: '0.5rem' }}>Preferred Date</label>
-                <input type="date" required value={pickupDate} onChange={(e) => setPickupDate(e.target.value)} style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000', color: '#fff' }} />
+                <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem' }}>Preferred Date</label>
+                <input type="date" required value={pickupDate} onChange={(e) => setPickupDate(e.target.value)} style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000', color: 'var(--foreground)' }} />
               </div>
               <div>
-                <label style={{ display: 'block', fontSize: '0.85rem', color: '#a0a0a0', marginBottom: '0.5rem' }}>Preferred Time</label>
-                <select required value={pickupTime} onChange={(e) => setPickupTime(e.target.value)} style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000', color: '#fff' }}>
+                <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem' }}>Preferred Time</label>
+                <select required value={pickupTime} onChange={(e) => setPickupTime(e.target.value)} style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000', color: 'var(--foreground)' }}>
                   <option value="">Select Time Slot</option>
                   <option value="10:00 AM - 1:00 PM">10:00 AM - 1:00 PM</option>
                   <option value="1:00 PM - 4:00 PM">1:00 PM - 4:00 PM</option>
@@ -3034,24 +3034,24 @@ export default function QuotePage() {
             </div>
 
             <div style={{ marginBottom: '1rem' }}>
-              <label style={{ display: 'block', fontSize: '0.85rem', color: '#a0a0a0', marginBottom: '0.5rem' }}>Flat / House No / Building Name</label>
-              <input type="text" required value={address} onChange={(e) => setAddress(e.target.value)} placeholder="e.g. 101, Fhoneify Apartments" style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000', color: '#fff' }} />
+              <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem' }}>Flat / House No / Building Name</label>
+              <input type="text" required value={address} onChange={(e) => setAddress(e.target.value)} placeholder="e.g. 101, Fhoneify Apartments" style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000', color: 'var(--foreground)' }} />
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               <div>
-                <label style={{ display: 'block', fontSize: '0.85rem', color: '#a0a0a0', marginBottom: '0.5rem' }}>Pincode</label>
-                <input type="text" required value={pincode} onChange={(e) => setPincode(e.target.value.replace(/\D/g, '').slice(0, 6))} placeholder="6 Digit Pincode" style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000', color: '#fff' }} />
+                <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem' }}>Pincode</label>
+                <input type="text" required value={pincode} onChange={(e) => setPincode(e.target.value.replace(/\D/g, '').slice(0, 6))} placeholder="6 Digit Pincode" style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000', color: 'var(--foreground)' }} />
               </div>
               <div>
-                <label style={{ display: 'block', fontSize: '0.85rem', color: '#a0a0a0', marginBottom: '0.5rem' }}>City</label>
-                <input type="text" required value={city} onChange={(e) => setCity(e.target.value)} placeholder="e.g. Bengaluru" style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000', color: '#fff' }} />
+                <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem' }}>City</label>
+                <input type="text" required value={city} onChange={(e) => setCity(e.target.value)} placeholder="e.g. Bengaluru" style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000', color: 'var(--foreground)' }} />
               </div>
             </div>
 
             <div style={{ display: 'flex', gap: '1rem', width: '100%' }}>
               <button type="button" onClick={() => setStep(8)} className="btn-outline" style={{ flex: 1, padding: '16px', fontSize: '1.1rem' }}>Back</button>
-              <button type="submit" className="btn-primary" style={{ flex: 2, padding: '16px', background: '#4CD964', color: '#fff', fontSize: '1.1rem', fontWeight: 600 }}>Confirm Pickup</button>
+              <button type="submit" className="btn-primary" style={{ flex: 2, padding: '16px', background: 'var(--gold)', color: 'var(--foreground)', fontSize: '1.1rem', fontWeight: 600 }}>Confirm Pickup</button>
             </div>
           </form>
         </div>
@@ -3084,8 +3084,8 @@ export default function QuotePage() {
                   <line x1="12" y1="16" x2="12.01" y2="16"></line>
                 </svg>
               </div>
-              <h2 style={{ color: '#fff', fontSize: '1.5rem', fontWeight: 600, marginBottom: '0.75rem' }}>Price Unavailable</h2>
-              <p style={{ color: '#FF3B30', fontSize: '1.1rem', maxWidth: '350px' }}>{timerError}</p>
+              <h2 style={{ color: 'var(--foreground)', fontSize: '1.5rem', fontWeight: 600, marginBottom: '0.75rem' }}>Price Unavailable</h2>
+              <p style={{ color: 'var(--gold)', fontSize: '1.1rem', maxWidth: '350px' }}>{timerError}</p>
             </div>
           ) : (
             <div style={{ textAlign: 'center', animation: 'fadeIn 0.5s ease-out' }}>
@@ -3114,20 +3114,20 @@ export default function QuotePage() {
                 <div style={{ 
                   position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, 
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontSize: '2.5rem', fontWeight: 700, color: '#fff'
+                  fontSize: '2.5rem', fontWeight: 700, color: 'var(--foreground)'
                 }}>
                   {timerCount}s
                 </div>
               </div>
               <h2 style={{ 
-                color: '#fff', fontSize: '1.5rem', fontWeight: 600, marginBottom: '0.5rem',
+                color: 'var(--foreground)', fontSize: '1.5rem', fontWeight: 600, marginBottom: '0.5rem',
                 background: 'linear-gradient(90deg, #4CD964, #34A853)',
                 WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
                 animation: 'pulse 2s infinite'
               }}>
                 {scrapingStatus}
               </h2>
-              <p style={{ color: '#a0a0a0', fontSize: '1rem', maxWidth: '300px', margin: '0 auto' }}>
+              <p style={{ color: 'var(--muted)', fontSize: '1rem', maxWidth: '300px', margin: '0 auto' }}>
                 Fetching real-time market data to give you the highest possible value.
               </p>
             </div>

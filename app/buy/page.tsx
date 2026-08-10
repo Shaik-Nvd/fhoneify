@@ -73,15 +73,15 @@ export default function BuyPage() {
   return (
     <div className="page-animate" style={{ maxWidth: '80rem', margin: '0 auto', padding: '2rem 1rem' }}>
       <p className="eyebrow" style={{ marginBottom: '0.5rem' }}>MARKETPLACE</p>
-      <h1 style={{ fontSize: '1.75rem', fontWeight: 300, color: '#fff', marginBottom: '2rem' }}>Buy Refurbished Phones</h1>
+      <h1 style={{ fontSize: '1.75rem', fontWeight: 300, color: 'var(--foreground)', marginBottom: '2rem' }}>Buy Refurbished Phones</h1>
 
       <div className="flex flex-col md:flex-row gap-8">
         {/* Sidebar */}
         <aside className="w-full md:w-64 shrink-0">
           <div className="card" style={{ position: 'sticky', top: '5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <h2 style={{ color: '#d4af37', fontWeight: 600, fontSize: '0.9rem' }}>Filters</h2>
+            <h2 style={{ color: 'var(--gold)', fontWeight: 600, fontSize: '0.9rem' }}>Filters</h2>
             <div>
-              <label style={{ display: 'block', fontSize: '0.75rem', color: '#a0a0a0', marginBottom: '0.35rem', fontWeight: 500 }}>Search</label>
+              <label style={{ display: 'block', fontSize: '0.75rem', color: 'var(--muted)', marginBottom: '0.35rem', fontWeight: 500 }}>Search</label>
               <input 
                 type="text" 
                 value={searchQuery} 
@@ -91,27 +91,27 @@ export default function BuyPage() {
               />
             </div>
             <div>
-              <label style={{ display: 'block', fontSize: '0.75rem', color: '#a0a0a0', marginBottom: '0.35rem', fontWeight: 500 }}>Brand</label>
+              <label style={{ display: 'block', fontSize: '0.75rem', color: 'var(--muted)', marginBottom: '0.35rem', fontWeight: 500 }}>Brand</label>
               <select value={brandFilter} onChange={(e) => setBrandFilter(e.target.value)} style={{ width: '100%' }}>
                 <option value="">All brands</option>
                 {brands.map((b) => <option key={b} value={b}>{b}</option>)}
               </select>
             </div>
             <div>
-              <label style={{ display: 'block', fontSize: '0.75rem', color: '#a0a0a0', marginBottom: '0.35rem', fontWeight: 500 }}>City</label>
+              <label style={{ display: 'block', fontSize: '0.75rem', color: 'var(--muted)', marginBottom: '0.35rem', fontWeight: 500 }}>City</label>
               <select value={cityFilter} onChange={(e) => setCityFilter(e.target.value)} style={{ width: '100%' }}>
                 <option value="">All cities</option>
                 {cities.map((c) => <option key={c} value={c}>{c}</option>)}
               </select>
             </div>
             <div>
-              <label style={{ display: 'block', fontSize: '0.75rem', color: '#a0a0a0', marginBottom: '0.35rem', fontWeight: 500 }}>Tier</label>
-              <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#fff', fontSize: '0.85rem' }}>
+              <label style={{ display: 'block', fontSize: '0.75rem', color: 'var(--muted)', marginBottom: '0.35rem', fontWeight: 500 }}>Tier</label>
+              <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--foreground)', fontSize: '0.85rem' }}>
                 <input 
                   type="checkbox" 
                   checked={isSelectTier} 
                   onChange={(e) => setIsSelectTier(e.target.checked)} 
-                  style={{ accentColor: '#d4af37' }}
+                  style={{ accentcolor: 'var(--gold)' }}
                 />
                 Fhoneify Select (Premium)
               </label>
@@ -132,24 +132,24 @@ export default function BuyPage() {
           ) : listings.length === 0 ? (
             <div style={{ textAlign: 'center', padding: '4rem 0' }}>
               <p style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>📱</p>
-              <p style={{ color: '#a0a0a0' }}>No listings match your filters.</p>
+              <p style={{ color: 'var(--muted)' }}>No listings match your filters.</p>
             </div>
           ) : (
             <>
-              <p style={{ color: '#a0a0a0', fontSize: '0.8rem', marginBottom: '1rem' }}>{listings.length} listing(s) found</p>
+              <p style={{ color: 'var(--muted)', fontSize: '0.8rem', marginBottom: '1rem' }}>{listings.length} listing(s) found</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {listings.map((listing) => (
                   <Link key={listing.id} href={`/buy/${listing.id}`} className="card" style={{ display: 'block', textDecoration: 'none', padding: 0, overflow: 'hidden' }}>
-                    <div style={{ backgroundColor: '#1a1a1a', height: '8rem', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2.5rem' }}>📱</div>
+                    <div style={{ backgroundColor: 'var(--surface-elevated)', height: '8rem', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2.5rem' }}>📱</div>
                     <div style={{ padding: '1rem 1.25rem' }}>
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
-                        <h3 style={{ fontWeight: 600, color: '#fff', fontSize: '0.95rem' }}>{listing.brand} {listing.model}</h3>
+                        <h3 style={{ fontWeight: 600, color: 'var(--foreground)', fontSize: '0.95rem' }}>{listing.brand} {listing.model}</h3>
                         <span className={conditionConfig[listing.condition]?.className || 'badge-muted'}>
                           {conditionConfig[listing.condition]?.label || listing.condition}
                         </span>
                       </div>
-                      <p style={{ fontSize: '0.8rem', color: '#a0a0a0', marginBottom: '0.5rem' }}>{listing.storage} · {listing.city}</p>
-                      <p style={{ fontSize: '1.15rem', fontWeight: 700, color: '#d4af37' }}>{formatCurrency(listing.price)}</p>
+                      <p style={{ fontSize: '0.8rem', color: 'var(--muted)', marginBottom: '0.5rem' }}>{listing.storage} · {listing.city}</p>
+                      <p style={{ fontSize: '1.15rem', fontWeight: 700, color: 'var(--gold)' }}>{formatCurrency(listing.price)}</p>
                     </div>
                   </Link>
                 ))}

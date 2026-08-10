@@ -2,6 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --background: #ffffff;
+  --surface: #f3f4f6;
+  --surface-elevated: #e5e7eb;
+  --gold: #8a6614;
+  --gold-hover: #6a4f0f;
+  --foreground: #111111;
+  --muted: #4b5563;
+  --border: #d1d5db;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(0, 0, 0, 0.05);
+  --glass-shadow: rgba(0, 0, 0, 0.05);
+}
+
+.dark {
+  --background: #0a0a0a;
+  --surface: #111111;
+  --surface-elevated: #1a1a1a;
+  --gold: #d4af37;
+  --gold-hover: #f0c040;
+  --foreground: #ffffff;
+  --muted: #a0a0a0;
+  --border: #2a2a2a;
+  --glass-bg: rgba(17, 17, 17, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.05);
+  --glass-shadow: rgba(0, 0, 0, 0.3);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,12 +38,12 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: #0a0a0a;
+  background-color: var(--background);
 }
 
 body {
-  background-color: #0a0a0a;
-  color: #ffffff;
+  background-color: var(--background);
+  color: var(--foreground);
   font-family: var(--font-inter), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -24,7 +52,7 @@ body {
 /* Gold text selection */
 ::selection {
   background: rgba(212, 175, 55, 0.3);
-  color: #ffffff;
+  color: var(--foreground);
 }
 
 /* Custom gold scrollbar */
@@ -32,14 +60,14 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: var(--background);
 }
 ::-webkit-scrollbar-thumb {
-  background: #2a2a2a;
+  background: var(--border);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #d4af37;
+  background: var(--gold);
 }
 
 /* Page transition */
@@ -60,11 +88,11 @@ body {
 
 /* Links */
 a {
-  color: #d4af37;
+  color: var(--gold);
   transition: color 150ms ease;
 }
 a:hover {
-  color: #f0c040;
+  color: var(--gold-hover);
 }
 
 button {
@@ -76,15 +104,15 @@ input,
 textarea,
 select {
   @apply rounded-lg border px-4 py-3 text-sm transition-all duration-150;
-  background-color: #0a0a0a;
-  border-color: #2a2a2a;
-  color: #ffffff;
+  background-color: var(--background);
+  border-color: var(--border);
+  color: var(--foreground);
   outline: none;
 }
 input:focus,
 textarea:focus,
 select:focus {
-  border-color: #d4af37;
+  border-color: var(--gold);
   box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.3);
 }
 input::placeholder,
@@ -93,8 +121,8 @@ textarea::placeholder {
 }
 
 select option {
-  background-color: #111111;
-  color: #ffffff;
+  background-color: var(--surface);
+  color: var(--foreground);
 }
 
 /* Container */
@@ -116,24 +144,24 @@ select option {
 
 .btn-primary {
   @apply btn;
-  background-color: #d4af37;
-  color: #0a0a0a;
+  background-color: var(--gold);
+  color: var(--background);
 }
 .btn-primary:hover {
-  background-color: #f0c040;
-  color: #0a0a0a;
+  background-color: var(--gold-hover);
+  color: var(--background);
 }
 
 .btn-secondary {
   @apply btn;
   background-color: transparent;
-  border: 1px solid #d4af37;
-  color: #d4af37;
+  border: 1px solid var(--gold);
+  color: var(--gold);
 }
 .btn-secondary:hover {
   background-color: rgba(212, 175, 55, 0.1);
-  color: #f0c040;
-  border-color: #f0c040;
+  color: var(--gold-hover);
+  border-color: var(--gold-hover);
 }
 
 .btn-danger {
@@ -149,18 +177,18 @@ select option {
 .btn-outline {
   @apply btn;
   background-color: transparent;
-  border: 1px solid #2a2a2a;
-  color: #a0a0a0;
+  border: 1px solid var(--border);
+  color: var(--muted);
 }
 .btn-outline:hover {
-  border-color: #d4af37;
-  color: #d4af37;
+  border-color: var(--gold);
+  color: var(--gold);
 }
 
 /* Cards */
 .card {
-  background-color: #111111;
-  border: 1px solid #2a2a2a;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 12px;
   padding: 1.5rem;
   transition: all 200ms ease;
@@ -196,43 +224,43 @@ select option {
   @apply badge;
   background-color: rgba(212, 175, 55, 0.1);
   border: 1px solid rgba(212, 175, 55, 0.3);
-  color: #d4af37;
+  color: var(--gold);
 }
 .badge-pending {
   @apply badge;
   background-color: rgba(212, 175, 55, 0.1);
   border: 1px solid rgba(212, 175, 55, 0.3);
-  color: #d4af37;
+  color: var(--gold);
 }
 .badge-gold {
   @apply badge;
   background-color: rgba(212, 175, 55, 0.15);
-  border: 1px solid #d4af37;
-  color: #d4af37;
+  border: 1px solid var(--gold);
+  color: var(--gold);
 }
 .badge-muted {
   @apply badge;
   background-color: rgba(160, 160, 160, 0.1);
   border: 1px solid rgba(160, 160, 160, 0.3);
-  color: #a0a0a0;
+  color: var(--muted);
 }
 
 /* Page typography */
 .page-title {
   @apply text-3xl font-light tracking-tight;
-  color: #ffffff;
+  color: var(--foreground);
 }
 .page-subtitle {
-  color: #a0a0a0;
+  color: var(--muted);
   font-size: 0.95rem;
 }
 
 .text-link {
-  color: #d4af37;
+  color: var(--gold);
   transition: color 150ms ease;
 }
 .text-link:hover {
-  color: #f0c040;
+  color: var(--gold-hover);
   text-decoration: underline;
 }
 
@@ -246,11 +274,11 @@ select option {
 
 /* Glassmorphism */
 .glass-panel {
-  background: rgba(17, 17, 17, 0.6);
+  background: var(--glass-bg);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 var(--glass-shadow);
 }
 
 .glass-card {
@@ -277,7 +305,7 @@ select option {
   pointer-events: none;
   z-index: 9999;
   mix-blend-mode: exclusion;
-  background-color: #d4af37;
+  background-color: var(--gold);
   opacity: 0;
   transition: width 0.2s, height 0.2s, background-color 0.2s, opacity 0.2s;
 }
@@ -294,7 +322,7 @@ body:hover .custom-cursor {
 
 /* Animated Text Gradient */
 .text-gradient-animated {
-  background: linear-gradient(to right, #d4af37, #ffecd2, #fcb69f, #d4af37);
+  background: linear-gradient(to right, var(--gold), #ffecd2, #fcb69f, var(--gold));
   background-size: 200% auto;
   color: transparent;
   -webkit-background-clip: text;
@@ -357,7 +385,7 @@ body:hover .custom-cursor {
   left: 6px;
   right: 6px;
   bottom: 6px;
-  background: linear-gradient(135deg, #1a1a1a, #0a0a0a);
+  background: linear-gradient(135deg, var(--surface-elevated), var(--background));
   border-radius: 34px;
   overflow: hidden;
   display: flex;
@@ -394,13 +422,13 @@ body:hover .custom-cursor {
   @apply mb-4 rounded-lg p-4 text-sm;
   background-color: rgba(212, 175, 55, 0.08);
   border: 1px solid rgba(212, 175, 55, 0.25);
-  color: #d4af37;
+  color: var(--gold);
 }
 
 /* Skeleton */
 .skeleton {
   @apply rounded-lg;
-  background: linear-gradient(90deg, #1a1a1a 25%, #222222 50%, #1a1a1a 75%);
+  background: linear-gradient(90deg, var(--surface-elevated) 25%, #222222 50%, var(--surface-elevated) 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s ease-in-out infinite;
 }
@@ -408,7 +436,7 @@ body:hover .custom-cursor {
 /* Price */
 .price-gold {
   font-weight: 700;
-  color: #d4af37;
+  color: var(--gold);
 }
 
 /* Gold focus ring for all interactive elements */
@@ -423,7 +451,7 @@ body:hover .custom-cursor {
   font-weight: 600;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #d4af37;
+  color: var(--gold);
 }
 
 /* Step indicator */
@@ -439,17 +467,17 @@ body:hover .custom-cursor {
   transition: all 200ms ease;
 }
 .step-dot-active {
-  background-color: #d4af37;
-  color: #0a0a0a;
+  background-color: var(--gold);
+  color: var(--background);
 }
 .step-dot-inactive {
-  background-color: #1a1a1a;
-  border: 1px solid #2a2a2a;
-  color: #a0a0a0;
+  background-color: var(--surface-elevated);
+  border: 1px solid var(--border);
+  color: var(--muted);
 }
 .step-dot-done {
   background-color: rgba(212, 175, 55, 0.2);
-  color: #d4af37;
+  color: var(--gold);
 }
 .step-line {
   height: 2px;
@@ -457,17 +485,17 @@ body:hover .custom-cursor {
   transition: background-color 200ms ease;
 }
 .step-line-active {
-  background-color: #d4af37;
+  background-color: var(--gold);
 }
 .step-line-inactive {
-  background-color: #2a2a2a;
+  background-color: var(--border);
 }
 
 
 @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
 .skeleton {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  background-color: #2a2a2a !important;
+  background-color: var(--border) !important;
 }
 
 /* WhatsApp Pulse Animation */

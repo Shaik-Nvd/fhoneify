@@ -52,11 +52,11 @@ export default function DiagnosticsPage() {
 
   return (
     <div className="page-animate" style={{ maxWidth: '40rem', margin: '0 auto', padding: '4rem 1.5rem', textAlign: 'center' }}>
-      <p className="eyebrow" style={{ marginBottom: '1rem', color: '#d4af37' }}>COMPANION DIAGNOSTICS</p>
-      <h1 style={{ fontSize: '2rem', fontWeight: 300, color: '#fff', marginBottom: '2rem' }}>Hardware & Security Scan</h1>
+      <p className="eyebrow" style={{ marginBottom: '1rem', color: 'var(--gold)' }}>COMPANION DIAGNOSTICS</p>
+      <h1 style={{ fontSize: '2rem', fontWeight: 300, color: 'var(--foreground)', marginBottom: '2rem' }}>Hardware & Security Scan</h1>
       
       <div className="card" style={{ padding: '3rem 2rem', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2rem' }}>
-        <p style={{ color: '#a0a0a0', fontSize: '0.9rem' }}>
+        <p style={{ color: 'var(--muted)', fontSize: '0.9rem' }}>
           Running deep hardware tests on your {deviceData.brand} {deviceData.model}...
         </p>
 
@@ -66,16 +66,16 @@ export default function DiagnosticsPage() {
           </button>
         ) : (
           <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '1.5rem', textAlign: 'left' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem', backgroundColor: '#111', borderRadius: '8px', border: '1px solid #2a2a2a' }}>
-              <span style={{ color: '#fff' }}>Touch Matrix & Sensors</span>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem', backgroundColor: 'var(--surface)', borderRadius: '8px', border: '1px solid var(--border)' }}>
+              <span style={{ color: 'var(--foreground)' }}>Touch Matrix & Sensors</span>
               {stage > 1 ? <span style={{ color: '#4CD964' }}>Passed ✓</span> : <span className="spinner" style={{ width: '20px', height: '20px' }}></span>}
             </div>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem', backgroundColor: '#111', borderRadius: '8px', border: '1px solid #2a2a2a' }}>
-              <span style={{ color: '#fff' }}>Component Authenticity (OEM Check)</span>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem', backgroundColor: 'var(--surface)', borderRadius: '8px', border: '1px solid var(--border)' }}>
+              <span style={{ color: 'var(--foreground)' }}>Component Authenticity (OEM Check)</span>
               {stage > 2 ? <span style={{ color: '#4CD964' }}>Genuine OEM ✓</span> : stage === 2 ? <span className="spinner" style={{ width: '20px', height: '20px' }}></span> : <span style={{ color: '#666' }}>Pending</span>}
             </div>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem', backgroundColor: '#111', borderRadius: '8px', border: '1px solid #2a2a2a' }}>
-              <span style={{ color: '#fff' }}>CEIR National Blacklist Check</span>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem', backgroundColor: 'var(--surface)', borderRadius: '8px', border: '1px solid var(--border)' }}>
+              <span style={{ color: 'var(--foreground)' }}>CEIR National Blacklist Check</span>
               {stage > 3 ? (
                 <span style={{ color: results.imeiClean ? '#4CD964' : '#FF3B30' }}>
                   {results.imeiClean ? 'Clean ✓' : 'Blacklisted ✗'}
@@ -95,7 +95,7 @@ export default function DiagnosticsPage() {
       </div>
 
       <style dangerouslySetInnerHTML={{__html: `
-        .spinner { border: 2px solid rgba(212,175,55,0.2); border-left-color: #d4af37; border-radius: 50%; animation: spin 1s linear infinite; }
+        .spinner { border: 2px solid rgba(212,175,55,0.2); border-left-color: var(--gold); border-radius: 50%; animation: spin 1s linear infinite; }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
       `}} />
     </div>

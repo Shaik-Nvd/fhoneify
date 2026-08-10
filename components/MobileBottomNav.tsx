@@ -35,15 +35,15 @@ export default function MobileBottomNav() {
   ];
 
   return (
-    <div className="md:hidden fixed bottom-0 left-0 w-full bg-[#111111] border-t border-[#2a2a2a] z-50 flex justify-around items-center pb-safe pt-2 px-2" style={{ paddingBottom: 'env(safe-area-inset-bottom, 16px)' }}>
+    <div className="md:hidden fixed bottom-0 left-0 w-full bg-surface border-t border-border z-50 flex justify-around items-center pb-safe pt-2 px-2" style={{ paddingBottom: 'env(safe-area-inset-bottom, 16px)' }}>
       {navItems.map((item) => {
         const isActive = pathname === item.path || (item.path !== '/' && pathname.startsWith(item.path));
         return (
           <Link key={item.name} href={item.path} style={{ textDecoration: 'none' }} className="flex-1 flex flex-col items-center justify-center py-2 gap-1">
-            <div style={{ color: isActive ? '#34C759' : '#888', transition: 'color 0.2s' }}>
+            <div style={{ color: isActive ? '#34C759' : 'var(--muted)', transition: 'color 0.2s' }}>
               {item.icon}
             </div>
-            <span style={{ fontSize: '0.75rem', fontWeight: isActive ? 600 : 500, color: isActive ? '#34C759' : '#888' }}>
+            <span style={{ fontSize: '0.75rem', fontWeight: isActive ? 600 : 500, color: isActive ? '#34C759' : 'var(--muted)' }}>
               {item.name}
             </span>
           </Link>

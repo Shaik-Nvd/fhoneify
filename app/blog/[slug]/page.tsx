@@ -54,17 +54,17 @@ export default async function BlogPostPage({ params }: Props) {
             <span key={tag} className="badge badge-gold" style={{ fontSize: '0.75rem' }}>{tag}</span>
           ))}
         </div>
-        <h1 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 700, color: '#fff', marginBottom: '1rem', lineHeight: 1.2 }}>
+        <h1 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 700, color: 'var(--foreground)', marginBottom: '1rem', lineHeight: 1.2 }}>
           {post.title}
         </h1>
-        <div style={{ color: '#a0a0a0', fontSize: '0.9rem', display: 'flex', justifyContent: 'center', gap: '1rem', alignItems: 'center' }}>
+        <div style={{ color: 'var(--muted)', fontSize: '0.9rem', display: 'flex', justifyContent: 'center', gap: '1rem', alignItems: 'center' }}>
           <span>By {post.author}</span>
           <span style={{ width: '4px', height: '4px', borderRadius: '50%', backgroundColor: '#2a2a2a' }} />
           <time dateTime={post.createdAt}>{new Date(post.createdAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</time>
         </div>
       </div>
 
-      <div style={{ height: '300px', backgroundColor: '#111', borderRadius: '12px', marginBottom: '3rem', border: '1px solid #2a2a2a', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <div style={{ height: '300px', backgroundColor: 'var(--surface)', borderRadius: '12px', marginBottom: '3rem', border: '1px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <span style={{ fontSize: '4rem', opacity: 0.1 }}>📸</span>
       </div>
 
@@ -76,9 +76,9 @@ export default async function BlogPostPage({ params }: Props) {
       }}>
         <style dangerouslySetInnerHTML={{__html: `
           .blog-content h2, .blog-content h3 { color: #fff; margin-top: 2.5rem; margin-bottom: 1rem; font-weight: 600; }
-          .blog-content h3 { font-size: 1.5rem; color: #d4af37; }
+          .blog-content h3 { font-size: 1.5rem; color: var(--gold); }
           .blog-content p { margin-bottom: 1.5rem; }
-          .blog-content a { color: #d4af37; text-decoration: underline; }
+          .blog-content a { color: var(--gold); text-decoration: underline; }
           .blog-content ul { padding-left: 1.5rem; margin-bottom: 1.5rem; }
           .blog-content li { margin-bottom: 0.5rem; }
         `}} />

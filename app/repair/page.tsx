@@ -101,7 +101,7 @@ export default function RepairPage() {
         <div className="card" style={{ padding: '3rem 2rem' }}>
           <div style={{ fontSize: '4rem', marginBottom: '1rem' }}>✅</div>
           <h1 className="page-title" style={{ marginBottom: '1rem' }}>Repair Booked!</h1>
-          <p style={{ color: '#a0a0a0', marginBottom: '2rem' }}>
+          <p style={{ color: 'var(--muted)', marginBottom: '2rem' }}>
             Your repair request for {quote?.issue} on your {quote?.device?.brand} {quote?.device?.model} has been scheduled.
             Our executive will visit you on {new Date(pickupDate).toLocaleDateString()} for doorstep repair.
           </p>
@@ -128,7 +128,7 @@ export default function RepairPage() {
       {!quote ? (
         <form onSubmit={handleGetQuote} className="card" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
           <div>
-            <label style={{ display: 'block', fontSize: '0.85rem', color: '#a0a0a0', marginBottom: '0.5rem', fontWeight: 500 }}>Select Brand</label>
+            <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem', fontWeight: 500 }}>Select Brand</label>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 1fr))', gap: '0.75rem' }}>
               {brands.map(brand => (
                 <button
@@ -136,8 +136,8 @@ export default function RepairPage() {
                   type="button"
                   onClick={() => { setSelectedBrand(brand); setSelectedModel(''); setQuote(null); }}
                   style={{
-                    padding: '10px', borderRadius: '8px', border: selectedBrand === brand ? '2px solid #d4af37' : '1px solid #2a2a2a',
-                    backgroundColor: selectedBrand === brand ? 'rgba(212,175,55,0.1)' : '#111', color: '#fff', fontSize: '0.9rem', transition: 'all 150ms'
+                    padding: '10px', borderRadius: '8px', border: selectedBrand === brand ? '2px solid var(--gold)' : '1px solid var(--border)',
+                    backgroundColor: selectedBrand === brand ? 'rgba(212,175,55,0.1)' : 'var(--surface)', color: 'var(--foreground)', fontSize: '0.9rem', transition: 'all 150ms'
                   }}
                 >
                   {brand}
@@ -148,7 +148,7 @@ export default function RepairPage() {
 
           {selectedBrand && (
             <div>
-              <label style={{ display: 'block', fontSize: '0.85rem', color: '#a0a0a0', marginBottom: '0.5rem', fontWeight: 500 }}>Select Model</label>
+              <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem', fontWeight: 500 }}>Select Model</label>
               <select
                 value={selectedModel}
                 onChange={(e) => setSelectedModel(e.target.value)}
@@ -164,7 +164,7 @@ export default function RepairPage() {
 
           {selectedModel && (
             <div>
-              <label style={{ display: 'block', fontSize: '0.85rem', color: '#a0a0a0', marginBottom: '0.5rem', fontWeight: 500 }}>Select Issue</label>
+              <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem', fontWeight: 500 }}>Select Issue</label>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '0.75rem' }}>
                 {issues.map(issue => (
                   <button
@@ -172,8 +172,8 @@ export default function RepairPage() {
                     type="button"
                     onClick={() => { setSelectedIssue(issue); setQuote(null); }}
                     style={{
-                      padding: '12px', borderRadius: '8px', border: selectedIssue === issue ? '2px solid #d4af37' : '1px solid #2a2a2a',
-                      backgroundColor: selectedIssue === issue ? 'rgba(212,175,55,0.1)' : '#111', color: '#fff', fontSize: '0.9rem', transition: 'all 150ms',
+                      padding: '12px', borderRadius: '8px', border: selectedIssue === issue ? '2px solid var(--gold)' : '1px solid var(--border)',
+                      backgroundColor: selectedIssue === issue ? 'rgba(212,175,55,0.1)' : 'var(--surface)', color: 'var(--foreground)', fontSize: '0.9rem', transition: 'all 150ms',
                       display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem'
                     }}
                   >
@@ -195,14 +195,14 @@ export default function RepairPage() {
         </form>
       ) : (
         <form onSubmit={handleBookRepair} className="card" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-          <div style={{ textAlign: 'center', padding: '1rem 0', borderBottom: '1px solid #2a2a2a', marginBottom: '1rem' }}>
-            <h2 style={{ fontSize: '1.25rem', color: '#a0a0a0', marginBottom: '0.5rem' }}>Estimated Repair Cost</h2>
+          <div style={{ textAlign: 'center', padding: '1rem 0', borderBottom: '1px solid var(--border)', marginBottom: '1rem' }}>
+            <h2 style={{ fontSize: '1.25rem', color: 'var(--muted)', marginBottom: '0.5rem' }}>Estimated Repair Cost</h2>
             <div className="price-gold" style={{ fontSize: '3rem', letterSpacing: '-1px' }}>₹{quote.estimatedCost.toLocaleString()}</div>
-            <p style={{ color: '#fff', marginTop: '0.5rem', fontWeight: 500 }}>{quote.device?.brand} {quote.device?.model} - {quote.issue} Repair</p>
+            <p style={{ color: 'var(--foreground)', marginTop: '0.5rem', fontWeight: 500 }}>{quote.device?.brand} {quote.device?.model} - {quote.issue} Repair</p>
           </div>
 
           <div>
-            <label style={{ display: 'block', fontSize: '0.85rem', color: '#a0a0a0', marginBottom: '0.5rem', fontWeight: 500 }}>Pickup Address</label>
+            <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem', fontWeight: 500 }}>Pickup Address</label>
             <textarea
               value={address}
               onChange={(e) => setAddress(e.target.value)}
@@ -214,7 +214,7 @@ export default function RepairPage() {
           </div>
 
           <div>
-            <label style={{ display: 'block', fontSize: '0.85rem', color: '#a0a0a0', marginBottom: '0.5rem', fontWeight: 500 }}>Schedule Date</label>
+            <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem', fontWeight: 500 }}>Schedule Date</label>
             <input
               type="date"
               value={pickupDate}

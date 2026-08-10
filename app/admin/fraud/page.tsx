@@ -51,8 +51,8 @@ export default function FraudDashboardPage() {
     <div className="page-animate" style={{ maxWidth: '64rem', margin: '0 auto', padding: '2rem 1rem' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
         <div>
-          <Link href="/admin" style={{ color: '#a0a0a0', fontSize: '0.85rem', textDecoration: 'none', marginBottom: '0.5rem', display: 'inline-block' }}>← Back to Dashboard</Link>
-          <h1 style={{ fontSize: '1.75rem', fontWeight: 300, color: '#fff' }}>Fraud & Security Alerts</h1>
+          <Link href="/admin" style={{ color: 'var(--muted)', fontSize: '0.85rem', textDecoration: 'none', marginBottom: '0.5rem', display: 'inline-block' }}>← Back to Dashboard</Link>
+          <h1 style={{ fontSize: '1.75rem', fontWeight: 300, color: 'var(--foreground)' }}>Fraud & Security Alerts</h1>
         </div>
       </div>
 
@@ -62,21 +62,21 @@ export default function FraudDashboardPage() {
         <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
           <table style={{ width: '100%', textAlign: 'left', borderCollapse: 'collapse' }}>
             <thead>
-              <tr style={{ borderBottom: '1px solid #2a2a2a', backgroundColor: '#0a0a0a' }}>
-                <th style={{ padding: '1rem', color: '#a0a0a0', fontSize: '0.85rem', fontWeight: 500 }}>Alert ID</th>
-                <th style={{ padding: '1rem', color: '#a0a0a0', fontSize: '0.85rem', fontWeight: 500 }}>User / IMEI</th>
-                <th style={{ padding: '1rem', color: '#a0a0a0', fontSize: '0.85rem', fontWeight: 500 }}>Risk Score</th>
-                <th style={{ padding: '1rem', color: '#a0a0a0', fontSize: '0.85rem', fontWeight: 500 }}>Flags</th>
-                <th style={{ padding: '1rem', color: '#a0a0a0', fontSize: '0.85rem', fontWeight: 500 }}>Status</th>
+              <tr style={{ borderBottom: '1px solid var(--border)', backgroundColor: 'var(--background)' }}>
+                <th style={{ padding: '1rem', color: 'var(--muted)', fontSize: '0.85rem', fontWeight: 500 }}>Alert ID</th>
+                <th style={{ padding: '1rem', color: 'var(--muted)', fontSize: '0.85rem', fontWeight: 500 }}>User / IMEI</th>
+                <th style={{ padding: '1rem', color: 'var(--muted)', fontSize: '0.85rem', fontWeight: 500 }}>Risk Score</th>
+                <th style={{ padding: '1rem', color: 'var(--muted)', fontSize: '0.85rem', fontWeight: 500 }}>Flags</th>
+                <th style={{ padding: '1rem', color: 'var(--muted)', fontSize: '0.85rem', fontWeight: 500 }}>Status</th>
               </tr>
             </thead>
             <tbody>
               {alerts.map(alert => (
-                <tr key={alert.id} style={{ borderBottom: '1px solid #2a2a2a' }}>
-                  <td style={{ padding: '1rem', color: '#fff', fontSize: '0.9rem' }}>{alert.id}</td>
+                <tr key={alert.id} style={{ borderBottom: '1px solid var(--border)' }}>
+                  <td style={{ padding: '1rem', color: 'var(--foreground)', fontSize: '0.9rem' }}>{alert.id}</td>
                   <td style={{ padding: '1rem' }}>
-                    <div style={{ color: '#fff', fontSize: '0.9rem' }}>{alert.phone}</div>
-                    <div style={{ color: '#a0a0a0', fontSize: '0.8rem', fontFamily: 'monospace' }}>{alert.imei}</div>
+                    <div style={{ color: 'var(--foreground)', fontSize: '0.9rem' }}>{alert.phone}</div>
+                    <div style={{ color: 'var(--muted)', fontSize: '0.8rem', fontFamily: 'monospace' }}>{alert.imei}</div>
                   </td>
                   <td style={{ padding: '1rem' }}>
                     <span className="badge badge-danger" style={{ backgroundColor: alert.score === 'Critical' ? 'rgba(255,0,0,0.2)' : undefined }}>
@@ -84,14 +84,14 @@ export default function FraudDashboardPage() {
                     </span>
                   </td>
                   <td style={{ padding: '1rem' }}>
-                    <ul style={{ margin: 0, paddingLeft: '1rem', color: '#a0a0a0', fontSize: '0.8rem' }}>
+                    <ul style={{ margin: 0, paddingLeft: '1rem', color: 'var(--muted)', fontSize: '0.8rem' }}>
                       {alert.flags.map((f: string, i: number) => <li key={i}>{f}</li>)}
                     </ul>
                   </td>
                   <td style={{ padding: '1rem' }}>
                     <select 
                       defaultValue={alert.status} 
-                      style={{ padding: '4px 8px', fontSize: '0.8rem', backgroundColor: '#0a0a0a' }}
+                      style={{ padding: '4px 8px', fontSize: '0.8rem', backgroundColor: 'var(--background)' }}
                     >
                       <option value="pending">Reviewing</option>
                       <option value="cleared">Cleared</option>
