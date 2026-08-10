@@ -111,7 +111,7 @@ export default function BuyPage() {
                   type="checkbox" 
                   checked={isSelectTier} 
                   onChange={(e) => setIsSelectTier(e.target.checked)} 
-                  style={{ accentcolor: 'var(--gold)' }}
+                  style={{ accentColor: 'var(--gold)' }}
                 />
                 Fhoneify Select (Premium)
               </label>

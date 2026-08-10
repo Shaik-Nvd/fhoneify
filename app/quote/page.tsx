@@ -2740,7 +2740,7 @@ export default function QuotePage() {
                 )}
 
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '2rem' }}>
-                  <input type="checkbox" required id="terms" style={{ width: '16px', height: '16px', accentcolor: 'var(--gold)' }} />
+                  <input type="checkbox" required id="terms" style={{ width: '16px', height: '16px', accentColor: 'var(--gold)' }} />
                   <label htmlFor="terms" style={{ fontSize: '0.85rem', color: '#666' }}>I agree to the <a href="/terms" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gold)', textDecoration: 'none' }}>Terms and Conditions</a> & <a href="/privacy" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gold)', textDecoration: 'none' }}>Privacy Policy</a></label>
                 </div>
 
