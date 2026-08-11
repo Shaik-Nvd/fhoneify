@@ -256,9 +256,17 @@ export function calculateApplePrice(model: string, basePrice: number, diagnostic
   }
 
   const exactCashifyPrice = Math.round(cashifyPrice);
+  const finalFhoneifyPrice = applyCompetitorUplift(basePrice, exactCashifyPrice);
+  
+  console.log("--- APPLE PRICE CALCULATION OUTPUT ---");
+  console.log("Calculated Age Multiplier:", ageMultiplier);
+  console.log("Exact Cashify Price:", exactCashifyPrice);
+  console.log("Final Fhoneify Price:", finalFhoneifyPrice);
+  console.log("--------------------------------------");
+
   return { 
     cashifyBasePrice: exactCashifyPrice, 
-    fhoneifyPrice: applyCompetitorUplift(basePrice, exactCashifyPrice) 
+    fhoneifyPrice: finalFhoneifyPrice 
   };
 }
 
@@ -586,6 +594,13 @@ export function calculateFhoneifyPrice(
   basePrice: number,
   diagnostics: DiagnosticsType
 ): PricingResult {
+  console.log("--- FHONEIFY PRICING CALCULATION LOG ---");
+  console.log("Brand:", brand);
+  console.log("Model:", model);
+  console.log("Base Price:", basePrice);
+  console.log("Diagnostics:", JSON.stringify(diagnostics, null, 2));
+  console.log("-----------------------------------------");
+
   const safeBrand = String(brand || "").toLowerCase().trim();
   const safeModel = String(model || "").toLowerCase().trim();
 
