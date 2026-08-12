@@ -127,6 +127,13 @@ export default function QuotePage() {
       return true; // Nothing and CMF are recent brands
     }
 
+    if (brand.toLowerCase() === 'vivo') {
+      return (
+        lowerModel.includes('fold5') ||
+        lowerModel.includes('fold 5')
+      );
+    }
+
     // Default to false for all other models since most traded-in phones are > 1 year old
     return false;
   };

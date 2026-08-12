@@ -1,7 +1,3 @@
-// ============================================================================
-// 1. TYPES & INTERFACES
-// ============================================================================
-
 export interface ModelParams {
   warrantyPenalty: number;
   gstBillPenalty: number;
@@ -43,7 +39,7 @@ export interface PricingResult {
 }
 
 // ============================================================================
-// 2. COMMON CONSTANTS & HELPERS
+// SHARED CONSTANTS & HELPERS
 // ============================================================================
 
 export const COMMON_BONUSES = {
@@ -91,19 +87,17 @@ export function applyCompetitorUplift(basePrice: number, exactCashifyPrice: numb
 }
 
 // ============================================================================
-// 3. BRAND-SEGREGATED CALCULATORS
+// BRAND 1: APPLE / iPHONE ENGINE
 // ============================================================================
 
-// ----------------------------------------------------------------------------
-// BRAND 1: APPLE / iPHONE
-// ----------------------------------------------------------------------------
 export const getAppleModelParams = (model: string): ModelParams => {
   const lowerModel = String(model || "").toLowerCase();
+  
   let params: ModelParams = {
     warrantyPenalty: 0.05,
     gstBillPenalty: 0.02,
     callsPenalty: 0.55,
-    originalScreenPenalty: 0.7,
+    originalScreenPenalty: 0.70,
     touchPenalty: 0.55,
     functionalScale: 1.15,
     physicalScale: 1.15,
@@ -115,37 +109,69 @@ export const getAppleModelParams = (model: string): ModelParams => {
   const isPlus = lowerModel.includes("plus");
 
   if (lowerModel.includes("17e")) {
-    params = { warrantyPenalty: 0.05, gstBillPenalty: 0.10287, callsPenalty: 0.25, originalScreenPenalty: 0.4554, touchPenalty: 0.215, functionalScale: 1.5, physicalScale: 1.5, facePenalty: 0.05 };
+    params = {
+      warrantyPenalty: 0.05,
+      gstBillPenalty: 0.10287356,
+      callsPenalty: 0.25,
+      originalScreenPenalty: 0.10229885,
+      touchPenalty: 0.31111111,
+      functionalScale: 1.0,
+      physicalScale: 1.0,
+      facePenalty: 0.05
+    };
   } else if (lowerModel.includes("16e")) {
-    params = { warrantyPenalty: 0.05, gstBillPenalty: 0.0055, callsPenalty: 0.25, originalScreenPenalty: 0.4336, touchPenalty: 0.22, functionalScale: 1.5, physicalScale: 1.5, facePenalty: 0.05 };
+    params = {
+      warrantyPenalty: 0.05,
+      gstBillPenalty: 0.005518,
+      callsPenalty: 0.25,
+      originalScreenPenalty: 0.4336,
+      touchPenalty: 0.22,
+      functionalScale: 1.5,
+      physicalScale: 1.5,
+      facePenalty: 0.05
+    };
   } else if (lowerModel.includes("17") || lowerModel.includes("air")) {
-    if (isProMax || isPlus) {
+    if (isProMax) {
       params = { warrantyPenalty: 0.05, gstBillPenalty: 0.11184, callsPenalty: 0.45, originalScreenPenalty: 0.58, touchPenalty: 0.61485, functionalScale: 1.15, physicalScale: 1.11392, facePenalty: 0.05 };
     } else if (isPro) {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.12304, callsPenalty: 0.45, originalScreenPenalty: 0.6, touchPenalty: 0.61485, functionalScale: 1.15, physicalScale: 1.05, facePenalty: 0.05 };
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.123046, callsPenalty: 0.45, originalScreenPenalty: 0.60, touchPenalty: 0.61485, functionalScale: 1.15, physicalScale: 1.05, facePenalty: 0.05 };
+    } else if (isPlus || lowerModel.includes("air")) {
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.114598, callsPenalty: 0.45, originalScreenPenalty: 0.60, touchPenalty: 0.61485, functionalScale: 1.15, physicalScale: 1.05, facePenalty: 0.05 };
     } else {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.12015, callsPenalty: 0.5, originalScreenPenalty: 0.65, touchPenalty: 0.61485, functionalScale: 1.1, physicalScale: 1.05, facePenalty: 0.05 };
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.120155, callsPenalty: 0.50, originalScreenPenalty: 0.65, touchPenalty: 0.61485, functionalScale: 1.10, physicalScale: 1.05, facePenalty: 0.05 };
     }
-  } else if (lowerModel.includes("16") || lowerModel.includes("15")) {
-    if (lowerModel.includes("16 pro max")) {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.0445, callsPenalty: 0.5, originalScreenPenalty: 0.782, touchPenalty: 0.635, functionalScale: 1.09, physicalScale: 1.08303, bodyScale: 0.9806, facePenalty: 0.257307 };
-    } else if (isProMax) {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.01187, callsPenalty: 0.5, originalScreenPenalty: 0.8176, touchPenalty: 0.635, functionalScale: 1.09, physicalScale: 1.05692, bodyScale: 0.9806, facePenalty: 0.257307 };
-    } else if (isPro || isPlus) {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.5, originalScreenPenalty: 0.65, touchPenalty: 0.55, functionalScale: 1.05, physicalScale: 1.05, facePenalty: 0.05 };
-    } else if (lowerModel.includes("15") && !isPro && !isPlus) {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.01988, callsPenalty: 0.55, originalScreenPenalty: 0.56465, touchPenalty: 0.59355, functionalScale: 1, physicalScale: 1, facePenalty: 0.05 };
+  } else if (lowerModel.includes("16")) {
+    if (isProMax) {
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.044527, callsPenalty: 0.50, originalScreenPenalty: 0.782, touchPenalty: 0.635, functionalScale: 1.09, physicalScale: 1.08303, bodyScale: 0.9806, facePenalty: 0.257307 };
+    } else if (isPro) {
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.65, touchPenalty: 0.55, functionalScale: 1.05, physicalScale: 1.05, facePenalty: 0.05 };
+    } else if (isPlus) {
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.021212, callsPenalty: 0.50, originalScreenPenalty: 0.65, touchPenalty: 0.55, functionalScale: 1.05, physicalScale: 1.05, facePenalty: 0.05 };
     } else {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.55, originalScreenPenalty: 0.7, touchPenalty: 0.55, functionalScale: 1, physicalScale: 1, facePenalty: 0.05 };
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.0, callsPenalty: 0.55, originalScreenPenalty: 0.70, touchPenalty: 0.55, functionalScale: 1.0, physicalScale: 1.0, facePenalty: 0.05 };
+    }
+  } else if (lowerModel.includes("15")) {
+    if (isProMax) {
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.011876, callsPenalty: 0.50, originalScreenPenalty: 0.62876, touchPenalty: 0.635, functionalScale: 1.09, physicalScale: 1.05692, bodyScale: 0.9806, facePenalty: 0.257307 };
+    } else if (isPro) {
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.50, originalScreenPenalty: 0.606183, touchPenalty: 0.55, functionalScale: 1.05, physicalScale: 1.05, facePenalty: 0.05 };
+    } else if (isPlus) {
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.019004, callsPenalty: 0.55, originalScreenPenalty: 0.65, touchPenalty: 0.55, functionalScale: 1.0, physicalScale: 1.0, facePenalty: 0.05 };
+    } else {
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.019888, callsPenalty: 0.55, originalScreenPenalty: 0.56465, touchPenalty: 0.59355, functionalScale: 1.0, physicalScale: 1.0, facePenalty: 0.05 };
     }
   } else if (lowerModel.includes("14")) {
-    if (isProMax || isPlus) {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.45, originalScreenPenalty: 0.55, touchPenalty: 0.5463, functionalScale: 1.25, physicalScale: 1.25, facePenalty: 0.05 };
+    if (isProMax) {
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.017058, callsPenalty: 0.45, originalScreenPenalty: 0.701061, touchPenalty: 0.5463, functionalScale: 1.25, physicalScale: 1.25, facePenalty: 0.05 };
+    } else if (isPro) {
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.45, originalScreenPenalty: 0.719084, touchPenalty: 0.5463, functionalScale: 1.25, physicalScale: 1.25, facePenalty: 0.225518 };
+    } else if (isPlus) {
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.45, originalScreenPenalty: 0.338111, touchPenalty: 0.5463, functionalScale: 1.25, physicalScale: 1.25, facePenalty: 0.05 };
     } else {
-      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.6, originalScreenPenalty: 0.6681, touchPenalty: 0.6, functionalScale: 1.2, physicalScale: 1.2, facePenalty: 0.05 };
+      params = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.60, originalScreenPenalty: 0.629265, touchPenalty: 0.60, functionalScale: 1.2, physicalScale: 1.2, facePenalty: -0.061203 };
     }
   } else {
-    params = { warrantyPenalty: 0, gstBillPenalty: 0.02, callsPenalty: 0.6, originalScreenPenalty: 0.7, touchPenalty: 0.5, functionalScale: 0.8, physicalScale: 0.8, facePenalty: 0.05 };
+    params = { warrantyPenalty: 0, gstBillPenalty: 0.02, callsPenalty: 0.60, originalScreenPenalty: 0.549363, touchPenalty: 0.50, functionalScale: 0.8, physicalScale: 0.8, facePenalty: 0.05 };
   }
   return params;
 };
@@ -157,6 +183,7 @@ export function calculateApplePrice(model: string, basePrice: number, diagnostic
   const isPro = lowerModel.includes("pro");
   const isProMax = lowerModel.includes("pro max");
   const isPlus = lowerModel.includes("plus");
+  const is17e = lowerModel.includes("17e");
 
   const params = getAppleModelParams(model);
 
@@ -164,32 +191,32 @@ export function calculateApplePrice(model: string, basePrice: number, diagnostic
   const touchOk = diagnostics.touch !== false;
   const screenOrig = diagnostics.originalScreen !== false;
   
-  const isOutOfWarranty = diagnostics.warranty === false || diagnostics.mobileAge === 'above11';
+  const isOutOfWarranty = diagnostics.warranty === false || diagnostics.mobileAge === 'above11' || diagnostics.mobileAge === 'above 11 months';
   const hasValidBill = diagnostics.validBill === true || (diagnostics.accessories || []).includes("bill");
   const hasBox = (diagnostics.accessories || []).includes("box") || diagnostics.box === true;
   const age = String(diagnostics.mobileAge || "").toLowerCase();
 
-  let ageMultiplier = 0.75116;
+  let ageMultiplier = 0.74961686;
   
   if (!isOutOfWarranty) {
     if (lowerModel.includes("17") || lowerModel.includes("air")) {
-      if (age.includes("below 3")) ageMultiplier = (isPro && !isProMax) ? 0.9875 : 0.98;
-      else if (age.includes("3") && age.includes("6")) ageMultiplier = (isPro || isProMax) ? 0.8881 : (lowerModel.includes("air") ? 0.8734 : 0.8806);
-      else if (age.includes("6") && age.includes("11")) ageMultiplier = (isPro && !isProMax) ? 0.8601 : (isProMax ? 0.8570 : (lowerModel.includes("air") ? 0.8457 : 0.8539));
-      else ageMultiplier = 0.75116;
+      if (age.includes("below 3") || age.includes("below3")) ageMultiplier = (isPro && !isProMax) ? 0.9875 : 0.98;
+      else if (age.includes("3") && age.includes("6")) ageMultiplier = (isPro || isProMax) ? 0.8881 : (lowerModel.includes("air") ? 0.873448 : 0.88065134);
+      else if (age.includes("6") && age.includes("11")) ageMultiplier = (isPro && !isProMax) ? 0.8601 : (isProMax ? 0.85704 : (lowerModel.includes("air") ? 0.845747 : 0.85249042));
+      else ageMultiplier = 0.74961686;
     } else if (lowerModel.includes("16")) {
-      if (age.includes("6") && age.includes("11")) ageMultiplier = isProMax ? 0.9086 : (isPro ? 0.9112 : 0.9114);
-      else ageMultiplier = 0.98;
+      if (age.includes("6") && age.includes("11")) ageMultiplier = isProMax ? 0.908642 : (isPro ? 0.911240 : 0.9114);
+      else ageMultiplier = isProMax ? 0.908642 : (isPro ? 0.911240 : 0.9114);
     } else if (lowerModel.includes("15")) {
-      ageMultiplier = isProMax ? 0.7529 : (isPro ? 0.7451 : (isPlus ? 0.7839 : 0.7492));
+      ageMultiplier = isProMax ? 0.752937 : (isPro ? 0.745160 : (isPlus ? 0.783929 : 0.749243));
     } else if (lowerModel.includes("14")) {
-      ageMultiplier = isProMax ? 0.9167 : (isPro ? 0.9145 : (isPlus ? 0.8547 : 0.6292));
+      ageMultiplier = isProMax ? 0.916788 : (isPro ? 0.914504 : (isPlus ? 0.854723 : 0.629265));
     } else {
-      ageMultiplier = 0.8598;
+      ageMultiplier = 0.859873;
     }
   } else {
-    if (lowerModel.includes("17e")) ageMultiplier = 0.7524;
-    else if (lowerModel.includes("16")) ageMultiplier = isProMax ? 0.7826 : (isPro ? 0.7456 : (isPlus ? 0.7716 : (lowerModel.includes("16e") ? 0.7524 : 0.7796)));
+    if (is17e) ageMultiplier = 0.74961686;
+    else if (lowerModel.includes("16")) ageMultiplier = isProMax ? 0.782628 : (isPro ? 0.745663 : (isPlus ? 0.771591 : (lowerModel.includes("16e") ? 0.752445 : 0.779625)));
   }
 
   if (!hasValidBill && !isOutOfWarranty) {
@@ -197,35 +224,45 @@ export function calculateApplePrice(model: string, basePrice: number, diagnostic
   }
 
   const callsMult = callsOk ? 1.0 : params.callsPenalty;
-  const touchMult = touchOk ? 1.0 : params.touchPenalty;
-  let screenOrigMult = screenOrig ? 1.0 : params.originalScreenPenalty;
-  if (!touchOk || (diagnostics.defects || []).includes("broken_screen")) screenOrigMult = 1.0;
+  const touchMult = touchOk ? 1.0 : (is17e ? (1.0 - params.touchPenalty) : params.touchPenalty);
+  let screenOrigMult = screenOrig ? 1.0 : (is17e ? (1.0 - params.originalScreenPenalty) : params.originalScreenPenalty);
+  if (!touchOk || (diagnostics.defects || []).includes("broken_screen")) {
+    if (!is17e) screenOrigMult = 1.0;
+  }
 
   let physicalSum = 0.0;
   const bScale = params.bodyScale || params.physicalScale;
   const defectsList = diagnostics.defects || [];
+  const screenCondition = String(diagnostics.screenCondition || "").toLowerCase();
+  const bodyScratches = String(diagnostics.bodyScratches || "").toLowerCase();
+  const bodyDents = String(diagnostics.bodyDents || "").toLowerCase();
   
-  const bodyScratches = diagnostics.bodyScratches || "";
-  const bodyDents = diagnostics.bodyDents || "";
-  
-  if (defectsList.includes("body_scratch") || defectsList.includes("Scratch/Dent on device body") || bodyScratches || bodyDents) {
+  if (
+    defectsList.includes("body_scratch") || 
+    defectsList.includes("screen_scratch") ||
+    defectsList.includes("Broken/scratch on device screen") || 
+    defectsList.includes("Scratch/Dent on device body") || 
+    screenCondition || 
+    bodyScratches || 
+    bodyDents
+  ) {
     let scratchPen = 0.0;
     let dentPen = 0.0;
 
-    if (bodyScratches.includes("More than 2")) {
-      scratchPen = 0.02116;
-    } else if (bodyScratches.includes("1-2")) {
+    if (screenCondition.includes("more than 2") || bodyScratches.includes("more than 2")) {
+      scratchPen = is17e ? 0.11800766 : (lowerModel.includes("16e") ? 0.0025 : 0.02116);
+    } else if (bodyScratches.includes("1-2") || screenCondition.includes("1-2")) {
       scratchPen = (lowerModel.includes("17") && isPro && !isProMax) ? 0.01117 : 0.01;
     }
 
-    if (bodyDents.includes("Major") || bodyDents.includes("more than 2")) {
+    if (bodyDents.includes("major") || bodyDents.includes("more than 2")) {
       dentPen = isProMax ? 0.02861 : 0.04232;
     } else if (bodyDents.includes("1-2")) {
-      dentPen = isProMax ? 0.015 : 0.02;
+      dentPen = (isPlus || isPro) && (lowerModel.includes("16") || lowerModel.includes("15")) ? 0.0 : (isProMax ? 0.015 : 0.02);
     }
 
-    if (bodyScratches.includes("No")) scratchPen = 0;
-    if (bodyDents.includes("No")) dentPen = 0;
+    if (bodyScratches.includes("no") && !screenCondition) scratchPen = 0;
+    if (bodyDents.includes("no")) dentPen = 0;
 
     physicalSum += (scratchPen + dentPen) * bScale;
   }
@@ -233,17 +270,29 @@ export function calculateApplePrice(model: string, basePrice: number, diagnostic
   let functionalSum = 0.0;
   const hardwareList = diagnostics.hardware || [];
   
+  if (
+    hardwareList.includes("battery_health") || 
+    hardwareList.includes("Battery Health 80-85%") || 
+    String(diagnostics.screenSpots || "").includes("Battery")
+  ) {
+    if (is17e) {
+      functionalSum += (age.includes("below 3") || age.includes("below3")) ? 0.01639847 : 0.02873563;
+    } else {
+      functionalSum += 0.0;
+    }
+  }
+
   if (hardwareList.includes("battery_service") || hardwareList.includes("Battery in Service")) {
-    if (lowerModel.includes("16") && isProMax) functionalSum += 0.0445;
-    else if (lowerModel.includes("16") && isPro) functionalSum += 0.0228;
-    else if (lowerModel.includes("16")) functionalSum += 0.0697;
-    else if (lowerModel.includes("15") && isPlus) functionalSum += 0.0644;
-    else if (lowerModel.includes("15")) functionalSum += 0.0485;
+    if (lowerModel.includes("16") && isProMax) functionalSum += 0.044527;
+    else if (lowerModel.includes("16") && isPro) functionalSum += 0.022882;
+    else if (lowerModel.includes("16")) functionalSum += 0.069763;
+    else if (lowerModel.includes("15") && isPlus) functionalSum += 0.064474;
+    else if (lowerModel.includes("15")) functionalSum += 0.048582;
     else functionalSum += 0.05 * params.functionalScale;
   }
+
   if (hardwareList.includes("face") || hardwareList.includes("Face Sensor not working")) {
-    if (lowerModel.includes("14") && !isPro && !isProMax && !isPlus) functionalSum -= 0.0612;
-    else functionalSum += params.facePenalty! * params.functionalScale;
+    functionalSum += params.facePenalty! * params.functionalScale;
   }
 
   const boxBonus = hasBox ? COMMON_BONUSES.box : 0;
@@ -251,28 +300,26 @@ export function calculateApplePrice(model: string, basePrice: number, diagnostic
   
   let cashifyPrice = basePrice * ageMultiplier * Math.max(0, 1 - totalPenaltySum) + boxBonus;
 
+  if (is17e) {
+    cashifyPrice = basePrice * (ageMultiplier - totalPenaltySum) + boxBonus;
+  }
+
   if (!callsOk) {
     cashifyPrice = 1200;
   }
 
   const exactCashifyPrice = Math.round(cashifyPrice);
-  const finalFhoneifyPrice = applyCompetitorUplift(basePrice, exactCashifyPrice);
   
-  console.log("--- APPLE PRICE CALCULATION OUTPUT ---");
-  console.log("Calculated Age Multiplier:", ageMultiplier);
-  console.log("Exact Cashify Price:", exactCashifyPrice);
-  console.log("Final Fhoneify Price:", finalFhoneifyPrice);
-  console.log("--------------------------------------");
-
   return { 
     cashifyBasePrice: exactCashifyPrice, 
-    fhoneifyPrice: finalFhoneifyPrice 
+    fhoneifyPrice: applyCompetitorUplift(basePrice, exactCashifyPrice) 
   };
 }
 
-// ----------------------------------------------------------------------------
-// BRAND 2: SAMSUNG
-// ----------------------------------------------------------------------------
+// ============================================================================
+// BRAND 2: SAMSUNG ENGINE
+// ============================================================================
+
 export function calculateSamsungPrice(model: string, basePrice: number, diagnostics: DiagnosticsType): PricingResult {
   if (!basePrice || basePrice <= 0) return { cashifyBasePrice: 0, fhoneifyPrice: 0 };
 
@@ -334,9 +381,10 @@ export function calculateSamsungPrice(model: string, basePrice: number, diagnost
   return { cashifyBasePrice: exactCashifyPrice, fhoneifyPrice: applyCompetitorUplift(basePrice, exactCashifyPrice) };
 }
 
-// ----------------------------------------------------------------------------
-// BRAND 3: XIAOMI / REDMI / POCO
-// ----------------------------------------------------------------------------
+// ============================================================================
+// BRAND 3: XIAOMI / REDMI / POCO ENGINE
+// ============================================================================
+
 export function calculateXiaomiPrice(model: string, basePrice: number, diagnostics: DiagnosticsType): PricingResult {
   if (!basePrice || basePrice <= 0) return { cashifyBasePrice: 0, fhoneifyPrice: 0 };
 
@@ -374,9 +422,10 @@ export function calculateXiaomiPrice(model: string, basePrice: number, diagnosti
   return { cashifyBasePrice: exactCashifyPrice, fhoneifyPrice: applyCompetitorUplift(basePrice, exactCashifyPrice) };
 }
 
-// ----------------------------------------------------------------------------
-// BRAND 4: VIVO / iQOO
-// ----------------------------------------------------------------------------
+// ============================================================================
+// BRAND 4: VIVO / iQOO ENGINE
+// ============================================================================
+
 export function calculateVivoPrice(model: string, basePrice: number, diagnostics: DiagnosticsType): PricingResult {
   if (!basePrice || basePrice <= 0) return { cashifyBasePrice: 0, fhoneifyPrice: 0 };
 
@@ -427,9 +476,10 @@ export function calculateVivoPrice(model: string, basePrice: number, diagnostics
   return { cashifyBasePrice: exactCashifyPrice, fhoneifyPrice: applyCompetitorUplift(basePrice, exactCashifyPrice) };
 }
 
-// ----------------------------------------------------------------------------
-// BRAND 5: OPPO
-// ----------------------------------------------------------------------------
+// ============================================================================
+// BRAND 5: OPPO ENGINE
+// ============================================================================
+
 export function calculateOppoPrice(model: string, basePrice: number, diagnostics: DiagnosticsType): PricingResult {
   if (!basePrice || basePrice <= 0) return { cashifyBasePrice: 0, fhoneifyPrice: 0 };
 
@@ -479,9 +529,10 @@ export function calculateOppoPrice(model: string, basePrice: number, diagnostics
   return { cashifyBasePrice: exactCashifyPrice, fhoneifyPrice: applyCompetitorUplift(basePrice, exactCashifyPrice) };
 }
 
-// ----------------------------------------------------------------------------
-// BRAND 6: ONEPLUS
-// ----------------------------------------------------------------------------
+// ============================================================================
+// BRAND 6: ONEPLUS ENGINE
+// ============================================================================
+
 export function calculateOnePlusPrice(model: string, basePrice: number, diagnostics: DiagnosticsType): PricingResult {
   if (!basePrice || basePrice <= 0) return { cashifyBasePrice: 0, fhoneifyPrice: 0 };
 
@@ -519,9 +570,10 @@ export function calculateOnePlusPrice(model: string, basePrice: number, diagnost
   return { cashifyBasePrice: exactCashifyPrice, fhoneifyPrice: applyCompetitorUplift(basePrice, exactCashifyPrice) };
 }
 
-// ----------------------------------------------------------------------------
-// BRAND 7: NOTHING & CMF
-// ----------------------------------------------------------------------------
+// ============================================================================
+// BRAND 7: NOTHING & CMF ENGINE
+// ============================================================================
+
 export function calculateNothingPrice(model: string, basePrice: number, diagnostics: DiagnosticsType): PricingResult {
   if (!basePrice || basePrice <= 0) return { cashifyBasePrice: 0, fhoneifyPrice: 0 };
 
@@ -562,9 +614,10 @@ export function calculateNothingPrice(model: string, basePrice: number, diagnost
   return { cashifyBasePrice: exactCashifyPrice, fhoneifyPrice: applyCompetitorUplift(basePrice, exactCashifyPrice) };
 }
 
-// ----------------------------------------------------------------------------
-// BRAND 8: GENERIC ANDROID FALLBACK
-// ----------------------------------------------------------------------------
+// ============================================================================
+// BRAND 8: GENERIC ANDROID FALLBACK ENGINE
+// ============================================================================
+
 export function calculateGenericAndroidPrice(brand: string, model: string, basePrice: number, diagnostics: DiagnosticsType): PricingResult {
   if (!basePrice || basePrice <= 0) return { cashifyBasePrice: 0, fhoneifyPrice: 0 };
 
@@ -585,7 +638,7 @@ export function calculateGenericAndroidPrice(brand: string, model: string, baseP
 }
 
 // ============================================================================
-// 4. CENTRAL ROUTER DISPATCHER
+// CENTRAL ROUTER DISPATCHER
 // ============================================================================
 
 export function calculateFhoneifyPrice(
@@ -594,27 +647,17 @@ export function calculateFhoneifyPrice(
   basePrice: number,
   diagnostics: DiagnosticsType
 ): PricingResult {
-  console.log("--- FHONEIFY PRICING CALCULATION LOG ---");
-  console.log("Brand:", brand);
-  console.log("Model:", model);
-  console.log("Base Price:", basePrice);
-  console.log("Diagnostics:", JSON.stringify(diagnostics, null, 2));
-  console.log("-----------------------------------------");
-
   const safeBrand = String(brand || "").toLowerCase().trim();
   const safeModel = String(model || "").toLowerCase().trim();
 
-  // Route 1: Apple
   if (safeBrand === "apple" || safeModel.includes("iphone")) {
     return calculateApplePrice(model, basePrice, diagnostics);
   }
 
-  // Route 2: Samsung
   if (safeBrand === "samsung" || safeModel.includes("galaxy")) {
     return calculateSamsungPrice(model, basePrice, diagnostics);
   }
 
-  // Route 3: Xiaomi / Redmi / POCO
   if (
     safeBrand === "xiaomi" || safeBrand === "redmi" || safeBrand === "poco" ||
     safeModel.includes("xiaomi") || safeModel.includes("redmi") || safeModel.includes("poco")
@@ -622,7 +665,6 @@ export function calculateFhoneifyPrice(
     return calculateXiaomiPrice(model, basePrice, diagnostics);
   }
 
-  // Route 4: Vivo / iQOO
   if (
     safeBrand === "vivo" || safeBrand === "iqoo" ||
     safeModel.includes("vivo") || safeModel.includes("iqoo")
@@ -630,7 +672,6 @@ export function calculateFhoneifyPrice(
     return calculateVivoPrice(model, basePrice, diagnostics);
   }
 
-  // Route 5: OPPO
   if (
     safeBrand === "oppo" || safeModel.includes("oppo") ||
     safeModel.includes("reno") || safeModel.includes("find x")
@@ -638,14 +679,12 @@ export function calculateFhoneifyPrice(
     return calculateOppoPrice(model, basePrice, diagnostics);
   }
 
-  // Route 6: OnePlus
   if (
     safeBrand === "oneplus" || safeModel.includes("oneplus") || safeModel.includes("nord")
   ) {
     return calculateOnePlusPrice(model, basePrice, diagnostics);
   }
 
-  // Route 7: Nothing / CMF
   if (
     safeBrand === "nothing" || safeBrand === "cmf" ||
     safeModel.includes("nothing") || safeModel.includes("cmf")
@@ -653,6 +692,5 @@ export function calculateFhoneifyPrice(
     return calculateNothingPrice(model, basePrice, diagnostics);
   }
 
-  // Route 8: Generic Fallback (Realme, Motorola, Lenovo, Nokia, Honor, Asus, Google, LG, Infinix, Tecno, Huawei, etc.)
   return calculateGenericAndroidPrice(brand, model, basePrice, diagnostics);
 }
