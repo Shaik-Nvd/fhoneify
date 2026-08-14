@@ -1454,5 +1454,10 @@
   "oppo-f25-pro-5g-128gb": 12680,
   "oppo-f27-pro-plus-5g-128gb": 14360,
   "oppo-f27-pro-plus-5g-256gb": 15370,
-  "samsung-galaxy-z-flip7-fe-5g-256gb": 53150
+  "samsung-galaxy-z-flip7-fe-5g-256gb": 53150,
+  "Samsung Galaxy Z Fold 8 Ultra": {
+    "12 GB/256 GB": 120000,
+    "12 GB/512 GB": 127000,
+    "16 GB/1 TB": 140000
+  }
 }

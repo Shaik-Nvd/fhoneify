@@ -21647,4 +21647,14 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "basePrice": 2300
   }
+  {
+    brand: 'Samsung',
+    name: 'Samsung Galaxy Z Fold 8 Ultra',
+    image: '/images/samsung-galaxy-z-fold-8-ultra.png',
+    variants: [
+      { storage: '12 GB/256 GB' },
+      { storage: '12 GB/512 GB' },
+      { storage: '16 GB/1 TB' }
+    ]
+  },
 ];
