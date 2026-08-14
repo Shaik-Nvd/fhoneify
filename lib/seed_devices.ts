@@ -21647,11 +21647,6 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "basePrice": 2300
   },
-  
-      { storage: '12 GB/512 GB' },
-      { storage: '16 GB/1 TB' }
-    ]
-  },
   {
     "id": "samsung_z_fold8_ultra_1",
     "brand": "Samsung",
