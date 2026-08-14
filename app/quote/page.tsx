@@ -174,6 +174,7 @@ export default function QuotePage() {
   const hasSPen = (brand: string, model: string) => {
     if (brand.toLowerCase() !== 'samsung') return false;
     const lower = model.toLowerCase();
+    if (lower.includes('fold 8') || lower.includes('fold8')) return false;
     return lower.includes('note') || (lower.includes('s') && lower.includes('ultra'));
   };
 
@@ -191,6 +192,9 @@ export default function QuotePage() {
 
     // Modern Samsung flagships do not have a charger in the box
     if (lowerBrand === 'samsung') {
+      if (lowerModel.includes('fold 8') || lowerModel.includes('fold8')) {
+        return true;
+      }
       if (
         lowerModel.includes('z flip') || 
         lowerModel.includes('z fold') || 
