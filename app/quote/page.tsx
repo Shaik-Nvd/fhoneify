@@ -127,6 +127,13 @@ export default function QuotePage() {
       return true; // Nothing and CMF are recent brands
     }
 
+    if (brand.toLowerCase() === 'xiaomi') {
+      return (
+        lowerModel.includes('17 ultra') ||
+        lowerModel.includes('14')
+      );
+    }
+
     if (brand.toLowerCase() === 'vivo') {
       return (
         lowerModel.includes('fold5') ||
@@ -190,6 +197,12 @@ export default function QuotePage() {
         lowerModel.includes('s25') ||
         lowerModel.includes('s26')
       ) {
+        return false;
+      }
+    }
+
+    if (lowerBrand === 'xiaomi') {
+      if (lowerModel.includes('17 ultra')) {
         return false;
       }
     }
