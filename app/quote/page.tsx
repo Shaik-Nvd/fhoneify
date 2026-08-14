@@ -103,6 +103,8 @@ export default function QuotePage() {
         lowerModel.includes('fold 6') ||
         lowerModel.includes('fold7') ||
         lowerModel.includes('fold 7') ||
+        lowerModel.includes('fold8') ||
+        lowerModel.includes('fold 8') ||
         lowerModel.includes('flip5') ||
         lowerModel.includes('flip 5') ||
         lowerModel.includes('flip6') ||
