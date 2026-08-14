@@ -130,14 +130,16 @@ export default function QuotePage() {
     if (brand.toLowerCase() === 'xiaomi') {
       return (
         lowerModel.includes('17 ultra') ||
-        lowerModel.includes('14')
+        lowerModel.includes('14') ||
+        lowerModel.includes('15c')
       );
     }
 
     if (brand.toLowerCase() === 'vivo') {
       return (
         lowerModel.includes('fold5') ||
-        lowerModel.includes('fold 5')
+        lowerModel.includes('fold 5') ||
+        lowerModel.includes('x300 fe')
       );
     }
 
