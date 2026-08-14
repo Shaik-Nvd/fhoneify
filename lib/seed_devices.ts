@@ -21646,7 +21646,7 @@ export const SEED_DEVICES: any[] = [
     "ram": "4 GB",
     "color": "Default",
     "basePrice": 2300
-  }
+  },
   {
     brand: 'Samsung',
     name: 'Samsung Galaxy Z Fold 8 Ultra',
