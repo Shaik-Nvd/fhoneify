@@ -21647,14 +21647,36 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "basePrice": 2300
   },
-  {
-    brand: 'Samsung',
-    name: 'Samsung Galaxy Z Fold 8 Ultra',
-    image: '/images/samsung-galaxy-z-fold-8-ultra.png',
-    variants: [
-      { storage: '12 GB/256 GB' },
+  
       { storage: '12 GB/512 GB' },
       { storage: '16 GB/1 TB' }
     ]
   },
+  {
+    "id": "samsung_z_fold8_ultra_1",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Fold 8 Ultra",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 120000
+  },
+  {
+    "id": "samsung_z_fold8_ultra_2",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Fold 8 Ultra",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 127000
+  },
+  {
+    "id": "samsung_z_fold8_ultra_3",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Fold 8 Ultra",
+    "storage": "16 GB/1 TB",
+    "ram": "16 GB",
+    "color": "Default",
+    "basePrice": 140000
+  }
 ];
