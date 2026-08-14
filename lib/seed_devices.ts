@@ -21655,7 +21655,7 @@ export const SEED_DEVICES: any[] = [
     "storage": "12 GB/256 GB",
     "ram": "12 GB",
     "color": "Default",
-    "basePrice": 120000
+    "basePrice": 122061
   },
   {
     "id": "samsung_z_fold8_ultra_2",
@@ -21665,7 +21665,7 @@ export const SEED_DEVICES: any[] = [
     "storage": "12 GB/512 GB",
     "ram": "12 GB",
     "color": "Default",
-    "basePrice": 127000
+    "basePrice": 129204
   },
   {
     "id": "samsung_z_fold8_ultra_3",
@@ -21675,6 +21675,6 @@ export const SEED_DEVICES: any[] = [
     "storage": "16 GB/1 TB",
     "ram": "16 GB",
     "color": "Default",
-    "basePrice": 140000
+    "basePrice": 142469
   }
 ];
