@@ -80,7 +80,7 @@ export function applyCompetitorUplift(basePrice: number, exactCashifyPrice: numb
   else upliftPercent = 1.04;
 
   let fhoneifyExtra = exactCashifyPrice * (upliftPercent - 1);
-  if (fhoneifyExtra > 2000) fhoneifyExtra = 2000;
+  // Removed 2000 cap per user request
   if (fhoneifyExtra < 100 && exactCashifyPrice > 1200) fhoneifyExtra = 100;
 
   return Math.max(Math.round(exactCashifyPrice + fhoneifyExtra), COMMON_BONUSES.floorPrice);
