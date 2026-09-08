@@ -1022,7 +1022,7 @@ export default function QuotePage() {
         mobileAge: 'Below 3 months'
       };
 
-      const realStartPrice = calculateFhoneifyPrice(selectedBrand, selectedModel, baseMarketPrice, perfectDiagnostics).fhoneifyPrice;
+      const realStartPrice = calculateFhoneifyPrice(selectedBrand, selectedModel, baseMarketPrice, perfectDiagnostics).cashifyBasePrice;
       
       // The "Get Upto" price displayed to the user follows the algorithm strictly
       setBasePrice(realStartPrice);
@@ -1214,7 +1214,7 @@ export default function QuotePage() {
       selectedModel,
       rawBasePrice || internal_base,
       diag as DiagnosticsType
-    ).fhoneifyPrice;
+    ).cashifyBasePrice;
     
     console.log('[DEBUG] Final Price Calculated:', calculated, 'Diag:', diag);
       
