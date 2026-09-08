@@ -2229,14 +2229,13 @@ export default function QuotePage() {
                    setFinalPrice(basePrice);
                    navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', isAuthenticated ? 11 : 10);
                 }}
-                className="btn-primary schedule-pickup-btn" 
+                className="schedule-pickup-btn" 
                 style={{ 
                   display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', 
-                  background: 'linear-gradient(135deg, var(--gold) 0%, #aa8c2c 100%)', 
-                  color: '#000', fontWeight: 700, padding: '1rem 2rem', borderRadius: '8px', flex: '1', minWidth: '200px',
-                  boxShadow: '0 4px 15px rgba(212, 175, 55, 0.4)',
+                  background: 'transparent', 
+                  color: 'var(--gold)', fontWeight: 600, padding: '1rem 2rem', borderRadius: '8px', flex: '1', minWidth: '200px',
+                  border: '2px solid var(--gold)',
                   transition: 'all 0.3s ease',
-                  border: 'none',
                   cursor: 'pointer'
                 }}
               >
