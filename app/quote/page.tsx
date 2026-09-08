@@ -1022,7 +1022,11 @@ export default function QuotePage() {
         mobileAge: 'Below 3 months'
       };
 
-      const realStartPrice = calculateFhoneifyPrice(selectedBrand, selectedModel, baseMarketPrice, perfectDiagnostics).fhoneifyPrice;
+      const cashifyMax = calculateFhoneifyPrice(selectedBrand, selectedModel, baseMarketPrice, perfectDiagnostics).cashifyBasePrice;
+      let upliftPercent = 1.04;
+      if (baseMarketPrice <= 20000) upliftPercent = 1.08;
+      else if (baseMarketPrice <= 50000) upliftPercent = 1.06;
+      const realStartPrice = Math.round(cashifyMax * upliftPercent);
       
       // The "Get Upto" price displayed to the user follows the algorithm strictly
       setBasePrice(realStartPrice);
