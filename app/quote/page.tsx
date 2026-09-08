@@ -1214,7 +1214,7 @@ export default function QuotePage() {
       selectedModel,
       rawBasePrice || internal_base,
       diag as DiagnosticsType
-    ).cashifyBasePrice;
+      ).fhoneifyPrice;
     
     console.log('[DEBUG] Final Price Calculated:', calculated, 'Diag:', diag);
       
