@@ -24,12 +24,12 @@ export async function sendOtp(phone: string): Promise<string> {
       const axios = require('axios');
       const https = require('https');
       
-      // Sending template message via Cunnekt API. 
+      // Sending template message via Cunnekt API (Fire-and-forget to speed up processing)
       const cunnektUrl = process.env.CUNNEKT_BASE_URL?.endsWith('/') 
         ? `${process.env.CUNNEKT_BASE_URL}sendnotification` 
         : `${process.env.CUNNEKT_BASE_URL}/sendnotification`;
 
-      await axios.post(
+      axios.post(
         cunnektUrl, 
         {
           mobile: finalPhone,
@@ -56,12 +56,14 @@ export async function sendOtp(phone: string): Promise<string> {
           // Bypass SSL "unable to verify the first certificate" error
           httpsAgent: new https.Agent({ rejectUnauthorized: false })
         }
-      );
-      logger.info({ phone: finalPhone }, 'OTP sent via Cunnekt WhatsApp successfully');
+      ).then(() => {
+        logger.info({ phone: finalPhone }, 'OTP sent via Cunnekt WhatsApp successfully');
+      }).catch((error: any) => {
+        logger.error({ phone, err: error.response?.data || error.message }, 'Failed to send OTP via Cunnekt');
+        process.stdout.write(`[DEV OTP FALLBACK] Phone ${phone} → OTP: ${otp}\n`);
+      });
     } catch (error: any) {
-      logger.error({ phone, err: error.response?.data || error.message }, 'Failed to send OTP via Cunnekt');
-      // We don't throw here so that dev environments can still use the console fallback
-      process.stdout.write(`[DEV OTP FALLBACK] Phone ${phone} → OTP: ${otp}\n`);
+      logger.error({ phone, err: error.message }, 'Failed to process OTP request');
     }
   } else {
     // Development fallback if no real credentials are provided
