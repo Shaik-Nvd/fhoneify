@@ -21,7 +21,7 @@ tempPrices.forEach((entry: any) => {
     );
     
     if (foundDevice) {
-        let lookupKey = \\-\\.toLowerCase().replace(/[^a-z0-9]/g, '-');
+        let lookupKey = foundDevice.model.toLowerCase().replace(/[^a-z0-9]/g, '-');
         
         if (lookupKey.includes('iphone-17e')) {
             lookupKey = lookupKey.replace('iphone-17e', 'iphone-17-e');
@@ -34,7 +34,7 @@ tempPrices.forEach((entry: any) => {
         cashifyPrices[lookupKey] = Number(entry.price);
         updatedCount++;
     } else {
-        let fallbackKey = \\-\\.toLowerCase().replace(/[^a-z0-9]/g, '-');
+        let fallbackKey = modelName.toLowerCase().replace(/[^a-z0-9]/g, '-');
         cashifyPrices[fallbackKey] = Number(entry.price);
         updatedCount++;
     }
