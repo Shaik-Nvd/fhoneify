@@ -236,6 +236,51 @@ async function run() {
     assert.ok(outcomes.every((o) => o.accepted));
   });
 
+  await test('REAL BUG FOUND WHILE BUILDING THE BRAND-SNAPSHOT IMPORTER: an older observation must never overwrite a newer verified value, even on a later ingestion run', async () => {
+    const store = tempStore();
+    const identity = { brand: 'X', model: 'Y', storage: 'Z' };
+    const recentSource: PriceSource = { name: 'recent', fetch: async () => ({ price: 40000, matchConfidence: 'exact', observedAt: '2026-09-09T00:00:00.000Z' }) };
+    await refreshDevice(store, identity, recentSource);
+
+    // A second, independent source reports OLDER data (e.g. a per-brand
+    // snapshot file scraped months earlier) for the same device, ingested
+    // AFTER the more recent one - simulates exactly what happened when the
+    // legacy-migration and brand-snapshot-import scripts were run in
+    // sequence and initially silently let the older file win 486 times.
+    const olderSource: PriceSource = { name: 'older', fetch: async () => ({ price: 45000, matchConfidence: 'exact', observedAt: '2026-07-09T00:00:00.000Z' }) };
+    const outcome = await refreshDevice(store, identity, olderSource);
+    assert.equal(outcome.accepted, true, 'an older-but-valid observation is not a failure');
+
+    const record = await store.get(deviceKey(identity));
+    assert.equal(record!.currentPrice, 40000, 'the more recent value must remain current');
+    assert.equal(record!.lastVerifiedAt, '2026-09-09T00:00:00.000Z');
+    assert.equal(record!.source, 'recent');
+
+    const history = await store.getHistory(deviceKey(identity));
+    assert.equal(history.length, 2, 'the older observation is still recorded in history, just not promoted');
+    assert.equal(history[1].price, 45000);
+  });
+
+  await test('ingestion is order-independent: processing the same two observations in the opposite order converges to the same current value', async () => {
+    const identity = { brand: 'X', model: 'Y', storage: 'Z' };
+    const older: PriceSource = { name: 'older', fetch: async () => ({ price: 45000, matchConfidence: 'exact', observedAt: '2026-07-09T00:00:00.000Z' }) };
+    const newer: PriceSource = { name: 'newer', fetch: async () => ({ price: 40000, matchConfidence: 'exact', observedAt: '2026-09-09T00:00:00.000Z' }) };
+
+    const storeA = tempStore();
+    await refreshDevice(storeA, identity, newer);
+    await refreshDevice(storeA, identity, older);
+
+    const storeB = tempStore();
+    await refreshDevice(storeB, identity, older);
+    await refreshDevice(storeB, identity, newer);
+
+    const recordA = await storeA.get(deviceKey(identity));
+    const recordB = await storeB.get(deviceKey(identity));
+    assert.equal(recordA!.currentPrice, 40000);
+    assert.equal(recordB!.currentPrice, 40000);
+    assert.equal(recordA!.currentPrice, recordB!.currentPrice, 'processing order must not affect the final current value');
+  });
+
   console.log('\n=== Store durability ===\n');
 
   await test('store data survives being re-read via a new store instance pointed at the same file (simulates a process restart)', async () => {

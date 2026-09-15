@@ -18,7 +18,20 @@ import { deviceKey } from './types';
  */
 export interface PriceSource {
   name: string;
-  fetch(device: DeviceIdentity): Promise<{ price: number; sourceUrl?: string; matchConfidence: MatchConfidence; matchEvidence?: string } | null>;
+  fetch(device: DeviceIdentity): Promise<{
+    price: number;
+    sourceUrl?: string;
+    matchConfidence: MatchConfidence;
+    matchEvidence?: string;
+    /** When this observation actually happened. Omit for a true live
+     * source (defaults to "now", correct - the fetch() call IS the
+     * observation). A source replaying historical/static data (a
+     * one-time migration, a dated snapshot file) MUST set this to the
+     * real historical date - never let replayed old data claim to have
+     * been "verified now". This is exactly the mistake the freshness
+     * system exists to prevent, so it is not an optional nicety. */
+    observedAt?: string;
+  } | null>;
 }
 
 export interface RefreshOptions {
@@ -80,6 +93,31 @@ export async function refreshDevice(
         return await recordFailure(repo, existing, device, key, now, `rejected: ${validation.reason}`);
       }
 
+      // The observation's own timestamp, not "now" - see the PriceSource
+      // interface doc. A historical-replay source (a dated snapshot file)
+      // must report its real date; only a true live source's omission
+      // defaults to "now", because for a live source the fetch() call
+      // genuinely IS the observation.
+      const observedAt = observation.observedAt ?? now;
+
+      // CORRECTNESS RULE: never let an older observation overwrite a
+      // newer one. Without this, re-running two historical-replay sources
+      // in a different order (or re-running one twice) could silently
+      // regress a device from a more-recently-verified price back to a
+      // stale one just because it happened to be processed last - the
+      // exact opposite of what this system exists to prevent. The older
+      // observation is still real data, so it's recorded in history, just
+      // not promoted to the current verified value.
+      if (existing?.lastVerifiedAt && observedAt < existing.lastVerifiedAt) {
+        await repo.appendHistory(key, {
+          price: observation.price,
+          recordedAt: observedAt,
+          source: source.name,
+          note: `older observation (${observedAt}) than the current verified value (${existing.lastVerifiedAt}) from "${existing.source}" - recorded in history but NOT promoted to current`,
+        });
+        return { deviceKey: key, accepted: true, reason: 'observation older than current verified value; kept existing as current', previousPrice: existing.currentPrice, newPrice: existing.currentPrice };
+      }
+
       const record: ReferencePriceRecord = {
         deviceKey: key,
         brand: device.brand,
@@ -90,8 +128,8 @@ export async function refreshDevice(
         currentPrice: observation.price,
         matchConfidence: observation.matchConfidence,
         matchEvidence: observation.matchEvidence,
-        status: classifyFreshness({ lastVerifiedAt: now, consecutiveFailures: 0 }),
-        lastVerifiedAt: now,
+        status: classifyFreshness({ lastVerifiedAt: observedAt, consecutiveFailures: 0 }),
+        lastVerifiedAt: observedAt,
         lastAttemptedAt: now,
         lastFailureAt: null,
         lastFailureError: null,
@@ -103,7 +141,7 @@ export async function refreshDevice(
       await repo.upsert(record);
       await repo.appendHistory(key, {
         price: observation.price,
-        recordedAt: now,
+        recordedAt: observedAt,
         source: source.name,
         note: validation.flagged ? validation.flagReason : undefined,
       });
