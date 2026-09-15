@@ -3,9 +3,8 @@ if (process.env.NODE_ENV === 'production') {
 }
 import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
-
-// Bypass strict SSL for local development (fixes UNABLE_TO_VERIFY_LEAF_SIGNATURE from proxy/antivirus)
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+import helmet from 'helmet';
+import rateLimit from 'express-rate-limit';
 import fs from 'fs';
 import path from 'path';
 import config from './config';
@@ -48,9 +47,41 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   next();
 });
 
-// Configure CORS and JSON parsing
-app.use(cors());
+// Security headers
+app.use(helmet());
+
+// CORS: explicit allowlist only. In production, CORS_ORIGINS (or FRONTEND_URL)
+// must be set - an unset allowlist in production means no cross-origin
+// requests are allowed rather than silently allowing every origin.
+if (config.IS_PRODUCTION && config.CORS_ORIGINS.length === 0) {
+  logger.error('CORS_ORIGINS/FRONTEND_URL is not set in production; cross-origin requests will be rejected');
+}
+app.use(cors({
+  origin: config.IS_PRODUCTION
+    ? config.CORS_ORIGINS
+    : (config.CORS_ORIGINS.length > 0 ? config.CORS_ORIGINS : true), // dev: allow any origin only when none configured
+  credentials: true,
+}));
 app.use(express.json());
+
+// Rate limiting. This is in-process only (per server instance) - once there
+// are multiple instances behind a load balancer this needs to move to a
+// Redis-backed limiter (see PRODUCTION_READINESS_AUDIT.md P1-4).
+const generalLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  limit: 300,
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+const authLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  limit: 20,
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: { success: false, error: 'Too many attempts, please try again later.' },
+});
+app.use('/api', generalLimiter);
+app.use('/api/auth', authLimiter);
 
 // Serve static quote test page
 const quoteTestHtmlPath = path.join(__dirname, '../public/quote-test.html');
@@ -103,7 +134,6 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
 
 app.listen(config.PORT, () => {
   logger.info(`Phoneify Modular API Server running on http://localhost:${config.PORT}`);
-  logger.info('Pre-seeded phone credentials: Admin (9000000000) | Seller (9988776655) | Buyer (9876543210)');
 });
 
 export default app;

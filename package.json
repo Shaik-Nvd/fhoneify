@@ -4,12 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "concurrently \"npm run dev:api\" \"npm run dev:web\"",
-    "dev:web": "next dev -p 3000",
+    "dev:web": "next dev -p 3001",
     "dev:api": "tsx watch server/server.ts",
     "build": "next build",
     "start": "next start",
     "start:api": "npx prisma db push && PLAYWRIGHT_BROWSERS_PATH=/ms-playwright tsx server/server.ts",
     "lint": "next lint",
+    "test:pricing": "tsx scripts/test/pricing.regression.test.ts",
     "setup-cashify": "node scripts/setup-cashify.js",
     "postinstall": "npx playwright install chromium"
   },
@@ -24,8 +25,10 @@
     "cors": "^2.8.5",
     "dotenv": "^17.4.2",
     "express": "^4.18.2",
+    "express-rate-limit": "^7.5.1",
     "framer-motion": "^12.40.0",
     "gsap": "^3.15.0",
+    "helmet": "^8.3.0",
     "jsonwebtoken": "^9.0.3",
     "lucide-react": "^1.31.0",
     "next": "^14.1.0",
@@ -59,5 +62,14 @@
     "eslint-config-next": "^14.1.0",
     "postcss": "^8.4.33",
     "tailwindcss": "^3.4.1"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@prisma/client",
+      "@prisma/engines",
+      "esbuild",
+      "prisma",
+      "unrs-resolver"
+    ]
   }
 }

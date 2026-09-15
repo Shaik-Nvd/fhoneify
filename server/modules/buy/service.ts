@@ -85,8 +85,11 @@ export function createOrder(userId: string, body: { address: string; couponCode?
 }
 
 export function getOrderById(userId: string, id: string): BuyOrder | null {
-  // Let admins view any order, otherwise check if it belongs to the user
   const order = buy_orders.find((o) => o.id === id);
   if (!order) return null;
+  // This is the buyer-facing lookup - only the order's own buyer may view it.
+  // (Admin order access goes through the separate admin module, which lists
+  // all orders directly rather than calling this function.)
+  if (order.userId !== userId) return null;
   return order;
 }
