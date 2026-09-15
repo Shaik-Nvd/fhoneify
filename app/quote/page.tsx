@@ -235,6 +235,7 @@ export default function QuotePage() {
   const { isAuthenticated, user } = useHydratedAuth();
   const [allDevices, setAllDevices] = useState<Device[]>([]);
   const [loading, setLoading] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   // Initialize data on mount to avoid hydration mismatch if needed, 
@@ -3012,40 +3013,32 @@ export default function QuotePage() {
           
           <form onSubmit={async (e) => {
             e.preventDefault();
+            if (isSubmitting) return;
+            setIsSubmitting(true);
             try {
-              const token = localStorage.getItem('accessToken');
-              const headers: any = { 'Content-Type': 'application/json' };
-              if (token) headers['Authorization'] = `Bearer ${token}`;
-              
-              const res = await fetch('/api/quote/leads', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                  brand: selectedBrand,
-                  model: selectedModel,
-                  storage: selectedStorage,
-                  quotedPrice: Number(finalPrice),
-                  name: userName || '',
-                  phone: userPhone || '',
-                  pickupDate: pickupDate || '',
-                  pickupTime: pickupTime || '',
-                  address: address || '',
-                  pincode: pincode || '',
-                  city: city || '',
-                  answers: diagnostics
-                })
+              const res = await api.post('/api/quote/leads', {
+                brand: selectedBrand,
+                model: selectedModel,
+                storage: selectedStorage,
+                quotedPrice: Number(finalPrice),
+                name: userName || user?.name || '',
+                phone: userPhone || user?.phone || '',
+                pickupDate: pickupDate || '',
+                pickupTime: pickupTime || '',
+                address: address || '',
+                pincode: pincode || '',
+                city: city || '',
+                answers: diagnostics
               });
-              
-              if (!res.ok) {
-                const data = await res.json().catch(() => ({}));
-                throw new Error(data.error || data.message || 'Failed to schedule pickup');
-              }
               
               alert("Scheduled for Pickup! Our executive will contact you shortly.");
               router.push('/');
             } catch (err: any) {
               console.error("Failed to schedule pickup", err);
-              alert("Something went wrong: " + (err.message || "Please try again."));
+              const errorMessage = err.response?.data?.error || err.message || "Please try again.";
+              alert("Something went wrong: " + errorMessage);
+            } finally {
+              setIsSubmitting(false);
             }
           }}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
@@ -3081,8 +3074,10 @@ export default function QuotePage() {
             </div>
 
             <div style={{ display: 'flex', gap: '1rem', width: '100%' }}>
-              <button type="button" onClick={() => setStep(8)} className="btn-outline" style={{ flex: 1, padding: '16px', fontSize: '1.1rem' }}>Back</button>
-              <button type="submit" className="btn-primary" style={{ flex: 2, padding: '16px', fontSize: '1.1rem', fontWeight: 600 }}>Confirm Pickup</button>
+              <button type="button" onClick={() => setStep(8)} className="btn-outline" style={{ flex: 1, padding: '16px', fontSize: '1.1rem' }} disabled={isSubmitting}>Back</button>
+              <button type="submit" className="btn-primary" style={{ flex: 2, padding: '16px', fontSize: '1.1rem', fontWeight: 600, opacity: isSubmitting ? 0.7 : 1 }} disabled={isSubmitting}>
+                {isSubmitting ? 'Confirming...' : 'Confirm Pickup'}
+              </button>
             </div>
           </form>
         </div>
