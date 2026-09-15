@@ -167,3 +167,14 @@ I'm not recommending a specific answer here because this is a product/operations
 ## H. DO NOT IMPLEMENT YET
 
 Confirmed — no fix has been implemented in this pass. No pricing file was edited. This document and the two new test files (`scripts/test/pricing.cashify-comparison.test.ts`, plus the `test:pricing:reference` npm script) are the only additions.
+
+---
+
+## Update: root-cause infrastructure implemented (follow-up pass)
+
+Per the explicit follow-up task ("fix the root cause"), a full reference-price lifecycle system was subsequently built — see **`PRICING_REFERENCE_DATA_ARCHITECTURE.md`** for the complete design and implementation record. Summary:
+
+- Both investigated devices are no longer silently dependent on an undetected stale snapshot: OnePlus 15R is now explicitly classified `stale` (backdated to its real June 24 scrape date), and OPPO Find X9s is explicitly classified `missing` (it never had a `cashify_prices.json` entry at all) — both facts are now structurally recorded and queryable, not hidden.
+- The pricing engine's live inputs (`lib/cashify_prices.json`) were **not changed** — updating the actual displayed price still requires a fresh, verified Cashify quote (a data input this investigation doesn't have) submitted through the new admin API, and deciding whether/how staleness should affect the live quote at all is the explicit business decision documented in the architecture doc Section 11.
+- The 46%-missing finding was broken down: 91% of missing devices never had reference data collected at all (not a bug); 9% have a related-but-not-exact entry worth a human look.
+- `npm run test:pricing` remains 27/27 throughout.
