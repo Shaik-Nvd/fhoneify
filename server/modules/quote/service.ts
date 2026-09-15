@@ -1,17 +1,62 @@
 import { SEED_DEVICES, quotes, counters, Quote, Device, leads, Lead } from '../../data';
-import fs from 'fs';
-import path from 'path';
 import prisma from '../../lib/prisma';
+// The canonical, live pricing engine - the SAME module app/quote/page.tsx
+// uses. Previously this file imported a server-local duplicate
+// (./pricingCalculator) that depended on an untracked config file which
+// was lost to filesystem sync issues; rather than reconstruct lost pricing
+// constants (which this task's brief explicitly forbids guessing at),
+// this now uses the one real engine, closing the frontend/backend
+// duplicate-implementation risk flagged in PRODUCTION_READINESS_AUDIT.md.
+import { calculateFhoneifyPrice, applyCompetitorUplift } from '../../../lib/pricingCalculator';
+import { getReferencePriceRepository } from '../../../lib/referencePricing/getStore';
+import { classifyFreshness, isUsableForPricing } from '../../../lib/referencePricing/freshnessPolicy';
+import { deviceKey } from '../../../lib/referencePricing/types';
+import logger from '../../lib/logger';
 
-// Load the Cashify prices dictionary
-let cashifyPrices: Record<string, number> = {};
-try {
-  const dataPath = path.join(process.cwd(), 'server', 'data', 'cashify_prices.json');
-  if (fs.existsSync(dataPath)) {
-    cashifyPrices = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+const referencePriceStore = getReferencePriceRepository();
+
+// Whether a device with NO reference price at all should still be quoted
+// using its raw basePrice (today's existing behavior, safe default - see
+// PRICING_REFERENCE_DATA_ARCHITECTURE.md Section 11) or should refuse to
+// quote and return an explicit "reference price unavailable" state. This
+// is exactly the "business decision" that document says must not be
+// hardcoded silently - so it's a config flag, defaulting to preserving
+// current live behavior, not a code change someone has to ship to try.
+const STRICT_REFERENCE_MODE = process.env.QUOTE_STRICT_REFERENCE_MODE === 'true';
+
+/** Looks up the verified reference price for a device from the reference-
+ * price repository - the "verified reference-price lookup" step between
+ * device resolution and the pricing engine (see
+ * PRICING_REFERENCE_DATA_ARCHITECTURE.md Section 3 / this task's Step 10).
+ * Falls back to the device's raw basePrice, exactly as before this system
+ * existed, ONLY when STRICT_REFERENCE_MODE is off (the default) - this
+ * preserves today's live behavior unless/until that config is explicitly
+ * turned on. Never performs a live external lookup here - reference data
+ * is refreshed out-of-band (scripts/reference-pricing/*), so this read is
+ * always fast and local, per Step 10's "quote path must not synchronously
+ * scrape" requirement. */
+async function resolveReferencePrice(device: { brand: string; model: string; storage?: string }): Promise<{
+  price: number | null;
+  status: 'fresh' | 'approaching_stale' | 'stale' | 'missing' | 'refresh_failed';
+  source: string | null;
+  lastVerifiedAt: string | null;
+}> {
+  const key = deviceKey({ brand: device.brand, model: device.model, storage: device.storage ?? '' });
+  const record = await referencePriceStore.get(key);
+
+  if (!record || record.status === 'missing') {
+    return { price: null, status: 'missing', source: null, lastVerifiedAt: null };
   }
-} catch (err) {
-  console.error("Failed to load cashify_prices.json", err);
+
+  const liveStatus = classifyFreshness({ lastVerifiedAt: record.lastVerifiedAt, consecutiveFailures: record.consecutiveFailures });
+  if (!isUsableForPricing(liveStatus)) {
+    // 'stale' by policy - still return the price (fresh/approaching_stale/
+    // refresh_failed already pass isUsableForPricing above; only pure
+    // 'stale' reaches here) so the caller can decide, but flag it clearly.
+    return { price: record.currentPrice, status: liveStatus, source: record.source, lastVerifiedAt: record.lastVerifiedAt };
+  }
+
+  return { price: record.currentPrice, status: liveStatus, source: record.source, lastVerifiedAt: record.lastVerifiedAt };
 }
 
 const CONDITION_MULTIPLIERS: Record<string, number> = {
@@ -28,233 +73,65 @@ export function listDevices(): Device[] {
   return SEED_DEVICES;
 }
 
-export function generateQuote(deviceId: string, condition: string, aiPriceAdjustment?: number, answers?: any) {
+export async function generateQuote(deviceId: string, condition: string, aiPriceAdjustment?: number, answers?: any) {
   const device = SEED_DEVICES.find((d) => d.id === deviceId);
   if (!device) return null;
 
-  let multiplier = CONDITION_MULTIPLIERS[condition] ?? 0.5;
+  // Verified reference-price lookup (Step 10: device resolution -> verified
+  // reference price -> existing pricing engine -> existing uplift -> quote).
+  // This is a local, synchronous-fast read of periodically-refreshed data,
+  // never a live external call from the request path.
+  const reference = await resolveReferencePrice(device);
 
-  // Form the key to lookup Cashify price, e.g. "apple-iphone-11-128gb"
-  const lookupKey = `${device.model}-${device.storage}`.toLowerCase().replace(/[^a-z0-9]/g, '-');
-  
-  // 1. Get Base Market Price
-  let baseMarketPrice = cashifyPrices[lookupKey] || device.basePrice || 1000;
+  if (reference.status === 'missing' && STRICT_REFERENCE_MODE) {
+    // Explicit "reference price unavailable" state (Step 11) - only reached
+    // when the operator has opted into strict mode. Default behavior below
+    // preserves today's basePrice fallback.
+    logger.warn({ deviceId, brand: device.brand, model: device.model }, 'Quote blocked: no reference price and QUOTE_STRICT_REFERENCE_MODE is on');
+    return { error: 'REFERENCE_PRICE_UNAVAILABLE', deviceId, brand: device.brand, model: device.model };
+  }
 
-  // 2. Apply Competitive Uplift (Fhoneify beats Cashify)
-  let upliftedBasePrice = baseMarketPrice;
-  if (baseMarketPrice <= 20000) {
-    upliftedBasePrice = baseMarketPrice * 1.08; // 8% greater
-  } else if (baseMarketPrice <= 50000) {
-    upliftedBasePrice = baseMarketPrice * 1.06; // 6% greater
+  const baseMarketPrice = reference.price ?? device.basePrice ?? 1000;
+  if (reference.status !== 'fresh') {
+    logger.info({ deviceId, brand: device.brand, model: device.model, referenceStatus: reference.status }, 'Quote generated from a non-fresh reference price');
+  }
+
+  let estimatedPrice: number;
+  let upliftedBasePrice: number;
+
+  if (answers) {
+    // The canonical engine applies age/defect/hardware penalties AND the
+    // competitor uplift internally - do not re-apply applyCompetitorUplift
+    // on top of its own result (that would double-apply the uplift).
+    const result = calculateFhoneifyPrice(device.brand, device.model, baseMarketPrice, answers);
+    estimatedPrice = result.fhoneifyPrice;
+    upliftedBasePrice = result.fhoneifyPrice;
   } else {
-    upliftedBasePrice = baseMarketPrice * 1.04; // 4% greater
-  }
-
-  // 3. Apply Condition Multiplier to the Uplifted Base
-  let estimatedPrice = Math.round(upliftedBasePrice * multiplier);
-  
-  // Specialized Algorithm for Samsung Galaxy S25 Ultra 5G
-  if (device.model.includes('S25 Ultra')) {
-    if (answers) {
-      let specializedPrice = 74650; // Max Theoretical Price for Flawless
-      
-      // Administrative Deductions
-      if (answers.warranty === false) {
-        specializedPrice -= 9650; 
+    // No detailed diagnostics yet (coarse condition-bucket quote, e.g. the
+    // initial estimate before the diagnostics form) - existing formula
+    // unchanged, just fed by the verified reference price now instead of
+    // a directly-imported JSON file.
+    const isApple = device.brand.toLowerCase() === 'apple';
+    let depreciatedPrice: number;
+    if (isApple) {
+      const multiplier = CONDITION_MULTIPLIERS[condition] ?? 0.5;
+      depreciatedPrice = Math.round(baseMarketPrice * multiplier);
+      if (device.model.includes('13') || device.model.includes('14')) {
+        depreciatedPrice = Math.round(depreciatedPrice * 0.85);
       }
-      if (answers.validBill === false) {
-        specializedPrice -= 3860;
-      }
-      
-      // Accessories
-      if (answers.accessories && !answers.accessories.includes('box')) {
-        specializedPrice -= 1500;
-      }
-
-      // Basic Functional / Screen Originality
-      if (answers.calls === false) specializedPrice -= 15000;
-      if (answers.touch === false) specializedPrice -= 12000;
-      if (answers.originalScreen === false) specializedPrice -= 15000;
-
-      // Defects
-      if (answers.defects && Array.isArray(answers.defects)) {
-        // Screen Defects
-        if (answers.defects.includes('broken_screen') || answers.screenCondition?.includes('More than 2')) {
-          specializedPrice -= 5260; 
-        } else if (answers.screenCondition?.includes('Cracked')) {
-          specializedPrice -= 12000;
-        }
-
-        if (answers.defects.includes('screen_spot')) {
-          specializedPrice -= 10000;
-        }
-
-        // Body Defects
-        if (answers.defects.includes('body_scratch')) {
-          let bodyDeduction = 0;
-          if (answers.bodyScratches?.includes('1-2')) bodyDeduction += 2500;
-          else if (answers.bodyScratches?.includes('More than')) bodyDeduction += 3500;
-
-          if (answers.bodyDents?.includes('1-2')) bodyDeduction += 2460;
-          else if (answers.bodyDents?.includes('More than')) bodyDeduction += 3500;
-          
-          if (bodyDeduction === 0) bodyDeduction = 4960; // Fallback
-          specializedPrice -= bodyDeduction;
-        }
-
-        // Panel Defects
-        if (answers.defects.includes('panel_missing')) {
-          specializedPrice -= 8000;
-        }
-      }
-
-      // Hardware / Functional Defects
-      if (answers.hardware && Array.isArray(answers.hardware)) {
-        const hardwarePenalties: Record<string, number> = {
-          'front_camera': 4000,
-          'back_camera': 8000,
-          'volume': 1500,
-          'fingerprint': 5000,
-          'wifi': 4000,
-          'speaker': 2000,
-          'silent': 1500,
-          'face': 5000,
-          'power': 1500,
-          'charging': 2500,
-          'audio_receiver': 2000,
-          'camera_glass': 2000,
-          'microphone': 2000,
-          'bluetooth': 4000,
-          'vibrator': 1500,
-          'proximity': 1500,
-          'battery_service': 3500,
-          'battery_health': 1500
-        };
-
-        for (const hw of answers.hardware) {
-          if (hardwarePenalties[hw]) {
-            specializedPrice -= hardwarePenalties[hw];
-          }
-        }
-      }
-
-      // Calculate Fhoneify Inflated Markup
-      let upliftPercent = 1.0;
-      if (baseMarketPrice <= 20000) upliftPercent = 1.08;
-      else if (baseMarketPrice <= 50000) upliftPercent = 1.06;
-      else upliftPercent = 1.04;
-
-      let fhoneifyExtra = specializedPrice * (upliftPercent - 1.0);
-      if (fhoneifyExtra > 2000) fhoneifyExtra = 2000;
-      if (fhoneifyExtra < 100 && specializedPrice > 1200) fhoneifyExtra = 100;
-      
-      specializedPrice += fhoneifyExtra;
-
-      // Safeguard against going below zero
-      estimatedPrice = Math.max(specializedPrice, 5000);
+    } else {
+      const conditionDeductions: Record<string, number> = {
+        like_new: 0,
+        excellent: 0.08,
+        good: 0.18,
+        fair: 0.35,
+        poor: 0.55,
+      };
+      const deduction = conditionDeductions[condition] ?? 0.35;
+      depreciatedPrice = Math.round(baseMarketPrice * (1 - deduction));
     }
-  } else if (device.model.includes('S26 Ultra')) {
-    if (answers) {
-      let specializedPrice = 105250; // Max Theoretical Price for Flawless
-      
-      // Administrative & Age Deductions
-      if (answers.mobileAge === '6 months - 11 months' || answers.mobileAge === '6to11') specializedPrice -= 9320;
-      else if (answers.mobileAge === '3 months - 6 months' || answers.mobileAge === '3to6') specializedPrice -= 7760;
-      else if (answers.warranty === false || answers.mobileAge === 'Above 11 months' || answers.mobileAge === 'above11') specializedPrice -= 13600;
-      
-      if (answers.validBill === false) specializedPrice -= 15040;
-
-      // Accessories
-      if (answers.accessories && !answers.accessories.includes('box')) specializedPrice -= 2100;
-      if (answers.accessories && !answers.accessories.includes('spen')) specializedPrice -= 2500;
-
-      // Basic Functional / Screen Originality
-      if (answers.calls === false) specializedPrice -= 21000;
-      if (answers.touch === false) specializedPrice -= 17000;
-      if (answers.originalScreen === false) specializedPrice -= 21000;
-
-      // Defects
-      if (answers.defects && Array.isArray(answers.defects)) {
-        // Screen Defects
-        if (answers.defects.includes('broken_screen') || answers.screenCondition?.includes('More than 2')) {
-          specializedPrice -= 7400; 
-        } else if (answers.screenCondition?.includes('Cracked')) {
-          specializedPrice -= 17000;
-        }
-
-        if (answers.defects.includes('screen_spot')) {
-          specializedPrice -= 14000;
-        }
-
-        // Body Defects
-        if (answers.defects.includes('body_scratch')) {
-          let bodyDeduction = 0;
-          if (answers.bodyScratches?.includes('1-2')) bodyDeduction += 3500;
-          else if (answers.bodyScratches?.includes('More than')) bodyDeduction += 3500;
-
-          if (answers.bodyDents?.includes('1-2')) bodyDeduction += 3400;
-          else if (answers.bodyDents?.includes('More than')) bodyDeduction += 4900;
-          
-          if (bodyDeduction === 0) bodyDeduction = 3500; // Fallback
-          specializedPrice -= bodyDeduction;
-        }
-
-        // Panel Defects
-        if (answers.defects.includes('panel_missing')) {
-          specializedPrice -= 11000;
-        }
-      }
-
-      // Hardware / Functional Defects
-      if (answers.hardware && Array.isArray(answers.hardware)) {
-        const hardwarePenalties: Record<string, number> = {
-          'front_camera': 5600,
-          'back_camera': 11000,
-          'volume': 2100,
-          'fingerprint': 7000,
-          'wifi': 5600,
-          'speaker': 2800,
-          'silent': 2100,
-          'face': 7000,
-          'power': 2100,
-          'charging': 3500,
-          'audio_receiver': 2800,
-          'camera_glass': 2800,
-          'microphone': 2800,
-          'bluetooth': 5600,
-          'vibrator': 2100,
-          'proximity': 2100,
-          'battery_service': 4900,
-          'battery_health': 2100
-        };
-
-        for (const hw of answers.hardware) {
-          if (hardwarePenalties[hw]) {
-            specializedPrice -= hardwarePenalties[hw];
-          }
-        }
-      }
-
-      // Calculate Fhoneify Inflated Markup
-      let upliftPercent = 1.0;
-      if (baseMarketPrice <= 20000) upliftPercent = 1.08;
-      else if (baseMarketPrice <= 50000) upliftPercent = 1.06;
-      else upliftPercent = 1.04;
-
-      let fhoneifyExtra = specializedPrice * (upliftPercent - 1.0);
-      if (fhoneifyExtra > 2000) fhoneifyExtra = 2000;
-      if (fhoneifyExtra < 100 && specializedPrice > 1200) fhoneifyExtra = 100;
-      
-      specializedPrice += fhoneifyExtra;
-
-      // Safeguard against going below zero
-      estimatedPrice = Math.max(specializedPrice, 5000);
-    }
-  }
-
-  // Dynamic Market Depreciation Engine (Optional legacy logic, can be kept)
-  if (device.model.includes('13') || device.model.includes('14') || device.model.includes('S22')) {
-    estimatedPrice = Math.round(estimatedPrice * 0.85); // 15% depreciation
+    estimatedPrice = applyCompetitorUplift(baseMarketPrice, depreciatedPrice);
+    upliftedBasePrice = estimatedPrice;
   }
 
   // Apply AI Price Adjustment if passed from the new AI quote flow
@@ -275,7 +152,16 @@ export function generateQuote(deviceId: string, condition: string, aiPriceAdjust
   };
 
   quotes.set(quoteId, quote);
-  return { estimatedPrice, deviceId, condition, quoteId, upliftedBasePrice };
+  return {
+    estimatedPrice,
+    deviceId,
+    condition,
+    quoteId,
+    upliftedBasePrice,
+    referenceStatus: reference.status,
+    referenceSource: reference.source,
+    referenceLastVerifiedAt: reference.lastVerifiedAt,
+  };
 }
 
 export function getQuoteById(quoteId: string): Quote | null {

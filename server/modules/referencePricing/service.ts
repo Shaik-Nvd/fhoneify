@@ -1,10 +1,10 @@
-import { getDefaultReferencePriceStore } from '../../../lib/referencePricing/store';
+import { getReferencePriceRepository } from '../../../lib/referencePricing/getStore';
 import { classifyFreshness } from '../../../lib/referencePricing/freshnessPolicy';
 import { refreshDevice } from '../../../lib/referencePricing/ingestion';
 import { createManualSubmissionSource } from '../../../lib/referencePricing/sources/manualSource';
 import { ReferencePriceRecord, ReferencePriceStatus } from '../../../lib/referencePricing/types';
 
-const store = getDefaultReferencePriceStore();
+const store = getReferencePriceRepository();
 
 /** Recomputes each record's status live from its lastVerifiedAt/failure
  * fields rather than trusting the stored status column, since a record
