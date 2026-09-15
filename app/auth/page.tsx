@@ -35,10 +35,7 @@ export default function AuthPage() {
       
       setIsLoading(false);
       
-      if (data.bypassCode) {
-         setMsg({ text: `WhatsApp failed! Use this temporary bypass code: ${data.bypassCode}`, isError: true });
-         setIsCodeStep(true);
-      } else if (data.error) {
+      if (data.error) {
          setMsg({ text: data.error, isError: true });
       } else {
          setMsg({ text: 'Check your WhatsApp for the code!', isError: false });
