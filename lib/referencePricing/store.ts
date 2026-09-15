@@ -132,3 +132,60 @@ export function getDefaultReferencePriceStore(): FileReferencePriceStore {
   if (!defaultStore) defaultStore = new FileReferencePriceStore();
   return defaultStore;
 }
+
+/**
+ * A buffered wrapper for BULK operations only (migrations, catalog-wide
+ * imports). FileReferencePriceStore does one full read-parse and one full
+ * write-serialize PER CALL, which is the right tradeoff for a single admin
+ * submission (immediately durable, safe to call rarely) but is O(n) work
+ * per device for a job touching thousands of devices - O(n^2) overall for
+ * a full-catalog run, which is what made the brand-snapshot importer hang.
+ *
+ * This wrapper loads the file ONCE, serves every get/upsert/appendHistory
+ * purely from an in-memory copy, and only touches disk once - on an
+ * explicit flush() call. This trades "each write is immediately durable"
+ * (fine for a rare admin action) for "the whole batch is durable once it
+ * completes" (fine, and necessary, for a several-thousand-record import) -
+ * it does NOT change any of the correctness guarantees (idempotency,
+ * never-destroy-on-failure, atomic file write), only when the disk write
+ * happens. Always call flush() when done, including on error paths where
+ * partial progress should still be saved (see the importer scripts for the
+ * pattern: wrap the loop in try/finally with flush() in finally).
+ */
+export class BufferedReferencePriceStore implements ReferencePriceRepository {
+  private data: StoreFileShape;
+  private backing: FileReferencePriceStore;
+
+  constructor(backing: FileReferencePriceStore) {
+    this.backing = backing;
+    this.data = (backing as any).readSync();
+  }
+
+  async get(deviceKey: string): Promise<ReferencePriceRecord | null> {
+    return this.data.records[deviceKey] ?? null;
+  }
+
+  async upsert(record: ReferencePriceRecord): Promise<void> {
+    this.data.records[record.deviceKey] = record;
+  }
+
+  async listAll(): Promise<ReferencePriceRecord[]> {
+    return Object.values(this.data.records);
+  }
+
+  async appendHistory(deviceKey: string, entry: ReferencePriceHistoryEntry): Promise<void> {
+    if (!this.data.history[deviceKey]) this.data.history[deviceKey] = [];
+    this.data.history[deviceKey].push(entry);
+  }
+
+  async getHistory(deviceKey: string): Promise<ReferencePriceHistoryEntry[]> {
+    return this.data.history[deviceKey] ?? [];
+  }
+
+  /** Persists the in-memory buffer to disk in one atomic write. Safe to
+   * call multiple times (e.g. periodically during a very long batch, to
+   * bound how much work a crash could lose). */
+  flush(): void {
+    (this.backing as any).writeSync(this.data);
+  }
+}
