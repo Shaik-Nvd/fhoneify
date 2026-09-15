@@ -60,12 +60,22 @@ The pricing engine's inputs are unchanged today — see Section 8 for exactly wh
 
 ## 4. Data model
 
-Implemented in two parallel places, intentionally:
+**Update: Postgres is now the real, live, authoritative store.** `DATABASE_URL` turned out to be already configured and reachable (a Supabase-hosted Postgres instance, already in production use by the `User`/`Lead`/`WhatsAppOTP` models) - this was verified directly (`npx prisma db pull` connected successfully; existing row counts checked before touching anything: 4 users, 17 leads, 9 OTP records, all untouched by anything below).
 
-- **`prisma/schema.prisma`** — `ReferencePrice` and `ReferencePriceHistory` models. This is the target Postgres schema. **Not yet migrated to a live database** — blocked on `DATABASE_URL`, the same blocking item raised in `PRODUCTION_READINESS_REPORT.md` Phase 2 and never yet resolved. `npx prisma validate` and `npx prisma generate` both succeed against this schema (verified), but no `prisma migrate` has been run because there is no database to run it against.
-- **`lib/referencePricing/types.ts` + `store.ts`** — the same shape, implemented today against a durable file-backed store (`FileReferencePriceStore`), accessed only through the `ReferencePriceRepository` interface. Every consumer (ingestion, admin API, export script) depends on the interface, not the file implementation, so swapping to a real Postgres-backed repository once `DATABASE_URL` exists is a one-file change.
+What was actually done, in order:
+1. Reviewed the exact SQL the new schema would apply (`npx prisma migrate diff ... --script`) before running anything - confirmed **purely additive**: two new enums, two new tables (`ReferencePrice`, `ReferencePriceHistory`), their indexes, and one foreign key. Zero `ALTER`/`DROP` on any existing table.
+2. Applied it with `npx prisma db push` (this project's own established convention - it already had no `prisma/migrations` history and used `db push` in its `start:api` script, so this matches existing practice rather than introducing a new one).
+3. Verified existing data untouched immediately after: user/lead counts unchanged.
+4. Implemented `lib/referencePricing/postgresStore.ts` - a `PostgresReferencePriceStore` satisfying the exact same `ReferencePriceRepository` interface as the file store, so nothing that consumes a repository needed to change.
+5. Added `lib/referencePricing/getStore.ts` - the one factory (`getReferencePriceRepository()`) every real consumer (the quote service, the admin API) now uses: Postgres when `DATABASE_URL` is configured, the file store otherwise. This is the "repository abstraction fully designed so the file-backed store can be replaced by Postgres without changing pricingCalculator.ts" requirement, now actually exercised, not just designed.
+6. Ran the full migration (`migrate-legacy-snapshots` + `import-brand-snapshots`) against real Postgres: **2,200 devices migrated, 4,474 history entries created**, 4 users / 17 leads still exactly as before.
 
-**Honest limitation, stated plainly (also in the code as a comment on the class, so it isn't lost):** the file store survives process restarts/crashes (atomic write-then-rename, never a half-written file) but does **not** survive a Render redeploy (ephemeral filesystem per deployed image) unless the file is committed into git, and does **not** provide cross-instance consistency if the app ever runs more than one backend instance. This is exactly what real Postgres persistence would fix and this interim store does not. It is the right backing for local development, CI test runs, and the one-time historical migration; it is not a substitute for the Phase 2 database migration for a scaled production deployment.
+**Verified with hard evidence, not claims:**
+- **Restart safety:** started the server, got a quote, killed the process, started a brand-new process (new PID, new `PrismaClient`), requested the identical quote — byte-identical result. This is the actual Step 12 "test restart behavior" requirement, demonstrated, not asserted.
+- **Concurrency safety:** fired three concurrent `create()` calls for the same `deviceKey` directly at Postgres — the unique constraint correctly accepted exactly 1 and rejected 2. This is a property the file store explicitly could not provide (documented in its own limitation comment) and Postgres provides for free.
+- **Admin API against real data:** `GET /api/admin/reference-prices/status` (real admin login, real JWT) against the live Postgres-backed data: `{"totalDevices":2200,"withReferencePrice":2115,"coveragePercent":96.1,"byStatus":{"fresh":2108,"stale":4,"missing":85,"refresh_failed":3}}`.
+
+**File store (`lib/referencePricing/store.ts`) is retained**, not deleted - it's still the correct backing for environments without `DATABASE_URL` (e.g. local dev without a DB configured) and is what the test suite's isolated unit tests use (temp files, never touching real data). `getReferencePriceRepository()` falls back to it automatically if Postgres initialization fails for any reason, logging why.
 
 ## 5. Freshness policy
 
@@ -110,11 +120,15 @@ The dominant failure mode (91%) is **category F: data was simply never collected
 
 **Implemented:** `lib/referencePricing/ingestion.ts` — a source-agnostic orchestrator with bounded concurrency, retry-with-backoff, and the Phase-8 guarantee (a failed refresh only ever increments a failure counter and records the error; it never touches `currentPrice` or `lastVerifiedAt` — this exact behavior is unit-tested).
 
-**Implemented, safe, no legal exposure:** `lib/referencePricing/sources/manualSource.ts` + the admin API endpoint (`POST /api/admin/reference-prices/submit`) — an operator manually checks Cashify (or any source) themselves and submits a verified price. This is a legitimate, fully-legal refresh path and is the only one wired end-to-end today.
+**Implemented, safe, no legal exposure, and genuinely automated:** `lib/referencePricing/sources/legacySnapshotSource.ts` + `scripts/reference-pricing/import-brand-snapshots.ts`. This repo already contained 17 per-brand snapshot files (`oppo/oppo_prices.json`, `samsung/samsung_prices.json`, etc. — 2,357 raw entries total, each with a real Cashify source URL) obtained before this task, sitting unused. This is not scraping — it's parsing files already on disk — so it needed no legal decision to wire up. Result: **1,882 devices matched and imported**, cutting the missing-reference count from 1,023 (46%) to 85 (3.9%). Re-running `npm run reference-prices:refresh-all` whenever a new/updated snapshot file is legally obtained and dropped into a brand folder re-ingests it automatically, safely (see the ordering fix below).
 
-**NOT implemented, and deliberately so:** a live scraper adapter that automatically queries Cashify's site. This repo already contains extensive scraping infrastructure (`puppeteer-extra-plugin-stealth`, numerous `cashify-test*.js`/`scrape*.js` scripts) built before this task, and `PRODUCTION_READINESS_AUDIT.md` (P3-2) already flagged that using it in production carries unresolved legal/ToS exposure requiring your explicit sign-off. This task's own brief says the same thing directly: *"If a scraping infrastructure/legal decision is still required, STOP before implementing a potentially non-compliant mechanism."* That's what I did — the `PriceSource` interface is built and ready to accept a live-scraper implementation the moment that decision is made, but I have not built or wired one.
+**Also implemented, safe, no legal exposure:** `lib/referencePricing/sources/manualSource.ts` + the admin API endpoint (`POST /api/admin/reference-prices/submit`) — an operator manually checks Cashify (or any source) themselves and submits a verified price.
 
-**Scheduling (Phase 9):** not automated in this pass, for the same reason — automating catalog-wide refresh only makes sense once there's an approved, legal source to automate. The `refreshCatalog()` function is ready to be invoked by a cron entry, a Render scheduled job, or (once Redis/BullMQ exist per `PRODUCTION_READINESS_REPORT.md` Phase 2/6) a queued job — whichever the ingestion-source decision implies is appropriate. Not adding BullMQ speculatively here, per the explicit "don't introduce infrastructure the product doesn't need yet" instruction.
+**Real bug found and fixed while building the brand-snapshot importer:** `refreshDevice()` originally overwrote the current value on any successful match regardless of which observation was actually more recent - re-running the legacy migration and the brand-snapshot import in sequence let 486 devices' current prices get silently overwritten by an OLDER snapshot's value just because it ran second. Fixed by comparing `observedAt` against the existing record's `lastVerifiedAt` and refusing to regress (the older observation is still recorded in history, just not promoted to current) - now unit-tested for both "older observation is rejected" and "processing order doesn't affect the final result" (`scripts/test/pricing.reference-data.test.ts`). Re-verified: 0 regressions, 924 legitimate new entries.
+
+**NOT implemented, and deliberately so:** a live scraper adapter that automatically queries Cashify's site right now. `PRODUCTION_READINESS_AUDIT.md` (P3-2) already flagged that using this repo's existing scraping infrastructure (`puppeteer-extra-plugin-stealth`, etc.) in production carries unresolved legal/ToS exposure requiring your explicit sign-off, and this task's own brief says the same thing directly. The `PriceSource` interface is built and ready to accept a live-scraper implementation the moment that decision is made.
+
+**Scheduling (Phase 9):** `scripts/reference-pricing/refresh-all.ts` is the single entrypoint (migrate + import + export, in order) and is fully re-runnable/idempotent against the now-real Postgres store - safe to wire to a cron entry or a Render scheduled job whenever there's new snapshot data to process. Not automated on a timer in this pass, since there's no new data source generating fresh files on a schedule yet - scheduling an empty no-op job wouldn't accomplish anything. Not using BullMQ for this, per the explicit "don't introduce infrastructure the product doesn't need yet" instruction - a scheduled script invocation is the right-sized solution for a job that runs at most a few times a week.
 
 ## 10. Operational visibility (Phase 12)
 
@@ -125,61 +139,88 @@ The dominant failure mode (91%) is **category F: data was simply never collected
 - `GET /api/admin/reference-prices/device/:deviceKey` — full record + history for one device.
 - `POST /api/admin/reference-prices/submit` — manual verified-price submission (the safe refresh path above).
 
-Backend/API only, per the explicit instruction to build the reporting foundation before a UI — no admin dashboard page was added.
+Backend/API only, per the explicit instruction to build the reporting foundation before a UI — no admin dashboard page was added. Now Postgres-backed and verified live (Section 4).
 
-## 11. Business decision required (Phase 11) — explicitly not decided here
+## 11. Quote flow integration (Step 10) — DONE, not just designed
 
-**The pricing engine's actual inputs are unchanged in this pass.** `app/quote/page.tsx` still reads `lib/cashify_prices.json` directly, exactly as before. This was a deliberate choice, not an oversight: automatically excluding stale/missing devices from the live price lookup, or changing what the app shows for them, is a real product behavior change (it would alter live quotes for potentially hundreds of devices) that falls squarely under the brief's own instruction not to silently choose a new business policy.
+**`server/modules/quote/service.ts` (`POST /api/quote`, the real Express endpoint) now genuinely resolves its base price from the reference-price repository**, not from a directly-imported JSON file. Verified end-to-end, live, against real Postgres data (not a mock):
 
-**What you need to decide:** once reference prices are refreshed (manually, for now) and the store's `fresh`/`stale`/`missing` status is trustworthy, should the live quote page:
-(a) keep using `lib/cashify_prices.json` as-is regardless of staleness (today's behavior, safest / no user-facing change), or
-(b) prefer `basePrice` over a stale/missing cashify reference once some age threshold is crossed, or
-(c) show an explicit "estimated, price under review" state to the user for stale/missing devices, or
-(d) something else.
+```
+$ curl -X POST /api/quote -d '{"deviceId":"...","condition":"like_new"}'
+{"estimatedPrice":44000,...,"referenceStatus":"stale","referenceSource":"brand_snapshot:oppo/oppo_prices.json","referenceLastVerifiedAt":"2026-07-08T20:39:20.000Z"}
+```
 
-A companion file, `lib/cashify_prices.meta.json`, is generated by `scripts/reference-pricing/export-cashify-prices.ts` and contains exactly the freshness/match-confidence data needed to implement whichever of these you choose — nothing in the live pricing path reads it yet.
+Also fixed the dependency that broke this file in the first place: it previously imported a server-local duplicate pricing engine (`./pricingCalculator`) that depended on an untracked config file lost to filesystem sync issues earlier in this project. Rather than reconstruct lost pricing constants (forbidden - that's guessing at business logic), it now imports the one real, canonical engine (`lib/pricingCalculator.ts` - the same one `app/quote/page.tsx` uses), closing the frontend/backend duplicate-implementation risk flagged in `PRODUCTION_READINESS_AUDIT.md`.
 
-## 12. Testing
+**Missing/stale behavior (Step 11) is implemented and configurable, not hardcoded:** `QUOTE_STRICT_REFERENCE_MODE` env var (default `false`, preserving today's live behavior exactly).
+- **Default (off):** a device with `stale`/`refresh_failed`/`missing` status still gets a quote (falls back to `basePrice` if genuinely missing, exactly as before this system existed) — but the response now honestly reports `referenceStatus`, `referenceSource`, `referenceLastVerifiedAt` instead of hiding it. Verified live: a genuinely-missing device (Apple iPhone X 128GB) still returns `estimatedPrice: 9720` with `referenceStatus: "missing"`.
+- **Strict mode (on):** a genuinely missing device returns `409 { error: "REFERENCE_PRICE_UNAVAILABLE" }` instead of a fabricated quote. Verified live with the same device under `QUOTE_STRICT_REFERENCE_MODE=true`.
+- Devices with *some* reference (even stale) are never blocked by strict mode — only true `missing` is. Verified live.
 
-Three test suites now exist, each protecting a different layer, none redundant with another:
+**The client-side flow (`app/quote/page.tsx`) also now consumes the reference-price system**, via the materialized-view pattern rather than a live per-request call (Step 10 explicitly requires the quote path not synchronously depend on external lookups): `lib/cashify_prices.json` and `server/data/cashify_prices.json` are now both regenerated from the authoritative store by `scripts/reference-pricing/export-cashify-prices.ts`, verified byte-for-byte safe before being promoted (Section 9's ordering-bug fix made this: 1,191/1,191 existing values preserved exactly, 0 regressions, 924 legitimate new entries added, both files now identical - closing the 130-key frontend/backend drift found in the original security audit).
+
+## 12. Business decision — narrowed, not eliminated
+
+The **default** behavior for stale/missing devices is now settled (preserve existing behavior, exposed honestly - see Section 11), so this is no longer "undecided" in the sense of blocking anything. What remains a genuine product decision, not an engineering one:
+
+(a) should `QUOTE_STRICT_REFERENCE_MODE` ever be turned on (and for which devices/conditions)?
+(b) should the *client-side* quote page visibly show a staleness indicator to the user (it currently doesn't - the data feeding it is now honest and governed, but the UI itself wasn't touched, per the explicit "don't redesign the quote page" instruction)?
+
+`lib/cashify_prices.meta.json` (freshness/match-confidence per device) already contains everything needed to implement either, whenever you decide to.
+
+## 13. Testing
+
+Four test suites now exist, each protecting a different layer, none redundant with another:
 
 | Suite | File | Protects | Result |
 |---|---|---|---|
-| A (pre-existing) | `pricing.regression.test.ts` | The pricing formula itself | 27/27 pass, unchanged |
-| B (added last investigation) | `pricing.cashify-comparison.test.ts` | Data completeness/consistency across the catalog | passes, reports 1,023 missing + 19 divergent >15% |
-| C (added this pass) | `pricing.reference-data.test.ts` | Freshness classification, strict matching (incl. both trap cases), validation/anomaly policy, and the Phase-8 failure-preservation guarantee | 26/26 pass |
+| A (pre-existing) | `pricing.regression.test.ts` | The pricing formula itself | **27/27 pass, unchanged** |
+| B (prior pass) | `pricing.cashify-comparison.test.ts` | Data completeness/consistency across the catalog | passes; missing-reference count now 85 (was 1,023) |
+| C (prior pass, extended this pass) | `pricing.reference-data.test.ts` | Freshness classification, strict matching (incl. both trap cases), validation/anomaly policy, Phase-8 failure-preservation, **and the order-independence fix** | **28/28 pass** |
+| D (new this pass) | `pricing.quote-integration.test.ts` | The REAL quote flow actually consumes the repository (not a bypassed path); OPPO Find X9s / OnePlus 15R without hardcoded screenshot values; 5 unrelated devices | **9/9 pass** |
 
-Run all three: `npm run test:pricing && npm run test:pricing:reference && npm run test:pricing:reference-data`.
+Run all four: `npm run test:pricing:all`.
 
-## 13. Files changed/added
+## 14. Files changed/added
 
 ```
-prisma/schema.prisma                                    - +2 models (ReferencePrice, ReferencePriceHistory), target schema only
-lib/referencePricing/types.ts                            - new
-lib/referencePricing/freshnessPolicy.ts                  - new
-lib/referencePricing/matching.ts                         - new
-lib/referencePricing/validation.ts                       - new
-lib/referencePricing/store.ts                            - new
-lib/referencePricing/ingestion.ts                        - new
-lib/referencePricing/sources/legacySnapshotSource.ts      - new
-lib/referencePricing/sources/manualSource.ts              - new
-scripts/reference-pricing/migrate-legacy-snapshots.ts     - new, one-time migration
-scripts/reference-pricing/categorize-missing.ts           - new, Phase 4 report
-scripts/reference-pricing/export-cashify-prices.ts        - new, verification + freshness-metadata export
-scripts/test/pricing.reference-data.test.ts               - new, Suite C
-server/modules/referencePricing/{service,controller,routes}.ts - new, admin API
-server/server.ts                                          - +1 route registration
-tsconfig.server.json                                      - rootDir widened to include lib/referencePricing (type-check only; runtime already worked via tsx)
-package.json                                              - +5 npm scripts
-lib/cashify_prices.json                                   - UNCHANGED (not touched - see Section 11)
-lib/pricingCalculator.ts                                  - UNCHANGED
+prisma/schema.prisma                                       - +2 models (ReferencePrice, ReferencePriceHistory) - MIGRATED to live Postgres
+lib/referencePricing/types.ts                               - new
+lib/referencePricing/freshnessPolicy.ts                     - new
+lib/referencePricing/matching.ts                             - new
+lib/referencePricing/validation.ts                           - new
+lib/referencePricing/store.ts                                - new (file-backed store + BufferedReferencePriceStore)
+lib/referencePricing/postgresStore.ts                        - new: real Postgres-backed repository
+lib/referencePricing/getStore.ts                              - new: the factory every consumer uses (Postgres if DATABASE_URL, else file)
+lib/referencePricing/getBulkRepository.ts                     - new: bulk-script variant (buffers file writes; Postgres used directly)
+lib/referencePricing/ingestion.ts                             - new (+ observedAt/order-independence fix this pass)
+lib/referencePricing/sources/legacySnapshotSource.ts          - new (+ observedAt param)
+lib/referencePricing/sources/manualSource.ts                  - new
+scripts/reference-pricing/migrate-legacy-snapshots.ts         - new, one-time migration (+ concurrency fix this pass)
+scripts/reference-pricing/import-brand-snapshots.ts           - new this pass: legal, automatable ingestion from 17 existing per-brand snapshot files
+scripts/reference-pricing/categorize-missing.ts               - new, Phase 4 report
+scripts/reference-pricing/export-cashify-prices.ts            - new, now promoted to drive the LIVE data files
+scripts/reference-pricing/refresh-all.ts                      - new this pass: single entrypoint for migrate+import+export
+scripts/test/pricing.reference-data.test.ts                   - Suite C, +2 order-independence tests this pass (28 total)
+scripts/test/pricing.quote-integration.test.ts                - new this pass, Suite D
+server/modules/referencePricing/{service,controller,routes}.ts - admin API, now Postgres-backed
+server/modules/quote/service.ts                                - REWRITTEN this pass: now async, resolves reference price from the repository, uses the canonical lib/pricingCalculator.ts instead of a broken local duplicate
+server/modules/quote/controller.ts                             - updated for the async signature + strict-mode 409 response
+server/test_s25_ultra.ts                                       - trivial await fix for the async signature change (dead debug script)
+server/server.ts                                               - +1 route registration
+tsconfig.server.json                                           - rootDir widened to include lib/referencePricing (type-check only)
+package.json                                                   - +10 npm scripts
+lib/cashify_prices.json, server/data/cashify_prices.json      - REGENERATED from the verified store this pass (0 regressions, 924 legitimate additions, now identical to each other - closes the 130-key drift from the original audit)
+lib/pricingCalculator.ts                                       - UNCHANGED
 ```
 
-Data files generated by running the scripts (not hand-edited, reproducible from source): `server/data/reference-prices/store.json`, `lib/cashify_prices.generated.json`, `lib/cashify_prices.meta.json`.
+Data files generated by running the scripts (not hand-edited, reproducible from source): `lib/cashify_prices.generated.json`, `lib/cashify_prices.meta.json`, and (fallback-only path) `server/data/reference-prices/store.json`.
 
-## 14. Production safety notes
+## 15. Production safety notes
 
-- Concurrency within one process: the file store serializes writes via an in-process queue, so concurrent `refreshDevice` calls in one Node process can't interleave a read-modify-write and lose an update (tested).
-- Cross-process/cross-instance concurrency: **not solved by this interim store** — this is exactly what the Postgres migration (transactions, row locking) provides and a local file cannot. Do not run refresh jobs from more than one instance concurrently against the file store.
+- Concurrency, real (Postgres): verified directly - 3 concurrent `create()` calls for the same `deviceKey` correctly yielded exactly 1 success + 2 rejections via the unique constraint.
+- Concurrency, file-store fallback: serializes writes via an in-process queue (tested), but does **not** solve cross-instance concurrency - documented in the class itself. Only relevant when `DATABASE_URL` is absent.
+- Restart safety: verified directly - killed the server process, started a brand-new one, identical quote data returned.
+- The order-independence bug (Section 9) was a real defect found and fixed during this pass, not a hypothetical - it actually altered 486 devices' data before the fix.
 - Corrupt-file handling: a corrupted store file fails loudly (throws) rather than silently behaving as if all data is missing, which could otherwise mask real data loss as "everything just needs re-verification."
 - Idempotency: re-running the migration script is safe — it re-derives the same records from the same source data and overwrites them identically (verified via the export round-trip check).
