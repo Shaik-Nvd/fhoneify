@@ -23,10 +23,10 @@
  */
 import fs from 'fs';
 import path from 'path';
-import { getDefaultReferencePriceStore } from '../../lib/referencePricing/store';
+import { getReferencePriceRepository } from '../../lib/referencePricing/getStore';
 
 async function main() {
-  const store = getDefaultReferencePriceStore();
+  const store = getReferencePriceRepository();
   const records = await store.listAll();
 
   const prices: Record<string, number> = {};

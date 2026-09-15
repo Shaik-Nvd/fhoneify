@@ -22,7 +22,7 @@
 import { execSync } from 'child_process';
 import { SEED_DEVICES } from '../../lib/seed_devices';
 import cashifyPricesRaw from '../../lib/cashify_prices.json';
-import { getDefaultReferencePriceStore } from '../../lib/referencePricing/store';
+import { getBulkRepository } from '../../lib/referencePricing/getBulkRepository';
 import { legacyLookupKey } from '../../lib/referencePricing/matching';
 import { deviceKey } from '../../lib/referencePricing/types';
 import { classifyFreshness } from '../../lib/referencePricing/freshnessPolicy';
@@ -49,8 +49,28 @@ const KNOWN_MORE_PRECISE_DATES: Record<string, string> = {
   [deviceKey({ brand: 'OnePlus', model: 'Oneplus 15R', storage: '12 GB/256 GB' })]: gitFileDate('update_oneplus.js'),
 };
 
+/** Bounded-concurrency map, so this is fast against a network-backed
+ * Postgres store (each device is a couple of real round-trips) without
+ * ever firing thousands of requests at the database at once. Matches the
+ * same "controlled concurrency" requirement ingestion.ts's refreshCatalog
+ * already implements for the live-refresh path. */
+async function mapWithConcurrency<T>(items: T[], concurrency: number, fn: (item: T) => Promise<void>): Promise<void> {
+  let index = 0;
+  async function worker() {
+    while (index < items.length) {
+      const item = items[index++];
+      await fn(item);
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(concurrency, items.length) }, worker));
+}
+
 async function main() {
-  const store = getDefaultReferencePriceStore();
+  // getBulkRepository() picks Postgres (network round-trips per call, so
+  // concurrency matters a lot here) or a buffered in-memory file store
+  // (concurrency is irrelevant there - already fast, and safe either way
+  // since the store's own write-serialization handles it).
+  const store = getBulkRepository();
   const fileDate = gitFileDate('lib/cashify_prices.json');
   console.log(`lib/cashify_prices.json last committed: ${fileDate} (used as the conservative upper-bound freshness date for entries with no more specific evidence)\n`);
 
@@ -58,13 +78,11 @@ async function main() {
   let withoutReference = 0;
   let skippedNoBasePrice = 0;
 
-  for (const device of SEED_DEVICES as any[]) {
-    if (!device.brand || !device.model || !device.storage) continue;
-    if (!device.basePrice) {
-      skippedNoBasePrice++;
-      continue;
-    }
+  const devices = (SEED_DEVICES as any[]).filter((d) => d.brand && d.model && d.storage);
+  skippedNoBasePrice = (SEED_DEVICES as any[]).filter((d) => d.brand && d.model && d.storage && !d.basePrice).length;
 
+  try {
+  await mapWithConcurrency(devices.filter((d) => d.basePrice), 20, async (device) => {
     const identity = { brand: device.brand, model: device.model, storage: device.storage };
     const key = deviceKey(identity);
     const legacyKey = legacyLookupKey(device.model, device.storage);
@@ -123,6 +141,9 @@ async function main() {
       };
       await store.upsert(record);
     }
+  });
+  } finally {
+    store.flush();
   }
 
   console.log(`Migration complete.`);
