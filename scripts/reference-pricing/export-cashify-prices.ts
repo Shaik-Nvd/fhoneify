@@ -46,11 +46,20 @@ async function main() {
     };
   }
 
+  // Sort keys before writing: Postgres's listAll() has no guaranteed row
+  // order, so without this, re-running this script produces a spurious
+  // full-file diff (every key reordered) even when not a single price
+  // actually changed - confirmed while testing this script (0 value
+  // differences, 100% of lines "changed" in a naive diff). Sorting makes
+  // the output deterministic and diffs meaningful.
+  const sortedPrices = Object.fromEntries(Object.keys(prices).sort().map((k) => [k, prices[k]]));
+  const sortedMeta = Object.fromEntries(Object.keys(meta).sort().map((k) => [k, meta[k]]));
+
   const libPath = path.join(process.cwd(), 'lib', 'cashify_prices.generated.json');
   const metaPath = path.join(process.cwd(), 'lib', 'cashify_prices.meta.json');
 
-  fs.writeFileSync(libPath, JSON.stringify(prices, null, 2), 'utf8');
-  fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2), 'utf8');
+  fs.writeFileSync(libPath, JSON.stringify(sortedPrices, null, 2), 'utf8');
+  fs.writeFileSync(metaPath, JSON.stringify(sortedMeta, null, 2), 'utf8');
 
   console.log(`Exported ${Object.keys(prices).length} priced entries to ${libPath}`);
   console.log(`Exported ${Object.keys(meta).length} freshness records to ${metaPath}`);
