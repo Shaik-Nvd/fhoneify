@@ -12,6 +12,10 @@
     "lint": "next lint",
     "test:pricing": "tsx scripts/test/pricing.regression.test.ts",
     "test:pricing:reference": "tsx scripts/test/pricing.cashify-comparison.test.ts",
+    "test:pricing:reference-data": "tsx scripts/test/pricing.reference-data.test.ts",
+    "reference-prices:migrate": "tsx scripts/reference-pricing/migrate-legacy-snapshots.ts",
+    "reference-prices:categorize-missing": "tsx scripts/reference-pricing/categorize-missing.ts",
+    "reference-prices:export": "tsx scripts/reference-pricing/export-cashify-prices.ts",
     "setup-cashify": "node scripts/setup-cashify.js",
     "postinstall": "npx playwright install chromium"
   },
