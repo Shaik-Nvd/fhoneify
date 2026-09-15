@@ -99,6 +99,11 @@ export async function refreshDevice(
       // defaults to "now", because for a live source the fetch() call
       // genuinely IS the observation.
       const observedAt = observation.observedAt ?? now;
+      const observedMs = Date.parse(observedAt);
+      if (!Number.isFinite(observedMs)) {
+        return await recordFailure(repo, existing, device, key, now, `rejected: unparseable observedAt "${observedAt}"`);
+      }
+      const existingMs = existing?.lastVerifiedAt ? Date.parse(existing.lastVerifiedAt) : NaN;
 
       // CORRECTNESS RULE: never let an older observation overwrite a
       // newer one. Without this, re-running two historical-replay sources
@@ -108,14 +113,35 @@ export async function refreshDevice(
       // exact opposite of what this system exists to prevent. The older
       // observation is still real data, so it's recorded in history, just
       // not promoted to the current verified value.
-      if (existing?.lastVerifiedAt && observedAt < existing.lastVerifiedAt) {
+      //
+      // Compared as instants, never as strings: Postgres returns
+      // "2026-07-08T20:39:20.000Z" for a snapshot stamped
+      // "2026-07-09T02:09:20+05:30" - the same moment, but the later string.
+      //
+      // At the SAME instant (two sources replaying one dated file), an
+      // observation without a source URL must not displace one that has
+      // it - otherwise re-runs silently strip provenance.
+      const isOlder = Number.isFinite(existingMs) && observedMs < existingMs;
+      const wouldDropProvenance =
+        Number.isFinite(existingMs) && observedMs === existingMs && !!existing?.sourceUrl && !observation.sourceUrl;
+      if (existing && (isOlder || wouldDropProvenance)) {
         await repo.appendHistory(key, {
           price: observation.price,
           recordedAt: observedAt,
           source: source.name,
-          note: `older observation (${observedAt}) than the current verified value (${existing.lastVerifiedAt}) from "${existing.source}" - recorded in history but NOT promoted to current`,
+          note: isOlder
+            ? `older observation (${observedAt}) than the current verified value (${existing.lastVerifiedAt}) from "${existing.source}" - recorded in history but NOT promoted to current`
+            : `same-instant observation without a source URL - current value from "${existing.source}" kept for its provenance`,
         });
-        return { deviceKey: key, accepted: true, reason: 'observation older than current verified value; kept existing as current', previousPrice: existing.currentPrice, newPrice: existing.currentPrice };
+        return {
+          deviceKey: key,
+          accepted: true,
+          reason: isOlder
+            ? 'observation older than current verified value; kept existing as current'
+            : 'same-instant observation lacks a source URL; kept existing as current',
+          previousPrice: existing.currentPrice,
+          newPrice: existing.currentPrice,
+        };
       }
 
       const record: ReferencePriceRecord = {

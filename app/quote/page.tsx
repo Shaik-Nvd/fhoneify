@@ -11,8 +11,8 @@ import { useHydratedAuth } from '@/lib/useHydratedAuth';
 import { BRAND_LOGOS, getBrandLogoStyle, sortBrands } from '@/lib/brands';
 import config from '@/lib/pricingConfig.json';
 import { SEED_DEVICES } from '@/lib/seed_devices';
-import { calculateFhoneifyPrice, DiagnosticsType } from '@/lib/pricingCalculator';
-import cashifyPrices from '@/lib/cashify_prices.json';
+import { DiagnosticsType } from '@/lib/pricingCalculator';
+import { computeStartingPrice, priceDevice, resolveBaseMarketPrice } from '@/lib/pricing/engine';
 
 export interface Device {
   id: string;
@@ -328,6 +328,10 @@ export default function QuotePage() {
   const [basePrice, setBasePrice] = useState<number | null>(null);
   const [rawBasePrice, setRawBasePrice] = useState<number | null>(null);
   const [finalPrice, setFinalPrice] = useState<number | null>(null);
+  // Signed, price-locked token from POST /api/quote/price; sent with the lead
+  // so the server can honour exactly the price the customer was shown.
+  const [quoteToken, setQuoteToken] = useState<string | null>(null);
+  const priceRequestIdRef = useRef(0);
 
   useEffect(() => {
     if (step === 11) {
@@ -994,43 +998,18 @@ export default function QuotePage() {
     if (!device) return;
 
     try {
-      // INSTANT CALCULATION INSTEAD OF API CALL TO AVOID 40S DELAY
-      let lookupKey = `${device.model}-${device.storage}`.toLowerCase().replace(/[^a-z0-9]/g, '-');
-      if (lookupKey.includes('iphone-air')) {
-        lookupKey = lookupKey.replace('iphone-air', 'iphone-17-air');
+      // INSTANT CALCULATION INSTEAD OF API CALL TO AVOID 40S DELAY. Same
+      // base-price resolution the server uses (lib/pricing/engine.ts).
+      const base = resolveBaseMarketPrice({ device: device as any });
+      if (!base) {
+        setError('Pricing is currently unavailable for this device.');
+        return;
       }
-      const baseMarketPrice = (cashifyPrices as Record<string, number>)[lookupKey] || (device as any).basePrice || 1000;
-      
-      const perfectDiagnostics: DiagnosticsType = {
-        calls: true,
-        touch: true,
-        originalScreen: true,
-        defects: [],
-        screenCondition: null,
-        screenSpots: null,
-        screenLines: null,
-        screenDiscoloration: null,
-        bodyScratches: 'No scratches',
-        bodyDents: 'No dents',
-        bodyPanel: null,
-        bodyBent: null,
-        hardware: [],
-        accessories: ['box', 'bill', 'charger', 'spen'],
-        warranty: true,
-        validBill: true,
-        eSim: null,
-        mobileAge: 'Below 3 months'
-      };
 
-      const cashifyMax = calculateFhoneifyPrice(selectedBrand, selectedModel, baseMarketPrice, perfectDiagnostics).cashifyBasePrice;
-      let upliftPercent = 1.04;
-      if (baseMarketPrice <= 20000) upliftPercent = 1.08;
-      else if (baseMarketPrice <= 50000) upliftPercent = 1.06;
-      const realStartPrice = Math.round(cashifyMax * upliftPercent);
-      
-      // The "Get Upto" price displayed to the user follows the algorithm strictly
-      setBasePrice(realStartPrice);
-      setRawBasePrice(baseMarketPrice);
+      // "Get Upto" = the best final price this device can reach, with the
+      // engine's own capped uplift - never more than a perfect quote pays.
+      setBasePrice(computeStartingPrice(selectedBrand, selectedModel, base.price));
+      setRawBasePrice(base.price);
       navigateToState(selectedBrand, selectedModel, s, 'storage', 2);
     } catch {
       setError('Failed to fetch quote.');
@@ -1213,16 +1192,31 @@ export default function QuotePage() {
 
   // Android model params moved to lib/pricingCalculator.ts
 
-    const calculated = calculateFhoneifyPrice(
-      selectedBrand,
-      selectedModel,
-      rawBasePrice || internal_base,
-      diag as DiagnosticsType
-      ).fhoneifyPrice;
-    
-    console.log('[DEBUG] Final Price Calculated:', calculated, 'Diag:', diag);
-      
-    setFinalPrice(calculated);
+    // Instant local estimate first, so the price screen never waits on the
+    // network...
+    try {
+      setFinalPrice(priceDevice(selectedBrand, selectedModel, rawBasePrice || internal_base, diag as DiagnosticsType).fhoneifyPrice);
+    } catch (err) {
+      console.error('Local price estimate failed', err);
+    }
+    setQuoteToken(null);
+
+    // ...then the authoritative, signed price replaces it. Only the latest
+    // request may update state, so rapid re-answers can't show a stale price.
+    const requestId = ++priceRequestIdRef.current;
+    api.post('/api/quote/price', {
+      brand: selectedBrand,
+      model: selectedModel,
+      storage: selectedStorage,
+      diagnostics: diag,
+    }).then((res) => {
+      if (requestId !== priceRequestIdRef.current || !res.data?.success) return;
+      setFinalPrice(res.data.data.fhoneifyPrice);
+      setQuoteToken(res.data.data.quoteToken);
+    }).catch((err) => {
+      // The lead endpoint re-prices server-side anyway; keep the estimate.
+      console.warn('Authoritative price unavailable; showing local estimate', err?.response?.data?.error || err?.message);
+    });
   };
 
   const handleSendOtp = async (e: React.FormEvent) => {
@@ -3009,39 +3003,30 @@ export default function QuotePage() {
           <form onSubmit={async (e) => {
             e.preventDefault();
             try {
-              const token = localStorage.getItem('accessToken');
-              const headers: any = { 'Content-Type': 'application/json' };
-              if (token) headers['Authorization'] = `Bearer ${token}`;
-              
-              const res = await fetch('/api/quote/leads', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                  brand: selectedBrand,
-                  model: selectedModel,
-                  storage: selectedStorage,
-                  quotedPrice: Number(finalPrice),
-                  name: userName || '',
-                  phone: userPhone || '',
-                  pickupDate: pickupDate || '',
-                  pickupTime: pickupTime || '',
-                  address: address || '',
-                  pincode: pincode || '',
-                  city: city || '',
-                  answers: diagnostics
-                })
+              // Through the API client (NEXT_PUBLIC_API_URL + auth header). The
+              // server stores its own verified price, not quotedPrice.
+              await api.post('/api/quote/leads', {
+                brand: selectedBrand,
+                model: selectedModel,
+                storage: selectedStorage,
+                quotedPrice: Number(finalPrice),
+                quoteToken: quoteToken || undefined,
+                name: userName || '',
+                phone: userPhone || '',
+                pickupDate: pickupDate || '',
+                pickupTime: pickupTime || '',
+                address: address || '',
+                pincode: pincode || '',
+                city: city || '',
+                answers: diagnostics
               });
-              
-              if (!res.ok) {
-                const data = await res.json().catch(() => ({}));
-                throw new Error(data.error || data.message || 'Failed to schedule pickup');
-              }
-              
+
               alert("Scheduled for Pickup! Our executive will contact you shortly.");
               router.push('/');
             } catch (err: any) {
               console.error("Failed to schedule pickup", err);
-              alert("Something went wrong: " + (err.message || "Please try again."));
+              const message = err?.response?.data?.error || err?.message;
+              alert("Something went wrong: " + (message || "Please try again."));
             }
           }}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">

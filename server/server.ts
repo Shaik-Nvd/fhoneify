@@ -65,6 +65,11 @@ app.use(cors({
 }));
 app.use(express.json());
 
+// Rate limits key on req.ip. Behind Render's proxy, req.ip is the proxy's
+// address unless Express trusts it - every customer would then share one
+// limit bucket. TRUST_PROXY_HOPS is the number of proxies in front of the app.
+app.set('trust proxy', Number(process.env.TRUST_PROXY_HOPS ?? (config.IS_PRODUCTION ? 1 : 0)));
+
 // Rate limiting. This is in-process only (per server instance) - once there
 // are multiple instances behind a load balancer this needs to move to a
 // Redis-backed limiter (see PRODUCTION_READINESS_AUDIT.md P1-4).
