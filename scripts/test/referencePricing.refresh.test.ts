@@ -708,6 +708,72 @@ async function run() {
     assert.equal(fs.existsSync(lockPath), false, 'the lock must be released once the run has fully stopped');
   });
 
+  await test('19d. CASHIFY BLOCKED / SESSION EXPIRED: the run stops safely after a failure streak, prices preserved', async () => {
+    const store = freshStore();
+    const devices: DeviceIdentity[] = Array.from({ length: 60 }, (_, i) => ({
+      brand: 'Oppo', model: `OPPO Blocked ${i}`, storage: '8 GB/128 GB',
+    }));
+    for (const d of devices.slice(0, 10)) await seedPrice(store, d, 20000);
+
+    let fetches = 0;
+    const blocked = createCashifyPriceSource({
+      fetchSnapshot: async () => {
+        fetches++;
+        throw new Error('Cashify page rendered no device heading (possible bot challenge)');
+      },
+    });
+
+    const result = await runRefreshJob({
+      repo: store,
+      devices,
+      source: blocked,
+      trigger: 'test',
+      options: { concurrency: 1, maxRetries: 0, retryDelayMs: 1, maxConsecutiveSourceFailures: 5 },
+      log: () => {},
+    });
+
+    assert.equal(result.report!.status, 'FAILED');
+    assert.match(result.report!.error ?? '', /consecutive source failures/);
+    assert.equal(fetches, 5, 'it must stop after the streak, not scrape the remaining 55 pages');
+    assert.equal(result.report!.notAttempted, 55);
+    for (const d of devices.slice(0, 5)) {
+      const r = await store.get(deviceKey(d));
+      assert.equal(r!.currentPrice, 20000, 'failed devices keep their previous price');
+      assert.ok(r!.lastVerifiedAt, 'and their previous lastVerifiedAt');
+    }
+    for (const d of devices.slice(5, 10)) {
+      const r = await store.get(deviceKey(d));
+      assert.equal(r!.consecutiveFailures, 0, 'devices never reached are not marked failed at all');
+    }
+  });
+
+  await test('19e. scattered failures, rejections and not-listed devices do NOT trip the breaker', async () => {
+    const store = freshStore();
+    const devices: DeviceIdentity[] = Array.from({ length: 30 }, (_, i) => ({
+      brand: 'Oppo', model: `OPPO Mixed ${i}`, storage: '8 GB/128 GB',
+    }));
+    const source = createCashifyPriceSource({
+      fetchSnapshot: async (d) => {
+        const i = Number(d.model.split(' ').pop());
+        if (i % 3 === 0) throw new Error('timeout'); // transport failure
+        if (i % 3 === 1) return pageFor(d, '₹10,000', { deviceName: 'OPPO Something Else' }); // rejection
+        return null; // not listed on Cashify
+      },
+    });
+
+    const result = await runRefreshJob({
+      repo: store,
+      devices,
+      source,
+      trigger: 'test',
+      options: { concurrency: 1, maxRetries: 0, retryDelayMs: 1, maxConsecutiveSourceFailures: 3 },
+      log: () => {},
+    });
+
+    assert.equal(result.report!.error, undefined, 'no streak of 3 transport failures ever occurred');
+    assert.equal(result.report!.notAttempted, 0, 'every device must be attempted');
+  });
+
   await test('19c. a failing RUN RECORDER cannot leak the lock or break the refresh', async () => {
     const store = freshStore();
     const lockPath = path.join(TMP_ROOT, `lock-recorder-${storeCounter++}.lock`);

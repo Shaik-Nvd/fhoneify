@@ -69,12 +69,17 @@ export interface RefreshOptions {
   /** Retries per device on a source error before recording a failure. */
   maxRetries?: number;
   retryDelayMs?: number;
+  /** Circuit breaker for catalog runs: stop after this many consecutive
+   * source transport failures (see DEFAULT_MAX_CONSECUTIVE_SOURCE_FAILURES).
+   * 0 disables. Ignored by single-device refreshDevice(). */
+  maxConsecutiveSourceFailures?: number;
 }
 
 const DEFAULT_OPTIONS: Required<RefreshOptions> = {
   concurrency: 5,
   maxRetries: 2,
   retryDelayMs: 200,
+  maxConsecutiveSourceFailures: 0, // resolved per catalog run from DEFAULT_MAX_CONSECUTIVE_SOURCE_FAILURES
 };
 
 function sleep(ms: number) {
@@ -282,6 +287,32 @@ export interface CatalogRefreshResult {
  * turns one clear failure into thousands of identical ones. */
 export const MAX_CONSECUTIVE_INFRASTRUCTURE_ERRORS = 10;
 
+/**
+ * After this many CONSECUTIVE source transport failures the run stops. A
+ * transport failure is a device the source could not load at all even after
+ * retries (timeout, block, challenge page, dead session) - NOT a rejection
+ * (page loaded, wrong device/variant/price) and NOT "device not listed".
+ *
+ * Individual failures are normal on a 2,200-page run and never stop it. A long
+ * unbroken streak is not individual: it means Cashify is blocking the scraper
+ * or the session has expired, and carrying on would only mark hundreds of
+ * devices refresh_failed and burn hours for no data. Prices are preserved
+ * either way; this just stops early and says why.
+ */
+export const DEFAULT_MAX_CONSECUTIVE_SOURCE_FAILURES = Number(
+  process.env.REFRESH_MAX_CONSECUTIVE_SOURCE_FAILURES ?? 25
+);
+
+/** A failed outcome that means "could not reach/load the source", as opposed
+ * to a reasoned rejection or a genuine not-found. */
+export function isSourceTransportFailure(outcome: IngestOutcome): boolean {
+  if (outcome.accepted || outcome.infrastructureError) return false;
+  const reason = outcome.reason ?? '';
+  if (reason.startsWith('rejected')) return false;
+  if (reason.includes('returned no match')) return false;
+  return true;
+}
+
 /** Refreshes many devices against one source with bounded concurrency. */
 export async function refreshCatalog(
   repo: ReferencePriceRepository,
@@ -307,6 +338,9 @@ export async function refreshCatalogWithControls(
   let index = 0;
   let stopped = false;
   let consecutiveInfraErrors = 0;
+  let consecutiveSourceFailures = 0;
+  let lastSourceFailure = '';
+  const maxSourceFailures = options.maxConsecutiveSourceFailures ?? DEFAULT_MAX_CONSECUTIVE_SOURCE_FAILURES;
   let abortedReason: string | undefined;
 
   async function worker() {
@@ -343,6 +377,18 @@ export async function refreshCatalogWithControls(
             `stopped after ${consecutiveInfraErrors} consecutive repository errors - ` +
             `the reference-price store appears to be unavailable (last: ${err?.message ?? err})`;
         }
+      }
+
+      if (isSourceTransportFailure(outcome)) {
+        consecutiveSourceFailures++;
+        lastSourceFailure = outcome.reason ?? '';
+        if (maxSourceFailures > 0 && consecutiveSourceFailures >= maxSourceFailures && !abortedReason) {
+          abortedReason =
+            `stopped after ${consecutiveSourceFailures} consecutive source failures - Cashify appears to be ` +
+            `blocking the scraper or the session has expired (last: ${lastSourceFailure.split('\n')[0].slice(0, 200)})`;
+        }
+      } else if (!outcome.infrastructureError) {
+        consecutiveSourceFailures = 0;
       }
 
       results.push(outcome);
