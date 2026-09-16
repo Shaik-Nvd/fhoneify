@@ -1,0 +1,586 @@
+[
+    {
+        "model": "Sell Old Apple iPhone 12 (4 GB/256 GB)",
+        "price": 18600
+    },
+    {
+        "model": "Sell Old Apple iPhone 11 (4 GB/256 GB)",
+        "price": 14520
+    },
+    {
+        "model": "Sell Old Samsung Galaxy Note 20 (8 GB/256 GB)",
+        "price": 8990
+    },
+    {
+        "model": "Sell Old OnePlus 9 Pro 5G (8 GB/128 GB)",
+        "price": 11840
+    },
+    {
+        "model": "Sell Old OnePlus 9 Pro 5G (12 GB/256 GB)",
+        "price": 12750
+    },
+    {
+        "model": "Sell Old OnePlus Nord 2 5G (8 GB/128 GB)",
+        "price": 9220
+    },
+    {
+        "model": "Sell Old OnePlus Nord CE 2 Lite 5G (6 GB/128 GB)",
+        "price": 7720
+    },
+    {
+        "model": "Sell Old OnePlus Nord CE 3 Lite 5G (8 GB/128 GB)",
+        "price": 11910
+    },
+    {
+        "model": "Xiaomi Redmi Note 4",
+        "price": "Not found"
+    },
+    {
+        "model": "Sell Old Apple iPhone 6 (1 GB/16 GB)",
+        "price": 1570
+    },
+    {
+        "model": "Sell Old Apple iPhone 6 (1 GB/32 GB)",
+        "price": 1790
+    },
+    {
+        "model": "Sell Old Apple iPhone 6 (1 GB/64 GB)",
+        "price": 2020
+    },
+    {
+        "model": "Sell Old Apple iPhone 6 (1 GB/128 GB)",
+        "price": 2220
+    },
+    {
+        "model": "Sell Old Apple iPhone 6 Plus (1 GB/16 GB)",
+        "price": 2100
+    },
+    {
+        "model": "Sell Old Apple iPhone 6 Plus (1 GB/64 GB)",
+        "price": 2400
+    },
+    {
+        "model": "Sell Old Apple iPhone 6 Plus (1 GB/128 GB)",
+        "price": 2660
+    },
+    {
+        "model": "Sell Old Apple iPhone 6S (2 GB/16 GB)",
+        "price": 2020
+    },
+    {
+        "model": "Sell Old Apple iPhone 6S (2 GB/32 GB)",
+        "price": 2290
+    },
+    {
+        "model": "Sell Old Apple iPhone 6S (2 GB/64 GB)",
+        "price": 2590
+    },
+    {
+        "model": "Sell Old Apple iPhone 6S (2 GB/128 GB)",
+        "price": 2740
+    },
+    {
+        "model": "Sell Old Apple iPhone 6S Plus (2 GB/16 GB)",
+        "price": 2290
+    },
+    {
+        "model": "Sell Old Apple iPhone 6S Plus (2 GB/32 GB)",
+        "price": 2850
+    },
+    {
+        "model": "Sell Old Apple iPhone 6S Plus (2 GB/64 GB)",
+        "price": 3260
+    },
+    {
+        "model": "Sell Old Apple iPhone 6S Plus (2 GB/128 GB)",
+        "price": 3670
+    },
+    {
+        "model": "Sell Old Apple iPhone SE 1st Generation (2 GB/16 GB)",
+        "price": 1680
+    },
+    {
+        "model": "Sell Old Apple iPhone SE 1st Generation (2 GB/32 GB)",
+        "price": 1950
+    },
+    {
+        "model": "Sell Old Apple iPhone SE 1st Generation (2 GB/64 GB)",
+        "price": 2100
+    },
+    {
+        "model": "Sell Old Apple iPhone SE 1st Generation (2 GB/128 GB)",
+        "price": 2170
+    },
+    {
+        "model": "Sell Old Apple iPhone 7 (2 GB/32 GB)",
+        "price": 4090
+    },
+    {
+        "model": "Sell Old Apple iPhone 7 (2 GB/128 GB)",
+        "price": 4420
+    },
+    {
+        "model": "Sell Old Apple iPhone 7 (2 GB/256 GB)",
+        "price": 4690
+    },
+    {
+        "model": "Sell Old Apple iPhone 7 Plus (3 GB/32 GB)",
+        "price": 4870
+    },
+    {
+        "model": "Sell Old Apple iPhone 7 Plus (3 GB/128 GB)",
+        "price": 5400
+    },
+    {
+        "model": "Sell Old Apple iPhone 8 (2 GB/64 GB)",
+        "price": 5320
+    },
+    {
+        "model": "Sell Old Apple iPhone 8 (2 GB/128 GB)",
+        "price": 5880
+    },
+    {
+        "model": "Sell Old Apple iPhone 8 (2 GB/256 GB)",
+        "price": 6180
+    },
+    {
+        "model": "Sell Old Apple iPhone 8 Plus (3 GB/64 GB)",
+        "price": 6480
+    },
+    {
+        "model": "Sell Old Apple iPhone 8 Plus (3 GB/128 GB)",
+        "price": 6970
+    },
+    {
+        "model": "Sell Old Apple iPhone 8 Plus (3 GB/256 GB)",
+        "price": 7490
+    },
+    {
+        "model": "Sell Old Apple iPhone X (3 GB/64 GB)",
+        "price": 9310
+    },
+    {
+        "model": "Sell Old Apple iPhone X (3 GB/256 GB)",
+        "price": 10000
+    },
+    {
+        "model": "Sell Old Apple iPhone XR (3 GB/64 GB)",
+        "price": 9790
+    },
+    {
+        "model": "Sell Old Apple iPhone XR (3 GB/128 GB)",
+        "price": 10680
+    },
+    {
+        "model": "Sell Old Apple iPhone XR (3 GB/256 GB)",
+        "price": 11000
+    },
+    {
+        "model": "Sell Old Apple iPhone XS (4 GB/64 GB)",
+        "price": 10370
+    },
+    {
+        "model": "Sell Old Apple iPhone XS (4 GB/256 GB)",
+        "price": 11690
+    },
+    {
+        "model": "Sell Old Apple iPhone XS (4 GB/512 GB)",
+        "price": 11810
+    },
+    {
+        "model": "Sell Old Apple iPhone XS Max (4 GB/64 GB)",
+        "price": 11660
+    },
+    {
+        "model": "Sell Old Apple iPhone XS Max (4 GB/256 GB)",
+        "price": 12590
+    },
+    {
+        "model": "Sell Old Apple iPhone XS Max (4 GB/512 GB)",
+        "price": 13270
+    },
+    {
+        "model": "Sell Old Apple iPhone 11 Pro (4 GB/64 GB)",
+        "price": 14590
+    },
+    {
+        "model": "Sell Old Apple iPhone 11 Pro (4 GB/256 GB)",
+        "price": 16740
+    },
+    {
+        "model": "Sell Old Apple iPhone 11 Pro (4 GB/512 GB)",
+        "price": 17750
+    },
+    {
+        "model": "Sell Old Apple iPhone 11 Pro Max (4 GB/64 GB)",
+        "price": 16810
+    },
+    {
+        "model": "Sell Old Apple iPhone 11 Pro Max (4 GB/256 GB)",
+        "price": 18250
+    },
+    {
+        "model": "Sell Old Apple iPhone 11 Pro Max (4 GB/512 GB)",
+        "price": 19100
+    },
+    {
+        "model": "Sell Old Apple iPhone SE 2020 (3 GB/64 GB)",
+        "price": 7340
+    },
+    {
+        "model": "Sell Old Apple iPhone SE 2020 (3 GB/128 GB)",
+        "price": 7690
+    },
+    {
+        "model": "Sell Old Apple iPhone SE 2020 (3 GB/256 GB)",
+        "price": 7930
+    },
+    {
+        "model": "Sell Old Apple iPhone 12 Mini (4 GB/64 GB)",
+        "price": 14060
+    },
+    {
+        "model": "Sell Old Apple iPhone 12 Mini (4 GB/128 GB)",
+        "price": 15720
+    },
+    {
+        "model": "Sell Old Apple iPhone 12 Mini (4 GB/256 GB)",
+        "price": 16440
+    },
+    {
+        "model": "Sell Old Apple iPhone 12 Pro (6 GB/128 GB)",
+        "price": 22560
+    },
+    {
+        "model": "Sell Old Apple iPhone 12 Pro (6 GB/256 GB)",
+        "price": 24140
+    },
+    {
+        "model": "Sell Old Apple iPhone 12 Pro (6 GB/512 GB)",
+        "price": 25760
+    },
+    {
+        "model": "Sell Old Apple iPhone 12 Pro Max (6 GB/128 GB)",
+        "price": 24020
+    },
+    {
+        "model": "Sell Old Apple iPhone 12 Pro Max (6 GB/256 GB)",
+        "price": 25350
+    },
+    {
+        "model": "Sell Old Apple iPhone 12 Pro Max (6 GB/512 GB)",
+        "price": 27130
+    },
+    {
+        "model": "Sell Old Apple iPhone 13 (4 GB/256 GB)",
+        "price": 24260
+    },
+    {
+        "model": "Sell Old Apple iPhone 13 (4 GB/512 GB)",
+        "price": 24900
+    },
+    {
+        "model": "Sell Old Apple iPhone 13 Mini (4 GB/128 GB)",
+        "price": 20860
+    },
+    {
+        "model": "Sell Old Apple iPhone 13 Mini (4 GB/256 GB)",
+        "price": 21640
+    },
+    {
+        "model": "Sell Old Apple iPhone 13 Mini (4 GB/512 GB)",
+        "price": 22210
+    },
+    {
+        "model": "Sell Old Apple iPhone 13 Pro (6 GB/256 GB)",
+        "price": 33300
+    },
+    {
+        "model": "Sell Old Apple iPhone 13 Pro (6 GB/512 GB)",
+        "price": 34800
+    },
+    {
+        "model": "Sell Old Apple iPhone 13 Pro (6 GB/1 TB)",
+        "price": 36060
+    },
+    {
+        "model": "Sell Old Apple iPhone 13 Pro Max (6 GB/128 GB)",
+        "price": 32970
+    },
+    {
+        "model": "Sell Old Apple iPhone 13 Pro Max (6 GB/256 GB)",
+        "price": 34430
+    },
+    {
+        "model": "Sell Old Apple iPhone 13 Pro Max (6 GB/512 GB)",
+        "price": 37190
+    },
+    {
+        "model": "Sell Old Apple iPhone 13 Pro Max (6 GB/1 TB)",
+        "price": 38640
+    },
+    {
+        "model": "Sell Old Apple iPhone SE 2022 (4 GB/64 GB)",
+        "price": 11470
+    },
+    {
+        "model": "Sell Old Apple iPhone SE 2022 (4 GB/128 GB)",
+        "price": 11870
+    },
+    {
+        "model": "Sell Old Apple iPhone SE 2022 (4 GB/256 GB)",
+        "price": 12270
+    },
+    {
+        "model": "Sell Old Apple iPhone 14 (6 GB/256 GB)",
+        "price": 27340
+    },
+    {
+        "model": "Sell Old Apple iPhone 14 (6 GB/512 GB)",
+        "price": 27860
+    },
+    {
+        "model": "Sell Old Apple iPhone 14 Pro (6 GB/256 GB)",
+        "price": 41960
+    },
+    {
+        "model": "Sell Old Apple iPhone 14 Pro (6 GB/512 GB)",
+        "price": 44070
+    },
+    {
+        "model": "Sell Old Apple iPhone 14 Pro (6 GB/1 TB)",
+        "price": 44800
+    },
+    {
+        "model": "Sell Old Apple iPhone 14 Pro Max (6 GB/128 GB)",
+        "price": 41430
+    },
+    {
+        "model": "Sell Old Apple iPhone 14 Pro Max (6 GB/256 GB)",
+        "price": 43460
+    },
+    {
+        "model": "Sell Old Apple iPhone 14 Pro Max (6 GB/512 GB)",
+        "price": 45800
+    },
+    {
+        "model": "Sell Old Apple iPhone 14 Pro Max (6 GB/1 TB)",
+        "price": 47510
+    },
+    {
+        "model": "Sell Old Apple iPhone 14 Plus (6 GB/128 GB)",
+        "price": 27370
+    },
+    {
+        "model": "Sell Old Apple iPhone 14 Plus (6 GB/256 GB)",
+        "price": 29020
+    },
+    {
+        "model": "Sell Old Apple iPhone 14 Plus (6 GB/512 GB)",
+        "price": 30140
+    },
+    {
+        "model": "Sell Old Apple iPhone 15 (6 GB/256 GB)",
+        "price": 42320
+    },
+    {
+        "model": "Sell Old Apple iPhone 15 (6 GB/512 GB)",
+        "price": 45280
+    },
+    {
+        "model": "Sell Old Apple iPhone 15 Pro (8 GB/128 GB)",
+        "price": 59230
+    },
+    {
+        "model": "Sell Old Apple iPhone 15 Pro (8 GB/256 GB)",
+        "price": 62500
+    },
+    {
+        "model": "Sell Old Apple iPhone 15 Pro (8 GB/512 GB)",
+        "price": 66050
+    },
+    {
+        "model": "Sell Old Apple iPhone 15 Pro (8 GB/1 TB)",
+        "price": 68260
+    },
+    {
+        "model": "Sell Old Apple iPhone 15 Pro Max (8 GB/256 GB)",
+        "price": 67490
+    },
+    {
+        "model": "Sell Old Apple iPhone 15 Pro Max (8 GB/512 GB)",
+        "price": 70370
+    },
+    {
+        "model": "Sell Old Apple iPhone 15 Pro Max (8 GB/1 TB)",
+        "price": 76420
+    },
+    {
+        "model": "Sell Old Apple iPhone 15 Plus (6 GB/128 GB)",
+        "price": 42890
+    },
+    {
+        "model": "Sell Old Apple iPhone 15 Plus (6 GB/256 GB)",
+        "price": 44700
+    },
+    {
+        "model": "Sell Old Apple iPhone 15 Plus (6 GB/512 GB)",
+        "price": 47550
+    },
+    {
+        "model": "Sell Old Apple iPhone 16 (8 GB/256 GB)",
+        "price": 51360
+    },
+    {
+        "model": "Sell Old Apple iPhone 16 (8 GB/512 GB)",
+        "price": 51840
+    },
+    {
+        "model": "Sell Old Apple iPhone 16 Plus (8 GB/128 GB)",
+        "price": 50780
+    },
+    {
+        "model": "Sell Old Apple iPhone 16 Plus (8 GB/256 GB)",
+        "price": 50980
+    },
+    {
+        "model": "Sell Old Apple iPhone 16 Plus (8 GB/512 GB)",
+        "price": 51840
+    },
+    {
+        "model": "Sell Old Apple iPhone 16 Pro (8 GB/128 GB)",
+        "price": 70810
+    },
+    {
+        "model": "Sell Old Apple iPhone 16 Pro (8 GB/256 GB)",
+        "price": 75270
+    },
+    {
+        "model": "Sell Old Apple iPhone 16 Pro (8 GB/512 GB)",
+        "price": 77500
+    },
+    {
+        "model": "Sell Old Apple iPhone 16 Pro (8 GB/1 TB)",
+        "price": 78380
+    },
+    {
+        "model": "Sell Old Apple iPhone 16 Pro Max (8 GB/256 GB)",
+        "price": 82740
+    },
+    {
+        "model": "Sell Old Apple iPhone 16 Pro Max (8 GB/512 GB)",
+        "price": 84680
+    },
+    {
+        "model": "Sell Old Apple iPhone 16 Pro Max (8 GB/1 TB)",
+        "price": 89530
+    },
+    {
+        "model": "Sell Old Apple iPhone 16e (8 GB/128 GB)",
+        "price": 34530
+    },
+    {
+        "model": "Sell Old Apple iPhone 16e (8 GB/256 GB)",
+        "price": 36180
+    },
+    {
+        "model": "Sell Old Apple iPhone 16e (8 GB/512 GB)",
+        "price": 39190
+    },
+    {
+        "model": "Sell Old Apple iPhone 17 (8 GB/256 GB)",
+        "price": 56900
+    },
+    {
+        "model": "Sell Old Apple iPhone 17 (8 GB/512 GB)",
+        "price": 63900
+    },
+    {
+        "model": "Sell Old Apple iPhone Air (12 GB/256 GB)",
+        "price": 66400
+    },
+    {
+        "model": "Sell Old Apple iPhone Air (12 GB/512 GB)",
+        "price": 75300
+    },
+    {
+        "model": "Sell Old Apple iPhone Air (12 GB/1 TB)",
+        "price": 85200
+    },
+    {
+        "model": "Sell Old Apple iPhone 17 Pro (12 GB/256 GB)",
+        "price": 97300
+    },
+    {
+        "model": "Sell Old Apple iPhone 17 Pro (12 GB/512 GB)",
+        "price": 105000
+    },
+    {
+        "model": "Sell Old Apple iPhone 17 Pro (12 GB/1 TB)",
+        "price": 109000
+    },
+    {
+        "model": "Sell Old Apple iPhone 17 Pro Max (12 GB/256 GB)",
+        "price": 106000
+    },
+    {
+        "model": "Sell Old Apple iPhone 17 Pro Max (12 GB/512 GB)",
+        "price": 114500
+    },
+    {
+        "model": "Sell Old Apple iPhone 17 Pro Max (12 GB/1 TB)",
+        "price": 117200
+    },
+    {
+        "model": "Sell Old Apple iPhone 17 Pro Max (12 GB/2 TB)",
+        "price": 123000
+    },
+    {
+        "model": "Sell Old Apple iPhone 17e (8 GB/256 GB)",
+        "price": 41800
+    },
+    {
+        "model": "Sell Old Apple iPhone 17e (8 GB/512 GB)",
+        "price": 51800
+    },
+    {
+        "model": "Sell Old Apple iPhone 13 (4 GB/128 GB)",
+        "price": 23310
+    },
+    {
+        "model": "Sell Old Apple iPhone 15 (6 GB/128 GB)",
+        "price": 39660
+    },
+    {
+        "model": "Sell Old Apple iPhone 14 Pro (6 GB/128 GB)",
+        "price": 39530
+    },
+    {
+        "model": "Sell Old Apple iPhone 11 (4 GB/64 GB)",
+        "price": 12440
+    },
+    {
+        "model": "Sell Old Apple iPhone 14 (6 GB/128 GB)",
+        "price": 25760
+    },
+    {
+        "model": "Sell Old Apple iPhone 12 (4 GB/128 GB)",
+        "price": 17230
+    },
+    {
+        "model": "Sell Old Apple iPhone 12 (4 GB/64 GB)",
+        "price": 16150
+    },
+    {
+        "model": "Sell Old Apple iPhone 13 Pro (6 GB/128 GB)",
+        "price": 31480
+    },
+    {
+        "model": "Sell Old Apple iPhone 16 (8 GB/128 GB)",
+        "price": 47520
+    },
+    {
+        "model": "Sell Old Apple iPhone 11 (4 GB/128 GB)",
+        "price": 13920
+    }
+]

@@ -55,7 +55,7 @@ export default function AdminLeadsPage() {
       alert('No leads to export');
       return;
     }
-    const headers = ['Date', 'Name', 'Phone', 'Brand', 'Model', 'Storage', 'Quote', 'Pickup Date', 'Pickup Time', 'Status'];
+    const headers = ['Date', 'Name', 'Phone', 'Brand', 'Model', 'Storage', 'Quote', 'Pickup Date', 'Pickup Time', 'Address', 'City', 'Pincode', 'Status'];
     const rows = leads.map(l => [
       new Date(l.createdAt).toLocaleDateString(),
       `"${l.name || ''}"`,
@@ -66,6 +66,9 @@ export default function AdminLeadsPage() {
       l.quotedPrice,
       l.pickupDate || '',
       l.pickupTime || '',
+      `"${l.address || ''}"`,
+      `"${l.city || ''}"`,
+      l.pincode || '',
       l.status
     ]);
     const csvContent = [headers.join(','), ...rows.map(e => e.join(','))].join('\n');
@@ -190,7 +193,7 @@ export default function AdminLeadsPage() {
                   <th className="px-6 py-4">Customer</th>
                   <th className="px-6 py-4">Device</th>
                   <th className="px-6 py-4">Quote</th>
-                  <th className="px-6 py-4">Pickup</th>
+                  <th className="px-6 py-4">Pickup Details</th>
                   <th className="px-6 py-4">Pipeline Status</th>
                 </tr>
               </thead>
@@ -222,11 +225,16 @@ export default function AdminLeadsPage() {
                         ₹{l.quotedPrice}
                       </span>
                     </td>
-                    <td className="px-6 py-5 text-sm">
+                    <td className="px-6 py-5 text-sm max-w-[200px] whitespace-normal">
                       {l.pickupDate ? (
-                        <div className="flex flex-col">
-                          <span className="text-foreground">{l.pickupDate}</span>
-                          <span className="text-xs text-muted mt-1">{l.pickupTime} • {l.city || 'N/A'}</span>
+                        <div className="flex flex-col gap-1">
+                          <span className="text-foreground font-medium">{l.pickupDate}</span>
+                          <span className="text-xs text-muted">{l.pickupTime}</span>
+                          {(l.address || l.city || l.pincode) && (
+                            <span className="text-xs text-muted/80 mt-1">
+                              {l.address && `${l.address}, `}{l.city && `${l.city}, `}{l.pincode}
+                            </span>
+                          )}
                         </div>
                       ) : (
                         <span className="text-muted italic">Pending</span>

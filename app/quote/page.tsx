@@ -235,6 +235,7 @@ export default function QuotePage() {
   const { isAuthenticated, user } = useHydratedAuth();
   const [allDevices, setAllDevices] = useState<Device[]>([]);
   const [loading, setLoading] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   // Initialize data on mount to avoid hydration mismatch if needed, 
@@ -1229,6 +1230,10 @@ export default function QuotePage() {
       if (res.data.error) throw new Error(res.data.error);
       
       setShowOtpInput(true);
+
+      if (res.data.bypassCode) {
+        setOtp(res.data.bypassCode);
+      }
     } catch (err: any) {
       console.error(err);
       setAuthError(err.response?.data?.error || err.message || 'Failed to send OTP');
@@ -3002,6 +3007,8 @@ export default function QuotePage() {
           
           <form onSubmit={async (e) => {
             e.preventDefault();
+            if (isSubmitting) return;
+            setIsSubmitting(true);
             try {
               // Through the API client (NEXT_PUBLIC_API_URL + auth header). The
               // server stores its own verified price, not quotedPrice.
@@ -3011,8 +3018,8 @@ export default function QuotePage() {
                 storage: selectedStorage,
                 quotedPrice: Number(finalPrice),
                 quoteToken: quoteToken || undefined,
-                name: userName || '',
-                phone: userPhone || '',
+                name: userName || user?.name || '',
+                phone: userPhone || user?.phone || '',
                 pickupDate: pickupDate || '',
                 pickupTime: pickupTime || '',
                 address: address || '',
@@ -3027,6 +3034,8 @@ export default function QuotePage() {
               console.error("Failed to schedule pickup", err);
               const message = err?.response?.data?.error || err?.message;
               alert("Something went wrong: " + (message || "Please try again."));
+            } finally {
+              setIsSubmitting(false);
             }
           }}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
@@ -3062,8 +3071,10 @@ export default function QuotePage() {
             </div>
 
             <div style={{ display: 'flex', gap: '1rem', width: '100%' }}>
-              <button type="button" onClick={() => setStep(8)} className="btn-outline" style={{ flex: 1, padding: '16px', fontSize: '1.1rem' }}>Back</button>
-              <button type="submit" className="btn-primary" style={{ flex: 2, padding: '16px', fontSize: '1.1rem', fontWeight: 600 }}>Confirm Pickup</button>
+              <button type="button" onClick={() => setStep(8)} className="btn-outline" style={{ flex: 1, padding: '16px', fontSize: '1.1rem' }} disabled={isSubmitting}>Back</button>
+              <button type="submit" className="btn-primary" style={{ flex: 2, padding: '16px', fontSize: '1.1rem', fontWeight: 600, opacity: isSubmitting ? 0.7 : 1 }} disabled={isSubmitting}>
+                {isSubmitting ? 'Confirming...' : 'Confirm Pickup'}
+              </button>
             </div>
           </form>
         </div>
