@@ -3,9 +3,8 @@
  *
  * This is NOT a second scraper. It imports and reuses the existing one's
  * session rotation and shared Chromium instance from ./cashifyScraper, and
- * only implements the one thing that module does not
- * already do: read a variant's LISTED BASE PRICE instead of walking the
- * diagnostics questionnaire.
+ * only implements the one thing that module does not already do: read a
+ * variant's LISTED BASE PRICE instead of walking the diagnostics questionnaire.
  *
  * Why a different read at all: scrapeCashifyPrice() answers "what would
  * Cashify pay for THIS user's phone in THIS condition" - it completes the
@@ -15,10 +14,23 @@
  * lib/pricingCalculator.ts takes the listed base price and applies
  * Fhoneify's own age/defect/accessory/bill rules to it. Feeding it an
  * already-condition-adjusted price would double-apply those penalties and
- * silently change every quote - so this stops right after variant selection.
+ * silently change every quote - so this never enters the questionnaire.
  *
- * This module deliberately returns RAW page text and performs no matching or
- * validation. Every identity and price rule lives in
+ * Cashify serves two kinds of device page (observed live, Sep 2026):
+ *
+ *  - VARIANT page, e.g. /used-oppo-find-x9s-12-gb-512-gb
+ *      h1 "Sell Old OPPO Find X9s (12 GB/512 GB)", one "Get Upto ₹44,060",
+ *      no variant chips.
+ *  - MODEL page, e.g. /used-apple-iphone-14
+ *      h1 "Sell Old Apple iPhone 14", storage-only chips ("128 GB", ...), no
+ *      price. Clicking a chip loads that variant's page.
+ *
+ * Both pages also carry a "Top Models" carousel of OTHER devices with
+ * near-identical labels ("Apple iPhone 13 (4 GB/128 GB)"). Nothing here reads
+ * from it: the name comes from the h1, and chips must be bare capacities.
+ *
+ * This module returns RAW page text and performs no matching or validation.
+ * Every identity and price rule lives in
  * lib/referencePricing/sources/cashifyIdentity.ts so those rules have exactly
  * one home and cannot drift between the browser path and the tests.
  */
@@ -27,96 +39,59 @@ import path from 'path';
 import logger from '../../lib/logger';
 import { getCashifySessionFiles, getCashifyBrowser } from './cashifyScraper';
 import type { CashifyPageSnapshot } from '../../../lib/referencePricing/sources/cashifyIdentity';
-import { parseVariant } from '../../../lib/referencePricing/sources/cashifyIdentity';
+import { parseVariant, splitHeading } from '../../../lib/referencePricing/sources/cashifyIdentity';
 
 const NAV_TIMEOUT_MS = Number(process.env.CASHIFY_NAV_TIMEOUT_MS ?? 45000);
-const SETTLE_MS = Number(process.env.CASHIFY_SETTLE_MS ?? 1500);
-const PRICE_SETTLE_MS = Number(process.env.CASHIFY_PRICE_SETTLE_MS ?? 2000);
+const SETTLE_MS = Number(process.env.CASHIFY_SETTLE_MS ?? 2500);
+const PRICE_SETTLE_MS = Number(process.env.CASHIFY_PRICE_SETTLE_MS ?? 2500);
 
-/** The DOM query used to locate variant chips. Defined once and reused for
- * both reading and clicking, so the index returned by the read is guaranteed
- * to address the same element on the click. */
-const CHIP_SELECTOR =
-  'button, [role="button"], li, label, div[class*="variant"], div[class*="storage"]';
+/** A variant chip's text is ONLY a capacity - "128 GB" or "8 GB/256 GB". The
+ * anchors are what exclude "Top Models" labels like "Apple iPhone 13 (4 GB/128
+ * GB)", which contain a capacity but are other devices. */
+const CHIP_TEXT_RE = /^\s*\d+(?:\.\d+)?\s*(?:GB|TB|MB)(?:\s*\/\s*\d+(?:\.\d+)?\s*(?:GB|TB|MB))?\s*$/i;
 
-async function readVariantChips(page: Page, selector: string): Promise<{ text: string; index: number }[]> {
-  return page.evaluate((sel: string) => {
-    const candidates = Array.from(document.querySelectorAll(sel));
-    const out: { text: string; index: number }[] = [];
-    candidates.forEach((el, index) => {
-      const text = (el.textContent || '').trim();
-      // A variant chip is short and contains a capacity token. Anything
-      // longer is a container that merely includes a chip.
-      if (text.length > 0 && text.length <= 24 && /\d+\s*(GB|TB|MB)/i.test(text)) {
-        out.push({ text, index });
-      }
-    });
-    return out;
-  }, selector);
+async function readHeading(page: Page): Promise<string> {
+  return page.evaluate(() => (document.querySelector('h1')?.textContent || '').replace(/\s+/g, ' ').trim());
 }
 
-async function readDeviceName(page: Page): Promise<string> {
-  return page.evaluate(() => {
-    const h1 = document.querySelector('h1');
-    const fromH1 = (h1?.textContent || '').trim();
-    if (fromH1) return fromH1;
-    return (document.title || '').trim();
-  });
+/** Leaf elements whose entire text is a bare capacity, in document order. */
+async function readVariantChips(page: Page): Promise<string[]> {
+  return page.evaluate((source: string) => {
+    const re = new RegExp(source, 'i');
+    return Array.from(document.querySelectorAll('body *'))
+      .filter((el) => el.children.length === 0 && re.test(el.textContent || ''))
+      .map((el) => (el.textContent || '').replace(/\s+/g, ' ').trim());
+  }, CHIP_TEXT_RE.source);
 }
 
 /**
- * The listed price for the currently-selected variant, as raw text
- * (e.g. "₹15,140"). Parsing and the currency check belong to
- * parsePriceText(), not here.
+ * The listed price, as raw text. Reads the amount inside the "Get Upto"
+ * block. If the page shows more than one DIFFERENT "Get Upto" amount, returns
+ * '' - it is then unclear which amount belongs to this variant, and an empty
+ * price is rejected upstream rather than guessed.
  */
 async function readListedPriceText(page: Page): Promise<string> {
   return page.evaluate(() => {
-    const priceIn = (t: string) => (t.match(/₹\s*[\d,]{2,}/) || [])[0] || '';
-
-    // Prefer a rupee amount sitting in an element explicitly labelled as the
-    // device's value, rather than any rupee amount anywhere on the page
-    // (offers, EMI banners and voucher blurbs are all rupee amounts too).
-    const labels = ['Get upto', 'Get Upto', 'Sell at', 'Best Price', 'Selling price', 'Up to', 'Upto'];
-    for (const label of labels) {
-      const labelEl = Array.from(document.querySelectorAll('*')).find((el) => {
-        const text = (el.textContent || '').trim();
-        return text.startsWith(label) && text.length < 60;
-      });
-      if (labelEl) {
-        const found = priceIn((labelEl.textContent || '').trim());
-        if (found) return found;
-      }
+    const amounts = new Set<string>();
+    for (const el of Array.from(document.querySelectorAll('body *'))) {
+      if (el.children.length !== 0) continue;
+      const own = (el.textContent || '').trim();
+      if (!/^₹\s*[\d,]{2,}$/.test(own)) continue;
+      const context = (el.parentElement?.textContent || '').replace(/\s+/g, ' ').trim();
+      if (/^get\s*up\s*to/i.test(context)) amounts.add(own.replace(/\s+/g, ''));
     }
-
-    // Otherwise the most prominent rupee amount: the largest-rendered leaf
-    // element whose entire text is a price.
-    const candidates = Array.from(document.querySelectorAll('span, div, h1, h2, h3, h4, p, strong'))
-      .map((el) => ({ el, text: (el.textContent || '').trim() }))
-      .filter(({ el, text }) => el.children.length === 0 && /₹\s*[\d,]{2,}/.test(text) && text.length < 24);
-
-    if (candidates.length === 0) return '';
-
-    let best = candidates[0];
-    let bestSize = -1;
-    for (const candidate of candidates) {
-      const size = parseFloat(getComputedStyle(candidate.el as Element).fontSize || '0');
-      if (size > bestSize) {
-        bestSize = size;
-        best = candidate;
-      }
-    }
-    return priceIn(best.text);
+    return amounts.size === 1 ? Array.from(amounts)[0] : '';
   });
 }
 
 /**
- * Loads one Cashify device page, selects the requested variant, and reports
- * what was actually on screen.
+ * Loads one Cashify device page and reports what was actually on screen for
+ * the requested variant.
  *
- * Returns null ONLY for a genuine "Cashify has no page for this device".
- * Every other problem either throws (transport-level, so the ingestion
- * layer's retry/backoff applies and a final failure preserves the previous
- * price) or comes back as a snapshot that fails verification upstream.
+ * Returns null ONLY for a genuine "Cashify has no page at this URL". Every
+ * other problem either throws (transport-level, so the ingestion layer's
+ * retry/backoff applies and a final failure preserves the previous price) or
+ * comes back as a snapshot that fails verification upstream.
  *
  * This NEVER falls back to Cashify's search results the way
  * scrapeCashifyPrice does. For an interactive "what's my phone worth" lookup,
@@ -144,6 +119,13 @@ export async function scrapeCashifyReferenceSnapshot(
     let context: BrowserContext | null = null;
     try {
       context = await browser.newContext({ storageState: sessionFile });
+      // This module runs under tsx (esbuild), which rewrites named function
+      // expressions as `__name(fn, "name")`. Callbacks passed to
+      // page.evaluate() are serialized and run INSIDE the browser, where that
+      // helper does not exist - so any evaluate body that declares a named
+      // inner function throws "__name is not defined". A no-op shim in the
+      // page makes the serialized code run as written.
+      await context.addInitScript({ content: 'window.__name = function (fn) { return fn; };' });
       const page = await context.newPage();
       page.setDefaultTimeout(NAV_TIMEOUT_MS);
 
@@ -159,7 +141,7 @@ export async function scrapeCashifyReferenceSnapshot(
       const response = await page.goto(url, { waitUntil: 'domcontentloaded' });
       const status = response?.status() ?? 0;
       if (status === 404 || status === 410) {
-        return null; // genuine "Cashify does not list this device"
+        return null; // genuine "Cashify does not list this URL"
       }
       if (status >= 500) {
         throw new Error(`Cashify returned HTTP ${status} for ${url}`);
@@ -167,49 +149,74 @@ export async function scrapeCashifyReferenceSnapshot(
 
       await page.waitForTimeout(SETTLE_MS);
 
-      const deviceName = await readDeviceName(page);
-      const chips = await readVariantChips(page, CHIP_SELECTOR);
-      const wanted = parseVariant(device.storage);
+      const heading = await readHeading(page);
+      if (!heading) {
+        // A 200 with no h1 is a challenge/interstitial page, not a device
+        // page. Transport-level: retry with another session or later.
+        throw new Error(`Cashify page at ${url} rendered no device heading (possible bot challenge)`);
+      }
 
-      const matching = chips.filter((chip) => {
-        const parsed = parseVariant(chip.text);
-        return parsed.storage !== null && parsed.storage === wanted.storage && parsed.ram === wanted.ram;
-      });
-
-      if (matching.length === 0) {
-        // The requested variant is not offered. Report that honestly instead
-        // of reading whichever variant happened to be selected by default -
-        // that is how a 256GB price ends up stored against a 512GB device.
+      // --- VARIANT page: the heading already names the variant --------------
+      if (splitHeading(heading).embeddedVariant) {
         return {
           url: page.url(),
-          deviceName,
+          deviceName: heading,
           selectedVariant: '',
-          priceText: '',
-          availableVariants: chips.map((c) => c.text),
+          priceText: await readListedPriceText(page),
+          variantResolvedBy: 'url',
         };
       }
 
-      // Every entry in `matching` parses to an identical RAM+storage pair, so
-      // these are the same variant rendered more than once (e.g. a mobile and
-      // a desktop copy of the chip list). Clicking the first is not a choice
-      // between different devices.
-      const chosen = matching[0];
-      await page.evaluate(
-        ({ sel, chipIndex }: { sel: string; chipIndex: number }) => {
-          const candidates = Array.from(document.querySelectorAll(sel));
-          (candidates[chipIndex] as HTMLElement | undefined)?.click();
-        },
-        { sel: CHIP_SELECTOR, chipIndex: chosen.index }
-      );
+      // --- MODEL page: choose the variant from its chips --------------------
+      const chips = await readVariantChips(page);
+      const wanted = parseVariant(device.storage);
 
+      const sameStorage = chips.filter((text) => parseVariant(text).storage === wanted.storage);
+      const exact = sameStorage.filter((text) => {
+        const p = parseVariant(text);
+        return p.ram === wanted.ram || (p.ram === null && wanted.ram === null);
+      });
+
+      // Distinct options, not DOM copies (mobile + desktop render the same
+      // chip twice).
+      const distinct = (xs: string[]) => Array.from(new Set(xs.map((x) => x.replace(/\s+/g, '').toLowerCase())));
+      const storageOnlyChips = chips.length > 0 && chips.every((t) => parseVariant(t).ram === null);
+
+      let chosen: string | undefined;
+      let resolvedBy: CashifyPageSnapshot['variantResolvedBy'];
+
+      if (distinct(exact).length === 1) {
+        chosen = exact[0];
+        resolvedBy = storageOnlyChips ? 'unique-storage-chip' : 'url';
+      } else if (storageOnlyChips && distinct(sameStorage).length === 1) {
+        chosen = sameStorage[0];
+        resolvedBy = 'unique-storage-chip';
+      }
+
+      if (!chosen) {
+        // Not offered, or offered more than once in different RAM
+        // configurations. Report honestly; never read the default selection.
+        return {
+          url: page.url(),
+          deviceName: heading,
+          selectedVariant: '',
+          priceText: '',
+          availableVariants: Array.from(new Set(chips)),
+        };
+      }
+
+      await page.getByText(chosen, { exact: true }).first().click();
       await page.waitForTimeout(PRICE_SETTLE_MS);
 
       return {
         url: page.url(),
-        deviceName,
-        selectedVariant: chosen.text,
+        // Re-read: the click navigates to the variant page, whose heading now
+        // names the variant Cashify actually loaded.
+        deviceName: await readHeading(page),
+        selectedVariant: chosen,
         priceText: await readListedPriceText(page),
-        availableVariants: chips.map((c) => c.text),
+        availableVariants: Array.from(new Set(chips)),
+        variantResolvedBy: resolvedBy,
       };
     } catch (error: any) {
       lastError = error;

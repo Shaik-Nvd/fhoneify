@@ -9,6 +9,7 @@
  *   npm run reference-prices:refresh-cashify
  *   npm run reference-prices:refresh-cashify -- --limit 5 --dry-run
  *   npm run reference-prices:refresh-cashify -- --device "Oppo|OPPO Find X9s|12 GB/512 GB"
+ *   npm run reference-prices:refresh-cashify -- --devices "Oppo|OPPO Find X9s|12 GB/512 GB;OnePlus|Oneplus 15R|12 GB/512 GB"
  *
  * Exit codes:
  *   0  SUCCESS or PARTIAL (prices are in a good state)
@@ -16,6 +17,7 @@
  *   75 another refresh already holds the lock (retryable, not an error)
  */
 import fs from 'fs';
+import os from 'os';
 import path from 'path';
 import 'dotenv/config';
 
@@ -23,11 +25,16 @@ import { loadRefreshCatalog, buildCashifyLinkIndex } from '../../lib/referencePr
 import { getReferencePriceRepository } from '../../lib/referencePricing/getStore';
 import { deviceKey, DeviceIdentity } from '../../lib/referencePricing/types';
 import { createCashifyPriceSource } from '../../lib/referencePricing/sources/cashifySource';
+import {
+  createCashifyUrlResolver,
+  loadCashifyUrlDictionary,
+} from '../../lib/referencePricing/sources/cashifyUrlResolver';
 import { runRefreshJob, exitCodeFor } from '../../lib/referencePricing/refreshJob';
 import {
   createPrismaRunRecorder,
   createFileRunRecorder,
   RefreshRunRecorder,
+  NULL_RUN_RECORDER,
 } from '../../lib/referencePricing/refreshRun';
 import {
   acquireFileLock,
@@ -47,7 +54,9 @@ import { ReferencePriceRecord, ReferencePriceHistoryEntry } from '../../lib/refe
 interface Args {
   limit?: number;
   brand?: string;
-  device?: string;
+  /** Exact devices, each "Brand|Model|Storage". Repeat --device, or pass
+   * several separated by ";" in one --devices argument. */
+  devices: string[];
   dryRun: boolean;
   trigger: string;
   concurrency: number;
@@ -60,10 +69,15 @@ function parseArgs(argv: string[]): Args {
     const i = argv.indexOf(flag);
     return i >= 0 ? argv[i + 1] : undefined;
   };
+  const devices: string[] = [];
+  argv.forEach((arg, i) => {
+    if (arg === '--device' && argv[i + 1]) devices.push(argv[i + 1]);
+    if (arg === '--devices' && argv[i + 1]) devices.push(...argv[i + 1].split(';'));
+  });
   return {
     limit: get('--limit') ? Number(get('--limit')) : undefined,
     brand: get('--brand'),
-    device: get('--device'),
+    devices: devices.map((d) => d.trim()).filter(Boolean),
     dryRun: argv.includes('--dry-run'),
     trigger: get('--trigger') ?? process.env.REFRESH_TRIGGER ?? 'cli',
     concurrency: Number(get('--concurrency') ?? process.env.REFRESH_CONCURRENCY ?? 3),
@@ -148,12 +162,19 @@ async function main() {
     const wanted = args.brand.toLowerCase();
     entries = entries.filter((e) => e.device.brand.toLowerCase() === wanted);
   }
-  if (args.device) {
-    const [brand, model, storage] = args.device.split('|');
-    const wantedKey = deviceKey({ brand: brand ?? '', model: model ?? '', storage: storage ?? '' });
-    entries = entries.filter((e) => deviceKey(e.device) === wantedKey);
-    if (entries.length === 0) {
-      console.error(`[refresh] --device "${args.device}" matched no catalog entry. Nothing to do.`);
+  if (args.devices.length > 0) {
+    const wanted = new Map<string, string>();
+    for (const spec of args.devices) {
+      const [brand, model, storage] = spec.split('|');
+      wanted.set(deviceKey({ brand: brand ?? '', model: model ?? '', storage: storage ?? '' }), spec);
+    }
+    entries = entries.filter((e) => wanted.has(deviceKey(e.device)));
+    // Every requested device must exist. Silently refreshing 4 of 5 would
+    // make a "5-device test" report success for a test that did not happen.
+    const found = new Set(entries.map((e) => deviceKey(e.device)));
+    const unknown = Array.from(wanted.entries()).filter(([key]) => !found.has(key)).map(([, spec]) => spec);
+    if (unknown.length > 0) {
+      console.error(`[refresh] no catalog entry for: ${unknown.join(' ; ')}. Nothing was refreshed.`);
       process.exit(1);
     }
   }
@@ -176,14 +197,22 @@ async function main() {
   const repo = args.dryRun ? makeDryRunRepository(realRepo) : realRepo;
   if (args.dryRun) console.log('[refresh] DRY RUN - every write is discarded.');
 
+  const resolveUrl = createCashifyUrlResolver({
+    curatedLinks: linkIndex,
+    dictionary: loadCashifyUrlDictionary(),
+  });
   const source = createCashifyPriceSource({
     fetchSnapshot: (device, url) => scrapeCashifyReferenceSnapshot(device, url),
-    resolveUrl: (device) => linkIndex.get(deviceKey(device)),
+    resolveUrl,
   });
 
   let prisma: any = null;
   let recorder: RefreshRunRecorder;
-  if (process.env.DATABASE_URL) {
+  if (args.dryRun) {
+    // A dry run writes NOTHING to the database - not prices, not a run row,
+    // not a lock row. The report is still printed to the log.
+    recorder = NULL_RUN_RECORDER;
+  } else if (process.env.DATABASE_URL) {
     try {
       const { PrismaClient } = require('@prisma/client');
       prisma = new PrismaClient();
@@ -207,16 +236,27 @@ async function main() {
   const lockTtlMs = 15 * 60 * 1000;
   const acquireLock = async () => {
     if (prisma) {
+      // A REAL run against the database must hold the database lock. Falling
+      // back to a file lock here would silently reduce the concurrency guard
+      // to "this one machine", which does not protect production from a
+      // second runner - so a missing lock table is a hard stop, not a warning.
       try {
         return await acquirePostgresLock(prisma, { holder, ttlMs: lockTtlMs, name: REFRESH_LOCK_NAME });
       } catch (err: any) {
-        console.warn(
-          `[refresh] Postgres lock unavailable (${err.message}); falling back to the file lock. ` +
-            'Run `npx prisma db push` to create the ReferencePriceRefreshLock table.'
+        throw new Error(
+          'the ReferencePriceRefreshLock table is not available in the database, so a safe production ' +
+            'run cannot start. Create the refresh tables first (see PRICING_REFERENCE_DATA_ARCHITECTURE.md ' +
+            `section 9c). Underlying error: ${String(err.message).split('\n').pop()}`
         );
       }
     }
-    return acquireFileLock({ holder, ttlMs: lockTtlMs });
+    // No database (local file-store mode) or a dry run: a local file lock,
+    // written to the OS temp dir so a dry run leaves nothing in the repo.
+    return acquireFileLock({
+      holder,
+      ttlMs: lockTtlMs,
+      lockPath: args.dryRun ? path.join(os.tmpdir(), 'fhoneify-refresh-dryrun.lock') : undefined,
+    });
   };
 
   // --- run -----------------------------------------------------------------

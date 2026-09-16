@@ -48,7 +48,7 @@ export interface CashifySourceOptions {
   /** Per-device canonical Cashify URL from the catalog (`cashifyLink`). This
    * is the strongest identifier available - a variant-specific URL that the
    * team already curated - so it is always preferred over a generated slug. */
-  resolveUrl?: (device: DeviceIdentity) => string | undefined;
+  resolveUrl?: (device: DeviceIdentity) => string | undefined | { url: string; tier: string };
 }
 
 export function createCashifyPriceSource(options: CashifySourceOptions): PriceSource {
@@ -57,8 +57,10 @@ export function createCashifyPriceSource(options: CashifySourceOptions): PriceSo
   return {
     name: CASHIFY_SOURCE_NAME,
     async fetch(device: DeviceIdentity): Promise<PriceObservation | PriceRejection | null> {
-      const curated = resolveUrl?.(device);
-      const url = curated ?? buildCashifyUrl(device);
+      const resolved = resolveUrl?.(device);
+      const url = typeof resolved === 'object' ? resolved.url : resolved ?? buildCashifyUrl(device);
+      const tier =
+        typeof resolved === 'object' ? resolved.tier : resolved ? 'catalog cashifyLink' : 'generated URL';
 
       // A transport failure propagates as a throw (retried upstream); a
       // genuine "no such device page" comes back as null.
@@ -91,7 +93,7 @@ export function createCashifyPriceSource(options: CashifySourceOptions): PriceSo
         price: parsed.price!,
         sourceUrl: snapshot.url,
         matchConfidence: identity.confidence,
-        matchEvidence: `${curated ? 'catalog cashifyLink' : 'generated slug'}; ${identity.evidence}; price text "${snapshot.priceText}"`,
+        matchEvidence: `url via ${tier}; ${identity.evidence}; price text "${snapshot.priceText}"`,
         // Omitted observedAt on purpose: this is a genuinely live source, so
         // the fetch IS the observation and "now" is the honest timestamp.
       };

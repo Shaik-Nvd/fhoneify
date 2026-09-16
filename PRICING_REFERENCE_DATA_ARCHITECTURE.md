@@ -156,6 +156,50 @@ Why not Vercel: the app is on Vercel's free plan, where a function is capped at 
 
 **`scripts/reference-pricing/refresh-all.ts` is unchanged** and remains the snapshot-file path for debugging/emergency use. Normal production operation is the scheduled Cashify job; nobody edits a price by hand.
 
+### 9a-2. Verified against live Cashify (2026-09-17)
+
+The reader was fitted to Cashify's real pages, not assumed selectors:
+
+| Page type | Example | What it exposes |
+|---|---|---|
+| Variant page | `/used-oppo-find-x9s-12-gb-512-gb` | h1 `Sell Old OPPO Find X9s (12 GB/512 GB)`, one `Get Upto ₹44,060`, no chips |
+| Model page | `/used-apple-iphone-14` | h1 `Sell Old Apple iPhone 14`, storage-only chips `128 GB` / `256 GB` / `512 GB`; clicking one loads that variant page |
+
+Both carry a "Top Models" carousel of other devices with near-identical labels (`Apple iPhone 13 (4 GB/128 GB)`), which the reader never reads from. Storage-only catalog rows (iPhones) have no variant URL - `-128gb` and `-128-gb` both 404 - so they resolve to the model page and choose the chip. A catalog "128GB" is accepted as Cashify's "6 GB/128 GB" **only** when the model page offered exactly one chip at that storage (`variantResolvedBy: 'unique-storage-chip'`); otherwise the RAM difference stays ambiguous and is rejected.
+
+URL resolution order: catalog `cashifyLink` → the existing scraper's URL dictionaries (`server/data/*_urls.json`) → generated URL (variant URL when RAM is known, model URL otherwise).
+
+Live dry runs against production Supabase (writes discarded; all 18 tables proven unchanged by checksum afterwards):
+
+| Device | Supabase (stale) | Live Cashify | Match |
+|---|---|---|---|
+| OPPO Find X9s 12/512 | ₹45,000 (verified 2026-07-08) | ₹44,060 | exact, variant page |
+| OnePlus 15R 12/512 | ₹36,300 (verified 2026-06-23) | ₹35,940 | exact, generated variant URL |
+| Apple iPhone 14 128GB | ₹40,333 | ₹26,810 | exact, model page + unique chip |
+| Samsung Galaxy S24 5G 8/256 | ₹35,110 | ₹34,560 | exact |
+| Vivo V40 8/256 | ₹21,470 | ₹21,250 | exact |
+
+Bug found live and fixed: under `tsx`, esbuild wraps named inner functions in `__name(...)`, which does not exist inside the browser, so any `page.evaluate` body declaring one throws. The reader installs a no-op `window.__name` init script.
+
+### 9c. Production database setup (Supabase)
+
+Production is the Supabase project already configured in `.env` (`DATABASE_URL` = transaction pooler, `DIRECT_URL` = direct connection). `ReferencePrice` (2,200 rows) and `ReferencePriceHistory` already live there, and the quote flow reads them through `PostgresReferencePriceStore` - verified live.
+
+The refresh adds two tables. The exact SQL was generated with `prisma migrate diff` against the live database and committed at `prisma/sql/20260917_add_reference_price_refresh_tables.sql`: one `CREATE TYPE`, two `CREATE TABLE`, two `CREATE INDEX`, no `ALTER`/`DROP`/`UPDATE`/`DELETE`. Apply it with the guarded script, which refuses anything but those statement types, stops if the objects already exist, and runs in one transaction:
+
+```
+npx tsx scripts/reference-pricing/db-snapshot.ts before.json
+npx tsx scripts/reference-pricing/apply-refresh-tables.ts            # plan
+npx tsx scripts/reference-pricing/apply-refresh-tables.ts --apply    # execute
+npx tsx scripts/reference-pricing/db-snapshot.ts after.json --compare before.json
+```
+
+The compare should show the two new tables as `ADDED` and every other table `unchanged`.
+
+A **real** (non-dry-run) refresh refuses to start if `ReferencePriceRefreshLock` is missing, rather than degrading to a single-machine file lock. A dry run writes nothing to the database - no prices, no run row, no lock row.
+
+**Full-refresh gate:** scheduled runs are skipped until the repository variable `REFERENCE_REFRESH_FULL_ENABLED` is `true`. Set it only after the manual 5-device live test succeeds. Manual dispatch is never gated.
+
 ### 9b. Cashify session material
 
 `cashify-sessions/*.json` and `cashify-session.json` are Playwright `storageState` files containing **live Cashify session cookies**, and they are currently **tracked in this repository** (pre-existing, not introduced by this work). Anyone with repository access has those sessions.

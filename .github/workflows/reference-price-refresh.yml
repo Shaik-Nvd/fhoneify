@@ -30,6 +30,10 @@ on:
         description: 'Only refresh one brand (blank = all brands)'
         required: false
         type: string
+      devices:
+        description: 'Only these exact devices: "Brand|Model|Storage" separated by ";" (blank = no filter)'
+        required: false
+        type: string
       dry_run:
         description: 'Run the full pipeline but discard every write'
         required: false
@@ -50,6 +54,13 @@ permissions:
 
 jobs:
   refresh:
+    # Safety gate for the FULL weekly refresh. Scheduled runs are skipped until
+    # the repository variable REFERENCE_REFRESH_FULL_ENABLED is set to "true"
+    # (Settings > Secrets and variables > Actions > Variables). This lets a
+    # small manual live test prove the pipeline against production BEFORE the
+    # cron is allowed to touch all ~2,200 reference prices. Manual dispatch is
+    # never gated, so the small test can always run.
+    if: github.event_name != 'schedule' || vars.REFERENCE_REFRESH_FULL_ENABLED == 'true'
     runs-on: ubuntu-latest
     # Below GitHub's 6h ceiling, and above the job's own internal wall-clock
     # cap (REFRESH_MAX_DURATION_MINUTES) so the job always gets to stop
@@ -82,6 +93,7 @@ jobs:
         run: |
           missing=""
           [ -z "$DATABASE_URL" ] && missing="$missing DATABASE_URL"
+          [ -z "$DIRECT_URL" ] && missing="$missing DIRECT_URL"
           [ -z "$CASHIFY_SESSION_STATE" ] && missing="$missing CASHIFY_SESSION_STATE"
           if [ -n "$missing" ]; then
             echo "::error::Missing required repository secret(s):$missing"
@@ -113,11 +125,13 @@ jobs:
           INPUT_LIMIT: ${{ inputs.limit }}
           INPUT_BRAND: ${{ inputs.brand }}
           INPUT_DRY_RUN: ${{ inputs.dry_run }}
+          INPUT_DEVICES: ${{ inputs.devices }}
         run: |
           set -o pipefail
           ARGS=()
           if [ -n "$INPUT_LIMIT" ]; then ARGS+=(--limit "$INPUT_LIMIT"); fi
           if [ -n "$INPUT_BRAND" ]; then ARGS+=(--brand "$INPUT_BRAND"); fi
+          if [ -n "$INPUT_DEVICES" ]; then ARGS+=(--devices "$INPUT_DEVICES"); fi
           if [ "$INPUT_DRY_RUN" = "true" ]; then ARGS+=(--dry-run); fi
 
           set +e

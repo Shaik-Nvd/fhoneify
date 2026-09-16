@@ -141,6 +141,35 @@ export interface CashifyPageSnapshot {
   /** Every variant the page offered. Purely for the rejection message, so an
    * operator can see WHY a device didn't match without re-scraping. */
   availableVariants?: string[];
+  /**
+   * How the page arrived at the variant it is showing:
+   *  - 'url': the loaded URL was already variant-specific (the heading names it);
+   *  - 'unique-storage-chip': a model page offered storage-only chips, and
+   *    EXACTLY ONE of them matched the requested storage, so Cashify - not this
+   *    code - decided which RAM configuration that storage belongs to.
+   *
+   * This is what makes it safe to accept Cashify's "6 GB/128 GB" for a catalog
+   * row that only says "128GB" (iPhones): the RAM was not guessed, it was the
+   * only configuration Cashify offers at that storage. Without this evidence,
+   * a RAM-vs-no-RAM difference stays ambiguous and is rejected.
+   */
+  variantResolvedBy?: 'url' | 'unique-storage-chip';
+}
+
+/**
+ * Splits a Cashify heading into the device name and the variant embedded in
+ * it: "Sell Old OPPO Find X9s (12 GB/512 GB)" -> name "OPPO Find X9s",
+ * variant "12 GB/512 GB". A parenthesized suffix that is not a capacity
+ * variant (e.g. "(2020)") is left as part of the name, since it IS part of the
+ * model's identity ("iPhone SE (2020)").
+ */
+export function splitHeading(heading: string): { name: string; embeddedVariant: string | null } {
+  const cleaned = stripTitleNoise(heading ?? '');
+  const m = cleaned.match(/^(.*?)\s*\(([^()]*)\)\s*$/);
+  if (m && parseVariant(m[2]).storage !== null) {
+    return { name: m[1].trim(), embeddedVariant: m[2].trim() };
+  }
+  return { name: cleaned, embeddedVariant: null };
 }
 
 export interface IdentityVerdict {
@@ -156,7 +185,7 @@ export interface IdentityVerdict {
  */
 export function verifyPageIdentity(device: DeviceIdentity, snapshot: CashifyPageSnapshot): IdentityVerdict {
   const expected = canonicalDeviceName(device.brand, device.model);
-  const observedName = stripTitleNoise(snapshot.deviceName ?? '');
+  const { name: observedName, embeddedVariant } = splitHeading(snapshot.deviceName ?? '');
   const observed = normalize(observedName);
 
   if (!observed) {
@@ -171,7 +200,48 @@ export function verifyPageIdentity(device: DeviceIdentity, snapshot: CashifyPage
     };
   }
 
-  const variant = matchVariant(device.storage, snapshot.selectedVariant ?? '');
+  // The heading's own variant is the page's authoritative statement of which
+  // variant the price belongs to. If the reader also reported a selected
+  // chip, the two must agree - a disagreement means the price on screen may
+  // not be for the variant that was clicked.
+  if (embeddedVariant && snapshot.selectedVariant) {
+    const agree = matchVariant(embeddedVariant, snapshot.selectedVariant);
+    const storageOnlyChip =
+      parseVariant(snapshot.selectedVariant).ram === null &&
+      parseVariant(embeddedVariant).storage === parseVariant(snapshot.selectedVariant).storage;
+    if (!agree.matched && !storageOnlyChip) {
+      return {
+        ok: false,
+        confidence: 'unmatched',
+        evidence: `page heading variant "${embeddedVariant}" disagrees with the selected chip "${snapshot.selectedVariant}"`,
+      };
+    }
+  }
+
+  const pageVariant = embeddedVariant ?? snapshot.selectedVariant ?? '';
+  let variant = matchVariant(device.storage, pageVariant);
+
+  // The ONE relaxation, and only with evidence: the catalog row omits RAM
+  // (e.g. "128GB"), the page names a RAM ("6 GB/128 GB"), storage is equal,
+  // and the page itself offered exactly one chip for that storage - so there
+  // was no other RAM configuration it could have been.
+  if (!variant.matched) {
+    const requested = parseVariant(device.storage);
+    const onPage = parseVariant(pageVariant);
+    if (
+      requested.ram === null &&
+      onPage.ram !== null &&
+      requested.storage !== null &&
+      requested.storage === onPage.storage &&
+      snapshot.variantResolvedBy === 'unique-storage-chip'
+    ) {
+      variant = {
+        matched: true,
+        reason: `storage matches (${requested.storage}); catalog omits RAM and Cashify offers exactly one configuration at this storage (${pageVariant})`,
+      };
+    }
+  }
+
   if (!variant.matched) {
     const offered = snapshot.availableVariants?.length
       ? ` (page offered: ${snapshot.availableVariants.join(', ')})`
@@ -182,7 +252,7 @@ export function verifyPageIdentity(device: DeviceIdentity, snapshot: CashifyPage
   return {
     ok: true,
     confidence: 'exact',
-    evidence: `device name "${observedName}" and selected variant "${snapshot.selectedVariant}" both verified on ${snapshot.url} (${variant.reason})`,
+    evidence: `device name "${observedName}" and variant "${pageVariant}" both verified on ${snapshot.url} (${variant.reason})`,
   };
 }
 
@@ -255,6 +325,16 @@ export function buildCashifySlug(device: DeviceIdentity): string {
     .replace(/^-+|-+$/g, '');
 }
 
+/**
+ * Generated Cashify URL for a device with no curated link.
+ *
+ * Cashify only has variant-specific URLs of the form "-12-gb-512-gb" (RAM AND
+ * storage). A storage-only variant ("128GB") has no such URL - "-128gb" and
+ * "-128-gb" both 404 (verified live) - so for those this points at the MODEL
+ * page, where the reader picks the variant from Cashify's own chips.
+ */
 export function buildCashifyUrl(device: DeviceIdentity): string {
-  return `https://www.cashify.in/sell-old-mobile-phone/used-${buildCashifySlug(device)}`;
+  const variant = parseVariant(device.storage ?? '');
+  const identity = variant.ram !== null ? device : { ...device, storage: '' };
+  return `https://www.cashify.in/sell-old-mobile-phone/used-${buildCashifySlug(identity)}`;
 }

@@ -26,6 +26,8 @@
     "reference-prices:refresh-all": "tsx scripts/reference-pricing/refresh-all.ts",
     "reference-prices:refresh-cashify": "tsx scripts/reference-pricing/refresh-from-cashify.ts",
     "reference-prices:status": "tsx scripts/reference-pricing/refresh-status.ts",
+    "reference-prices:apply-refresh-tables": "tsx scripts/reference-pricing/apply-refresh-tables.ts",
+    "db:snapshot": "tsx scripts/reference-pricing/db-snapshot.ts",
     "setup-cashify": "node scripts/setup-cashify.js",
     "postinstall": "npx playwright install chromium"
   },

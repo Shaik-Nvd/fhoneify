@@ -17,8 +17,11 @@ import {
   verifyPageIdentity,
   parsePriceText,
   buildCashifyUrl,
+  splitHeading,
   CashifyPageSnapshot,
 } from '../../lib/referencePricing/sources/cashifyIdentity';
+import { DeviceIdentity } from '../../lib/referencePricing/types';
+import { createCashifyUrlResolver, dictionaryKey } from '../../lib/referencePricing/sources/cashifyUrlResolver';
 
 let passed = 0;
 let failed = 0;
@@ -162,6 +165,102 @@ test('an unavailable variant lists what the page DID offer, so the miss is diagn
   assert.match(verdict.evidence, /12 GB\/256 GB/);
 });
 
+console.log('\n=== Live Cashify page shapes (observed Sep 2026) ===\n');
+
+test('splits the real heading "Sell Old OPPO Find X9s (12 GB/512 GB)" into name + variant', () => {
+  assert.deepEqual(splitHeading('Sell Old OPPO Find X9s (12 GB/512 GB)'), {
+    name: 'OPPO Find X9s',
+    embeddedVariant: '12 GB/512 GB',
+  });
+});
+
+test('a non-capacity parenthetical stays part of the model name: "iPhone SE (2020)"', () => {
+  assert.deepEqual(splitHeading('Sell Old Apple iPhone SE (2020)'), { name: 'Apple iPhone SE (2020)', embeddedVariant: null });
+});
+
+test('VARIANT page: OPPO Find X9s 12/512 is accepted from its real heading, with no chip at all', () => {
+  const verdict = verifyPageIdentity(OPPO, {
+    url: 'https://www.cashify.in/sell-old-mobile-phone/used-oppo-find-x9s-12-gb-512-gb',
+    deviceName: 'Sell Old OPPO Find X9s (12 GB/512 GB)',
+    selectedVariant: '',
+    priceText: '₹44,060',
+    variantResolvedBy: 'url',
+  });
+  assert.equal(verdict.ok, true, verdict.evidence);
+});
+
+test('VARIANT page: OnePlus 15R 12/512 is accepted from its real heading', () => {
+  const verdict = verifyPageIdentity(ONEPLUS, {
+    url: 'https://www.cashify.in/sell-old-mobile-phone/used-oneplus-15r-12-gb-512-gb',
+    deviceName: 'Sell Old Oneplus 15R (12 GB/512 GB)',
+    selectedVariant: '',
+    priceText: '₹35,940',
+    variantResolvedBy: 'url',
+  });
+  assert.equal(verdict.ok, true, verdict.evidence);
+});
+
+test('VARIANT page with the WRONG variant in its heading is rejected (12/256 for a 12/512 request)', () => {
+  const verdict = verifyPageIdentity(OPPO, snapshot({ deviceName: 'Sell Old OPPO Find X9s (12 GB/256 GB)', selectedVariant: '' }));
+  assert.equal(verdict.ok, false);
+  assert.match(verdict.evidence, /storage mismatch/);
+});
+
+const IPHONE14: DeviceIdentity = { brand: 'Apple', model: 'Apple iPhone 14', storage: '128GB' };
+
+test('MODEL page: iPhone 14 "128GB" accepted as Cashify\'s "6 GB/128 GB" ONLY because the 128 GB chip was unique', () => {
+  const verdict = verifyPageIdentity(IPHONE14, {
+    url: 'https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-14',
+    deviceName: 'Sell Old Apple iPhone 14 (6 GB/128 GB)',
+    selectedVariant: '128 GB',
+    priceText: '₹26,810',
+    variantResolvedBy: 'unique-storage-chip',
+  });
+  assert.equal(verdict.ok, true, verdict.evidence);
+});
+
+test('...and the SAME page is rejected as ambiguous without that uniqueness evidence', () => {
+  const verdict = verifyPageIdentity(IPHONE14, {
+    url: 'https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-14-6-gb-128-gb',
+    deviceName: 'Sell Old Apple iPhone 14 (6 GB/128 GB)',
+    selectedVariant: '',
+    priceText: '₹26,810',
+    variantResolvedBy: 'url',
+  });
+  assert.equal(verdict.ok, false, 'RAM must not be assumed just because the storage matches');
+  assert.match(verdict.evidence, /ambiguous/);
+});
+
+test('MODEL page: a click that lands on a different storage than the chip is rejected', () => {
+  const verdict = verifyPageIdentity(IPHONE14, {
+    url: 'https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-14',
+    deviceName: 'Sell Old Apple iPhone 14 (6 GB/256 GB)',
+    selectedVariant: '128 GB',
+    priceText: '₹29,000',
+    variantResolvedBy: 'unique-storage-chip',
+  });
+  assert.equal(verdict.ok, false);
+});
+
+test('MODEL page: a "Top Models" neighbour (iPhone 13) can never satisfy an iPhone 14 request', () => {
+  const verdict = verifyPageIdentity(IPHONE14, {
+    url: 'https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-13',
+    deviceName: 'Sell Old Apple iPhone 13 (4 GB/128 GB)',
+    selectedVariant: '128 GB',
+    priceText: '₹22,000',
+    variantResolvedBy: 'unique-storage-chip',
+  });
+  assert.equal(verdict.ok, false);
+  assert.match(verdict.evidence, /device-name mismatch/);
+});
+
+test('real title noise ("... Online & Get Instant Cash At Doorstep | Cashify.in") is stripped', () => {
+  assert.equal(
+    stripTitleNoise('Sell Old Oneplus 15R (12 GB/512 GB) Online & Get Instant Cash At Doorstep | Cashify.in'),
+    'Oneplus 15R (12 GB/512 GB)'
+  );
+});
+
 console.log('\n=== Price parsing (Phase 5) ===\n');
 
 test('parses a normal rupee price', () => {
@@ -211,6 +310,29 @@ test('builds a variant-specific Cashify slug matching the catalog link format', 
     buildCashifyUrl(OPPO),
     'https://www.cashify.in/sell-old-mobile-phone/used-oppo-find-x9s-12-gb-512-gb'
   );
+  assert.equal(
+    buildCashifyUrl(ONEPLUS),
+    'https://www.cashify.in/sell-old-mobile-phone/used-oneplus-15r-12-gb-512-gb',
+    'verified live: this URL serves the OnePlus 15R 12/512 page'
+  );
+});
+
+test('a storage-only variant points at the MODEL page (variant URLs like "-128gb" 404 on Cashify)', () => {
+  assert.equal(
+    buildCashifyUrl({ brand: 'Apple', model: 'Apple iPhone 14', storage: '128GB' }),
+    'https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-14'
+  );
+});
+
+test('URL resolution prefers catalog link, then the existing scraper dictionaries, then a generated URL', () => {
+  const resolve = createCashifyUrlResolver({
+    curatedLinks: new Map([['oppo|oppo find x9s|12 gb/512 gb', 'https://curated.example/oppo']]),
+    dictionary: { 'apple iphone 6 plus': 'https://www.cashify.in/sell-old-mobile-phone/used-iphone-6-plus' },
+  });
+  assert.deepEqual(resolve(OPPO), { url: 'https://curated.example/oppo', tier: 'catalog' });
+  assert.equal(resolve({ brand: 'Apple', model: 'Apple iPhone 6 Plus', storage: '128GB' }).tier, 'dictionary');
+  assert.equal(resolve(ONEPLUS).tier, 'generated');
+  assert.equal(dictionaryKey({ brand: 'Apple', model: 'Apple iPhone 6 Plus', storage: '' }), 'apple iphone 6 plus');
 });
 
 console.log(`\n${passed} passed, ${failed} failed.\n`);
