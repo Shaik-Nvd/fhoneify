@@ -26,6 +26,19 @@ require('dotenv').config();
  * on the ReferencePriceRepository interface.
  */
 let cached: ReferencePriceRepository | null = null;
+let cachedPrismaClient: any = null;
+let backend: 'postgres' | 'file' = 'file';
+
+export interface ReferenceStoreHealth {
+  backend: 'postgres' | 'file';
+  /** Postgres only: whether the last warm-up/connection attempt succeeded.
+   * Always true for the file store, which needs no connection. */
+  connected: boolean;
+  error?: string;
+  checkedAt: string | null;
+}
+
+let lastHealth: ReferenceStoreHealth = { backend: 'file', connected: true, checkedAt: null };
 
 export function getReferencePriceRepository(): ReferencePriceRepository {
   if (cached) return cached;
@@ -39,6 +52,8 @@ export function getReferencePriceRepository(): ReferencePriceRepository {
       const { PrismaClient } = require('@prisma/client');
       const { PostgresReferencePriceStore } = require('./postgresStore');
       const prisma = new PrismaClient();
+      cachedPrismaClient = prisma;
+      backend = 'postgres';
       resolved = new PostgresReferencePriceStore(prisma);
     } catch (err: any) {
       console.error('[referencePricing] DATABASE_URL is set but the Postgres store failed to initialize; falling back to the file-backed store:', err.message);
@@ -49,8 +64,73 @@ export function getReferencePriceRepository(): ReferencePriceRepository {
   return cached;
 }
 
+/**
+ * Opens the database connection at startup instead of on the first quote.
+ *
+ * Prisma connects lazily, so the first reference lookup after boot paid the
+ * whole connection+engine cost and could exceed the (deliberately tight)
+ * REFERENCE_PRICE_LOOKUP_TIMEOUT_MS, degrading that one request to the
+ * snapshot fallback for no real reason. `SELECT 1` after $connect() forces
+ * the query engine and pool to be fully ready, not just dialled.
+ *
+ * Never throws: if the database is unavailable at boot the app still starts
+ * and serves quotes from the snapshot fallback, and Prisma reconnects by
+ * itself on a later query once the database is back. The returned health is
+ * reported truthfully so nothing claims Postgres is up when it is not.
+ */
+export async function warmReferencePriceRepository(
+  timeoutMs = Number(process.env.REFERENCE_PRICE_WARMUP_TIMEOUT_MS ?? 10000)
+): Promise<ReferenceStoreHealth> {
+  getReferencePriceRepository();
+
+  if (backend !== 'postgres' || !cachedPrismaClient) {
+    lastHealth = { backend: 'file', connected: true, checkedAt: new Date().toISOString() };
+    return lastHealth;
+  }
+
+  let timer: ReturnType<typeof setTimeout> | undefined;
+  try {
+    await Promise.race([
+      (async () => {
+        await cachedPrismaClient.$connect();
+        await cachedPrismaClient.$queryRaw`SELECT 1`;
+      })(),
+      new Promise((_, reject) => {
+        timer = setTimeout(() => reject(new Error(`warm-up timed out after ${timeoutMs}ms`)), timeoutMs);
+      }),
+    ]);
+    lastHealth = { backend: 'postgres', connected: true, checkedAt: new Date().toISOString() };
+  } catch (err: any) {
+    lastHealth = { backend: 'postgres', connected: false, error: err?.message ?? String(err), checkedAt: new Date().toISOString() };
+  } finally {
+    if (timer) clearTimeout(timer);
+  }
+
+  return lastHealth;
+}
+
+/** Result of the most recent warm-up attempt. Never asserts more than was
+ * actually observed. */
+export function getReferenceStoreHealth(): ReferenceStoreHealth {
+  return lastHealth;
+}
+
+/** Graceful shutdown: releases the pool this module owns. Safe to call when
+ * there is no Postgres client. */
+export async function disconnectReferencePriceRepository(): Promise<void> {
+  if (!cachedPrismaClient) return;
+  try {
+    await cachedPrismaClient.$disconnect();
+  } catch {
+    // Shutdown must not fail because the connection was already gone.
+  }
+}
+
 /** Test-only: clears the cached instance so a test can force
  * re-evaluation of DATABASE_URL (e.g. after temporarily unsetting it). */
 export function _resetReferencePriceRepositoryCacheForTests(): void {
   cached = null;
+  cachedPrismaClient = null;
+  backend = 'file';
+  lastHealth = { backend: 'file', connected: true, checkedAt: null };
 }

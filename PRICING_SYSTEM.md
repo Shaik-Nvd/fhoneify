@@ -124,6 +124,22 @@ It sits in the existing `answers` JSON, so no migration is needed. The admin vie
 
 Suite D (`pricing.quote-integration.test.ts`) still runs against whatever `DATABASE_URL` points to, and writes a probe record there. Point it at a non-production database.
 
+## 7a. Startup warm-up
+
+Prisma connects lazily, so the first reference lookup after boot used to pay the connection cost and could exceed `REFERENCE_PRICE_LOOKUP_TIMEOUT_MS`, degrading that one request to the snapshot for no real reason (the price was still correct, but `referenceStatus` read `unknown`).
+
+`warmReferencePriceRepository()` now runs before `app.listen()`: it calls `$connect()` and then `SELECT 1`, which fully initializes the query engine and pool. The application database is connected at the same point. Both are non-fatal: if Postgres is down at boot the server still starts, quotes use the snapshot fallback, and Prisma reconnects on a later query.
+
+`GET /health` reports the truth rather than assuming it:
+
+```json
+{ "ok": true, "referenceStore": "postgres", "database": "connected", "databaseCheckedAt": "..." }
+```
+
+`database` is `connected`, `unavailable`, or `not_configured` (file store). `ok` only means the process is serving. `SIGTERM`/`SIGINT` now drain the HTTP server and disconnect both Prisma clients, with a 10s hard exit.
+
+The lookup timeout was **not** widened, and the degraded fallback is unchanged - it remains genuine failure safety, as Scenarios 2 and 3 in the test table demonstrate.
+
 ## 8. Operational follow-ups
 
 1. **Repair the stripped source URLs.** After deploying the ingestion fix, run `npm run reference-prices:refresh-all` against production. Suite D's OPPO Find X9s `sourceUrl` assertion should then pass.

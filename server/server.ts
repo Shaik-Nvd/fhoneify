@@ -33,6 +33,12 @@ import { diagnosticsRouter } from './modules/diagnostics/routes';
 import { logisticsRouter } from './modules/logistics/routes';
 import webhookRouter from './modules/webhook/routes';
 import { referencePricingRouter } from './modules/referencePricing/routes';
+import {
+  disconnectReferencePriceRepository,
+  getReferenceStoreHealth,
+  warmReferencePriceRepository,
+} from '../lib/referencePricing/getStore';
+import prisma from './lib/prisma';
 
 const app = express();
 
@@ -104,9 +110,17 @@ app.get('/quote-test.html', (_req: Request, res: Response) => {
   res.send(quoteTestHtml);
 });
 
-// Health check endpoint
+// Health check endpoint. `ok` means the process is serving; the reference
+// store is reported separately and truthfully, so a degraded database is
+// never presented as healthy.
 app.get('/health', (_req: Request, res: Response) => {
-  res.json({ ok: true });
+  const store = getReferenceStoreHealth();
+  res.json({
+    ok: true,
+    referenceStore: store.backend,
+    database: store.backend === 'postgres' ? (store.connected ? 'connected' : 'unavailable') : 'not_configured',
+    databaseCheckedAt: store.checkedAt,
+  });
 });
 
 // Register routers
@@ -139,8 +153,49 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
   res.status(500).json({ success: false, error: 'Internal server error' });
 });
 
-app.listen(config.PORT, () => {
-  logger.info(`Phoneify Modular API Server running on http://localhost:${config.PORT}`);
-});
+/**
+ * Warm the database connections before accepting traffic, so the first
+ * quote is not the request that pays for connecting (which could trip the
+ * tight reference-lookup timeout and degrade to the snapshot needlessly).
+ *
+ * A failed warm-up is logged, not fatal: the server still starts and quotes
+ * fall back to the snapshot exactly as designed until the database recovers.
+ */
+async function start() {
+  const store = await warmReferencePriceRepository();
+  if (store.backend !== 'postgres') {
+    logger.info('Reference prices are file-backed; no database warm-up required');
+  } else if (store.connected) {
+    logger.info('Reference-price database connection warmed and ready');
+  } else {
+    logger.error({ err: store.error }, 'Reference-price database warm-up FAILED; quotes will use the snapshot fallback until it recovers');
+  }
+
+  // The application database (leads, users) - same rationale, non-fatal.
+  try {
+    await prisma.$connect();
+  } catch (err: any) {
+    logger.error({ err: err.message }, 'Application database warm-up failed; it will reconnect on demand');
+  }
+
+  const server = app.listen(config.PORT, () => {
+    logger.info(`Phoneify Modular API Server running on http://localhost:${config.PORT}`);
+  });
+
+  const shutdown = (signal: string) => {
+    logger.info({ signal }, 'Shutting down; draining connections');
+    server.close(async () => {
+      await disconnectReferencePriceRepository();
+      await prisma.$disconnect().catch(() => undefined);
+      process.exit(0);
+    });
+    // Never hang forever on a stuck socket.
+    setTimeout(() => process.exit(1), 10000).unref();
+  };
+  process.on('SIGTERM', () => shutdown('SIGTERM'));
+  process.on('SIGINT', () => shutdown('SIGINT'));
+}
+
+start();
 
 export default app;

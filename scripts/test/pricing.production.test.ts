@@ -27,6 +27,12 @@ import { canonicalDiagnosticsHash, signQuoteToken, verifyQuoteToken } from '../.
 import { createPricingService, PricingServiceDeps } from '../../lib/pricing/pricingService';
 import { refreshDevice, PriceSource } from '../../lib/referencePricing/ingestion';
 import type { ReferencePriceRepository } from '../../lib/referencePricing/store';
+import {
+  _resetReferencePriceRepositoryCacheForTests,
+  disconnectReferencePriceRepository,
+  getReferenceStoreHealth,
+  warmReferencePriceRepository,
+} from '../../lib/referencePricing/getStore';
 import { deviceKey, ReferencePriceHistoryEntry, ReferencePriceRecord } from '../../lib/referencePricing/types';
 import { SEED_DEVICES } from '../../lib/seed_devices';
 import snapshot from '../../lib/cashify_prices.json';
@@ -410,6 +416,42 @@ async function run() {
     const outcome = await refreshDevice(repo, ingestDevice, source({ price: 1, matchConfidence: 'exact', observedAt: 'yesterday' }));
     assert.equal(outcome.accepted, false);
     assert.equal((await repo.get(deviceKey(ingestDevice)))!.currentPrice, 45000);
+  });
+
+  console.log('\n=== Startup warm-up ===\n');
+
+  await test('file-backed store reports healthy without any connection attempt', async () => {
+    const original = process.env.DATABASE_URL;
+    delete process.env.DATABASE_URL;
+    _resetReferencePriceRepositoryCacheForTests();
+    try {
+      const health = await warmReferencePriceRepository();
+      assert.equal(health.backend, 'file');
+      assert.equal(health.connected, true);
+      assert.deepEqual(getReferenceStoreHealth(), health);
+    } finally {
+      if (original === undefined) delete process.env.DATABASE_URL;
+      else process.env.DATABASE_URL = original;
+      _resetReferencePriceRepositoryCacheForTests();
+    }
+  });
+
+  await test('an unreachable database fails warm-up honestly instead of throwing or claiming health', async () => {
+    const original = process.env.DATABASE_URL;
+    process.env.DATABASE_URL = 'postgresql://u:p@127.0.0.1:1/nodb?connect_timeout=1';
+    _resetReferencePriceRepositoryCacheForTests();
+    try {
+      const health = await warmReferencePriceRepository(4000);
+      assert.equal(health.backend, 'postgres');
+      assert.equal(health.connected, false, 'must not report a connection it never made');
+      assert.ok(health.error, 'must record why');
+      // Shutdown path must stay safe after a failed warm-up.
+      await disconnectReferencePriceRepository();
+    } finally {
+      if (original === undefined) delete process.env.DATABASE_URL;
+      else process.env.DATABASE_URL = original;
+      _resetReferencePriceRepositoryCacheForTests();
+    }
   });
 
   console.log(`\n${passed} passed, ${failed} failed.`);
