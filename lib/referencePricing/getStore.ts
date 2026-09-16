@@ -54,3 +54,20 @@ export function getReferencePriceRepository(): ReferencePriceRepository {
 export function _resetReferencePriceRepositoryCacheForTests(): void {
   cached = null;
 }
+
+/**
+ * Test-only: pins the repository to an explicit instance, bypassing
+ * DATABASE_URL entirely.
+ *
+ * This exists because unsetting DATABASE_URL is NOT sufficient to keep a test
+ * off the production database. `server/lib/prisma.ts` constructs a
+ * PrismaClient at import time, and Prisma searches parent directories for a
+ * .env - so merely importing anything in the server module graph can silently
+ * re-inject a production DATABASE_URL before this factory ever runs. Any test
+ * that touches the quote flow must call this FIRST and then import the quote
+ * service dynamically, so "this test cannot write to production" is
+ * structurally true rather than a matter of import ordering.
+ */
+export function _setReferencePriceRepositoryForTests(repo: ReferencePriceRepository): void {
+  cached = repo;
+}

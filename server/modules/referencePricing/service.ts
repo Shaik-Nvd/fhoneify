@@ -1,10 +1,15 @@
+import path from 'path';
 import { getReferencePriceRepository } from '../../../lib/referencePricing/getStore';
 import { classifyFreshness } from '../../../lib/referencePricing/freshnessPolicy';
 import { refreshDevice } from '../../../lib/referencePricing/ingestion';
 import { createManualSubmissionSource } from '../../../lib/referencePricing/sources/manualSource';
 import { ReferencePriceRecord, ReferencePriceStatus } from '../../../lib/referencePricing/types';
+import { readRecentRuns, listSuspiciousChanges, RefreshRunSummary } from '../../../lib/referencePricing/refreshHealth';
+import prisma from '../../lib/prisma';
 
 const store = getReferencePriceRepository();
+
+const RUN_LOG_PATH = path.join(process.cwd(), 'server', 'data', 'reference-prices', 'refresh-runs.json');
 
 /** Recomputes each record's status live from its lastVerifiedAt/failure
  * fields rather than trusting the stored status column, since a record
@@ -30,12 +35,55 @@ export async function getCoverageSummary() {
   const total = all.length;
   const withAnyPrice = total - byStatus.missing;
 
+  const runs = await getRefreshRuns(5);
+  const lastAttempt = runs[0] ?? null;
+  const lastSuccess = runs.find((r) => r.status === 'SUCCESS' || r.status === 'PARTIAL') ?? null;
+
   return {
     totalDevices: total,
     withReferencePrice: withAnyPrice,
     coveragePercent: total > 0 ? Number(((withAnyPrice / total) * 100).toFixed(1)) : 0,
     byStatus,
+    // Phase 13: everything needed to answer "is the weekly refresh healthy?"
+    // in one call, without building a dashboard.
+    refresh: {
+      lastAttemptedAt: lastAttempt?.startedAt ?? null,
+      lastAttemptedStatus: lastAttempt?.status ?? null,
+      lastSuccessfulAt: lastSuccess?.startedAt ?? null,
+      lastDurationMs: lastAttempt?.durationMs ?? null,
+      lastCounts: lastAttempt
+        ? {
+            devicesDiscovered: lastAttempt.devicesDiscovered,
+            updated: lastAttempt.updatedCount,
+            unchanged: lastAttempt.unchangedCount,
+            rejected: lastAttempt.rejectedCount,
+            failed: lastAttempt.failedCount,
+            missing: lastAttempt.missingCount,
+            flagged: lastAttempt.flaggedCount,
+            notAttempted: lastAttempt.notAttemptedCount,
+          }
+        : null,
+      lastError: lastAttempt?.error ?? null,
+    },
   };
+}
+
+/** Recent scheduled-refresh runs, newest first. Reads from Postgres when
+ * available and from the JSON run log otherwise, so this works identically in
+ * a deployed environment and in local file-store mode. */
+export async function getRefreshRuns(limit = 10): Promise<RefreshRunSummary[]> {
+  return readRecentRuns({
+    limit,
+    prisma: process.env.DATABASE_URL ? prisma : undefined,
+    filePath: RUN_LOG_PATH,
+  });
+}
+
+/** Devices whose most recent accepted price moved far enough to be flagged for
+ * human review. The price was still accepted (a large drop can be real - see
+ * validation.ts); this is the review queue, not a rejection list. */
+export async function getSuspiciousChanges(limit = 50) {
+  return listSuspiciousChanges(store, limit);
 }
 
 export async function listDevicesByStatus(status: ReferencePriceStatus) {

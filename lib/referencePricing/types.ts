@@ -68,4 +68,14 @@ export interface IngestOutcome {
   flagged?: boolean; // accepted but marked for human review (large price swing)
   previousPrice?: number;
   newPrice?: number;
+  /** True when a usable previous price existed and was PRESERVED through a
+   * failed/rejected attempt. This is what separates "we failed but the
+   * device still has yesterday's good price" (Phase 6) from "this device has
+   * never had a price at all" (missing) in the refresh report. */
+  preservedPreviousPrice?: boolean;
+  /** True when the attempt died on OUR infrastructure (the database write or
+   * read threw), rather than on the source. Nothing about the stored record is
+   * known to have changed, so this is always reported as a failure - never as
+   * "missing", which would wrongly claim the device has no price. */
+  infrastructureError?: boolean;
 }

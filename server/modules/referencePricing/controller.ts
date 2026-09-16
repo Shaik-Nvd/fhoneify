@@ -16,6 +16,28 @@ export async function getStatus(req: AuthenticatedRequest, res: Response) {
   }
 }
 
+export async function listRefreshRuns(req: AuthenticatedRequest, res: Response) {
+  try {
+    const limit = Math.min(Number(req.query.limit ?? 10) || 10, 100);
+    const runs = await service.getRefreshRuns(limit);
+    return res.json({ success: true, data: runs });
+  } catch (err: any) {
+    logger.error({ err: err.message }, 'Error in reference-pricing listRefreshRuns');
+    return res.status(500).json({ success: false, error: 'Internal server error' });
+  }
+}
+
+export async function listSuspicious(req: AuthenticatedRequest, res: Response) {
+  try {
+    const limit = Math.min(Number(req.query.limit ?? 50) || 50, 200);
+    const changes = await service.getSuspiciousChanges(limit);
+    return res.json({ success: true, data: changes });
+  } catch (err: any) {
+    logger.error({ err: err.message }, 'Error in reference-pricing listSuspicious');
+    return res.status(500).json({ success: false, error: 'Internal server error' });
+  }
+}
+
 export async function listByStatus(req: AuthenticatedRequest, res: Response) {
   try {
     const status = req.params.status;

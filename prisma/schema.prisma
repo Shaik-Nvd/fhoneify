@@ -273,3 +273,54 @@ model ReferencePriceHistory {
 
   @@index([referencePriceId, recordedAt])
 }
+
+enum RefreshRunStatus {
+  RUNNING
+  SUCCESS
+  PARTIAL
+  FAILED
+}
+
+/// One execution of the scheduled reference-price refresh. This is the
+/// monitoring surface for "is the weekly job healthy" (last attempted, last
+/// successful, counts, duration) - deliberately one row per run rather than a
+/// dashboard, so the question can be answered from the database, the admin
+/// API, or a CI log without building a reporting system.
+model ReferencePriceRefreshRun {
+  id                String           @id @default(uuid())
+  source            String // e.g. "cashify"
+  /// How the run was started: "schedule" | "manual" | "cli".
+  trigger           String           @default("cli")
+  status            RefreshRunStatus @default(RUNNING)
+  startedAt         DateTime         @default(now())
+  finishedAt        DateTime?
+  durationMs        Int?
+  devicesDiscovered Int              @default(0)
+  updatedCount      Int              @default(0)
+  unchangedCount    Int              @default(0)
+  rejectedCount     Int              @default(0)
+  failedCount       Int              @default(0)
+  missingCount      Int              @default(0)
+  flaggedCount      Int              @default(0)
+  /// Devices the run never got to (time cap or an abort). Counted separately
+  /// from failures: an unvisited device simply kept its existing price.
+  notAttemptedCount Int              @default(0)
+  error             String?
+  /// The full human-readable report, stored verbatim so an operator can read
+  /// exactly what CI printed without needing the CI logs to still exist.
+  report            String?
+
+  @@index([startedAt])
+  @@index([status, startedAt])
+}
+
+/// A mutual-exclusion row so two refresh runs cannot corrupt each other
+/// (scheduler retry, an accidental manual trigger during the weekly run, two
+/// runners starting at once). Held for a bounded TTL so a crashed run cannot
+/// block the pipeline forever.
+model ReferencePriceRefreshLock {
+  name       String   @id
+  holder     String
+  acquiredAt DateTime @default(now())
+  expiresAt  DateTime
+}

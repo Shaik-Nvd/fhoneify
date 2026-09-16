@@ -11,27 +11,53 @@ import { deviceKey } from './types';
  * requirement to decouple pricing calculation from acquisition).
  *
  * Implementations in ./sources/: a legacy one-time migration source (reads
- * the existing static JSON snapshots) and a manual/admin-submitted source.
- * There is deliberately NO live-scraper implementation in this codebase -
- * see PRICING_REFERENCE_DATA_ARCHITECTURE.md "Blocked: live ingestion" for
- * why, and what would be needed to add one safely.
+ * the existing static JSON snapshots), a manual/admin-submitted source, and
+ * the live Cashify source (cashifySource.ts) that the scheduled 7-day refresh
+ * uses - see PRICING_REFERENCE_DATA_ARCHITECTURE.md section 9a.
  */
+export interface PriceObservation {
+  price: number;
+  sourceUrl?: string;
+  matchConfidence: MatchConfidence;
+  matchEvidence?: string;
+  /** When this observation actually happened. Omit for a true live
+   * source (defaults to "now", correct - the fetch() call IS the
+   * observation). A source replaying historical/static data (a
+   * one-time migration, a dated snapshot file) MUST set this to the
+   * real historical date - never let replayed old data claim to have
+   * been "verified now". This is exactly the mistake the freshness
+   * system exists to prevent, so it is not an optional nicety. */
+  observedAt?: string;
+}
+
+/**
+ * An explicit, self-describing refusal from a source: "I reached the
+ * reference, and what I found is not usable for this device."
+ *
+ * This exists so a source can distinguish a REASONED rejection (the page
+ * turned out to be a different model, the variant didn't match, the price
+ * wasn't in rupees) from a bare `null`. Returning null still works and still
+ * means "no match" - this just carries the reason through to the refresh
+ * report and the stored failure message instead of collapsing every refusal
+ * into one generic string. A rejection is never retried by default: the
+ * source already looked and already decided, so retrying would only repeat
+ * the same answer more slowly.
+ */
+export interface PriceRejection {
+  rejected: true;
+  reason: string;
+  /** Set true only for a refusal that a later attempt could plausibly
+   * resolve (e.g. the page rendered no price yet). Defaults to false. */
+  retryable?: boolean;
+}
+
+export function isRejection(v: PriceObservation | PriceRejection | null): v is PriceRejection {
+  return v !== null && (v as PriceRejection).rejected === true;
+}
+
 export interface PriceSource {
   name: string;
-  fetch(device: DeviceIdentity): Promise<{
-    price: number;
-    sourceUrl?: string;
-    matchConfidence: MatchConfidence;
-    matchEvidence?: string;
-    /** When this observation actually happened. Omit for a true live
-     * source (defaults to "now", correct - the fetch() call IS the
-     * observation). A source replaying historical/static data (a
-     * one-time migration, a dated snapshot file) MUST set this to the
-     * real historical date - never let replayed old data claim to have
-     * been "verified now". This is exactly the mistake the freshness
-     * system exists to prevent, so it is not an optional nicety. */
-    observedAt?: string;
-  } | null>;
+  fetch(device: DeviceIdentity): Promise<PriceObservation | PriceRejection | null>;
 }
 
 export interface RefreshOptions {
@@ -82,6 +108,19 @@ export async function refreshDevice(
       if (!observation) {
         lastError = `source "${source.name}" returned no match for this device`;
         break; // no point retrying a genuine "not found"
+      }
+
+      if (isRejection(observation)) {
+        // The source looked and deliberately refused (wrong model, wrong
+        // variant, unparseable/foreign-currency price). Carry its reason
+        // through verbatim so the refresh report and the stored
+        // lastFailureError say WHY, not just "no match".
+        lastError = `rejected by source "${source.name}": ${observation.reason}`;
+        if (observation.retryable && attempt < opts.maxRetries) {
+          await sleep(opts.retryDelayMs * (attempt + 1));
+          continue;
+        }
+        break;
       }
 
       const validation = validatePriceObservation({
@@ -205,27 +244,115 @@ async function recordFailure(
       };
 
   await repo.upsert(record);
-  return { deviceKey: key, accepted: false, reason: error };
+  const preserved = !!existing && existing.currentPrice > 0 && !!existing.lastVerifiedAt;
+  return {
+    deviceKey: key,
+    accepted: false,
+    reason: error,
+    preservedPreviousPrice: preserved,
+    previousPrice: preserved ? existing!.currentPrice : undefined,
+    // Deliberately reporting the PREVIOUS price as the current one on a
+    // failure: the stored value genuinely did not change. Reporting
+    // newPrice: 0 here would make a preserved price look like a wipe in the
+    // run report, which is the exact confusion Phase 6 is about.
+    newPrice: preserved ? existing!.currentPrice : undefined,
+  };
 }
+
+export interface CatalogRefreshControls {
+  /** Cooperative stop signal. Checked before starting each device, never
+   * mid-device, so a stop can never leave a device half-written. Devices not
+   * reached are simply not attempted - and therefore keep their existing
+   * price untouched, which is the safe outcome. */
+  shouldStop?: () => boolean;
+  onProgress?: (done: number, total: number, outcome: IngestOutcome) => void;
+}
+
+export interface CatalogRefreshResult {
+  outcomes: IngestOutcome[];
+  /** Devices never attempted because shouldStop() fired or the run aborted. */
+  notAttempted: DeviceIdentity[];
+  /** Set when the run stopped early because the repository itself kept
+   * failing (e.g. the database went away). */
+  abortedReason?: string;
+}
+
+/** After this many CONSECUTIVE infrastructure errors the run stops: the
+ * database is down, and hammering it for the remaining ~2,000 devices only
+ * turns one clear failure into thousands of identical ones. */
+export const MAX_CONSECUTIVE_INFRASTRUCTURE_ERRORS = 10;
 
 /** Refreshes many devices against one source with bounded concurrency. */
 export async function refreshCatalog(
   repo: ReferencePriceRepository,
   devices: DeviceIdentity[],
   source: PriceSource,
-  options: RefreshOptions = {}
+  options: RefreshOptions & CatalogRefreshControls = {}
 ): Promise<IngestOutcome[]> {
+  const result = await refreshCatalogWithControls(repo, devices, source, options);
+  return result.outcomes;
+}
+
+/** As refreshCatalog, but also reports which devices were never attempted
+ * (needed by the scheduled job so a time-capped run reports honestly rather
+ * than counting unvisited devices as failures). */
+export async function refreshCatalogWithControls(
+  repo: ReferencePriceRepository,
+  devices: DeviceIdentity[],
+  source: PriceSource,
+  options: RefreshOptions & CatalogRefreshControls = {}
+): Promise<CatalogRefreshResult> {
   const opts = { ...DEFAULT_OPTIONS, ...options };
   const results: IngestOutcome[] = [];
   let index = 0;
+  let stopped = false;
+  let consecutiveInfraErrors = 0;
+  let abortedReason: string | undefined;
 
   async function worker() {
     while (index < devices.length) {
+      if (abortedReason || options.shouldStop?.()) {
+        stopped = true;
+        return;
+      }
       const device = devices[index++];
-      results.push(await refreshDevice(repo, device, source, opts));
+
+      let outcome: IngestOutcome;
+      try {
+        outcome = await refreshDevice(repo, device, source, opts);
+        consecutiveInfraErrors = 0;
+      } catch (err: any) {
+        // refreshDevice never throws for a SOURCE problem - those become
+        // outcomes. Reaching here means the repository itself threw (the
+        // database is unreachable or rejected a write).
+        //
+        // This MUST be caught per device. Letting it reject Promise.all would
+        // return control to the caller - which then releases the lock and
+        // reports - while the other workers were still running and writing.
+        // That is a lock-free concurrent writer, the one thing the lock exists
+        // to prevent.
+        consecutiveInfraErrors++;
+        outcome = {
+          deviceKey: deviceKey(device),
+          accepted: false,
+          infrastructureError: true,
+          reason: `infrastructure error (repository unavailable): ${err?.message ?? err}`,
+        };
+        if (consecutiveInfraErrors >= MAX_CONSECUTIVE_INFRASTRUCTURE_ERRORS && !abortedReason) {
+          abortedReason =
+            `stopped after ${consecutiveInfraErrors} consecutive repository errors - ` +
+            `the reference-price store appears to be unavailable (last: ${err?.message ?? err})`;
+        }
+      }
+
+      results.push(outcome);
+      options.onProgress?.(results.length, devices.length, outcome);
     }
   }
 
+  // Every worker settles before this returns, so no write can outlive it.
   await Promise.all(Array.from({ length: Math.min(opts.concurrency, devices.length) }, worker));
-  return results;
+
+  const notAttempted = stopped ? devices.slice(Math.min(index, devices.length)) : [];
+  return { outcomes: results, notAttempted, abortedReason };
 }

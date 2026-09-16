@@ -10,20 +10,71 @@ const SESSIONS_DIR = path.join(__dirname, '../../../cashify-sessions');
 
 let globalBrowser: Browser | null = null;
 
-export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: string, storage: string, answers: any }) {
+/**
+ * Resolves whether a caller's browser should have a visible window.
+ *
+ * Each caller states its own default rather than sharing one global:
+ * scrapeCashifyPrice() keeps its original headed launch exactly as before
+ * (changing an existing feature's behaviour as a side effect of adding a
+ * scheduled job would be the wrong trade), while the scheduled reference
+ * refresh defaults to headless because a CI runner has no display at all.
+ *
+ * CASHIFY_SCRAPER_HEADED=true forces a visible window for either path - the
+ * local "solve a CAPTCHA by hand" mode.
+ */
+export function resolveHeadless(callerDefault: boolean): boolean {
+  if (process.env.CASHIFY_SCRAPER_HEADED === 'true') return false;
+  return callerDefault;
+}
+
+/** Every stored Cashify session, newest-first-agnostic. Shared by both the
+ * on-demand market-price scrape and the scheduled reference refresh so there
+ * is one definition of "where do sessions come from". */
+export function getCashifySessionFiles(): string[] {
   let sessionFiles: string[] = [];
-  
+
   if (fs.existsSync(SESSIONS_DIR)) {
     sessionFiles = fs.readdirSync(SESSIONS_DIR)
       .filter(f => f.endsWith('.json'))
       .map(f => path.join(SESSIONS_DIR, f));
   }
-  
+
   // Backwards compatibility for the old single session file
   const oldSessionFile = path.join(__dirname, '../../../cashify-session.json');
   if (fs.existsSync(oldSessionFile) && sessionFiles.length === 0) {
     sessionFiles = [oldSessionFile];
   }
+
+  return sessionFiles;
+}
+
+/** Boots the shared Chromium instance, or returns the existing one. The
+ * instance is per-process, and the two callers never share a process (the API
+ * server only runs scrapeCashifyPrice; the scheduled job only runs the
+ * reference read), so each launches in the mode it asked for. */
+export async function getCashifyBrowser(opts: { headless: boolean }): Promise<Browser> {
+  if (!globalBrowser) {
+    const headless = resolveHeadless(opts.headless);
+    logger.info({ headless }, 'Launching new persistent Chromium instance...');
+    globalBrowser = await chromium.launch({
+      headless,
+      args: ['--no-sandbox', '--disable-setuid-sandbox']
+    });
+  }
+  return globalBrowser;
+}
+
+/** Releases the shared Chromium instance. A long-lived server never needs
+ * this, but a batch job MUST call it or the process will not exit. */
+export async function closeCashifyBrowser(): Promise<void> {
+  if (globalBrowser) {
+    await globalBrowser.close().catch(() => {});
+    globalBrowser = null;
+  }
+}
+
+export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: string, storage: string, answers: any }) {
+  let sessionFiles: string[] = getCashifySessionFiles();
 
   if (sessionFiles.length === 0) {
     throw new Error('Cashify sessions not found. Please run setup-cashify script first.');
@@ -33,15 +84,10 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
   sessionFiles.sort(() => Math.random() - 0.5);
 
   let lastError: Error | null = null;
-  
-  // Boot or reuse global browser
-  if (!globalBrowser) {
-    logger.info('Launching new persistent Chromium instance...');
-    globalBrowser = await chromium.launch({ 
-      headless: false,
-      args: ['--no-sandbox', '--disable-setuid-sandbox']
-    });
-  }
+
+  // Boot or reuse global browser. Headed, exactly as this function always
+  // launched - see resolveHeadless().
+  globalBrowser = await getCashifyBrowser({ headless: false });
 
   for (let i = 0; i < sessionFiles.length; i++) {
     const sessionFile = sessionFiles[i];

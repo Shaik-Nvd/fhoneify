@@ -10,6 +10,10 @@ const router = Router();
 router.use(requireAuth, requireAdmin);
 
 router.get('/status', ctrl.getStatus);
+// Weekly-refresh health (Phase 13). Registered BEFORE /devices/:status so the
+// literal paths are not swallowed by the parameterized one.
+router.get('/refresh-runs', ctrl.listRefreshRuns);
+router.get('/suspicious', ctrl.listSuspicious);
 router.get('/devices/:status', ctrl.listByStatus);
 router.get('/device/:deviceKey', ctrl.getDevice);
 router.post('/submit', ctrl.submitPrice);
