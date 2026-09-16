@@ -5,9 +5,13 @@ const router = Router();
 // White-Label Trade-In API Hook for 3rd-party resellers
 router.post('/trade-in', async (req: Request, res: Response) => {
   try {
-    // Expecting API Key in headers for white-label authentication
+    // Expecting API Key in headers for white-label authentication.
+    // No hardcoded fallback: without WHITE_LABEL_API_KEY configured, this
+    // endpoint must reject every request rather than accept a key value
+    // that's visible to anyone reading this source file.
+    const configuredKey = process.env.WHITE_LABEL_API_KEY;
     const apiKey = req.headers['x-api-key'];
-    if (apiKey !== 'test-white-label-key') {
+    if (!configuredKey || apiKey !== configuredKey) {
       return res.status(401).json({ success: false, error: 'Unauthorized: Invalid White-Label API Key' });
     }
 

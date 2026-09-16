@@ -35,10 +35,7 @@ export async function sendOtp(req: Request, res: Response) {
   const { phone } = req.body; // Needs to be format "+1234567890"
   if (!phone) { return res.status(400).json({ error: 'Phone required' }); }
 
-  let code = Math.floor(100000 + Math.random() * 900000).toString();
-  if (phone === '+919999999999' || phone === '+91 9999999999') {
-    code = '123456';
-  }
+  const code = Math.floor(100000 + Math.random() * 900000).toString();
   const expiresAt = new Date(Date.now() + 5 * 60 * 1000); // 5 mins
 
   try {
@@ -51,7 +48,7 @@ export async function sendOtp(req: Request, res: Response) {
     // Send the WhatsApp message asynchronously in the background
     // This allows the frontend to instantly show the OTP input without waiting for WhatsApp API
     if (process.env.WHATSAPP_ACCESS_TOKEN && process.env.WHATSAPP_PHONE_NUMBER_ID) {
-      logger.info(`[WhatsApp API] Attempting to send OTP ${code} to ${phone}`);
+      logger.info({ phone }, '[WhatsApp API] Sending OTP');
       setTimeout(async () => {
         try {
           const controller = new AbortController();
@@ -88,9 +85,17 @@ export async function sendOtp(req: Request, res: Response) {
           logger.error('Background WhatsApp delivery failed', fetchErr);
         }
       }, 0);
+    } else if (process.env.NODE_ENV === 'production') {
+      // WhatsApp credentials are required in production. Never fall back to
+      // returning the OTP in the response - that would be a full auth bypass.
+      logger.error('WhatsApp credentials missing in production; cannot deliver OTP');
+      return res.status(500).json({ error: 'OTP delivery is not configured' });
     } else {
-      logger.info(`Developer bypass activated. OTP for ${phone} is ${code}`);
-      return res.status(200).json({ success: true, bypassCode: code, message: 'Developer bypass' });
+      // Non-production convenience only: OTP is logged to the server console
+      // (never returned in the API response) so local/dev testing can proceed
+      // without WhatsApp credentials.
+      logger.info({ phone }, '[dev only] WhatsApp credentials not configured; OTP logged to console instead of sent');
+      process.stdout.write(`[DEV OTP] ${phone} -> ${code}\n`);
     }
 
     // Instantly return success so the frontend loads the OTP box immediately

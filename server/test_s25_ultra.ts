@@ -43,11 +43,14 @@ const iteration3 = {
   bodyDents: '1-2 minor dents'
 };
 
-const result1 = generateQuote(testDeviceId, "good", undefined, iteration1);
-console.log("Iteration 1 (Expected 59740):", result1?.estimatedPrice);
+async function main() {
+  const result1 = await generateQuote(testDeviceId, "good", undefined, iteration1);
+  console.log("Iteration 1 (Expected 59740):", (result1 as any)?.estimatedPrice);
 
-const result2 = generateQuote(testDeviceId, "excellent", undefined, iteration2);
-console.log("Iteration 2 (Expected 61140):", result2?.estimatedPrice);
+  const result2 = await generateQuote(testDeviceId, "excellent", undefined, iteration2);
+  console.log("Iteration 2 (Expected 61140):", (result2 as any)?.estimatedPrice);
 
-const result3 = generateQuote(testDeviceId, "good", undefined, iteration3);
-console.log("Iteration 3 (Expected 58540):", result3?.estimatedPrice);
+  const result3 = await generateQuote(testDeviceId, "good", undefined, iteration3);
+  console.log("Iteration 3 (Expected 58540):", (result3 as any)?.estimatedPrice);
+}
+main();

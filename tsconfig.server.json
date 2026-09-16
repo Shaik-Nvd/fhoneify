@@ -2,14 +2,18 @@
   "compilerOptions": {
     "target": "ES2020",
     "module": "commonjs",
-    "lib": ["ES2020"],
+    // "dom" is required because several server modules run code INSIDE the
+    // browser via Playwright's page.evaluate(), where `document` and
+    // `getComputedStyle` are real. Without it, every such callback fails to
+    // typecheck even though it is correct at runtime.
+    "lib": ["ES2020", "dom", "dom.iterable"],
     "outDir": "./dist-server",
-    "rootDir": "./server",
+    "rootDir": ".",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "moduleResolution": "node"
   },
-  "include": ["server/**/*"]
+  "include": ["server/**/*", "lib/referencePricing/**/*"]
 }

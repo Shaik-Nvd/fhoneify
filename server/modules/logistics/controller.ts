@@ -1,30 +1,39 @@
-import { Request, Response } from 'express';
+import { Response } from 'express';
 import { LogisticsService } from './service';
+import { AuthenticatedRequest } from '../../middleware/auth';
 
+// NOTE: these endpoints previously had no authentication at all and used a
+// hardcoded 'u-tech-1' identity for every caller (see
+// PRODUCTION_READINESS_AUDIT.md). requestRequote/verifyOtp in particular
+// authorize a payment change with no ownership check on pickupId - closing
+// the "anonymous caller" gap with requireAuth is the minimal safe fix here.
+// A dedicated technician role/middleware (distinct from buyer/seller/admin)
+// is a reasonable follow-up but is a small role-system addition, not made
+// in this pass to keep the change scoped.
 export const LogisticsController = {
-  getFloat(req: Request, res: Response) {
+  getFloat(req: AuthenticatedRequest, res: Response) {
     try {
-      // Hardcoded tech ID for demo
-      const techId = 'u-tech-1';
-      const float = LogisticsService.getTechFloat(techId);
+      if (!req.user) return res.status(401).json({ success: false, error: 'Unauthorized' });
+      const float = LogisticsService.getTechFloat(req.user.id);
       res.json({ success: true, data: float });
     } catch (err: any) {
       res.status(500).json({ success: false, error: err.message });
     }
   },
 
-  getPickups(req: Request, res: Response) {
+  getPickups(req: AuthenticatedRequest, res: Response) {
     try {
-      const techId = 'u-tech-1';
-      const pickups = LogisticsService.getAssignedPickups(techId);
+      if (!req.user) return res.status(401).json({ success: false, error: 'Unauthorized' });
+      const pickups = LogisticsService.getAssignedPickups(req.user.id);
       res.json({ success: true, data: pickups });
     } catch (err: any) {
       res.status(500).json({ success: false, error: err.message });
     }
   },
 
-  async requestRequote(req: Request, res: Response) {
+  async requestRequote(req: AuthenticatedRequest, res: Response) {
     try {
+      if (!req.user) return res.status(401).json({ success: false, error: 'Unauthorized' });
       const { pickupId, newCondition, newQuote } = req.body;
       const data = await LogisticsService.requestRequote(pickupId, newCondition, newQuote);
       if (!data) return res.status(404).json({ success: false, error: 'Pickup not found' });
@@ -34,8 +43,9 @@ export const LogisticsController = {
     }
   },
 
-  async verifyOtp(req: Request, res: Response) {
+  async verifyOtp(req: AuthenticatedRequest, res: Response) {
     try {
+      if (!req.user) return res.status(401).json({ success: false, error: 'Unauthorized' });
       const { pickupId, otp } = req.body;
       const success = await LogisticsService.verifyRequoteOtp(pickupId, otp);
       if (!success) return res.status(400).json({ success: false, error: 'Invalid OTP' });

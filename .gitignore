@@ -19,3 +19,20 @@ pnpm-lock.yaml
 
 serviceAccountKey.json
 
+# Runtime state produced by the scheduled reference-price refresh. The run log
+# is operational history (Postgres holds the authoritative copy in a deployed
+# environment) and the lock file is transient by definition - neither belongs
+# in version control.
+server/data/reference-prices/refresh-runs.json
+server/data/reference-prices/.refresh.lock
+tsconfig.next.tsbuildinfo
+
+# NOTE: cashify-sessions/*.json and cashify-session.json are Playwright
+# storageState files - they contain live Cashify session cookies. They are
+# currently TRACKED in this repository (pre-existing), which is why they are
+# not listed here: adding them now would leave them ignored-but-tracked, and
+# untracking them would break any deploy that relies on the committed copy.
+# See PRICING_REFERENCE_DATA_ARCHITECTURE.md ("Cashify session material") for
+# the rotation/removal steps. CI does NOT use the committed files - it reads
+# the CASHIFY_SESSION_STATE secret instead.
+

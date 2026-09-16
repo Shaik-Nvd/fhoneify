@@ -22,8 +22,7 @@ export async function sendOtp(phone: string): Promise<string> {
       const finalPhone = formattedPhone.startsWith('91') || formattedPhone.length > 10 ? formattedPhone : `91${formattedPhone}`;
       
       const axios = require('axios');
-      const https = require('https');
-      
+
       // Sending template message via Cunnekt API (Fire-and-forget to speed up processing)
       const cunnektUrl = process.env.CUNNEKT_BASE_URL?.endsWith('/') 
         ? `${process.env.CUNNEKT_BASE_URL}sendnotification` 
@@ -53,24 +52,24 @@ export async function sendOtp(phone: string): Promise<string> {
             'API-KEY': process.env.CUNNEKT_API_KEY,
             'Content-Type': 'application/json'
           },
-          // Bypass SSL "unable to verify the first certificate" error
-          httpsAgent: new https.Agent({ rejectUnauthorized: false })
         }
       ).then(() => {
         logger.info({ phone: finalPhone }, 'OTP sent via Cunnekt WhatsApp successfully');
       }).catch((error: any) => {
         logger.error({ phone, err: error.response?.data || error.message }, 'Failed to send OTP via Cunnekt');
-        process.stdout.write(`[DEV OTP FALLBACK] Phone ${phone} → OTP: ${otp}\n`);
+        if (process.env.NODE_ENV !== 'production') {
+          process.stdout.write(`[DEV OTP FALLBACK] Phone ${phone} -> OTP logged, not shown here for security\n`);
+        }
       });
     } catch (error: any) {
       logger.error({ phone, err: error.message }, 'Failed to process OTP request');
     }
-  } else {
-    // Development fallback if no real credentials are provided
-    process.stdout.write(`[DEV OTP] Phone ${phone} → OTP: ${otp}\n`);
+  } else if (process.env.NODE_ENV !== 'production') {
+    // Development fallback if no real credentials are provided. Never do this in production.
+    process.stdout.write(`[DEV OTP] Phone ${phone} -> OTP: ${otp}\n`);
   }
-  
-  logger.info({ phone, otp }, 'OTP generated and logged');
+
+  logger.info({ phone }, 'OTP generated');
   return otp;
 }
 
@@ -187,8 +186,17 @@ export function getMe(user: User) {
 }
 
 export async function adminLoginWithPassword(username: string, password: string) {
-  // Hardcoded for now based on user requirements. In production, this should be in DB and hashed.
-  if (username === 'Fhoneify-web' && password === 'Fhoneify@Get2go') {
+  const validUsername = process.env.ADMIN_USERNAME;
+  const validPassword = process.env.ADMIN_PASSWORD;
+
+  if (!validUsername || !validPassword) {
+    // No insecure hardcoded fallback: without real credentials configured,
+    // admin login must fail rather than accept a publicly-known default.
+    logger.error('ADMIN_USERNAME/ADMIN_PASSWORD are not configured; admin login is disabled');
+    return null;
+  }
+
+  if (username === validUsername && password === validPassword) {
     // Find or mock the admin user
     let user = users.find((u) => u.role === 'admin');
     if (!user) {

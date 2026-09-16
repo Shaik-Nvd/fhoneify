@@ -35,15 +35,27 @@ export async function requireAuth(req: AuthenticatedRequest, res: Response, next
     // Find user in db/in-memory users list
     let user = users.find((u) => u.id === decoded.userId);
     if (!user) {
-      // Vercel serverless workaround: In-memory array might have reset. 
-      // If the JWT is valid, we auto-recreate the user in the mock array.
+      // KNOWN LIMITATION: business state (including the users list) currently
+      // lives only in an in-process array (server/data.ts), so it does not
+      // survive a restart, redeploy, or a second serverless instance. When
+      // that happens, we cannot verify this user's real account status.
+      //
+      // We deliberately do NOT trust the JWT's `role` claim to restore
+      // elevated access here - a token's role claim reflects the role at
+      // ISSUE time, not now, and treating it as authoritative would let a
+      // demoted/disabled/deleted admin keep admin access forever via an
+      // old token. A restored session is always re-created at the lowest
+      // privilege level; anything requiring elevated access must be
+      // re-authenticated once persistent, database-backed users exist
+      // (see PRODUCTION_READINESS_AUDIT.md P0-8 / P1-1).
       user = {
         id: decoded.userId,
         phone: 'restored-session', // Phone is not stored in JWT, so we mock it
-        role: decoded.role as any || 'buyer',
+        role: 'buyer',
+        email: null,
       };
       users.push(user);
-      logger.info(`Auto-restored user ${decoded.userId} from valid JWT`);
+      logger.warn({ userId: decoded.userId }, 'User not found in store; restored session at buyer-level access only');
     }
 
     req.user = user;

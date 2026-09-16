@@ -4,12 +4,30 @@
   "private": true,
   "scripts": {
     "dev": "concurrently \"npm run dev:api\" \"npm run dev:web\"",
-    "dev:web": "next dev -p 3000",
+    "dev:web": "next dev -p 3001",
     "dev:api": "tsx watch server/server.ts",
     "build": "next build",
     "start": "next start",
     "start:api": "npx prisma db push && PLAYWRIGHT_BROWSERS_PATH=/ms-playwright tsx server/server.ts",
     "lint": "next lint",
+    "test:pricing": "tsx scripts/test/pricing.regression.test.ts",
+    "test:pricing:reference": "tsx scripts/test/pricing.cashify-comparison.test.ts",
+    "test:pricing:reference-data": "tsx scripts/test/pricing.reference-data.test.ts",
+    "test:pricing:quote-integration": "tsx scripts/test/pricing.quote-integration.test.ts",
+    "test:pricing:refresh": "tsx scripts/test/referencePricing.refresh.test.ts",
+    "test:pricing:cashify-matching": "tsx scripts/test/referencePricing.cashify-matching.test.ts",
+    "test:pricing:refresh-e2e": "tsx scripts/test/referencePricing.refresh-e2e.test.ts",
+    "test:pricing:all": "npm run test:pricing && npm run test:pricing:reference && npm run test:pricing:reference-data && npm run test:pricing:quote-integration",
+    "test:refresh:all": "npm run test:pricing:cashify-matching && npm run test:pricing:refresh && npm run test:pricing:refresh-e2e",
+    "reference-prices:migrate": "tsx scripts/reference-pricing/migrate-legacy-snapshots.ts",
+    "reference-prices:import-brand-snapshots": "tsx scripts/reference-pricing/import-brand-snapshots.ts",
+    "reference-prices:categorize-missing": "tsx scripts/reference-pricing/categorize-missing.ts",
+    "reference-prices:export": "tsx scripts/reference-pricing/export-cashify-prices.ts",
+    "reference-prices:refresh-all": "tsx scripts/reference-pricing/refresh-all.ts",
+    "reference-prices:refresh-cashify": "tsx scripts/reference-pricing/refresh-from-cashify.ts",
+    "reference-prices:status": "tsx scripts/reference-pricing/refresh-status.ts",
+    "reference-prices:apply-refresh-tables": "tsx scripts/reference-pricing/apply-refresh-tables.ts",
+    "db:snapshot": "tsx scripts/reference-pricing/db-snapshot.ts",
     "setup-cashify": "node scripts/setup-cashify.js",
     "postinstall": "npx playwright install chromium"
   },
@@ -24,8 +42,10 @@
     "cors": "^2.8.5",
     "dotenv": "^17.4.2",
     "express": "^4.18.2",
+    "express-rate-limit": "^7.5.1",
     "framer-motion": "^12.40.0",
     "gsap": "^3.15.0",
+    "helmet": "^8.3.0",
     "jsonwebtoken": "^9.0.3",
     "lucide-react": "^1.31.0",
     "next": "^14.1.0",
@@ -59,5 +79,14 @@
     "eslint-config-next": "^14.1.0",
     "postcss": "^8.4.33",
     "tailwindcss": "^3.4.1"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@prisma/client",
+      "@prisma/engines",
+      "esbuild",
+      "prisma",
+      "unrs-resolver"
+    ]
   }
 }

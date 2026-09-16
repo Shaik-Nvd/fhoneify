@@ -1236,10 +1236,6 @@ export default function QuotePage() {
       if (res.data.error) throw new Error(res.data.error);
       
       setShowOtpInput(true);
-      
-      if (res.data.bypassCode) {
-        setOtp(res.data.bypassCode);
-      }
     } catch (err: any) {
       console.error(err);
       setAuthError(err.response?.data?.error || err.message || 'Failed to send OTP');

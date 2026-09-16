@@ -35,16 +35,19 @@ export function listDevices(req: Request, res: Response) {
   }
 }
 
-export function createQuote(req: Request, res: Response) {
+export async function createQuote(req: Request, res: Response) {
   try {
     const result = CreateQuoteSchema.safeParse(req.body);
     if (!result.success) {
       return res.status(400).json({ success: false, error: result.error.issues[0].message });
     }
     const { deviceId, condition, answers } = result.data;
-    const quoteResult = quoteService.generateQuote(deviceId, condition, undefined, answers);
+    const quoteResult = await quoteService.generateQuote(deviceId, condition, undefined, answers);
     if (!quoteResult) {
       return res.status(404).json({ success: false, error: 'Device not found' });
+    }
+    if ('error' in quoteResult && quoteResult.error === 'REFERENCE_PRICE_UNAVAILABLE') {
+      return res.status(409).json({ success: false, error: 'Reference price unavailable for this device', data: quoteResult });
     }
     return res.json({ success: true, data: quoteResult, message: 'Quote generated successfully' });
   } catch (err: any) {
