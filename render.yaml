@@ -14,5 +14,29 @@ services:
         sync: false
       - key: JWT_SECRET
         sync: false
+      # The live storefront. This was still the placeholder
+      # "https://your-vercel-domain.vercel.app", which became the API's entire
+      # CORS allowlist and blocked every browser call from the real site.
+      # server/config.ts now also allows the known storefront origins outright,
+      # so this value can no longer take the site down on its own.
       - key: FRONTEND_URL
-        value: https://your-vercel-domain.vercel.app
+        value: https://www.fhoneify.in
+      - key: CORS_ORIGINS
+        value: https://www.fhoneify.in,https://fhoneify.in,https://www.fhoneify.com,https://fhoneify.com,https://fhoneify-j7vf.vercel.app
+      # Admin login (see PRICING_SYSTEM.md / .env.example). The hash is set in
+      # the Render dashboard, never in this file.
+      - key: ADMIN_USERNAME
+        sync: false
+      - key: ADMIN_PASSWORD_HASH
+        sync: false
+      # WhatsApp OTP delivery (Meta Cloud API). Required for customer login.
+      - key: WHATSAPP_ACCESS_TOKEN
+        sync: false
+      - key: WHATSAPP_PHONE_NUMBER_ID
+        sync: false
+      - key: WHATSAPP_OTP_TEMPLATE_NAME
+        sync: false
+      - key: WHATSAPP_OTP_TEMPLATE_LANGUAGE
+        sync: false
+      - key: WHATSAPP_WEBHOOK_VERIFY_TOKEN
+        sync: false

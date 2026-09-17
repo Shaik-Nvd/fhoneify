@@ -14,7 +14,7 @@ export default function FieldTechDashboard() {
   const [selectedPickup, setSelectedPickup] = useState<any>(null);
   const [newQuote, setNewQuote] = useState('');
   const [otpSent, setOtpSent] = useState(false);
-  const [generatedOtp, setGeneratedOtp] = useState(''); // For demo
+  const [requoteNotice, setRequoteNotice] = useState('');
   const [enteredOtp, setEnteredOtp] = useState('');
 
   useEffect(() => {
@@ -45,7 +45,10 @@ export default function FieldTechDashboard() {
         newQuote: Number(newQuote)
       });
       setOtpSent(true);
-      setGeneratedOtp(res.data.data.otp); // Demo purposes only
+      // The confirmation code is never sent to this screen - it goes to the
+      // customer. Showing it here would let a technician approve their own
+      // re-quote.
+      setRequoteNotice(res.data?.data?.message || 'Confirmation code sent to the customer');
     } catch (err) {
       alert('Failed to request re-quote');
     }
@@ -141,7 +144,7 @@ export default function FieldTechDashboard() {
               </div>
             ) : (
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                <div className="alert-info">Demo Note: Customer received OTP <strong>{generatedOtp}</strong></div>
+                <div className="alert-info">{requoteNotice}</div>
                 <div>
                   <label style={{ display: 'block', fontSize: '0.8rem', color: 'var(--muted)', marginBottom: '0.5rem' }}>Ask customer for OTP to approve {formatCurrency(Number(newQuote))}</label>
                   <input 

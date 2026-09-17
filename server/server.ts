@@ -62,6 +62,10 @@ app.use(helmet());
 // requests are allowed rather than silently allowing every origin.
 if (config.IS_PRODUCTION && config.CORS_ORIGINS.length === 0) {
   logger.error('CORS_ORIGINS/FRONTEND_URL is not set in production; cross-origin requests will be rejected');
+} else {
+  // Log the effective allowlist at boot: a wrong/placeholder value here blocks
+  // every browser call, and that used to be invisible until customers noticed.
+  logger.info({ corsOrigins: config.CORS_ORIGINS }, 'CORS allowlist active');
 }
 app.use(cors({
   origin: config.IS_PRODUCTION
@@ -87,7 +91,10 @@ const generalLimiter = rateLimit({
 });
 const authLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
-  limit: 20,
+  // Tunable so the automated auth/OTP suites can drive the real endpoints
+  // without tripping the production limit. Defaults to the production value;
+  // there is no way to disable it entirely.
+  limit: Math.max(5, Number(process.env.AUTH_RATE_LIMIT ?? 20)),
   standardHeaders: true,
   legacyHeaders: false,
   message: { success: false, error: 'Too many attempts, please try again later.' },

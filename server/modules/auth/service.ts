@@ -1,9 +1,8 @@
 import jwt from 'jsonwebtoken';
 import config from '../../config';
-import { users, otps, redis, User } from '../../data';
+import { users, redis, User } from '../../data';
 import logger from '../../lib/logger';
 import { verifyPassword, isValidPasswordHash, timingSafeStringEqual, getDummyPasswordHash } from '../../lib/password';
-import twilio from 'twilio';
 import crypto from 'crypto';
 
 /**
@@ -17,80 +16,11 @@ function tokenOptions(expiresIn: string): jwt.SignOptions {
   return { expiresIn: expiresIn as any, jwtid: crypto.randomUUID(), algorithm: 'HS256' };
 }
 
-// Initialize Twilio client (requires ENV vars to be set in production)
-const twilioClient = twilio(
-  process.env.TWILIO_ACCOUNT_SID || 'AC_dummy_sid_for_dev',
-  process.env.TWILIO_AUTH_TOKEN || 'dummy_token_for_dev'
-);
-
-export async function sendOtp(phone: string): Promise<string> {
-  const otp = String(Math.floor(100000 + Math.random() * 900000));
-  otps.set(phone, { otp, expires: Date.now() + 10 * 60 * 1000 });
-
-  // If Cunnekt credentials are provided, send a real WhatsApp message
-  if (process.env.CUNNEKT_API_KEY && process.env.CUNNEKT_BASE_URL) {
-    try {
-      // Ensure phone is in format without '+' but with country code '91' for Indian numbers
-      const formattedPhone = phone.replace(/^\+/, '');
-      const finalPhone = formattedPhone.startsWith('91') || formattedPhone.length > 10 ? formattedPhone : `91${formattedPhone}`;
-      
-      const axios = require('axios');
-
-      // Sending template message via Cunnekt API (Fire-and-forget to speed up processing)
-      const cunnektUrl = process.env.CUNNEKT_BASE_URL?.endsWith('/') 
-        ? `${process.env.CUNNEKT_BASE_URL}sendnotification` 
-        : `${process.env.CUNNEKT_BASE_URL}/sendnotification`;
-
-      axios.post(
-        cunnektUrl, 
-        {
-          mobile: finalPhone,
-          templateid: "otptemplate",
-          template: {
-            components: [
-              {
-                type: "body",
-                parameters: [
-                  {
-                    type: "text",
-                    text: otp
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          headers: {
-            'API-KEY': process.env.CUNNEKT_API_KEY,
-            'Content-Type': 'application/json'
-          },
-        }
-      ).then(() => {
-        logger.info({ phone: finalPhone }, 'OTP sent via Cunnekt WhatsApp successfully');
-      }).catch((error: any) => {
-        logger.error({ phone, err: error.response?.data || error.message }, 'Failed to send OTP via Cunnekt');
-        if (process.env.NODE_ENV !== 'production') {
-          process.stdout.write(`[DEV OTP FALLBACK] Phone ${phone} -> OTP logged, not shown here for security\n`);
-        }
-      });
-    } catch (error: any) {
-      logger.error({ phone, err: error.message }, 'Failed to process OTP request');
-    }
-  } else if (process.env.NODE_ENV !== 'production') {
-    // Development fallback if no real credentials are provided. Never do this in production.
-    process.stdout.write(`[DEV OTP] Phone ${phone} -> OTP: ${otp}\n`);
-  }
-
-  logger.info({ phone }, 'OTP generated');
-  return otp;
-}
-
 export async function generateTokensForUser(phone: string, usedReferralCode?: string) {
   let user = users.find((u) => u.phone === phone);
   let isNewUser = false;
   if (!user) {
-    const myReferralCode = 'REF' + Math.random().toString(36).substring(2, 6).toUpperCase();
+    const myReferralCode = 'REF' + crypto.randomBytes(3).toString('hex').toUpperCase();
     
     let referredBy: string | undefined;
     if (usedReferralCode) {

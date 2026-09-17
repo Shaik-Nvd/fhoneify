@@ -199,9 +199,16 @@ model Lead {
 model WhatsAppOTP {
   id        String   @id @default(uuid())
   phone     String   @unique
+  /// HMAC of the one-time code, never the code itself: a database dump (or a
+  /// support user with read access) must not be able to complete someone's
+  /// login. Verification re-computes the HMAC and compares in constant time.
   code      String
   expiresAt DateTime
   createdAt DateTime @default(now())
+  /// Failed verification attempts for the current code. The code is destroyed
+  /// once this reaches the limit, so a 6-digit code cannot be brute-forced
+  /// within its lifetime.
+  attempts  Int      @default(0)
 }
 
 // --- Reference pricing infrastructure ---
