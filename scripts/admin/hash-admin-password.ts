@@ -16,13 +16,24 @@ import { hashPassword, verifyPassword } from '../../server/lib/password';
 
 const MIN_LENGTH = 12;
 
+/**
+ * Asks for a secret with the prompt visible and the typed characters masked.
+ *
+ * Writing the prompt before suppressing echo does not work: readline redraws
+ * the line when question() starts, which erased the prompt on Windows and left
+ * the user staring at a blank screen with no idea it was waiting for input.
+ * Masking inside _writeToOutput keeps the prompt and shows '*' per keystroke.
+ */
 function readHidden(prompt: string): Promise<string> {
   return new Promise((resolve) => {
     const rl = readline.createInterface({ input: process.stdin, output: process.stdout, terminal: true });
     const out = rl as any;
-    process.stdout.write(prompt);
-    out._writeToOutput = () => {}; // suppress echo of typed characters
-    rl.question('', (answer) => {
+    out._writeToOutput = (chunk: string) => {
+      if (chunk.includes(prompt)) out.output.write(prompt);
+      else if (chunk === '\r\n' || chunk === '\n') out.output.write(chunk);
+      else out.output.write('*');
+    };
+    rl.question(prompt, (answer) => {
       rl.close();
       process.stdout.write('\n');
       resolve(answer);
