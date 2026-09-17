@@ -18,12 +18,21 @@ import jwt from 'jsonwebtoken';
 
 const API = (process.env.PRODUCTION_API_URL || 'https://fhoneify-api.onrender.com').replace(/\/$/, '');
 
+/** Prompts, masking the answer when hidden. The mask lives inside
+ * _writeToOutput because readline redraws the line when question() starts,
+ * which erases a prompt written beforehand (on Windows it looks like a hang). */
 function ask(prompt: string, hidden: boolean): Promise<string> {
   return new Promise((resolve) => {
     const rl = readline.createInterface({ input: process.stdin, output: process.stdout, terminal: true });
-    process.stdout.write(prompt);
-    if (hidden) (rl as any)._writeToOutput = () => {};
-    rl.question('', (answer) => {
+    const out = rl as any;
+    if (hidden) {
+      out._writeToOutput = (chunk: string) => {
+        if (chunk.includes(prompt)) out.output.write(prompt);
+        else if (chunk === '\r\n' || chunk === '\n') out.output.write(chunk);
+        else out.output.write('*');
+      };
+    }
+    rl.question(prompt, (answer) => {
       rl.close();
       if (hidden) process.stdout.write('\n');
       resolve(answer);
