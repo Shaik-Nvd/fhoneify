@@ -34,7 +34,7 @@
     "test:auth": "tsx scripts/test/auth.admin.test.ts",
     "test:otp": "tsx scripts/test/auth.otp.test.ts",
     "setup-cashify": "node scripts/setup-cashify.js",
-    "postinstall": "npx playwright install chromium"
+    "postinstall": "prisma generate && npx playwright install chromium"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"
