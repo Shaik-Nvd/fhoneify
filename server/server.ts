@@ -130,6 +130,11 @@ app.use('/api/admin/reference-prices', referencePricingRouter);
 
 // Global Error Handler
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
+  // A malformed or oversized JSON body is a bad request, not a server fault.
+  // Do not log the body - on auth routes it can contain credentials.
+  if (err?.type === 'entity.parse.failed' || err?.type === 'entity.too.large') {
+    return res.status(400).json({ success: false, error: 'Malformed request body' });
+  }
   logger.error({ err: err.message, stack: err.stack }, 'Unhandled Application Error');
   res.status(500).json({ success: false, error: 'Internal server error' });
 });

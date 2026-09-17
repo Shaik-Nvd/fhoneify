@@ -19,8 +19,9 @@ const VerifyOtpSchema = z.object({
 });
 
 const AdminLoginSchema = z.object({
-  username: z.string().min(1, 'Username is required'),
-  password: z.string().min(1, 'Password is required'),
+  // Upper bounds stop an oversized password from being fed into scrypt.
+  username: z.string().min(1, 'Username is required').max(128, 'Invalid credentials'),
+  password: z.string().min(1, 'Password is required').max(256, 'Invalid credentials'),
 });
 
 const RefreshTokenSchema = z.object({
@@ -115,6 +116,9 @@ export async function verifyOtp(req: Request, res: Response) {
     await prisma.whatsAppOTP.delete({ where: { phone } });
     
     const loginResult = await authService.generateTokensForUser(phone, referralCode);
+    if (!loginResult) {
+      return res.status(403).json({ error: 'This account must sign in through the admin login' });
+    }
     return res.json({ success: true, data: loginResult, message: 'Login successful' });
   } catch (e) {
     logger.error(e, 'Verification system error');

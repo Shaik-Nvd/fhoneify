@@ -29,9 +29,21 @@ export async function requireAuth(req: AuthenticatedRequest, res: Response, next
       return res.status(401).json({ success: false, error: 'Unauthorized' });
     }
 
-    // Verify JWT
-    const decoded = jwt.verify(token, config.JWT_SECRET) as { userId: string; role: string };
-    
+    // Verify JWT (signature + expiry), pinned to the algorithm we sign with.
+    const decoded = jwt.verify(token, config.JWT_SECRET, { algorithms: ['HS256'] }) as {
+      userId: string;
+      role: string;
+      tokenType?: string;
+    };
+
+    // A refresh token lives 7 days; an access token 15 minutes. Accepting a
+    // refresh token here would let it act as a week-long access token and
+    // bypass the access-token expiry entirely.
+    if (decoded.tokenType === 'refresh') {
+      logger.warn('Auth failed: refresh token presented as an access token');
+      return res.status(401).json({ success: false, error: 'Unauthorized' });
+    }
+
     // Find user in db/in-memory users list
     let user = users.find((u) => u.id === decoded.userId);
     if (!user) {
