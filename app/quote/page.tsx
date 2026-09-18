@@ -9,10 +9,23 @@ import { useHydratedAuth } from '@/lib/useHydratedAuth';
 
 
 import { BRAND_LOGOS, getBrandLogoStyle, sortBrands } from '@/lib/brands';
-import config from '@/lib/pricingConfig.json';
 import { SEED_DEVICES } from '@/lib/seed_devices';
-import { DiagnosticsType } from '@/lib/pricingCalculator';
-import { computeStartingPrice, priceDevice, resolveBaseMarketPrice } from '@/lib/pricing/engine';
+// Prices come only from POST /api/quote/price. This page must not import the
+// pricing engine or the price snapshot: a second, browser-side price is what
+// let the screen, the stored lead and a reloaded page disagree.
+import { PERFECT_CONDITION_DIAGNOSTICS } from '@/lib/pricing/perfectCondition';
+import { customerPayout } from '@/lib/pricing/payout';
+import { SignedQuote, clearQuoteSession, loadQuoteSession, sameDevice, saveQuoteSession } from '@/lib/pricing/quoteSession';
+
+/** sessionStorage, or null where the browser blocks it (the page then simply
+ * re-prices after a reload). */
+const getSessionStore = () => {
+  try {
+    return window.sessionStorage;
+  } catch {
+    return null;
+  }
+};
 
 export interface Device {
   id: string;
@@ -274,6 +287,23 @@ export default function QuotePage() {
     };
 
     handlePopState();
+
+    // After a reload, bring back this device's signed prices and answers.
+    // Anything expired, unsigned, zero or for another device is dropped and
+    // re-priced by the server instead (see the recovery effect below).
+    const params = new URLSearchParams(window.location.search);
+    const store = getSessionStore();
+    const saved = store
+      ? loadQuoteSession(store, { brand: params.get('brand') || '', model: params.get('model') || '', storage: params.get('storage') || '' }, new Date())
+      : null;
+    if (saved) {
+      if (saved.answers) setDiagnostics(saved.answers as any);
+      setStartingQuote(saved.starting);
+      setFinalQuote(saved.final);
+      setAppliedCoupon(saved.couponApplied);
+    }
+    setSessionRestored(true);
+
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
@@ -326,13 +356,26 @@ export default function QuotePage() {
   // New 8-stage flow: 1: Select, 2: BasePrice, 3: BasicQ, 4: Defects, 5: Hardware, 6: Accessories, 7: LeadCapture, 8: FinalPrice
   const [step, setStep] = useState(1);
   const [stepHistory, setStepHistory] = useState<number[]>([]);
-  const [basePrice, setBasePrice] = useState<number | null>(null);
-  const [rawBasePrice, setRawBasePrice] = useState<number | null>(null);
-  const [finalPrice, setFinalPrice] = useState<number | null>(null);
-  // Signed, price-locked token from POST /api/quote/price; sent with the lead
-  // so the server can honour exactly the price the customer was shown.
-  const [quoteToken, setQuoteToken] = useState<string | null>(null);
+  // Signed quotes from POST /api/quote/price - the only prices this page
+  // shows. Each carries its token and the exact answers it was signed for,
+  // which the lead sends back so the server stores this same price.
+  const [startingQuote, setStartingQuote] = useState<SignedQuote | null>(null);
+  const [finalQuote, setFinalQuote] = useState<SignedQuote | null>(null);
+  const [startingPriceError, setStartingPriceError] = useState<string | null>(null);
+  const [finalPriceError, setFinalPriceError] = useState<string | null>(null);
+  const [isFinalPriceLoading, setIsFinalPriceLoading] = useState(false);
+  const [isStartingPriceLoading, setIsStartingPriceLoading] = useState(false);
+  // A quote is only ever shown for the device it was signed for.
+  const currentDevice = { brand: selectedBrand, model: selectedModel, storage: selectedStorage };
+  const activeStartingQuote = startingQuote && sameDevice(startingQuote.device, currentDevice) ? startingQuote : null;
+  const activeFinalQuote = finalQuote && sameDevice(finalQuote.device, currentDevice) ? finalQuote : null;
+  const basePrice = activeStartingQuote?.price ?? null;
+  const finalPrice = activeFinalQuote?.price ?? null;
   const priceRequestIdRef = useRef(0);
+  const startingRequestIdRef = useRef(0);
+  // Set once the saved quote session has been read after a reload, so the
+  // save effect cannot overwrite it with the empty initial state first.
+  const [sessionRestored, setSessionRestored] = useState(false);
 
   useEffect(() => {
     if (step === 11) {
@@ -987,34 +1030,45 @@ export default function QuotePage() {
     navigateToState(b, '', '', 'model', 1); 
   };
   const handleModelSelect = (m: string) => { navigateToState(selectedBrand, m, '', 'storage', 1); };
-  const handleStorageSelect = async (s: string) => { 
-    navigateToState(selectedBrand, selectedModel, s, 'storage', 1); 
-    
-    const device = allDevices.find(d => 
-      d.brand.toLowerCase() === selectedBrand.toLowerCase() && 
-      d.model.toLowerCase() === selectedModel.toLowerCase() && 
+  /** The one way this page obtains a price. Rejects anything that is not a
+   * positive signed price, so ₹0 or a missing number can never be shown. */
+  const requestSignedQuote = async (brand: string, model: string, storage: string, diag: unknown): Promise<SignedQuote> => {
+    const res = await api.post('/api/quote/price', { brand, model, storage, diagnostics: diag });
+    const d = res.data?.data;
+    if (!res.data?.success || typeof d?.fhoneifyPrice !== 'number' || !(d.fhoneifyPrice > 0) || !d.quoteToken) {
+      throw new Error(res.data?.error || 'Pricing is currently unavailable for this device.');
+    }
+    return { device: { brand, model, storage }, price: d.fhoneifyPrice, token: d.quoteToken, expiresAt: d.expiresAt, diagnostics: diag };
+  };
+
+  const describePricingError = (err: any) =>
+    err?.response?.data?.error || 'We could not fetch the price right now. Please try again.';
+
+  /** "Get upto" = the server's perfect-condition quote for this device. */
+  const fetchStartingQuote = (brand: string, model: string, storage: string) => {
+    setStartingQuote(null);
+    setStartingPriceError(null);
+    setIsStartingPriceLoading(true);
+    const requestId = ++startingRequestIdRef.current;
+    requestSignedQuote(brand, model, storage, PERFECT_CONDITION_DIAGNOSTICS)
+      .then((q) => { if (requestId === startingRequestIdRef.current) setStartingQuote(q); })
+      .catch((err) => { if (requestId === startingRequestIdRef.current) setStartingPriceError(describePricingError(err)); })
+      .finally(() => { if (requestId === startingRequestIdRef.current) setIsStartingPriceLoading(false); });
+  };
+
+  const handleStorageSelect = (s: string) => {
+    const device = allDevices.find(d =>
+      d.brand.toLowerCase() === selectedBrand.toLowerCase() &&
+      d.model.toLowerCase() === selectedModel.toLowerCase() &&
       d.storage === s
     );
-
     if (!device) return;
 
-    try {
-      // INSTANT CALCULATION INSTEAD OF API CALL TO AVOID 40S DELAY. Same
-      // base-price resolution the server uses (lib/pricing/engine.ts).
-      const base = resolveBaseMarketPrice({ device: device as any });
-      if (!base) {
-        setError('Pricing is currently unavailable for this device.');
-        return;
-      }
-
-      // "Get Upto" = the best final price this device can reach, with the
-      // engine's own capped uplift - never more than a perfect quote pays.
-      setBasePrice(computeStartingPrice(selectedBrand, selectedModel, base.price));
-      setRawBasePrice(base.price);
-      navigateToState(selectedBrand, selectedModel, s, 'storage', 2);
-    } catch {
-      setError('Failed to fetch quote.');
-    }
+    // A different device invalidates any price from the previous one.
+    setFinalQuote(null);
+    setFinalPriceError(null);
+    fetchStartingQuote(selectedBrand, selectedModel, s);
+    navigateToState(selectedBrand, selectedModel, s, 'storage', 2);
   };
 
   const toggleArrayItem = (key: 'defects' | 'hardware' | 'accessories', val: string) => {
@@ -1180,45 +1234,61 @@ export default function QuotePage() {
 
   // Model params moved to lib/pricingCalculator.ts
 
+  /** Prices the customer's answers on the server. Nothing is shown until the
+   * signed price arrives; on failure the screen offers a retry instead of a
+   * number. Only the latest request may update state, so rapid re-answers
+   * cannot show a stale price. */
   const calculateFinalPrice = (overrideDiagnostics?: typeof diagnostics) => {
-    if (!basePrice) return;
     const diag = overrideDiagnostics || diagnostics;
-    
-    const floor_price = config.modelFloorPrice; // 1200
-    const internal_base = basePrice;
-    
-
-
-  // applyGranularDefects moved to lib/pricingCalculator.ts
-
-  // Android model params moved to lib/pricingCalculator.ts
-
-    // Instant local estimate first, so the price screen never waits on the
-    // network...
-    try {
-      setFinalPrice(priceDevice(selectedBrand, selectedModel, rawBasePrice || internal_base, diag as DiagnosticsType).fhoneifyPrice);
-    } catch (err) {
-      console.error('Local price estimate failed', err);
-    }
-    setQuoteToken(null);
-
-    // ...then the authoritative, signed price replaces it. Only the latest
-    // request may update state, so rapid re-answers can't show a stale price.
+    setFinalQuote(null);
+    setFinalPriceError(null);
+    setIsFinalPriceLoading(true);
     const requestId = ++priceRequestIdRef.current;
-    api.post('/api/quote/price', {
+    requestSignedQuote(selectedBrand, selectedModel, selectedStorage, diag)
+      .then((q) => {
+        if (requestId !== priceRequestIdRef.current) return;
+        setFinalQuote(q);
+      })
+      .catch((err) => {
+        if (requestId !== priceRequestIdRef.current) return;
+        setFinalPriceError(describePricingError(err));
+      })
+      .finally(() => {
+        if (requestId === priceRequestIdRef.current) setIsFinalPriceLoading(false);
+      });
+  };
+
+  // Persist the signed quotes and answers so a reload shows the same price.
+  useEffect(() => {
+    if (!sessionRestored || !selectedStorage) return;
+    const store = getSessionStore();
+    if (!store) return;
+    saveQuoteSession(store, {
       brand: selectedBrand,
       model: selectedModel,
       storage: selectedStorage,
-      diagnostics: diag,
-    }).then((res) => {
-      if (requestId !== priceRequestIdRef.current || !res.data?.success) return;
-      setFinalPrice(res.data.data.fhoneifyPrice);
-      setQuoteToken(res.data.data.quoteToken);
-    }).catch((err) => {
-      // The lead endpoint re-prices server-side anyway; keep the estimate.
-      console.warn('Authoritative price unavailable; showing local estimate', err?.response?.data?.error || err?.message);
+      starting: activeStartingQuote,
+      final: activeFinalQuote,
+      answers: diagnostics,
+      couponApplied: appliedCoupon,
     });
-  };
+  }, [sessionRestored, selectedBrand, selectedModel, selectedStorage, activeStartingQuote, activeFinalQuote, diagnostics, appliedCoupon]);
+
+  // A price screen reached without a usable signed price (reload after the
+  // token expired, storage blocked, back/forward to another device) asks the
+  // server again - it never falls back to a local number or ₹0.
+  useEffect(() => {
+    if (!sessionRestored || !selectedStorage) return;
+    if (step === 2 && !activeStartingQuote && !isStartingPriceLoading && !startingPriceError) {
+      fetchStartingQuote(selectedBrand, selectedModel, selectedStorage);
+    }
+    if ((step === 11 || step === 12) && !activeFinalQuote && !isFinalPriceLoading && !finalPriceError) {
+      if (diagnostics.calls !== null) calculateFinalPrice(diagnostics);
+      // The answers are gone too: ask them again rather than guess a price.
+      else navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 3);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [sessionRestored, step, selectedBrand, selectedModel, selectedStorage, activeStartingQuote, activeFinalQuote, isStartingPriceLoading, isFinalPriceLoading, startingPriceError, finalPriceError]);
 
   const handleSendOtp = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -1260,7 +1330,9 @@ export default function QuotePage() {
       }
       
       setShowOtpInput(false);
-      calculateFinalPrice();
+      // Keep a quote already chosen ("Schedule Pickup" from Get Upto);
+      // otherwise price the answers now that the user is signed in.
+      if (!activeFinalQuote) calculateFinalPrice();
       setMarketPriceFetched(false);
       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11);
     } catch (err: any) {
@@ -2213,15 +2285,30 @@ export default function QuotePage() {
           <div className="flex flex-col gap-2 flex-1 w-full text-foreground items-center md:items-start">
             <h2 style={{ fontSize: '1.4rem', fontWeight: 500 }}>Sell Old {getDisplayModelName(selectedBrand, selectedModel)} ({selectedStorage})</h2>
             <p style={{ color: '#666', fontSize: '1rem', marginTop: '1rem' }}>Get Upto</p>
-            <p style={{ fontSize: '3rem', fontWeight: 700, color: 'var(--gold)' }}>{formatCurrency(basePrice || 0)}</p>
+            {basePrice != null ? (
+              <p style={{ fontSize: '3rem', fontWeight: 700, color: 'var(--gold)' }}>{formatCurrency(basePrice)}</p>
+            ) : startingPriceError ? (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                <p style={{ color: '#FF3B30', fontSize: '0.95rem' }}>{startingPriceError}</p>
+                <button type="button" onClick={() => fetchStartingQuote(selectedBrand, selectedModel, selectedStorage)} className="btn-outline" style={{ padding: '0.5rem 1.25rem', borderRadius: '8px', alignSelf: 'flex-start' }}>Try again</button>
+              </div>
+            ) : (
+              <p style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--muted)' }} aria-live="polite">Fetching today&apos;s best price…</p>
+            )}
             <div style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem', width: '100%', flexWrap: 'wrap', justifyContent: 'flex-start' }}>
-              <button onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 3)} className="btn-primary" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', fontWeight: 600, padding: '1rem 2rem', borderRadius: '8px', flex: '1', minWidth: '200px' }}>
+              <button onClick={() => { setFinalQuote(null); navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 3); }} className="btn-primary" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', fontWeight: 600, padding: '1rem 2rem', borderRadius: '8px', flex: '1', minWidth: '200px' }}>
                 Get Exact Value <ArrowRightIcon />
               </button>
               
               <button 
+                // Skipping the questions books the perfect-condition quote: the
+                // same signed price as "Get Upto", with the answers it was
+                // signed for, so the lead stores exactly what was shown.
+                disabled={!activeStartingQuote}
                 onClick={() => {
-                   setFinalPrice(basePrice);
+                   if (!activeStartingQuote) return;
+                   setFinalQuote(activeStartingQuote);
+                   setFinalPriceError(null);
                    navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', isAuthenticated ? 11 : 10);
                 }}
                 className="schedule-pickup-btn" 
@@ -2231,7 +2318,8 @@ export default function QuotePage() {
                   color: 'var(--gold)', fontWeight: 600, padding: '1rem 2rem', borderRadius: '8px', flex: '1', minWidth: '200px',
                   border: '2px solid var(--gold)',
                   transition: 'all 0.3s ease',
-                  cursor: 'pointer'
+                  cursor: activeStartingQuote ? 'pointer' : 'not-allowed',
+                  opacity: activeStartingQuote ? 1 : 0.5
                 }}
               >
                 Schedule Pickup 🚚
@@ -2634,7 +2722,7 @@ export default function QuotePage() {
                            setMarketPriceFetched(false);
                            navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11); 
                          } else { 
-                           navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 10); 
+                           setFinalQuote(null); navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 10); 
                          }
                       } else {
                         navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 9);
@@ -2650,7 +2738,7 @@ export default function QuotePage() {
                         setMarketPriceFetched(false);
                         navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11); 
                       } else { 
-                        navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 10); 
+                        setFinalQuote(null); navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 10); 
                       }
                     }
                   }} className="btn-primary" style={{ fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px' }}>Continue <ArrowRightIcon /></button>
@@ -2688,7 +2776,7 @@ export default function QuotePage() {
                       setMarketPriceFetched(false);
                       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11); 
                     } else { 
-                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 10); 
+                      setFinalQuote(null); navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 10); 
                     } 
                   }} disabled={!diagnostics.mobileAge} className="btn-primary" style={{ fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: diagnostics.mobileAge ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
                 </div>
@@ -2775,6 +2863,21 @@ export default function QuotePage() {
         </div>
       )}
 
+      {/* STAGE 11 while the signed price is loading or failed - never a ₹0 */}
+      {(step === 11 || step === 12) && finalPrice == null && (
+        <div className="card flex flex-col gap-4 bg-surface border border-border p-6 md:p-8 rounded-xl max-w-[600px] mx-auto text-center">
+          <h2 style={{ fontSize: '1.25rem', fontWeight: 600 }}>{getDisplayModelName(selectedBrand, selectedModel)} ({selectedStorage})</h2>
+          {finalPriceError ? (
+            <>
+              <p style={{ color: '#FF3B30' }}>{finalPriceError}</p>
+              <button type="button" onClick={() => calculateFinalPrice(diagnostics)} className="btn-primary" style={{ padding: '12px', borderRadius: '8px', fontWeight: 600 }}>Try again</button>
+            </>
+          ) : (
+            <p style={{ color: 'var(--muted)' }} aria-live="polite">Calculating your exact price…</p>
+          )}
+        </div>
+      )}
+
       {/* STAGE 11: FINAL EXACT PRICE */}
       {step === 11 && finalPrice != null && (
         <div className="card flex flex-col gap-2 md:gap-4 bg-surface border border-border p-4 md:p-8 rounded-xl max-w-[600px] mx-auto text-left">
@@ -2784,11 +2887,11 @@ export default function QuotePage() {
               <h2 style={{ fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.25rem' }}>{getDisplayModelName(selectedBrand, selectedModel)} ({selectedStorage})</h2>
               <p style={{ color: 'var(--muted)', fontSize: '0.85rem', marginBottom: '0.5rem' }}>Estimated value :</p>
               <p style={{ fontSize: '2rem', fontWeight: 700, color: 'var(--gold)', lineHeight: 1 }}>
-                {formatCurrency((finalPrice || 0) - (finalPrice === 1200 ? 0 : 99) + (appliedCoupon ? 299 : 0))}
+                {formatCurrency(customerPayout(finalPrice, appliedCoupon).payout)}
               </p>
               <button 
                 onClick={() => {
-                  setFinalPrice(null);
+                  setFinalQuote(null);
                   setMarketPriceFetched(false);
                   setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], screenCondition: null, screenSpots: null, screenLines: null, screenDiscoloration: null, bodyScratches: null, bodyDents: null, bodyPanel: null, bodyBent: null, hardware: [], accessories: [], warranty: null, validBill: null, eSim: null, mobileAge: null });
                   navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 3);
@@ -2990,30 +3093,32 @@ export default function QuotePage() {
           
           <div style={{ display: 'flex', gap: '0.75rem', marginTop: '1rem', width: '100%' }}>
             <button type="button" onClick={handleBack} className="btn-outline" style={{ flex: 1, padding: '12px', fontSize: '1rem' }}>Back</button>
-            <button type="button" onClick={() => { navigateToState('', '', '', 'brand', 1); setFinalPrice(null); setMarketPriceFetched(false); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], screenCondition: null, screenSpots: null, screenLines: null, screenDiscoloration: null, bodyScratches: null, bodyDents: null, bodyPanel: null, bodyBent: null, hardware: [], accessories: [], warranty: null, validBill: null, eSim: null, mobileAge: null }); }} className="btn-outline" style={{ flex: 1, padding: '12px', fontSize: '1rem' }}>Start Over</button>
+            <button type="button" onClick={() => { navigateToState('', '', '', 'brand', 1); setFinalQuote(null); setStartingQuote(null); setAppliedCoupon(false); { const store = getSessionStore(); if (store) clearQuoteSession(store); } setMarketPriceFetched(false); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], screenCondition: null, screenSpots: null, screenLines: null, screenDiscoloration: null, bodyScratches: null, bodyDents: null, bodyPanel: null, bodyBent: null, hardware: [], accessories: [], warranty: null, validBill: null, eSim: null, mobileAge: null }); }} className="btn-outline" style={{ flex: 1, padding: '12px', fontSize: '1rem' }}>Start Over</button>
             <button type="button" onClick={() => setStep(12)} className="btn-primary" style={{ flex: 2, padding: '12px', fontSize: '1rem', fontWeight: 600, cursor: 'pointer' }}>Schedule Pickup</button>
           </div>
         </div>
       )}
 
       {/* STAGE 12: PICKUP DETAILS FORM */}
-      {step === 12 && (
+      {step === 12 && activeFinalQuote != null && (
         <div className="card flex flex-col gap-4 bg-surface border border-border p-6 md:p-8 rounded-xl max-w-[600px] mx-auto text-left">
           <p className="eyebrow" style={{ color: 'var(--gold)', fontSize: '1rem', letterSpacing: '2px', textAlign: 'center', marginBottom: '1.5rem' }}>SCHEDULE PICKUP</p>
           
           <form onSubmit={async (e) => {
             e.preventDefault();
-            if (isSubmitting) return;
+            if (isSubmitting || !activeFinalQuote) return;
             setIsSubmitting(true);
             try {
               // Through the API client (NEXT_PUBLIC_API_URL + auth header). The
-              // server stores its own verified price, not quotedPrice.
+              // token and the answers it was signed for go together, so the
+              // server verifies and stores exactly the price shown here.
               await api.post('/api/quote/leads', {
                 brand: selectedBrand,
                 model: selectedModel,
                 storage: selectedStorage,
-                quotedPrice: Number(finalPrice),
-                quoteToken: quoteToken || undefined,
+                quotedPrice: activeFinalQuote.price,
+                quoteToken: activeFinalQuote.token,
+                couponApplied: appliedCoupon,
                 name: userName || user?.name || '',
                 phone: userPhone || user?.phone || '',
                 pickupDate: pickupDate || '',
@@ -3021,8 +3126,9 @@ export default function QuotePage() {
                 address: address || '',
                 pincode: pincode || '',
                 city: city || '',
-                answers: diagnostics
+                answers: activeFinalQuote.diagnostics
               });
+              { const store = getSessionStore(); if (store) clearQuoteSession(store); }
 
               alert("Scheduled for Pickup! Our executive will contact you shortly.");
               router.push('/');

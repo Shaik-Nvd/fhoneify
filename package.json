@@ -18,7 +18,7 @@
     "test:pricing:cashify-matching": "tsx scripts/test/referencePricing.cashify-matching.test.ts",
     "test:pricing:refresh-e2e": "tsx scripts/test/referencePricing.refresh-e2e.test.ts",
     "test:pricing:production": "tsx scripts/test/pricing.production.test.ts",
-    "test:pricing:all": "npm run test:pricing && npm run test:pricing:production && npm run test:pricing:reference && npm run test:pricing:reference-data && npm run test:pricing:quote-integration",
+    "test:pricing:all": "npm run test:pricing && npm run test:pricing:production && npm run test:pricing:reference && npm run test:pricing:reference-data && npm run test:pricing:quote-integration && npm run test:pricing:consistency",
     "test:refresh:all": "npm run test:pricing:cashify-matching && npm run test:pricing:refresh && npm run test:pricing:refresh-e2e",
     "reference-prices:migrate": "tsx scripts/reference-pricing/migrate-legacy-snapshots.ts",
     "reference-prices:import-brand-snapshots": "tsx scripts/reference-pricing/import-brand-snapshots.ts",
@@ -35,7 +35,9 @@
     "test:auth": "tsx scripts/test/auth.admin.test.ts",
     "test:otp": "tsx scripts/test/auth.otp.test.ts",
     "setup-cashify": "node scripts/setup-cashify.js",
-    "postinstall": "prisma generate && npx playwright install chromium"
+    "postinstall": "prisma generate && npx playwright install chromium",
+    "pricing:explain": "tsx scripts/pricing/explain-quote.ts",
+    "test:pricing:consistency": "tsx scripts/test/pricing.quote-consistency.test.ts"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"
