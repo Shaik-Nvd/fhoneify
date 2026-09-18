@@ -43,7 +43,8 @@ Repo: https://github.com/Shaik-Nvd/fhoneify, default branch `main`.
 
 ## 3. What was done (most recent first)
 
-### 3.1 Pricing forensic audit + data-flow fix — PR #2 (squash-merged to `main` on 2026-09-19)
+### 3.1 Pricing forensic audit + data-flow fix — PR #2, branch `fix/pricing-single-source` (READY, NOT YET MERGED as of 2026-09-19)
+https://github.com/Shaik-Nvd/fhoneify/pull/2. It is mergeable with no conflicts; the branch's base content is identical to `main` at `77f7b4b`. The two red Vercel checks on the PR say "Deployment was blocked" (the author rule), **not** a build failure; `next build` passes locally. The owner merges it (squash is recommended), then continues with §4 Task 1.
 Commit message: "Make the server's signed quote the only price the quote page shows".
 
 **Root causes found and fixed:**
@@ -84,6 +85,7 @@ Commit message: "Make the server's signed quote the only price the quote page sh
 ## 4. Open tasks, in priority order
 
 ### Task 1 — Confirm the pricing fix is live in production (do this first)
+0. If PR #2 is not merged yet, ask the owner to merge it. First check with `gh pr view 2 --json state`. If `main` has moved since, re-run the test suites in §6 on the merged result.
 1. **Render (API):** it auto-deploys from `main`. Check that `GET https://fhoneify-api.onrender.com/health` returns 200. Then check the new lead fields by reading the code path (no lead needed). The API change is only the extra `couponApplied` field plus `customerPayout` storage.
 2. **Vercel (frontend): will be BLOCKED** because the merge commit is authored by ShoaebMalik19. Ask the owner (nvd_shaik) to push an owner-authored commit to `main`, e.g. `git commit --allow-empty -m "Trigger deployment"` then `git push`. Then confirm both Vercel projects show "Ready" for the latest `main` commit.
 3. Live check on https://www.fhoneify.in/quote. Pick OnePlus → Oneplus 15R → 12 GB/512 GB.
