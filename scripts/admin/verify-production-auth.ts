@@ -18,26 +18,35 @@ import jwt from 'jsonwebtoken';
 
 const API = (process.env.PRODUCTION_API_URL || 'https://fhoneify-api.onrender.com').replace(/\/$/, '');
 
-/** Prompts, masking the answer when hidden. The mask lives inside
- * _writeToOutput because readline redraws the line when question() starts,
- * which erases a prompt written beforehand (on Windows it looks like a hang). */
-function ask(prompt: string, hidden: boolean): Promise<string> {
-  return new Promise((resolve) => {
-    const rl = readline.createInterface({ input: process.stdin, output: process.stdout, terminal: true });
-    const out = rl as any;
-    if (hidden) {
-      out._writeToOutput = (chunk: string) => {
-        if (chunk.includes(prompt)) out.output.write(prompt);
-        else if (chunk === '\r\n' || chunk === '\n') out.output.write(chunk);
-        else out.output.write('*');
-      };
-    }
-    rl.question(prompt, (answer) => {
-      rl.close();
-      if (hidden) process.stdout.write('\n');
-      resolve(answer);
+/**
+ * Asks both questions through ONE readline interface. Opening and closing a
+ * second interface on the same stdin is unreliable on Windows consoles, which
+ * risks capturing the password wrongly and reporting a false 401. Masking lives
+ * inside _writeToOutput because readline redraws the line when question()
+ * starts, which erases a prompt written beforehand.
+ */
+async function askCredentials(): Promise<{ username: string; password: string }> {
+  const rl = readline.createInterface({ input: process.stdin, output: process.stdout, terminal: true });
+  const out = rl as any;
+  let masked = false;
+  let currentPrompt = '';
+  out._writeToOutput = (chunk: string) => {
+    if (!masked) return out.output.write(chunk);
+    if (chunk.includes(currentPrompt)) out.output.write(currentPrompt);
+    else if (chunk === '\r\n' || chunk === '\n') out.output.write(chunk);
+    else out.output.write('*');
+  };
+  const ask = (prompt: string, hide: boolean) =>
+    new Promise<string>((resolve) => {
+      masked = hide;
+      currentPrompt = prompt;
+      rl.question(prompt, resolve);
     });
-  });
+  const username = await ask('Admin username: ', false);
+  const password = await ask('Admin password (hidden): ', true);
+  rl.close();
+  process.stdout.write('\n');
+  return { username, password };
 }
 
 async function call(method: string, path: string, opts: { token?: string; body?: any; raw?: string } = {}) {
@@ -64,8 +73,12 @@ const check = (name: string, ok: boolean, detail: string) => {
       console.error('--login needs an interactive terminal, or ADMIN_LIVE_USERNAME and ADMIN_LIVE_PASSWORD in the environment.');
       process.exit(1);
     }
-    process.env.ADMIN_LIVE_USERNAME = await ask('Admin username: ', false);
-    process.env.ADMIN_LIVE_PASSWORD = await ask('Admin password (hidden): ', true);
+    const { username, password } = await askCredentials();
+    process.env.ADMIN_LIVE_USERNAME = username;
+    process.env.ADMIN_LIVE_PASSWORD = password;
+  }
+  if (process.env.ADMIN_LIVE_USERNAME && process.env.ADMIN_LIVE_USERNAME !== process.env.ADMIN_LIVE_USERNAME.trim()) {
+    console.log('WARN  the username you entered has leading/trailing spaces; production compares it exactly');
   }
   console.log(`Target: ${API}\n`);
 

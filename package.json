@@ -31,6 +31,7 @@
     "db:snapshot": "tsx scripts/reference-pricing/db-snapshot.ts",
     "admin:hash-password": "tsx scripts/admin/hash-admin-password.ts",
     "admin:verify-production": "tsx scripts/admin/verify-production-auth.ts",
+    "admin:check-credentials": "tsx scripts/admin/check-admin-credentials.ts",
     "test:auth": "tsx scripts/test/auth.admin.test.ts",
     "test:otp": "tsx scripts/test/auth.otp.test.ts",
     "setup-cashify": "node scripts/setup-cashify.js",

@@ -8,6 +8,12 @@ WORKDIR /app
 # Copy package files
 COPY package*.json ./
 
+# The Prisma schema must be present BEFORE npm install: postinstall now runs
+# `prisma generate`, which exits non-zero with "prisma/schema: directory not
+# found" if the schema has not been copied yet - failing the whole image build.
+# That is what broke the Render deploy of 5b30136.
+COPY prisma ./prisma
+
 # Install dependencies
 RUN npm install
 
