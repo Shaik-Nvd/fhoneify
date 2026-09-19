@@ -1,43 +1,4 @@
 {
   "description": "Manually verified, same-variant Cashify condition quotes. Add records only when the Cashify answers and final quote were observed together.",
-  "records": [
-    {
-      "brand": "Oppo",
-      "model": "OPPO Find X9s",
-      "storage": "12 GB/512 GB",
-      "referencePrice": 15140,
-      "age": "below3",
-      "cashifyAnswers": {
-        "condition": "perfect",
-        "age": "Below 3 months",
-        "bill": "available",
-        "box": "available",
-        "charger": "available",
-        "defects": "none"
-      },
-      "fhoneifyAnswers": {
-        "calls": true,
-        "touch": true,
-        "originalScreen": true,
-        "defects": [],
-        "screenCondition": null,
-        "screenSpots": null,
-        "screenLines": null,
-        "screenDiscoloration": null,
-        "bodyScratches": "No scratches",
-        "bodyDents": "No dents",
-        "bodyPanel": "No defect on side or back panel",
-        "bodyBent": "Phone not bent",
-        "hardware": [],
-        "accessories": ["box", "bill", "charger"],
-        "warranty": true,
-        "validBill": true,
-        "eSim": null,
-        "mobileAge": "below3"
-      },
-      "cashifyActualFinalQuote": 15140,
-      "observedAt": "2026-09-15",
-      "notes": "Team screenshot documented in PRICING_ACCURACY_INVESTIGATION.md; same-variant perfect-condition baseline. This does not calibrate damaged-condition penalties."
-    }
-  ]
+  "records": []
 }
