@@ -55,7 +55,7 @@ export default function AdminLeadsPage() {
       alert('No leads to export');
       return;
     }
-    const headers = ['Date', 'Name', 'Phone', 'Brand', 'Model', 'Storage', 'Quote', 'Pickup Date', 'Pickup Time', 'Address', 'City', 'Pincode', 'Status'];
+    const headers = ['Date', 'Name', 'Phone', 'Brand', 'Model', 'Storage', 'Quote', 'Customer Saw', 'Pickup Date', 'Pickup Time', 'Address', 'City', 'Pincode', 'Status'];
     const rows = leads.map(l => [
       new Date(l.createdAt).toLocaleDateString(),
       `"${l.name || ''}"`,
@@ -64,6 +64,7 @@ export default function AdminLeadsPage() {
       l.model,
       l.storage,
       l.quotedPrice,
+      l.answers?.pricing?.customerPayout?.payout ?? '',
       l.pickupDate || '',
       l.pickupTime || '',
       `"${l.address || ''}"`,
@@ -224,6 +225,11 @@ export default function AdminLeadsPage() {
                       <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-gold/10 text-gold border border-gold/20 font-bold text-sm shadow-[0_0_10px_rgba(212,175,55,0.1)]">
                         ₹{l.quotedPrice}
                       </span>
+                      {typeof l.answers?.pricing?.customerPayout?.payout === 'number' && (
+                        <span className="block text-xs text-muted mt-1" title="Amount the quote screen showed: quote - ₹99 fee (+₹299 if the customer applied the first-time coupon, which is not server-verified)">
+                          customer saw ₹{l.answers.pricing.customerPayout.payout}{l.answers.pricing.couponClaimed ? ' (coupon claimed)' : ''}
+                        </span>
+                      )}
                     </td>
                     <td className="px-6 py-5 text-sm max-w-[200px] whitespace-normal">
                       {l.pickupDate ? (

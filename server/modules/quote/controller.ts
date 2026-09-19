@@ -4,6 +4,7 @@ import * as quoteService from './service';
 import { pricingService } from './pricing';
 import { parseDiagnostics } from '../../../lib/pricing/diagnostics';
 import type { PricingErrorCode } from '../../../lib/pricing/pricingService';
+import { buildLeadAnswers } from '../../../lib/pricing/payout';
 import config from '../../config';
 import logger from '../../lib/logger';
 
@@ -33,6 +34,9 @@ const CreateLeadSchema = z.object({
   // Accepted for audit only - the stored price is always server-verified.
   quotedPrice: z.number().finite().optional(),
   quoteToken: z.string().max(2048).optional(),
+  // The first-time coupon is issued and checked in the browser, so this is
+  // stored as the customer's claim, not as a verified entitlement.
+  couponApplied: z.boolean().optional(),
   pickupDate: optionalText(40),
   pickupTime: optionalText(40),
   address: optionalText(500),
@@ -138,7 +142,7 @@ export async function createLead(req: Request, res: Response) {
     if (!result.success) {
       return res.status(400).json({ success: false, error: result.error.issues[0].message });
     }
-    const { quoteToken, quotedPrice, answers, ...lead } = result.data;
+    const { quoteToken, quotedPrice, couponApplied, answers, ...lead } = result.data;
 
     const verified = await pricingService.verifyLeadPrice({
       brand: lead.brand,
@@ -161,7 +165,7 @@ export async function createLead(req: Request, res: Response) {
       quotedPrice: verified.price,
       // The audit rides alongside the diagnostics the admin views already
       // read, so no schema migration is needed to make prices traceable.
-      answers: { ...verified.diagnostics, pricing: verified.audit },
+      answers: buildLeadAnswers(verified, couponApplied === true),
     });
     return res.json({ success: true, data: created, message: 'Lead created successfully' });
   } catch (err: any) {

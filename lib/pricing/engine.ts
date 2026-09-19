@@ -9,11 +9,13 @@ import materializedSnapshot from '../cashify_prices.json';
 import { classifyFreshness } from '../referencePricing/freshnessPolicy';
 import type { ReferencePriceRecord, ReferencePriceStatus } from '../referencePricing/types';
 import type { CatalogDevice } from './catalog';
+import { PERFECT_CONDITION_DIAGNOSTICS } from './perfectCondition';
 
 /**
  * The one place a quote's base market price is resolved and the pricing
- * methodology is invoked. Shared by the quote page (instant, local estimate)
- * and the API (authoritative, signed price), so the two can no longer drift.
+ * methodology is invoked. Used on the server (POST /api/quote/price) and by
+ * tests/tools; the quote page never runs it - it shows only the API's signed
+ * price, so there is exactly one place a customer's price comes from.
  *
  * This module does not change the methodology: every price still comes from
  * calculateFhoneifyPrice() in lib/pricingCalculator.ts, untouched. It adds
@@ -165,28 +167,7 @@ export function priceDevice(
   return result;
 }
 
-/** The perfect-condition answers the quote page has always used for its
- * "Get upto" figure. */
-export const PERFECT_CONDITION_DIAGNOSTICS: DiagnosticsType = {
-  calls: true,
-  touch: true,
-  originalScreen: true,
-  defects: [],
-  screenCondition: null,
-  screenSpots: null,
-  screenLines: null,
-  screenDiscoloration: null,
-  bodyScratches: 'No scratches',
-  bodyDents: 'No dents',
-  bodyPanel: null,
-  bodyBent: null,
-  hardware: [],
-  accessories: ['box', 'bill', 'charger', 'spen'],
-  warranty: true,
-  validBill: true,
-  eSim: null,
-  mobileAge: 'Below 3 months',
-};
+export { PERFECT_CONDITION_DIAGNOSTICS };
 
 /** "Get upto" price: the best final price the device can reach. Uses the
  * engine's own capped uplift so it can never advertise more than a
