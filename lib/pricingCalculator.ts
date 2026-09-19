@@ -73,6 +73,157 @@ export const COMMON_FUNCTIONAL_PENALTIES: Record<string, number> = {
   hinge: 0.2
 };
 
+/**
+ * Condition values restored from the repository's granular-questionnaire
+ * commits (1a4501c and 8623ff9). They are shared by every brand; brand/model
+ * rules only scale them through ModelParams. Keeping the values here prevents
+ * another brand calculator from silently forgetting a questionnaire field.
+ */
+export const GRANULAR_CONDITION_PENALTIES = {
+  screen: {
+    cracked: 0.35,
+    chipped: 0.20,
+    scratchesHeavy: 0.15,
+    scratchesLight: 0.08,
+    spotsHeavy: 0.25,
+    spotsLight: 0.15,
+    lines: 0.30,
+    fadedEdges: 0.20,
+    discolorationMajor: 0.25,
+    discolorationMinor: 0.10,
+  },
+  body: {
+    scratchesHeavy: 0.08,
+    scratchesLight: 0.03,
+    dentsMajor: 0.12,
+    dentsMinor: 0.05,
+    panelMissing: 0.20,
+    panelCracked: 0.15,
+    bent: 0.25,
+    looseScreen: 0.15,
+  },
+} as const;
+
+export interface ConditionAdjustmentBreakdown {
+  touchRetention: number;
+  originalScreenRetention: number;
+  screenPenalty: number;
+  bodyPenalty: number;
+  functionalPenalty: number;
+  conditionRetention: number;
+}
+
+interface ConditionAdjustmentOptions {
+  touchRetention?: number;
+  originalScreenRetention?: number;
+  functionalOverrides?: Record<string, number>;
+}
+
+const lower = (value: unknown) => String(value ?? '').toLowerCase();
+
+/**
+ * Converts the UI diagnostics into one transparent set of condition factors.
+ * Physical alternatives within one repair group use the largest applicable
+ * deduction. Distinct deductions are summed against the age-adjusted base,
+ * matching the penalty-summation model in place immediately before f1034f4.
+ * A failed touch screen supersedes other screen-replacement charges, matching
+ * the historical no-double-charge behavior.
+ */
+export function calculateConditionAdjustments(
+  diagnostics: DiagnosticsType,
+  params: ModelParams,
+  options: ConditionAdjustmentOptions = {}
+): ConditionAdjustmentBreakdown {
+  const defects = new Set(diagnostics.defects || []);
+  const screenCondition = lower(diagnostics.screenCondition);
+  const screenSpots = lower(diagnostics.screenSpots);
+  const screenLines = lower(diagnostics.screenLines);
+  const screenDiscoloration = lower(diagnostics.screenDiscoloration);
+  const bodyScratches = lower(diagnostics.bodyScratches);
+  const bodyDents = lower(diagnostics.bodyDents);
+  const bodyPanel = lower(diagnostics.bodyPanel);
+  const bodyBent = lower(diagnostics.bodyBent);
+  const bentOrCurved = (bodyBent.includes('bent') && !bodyBent.includes('not bent')) || bodyBent.includes('curved');
+
+  const touchFailed = diagnostics.touch === false;
+  const crackedScreen = screenCondition.includes('cracked') || screenCondition.includes('glass broken') || defects.has('broken_screen');
+
+  let touchRetention = touchFailed ? (options.touchRetention ?? params.touchPenalty) : 1;
+  let originalScreenRetention = diagnostics.originalScreen === false
+    ? (options.originalScreenRetention ?? params.originalScreenPenalty)
+    : 1;
+
+  let physicalScreenPenalty = 0;
+  if (defects.has('screen_scratch') || defects.has('broken_screen') || screenCondition) {
+    if (crackedScreen && !screenCondition.includes('outside display')) physicalScreenPenalty = GRANULAR_CONDITION_PENALTIES.screen.cracked;
+    else if (screenCondition.includes('outside display')) physicalScreenPenalty = GRANULAR_CONDITION_PENALTIES.screen.chipped;
+    else if (screenCondition.includes('more than 2')) physicalScreenPenalty = GRANULAR_CONDITION_PENALTIES.screen.scratchesHeavy;
+    else if (screenCondition.includes('1-2')) physicalScreenPenalty = GRANULAR_CONDITION_PENALTIES.screen.scratchesLight;
+    else physicalScreenPenalty = GRANULAR_CONDITION_PENALTIES.screen.cracked;
+  }
+
+  let displayPenalty = 0;
+  if (defects.has('screen_spot') || screenSpots || screenLines || screenDiscoloration) {
+    if (screenSpots.includes('large') || screenSpots.includes('3 or more')) displayPenalty = GRANULAR_CONDITION_PENALTIES.screen.spotsHeavy;
+    else if (screenSpots.includes('1-2')) displayPenalty = GRANULAR_CONDITION_PENALTIES.screen.spotsLight;
+    if (screenLines.includes('visible line')) displayPenalty = Math.max(displayPenalty, GRANULAR_CONDITION_PENALTIES.screen.lines);
+    else if (screenLines.includes('faded')) displayPenalty = Math.max(displayPenalty, GRANULAR_CONDITION_PENALTIES.screen.fadedEdges);
+    if (screenDiscoloration.includes('major')) displayPenalty = Math.max(displayPenalty, GRANULAR_CONDITION_PENALTIES.screen.discolorationMajor);
+    else if (screenDiscoloration.includes('minor')) displayPenalty = Math.max(displayPenalty, GRANULAR_CONDITION_PENALTIES.screen.discolorationMinor);
+    if (defects.has('screen_spot') && !screenSpots && !screenLines && !screenDiscoloration) {
+      displayPenalty = GRANULAR_CONDITION_PENALTIES.screen.spotsHeavy;
+    }
+  }
+
+  // Touch failure or a cracked display already implies screen replacement.
+  // Do not stack original-screen and cosmetic screen replacement charges.
+  if (touchFailed) {
+    originalScreenRetention = 1;
+    physicalScreenPenalty = 0;
+    displayPenalty = 0;
+  } else if (crackedScreen) {
+    originalScreenRetention = 1;
+  }
+
+  const screenPenalty = Math.min(1, Math.max(physicalScreenPenalty, displayPenalty) * params.physicalScale);
+
+  let cosmeticBodyPenalty = 0;
+  if (defects.has('body_scratch') || bodyScratches || bodyDents) {
+    if (bodyScratches.includes('more than 2')) cosmeticBodyPenalty += GRANULAR_CONDITION_PENALTIES.body.scratchesHeavy;
+    else if (bodyScratches.includes('1-2')) cosmeticBodyPenalty += GRANULAR_CONDITION_PENALTIES.body.scratchesLight;
+    if (bodyDents.includes('major') || bodyDents.includes('more than 2')) cosmeticBodyPenalty += GRANULAR_CONDITION_PENALTIES.body.dentsMajor;
+    else if (bodyDents.includes('1-2')) cosmeticBodyPenalty += GRANULAR_CONDITION_PENALTIES.body.dentsMinor;
+  }
+
+  let panelPenalty = 0;
+  if (defects.has('panel_missing') || defects.has('body_bent') || bodyPanel || bodyBent) {
+    if (bodyPanel.includes('missing')) panelPenalty = GRANULAR_CONDITION_PENALTIES.body.panelMissing;
+    else if (bodyPanel.includes('cracked') || bodyPanel.includes('broken')) panelPenalty = GRANULAR_CONDITION_PENALTIES.body.panelCracked;
+    if (bentOrCurved) panelPenalty = Math.max(panelPenalty, GRANULAR_CONDITION_PENALTIES.body.bent);
+    else if (bodyBent.includes('loose screen') || bodyBent.includes('gap')) panelPenalty = Math.max(panelPenalty, GRANULAR_CONDITION_PENALTIES.body.looseScreen);
+    if (defects.has('panel_missing') && !bodyPanel && !bodyBent) panelPenalty = GRANULAR_CONDITION_PENALTIES.body.panelMissing;
+  }
+
+  const bodyPenalty = Math.min(1, (cosmeticBodyPenalty + panelPenalty) * (params.bodyScale ?? params.physicalScale));
+
+  let functionalPenalty = 0;
+  for (const hardware of new Set(diagnostics.hardware || [])) {
+    const override = options.functionalOverrides?.[hardware];
+    if (override !== undefined) functionalPenalty += override;
+    else if (COMMON_FUNCTIONAL_PENALTIES[hardware] !== undefined) functionalPenalty += COMMON_FUNCTIONAL_PENALTIES[hardware] * params.functionalScale;
+  }
+  functionalPenalty = Math.min(1, functionalPenalty);
+
+  const totalPenalty = (1 - touchRetention) +
+    (1 - originalScreenRetention) +
+    screenPenalty +
+    bodyPenalty +
+    functionalPenalty;
+  const conditionRetention = Math.max(0, 1 - totalPenalty);
+
+  return { touchRetention, originalScreenRetention, screenPenalty, bodyPenalty, functionalPenalty, conditionRetention };
+}
+
 export function applyCompetitorUplift(basePrice: number, exactCashifyPrice: number): number {
   let upliftPercent = 1;
   if (basePrice <= 20000) upliftPercent = 1.08;
@@ -187,9 +338,6 @@ export function calculateApplePrice(model: string, basePrice: number, diagnostic
   const params = getAppleModelParams(model);
 
   const callsOk = diagnostics.calls !== false;
-  const touchOk = diagnostics.touch !== false;
-  const screenOrig = diagnostics.originalScreen !== false;
-  
   const isOutOfWarranty = diagnostics.warranty === false || diagnostics.mobileAge === 'above11' || diagnostics.mobileAge === 'above 11 months';
   const hasValidBill = diagnostics.validBill === true || (diagnostics.accessories || []).includes("bill");
   const hasBox = (diagnostics.accessories || []).includes("box") || diagnostics.box === true;
@@ -222,86 +370,30 @@ export function calculateApplePrice(model: string, basePrice: number, diagnostic
     ageMultiplier -= params.gstBillPenalty;
   }
 
-  const callsMult = callsOk ? 1.0 : params.callsPenalty;
-  const touchMult = touchOk ? 1.0 : (is17e ? (1.0 - params.touchPenalty) : params.touchPenalty);
-  let screenOrigMult = screenOrig ? 1.0 : (is17e ? (1.0 - params.originalScreenPenalty) : params.originalScreenPenalty);
-  if (!touchOk || (diagnostics.defects || []).includes("broken_screen")) {
-    if (!is17e) screenOrigMult = 1.0;
-  }
+  let batteryServicePenalty = 0.05 * params.functionalScale;
+  if (lowerModel.includes("16") && isProMax) batteryServicePenalty = 0.044527;
+  else if (lowerModel.includes("16") && isPro) batteryServicePenalty = 0.022882;
+  else if (lowerModel.includes("16")) batteryServicePenalty = 0.069763;
+  else if (lowerModel.includes("15") && isPlus) batteryServicePenalty = 0.064474;
+  else if (lowerModel.includes("15")) batteryServicePenalty = 0.048582;
 
-  let physicalSum = 0.0;
-  const bScale = params.bodyScale || params.physicalScale;
-  const defectsList = diagnostics.defects || [];
-  const screenCondition = String(diagnostics.screenCondition || "").toLowerCase();
-  const bodyScratches = String(diagnostics.bodyScratches || "").toLowerCase();
-  const bodyDents = String(diagnostics.bodyDents || "").toLowerCase();
-  
-  if (
-    defectsList.includes("body_scratch") || 
-    defectsList.includes("screen_scratch") ||
-    defectsList.includes("Broken/scratch on device screen") || 
-    defectsList.includes("Scratch/Dent on device body") || 
-    screenCondition || 
-    bodyScratches || 
-    bodyDents
-  ) {
-    let scratchPen = 0.0;
-    let dentPen = 0.0;
-
-    if (screenCondition.includes("more than 2") || bodyScratches.includes("more than 2")) {
-      scratchPen = is17e ? 0.11800766 : (lowerModel.includes("16e") ? 0.0025 : 0.02116);
-    } else if (bodyScratches.includes("1-2") || screenCondition.includes("1-2")) {
-      scratchPen = (lowerModel.includes("17") && isPro && !isProMax) ? 0.01117 : 0.01;
-    }
-
-    if (bodyDents.includes("major") || bodyDents.includes("more than 2")) {
-      dentPen = isProMax ? 0.02861 : 0.04232;
-    } else if (bodyDents.includes("1-2")) {
-      dentPen = (isPlus || isPro) && (lowerModel.includes("16") || lowerModel.includes("15")) ? 0.0 : (isProMax ? 0.015 : 0.02);
-    }
-
-    if (bodyScratches.includes("no") && !screenCondition) scratchPen = 0;
-    if (bodyDents.includes("no")) dentPen = 0;
-
-    physicalSum += (scratchPen + dentPen) * bScale;
-  }
-
-  let functionalSum = 0.0;
-  const hardwareList = diagnostics.hardware || [];
-  
-  if (
-    hardwareList.includes("battery_health") || 
-    hardwareList.includes("Battery Health 80-85%") || 
-    String(diagnostics.screenSpots || "").includes("Battery")
-  ) {
-    if (is17e) {
-      functionalSum += (age.includes("below 3") || age.includes("below3")) ? 0.01639847 : 0.02873563;
-    } else {
-      functionalSum += 0.0;
-    }
-  }
-
-  if (hardwareList.includes("battery_service") || hardwareList.includes("Battery in Service")) {
-    if (lowerModel.includes("16") && isProMax) functionalSum += 0.044527;
-    else if (lowerModel.includes("16") && isPro) functionalSum += 0.022882;
-    else if (lowerModel.includes("16")) functionalSum += 0.069763;
-    else if (lowerModel.includes("15") && isPlus) functionalSum += 0.064474;
-    else if (lowerModel.includes("15")) functionalSum += 0.048582;
-    else functionalSum += 0.05 * params.functionalScale;
-  }
-
-  if (hardwareList.includes("face") || hardwareList.includes("Face Sensor not working")) {
-    functionalSum += params.facePenalty! * params.functionalScale;
-  }
-
+  const batteryHealthPenalty = is17e
+    ? ((age.includes("below 3") || age.includes("below3")) ? 0.01639847 : 0.02873563)
+    : 0;
+  const facePenalty = params.facePenalty !== undefined && params.facePenalty > 0
+    ? params.facePenalty * params.functionalScale
+    : COMMON_FUNCTIONAL_PENALTIES.face * params.functionalScale;
+  const adjustments = calculateConditionAdjustments(diagnostics, params, {
+    touchRetention: is17e ? 1 - params.touchPenalty : params.touchPenalty,
+    originalScreenRetention: is17e ? 1 - params.originalScreenPenalty : params.originalScreenPenalty,
+    functionalOverrides: {
+      battery_health: batteryHealthPenalty,
+      battery_service: batteryServicePenalty,
+      face: facePenalty,
+    },
+  });
   const boxBonus = hasBox ? COMMON_BONUSES.box : 0;
-  const totalPenaltySum = (1 - callsMult) + (1 - touchMult) + (1 - screenOrigMult) + physicalSum + functionalSum;
-  
-  let cashifyPrice = basePrice * ageMultiplier * Math.max(0, 1 - totalPenaltySum) + boxBonus;
-
-  if (is17e) {
-    cashifyPrice = basePrice * (ageMultiplier - totalPenaltySum) + boxBonus;
-  }
+  let cashifyPrice = basePrice * ageMultiplier * adjustments.conditionRetention + boxBonus;
 
   if (!callsOk) {
     cashifyPrice = 1200;
@@ -354,12 +446,6 @@ export function calculateSamsungPrice(model: string, basePrice: number, diagnost
     else ageMultiplier -= params.gstBillPenalty;
   }
 
-  let scratchPenalty = 0;
-  if ((diagnostics.defects || []).includes("body_scratch")) {
-    if (diagnostics.bodyScratches?.includes("More than 2")) scratchPenalty = isA35 ? 0.049756 : isA34 ? 0.033296 : isA ? 0.010277 : isS26Ultra ? 0.015111 : isS24Ultra ? 0.005932 : isPlus ? 0.010416 : 0.02116;
-    else if (diagnostics.bodyScratches?.includes("1-2")) scratchPenalty = (isA35 || isA34 || isA) ? 0 : isS24Ultra ? 0.018735 : isUltra ? 0.015016 : isEdge ? 0.0111 : isPlus ? 0.016848 : 0.01677;
-  }
-
   const hasBox = (diagnostics.accessories || []).includes("box") || diagnostics.box === true;
   const hasCharger = (diagnostics.accessories || []).includes("charger") || diagnostics.charger === true;
 
@@ -373,7 +459,8 @@ export function calculateSamsungPrice(model: string, basePrice: number, diagnost
     boxBonus = COMMON_BONUSES.chargerOnlyBonus;
   }
 
-  let cashifyPrice = basePrice * ageMultiplier * Math.max(0, 1 - scratchPenalty) + boxBonus;
+  const adjustments = calculateConditionAdjustments(diagnostics, params);
+  let cashifyPrice = basePrice * ageMultiplier * adjustments.conditionRetention + boxBonus;
   if (diagnostics.calls === false) cashifyPrice = 1200;
 
   const exactCashifyPrice = Math.round(cashifyPrice);
@@ -392,6 +479,15 @@ export function calculateXiaomiPrice(model: string, basePrice: number, diagnosti
   const ageConfig = isRedmiNote
     ? { below3: 1, "3to6": 0.93, "6to11": 0.85, above11: 0.74 }
     : { below3: 1, "3to6": 0.94, "6to11": 0.86, above11: 0.75 };
+  const params: ModelParams = {
+    warrantyPenalty: 0.1,
+    gstBillPenalty: 0.08,
+    callsPenalty: 0.5,
+    originalScreenPenalty: 0.6,
+    touchPenalty: 0.4,
+    functionalScale: 1.0,
+    physicalScale: 1.0,
+  };
 
   let ageMultiplier = ageConfig.below3;
   if (diagnostics.warranty === false || diagnostics.mobileAge === "above11") {
@@ -405,16 +501,11 @@ export function calculateXiaomiPrice(model: string, basePrice: number, diagnosti
   const hasValidBill = diagnostics.validBill === true || (diagnostics.accessories || []).includes("bill");
   if (!hasValidBill && diagnostics.warranty !== false) ageMultiplier -= 0.08;
 
-  let scratchPenalty = 0;
-  if ((diagnostics.defects || []).includes("body_scratch")) {
-    if (diagnostics.bodyScratches?.includes("More than 2")) scratchPenalty = 0.05;
-    else if (diagnostics.bodyScratches?.includes("1-2")) scratchPenalty = 0.02;
-  }
-
   const hasBox = (diagnostics.accessories || []).includes("box") || diagnostics.box === true;
   const boxBonus = hasBox ? COMMON_BONUSES.box : 0;
 
-  let cashifyPrice = basePrice * ageMultiplier * Math.max(0, 1 - scratchPenalty) + boxBonus;
+  const adjustments = calculateConditionAdjustments(diagnostics, params);
+  let cashifyPrice = basePrice * ageMultiplier * adjustments.conditionRetention + boxBonus;
   if (diagnostics.calls === false) cashifyPrice = basePrice <= 5000 ? 200 : 1200;
 
   const exactCashifyPrice = Math.round(cashifyPrice);
@@ -446,19 +537,6 @@ export function calculateVivoPrice(model: string, basePrice: number, diagnostics
   const hasValidBill = diagnostics.validBill === true || (diagnostics.accessories || []).includes("bill");
   if (!hasValidBill && diagnostics.warranty !== false) ageMultiplier -= params.gstBillPenalty;
 
-  let scratchPenalty = 0;
-  if ((diagnostics.defects || []).includes("body_scratch")) {
-    if (isFold) scratchPenalty = 0.023642990343003003;
-    else scratchPenalty = diagnostics.bodyScratches?.includes("More than 2") ? 0.04 : 0.015;
-  }
-
-  let functionalSum = 0;
-  if (isFold) {
-    (diagnostics.hardware || []).forEach((h) => {
-      if (h === "battery_health" || h === "battery_service" || h === "battery") functionalSum += 0.02992159060803527;
-    });
-  }
-
   const hasBox = (diagnostics.accessories || []).includes("box") || diagnostics.box === true;
   const hasCharger = (diagnostics.accessories || []).includes("charger") || diagnostics.charger === true;
 
@@ -468,7 +546,14 @@ export function calculateVivoPrice(model: string, basePrice: number, diagnostics
     if (hasCharger === false && diagnostics.charger !== undefined) boxBonus -= COMMON_BONUSES.missingChargerPenalty;
   }
 
-  let cashifyPrice = basePrice * ageMultiplier * Math.max(0, 1 - (scratchPenalty + functionalSum)) + boxBonus;
+  const adjustments = calculateConditionAdjustments(diagnostics, params, isFold ? {
+    functionalOverrides: {
+      battery_health: 0.02992159060803527,
+      battery_service: 0.02992159060803527,
+      battery: 0.02992159060803527,
+    },
+  } : undefined);
+  let cashifyPrice = basePrice * ageMultiplier * adjustments.conditionRetention + boxBonus;
   if (diagnostics.calls === false) cashifyPrice = 1200;
 
   const exactCashifyPrice = Math.round(cashifyPrice);
@@ -512,16 +597,11 @@ export function calculateOppoPrice(model: string, basePrice: number, diagnostics
   const hasValidBill = diagnostics.validBill === true || (diagnostics.accessories || []).includes("bill");
   if (!hasValidBill && diagnostics.warranty !== false) ageMultiplier -= params.gstBillPenalty;
 
-  let scratchPenalty = 0;
-  if ((diagnostics.defects || []).includes("body_scratch")) {
-    if (diagnostics.bodyScratches?.includes("More than 2")) scratchPenalty = isFindX9Ultra ? 0.060106 : isFindX9Pro ? 0.077866 : 0.05;
-    else if (diagnostics.bodyScratches?.includes("1-2")) scratchPenalty = isFindX9s ? 0.064066 : isReno16 ? 0.065593 : isReno16c ? 0.065821 : 0.02;
-  }
-
   const hasBox = (diagnostics.accessories || []).includes("box") || diagnostics.box === true;
   const boxBonus = hasBox ? COMMON_BONUSES.box : 0;
 
-  let cashifyPrice = basePrice * ageMultiplier * Math.max(0, 1 - scratchPenalty) + boxBonus;
+  const adjustments = calculateConditionAdjustments(diagnostics, params);
+  let cashifyPrice = basePrice * ageMultiplier * adjustments.conditionRetention + boxBonus;
   if (diagnostics.calls === false) cashifyPrice = 1200;
 
   const exactCashifyPrice = Math.round(cashifyPrice);
@@ -552,17 +632,19 @@ export function calculateOnePlusPrice(model: string, basePrice: number, diagnost
   const hasValidBill = diagnostics.validBill === true || (diagnostics.accessories || []).includes("bill");
   if (!hasValidBill && diagnostics.warranty !== false) ageMultiplier -= params.gstBillPenalty;
 
-  let functionalSum = 0;
-  (diagnostics.hardware || []).forEach((h) => {
-    if (h === "front_camera") functionalSum += 0.0658385;
-    else if (h === "back_camera") functionalSum += 0.1827216;
-    else if (h.includes("battery")) functionalSum += 0.0620553;
-  });
-
   const hasBox = (diagnostics.accessories || []).includes("box") || diagnostics.box === true;
   const boxBonus = hasBox ? COMMON_BONUSES.box : 0;
 
-  let cashifyPrice = basePrice * ageMultiplier * Math.max(0, 1 - functionalSum) + boxBonus;
+  const adjustments = calculateConditionAdjustments(diagnostics, params, {
+    functionalOverrides: {
+      front_camera: 0.0658385,
+      back_camera: 0.1827216,
+      battery_health: 0.0620553,
+      battery_service: 0.0620553,
+      battery: 0.0620553,
+    },
+  });
+  let cashifyPrice = basePrice * ageMultiplier * adjustments.conditionRetention + boxBonus;
   if (diagnostics.calls === false) cashifyPrice = 1200;
 
   const exactCashifyPrice = Math.round(cashifyPrice);
@@ -586,27 +668,22 @@ export function calculateNothingPrice(model: string, basePrice: number, diagnost
   const hasValidBill = diagnostics.validBill === true || (diagnostics.accessories || []).includes("bill");
   if (!hasValidBill && diagnostics.warranty !== false) ageMultiplier -= params.gstBillPenalty;
 
-  let functionalSum = 0;
-  (diagnostics.hardware || []).forEach((h) => {
-    if (isNothing2) {
-      if (h === "front_camera") functionalSum += 0.0653835;
-      else if (h === "back_camera") functionalSum += 0.1826338;
-      else if (h.includes("battery")) functionalSum += 0.0620067;
-    } else if (isNothing1) {
-      if (h === "front_camera") functionalSum += 0.0589928;
-      else if (h === "back_camera") functionalSum += 0.1352517;
-      else if (h.includes("battery")) functionalSum += 0.0496402;
-    } else {
-      if (h === "front_camera") functionalSum += 0.0658385;
-      else if (h === "back_camera") functionalSum += 0.1827216;
-      else if (h.includes("battery")) functionalSum += 0.0620553;
-    }
-  });
-
   const hasBox = (diagnostics.accessories || []).includes("box") || diagnostics.box === true;
   const boxBonus = hasBox ? COMMON_BONUSES.box : 0;
 
-  let cashifyPrice = basePrice * ageMultiplier * Math.max(0, 1 - functionalSum) + boxBonus;
+  const frontCameraPenalty = isNothing2 ? 0.0653835 : isNothing1 ? 0.0589928 : 0.0658385;
+  const backCameraPenalty = isNothing2 ? 0.1826338 : isNothing1 ? 0.1352517 : 0.1827216;
+  const batteryPenalty = isNothing2 ? 0.0620067 : isNothing1 ? 0.0496402 : 0.0620553;
+  const adjustments = calculateConditionAdjustments(diagnostics, params, {
+    functionalOverrides: {
+      front_camera: frontCameraPenalty,
+      back_camera: backCameraPenalty,
+      battery_health: batteryPenalty,
+      battery_service: batteryPenalty,
+      battery: batteryPenalty,
+    },
+  });
+  let cashifyPrice = basePrice * ageMultiplier * adjustments.conditionRetention + boxBonus;
   if (diagnostics.calls === false) cashifyPrice = 1200;
 
   const exactCashifyPrice = Math.round(cashifyPrice);
@@ -629,7 +706,8 @@ export function calculateGenericAndroidPrice(brand: string, model: string, baseP
   const hasBox = (diagnostics.accessories || []).includes("box") || diagnostics.box === true;
   const boxBonus = hasBox ? COMMON_BONUSES.box : 0;
 
-  let cashifyPrice = basePrice * ageMultiplier + boxBonus;
+  const adjustments = calculateConditionAdjustments(diagnostics, params);
+  let cashifyPrice = basePrice * ageMultiplier * adjustments.conditionRetention + boxBonus;
   if (diagnostics.calls === false) cashifyPrice = basePrice <= 5000 ? 200 : 1200;
 
   const exactCashifyPrice = Math.round(cashifyPrice);

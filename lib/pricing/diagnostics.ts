@@ -66,3 +66,36 @@ export function parseDiagnostics(input: unknown): DiagnosticsParseResult {
   }
   return { ok: true, value: result.data as DiagnosticsType };
 }
+
+/**
+ * Uses the values the current quote UI actually sends. The old page checked
+ * legacy defect ids such as `screen_lines` and `body_bent`, so severe damage
+ * could leave warranty=true and then be priced as a below-three-month phone.
+ */
+export function warrantyVoidedByDiagnostics(diagnostics: Pick<DiagnosticsType,
+  'calls' | 'originalScreen' | 'screenCondition' | 'screenSpots' |
+  'screenLines' | 'screenDiscoloration' | 'bodyPanel' | 'bodyBent'
+>): boolean {
+  const value = (input: string | null) => String(input ?? '').toLowerCase();
+  const screenCondition = value(diagnostics.screenCondition);
+  const spots = value(diagnostics.screenSpots);
+  const lines = value(diagnostics.screenLines);
+  const discoloration = value(diagnostics.screenDiscoloration);
+  const panel = value(diagnostics.bodyPanel);
+  const bent = value(diagnostics.bodyBent);
+  const bentOrCurved = (bent.includes('bent') && !bent.includes('not bent')) || bent.includes('curved');
+
+  return diagnostics.calls === false ||
+    diagnostics.originalScreen === false ||
+    screenCondition.includes('cracked') ||
+    screenCondition.includes('glass broken') ||
+    (!!spots && !spots.includes('no spots')) ||
+    (!!lines && !lines.includes('no line')) ||
+    (!!discoloration && !discoloration.includes('no discoloration')) ||
+    panel.includes('cracked') ||
+    panel.includes('broken') ||
+    panel.includes('missing') ||
+    bentOrCurved ||
+    bent.includes('loose screen') ||
+    bent.includes('gap');
+}

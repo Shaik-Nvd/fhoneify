@@ -16,6 +16,7 @@ import { SEED_DEVICES } from '@/lib/seed_devices';
 import { PERFECT_CONDITION_DIAGNOSTICS } from '@/lib/pricing/perfectCondition';
 import { customerPayout } from '@/lib/pricing/payout';
 import { SignedQuote, clearQuoteSession, loadQuoteSession, sameDevice, saveQuoteSession } from '@/lib/pricing/quoteSession';
+import { warrantyVoidedByDiagnostics } from '@/lib/pricing/diagnostics';
 
 /** sessionStorage, or null where the browser blocks it (the page then simply
  * re-prices after a reload). */
@@ -2696,12 +2697,10 @@ export default function QuotePage() {
                   <button onClick={() => { 
                     const isEligible = isWarrantyEligible(selectedBrand, selectedModel);
                     
-                    // Major physical defects void the manufacturer warranty.
-                    // Note: Cashify does not void warranty purely for non-original screen or faulty touch for age pricing.
-                    const hasWarrantyVoidingDefects = 
-                      diagnostics.calls === false ||
-                      diagnostics.originalScreen === false ||
-                      (diagnostics.defects && diagnostics.defects.some(d => ['broken_screen', 'screen_spot', 'panel_missing', 'screen_lines', 'screen_discoloration', 'body_bent'].includes(d)));
+                    // Check the concrete fields this UI sends. The previous
+                    // legacy-id check could never see lines, discoloration or
+                    // bent-panel answers.
+                    const hasWarrantyVoidingDefects = warrantyVoidedByDiagnostics(diagnostics);
                       
                     // Even if validBill is false, Cashify still asks for the mobile age and applies an age deduction 
                     // in addition to the missing bill deduction.
@@ -2730,7 +2729,8 @@ export default function QuotePage() {
                     } else {
                       const updatedDiag = {
                         ...diagnostics,
-                        mobileAge: 'below3' as const
+                        warranty: false,
+                        mobileAge: 'above11' as const
                       };
                       setDiagnostics(updatedDiag);
                       if (isAuthenticated) { 

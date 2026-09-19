@@ -59,8 +59,10 @@ const GOLDEN_CASES: GoldenCase[] = [
   { name: 'apple_scrap_value', brand: 'Apple', model: 'iPhone 14', basePrice: 22000, diagnostics: diag({ calls: false, touch: false, originalScreen: false, warranty: false, validBill: false, defects: ['broken_screen', 'body_scratch', 'panel_missing'], bodyScratches: 'More than 2 scratches', bodyDents: 'Major dent(s) or more than 2', hardware: ['battery_service', 'fingerprint', 'back_camera', 'wifi'], mobileAge: 'above11' }), expected: { cashifyBasePrice: 1200, fhoneifyPrice: 1272 } },
 
   { name: 'samsung_s24_ultra_perfect', brand: 'Samsung', model: 'Galaxy S24 Ultra', basePrice: 55000, diagnostics: diag(), expected: { cashifyBasePrice: 54280, fhoneifyPrice: 56280 } },
-  { name: 'samsung_s24_ultra_spen_missing', brand: 'Samsung', model: 'Galaxy S24 Ultra', basePrice: 55000, diagnostics: diag({ hardware: ['s_pen'] }), expected: { cashifyBasePrice: 54280, fhoneifyPrice: 56280 } },
-  { name: 'samsung_fold_hinge_defect', brand: 'Samsung', model: 'Galaxy Z Fold 6', basePrice: 60000, diagnostics: diag({ hardware: ['hinge'] }), expected: { cashifyBasePrice: 59180, fhoneifyPrice: 61180 } },
+  // These two values intentionally changed when the already-defined shared
+  // functional map was reconnected; both faults previously had a ₹0 effect.
+  { name: 'samsung_s24_ultra_spen_missing', brand: 'Samsung', model: 'Galaxy S24 Ultra', basePrice: 55000, diagnostics: diag({ hardware: ['s_pen'] }), expected: { cashifyBasePrice: 49106, fhoneifyPrice: 51070 } },
+  { name: 'samsung_fold_hinge_defect', brand: 'Samsung', model: 'Galaxy Z Fold 6', basePrice: 60000, diagnostics: diag({ hardware: ['hinge'] }), expected: { cashifyBasePrice: 46244, fhoneifyPrice: 48094 } },
   { name: 'samsung_budget_perfect', brand: 'Samsung', model: 'Galaxy M14', basePrice: 6000, diagnostics: diag(), expected: { cashifyBasePrice: 6260, fhoneifyPrice: 6761 } },
 
   { name: 'xiaomi_redmi_note13_perfect', brand: 'Xiaomi', model: 'Redmi Note 13', basePrice: 15000, diagnostics: diag(), expected: { cashifyBasePrice: 15380, fhoneifyPrice: 16610 } },

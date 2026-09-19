@@ -94,16 +94,21 @@ async function main() {
     return;
   }
 
-  console.log(`\n${device.brand} | ${device.model} | ${device.storage}`);
-  console.log(`reference price:                 ${inr(x.referencePrice)}   (${referenceSource})`);
-  console.log(`perfect-condition value:         ${inr(x.perfectConditionCashifyEquivalent)}   (best age multiplier, bill, box/charger bonus)`);
+  console.log(`\nDevice:                          ${device.brand} | ${device.model} | ${device.storage}`);
+  console.log(`Reference price:                 ${inr(x.referencePrice)}   (${referenceSource})`);
+  console.log(`Perfect-condition baseline:      ${inr(x.perfectConditionCashifyEquivalent)}`);
   for (const s of x.steps) {
-    console.log(`  ${s.step.padEnd(28)} ${signed(s.delta).padStart(10)}  -> ${inr(s.cashifyEquivalent).padStart(9)}   ${JSON.stringify(s.fields)}`);
+    const label = `${s.step[0].toUpperCase()}${s.step.slice(1)} adjustment`;
+    console.log(`${label.padEnd(32)} ${signed(s.delta).padStart(10)}  -> ${inr(s.cashifyEquivalent).padStart(9)}   ${JSON.stringify(s.fields)}`);
   }
-  console.log(`cashify-equivalent value:        ${inr(x.cashifyEquivalent)}`);
-  console.log(`uplift:                          ${x.uplift.tierPercent}% of ${inr(x.cashifyEquivalent)} = ${inr(x.uplift.uncappedRupees)}${x.uplift.capApplied ? ` -> capped at ${inr(x.uplift.capRupees)}` : ''}  (+${inr(x.uplift.rupees)})`);
-  if (x.uplift.floorApplied) console.log('floor:                           ₹100 minimum applied');
-  console.log(`FINAL FHONEIFY QUOTE:            ${inr(x.finalPrice)}`);
+  console.log('--------------------------------');
+  console.log(`Cashify-equivalent:              ${inr(x.cashifyEquivalent)}`);
+  console.log(`Fhoneify uplift tier:            ${x.uplift.tierPercent}%`);
+  console.log(`Raw uplift:                      ${inr(x.uplift.uncappedRupees)}`);
+  console.log(`Cap applied:                     ${x.uplift.capApplied ? 'YES' : 'NO'}`);
+  console.log(`Uplift used:                     ${inr(x.uplift.rupees)}`);
+  if (x.uplift.floorApplied) console.log('Quote floor:                     ₹100');
+  console.log(`Final Fhoneify quote:            ${inr(x.finalPrice)}`);
   const payout = customerPayout(x.finalPrice, false);
   console.log(`shown to customer (no coupon):   ${inr(payout.payout)}   (quote - ${inr(payout.deduction)}; +₹299 with the first-time coupon)`);
   if (x.ignoredAnswers.length) {

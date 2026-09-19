@@ -1,0 +1,48 @@
+# Pricing Condition Engine
+
+This record compares the engine immediately before and after `f1034f4`. Status describes the code as found before the 2026-09-20 repair; the final column records the repair.
+
+| Condition | Old input field | Old deduction | Current input field | Deduction after `f1034f4` | Existing constant | Status | Resolution |
+|---|---|---:|---|---:|---:|---|---|
+| Age | `mobileAge` | age table/model multiplier | `mobileAge` | model multiplier | per brand/family | WORKING | Preserved |
+| Warranty | `warranty` | model multiplier | `warranty` | model multiplier | per brand/family | FIELD_MISMATCH | Current UI fields now void warranty and select `above11` |
+| Valid bill | `validBill`/`accessories.bill` | model GST/bill factor | same | same | per brand/family | WORKING | Preserved |
+| Cracked/glass-broken screen | `defects.screen_scratch` + `screenCondition` | 35% × scale | same | ₹0 on most Android paths | 35% | REMOVED | Restored |
+| Original/replaced screen | `originalScreen` | model retention | same | ignored outside Apple | `originalScreenPenalty` | DISCONNECTED | Reconnected |
+| Touch | `touch` | model retention | same | ignored outside Apple | `touchPenalty` | DISCONNECTED | Reconnected |
+| Screen spots | `defects.screen_spot` | 25% × scale; detail ignored | `screenSpots` | ₹0 on most paths | historical 15%/25% | REMOVED | Granular rule restored |
+| Screen lines | `defects.screen_spot` | 25% × scale; detail ignored | `screenLines` | ₹0 on most paths | historical 20%/30% | REMOVED | Granular rule restored |
+| Discoloration | `defects.screen_spot` | 25% × scale; detail ignored | `screenDiscoloration` | ₹0 on most paths | historical 10%/25% | REMOVED | Granular rule restored |
+| Panel | `defects.panel_missing` | 20% × scale; detail ignored | `bodyPanel` | ₹0 | historical 15%/20% | REMOVED | Granular rule restored |
+| Screen scratches | `screenCondition` | 8%/15% × scale | same | Apple only | 8%/15% | DISCONNECTED | Shared across brands |
+| Body scratches | `bodyScratches` | 2%/5% × body scale | same | ₹0 | historical 3%/8% | REMOVED | Granular rule restored |
+| Dents | `bodyDents` | 2% light; major ignored | same | ₹0 | historical 5%/12% | REMOVED | Granular rule restored |
+| Bent frame/body | `defects.panel_missing` | 20% × scale; detail ignored | `bodyBent` | ₹0; `Phone not bent` also matched naive substring checks | historical 15%/25% | FIELD_MISMATCH | Granular rule restored; negative option handled exactly |
+| Front camera | `hardware.front_camera` | ₹0; map disconnected | same | selected-brand overrides only | 12.53% | DISCONNECTED | Shared map with preserved overrides |
+| Back camera | `hardware.back_camera` | ₹0; map disconnected | same | selected-brand overrides only | 22.3% | DISCONNECTED | Shared map with preserved overrides |
+| Speaker | `hardware.speaker` | ₹0; map disconnected | same | ₹0 | 10% | DISCONNECTED | Reconnected |
+| Microphone | `hardware.microphone` | ₹0; map disconnected | same | ₹0 | 10% | DISCONNECTED | Reconnected |
+| Charging | `hardware.charging` | ₹0; map disconnected | same | ₹0 | 10% | DISCONNECTED | Reconnected |
+| Battery | `hardware.battery_*` | ₹0; map disconnected | same | selected-brand overrides only | 5%/15% | DISCONNECTED | Shared map with preserved overrides |
+| Buttons | `hardware.volume/power/silent` | ₹0; map disconnected | same | ₹0 | 2%/5% | DISCONNECTED | Reconnected |
+| Sensors | `hardware.fingerprint/face/proximity` | ₹0; map disconnected | same | Apple Face ID only; iPhone 14 override was negative | shared map/model override | DISCONNECTED | Reconnected; non-positive override cannot reward damage |
+| Wi-Fi | `hardware.wifi` | ₹0; map disconnected | same | ₹0 | 12% | DISCONNECTED | Reconnected |
+| Bluetooth | `hardware.bluetooth` | ₹0; map disconnected | same | ₹0 | 5% | DISCONNECTED | Reconnected |
+| SIM/network | `calls` | scrap value | `calls` | ₹200/₹1,200 scrap value | existing scrap rules | WORKING | Preserved |
+| Other hardware | `hardware.camera_glass/vibrator/s_pen/hinge` | ₹0; map disconnected | same | ₹0 | 2%–20% shared map | DISCONNECTED | Reconnected |
+| Box | `accessories.box`/`box` | +₹380/model override | same | same | `COMMON_BONUSES.box` | WORKING | Preserved |
+| Charger/accessories | `accessories.charger`/`charger` | Samsung/Vivo model effect | same | same | ₹80/₹280 rules | WORKING | Preserved; broader effects need calibration evidence |
+
+## Rule hierarchy
+
+The engine uses global condition values, then brand/family scales from `ModelParams`, then existing model-family overrides for age, bill, battery, camera, screen, or accessory behavior. A model-specific rule is retained only where repository history contains calibration evidence. It does not create per-device formulas.
+
+The server pipeline is:
+
+`reference price → age/bill/warranty → screen → body → functional → accessories → Cashify-equivalent → existing 8%/6%/4% uplift (₹2,000 cap) → final quote`
+
+Screen-replacement conditions use the largest applicable screen-repair deduction, and a dead touch screen waives cosmetic/replacement overlap. Other distinct condition groups use the historical penalty-summation model. The signed server result remains the only final quote source.
+
+## Calibration
+
+Run `npm run pricing:compare-cashify` with manually verified, same-variant observations. Compare `fhoneifyCashifyEquivalent` with Cashify's actual condition quote before evaluating uplift. New numeric rules require grouped evidence and approval; absent evidence is `NEEDS_CALIBRATION`.

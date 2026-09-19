@@ -9,9 +9,9 @@ import { PERFECT_CONDITION_DIAGNOSTICS } from './perfectCondition';
  * It contains NO pricing formula of its own. Each answer's effect is measured
  * by re-running the real engine (priceDevice -> calculateFhoneifyPrice) as the
  * answers are applied one group at a time, starting from perfect condition.
- * Because the methodology multiplies some factors together, the size of a
- * step can depend on the order; the order used is fixed and printed, and the
- * steps always add up exactly to the final Cashify-equivalent value.
+ * The size of a step can depend on the age-adjusted base and on repair-group
+ * waivers; the order used is fixed and printed, and the steps always add up
+ * exactly to the final Cashify-equivalent value.
  */
 
 export interface ExplainStep {
@@ -44,18 +44,41 @@ export interface QuoteExplanation {
 
 const UPLIFT_CAP = 2000;
 
-/** Answer groups in the order they are applied. */
-const GROUPS: { step: string; keys: (keyof DiagnosticsType)[] }[] = [
-  { step: 'age / warranty / bill', keys: ['warranty', 'validBill', 'mobileAge'] },
-  { step: 'calls', keys: ['calls'] },
-  { step: 'touch', keys: ['touch'] },
-  { step: 'original screen', keys: ['originalScreen'] },
-  { step: 'defect selection', keys: ['defects'] },
-  { step: 'screen condition', keys: ['screenCondition', 'screenSpots', 'screenLines', 'screenDiscoloration'] },
-  { step: 'body condition', keys: ['bodyScratches', 'bodyDents', 'bodyPanel', 'bodyBent'] },
-  { step: 'functional problems', keys: ['hardware'] },
-  { step: 'accessories', keys: ['accessories', 'box', 'charger'] },
-  { step: 'eSIM', keys: ['eSim'] },
+const SCREEN_DEFECTS = new Set(['screen_scratch', 'screen_spot', 'broken_screen', 'screen_lines', 'screen_discoloration']);
+const BODY_DEFECTS = new Set(['body_scratch', 'panel_missing', 'body_bent']);
+
+interface ExplainGroup {
+  step: string;
+  fields: (target: DiagnosticsType, current: DiagnosticsType) => Partial<DiagnosticsType>;
+}
+
+const picked = (target: DiagnosticsType, keys: (keyof DiagnosticsType)[]): Partial<DiagnosticsType> => {
+  const fields: Partial<DiagnosticsType> = {};
+  for (const key of keys) (fields as any)[key] = target[key];
+  return fields;
+};
+
+/** The public pricing pipeline, in the order used by the explanation. */
+const GROUPS: ExplainGroup[] = [
+  { step: 'age', fields: (target) => picked(target, ['mobileAge']) },
+  { step: 'warranty / bill', fields: (target) => picked(target, ['warranty', 'validBill']) },
+  {
+    step: 'screen',
+    fields: (target, current) => ({
+      ...picked(target, ['touch', 'originalScreen', 'screenCondition', 'screenSpots', 'screenLines', 'screenDiscoloration']),
+      defects: [...new Set([...(current.defects || []), ...(target.defects || []).filter((d) => SCREEN_DEFECTS.has(d))])],
+    }),
+  },
+  {
+    step: 'body',
+    fields: (target, current) => ({
+      ...picked(target, ['bodyScratches', 'bodyDents', 'bodyPanel', 'bodyBent']),
+      defects: [...new Set([...(current.defects || []), ...(target.defects || []).filter((d) => BODY_DEFECTS.has(d))])],
+    }),
+  },
+  { step: 'functional', fields: (target) => picked(target, ['calls', 'hardware']) },
+  { step: 'accessories', fields: (target) => picked(target, ['accessories', 'box', 'charger']) },
+  { step: 'eSIM', fields: (target) => picked(target, ['eSim']) },
 ];
 
 const sameValue = (a: unknown, b: unknown) => JSON.stringify(a ?? null) === JSON.stringify(b ?? null);
@@ -70,11 +93,11 @@ export function explainQuote(brand: string, model: string, referencePrice: numbe
   const ignoredAnswers: string[] = [];
 
   for (const group of GROUPS) {
+    const selected = group.fields(diagnostics, current);
     const fields: Partial<DiagnosticsType> = {};
-    for (const key of group.keys) {
-      if (!sameValue(diagnostics[key], PERFECT_CONDITION_DIAGNOSTICS[key])) (fields as any)[key] = diagnostics[key];
+    for (const [key, value] of Object.entries(selected)) {
+      if (!sameValue(value, (current as any)[key])) (fields as any)[key] = value;
     }
-    if (Object.keys(fields).length === 0) continue;
 
     // Is each changed answer, applied on its own to a perfect device, ignored?
     for (const [key, value] of Object.entries(fields)) {
