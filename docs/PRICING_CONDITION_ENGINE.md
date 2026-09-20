@@ -62,6 +62,21 @@ their historical values.
 | Samsung S-series slab | heavy-scratch scale | 1.10 | 0.75 | S24 isolation pair and the pre-`f1034f4` historical scale |
 | Samsung foldable | heavy-scratch scale | 1.10 | 1.50 | Fold6 isolation pair plus the historical foldable screen multiplier |
 
-The iPhone 14 Pro Max remains `NEEDS_CALIBRATION`: its standardized quote is
-still materially low after the shared Apple screen correction, and no matching
-old/no-screen control supports changing its age multiplier yet.
+### Documented calibration outlier: iPhone 14 Pro Max 256GB
+
+The standardized historical profile (old/out of warranty, valid bill, box,
+heavy screen scratches) has a Cashify quote of ₹38,730 against an engine
+Cashify-equivalent of ₹31,354 using its then-fresh ₹44,670 reference price.
+
+On 2026-09-20, Cashify's current calculator produced ₹42,690 for the matching
+256GB variant with calls, touch, original screen, Dual eSIM, no screen/body or
+functional faults, and the original box. Its current public reference was
+₹45,080; the engine's no-screen equivalent at that reference is ₹34,173.
+Cashify did not ask for age, warranty, or bill in that flow, so the control
+cannot safely establish an old/out-of-warranty multiplier. It demonstrates a
+material Apple 14 Pro Max generation/family gap, but does not justify a
+model-specific override or a new Apple-wide numeric rule.
+
+Status: `DOCUMENTED_OUTLIER`. Keep the calibrated production rule unchanged
+until a Cashify observation exposes equivalent age/warranty semantics or a
+second supported Apple 14 Pro Max observation confirms a generation-level rule.
