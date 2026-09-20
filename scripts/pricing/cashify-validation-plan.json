@@ -1,0 +1,46 @@
+{
+  "description": "Stratified parity plan. Every entry must resolve to a fresh local ReferencePrice before collection.",
+  "scenarios": [
+    { "id": "A01", "brand": "Apple", "model": "Apple iPhone 11", "storage": "128GB", "profile": "P1_OLD_NO_DAMAGE", "why": "High-volume legacy Apple standard family" },
+    { "id": "A02", "brand": "Apple", "model": "Apple iPhone 13 Pro", "storage": "256GB", "profile": "P2_HEAVY_SCREEN", "why": "Legacy Pro screen calibration holdout" },
+    { "id": "A03", "brand": "Apple", "model": "Apple iPhone 13 Pro Max", "storage": "256GB", "profile": "P1_OLD_NO_DAMAGE", "why": "Legacy Pro Max age holdout" },
+    { "id": "A04", "brand": "Apple", "model": "Apple iPhone 14", "storage": "256GB", "profile": "P1_OLD_NO_DAMAGE", "why": "iPhone 14 standard generation" },
+    { "id": "A05", "brand": "Apple", "model": "Apple iPhone 14 Plus", "storage": "256GB", "profile": "P2_HEAVY_SCREEN", "why": "iPhone 14 Plus screen behavior" },
+    { "id": "A06", "brand": "Apple", "model": "Apple iPhone 14 Pro", "storage": "256GB", "profile": "P3_FUNCTIONAL", "why": "iPhone 14 Pro functional holdout without Pro Max questionnaire ambiguity" },
+    { "id": "A07", "brand": "Apple", "model": "Apple iPhone 15", "storage": "256GB", "profile": "P1_OLD_NO_DAMAGE", "why": "iPhone 15 standard age behavior" },
+    { "id": "A08", "brand": "Apple", "model": "Apple iPhone 15 Pro Max", "storage": "256GB", "profile": "P2_HEAVY_SCREEN", "why": "Current Pro Max screen family" },
+    { "id": "A09", "brand": "Apple", "model": "Apple iPhone 16", "storage": "256GB", "profile": "P1_OLD_NO_DAMAGE", "why": "iPhone 16 standard age behavior" },
+    { "id": "A10", "brand": "Apple", "model": "Apple iPhone 16 Pro Max", "storage": "256GB", "profile": "P3_FUNCTIONAL", "why": "Current Pro Max functional holdout" },
+    { "id": "A11", "brand": "Apple", "model": "Apple iPhone 16e", "storage": "256GB", "profile": "P1_OLD_NO_DAMAGE", "why": "Separate 16e generation branch" },
+    { "id": "A12", "brand": "Apple", "model": "Apple iPhone 17 Pro", "storage": "256GB", "profile": "P2_HEAVY_SCREEN", "why": "Newest Pro generation holdout" },
+
+    { "id": "S01", "brand": "Samsung", "model": "Samsung Galaxy A14 5G", "storage": "8 GB/128 GB", "profile": "P1_OLD_NO_DAMAGE", "why": "Large Samsung A-series family" },
+    { "id": "S02", "brand": "Samsung", "model": "Samsung Galaxy Note 20", "storage": "8 GB/256 GB", "profile": "P3_FUNCTIONAL", "why": "Large generic Samsung fallback family" },
+    { "id": "S03", "brand": "Samsung", "model": "Samsung Galaxy S23 FE 5G", "storage": "8 GB/256 GB", "profile": "P2_HEAVY_SCREEN", "why": "Samsung FE branch" },
+    { "id": "S04", "brand": "Samsung", "model": "Samsung Galaxy S23 5G", "storage": "8 GB/256 GB", "profile": "P4_BODY", "why": "S/Plus slab body behavior holdout" },
+    { "id": "S05", "brand": "Samsung", "model": "Samsung Galaxy S23 Ultra 5G", "storage": "12 GB/256 GB", "profile": "P1_OLD_NO_DAMAGE", "why": "Samsung Ultra age behavior" },
+    { "id": "S06", "brand": "Samsung", "model": "Samsung Galaxy Z Fold 7", "storage": "12 GB/256 GB", "profile": "P2_HEAVY_SCREEN", "why": "Foldable screen calibration holdout" },
+    { "id": "S07", "brand": "Samsung", "model": "Samsung Galaxy Z Flip 7", "storage": "12 GB/256 GB", "profile": "P1_OLD_NO_DAMAGE", "why": "Flip side of foldable family" },
+    { "id": "S08", "brand": "Samsung", "model": "Samsung Galaxy S25 Edge", "storage": "12 GB/256 GB", "profile": "P2_HEAVY_SCREEN", "why": "Samsung Edge branch" },
+    { "id": "S09", "brand": "Samsung", "model": "Samsung Galaxy S26 Ultra", "storage": "12 GB/256 GB", "profile": "P1_OLD_NO_DAMAGE", "why": "S26 Ultra special branch" },
+
+    { "id": "O01", "brand": "OnePlus", "model": "Oneplus Nord CE4 5G", "storage": "8 GB/128 GB", "profile": "P1_OLD_NO_DAMAGE", "why": "Nord age holdout" },
+    { "id": "O02", "brand": "OnePlus", "model": "OnePlus 12", "storage": "12 GB/256 GB", "profile": "P2_HEAVY_SCREEN", "why": "Flagship standard screen holdout" },
+    { "id": "O03", "brand": "OnePlus", "model": "OnePlus 9 Pro 5G", "storage": "12 GB/256 GB", "profile": "P3_FUNCTIONAL", "why": "Pro family functional behavior" },
+    { "id": "O04", "brand": "OnePlus", "model": "Oneplus Open", "storage": "16 GB/512 GB", "profile": "P1_OLD_NO_DAMAGE", "why": "OnePlus fold family" },
+    { "id": "O05", "brand": "OnePlus", "model": "OnePlus Nord 5", "storage": "12 GB/256 GB", "profile": "P1_OLD_NO_DAMAGE", "why": "Nord 5 bill-override branch" },
+
+    { "id": "P01", "brand": "Oppo", "model": "OPPO Find X8 Pro 5G", "storage": "16 GB/512 GB", "profile": "P0_PERFECT", "why": "Oppo premium baseline" },
+    { "id": "P02", "brand": "Oppo", "model": "OPPO Reno11 5G", "storage": "8 GB/128 GB", "profile": "P2_HEAVY_SCREEN", "why": "Large Oppo standard family" },
+    { "id": "V01", "brand": "Vivo", "model": "Vivo V40 Pro", "storage": "12 GB/512 GB", "profile": "P3_FUNCTIONAL", "why": "Large Vivo standard family" },
+    { "id": "V02", "brand": "Vivo", "model": "Vivo X Fold 3 Pro", "storage": "16 GB/512 GB", "profile": "P2_HEAVY_SCREEN", "why": "Vivo Fold branch" },
+    { "id": "V03", "brand": "iQOO", "model": "iQOO 12 5G", "storage": "16 GB/512 GB", "profile": "P1_OLD_NO_DAMAGE", "why": "iQOO routed through Vivo standard" },
+    { "id": "X01", "brand": "Xiaomi", "model": "Xiaomi Redmi Note 13 Pro 5G", "storage": "8 GB/128 GB", "profile": "P4_BODY", "why": "Large Redmi Note family" },
+    { "id": "X02", "brand": "POCO", "model": "POCO X6 Pro 5G", "storage": "8 GB/256 GB", "profile": "P2_HEAVY_SCREEN", "why": "Xiaomi/POCO standard family" },
+    { "id": "N01", "brand": "Nothing", "model": "Nothing Phone 2", "storage": "12 GB/256 GB", "profile": "P1_OLD_NO_DAMAGE", "why": "Nothing Phone 2 branch" },
+    { "id": "N02", "brand": "Nothing", "model": "Nothing Phone 3a", "storage": "8 GB/256 GB", "profile": "P3_FUNCTIONAL", "why": "Nothing/CMF current fallback branch" },
+    { "id": "G01", "brand": "Realme", "model": "Realme GT 6T 5G", "storage": "8 GB/128 GB", "profile": "P1_OLD_NO_DAMAGE", "why": "Largest generic-Android brand" },
+    { "id": "G02", "brand": "Google", "model": "Google Pixel 8 Pro", "storage": "12 GB/128 GB", "profile": "P2_HEAVY_SCREEN", "why": "Premium generic-Android holdout" },
+    { "id": "G03", "brand": "Tecno", "model": "Tecno Camon 30 5G", "storage": "8 GB/256 GB", "profile": "P3_FUNCTIONAL", "why": "Budget generic-Android holdout" }
+  ]
+}

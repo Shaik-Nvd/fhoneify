@@ -40,9 +40,12 @@
     "pricing:capture-comparison": "tsx scripts/pricing/capture-comparison.ts",
     "pricing:compare-cashify": "tsx scripts/pricing/compare-cashify.ts",
     "pricing:isolate": "tsx scripts/pricing/isolate-cases.ts",
+    "pricing:families": "tsx scripts/pricing/catalog-family-report.ts",
+    "pricing:prepare-validation": "tsx scripts/pricing/prepare-cashify-validation.ts",
     "test:pricing:conditions": "tsx scripts/test/pricing.condition-matrix.test.ts",
     "test:pricing:consistency": "tsx scripts/test/pricing.quote-consistency.test.ts",
-    "test:pricing:calibration": "tsx scripts/test/pricing.calibration.test.ts"
+    "test:pricing:calibration": "tsx scripts/test/pricing.calibration.test.ts",
+    "test:pricing:catalog-properties": "tsx scripts/test/pricing.catalog-properties.test.ts"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"

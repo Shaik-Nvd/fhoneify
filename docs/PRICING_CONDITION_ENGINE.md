@@ -57,7 +57,7 @@ their historical values.
 |---|---|---:|---:|---|
 | OnePlus standard/Nord | out-of-warranty age multiplier | 0.7966 | 0.725 | Three devices plus OnePlus 13 old/no-screen control |
 | OnePlus standard/Nord | heavy-scratch scale | 0.80 | 1.00 | OnePlus 13 young/old isolation pair and three standardized quotes |
-| Apple Pro/Pro Max | heavy-scratch scale | 1.05 to 1.25 | 0.50 | Three standardized quotes and iPhone 15 Pro screen isolation |
+| Apple Pro/Pro Max | screen-scratch scale | 1.05 to 1.25 | 0.50 | Three standardized heavy-scratch quotes, iPhone 15 Pro screen isolation, and catalog-wide light/heavy ordering |
 | iPhone 15 Pro generation | young/in-warranty multiplier | 0.745160 | 0.912 | Live young control plus the existing 14 Pro/16 Pro sequence |
 | Samsung S-series slab | heavy-scratch scale | 1.10 | 0.75 | S24 isolation pair and the pre-`f1034f4` historical scale |
 | Samsung foldable | heavy-scratch scale | 1.10 | 1.50 | Fold6 isolation pair plus the historical foldable screen multiplier |

@@ -10,7 +10,7 @@ export const CASHIFY_CALIBRATION = {
     proFamily: {
       // Three old/heavy-scratch observations plus an isolated iPhone 15 Pro
       // screen pair support a 7.5% deduction (15% global rule x 0.50).
-      heavyScreenScratchScale: 0.50,
+      screenScratchScale: 0.50,
     },
     proYoungAgeByGeneration: {
       // Restores the smooth 14 Pro (0.914504) -> 16 Pro (0.911240) sequence.

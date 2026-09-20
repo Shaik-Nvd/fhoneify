@@ -120,6 +120,7 @@ interface ConditionAdjustmentOptions {
   originalScreenRetention?: number;
   functionalOverrides?: Record<string, number>;
   heavyScreenScratchScale?: number;
+  lightScreenScratchScale?: number;
 }
 
 const lower = (value: unknown) => String(value ?? '').toLowerCase();
@@ -165,7 +166,10 @@ export function calculateConditionAdjustments(
       physicalScreenPenalty = GRANULAR_CONDITION_PENALTIES.screen.scratchesHeavy;
       physicalScreenScale = options.heavyScreenScratchScale ?? params.physicalScale;
     }
-    else if (screenCondition.includes('1-2')) physicalScreenPenalty = GRANULAR_CONDITION_PENALTIES.screen.scratchesLight;
+    else if (screenCondition.includes('1-2')) {
+      physicalScreenPenalty = GRANULAR_CONDITION_PENALTIES.screen.scratchesLight;
+      physicalScreenScale = options.lightScreenScratchScale ?? params.physicalScale;
+    }
     else physicalScreenPenalty = GRANULAR_CONDITION_PENALTIES.screen.cracked;
   }
 
@@ -415,7 +419,10 @@ export function calculateApplePrice(model: string, basePrice: number, diagnostic
       face: facePenalty,
     },
     heavyScreenScratchScale: (isPro || isProMax)
-      ? CASHIFY_CALIBRATION.apple.proFamily.heavyScreenScratchScale
+      ? CASHIFY_CALIBRATION.apple.proFamily.screenScratchScale
+      : undefined,
+    lightScreenScratchScale: (isPro || isProMax)
+      ? CASHIFY_CALIBRATION.apple.proFamily.screenScratchScale
       : undefined,
   });
   const boxBonus = hasBox ? COMMON_BONUSES.box : 0;
