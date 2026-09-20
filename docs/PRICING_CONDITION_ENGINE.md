@@ -46,3 +46,22 @@ Screen-replacement conditions use the largest applicable screen-repair deduction
 ## Calibration
 
 Run `npm run pricing:compare-cashify` with manually verified, same-variant observations. Compare `fhoneifyCashifyEquivalent` with Cashify's actual condition quote before evaluating uplift. New numeric rules require grouped evidence and approval; absent evidence is `NEEDS_CALIBRATION`.
+
+The 2026-09-20 calibration uses eight standardized observations and six
+condition-isolation controls. Values are centralized in
+`lib/pricing/calibration.ts` and affect only the measured heavy-screen-scratch
+condition; other screen, body, functional, accessory, and uplift rules retain
+their historical values.
+
+| Group | Parameter | Previous | Calibrated | Evidence |
+|---|---|---:|---:|---|
+| OnePlus standard/Nord | out-of-warranty age multiplier | 0.7966 | 0.725 | Three devices plus OnePlus 13 old/no-screen control |
+| OnePlus standard/Nord | heavy-scratch scale | 0.80 | 1.00 | OnePlus 13 young/old isolation pair and three standardized quotes |
+| Apple Pro/Pro Max | heavy-scratch scale | 1.05 to 1.25 | 0.50 | Three standardized quotes and iPhone 15 Pro screen isolation |
+| iPhone 15 Pro generation | young/in-warranty multiplier | 0.745160 | 0.912 | Live young control plus the existing 14 Pro/16 Pro sequence |
+| Samsung S-series slab | heavy-scratch scale | 1.10 | 0.75 | S24 isolation pair and the pre-`f1034f4` historical scale |
+| Samsung foldable | heavy-scratch scale | 1.10 | 1.50 | Fold6 isolation pair plus the historical foldable screen multiplier |
+
+The iPhone 14 Pro Max remains `NEEDS_CALIBRATION`: its standardized quote is
+still materially low after the shared Apple screen correction, and no matching
+old/no-screen control supports changing its age multiplier yet.

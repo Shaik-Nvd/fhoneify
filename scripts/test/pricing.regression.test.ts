@@ -52,7 +52,10 @@ interface GoldenCase {
 const GOLDEN_CASES: GoldenCase[] = [
   { name: 'apple_17_pro_max_perfect_high_tier', brand: 'Apple', model: 'iPhone 17 Pro Max', basePrice: 120000, diagnostics: diag(), expected: { cashifyBasePrice: 117980, fhoneifyPrice: 119980 } },
   { name: 'apple_17_pro_max_worst_case', brand: 'Apple', model: 'iPhone 17 Pro Max', basePrice: 120000, diagnostics: diag({ calls: false, touch: false, originalScreen: false, warranty: false, validBill: false, accessories: [], defects: ['broken_screen', 'body_scratch', 'panel_missing'], bodyScratches: 'More than 2 scratches', bodyDents: 'Major dent(s) or more than 2', hardware: ['battery_service', 'fingerprint'], mobileAge: 'above11' }), expected: { cashifyBasePrice: 1200, fhoneifyPrice: 1248 } },
-  { name: 'apple_14_perfect_mid_tier', brand: 'Apple', model: 'iPhone 14', basePrice: 22000, diagnostics: diag(), expected: { cashifyBasePrice: 14224, fhoneifyPrice: 15077 } },
+  // The old 0.629265 young multiplier priced an in-warranty iPhone 14 below
+  // the identical out-of-warranty phone. The monotonic age guard reuses the
+  // existing 0.74961686 old-device value instead of introducing a new rate.
+  { name: 'apple_14_perfect_mid_tier', brand: 'Apple', model: 'iPhone 14', basePrice: 22000, diagnostics: diag(), expected: { cashifyBasePrice: 16872, fhoneifyPrice: 17884 } },
   { name: 'apple_14_no_bill_no_warranty', brand: 'Apple', model: 'iPhone 14', basePrice: 22000, diagnostics: diag({ warranty: false, validBill: false, mobileAge: 'above11' }), expected: { cashifyBasePrice: 16872, fhoneifyPrice: 17884 } },
   { name: 'apple_11_budget_tier', brand: 'Apple', model: 'iPhone 11', basePrice: 9000, diagnostics: diag(), expected: { cashifyBasePrice: 8119, fhoneifyPrice: 8769 } },
   { name: 'apple_se2020_old_device', brand: 'Apple', model: 'iPhone SE (2020)', basePrice: 5000, diagnostics: diag(), expected: { cashifyBasePrice: 4679, fhoneifyPrice: 5053 } },

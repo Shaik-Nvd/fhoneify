@@ -37,9 +37,12 @@
     "setup-cashify": "node scripts/setup-cashify.js",
     "postinstall": "prisma generate && npx playwright install chromium",
     "pricing:explain": "tsx scripts/pricing/explain-quote.ts",
+    "pricing:capture-comparison": "tsx scripts/pricing/capture-comparison.ts",
     "pricing:compare-cashify": "tsx scripts/pricing/compare-cashify.ts",
+    "pricing:isolate": "tsx scripts/pricing/isolate-cases.ts",
     "test:pricing:conditions": "tsx scripts/test/pricing.condition-matrix.test.ts",
-    "test:pricing:consistency": "tsx scripts/test/pricing.quote-consistency.test.ts"
+    "test:pricing:consistency": "tsx scripts/test/pricing.quote-consistency.test.ts",
+    "test:pricing:calibration": "tsx scripts/test/pricing.calibration.test.ts"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"

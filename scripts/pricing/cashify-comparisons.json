@@ -1,4 +1,329 @@
 {
-  "description": "Manually verified, same-variant Cashify condition quotes. Add records only when the Cashify answers and final quote were observed together.",
-  "records": []
+  "description": "Manually verified, same-variant Cashify condition quotes. The eight records below use the owner-supplied standardized profile; the harness computes Fhoneify cashifyEquivalent, final quote, customer payout, and rupee/percent differences.",
+  "records": [
+    { "brand": "OnePlus", "model": "OnePlus Nord 4", "ramStorage": "8 GB/256 GB", "referencePrice": 19770, "age": "above11", "cashifyAnswers": { "profile": "standardized-owner-supplied" }, "fhoneifyAnswers": { "calls": true, "touch": true, "originalScreen": true, "defects": ["screen_scratch"], "screenCondition": "More than 2 scratches on screen", "screenSpots": "No spots on screen", "screenLines": "No line(s) on Display", "screenDiscoloration": "No Discoloration", "bodyScratches": "No scratches", "bodyDents": "No dents", "bodyPanel": "No defect on side or back panel", "bodyBent": "Phone not bent", "hardware": [], "accessories": ["box"], "warranty": false, "validBill": true, "eSim": null, "mobileAge": "above11" }, "cashifyActualFinalQuote": 13030, "fhoneifyDisplayedQuote": 15279, "couponApplied": false, "mismatchCause": "BRAND_RULE", "notes": "Owner-supplied standardized profile; charger is absent because the frontend represents No charger by leaving it out. Candidate cause only: OnePlus age/screen rule needs a profile-isolation check." },
+    { "brand": "OnePlus", "model": "OnePlus 15", "ramStorage": "16 GB/512 GB", "referencePrice": 57720, "age": "above11", "cashifyAnswers": { "profile": "standardized-owner-supplied" }, "fhoneifyAnswers": { "calls": true, "touch": true, "originalScreen": true, "defects": ["screen_scratch"], "screenCondition": "More than 2 scratches on screen", "screenSpots": "No spots on screen", "screenLines": "No line(s) on Display", "screenDiscoloration": "No Discoloration", "bodyScratches": "No scratches", "bodyDents": "No dents", "bodyPanel": "No defect on side or back panel", "bodyBent": "Phone not bent", "hardware": [], "accessories": ["box"], "warranty": false, "validBill": true, "eSim": null, "mobileAge": "above11" }, "cashifyActualFinalQuote": 36380, "fhoneifyDisplayedQuote": 42377, "couponApplied": false, "mismatchCause": "BRAND_RULE", "notes": "Owner-supplied standardized profile; charger is absent because the frontend represents No charger by leaving it out. Candidate cause only: OnePlus age/screen rule needs a profile-isolation check." },
+    { "brand": "OnePlus", "model": "OnePlus 13", "ramStorage": "16 GB/512 GB", "referencePrice": 43560, "age": "above11", "cashifyAnswers": { "profile": "standardized-owner-supplied" }, "fhoneifyAnswers": { "calls": true, "touch": true, "originalScreen": true, "defects": ["screen_scratch"], "screenCondition": "More than 2 scratches on screen", "screenSpots": "No spots on screen", "screenLines": "No line(s) on Display", "screenDiscoloration": "No Discoloration", "bodyScratches": "No scratches", "bodyDents": "No dents", "bodyPanel": "No defect on side or back panel", "bodyBent": "Phone not bent", "hardware": [], "accessories": ["box"], "warranty": false, "validBill": true, "eSim": null, "mobileAge": "above11" }, "cashifyActualFinalQuote": 25960, "fhoneifyDisplayedQuote": 32672, "couponApplied": false, "mismatchCause": "BRAND_RULE", "notes": "Owner-supplied standardized profile; charger is absent because the frontend represents No charger by leaving it out. Candidate cause only: OnePlus age/screen rule needs a profile-isolation check." },
+    { "brand": "Samsung", "model": "Samsung Galaxy S24 5G", "ramStorage": "8 GB/512 GB", "referencePrice": 35960, "age": "above11", "cashifyAnswers": { "profile": "standardized-owner-supplied" }, "fhoneifyAnswers": { "calls": true, "touch": true, "originalScreen": true, "defects": ["screen_scratch"], "screenCondition": "More than 2 scratches on screen", "screenSpots": "No spots on screen", "screenLines": "No line(s) on Display", "screenDiscoloration": "No Discoloration", "bodyScratches": "No scratches", "bodyDents": "No dents", "bodyPanel": "No defect on side or back panel", "bodyBent": "Phone not bent", "hardware": [], "accessories": ["box"], "warranty": false, "validBill": true, "eSim": null, "mobileAge": "above11" }, "cashifyActualFinalQuote": 25210, "fhoneifyDisplayedQuote": 25005, "couponApplied": false, "mismatchCause": "BRAND_RULE", "notes": "Owner-supplied standardized profile; charger is absent because the frontend represents No charger by leaving it out. Display is close only because the unchanged uplift offsets the low cashifyEquivalent." },
+    { "brand": "Samsung", "model": "Samsung Galaxy Z Fold6 5G", "ramStorage": "12 GB/256 GB", "referencePrice": 65960, "age": "above11", "cashifyAnswers": { "profile": "standardized-owner-supplied" }, "fhoneifyAnswers": { "calls": true, "touch": true, "originalScreen": true, "defects": ["screen_scratch"], "screenCondition": "More than 2 scratches on screen", "screenSpots": "No spots on screen", "screenLines": "No line(s) on Display", "screenDiscoloration": "No Discoloration", "bodyScratches": "No scratches", "bodyDents": "No dents", "bodyPanel": "No defect on side or back panel", "bodyBent": "Phone not bent", "hardware": [], "accessories": ["box"], "warranty": false, "validBill": true, "eSim": null, "mobileAge": "above11" }, "cashifyActualFinalQuote": 39750, "fhoneifyDisplayedQuote": 44750, "couponApplied": false, "mismatchCause": "FAMILY_SEGMENT_RULE", "notes": "Owner-supplied standardized profile; charger is absent because the frontend represents No charger by leaving it out. Samsung has no Fold-specific branch in this formula." },
+    { "brand": "Apple", "model": "Apple iPhone 14 Pro Max", "ramStorage": "256 GB", "referencePrice": 44670, "age": "above11", "cashifyAnswers": { "profile": "standardized-owner-supplied" }, "fhoneifyAnswers": { "calls": true, "touch": true, "originalScreen": true, "defects": ["screen_scratch"], "screenCondition": "More than 2 scratches on screen", "screenSpots": "No spots on screen", "screenLines": "No line(s) on Display", "screenDiscoloration": "No Discoloration", "bodyScratches": "No scratches", "bodyDents": "No dents", "bodyPanel": "No defect on side or back panel", "bodyBent": "Phone not bent", "hardware": [], "accessories": ["box"], "warranty": false, "validBill": true, "eSim": null, "mobileAge": "above11" }, "cashifyActualFinalQuote": 38730, "fhoneifyDisplayedQuote": 29143, "couponApplied": false, "mismatchCause": "AGE", "notes": "Owner-supplied standardized profile. Apple Pro eSIM is required in the UI but omitted from the supplied profile; null is the engine-normalized default and has no pricing effect. Candidate cause: Apple out-of-warranty age multiplier plus heavy-scratch scale." },
+    { "brand": "Apple", "model": "Apple iPhone 15 Pro", "ramStorage": "256 GB", "referencePrice": 64800, "age": "above11", "cashifyAnswers": { "profile": "standardized-owner-supplied" }, "fhoneifyAnswers": { "calls": true, "touch": true, "originalScreen": true, "defects": ["screen_scratch"], "screenCondition": "More than 2 scratches on screen", "screenSpots": "No spots on screen", "screenLines": "No line(s) on Display", "screenDiscoloration": "No Discoloration", "bodyScratches": "No scratches", "bodyDents": "No dents", "bodyPanel": "No defect on side or back panel", "bodyBent": "Phone not bent", "hardware": [], "accessories": ["box"], "warranty": false, "validBill": true, "eSim": null, "mobileAge": "above11" }, "cashifyActualFinalQuote": 45790, "fhoneifyDisplayedQuote": 42858, "couponApplied": false, "mismatchCause": "AGE", "notes": "Owner-supplied standardized profile. Apple Pro eSIM is required in the UI but omitted from the supplied profile; null is the engine-normalized default and has no pricing effect. Candidate cause: Apple out-of-warranty age multiplier plus heavy-scratch scale." },
+    { "brand": "Apple", "model": "Apple iPhone 16 Pro", "ramStorage": "256 GB", "referencePrice": 77600, "age": "above11", "cashifyAnswers": { "profile": "standardized-owner-supplied" }, "fhoneifyAnswers": { "calls": true, "touch": true, "originalScreen": true, "defects": ["screen_scratch"], "screenCondition": "More than 2 scratches on screen", "screenSpots": "No spots on screen", "screenLines": "No line(s) on Display", "screenDiscoloration": "No Discoloration", "bodyScratches": "No scratches", "bodyDents": "No dents", "bodyPanel": "No defect on side or back panel", "bodyBent": "Phone not bent", "hardware": [], "accessories": ["box"], "warranty": false, "validBill": true, "eSim": null, "mobileAge": "above11" }, "cashifyActualFinalQuote": 53880, "fhoneifyDisplayedQuote": 50996, "couponApplied": false, "mismatchCause": "AGE", "notes": "Owner-supplied standardized profile. Apple Pro eSIM is required in the UI but omitted from the supplied profile; null is the engine-normalized default and has no pricing effect. Candidate cause: Apple out-of-warranty age multiplier plus heavy-scratch scale." }
+  ],
+  "excludedObservations": [
+    {
+      "id": "excluded-samsung-galaxy-a33-vs-a55-8-128",
+      "fhoneifyDevice": "Samsung Galaxy A33 5G / 8 GB/128 GB",
+      "cashifyDevice": "Samsung Galaxy A55 5G / 8 GB/128 GB",
+      "reason": "Different models were compared. Excluded from calibration."
+    }
+  ],
+  "collectionInstructions": "For each scenario, record Cashify's final quote only after using the same model, RAM/storage, condition answers, and accessories. Copy the scenario's final server diagnostics into a new records entry, then run npm run pricing:compare-cashify. Do not place planned scenarios in records.",
+  "recommendedScenarios": [
+    {
+      "id": "apple-16-pro-perfect",
+      "device": "Apple iPhone 16 Pro",
+      "variant": "4 GB/256 GB",
+      "conditionScenario": "Perfect-condition baseline",
+      "fhoneifyAnswers": { "calls": "Yes", "touch": "Yes", "originalScreen": "Yes", "warranty": "Yes", "validBill": "Yes", "mobileAge": "below3", "defects": [], "hardware": [], "accessories": ["box", "charger"], "eSim": "Dual eSIM" },
+      "cashifyMatch": "Same variant; all functions working; original screen; under warranty with valid bill; newest age band; original box and charger if offered; Dual eSIM if asked.",
+      "tests": "Apple flagship perfect baseline and reference-price alignment."
+    },
+    {
+      "id": "apple-16-pro-cracked",
+      "device": "Apple iPhone 16 Pro",
+      "variant": "4 GB/256 GB",
+      "conditionScenario": "Original display with cracked/glass-broken screen",
+      "fhoneifyAnswers": { "calls": "Yes", "touch": "Yes", "originalScreen": "Yes", "warranty": "Yes initially; final diagnostics become No", "validBill": "Yes", "mobileAge": "above11 after the warranty-invalidating defect", "defects": ["screen_scratch"], "screenCondition": "Screen cracked/ glass broken", "hardware": [], "accessories": ["box", "charger"], "eSim": "Dual eSIM" },
+      "cashifyMatch": "Choose the closest cracked/broken-display answer while keeping touch working and the screen original; follow Cashify's resulting warranty/age path.",
+      "tests": "Apple cracked-screen deduction and warranty invalidation."
+    },
+    {
+      "id": "apple-16-pro-replaced-screen",
+      "device": "Apple iPhone 16 Pro",
+      "variant": "4 GB/256 GB",
+      "conditionScenario": "Working but non-original/local-shop replacement screen",
+      "fhoneifyAnswers": { "calls": "Yes", "touch": "Yes", "originalScreen": "No", "warranty": "Yes initially; final diagnostics become No", "validBill": "Yes", "mobileAge": "above11 after the warranty-invalidating answer", "defects": [], "hardware": [], "accessories": ["box", "charger"], "eSim": "Dual eSIM" },
+      "cashifyMatch": "Choose the closest display-replaced/non-original-screen answer; leave physical screen damage and hardware faults absent.",
+      "tests": "Original-screen penalty separately from cracked glass."
+    },
+    {
+      "id": "apple-16-pro-touch",
+      "device": "Apple iPhone 16 Pro",
+      "variant": "4 GB/256 GB",
+      "conditionScenario": "Touchscreen not working; display otherwise original and uncracked",
+      "fhoneifyAnswers": { "calls": "Yes", "touch": "No", "originalScreen": "Yes", "warranty": "Yes", "validBill": "Yes", "mobileAge": "below3", "defects": [], "hardware": [], "accessories": ["box", "charger"], "eSim": "Dual eSIM" },
+      "cashifyMatch": "Choose touchscreen not working and keep the screen original with no crack.",
+      "tests": "Touch penalty without screen-physical overlap."
+    },
+    {
+      "id": "apple-16-pro-camera",
+      "device": "Apple iPhone 16 Pro",
+      "variant": "4 GB/256 GB",
+      "conditionScenario": "Back camera not working",
+      "fhoneifyAnswers": { "calls": "Yes", "touch": "Yes", "originalScreen": "Yes", "warranty": "Yes", "validBill": "Yes", "mobileAge": "below3", "defects": [], "hardware": ["back_camera"], "accessories": ["box", "charger"], "eSim": "Dual eSIM" },
+      "cashifyMatch": "Choose only the closest rear-camera fault; leave camera glass intact and all other hardware working.",
+      "tests": "Apple flagship camera functional deduction."
+    },
+    {
+      "id": "samsung-s24-ultra-perfect",
+      "device": "Samsung Galaxy S24 Ultra 5G",
+      "variant": "12 GB/256 GB",
+      "conditionScenario": "Perfect-condition baseline",
+      "fhoneifyAnswers": { "calls": "Yes", "touch": "Yes", "originalScreen": "Yes", "warranty": "Yes", "validBill": "Yes", "mobileAge": "below3", "defects": [], "hardware": [], "accessories": ["box", "spen"] },
+      "cashifyMatch": "Same variant; all functions working; original screen; under warranty with valid bill; newest age band; original box and S Pen. Do not add a charger where Cashify does not ask for one.",
+      "tests": "Samsung flagship perfect baseline and S Pen accessory path."
+    },
+    {
+      "id": "samsung-s24-ultra-age",
+      "device": "Samsung Galaxy S24 Ultra 5G",
+      "variant": "12 GB/256 GB",
+      "conditionScenario": "Old device, otherwise perfect",
+      "fhoneifyAnswers": { "calls": "Yes", "touch": "Yes", "originalScreen": "Yes", "warranty": "No", "validBill": "Yes", "mobileAge": "above11", "defects": [], "hardware": [], "accessories": ["box", "spen"] },
+      "cashifyMatch": "Choose no manufacturer warranty and the oldest available age band; keep all condition answers perfect.",
+      "tests": "Live-flow combined warranty and age depreciation."
+    },
+    {
+      "id": "samsung-s24-ultra-body",
+      "device": "Samsung Galaxy S24 Ultra 5G",
+      "variant": "12 GB/256 GB",
+      "conditionScenario": "Heavy body scratches and major dents",
+      "fhoneifyAnswers": { "calls": "Yes", "touch": "Yes", "originalScreen": "Yes", "warranty": "Yes", "validBill": "Yes", "mobileAge": "below3", "defects": ["body_scratch"], "bodyScratches": "More than 2 scratches", "bodyDents": "Major dent(s) or more than 2", "hardware": [], "accessories": ["box", "spen"] },
+      "cashifyMatch": "Choose the closest heavy body-scratch and major-dent answers; no screen or functional defects.",
+      "tests": "Samsung flagship body-damage deductions."
+    },
+    {
+      "id": "samsung-s24-ultra-accessories",
+      "device": "Samsung Galaxy S24 Ultra 5G",
+      "variant": "12 GB/256 GB",
+      "conditionScenario": "Perfect phone, missing original box and S Pen",
+      "fhoneifyAnswers": { "calls": "Yes", "touch": "Yes", "originalScreen": "Yes", "warranty": "Yes", "validBill": "Yes", "mobileAge": "below3", "defects": [], "hardware": [], "accessories": [] },
+      "cashifyMatch": "Keep the phone perfect but select no box and no S Pen wherever Cashify offers those questions.",
+      "tests": "Accessory effect independently of device damage."
+    },
+    {
+      "id": "samsung-fold6-perfect",
+      "device": "Samsung Galaxy Z Fold 6 5G",
+      "variant": "12 GB/256 GB",
+      "conditionScenario": "Perfect-condition foldable baseline",
+      "fhoneifyAnswers": { "calls": "Yes", "touch": "Yes", "originalScreen": "Yes", "warranty": "Yes", "validBill": "Yes", "mobileAge": "below3", "defects": [], "hardware": [], "accessories": ["box"] },
+      "cashifyMatch": "Same foldable variant with all functions, both displays, and hinge working; under warranty with valid bill; original box.",
+      "tests": "Samsung foldable family baseline."
+    },
+    {
+      "id": "oneplus-13-perfect",
+      "device": "OnePlus 13",
+      "variant": "12 GB/256 GB",
+      "conditionScenario": "Perfect-condition baseline",
+      "fhoneifyAnswers": { "calls": "Yes", "touch": "Yes", "originalScreen": "Yes", "warranty": "Yes", "validBill": "Yes", "mobileAge": "below3", "defects": [], "hardware": [], "accessories": ["box", "charger"] },
+      "cashifyMatch": "Same variant; all functions working; original screen; under warranty with valid bill; newest age band; original box and charger.",
+      "tests": "OnePlus flagship perfect baseline."
+    },
+    {
+      "id": "oneplus-13-camera",
+      "device": "OnePlus 13",
+      "variant": "12 GB/256 GB",
+      "conditionScenario": "Back camera not working",
+      "fhoneifyAnswers": { "calls": "Yes", "touch": "Yes", "originalScreen": "Yes", "warranty": "Yes", "validBill": "Yes", "mobileAge": "below3", "defects": [], "hardware": ["back_camera"], "accessories": ["box", "charger"] },
+      "cashifyMatch": "Choose only the closest rear-camera fault; retain the original camera glass and all other functionality.",
+      "tests": "OnePlus flagship camera functional deduction."
+    },
+    {
+      "id": "oneplus-13-multiple-faults",
+      "device": "OnePlus 13",
+      "variant": "12 GB/256 GB",
+      "conditionScenario": "Speaker, charging port, and battery faulty",
+      "fhoneifyAnswers": { "calls": "Yes", "touch": "Yes", "originalScreen": "Yes", "warranty": "Yes", "validBill": "Yes", "mobileAge": "below3", "defects": [], "hardware": ["speaker", "charging", "battery_service"], "accessories": ["box", "charger"] },
+      "cashifyMatch": "Choose only speaker fault, charging-port fault, and battery-fault answers; do not select battery-health as well as battery faulty.",
+      "tests": "Stacking of distinct functional deductions."
+    },
+    {
+      "id": "oppo-find-x8-pro-perfect",
+      "device": "OPPO Find X8 Pro 5G",
+      "variant": "16 GB/512 GB",
+      "conditionScenario": "Perfect-condition baseline",
+      "fhoneifyAnswers": { "calls": "Yes", "touch": "Yes", "originalScreen": "Yes", "warranty": "Yes", "validBill": "Yes", "mobileAge": "below3", "defects": [], "hardware": [], "accessories": ["box", "charger"] },
+      "cashifyMatch": "Same variant; all functions working; original screen; under warranty with valid bill; newest age band; original box and charger.",
+      "tests": "OPPO Find-family perfect baseline."
+    },
+    {
+      "id": "oppo-find-x8-pro-cracked",
+      "device": "OPPO Find X8 Pro 5G",
+      "variant": "16 GB/512 GB",
+      "conditionScenario": "Original display with cracked/glass-broken screen",
+      "fhoneifyAnswers": { "calls": "Yes", "touch": "Yes", "originalScreen": "Yes", "warranty": "Yes initially; final diagnostics become No", "validBill": "Yes", "mobileAge": "above11 after the warranty-invalidating defect", "defects": ["screen_scratch"], "screenCondition": "Screen cracked/ glass broken", "hardware": [], "accessories": ["box", "charger"] },
+      "cashifyMatch": "Choose the closest cracked/broken-display answer while retaining touch and an original display.",
+      "tests": "OPPO flagship screen-damage deduction."
+    },
+    {
+      "id": "vivo-v40-pro-perfect",
+      "device": "Vivo V40 Pro",
+      "variant": "8 GB/256 GB",
+      "conditionScenario": "Perfect-condition baseline",
+      "fhoneifyAnswers": { "calls": "Yes", "touch": "Yes", "originalScreen": "Yes", "warranty": "Yes", "validBill": "Yes", "mobileAge": "below3", "defects": [], "hardware": [], "accessories": ["box", "charger"] },
+      "cashifyMatch": "Same variant; all functions working; original screen; under warranty with valid bill; newest age band; original box and charger.",
+      "tests": "Vivo mid-premium perfect baseline."
+    },
+    {
+      "id": "vivo-v40-pro-touch",
+      "device": "Vivo V40 Pro",
+      "variant": "8 GB/256 GB",
+      "conditionScenario": "Touchscreen not working; display otherwise original and uncracked",
+      "fhoneifyAnswers": { "calls": "Yes", "touch": "No", "originalScreen": "Yes", "warranty": "Yes", "validBill": "Yes", "mobileAge": "below3", "defects": [], "hardware": [], "accessories": ["box", "charger"] },
+      "cashifyMatch": "Choose touchscreen not working; retain original screen and no physical screen damage.",
+      "tests": "Vivo touch penalty."
+    },
+    {
+      "id": "redmi-note13-pro-perfect",
+      "device": "Xiaomi Redmi Note 13 Pro 5G",
+      "variant": "12 GB/256 GB",
+      "conditionScenario": "Perfect-condition baseline",
+      "fhoneifyAnswers": { "calls": "Yes", "touch": "Yes", "originalScreen": "Yes", "warranty": "No", "validBill": "No", "mobileAge": "above11", "defects": [], "hardware": [], "accessories": ["box", "charger"] },
+      "cashifyMatch": "Same variant; all functions working; original screen; no warranty or valid bill; oldest available age band; original box and charger.",
+      "tests": "Redmi Note budget/midrange baseline in its normal older-device flow."
+    },
+    {
+      "id": "redmi-note13-pro-body",
+      "device": "Xiaomi Redmi Note 13 Pro 5G",
+      "variant": "12 GB/256 GB",
+      "conditionScenario": "Heavy body scratches and major dents",
+      "fhoneifyAnswers": { "calls": "Yes", "touch": "Yes", "originalScreen": "Yes", "warranty": "No", "validBill": "No", "mobileAge": "above11", "defects": ["body_scratch"], "bodyScratches": "More than 2 scratches", "bodyDents": "Major dent(s) or more than 2", "hardware": [], "accessories": ["box", "charger"] },
+      "cashifyMatch": "Choose the closest heavy body-scratch and major-dent answers; retain no screen or functional faults.",
+      "tests": "Redmi body-damage deduction against its own baseline."
+    },
+    {
+      "id": "realme-gt6-perfect",
+      "device": "Realme GT 6",
+      "variant": "12 GB/256 GB",
+      "conditionScenario": "Perfect-condition baseline",
+      "fhoneifyAnswers": { "calls": "Yes", "touch": "Yes", "originalScreen": "Yes", "warranty": "No", "validBill": "No", "mobileAge": "above11", "defects": [], "hardware": [], "accessories": ["box", "charger"] },
+      "cashifyMatch": "Same variant; all functions working; original screen; no warranty or valid bill; oldest available age band; original box and charger.",
+      "tests": "Realme generic-Android baseline."
+    }
+  ],
+  "isolationCases": [
+    {
+      "id": "A1-oneplus-13-old-no-screen",
+      "case": "A1",
+      "brand": "OnePlus",
+      "model": "OnePlus 13",
+      "ramStorage": "16 GB/512 GB",
+      "referencePrice": 43560,
+      "cashifyActualFinalQuote": 31950,
+      "cashifyListedReferenceObserved": 43300,
+      "cashifyObservedAt": "2026-09-20",
+      "fhoneifyAnswers": { "calls": true, "touch": true, "originalScreen": true, "defects": [], "screenCondition": null, "screenSpots": null, "screenLines": null, "screenDiscoloration": null, "bodyScratches": null, "bodyDents": null, "bodyPanel": null, "bodyBent": null, "hardware": [], "accessories": ["box"], "warranty": false, "validBill": true, "eSim": null, "mobileAge": "above11" },
+      "cashifySelections": "Calls working: Yes; touch working: Yes; original screen: Yes; warranty: No; valid GST bill: Yes; age: Above 11 months; no screen/body defects; no hardware faults; original box with same IMEI: Yes; original charger: No."
+    },
+    {
+      "id": "A2-oneplus-13-young-heavy-scratches",
+      "case": "A2",
+      "brand": "OnePlus",
+      "model": "OnePlus 13",
+      "ramStorage": "16 GB/512 GB",
+      "referencePrice": 43560,
+      "cashifyActualFinalQuote": 36690,
+      "cashifyListedReferenceObserved": 43300,
+      "cashifyObservedAt": "2026-09-20",
+      "fhoneifyAnswers": { "calls": true, "touch": true, "originalScreen": true, "defects": ["screen_scratch"], "screenCondition": "More than 2 scratches on screen", "screenSpots": null, "screenLines": null, "screenDiscoloration": null, "bodyScratches": null, "bodyDents": null, "bodyPanel": null, "bodyBent": null, "hardware": [], "accessories": ["box"], "warranty": true, "validBill": true, "eSim": null, "mobileAge": "below3" },
+      "cashifySelections": "Calls working: Yes; touch working: Yes; original screen: Yes; warranty: Yes; valid GST bill: Yes; age: Below 3 months; screen: More than 2 scratches; no other screen/body defects; no hardware faults; original box with same IMEI: Yes; original charger: No."
+    },
+    {
+      "id": "B1-iphone-15-pro-old-no-screen",
+      "case": "B1",
+      "brand": "Apple",
+      "model": "Apple iPhone 15 Pro",
+      "ramStorage": "256 GB",
+      "referencePrice": 64800,
+      "cashifyActualFinalQuote": 49820,
+      "cashifyListedReferenceObserved": 64800,
+      "cashifyObservedAt": "2026-09-20",
+      "fhoneifyAnswers": { "calls": true, "touch": true, "originalScreen": true, "defects": [], "screenCondition": null, "screenSpots": null, "screenLines": null, "screenDiscoloration": null, "bodyScratches": null, "bodyDents": null, "bodyPanel": null, "bodyBent": null, "hardware": [], "accessories": ["box"], "warranty": false, "validBill": true, "eSim": "Dual eSIM", "mobileAge": "above11" },
+      "cashifySelections": "Calls working: Yes; touch working: Yes; original screen: Yes; eSIM: Dual eSIM if asked; warranty: No; valid GST bill: Yes; age: Above 11 months; no screen/body defects; no hardware faults; original box with same IMEI: Yes; original charger: No."
+    },
+    {
+      "id": "B2-iphone-15-pro-young-heavy-scratches",
+      "case": "B2",
+      "brand": "Apple",
+      "model": "Apple iPhone 15 Pro",
+      "ramStorage": "256 GB",
+      "referencePrice": 64800,
+      "cashifyActualFinalQuote": 54780,
+      "cashifyListedReferenceObserved": 64800,
+      "cashifyObservedAt": "2026-09-20",
+      "fhoneifyAnswers": { "calls": true, "touch": true, "originalScreen": true, "defects": ["screen_scratch"], "screenCondition": "More than 2 scratches on screen", "screenSpots": null, "screenLines": null, "screenDiscoloration": null, "bodyScratches": null, "bodyDents": null, "bodyPanel": null, "bodyBent": null, "hardware": [], "accessories": ["box"], "warranty": true, "validBill": true, "eSim": "Dual eSIM", "mobileAge": "below3" },
+      "cashifySelections": "Calls working: Yes; touch working: Yes; original screen: Yes; eSIM: Dual eSIM if asked; warranty: Yes; valid GST bill: Yes; age: Below 3 months; screen: More than 2 scratches; no other screen/body defects; no hardware faults; original box with same IMEI: Yes; original charger: No."
+    },
+    {
+      "id": "C1-fold6-old-no-screen",
+      "case": "C1",
+      "brand": "Samsung",
+      "model": "Samsung Galaxy Z Fold6 5G",
+      "ramStorage": "12 GB/256 GB",
+      "referencePrice": 65960,
+      "cashifyActualFinalQuote": 51930,
+      "cashifyListedReferenceObserved": 65560,
+      "cashifyObservedAt": "2026-09-20",
+      "fhoneifyAnswers": { "calls": true, "touch": true, "originalScreen": true, "defects": [], "screenCondition": null, "screenSpots": null, "screenLines": null, "screenDiscoloration": null, "bodyScratches": null, "bodyDents": null, "bodyPanel": null, "bodyBent": null, "hardware": [], "accessories": ["box"], "warranty": false, "validBill": true, "eSim": null, "mobileAge": "above11" },
+      "cashifySelections": "Calls working: Yes; touch working: Yes; original screen: Yes; warranty: No; valid GST bill: Yes; age: Above 11 months; no screen/body defects; no hardware faults; original box with same IMEI: Yes; original charger: No."
+    },
+    {
+      "id": "C2-s24-old-no-screen",
+      "case": "C2",
+      "brand": "Samsung",
+      "model": "Samsung Galaxy S24 5G",
+      "ramStorage": "8 GB/512 GB",
+      "referencePrice": 35960,
+      "cashifyActualFinalQuote": 28030,
+      "cashifyListedReferenceObserved": 35750,
+      "cashifyObservedAt": "2026-09-20",
+      "fhoneifyAnswers": { "calls": true, "touch": true, "originalScreen": true, "defects": [], "screenCondition": null, "screenSpots": null, "screenLines": null, "screenDiscoloration": null, "bodyScratches": null, "bodyDents": null, "bodyPanel": null, "bodyBent": null, "hardware": [], "accessories": ["box"], "warranty": false, "validBill": true, "eSim": null, "mobileAge": "above11" },
+      "cashifySelections": "Calls working: Yes; touch working: Yes; original screen: Yes; warranty: No; valid GST bill: Yes; age: Above 11 months; no screen/body defects; no hardware faults; original box with same IMEI: Yes; original charger: No."
+    }
+  ],
+  "recordTemplate": {
+    "brand": "<brand>",
+    "model": "<exact model>",
+    "ramStorage": "<RAM/storage exactly as Cashify showed it>",
+    "referencePrice": 0,
+    "age": "below3 | 3to6 | 6to11 | above11",
+    "cashifyAnswers": {
+      "screenCondition": "<observed answer>",
+      "bodyCondition": "<observed answer>",
+      "functionalFaults": ["<observed hardware id>"],
+      "accessories": ["box", "charger"],
+      "warranty": true,
+      "validBill": true
+    },
+    "fhoneifyAnswers": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "defects": [],
+      "screenCondition": null,
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": "No scratches",
+      "bodyDents": "No dents",
+      "bodyPanel": "No defect on side or back panel",
+      "bodyBent": "Phone not bent",
+      "hardware": [],
+      "accessories": ["box", "charger"],
+      "warranty": true,
+      "validBill": true,
+      "eSim": null,
+      "mobileAge": "below3"
+    },
+    "cashifyActualFinalQuote": 0,
+    "mismatchCause": "UNKNOWN",
+    "observedAt": "YYYY-MM-DD",
+    "notes": "<Cashify page/variant and any answer-mapping note>",
+    "computedByHarness": {
+      "fhoneifyCashifyEquivalent": "computed",
+      "differenceRupees": "computed",
+      "differencePercent": "computed",
+      "fhoneifyFinalQuote": "computed"
+    }
+  }
 }

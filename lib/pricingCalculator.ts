@@ -1,3 +1,5 @@
+import { CASHIFY_CALIBRATION } from './pricing/calibration';
+
 export interface ModelParams {
   warrantyPenalty: number;
   gstBillPenalty: number;
@@ -117,6 +119,7 @@ interface ConditionAdjustmentOptions {
   touchRetention?: number;
   originalScreenRetention?: number;
   functionalOverrides?: Record<string, number>;
+  heavyScreenScratchScale?: number;
 }
 
 const lower = (value: unknown) => String(value ?? '').toLowerCase();
@@ -154,10 +157,14 @@ export function calculateConditionAdjustments(
     : 1;
 
   let physicalScreenPenalty = 0;
+  let physicalScreenScale = params.physicalScale;
   if (defects.has('screen_scratch') || defects.has('broken_screen') || screenCondition) {
     if (crackedScreen && !screenCondition.includes('outside display')) physicalScreenPenalty = GRANULAR_CONDITION_PENALTIES.screen.cracked;
     else if (screenCondition.includes('outside display')) physicalScreenPenalty = GRANULAR_CONDITION_PENALTIES.screen.chipped;
-    else if (screenCondition.includes('more than 2')) physicalScreenPenalty = GRANULAR_CONDITION_PENALTIES.screen.scratchesHeavy;
+    else if (screenCondition.includes('more than 2')) {
+      physicalScreenPenalty = GRANULAR_CONDITION_PENALTIES.screen.scratchesHeavy;
+      physicalScreenScale = options.heavyScreenScratchScale ?? params.physicalScale;
+    }
     else if (screenCondition.includes('1-2')) physicalScreenPenalty = GRANULAR_CONDITION_PENALTIES.screen.scratchesLight;
     else physicalScreenPenalty = GRANULAR_CONDITION_PENALTIES.screen.cracked;
   }
@@ -185,7 +192,10 @@ export function calculateConditionAdjustments(
     originalScreenRetention = 1;
   }
 
-  const screenPenalty = Math.min(1, Math.max(physicalScreenPenalty, displayPenalty) * params.physicalScale);
+  const screenPenalty = Math.min(1, Math.max(
+    physicalScreenPenalty * physicalScreenScale,
+    displayPenalty * params.physicalScale,
+  ));
 
   let cosmeticBodyPenalty = 0;
   if (defects.has('body_scratch') || bodyScratches || bodyDents) {
@@ -355,7 +365,9 @@ export function calculateApplePrice(model: string, basePrice: number, diagnostic
       if (age.includes("6") && age.includes("11")) ageMultiplier = isProMax ? 0.908642 : (isPro ? 0.911240 : 0.9114);
       else ageMultiplier = isProMax ? 0.908642 : (isPro ? 0.911240 : 0.9114);
     } else if (lowerModel.includes("15")) {
-      ageMultiplier = isProMax ? 0.752937 : (isPro ? 0.745160 : (isPlus ? 0.783929 : 0.749243));
+      ageMultiplier = isProMax
+        ? 0.752937
+        : (isPro ? CASHIFY_CALIBRATION.apple.proYoungAgeByGeneration[15] : (isPlus ? 0.783929 : 0.749243));
     } else if (lowerModel.includes("14")) {
       ageMultiplier = isProMax ? 0.916788 : (isPro ? 0.914504 : (isPlus ? 0.854723 : 0.629265));
     } else {
@@ -364,6 +376,17 @@ export function calculateApplePrice(model: string, basePrice: number, diagnostic
   } else {
     if (is17e) ageMultiplier = 0.74961686;
     else if (lowerModel.includes("16")) ageMultiplier = isProMax ? 0.782628 : (isPro ? 0.745663 : (isPlus ? 0.771591 : (lowerModel.includes("16e") ? 0.752445 : 0.779625)));
+  }
+
+  // A younger, in-warranty device cannot be worth less than the same device
+  // after it becomes old/out of warranty. This also protects older Apple
+  // generation constants that were historically calibrated independently.
+  if (!isOutOfWarranty) {
+    let outOfWarrantyMultiplier = 0.74961686;
+    if (lowerModel.includes("16")) {
+      outOfWarrantyMultiplier = isProMax ? 0.782628 : (isPro ? 0.745663 : (isPlus ? 0.771591 : (lowerModel.includes("16e") ? 0.752445 : 0.779625)));
+    }
+    ageMultiplier = Math.max(ageMultiplier, outOfWarrantyMultiplier);
   }
 
   if (!hasValidBill && !isOutOfWarranty) {
@@ -391,6 +414,9 @@ export function calculateApplePrice(model: string, basePrice: number, diagnostic
       battery_service: batteryServicePenalty,
       face: facePenalty,
     },
+    heavyScreenScratchScale: (isPro || isProMax)
+      ? CASHIFY_CALIBRATION.apple.proFamily.heavyScreenScratchScale
+      : undefined,
   });
   const boxBonus = hasBox ? COMMON_BONUSES.box : 0;
   let cashifyPrice = basePrice * ageMultiplier * adjustments.conditionRetention + boxBonus;
@@ -424,6 +450,8 @@ export function calculateSamsungPrice(model: string, basePrice: number, diagnost
   const isPlus = lowerModel.includes("plus") || lowerModel.includes("+");
   const isEdge = lowerModel.includes("edge");
   const isFE = lowerModel.includes("fe");
+  const isFoldable = lowerModel.includes("fold") || lowerModel.includes("flip");
+  const isSFamily = lowerModel.includes("galaxy s") || /\bs\d/.test(lowerModel);
 
   let params: ModelParams = { warrantyPenalty: 0.05, gstBillPenalty: 0.02, callsPenalty: 0.5, originalScreenPenalty: 0.6, touchPenalty: 0.3, functionalScale: 1.1, physicalScale: 1.1 };
   if (isA) params = { warrantyPenalty: 0.1, gstBillPenalty: 0.05, callsPenalty: 0.5, originalScreenPenalty: 0.75, touchPenalty: 0.4, functionalScale: 0.8, physicalScale: 0.75 };
@@ -438,7 +466,7 @@ export function calculateSamsungPrice(model: string, basePrice: number, diagnost
   else if (isS26Ultra) ageMultiplier = diagnostics.warranty === false ? 0.8139316811781648 : 0.95;
   else if (isA35) ageMultiplier = diagnostics.warranty === false ? 0.7689422355588897 : 0.98;
   else if (isA34) ageMultiplier = diagnostics.warranty === false ? 0.7807625649913345 : 0.98;
-  else if (isA) ageMultiplier = diagnostics.warranty === false ? 0.7586206896551724 : 0.7431261770244821;
+  else if (isA) ageMultiplier = diagnostics.warranty === false ? 0.7586206896551724 : 0.98;
   else if (diagnostics.warranty !== false) ageMultiplier = 0.98;
 
   if (!hasValidBill && diagnostics.warranty !== false) {
@@ -459,7 +487,12 @@ export function calculateSamsungPrice(model: string, basePrice: number, diagnost
     boxBonus = COMMON_BONUSES.chargerOnlyBonus;
   }
 
-  const adjustments = calculateConditionAdjustments(diagnostics, params);
+  const heavyScreenScratchScale = isFoldable
+    ? CASHIFY_CALIBRATION.samsung.foldable.heavyScreenScratchScale
+    : (isSFamily && !isUltra && !isFE && !isEdge
+      ? CASHIFY_CALIBRATION.samsung.sSeriesSlab.heavyScreenScratchScale
+      : undefined);
+  const adjustments = calculateConditionAdjustments(diagnostics, params, { heavyScreenScratchScale });
   let cashifyPrice = basePrice * ageMultiplier * adjustments.conditionRetention + boxBonus;
   if (diagnostics.calls === false) cashifyPrice = 1200;
 
@@ -627,7 +660,10 @@ export function calculateOnePlusPrice(model: string, basePrice: number, diagnost
   else if (lowerModel.includes("15r")) params.gstBillPenalty = 0.245492873398;
   else if (lowerModel.includes("15")) params.gstBillPenalty = 0.184090806203;
 
-  let ageMultiplier = diagnostics.warranty === false ? 0.7966 : 0.98;
+  const isOutOfWarranty = diagnostics.warranty === false || diagnostics.mobileAge === 'above11' || diagnostics.mobileAge === 'above 11 months';
+  let ageMultiplier = isOutOfWarranty && !isPro && !isFold
+    ? CASHIFY_CALIBRATION.onePlus.standard.outOfWarrantyAgeMultiplier
+    : (isOutOfWarranty ? 0.7966 : 0.98);
 
   const hasValidBill = diagnostics.validBill === true || (diagnostics.accessories || []).includes("bill");
   if (!hasValidBill && diagnostics.warranty !== false) ageMultiplier -= params.gstBillPenalty;
@@ -643,6 +679,9 @@ export function calculateOnePlusPrice(model: string, basePrice: number, diagnost
       battery_service: 0.0620553,
       battery: 0.0620553,
     },
+    heavyScreenScratchScale: (!isPro && !isFold)
+      ? CASHIFY_CALIBRATION.onePlus.standard.heavyScreenScratchScale
+      : undefined,
   });
   let cashifyPrice = basePrice * ageMultiplier * adjustments.conditionRetention + boxBonus;
   if (diagnostics.calls === false) cashifyPrice = 1200;

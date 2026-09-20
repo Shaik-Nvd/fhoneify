@@ -10,6 +10,7 @@ import { warrantyVoidedByDiagnostics } from '../../lib/pricing/diagnostics';
 const devices = [
   { category: 'Apple flagship', brand: 'Apple', model: 'Apple iPhone 16 Pro Max', base: 100000 },
   { category: 'Samsung flagship', brand: 'Samsung', model: 'Samsung Galaxy S24 Ultra 5G', base: 55000 },
+  { category: 'Samsung slab holdout', brand: 'Samsung', model: 'Samsung Galaxy S23 5G', base: 35000 },
   { category: 'Samsung midrange', brand: 'Samsung', model: 'Samsung Galaxy A14 5G', base: 15000 },
   { category: 'Samsung foldable', brand: 'Samsung', model: 'Samsung Galaxy Z Fold 7', base: 80000 },
   { category: 'OnePlus flagship', brand: 'OnePlus', model: 'OnePlus 12', base: 45000 },
@@ -107,8 +108,17 @@ for (const device of devices) {
     assert.ok(prices.severe < prices.crackedScreen, 'severe multi-damage must be below cracked screen alone');
     assert.ok(prices.severe < prices.bentFrame, 'severe multi-damage must be below a bent frame alone');
     assert.ok(prices.oldPerfect > 0, 'old but perfect scenario must still produce a positive quote');
+    assert.ok(prices.oldPerfect <= prices.perfect, `older/out-of-warranty must not exceed younger/in-warranty (${prices.oldPerfect} > ${prices.perfect})`);
+    const warrantyLost = calculateFhoneifyPrice(device.brand, device.model, device.base, answers({ warranty: false, validBill: true, mobileAge: 'below3' })).cashifyBasePrice;
+    assert.ok(warrantyLost <= prices.perfect, `losing warranty must not increase payout (${warrantyLost} > ${prices.perfect})`);
   });
 }
+
+test('iPhone 15 Pro age/warranty ordering cannot invert', () => {
+  const young = calculateFhoneifyPrice('Apple', 'Apple iPhone 15 Pro', 64800, answers({ mobileAge: 'below3', warranty: true })).cashifyBasePrice;
+  const old = calculateFhoneifyPrice('Apple', 'Apple iPhone 15 Pro', 64800, answers({ mobileAge: 'above11', warranty: false })).cashifyBasePrice;
+  assert.ok(young >= old, `young/in-warranty quote must be at least old/out-of-warranty (${young} < ${old})`);
+});
 
 test('warranty invalidation uses current UI fields', () => {
   assert.equal(warrantyVoidedByDiagnostics(answers({ screenLines: 'Visible line(s) on display' })), true);
