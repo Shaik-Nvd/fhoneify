@@ -508,3 +508,25 @@ body:hover .custom-cursor {
 .whatsapp-pulse {
   animation: whatsapp-soft-pulse 2s infinite;
 }
+
+/* Respect the OS "reduce motion" setting. The quote result now scrolls itself
+   into view and its loading card shimmers, so this is the one place that has
+   to stand down for motion-sensitive users. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .skeleton,
+  .whatsapp-pulse {
+    animation: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

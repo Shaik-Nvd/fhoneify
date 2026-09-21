@@ -18,6 +18,12 @@ import { customerPayout } from '@/lib/pricing/payout';
 import { SignedQuote, clearQuoteSession, loadQuoteSession, sameDevice, saveQuoteSession } from '@/lib/pricing/quoteSession';
 import { warrantyVoidedByDiagnostics } from '@/lib/pricing/diagnostics';
 
+/** How long to wait for the authoritative quote before offering a retry.
+ * A cold Render instance can take ~30s, so this is deliberately generous -
+ * its job is to prevent an endless "calculating" state, not to cut the
+ * request short. */
+const QUOTE_REQUEST_TIMEOUT_MS = 45000;
+
 /** sessionStorage, or null where the browser blocks it (the page then simply
  * re-prices after a reload). */
 const getSessionStore = () => {
@@ -374,9 +380,27 @@ export default function QuotePage() {
   const finalPrice = activeFinalQuote?.price ?? null;
   const priceRequestIdRef = useRef(0);
   const startingRequestIdRef = useRef(0);
+  const resultCardRef = useRef<HTMLDivElement | null>(null);
+  const announcedPriceRef = useRef<number | null>(null);
   // Set once the saved quote session has been read after a reload, so the
   // save effect cannot overwrite it with the empty initial state first.
   const [sessionRestored, setSessionRestored] = useState(false);
+
+  // The step-11 scroll below fires when the step changes, which is while the
+  // offer is still loading. By the time the signed quote lands, a ~420px card
+  // has replaced the skeleton and the viewport may be nowhere near it, so
+  // bring the result to the customer instead of leaving them to hunt for it.
+  useEffect(() => {
+    if (step !== 11 || finalPrice == null) return;
+    if (announcedPriceRef.current === finalPrice) return;
+    announcedPriceRef.current = finalPrice;
+    const el = resultCardRef.current;
+    if (!el) return;
+    const prefersReducedMotion =
+      typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    el.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
+    el.focus({ preventScroll: true });
+  }, [step, finalPrice]);
 
   useEffect(() => {
     if (step === 11) {
@@ -1034,7 +1058,15 @@ export default function QuotePage() {
   /** The one way this page obtains a price. Rejects anything that is not a
    * positive signed price, so ₹0 or a missing number can never be shown. */
   const requestSignedQuote = async (brand: string, model: string, storage: string, diag: unknown): Promise<SignedQuote> => {
-    const res = await api.post('/api/quote/price', { brand, model, storage, diagnostics: diag });
+    // The shared axios client has no timeout, so a stalled connection used to
+    // leave the customer on "Calculating your offer" forever with no way out.
+    // Giving up turns that dead end into the existing error + retry card.
+    // Generous, because a cold Render instance can legitimately take ~30s.
+    const res = await api.post(
+      '/api/quote/price',
+      { brand, model, storage, diagnostics: diag },
+      { timeout: QUOTE_REQUEST_TIMEOUT_MS }
+    );
     const d = res.data?.data;
     if (!res.data?.success || typeof d?.fhoneifyPrice !== 'number' || !(d.fhoneifyPrice > 0) || !d.quoteToken) {
       throw new Error(res.data?.error || 'Pricing is currently unavailable for this device.');
@@ -1042,8 +1074,10 @@ export default function QuotePage() {
     return { device: { brand, model, storage }, price: d.fhoneifyPrice, token: d.quoteToken, expiresAt: d.expiresAt, diagnostics: diag };
   };
 
-  const describePricingError = (err: any) =>
-    err?.response?.data?.error || 'We could not fetch the price right now. Please try again.';
+  const describePricingError = (err: any) => {
+    if (err?.code === 'ECONNABORTED') return 'That took longer than expected. Please try again.';
+    return err?.response?.data?.error || 'We could not fetch the price right now. Please try again.';
+  };
 
   /** "Get upto" = the server's perfect-condition quote for this device. */
   const fetchStartingQuote = (brand: string, model: string, storage: string) => {
@@ -1242,6 +1276,8 @@ export default function QuotePage() {
   const calculateFinalPrice = (overrideDiagnostics?: typeof diagnostics) => {
     const diag = overrideDiagnostics || diagnostics;
     setFinalQuote(null);
+    // Let the next arriving price re-announce and re-focus the result card.
+    announcedPriceRef.current = null;
     setFinalPriceError(null);
     setIsFinalPriceLoading(true);
     const requestId = ++priceRequestIdRef.current;
@@ -1331,9 +1367,11 @@ export default function QuotePage() {
       }
       
       setShowOtpInput(false);
-      // Keep a quote already chosen ("Schedule Pickup" from Get Upto);
-      // otherwise price the answers now that the user is signed in.
-      if (!activeFinalQuote) calculateFinalPrice();
+      // Keep a quote already chosen ("Schedule Pickup" from Get Upto), and do
+      // not restart one the OTP step already set going. Only re-price when
+      // there is nothing in flight and nothing to show - e.g. the prefetch
+      // failed, so this doubles as the retry.
+      if (!activeFinalQuote && !isFinalPriceLoading) calculateFinalPrice();
       setMarketPriceFetched(false);
       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11);
     } catch (err: any) {
@@ -2716,13 +2754,12 @@ export default function QuotePage() {
                          const assignedAge = isApple15ProMax ? 'above11' as const : 'below3' as const;
                          const updatedDiag = { ...diagnostics, mobileAge: assignedAge };
                          setDiagnostics(updatedDiag);
-                         if (isAuthenticated) { 
-                           calculateFinalPrice(updatedDiag); 
-                           setMarketPriceFetched(false);
-                           navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11); 
-                         } else { 
-                           setFinalQuote(null); navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 10); 
-                         }
+                         setMarketPriceFetched(false);
+                         // Price while the customer is on the OTP step. The
+                         // endpoint needs no auth, so waiting for the login
+                         // round trip first only added dead time.
+                         calculateFinalPrice(updatedDiag);
+                         navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', isAuthenticated ? 11 : 10);
                       } else {
                         navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 9);
                       }
@@ -2733,13 +2770,9 @@ export default function QuotePage() {
                         mobileAge: 'above11' as const
                       };
                       setDiagnostics(updatedDiag);
-                      if (isAuthenticated) { 
-                        calculateFinalPrice(updatedDiag); 
-                        setMarketPriceFetched(false);
-                        navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11); 
-                      } else { 
-                        setFinalQuote(null); navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 10); 
-                      }
+                      setMarketPriceFetched(false);
+                      calculateFinalPrice(updatedDiag);
+                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', isAuthenticated ? 11 : 10);
                     }
                   }} className="btn-primary" style={{ fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px' }}>Continue <ArrowRightIcon /></button>
                 </div>
@@ -2771,13 +2804,9 @@ export default function QuotePage() {
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
                   <button onClick={() => { 
 
-                    if (isAuthenticated) { 
-                      calculateFinalPrice(diagnostics); 
-                      setMarketPriceFetched(false);
-                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11); 
-                    } else { 
-                      setFinalQuote(null); navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 10); 
-                    } 
+                    setMarketPriceFetched(false);
+                    calculateFinalPrice(diagnostics);
+                    navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', isAuthenticated ? 11 : 10);
                   }} disabled={!diagnostics.mobileAge} className="btn-primary" style={{ fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: diagnostics.mobileAge ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
@@ -2865,54 +2894,76 @@ export default function QuotePage() {
 
       {/* STAGE 11 while the signed price is loading or failed - never a ₹0 */}
       {(step === 11 || step === 12) && finalPrice == null && (
-        <div className="card flex flex-col gap-4 bg-surface border border-border p-6 md:p-8 rounded-xl max-w-[600px] mx-auto text-center">
-          <h2 style={{ fontSize: '1.25rem', fontWeight: 600 }}>{getDisplayModelName(selectedBrand, selectedModel)} ({selectedStorage})</h2>
+        <div
+          ref={resultCardRef}
+          tabIndex={-1}
+          className="card flex flex-col gap-4 bg-surface border border-border p-4 md:p-8 rounded-xl max-w-[600px] mx-auto min-h-[420px] md:min-h-[460px] outline-none"
+        >
           {finalPriceError ? (
-            <>
-              <p style={{ color: '#FF3B30' }}>{finalPriceError}</p>
-              <button type="button" onClick={() => calculateFinalPrice(diagnostics)} className="btn-primary" style={{ padding: '12px', borderRadius: '8px', fontWeight: 600 }}>Try again</button>
-            </>
+            <div className="flex flex-col items-center gap-3 py-8 text-center m-auto" role="alert">
+              <h2 style={{ fontSize: '1.15rem', fontWeight: 600 }}>We could not load your offer</h2>
+              <p style={{ color: '#FF3B30', fontSize: '0.95rem' }}>{finalPriceError}</p>
+              <p className="text-xs text-muted">Your answers are saved — this will not start you over.</p>
+              <button type="button" onClick={() => calculateFinalPrice(diagnostics)} className="btn-primary" style={{ padding: '12px 32px', borderRadius: '8px', fontWeight: 600, minHeight: '48px' }}>Try again</button>
+            </div>
           ) : (
-            <p style={{ color: 'var(--muted)' }} aria-live="polite">Calculating your exact price…</p>
+            <>
+              {/* Reserves the priced card's height so the swap does not jump,
+                  and keeps moving so a slow API never reads as a frozen page. */}
+              <div className="flex items-center gap-3 border-b border-border pb-4">
+                <div className="skeleton w-12 h-16 shrink-0" />
+                <div className="skeleton h-5 w-2/3" />
+              </div>
+              <div className="flex flex-col items-center gap-3 pt-2" aria-live="polite">
+                <p className="text-[0.7rem] md:text-xs font-semibold uppercase tracking-[0.15em] text-muted">
+                  Calculating your offer
+                </p>
+                <div className="skeleton h-12 md:h-16 w-3/4" />
+                <div className="skeleton h-3 w-1/2" />
+              </div>
+              <div className="skeleton h-12 w-full mt-2" />
+              <div className="skeleton h-20 w-full" />
+            </>
           )}
         </div>
       )}
 
       {/* STAGE 11: FINAL EXACT PRICE */}
       {step === 11 && finalPrice != null && (
-        <div className="card flex flex-col gap-2 md:gap-4 bg-surface border border-border p-4 md:p-8 rounded-xl max-w-[600px] mx-auto text-left">
-          <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', borderBottom: '1px solid var(--border)', paddingBottom: '1rem', marginBottom: '0.5rem' }}>
-            <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} style={{ width: '60px', height: 'auto', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
-            <div>
-              <h2 style={{ fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.25rem' }}>{getDisplayModelName(selectedBrand, selectedModel)} ({selectedStorage})</h2>
-              <p style={{ color: 'var(--muted)', fontSize: '0.85rem', marginBottom: '0.5rem' }}>Estimated value :</p>
-              <p style={{ fontSize: '2rem', fontWeight: 700, color: 'var(--gold)', lineHeight: 1 }}>
-                {formatCurrency(customerPayout(finalPrice, appliedCoupon).payout)}
-              </p>
-              <button 
-                onClick={() => {
-                  setFinalQuote(null);
-                  setMarketPriceFetched(false);
-                  setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], screenCondition: null, screenSpots: null, screenLines: null, screenDiscoloration: null, bodyScratches: null, bodyDents: null, bodyPanel: null, bodyBent: null, hardware: [], accessories: [], warranty: null, validBill: null, eSim: null, mobileAge: null });
-                  navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 3);
-                }}
-                style={{
-                  background: 'none',
-                  border: 'none',
-                  borderBottom: '1px solid var(--gold)',
-                  color: 'var(--gold)',
-                  cursor: 'pointer',
-                  padding: '2px 0',
-                  marginTop: '0.75rem',
-                  fontSize: '0.9rem',
-                  display: 'inline-block'
-                }}
-              >
-                Recalculate
-              </button>
-            </div>
+        <div
+          ref={resultCardRef}
+          tabIndex={-1}
+          className="card flex flex-col gap-2 md:gap-4 bg-surface border border-border p-4 md:p-8 rounded-xl max-w-[600px] mx-auto text-left min-h-[420px] md:min-h-[460px] outline-none scroll-mt-6"
+        >
+          <div className="flex items-center gap-3 border-b border-border pb-4">
+            <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} className="w-12 h-auto shrink-0 object-contain" onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
+            <h2 className="min-w-0 text-base md:text-lg font-semibold leading-snug">{getDisplayModelName(selectedBrand, selectedModel)} ({selectedStorage})</h2>
           </div>
-          
+
+          {/* The offer is the point of this page, so it gets the full width of
+              the card rather than a ~235px column beside the thumbnail. The
+              value shown is unchanged: the server's signed quote after the
+              existing payout rule. */}
+          <div className="pt-2 pb-1 text-center" aria-live="polite" aria-atomic="true">
+            <p className="text-[0.7rem] md:text-xs font-semibold uppercase tracking-[0.15em] text-muted">
+              Your Fhoneify Offer
+            </p>
+            <p className="mt-2 text-gold font-extrabold leading-none tabular-nums tracking-tight text-[clamp(2.5rem,12vw,4rem)] break-words">
+              {formatCurrency(customerPayout(finalPrice, appliedCoupon).payout)}
+            </p>
+            <p className="mt-2 text-xs md:text-sm text-muted">Paid to you at pickup, after inspection.</p>
+          </div>
+
+          <button
+            type="button"
+            onClick={() => setStep(12)}
+            className="btn-primary w-full rounded-lg font-bold text-base md:text-lg"
+            style={{ minHeight: '52px' }}
+          >
+            Schedule Free Pickup
+          </button>
+          <p className="text-center text-xs text-muted">Free doorstep pickup · Instant payment</p>
+
           {!appliedCoupon && (
             <div style={{ 
               position: 'relative',
@@ -3094,7 +3145,19 @@ export default function QuotePage() {
           <div style={{ display: 'flex', gap: '0.75rem', marginTop: '1rem', width: '100%' }}>
             <button type="button" onClick={handleBack} className="btn-outline" style={{ flex: 1, padding: '12px', fontSize: '1rem' }}>Back</button>
             <button type="button" onClick={() => { navigateToState('', '', '', 'brand', 1); setFinalQuote(null); setStartingQuote(null); setAppliedCoupon(false); { const store = getSessionStore(); if (store) clearQuoteSession(store); } setMarketPriceFetched(false); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], screenCondition: null, screenSpots: null, screenLines: null, screenDiscoloration: null, bodyScratches: null, bodyDents: null, bodyPanel: null, bodyBent: null, hardware: [], accessories: [], warranty: null, validBill: null, eSim: null, mobileAge: null }); }} className="btn-outline" style={{ flex: 1, padding: '12px', fontSize: '1rem' }}>Start Over</button>
-            <button type="button" onClick={() => setStep(12)} className="btn-primary" style={{ flex: 2, padding: '12px', fontSize: '1rem', fontWeight: 600, cursor: 'pointer' }}>Schedule Pickup</button>
+            <button
+              type="button"
+              onClick={() => {
+                setFinalQuote(null);
+                setMarketPriceFetched(false);
+                setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], screenCondition: null, screenSpots: null, screenLines: null, screenDiscoloration: null, bodyScratches: null, bodyDents: null, bodyPanel: null, bodyBent: null, hardware: [], accessories: [], warranty: null, validBill: null, eSim: null, mobileAge: null });
+                navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 3);
+              }}
+              className="btn-outline"
+              style={{ flex: 1, padding: '12px', fontSize: '1rem' }}
+            >
+              Recalculate
+            </button>
           </div>
         </div>
       )}
