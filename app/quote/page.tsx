@@ -19,10 +19,16 @@ import { SignedQuote, clearQuoteSession, loadQuoteSession, sameDevice, saveQuote
 import { warrantyVoidedByDiagnostics } from '@/lib/pricing/diagnostics';
 
 /** How long to wait for the authoritative quote before offering a retry.
- * A cold Render instance can take ~30s, so this is deliberately generous -
- * its job is to prevent an endless "calculating" state, not to cut the
- * request short. */
-const QUOTE_REQUEST_TIMEOUT_MS = 45000;
+ * MEASURED against production: after a long idle the free-tier Render API
+ * took over 60s to answer its first request (then ~9s for the next while it
+ * finished booting). A shorter limit would show an error to exactly the
+ * customer who is about to get a price, so this must comfortably exceed a
+ * cold start. Its job is only to prevent an endless "calculating" state. */
+const QUOTE_REQUEST_TIMEOUT_MS = 120000;
+
+/** After this long the loading card says the server is starting up, so a
+ * cold start reads as expected rather than as a frozen page. */
+const SLOW_QUOTE_NOTICE_MS = 6000;
 
 /** sessionStorage, or null where the browser blocks it (the page then simply
  * re-prices after a reload). */
@@ -504,6 +510,12 @@ export default function QuotePage() {
   const [couponError, setCouponError] = useState<string | null>(null);
   const [isCouponChecking, setIsCouponChecking] = useState(false);
   const [couponOfferLoaded, setCouponOfferLoaded] = useState(false);
+  const [isSlowQuote, setIsSlowQuote] = useState(false);
+  useEffect(() => {
+    if (!isFinalPriceLoading) { setIsSlowQuote(false); return; }
+    const timer = setTimeout(() => setIsSlowQuote(true), SLOW_QUOTE_NOTICE_MS);
+    return () => clearTimeout(timer);
+  }, [isFinalPriceLoading]);
 
   // Ask the server whether this phone gets a first-time code. Purely a
   // display convenience: the server re-checks the code when it is applied and
@@ -2949,6 +2961,11 @@ export default function QuotePage() {
                 </p>
                 <div className="skeleton h-12 md:h-16 w-3/4" />
                 <div className="skeleton h-3 w-1/2" />
+                {isSlowQuote && (
+                  <p className="text-xs text-muted text-center mt-1">
+                    Our pricing server is starting up - your offer will appear in a moment.
+                  </p>
+                )}
               </div>
               <div className="skeleton h-12 w-full mt-2" />
               <div className="skeleton h-20 w-full" />
