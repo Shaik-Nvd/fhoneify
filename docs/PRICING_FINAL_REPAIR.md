@@ -62,11 +62,17 @@ Per `AGENTS.md`, no age depreciation value is invented:
 
 - **Vivo** already defined `0.75` and `0.7526315789473684` for
   `warranty === false`; the age answer simply never reached them.
-- **Oppo** defines no out-of-warranty multiplier anywhere, so it takes `0.75`,
-  the rate already shared by Vivo standard, Xiaomi non-Note and the generic
-  Android fallback.
+- **Oppo** takes `0.7966`, the `above11` value in **every** Oppo table of the
+  engine that commit `f1034f4` replaced (Find X9s / X9 Ultra / X9 Pro / Reno16 /
+  Reno16c series, plus the shared `ageBonus` every other Oppo used), whose
+  header says it was "calibrated against Cashify reverse logic … OPPO".
+  `f1034f4` dropped it when it collapsed those tables. See
+  `git show f1034f4^:lib/pricingCalculator.ts`. (An earlier revision of this
+  branch used `0.75`, borrowed from other brands, as a stand-in; the real
+  historical constant replaces it.)
 
-Oppo now sits at 84.4% of reference, beside its sibling Vivo at 84.2%.
+Oppo now averages 89.4% of reference for an old, unbilled, otherwise perfect
+phone with box (was 109.1%); none is above reference.
 
 A follow-up commit fixes a defect introduced by the first: Vivo and Oppo gated
 the missing-bill penalty on `warranty !== false`, so once `above11` could
@@ -96,9 +102,17 @@ fix and 0 after**.
 
 ## 7. Speed
 
-Measured against production, not guessed. **Render cold start is not the
-problem** — after 17 minutes of silence the process was still up with an
-unchanged boot timestamp.
+Measured against production, not guessed. **Correction:** an earlier revision
+of this document said Render cold start was not a problem, based on a
+17-minute idle. That was wrong for longer idles. A later probe after a long
+idle took **over 60 s** to answer its first request, then ~9 s for the next
+while the API finished booting (`databaseCheckedAt` was seconds old). The API
+runs on Render's free plan and does spin down. The warm figures below are
+still valid; the cold-start cost is real and is addressed by a longer timeout
+(120 s, so the error card never fires on a waking server), an on-screen "our
+pricing server is starting up" note after 6 s, and the frontend's existing
+keep-alive ping. Removing it entirely needs a paid always-on plan or an
+external pinger — a hosting decision, not made here.
 
 | Stage | p50 |
 |---|---|
@@ -174,28 +188,31 @@ this generalises rather than tuning the calibrated devices.
 
 ## Needs an owner decision before merge
 
-1. **The Oppo `0.75`.** `AGENTS.md` reserves age depreciation values for
-   explicit approval. It is the existing cross-brand rate rather than a new
-   number, but it moves 152 devices by roughly 13–25%.
-2. **`isWarrantyEligible()` has no Oppo case**, so every Oppo is priced as old
-   and out of warranty and a genuinely new Oppo can never earn the young
-   multiplier. Oppo's `3to6` / `6to11` branches and its calibrated
-   `gstBillPenalty` values stay unreachable. Adding Oppo changes which
-   questions customers are asked, so it is not done here.
-3. **The ₹299 coupon is client-side only.** `WELCOME299` and `FHONEIFY299` are
-   hardcoded in the shipped bundle, so any visitor can apply it, and the server
-   accepts `couponApplied` as an unverified claim. The displayed payout is then
-   ₹200 above the signed quote.
-4. **iPhone 14 Pro Max** remains ~19% below Cashify on two observations. Both
+1. **Oppo `0.7966` and Oppo eligibility.** `AGENTS.md` reserves age
+   depreciation values for owner approval. `0.7966` is not new — it is the
+   historical value, restored — but it moves 152 Oppo devices by ~17–25%
+   versus what customers were being quoted. Find X9 and Reno16 are also now
+   asked warranty / bill / age (they were never in `isWarrantyEligible()`,
+   though the engine carries young-phone constants calibrated from Cashify
+   for exactly them); older Oppo stays ineligible. This changes which
+   questions those customers see.
+2. **The ₹299 coupon** is now decided on the server (see `coupon.ts`). Its
+   database path — a per-phone Postgres advisory lock and a JSON-path lookup
+   on `Lead.answers` — is type-checked and unit-tested but has **not been run
+   against a real database**; exercise one lead with a coupon on staging or
+   after deploy. Also decide whether `WELCOME299` / `FHONEIFY299` should
+   stay as public promo codes (default, one use per phone) or be retired via
+   `PROMO_COUPON_CODES=`.
+3. **iPhone 14 Pro Max** remains ~19% below Cashify on two observations. Both
    are `STALE_NOT_COMPARABLE` because Cashify's flow for that variant never
    asks age or warranty, so it is not a like-for-like gap — but our customer
    does answer those questions and lands ~₹6.5k lower. Resolving it needs a
    matched observation, which cannot be manufactured.
-5. **Inert questionnaire inputs.** `eSim` is asked and blocks Continue but no
+4. **Inert questionnaire inputs.** `eSim` is asked and blocks Continue but no
    engine reads it; the `spen` accessory is collected but never read; the
    missing-charger penalties never fire because the page only sends an
    `accessories` array and never the `charger` boolean.
-6. **`Samsung Galaxy Z Fold 8 Ultra`** matches `isUltra` before the foldable
+5. **`Samsung Galaxy Z Fold 8 Ultra`** matches `isUltra` before the foldable
    test, so it takes Ultra params and the Ultra-only no-bill penalty while
    still using the foldable screen scale.
 
