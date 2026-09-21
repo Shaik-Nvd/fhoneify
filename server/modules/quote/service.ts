@@ -247,5 +247,9 @@ export async function createLeadWithCoupon(
         answers: answers || null,
       },
     });
-  });
+    // Prisma's default is a 5s transaction timeout and 2s wait for a
+    // connection. The lock, two counts and the insert are four round trips to
+    // a database measured at ~500ms each, so a cold or slow Supabase could
+    // exceed that and lose the lead. Generous limits cost nothing here.
+  }, { timeout: 15000, maxWait: 10000 });
 }
