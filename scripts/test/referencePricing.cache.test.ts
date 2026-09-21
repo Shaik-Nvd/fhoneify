@@ -42,7 +42,7 @@ const record = (deviceKey: string, currentPrice: number): ReferencePriceRecord =
   lastFailureError: null,
   consecutiveFailures: 0,
   updatedAt: '2026-09-20T00:00:00.000Z',
-}) as ReferencePriceRecord;
+}) as unknown as ReferencePriceRecord;
 
 class FakeRepo implements ReferencePriceRepository {
   getCalls = 0;

@@ -189,3 +189,63 @@ export async function createLead(data: { userId?: string; name?: string; phone: 
   });
   return lead;
 }
+
+type CouponCounts = { totalLeads: number; redeemedLeads: number };
+
+/**
+ * Prior leads for a phone, for coupon rules. `redeemed` reads the marker
+ * written when a coupon is honoured (answers.pricing.couponPhoneKey +
+ * couponRedeemed), which is exact; `total` matches stored phones by their
+ * last 10 digits, so "+91 98..." and "98..." are the same customer.
+ */
+const countsFor = (db: typeof prisma) => async (key: string): Promise<CouponCounts> => {
+  const [totalLeads, redeemedLeads] = await Promise.all([
+    db.lead.count({ where: { phone: { endsWith: key } } }),
+    db.lead.count({
+      where: {
+        AND: [
+          { answers: { path: ['pricing', 'couponPhoneKey'], equals: key } },
+          { answers: { path: ['pricing', 'couponRedeemed'], equals: true } },
+        ],
+      },
+    }),
+  ]);
+  return { totalLeads, redeemedLeads };
+};
+
+export const countLeadsForPhone = countsFor(prisma);
+
+/**
+ * Creates a lead and decides its coupon in one transaction. A per-phone
+ * advisory lock serialises concurrent submissions, so two simultaneous
+ * requests (or a replayed signed quote) cannot both redeem. `decide` runs
+ * inside the lock and returns the answers JSON to store.
+ */
+export async function createLeadWithCoupon(
+  key: string,
+  data: Omit<Parameters<typeof createLead>[0], 'answers'>,
+  decide: (lookup: (k: string) => Promise<CouponCounts>) => Promise<{ answers: any }>
+) {
+  return prisma.$transaction(async (tx) => {
+    await tx.$executeRaw`SELECT pg_advisory_xact_lock(hashtext(${'coupon:' + key}))`;
+    const { answers } = await decide(countsFor(tx as unknown as typeof prisma));
+    return tx.lead.create({
+      data: {
+        userId: data.userId || null,
+        name: data.name || null,
+        phone: data.phone,
+        brand: data.brand,
+        model: data.model,
+        storage: data.storage,
+        quotedPrice: data.quotedPrice,
+        pickupDate: data.pickupDate || null,
+        pickupTime: data.pickupTime || null,
+        address: data.address || null,
+        pincode: data.pincode || null,
+        city: data.city || null,
+        status: 'pending',
+        answers: answers || null,
+      },
+    });
+  });
+}

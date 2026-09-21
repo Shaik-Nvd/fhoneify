@@ -1,7 +1,16 @@
 import { Request, Response } from 'express';
 import { z } from 'zod';
 import * as quoteService from './service';
-import { pricingService } from './pricing';
+import { pricingService, signingSecret } from './pricing';
+import {
+  CouponResult,
+  evaluateCoupon,
+  isVerifiedPhone,
+  offerFor,
+  parsePromoCodes,
+  phoneKey,
+  RedemptionLookup,
+} from './coupon';
 import { parseDiagnostics } from '../../../lib/pricing/diagnostics';
 import type { PricingErrorCode } from '../../../lib/pricing/pricingService';
 import { buildLeadAnswers } from '../../../lib/pricing/payout';
@@ -34,9 +43,10 @@ const CreateLeadSchema = z.object({
   // Accepted for audit only - the stored price is always server-verified.
   quotedPrice: z.number().finite().optional(),
   quoteToken: z.string().max(2048).optional(),
-  // The first-time coupon is issued and checked in the browser, so this is
-  // stored as the customer's claim, not as a verified entitlement.
-  couponApplied: z.boolean().optional(),
+  // Only a CODE is accepted. The server decides whether it is honoured; a
+  // client-supplied `couponApplied` boolean is not part of this schema and is
+  // dropped by zod, so it cannot grant anything.
+  couponCode: z.string().trim().max(40).optional(),
   pickupDate: optionalText(40),
   pickupTime: optionalText(40),
   address: optionalText(500),
@@ -136,13 +146,50 @@ export function getQuote(req: Request, res: Response) {
   }
 }
 
+const promoCodes = parsePromoCodes(process.env.PROMO_COUPON_CODES);
+const couponDeps = (lookup: RedemptionLookup = quoteService.countLeadsForPhone) => ({
+  secret: signingSecret,
+  promoCodes,
+  lookup,
+});
+
+/** GET /coupon/offer - the first-time code for the signed-in phone, if any. */
+export async function couponOffer(req: Request, res: Response) {
+  try {
+    const code = await offerFor(couponDeps(), (req as any).user?.phone);
+    return res.json({ success: true, data: { code } });
+  } catch (err: any) {
+    logger.error({ err: err.message }, 'Error in couponOffer controller');
+    return res.status(500).json({ success: false, error: 'Internal server error' });
+  }
+}
+
+const ValidateCouponSchema = z.object({ code: z.string().trim().min(1).max(40) });
+
+/** POST /coupon/validate - the same rules createLead enforces, so the screen
+ * never shows a bonus the server will not pay. Read-only: redeems nothing. */
+export async function couponValidate(req: Request, res: Response) {
+  try {
+    const parsed = ValidateCouponSchema.safeParse(req.body);
+    if (!parsed.success) return res.status(400).json({ success: false, error: 'code is required' });
+    const result: CouponResult = await evaluateCoupon(couponDeps(), {
+      code: parsed.data.code,
+      verifiedPhone: (req as any).user?.phone,
+    });
+    return res.json({ success: true, data: result });
+  } catch (err: any) {
+    logger.error({ err: err.message }, 'Error in couponValidate controller');
+    return res.status(500).json({ success: false, error: 'Internal server error' });
+  }
+}
+
 export async function createLead(req: Request, res: Response) {
   try {
     const result = CreateLeadSchema.safeParse(req.body);
     if (!result.success) {
       return res.status(400).json({ success: false, error: result.error.issues[0].message });
     }
-    const { quoteToken, quotedPrice, couponApplied, answers, ...lead } = result.data;
+    const { quoteToken, quotedPrice, couponCode, answers, ...lead } = result.data;
 
     const verified = await pricingService.verifyLeadPrice({
       brand: lead.brand,
@@ -156,18 +203,54 @@ export async function createLead(req: Request, res: Response) {
       return res.status(PRICING_ERROR_STATUS[verified.code]).json({ success: false, error: verified.message, code: verified.code });
     }
 
-    // Optional user context
-    const userId = (req as any).user?.id;
+    // Optional user context (set by optionalAuth when a valid token is sent)
+    const user = (req as any).user;
+    const userId = user?.id;
 
-    const created = await quoteService.createLead({
-      ...lead,
-      userId,
-      quotedPrice: verified.price,
-      // The audit rides alongside the diagnostics the admin views already
-      // read, so no schema migration is needed to make prices traceable.
-      answers: buildLeadAnswers(verified, couponApplied === true),
-    });
-    return res.json({ success: true, data: created, message: 'Lead created successfully' });
+    // Without a coupon code this is the plain path: nothing to decide.
+    if (!couponCode) {
+      const created = await quoteService.createLead({
+        ...lead,
+        userId,
+        quotedPrice: verified.price,
+        // The audit rides alongside the diagnostics the admin views already
+        // read, so no schema migration is needed to make prices traceable.
+        answers: buildLeadAnswers(verified, false),
+      });
+      return res.json({ success: true, data: created, message: 'Lead created successfully' });
+    }
+
+    // A coupon is honoured only for the OTP-verified phone, and the decision
+    // is made inside the per-phone lock so a replay or double submit cannot
+    // redeem twice. A denied coupon still creates the lead - at the price
+    // without the bonus - and the response says why.
+    const verifiedPhone = user?.phone;
+    const key = phoneKey(verifiedPhone);
+    if (!isVerifiedPhone(verifiedPhone) || phoneKey(lead.phone) !== key) {
+      const created = await quoteService.createLead({
+        ...lead,
+        userId,
+        quotedPrice: verified.price,
+        answers: buildLeadAnswers(verified, false),
+      });
+      const reason = !isVerifiedPhone(verifiedPhone) ? 'login_required' : 'phone_mismatch';
+      return res.json({ success: true, data: created, coupon: { valid: false, bonus: 0, reason }, message: 'Lead created successfully' });
+    }
+
+    let couponResult: CouponResult = { valid: false, bonus: 0 };
+    const created = await quoteService.createLeadWithCoupon(
+      key,
+      { ...lead, userId, quotedPrice: verified.price },
+      async (lookup) => {
+        couponResult = await evaluateCoupon(couponDeps(lookup), { code: couponCode, verifiedPhone });
+        return {
+          answers: couponResult.valid
+            ? buildLeadAnswers(verified, true, { code: couponResult.code!, phoneKey: key })
+            : buildLeadAnswers(verified, false),
+        };
+      }
+    );
+    return res.json({ success: true, data: created, coupon: couponResult, message: 'Lead created successfully' });
   } catch (err: any) {
     logger.error({ err: err.message }, 'Error in createLead controller');
     return res.status(500).json({ success: false, error: 'Internal server error' });

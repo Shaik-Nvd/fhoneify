@@ -307,7 +307,10 @@ export default function QuotePage() {
       if (saved.answers) setDiagnostics(saved.answers as any);
       setStartingQuote(saved.starting);
       setFinalQuote(saved.final);
-      setAppliedCoupon(saved.couponApplied);
+      // A coupon is only ever applied after the server approves a code, and
+      // the approval is not stored here, so a reload shows the price without
+      // it and the customer re-applies. Restoring a bare boolean would show a
+      // bonus the server has not agreed to pay.
     }
     setSessionRestored(true);
 
@@ -485,6 +488,26 @@ export default function QuotePage() {
   const [generatedCoupon, setGeneratedCoupon] = useState<string | null>(null);
   const [couponInput, setCouponInput] = useState('');
   const [appliedCoupon, setAppliedCoupon] = useState(false);
+  // The code the SERVER approved. The lead sends this code, never a boolean.
+  const [appliedCouponCode, setAppliedCouponCode] = useState<string | null>(null);
+  const [couponError, setCouponError] = useState<string | null>(null);
+  const [isCouponChecking, setIsCouponChecking] = useState(false);
+  const [couponOfferLoaded, setCouponOfferLoaded] = useState(false);
+
+  // Ask the server whether this phone gets a first-time code. Purely a
+  // display convenience: the server re-checks the code when it is applied and
+  // again when the lead is created.
+  useEffect(() => {
+    if (step !== 11 || !isAuthenticated || couponOfferLoaded) return;
+    setCouponOfferLoaded(true);
+    api.get('/api/quote/coupon/offer')
+      .then((res) => {
+        const code = res.data?.data?.code ?? null;
+        setGeneratedCoupon(code);
+        setIsFirstTimeUser(Boolean(code));
+      })
+      .catch(() => { setGeneratedCoupon(null); setIsFirstTimeUser(false); });
+  }, [step, isAuthenticated, couponOfferLoaded]);
 
   const getDisplayModelName = (brand: string, model: string) => {
     let clean = model.replace(/\s*\d+\s*[gG][bB]\s*\d+\s*[gG][bB]\s*$/i, '').trim();
@@ -1352,20 +1375,15 @@ export default function QuotePage() {
       const res = await api.post('/api/auth/otp/verify', { phone: '+91' + userPhone, code: otp, name: userName });
       if (res.data.error) throw new Error(res.data.error);
       
-      const { accessToken, refreshToken, user, isNewUser } = res.data.data;
-      
+      const { accessToken, refreshToken, user } = res.data.data;
+
       // Save tokens so next request is authenticated
       setAuth({ id: user.id, phone: user.phone, name: user.name, role: user.role, email: user.email }, accessToken, refreshToken);
-      
-      if (isNewUser) {
-        setIsFirstTimeUser(true);
-        const code = 'NEW' + Math.floor(1000 + Math.random() * 9000);
-        setGeneratedCoupon(code);
-      } else {
-        setIsFirstTimeUser(false);
-        setGeneratedCoupon(null);
-      }
-      
+
+      // The first-time code is no longer invented here. The server offers one
+      // (see the coupon-offer effect) only to a phone with no earlier lead.
+      setCouponOfferLoaded(false);
+
       setShowOtpInput(false);
       // Keep a quote already chosen ("Schedule Pickup" from Get Upto), and do
       // not restart one the OTP step already set going. Only re-price when
@@ -3008,11 +3026,29 @@ export default function QuotePage() {
                     onBlur={(e) => { e.currentTarget.style.border = '1px solid rgba(255,255,255,0.1)'; e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)'; }}
                   />
                   <button 
-                    onClick={() => {
-                      if (couponInput === generatedCoupon || couponInput === 'WELCOME299' || couponInput === 'FHONEIFY299') {
-                        setAppliedCoupon(true);
-                      } else {
-                        alert('Invalid coupon code');
+                    disabled={isCouponChecking || !couponInput.trim()}
+                    onClick={async () => {
+                      // The server decides. The browser holds no valid codes.
+                      setCouponError(null);
+                      setIsCouponChecking(true);
+                      try {
+                        const res = await api.post('/api/quote/coupon/validate', { code: couponInput.trim() });
+                        const result = res.data?.data;
+                        if (result?.valid) {
+                          setAppliedCouponCode(result.code);
+                          setAppliedCoupon(true);
+                        } else {
+                          const reasons: Record<string, string> = {
+                            already_redeemed: 'This code has already been used.',
+                            not_first_time: 'This code is only for first-time customers.',
+                            login_required: 'Please log in again to use a promo code.',
+                          };
+                          setCouponError(reasons[result?.reason] || 'Invalid coupon code');
+                        }
+                      } catch {
+                        setCouponError('Could not check the code right now. Please try again.');
+                      } finally {
+                        setIsCouponChecking(false);
                       }
                     }}
                     style={{ padding: '0 1.5rem', borderRadius: '8px', fontWeight: 700, background: 'linear-gradient(45deg, #FFB800, #FF8C00)', color: '#000', cursor: 'pointer', border: 'none', boxShadow: '0 4px 10px rgba(255,184,0,0.3)', transition: 'all 0.3s ease', textTransform: 'uppercase', letterSpacing: '1px' }}
@@ -3022,6 +3058,9 @@ export default function QuotePage() {
                     Apply
                   </button>
                 </div>
+                {couponError && (
+                  <p role="alert" style={{ color: '#FF3B30', fontSize: '0.85rem', margin: 0 }}>{couponError}</p>
+                )}
               </div>
             </div>
           )}
@@ -3144,7 +3183,7 @@ export default function QuotePage() {
           
           <div style={{ display: 'flex', gap: '0.75rem', marginTop: '1rem', width: '100%' }}>
             <button type="button" onClick={handleBack} className="btn-outline" style={{ flex: 1, padding: '12px', fontSize: '1rem' }}>Back</button>
-            <button type="button" onClick={() => { navigateToState('', '', '', 'brand', 1); setFinalQuote(null); setStartingQuote(null); setAppliedCoupon(false); { const store = getSessionStore(); if (store) clearQuoteSession(store); } setMarketPriceFetched(false); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], screenCondition: null, screenSpots: null, screenLines: null, screenDiscoloration: null, bodyScratches: null, bodyDents: null, bodyPanel: null, bodyBent: null, hardware: [], accessories: [], warranty: null, validBill: null, eSim: null, mobileAge: null }); }} className="btn-outline" style={{ flex: 1, padding: '12px', fontSize: '1rem' }}>Start Over</button>
+            <button type="button" onClick={() => { navigateToState('', '', '', 'brand', 1); setFinalQuote(null); setStartingQuote(null); setAppliedCoupon(false); setAppliedCouponCode(null); setCouponError(null); { const store = getSessionStore(); if (store) clearQuoteSession(store); } setMarketPriceFetched(false); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], screenCondition: null, screenSpots: null, screenLines: null, screenDiscoloration: null, bodyScratches: null, bodyDents: null, bodyPanel: null, bodyBent: null, hardware: [], accessories: [], warranty: null, validBill: null, eSim: null, mobileAge: null }); }} className="btn-outline" style={{ flex: 1, padding: '12px', fontSize: '1rem' }}>Start Over</button>
             <button
               type="button"
               onClick={() => {
@@ -3175,13 +3214,15 @@ export default function QuotePage() {
               // Through the API client (NEXT_PUBLIC_API_URL + auth header). The
               // token and the answers it was signed for go together, so the
               // server verifies and stores exactly the price shown here.
-              await api.post('/api/quote/leads', {
+              const leadRes = await api.post('/api/quote/leads', {
                 brand: selectedBrand,
                 model: selectedModel,
                 storage: selectedStorage,
                 quotedPrice: activeFinalQuote.price,
                 quoteToken: activeFinalQuote.token,
-                couponApplied: appliedCoupon,
+                // Only the server-approved CODE is sent. Whether it pays out is
+                // decided again server-side; there is no client boolean.
+                couponCode: appliedCoupon ? appliedCouponCode : undefined,
                 name: userName || user?.name || '',
                 phone: userPhone || user?.phone || '',
                 pickupDate: pickupDate || '',
@@ -3193,7 +3234,13 @@ export default function QuotePage() {
               });
               { const store = getSessionStore(); if (store) clearQuoteSession(store); }
 
-              alert("Scheduled for Pickup! Our executive will contact you shortly.");
+              // The server has the final say on the coupon. If it declined
+              // (e.g. a different phone number was typed here), say so rather
+              // than let the customer expect a bonus that will not be paid.
+              const couponDeclined = appliedCoupon && leadRes.data?.coupon && leadRes.data.coupon.valid === false;
+              alert(couponDeclined
+                ? "Scheduled for Pickup! Note: the promo code could not be applied to this booking, so the offer excludes the bonus. Our executive will contact you shortly."
+                : "Scheduled for Pickup! Our executive will contact you shortly.");
               router.push('/');
             } catch (err: any) {
               console.error("Failed to schedule pickup", err);

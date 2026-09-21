@@ -7,8 +7,9 @@
  *     exactly ₹1,200. (NOTE: a non-working device's quote is ₹1,200 AFTER
  *     the uplift, i.e. ₹1,248-₹1,296, so this exemption never matches today.
  *     Kept as-is: changing it is a business decision.)
- *   - A first-time-user coupon adds ₹299. The coupon is generated and checked
- *     in the browser only, so the server records it as a customer claim.
+ *   - A coupon adds ₹299. Whether it applies is decided by the server
+ *     (server/modules/quote/coupon.ts); the browser only shows the result of
+ *     that decision and sends a code, never a boolean.
  *
  * Browser-safe: no imports.
  */
@@ -37,10 +38,20 @@ export function customerPayout(quotePrice: number, couponApplied: boolean): Cust
  */
 export function buildLeadAnswers(
   verified: { price: number; diagnostics: object; audit: object },
-  couponClaimed: boolean
+  couponClaimed: boolean,
+  redemption?: { code: string; phoneKey: string }
 ) {
   return {
     ...verified.diagnostics,
-    pricing: { ...verified.audit, customerPayout: customerPayout(verified.price, couponClaimed), couponClaimed },
+    pricing: {
+      ...verified.audit,
+      customerPayout: customerPayout(verified.price, couponClaimed),
+      // Kept under this name for the admin leads screen. It is now the
+      // SERVER's decision, never the client's claim.
+      couponClaimed,
+      // Written only when the server honoured a coupon; the coupon rules
+      // read these back to enforce one redemption per phone.
+      ...(redemption ? { couponRedeemed: true, couponCode: redemption.code, couponPhoneKey: redemption.phoneKey } : {}),
+    },
   };
 }

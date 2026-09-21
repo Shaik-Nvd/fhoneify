@@ -8,7 +8,7 @@ import { getReferencePriceRepository } from '../../../lib/referencePricing/getSt
 // logging every user out. Without one, a key is derived from JWT_SECRET
 // with domain separation, so a quote token can never be replayed as a JWT
 // (or vice versa).
-const signingSecret =
+export const signingSecret =
   process.env.QUOTE_SIGNING_SECRET ||
   crypto.createHmac('sha256', config.JWT_SECRET).update('fhoneify:quote-token:v1').digest('hex');
 
