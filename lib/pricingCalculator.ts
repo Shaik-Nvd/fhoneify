@@ -126,6 +126,38 @@ interface ConditionAdjustmentOptions {
 const lower = (value: unknown) => String(value ?? '').toLowerCase();
 
 /**
+ * "Older than 11 months" as the questionnaire sends it. The quote page sends
+ * the id `above11`; older payloads and the explain tooling use the label.
+ * Apple and Xiaomi already treat this as equivalent to being out of warranty;
+ * this helper lets the remaining engines do the same without restating the
+ * string test in each one.
+ */
+export const isAboveElevenMonths = (age: unknown): boolean => {
+  const value = lower(age);
+  return value === 'above11' || value.includes('above 11');
+};
+
+/**
+ * Out-of-warranty depreciation for the two engines that had no "above 11
+ * months" branch at all. Neither value is a new depreciation rate:
+ *
+ *  - Vivo already defines these exact multipliers for `warranty === false`
+ *    (see calculateVivoPrice); the age answer simply never reached them.
+ *  - Oppo defines no out-of-warranty multiplier anywhere, so it takes 0.75,
+ *    the rate already shared by Vivo standard, Xiaomi non-Note and the
+ *    generic Android fallback.
+ *
+ * Without these, `above11` matched no branch and an old phone kept the
+ * brand-new multiplier, which quoted the entire Oppo catalog above its own
+ * market reference price.
+ */
+export const OUT_OF_WARRANTY_AGE_MULTIPLIERS = {
+  vivoStandard: 0.75,
+  vivoFold: 0.7526315789473684,
+  oppo: 0.75,
+} as const;
+
+/**
  * Converts the UI diagnostics into one transparent set of condition factors.
  * Physical alternatives within one repair group use the largest applicable
  * deduction. Distinct deductions are summed against the age-adjusted base,
@@ -565,9 +597,15 @@ export function calculateVivoPrice(model: string, basePrice: number, diagnostics
     ? { warrantyPenalty: 0.1, gstBillPenalty: 0.02656641604010025, callsPenalty: 0.5, originalScreenPenalty: 0.6, touchPenalty: 0.4, functionalScale: 1.0, physicalScale: 1.0 }
     : { warrantyPenalty: 0.1, gstBillPenalty: 0.05, callsPenalty: 0.5, originalScreenPenalty: 0.8002385938173499, touchPenalty: 0.34764077227429186, functionalScale: 1.0, physicalScale: 0.8 };
 
+  // A phone older than 11 months depreciates like an out-of-warranty one.
+  // Previously `above11` matched neither the "3to6" nor the "6to11" test and
+  // fell through to the 1.0 initialiser, so the oldest phone was worth more
+  // than a 6-month-old one and could out-price its own market reference.
+  const isOutOfWarranty = diagnostics.warranty === false || isAboveElevenMonths(diagnostics.mobileAge);
+
   let ageMultiplier = 1.0;
-  if (isFold) ageMultiplier = diagnostics.warranty === false ? 0.7526315789473684 : 0.98;
-  else if (diagnostics.warranty === false) ageMultiplier = 0.75;
+  if (isFold) ageMultiplier = isOutOfWarranty ? OUT_OF_WARRANTY_AGE_MULTIPLIERS.vivoFold : 0.98;
+  else if (isOutOfWarranty) ageMultiplier = OUT_OF_WARRANTY_AGE_MULTIPLIERS.vivoStandard;
   else if (diagnostics.mobileAge) {
     const k = diagnostics.mobileAge.toLowerCase();
     if (k.includes("3") && k.includes("6")) ageMultiplier = 0.93;
@@ -628,7 +666,15 @@ export function calculateOppoPrice(model: string, basePrice: number, diagnostics
   else if (isReno16) ageMultiplier = 0.9909523809523809;
   else if (isReno16c) ageMultiplier = 0.9886567164179104;
 
-  if (diagnostics.mobileAge) {
+  // Oppo was the only engine that never read `warranty` and had no "above 11
+  // months" branch, so every Oppo kept the brand-new multiplier above. The
+  // quote page also forces `warranty:false, mobileAge:'above11'` for Oppo
+  // (isWarrantyEligible has no Oppo case), so in production this was the only
+  // reachable path - the whole catalog quoted above its market reference.
+  const isOutOfWarranty = diagnostics.warranty === false || isAboveElevenMonths(diagnostics.mobileAge);
+  if (isOutOfWarranty) {
+    ageMultiplier = OUT_OF_WARRANTY_AGE_MULTIPLIERS.oppo;
+  } else if (diagnostics.mobileAge) {
     const k = diagnostics.mobileAge.toLowerCase();
     if (k.includes("3") && k.includes("6")) ageMultiplier = 0.94;
     else if (k.includes("6") && k.includes("11")) ageMultiplier = isFindX9Pro ? 0.85408 : 0.90;

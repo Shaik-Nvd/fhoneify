@@ -53,6 +53,16 @@ for (const device of validDevices) {
     assert.ok(calculated.P0_PERFECT >= calculated.P4_BODY, 'body damage increases quote');
     assert.ok(calculated.P3_SCREEN_FUNCTIONAL >= calculated.P5_SEVERE_MULTI, 'severe multi-damage increases quote');
     assert.ok(calculated.P0_PERFECT >= calculated.P1_OLD_NO_DAMAGE, 'old/out-of-warranty exceeds young/in-warranty');
+
+    // Age alone, holding warranty fixed: a phone can never be worth more as
+    // it gets older. Checked step by step so an engine cannot pass by
+    // ignoring the age answer on one rung of the ladder.
+    assert.ok(calculated.P0_PERFECT >= calculated.P1_AGE_3TO6, '3-6 months exceeds below 3 months');
+    assert.ok(calculated.P1_AGE_3TO6 >= calculated.P1_AGE_6TO11, '6-11 months exceeds 3-6 months');
+    assert.ok(calculated.P1_AGE_6TO11 >= calculated.P1_AGE_ABOVE11, 'above 11 months exceeds 6-11 months');
+
+    // Warranty alone, holding age fixed: losing warranty cannot raise a price.
+    assert.ok(calculated.P0_PERFECT >= calculated.P1_NO_WARRANTY, 'losing warranty raises the quote');
   } catch (error: any) {
     failures.push({
       device: `${device.brand} | ${device.model} | ${device.storage}`,

@@ -25,6 +25,14 @@ export const validationAnswer = (overrides: Partial<DiagnosticsType> = {}): Diag
 export const VALIDATION_PROFILES: Record<string, DiagnosticsType> = {
   P0_PERFECT: validationAnswer(),
   P1_OLD_NO_DAMAGE: validationAnswer({ warranty: false, mobileAge: 'above11' }),
+  // Age and warranty must vary INDEPENDENTLY. P1_OLD_NO_DAMAGE moves both at
+  // once, so an engine that ignored one of them still satisfied it by
+  // returning an equal price. That is how two brands shipped with no
+  // "above 11 months" branch at all, pricing the oldest phone as brand new.
+  P1_AGE_3TO6: validationAnswer({ mobileAge: '3to6' }),
+  P1_AGE_6TO11: validationAnswer({ mobileAge: '6to11' }),
+  P1_AGE_ABOVE11: validationAnswer({ mobileAge: 'above11' }),
+  P1_NO_WARRANTY: validationAnswer({ warranty: false }),
   P2_MINOR_SCREEN: validationAnswer({ defects: ['screen_scratch'], screenCondition: '1-2 scratches on screen' }),
   P2_HEAVY_SCREEN: validationAnswer({ defects: ['screen_scratch'], screenCondition: 'More than 2 scratches on screen' }),
   P3_FUNCTIONAL: validationAnswer({ hardware: ['speaker'] }),
