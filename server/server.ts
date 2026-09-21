@@ -35,6 +35,7 @@ import webhookRouter from './modules/webhook/routes';
 import { referencePricingRouter } from './modules/referencePricing/routes';
 import {
   disconnectReferencePriceRepository,
+  getReferenceCacheStats,
   getReferenceStoreHealth,
   warmReferencePriceRepository,
 } from '../lib/referencePricing/getStore';
@@ -127,6 +128,10 @@ app.get('/health', (_req: Request, res: Response) => {
     referenceStore: store.backend,
     database: store.backend === 'postgres' ? (store.connected ? 'connected' : 'unavailable') : 'not_configured',
     databaseCheckedAt: store.checkedAt,
+    // Counts and timestamps only - no prices. Lets a deploy be verified: a
+    // running build with the cache reports referenceCache.size > 0, an older
+    // build omits the field entirely.
+    referenceCache: getReferenceCacheStats(),
   });
 });
 
