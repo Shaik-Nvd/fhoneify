@@ -156,8 +156,8 @@ const couponDeps = (lookup: RedemptionLookup = quoteService.countLeadsForPhone) 
 /** GET /coupon/offer - the first-time code for the signed-in phone, if any. */
 export async function couponOffer(req: Request, res: Response) {
   try {
-    const code = await offerFor(couponDeps(), (req as any).user?.phone);
-    return res.json({ success: true, data: { code } });
+    const couponCode = await offerFor(couponDeps(), (req as any).user?.phone);
+    return res.json({ success: true, data: { couponCode } });
   } catch (err: any) {
     logger.error({ err: err.message }, 'Error in couponOffer controller');
     return res.status(500).json({ success: false, error: 'Internal server error' });

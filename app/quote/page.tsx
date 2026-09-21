@@ -157,6 +157,17 @@ export default function QuotePage() {
       );
     }
 
+    if (brand.toLowerCase() === 'oppo') {
+      // Oppo was simply missing from this whitelist, so every Oppo was forced
+      // to "no warranty, no bill, above 11 months" without being asked. The
+      // pricing engine carries young-phone constants (near-1.0 age
+      // multipliers and ~0.25 no-bill penalties, which only apply to an
+      // in-warranty phone) for exactly these generations, calibrated against
+      // Cashify - so Cashify asks warranty, bill and age for them. Older Oppo
+      // stays ineligible, like older Samsung/Xiaomi/Vivo above.
+      return lowerModel.includes('find x9') || lowerModel.includes('reno16');
+    }
+
     if (brand.toLowerCase() === 'vivo') {
       return (
         lowerModel.includes('fold5') ||
@@ -502,7 +513,7 @@ export default function QuotePage() {
     setCouponOfferLoaded(true);
     api.get('/api/quote/coupon/offer')
       .then((res) => {
-        const code = res.data?.data?.code ?? null;
+        const code = res.data?.data?.couponCode ?? null;
         setGeneratedCoupon(code);
         setIsFirstTimeUser(Boolean(code));
       })

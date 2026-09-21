@@ -143,9 +143,13 @@ export const isAboveElevenMonths = (age: unknown): boolean => {
  *
  *  - Vivo already defines these exact multipliers for `warranty === false`
  *    (see calculateVivoPrice); the age answer simply never reached them.
- *  - Oppo defines no out-of-warranty multiplier anywhere, so it takes 0.75,
- *    the rate already shared by Vivo standard, Xiaomi non-Note and the
- *    generic Android fallback.
+ *    They also match the pre-f1034f4 vivoXSeriesAgeBonus / vivoXFold tables.
+ *  - Oppo: 0.7966, the `above11` value in EVERY Oppo table of the engine that
+ *    f1034f4 replaced (oppoFindX9s/X9Ultra/X9Pro/Reno16/Reno16c series and
+ *    the shared ageBonus that every other Oppo used), whose header says it
+ *    was "calibrated against Cashify reverse logic ... OPPO". f1034f4 dropped
+ *    the value when it collapsed those tables, which is how Oppo lost its
+ *    old-phone depreciation. See `git show f1034f4^:lib/pricingCalculator.ts`.
  *
  * Without these, `above11` matched no branch and an old phone kept the
  * brand-new multiplier, which quoted the entire Oppo catalog above its own
@@ -154,7 +158,7 @@ export const isAboveElevenMonths = (age: unknown): boolean => {
 export const OUT_OF_WARRANTY_AGE_MULTIPLIERS = {
   vivoStandard: 0.75,
   vivoFold: 0.7526315789473684,
-  oppo: 0.75,
+  oppo: 0.7966,
 } as const;
 
 /**

@@ -47,6 +47,7 @@
     "test:pricing:calibration": "tsx scripts/test/pricing.calibration.test.ts",
     "test:pricing:catalog-properties": "tsx scripts/test/pricing.catalog-properties.test.ts",
     "test:pricing:business-invariant": "tsx scripts/test/pricing.business-invariant.test.ts",
+    "test:pricing:oppo-vivo-age": "tsx scripts/test/pricing.oppo-vivo-age.test.ts",
     "test:pricing:coupon": "tsx scripts/test/pricing.coupon.test.ts",
     "test:pricing:reference-cache": "tsx scripts/test/referencePricing.cache.test.ts",
     "pricing:business-report": "tsx scripts/pricing/business-invariant-report.ts"
