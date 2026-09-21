@@ -613,7 +613,12 @@ export function calculateVivoPrice(model: string, basePrice: number, diagnostics
   }
 
   const hasValidBill = diagnostics.validBill === true || (diagnostics.accessories || []).includes("bill");
-  if (!hasValidBill && diagnostics.warranty !== false) ageMultiplier -= params.gstBillPenalty;
+  // Gate on the out-of-warranty result, not on the warranty answer alone, so
+  // that "above 11 months" behaves exactly like "no warranty" here too. This
+  // matches calculateApplePrice, which already tests !isOutOfWarranty.
+  // Otherwise an out-of-warranty-by-age phone would take the out-of-warranty
+  // multiplier AND the missing-bill penalty on top of it.
+  if (!hasValidBill && !isOutOfWarranty) ageMultiplier -= params.gstBillPenalty;
 
   const hasBox = (diagnostics.accessories || []).includes("box") || diagnostics.box === true;
   const hasCharger = (diagnostics.accessories || []).includes("charger") || diagnostics.charger === true;
@@ -681,7 +686,11 @@ export function calculateOppoPrice(model: string, basePrice: number, diagnostics
   }
 
   const hasValidBill = diagnostics.validBill === true || (diagnostics.accessories || []).includes("bill");
-  if (!hasValidBill && diagnostics.warranty !== false) ageMultiplier -= params.gstBillPenalty;
+  // See the note in calculateVivoPrice: gate on the out-of-warranty result so
+  // an old phone cannot take the out-of-warranty multiplier and the
+  // missing-bill penalty at once. Oppo's bill penalties reach 0.2612, so that
+  // combination would have driven the multiplier under 0.49.
+  if (!hasValidBill && !isOutOfWarranty) ageMultiplier -= params.gstBillPenalty;
 
   const hasBox = (diagnostics.accessories || []).includes("box") || diagnostics.box === true;
   const boxBonus = hasBox ? COMMON_BONUSES.box : 0;
