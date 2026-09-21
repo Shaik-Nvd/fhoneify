@@ -1,4 +1,5 @@
 import { ReferencePriceRepository, getDefaultReferencePriceStore } from './store';
+import type { CachedReferencePriceStore } from './cachedStore';
 
 // Standalone scripts (scripts/reference-pricing/*.ts) invoke this module
 // directly, without going through server/config.ts's dotenv.config() call -
@@ -27,6 +28,7 @@ require('dotenv').config();
  */
 let cached: ReferencePriceRepository | null = null;
 let cachedPrismaClient: any = null;
+let cachedReadThrough: CachedReferencePriceStore | null = null;
 let backend: 'postgres' | 'file' = 'file';
 
 export interface ReferenceStoreHealth {
@@ -51,10 +53,18 @@ export function getReferencePriceRepository(): ReferencePriceRepository {
       // (or without DATABASE_URL) never pay the cost/risk of loading it.
       const { PrismaClient } = require('@prisma/client');
       const { PostgresReferencePriceStore } = require('./postgresStore');
+      const { CachedReferencePriceStore } = require('./cachedStore');
       const prisma = new PrismaClient();
       cachedPrismaClient = prisma;
       backend = 'postgres';
-      resolved = new PostgresReferencePriceStore(prisma);
+      // Reads are served from memory - the per-quote findUnique round trip to
+      // Supabase was the single largest cost in a quote. Writes still go
+      // straight to Postgres, which remains authoritative.
+      const readThrough: CachedReferencePriceStore = new CachedReferencePriceStore(
+        new PostgresReferencePriceStore(prisma)
+      );
+      cachedReadThrough = readThrough;
+      resolved = readThrough;
     } catch (err: any) {
       console.error('[referencePricing] DATABASE_URL is set but the Postgres store failed to initialize; falling back to the file-backed store:', err.message);
     }
@@ -106,7 +116,24 @@ export async function warmReferencePriceRepository(
     if (timer) clearTimeout(timer);
   }
 
+  // Pull the ~2,200 reference rows into memory so the first customer does not
+  // pay the ~500ms per-quote lookup. Deliberately outside the race above: a
+  // slow preload must not be reported as "Postgres is down". A failure is not
+  // fatal either - the cache stays empty and lookups go to the database
+  // exactly as they did before this cache existed.
+  if (lastHealth.connected && cachedReadThrough) {
+    const { loaded, error } = await cachedReadThrough.preload();
+    if (error) console.error('[referencePricing] reference-price preload failed; lookups will hit the database:', error);
+    else console.log(`[referencePricing] preloaded ${loaded} reference prices into memory`);
+  }
+
   return lastHealth;
+}
+
+/** Reporting only: in-memory reference-cache state, or null when reads are
+ * not cached (the file-backed store). */
+export function getReferenceCacheStats(): { size: number; loadedAt: string | null; fresh: boolean } | null {
+  return cachedReadThrough ? cachedReadThrough.stats() : null;
 }
 
 /** Result of the most recent warm-up attempt. Never asserts more than was
@@ -131,6 +158,7 @@ export async function disconnectReferencePriceRepository(): Promise<void> {
 export function _resetReferencePriceRepositoryCacheForTests(): void {
   cached = null;
   cachedPrismaClient = null;
+  cachedReadThrough = null;
   backend = 'file';
   lastHealth = { backend: 'file', connected: true, checkedAt: null };
 }
@@ -150,4 +178,6 @@ export function _resetReferencePriceRepositoryCacheForTests(): void {
  */
 export function _setReferencePriceRepositoryForTests(repo: ReferencePriceRepository): void {
   cached = repo;
+  // The pinned repository is used directly, so no read-through cache applies.
+  cachedReadThrough = null;
 }

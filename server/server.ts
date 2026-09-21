@@ -190,12 +190,23 @@ async function start() {
     logger.error({ err: err.message }, 'Application database warm-up failed; it will reconnect on demand');
   }
 
+  // Keep the connection pool dialled. Measured against production: a quote
+  // after a quiet period cost 1.4-3.1s of server time against 0.88s warm,
+  // because Prisma had to re-establish the connection - the process itself
+  // never restarted. A cheap periodic query keeps that cost off the first
+  // real customer. Unref'd so it can never hold the process open.
+  const keepAlive = setInterval(() => {
+    prisma.$queryRaw`SELECT 1`.catch(() => undefined);
+  }, 4 * 60 * 1000);
+  keepAlive.unref();
+
   const server = app.listen(config.PORT, () => {
     logger.info(`Phoneify Modular API Server running on http://localhost:${config.PORT}`);
   });
 
   const shutdown = (signal: string) => {
     logger.info({ signal }, 'Shutting down; draining connections');
+    clearInterval(keepAlive);
     server.close(async () => {
       await disconnectReferencePriceRepository();
       await prisma.$disconnect().catch(() => undefined);
