@@ -44,10 +44,10 @@ export type DiagnosticsType = {
  *   already Cashify's best-case used-device offer, not a new/launch price, so
  *   it must never be depreciated to produce Fhoneify's own "Get Upto".
  * - The pre-2026-09-16 `lib/cashify_prices.json` values were a different,
- *   pre-inflated base (Get Upto / model multiplier, commit cbc344a). They are
- *   converted in lib/pricing/engine.ts before they reach this file.
+ *   pre-inflated base (Get Upto / model multiplier, commit cbc344a). The file
+ *   is now regenerated from ReferencePrice, so it holds Get Upto values too.
  * - CashifyConditionEquivalent: what Cashify's own questionnaire pays for the
- *   customer's answers. Never above the Get Upto reference.
+ *   customer's answers (final offer only).
  * - FhoneifyGetUpto / FhoneifyFinalOffer: the two figures after the existing
  *   applyCompetitorUplift rule.
  */
@@ -281,19 +281,11 @@ export function computeFhoneifyGetUpto(reference: CashifyGetUptoReference): Fhon
 }
 
 /**
- * Shared tail of every brand model. The brand rules estimate what Cashify's
- * questionnaire pays for the answers; that can never exceed Cashify's own Get
- * Upto, so the final offer can never exceed Fhoneify's Get Upto. The Get Upto
- * assumes every accessory, so the ceiling drops by the accessory bonus the
- * customer cannot claim (existing rupee values, e.g. ₹380 for a missing box).
+ * Shared tail of every brand model (final offer only, never Get Upto): the
+ * brand rules' Cashify condition equivalent plus the existing uplift.
  */
-function finalizeConditionQuote(
-  reference: CashifyGetUptoReference,
-  conditionValue: number,
-  accessoryShortfall: number
-): PricingResult {
-  const ceiling = Math.round(reference) - Math.max(0, accessoryShortfall);
-  const cashifyConditionEquivalent = Math.max(0, Math.min(Math.round(conditionValue), ceiling));
+function finalizeConditionQuote(reference: CashifyGetUptoReference, conditionValue: number): PricingResult {
+  const cashifyConditionEquivalent = Math.round(conditionValue);
   return {
     cashifyConditionEquivalent,
     fhoneifyPrice: applyCompetitorUplift(reference, cashifyConditionEquivalent),
@@ -482,7 +474,7 @@ export function calculateApplePrice(model: string, reference: CashifyGetUptoRefe
     cashifyPrice = 1200;
   }
 
-  return finalizeConditionQuote(reference, cashifyPrice, diagnostics.calls === false ? 0 : COMMON_BONUSES.box - boxBonus);
+  return finalizeConditionQuote(reference, cashifyPrice);
 }
 
 // ============================================================================
@@ -548,7 +540,7 @@ export function calculateSamsungPrice(model: string, reference: CashifyGetUptoRe
   let cashifyPrice = reference * ageMultiplier * adjustments.conditionRetention + boxBonus;
   if (diagnostics.calls === false) cashifyPrice = 1200;
 
-  return finalizeConditionQuote(reference, cashifyPrice, diagnostics.calls === false ? 0 : (isA35 ? 100 : COMMON_BONUSES.box) - boxBonus);
+  return finalizeConditionQuote(reference, cashifyPrice);
 }
 
 // ============================================================================
@@ -592,7 +584,7 @@ export function calculateXiaomiPrice(model: string, reference: CashifyGetUptoRef
   let cashifyPrice = reference * ageMultiplier * adjustments.conditionRetention + boxBonus;
   if (diagnostics.calls === false) cashifyPrice = reference <= 5000 ? 200 : 1200;
 
-  return finalizeConditionQuote(reference, cashifyPrice, diagnostics.calls === false ? 0 : COMMON_BONUSES.box - boxBonus);
+  return finalizeConditionQuote(reference, cashifyPrice);
 }
 
 // ============================================================================
@@ -639,7 +631,7 @@ export function calculateVivoPrice(model: string, reference: CashifyGetUptoRefer
   let cashifyPrice = reference * ageMultiplier * adjustments.conditionRetention + boxBonus;
   if (diagnostics.calls === false) cashifyPrice = 1200;
 
-  return finalizeConditionQuote(reference, cashifyPrice, diagnostics.calls === false ? 0 : COMMON_BONUSES.box - boxBonus);
+  return finalizeConditionQuote(reference, cashifyPrice);
 }
 
 // ============================================================================
@@ -686,7 +678,7 @@ export function calculateOppoPrice(model: string, reference: CashifyGetUptoRefer
   let cashifyPrice = reference * ageMultiplier * adjustments.conditionRetention + boxBonus;
   if (diagnostics.calls === false) cashifyPrice = 1200;
 
-  return finalizeConditionQuote(reference, cashifyPrice, diagnostics.calls === false ? 0 : COMMON_BONUSES.box - boxBonus);
+  return finalizeConditionQuote(reference, cashifyPrice);
 }
 
 // ============================================================================
@@ -734,7 +726,7 @@ export function calculateOnePlusPrice(model: string, reference: CashifyGetUptoRe
   let cashifyPrice = reference * ageMultiplier * adjustments.conditionRetention + boxBonus;
   if (diagnostics.calls === false) cashifyPrice = 1200;
 
-  return finalizeConditionQuote(reference, cashifyPrice, diagnostics.calls === false ? 0 : COMMON_BONUSES.box - boxBonus);
+  return finalizeConditionQuote(reference, cashifyPrice);
 }
 
 // ============================================================================
@@ -772,7 +764,7 @@ export function calculateNothingPrice(model: string, reference: CashifyGetUptoRe
   let cashifyPrice = reference * ageMultiplier * adjustments.conditionRetention + boxBonus;
   if (diagnostics.calls === false) cashifyPrice = 1200;
 
-  return finalizeConditionQuote(reference, cashifyPrice, diagnostics.calls === false ? 0 : COMMON_BONUSES.box - boxBonus);
+  return finalizeConditionQuote(reference, cashifyPrice);
 }
 
 // ============================================================================
@@ -795,7 +787,7 @@ export function calculateGenericAndroidPrice(brand: string, model: string, refer
   let cashifyPrice = reference * ageMultiplier * adjustments.conditionRetention + boxBonus;
   if (diagnostics.calls === false) cashifyPrice = reference <= 5000 ? 200 : 1200;
 
-  return finalizeConditionQuote(reference, cashifyPrice, diagnostics.calls === false ? 0 : COMMON_BONUSES.box - boxBonus);
+  return finalizeConditionQuote(reference, cashifyPrice);
 }
 
 // ============================================================================

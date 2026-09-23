@@ -8,8 +8,7 @@ import {
   PRICING_ENGINE_VERSION,
   PricingInvariantError,
   QuoteReferenceStatus,
-  ReferenceSemantics,
-  computeGetUpto,
+  computeFhoneifyGetUpto,
   priceDevice,
   resolveReference,
 } from './engine';
@@ -74,8 +73,6 @@ export interface AuthoritativeQuote {
     deviceKey: string;
     diagnosticsHash: string;
     cashifyGetUptoReference: number;
-    storedReferencePrice: number;
-    referenceSemantics: ReferenceSemantics;
     baseSource: BaseSource;
     referenceSource: string | null;
     cashifyConditionEquivalent: number;
@@ -94,7 +91,6 @@ export interface LeadPricingAudit {
   clientPriceMismatch: boolean;
   currentPrice: number | null;
   cashifyGetUptoReference: number | null;
-  referenceSemantics: ReferenceSemantics | null;
   baseSource: BaseSource | null;
   cashifyConditionEquivalent: number | null;
   fhoneifyGetUpto: number | null;
@@ -164,7 +160,8 @@ export function createPricingService(deps: PricingServiceDeps) {
       // with the catalog's own strings keeps the engine's model matching
       // identical for both.
       result = priceDevice(device.brand, device.model, base.cashifyGetUptoReference, diagnostics);
-      startingPrice = computeGetUpto(base.cashifyGetUptoReference);
+      // Get Upto: the reference plus the uplift, nothing else.
+      startingPrice = computeFhoneifyGetUpto(base.cashifyGetUptoReference);
     } catch (err) {
       if (err instanceof PricingInvariantError) {
         deps.logger.error({ deviceKey: key, ...err.details, reason: err.message }, 'Pricing invariant violated; quote refused');
@@ -200,8 +197,6 @@ export function createPricingService(deps: PricingServiceDeps) {
         deviceKey: key,
         diagnosticsHash,
         cashifyGetUptoReference: base.cashifyGetUptoReference,
-        storedReferencePrice: base.storedPrice,
-        referenceSemantics: base.semantics,
         baseSource: base.source,
         referenceSource: base.referenceSource,
         cashifyConditionEquivalent: result.cashifyConditionEquivalent,
@@ -265,7 +260,6 @@ export function createPricingService(deps: PricingServiceDeps) {
       clientPriceMismatch: clientQuotedPrice !== null && clientQuotedPrice !== price,
       currentPrice: current.ok ? current.fhoneifyPrice : null,
       cashifyGetUptoReference: current.ok ? current.internal.cashifyGetUptoReference : null,
-      referenceSemantics: current.ok ? current.internal.referenceSemantics : null,
       baseSource: current.ok ? current.internal.baseSource : null,
       cashifyConditionEquivalent: current.ok ? current.internal.cashifyConditionEquivalent : null,
       fhoneifyGetUpto: current.ok ? current.startingPrice : null,

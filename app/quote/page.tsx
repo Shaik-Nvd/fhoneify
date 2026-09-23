@@ -1039,7 +1039,7 @@ export default function QuotePage() {
     const d = res.data?.data;
     if (
       !res.data?.success || typeof d?.fhoneifyPrice !== 'number' || !(d.fhoneifyPrice > 0) ||
-      typeof d?.startingPrice !== 'number' || !(d.startingPrice >= d.fhoneifyPrice) || !d.quoteToken
+      typeof d?.startingPrice !== 'number' || !(d.startingPrice > 0) || !d.quoteToken
     ) {
       throw new Error(res.data?.error || 'Pricing is currently unavailable for this device.');
     }
@@ -1051,7 +1051,7 @@ export default function QuotePage() {
 
   /** "Get upto" = the server's startingPrice (Cashify Get Upto + uplift).
    * The quote is signed for perfect-condition answers, so "Schedule Pickup"
-   * from this screen books that signed offer, shown on the final screen. */
+   * from this screen books that signed offer, shown on the next screen. */
   const fetchStartingQuote = (brand: string, model: string, storage: string) => {
     setStartingQuote(null);
     setStartingPriceError(null);
@@ -2309,8 +2309,8 @@ export default function QuotePage() {
               
               <button 
                 // Skipping the questions books the signed perfect-condition
-                // offer (at most the Get Upto), with the answers it was signed
-                // for; the final screen shows exactly what the lead stores.
+                // offer, with the answers it was signed for; the next screen
+                // shows exactly what the lead stores.
                 disabled={!activeStartingQuote}
                 onClick={() => {
                    if (!activeStartingQuote) return;

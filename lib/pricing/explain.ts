@@ -1,5 +1,5 @@
 import { applyCompetitorUplift, COMMON_BONUSES, DiagnosticsType } from '../pricingCalculator';
-import { computeGetUpto, priceDevice } from './engine';
+import { computeFhoneifyGetUpto, priceDevice } from './engine';
 import { PERFECT_CONDITION_DIAGNOSTICS } from './perfectCondition';
 
 /**
@@ -138,7 +138,7 @@ export function explainQuote(brand: string, model: string, referencePrice: numbe
     brand,
     model,
     referencePrice,
-    fhoneifyGetUpto: computeGetUpto(referencePrice),
+    fhoneifyGetUpto: computeFhoneifyGetUpto(referencePrice),
     perfectConditionCashifyEquivalent: perfect,
     steps,
     cashifyEquivalent,

@@ -2,22 +2,25 @@
  * Get Upto semantics (2026-09-23).
  *
  * ReferencePrice.currentPrice is Cashify's live public "Get Upto". Fhoneify's
- * Get Upto must be that figure plus the existing uplift - never a depreciated
- * version of it - and every final offer must stay at or below it.
+ * Get Upto is that figure plus the existing uplift (4/6/8%, extra capped at
+ * ₹2,000) and nothing else - no age, warranty, bill, box, charger or
+ * condition rule. Final offers are a separate path and are not tested here.
  *
  * Run: npm run test:pricing:get-upto   (no database needed)
  */
 import assert from 'node:assert/strict';
-import { applyCompetitorUplift, calculateFhoneifyPrice, DiagnosticsType } from '../../lib/pricingCalculator';
-import { computeGetUpto, PERFECT_CONDITION_DIAGNOSTICS, priceDevice, resolveReference } from '../../lib/pricing/engine';
+import { applyCompetitorUplift, DiagnosticsType } from '../../lib/pricingCalculator';
+import { computeFhoneifyGetUpto, PERFECT_CONDITION_DIAGNOSTICS, resolveReference } from '../../lib/pricing/engine';
+import { createPricingService } from '../../lib/pricing/pricingService';
+import { deviceKey, ReferencePriceRecord } from '../../lib/referencePricing/types';
 import { SEED_DEVICES } from '../../lib/seed_devices';
 import type { CatalogDevice } from '../../lib/pricing/catalog';
 
 let passed = 0;
 let failed = 0;
-function test(name: string, fn: () => void) {
+async function test(name: string, fn: () => void | Promise<void>) {
   try {
-    fn();
+    await fn();
     console.log(`  PASS  ${name}`);
     passed++;
   } catch (err: any) {
@@ -43,93 +46,85 @@ const LIVE: [string, string, string, number][] = [
   ['Realme', 'Realme 12 Pro 5G', '12 GB/256 GB', 15210],
 ];
 
-const answers = (overrides: Partial<DiagnosticsType> = {}): DiagnosticsType => ({
-  ...PERFECT_CONDITION_DIAGNOSTICS,
-  mobileAge: 'below3',
-  ...overrides,
-});
+const expectedGetUpto = (reference: number) => {
+  const tier = reference <= 20000 ? 0.08 : reference <= 50000 ? 0.06 : 0.04;
+  return Math.round(reference + Math.min(reference * tier, 2000));
+};
 
-const DAMAGE: [string, Partial<DiagnosticsType>][] = [
-  ['cracked screen', { defects: ['screen_scratch'], screenCondition: 'Screen cracked/ glass broken' }],
-  ['visible display lines', { defects: ['screen_spot'], screenLines: 'Visible line(s) on display' }],
-  ['broken back panel', { defects: ['panel_missing'], bodyPanel: 'Cracked/ broken side or back panel' }],
-  ['bent frame', { bodyBent: 'Bent/ curved panel' }],
-  ['touch not working', { touch: false }],
-  ['back camera faulty', { hardware: ['back_camera'] }],
-  ['old, out of warranty', { mobileAge: 'above11', warranty: false }],
-  ['no box', { accessories: ['bill', 'charger'] }],
-];
+class Repo {
+  records = new Map<string, ReferencePriceRecord>();
+  async get(key: string) { return this.records.get(key) ?? null; }
+  async listAll() { return [...this.records.values()]; }
+  async upsert(): Promise<never> { throw new Error('read-only'); }
+}
 
-console.log('\nSuite G - Get Upto semantics\n');
+async function run() {
+  console.log('\nSuite G - Get Upto semantics\n');
 
-test('Get Upto = Cashify Get Upto + existing uplift, for all 7 brands', () => {
-  const brands = new Set<string>();
-  for (const [brand, model, , reference] of LIVE) {
-    const getUpto = computeGetUpto(reference);
-    assert.equal(getUpto, applyCompetitorUplift(reference, reference), model);
-    assert.ok(getUpto > reference, `${model}: Fhoneify ${getUpto} must be above Cashify ${reference}`);
-    const tier = reference <= 20000 ? 0.08 : reference <= 50000 ? 0.06 : 0.04;
-    assert.equal(getUpto - reference, Math.round(Math.min(reference * tier, 2000)), `${model}: uplift`);
-    brands.add(brand);
-  }
-  for (const brand of ['Apple', 'Samsung', 'OnePlus', 'Oppo', 'Vivo', 'Xiaomi', 'Realme']) assert.ok(brands.has(brand), brand);
-});
-
-test('THE BUG: Get Upto no longer runs age/perfect-condition depreciation (iPhone 15 512GB)', () => {
-  // Old flow: 45,570 x 0.7496 (Apple age multiplier) + 380 = 34,540 -> +2,000 = 36,540.
-  assert.equal(computeGetUpto(45570), 47570);
-});
-
-test('no final offer exceeds the Get Upto; the perfect offer never exceeds it either', () => {
-  for (const [brand, model, , reference] of LIVE) {
-    const getUpto = computeGetUpto(reference);
-    const perfect = priceDevice(brand, model, reference, answers());
-    assert.ok(perfect.cashifyConditionEquivalent <= reference, `${model}: equivalent above Cashify Get Upto`);
-    assert.ok(perfect.fhoneifyPrice <= getUpto, `${model}: perfect offer above Get Upto`);
-    for (const [label, fields] of DAMAGE) {
-      const damaged = priceDevice(brand, model, reference, answers(fields));
-      assert.ok(damaged.fhoneifyPrice <= getUpto, `${model} ${label}: above Get Upto`);
-      assert.equal(damaged.fhoneifyPrice, applyCompetitorUplift(reference, damaged.cashifyConditionEquivalent), `${model} ${label}: uplift`);
+  await test('Get Upto = Cashify Get Upto + 4/6/8% uplift (extra capped at ₹2,000), all 7 brands', () => {
+    const brands = new Set<string>();
+    for (const [brand, model, , reference] of LIVE) {
+      const getUpto = computeFhoneifyGetUpto(reference);
+      assert.equal(getUpto, expectedGetUpto(reference), model);
+      assert.equal(getUpto, applyCompetitorUplift(reference, reference), model);
+      assert.ok(getUpto > reference, `${model}: Fhoneify ${getUpto} must be above Cashify ${reference}`);
+      brands.add(brand);
     }
-  }
-});
+    for (const brand of ['Apple', 'Samsung', 'OnePlus', 'Oppo', 'Vivo', 'Xiaomi', 'Realme']) assert.ok(brands.has(brand), brand);
+  });
 
-test('meaningful damage lowers the offer below the perfect-condition offer', () => {
-  for (const [brand, model, , reference] of LIVE) {
-    const perfect = priceDevice(brand, model, reference, answers()).fhoneifyPrice;
-    for (const [label, fields] of DAMAGE) {
-      // Existing age rules, unchanged here: Apple 14/15 base is flat across
-      // age, and the Oppo formula never reads warranty/above11.
-      if (label === 'old, out of warranty' && (brand === 'Apple' || brand === 'Oppo')) continue;
-      const damaged = priceDevice(brand, model, reference, answers(fields)).fhoneifyPrice;
-      assert.ok(damaged < perfect, `${model} ${label}: ${damaged} must be below ${perfect}`);
+  await test('THE BUG: iPhone 15 512GB Get Upto is ₹47,570, not the depreciated ₹36,540', () => {
+    assert.equal(computeFhoneifyGetUpto(45570), 47570);
+  });
+
+  await test('the cap limits only the extra uplift, never the price back to Cashify', () => {
+    assert.equal(computeFhoneifyGetUpto(120000), 122000);
+    assert.equal(computeFhoneifyGetUpto(76920), 78920);
+  });
+
+  await test('API startingPrice = uplift(ReferencePrice) for every device, whatever the answers', async () => {
+    const repo = new Repo();
+    const at = new Date().toISOString();
+    for (const [brand, model, storage, currentPrice] of LIVE) {
+      repo.records.set(deviceKey({ brand, model, storage }), {
+        deviceKey: deviceKey({ brand, model, storage }), brand, model, storage, source: 'cashify',
+        currentPrice, matchConfidence: 'exact', status: 'fresh', lastVerifiedAt: at, lastAttemptedAt: at, lastFailureAt: null,
+        lastFailureError: null, consecutiveFailures: 0, createdAt: at, updatedAt: at,
+      } as unknown as ReferencePriceRecord);
     }
-  }
-});
-
-test('missing box and charger always cost at least the existing ₹380 box value', () => {
-  for (const [brand, model, , reference] of LIVE) {
-    const withBox = calculateFhoneifyPrice(brand, model, reference, answers()).cashifyConditionEquivalent;
-    const noBox = calculateFhoneifyPrice(brand, model, reference, answers({ accessories: ['bill'] })).cashifyConditionEquivalent;
-    assert.ok(withBox - noBox >= 380, `${model}: box worth ${withBox - noBox}`);
-  }
-});
-
-test('whole catalog: Get Upto above the resolved Cashify reference; no offer above Get Upto', () => {
-  let checked = 0;
-  for (const device of SEED_DEVICES as CatalogDevice[]) {
-    const reference = resolveReference({ device });
-    if (!reference) continue;
-    const getUpto = computeGetUpto(reference.cashifyGetUptoReference);
-    assert.ok(getUpto > reference.cashifyGetUptoReference, `${device.model} ${device.storage}`);
-    for (const d of [answers(), answers(DAMAGE[0][1]), answers({ calls: false })]) {
-      const offer = priceDevice(device.brand, device.model, reference.cashifyGetUptoReference, d).fhoneifyPrice;
-      assert.ok(offer <= getUpto, `${device.model} ${device.storage}: offer ${offer} > Get Upto ${getUpto}`);
+    const svc = createPricingService({
+      repository: repo as any, signingSecret: 'x'.repeat(32), tokenTtlSeconds: 600, strictReferenceMode: false,
+      referenceLookupTimeoutMs: 100, logger: { info() {}, warn() {}, error() {} },
+    });
+    const damaged: DiagnosticsType = {
+      ...PERFECT_CONDITION_DIAGNOSTICS, touch: false, defects: ['screen_scratch'], screenCondition: 'Screen cracked/ glass broken',
+      warranty: false, validBill: false, accessories: [], mobileAge: 'above11', hardware: ['back_camera'],
+    };
+    for (const [, model, storage, reference] of LIVE) {
+      const brand = LIVE.find((row) => row[1] === model)![0];
+      for (const diagnostics of [PERFECT_CONDITION_DIAGNOSTICS, damaged]) {
+        const q = await svc.quote({ brand, model, storage, diagnostics });
+        assert.ok(q.ok, `${model}: ${!q.ok ? q.code : ''}`);
+        if (q.ok) assert.equal(q.startingPrice, expectedGetUpto(reference), `${model}: startingPrice`);
+      }
     }
-    checked++;
-  }
-  assert.ok(checked > 2000, `checked ${checked}`);
-});
+  });
 
-console.log(`\n${passed} passed, ${failed} failed`);
-if (failed > 0) process.exitCode = 1;
+  await test('whole catalog: Get Upto is exactly uplift(resolved reference) and above it', () => {
+    let checked = 0;
+    for (const device of SEED_DEVICES as CatalogDevice[]) {
+      const reference = resolveReference({ device });
+      if (!reference) continue;
+      const getUpto = computeFhoneifyGetUpto(reference.cashifyGetUptoReference);
+      assert.equal(getUpto, expectedGetUpto(reference.cashifyGetUptoReference), `${device.model} ${device.storage}`);
+      assert.ok(getUpto > reference.cashifyGetUptoReference, `${device.model} ${device.storage}`);
+      checked++;
+    }
+    assert.ok(checked > 2000, `checked ${checked}`);
+  });
+
+  console.log(`\n${passed} passed, ${failed} failed`);
+  if (failed > 0) process.exitCode = 1;
+}
+
+run();

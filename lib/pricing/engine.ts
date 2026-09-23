@@ -1,14 +1,13 @@
 import {
+  applyCompetitorUplift,
   calculateFhoneifyPrice,
   COMMON_BONUSES,
   computeFhoneifyGetUpto,
   CashifyGetUptoReference,
   DiagnosticsType,
-  FhoneifyGetUpto,
   PricingResult,
 } from '../pricingCalculator';
 import materializedSnapshot from '../cashify_prices.json';
-import materializedSnapshotMeta from '../cashify_prices.meta.json';
 import { classifyFreshness } from '../referencePricing/freshnessPolicy';
 import type { ReferencePriceRecord, ReferencePriceStatus } from '../referencePricing/types';
 import type { CatalogDevice } from './catalog';
@@ -17,14 +16,13 @@ import { PERFECT_CONDITION_DIAGNOSTICS } from './perfectCondition';
 /**
  * The one place a quote's reference price is resolved and the pricing
  * methodology is invoked. Used on the server (POST /api/quote/price) and by
- * tests/tools; the quote page never runs it - it shows only the API's signed
- * price, so there is exactly one place a customer's price comes from.
+ * tests/tools; the quote page never runs it - it shows only the API's
+ * figures, so there is exactly one place a customer's price comes from.
  *
- *   Get Upto:    Cashify Get Upto -> applyCompetitorUplift -> Fhoneify Get Upto
- *   Final offer: Cashify Get Upto -> brand condition rules (calibrated against
- *                Cashify's questionnaire) -> Cashify condition equivalent
- *                (never above the Get Upto) -> applyCompetitorUplift
- *                -> Fhoneify final offer
+ *   Get Upto:    ReferencePrice.currentPrice (Cashify's live public Get Upto)
+ *                -> computeFhoneifyGetUpto (the existing uplift, nothing else)
+ *   Final offer: ReferencePrice.currentPrice -> brand condition rules
+ *                -> Cashify condition equivalent -> the same uplift
  *
  * Browser-safe - no Node-only imports belong here (see quoteToken.ts /
  * pricingService.ts).
@@ -37,27 +35,14 @@ export const PRICING_ENGINE_VERSION = 'fhoneify-pricing/2026-09-23-get-upto-refe
 
 export type BaseSource = 'reference_repository' | 'materialized_snapshot' | 'catalog_base_price';
 
-/**
- * What a stored price means.
- * - cashify_get_upto: Cashify's live public "Get Upto" (scraped, source
- *   "cashify"), or the catalog's own basePrice, which carries the same values.
- * - legacy_pre_inflated_base: a pre-refresh lib/cashify_prices.json value.
- *   Those were deliberately inflated to Get Upto / model multiplier (commit
- *   cbc344a) so the old engine's depreciation landed back on Cashify's
- *   figure. They must be converted before use, never treated as a Get Upto.
- */
-export type ReferenceSemantics = 'cashify_get_upto' | 'legacy_pre_inflated_base';
-
 /** 'unknown' = the price came from the materialized snapshot, which carries
  * no per-device freshness of its own. */
 export type QuoteReferenceStatus = ReferencePriceStatus | 'unknown';
 
 export interface ResolvedReference {
-  /** The only price the engine consumes. */
+  /** Cashify's live public Get Upto for the variant. Not a launch price and
+   * not a pre-depreciation base: never depreciate it to show Get Upto. */
   cashifyGetUptoReference: CashifyGetUptoReference;
-  /** The stored figure before any semantic conversion (audit only). */
-  storedPrice: number;
-  semantics: ReferenceSemantics;
   source: BaseSource;
   referenceStatus: QuoteReferenceStatus;
   referenceSource: string | null;
@@ -75,62 +60,19 @@ export function materializedSnapshotKey(model: string, storage: string): string 
 const isPositivePrice = (value: unknown): value is number =>
   typeof value === 'number' && Number.isFinite(value) && value > 0;
 
-const SNAPSHOT_SOURCES: Record<string, string | undefined> = Object.fromEntries(
-  Object.entries(materializedSnapshotMeta as Record<string, { source?: string }>).map(([key, meta]) => [key, meta.source])
-);
-
-/** Provenances written from the pre-refresh snapshots (see
- * scripts/reference-pricing/migrate-legacy-snapshots.ts and
- * import-brand-snapshots.ts). Everything else - the live "cashify" scrape -
- * is a Get Upto figure. */
-const LEGACY_SOURCE_PREFIXES = ['legacy_migration:', 'brand_snapshot:'];
-
-export function semanticsForSource(source: string | null | undefined): ReferenceSemantics {
-  // A snapshot entry with no recorded provenance predates the refresh.
-  if (!source) return 'legacy_pre_inflated_base';
-  return LEGACY_SOURCE_PREFIXES.some((prefix) => source.startsWith(prefix))
-    ? 'legacy_pre_inflated_base'
-    : 'cashify_get_upto';
-}
-
-/**
- * Undoes the legacy inflation. The old engine's perfect-condition multiplier
- * applied to a legacy base is what that base was built to reproduce:
- * Cashify's Get Upto. Accessory bonuses were never part of that inflation.
- */
-export function cashifyGetUptoFromLegacyBase(brand: string, model: string, legacyBase: number): CashifyGetUptoReference {
-  const probe = 1_000_000;
-  const withoutAccessoryBonus: DiagnosticsType = { ...PERFECT_CONDITION_DIAGNOSTICS, accessories: ['bill'] };
-  const perfectMultiplier = calculateFhoneifyPrice(brand, model, probe, withoutAccessoryBonus).cashifyConditionEquivalent / probe;
-  return Math.round(legacyBase * perfectMultiplier);
-}
-
-function toReference(
-  device: Pick<CatalogDevice, 'brand' | 'model'>,
-  storedPrice: number,
-  semantics: ReferenceSemantics,
-  rest: Omit<ResolvedReference, 'cashifyGetUptoReference' | 'storedPrice' | 'semantics'>
-): ResolvedReference {
-  const cashifyGetUptoReference = semantics === 'cashify_get_upto'
-    ? storedPrice
-    : cashifyGetUptoFromLegacyBase(device.brand, device.model, storedPrice);
-  return { cashifyGetUptoReference, storedPrice, semantics, ...rest };
-}
-
 /**
  * Resolution order, most to least authoritative:
- *   1. the reference-price repository record (server only)
- *   2. the materialized snapshot exported from that repository
- *   3. the catalog's own basePrice (what the app has always fallen back to)
- * Each is converted to a Cashify Get Upto reference according to its
- * provenance. Returns null when none exist - callers must not invent a price.
+ *   1. the ReferencePrice repository record (server only)
+ *   2. lib/cashify_prices.json, exported from that same table
+ *      (npm run reference-prices:export) for when the database is unreachable
+ *   3. the catalog's own basePrice
+ * The resolved figure is used as-is. Returns null when none exist - callers
+ * must not invent a price.
  */
 export function resolveReference(params: {
-  device: Pick<CatalogDevice, 'brand' | 'model' | 'storage' | 'basePrice'>;
+  device: Pick<CatalogDevice, 'model' | 'storage' | 'basePrice'>;
   repositoryRecord?: ReferencePriceRecord | null;
   snapshot?: Record<string, number>;
-  /** Provenance per snapshot key; defaults to lib/cashify_prices.meta.json. */
-  snapshotSources?: Record<string, string | undefined>;
   now?: Date;
 }): ResolvedReference | null {
   const { device, repositoryRecord } = params;
@@ -141,7 +83,8 @@ export function resolveReference(params: {
     repositoryRecord.lastVerifiedAt &&
     isPositivePrice(repositoryRecord.currentPrice)
   ) {
-    return toReference(device, repositoryRecord.currentPrice, semanticsForSource(repositoryRecord.source), {
+    return {
+      cashifyGetUptoReference: repositoryRecord.currentPrice,
       source: 'reference_repository',
       // Always re-derived at read time; the stored status can be stale.
       referenceStatus: classifyFreshness({
@@ -151,29 +94,29 @@ export function resolveReference(params: {
       }),
       referenceSource: repositoryRecord.source,
       referenceLastVerifiedAt: repositoryRecord.lastVerifiedAt,
-    });
+    };
   }
 
   const snapshot = params.snapshot ?? (materializedSnapshot as Record<string, number>);
-  const key = materializedSnapshotKey(device.model, device.storage);
-  const snapshotPrice = snapshot[key];
+  const snapshotPrice = snapshot[materializedSnapshotKey(device.model, device.storage)];
   if (isPositivePrice(snapshotPrice)) {
-    const sources = params.snapshotSources ?? SNAPSHOT_SOURCES;
-    return toReference(device, snapshotPrice, semanticsForSource(sources[key]), {
+    return {
+      cashifyGetUptoReference: snapshotPrice,
       source: 'materialized_snapshot',
       referenceStatus: 'unknown',
-      referenceSource: sources[key] ?? null,
+      referenceSource: null,
       referenceLastVerifiedAt: null,
-    });
+    };
   }
 
   if (isPositivePrice(device.basePrice)) {
-    return toReference(device, device.basePrice, 'cashify_get_upto', {
+    return {
+      cashifyGetUptoReference: device.basePrice,
       source: 'catalog_base_price',
       referenceStatus: 'missing',
       referenceSource: null,
       referenceLastVerifiedAt: null,
-    });
+    };
   }
 
   return null;
@@ -186,16 +129,24 @@ export class PricingInvariantError extends Error {
   }
 }
 
-/** Highest price the methodology can produce for a reference: its Get Upto.
- * Every final offer is capped at Cashify's Get Upto before the uplift. */
-export function maxPlausiblePrice(reference: CashifyGetUptoReference): FhoneifyGetUpto {
-  return computeFhoneifyGetUpto(reference);
+/** Highest final offer the methodology can legitimately produce for a
+ * reference: the reference plus every accessory bonus, or the fixed ₹1,200
+ * non-working-device price (which can exceed a very cheap reference), then
+ * the capped uplift. */
+export function maxPlausiblePrice(reference: CashifyGetUptoReference): number {
+  const maxAccessoryBonus = COMMON_BONUSES.box + COMMON_BONUSES.chargerOnlyBonus;
+  const NON_WORKING_DEVICE_PRICE = 1200;
+  return Math.max(
+    applyCompetitorUplift(reference, Math.round(reference + maxAccessoryBonus)),
+    applyCompetitorUplift(reference, NON_WORKING_DEVICE_PRICE)
+  );
 }
 
-/** Runs the methodology, then refuses to return a price that is non-finite,
- * below the floor, below the Cashify condition equivalent, or above the Get
- * Upto. A violation means a bug or corrupt input - never something to show a
- * customer or persist on a lead. */
+/** Final offer for the customer's answers. Runs the unchanged methodology,
+ * then refuses to return a price that is non-finite, below the floor, below
+ * the Cashify condition equivalent, or above what the methodology can
+ * produce. A violation means a bug or corrupt input - never something to
+ * show a customer or persist on a lead. */
 export function priceDevice(
   brand: string,
   model: string,
@@ -217,30 +168,14 @@ export function priceDevice(
   if (fhoneifyPrice < COMMON_BONUSES.floorPrice) {
     throw new PricingInvariantError('price is below the floor price', details);
   }
-  if (cashifyConditionEquivalent > Math.round(reference)) {
-    throw new PricingInvariantError('Cashify condition equivalent exceeds the Cashify Get Upto', details);
-  }
   if (fhoneifyPrice < cashifyConditionEquivalent) {
     throw new PricingInvariantError('uplifted price is below the Cashify condition equivalent', details);
   }
   if (fhoneifyPrice > ceiling) {
-    throw new PricingInvariantError('final offer exceeds the Fhoneify Get Upto', details);
+    throw new PricingInvariantError('price exceeds the maximum the methodology can produce', details);
   }
 
   return result;
 }
 
-export { PERFECT_CONDITION_DIAGNOSTICS };
-
-/** Fhoneify "Get Upto": the reference plus the existing uplift, with no
- * condition rule applied (the customer has answered nothing yet). */
-export function computeGetUpto(reference: CashifyGetUptoReference): FhoneifyGetUpto {
-  if (!isPositivePrice(reference)) {
-    throw new PricingInvariantError('Cashify Get Upto reference must be a positive finite number', { reference });
-  }
-  const getUpto = computeFhoneifyGetUpto(reference);
-  if (getUpto <= reference) {
-    throw new PricingInvariantError('Fhoneify Get Upto must be above the Cashify Get Upto', { reference, getUpto });
-  }
-  return getUpto;
-}
+export { PERFECT_CONDITION_DIAGNOSTICS, computeFhoneifyGetUpto };

@@ -26,7 +26,7 @@ export interface SignedQuote {
   /** POST /api/quote/price fhoneifyPrice - the final offer for `diagnostics`. */
   price: number;
   /** POST /api/quote/price startingPrice - Fhoneify Get Upto (Cashify Get
-   * Upto + uplift, no answers applied). Never below `price`. */
+   * Upto + uplift, no answers applied). */
   getUpto: number;
   token: string;
   expiresAt: string;
@@ -68,7 +68,7 @@ export function isUsableSignedQuote(q: unknown, device: QuoteSessionDevice, now:
     s.price > 0 &&
     typeof s.getUpto === 'number' &&
     Number.isFinite(s.getUpto) &&
-    s.getUpto >= s.price &&
+    s.getUpto > 0 &&
     typeof s.token === 'string' &&
     s.token.length > 0 &&
     typeof s.expiresAt === 'string' &&

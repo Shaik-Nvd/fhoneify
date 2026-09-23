@@ -43,10 +43,6 @@ interface GoldenCase {
   expected: { cashifyConditionEquivalent: number; fhoneifyPrice: number };
 }
 
-// 2026-09-23: basePrice here is the Cashify Get Upto reference. Eight
-// perfect-condition cases used to price ABOVE that reference (reference +
-// ₹380 box); the Cashify equivalent is now capped at the Get Upto, so their
-// final offer equals computeFhoneifyGetUpto(reference). Nothing else moved.
 // Golden values captured from lib/pricingCalculator.ts as of the competitor-
 // uplift floor-bug fix (commit eefac53). Covers every brand branch
 // (Apple/Samsung/Xiaomi/Vivo/Oppo/OnePlus/Nothing/generic-fallback),
@@ -70,27 +66,27 @@ const GOLDEN_CASES: GoldenCase[] = [
   // functional map was reconnected; both faults previously had a ₹0 effect.
   { name: 'samsung_s24_ultra_spen_missing', brand: 'Samsung', model: 'Galaxy S24 Ultra', basePrice: 55000, diagnostics: diag({ hardware: ['s_pen'] }), expected: { cashifyConditionEquivalent: 49106, fhoneifyPrice: 51070 } },
   { name: 'samsung_fold_hinge_defect', brand: 'Samsung', model: 'Galaxy Z Fold 6', basePrice: 60000, diagnostics: diag({ hardware: ['hinge'] }), expected: { cashifyConditionEquivalent: 46244, fhoneifyPrice: 48094 } },
-  { name: 'samsung_budget_perfect', brand: 'Samsung', model: 'Galaxy M14', basePrice: 6000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 6000, fhoneifyPrice: 6480 } },
+  { name: 'samsung_budget_perfect', brand: 'Samsung', model: 'Galaxy M14', basePrice: 6000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 6260, fhoneifyPrice: 6761 } },
 
-  { name: 'xiaomi_redmi_note13_perfect', brand: 'Xiaomi', model: 'Redmi Note 13', basePrice: 15000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 15000, fhoneifyPrice: 16200 } },
+  { name: 'xiaomi_redmi_note13_perfect', brand: 'Xiaomi', model: 'Redmi Note 13', basePrice: 15000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 15380, fhoneifyPrice: 16610 } },
   { name: 'xiaomi_redmi_note13_worst', brand: 'Xiaomi', model: 'Redmi Note 13', basePrice: 15000, diagnostics: diag({ calls: false, touch: false, warranty: false, validBill: false, mobileAge: 'above11' }), expected: { cashifyConditionEquivalent: 1200, fhoneifyPrice: 1296 } },
 
-  { name: 'vivo_x100_perfect', brand: 'Vivo', model: 'Vivo X100', basePrice: 40000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 40000, fhoneifyPrice: 42000 } },
+  { name: 'vivo_x100_perfect', brand: 'Vivo', model: 'Vivo X100', basePrice: 40000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 40380, fhoneifyPrice: 42380 } },
   { name: 'vivo_x_fold_perfect', brand: 'Vivo', model: 'Vivo X Fold 5', basePrice: 70000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 68980, fhoneifyPrice: 70980 } },
 
-  { name: 'oppo_reno11_perfect', brand: 'Oppo', model: 'Reno 11', basePrice: 16000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 16000, fhoneifyPrice: 17280 } },
+  { name: 'oppo_reno11_perfect', brand: 'Oppo', model: 'Reno 11', basePrice: 16000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 16060, fhoneifyPrice: 17345 } },
 
   { name: 'oneplus_12_perfect', brand: 'OnePlus', model: 'OnePlus 12', basePrice: 45000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 44480, fhoneifyPrice: 46480 } },
-  { name: 'oneplus_nord_perfect', brand: 'OnePlus', model: 'OnePlus Nord CE4', basePrice: 12000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 12000, fhoneifyPrice: 12960 } },
+  { name: 'oneplus_nord_perfect', brand: 'OnePlus', model: 'OnePlus Nord CE4', basePrice: 12000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 12140, fhoneifyPrice: 13111 } },
 
-  { name: 'nothing_phone2_perfect', brand: 'Nothing', model: 'Phone 2', basePrice: 17000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 17000, fhoneifyPrice: 18360 } },
+  { name: 'nothing_phone2_perfect', brand: 'Nothing', model: 'Phone 2', basePrice: 17000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 17040, fhoneifyPrice: 18403 } },
 
   { name: 'realme_gt5_perfect', brand: 'Realme', model: 'Realme GT 5', basePrice: 28000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 26980, fhoneifyPrice: 28599 } },
   { name: 'motorola_edge_perfect', brand: 'Motorola', model: 'Edge 50', basePrice: 18000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 17480, fhoneifyPrice: 18878 } },
   { name: 'google_pixel_perfect', brand: 'Google', model: 'Pixel 8', basePrice: 35000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 33630, fhoneifyPrice: 35630 } },
 
-  { name: 'boundary_base_exactly_20000', brand: 'Xiaomi', model: 'Redmi Note 13', basePrice: 20000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 20000, fhoneifyPrice: 21600 } },
-  { name: 'boundary_base_exactly_50000', brand: 'Vivo', model: 'Vivo X100', basePrice: 50000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 50000, fhoneifyPrice: 52000 } },
+  { name: 'boundary_base_exactly_20000', brand: 'Xiaomi', model: 'Redmi Note 13', basePrice: 20000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 20380, fhoneifyPrice: 22010 } },
+  { name: 'boundary_base_exactly_50000', brand: 'Vivo', model: 'Vivo X100', basePrice: 50000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 50380, fhoneifyPrice: 52380 } },
   { name: 'boundary_low_value_device', brand: 'Realme', model: 'Realme GT 5', basePrice: 1300, diagnostics: diag({ calls: false, touch: false, warranty: false, validBill: false, mobileAge: 'above11' }), expected: { cashifyConditionEquivalent: 200, fhoneifyPrice: 216 } },
 
   { name: 'unknown_brand_falls_to_generic', brand: 'UnknownBrandXYZ', model: 'Some Model 9000', basePrice: 10000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 9880, fhoneifyPrice: 10670 } },

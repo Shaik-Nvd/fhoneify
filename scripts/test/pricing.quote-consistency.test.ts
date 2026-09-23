@@ -13,7 +13,7 @@ import fs from 'fs';
 import path from 'path';
 import type { DiagnosticsType } from '../../lib/pricingCalculator';
 import { createPricingService } from '../../lib/pricing/pricingService';
-import { PERFECT_CONDITION_DIAGNOSTICS, computeGetUpto, priceDevice } from '../../lib/pricing/engine';
+import { PERFECT_CONDITION_DIAGNOSTICS, computeFhoneifyGetUpto, priceDevice } from '../../lib/pricing/engine';
 import { explainQuote } from '../../lib/pricing/explain';
 import { buildLeadAnswers, customerPayout } from '../../lib/pricing/payout';
 import {
@@ -150,7 +150,7 @@ async function run() {
   await test('Get Upto is the Cashify Get Upto plus uplift, before any answer', async () => {
     const { svc } = setup();
     const starting = await pageRequestsQuote(svc, PERFECT_CONDITION_DIAGNOSTICS);
-    assert.equal(starting.getUpto, computeGetUpto(REFERENCE));
+    assert.equal(starting.getUpto, computeFhoneifyGetUpto(REFERENCE));
     assert.equal(starting.getUpto, 37940, 'OnePlus 15R 12/512: ₹35,940 + capped ₹2,000');
     assert.ok(starting.getUpto > REFERENCE, 'Fhoneify Get Upto starts above Cashify');
     const damaged = await pageRequestsQuote(svc, ANSWERS);
@@ -161,7 +161,6 @@ async function run() {
   await test('"Schedule Pickup" from Get Upto stores exactly the signed perfect-condition offer', async () => {
     const { svc } = setup();
     const starting = await pageRequestsQuote(svc, PERFECT_CONDITION_DIAGNOSTICS);
-    assert.ok(starting.price <= starting.getUpto, 'booked offer never exceeds the advertised Get Upto');
     const lead = await submitLead(svc, starting, false);
     assert.equal(lead.quotedPrice, starting.price);
     assert.equal(lead.answers.pricing.priceSource, 'quote_token');
@@ -192,7 +191,7 @@ async function run() {
       ['string price', { ...good, price: '30916' }],
       ['no token', { ...good, token: '' }],
       ['no Get Upto (pre-2026-09-23 session)', { ...good, getUpto: undefined }],
-      ['Get Upto below the offer', { ...good, getUpto: good.price - 1 }],
+      ['zero Get Upto', { ...good, getUpto: 0 }],
       ['expired', { ...good, expiresAt: new Date(now.getTime() - 1).toISOString() }],
       ['other device', { ...good, device: { ...DEVICE, storage: '12 GB/256 GB' } }],
     ];
