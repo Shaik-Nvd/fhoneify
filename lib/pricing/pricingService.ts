@@ -204,6 +204,27 @@ export function createPricingService(deps: PricingServiceDeps) {
     };
   }
 
+  /** Fhoneify Get Upto only (homepage cards): the same reference lookup and
+   * computeFhoneifyGetUpto as quote(), with no answers and no token. */
+  async function getUpto(input: { brand: string; model: string; storage: string }): Promise<
+    { ok: true; device: { brand: string; model: string; storage: string }; startingPrice: number; referenceStatus: QuoteReferenceStatus } | PricingFailure
+  > {
+    const device = findCatalogDevice(input.brand, input.model, input.storage, deps.catalog);
+    if (!device) return { ok: false, code: 'DEVICE_NOT_FOUND', message: 'Device not found' };
+    const key = deviceKey({ brand: device.brand, model: device.model, storage: device.storage });
+    const reference = await lookupReference(key);
+    const base = resolveReference({ device, repositoryRecord: reference.record, snapshot: deps.snapshot, now: now() });
+    if (!base || (deps.strictReferenceMode && base.source === 'catalog_base_price')) {
+      return { ok: false, code: 'REFERENCE_PRICE_UNAVAILABLE', message: 'Reference price unavailable for this device' };
+    }
+    return {
+      ok: true,
+      device: { brand: device.brand, model: device.model, storage: device.storage },
+      startingPrice: computeFhoneifyGetUpto(base.cashifyGetUptoReference),
+      referenceStatus: base.referenceStatus,
+    };
+  }
+
   /**
    * The price a lead is stored with. Never the client's number: a valid token
    * for this exact device + diagnostics locks its price; otherwise the price
@@ -278,7 +299,7 @@ export function createPricingService(deps: PricingServiceDeps) {
     return { ok: true, price, diagnostics: parsed.value, audit };
   }
 
-  return { quote, verifyLeadPrice };
+  return { quote, getUpto, verifyLeadPrice };
 }
 
 export type PricingService = ReturnType<typeof createPricingService>;

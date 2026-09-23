@@ -97,6 +97,33 @@ export async function createQuote(req: Request, res: Response) {
   }
 }
 
+const GetUptoSchema = z.object({
+  devices: z
+    .array(z.object({ brand: deviceField('brand'), model: deviceField('model'), storage: deviceField('storage') }))
+    .min(1)
+    .max(20),
+});
+
+/** POST /api/quote/get-upto - Fhoneify Get Upto (ReferencePrice + uplift)
+ * for up to 20 devices in one call, for the homepage cards. A device that
+ * cannot be priced returns startingPrice null; no fallback number is sent. */
+export async function getUptoBatch(req: Request, res: Response) {
+  try {
+    const body = GetUptoSchema.safeParse(req.body);
+    if (!body.success) {
+      return res.status(400).json({ success: false, error: body.error.issues[0].message });
+    }
+    const data = await Promise.all(body.data.devices.map(async (device) => {
+      const outcome = await pricingService.getUpto(device);
+      return { ...device, startingPrice: outcome.ok ? outcome.startingPrice : null };
+    }));
+    return res.json({ success: true, data });
+  } catch (err: any) {
+    logger.error({ err: err.message }, 'Error in getUptoBatch controller');
+    return res.status(500).json({ success: false, error: 'Internal server error' });
+  }
+}
+
 /** POST /api/quote/price - authoritative price + signed quote token for the
  * brand/model/storage and diagnostics the quote page collected. */
 export async function priceQuote(req: Request, res: Response) {

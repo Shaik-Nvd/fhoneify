@@ -28,6 +28,7 @@ const marketPriceLimiter = limiter(envLimit('QUOTE_MARKET_PRICE_RATE_LIMIT', 10)
 router.get('/devices', ctrl.listDevices);
 router.post('/', pricingLimiter, ctrl.createQuote);
 router.post('/price', pricingLimiter, ctrl.priceQuote);
+router.post('/get-upto', pricingLimiter, ctrl.getUptoBatch);
 router.post('/cashify-price', marketPriceLimiter, ctrl.getCashifyPrice);
 router.post('/leads', leadLimiter, ctrl.createLead);
 router.get('/:id', ctrl.getQuote);

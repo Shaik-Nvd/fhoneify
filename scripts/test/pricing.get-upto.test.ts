@@ -107,6 +107,9 @@ async function run() {
         assert.ok(q.ok, `${model}: ${!q.ok ? q.code : ''}`);
         if (q.ok) assert.equal(q.startingPrice, expectedGetUpto(reference), `${model}: startingPrice`);
       }
+      // Homepage cards (POST /api/quote/get-upto) show the same number.
+      const card = await svc.getUpto({ brand, model, storage });
+      assert.ok(card.ok && card.startingPrice === expectedGetUpto(reference), `${model}: homepage Get Upto`);
     }
   });
 

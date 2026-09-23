@@ -1,13 +1,13 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Draggable } from 'gsap/all';
 import Image from 'next/image';
-import { computeFhoneifyGetUpto } from '@/lib/pricingCalculator';
+import api from '@/lib/api';
 
 export interface TopModel {
   id: string;
@@ -15,20 +15,22 @@ export interface TopModel {
   model: string;
   ram: string;
   storage: string;
-  price: number;
+  /** Catalog identity sent to POST /api/quote/get-upto. */
+  catalogModel: string;
+  catalogStorage: string;
   image: string;
 }
 
 const TOP_MODELS: TopModel[] = [
-  { id: '1', brand: 'Apple', model: 'iPhone 14 Pro', ram: '6 GB', storage: '128 GB', price: 41150, image: 'https://m.media-amazon.com/images/I/61HHS0HrjpL._SX679_.jpg' },
-  { id: '2', brand: 'Apple', model: 'iPhone 15', ram: '6 GB', storage: '128 GB', price: 38040, image: 'https://m.media-amazon.com/images/I/71d7rfSl0wL._SX679_.jpg' },
-  { id: '3', brand: 'Apple', model: 'iPhone 13 Pro', ram: '6 GB', storage: '128 GB', price: 33100, image: 'https://m.media-amazon.com/images/I/61jLiCovxVL._SX679_.jpg' },
-  { id: '4', brand: 'Apple', model: 'iPhone 14', ram: '6 GB', storage: '128 GB', price: 26730, image: 'https://m.media-amazon.com/images/I/61bK6PMOC3L._SX679_.jpg' },
-  { id: '5', brand: 'Apple', model: 'iPhone 13', ram: '4 GB', storage: '128 GB', price: 23950, image: 'https://m.media-amazon.com/images/I/71xb2xkN5qL._SX679_.jpg' },
-  { id: '6', brand: 'Apple', model: 'iPhone 12', ram: '4 GB', storage: '128 GB', price: 17580, image: 'https://m.media-amazon.com/images/I/711wsjBtWeL._SX679_.jpg' },
-  { id: '7', brand: 'Apple', model: 'iPhone 12', ram: '4 GB', storage: '64 GB', price: 16850, image: 'https://m.media-amazon.com/images/I/711wsjBtWeL._SX679_.jpg' },
-  { id: '8', brand: 'Apple', model: 'iPhone 11', ram: '4 GB', storage: '128 GB', price: 14020, image: 'https://m.media-amazon.com/images/I/71tpxtLD0aL._SX679_.jpg' },
-  { id: '10', brand: 'Apple', model: 'iPhone 11', ram: '4 GB', storage: '64 GB', price: 13220, image: 'https://m.media-amazon.com/images/I/71tpxtLD0aL._SX679_.jpg' },
+  { id: '1', brand: 'Apple', model: 'iPhone 14 Pro', ram: '6 GB', storage: '128 GB', catalogModel: 'Apple iPhone 14 Pro', catalogStorage: '128GB', image: 'https://m.media-amazon.com/images/I/61HHS0HrjpL._SX679_.jpg' },
+  { id: '2', brand: 'Apple', model: 'iPhone 15', ram: '6 GB', storage: '128 GB', catalogModel: 'Apple iPhone 15', catalogStorage: '128GB', image: 'https://m.media-amazon.com/images/I/71d7rfSl0wL._SX679_.jpg' },
+  { id: '3', brand: 'Apple', model: 'iPhone 13 Pro', ram: '6 GB', storage: '128 GB', catalogModel: 'Apple iPhone 13 Pro', catalogStorage: '128GB', image: 'https://m.media-amazon.com/images/I/61jLiCovxVL._SX679_.jpg' },
+  { id: '4', brand: 'Apple', model: 'iPhone 14', ram: '6 GB', storage: '128 GB', catalogModel: 'Apple iPhone 14', catalogStorage: '128GB', image: 'https://m.media-amazon.com/images/I/61bK6PMOC3L._SX679_.jpg' },
+  { id: '5', brand: 'Apple', model: 'iPhone 13', ram: '4 GB', storage: '128 GB', catalogModel: 'Apple iPhone 13', catalogStorage: '128GB', image: 'https://m.media-amazon.com/images/I/71xb2xkN5qL._SX679_.jpg' },
+  { id: '6', brand: 'Apple', model: 'iPhone 12', ram: '4 GB', storage: '128 GB', catalogModel: 'Apple iPhone 12', catalogStorage: '128GB', image: 'https://m.media-amazon.com/images/I/711wsjBtWeL._SX679_.jpg' },
+  { id: '7', brand: 'Apple', model: 'iPhone 12', ram: '4 GB', storage: '64 GB', catalogModel: 'Apple iPhone 12', catalogStorage: '64GB', image: 'https://m.media-amazon.com/images/I/711wsjBtWeL._SX679_.jpg' },
+  { id: '8', brand: 'Apple', model: 'iPhone 11', ram: '4 GB', storage: '128 GB', catalogModel: 'Apple iPhone 11', catalogStorage: '128GB', image: 'https://m.media-amazon.com/images/I/71tpxtLD0aL._SX679_.jpg' },
+  { id: '10', brand: 'Apple', model: 'iPhone 11', ram: '4 GB', storage: '64 GB', catalogModel: 'Apple iPhone 11', catalogStorage: '64GB', image: 'https://m.media-amazon.com/images/I/71tpxtLD0aL._SX679_.jpg' },
 ];
 
 
@@ -71,6 +73,25 @@ function buildSeamlessLoop(items: any[], spacing: number, animateFunc: (el: HTML
 
 export default function TopSellingModels() {
   const router = useRouter();
+  // Get Upto comes only from the server (ReferencePrice + uplift). Until it
+  // arrives, or if it fails, no number is shown - never a bundled figure.
+  const [getUpto, setGetUpto] = useState<Record<string, number>>({});
+
+  useEffect(() => {
+    let cancelled = false;
+    const devices = TOP_MODELS.map((m) => ({ brand: m.brand, model: m.catalogModel, storage: m.catalogStorage }));
+    api.post('/api/quote/get-upto', { devices })
+      .then((res) => {
+        if (cancelled || !res.data?.success || !Array.isArray(res.data.data)) return;
+        const prices: Record<string, number> = {};
+        res.data.data.forEach((row: any, i: number) => {
+          if (typeof row?.startingPrice === 'number' && row.startingPrice > 0) prices[TOP_MODELS[i].id] = row.startingPrice;
+        });
+        setGetUpto(prices);
+      })
+      .catch(() => { /* cards stay without a price */ });
+    return () => { cancelled = true; };
+  }, []);
   const containerRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<(HTMLLIElement | null)[]>([]);
   const nextBtnRef = useRef<HTMLButtonElement>(null);
@@ -206,7 +227,7 @@ export default function TopSellingModels() {
               </div>
               <div className="text-center mb-6">
                 <div className="text-muted text-xs uppercase tracking-wider mb-1">Get Upto</div>
-                <div className="text-[var(--gold)] font-black text-2xl md:text-3xl">₹{computeFhoneifyGetUpto(item.price).toLocaleString('en-IN')}</div>
+                <div className="text-[var(--gold)] font-black text-2xl md:text-3xl">{getUpto[item.id] ? `₹${getUpto[item.id].toLocaleString('en-IN')}` : '…'}</div>
               </div>
               <button 
                 onClick={() => handleSellClick(item.brand, item.model)}
