@@ -8,7 +8,7 @@ import snapshot from '../../lib/cashify_prices.json';
 import { SEED_DEVICES } from '../../lib/seed_devices';
 import { applyCompetitorUplift } from '../../lib/pricingCalculator';
 import { classifyPricingFamily, pricingFamilyKey } from '../../lib/pricing/families';
-import { priceDevice, resolveBaseMarketPrice } from '../../lib/pricing/engine';
+import { priceDevice, resolveReference } from '../../lib/pricing/engine';
 import { deviceKey, type ReferencePriceRecord } from '../../lib/referencePricing/types';
 import { VALIDATION_PROFILES } from '../pricing/validation-profiles';
 
@@ -25,7 +25,7 @@ let quotesGenerated = 0;
 for (const device of validDevices) {
   const family = pricingFamilyKey(device.brand, device.model);
   families.add(family);
-  const base = resolveBaseMarketPrice({
+  const base = resolveReference({
     device,
     repositoryRecord: records[deviceKey(device)] ?? null,
     snapshot: snapshot as Record<string, number>,
@@ -33,17 +33,17 @@ for (const device of validDevices) {
   });
 
   try {
-    assert.ok(base && Number.isFinite(base.price) && base.price > 0, 'no valid catalog/reference price');
+    assert.ok(base && Number.isFinite(base.cashifyGetUptoReference) && base.cashifyGetUptoReference > 0, 'no valid catalog/reference price');
     sources.set(base.source, (sources.get(base.source) ?? 0) + 1);
     const calculated = Object.fromEntries(Object.entries(VALIDATION_PROFILES).map(([name, diagnostics]) => {
-      const first = priceDevice(device.brand, device.model, base.price, diagnostics);
-      const second = priceDevice(device.brand, device.model, base.price, diagnostics);
+      const first = priceDevice(device.brand, device.model, base.cashifyGetUptoReference, diagnostics);
+      const second = priceDevice(device.brand, device.model, base.cashifyGetUptoReference, diagnostics);
       quotesGenerated += 2;
       assert.deepEqual(second, first, `${name}: non-deterministic result`);
-      assert.ok(Number.isFinite(first.cashifyBasePrice) && first.cashifyBasePrice >= 0, `${name}: invalid Cashify-equivalent`);
+      assert.ok(Number.isFinite(first.cashifyConditionEquivalent) && first.cashifyConditionEquivalent >= 0, `${name}: invalid Cashify-equivalent`);
       assert.ok(Number.isFinite(first.fhoneifyPrice) && first.fhoneifyPrice >= 100, `${name}: invalid final quote`);
-      assert.equal(first.fhoneifyPrice, applyCompetitorUplift(base.price, first.cashifyBasePrice), `${name}: uplift mismatch`);
-      return [name, first.cashifyBasePrice];
+      assert.equal(first.fhoneifyPrice, applyCompetitorUplift(base.cashifyGetUptoReference, first.cashifyConditionEquivalent), `${name}: uplift mismatch`);
+      return [name, first.cashifyConditionEquivalent];
     }));
 
     assert.ok(calculated.P0_PERFECT >= calculated.P2_MINOR_SCREEN, 'minor damage increases quote');

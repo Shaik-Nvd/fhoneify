@@ -21,7 +21,7 @@ const controls = (data.isolationCases as Observation[]).filter((entry) => entry.
 const evaluate = (entry: Observation) => {
   const parsed = parseDiagnostics(entry.fhoneifyAnswers);
   assert.ok(parsed.ok, `${entry.model}: diagnostics must parse`);
-  const equivalent = priceDevice(entry.brand, entry.model, entry.referencePrice, parsed.value).cashifyBasePrice;
+  const equivalent = priceDevice(entry.brand, entry.model, entry.referencePrice, parsed.value).cashifyConditionEquivalent;
   return { ...entry, equivalent, error: equivalent - entry.cashifyActualFinalQuote };
 };
 const mae = (items: ReturnType<typeof evaluate>[]) =>

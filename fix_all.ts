@@ -33,9 +33,9 @@ function findBasePrice(brand: string, model: string, targetPrice: number): numbe
     for (let i = 0; i < 60; i++) {
         let mid = (low + high) / 2;
         let res = calculateFhoneifyPrice(brand, model, mid, perfectDiagnostics);
-        if (Math.abs(res.cashifyBasePrice - targetPrice) < 0.5) {
+        if (Math.abs(res.cashifyConditionEquivalent - targetPrice) < 0.5) {
             return mid;
-        } else if (res.cashifyBasePrice < targetPrice) {
+        } else if (res.cashifyConditionEquivalent < targetPrice) {
             low = mid;
         } else {
             high = mid;

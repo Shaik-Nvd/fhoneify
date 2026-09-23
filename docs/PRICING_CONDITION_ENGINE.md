@@ -80,3 +80,33 @@ model-specific override or a new Apple-wide numeric rule.
 Status: `DOCUMENTED_OUTLIER`. Keep the calibrated production rule unchanged
 until a Cashify observation exposes equivalent age/warranty semantics or a
 second supported Apple 14 Pro Max observation confirms a generation-level rule.
+
+## Reference semantics (2026-09-23)
+
+`ReferencePrice.currentPrice` (source `cashify`) is Cashify's live public
+"Get Upto". It is already Cashify's best-case used-device offer.
+
+- **Fhoneify Get Upto** (`startingPrice`, shown before any answer) =
+  `computeFhoneifyGetUpto(reference)` = `applyCompetitorUplift(reference, reference)`.
+  No age, warranty, condition or accessory rule runs.
+- **Final offer** = brand condition rules on the reference → Cashify condition
+  equivalent, capped at `reference − accessory shortfall` → existing uplift.
+  No final offer can exceed the Get Upto.
+- The pre-refresh `lib/cashify_prices.json` values (and ReferencePrice rows with
+  source `legacy_migration:*` / `brand_snapshot:*`) are a *different* number: a
+  base pre-inflated to Get Upto ÷ model multiplier (commit `cbc344a`, e.g. iPhone
+  15 512GB ₹59,927 vs Get Upto ₹45,570). `resolveReference` converts them by
+  provenance before use.
+
+Root cause of Fhoneify's Get Upto starting below Cashify: `computeStartingPrice`
+ran the full brand formula with perfect answers, so the Apple age multiplier
+(0.7496 for iPhone 14/15) and Android 0.98/+₹380 were applied on top of a figure
+that was already Cashify's Get Upto. Guarded by `npm run test:pricing:get-upto`.
+
+Open: the perfect-condition *final* offer for Apple families whose young
+multiplier was fitted to the legacy inflated base (iPhone 15/15 Plus/15 Pro Max,
+iPhone 14/14 Plus, iPhone 13 and older) is still far below the Get Upto (iPhone 15
+512GB: offer ₹36,540 vs Get Upto ₹47,570). iPhone 15 Pro / 16 Pro, OnePlus and
+Samsung were recalibrated against live Get Upto values and match Cashify's
+questionnaire (comparable MAE ₹433). The Oppo formula ignores `above11`/warranty.
+Both need young/perfect Cashify observations before any value changes.

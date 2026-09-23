@@ -97,7 +97,7 @@ for (const device of devices) {
   test(device.category, () => {
     const prices = Object.fromEntries(Object.entries(profiles).map(([name, diagnostics]) => [
       name,
-      calculateFhoneifyPrice(device.brand, device.model, device.base, diagnostics).cashifyBasePrice,
+      calculateFhoneifyPrice(device.brand, device.model, device.base, diagnostics).cashifyConditionEquivalent,
     ])) as Record<string, number>;
 
     for (const scenario of ['minorScratches', 'dents', 'crackedScreen', 'nonOriginalScreen', 'deadTouch', 'spotsAndLines', 'bentFrame', 'cameraFault', 'singleFunctional', 'multipleFunctional', 'missingAccessories']) {
@@ -109,14 +109,14 @@ for (const device of devices) {
     assert.ok(prices.severe < prices.bentFrame, 'severe multi-damage must be below a bent frame alone');
     assert.ok(prices.oldPerfect > 0, 'old but perfect scenario must still produce a positive quote');
     assert.ok(prices.oldPerfect <= prices.perfect, `older/out-of-warranty must not exceed younger/in-warranty (${prices.oldPerfect} > ${prices.perfect})`);
-    const warrantyLost = calculateFhoneifyPrice(device.brand, device.model, device.base, answers({ warranty: false, validBill: true, mobileAge: 'below3' })).cashifyBasePrice;
+    const warrantyLost = calculateFhoneifyPrice(device.brand, device.model, device.base, answers({ warranty: false, validBill: true, mobileAge: 'below3' })).cashifyConditionEquivalent;
     assert.ok(warrantyLost <= prices.perfect, `losing warranty must not increase payout (${warrantyLost} > ${prices.perfect})`);
   });
 }
 
 test('iPhone 15 Pro age/warranty ordering cannot invert', () => {
-  const young = calculateFhoneifyPrice('Apple', 'Apple iPhone 15 Pro', 64800, answers({ mobileAge: 'below3', warranty: true })).cashifyBasePrice;
-  const old = calculateFhoneifyPrice('Apple', 'Apple iPhone 15 Pro', 64800, answers({ mobileAge: 'above11', warranty: false })).cashifyBasePrice;
+  const young = calculateFhoneifyPrice('Apple', 'Apple iPhone 15 Pro', 64800, answers({ mobileAge: 'below3', warranty: true })).cashifyConditionEquivalent;
+  const old = calculateFhoneifyPrice('Apple', 'Apple iPhone 15 Pro', 64800, answers({ mobileAge: 'above11', warranty: false })).cashifyConditionEquivalent;
   assert.ok(young >= old, `young/in-warranty quote must be at least old/out-of-warranty (${young} < ${old})`);
 });
 
@@ -131,22 +131,22 @@ test('warranty invalidation uses current UI fields', () => {
 
 test('every functional id exposed by the quote page has a deduction', () => {
   const device = { brand: 'Realme', model: 'Realme GT 5G', base: 20000 };
-  const perfect = calculateFhoneifyPrice(device.brand, device.model, device.base, answers()).cashifyBasePrice;
+  const perfect = calculateFhoneifyPrice(device.brand, device.model, device.base, answers()).cashifyConditionEquivalent;
   for (const hardware of Object.keys(COMMON_FUNCTIONAL_PENALTIES)) {
-    const damaged = calculateFhoneifyPrice(device.brand, device.model, device.base, answers({ hardware: [hardware] })).cashifyBasePrice;
+    const damaged = calculateFhoneifyPrice(device.brand, device.model, device.base, answers({ hardware: [hardware] })).cashifyConditionEquivalent;
     assert.ok(damaged < perfect, `${hardware} must reduce the Cashify-equivalent quote`);
   }
 });
 
 test('a Face ID fault cannot increase the iPhone 14 quote', () => {
-  const perfect = calculateFhoneifyPrice('Apple', 'Apple iPhone 14', 30000, answers()).cashifyBasePrice;
-  const damaged = calculateFhoneifyPrice('Apple', 'Apple iPhone 14', 30000, answers({ hardware: ['face'] })).cashifyBasePrice;
+  const perfect = calculateFhoneifyPrice('Apple', 'Apple iPhone 14', 30000, answers()).cashifyConditionEquivalent;
+  const damaged = calculateFhoneifyPrice('Apple', 'Apple iPhone 14', 30000, answers({ hardware: ['face'] })).cashifyConditionEquivalent;
   assert.ok(damaged < perfect, `Face ID fault must reduce the quote (${damaged} >= ${perfect})`);
 });
 
 test('current granular fields work without legacy defect ids', () => {
   const device = { brand: 'Samsung', model: 'Samsung Galaxy S24 Ultra 5G', base: 55000 };
-  const perfect = calculateFhoneifyPrice(device.brand, device.model, device.base, answers()).cashifyBasePrice;
+  const perfect = calculateFhoneifyPrice(device.brand, device.model, device.base, answers()).cashifyConditionEquivalent;
   const granular: Partial<DiagnosticsType>[] = [
     { screenCondition: 'Screen cracked/ glass broken' },
     { screenSpots: '1-2 minor spots on screen' },
@@ -158,7 +158,7 @@ test('current granular fields work without legacy defect ids', () => {
     { bodyBent: 'Bent/ curved panel' },
   ];
   for (const fields of granular) {
-    const damaged = calculateFhoneifyPrice(device.brand, device.model, device.base, answers(fields)).cashifyBasePrice;
+    const damaged = calculateFhoneifyPrice(device.brand, device.model, device.base, answers(fields)).cashifyConditionEquivalent;
     assert.ok(damaged < perfect, `${JSON.stringify(fields)} must reduce the Cashify-equivalent quote`);
   }
 });

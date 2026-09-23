@@ -7,6 +7,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Draggable } from 'gsap/all';
 import Image from 'next/image';
+import { computeFhoneifyGetUpto } from '@/lib/pricingCalculator';
 
 export interface TopModel {
   id: string;
@@ -30,11 +31,6 @@ const TOP_MODELS: TopModel[] = [
   { id: '10', brand: 'Apple', model: 'iPhone 11', ram: '4 GB', storage: '64 GB', price: 13220, image: 'https://m.media-amazon.com/images/I/71tpxtLD0aL._SX679_.jpg' },
 ];
 
-const calculateFhoneifyPrice = (basePrice: number) => {
-  if (basePrice <= 20000) return Math.round(basePrice * 1.08);
-  if (basePrice <= 50000) return Math.round(basePrice * 1.06);
-  return Math.round(basePrice * 1.04);
-};
 
 // We include buildSeamlessLoop outside component or inside context.
 function buildSeamlessLoop(items: any[], spacing: number, animateFunc: (el: HTMLElement) => gsap.core.Timeline) {
@@ -210,7 +206,7 @@ export default function TopSellingModels() {
               </div>
               <div className="text-center mb-6">
                 <div className="text-muted text-xs uppercase tracking-wider mb-1">Get Upto</div>
-                <div className="text-[var(--gold)] font-black text-2xl md:text-3xl">₹{calculateFhoneifyPrice(item.price).toLocaleString('en-IN')}</div>
+                <div className="text-[var(--gold)] font-black text-2xl md:text-3xl">₹{computeFhoneifyGetUpto(item.price).toLocaleString('en-IN')}</div>
               </div>
               <button 
                 onClick={() => handleSellClick(item.brand, item.model)}

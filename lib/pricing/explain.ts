@@ -1,5 +1,5 @@
 import { applyCompetitorUplift, COMMON_BONUSES, DiagnosticsType } from '../pricingCalculator';
-import { priceDevice } from './engine';
+import { computeGetUpto, priceDevice } from './engine';
 import { PERFECT_CONDITION_DIAGNOSTICS } from './perfectCondition';
 
 /**
@@ -24,7 +24,10 @@ export interface ExplainStep {
 export interface QuoteExplanation {
   brand: string;
   model: string;
+  /** Cashify's live public Get Upto for the variant. */
   referencePrice: number;
+  /** Fhoneify Get Upto shown before any answer: reference + uplift. */
+  fhoneifyGetUpto: number;
   perfectConditionCashifyEquivalent: number;
   steps: ExplainStep[];
   cashifyEquivalent: number;
@@ -87,7 +90,7 @@ export function explainQuote(brand: string, model: string, referencePrice: numbe
   const price = (d: DiagnosticsType) => priceDevice(brand, model, referencePrice, d);
 
   let current: DiagnosticsType = { ...PERFECT_CONDITION_DIAGNOSTICS };
-  const perfect = price(current).cashifyBasePrice;
+  const perfect = price(current).cashifyConditionEquivalent;
   let previous = perfect;
   const steps: ExplainStep[] = [];
   const ignoredAnswers: string[] = [];
@@ -101,24 +104,24 @@ export function explainQuote(brand: string, model: string, referencePrice: numbe
 
     // Is each changed answer, applied on its own to a perfect device, ignored?
     for (const [key, value] of Object.entries(fields)) {
-      const alone = price({ ...PERFECT_CONDITION_DIAGNOSTICS, [key]: value } as DiagnosticsType).cashifyBasePrice;
+      const alone = price({ ...PERFECT_CONDITION_DIAGNOSTICS, [key]: value } as DiagnosticsType).cashifyConditionEquivalent;
       if (alone === perfect) ignoredAnswers.push(`${key}=${JSON.stringify(value)}`);
     }
 
     current = { ...current, ...fields } as DiagnosticsType;
-    const now = price(current).cashifyBasePrice;
+    const now = price(current).cashifyConditionEquivalent;
     steps.push({ step: group.step, fields, cashifyEquivalent: now, delta: now - previous });
     previous = now;
   }
 
   const result = price(diagnostics);
-  if (result.cashifyBasePrice !== previous) {
+  if (result.cashifyConditionEquivalent !== previous) {
     // Only possible if a field outside GROUPS affects price - the breakdown
     // would then be incomplete, so refuse rather than mislead.
-    throw new Error(`explain: breakdown ended at ${previous} but the engine returned ${result.cashifyBasePrice}; a diagnostics field is not covered`);
+    throw new Error(`explain: breakdown ended at ${previous} but the engine returned ${result.cashifyConditionEquivalent}; a diagnostics field is not covered`);
   }
 
-  const cashifyEquivalent = result.cashifyBasePrice;
+  const cashifyEquivalent = result.cashifyConditionEquivalent;
   const tierPercent = referencePrice <= 20000 ? 8 : referencePrice <= 50000 ? 6 : 4;
   const uncappedRupees = cashifyEquivalent * (tierPercent / 100);
   const capApplied = uncappedRupees > UPLIFT_CAP;
@@ -135,6 +138,7 @@ export function explainQuote(brand: string, model: string, referencePrice: numbe
     brand,
     model,
     referencePrice,
+    fhoneifyGetUpto: computeGetUpto(referencePrice),
     perfectConditionCashifyEquivalent: perfect,
     steps,
     cashifyEquivalent,

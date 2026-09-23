@@ -23,8 +23,11 @@ export interface QuoteSessionDevice {
 export interface SignedQuote {
   /** The device exactly as the page submitted it. */
   device: QuoteSessionDevice;
-  /** POST /api/quote/price fhoneifyPrice - the price the customer is shown. */
+  /** POST /api/quote/price fhoneifyPrice - the final offer for `diagnostics`. */
   price: number;
+  /** POST /api/quote/price startingPrice - Fhoneify Get Upto (Cashify Get
+   * Upto + uplift, no answers applied). Never below `price`. */
+  getUpto: number;
   token: string;
   expiresAt: string;
   /** The exact answers the token was signed for; the lead must send these. */
@@ -63,6 +66,9 @@ export function isUsableSignedQuote(q: unknown, device: QuoteSessionDevice, now:
     typeof s.price === 'number' &&
     Number.isFinite(s.price) &&
     s.price > 0 &&
+    typeof s.getUpto === 'number' &&
+    Number.isFinite(s.getUpto) &&
+    s.getUpto >= s.price &&
     typeof s.token === 'string' &&
     s.token.length > 0 &&
     typeof s.expiresAt === 'string' &&

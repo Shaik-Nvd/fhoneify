@@ -9,7 +9,7 @@ import fs from 'node:fs';
 import { findCatalogDevice } from '../../lib/pricing/catalog';
 import { parseDiagnostics } from '../../lib/pricing/diagnostics';
 import { explainQuote } from '../../lib/pricing/explain';
-import { resolveBaseMarketPrice } from '../../lib/pricing/engine';
+import { resolveReference } from '../../lib/pricing/engine';
 import { customerPayout } from '../../lib/pricing/payout';
 import { deviceKey } from '../../lib/referencePricing/types';
 
@@ -37,10 +37,10 @@ async function main() {
 
   const { getReferencePriceRepository } = await import('../../lib/referencePricing/getStore');
   const record = await getReferencePriceRepository().get(deviceKey(device));
-  const base = resolveBaseMarketPrice({ device, repositoryRecord: record });
+  const base = resolveReference({ device, repositoryRecord: record });
   if (!base) throw new Error('No usable reference price for this device.');
 
-  const explanation = explainQuote(device.brand, device.model, base.price, parsed.value);
+  const explanation = explainQuote(device.brand, device.model, base.cashifyGetUptoReference, parsed.value);
   let liveApiFinalPrice: number | null = null;
   if (flag('live-api')) {
     const url = `${(process.env.PRODUCTION_API_URL || 'https://fhoneify-api.onrender.com').replace(/\/$/, '')}/api/quote/price`;
@@ -63,7 +63,7 @@ async function main() {
   console.log(JSON.stringify({
     device: { brand: device.brand, model: device.model, storage: device.storage },
     normalizedPricingAnswers: parsed.value,
-    referencePrice: base.price,
+    referencePrice: base.cashifyGetUptoReference,
     reference: {
       source: base.source,
       status: base.referenceStatus,

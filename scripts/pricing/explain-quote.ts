@@ -23,7 +23,7 @@ import fs from 'fs';
 import { explainQuote } from '../../lib/pricing/explain';
 import { findCatalogDevice } from '../../lib/pricing/catalog';
 import { parseDiagnostics } from '../../lib/pricing/diagnostics';
-import { resolveBaseMarketPrice } from '../../lib/pricing/engine';
+import { resolveReference } from '../../lib/pricing/engine';
 import { customerPayout } from '../../lib/pricing/payout';
 import { deviceKey } from '../../lib/referencePricing/types';
 
@@ -65,12 +65,12 @@ async function main() {
   } else {
     const { getReferencePriceRepository } = await import('../../lib/referencePricing/getStore');
     const record = await getReferencePriceRepository().get(deviceKey({ brand: device.brand, model: device.model, storage: device.storage }));
-    const base = resolveBaseMarketPrice({ device, repositoryRecord: record });
+    const base = resolveReference({ device, repositoryRecord: record });
     if (!base) {
       console.error('No reference price for this device.');
       return void (process.exitCode = 1);
     }
-    referencePrice = base.price;
+    referencePrice = base.cashifyGetUptoReference;
     referenceSource = `${base.source}${base.referenceLastVerifiedAt ? `, verified ${base.referenceLastVerifiedAt}` : ''}, status ${base.referenceStatus}`;
   }
 
@@ -96,6 +96,8 @@ async function main() {
 
   console.log(`\nDevice:                          ${device.brand} | ${device.model} | ${device.storage}`);
   console.log(`Reference price:                 ${inr(x.referencePrice)}   (${referenceSource})`);
+  console.log(`Cashify Get Upto (reference):    ${inr(x.referencePrice)}`);
+  console.log(`Fhoneify Get Upto (no answers):  ${inr(x.fhoneifyGetUpto)}`);
   console.log(`Perfect-condition baseline:      ${inr(x.perfectConditionCashifyEquivalent)}`);
   for (const s of x.steps) {
     const label = `${s.step[0].toUpperCase()}${s.step.slice(1)} adjustment`;

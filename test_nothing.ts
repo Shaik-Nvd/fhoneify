@@ -27,6 +27,6 @@ cases.forEach((c) => {
   ages.forEach(age => {
       const diag = {...c.diag, mobileAge: age} as unknown as DiagnosticsType;
       const result = calculateFhoneifyPrice("Nothing", c.name, c.basePrice, diag);
-      console.log(`Age ${age} - Expected: ${c.expectedPrice}, Got: ${result.fhoneifyPrice}, CashifyBase: ${result.cashifyBasePrice}`);
+      console.log(`Age ${age} - Expected: ${c.expectedPrice}, Got: ${result.fhoneifyPrice}, CashifyBase: ${result.cashifyConditionEquivalent}`);
   })
 });

@@ -370,7 +370,8 @@ export default function QuotePage() {
   const currentDevice = { brand: selectedBrand, model: selectedModel, storage: selectedStorage };
   const activeStartingQuote = startingQuote && sameDevice(startingQuote.device, currentDevice) ? startingQuote : null;
   const activeFinalQuote = finalQuote && sameDevice(finalQuote.device, currentDevice) ? finalQuote : null;
-  const basePrice = activeStartingQuote?.price ?? null;
+  // Fhoneify Get Upto = Cashify Get Upto + uplift, with no answers applied.
+  const fhoneifyGetUpto = activeStartingQuote?.getUpto ?? null;
   const finalPrice = activeFinalQuote?.price ?? null;
   const priceRequestIdRef = useRef(0);
   const startingRequestIdRef = useRef(0);
@@ -1036,16 +1037,21 @@ export default function QuotePage() {
   const requestSignedQuote = async (brand: string, model: string, storage: string, diag: unknown): Promise<SignedQuote> => {
     const res = await api.post('/api/quote/price', { brand, model, storage, diagnostics: diag });
     const d = res.data?.data;
-    if (!res.data?.success || typeof d?.fhoneifyPrice !== 'number' || !(d.fhoneifyPrice > 0) || !d.quoteToken) {
+    if (
+      !res.data?.success || typeof d?.fhoneifyPrice !== 'number' || !(d.fhoneifyPrice > 0) ||
+      typeof d?.startingPrice !== 'number' || !(d.startingPrice >= d.fhoneifyPrice) || !d.quoteToken
+    ) {
       throw new Error(res.data?.error || 'Pricing is currently unavailable for this device.');
     }
-    return { device: { brand, model, storage }, price: d.fhoneifyPrice, token: d.quoteToken, expiresAt: d.expiresAt, diagnostics: diag };
+    return { device: { brand, model, storage }, price: d.fhoneifyPrice, getUpto: d.startingPrice, token: d.quoteToken, expiresAt: d.expiresAt, diagnostics: diag };
   };
 
   const describePricingError = (err: any) =>
     err?.response?.data?.error || 'We could not fetch the price right now. Please try again.';
 
-  /** "Get upto" = the server's perfect-condition quote for this device. */
+  /** "Get upto" = the server's startingPrice (Cashify Get Upto + uplift).
+   * The quote is signed for perfect-condition answers, so "Schedule Pickup"
+   * from this screen books that signed offer, shown on the final screen. */
   const fetchStartingQuote = (brand: string, model: string, storage: string) => {
     setStartingQuote(null);
     setStartingPriceError(null);
@@ -2286,8 +2292,8 @@ export default function QuotePage() {
           <div className="flex flex-col gap-2 flex-1 w-full text-foreground items-center md:items-start">
             <h2 style={{ fontSize: '1.4rem', fontWeight: 500 }}>Sell Old {getDisplayModelName(selectedBrand, selectedModel)} ({selectedStorage})</h2>
             <p style={{ color: '#666', fontSize: '1rem', marginTop: '1rem' }}>Get Upto</p>
-            {basePrice != null ? (
-              <p style={{ fontSize: '3rem', fontWeight: 700, color: 'var(--gold)' }}>{formatCurrency(basePrice)}</p>
+            {fhoneifyGetUpto != null ? (
+              <p style={{ fontSize: '3rem', fontWeight: 700, color: 'var(--gold)' }}>{formatCurrency(fhoneifyGetUpto)}</p>
             ) : startingPriceError ? (
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                 <p style={{ color: '#FF3B30', fontSize: '0.95rem' }}>{startingPriceError}</p>
@@ -2302,9 +2308,9 @@ export default function QuotePage() {
               </button>
               
               <button 
-                // Skipping the questions books the perfect-condition quote: the
-                // same signed price as "Get Upto", with the answers it was
-                // signed for, so the lead stores exactly what was shown.
+                // Skipping the questions books the signed perfect-condition
+                // offer (at most the Get Upto), with the answers it was signed
+                // for; the final screen shows exactly what the lead stores.
                 disabled={!activeStartingQuote}
                 onClick={() => {
                    if (!activeStartingQuote) return;

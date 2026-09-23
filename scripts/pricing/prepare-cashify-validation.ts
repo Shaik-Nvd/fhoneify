@@ -45,7 +45,7 @@ const prepared = plan.scenarios.map((scenario) => {
     referencePrice: reference.currentPrice,
     normalizedAnswers: parsed.value,
     cashifySelections: `${selectionSummary[scenario.profile]}${scenario.brand === 'Apple' ? ' Dual eSIM if asked.' : ''}`,
-    cashifyEquivalent: quote.cashifyBasePrice,
+    cashifyEquivalent: quote.cashifyConditionEquivalent,
     finalPrice: quote.fhoneifyPrice,
     displayedPayout: customerPayout(quote.fhoneifyPrice, false).payout,
     cashifyActualFinalQuote: null,

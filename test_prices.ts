@@ -54,9 +54,9 @@ tempPrices.forEach((entry: any) => {
     
     let res = calculateFhoneifyPrice(brand, modelName, basePrice, perfectDiagnostics);
     
-    // We expect res.cashifyBasePrice to equal targetPrice
-    if (Math.abs(res.cashifyBasePrice - targetPrice) > 5) {
-        console.log('FAIL:', modelName, storage, '| Target:', targetPrice, '| Actual:', res.cashifyBasePrice, '| Used Base:', basePrice);
+    // We expect res.cashifyConditionEquivalent to equal targetPrice
+    if (Math.abs(res.cashifyConditionEquivalent - targetPrice) > 5) {
+        console.log('FAIL:', modelName, storage, '| Target:', targetPrice, '| Actual:', res.cashifyConditionEquivalent, '| Used Base:', basePrice);
         fails++;
     }
 });

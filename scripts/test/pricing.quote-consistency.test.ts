@@ -13,7 +13,7 @@ import fs from 'fs';
 import path from 'path';
 import type { DiagnosticsType } from '../../lib/pricingCalculator';
 import { createPricingService } from '../../lib/pricing/pricingService';
-import { PERFECT_CONDITION_DIAGNOSTICS, computeStartingPrice, priceDevice } from '../../lib/pricing/engine';
+import { PERFECT_CONDITION_DIAGNOSTICS, computeGetUpto, priceDevice } from '../../lib/pricing/engine';
 import { explainQuote } from '../../lib/pricing/explain';
 import { buildLeadAnswers, customerPayout } from '../../lib/pricing/payout';
 import {
@@ -92,7 +92,7 @@ async function pageRequestsQuote(svc: ReturnType<typeof setup>['svc'], diag: unk
   const q = await svc.quote({ ...DEVICE, diagnostics: diag });
   if (!q.ok) throw new Error(q.code);
   const { internal, ok, ...publicResponse } = q; // exactly what the controller sends
-  return { device: { ...DEVICE }, price: publicResponse.fhoneifyPrice, token: publicResponse.quoteToken, expiresAt: publicResponse.expiresAt, diagnostics: diag };
+  return { device: { ...DEVICE }, price: publicResponse.fhoneifyPrice, getUpto: publicResponse.startingPrice, token: publicResponse.quoteToken, expiresAt: publicResponse.expiresAt, diagnostics: diag };
 }
 
 /** The lead endpoint: verify, then store what createLead stores. */
@@ -147,13 +147,26 @@ async function run() {
     assert.equal(lead.quotedPrice, shown.price, 'the engine price column is not altered by the coupon');
   });
 
-  await test('"Schedule Pickup" from Get Upto stores exactly the Get Upto price', async () => {
+  await test('Get Upto is the Cashify Get Upto plus uplift, before any answer', async () => {
     const { svc } = setup();
     const starting = await pageRequestsQuote(svc, PERFECT_CONDITION_DIAGNOSTICS);
-    assert.equal(starting.price, computeStartingPrice(DEVICE.brand, DEVICE.model, REFERENCE));
+    assert.equal(starting.getUpto, computeGetUpto(REFERENCE));
+    assert.equal(starting.getUpto, 37940, 'OnePlus 15R 12/512: ₹35,940 + capped ₹2,000');
+    assert.ok(starting.getUpto > REFERENCE, 'Fhoneify Get Upto starts above Cashify');
+    const damaged = await pageRequestsQuote(svc, ANSWERS);
+    assert.equal(damaged.getUpto, starting.getUpto, 'Get Upto does not depend on answers');
+    assert.ok(damaged.price < damaged.getUpto);
+  });
+
+  await test('"Schedule Pickup" from Get Upto stores exactly the signed perfect-condition offer', async () => {
+    const { svc } = setup();
+    const starting = await pageRequestsQuote(svc, PERFECT_CONDITION_DIAGNOSTICS);
+    assert.ok(starting.price <= starting.getUpto, 'booked offer never exceeds the advertised Get Upto');
     const lead = await submitLead(svc, starting, false);
     assert.equal(lead.quotedPrice, starting.price);
     assert.equal(lead.answers.pricing.priceSource, 'quote_token');
+    assert.equal(lead.answers.pricing.fhoneifyGetUpto, starting.getUpto);
+    assert.equal(lead.answers.pricing.cashifyGetUptoReference, REFERENCE);
   });
 
   await test('the OLD page flow (empty answers, stale snapshot) is exactly what diverged', async () => {
@@ -172,12 +185,14 @@ async function run() {
 
   await test('a reload never restores ₹0, unsigned, expired or other-device prices', () => {
     const now = new Date();
-    const good: SignedQuote = { device: { ...DEVICE }, price: 30916, token: 't', expiresAt: new Date(now.getTime() + 60000).toISOString(), diagnostics: ANSWERS };
+    const good: SignedQuote = { device: { ...DEVICE }, price: 30916, getUpto: 37940, token: 't', expiresAt: new Date(now.getTime() + 60000).toISOString(), diagnostics: ANSWERS };
     const bad: [string, any][] = [
       ['zero price', { ...good, price: 0 }],
       ['null price', { ...good, price: null }],
       ['string price', { ...good, price: '30916' }],
       ['no token', { ...good, token: '' }],
+      ['no Get Upto (pre-2026-09-23 session)', { ...good, getUpto: undefined }],
+      ['Get Upto below the offer', { ...good, getUpto: good.price - 1 }],
       ['expired', { ...good, expiresAt: new Date(now.getTime() - 1).toISOString() }],
       ['other device', { ...good, device: { ...DEVICE, storage: '12 GB/256 GB' } }],
     ];
@@ -206,6 +221,9 @@ async function run() {
       /\bcalculateFhoneifyPrice\(/,
       /\bcomputeStartingPrice\(/,
       /\bresolveBaseMarketPrice\(/,
+      /\bcomputeGetUpto\(/,
+      /\bcomputeFhoneifyGetUpto\(/,
+      /\bresolveReference\(/,
       /formatCurrency\(\s*\(?\s*(basePrice|finalPrice)\s*\|\|\s*0/,
       /Number\(finalPrice\)/,
     ];

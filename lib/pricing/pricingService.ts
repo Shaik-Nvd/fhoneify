@@ -8,15 +8,16 @@ import {
   PRICING_ENGINE_VERSION,
   PricingInvariantError,
   QuoteReferenceStatus,
-  computeStartingPrice,
+  ReferenceSemantics,
+  computeGetUpto,
   priceDevice,
-  resolveBaseMarketPrice,
+  resolveReference,
 } from './engine';
 import { QUOTE_TOKEN_VERSION, canonicalDiagnosticsHash, signQuoteToken, verifyQuoteToken } from './quoteToken';
 
 /**
- * Server-authoritative pricing: device resolution -> reference price ->
- * unchanged methodology -> guardrails -> signed quote. Dependencies are
+ * Server-authoritative pricing: device resolution -> Cashify Get Upto
+ * reference -> methodology -> guardrails -> signed quote. Dependencies are
  * injected so tests run against an in-memory repository instead of the
  * live database; server/modules/quote/pricing.ts wires the real ones.
  */
@@ -56,7 +57,9 @@ export interface PricingFailure {
 export interface AuthoritativeQuote {
   ok: true;
   device: { brand: string; model: string; storage: string };
+  /** Fhoneify final offer for these answers. */
   fhoneifyPrice: number;
+  /** Fhoneify Get Upto: Cashify's Get Upto plus the uplift, no deductions. */
   startingPrice: number;
   quoteToken: string;
   expiresAt: string;
@@ -70,10 +73,12 @@ export interface AuthoritativeQuote {
   internal: {
     deviceKey: string;
     diagnosticsHash: string;
-    baseMarketPrice: number;
+    cashifyGetUptoReference: number;
+    storedReferencePrice: number;
+    referenceSemantics: ReferenceSemantics;
     baseSource: BaseSource;
     referenceSource: string | null;
-    cashifyBasePrice: number;
+    cashifyConditionEquivalent: number;
   };
 }
 
@@ -88,9 +93,11 @@ export interface LeadPricingAudit {
   clientQuotedPrice: number | null;
   clientPriceMismatch: boolean;
   currentPrice: number | null;
-  baseMarketPrice: number | null;
+  cashifyGetUptoReference: number | null;
+  referenceSemantics: ReferenceSemantics | null;
   baseSource: BaseSource | null;
-  cashifyBasePrice: number | null;
+  cashifyConditionEquivalent: number | null;
+  fhoneifyGetUpto: number | null;
   referenceStatus: QuoteReferenceStatus | null;
   referenceSource: string | null;
   referenceLastVerifiedAt: string | null;
@@ -143,7 +150,7 @@ export function createPricingService(deps: PricingServiceDeps) {
     const key = deviceKey({ brand: device.brand, model: device.model, storage: device.storage });
     const reference = await lookupReference(key);
     const at = now();
-    const base = resolveBaseMarketPrice({ device, repositoryRecord: reference.record, snapshot: deps.snapshot, now: at });
+    const base = resolveReference({ device, repositoryRecord: reference.record, snapshot: deps.snapshot, now: at });
 
     if (!base || (deps.strictReferenceMode && base.source === 'catalog_base_price')) {
       deps.logger.warn({ deviceKey: key, baseSource: base?.source ?? null, strict: deps.strictReferenceMode }, 'Quote refused: no usable reference price');
@@ -156,8 +163,8 @@ export function createPricingService(deps: PricingServiceDeps) {
       // The quote page passes the brand/model exactly as selected; pricing
       // with the catalog's own strings keeps the engine's model matching
       // identical for both.
-      result = priceDevice(device.brand, device.model, base.price, diagnostics);
-      startingPrice = computeStartingPrice(device.brand, device.model, base.price);
+      result = priceDevice(device.brand, device.model, base.cashifyGetUptoReference, diagnostics);
+      startingPrice = computeGetUpto(base.cashifyGetUptoReference);
     } catch (err) {
       if (err instanceof PricingInvariantError) {
         deps.logger.error({ deviceKey: key, ...err.details, reason: err.message }, 'Pricing invariant violated; quote refused');
@@ -192,10 +199,12 @@ export function createPricingService(deps: PricingServiceDeps) {
       internal: {
         deviceKey: key,
         diagnosticsHash,
-        baseMarketPrice: base.price,
+        cashifyGetUptoReference: base.cashifyGetUptoReference,
+        storedReferencePrice: base.storedPrice,
+        referenceSemantics: base.semantics,
         baseSource: base.source,
         referenceSource: base.referenceSource,
-        cashifyBasePrice: result.cashifyBasePrice,
+        cashifyConditionEquivalent: result.cashifyConditionEquivalent,
       },
     };
   }
@@ -255,9 +264,11 @@ export function createPricingService(deps: PricingServiceDeps) {
       clientQuotedPrice,
       clientPriceMismatch: clientQuotedPrice !== null && clientQuotedPrice !== price,
       currentPrice: current.ok ? current.fhoneifyPrice : null,
-      baseMarketPrice: current.ok ? current.internal.baseMarketPrice : null,
+      cashifyGetUptoReference: current.ok ? current.internal.cashifyGetUptoReference : null,
+      referenceSemantics: current.ok ? current.internal.referenceSemantics : null,
       baseSource: current.ok ? current.internal.baseSource : null,
-      cashifyBasePrice: current.ok ? current.internal.cashifyBasePrice : null,
+      cashifyConditionEquivalent: current.ok ? current.internal.cashifyConditionEquivalent : null,
+      fhoneifyGetUpto: current.ok ? current.startingPrice : null,
       referenceStatus: current.ok ? current.referenceStatus : null,
       referenceSource: current.ok ? current.internal.referenceSource : null,
       referenceLastVerifiedAt: current.ok ? current.referenceLastVerifiedAt : null,

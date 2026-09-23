@@ -17,11 +17,11 @@ import { findCatalogDevice } from '../../lib/pricing/catalog';
 import {
   PERFECT_CONDITION_DIAGNOSTICS,
   PricingInvariantError,
-  computeStartingPrice,
+  computeGetUpto,
   materializedSnapshotKey,
   maxPlausiblePrice,
   priceDevice,
-  resolveBaseMarketPrice,
+  resolveReference,
 } from '../../lib/pricing/engine';
 import { canonicalDiagnosticsHash, signQuoteToken, verifyQuoteToken } from '../../lib/pricing/quoteToken';
 import { createPricingService, PricingServiceDeps } from '../../lib/pricing/pricingService';
@@ -163,15 +163,15 @@ async function run() {
   await test('priceDevice returns exactly what calculateFhoneifyPrice returns across the whole catalog (3 condition profiles)', () => {
     let checked = 0;
     for (const device of catalog) {
-      const base = resolveBaseMarketPrice({ device });
+      const base = resolveReference({ device });
       if (!base) continue;
       for (const profile of [PERFECT_CONDITION_DIAGNOSTICS, DAMAGED, NOT_WORKING]) {
-        const expected = calculateFhoneifyPrice(device.brand, device.model, base.price, profile);
+        const expected = calculateFhoneifyPrice(device.brand, device.model, base.cashifyGetUptoReference, profile);
         let actual;
         try {
-          actual = priceDevice(device.brand, device.model, base.price, profile);
+          actual = priceDevice(device.brand, device.model, base.cashifyGetUptoReference, profile);
         } catch (err: any) {
-          throw new Error(`${device.brand} ${device.model} ${device.storage} @ ${base.price}: ${err.message} ${JSON.stringify(err.details ?? {})}`);
+          throw new Error(`${device.brand} ${device.model} ${device.storage} @ ${base.cashifyGetUptoReference}: ${err.message} ${JSON.stringify(err.details ?? {})}`);
         }
         assert.deepEqual(actual, expected);
         checked++;
@@ -181,45 +181,58 @@ async function run() {
   });
 
   await test('every catalog device resolves a base price (nothing falls through to an invented number)', () => {
-    const unresolved = catalog.filter((d) => !resolveBaseMarketPrice({ device: d }));
+    const unresolved = catalog.filter((d) => !resolveReference({ device: d }));
     assert.equal(unresolved.length, 0, `unresolved: ${unresolved.slice(0, 3).map((d) => d.model).join(', ')}`);
   });
 
   await test('resolution order: repository record > materialized snapshot > catalog basePrice', () => {
-    const device = { model: snapshotDevice.model, storage: snapshotDevice.storage, basePrice: 1 };
-    const rec = record({ brand: snapshotDevice.brand, model: device.model, storage: device.storage }, { currentPrice: 77777 });
-    assert.equal(resolveBaseMarketPrice({ device, repositoryRecord: rec })?.source, 'reference_repository');
-    assert.equal(resolveBaseMarketPrice({ device, repositoryRecord: rec })?.price, 77777);
-    assert.equal(resolveBaseMarketPrice({ device })?.source, 'materialized_snapshot');
-    assert.equal(resolveBaseMarketPrice({ device: { model: 'No Such Phone', storage: '1GB', basePrice: 4321 } })?.source, 'catalog_base_price');
-    assert.equal(resolveBaseMarketPrice({ device: { model: 'No Such Phone', storage: '1GB' } }), null);
+    const device = { brand: snapshotDevice.brand, model: snapshotDevice.model, storage: snapshotDevice.storage, basePrice: 1 };
+    const rec = record({ brand: snapshotDevice.brand, model: device.model, storage: device.storage }, { currentPrice: 77777, source: 'cashify' });
+    assert.equal(resolveReference({ device, repositoryRecord: rec })?.source, 'reference_repository');
+    assert.equal(resolveReference({ device, repositoryRecord: rec })?.cashifyGetUptoReference, 77777);
+    assert.equal(resolveReference({ device })?.source, 'materialized_snapshot');
+    assert.equal(resolveReference({ device: { brand: 'X', model: 'No Such Phone', storage: '1GB', basePrice: 4321 } })?.source, 'catalog_base_price');
+    assert.equal(resolveReference({ device: { brand: 'X', model: 'No Such Phone', storage: '1GB' } }), null);
   });
 
   await test('missing, zero-priced, or never-verified repository records are ignored, not priced', () => {
-    const device = { model: 'No Such Phone', storage: '1GB', basePrice: 4321 };
+    const device = { brand: 'X', model: 'No Such Phone', storage: '1GB', basePrice: 4321 };
     const identity = { brand: 'X', model: device.model, storage: device.storage };
     for (const bad of [{ status: 'missing' as const }, { currentPrice: 0 }, { lastVerifiedAt: null }]) {
-      assert.equal(resolveBaseMarketPrice({ device, repositoryRecord: record(identity, bad) })?.source, 'catalog_base_price');
+      assert.equal(resolveReference({ device, repositoryRecord: record(identity, bad) })?.source, 'catalog_base_price');
     }
   });
 
   await test('reference status is re-derived at read time, not trusted from the stored field', () => {
     const old = new Date(Date.now() - 60 * 86400000).toISOString();
     const rec = record({ brand: 'X', model: 'Y', storage: 'Z' }, { status: 'fresh', lastVerifiedAt: old });
-    assert.equal(resolveBaseMarketPrice({ device: { model: 'Y', storage: 'Z' }, repositoryRecord: rec })?.referenceStatus, 'stale');
+    assert.equal(resolveReference({ device: { brand: 'X', model: 'Y', storage: 'Z' }, repositoryRecord: rec })?.referenceStatus, 'stale');
   });
 
   await test('iPhone Air keeps its historical snapshot-key alias', () => {
     assert.equal(materializedSnapshotKey('Apple iPhone Air', '256GB'), 'apple-iphone-17-air-256gb');
   });
 
-  await test('"Get upto" equals the perfect-condition final price and respects the ₹2,000 uplift cap', () => {
-    const start = computeStartingPrice('Apple', 'iPhone 17 Pro Max', 120000);
+  await test('"Get upto" is the Cashify Get Upto plus the capped uplift, with no deductions', () => {
+    assert.equal(computeGetUpto(120000), 122000, '4% tier capped at ₹2,000');
+    assert.equal(computeGetUpto(45570), 47570, '6% tier capped at ₹2,000');
+    assert.equal(computeGetUpto(27220), 28853, '6% tier');
+    assert.equal(computeGetUpto(13550), 14634, '8% tier');
     const perfect = calculateFhoneifyPrice('Apple', 'iPhone 17 Pro Max', 120000, PERFECT_CONDITION_DIAGNOSTICS);
-    assert.equal(start, perfect.fhoneifyPrice);
-    assert.ok(start - perfect.cashifyBasePrice <= 2000);
-    // The page's previous uncapped formula advertised more than any quote pays.
-    assert.ok(Math.round(perfect.cashifyBasePrice * 1.04) > start);
+    assert.ok(perfect.fhoneifyPrice <= computeGetUpto(120000), 'no final offer exceeds the Get Upto');
+    assert.ok(perfect.cashifyConditionEquivalent <= 120000, 'no Cashify equivalent exceeds the Cashify Get Upto');
+  });
+
+  await test('legacy pre-inflated snapshot values are converted, live Cashify values are used as-is', () => {
+    const device = { brand: 'Apple', model: 'Apple iPhone 15', storage: '512GB' };
+    const legacy = resolveReference({ device, snapshot: { 'apple-iphone-15-512gb': 59927 }, snapshotSources: {} })!;
+    assert.equal(legacy.semantics, 'legacy_pre_inflated_base');
+    assert.ok(Math.abs(legacy.cashifyGetUptoReference - 45570) < 1000, `legacy 59,927 must convert to ~Cashify ₹45,570, got ${legacy.cashifyGetUptoReference}`);
+    const live = resolveReference({ device, repositoryRecord: record(device, { currentPrice: 45570, source: 'cashify' }) })!;
+    assert.equal(live.semantics, 'cashify_get_upto');
+    assert.equal(live.cashifyGetUptoReference, 45570);
+    const migrated = resolveReference({ device, repositoryRecord: record(device, { currentPrice: 59927, source: 'legacy_migration:lib/cashify_prices.json' }) })!;
+    assert.equal(migrated.cashifyGetUptoReference, legacy.cashifyGetUptoReference);
   });
 
   await test('non-positive or non-finite base prices are refused', () => {
@@ -268,11 +281,11 @@ async function run() {
     const { svc } = service();
     const result = await svc.quote({ ...identity, diagnostics: diag() });
     assert.ok(result.ok);
-    const expected = calculateFhoneifyPrice(identity.brand, identity.model, snapshotPrices[materializedSnapshotKey(identity.model, identity.storage)], diag());
+    const expected = calculateFhoneifyPrice(identity.brand, identity.model, resolveReference({ device: identity })!.cashifyGetUptoReference, diag());
     assert.equal(result.fhoneifyPrice, expected.fhoneifyPrice);
     const verified = verifyQuoteToken(result.quoteToken, SECRET, Math.floor(Date.now() / 1000));
     assert.ok(verified.ok && verified.payload.p === result.fhoneifyPrice);
-    assert.ok(!JSON.stringify(verified).includes(String(expected.cashifyBasePrice)) || expected.cashifyBasePrice === expected.fhoneifyPrice);
+    assert.ok(!JSON.stringify(verified).includes(String(expected.cashifyConditionEquivalent)) || expected.cashifyConditionEquivalent === expected.fhoneifyPrice);
   });
 
   await test('brand/model/storage matching is case- and whitespace-insensitive only', async () => {
