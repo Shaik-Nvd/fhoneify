@@ -331,3 +331,57 @@ model ReferencePriceRefreshLock {
   acquiredAt DateTime @default(now())
   expiresAt  DateTime
 }
+
+/// Which questions Cashify's own "Get Exact Value" questionnaire presents for
+/// a model. ASKED / NOT_ASKED / UNKNOWN - never a boolean, because "Cashify
+/// does not ask warranty" is a different state from "warranty = No".
+enum QuestionnaireMode {
+  ASKED
+  NOT_ASKED
+  UNKNOWN
+}
+
+/// Model-level (not RAM/storage-variant) questionnaire semantics, learned by
+/// scripts/reference-pricing/refresh-questionnaire-profiles.ts from Cashify's
+/// public questionnaire without logging in. Exact-condition pricing reads it;
+/// Get Upto never does.
+model CashifyQuestionnaireProfile {
+  id                String            @id @default(uuid())
+  /// "brand|model", lowercased (lib/referencePricing/questionnaire/types.ts).
+  modelKey          String            @unique
+  brand             String
+  model             String
+  warrantyMode      QuestionnaireMode @default(UNKNOWN)
+  billMode          QuestionnaireMode @default(UNKNOWN)
+  ageMode           QuestionnaireMode @default(UNKNOWN)
+  /// Question headings seen on the first questionnaire page, for audit.
+  questionLabels    String[]
+  /// OK | PARSE_FAILED | FETCH_FAILED | NOT_FOUND | VARIANT_MISMATCH
+  status            String
+  statusDetail      String?
+  sourceUrl         String?
+  variantsChecked   Int               @default(0)
+  parserVersion     String
+  observedAt        DateTime
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+  history           CashifyQuestionnaireProfileHistory[]
+
+  @@index([status])
+}
+
+/// Append-only record of every change to a model's questionnaire semantics.
+model CashifyQuestionnaireProfileHistory {
+  id           String                      @id @default(uuid())
+  profileId    String
+  profile      CashifyQuestionnaireProfile @relation(fields: [profileId], references: [id])
+  warrantyMode QuestionnaireMode
+  billMode     QuestionnaireMode
+  ageMode      QuestionnaireMode
+  status       String
+  parserVersion String
+  observedAt   DateTime
+  recordedAt   DateTime                    @default(now())
+
+  @@index([profileId, recordedAt])
+}

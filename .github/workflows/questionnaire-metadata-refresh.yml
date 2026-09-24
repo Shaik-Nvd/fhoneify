@@ -1,0 +1,92 @@
+name: Questionnaire metadata refresh (Cashify, weekly)
+
+# Learns which questions Cashify's public "Get Exact Value" questionnaire asks
+# per model (warranty / GST bill / age) and stores them in
+# CashifyQuestionnaireProfile. Kept out of the price refresh so that job stays
+# fast: known, recent (<30 days) profiles are reused and only new, UNKNOWN,
+# failed or stale models are fetched. Logged out - no Cashify session is used,
+# no answers are submitted and no quote is requested.
+
+on:
+  schedule:
+    # 03:30 UTC every Wednesday, well away from the Sunday price refresh.
+    - cron: '30 3 * * 3'
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 'Only learn the first N models needing refresh (blank = all)'
+        required: false
+        type: string
+      brand:
+        description: 'Only one brand (blank = all)'
+        required: false
+        type: string
+      force:
+        description: 'Re-learn every selected model regardless of freshness'
+        required: false
+        type: boolean
+        default: false
+      dry_run:
+        description: 'Fetch and parse but discard every write'
+        required: false
+        type: boolean
+        default: false
+
+concurrency:
+  group: questionnaire-metadata-refresh
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      DIRECT_URL: ${{ secrets.DIRECT_URL }}
+      CASHIFY_SCRAPER_HEADED: 'false'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+      - name: Fail fast if required secrets are missing
+        run: |
+          [ -n "$DATABASE_URL" ] && [ -n "$DIRECT_URL" ] || { echo "::error::DATABASE_URL and DIRECT_URL secrets are required"; exit 1; }
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Generate the Prisma client
+        # generate only - this job never alters the production schema.
+        run: npx prisma generate
+      - name: Refresh questionnaire profiles
+        env:
+          INPUT_LIMIT: ${{ inputs.limit }}
+          INPUT_BRAND: ${{ inputs.brand }}
+          INPUT_FORCE: ${{ inputs.force }}
+          INPUT_DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          set -o pipefail
+          ARGS=(--concurrency 3)
+          if [ -n "$INPUT_LIMIT" ]; then ARGS+=(--limit "$INPUT_LIMIT"); fi
+          if [ -n "$INPUT_BRAND" ]; then ARGS+=(--brand "$INPUT_BRAND"); fi
+          if [ "$INPUT_FORCE" = "true" ]; then ARGS+=(--force); fi
+          if [ "$INPUT_DRY_RUN" = "true" ]; then ARGS+=(--dry-run); fi
+          npm run reference-prices:refresh-questionnaire -- "${ARGS[@]}" 2>&1 | tee questionnaire-report.log
+      - name: Publish the report to the job summary
+        if: always()
+        run: |
+          {
+            echo '## Cashify questionnaire profile refresh'
+            echo '```'
+            sed -n '/QUESTIONNAIRE PROFILE REFRESH/,$p' questionnaire-report.log | head -60
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY" || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: questionnaire-report-${{ github.run_id }}
+          path: questionnaire-report.log
+          retention-days: 30

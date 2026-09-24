@@ -109,6 +109,29 @@ export async function warmReferencePriceRepository(
   return lastHealth;
 }
 
+let cachedQuestionnaireStore: import('./questionnaire/store').QuestionnaireProfileStore | null = null;
+
+/**
+ * Cashify questionnaire profiles, on the same Prisma client as the reference
+ * prices. Without a database (tests, local runs with no DATABASE_URL) this is
+ * an empty in-memory store, so every model reads as UNKNOWN - the explicit,
+ * ask-everything fallback - never as "not asked".
+ */
+export function getQuestionnaireProfileStore(): import('./questionnaire/store').QuestionnaireProfileStore {
+  if (cachedQuestionnaireStore) return cachedQuestionnaireStore;
+  getReferencePriceRepository();
+  const { PostgresQuestionnaireProfileStore, InMemoryQuestionnaireProfileStore } = require('./questionnaire/store');
+  cachedQuestionnaireStore = backend === 'postgres' && cachedPrismaClient
+    ? new PostgresQuestionnaireProfileStore(cachedPrismaClient)
+    : new InMemoryQuestionnaireProfileStore();
+  return cachedQuestionnaireStore!;
+}
+
+/** Test-only: pins the questionnaire profile store. */
+export function _setQuestionnaireProfileStoreForTests(store: import('./questionnaire/store').QuestionnaireProfileStore | null): void {
+  cachedQuestionnaireStore = store;
+}
+
 /** Result of the most recent warm-up attempt. Never asserts more than was
  * actually observed. */
 export function getReferenceStoreHealth(): ReferenceStoreHealth {
