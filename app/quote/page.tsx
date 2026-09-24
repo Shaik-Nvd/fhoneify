@@ -17,6 +17,7 @@ import { PERFECT_CONDITION_DIAGNOSTICS } from '@/lib/pricing/perfectCondition';
 import { customerPayout } from '@/lib/pricing/payout';
 import { SignedQuote, clearQuoteSession, loadQuoteSession, sameDevice, saveQuoteSession } from '@/lib/pricing/quoteSession';
 import { warrantyVoidedByDiagnostics } from '@/lib/pricing/diagnostics';
+import { questionnaireFor } from '@/lib/pricing/questionnaire';
 
 /** sessionStorage, or null where the browser blocks it (the page then simply
  * re-prices after a reload). */
@@ -78,90 +79,16 @@ const FaceIdIcon = () => (
 );
 
 export default function QuotePage() {
-  const isWarrantyEligible = (brand: string, model: string) => {
-    const lowerModel = model.toLowerCase();
-    
-    if (brand === 'Apple') {
-      // Only iPhones 15, 16, 17, and iPhone Air are warranty eligible (released within 1-2 years)
-      return (
-        lowerModel.includes('15') ||
-        lowerModel.includes('16') ||
-        lowerModel.includes('17') ||
-        lowerModel.includes('air')
-      );
-    }
-    
-    if (brand === 'OnePlus') {
-      // Recent OnePlus models (12, 13, Nord 4, CE4, Open)
-      return (
-        lowerModel.includes('12') ||
-        lowerModel.includes('13') ||
-        lowerModel.includes('14') ||
-        lowerModel.includes('15') ||
-        lowerModel.includes('nord 4') ||
-        lowerModel.includes('ce4') ||
-        lowerModel.includes('ce 4') ||
-        lowerModel.includes('open')
-      );
-    }
-    
-    if (brand === 'Samsung') {
-      // Only recent Samsung models are warranty eligible (released within 1-2 years)
-      return (
-        lowerModel.includes('s24') ||
-        lowerModel.includes('s25') ||
-        lowerModel.includes('s26') ||
-        lowerModel.includes('fold5') ||
-        lowerModel.includes('fold 5') ||
-        lowerModel.includes('fold6') ||
-        lowerModel.includes('fold 6') ||
-        lowerModel.includes('fold7') ||
-        lowerModel.includes('fold 7') ||
-        lowerModel.includes('fold8') ||
-        lowerModel.includes('fold 8') ||
-        lowerModel.includes('flip5') ||
-        lowerModel.includes('flip 5') ||
-        lowerModel.includes('flip6') ||
-        lowerModel.includes('flip 6') ||
-        lowerModel.includes('flip7') ||
-        lowerModel.includes('flip 7') ||
-        lowerModel.includes('a55') ||
-        lowerModel.includes('a35') ||
-        lowerModel.includes('a15') ||
-        lowerModel.includes('a25') ||
-        lowerModel.includes('m55') ||
-        lowerModel.includes('m35') ||
-        lowerModel.includes('m15')
-      );
-    }
-
-    if (brand.toLowerCase() === 'nokia') {
-      return false; // Nokia phones are typically older and out of warranty on Cashify
-    }
-
-    if (brand.toLowerCase() === 'nothing' || brand.toLowerCase() === 'cmf') {
-      return true; // Nothing and CMF are recent brands
-    }
-
-    if (brand.toLowerCase() === 'xiaomi') {
-      return (
-        lowerModel.includes('17 ultra') ||
-        lowerModel.includes('14') ||
-        lowerModel.includes('15c')
-      );
-    }
-
-    if (brand.toLowerCase() === 'vivo') {
-      return (
-        lowerModel.includes('fold5') ||
-        lowerModel.includes('fold 5') ||
-        lowerModel.includes('x300 fe')
-      );
-    }
-
-    // Default to false for all other models since most traded-in phones are > 1 year old
-    return false;
-  };
+  // Whether to ask warranty/GST-bill for this device. Previously a
+  // hand-maintained allowlist of "recent" models unrelated to the pricing
+  // engine, so most devices (e.g. Samsung Galaxy A57 5G, Vivo X200 FE) never
+  // got asked and silently priced as out-of-warranty/no-bill instead. Now
+  // backed by lib/pricing/questionnaire.ts, which determines this from the
+  // same brand dispatch the pricing engine (lib/pricingCalculator.ts) uses -
+  // see scripts/test/pricing.questionnaire-coverage.test.ts for the
+  // catalog-wide proof that this can't drift from what the engine reads.
+  const isWarrantyEligible = (brand: string, model: string) =>
+    questionnaireFor({ brand, model }).asksWarranty;
 
   const isESimEligible = (brand: string, model: string) => {
     if (brand.toLowerCase() !== 'apple') return false;
@@ -2700,51 +2627,70 @@ export default function QuotePage() {
                   ))}
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
-                  <button onClick={() => { 
-                    const isEligible = isWarrantyEligible(selectedBrand, selectedModel);
-                    
+                  <button onClick={() => {
+                    // Does the ACTIVE pricing path for this device ever read
+                    // mobileAge? (Always true for Apple/Xiaomi/Oppo/OnePlus
+                    // and non-foldable Vivo/iQOO, never for Samsung, Nothing/
+                    // CMF, foldable Vivo/iQOO or the generic fallback - see
+                    // lib/pricing/questionnaire.ts.)
+                    const asksAge = questionnaireFor({ brand: selectedBrand, model: selectedModel }).asksAge;
+
                     // Check the concrete fields this UI sends. The previous
                     // legacy-id check could never see lines, discoloration or
                     // bent-panel answers.
                     const hasWarrantyVoidingDefects = warrantyVoidedByDiagnostics(diagnostics);
-                      
-                    // Even if validBill is false, Cashify still asks for the mobile age and applies an age deduction 
+
+                    // Even if validBill is false, Cashify still asks for the mobile age and applies an age deduction
                     // in addition to the missing bill deduction.
                     const isWarrantyValid = diagnostics.warranty === true && !hasWarrantyVoidingDefects;
-                    
-                    if (isEligible && isWarrantyValid) {
-                      // Cashify skips the age question entirely for brand new phones (17e, 16e, Z Flip7 FE)
-                      const isBrandNewApple = selectedBrand === 'Apple' && (selectedModel.toLowerCase().includes('17e') || selectedModel.toLowerCase().includes('16e'));
-                      const isBrandNewSamsung = selectedBrand === 'Samsung' && selectedModel.toLowerCase().includes('flip7 fe');
-                      const isApple15ProMax = selectedBrand === 'Apple' && selectedModel.toLowerCase().includes('15 pro max');
-                      
-                      if ((isBrandNewApple && !diagnostics.accessories.includes('box')) || isBrandNewSamsung || isApple15ProMax) {
-                         const assignedAge = isApple15ProMax ? 'above11' as const : 'below3' as const;
-                         const updatedDiag = { ...diagnostics, mobileAge: assignedAge };
-                         setDiagnostics(updatedDiag);
-                         if (isAuthenticated) { 
-                           calculateFinalPrice(updatedDiag); 
-                           setMarketPriceFetched(false);
-                           navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11); 
-                         } else { 
-                           setFinalQuote(null); navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 10); 
-                         }
-                      } else {
-                        navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 9);
+
+                    // Void a warranty=true answer that the reported defects
+                    // contradict. This must happen regardless of whether the
+                    // brand also asks a separate age-bracket question, and it
+                    // must never touch an honest warranty=false/true answer
+                    // otherwise - forcing warranty:false here for every
+                    // non-age-asking brand was the original bug (e.g. every
+                    // Samsung Galaxy A-series device).
+                    const baseDiag = isWarrantyValid ? diagnostics : { ...diagnostics, warranty: false as const };
+
+                    if (asksAge) {
+                      if (isWarrantyValid) {
+                        // Cashify skips the age question entirely for brand new phones (17e, 16e, Z Flip7 FE)
+                        const isBrandNewApple = selectedBrand === 'Apple' && (selectedModel.toLowerCase().includes('17e') || selectedModel.toLowerCase().includes('16e'));
+                        const isBrandNewSamsung = selectedBrand === 'Samsung' && selectedModel.toLowerCase().includes('flip7 fe');
+                        const isApple15ProMax = selectedBrand === 'Apple' && selectedModel.toLowerCase().includes('15 pro max');
+
+                        if ((isBrandNewApple && !diagnostics.accessories.includes('box')) || isBrandNewSamsung || isApple15ProMax) {
+                           const assignedAge = isApple15ProMax ? 'above11' as const : 'below3' as const;
+                           const updatedDiag = { ...baseDiag, mobileAge: assignedAge };
+                           setDiagnostics(updatedDiag);
+                           if (isAuthenticated) {
+                             calculateFinalPrice(updatedDiag);
+                             setMarketPriceFetched(false);
+                             navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11);
+                           } else {
+                             setFinalQuote(null); navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 10);
+                           }
+                           return;
+                        }
                       }
+                      // Ask the age question. Some brands (e.g. Oppo) read
+                      // mobileAge even when out of warranty, so this is not
+                      // gated on isWarrantyValid.
+                      setDiagnostics(baseDiag);
+                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 9);
                     } else {
                       const updatedDiag = {
-                        ...diagnostics,
-                        warranty: false,
-                        mobileAge: 'above11' as const
+                        ...baseDiag,
+                        mobileAge: isWarrantyValid ? baseDiag.mobileAge : 'above11' as const
                       };
                       setDiagnostics(updatedDiag);
-                      if (isAuthenticated) { 
-                        calculateFinalPrice(updatedDiag); 
+                      if (isAuthenticated) {
+                        calculateFinalPrice(updatedDiag);
                         setMarketPriceFetched(false);
-                        navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11); 
-                      } else { 
-                        setFinalQuote(null); navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 10); 
+                        navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11);
+                      } else {
+                        setFinalQuote(null); navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 10);
                       }
                     }
                   }} className="btn-primary" style={{ fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px' }}>Continue <ArrowRightIcon /></button>
@@ -2816,7 +2762,7 @@ export default function QuotePage() {
                   </div>
                 </div>
                 <button onClick={() => { 
-                  const prevStep = isWarrantyEligible(selectedBrand, selectedModel) ? 9 : 8;
+                  const prevStep = questionnaireFor({ brand: selectedBrand, model: selectedModel }).asksAge ? 9 : 8;
                   navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', prevStep); 
                   setShowOtpInput(false); 
                 }} style={{ background: 'none', border: 'none', fontSize: '2rem', cursor: 'pointer', paddingLeft: '1rem', color: '#999', lineHeight: 1 }}>×</button>
