@@ -21187,7 +21187,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "8 GB/256 GB",
     "ram": "8 GB",
     "color": "Default",
-    "basePrice": 13230
+    "basePrice": 13230,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-12-pro-5g-8-gb-256-gb"
   },
   {
     "id": "xiaomi_12_pro_5g_12_256",
@@ -21196,7 +21197,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "12 GB/256 GB",
     "ram": "12 GB",
     "color": "Default",
-    "basePrice": 14400
+    "basePrice": 14400,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-12-pro-5g-12-gb-256-gb"
   },
   {
     "id": "xiaomi_redmi_12_5g_4_128",
@@ -21314,7 +21316,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "8 GB/128 GB",
     "ram": "8 GB",
     "color": "Default",
-    "basePrice": 8500
+    "basePrice": 8500,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-11t-pro-5g-8-gb-128-gb"
   },
   {
     "id": "xiaomi_11t_pro_5g_8_256",
@@ -21323,7 +21326,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "8 GB/256 GB",
     "ram": "8 GB",
     "color": "Default",
-    "basePrice": 8780
+    "basePrice": 8780,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-11t-pro-5g-8-gb-256-gb"
   },
   {
     "id": "xiaomi_11t_pro_5g_12_256",
@@ -21332,7 +21336,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "12 GB/256 GB",
     "ram": "12 GB",
     "color": "Default",
-    "basePrice": 9160
+    "basePrice": 9160,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-11t-pro-5g-12-gb-256-gb"
   },
   {
     "id": "xiaomi_redmi_11_prime_5g_4_64",
@@ -21471,7 +21476,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "512 GB",
     "ram": "12 GB",
     "color": "Default",
-    "basePrice": 27210
+    "basePrice": 27210,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-14-12-gb-512-gb"
   },
   {
     "id": "xiaomi-14-ultra-16-512",
@@ -21480,7 +21486,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "512 GB",
     "ram": "16 GB",
     "color": "Default",
-    "basePrice": 37780
+    "basePrice": 37780,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-14-ultra-16-gb-512-gb"
   },
   {
     "id": "xiaomi-13-pro-5g-12-256",
@@ -21489,7 +21496,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "256 GB",
     "ram": "12 GB",
     "color": "Default",
-    "basePrice": 25190
+    "basePrice": 25190,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-13-pro-5g-12-gb-256-gb"
   },
   {
     "id": "samsung-galaxy-s25-ultra-5g-12-1tb",
@@ -21575,7 +21583,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "256 GB",
     "ram": "8 GB",
     "color": "Default",
-    "basePrice": 24730
+    "basePrice": 24730,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s24-fe-5g-8-gb-256-gb"
   },
   {
     "id": "samsung-galaxy-s24-fe-5g-8-128",
@@ -21584,7 +21593,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "128 GB",
     "ram": "8 GB",
     "color": "Default",
-    "basePrice": 22690
+    "basePrice": 22690,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s24-fe-5g-8-gb-128-gb"
   },
   {
     "id": "samsung-galaxy-s24-ultra-5g-12-1tb",
@@ -21593,7 +21603,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "1 TB",
     "ram": "12 GB",
     "color": "Default",
-    "basePrice": 64050
+    "basePrice": 64050,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s24-ultra-5g-12-gb-1-tb"
   },
   {
     "id": "samsung-galaxy-s24-ultra-5g-12-512",
@@ -21602,7 +21613,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "512 GB",
     "ram": "12 GB",
     "color": "Default",
-    "basePrice": 63620
+    "basePrice": 63620,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s24-ultra-5g-12-gb-512-gb"
   },
   {
     "id": "samsung-galaxy-s24-ultra-5g-12-256",
@@ -21611,7 +21623,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "256 GB",
     "ram": "12 GB",
     "color": "Default",
-    "basePrice": 62290
+    "basePrice": 62290,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s24-ultra-5g-12-gb-256-gb"
   },
   {
     "id": "samsung-galaxy-s22-ultra-5g-12-1tb",
@@ -21650,7 +21663,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "256 GB",
     "ram": "8 GB",
     "color": "Default",
-    "basePrice": 18210
+    "basePrice": 18210,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s22-plus-5g-8-gb-256-gb"
   },
   {
     "id": "samsung-galaxy-s22-plus-5g-8-128",
@@ -21659,7 +21673,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "128 GB",
     "ram": "8 GB",
     "color": "Default",
-    "basePrice": 17120
+    "basePrice": 17120,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s22-plus-5g-8-gb-128-gb"
   },
   {
     "id": "samsung-galaxy-s22-5g-8-256",
@@ -21668,7 +21683,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "256 GB",
     "ram": "8 GB",
     "color": "Default",
-    "basePrice": 16810
+    "basePrice": 16810,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s22-5g-8-gb-256-gb"
   },
   {
     "id": "samsung-galaxy-s22-5g-8-128",
@@ -21677,7 +21693,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "128 GB",
     "ram": "8 GB",
     "color": "Default",
-    "basePrice": 16090
+    "basePrice": 16090,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s22-5g-8-gb-128-gb"
   },
   {
     "id": "samsung-galaxy-s21-fe-5g-8-256",
@@ -21686,7 +21703,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "256 GB",
     "ram": "8 GB",
     "color": "Default",
-    "basePrice": 11810
+    "basePrice": 11810,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s21-fe-5g-8-gb-256-gb"
   },
   {
     "id": "samsung-galaxy-s21-fe-5g-8-128",
@@ -21695,7 +21713,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "128 GB",
     "ram": "8 GB",
     "color": "Default",
-    "basePrice": 11040
+    "basePrice": 11040,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s21-fe-5g-8-gb-128-gb"
   },
   {
     "id": "samsung-galaxy-s20-ultra-5g-12-128",
