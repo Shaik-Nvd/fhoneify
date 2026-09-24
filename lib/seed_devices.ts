@@ -2120,6 +2120,15 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 7720
   },
   {
+    "id": "oneplus_7104",
+    "brand": "OnePlus",
+    "model": "OnePlus N6x",
+    "storage": "4 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 13460,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-n6x-4-gb-128-gb"
+  },
+  {
     "id": "asus_8000",
     "brand": "Asus",
     "model": "Asus ROG Phone II ZS660KL",
@@ -2499,6 +2508,16 @@ export const SEED_DEVICES: any[] = [
     "color": "Obsidian",
     "basePrice": 32810,
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-10a-8-gb-256-gb"
+  },
+  {
+    "id": "google_batch_26",
+    "brand": "Google",
+    "model": "Google Pixel 11 Pro XL",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Obsidian",
+    "basePrice": 80000,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-11-pro-xl-12-gb-256-gb"
   },
   {
     "id": "37d06139-0eef-4ba4-8e3c-a6eb5ea3cef4",
@@ -5751,6 +5770,116 @@ export const SEED_DEVICES: any[] = [
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-edge-50-fusion-8-gb-128-gb"
   },
   {
+    "id": "motorola_batch_65",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 50 Fusion",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 14900,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-edge-50-fusion-12-gb-256-gb"
+  },
+  {
+    "id": "motorola_batch_66",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 40",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 14970,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-edge-40-8-gb-256-gb"
+  },
+  {
+    "id": "motorola_batch_67",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 50 Pro",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 17590,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-edge-50-pro-12-gb-256-gb"
+  },
+  {
+    "id": "motorola_batch_68",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 50 Neo",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 15430,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-edge-50-neo-8-gb-256-gb"
+  },
+  {
+    "id": "motorola_batch_69",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 60 Fusion",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 16430,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-edge-60-fusion-8-gb-256-gb"
+  },
+  {
+    "id": "motorola_batch_70",
+    "brand": "Motorola",
+    "model": "Motorola Moto Edge 60 Pro",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 21650,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-edge-60-pro-12-gb-256-gb"
+  },
+  {
+    "id": "motorola_batch_71",
+    "brand": "Motorola",
+    "model": "Motorola Moto Razr 40",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 18420,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-razr-40-8-gb-256-gb"
+  },
+  {
+    "id": "motorola_batch_72",
+    "brand": "Motorola",
+    "model": "Motorola Moto Razr 40 Ultra",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 22430,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-razr-40-ultra-8-gb-256-gb"
+  },
+  {
+    "id": "motorola_batch_73",
+    "brand": "Motorola",
+    "model": "Motorola Moto Razr 50",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 23240,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-razr-50-8-gb-256-gb"
+  },
+  {
+    "id": "motorola_batch_74",
+    "brand": "Motorola",
+    "model": "Motorola Moto Razr 50 Ultra",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 31160,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-razr-50-ultra-12-gb-512-gb"
+  },
+  {
+    "id": "motorola_batch_75",
+    "brand": "Motorola",
+    "model": "Motorola Moto Razr 60",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 26430,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-razr-60-8-gb-256-gb"
+  },
+  {
     "brand": "Lenovo",
     "model": "Lenovo Z6 Pro",
     "storage": "8 GB/128 GB",
@@ -7580,6 +7709,16 @@ export const SEED_DEVICES: any[] = [
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-x8-pro-12-gb-256-gb"
   },
   {
+    "id": "poco_x8promax5g_12_256",
+    "brand": "POCO",
+    "model": "POCO X8 Pro Max 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 27450,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-poco-x8-pro-max-5g-12-gb-256-gb"
+  },
+  {
     "id": "54544122-0ef0-4447-998a-6cbe7fb95d94",
     "brand": "Infinix",
     "model": "Infinix Hot 7 Pro",
@@ -8198,6 +8337,16 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "basePrice": 6190,
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-hot-30-5g-8-gb-128-gb"
+  },
+  {
+    "id": "infinix_gt20pro_12_256",
+    "brand": "Infinix",
+    "model": "Infinix GT 20 Pro",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 10040,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-gt-20-pro-12-gb-256-gb"
   },
   {
     "id": "041d6d9c-ddcd-4134-b15a-e028f211ec95",
@@ -10128,6 +10277,16 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "basePrice": 28000,
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-4a-pro-8-gb-128-gb"
+  },
+  {
+    "id": "nothing_phone4b_8_256",
+    "brand": "Nothing",
+    "model": "Nothing Phone 4b",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 24990,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-4b-8-gb-256-gb"
   },
   {
     "id": "e89e5499-ce03-48b4-8132-5a3b4728dd30",
@@ -21339,7 +21498,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "1 TB",
     "ram": "12 GB",
     "color": "Default",
-    "basePrice": 74650
+    "basePrice": 74650,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s25-ultra-5g-12-gb-1-tb"
   },
   {
     "id": "samsung-galaxy-s25-ultra-5g-12-512",
@@ -21348,7 +21508,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "512 GB",
     "ram": "12 GB",
     "color": "Default",
-    "basePrice": 72470
+    "basePrice": 72470,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s25-ultra-5g-12-gb-512-gb"
   },
   {
     "id": "samsung-galaxy-s25-ultra-5g-12-256",
@@ -21357,7 +21518,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "256 GB",
     "ram": "12 GB",
     "color": "Default",
-    "basePrice": 68950
+    "basePrice": 68950,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s25-ultra-5g-12-gb-256-gb"
   },
   {
     "id": "samsung-galaxy-s25-plus-5g-12-512",
@@ -21366,7 +21528,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "512 GB",
     "ram": "12 GB",
     "color": "Default",
-    "basePrice": 52310
+    "basePrice": 52310,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s25-plus-5g-12-gb-512-gb"
   },
   {
     "id": "samsung-galaxy-s25-plus-5g-12-256",
@@ -21375,7 +21538,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "256 GB",
     "ram": "12 GB",
     "color": "Default",
-    "basePrice": 49980
+    "basePrice": 49980,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s25-plus-5g-12-gb-256-gb"
   },
   {
     "id": "samsung-galaxy-s25-5g-12-512",
@@ -21456,7 +21620,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "1 TB",
     "ram": "12 GB",
     "color": "Default",
-    "basePrice": 28540
+    "basePrice": 28540,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s22-ultra-5g-12-gb-1-tb"
   },
   {
     "id": "samsung-galaxy-s22-ultra-5g-12-512",
@@ -21465,7 +21630,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "512 GB",
     "ram": "12 GB",
     "color": "Default",
-    "basePrice": 27730
+    "basePrice": 27730,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s22-ultra-5g-12-gb-512-gb"
   },
   {
     "id": "samsung-galaxy-s22-ultra-5g-12-256",
@@ -21474,7 +21640,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "256 GB",
     "ram": "12 GB",
     "color": "Default",
-    "basePrice": 26520
+    "basePrice": 24470,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s22-ultra-5g-12-gb-256-gb"
   },
   {
     "id": "samsung-galaxy-s22-plus-5g-8-256",
