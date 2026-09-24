@@ -142,6 +142,9 @@ interface ConditionAdjustmentOptions {
   functionalOverrides?: Record<string, number>;
   heavyScreenScratchScale?: number;
   lightScreenScratchScale?: number;
+  /** Scale on the heavy body tier (>2 scratches, major dents) where a
+   * family has Cashify body evidence (lib/pricing/calibration.ts). */
+  heavyBodyCosmeticScale?: number;
 }
 
 const lower = (value: unknown) => String(value ?? '').toLowerCase();
@@ -226,9 +229,9 @@ export function calculateConditionAdjustments(
 
   let cosmeticBodyPenalty = 0;
   if (defects.has('body_scratch') || bodyScratches || bodyDents) {
-    if (bodyScratches.includes('more than 2')) cosmeticBodyPenalty += GRANULAR_CONDITION_PENALTIES.body.scratchesHeavy * CASHIFY_CALIBRATION.heavyBody.cosmeticScale;
+    if (bodyScratches.includes('more than 2')) cosmeticBodyPenalty += GRANULAR_CONDITION_PENALTIES.body.scratchesHeavy * (options.heavyBodyCosmeticScale ?? 1);
     else if (bodyScratches.includes('1-2')) cosmeticBodyPenalty += GRANULAR_CONDITION_PENALTIES.body.scratchesLight;
-    if (bodyDents.includes('major') || bodyDents.includes('more than 2')) cosmeticBodyPenalty += GRANULAR_CONDITION_PENALTIES.body.dentsMajor * CASHIFY_CALIBRATION.heavyBody.cosmeticScale;
+    if (bodyDents.includes('major') || bodyDents.includes('more than 2')) cosmeticBodyPenalty += GRANULAR_CONDITION_PENALTIES.body.dentsMajor * (options.heavyBodyCosmeticScale ?? 1);
     else if (bodyDents.includes('1-2')) cosmeticBodyPenalty += GRANULAR_CONDITION_PENALTIES.body.dentsMinor;
   }
 
@@ -538,7 +541,10 @@ export function calculateSamsungPrice(model: string, reference: CashifyGetUptoRe
     : (isSFamily && !isUltra && !isFE && !isEdge
       ? CASHIFY_CALIBRATION.samsung.sSeriesSlab.heavyScreenScratchScale
       : undefined);
-  const adjustments = calculateConditionAdjustments(diagnostics, params, { heavyScreenScratchScale });
+  const heavyBodyCosmeticScale = isSFamily && !isFoldable && !isFE && !isEdge
+    ? CASHIFY_CALIBRATION.samsung.sSeriesBody.heavyBodyCosmeticScale
+    : undefined;
+  const adjustments = calculateConditionAdjustments(diagnostics, params, { heavyScreenScratchScale, heavyBodyCosmeticScale });
   let cashifyPrice = reference * ageMultiplier * adjustments.conditionRetention + boxBonus;
   if (diagnostics.calls === false) cashifyPrice = 1200;
 

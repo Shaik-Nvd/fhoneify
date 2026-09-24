@@ -106,4 +106,6 @@ already Cashify's Get Upto. Guarded by `npm run test:pricing:get-upto`.
 
 ## Heavy body damage (2026-09-24)
 
-Body-only control: Galaxy S24 5G 8/256, out of warranty, bill, box, >2 body scratches + major dents, Cashify ₹24,320 on a ₹34,710 reference = 11.13% deduction against the engine's 22.0%. The heavy cosmetic body tier (scratchesHeavy, dentsMajor) is scaled by CASHIFY_CALIBRATION.heavyBody.cosmeticScale = 0.506; light scratches, minor dents, panel and bent rules are unchanged, and condition penalties still add. Cross-checks with a local display: iPhone 13 −₹426, Galaxy S22 Ultra −₹1,694 (display share within the 10.8-24.1% display-only spread), so stacking was left unchanged.
+Body-only control: Galaxy S24 5G 8/256, out of warranty, bill, box, >2 body scratches + major dents, Cashify ₹24,320 on a ₹34,710 reference = 11.13% deduction against the engine's 22.0%. Galaxy S / Plus / Ultra (not FE, Edge or foldables) scale the heavy cosmetic body tier by CASHIFY_CALIBRATION.samsung.sSeriesBody.heavyBodyCosmeticScale = 0.506. Other brands, including Apple, keep the previous body values until they have their own body-only evidence.
+
+Open (stacking): Galaxy S22 Ultra with a local display + the same body damage implies a 22.2% combined deduction; additive stacking gives 31.1% and multiplicative 28.8%. iPhone 13 (local display + heavy body) is ₹1.8k low with no Apple body-only control. One combined observation per brand cannot fix a stacking rule; see the requested controls in scripts/pricing/team-qa-observations.json.

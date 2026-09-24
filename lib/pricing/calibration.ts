@@ -24,6 +24,14 @@ export const CASHIFY_CALIBRATION = {
       // ₹62 error on the standardized heavy-scratch profile.
       heavyScreenScratchScale: 0.75,
     },
+    sSeriesBody: {
+      // Galaxy S / Plus / Ultra (not FE, Edge or foldables): scale on the
+      // heavy cosmetic body tier (">2 scratches", "major dents / more than
+      // 2"). Body-only control 2026-09-24: Galaxy S24 5G 8/256, out of
+      // warranty, bill, box, Cashify ₹24,320 on a ₹34,710 reference = 11.13%
+      // deduction vs the engine's 22.0% (0.20 x scale 1.1) -> 0.506.
+      heavyBodyCosmeticScale: 0.506,
+    },
     foldable: {
       // Foldables historically had an extra screen-damage multiplier. The
       // live Fold6 pair supports 1.50 as a conservative family-level scale.
@@ -56,15 +64,5 @@ export const CASHIFY_CALIBRATION = {
     // body damage -> Apple 0.87.
     androidRetention: 0.81,
     appleRetention: 0.87,
-  },
-  heavyBody: {
-    // Scale on the heavy cosmetic body tier (">2 scratches", "major dents /
-    // more than 2"). Body-only control 2026-09-24: Galaxy S24 5G 8/256, out
-    // of warranty, bill, box, >2 scratches + major dents, Cashify ₹24,320 on
-    // a ₹34,710 reference = 11.13% deduction vs the engine's 22.0%
-    // (0.20 x S-series scale 1.1) -> 0.506. Cross-checks with a local
-    // display: iPhone 13 (−₹425), Galaxy S22 Ultra (−₹1.7k, within the
-    // display-only spread). Light scratches/minor dents unchanged.
-    cosmeticScale: 0.506,
   },
 } as const;
