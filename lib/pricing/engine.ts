@@ -31,7 +31,7 @@ import { PERFECT_CONDITION_DIAGNOSTICS } from './perfectCondition';
 /** Recorded on every signed quote and lead so a price can be traced to the
  * code that produced it. Bump when base resolution, guardrails, or the
  * methodology change. */
-export const PRICING_ENGINE_VERSION = 'fhoneify-pricing/2026-09-24-display-oppo-calibration';
+export const PRICING_ENGINE_VERSION = 'fhoneify-pricing/2026-09-24-heavy-body-calibration';
 
 export type BaseSource = 'reference_repository' | 'materialized_snapshot' | 'catalog_base_price';
 

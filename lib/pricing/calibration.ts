@@ -57,4 +57,14 @@ export const CASHIFY_CALIBRATION = {
     androidRetention: 0.81,
     appleRetention: 0.87,
   },
+  heavyBody: {
+    // Scale on the heavy cosmetic body tier (">2 scratches", "major dents /
+    // more than 2"). Body-only control 2026-09-24: Galaxy S24 5G 8/256, out
+    // of warranty, bill, box, >2 scratches + major dents, Cashify ₹24,320 on
+    // a ₹34,710 reference = 11.13% deduction vs the engine's 22.0%
+    // (0.20 x S-series scale 1.1) -> 0.506. Cross-checks with a local
+    // display: iPhone 13 (−₹425), Galaxy S22 Ultra (−₹1.7k, within the
+    // display-only spread). Light scratches/minor dents unchanged.
+    cosmeticScale: 0.506,
+  },
 } as const;

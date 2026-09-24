@@ -41,8 +41,8 @@ const priced = comparable.map((o: any) => {
 
 console.log('\nSuite H - team QA Cashify observations\n');
 
-test('fixture holds the eight comparable observations with reproduced answers', () => {
-  assert.equal(comparable.length, 8);
+test("fixture holds the nine comparable observations with reproduced answers", () => {
+  assert.equal(comparable.length, 9);
   for (const o of comparable) assert.ok(o.fhoneifyAnswers && o.referencePrice > 0 && o.cashifyFinal > 0, o.id);
 });
 

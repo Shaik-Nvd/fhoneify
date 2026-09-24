@@ -104,6 +104,6 @@ the perfect-condition *final offer* as Get Upto, so the brand age multiplier
 (0.7496 for iPhone 14/15) and Android 0.98/+₹380 ran on a figure that was
 already Cashify's Get Upto. Guarded by `npm run test:pricing:get-upto`.
 
-## Open: heavy body damage (2026-09-24)
+## Heavy body damage (2026-09-24)
 
-Two team QA quotes combining a local display with >2 body scratches and major dents (Galaxy S22 Ultra 12/256, iPhone 13 128GB) remain ₹1.8k-3.9k low after the display calibration; Cashify implies only ~3-6% for that body damage versus the engine's 16-24%. Both observations also include a local display, so the body rule is unchanged until a body-only Cashify quote isolates it. Fixture: scripts/pricing/team-qa-observations.json; guard: npm run test:pricing:team-qa.
+Body-only control: Galaxy S24 5G 8/256, out of warranty, bill, box, >2 body scratches + major dents, Cashify ₹24,320 on a ₹34,710 reference = 11.13% deduction against the engine's 22.0%. The heavy cosmetic body tier (scratchesHeavy, dentsMajor) is scaled by CASHIFY_CALIBRATION.heavyBody.cosmeticScale = 0.506; light scratches, minor dents, panel and bent rules are unchanged, and condition penalties still add. Cross-checks with a local display: iPhone 13 −₹426, Galaxy S22 Ultra −₹1,694 (display share within the 10.8-24.1% display-only spread), so stacking was left unchanged.

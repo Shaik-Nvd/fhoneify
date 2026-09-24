@@ -8,12 +8,12 @@
       "model": "Samsung Galaxy S22 Ultra 5G",
       "variant": "12 GB/256 GB",
       "catalogStorage": "256 GB",
-      "referencePrice": null,
+      "referencePrice": 24470,
       "profile": "local/non-original display, more than 2 dents, more than 2 scratches",
       "cashifyFinal": 15150,
       "fhoneifyObserved": 8157,
       "comparisonStatus": "UNVERIFIED",
-      "notes": "Fhoneify figure reproduced exactly, but priced from the catalog fallback (₹26,520) because the Supabase ReferencePrice row is MISSING; not comparable until a live reference exists. fhoneifyObserved is the on-screen payout (quote − ₹99 display rule).",
+      "notes": "Supabase ReferencePrice row is MISSING (a Cashify variant link was added so the weekly refresh can fill it); referencePrice here is the Cashify public Get Upto read 2026-09-24, also the catalog fallback. Kept UNVERIFIED until the live reference exists. fhoneifyObserved is the on-screen payout (quote − ₹99 display rule).",
       "fhoneifyAnswers": {
         "calls": true,
         "touch": true,
@@ -255,6 +255,42 @@
       "notes": "Shown ₹33,579 cannot be reproduced by any warranty/bill/box/charger combination (closest ₹733 off); not used for calibration. fhoneifyObserved is the on-screen payout (quote − ₹99 display rule)."
     },
     {
+      "id": "qa-s24-body-only-control",
+      "brand": "Samsung",
+      "model": "Samsung Galaxy S24 5G",
+      "variant": "8 GB/256 GB",
+      "referencePrice": 34710,
+      "profile": "body-only control: calls/touch/original screen yes, out of warranty, GST bill, no screen defect, >2 body scratches + major dents, no functional issue, original box",
+      "cashifyFinal": 24320,
+      "fhoneifyObserved": null,
+      "comparisonStatus": "COMPARABLE",
+      "notes": "Owner-collected Cashify quote 2026-09-24 to isolate the heavy body rule from local-display stacking.",
+      "fhoneifyAnswers": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": true,
+        "defects": [
+          "body_scratch"
+        ],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": "More than 2 scratches",
+        "bodyDents": "Major dent(s) or more than 2",
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [],
+        "eSim": null,
+        "warranty": false,
+        "mobileAge": "above11",
+        "validBill": true,
+        "accessories": [
+          "box"
+        ]
+      }
+    },
+    {
       "id": "qa-reno12pro-oow-nobox-nobill",
       "brand": "Oppo",
       "model": "OPPO Reno12 Pro 5G",
@@ -369,7 +405,30 @@
       "cashifyFinal": 11530,
       "fhoneifyObserved": 9667,
       "comparisonStatus": "UNVERIFIED",
-      "notes": "Profile not recorded."
+      "notes": "Shown ₹9,667 reproduces exactly as out of warranty + box + bill, no damage; but Cashify ₹11,530 is 99.8% of its own Get Upto, implausible for an out-of-warranty phone, so the Cashify answers likely differed. Not used for calibration.",
+      "fhoneifyAnswers": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": true,
+        "defects": [],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": null,
+        "bodyDents": null,
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [],
+        "eSim": null,
+        "warranty": false,
+        "mobileAge": "above11",
+        "validBill": true,
+        "accessories": [
+          "box",
+          "bill"
+        ]
+      }
     },
     {
       "id": "qa-pocox8",

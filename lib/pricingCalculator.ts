@@ -226,9 +226,9 @@ export function calculateConditionAdjustments(
 
   let cosmeticBodyPenalty = 0;
   if (defects.has('body_scratch') || bodyScratches || bodyDents) {
-    if (bodyScratches.includes('more than 2')) cosmeticBodyPenalty += GRANULAR_CONDITION_PENALTIES.body.scratchesHeavy;
+    if (bodyScratches.includes('more than 2')) cosmeticBodyPenalty += GRANULAR_CONDITION_PENALTIES.body.scratchesHeavy * CASHIFY_CALIBRATION.heavyBody.cosmeticScale;
     else if (bodyScratches.includes('1-2')) cosmeticBodyPenalty += GRANULAR_CONDITION_PENALTIES.body.scratchesLight;
-    if (bodyDents.includes('major') || bodyDents.includes('more than 2')) cosmeticBodyPenalty += GRANULAR_CONDITION_PENALTIES.body.dentsMajor;
+    if (bodyDents.includes('major') || bodyDents.includes('more than 2')) cosmeticBodyPenalty += GRANULAR_CONDITION_PENALTIES.body.dentsMajor * CASHIFY_CALIBRATION.heavyBody.cosmeticScale;
     else if (bodyDents.includes('1-2')) cosmeticBodyPenalty += GRANULAR_CONDITION_PENALTIES.body.dentsMinor;
   }
 
