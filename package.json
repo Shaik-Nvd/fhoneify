@@ -46,7 +46,9 @@
     "test:pricing:consistency": "tsx scripts/test/pricing.quote-consistency.test.ts",
     "test:pricing:calibration": "tsx scripts/test/pricing.calibration.test.ts",
     "test:pricing:catalog-properties": "tsx scripts/test/pricing.catalog-properties.test.ts",
-    "test:pricing:get-upto": "tsx scripts/test/pricing.get-upto.test.ts"
+    "test:pricing:get-upto": "tsx scripts/test/pricing.get-upto.test.ts",
+    "test:pricing:questionnaire": "tsx scripts/test/pricing.questionnaire-coverage.test.ts",
+    "test:pricing:team-qa": "tsx scripts/test/pricing.team-qa.test.ts"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"

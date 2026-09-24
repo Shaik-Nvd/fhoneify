@@ -38,4 +38,23 @@ export const CASHIFY_CALIBRATION = {
       heavyScreenScratchScale: 1.00,
     },
   },
+  oppo: {
+    // Oppo had no out-of-warranty step at all (old phones kept the 0.98
+    // new-phone multiplier). Team QA 2026-09-24: Reno12 Pro 12/512, out of
+    // warranty, no box/bill/damage, Cashify ₹14,420 on a ₹20,250 reference
+    // = 0.712. Cross-check A6 5G 6/128 (out of warranty, box, back camera
+    // fault, unchanged 0.223 camera rule): predicted ₹8,331 vs Cashify ₹8,360.
+    outOfWarrantyAgeMultiplier: 0.712,
+  },
+  localDisplay: {
+    // Retention for a non-original (local/copy) display, replacing the
+    // pre-reference per-brand originalScreenPenalty values (40-45% cuts).
+    // Team QA 2026-09-24, local display, out of warranty, engine age rules
+    // held fixed: Pixel 7 Pro 10.8%, Pixel 9 Pro 24.1%, POCO F6 23.6%,
+    // Galaxy S26 Ultra 18.9% -> Android 0.81. iPhone 15 Pro Max 13.1%
+    // (after its 1-2 body scratches), iPhone 13 <= 18.7% including heavy
+    // body damage -> Apple 0.87.
+    androidRetention: 0.81,
+    appleRetention: 0.87,
+  },
 } as const;

@@ -175,7 +175,9 @@ export function calculateConditionAdjustments(
 
   let touchRetention = touchFailed ? (options.touchRetention ?? params.touchPenalty) : 1;
   let originalScreenRetention = diagnostics.originalScreen === false
-    ? (options.originalScreenRetention ?? params.originalScreenPenalty)
+    // Local/copy display: calibrated against real Cashify quotes on live Get
+    // Upto references (lib/pricing/calibration.ts); brands may override.
+    ? (options.originalScreenRetention ?? CASHIFY_CALIBRATION.localDisplay.androidRetention)
     : 1;
 
   let physicalScreenPenalty = 0;
@@ -454,7 +456,7 @@ export function calculateApplePrice(model: string, reference: CashifyGetUptoRefe
     : COMMON_FUNCTIONAL_PENALTIES.face * params.functionalScale;
   const adjustments = calculateConditionAdjustments(diagnostics, params, {
     touchRetention: is17e ? 1 - params.touchPenalty : params.touchPenalty,
-    originalScreenRetention: is17e ? 1 - params.originalScreenPenalty : params.originalScreenPenalty,
+    originalScreenRetention: CASHIFY_CALIBRATION.localDisplay.appleRetention,
     functionalOverrides: {
       battery_health: batteryHealthPenalty,
       battery_service: batteryServicePenalty,
@@ -667,6 +669,9 @@ export function calculateOppoPrice(model: string, reference: CashifyGetUptoRefer
     if (k.includes("3") && k.includes("6")) ageMultiplier = 0.94;
     else if (k.includes("6") && k.includes("11")) ageMultiplier = isFindX9Pro ? 0.85408 : 0.90;
   }
+  if (diagnostics.warranty === false || diagnostics.mobileAge === "above11") {
+    ageMultiplier = Math.min(ageMultiplier, CASHIFY_CALIBRATION.oppo.outOfWarrantyAgeMultiplier);
+  }
 
   const hasValidBill = diagnostics.validBill === true || (diagnostics.accessories || []).includes("bill");
   if (!hasValidBill && diagnostics.warranty !== false) ageMultiplier -= params.gstBillPenalty;
@@ -795,6 +800,25 @@ export function calculateGenericAndroidPrice(brand: string, model: string, refer
 // ============================================================================
 
 export function calculateFhoneifyPrice(
+  brand: string,
+  model: string,
+  cashifyGetUptoReference: CashifyGetUptoReference,
+  diagnostics: DiagnosticsType
+): PricingResult {
+  const asAnswered = routeBrandCalculator(brand, model, cashifyGetUptoReference, diagnostics);
+  // A warranty cannot be claimed without the GST bill (Cashify asks the two
+  // together), so "in warranty, no bill" never prices below the same phone
+  // answered as out of warranty - the brand bill deductions alone could
+  // otherwise reward answering "no warranty".
+  const hasValidBill = diagnostics.validBill === true || (diagnostics.accessories || []).includes("bill");
+  if (!hasValidBill && diagnostics.warranty !== false) {
+    const asOutOfWarranty = routeBrandCalculator(brand, model, cashifyGetUptoReference, { ...diagnostics, warranty: false, mobileAge: "above11" });
+    if (asOutOfWarranty.cashifyConditionEquivalent > asAnswered.cashifyConditionEquivalent) return asOutOfWarranty;
+  }
+  return asAnswered;
+}
+
+function routeBrandCalculator(
   brand: string,
   model: string,
   cashifyGetUptoReference: CashifyGetUptoReference,

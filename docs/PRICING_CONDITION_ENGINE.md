@@ -61,6 +61,9 @@ their historical values.
 | iPhone 15 Pro generation | young/in-warranty multiplier | 0.745160 | 0.912 | Live young control plus the existing 14 Pro/16 Pro sequence |
 | Samsung S-series slab | heavy-scratch scale | 1.10 | 0.75 | S24 isolation pair and the pre-`f1034f4` historical scale |
 | Samsung foldable | heavy-scratch scale | 1.10 | 1.50 | Fold6 isolation pair plus the historical foldable screen multiplier |
+| Oppo (all) | out-of-warranty age multiplier | none (stayed 0.98) | 0.712 | Team QA 2026-09-24: Reno12 Pro 12/512 clean out-of-warranty quote; A6 5G back-camera cross-check within ₹30 |
+| All non-Apple | local/copy display retention | 0.55-0.80 per brand (pre-reference) | 0.81 | Team QA 2026-09-24: Pixel 7 Pro, Pixel 9 Pro, POCO F6, Galaxy S26 Ultra (implied 10.8-24.1%) |
+| Apple (all) | local/copy display retention | 0.34-0.78 per model (pre-reference) | 0.87 | Team QA 2026-09-24: iPhone 15 Pro Max (13.1%), iPhone 13 (<=18.7% incl. heavy body damage) |
 
 ### Documented calibration outlier: iPhone 14 Pro Max 256GB
 
@@ -100,3 +103,7 @@ Root cause of Fhoneify's Get Upto starting below Cashify: the quote page showed
 the perfect-condition *final offer* as Get Upto, so the brand age multiplier
 (0.7496 for iPhone 14/15) and Android 0.98/+₹380 ran on a figure that was
 already Cashify's Get Upto. Guarded by `npm run test:pricing:get-upto`.
+
+## Open: heavy body damage (2026-09-24)
+
+Two team QA quotes combining a local display with >2 body scratches and major dents (Galaxy S22 Ultra 12/256, iPhone 13 128GB) remain ₹1.8k-3.9k low after the display calibration; Cashify implies only ~3-6% for that body damage versus the engine's 16-24%. Both observations also include a local display, so the body rule is unchanged until a body-only Cashify quote isolates it. Fixture: scripts/pricing/team-qa-observations.json; guard: npm run test:pricing:team-qa.
