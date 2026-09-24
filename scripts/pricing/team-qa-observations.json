@@ -1,5 +1,5 @@
 {
-  "description": "Team QA screenshots (2026-09-24): real Cashify final quotes vs the Fhoneify final shown for the same device and conditions. referencePrice is the Supabase ReferencePrice (Cashify public Get Upto) on 2026-09-24. comparisonStatus: COMPARABLE (same device/variant, conditions reproduced), UNVERIFIED (conditions not confirmed), INVALID_MODEL_MISMATCH, QUESTIONNAIRE_BUG, CATALOG_MISSING. fhoneifyAnswers is filled only once the shown Fhoneify figure has been reproduced exactly by the engine.",
+  "description": "Team QA screenshots (2026-09-24): real Cashify final quotes vs the Fhoneify final shown for the same device and conditions. referencePrice is the Supabase ReferencePrice (Cashify public Get Upto) on 2026-09-24. comparisonStatus: COMPARABLE (same device/variant, conditions reproduced), UNVERIFIED (conditions not confirmed), INVALID_MODEL_MISMATCH, QUESTIONNAIRE_BUG, CATALOG_MISSING. fhoneifyAnswers is filled only once the shown Fhoneify figure has been reproduced exactly by the engine. cashifyAsksWarranty records whether Cashify's own questionnaire for that model asks the warranty/GST-bill questions (checked 2026-09-24); where it does not, Cashify applies no out-of-warranty deduction. cashifyQuestionnaire records the warranty/bill/age modes Cashify's questionnaire presents for that model (read 2026-09-24); a question Cashify does not ask is priced as neutral, never as \"No\".",
   "source": "team_qa_2026_09_24",
   "observations": [
     {
@@ -31,13 +31,18 @@
         "bodyBent": null,
         "hardware": [],
         "eSim": null,
-        "warranty": false,
-        "mobileAge": "above11",
-        "validBill": true,
+        "warranty": null,
+        "mobileAge": null,
+        "validBill": null,
         "accessories": [
           "box",
           "charger"
         ]
+      },
+      "cashifyQuestionnaire": {
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED"
       }
     },
     {
@@ -66,10 +71,15 @@
         "bodyBent": null,
         "hardware": [],
         "eSim": null,
-        "warranty": false,
-        "mobileAge": "above11",
-        "validBill": true,
+        "warranty": null,
+        "mobileAge": null,
+        "validBill": null,
         "accessories": []
+      },
+      "cashifyQuestionnaire": {
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED"
       }
     },
     {
@@ -104,6 +114,11 @@
         "accessories": [
           "box"
         ]
+      },
+      "cashifyQuestionnaire": {
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED"
       }
     },
     {
@@ -138,6 +153,11 @@
         "accessories": [
           "box"
         ]
+      },
+      "cashifyQuestionnaire": {
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED"
       }
     },
     {
@@ -172,6 +192,11 @@
         "mobileAge": "above11",
         "validBill": true,
         "accessories": []
+      },
+      "cashifyQuestionnaire": {
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED"
       }
     },
     {
@@ -202,12 +227,17 @@
         "bodyBent": null,
         "hardware": [],
         "eSim": null,
-        "warranty": false,
-        "mobileAge": "above11",
-        "validBill": true,
+        "warranty": null,
+        "mobileAge": null,
+        "validBill": null,
         "accessories": [
           "box"
         ]
+      },
+      "cashifyQuestionnaire": {
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED"
       }
     },
     {
@@ -240,6 +270,11 @@
         "mobileAge": "above11",
         "validBill": true,
         "accessories": []
+      },
+      "cashifyQuestionnaire": {
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED"
       }
     },
     {
@@ -252,7 +287,12 @@
       "cashifyFinal": 33860,
       "fhoneifyObserved": 33579,
       "comparisonStatus": "UNVERIFIED",
-      "notes": "Shown ₹33,579 cannot be reproduced by any warranty/bill/box/charger combination (closest ₹733 off); not used for calibration. fhoneifyObserved is the on-screen payout (quote − ₹99 display rule)."
+      "notes": "Shown ₹33,579 cannot be reproduced by any warranty/bill/box/charger combination (closest ₹733 off); not used for calibration. fhoneifyObserved is the on-screen payout (quote − ₹99 display rule).",
+      "cashifyQuestionnaire": {
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED"
+      }
     },
     {
       "id": "qa-s24-body-only-control",
@@ -288,6 +328,251 @@
         "accessories": [
           "box"
         ]
+      },
+      "cashifyQuestionnaire": {
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED"
+      }
+    },
+    {
+      "id": "qa-s24-display-only-control",
+      "brand": "Samsung",
+      "model": "Samsung Galaxy S24 5G",
+      "variant": "8 GB/256 GB",
+      "referencePrice": 34710,
+      "profile": "local display only; out of warranty; GST bill; no other defect; box",
+      "cashifyFinal": 22300,
+      "fhoneifyObserved": null,
+      "comparisonStatus": "COMPARABLE",
+      "notes": "Owner-collected 2026-09-24. Implies an 18.6% local-display deduction, confirming the Android 0.81 display retention.",
+      "fhoneifyAnswers": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": false,
+        "defects": [],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": null,
+        "bodyDents": null,
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [],
+        "eSim": null,
+        "warranty": false,
+        "mobileAge": "above11",
+        "validBill": true,
+        "accessories": [
+          "box"
+        ]
+      },
+      "cashifyQuestionnaire": {
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED"
+      }
+    },
+    {
+      "id": "qa-s24-display-body-control-first-attempt",
+      "brand": "Samsung",
+      "model": "Samsung Galaxy S24 5G",
+      "variant": "8 GB/256 GB",
+      "referencePrice": 34710,
+      "profile": "local display + >2 body scratches + major dents; out of warranty; GST bill; box",
+      "cashifyFinal": 27070,
+      "fhoneifyObserved": null,
+      "comparisonStatus": "UNVERIFIED",
+      "notes": "First attempt (₹27,070) exceeded both single-defect quotes; the defects did not register. Superseded by qa-s24-display-body-control.",
+      "fhoneifyAnswers": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": false,
+        "defects": [
+          "body_scratch"
+        ],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": "More than 2 scratches",
+        "bodyDents": "Major dent(s) or more than 2",
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [],
+        "eSim": null,
+        "warranty": false,
+        "mobileAge": "above11",
+        "validBill": true,
+        "accessories": [
+          "box"
+        ]
+      },
+      "cashifyQuestionnaire": {
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED"
+      }
+    },
+    {
+      "id": "qa-s24-display-body-control",
+      "brand": "Samsung",
+      "model": "Samsung Galaxy S24 5G",
+      "variant": "8 GB/256 GB",
+      "referencePrice": 34710,
+      "profile": "local display + >2 body scratches + major dents; out of warranty; GST bill; box",
+      "cashifyFinal": 21220,
+      "fhoneifyObserved": null,
+      "comparisonStatus": "COMPARABLE",
+      "cashifyQuestionnaire": {
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED"
+      },
+      "notes": "Owner-collected 2026-09-24 (re-entered). With display-only ₹22,300 and body-only ₹24,320 this fixes the display/body overlap.",
+      "fhoneifyAnswers": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": false,
+        "defects": [
+          "body_scratch"
+        ],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": "More than 2 scratches",
+        "bodyDents": "Major dent(s) or more than 2",
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [],
+        "eSim": null,
+        "warranty": false,
+        "mobileAge": "above11",
+        "validBill": true,
+        "accessories": [
+          "box"
+        ]
+      }
+    },
+    {
+      "id": "qa-iphone13-clean-control",
+      "brand": "Apple",
+      "model": "Apple iPhone 13",
+      "variant": "128GB",
+      "referencePrice": 23710,
+      "profile": "clean, original screen, box; Cashify asks no warranty/bill question for this model",
+      "cashifyFinal": 24030,
+      "fhoneifyObserved": null,
+      "comparisonStatus": "COMPARABLE",
+      "cashifyQuestionnaire": {
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED"
+      },
+      "notes": "Owner-collected 2026-09-24: Get Upto ₹23,710 + box -> no age/warranty deduction when Cashify does not ask warranty.",
+      "fhoneifyAnswers": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": true,
+        "defects": [],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": null,
+        "bodyDents": null,
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [],
+        "eSim": null,
+        "warranty": null,
+        "mobileAge": null,
+        "validBill": null,
+        "accessories": [
+          "box"
+        ]
+      }
+    },
+    {
+      "id": "qa-pixel7pro-clean-control",
+      "brand": "Google",
+      "model": "Google Pixel 7 Pro",
+      "variant": "12 GB/256 GB",
+      "referencePrice": 19200,
+      "profile": "clean, original screen, box; Cashify asks no warranty/bill question for this model",
+      "cashifyFinal": 18940,
+      "fhoneifyObserved": null,
+      "comparisonStatus": "COMPARABLE",
+      "cashifyQuestionnaire": {
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED"
+      },
+      "notes": "Owner-collected 2026-09-24.",
+      "fhoneifyAnswers": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": true,
+        "defects": [],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": null,
+        "bodyDents": null,
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [],
+        "eSim": null,
+        "warranty": null,
+        "mobileAge": null,
+        "validBill": null,
+        "accessories": [
+          "box"
+        ]
+      }
+    },
+    {
+      "id": "qa-iphone13-body-only-control",
+      "brand": "Apple",
+      "model": "Apple iPhone 13",
+      "variant": "128GB",
+      "referencePrice": 23710,
+      "profile": "body only: >2 scratches + major dents; original screen; box. Cashify does not ask warranty or bill for this model.",
+      "cashifyFinal": 22950,
+      "fhoneifyObserved": null,
+      "comparisonStatus": "COMPARABLE",
+      "notes": "Owner-collected 2026-09-24. 96.8% of Get Upto: Cashify applies no age/warranty deduction to models it does not ask warranty for, while the engine applies its out-of-warranty multiplier.",
+      "fhoneifyAnswers": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": true,
+        "defects": [
+          "body_scratch"
+        ],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": "More than 2 scratches",
+        "bodyDents": "Major dent(s) or more than 2",
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [],
+        "eSim": null,
+        "warranty": null,
+        "mobileAge": null,
+        "validBill": null,
+        "accessories": [
+          "box"
+        ]
+      },
+      "cashifyQuestionnaire": {
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED"
       }
     },
     {
@@ -320,6 +605,11 @@
         "mobileAge": "above11",
         "validBill": false,
         "accessories": []
+      },
+      "cashifyQuestionnaire": {
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED"
       }
     },
     {
@@ -355,6 +645,11 @@
           "box",
           "bill"
         ]
+      },
+      "cashifyQuestionnaire": {
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED"
       }
     },
     {
@@ -393,6 +688,11 @@
           "charger",
           "bill"
         ]
+      },
+      "cashifyQuestionnaire": {
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED"
       }
     },
     {
@@ -404,8 +704,8 @@
       "profile": "not recorded",
       "cashifyFinal": 11530,
       "fhoneifyObserved": 9667,
-      "comparisonStatus": "UNVERIFIED",
-      "notes": "Shown ₹9,667 reproduces exactly as out of warranty + box + bill, no damage; but Cashify ₹11,530 is 99.8% of its own Get Upto, implausible for an out-of-warranty phone, so the Cashify answers likely differed. Not used for calibration.",
+      "comparisonStatus": "COMPARABLE",
+      "notes": "Fhoneify figure reproduces as box + no damage. Cashify does not ask warranty/bill for this model (questionnaire crawl 2026-09-24), which explains its ₹11,530 on an ₹11,550 Get Upto: no age deduction applies.",
       "fhoneifyAnswers": {
         "calls": true,
         "touch": true,
@@ -421,13 +721,18 @@
         "bodyBent": null,
         "hardware": [],
         "eSim": null,
-        "warranty": false,
-        "mobileAge": "above11",
-        "validBill": true,
+        "warranty": null,
+        "mobileAge": null,
+        "validBill": null,
         "accessories": [
           "box",
           "bill"
         ]
+      },
+      "cashifyQuestionnaire": {
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED"
       }
     },
     {

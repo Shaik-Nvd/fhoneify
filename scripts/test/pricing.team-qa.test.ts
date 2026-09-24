@@ -14,6 +14,7 @@ import { parseDiagnostics } from '../../lib/pricing/diagnostics';
 import { customerPayout } from '../../lib/pricing/payout';
 import { PERFECT_CONDITION_DIAGNOSTICS, resolveReference } from '../../lib/pricing/engine';
 import { SEED_DEVICES } from '../../lib/seed_devices';
+import { UNKNOWN_QUESTIONNAIRE } from '../../lib/pricing/questionnaireSemantics';
 import type { CatalogDevice } from '../../lib/pricing/catalog';
 
 let passed = 0;
@@ -35,14 +36,15 @@ const comparable = fixture.observations.filter((o: any) => o.comparisonStatus ==
 const priced = comparable.map((o: any) => {
   const parsed = parseDiagnostics(o.fhoneifyAnswers);
   if (!parsed.ok) throw new Error(`${o.id}: ${parsed.error}`);
-  const result = calculateFhoneifyPrice(o.brand, o.model, o.referencePrice, parsed.value);
+  // Priced under the questionnaire Cashify showed for the model.
+  const result = calculateFhoneifyPrice(o.brand, o.model, o.referencePrice, parsed.value, o.cashifyQuestionnaire ?? UNKNOWN_QUESTIONNAIRE);
   return { o, result, error: result.cashifyConditionEquivalent - o.cashifyFinal };
 });
 
 console.log('\nSuite H - team QA Cashify observations\n');
 
-test("fixture holds the nine comparable observations with reproduced answers", () => {
-  assert.equal(comparable.length, 9);
+test("fixture holds the comparable observations with reproduced answers", () => {
+  assert.ok(comparable.length >= 14, `${comparable.length} comparable`);
   for (const o of comparable) assert.ok(o.fhoneifyAnswers && o.referencePrice > 0 && o.cashifyFinal > 0, o.id);
 });
 
@@ -60,6 +62,7 @@ test('no systematic bias: mean error within ±₹500 and mean absolute error und
 test('the final offer is the Cashify equivalent plus the existing uplift, applied once', () => {
   for (const { o, result } of priced) {
     assert.equal(result.fhoneifyPrice, applyCompetitorUplift(o.referencePrice, result.cashifyConditionEquivalent), o.id);
+    assert.ok(o.cashifyQuestionnaire, `${o.id}: comparable observations must record the Cashify questionnaire`);
   }
 });
 

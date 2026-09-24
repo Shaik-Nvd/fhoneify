@@ -109,3 +109,25 @@ already Cashify's Get Upto. Guarded by `npm run test:pricing:get-upto`.
 Body-only control: Galaxy S24 5G 8/256, out of warranty, bill, box, >2 body scratches + major dents, Cashify ₹24,320 on a ₹34,710 reference = 11.13% deduction against the engine's 22.0%. Galaxy S / Plus / Ultra (not FE, Edge or foldables) scale the heavy cosmetic body tier by CASHIFY_CALIBRATION.samsung.sSeriesBody.heavyBodyCosmeticScale = 0.506. Other brands, including Apple, keep the previous body values until they have their own body-only evidence.
 
 Open (stacking): Galaxy S22 Ultra with a local display + the same body damage implies a 22.2% combined deduction; additive stacking gives 31.1% and multiplicative 28.8%. iPhone 13 (local display + heavy body) is ₹1.8k low with no Apple body-only control. One combined observation per brand cannot fix a stacking rule; see the requested controls in scripts/pricing/team-qa-observations.json.
+
+## Cashify questionnaire semantics (2026-09-24)
+
+Cashify only asks "under manufacturer warranty?" and "GST valid bill?" for
+newer models (e.g. iPhone 15/16, Galaxy S24/S25/S26 Ultra, Pixel 9 Pro); for
+older ones (iPhone 13/14, Galaxy S22 Ultra/S23, Pixel 7 Pro, Vivo X60 Pro) the
+questions are absent and its quote applies no age/warranty deduction - the Get
+Upto already reflects the model's age (iPhone 13 clean ₹24,030 on ₹23,710).
+
+- `CashifyQuestionnaireProfile` (Postgres, with history) stores per MODEL
+  `warrantyMode` / `billMode` / `ageMode` = ASKED | NOT_ASKED | UNKNOWN.
+- Learned by `npm run reference-prices:refresh-questionnaire` (weekly workflow
+  `questionnaire-metadata-refresh.yml`): logged out, first questionnaire page
+  only, two variants per model, reuse for 30 days, retry UNKNOWN/failed.
+- Engine: NOT_ASKED warranty -> no age/warranty/bill factor; NOT_ASKED bill ->
+  neutral; NOT_ASKED age -> the warranty answer is the only age signal.
+  UNKNOWN (no profile) -> answers priced as given; logged as a fallback.
+- UI: shows a question only if ASKED or UNKNOWN; never sends a synthetic "No".
+- Local display: ASKED Android 0.81 / Apple 0.849; NOT_ASKED Android 0.656 /
+  Apple 0.630. Display + cosmetic body overlap: larger in full + 0.327 x the
+  smaller (S24 controls). Apple heavy body tier floored at the light tier.
+- Get Upto is untouched.

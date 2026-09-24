@@ -14,6 +14,8 @@
  * tests).
  */
 
+import type { QuestionnaireSemantics } from './questionnaireSemantics';
+
 export interface QuoteSessionDevice {
   brand: string;
   model: string;
@@ -32,6 +34,9 @@ export interface SignedQuote {
   expiresAt: string;
   /** The exact answers the token was signed for; the lead must send these. */
   diagnostics: unknown;
+  /** Which questions Cashify asks for this model (from the API). Absent in
+   * sessions saved before 2026-09-24: the page then asks everything. */
+  questionnaire?: QuestionnaireSemantics;
 }
 
 export interface QuoteSession extends QuoteSessionDevice {

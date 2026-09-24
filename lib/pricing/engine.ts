@@ -7,6 +7,7 @@ import {
   DiagnosticsType,
   PricingResult,
 } from '../pricingCalculator';
+import { UNKNOWN_QUESTIONNAIRE, type QuestionnaireSemantics } from './questionnaireSemantics';
 import materializedSnapshot from '../cashify_prices.json';
 import { classifyFreshness } from '../referencePricing/freshnessPolicy';
 import type { ReferencePriceRecord, ReferencePriceStatus } from '../referencePricing/types';
@@ -31,7 +32,7 @@ import { PERFECT_CONDITION_DIAGNOSTICS } from './perfectCondition';
 /** Recorded on every signed quote and lead so a price can be traced to the
  * code that produced it. Bump when base resolution, guardrails, or the
  * methodology change. */
-export const PRICING_ENGINE_VERSION = 'fhoneify-pricing/2026-09-24-samsung-s-body-calibration';
+export const PRICING_ENGINE_VERSION = 'fhoneify-pricing/2026-09-24-questionnaire-semantics';
 
 export type BaseSource = 'reference_repository' | 'materialized_snapshot' | 'catalog_base_price';
 
@@ -151,13 +152,14 @@ export function priceDevice(
   brand: string,
   model: string,
   reference: CashifyGetUptoReference,
-  diagnostics: DiagnosticsType
+  diagnostics: DiagnosticsType,
+  semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE
 ): PricingResult {
   if (!isPositivePrice(reference)) {
     throw new PricingInvariantError('Cashify Get Upto reference must be a positive finite number', { brand, model, reference });
   }
 
-  const result = calculateFhoneifyPrice(brand, model, reference, diagnostics);
+  const result = calculateFhoneifyPrice(brand, model, reference, diagnostics, semantics);
   const { cashifyConditionEquivalent, fhoneifyPrice } = result;
   const ceiling = maxPlausiblePrice(reference);
   const details = { brand, model, reference, cashifyConditionEquivalent, fhoneifyPrice, ceiling };

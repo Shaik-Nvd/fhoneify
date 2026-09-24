@@ -2,7 +2,7 @@ import crypto from 'crypto';
 import config from '../../config';
 import logger from '../../lib/logger';
 import { createPricingService } from '../../../lib/pricing/pricingService';
-import { getReferencePriceRepository } from '../../../lib/referencePricing/getStore';
+import { getQuestionnaireProfileStore, getReferencePriceRepository } from '../../../lib/referencePricing/getStore';
 
 // A dedicated QUOTE_SIGNING_SECRET lets quote tokens be rotated without
 // logging every user out. Without one, a key is derived from JWT_SECRET
@@ -27,5 +27,6 @@ export const pricingService = createPricingService({
   tokenTtlSeconds: positiveInt(process.env.QUOTE_TOKEN_TTL_MINUTES, 24 * 60) * 60,
   strictReferenceMode: process.env.QUOTE_STRICT_REFERENCE_MODE === 'true',
   referenceLookupTimeoutMs: positiveInt(process.env.REFERENCE_PRICE_LOOKUP_TIMEOUT_MS, 1500),
+  questionnaireStore: getQuestionnaireProfileStore(),
   logger,
 });

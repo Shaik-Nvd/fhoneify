@@ -12,6 +12,11 @@ export const CASHIFY_CALIBRATION = {
       // screen pair support a 7.5% deduction (15% global rule x 0.50).
       screenScratchScale: 0.50,
     },
+    // Heavy cosmetic body tier (>2 scratches, major dents). iPhone 13 body-only
+    // control 2026-09-24 (no warranty question): Cashify ₹22,950 on ₹23,710
+    // = 4.8% vs the engine's 16% (0.20 x scale 0.8) -> 0.30. The heavy tier is
+    // floored at the light tier, so for Apple it prices as light (6.4%).
+    heavyBodyCosmeticScale: 0.30,
     proYoungAgeByGeneration: {
       // Restores the smooth 14 Pro (0.914504) -> 16 Pro (0.911240) sequence.
       // The live young/heavy-scratch iPhone 15 Pro control supports 0.912.
@@ -63,6 +68,23 @@ export const CASHIFY_CALIBRATION = {
     // (after its 1-2 body scratches), iPhone 13 <= 18.7% including heavy
     // body damage -> Apple 0.87.
     androidRetention: 0.81,
-    appleRetention: 0.87,
+    // Re-derived 2026-09-24 with the display/body overlap below: iPhone 15
+    // Pro Max, out of warranty, local display + 1-2 body scratches, Cashify
+    // ₹44,410 -> 15.1% display.
+    appleRetention: 0.849,
+    // Models whose Cashify questionnaire does NOT ask warranty (no age factor
+    // applies there, so the whole observed cut is condition). Android: Pixel 7
+    // Pro local display only 33.1%; Galaxy S22 Ultra local display + heavy
+    // body 35.7% after the body share -> 0.656. Apple: iPhone 13 local
+    // display + heavy body 37.0% after the body share -> 0.630.
+    notAskedAndroidRetention: 0.656,
+    notAskedAppleRetention: 0.630,
+  },
+  damageOverlap: {
+    // Local display + cosmetic body damage: the larger deduction in full plus
+    // this share of the smaller. Galaxy S24 5G 8/256, out of warranty, box:
+    // display only ₹22,300 (19.0%), body only ₹24,320 (11.13%), both ₹21,220
+    // (22.64%) -> (22.64 - 19.0) / 11.13 = 0.327.
+    displayAndBodySecondFactor: 0.327,
   },
 } as const;

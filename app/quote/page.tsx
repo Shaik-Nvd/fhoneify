@@ -18,6 +18,7 @@ import { customerPayout } from '@/lib/pricing/payout';
 import { SignedQuote, clearQuoteSession, loadQuoteSession, sameDevice, saveQuoteSession } from '@/lib/pricing/quoteSession';
 import { warrantyVoidedByDiagnostics } from '@/lib/pricing/diagnostics';
 import { questionnaireFor } from '@/lib/pricing/questionnaire';
+import { UNKNOWN_QUESTIONNAIRE, isQuestionMode, showsQuestion, type QuestionnaireSemantics } from '@/lib/pricing/questionnaireSemantics';
 
 /** sessionStorage, or null where the browser blocks it (the page then simply
  * re-prices after a reload). */
@@ -299,6 +300,14 @@ export default function QuotePage() {
   const activeFinalQuote = finalQuote && sameDevice(finalQuote.device, currentDevice) ? finalQuote : null;
   // Fhoneify Get Upto = Cashify Get Upto + uplift, with no answers applied.
   const fhoneifyGetUpto = activeStartingQuote?.getUpto ?? null;
+  // Which questions Cashify's own questionnaire asks for this model. A
+  // question Cashify does not ask is not shown and never sent as "No";
+  // UNKNOWN (no stored profile yet) shows it - the safe, explicit fallback.
+  const modelQuestionnaire: QuestionnaireSemantics = activeStartingQuote?.questionnaire ?? UNKNOWN_QUESTIONNAIRE;
+  const asksWarrantyQuestion = showsQuestion(modelQuestionnaire.warrantyMode) && isWarrantyEligible(selectedBrand, selectedModel);
+  const asksBillQuestion = showsQuestion(modelQuestionnaire.billMode) && isWarrantyEligible(selectedBrand, selectedModel);
+  const asksAgeQuestion = modelQuestionnaire.ageMode === 'ASKED' ||
+    (modelQuestionnaire.ageMode === 'UNKNOWN' && questionnaireFor({ brand: selectedBrand, model: selectedModel }).asksAge);
   const finalPrice = activeFinalQuote?.price ?? null;
   const priceRequestIdRef = useRef(0);
   const startingRequestIdRef = useRef(0);
@@ -970,7 +979,11 @@ export default function QuotePage() {
     ) {
       throw new Error(res.data?.error || 'Pricing is currently unavailable for this device.');
     }
-    return { device: { brand, model, storage }, price: d.fhoneifyPrice, getUpto: d.startingPrice, token: d.quoteToken, expiresAt: d.expiresAt, diagnostics: diag };
+    const q = d.questionnaire;
+    const questionnaire: QuestionnaireSemantics = q && isQuestionMode(q.warrantyMode) && isQuestionMode(q.billMode) && isQuestionMode(q.ageMode)
+      ? { warrantyMode: q.warrantyMode, billMode: q.billMode, ageMode: q.ageMode }
+      : UNKNOWN_QUESTIONNAIRE;
+    return { device: { brand, model, storage }, price: d.fhoneifyPrice, getUpto: d.startingPrice, token: d.quoteToken, expiresAt: d.expiresAt, diagnostics: diag, questionnaire };
   };
 
   const describePricingError = (err: any) =>
@@ -2292,9 +2305,10 @@ export default function QuotePage() {
                   </div>
                 ))}
                 
-                {/* Newer model flow: Warranty and GST Bill Questions */}
-                {isWarrantyEligible(selectedBrand, selectedModel) && (
+                {/* Warranty and GST bill: shown exactly when Cashify asks them for this model */}
+                {(asksWarrantyQuestion || asksBillQuestion) && (
                   <>
+                    {asksWarrantyQuestion && (
                     <div style={{ marginBottom: '2.5rem' }}>
                       <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem' }}>Is your device under manufacturer warranty?</h3>
                       <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>You can get a better price for your device if it&apos;s under manufacturer warranty with a GST valid bill.</p>
@@ -2308,6 +2322,8 @@ export default function QuotePage() {
                       </div>
                     </div>
 
+                    )}
+                    {asksBillQuestion && (
                     <div style={{ marginBottom: '2.5rem' }}>
                       <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem' }}>Do you have GST valid bill with the same IMEI?</h3>
                       <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Make sure your bill has device IMEI mentioned on it.</p>
@@ -2320,6 +2336,7 @@ export default function QuotePage() {
                         </button>
                       </div>
                     </div>
+                    )}
                   </>
                 )}
 
@@ -2342,11 +2359,13 @@ export default function QuotePage() {
                 <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
                   <button onClick={() => {
                     const finalDiag = { ...diagnostics };
-                    if (!isWarrantyEligible(selectedBrand, selectedModel)) {
-                      finalDiag.warranty = false;
-                      finalDiag.validBill = false;
-                      finalDiag.mobileAge = 'above11';
+                    // A question Cashify does not ask for this model has no
+                    // answer: null (neutral), never a synthetic "No".
+                    if (!asksWarrantyQuestion) {
+                      finalDiag.warranty = null;
+                      finalDiag.mobileAge = null;
                     }
+                    if (!asksBillQuestion) finalDiag.validBill = null;
                     if (!isESimEligible(selectedBrand, selectedModel)) {
                       finalDiag.eSim = null;
                     }
@@ -2356,13 +2375,15 @@ export default function QuotePage() {
                     diagnostics.calls === null || 
                     diagnostics.touch === null || 
                     diagnostics.originalScreen === null || 
-                    (isWarrantyEligible(selectedBrand, selectedModel) && (diagnostics.warranty === null || diagnostics.validBill === null)) ||
+                    (asksWarrantyQuestion && diagnostics.warranty === null) ||
+                    (asksBillQuestion && diagnostics.validBill === null) ||
                     (isESimEligible(selectedBrand, selectedModel) && diagnostics.eSim === null)
                   } className="btn-primary" style={{ fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (
                     diagnostics.calls !== null && 
                     diagnostics.touch !== null && 
                     diagnostics.originalScreen !== null && 
-                    (!isWarrantyEligible(selectedBrand, selectedModel) || (diagnostics.warranty !== null && diagnostics.validBill !== null)) &&
+                    (!asksWarrantyQuestion || diagnostics.warranty !== null) &&
+                    (!asksBillQuestion || diagnostics.validBill !== null) &&
                     (!isESimEligible(selectedBrand, selectedModel) || diagnostics.eSim !== null)
                   ) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
                 </div>
@@ -2633,7 +2654,7 @@ export default function QuotePage() {
                     // and non-foldable Vivo/iQOO, never for Samsung, Nothing/
                     // CMF, foldable Vivo/iQOO or the generic fallback - see
                     // lib/pricing/questionnaire.ts.)
-                    const asksAge = questionnaireFor({ brand: selectedBrand, model: selectedModel }).asksAge;
+                    const asksAge = asksAgeQuestion;
 
                     // Check the concrete fields this UI sends. The previous
                     // legacy-id check could never see lines, discoloration or
@@ -2651,7 +2672,9 @@ export default function QuotePage() {
                     // otherwise - forcing warranty:false here for every
                     // non-age-asking brand was the original bug (e.g. every
                     // Samsung Galaxy A-series device).
-                    const baseDiag = isWarrantyValid ? diagnostics : { ...diagnostics, warranty: false as const };
+                    const baseDiag = !asksWarrantyQuestion
+                      ? { ...diagnostics, warranty: null, mobileAge: null }
+                      : (isWarrantyValid ? diagnostics : { ...diagnostics, warranty: false as const });
 
                     if (asksAge) {
                       if (isWarrantyValid) {
@@ -2682,7 +2705,7 @@ export default function QuotePage() {
                     } else {
                       const updatedDiag = {
                         ...baseDiag,
-                        mobileAge: isWarrantyValid ? baseDiag.mobileAge : 'above11' as const
+                        mobileAge: !asksWarrantyQuestion ? null : (isWarrantyValid ? baseDiag.mobileAge : 'above11' as const)
                       };
                       setDiagnostics(updatedDiag);
                       if (isAuthenticated) {
@@ -2762,7 +2785,7 @@ export default function QuotePage() {
                   </div>
                 </div>
                 <button onClick={() => { 
-                  const prevStep = questionnaireFor({ brand: selectedBrand, model: selectedModel }).asksAge ? 9 : 8;
+                  const prevStep = asksAgeQuestion ? 9 : 8;
                   navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', prevStep); 
                   setShowOtpInput(false); 
                 }} style={{ background: 'none', border: 'none', fontSize: '2rem', cursor: 'pointer', paddingLeft: '1rem', color: '#999', lineHeight: 1 }}>×</button>

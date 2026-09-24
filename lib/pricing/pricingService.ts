@@ -12,6 +12,9 @@ import {
   priceDevice,
   resolveReference,
 } from './engine';
+import { UNKNOWN_QUESTIONNAIRE, type QuestionnaireSemantics } from './questionnaireSemantics';
+import type { QuestionnaireProfileStore } from '../referencePricing/questionnaire/store';
+import { questionnaireModelKey } from '../referencePricing/questionnaire/types';
 import { QUOTE_TOKEN_VERSION, canonicalDiagnosticsHash, signQuoteToken, verifyQuoteToken } from './quoteToken';
 
 /**
@@ -39,6 +42,9 @@ export interface PricingServiceDeps {
   catalog?: CatalogDevice[];
   snapshot?: Record<string, number>;
   now?: () => Date;
+  /** Cashify questionnaire profiles per model. Absent or unreadable = the
+   * explicit UNKNOWN fallback (every question asked, answers priced as given). */
+  questionnaireStore?: QuestionnaireProfileStore;
 }
 
 export type PricingErrorCode =
@@ -68,6 +74,9 @@ export interface AuthoritativeQuote {
   /** True when the repository could not be read and the materialized
    * snapshot was used instead. */
   referenceLookupDegraded: boolean;
+  /** Which questions Cashify asks for this model; the quote page shows
+   * exactly these (UNKNOWN = asked, as the safe fallback). */
+  questionnaire: QuestionnaireSemantics & { source: 'profile' | 'fallback' };
   /** Server-side only - never send to clients. */
   internal: {
     deviceKey: string;
@@ -94,6 +103,7 @@ export interface LeadPricingAudit {
   baseSource: BaseSource | null;
   cashifyConditionEquivalent: number | null;
   fhoneifyGetUpto: number | null;
+  questionnaire: (QuestionnaireSemantics & { source: 'profile' | 'fallback' }) | null;
   referenceStatus: QuoteReferenceStatus | null;
   referenceSource: string | null;
   referenceLastVerifiedAt: string | null;
@@ -135,6 +145,18 @@ export function createPricingService(deps: PricingServiceDeps) {
     }
   }
 
+  async function lookupQuestionnaire(device: { brand: string; model: string }): Promise<QuestionnaireSemantics & { source: 'profile' | 'fallback' }> {
+    if (!deps.questionnaireStore) return { ...UNKNOWN_QUESTIONNAIRE, source: 'fallback' };
+    const modelKey = questionnaireModelKey(device);
+    try {
+      const profile = await withTimeout(deps.questionnaireStore.get(modelKey), deps.referenceLookupTimeoutMs);
+      if (profile) return { warrantyMode: profile.warrantyMode, billMode: profile.billMode, ageMode: profile.ageMode, source: 'profile' };
+    } catch (err: any) {
+      deps.logger.warn({ modelKey, err: err?.message }, 'Questionnaire profile lookup failed; using the UNKNOWN fallback');
+    }
+    return { ...UNKNOWN_QUESTIONNAIRE, source: 'fallback' };
+  }
+
   async function quote(input: { brand: string; model: string; storage: string; diagnostics: unknown }): Promise<AuthoritativeQuote | PricingFailure> {
     const parsed = parseDiagnostics(input.diagnostics);
     if (!parsed.ok) return { ok: false, code: 'INVALID_DIAGNOSTICS', message: parsed.error };
@@ -144,7 +166,7 @@ export function createPricingService(deps: PricingServiceDeps) {
     if (!device) return { ok: false, code: 'DEVICE_NOT_FOUND', message: 'Device not found' };
 
     const key = deviceKey({ brand: device.brand, model: device.model, storage: device.storage });
-    const reference = await lookupReference(key);
+    const [reference, questionnaire] = await Promise.all([lookupReference(key), lookupQuestionnaire(device)]);
     const at = now();
     const base = resolveReference({ device, repositoryRecord: reference.record, snapshot: deps.snapshot, now: at });
 
@@ -159,7 +181,7 @@ export function createPricingService(deps: PricingServiceDeps) {
       // The quote page passes the brand/model exactly as selected; pricing
       // with the catalog's own strings keeps the engine's model matching
       // identical for both.
-      result = priceDevice(device.brand, device.model, base.cashifyGetUptoReference, diagnostics);
+      result = priceDevice(device.brand, device.model, base.cashifyGetUptoReference, diagnostics, questionnaire);
       // Get Upto: the reference plus the uplift, nothing else.
       startingPrice = computeFhoneifyGetUpto(base.cashifyGetUptoReference);
     } catch (err) {
@@ -178,6 +200,10 @@ export function createPricingService(deps: PricingServiceDeps) {
       deps.signingSecret
     );
 
+    if (questionnaire.source === 'fallback' || questionnaire.warrantyMode === 'UNKNOWN') {
+      // Telemetry: priced with every question asked, no stored Cashify profile.
+      deps.logger.info({ deviceKey: key, questionnaire }, 'Quote priced with the UNKNOWN questionnaire fallback');
+    }
     if (base.referenceStatus !== 'fresh') {
       deps.logger.info({ deviceKey: key, referenceStatus: base.referenceStatus, baseSource: base.source }, 'Quote priced from a non-fresh reference');
     }
@@ -193,6 +219,7 @@ export function createPricingService(deps: PricingServiceDeps) {
       referenceStatus: base.referenceStatus,
       referenceLastVerifiedAt: base.referenceLastVerifiedAt,
       referenceLookupDegraded: reference.degraded,
+      questionnaire,
       internal: {
         deviceKey: key,
         diagnosticsHash,
@@ -284,6 +311,7 @@ export function createPricingService(deps: PricingServiceDeps) {
       baseSource: current.ok ? current.internal.baseSource : null,
       cashifyConditionEquivalent: current.ok ? current.internal.cashifyConditionEquivalent : null,
       fhoneifyGetUpto: current.ok ? current.startingPrice : null,
+      questionnaire: current.ok ? current.questionnaire : null,
       referenceStatus: current.ok ? current.referenceStatus : null,
       referenceSource: current.ok ? current.internal.referenceSource : null,
       referenceLastVerifiedAt: current.ok ? current.referenceLastVerifiedAt : null,

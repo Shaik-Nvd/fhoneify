@@ -1,4 +1,5 @@
 import { CASHIFY_CALIBRATION } from './pricing/calibration';
+import { UNKNOWN_QUESTIONNAIRE, type QuestionnaireSemantics } from './pricing/questionnaireSemantics';
 
 export interface ModelParams {
   warrantyPenalty: number;
@@ -145,6 +146,8 @@ interface ConditionAdjustmentOptions {
   /** Scale on the heavy body tier (>2 scratches, major dents) where a
    * family has Cashify body evidence (lib/pricing/calibration.ts). */
   heavyBodyCosmeticScale?: number;
+  /** Cashify questionnaire regime of the model (display values differ). */
+  questionnaire?: QuestionnaireSemantics;
 }
 
 const lower = (value: unknown) => String(value ?? '').toLowerCase();
@@ -180,7 +183,9 @@ export function calculateConditionAdjustments(
   let originalScreenRetention = diagnostics.originalScreen === false
     // Local/copy display: calibrated against real Cashify quotes on live Get
     // Upto references (lib/pricing/calibration.ts); brands may override.
-    ? (options.originalScreenRetention ?? CASHIFY_CALIBRATION.localDisplay.androidRetention)
+    ? (options.originalScreenRetention ?? (options.questionnaire?.warrantyMode === 'NOT_ASKED'
+      ? CASHIFY_CALIBRATION.localDisplay.notAskedAndroidRetention
+      : CASHIFY_CALIBRATION.localDisplay.androidRetention))
     : 1;
 
   let physicalScreenPenalty = 0;
@@ -229,9 +234,9 @@ export function calculateConditionAdjustments(
 
   let cosmeticBodyPenalty = 0;
   if (defects.has('body_scratch') || bodyScratches || bodyDents) {
-    if (bodyScratches.includes('more than 2')) cosmeticBodyPenalty += GRANULAR_CONDITION_PENALTIES.body.scratchesHeavy * (options.heavyBodyCosmeticScale ?? 1);
+    if (bodyScratches.includes('more than 2')) cosmeticBodyPenalty += Math.max(GRANULAR_CONDITION_PENALTIES.body.scratchesLight, GRANULAR_CONDITION_PENALTIES.body.scratchesHeavy * (options.heavyBodyCosmeticScale ?? 1));
     else if (bodyScratches.includes('1-2')) cosmeticBodyPenalty += GRANULAR_CONDITION_PENALTIES.body.scratchesLight;
-    if (bodyDents.includes('major') || bodyDents.includes('more than 2')) cosmeticBodyPenalty += GRANULAR_CONDITION_PENALTIES.body.dentsMajor * (options.heavyBodyCosmeticScale ?? 1);
+    if (bodyDents.includes('major') || bodyDents.includes('more than 2')) cosmeticBodyPenalty += Math.max(GRANULAR_CONDITION_PENALTIES.body.dentsMinor, GRANULAR_CONDITION_PENALTIES.body.dentsMajor * (options.heavyBodyCosmeticScale ?? 1));
     else if (bodyDents.includes('1-2')) cosmeticBodyPenalty += GRANULAR_CONDITION_PENALTIES.body.dentsMinor;
   }
 
@@ -254,10 +259,16 @@ export function calculateConditionAdjustments(
   }
   functionalPenalty = Math.min(1, functionalPenalty);
 
+  // A local display and cosmetic body damage overlap: Cashify charges the
+  // larger one in full and only part of the smaller (S24 controls 2026-09-24:
+  // display ₹22,300, body ₹24,320, both ₹21,220). Every other group adds.
+  const displayDeduction = 1 - originalScreenRetention;
+  const overlapping = displayDeduction > 0 && bodyPenalty > 0
+    ? Math.max(displayDeduction, bodyPenalty) + CASHIFY_CALIBRATION.damageOverlap.displayAndBodySecondFactor * Math.min(displayDeduction, bodyPenalty)
+    : displayDeduction + bodyPenalty;
   const totalPenalty = (1 - touchRetention) +
-    (1 - originalScreenRetention) +
+    overlapping +
     screenPenalty +
-    bodyPenalty +
     functionalPenalty;
   const conditionRetention = Math.max(0, 1 - totalPenalty);
 
@@ -283,6 +294,18 @@ export function applyCompetitorUplift(basePrice: number, exactCashifyPrice: numb
  */
 export function computeFhoneifyGetUpto(reference: CashifyGetUptoReference): FhoneifyGetUpto {
   return applyCompetitorUplift(reference, reference);
+}
+
+/**
+ * The age/warranty/bill factor, following Cashify's own questionnaire. When
+ * Cashify does not ask warranty for a model, its quote applies no age or
+ * warranty deduction - the public Get Upto already reflects the model's age -
+ * so neither does this. (Controls 2026-09-24: iPhone 13 clean ₹24,030 on a
+ * ₹23,710 Get Upto; Pixel 7 Pro clean ₹18,940 on ₹19,200.) ASKED and UNKNOWN
+ * keep the brand's calibrated factor for the answers given.
+ */
+function questionnaireAgeFactor(brandAgeMultiplier: number, semantics: QuestionnaireSemantics): number {
+  return semantics.warrantyMode === 'NOT_ASKED' ? 1 : brandAgeMultiplier;
 }
 
 /**
@@ -387,7 +410,7 @@ export const getAppleModelParams = (model: string): ModelParams => {
   return params;
 };
 
-export function calculateApplePrice(model: string, reference: CashifyGetUptoReference, diagnostics: DiagnosticsType): PricingResult {
+export function calculateApplePrice(model: string, reference: CashifyGetUptoReference, diagnostics: DiagnosticsType, semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE): PricingResult {
   if (!reference || reference <= 0) return { cashifyConditionEquivalent: 0, fhoneifyPrice: 0 };
 
   const lowerModel = String(model || "").toLowerCase().trim();
@@ -459,7 +482,11 @@ export function calculateApplePrice(model: string, reference: CashifyGetUptoRefe
     : COMMON_FUNCTIONAL_PENALTIES.face * params.functionalScale;
   const adjustments = calculateConditionAdjustments(diagnostics, params, {
     touchRetention: is17e ? 1 - params.touchPenalty : params.touchPenalty,
-    originalScreenRetention: CASHIFY_CALIBRATION.localDisplay.appleRetention,
+    originalScreenRetention: semantics.warrantyMode === 'NOT_ASKED'
+      ? CASHIFY_CALIBRATION.localDisplay.notAskedAppleRetention
+      : CASHIFY_CALIBRATION.localDisplay.appleRetention,
+    heavyBodyCosmeticScale: CASHIFY_CALIBRATION.apple.heavyBodyCosmeticScale,
+    questionnaire: semantics,
     functionalOverrides: {
       battery_health: batteryHealthPenalty,
       battery_service: batteryServicePenalty,
@@ -473,7 +500,7 @@ export function calculateApplePrice(model: string, reference: CashifyGetUptoRefe
       : undefined,
   });
   const boxBonus = hasBox ? COMMON_BONUSES.box : 0;
-  let cashifyPrice = reference * ageMultiplier * adjustments.conditionRetention + boxBonus;
+  let cashifyPrice = reference * questionnaireAgeFactor(ageMultiplier, semantics) * adjustments.conditionRetention + boxBonus;
 
   if (!callsOk) {
     cashifyPrice = 1200;
@@ -486,7 +513,7 @@ export function calculateApplePrice(model: string, reference: CashifyGetUptoRefe
 // BRAND 2: SAMSUNG ENGINE
 // ============================================================================
 
-export function calculateSamsungPrice(model: string, reference: CashifyGetUptoReference, diagnostics: DiagnosticsType): PricingResult {
+export function calculateSamsungPrice(model: string, reference: CashifyGetUptoReference, diagnostics: DiagnosticsType, semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE): PricingResult {
   if (!reference || reference <= 0) return { cashifyConditionEquivalent: 0, fhoneifyPrice: 0 };
 
   const lowerModel = String(model || "").toLowerCase();
@@ -544,8 +571,8 @@ export function calculateSamsungPrice(model: string, reference: CashifyGetUptoRe
   const heavyBodyCosmeticScale = isSFamily && !isFoldable && !isFE && !isEdge
     ? CASHIFY_CALIBRATION.samsung.sSeriesBody.heavyBodyCosmeticScale
     : undefined;
-  const adjustments = calculateConditionAdjustments(diagnostics, params, { heavyScreenScratchScale, heavyBodyCosmeticScale });
-  let cashifyPrice = reference * ageMultiplier * adjustments.conditionRetention + boxBonus;
+  const adjustments = calculateConditionAdjustments(diagnostics, params, { heavyScreenScratchScale, heavyBodyCosmeticScale, questionnaire: semantics });
+  let cashifyPrice = reference * questionnaireAgeFactor(ageMultiplier, semantics) * adjustments.conditionRetention + boxBonus;
   if (diagnostics.calls === false) cashifyPrice = 1200;
 
   return finalizeConditionQuote(reference, cashifyPrice);
@@ -555,7 +582,7 @@ export function calculateSamsungPrice(model: string, reference: CashifyGetUptoRe
 // BRAND 3: XIAOMI / REDMI / POCO ENGINE
 // ============================================================================
 
-export function calculateXiaomiPrice(model: string, reference: CashifyGetUptoReference, diagnostics: DiagnosticsType): PricingResult {
+export function calculateXiaomiPrice(model: string, reference: CashifyGetUptoReference, diagnostics: DiagnosticsType, semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE): PricingResult {
   if (!reference || reference <= 0) return { cashifyConditionEquivalent: 0, fhoneifyPrice: 0 };
 
   const lowerModel = String(model || "").toLowerCase();
@@ -588,8 +615,8 @@ export function calculateXiaomiPrice(model: string, reference: CashifyGetUptoRef
   const hasBox = (diagnostics.accessories || []).includes("box") || diagnostics.box === true;
   const boxBonus = hasBox ? COMMON_BONUSES.box : 0;
 
-  const adjustments = calculateConditionAdjustments(diagnostics, params);
-  let cashifyPrice = reference * ageMultiplier * adjustments.conditionRetention + boxBonus;
+  const adjustments = calculateConditionAdjustments(diagnostics, params, { questionnaire: semantics });
+  let cashifyPrice = reference * questionnaireAgeFactor(ageMultiplier, semantics) * adjustments.conditionRetention + boxBonus;
   if (diagnostics.calls === false) cashifyPrice = reference <= 5000 ? 200 : 1200;
 
   return finalizeConditionQuote(reference, cashifyPrice);
@@ -599,7 +626,7 @@ export function calculateXiaomiPrice(model: string, reference: CashifyGetUptoRef
 // BRAND 4: VIVO / iQOO ENGINE
 // ============================================================================
 
-export function calculateVivoPrice(model: string, reference: CashifyGetUptoReference, diagnostics: DiagnosticsType): PricingResult {
+export function calculateVivoPrice(model: string, reference: CashifyGetUptoReference, diagnostics: DiagnosticsType, semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE): PricingResult {
   if (!reference || reference <= 0) return { cashifyConditionEquivalent: 0, fhoneifyPrice: 0 };
 
   const lowerModel = String(model || "").toLowerCase();
@@ -630,13 +657,14 @@ export function calculateVivoPrice(model: string, reference: CashifyGetUptoRefer
   }
 
   const adjustments = calculateConditionAdjustments(diagnostics, params, isFold ? {
+    questionnaire: semantics,
     functionalOverrides: {
       battery_health: 0.02992159060803527,
       battery_service: 0.02992159060803527,
       battery: 0.02992159060803527,
     },
-  } : undefined);
-  let cashifyPrice = reference * ageMultiplier * adjustments.conditionRetention + boxBonus;
+  } : { questionnaire: semantics });
+  let cashifyPrice = reference * questionnaireAgeFactor(ageMultiplier, semantics) * adjustments.conditionRetention + boxBonus;
   if (diagnostics.calls === false) cashifyPrice = 1200;
 
   return finalizeConditionQuote(reference, cashifyPrice);
@@ -646,7 +674,7 @@ export function calculateVivoPrice(model: string, reference: CashifyGetUptoRefer
 // BRAND 5: OPPO ENGINE
 // ============================================================================
 
-export function calculateOppoPrice(model: string, reference: CashifyGetUptoReference, diagnostics: DiagnosticsType): PricingResult {
+export function calculateOppoPrice(model: string, reference: CashifyGetUptoReference, diagnostics: DiagnosticsType, semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE): PricingResult {
   if (!reference || reference <= 0) return { cashifyConditionEquivalent: 0, fhoneifyPrice: 0 };
 
   const lowerModel = String(model || "").toLowerCase();
@@ -685,8 +713,8 @@ export function calculateOppoPrice(model: string, reference: CashifyGetUptoRefer
   const hasBox = (diagnostics.accessories || []).includes("box") || diagnostics.box === true;
   const boxBonus = hasBox ? COMMON_BONUSES.box : 0;
 
-  const adjustments = calculateConditionAdjustments(diagnostics, params);
-  let cashifyPrice = reference * ageMultiplier * adjustments.conditionRetention + boxBonus;
+  const adjustments = calculateConditionAdjustments(diagnostics, params, { questionnaire: semantics });
+  let cashifyPrice = reference * questionnaireAgeFactor(ageMultiplier, semantics) * adjustments.conditionRetention + boxBonus;
   if (diagnostics.calls === false) cashifyPrice = 1200;
 
   return finalizeConditionQuote(reference, cashifyPrice);
@@ -696,7 +724,7 @@ export function calculateOppoPrice(model: string, reference: CashifyGetUptoRefer
 // BRAND 6: ONEPLUS ENGINE
 // ============================================================================
 
-export function calculateOnePlusPrice(model: string, reference: CashifyGetUptoReference, diagnostics: DiagnosticsType): PricingResult {
+export function calculateOnePlusPrice(model: string, reference: CashifyGetUptoReference, diagnostics: DiagnosticsType, semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE): PricingResult {
   if (!reference || reference <= 0) return { cashifyConditionEquivalent: 0, fhoneifyPrice: 0 };
 
   const lowerModel = String(model || "").toLowerCase();
@@ -723,6 +751,7 @@ export function calculateOnePlusPrice(model: string, reference: CashifyGetUptoRe
   const boxBonus = hasBox ? COMMON_BONUSES.box : 0;
 
   const adjustments = calculateConditionAdjustments(diagnostics, params, {
+    questionnaire: semantics,
     functionalOverrides: {
       front_camera: 0.0658385,
       back_camera: 0.1827216,
@@ -734,7 +763,7 @@ export function calculateOnePlusPrice(model: string, reference: CashifyGetUptoRe
       ? CASHIFY_CALIBRATION.onePlus.standard.heavyScreenScratchScale
       : undefined,
   });
-  let cashifyPrice = reference * ageMultiplier * adjustments.conditionRetention + boxBonus;
+  let cashifyPrice = reference * questionnaireAgeFactor(ageMultiplier, semantics) * adjustments.conditionRetention + boxBonus;
   if (diagnostics.calls === false) cashifyPrice = 1200;
 
   return finalizeConditionQuote(reference, cashifyPrice);
@@ -744,7 +773,7 @@ export function calculateOnePlusPrice(model: string, reference: CashifyGetUptoRe
 // BRAND 7: NOTHING & CMF ENGINE
 // ============================================================================
 
-export function calculateNothingPrice(model: string, reference: CashifyGetUptoReference, diagnostics: DiagnosticsType): PricingResult {
+export function calculateNothingPrice(model: string, reference: CashifyGetUptoReference, diagnostics: DiagnosticsType, semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE): PricingResult {
   if (!reference || reference <= 0) return { cashifyConditionEquivalent: 0, fhoneifyPrice: 0 };
 
   const lowerModel = String(model || "").toLowerCase();
@@ -764,6 +793,7 @@ export function calculateNothingPrice(model: string, reference: CashifyGetUptoRe
   const backCameraPenalty = isNothing2 ? 0.1826338 : isNothing1 ? 0.1352517 : 0.1827216;
   const batteryPenalty = isNothing2 ? 0.0620067 : isNothing1 ? 0.0496402 : 0.0620553;
   const adjustments = calculateConditionAdjustments(diagnostics, params, {
+    questionnaire: semantics,
     functionalOverrides: {
       front_camera: frontCameraPenalty,
       back_camera: backCameraPenalty,
@@ -772,7 +802,7 @@ export function calculateNothingPrice(model: string, reference: CashifyGetUptoRe
       battery: batteryPenalty,
     },
   });
-  let cashifyPrice = reference * ageMultiplier * adjustments.conditionRetention + boxBonus;
+  let cashifyPrice = reference * questionnaireAgeFactor(ageMultiplier, semantics) * adjustments.conditionRetention + boxBonus;
   if (diagnostics.calls === false) cashifyPrice = 1200;
 
   return finalizeConditionQuote(reference, cashifyPrice);
@@ -782,7 +812,7 @@ export function calculateNothingPrice(model: string, reference: CashifyGetUptoRe
 // BRAND 8: GENERIC ANDROID FALLBACK ENGINE
 // ============================================================================
 
-export function calculateGenericAndroidPrice(brand: string, model: string, reference: CashifyGetUptoReference, diagnostics: DiagnosticsType): PricingResult {
+export function calculateGenericAndroidPrice(brand: string, model: string, reference: CashifyGetUptoReference, diagnostics: DiagnosticsType, semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE): PricingResult {
   if (!reference || reference <= 0) return { cashifyConditionEquivalent: 0, fhoneifyPrice: 0 };
 
   const params: ModelParams = { warrantyPenalty: 0.12, gstBillPenalty: 0.08, callsPenalty: 0.45, originalScreenPenalty: 0.55, touchPenalty: 0.45, functionalScale: 0.75, physicalScale: 0.7 };
@@ -794,8 +824,8 @@ export function calculateGenericAndroidPrice(brand: string, model: string, refer
   const hasBox = (diagnostics.accessories || []).includes("box") || diagnostics.box === true;
   const boxBonus = hasBox ? COMMON_BONUSES.box : 0;
 
-  const adjustments = calculateConditionAdjustments(diagnostics, params);
-  let cashifyPrice = reference * ageMultiplier * adjustments.conditionRetention + boxBonus;
+  const adjustments = calculateConditionAdjustments(diagnostics, params, { questionnaire: semantics });
+  let cashifyPrice = reference * questionnaireAgeFactor(ageMultiplier, semantics) * adjustments.conditionRetention + boxBonus;
   if (diagnostics.calls === false) cashifyPrice = reference <= 5000 ? 200 : 1200;
 
   return finalizeConditionQuote(reference, cashifyPrice);
@@ -809,16 +839,27 @@ export function calculateFhoneifyPrice(
   brand: string,
   model: string,
   cashifyGetUptoReference: CashifyGetUptoReference,
-  diagnostics: DiagnosticsType
+  answers: DiagnosticsType,
+  semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE
 ): PricingResult {
-  const asAnswered = routeBrandCalculator(brand, model, cashifyGetUptoReference, diagnostics);
+  // A question Cashify never asks for this model is not a "No": its answer is
+  // neutral here, and questionnaireAgeFactor drops the age/warranty factor.
+  const diagnostics: DiagnosticsType = {
+    ...answers,
+    ...(semantics.billMode === 'NOT_ASKED' ? { validBill: true } : {}),
+    // Cashify never asks an age bracket when it does not ask age: the warranty
+    // answer is its only age signal.
+    ...(semantics.ageMode === 'NOT_ASKED' ? { mobileAge: answers.warranty === false ? 'above11' : null } : {}),
+    ...(semantics.warrantyMode === 'NOT_ASKED' ? { warranty: null, mobileAge: null } : {}),
+  };
+  const asAnswered = routeBrandCalculator(brand, model, cashifyGetUptoReference, diagnostics, semantics);
   // A warranty cannot be claimed without the GST bill (Cashify asks the two
   // together), so "in warranty, no bill" never prices below the same phone
   // answered as out of warranty - the brand bill deductions alone could
   // otherwise reward answering "no warranty".
   const hasValidBill = diagnostics.validBill === true || (diagnostics.accessories || []).includes("bill");
   if (!hasValidBill && diagnostics.warranty !== false) {
-    const asOutOfWarranty = routeBrandCalculator(brand, model, cashifyGetUptoReference, { ...diagnostics, warranty: false, mobileAge: "above11" });
+    const asOutOfWarranty = routeBrandCalculator(brand, model, cashifyGetUptoReference, { ...diagnostics, warranty: false, mobileAge: "above11" }, semantics);
     if (asOutOfWarranty.cashifyConditionEquivalent > asAnswered.cashifyConditionEquivalent) return asOutOfWarranty;
   }
   return asAnswered;
@@ -828,52 +869,53 @@ function routeBrandCalculator(
   brand: string,
   model: string,
   cashifyGetUptoReference: CashifyGetUptoReference,
-  diagnostics: DiagnosticsType
+  diagnostics: DiagnosticsType,
+  semantics: QuestionnaireSemantics
 ): PricingResult {
   const safeBrand = String(brand || "").toLowerCase().trim();
   const safeModel = String(model || "").toLowerCase().trim();
 
   if (safeBrand === "apple" || safeModel.includes("iphone")) {
-    return calculateApplePrice(model, cashifyGetUptoReference, diagnostics);
+    return calculateApplePrice(model, cashifyGetUptoReference, diagnostics, semantics);
   }
 
   if (safeBrand === "samsung" || safeModel.includes("galaxy")) {
-    return calculateSamsungPrice(model, cashifyGetUptoReference, diagnostics);
+    return calculateSamsungPrice(model, cashifyGetUptoReference, diagnostics, semantics);
   }
 
   if (
     safeBrand === "xiaomi" || safeBrand === "redmi" || safeBrand === "poco" ||
     safeModel.includes("xiaomi") || safeModel.includes("redmi") || safeModel.includes("poco")
   ) {
-    return calculateXiaomiPrice(model, cashifyGetUptoReference, diagnostics);
+    return calculateXiaomiPrice(model, cashifyGetUptoReference, diagnostics, semantics);
   }
 
   if (
     safeBrand === "vivo" || safeBrand === "iqoo" ||
     safeModel.includes("vivo") || safeModel.includes("iqoo")
   ) {
-    return calculateVivoPrice(model, cashifyGetUptoReference, diagnostics);
+    return calculateVivoPrice(model, cashifyGetUptoReference, diagnostics, semantics);
   }
 
   if (
     safeBrand === "oppo" || safeModel.includes("oppo") ||
     safeModel.includes("reno") || safeModel.includes("find x")
   ) {
-    return calculateOppoPrice(model, cashifyGetUptoReference, diagnostics);
+    return calculateOppoPrice(model, cashifyGetUptoReference, diagnostics, semantics);
   }
 
   if (
     safeBrand === "oneplus" || safeModel.includes("oneplus") || safeModel.includes("nord")
   ) {
-    return calculateOnePlusPrice(model, cashifyGetUptoReference, diagnostics);
+    return calculateOnePlusPrice(model, cashifyGetUptoReference, diagnostics, semantics);
   }
 
   if (
     safeBrand === "nothing" || safeBrand === "cmf" ||
     safeModel.includes("nothing") || safeModel.includes("cmf")
   ) {
-    return calculateNothingPrice(model, cashifyGetUptoReference, diagnostics);
+    return calculateNothingPrice(model, cashifyGetUptoReference, diagnostics, semantics);
   }
 
-  return calculateGenericAndroidPrice(brand, model, cashifyGetUptoReference, diagnostics);
+  return calculateGenericAndroidPrice(brand, model, cashifyGetUptoReference, diagnostics, semantics);
 }
