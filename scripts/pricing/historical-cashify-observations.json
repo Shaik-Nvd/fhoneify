@@ -1,0 +1,36 @@
+{
+  "description": "Historical real Cashify final quotes recovered from repository history (commit 102af18, 2026-08-09: verify_nothing.ts / brute_force_nothing.ts / optimize_nothing.ts). Each entry records Cashify's quote, the Cashify Get Upto used at the time, and the answers the calibration script applied. Lower confidence than the 2026-09-20/24 fixtures: variant, questionnaire modes and exact observation date were not recorded, and Cashify may have changed its rules since. Evidence only - never used to tune production rules without fresh Cashify controls.",
+  "source": "commit 102af18 (2026-08-09)",
+  "provenanceNotes": [
+    "All 30 quotes end in 0 (Cashify rounds to Rs 10); Fhoneify outputs do not, so these are Cashify figures, not Fhoneify targets.",
+    "The August scripts fitted Fhoneify's uplifted price to these numbers; compare them with the Cashify condition equivalent instead.",
+    "Nothing camera/battery/bill constants in lib/pricingCalculator.ts were fitted from this table in August, so the functional and bill parts are partly in-sample. Touch, local-display and screen-scratch rules were replaced later and are out-of-sample.",
+    "Use catalog model names (not the August script names such as 'Nothing 1') so production family routing applies."
+  ],
+  "cases": {
+    "C1_TOUCH_SCREEN_BACKCAM": {
+      "profile": "touch not working, 1-2 screen scratches, back camera faulty, warranty yes, GST bill yes, box + charger",
+      "answers": { "calls": true, "touch": false, "originalScreen": true, "warranty": true, "validBill": true, "defects": ["screen_scratch"], "screenCondition": "1-2 scratches on screen", "hardware": ["back_camera"], "accessories": ["box", "charger"] }
+    },
+    "C2_LOCAL_DISPLAY_FRONTCAM": {
+      "profile": "local/non-original display, front camera faulty, warranty yes, GST bill yes, box",
+      "answers": { "calls": true, "touch": true, "originalScreen": false, "warranty": true, "validBill": true, "defects": [], "screenCondition": null, "hardware": ["front_camera"], "accessories": ["box"] }
+    },
+    "C3_NOBILL_HEAVY_SCREEN_BATTERY": {
+      "profile": "no GST bill, warranty yes, >2 screen scratches, battery health issue, box + charger",
+      "answers": { "calls": true, "touch": true, "originalScreen": true, "warranty": true, "validBill": false, "defects": ["screen_scratch"], "screenCondition": "More than 2 scratches on screen", "hardware": ["battery_health"], "accessories": ["box", "charger"] }
+    }
+  },
+  "observations": [
+    { "id": "hist-nothing-phone-1", "brand": "Nothing", "model": "Nothing Phone 1", "scriptName": "Nothing 1", "referencePrice": 13900, "cashify": { "C1_TOUCH_SCREEN_BACKCAM": 4040, "C2_LOCAL_DISPLAY_FRONTCAM": 9200, "C3_NOBILL_HEAVY_SCREEN_BATTERY": 10630 } },
+    { "id": "hist-nothing-phone-2", "brand": "Nothing", "model": "Nothing Phone 2", "scriptName": "Nothing 2", "referencePrice": 20730, "cashify": { "C1_TOUCH_SCREEN_BACKCAM": 5110, "C2_LOCAL_DISPLAY_FRONTCAM": 11080, "C3_NOBILL_HEAVY_SCREEN_BATTERY": 12830 } },
+    { "id": "hist-nothing-phone-2a", "brand": "Nothing", "model": "Nothing Phone 2a 5G", "scriptName": "Nothing 2a", "referencePrice": 17710, "cashify": { "C1_TOUCH_SCREEN_BACKCAM": 4100, "C2_LOCAL_DISPLAY_FRONTCAM": 8670, "C3_NOBILL_HEAVY_SCREEN_BATTERY": 10420 } },
+    { "id": "hist-cmf-phone-1", "brand": "Nothing", "model": "CMF by Nothing Phone 1", "scriptName": "CMF", "referencePrice": 11430, "cashify": { "C1_TOUCH_SCREEN_BACKCAM": 2640, "C2_LOCAL_DISPLAY_FRONTCAM": 4950, "C3_NOBILL_HEAVY_SCREEN_BATTERY": 6030 } },
+    { "id": "hist-nothing-phone-2a-plus", "brand": "Nothing", "model": "Nothing Phone 2a Plus", "scriptName": "Nothing 2a Plus", "referencePrice": 18260, "cashify": { "C1_TOUCH_SCREEN_BACKCAM": 4220, "C2_LOCAL_DISPLAY_FRONTCAM": 9110, "C3_NOBILL_HEAVY_SCREEN_BATTERY": 10870 } },
+    { "id": "hist-nothing-phone-3a", "brand": "Nothing", "model": "Nothing Phone 3a", "scriptName": "Nothing 3a", "referencePrice": 20810, "cashify": { "C1_TOUCH_SCREEN_BACKCAM": 4580, "C2_LOCAL_DISPLAY_FRONTCAM": 9760, "C3_NOBILL_HEAVY_SCREEN_BATTERY": 11810 } },
+    { "id": "hist-nothing-phone-3", "brand": "Nothing", "model": "Nothing Phone 3", "scriptName": "Nothing 3", "referencePrice": 32550, "cashify": { "C1_TOUCH_SCREEN_BACKCAM": 10650, "C2_LOCAL_DISPLAY_FRONTCAM": 17400, "C3_NOBILL_HEAVY_SCREEN_BATTERY": 20210 } },
+    { "id": "hist-nothing-phone-3a-pro", "brand": "Nothing", "model": "Nothing Phone 3a Pro", "scriptName": "Nothing 3a Pro", "referencePrice": 22710, "cashify": { "C1_TOUCH_SCREEN_BACKCAM": 5000, "C2_LOCAL_DISPLAY_FRONTCAM": 11200, "C3_NOBILL_HEAVY_SCREEN_BATTERY": 13250 } },
+    { "id": "hist-nothing-phone-4a", "brand": "Nothing", "model": "Nothing Phone 4a", "scriptName": "Nothing 4a", "referencePrice": 27000, "cashify": { "C1_TOUCH_SCREEN_BACKCAM": 7850, "C2_LOCAL_DISPLAY_FRONTCAM": 14450, "C3_NOBILL_HEAVY_SCREEN_BATTERY": 16500 } },
+    { "id": "hist-nothing-phone-4a-pro", "brand": "Nothing", "model": "Nothing Phone 4a Pro", "scriptName": "Nothing 4a Pro", "referencePrice": 32500, "cashify": { "C1_TOUCH_SCREEN_BACKCAM": 12010, "C2_LOCAL_DISPLAY_FRONTCAM": 18610, "C3_NOBILL_HEAVY_SCREEN_BATTERY": 20660 } }
+  ]
+}

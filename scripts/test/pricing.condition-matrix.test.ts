@@ -4,7 +4,8 @@
  * price for a device and checks that additional damage cannot improve it.
  */
 import assert from 'node:assert/strict';
-import { calculateFhoneifyPrice, COMMON_FUNCTIONAL_PENALTIES, DiagnosticsType } from '../../lib/pricingCalculator';
+import { calculateFhoneifyPrice, COMMON_FUNCTIONAL_PENALTIES, DiagnosticsType, nothingModelFamily } from '../../lib/pricingCalculator';
+import { pricingFamilyKey } from '../../lib/pricing/families';
 import { warrantyVoidedByDiagnostics } from '../../lib/pricing/diagnostics';
 
 const devices = [
@@ -161,6 +162,65 @@ test('current granular fields work without legacy defect ids', () => {
     const damaged = calculateFhoneifyPrice(device.brand, device.model, device.base, answers(fields)).cashifyConditionEquivalent;
     assert.ok(damaged < perfect, `${JSON.stringify(fields)} must reduce the Cashify-equivalent quote`);
   }
+});
+
+const NOT_ASKED = { warrantyMode: 'NOT_ASKED', billMode: 'NOT_ASKED', ageMode: 'NOT_ASKED' } as const;
+
+test('cracked glass or failed touch never raises a local-display quote', () => {
+  const cases: [string, string, number][] = [
+    ['Apple', 'Apple iPhone 13', 23710], ['Samsung', 'Samsung Galaxy S22 Ultra 5G', 24470],
+    ['Google', 'Google Pixel 7 Pro', 19200], ['Apple', 'Apple iPhone 6', 2320], ['OnePlus', 'OnePlus Nord 4', 19770],
+  ];
+  for (const [brand, model, ref] of cases) {
+    for (const semantics of [NOT_ASKED, undefined]) {
+      const local = answers({ originalScreen: false, defects: ['body_scratch'], bodyScratches: 'More than 2 scratches', bodyDents: 'Major dent(s) or more than 2', warranty: false, mobileAge: 'above11' });
+      const before = calculateFhoneifyPrice(brand, model, ref, local, semantics).cashifyConditionEquivalent;
+      const cracked = calculateFhoneifyPrice(brand, model, ref, { ...local, defects: ['body_scratch', 'screen_scratch'], screenCondition: 'Screen cracked/ glass broken' }, semantics).cashifyConditionEquivalent;
+      const touch = calculateFhoneifyPrice(brand, model, ref, { ...local, touch: false }, semantics).cashifyConditionEquivalent;
+      assert.ok(cracked <= before, `${model}: cracked ${cracked} > ${before}`);
+      assert.ok(touch <= before, `${model}: touch ${touch} > ${before}`);
+    }
+  }
+  for (const model of ['Apple iPhone 14', 'Apple iPhone 15 Pro Max', 'Apple iPhone 16 Pro Max', 'Apple iPhone 17 Pro Max', 'Apple iPhone 17e']) {
+    const crackedPhone = answers({ defects: ['screen_scratch'], screenCondition: 'Screen cracked/ glass broken', hardware: ['speaker'], warranty: false, mobileAge: 'above11' });
+    const before = calculateFhoneifyPrice('Apple', model, 50000, crackedPhone).cashifyConditionEquivalent;
+    const after = calculateFhoneifyPrice('Apple', model, 50000, { ...crackedPhone, touch: false }).cashifyConditionEquivalent;
+    assert.ok(after <= before, `${model}: touch failure on cracked glass ${after} > ${before}`);
+  }
+});
+
+test('Galaxy S24 Ultra out of warranty: no bill never pays more than a valid bill', () => {
+  const base = answers({ warranty: false, mobileAge: 'above11', accessories: ['box'] });
+  const withBill = calculateFhoneifyPrice('Samsung', 'Samsung Galaxy S24 Ultra 5G', 55000, { ...base, validBill: true }).cashifyConditionEquivalent;
+  const noBill = calculateFhoneifyPrice('Samsung', 'Samsung Galaxy S24 Ultra 5G', 55000, { ...base, validBill: false }).cashifyConditionEquivalent;
+  assert.ok(noBill <= withBill, `${noBill} > ${withBill}`);
+});
+
+test('a missing bill answer is never priced as "No"', () => {
+  for (const [brand, model] of [['Apple', 'Apple iPhone 16 Pro'], ['OnePlus', 'OnePlus 15'], ['Samsung', 'Samsung Galaxy S24 Ultra 5G'], ['Nothing', 'Nothing Phone 3']]) {
+    const young = answers({ warranty: true, mobileAge: 'below3', accessories: ['box'] });
+    const no = calculateFhoneifyPrice(brand, model, 40000, { ...young, validBill: false }).cashifyConditionEquivalent;
+    const missing = calculateFhoneifyPrice(brand, model, 40000, { ...young, validBill: null }).cashifyConditionEquivalent;
+    assert.ok(missing > no, `${model}: missing ${missing} priced like No ${no}`);
+  }
+});
+
+test('Nothing/CMF models match their own family, not by substring', () => {
+  const expected: [string, string][] = [
+    ['Nothing Phone 1', 'Phone 1'], ['Nothing Phone (1)', 'Phone 1'], ['Nothing Phone 2', 'Phone 2'],
+    ['Nothing Phone 2a 5G', 'other/CMF'], ['Nothing Phone 2a Plus', 'other/CMF'], ['CMF by Nothing Phone 1', 'other/CMF'],
+    ['CMF by Nothing Phone 2 Pro 5G', 'other/CMF'], ['Nothing Phone 3', 'other/CMF'],
+  ];
+  for (const [model, family] of expected) {
+    assert.equal(nothingModelFamily(model), family, model);
+    assert.equal(pricingFamilyKey('Nothing', model), `Nothing/CMF / ${family}`, model);
+  }
+  const cam = answers({ hardware: ['back_camera'] });
+  const cmf = calculateFhoneifyPrice('Nothing', 'CMF by Nothing Phone 1', 10000, cam).cashifyConditionEquivalent;
+  const shared = calculateFhoneifyPrice('Nothing', 'Nothing Phone 3a', 10000, cam).cashifyConditionEquivalent;
+  const phone1 = calculateFhoneifyPrice('Nothing', 'Nothing Phone 1', 10000, cam).cashifyConditionEquivalent;
+  assert.equal(cmf, shared);
+  assert.notEqual(cmf, phone1);
 });
 
 console.log(`\n${passed} passed, ${failed} failed`);

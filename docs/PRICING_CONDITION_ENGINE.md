@@ -131,3 +131,39 @@ Upto already reflects the model's age (iPhone 13 clean ₹24,030 on ₹23,710).
   Apple 0.630. Display + cosmetic body overlap: larger in full + 0.327 x the
   smaller (S24 controls). Apple heavy body tier floored at the light tier.
 - Get Upto is untouched.
+
+## Internal consistency fixes (2026-09-25)
+
+- A failed touch screen or cracked glass is charged at least what the same
+  phone is charged without it (largest applicable screen deduction).
+  Adding cracked glass to a NOT_ASKED local display used to raise the quote.
+- Galaxy S24 Ultra out of warranty: the bill no longer changes the factor
+  (0.8033); "no bill" used to pay ~Rs 1,000 more than "bill".
+- A missing GST-bill answer is never priced as "No": the engine treats it
+  neutrally and the quote API refuses an exact value without it wherever the
+  bill question is shown (`validBill: required for this device`).
+- Nothing families match exactly (`nothingModelFamily`): CMF Phone 1, Phone
+  2a and 2a Plus no longer borrow Phone 1 / Phone 2 constants. Constants are
+  unchanged.
+- Catalog invariants: `npm run test:pricing:generalization-properties`
+  (offline). The flat no-calls Rs 1,200 scrap price is reported, not failed.
+
+## EXTERNAL VALIDATION REQUIRED
+
+Not changed by the fixes above; each needs fresh Cashify controls first.
+
+- **Nothing/CMF out-of-warranty factor 0.88** (`calculateNothingPrice`). No
+  calibration evidence since f1034f4. The August Cashify table
+  (`scripts/pricing/historical-cashify-observations.json`, 30 quotes) implies
+  a median ~0.72, in line with other brands' 0.712-0.776, so 0.88 is probably
+  too high. It also feeds local display (warranty voided) and the no-bill floor.
+- **Android local display 0.81 (ASKED)**: Samsung fits ~0.81, Pixel 9 Pro and
+  POCO F6 ~0.76; not separable from the uncalibrated generic/Xiaomi
+  out-of-warranty factor 0.75 without same-model clean controls.
+- **Touch failure** as a fixed percentage (Nothing 60%): unvalidated.
+- **No-calls Rs 1,200 scrap rule**: no stored Cashify observation.
+- **Brands with no current Cashify evidence**: Nothing/CMF (historical only),
+  Motorola, Infinix, Redmi/Xiaomi (only POCO F6), Realme, iQOO, Tecno, Honor,
+  Huawei, Lenovo, Nokia, LG, Asus, and Vivo beyond one X60 Pro quote. Also no
+  current evidence for cracked screen, touch failure, spots/lines,
+  panel/bent, no-calls, light scratches, and most functional faults.

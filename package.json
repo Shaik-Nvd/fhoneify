@@ -50,7 +50,8 @@
     "test:pricing:get-upto": "tsx scripts/test/pricing.get-upto.test.ts",
     "test:pricing:questionnaire": "tsx scripts/test/pricing.questionnaire-coverage.test.ts",
     "test:pricing:team-qa": "tsx scripts/test/pricing.team-qa.test.ts",
-    "test:pricing:questionnaire-metadata": "tsx scripts/test/pricing.questionnaire-metadata.test.ts"
+    "test:pricing:questionnaire-metadata": "tsx scripts/test/pricing.questionnaire-metadata.test.ts",
+    "test:pricing:generalization-properties": "tsx scripts/test/pricing.generalization-properties.test.ts"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"
