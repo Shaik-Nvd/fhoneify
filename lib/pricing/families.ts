@@ -1,3 +1,5 @@
+import { nothingModelFamily } from '../pricingCalculator';
+
 export interface PricingFamily {
   engine: string;
   family: string;
@@ -84,9 +86,7 @@ export function classifyPricingFamily(brand: string, model: string): PricingFami
   }
 
   if (b === 'nothing' || b === 'cmf' || m.includes('nothing') || m.includes('cmf')) {
-    const family = m.includes('phone 1') || m.includes('phone (1)') ? 'Phone 1'
-      : m.includes('phone 2') || m.includes('phone (2)') ? 'Phone 2'
-        : 'other/CMF';
+    const family = nothingModelFamily(model);
     return { engine: 'Nothing/CMF', family, ruleSource: `calculateNothingPrice:${family}` };
   }
 

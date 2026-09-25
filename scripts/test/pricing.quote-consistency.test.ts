@@ -175,9 +175,10 @@ async function run() {
     const starting = await pageRequestsQuote(svc, PERFECT_CONDITION_DIAGNOSTICS);
     const empty = { calls: null, touch: null, originalScreen: null, defects: [], hardware: [], accessories: [] };
     const v = await svc.verifyLeadPrice({ ...DEVICE, diagnostics: empty, quoteToken: starting.token, clientQuotedPrice: starting.price });
-    assert.ok(v.ok);
-    assert.equal(v.audit.tokenRejectedReason, 'diagnostics_mismatch');
-    assert.notEqual(v.price, starting.price, 'old flow stored a different number than it showed');
+    // The unanswered GST bill now makes the recomputation refuse outright
+    // (missing is not "No"), so the old flow cannot store any price at all.
+    assert.ok(!v.ok);
+    assert.equal(v.code, 'INVALID_DIAGNOSTICS');
     // And the browser-side estimate used the bundled snapshot (₹36,300).
     assert.notEqual(priceDevice(DEVICE.brand, DEVICE.model, 36300, ANSWERS).fhoneifyPrice, priceDevice(DEVICE.brand, DEVICE.model, REFERENCE, ANSWERS).fhoneifyPrice);
   });

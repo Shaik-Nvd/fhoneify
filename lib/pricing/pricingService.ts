@@ -167,6 +167,12 @@ export function createPricingService(deps: PricingServiceDeps) {
 
     const key = deviceKey({ brand: device.brand, model: device.model, storage: device.storage });
     const [reference, questionnaire] = await Promise.all([lookupReference(key), lookupQuestionnaire(device)]);
+    // Missing is not "No": where the bill question is shown, an exact value
+    // needs the answer rather than silently depreciating (or crediting) it.
+    if (questionnaire.billMode !== 'NOT_ASKED' && diagnostics.validBill === null && !(diagnostics.accessories || []).includes('bill')) {
+      return { ok: false, code: 'INVALID_DIAGNOSTICS', message: 'validBill: required for this device' };
+    }
+
     const at = now();
     const base = resolveReference({ device, repositoryRecord: reference.record, snapshot: deps.snapshot, now: at });
 

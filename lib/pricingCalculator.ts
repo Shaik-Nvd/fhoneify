@@ -165,6 +165,30 @@ export function calculateConditionAdjustments(
   params: ModelParams,
   options: ConditionAdjustmentOptions = {}
 ): ConditionAdjustmentBreakdown {
+  const result = rawConditionAdjustments(diagnostics, params, options);
+  // A failed touch screen or cracked glass supersedes the other screen
+  // charges, so it must be charged at least what the same phone is charged
+  // without it: the largest applicable screen deduction, never a smaller one
+  // (e.g. a NOT_ASKED local-display deduction can exceed the cracked rule).
+  const lesser: DiagnosticsType[] = [];
+  if (diagnostics.touch === false) lesser.push({ ...diagnostics, touch: true });
+  const screenCondition = lower(diagnostics.screenCondition);
+  if (screenCondition.includes('cracked') || screenCondition.includes('glass broken') || (diagnostics.defects || []).includes('broken_screen')) {
+    lesser.push({ ...diagnostics, screenCondition: null, defects: (diagnostics.defects || []).filter((d) => d !== 'broken_screen' && d !== 'screen_scratch') });
+  }
+  let strictest = result;
+  for (const candidate of lesser) {
+    const without = calculateConditionAdjustments(candidate, params, options);
+    if (without.conditionRetention < strictest.conditionRetention) strictest = without;
+  }
+  return strictest;
+}
+
+function rawConditionAdjustments(
+  diagnostics: DiagnosticsType,
+  params: ModelParams,
+  options: ConditionAdjustmentOptions
+): ConditionAdjustmentBreakdown {
   const defects = new Set(diagnostics.defects || []);
   const screenCondition = lower(diagnostics.screenCondition);
   const screenSpots = lower(diagnostics.screenSpots);
@@ -538,7 +562,9 @@ export function calculateSamsungPrice(model: string, reference: CashifyGetUptoRe
   const hasValidBill = diagnostics.validBill === true || (diagnostics.accessories || []).includes("bill");
   let ageMultiplier = 0.7760816326;
 
-  if (isS24Ultra) ageMultiplier = diagnostics.warranty === false ? (hasValidBill ? 0.8032786885245902 : 0.8188914910226385) : 0.98;
+  // Out of warranty the bill carries no premium (as for every other Samsung);
+  // the former no-bill 0.8189 paid more than a valid bill's 0.8033.
+  if (isS24Ultra) ageMultiplier = diagnostics.warranty === false ? 0.8032786885245902 : 0.98;
   else if (isS26Ultra) ageMultiplier = diagnostics.warranty === false ? 0.8139316811781648 : 0.95;
   else if (isA35) ageMultiplier = diagnostics.warranty === false ? 0.7689422355588897 : 0.98;
   else if (isA34) ageMultiplier = diagnostics.warranty === false ? 0.7807625649913345 : 0.98;
@@ -773,12 +799,26 @@ export function calculateOnePlusPrice(model: string, reference: CashifyGetUptoRe
 // BRAND 7: NOTHING & CMF ENGINE
 // ============================================================================
 
+/**
+ * Exact Nothing model family. Substring matching sent "CMF by Nothing Phone 1"
+ * to Nothing Phone 1's constants and "Phone 2a"/"2a Plus" to Phone 2's.
+ */
+export function nothingModelFamily(model: string): 'Phone 1' | 'Phone 2' | 'other/CMF' {
+  const m = String(model || '').toLowerCase().replace(/\s+/g, ' ').trim();
+  if (/cmf/.test(m)) return 'other/CMF';
+  const name = m.replace(/^nothing /, '').replace(/ 5g$/, '');
+  if (/^phone ?\(?1\)?$/.test(name)) return 'Phone 1';
+  if (/^phone ?\(?2\)?$/.test(name)) return 'Phone 2';
+  return 'other/CMF';
+}
+
 export function calculateNothingPrice(model: string, reference: CashifyGetUptoReference, diagnostics: DiagnosticsType, semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE): PricingResult {
   if (!reference || reference <= 0) return { cashifyConditionEquivalent: 0, fhoneifyPrice: 0 };
 
   const lowerModel = String(model || "").toLowerCase();
-  const isNothing1 = lowerModel.includes("phone 1") || lowerModel.includes("phone (1)");
-  const isNothing2 = lowerModel.includes("phone 2") || lowerModel.includes("phone (2)");
+  const nothingFamily = nothingModelFamily(model);
+  const isNothing1 = nothingFamily === 'Phone 1';
+  const isNothing2 = nothingFamily === 'Phone 2';
 
   const params: ModelParams = { warrantyPenalty: 0.1, gstBillPenalty: 0.223828345567476, callsPenalty: 0.5, originalScreenPenalty: 0.6, touchPenalty: 0.4, functionalScale: 1.0, physicalScale: 1.0 };
   let ageMultiplier = diagnostics.warranty === false ? (isNothing1 ? 0.8805755395683453 : 0.88) : 0.98;
@@ -846,7 +886,10 @@ export function calculateFhoneifyPrice(
   // neutral here, and questionnaireAgeFactor drops the age/warranty factor.
   const diagnostics: DiagnosticsType = {
     ...answers,
-    ...(semantics.billMode === 'NOT_ASKED' ? { validBill: true } : {}),
+    // A missing bill answer is not a "No": it is priced neutrally, like a
+    // question Cashify does not ask. The quote API refuses an exact value
+    // without it where the bill is asked (lib/pricing/pricingService.ts).
+    ...(semantics.billMode === 'NOT_ASKED' || answers.validBill == null ? { validBill: true } : {}),
     // Cashify never asks an age bracket when it does not ask age: the warranty
     // answer is its only age signal.
     ...(semantics.ageMode === 'NOT_ASKED' ? { mobileAge: answers.warranty === false ? 'above11' : null } : {}),
