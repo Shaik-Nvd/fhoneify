@@ -16041,6 +16041,15 @@ export const SEED_DEVICES: any[] = [
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t2x-5g-6-gb-128-gb"
   },
   {
+    "id": "xiaomi_redmi_turbo_5_8_256",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Turbo 5",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 24110
+  },
+  {
     "id": "e31f8426-9b6a-48fd-ab7d-60020990195f",
     "brand": "Xiaomi",
     "model": "Xiaomi Redmi Note 6 Pro",
