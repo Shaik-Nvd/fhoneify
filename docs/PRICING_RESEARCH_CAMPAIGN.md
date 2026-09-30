@@ -182,10 +182,10 @@ the same owner-approval process as any other pricing change (AGENTS.md,
 
 ## Known, pre-existing, out-of-scope risk
 
-`cashify-sessions/*.json` are tracked in this repository's git history
-(pre-existing, documented in `PRICING_REFERENCE_DATA_ARCHITECTURE.md` §9b —
-not introduced by this campaign). Anyone with repository access has those
-session cookies. This campaign does not make that worse (CI never commits
-the materialized session file), but be aware when running `research:login`
-locally: don't `git add cashify-sessions/` unless you mean to continue that
-existing practice.
+`cashify-sessions/*.json` and `cashify-session.json` are ignored because
+they are Playwright storageState files containing live Cashify session
+cookies. CI materializes its session only from `CASHIFY_SESSION_STATE` at
+runtime and never logs its contents. Historical commits contained tracked
+session files; rotate the affected Cashify sessions and coordinate any
+history-cleanup decision with repository owners. Do not add local session
+files to Git.

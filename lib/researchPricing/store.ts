@@ -256,7 +256,8 @@ export class PostgresResearchStore implements ResearchStore {
         SELECT id FROM "CashifyResearchExperiment"
         WHERE (
           status = 'PENDING'
-          OR (status IN ('IN_PROGRESS', 'AUTH_REQUIRED') AND "claimedAt" IS NOT NULL AND "claimedAt" < ${staleBefore})
+          OR status = 'AUTH_REQUIRED'
+          OR (status = 'IN_PROGRESS' AND "claimedAt" IS NOT NULL AND "claimedAt" < ${staleBefore})
         )
         AND (${opts.brandFilter ?? null}::text IS NULL OR brand ILIKE ${opts.brandFilter ?? null})
         AND (${opts.modelFilter ?? null}::text IS NULL OR model ILIKE ${opts.modelFilter ? `%${opts.modelFilter}%` : null})
