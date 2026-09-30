@@ -1162,6 +1162,42 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 41600
   },
   {
+    "id": "apple_18pm_2tb",
+    "brand": "Apple",
+    "model": "Apple iPhone 18 Pro Max",
+    "storage": "12 GB/2 TB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 165000
+  },
+  {
+    "id": "apple_18pm_1tb",
+    "brand": "Apple",
+    "model": "Apple iPhone 18 Pro Max",
+    "storage": "12 GB/1 TB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 145000
+  },
+  {
+    "id": "apple_18pm_512",
+    "brand": "Apple",
+    "model": "Apple iPhone 18 Pro Max",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 137000
+  },
+  {
+    "id": "apple_18pm_256",
+    "brand": "Apple",
+    "model": "Apple iPhone 18 Pro Max",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "basePrice": 130000
+  },
+  {
     "id": "apple_2117",
     "brand": "Apple",
     "model": "Apple iPhone 17",
