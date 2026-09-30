@@ -6609,6 +6609,16 @@ export const SEED_DEVICES: any[] = [
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-honor-90-12-gb-512-gb"
   },
   {
+    "id": "f583e3c9-9b9c-5b4e-c3b2-ac9d8e7f6g5b",
+    "brand": "POCO",
+    "model": "POCO C81x",
+    "storage": "3 GB/64 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "basePrice": 6490,
+    "cashifyLink": ""
+  },
+  {
     "id": "e492f2c8-8a8b-4a3d-b2a1-9b8c7d6e5f4a",
     "brand": "POCO",
     "model": "POCO C81",
