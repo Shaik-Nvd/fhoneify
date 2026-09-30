@@ -139,6 +139,8 @@ one valid block against that block's own opening baseline.
 ```bash
 # dry run: tests, preflight, reservation preview; no Cashify request, no ledger write
 gh workflow run cashify-research-campaign.yml --ref codex/cashify-matrix-integration -f stage=1 -f max_attempts=100 -f mode=dry-run
+# evidence self-test: seal/upload/read back a synthetic price-free record (verified 2026-10-01, artifact 11126943087)
+gh workflow run cashify-research-campaign.yml --ref codex/cashify-matrix-integration -f stage=1 -f max_attempts=100 -f mode=evidence-selftest
 # collect (only the approved stage)
 gh workflow run cashify-research-campaign.yml --ref codex/cashify-matrix-integration -f stage=1 -f max_attempts=100 -f mode=collect
 
