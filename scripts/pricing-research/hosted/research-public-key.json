@@ -1,0 +1,7 @@
+{
+  "algorithm": "RSA-OAEP-SHA256+A256GCM",
+  "modulusLength": 4096,
+  "fingerprintSha256": "fbfdf78ec96e30ae53bfa655e40e2e90eddf7ee83539e14001466d8c87383fa9",
+  "createdAt": "2026-09-30T21:16:27.644Z",
+  "note": "Public key only. The private key never leaves the owner laptop."
+}

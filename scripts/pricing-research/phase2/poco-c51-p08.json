@@ -1,0 +1,33 @@
+{
+  "experimentId": "0ip731n:screenCondition=scratch_gt2+bodyScratches=scratch_gt2",
+  "blockId": "0ip731n:blk1",
+  "deviceKey": "poco|poco c51|4 gb/64 gb",
+  "modelKey": "poco|poco c51",
+  "role": "CORE",
+  "phase": 2,
+  "kinds": ["PAIR"],
+  "purposes": ["pair P08: owner-requested Phase 2 replication; supplement to the existing training block"],
+  "order": 23,
+  "forceCheckboxes": [],
+  "changes": [
+    {"factorId": "screenCondition", "from": "none", "to": "scratch_gt2"},
+    {"factorId": "bodyScratches", "from": "none", "to": "scratch_gt2"}
+  ],
+  "baselineExperimentId": "0ip731n:baseline",
+  "referenceExperimentIds": ["0ip731n:screenCondition=scratch_gt2", "0ip731n:bodyScratches=scratch_gt2"],
+  "isolation": "SUBPAGE_SIBLINGS_HELD",
+  "isolationNotes": ["Existing baseline and two OFAT vectors reused; bodyDents remains none. Original Claude plan is unchanged."],
+  "requiresRuntimeConfirmation": [],
+  "blind": false,
+  "answers": {
+    "calls": "yes", "touch": "yes", "originalScreen": "yes",
+    "warranty": "yes", "validBill": "yes", "eSim": "single",
+    "screenCondition": "scratch_gt2", "screenSpots": "none", "screenLines": "none", "screenDiscoloration": "none",
+    "bodyScratches": "scratch_gt2", "bodyDents": "none", "bodyPanel": "none", "bodyBent": "none",
+    "hw_back_camera": "ok", "hw_front_camera": "ok", "hw_battery_service": "ok", "hw_battery_health": "ok",
+    "hw_charging": "ok", "hw_speaker": "ok", "hw_microphone": "ok", "hw_wifi": "ok",
+    "hw_fingerprint": "ok", "hw_face": "ok", "hw_power": "ok", "hw_volume": "ok",
+    "hw_camera_glass": "ok", "hw_audio_receiver": "ok", "hw_bluetooth": "ok", "hw_vibrator": "ok",
+    "hw_proximity": "ok", "hw_silent": "ok", "charger": "present", "sPen": null, "box": "present", "mobileAge": "below3"
+  }
+}

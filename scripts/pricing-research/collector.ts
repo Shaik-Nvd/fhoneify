@@ -31,6 +31,7 @@ import {
 } from '../../server/modules/quote/cashifyScraper';
 import type { CashifyResearchAnswers } from './profiles';
 import { hasAuthGate, validateFinalQuote, verifyOptionGrid } from './quoteEvidence';
+import { inspectDefectQuestion, verifyDefectSelection } from './defectQuestion';
 
 /** Playwright's own $/$$ return this generic instantiation - kept as an
  * alias so the rest of the file does not repeat it. */
@@ -41,6 +42,9 @@ export type CollectorStatus = 'COMPLETED' | 'UNSUPPORTED' | 'AUTH_REQUIRED' | 'F
 export interface QuestionAnswerRecord {
   questionText: string;
   selectedAnswer: string;
+  /** Actual questionnaire surface, not inferred from a planned factor. */
+  sourcePage?: string;
+  optionStates?: Array<{ text: string; selected: boolean }>;
 }
 
 /**
@@ -93,6 +97,9 @@ export interface CollectOptions {
   evidenceId?: string;
   /** A fresh, explicitly selected session; never rotate through exposed historical files. */
   sessionFileName?: string;
+  /** Matrix-only gate: reject any missing or mismatched planned answer before
+   * reading/storing a final price. Legacy A/B/C callers leave this unset. */
+  verifyPlannedAnswers?: (observed: QuestionAnswerRecord[]) => { status: string; reason: string | null };
 }
 
 const CAPTCHA_MARKERS = [/i'?m not a robot/i, /verify you are human/i, /recaptcha/i, /hcaptcha/i];
@@ -121,6 +128,25 @@ function assertSafeToSelect(text: string): void {
   if (hit) {
     throw new Error(`refusing to click a forbidden action button ("${text}" matched ${hit})`);
   }
+}
+
+function safeCollectorFailure(error: unknown): string {
+  const message = error instanceof Error ? error.message : '';
+  const networkCode = message.match(/net::(ERR_[A-Z_]+)/)?.[1];
+  if (networkCode) return `Cashify navigation failed: ${networkCode}`;
+  if (/timeout/i.test(message)) return 'Cashify questionnaire timed out';
+  const known = [
+    'requested defect option not visible', 'requested hardware option not visible',
+    'requested charger option not visible', 'requested box option not visible',
+    'requested mobile-age answer was not visible',
+    'question label could not be verified', 'selected answer state could not be verified',
+    'questionnaire option grid could not be fully identified',
+    'questionnaire option state did not match requested answer',
+    'defect question structure not verified', 'defect question heading missing or ambiguous',
+    'defect option identity or selection state ambiguous', 'defect answer selection could not be verified',
+    'defect question changed during selection',
+  ];
+  return known.find((reason) => message.includes(reason)) ?? 'questionnaire action failed (selector or navigation)';
 }
 
 /**
@@ -268,6 +294,8 @@ interface WalkContext {
   page: Page;
   questions: QuestionAnswerRecord[];
   actionTimeoutMs: number;
+  sourcePage: string;
+  planned: boolean;
 }
 
 /** Captures the question text for `handle` before clicking it, and refuses
@@ -275,6 +303,32 @@ interface WalkContext {
 async function recordAndClick(ctx: WalkContext, handle: ElHandle, selectedAnswer: string): Promise<void> {
   assertSafeToSelect(selectedAnswer);
   await assertNoChallenge(ctx.page);
+  if (ctx.sourcePage.startsWith('P2-')) {
+    const saveRejected = (html: string | null) => {
+      if (!html) return;
+      const destination = path.resolve('research-evidence/diagnostic');
+      fs.mkdirSync(destination, { recursive: true });
+      fs.writeFileSync(path.join(destination, `rejected-${ctx.sourcePage}-${Date.now()}.html`), html);
+    };
+    const before = await handle.evaluate(inspectDefectQuestion);
+    if (!before.ok || before.options.filter((option) => option.text === selectedAnswer).length !== 1) {
+      saveRejected(before.sanitizedHtml);
+      throw new Error(before.reason ?? 'defect question structure not verified');
+    }
+    await handle.click({ timeout: ctx.actionTimeoutMs });
+    await assertNoChallenge(ctx.page);
+    const after = await handle.evaluate(inspectDefectQuestion);
+    try {
+      verifyDefectSelection(after, selectedAnswer);
+      if (after.questionText !== before.questionText ||
+        JSON.stringify(after.options.map((option) => option.text)) !== JSON.stringify(before.options.map((option) => option.text))) {
+        throw new Error('defect question changed during selection');
+      }
+    } catch (error) { saveRejected(after.sanitizedHtml); throw error; }
+    ctx.questions.push({ questionText: after.questionText!, selectedAnswer, sourcePage: ctx.sourcePage,
+      optionStates: after.options });
+    return;
+  }
   const label = await readQuestionLabel(ctx.page, handle);
   if (!label || label.toLowerCase() === selectedAnswer.toLowerCase()) {
     throw new Error('question label could not be verified');
@@ -293,18 +347,23 @@ async function recordAndClick(ctx: WalkContext, handle: ElHandle, selectedAnswer
     return false;
   }).catch(() => false);
   if (!selected) throw new Error('selected answer state could not be verified');
-  ctx.questions.push({ questionText: label, selectedAnswer });
+  ctx.questions.push({ questionText: label, selectedAnswer, sourcePage: ctx.sourcePage });
 }
 
 /** Cashify's defect, hardware and accessory grids expose each choice as a
  * card. Read every visible card, including the explicitly unselected ones. */
-async function captureGridVector(ctx: WalkContext, expectedSelected: string[]): Promise<void> {
+async function captureGridVector(ctx: WalkContext, expectedSelected: string[], sourcePage: string): Promise<void> {
   const choices = await ctx.page.locator('div.flex.flex-col.items-center.w-full.flex-1').evaluateAll((elements) =>
     elements.map((el) => ({
       text: ((el as HTMLElement).innerText || '').replace(/\s+/g, ' ').trim(),
       selected: el.classList.contains('bg-primary') && el.classList.contains('border-primary'),
     })));
-  ctx.questions.push(...verifyOptionGrid(choices, expectedSelected));
+  // In a planned experiment, retain the entire verified DOM state even when
+  // an unknown card is selected or a requested card is missing. The matrix
+  // verifier rejects that state before the final-price gate, with evidence.
+  // Legacy A/B/C collection keeps its existing strict option-grid check.
+  const selected = ctx.planned ? choices.filter((choice) => choice.selected).map((choice) => choice.text) : expectedSelected;
+  ctx.questions.push(...verifyOptionGrid(choices, selected).map((choice) => ({ ...choice, sourcePage })));
 }
 
 async function clickByText(page: Page, text: string, timeoutMs: number): Promise<ElHandle | null> {
@@ -447,9 +506,12 @@ export async function collectCashifyQuote(
   // (matching how a thrown error already falls through via `continue`), and
   // AUTH_REQUIRED is only the final answer if every single session hit it.
   let lastAuthRequired: CollectorResult | null = null;
+  let lastFailure: CollectorResult | null = null;
 
   for (const sessionFile of sessionFiles) {
     let context: BrowserContext | null = null;
+    const questions: QuestionAnswerRecord[] = [];
+    let sourceUrl: string | undefined;
     try {
       context = await browser.newContext({ storageState: sessionFile });
       const page = await context.newPage();
@@ -460,6 +522,7 @@ export async function collectCashifyQuote(
       const cleanModel = modelLower.startsWith(brandLower) ? modelLower.slice(brandLower.length).trim() : modelLower;
       const modelSlug = `${brandLower}-${cleanModel}`.toLowerCase().replace(/[^a-z0-9]+/g, '-');
       const deviceUrl = device.cashifyUrl || `https://www.cashify.in/sell-old-mobile-phone/used-${modelSlug}`;
+      sourceUrl = deviceUrl;
 
       const response = await page.goto(deviceUrl, { waitUntil: 'domcontentloaded' });
 
@@ -517,8 +580,7 @@ export async function collectCashifyQuote(
 
       await page.waitForSelector('text=/make and receive calls/i', { timeout: 10000 }).catch(() => {});
 
-      const questions: QuestionAnswerRecord[] = [];
-      const ctx: WalkContext = { page, questions, actionTimeoutMs };
+      const ctx: WalkContext = { page, questions, actionTimeoutMs, sourcePage: 'P1', planned: !!opts.verifyPlannedAnswers };
 
       // PAGE 1: associate each pair with its *visible question*, never its
       // position. An extra/missing/reordered question is not guessed.
@@ -555,7 +617,7 @@ export async function collectCashifyQuote(
         const choice = selectedAnswer === 'No' ? pair.no : pair.yes;
         await choice.click({ timeout: actionTimeoutMs });
         await assertYesNoSelected(choice);
-        questions.push({ questionText: pair.text, selectedAnswer });
+        questions.push({ questionText: pair.text, selectedAnswer, sourcePage: 'P1' });
         if (await detectAuthRequired(page)) {
           lastAuthRequired = { status: 'AUTH_REQUIRED', sourceUrl: deviceUrl, questionsAsked: questions, errorReason: 'login prompt during Yes/No questions' };
           authDuringQuestion = true;
@@ -592,15 +654,23 @@ export async function collectCashifyQuote(
       }
 
       // PAGE 2: Screen/body defect checkboxes.
+      let missingDefect = false;
       for (const [id, text] of Object.entries(DEFECT_CHECKBOX_TEXT) as Array<[keyof typeof DEFECT_CHECKBOX_TEXT, string]>) {
         if (answers.defects?.includes(id)) {
           const el = await page.$(`text="${text}"`);
-          if (!el) throw new Error('requested defect option not visible');
+          if (!el) {
+            if (!ctx.planned) throw new Error('requested defect option not visible');
+            missingDefect = true;
+            continue;
+          }
           await assertNoChallenge(page);
           await el.click({ timeout: actionTimeoutMs });
         }
       }
-      await captureGridVector(ctx, (answers.defects ?? []).map((id) => DEFECT_CHECKBOX_TEXT[id]));
+      await captureGridVector(ctx, (answers.defects ?? []).map((id) => DEFECT_CHECKBOX_TEXT[id]), 'P2');
+      if (missingDefect) return { status: 'UNSUPPORTED', sourceUrl: deviceUrl, questionsAsked: questions,
+        originalGetUptoReference: originalGetUptoReference ?? undefined,
+        unsupportedReason: 'requested screen/body defect checkbox not visible' };
       const continue2 = await page.$('text="Continue"');
       if (!continue2) throw new Error('defect page did not offer Continue');
       await continue2.click();
@@ -610,11 +680,15 @@ export async function collectCashifyQuote(
       // scrapeCashifyPrice() walks them.
       for (const sub of SUB_PAGE_FIELDS) {
         if (!answers.defects?.includes(sub.triggerId)) continue;
+        ctx.sourcePage = `P2-${sub.triggerId === 'broken_screen' ? 'screen' : sub.triggerId === 'screen_spot' ? 'display' : sub.triggerId === 'body_scratch' ? 'body' : 'panel'}`;
         for (const field of sub.fields) {
           const value = answers[field] as string | undefined;
           if (!value) continue;
           const el = await page.$(`text="${value}"`);
           if (el) await recordAndClick(ctx, el, value);
+          else if (ctx.planned) return { status: 'UNSUPPORTED', sourceUrl: deviceUrl, questionsAsked: questions,
+            originalGetUptoReference: originalGetUptoReference ?? undefined,
+            unsupportedReason: 'requested screen/body detail option not visible' };
         }
         const cont = await page.$('text="Continue"');
         if (!cont) throw new Error('defect detail page did not offer Continue');
@@ -623,37 +697,60 @@ export async function collectCashifyQuote(
       }
 
       // PAGE 3: Functional/hardware defects.
+      let missingHardware = false;
       for (const hwId of answers.hardware ?? []) {
         const text = HARDWARE_TEXT[hwId];
         if (!text) throw new Error('unrecognized requested hardware option');
         const el = await page.$(`text="${text}"`);
-        if (!el) throw new Error('requested hardware option not visible');
+        if (!el) {
+          if (!ctx.planned) throw new Error('requested hardware option not visible');
+          missingHardware = true;
+          continue;
+        }
         await assertNoChallenge(page);
         await el.click({ timeout: actionTimeoutMs });
       }
-      await captureGridVector(ctx, (answers.hardware ?? []).map((id) => HARDWARE_TEXT[id]));
+      await captureGridVector(ctx, (answers.hardware ?? []).map((id) => HARDWARE_TEXT[id]), 'P3');
+      if (missingHardware || questions.some((q) => q.sourcePage === 'P3' && q.selectedAnswer === 'Selected' &&
+        !Object.values(HARDWARE_TEXT).includes(q.questionText))) {
+        return { status: 'UNSUPPORTED', sourceUrl: deviceUrl, questionsAsked: questions,
+          originalGetUptoReference: originalGetUptoReference ?? undefined,
+          unsupportedReason: missingHardware ? 'requested hardware option not visible' : 'unplanned hardware fault selected' };
+      }
       const continue3 = await page.$('text="Continue"');
       if (!continue3) throw new Error('hardware page did not offer Continue');
       await continue3.click();
       await page.waitForTimeout(1500);
 
       // PAGE 4: Accessories.
+      let missingAccessory = false;
       if (answers.accessories?.includes('charger')) {
         const el = await page.$('text=Original Charger of device');
-        if (!el) throw new Error('requested charger option not visible');
-        await assertNoChallenge(page);
-        await el.click({ timeout: actionTimeoutMs });
+        if (!el) {
+          if (!ctx.planned) throw new Error('requested charger option not visible');
+          missingAccessory = true;
+        } else {
+          await assertNoChallenge(page);
+          await el.click({ timeout: actionTimeoutMs });
+        }
       }
       if (answers.accessories?.includes('box')) {
         const el = await page.$('text=Box with same IMEI');
-        if (!el) throw new Error('requested box option not visible');
-        await assertNoChallenge(page);
-        await el.click({ timeout: actionTimeoutMs });
+        if (!el) {
+          if (!ctx.planned) throw new Error('requested box option not visible');
+          missingAccessory = true;
+        } else {
+          await assertNoChallenge(page);
+          await el.click({ timeout: actionTimeoutMs });
+        }
       }
       await captureGridVector(ctx, [
         ...(answers.accessories?.includes('charger') ? ['Original Charger of Device'] : []),
         ...(answers.accessories?.includes('box') ? ['Original Box with same IMEI'] : []),
-      ]);
+      ], 'P4');
+      if (missingAccessory) return { status: 'UNSUPPORTED', sourceUrl: deviceUrl, questionsAsked: questions,
+        originalGetUptoReference: originalGetUptoReference ?? undefined,
+        unsupportedReason: 'requested accessory option not visible' };
       const continue4 = await page.$('text="Continue"');
       if (!continue4) throw new Error('accessory page did not offer Continue');
       await continue4.click();
@@ -663,9 +760,15 @@ export async function collectCashifyQuote(
       // Requested warranty/bill values do not imply the question exists.
       const agePageTitle = await page.$('text=What is your mobile age?');
       if (agePageTitle) {
+        ctx.sourcePage = 'P5';
         const ageText = AGE_TEXT[answers.mobileAge ?? 'above11'] ?? AGE_TEXT.above11;
         const ageBtn = await page.$(`text="${ageText}"`);
-        if (!ageBtn) throw new Error('requested mobile-age answer was not visible');
+        if (!ageBtn) {
+          if (!ctx.planned) throw new Error('requested mobile-age answer was not visible');
+          return { status: 'UNSUPPORTED', sourceUrl: deviceUrl, questionsAsked: questions,
+            originalGetUptoReference: originalGetUptoReference ?? undefined,
+            unsupportedReason: 'requested mobile-age answer not visible' };
+        }
         await recordAndClick(ctx, ageBtn, ageText);
       }
 
@@ -690,6 +793,16 @@ export async function collectCashifyQuote(
           errorReason: 'CAPTCHA before final price',
         };
         continue;
+      }
+
+      if (opts.verifyPlannedAnswers) {
+        const verdict = opts.verifyPlannedAnswers(questions);
+        if (verdict.status !== 'COMPLETED') {
+          return { status: 'UNSUPPORTED', sourceUrl: deviceUrl,
+            originalGetUptoReference: originalGetUptoReference ?? undefined,
+            questionsAsked: questions, answersSelected: { requested: answers, observed: questions },
+            unsupportedReason: verdict.reason ?? 'planned answer vector was not verified' };
+        }
       }
 
       const fingerprint = stableFingerprint(questions);
@@ -728,11 +841,12 @@ export async function collectCashifyQuote(
       };
     } catch (error: any) {
       if (error instanceof AuthGateError) {
-        lastAuthRequired = { status: 'AUTH_REQUIRED', errorReason: error.message };
+        lastAuthRequired = { status: 'AUTH_REQUIRED', sourceUrl, questionsAsked: questions, errorReason: error.message };
       } else {
         // Playwright exceptions may include page text and URLs. Neither
         // belongs in a database errorReason or CI log.
-        lastError = 'questionnaire action failed (selector or navigation)';
+        lastError = safeCollectorFailure(error);
+        lastFailure = { status: 'FAILED', sourceUrl, questionsAsked: questions, errorReason: lastError };
       }
       // Loop continues and tries the next session file.
     } finally {
@@ -744,5 +858,5 @@ export async function collectCashifyQuote(
   // failure (it tells the operator exactly what to do: re-authenticate),
   // so prefer it over lastError when every session in the pool hit it.
   if (lastAuthRequired) return lastAuthRequired;
-  return { status: 'FAILED', errorReason: lastError ?? 'all Cashify sessions failed' };
+  return lastFailure ?? { status: 'FAILED', errorReason: lastError ?? 'all Cashify sessions failed' };
 }
