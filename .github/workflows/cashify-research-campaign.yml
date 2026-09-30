@@ -1,0 +1,179 @@
+name: Cashify pricing research campaign (one-time, manual only)
+
+# Separate from reference-price-refresh.yml on purpose (AGENTS.md: "Do not
+# touch Cashify refresh unless explicitly asked"). This workflow never runs
+# on a schedule and never touches ReferencePrice/CashifyQuestionnaireProfile.
+# It authenticates as a real Cashify user (session provided via the
+# CASHIFY_SESSION_STATE secret, same mechanism the existing refresh uses) and
+# walks the real condition questionnaire to collect up to 3 quotes per device
+# variant into isolated CashifyResearch* tables.
+#
+# GitHub-hosted runners only, within their normal limits: each dispatch
+# processes one bounded batch (--batch-size) and exits. Progress is
+# checkpointed in Postgres (CashifyResearchExperiment), not in this workflow,
+# so the NEXT manual dispatch with the same brand/model filter resumes
+# automatically - re-run this workflow as many times as the campaign needs.
+# Do not add a schedule trigger to this file; the campaign is one-time and
+# each run must be a deliberate, approved dispatch.
+
+on:
+  workflow_dispatch:
+    inputs:
+      brand:
+        description: 'Only this brand (blank = all brands)'
+        required: false
+        type: string
+      model:
+        description: 'Only models containing this text (blank = no filter)'
+        required: false
+        type: string
+      batch_size:
+        description: 'Experiments to claim and collect in this run'
+        required: false
+        type: string
+        default: '25'
+      max_experiments:
+        description: 'Hard cap on experiments this run collects (defaults to batch_size)'
+        required: false
+        type: string
+      profiles:
+        description: 'Comma list from A,B,C'
+        required: false
+        type: string
+        default: 'A,B,C'
+      resume:
+        description: 'true = collect (resumes automatically from checkpointed state); false = dry-run only, prints the plan and collects nothing'
+        required: false
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+# One in-flight run per (brand, model) filter - two dispatches for DIFFERENT
+# filters may run concurrently; claimNext()'s row-level locking (Postgres
+# FOR UPDATE SKIP LOCKED) is what actually prevents two workers from
+# collecting the same experiment, this is just to keep same-filter dispatches
+# from racing each other pointlessly.
+concurrency:
+  group: cashify-research-${{ inputs.brand || 'all' }}-${{ inputs.model || 'all' }}
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    # Well under GitHub's 6h ceiling. A single batch of a few dozen
+    # questionnaire walks should finish in minutes; this is a safety cap, not
+    # the expected duration.
+    timeout-minutes: 90
+
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      DIRECT_URL: ${{ secrets.DIRECT_URL }}
+      CASHIFY_SESSION_STATE: ${{ secrets.CASHIFY_SESSION_STATE }}
+      GITHUB_RUN_ID: ${{ github.run_id }}
+      GITHUB_RUN_ATTEMPT: ${{ github.run_attempt }}
+      # Never headed on a runner: no display, and an unattended job must
+      # never sit waiting for a human to solve a CAPTCHA. The collector
+      # treats a CAPTCHA as AUTH_REQUIRED and stops cleanly instead.
+      CASHIFY_SCRAPER_HEADED: 'false'
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Fail fast if required secrets are missing
+        run: |
+          missing=""
+          [ -z "$DATABASE_URL" ] && missing="$missing DATABASE_URL"
+          [ -z "$DIRECT_URL" ] && missing="$missing DIRECT_URL"
+          [ -z "$CASHIFY_SESSION_STATE" ] && missing="$missing CASHIFY_SESSION_STATE"
+          if [ -n "$missing" ]; then
+            echo "::error::Missing required repository secret(s):$missing"
+            echo "CASHIFY_SESSION_STATE must be a fresh, valid session - see docs/PRICING_RESEARCH_CAMPAIGN.md."
+            exit 1
+          fi
+          echo "Required secrets are present."
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Chromium system dependencies
+        run: npx playwright install --with-deps chromium
+
+      - name: Generate the Prisma client
+        # generate only - this job never runs `prisma db push` or a
+        # migration. The CashifyResearch* tables must already exist in the
+        # target database before this workflow is dispatched (see the
+        # campaign doc's "apply the schema" step, run manually and once).
+        run: npx prisma generate
+
+      - name: Collect this batch
+        id: collect
+        env:
+          INPUT_BRAND: ${{ inputs.brand }}
+          INPUT_MODEL: ${{ inputs.model }}
+          INPUT_BATCH_SIZE: ${{ inputs.batch_size }}
+          INPUT_MAX_EXPERIMENTS: ${{ inputs.max_experiments }}
+          INPUT_PROFILES: ${{ inputs.profiles }}
+          INPUT_RESUME: ${{ inputs.resume }}
+        run: |
+          set -o pipefail
+          ARGS=(--batch-size "${INPUT_BATCH_SIZE:-25}" --profiles "${INPUT_PROFILES:-A,B,C}" --json batch-report.json)
+          if [ -n "$INPUT_BRAND" ]; then ARGS+=(--brand "$INPUT_BRAND"); fi
+          if [ -n "$INPUT_MODEL" ]; then ARGS+=(--model "$INPUT_MODEL"); fi
+          if [ -n "$INPUT_MAX_EXPERIMENTS" ]; then ARGS+=(--max-experiments "$INPUT_MAX_EXPERIMENTS"); fi
+          if [ "$INPUT_RESUME" = "false" ]; then ARGS+=(--dry-run); fi
+
+          set +e
+          npm run research:collect -- "${ARGS[@]}" 2>&1 | tee research-batch.log
+          code=${PIPESTATUS[0]}
+          set -e
+
+          # Exit code 2 = the batch stopped early on AUTH_REQUIRED. Report it
+          # clearly but do not turn the job red - it is a known, handled
+          # stopping condition (Phase 3: "mark AUTH_REQUIRED and stop
+          # cleanly"), not a bug in the pipeline.
+          if [ "$code" = "2" ]; then
+            echo "::warning::Cashify session expired or was challenged mid-batch (AUTH_REQUIRED). Re-authenticate locally with 'npm run research:login', refresh the CASHIFY_SESSION_STATE secret, then re-dispatch this workflow with the same inputs to resume."
+            exit 0
+          fi
+          exit "$code"
+
+      - name: Print campaign progress
+        if: always()
+        env:
+          INPUT_BRAND: ${{ inputs.brand }}
+          INPUT_MODEL: ${{ inputs.model }}
+        run: |
+          ARGS=()
+          if [ -n "$INPUT_BRAND" ]; then ARGS+=(--brand "$INPUT_BRAND"); fi
+          if [ -n "$INPUT_MODEL" ]; then ARGS+=(--model "$INPUT_MODEL"); fi
+          npm run research:progress -- "${ARGS[@]}"
+
+      - name: Publish batch report to the job summary
+        if: always()
+        run: |
+          {
+            echo '## Cashify pricing research - batch report'
+            echo ''
+            echo '```json'
+            cat batch-report.json 2>/dev/null || echo '(no report file - see the log artifact)'
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY" || true
+
+      - name: Upload the full log and batch report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cashify-research-batch-${{ github.run_id }}
+          path: |
+            research-batch.log
+            batch-report.json
+          retention-days: 30

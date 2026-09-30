@@ -237,33 +237,33 @@ enum MatchConfidence {
 }
 
 model ReferencePrice {
-  id               String               @id @default(uuid())
+  id                  String                  @id @default(uuid())
   // deviceKey is the canonical, stable identifier for a specific
   // brand+model+storage variant (see lib/referencePricing/matching.ts).
   // It is NOT the same as seed_devices.ts's random "id" field, so it
   // survives seed-data reshuffling.
-  deviceKey        String               @unique
-  brand            String
-  model            String
-  storage          String
-  source           String // e.g. "cashify" - which external reference this came from
-  sourceUrl        String?
-  currentPrice     Float // NOTE: Float mirrors the existing schema's money
+  deviceKey           String                  @unique
+  brand               String
+  model               String
+  storage             String
+  source              String // e.g. "cashify" - which external reference this came from
+  sourceUrl           String?
+  currentPrice        Float // NOTE: Float mirrors the existing schema's money
   // handling elsewhere (see PRODUCTION_READINESS_AUDIT.md's money-as-Float
   // finding on WalletLedgerEntry/BuyOrder) - not changed here to avoid a
   // second, disconnected money-representation decision; both should move
   // to Int-minor-units/Decimal together as part of the Phase 2 DB migration.
-  matchConfidence  MatchConfidence
-  matchEvidence    String? // human-readable note on how the match was made
-  status           ReferencePriceStatus @default(MISSING)
-  lastVerifiedAt   DateTime? // last time a refresh SUCCEEDED
-  lastAttemptedAt  DateTime? // last time a refresh was ATTEMPTED (success or fail)
-  lastFailureAt    DateTime?
-  lastFailureError String?
-  consecutiveFailures Int    @default(0)
-  createdAt        DateTime             @default(now())
-  updatedAt        DateTime             @updatedAt
-  history          ReferencePriceHistory[]
+  matchConfidence     MatchConfidence
+  matchEvidence       String? // human-readable note on how the match was made
+  status              ReferencePriceStatus    @default(MISSING)
+  lastVerifiedAt      DateTime? // last time a refresh SUCCEEDED
+  lastAttemptedAt     DateTime? // last time a refresh was ATTEMPTED (success or fail)
+  lastFailureAt       DateTime?
+  lastFailureError    String?
+  consecutiveFailures Int                     @default(0)
+  createdAt           DateTime                @default(now())
+  updatedAt           DateTime                @updatedAt
+  history             ReferencePriceHistory[]
 
   @@index([status])
   @@index([brand, model])
@@ -346,42 +346,160 @@ enum QuestionnaireMode {
 /// public questionnaire without logging in. Exact-condition pricing reads it;
 /// Get Upto never does.
 model CashifyQuestionnaireProfile {
-  id                String            @id @default(uuid())
+  id              String                               @id @default(uuid())
   /// "brand|model", lowercased (lib/referencePricing/questionnaire/types.ts).
-  modelKey          String            @unique
-  brand             String
-  model             String
-  warrantyMode      QuestionnaireMode @default(UNKNOWN)
-  billMode          QuestionnaireMode @default(UNKNOWN)
-  ageMode           QuestionnaireMode @default(UNKNOWN)
+  modelKey        String                               @unique
+  brand           String
+  model           String
+  warrantyMode    QuestionnaireMode                    @default(UNKNOWN)
+  billMode        QuestionnaireMode                    @default(UNKNOWN)
+  ageMode         QuestionnaireMode                    @default(UNKNOWN)
   /// Question headings seen on the first questionnaire page, for audit.
-  questionLabels    String[]
+  questionLabels  String[]
   /// OK | PARSE_FAILED | FETCH_FAILED | NOT_FOUND | VARIANT_MISMATCH
-  status            String
-  statusDetail      String?
-  sourceUrl         String?
-  variantsChecked   Int               @default(0)
-  parserVersion     String
-  observedAt        DateTime
-  createdAt         DateTime          @default(now())
-  updatedAt         DateTime          @updatedAt
-  history           CashifyQuestionnaireProfileHistory[]
+  status          String
+  statusDetail    String?
+  sourceUrl       String?
+  variantsChecked Int                                  @default(0)
+  parserVersion   String
+  observedAt      DateTime
+  createdAt       DateTime                             @default(now())
+  updatedAt       DateTime                             @updatedAt
+  history         CashifyQuestionnaireProfileHistory[]
 
   @@index([status])
 }
 
 /// Append-only record of every change to a model's questionnaire semantics.
 model CashifyQuestionnaireProfileHistory {
-  id           String                      @id @default(uuid())
-  profileId    String
-  profile      CashifyQuestionnaireProfile @relation(fields: [profileId], references: [id])
-  warrantyMode QuestionnaireMode
-  billMode     QuestionnaireMode
-  ageMode      QuestionnaireMode
-  status       String
+  id            String                      @id @default(uuid())
+  profileId     String
+  profile       CashifyQuestionnaireProfile @relation(fields: [profileId], references: [id])
+  warrantyMode  QuestionnaireMode
+  billMode      QuestionnaireMode
+  ageMode       QuestionnaireMode
+  status        String
   parserVersion String
-  observedAt   DateTime
-  recordedAt   DateTime                    @default(now())
+  observedAt    DateTime
+  recordedAt    DateTime                    @default(now())
 
   @@index([profileId, recordedAt])
+}
+
+// --- One-time Cashify pricing research campaign ---
+// See docs/PRICING_RESEARCH_CAMPAIGN.md. Fully separate from ReferencePrice /
+// CashifyQuestionnaireProfile above: those back live customer pricing and the
+// weekly refresh, these back a one-time authenticated research collection.
+// Never read by quote pricing or the weekly refresh. Do not merge these
+// tables with the reference-pricing tables, and do not point the weekly
+// refresh's lock/workflow at this campaign's lock/workflow.
+
+/// A/B/C from the campaign brief. A = clean/fully-working baseline. B = a
+/// single-variable control (age/warranty when Cashify asks it, otherwise
+/// another supported single-variable control - see controlKind on the
+/// experiment). C = one clearly specified damage condition (screen defect
+/// where supported), all other answers held at the Profile A baseline.
+enum ResearchProfile {
+  A_CLEAN_BASELINE
+  B_SINGLE_VARIABLE_CONTROL
+  C_DAMAGE_CONDITION
+}
+
+enum ResearchExperimentStatus {
+  PENDING
+  IN_PROGRESS
+  COMPLETED
+  UNSUPPORTED
+  AUTH_REQUIRED
+  FAILED
+}
+
+/// One batch/campaign execution - a CLI run or a GitHub Actions job. Batches
+/// are cheap and many: one per resumed GitHub Actions job, so campaign
+/// progress can always be read as "sum of experiments across all batches for
+/// this brand/model filter" rather than needing one long-lived run row.
+model CashifyResearchBatch {
+  id             String                      @id @default(uuid())
+  batchLabel     String
+  brandFilter    String?
+  modelFilter    String?
+  /// "cli" | "github-actions"
+  triggeredBy    String
+  /// GitHub Actions run id, when triggeredBy = "github-actions" - lets a
+  /// resumed job find and continue its own predecessor's claims.
+  externalRunId  String?
+  requestedLimit Int?
+  startedAt      DateTime                    @default(now())
+  finishedAt     DateTime?
+  notes          String?
+  experiments    CashifyResearchExperiment[]
+
+  @@index([startedAt])
+}
+
+/// One (device variant, profile) experiment. Idempotent by design: re-running
+/// the campaign for the same deviceKey+profile updates this row in place and
+/// appends to CashifyResearchObservation instead of creating a duplicate, so
+/// a failed or interrupted run can never destroy a completed observation.
+model CashifyResearchExperiment {
+  id                       String                       @id @default(uuid())
+  deviceKey                String
+  brand                    String
+  model                    String
+  storage                  String
+  profile                  ResearchProfile
+  status                   ResearchExperimentStatus     @default(PENDING)
+  sourceUrl                String?
+  /// The device's original "Get Upto" headline reference at the time this
+  /// profile was collected, for computing relative deductions.
+  originalGetUptoReference Float?
+  /// Exact questionnaire question text observed for this run, in display
+  /// order - never inferred, only what Cashify actually rendered.
+  questionsAsked           Json?
+  /// Exact selected answer per question, keyed by the question text/id used
+  /// in questionsAsked. NOT_ASKED questions are absent here, never guessed.
+  answersSelected          Json?
+  finalQuote               Float?
+  /// Set when a required condition/question could not be selected on
+  /// Cashify's UI for this device - status is UNSUPPORTED, never a fabricated
+  /// finalQuote.
+  unsupportedReason        String?
+  errorReason              String?
+  /// Fingerprint of the questionnaire flow/copy this observation matched
+  /// against (see lib/referencePricing/questionnaire/parser.ts's
+  /// parserVersion convention) - lets analysis detect when Cashify's UI
+  /// changed shape between observations of the same device.
+  questionnaireFingerprint String?
+  /// Soft claim so two concurrent workers cannot collect the same
+  /// experiment. Claims older than the campaign's claim TTL are treated as
+  /// abandoned and reclaimable (see lib/researchPricing/store.ts).
+  claimedBy                String?
+  claimedAt                DateTime?
+  batchId                  String?
+  batch                    CashifyResearchBatch?        @relation(fields: [batchId], references: [id])
+  createdAt                DateTime                     @default(now())
+  updatedAt                DateTime                     @updatedAt
+  observations             CashifyResearchObservation[]
+
+  @@unique([deviceKey, profile])
+  @@index([status])
+  @@index([brand, model])
+  @@index([claimedAt])
+}
+
+/// Append-only history of every observation recorded for an experiment -
+/// preserved even when CashifyResearchExperiment's current row is overwritten
+/// by a later re-run, so historical observations are never lost.
+model CashifyResearchObservation {
+  id              String                    @id @default(uuid())
+  experimentId    String
+  experiment      CashifyResearchExperiment @relation(fields: [experimentId], references: [id])
+  status          ResearchExperimentStatus
+  finalQuote      Float?
+  questionsAsked  Json?
+  answersSelected Json?
+  errorReason     String?
+  recordedAt      DateTime                  @default(now())
+
+  @@index([experimentId, recordedAt])
 }

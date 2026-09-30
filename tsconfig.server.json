@@ -15,5 +15,5 @@
     "resolveJsonModule": true,
     "moduleResolution": "node"
   },
-  "include": ["server/**/*", "lib/referencePricing/**/*", "lib/pricing/**/*", "lib/pricingCalculator.ts"]
+  "include": ["server/**/*", "lib/referencePricing/**/*", "lib/pricing/**/*", "lib/pricingCalculator.ts", "lib/researchPricing/**/*"]
 }
