@@ -202,9 +202,9 @@ A **real** (non-dry-run) refresh refuses to start if `ReferencePriceRefreshLock`
 
 ### 9b. Cashify session material
 
-`cashify-sessions/*.json` and `cashify-session.json` are Playwright `storageState` files containing **live Cashify session cookies**, and they are currently **tracked in this repository** (pre-existing, not introduced by this work). Anyone with repository access has those sessions.
+`cashify-sessions/*.json` and `cashify-session.json` are Playwright `storageState` files containing **live Cashify session cookies**. They are ignored and must never be committed. CI reads the `CASHIFY_SESSION_STATE` secret and materializes a 0600 session file at runtime, logging nothing about its contents.
 
-CI does not use them: the workflow reads the `CASHIFY_SESSION_STATE` secret and materializes a 0600 session file at runtime, logging nothing about its contents. They were deliberately **not** untracked here, because a deployed build (Docker/Render) that relies on the committed copy for the on-demand market-price endpoint would break. Remediation, when you want it: invalidate the sessions in Cashify, `git rm --cached cashify-sessions/*.json cashify-session.json`, add them to `.gitignore`, and supply sessions via the secret everywhere. Note that rewriting history would be needed to remove them from past commits.
+Historical commits contained tracked session files. Invalidate the affected Cashify sessions, then coordinate any shared-history cleanup with repository owners; do not rewrite shared history unilaterally. Runtime consumers must receive a fresh session via their approved secret path rather than from a committed file.
 
 ## 10. Operational visibility (Phase 12)
 

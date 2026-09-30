@@ -46,34 +46,18 @@ state, unique per device+profile — safe to re-run), `CashifyResearchObservatio
 (append-only history). See `prisma/schema.prisma`, appended after
 `CashifyQuestionnaireProfileHistory`.
 
-**These tables do not exist in the database yet.** Before the first
-collection run (local or GitHub Actions), an explicit, human-approved schema
-application step is required — see "Applying the schema" below. This is
-deliberately not automated.
+The research tables already exist in the database. Before any future pilot,
+verify their presence with a read-only query. Do not run a schema command as
+part of collection.
 
 ## One-time setup
 
-### 1. Applying the schema (owner-approved, once)
+### 1. Verify the existing research schema
 
-This is additive-only (new enums + new tables; nothing existing is touched).
-Review the exact SQL before applying:
-
-```bash
-# Already generated once for review — regenerate if schema.prisma changes:
-set -a && source <(grep -E '^(DATABASE_URL|DIRECT_URL)=' .env) && set +a
-npx prisma migrate diff --from-url "$DIRECT_URL" --to-schema-datamodel prisma/schema.prisma --script > scratch/pricing-research-schema.sql
-cat scratch/pricing-research-schema.sql   # review before applying
-```
-
-Apply it the same way this repo already applies schema changes (no migration
-history is used — see `docs/HANDOFF_CODEX.md` §6, "`npm run start:api` runs
-`prisma db push` against production"):
-
-```bash
-npx prisma db push
-```
-
-Do this once, deliberately, against the real `DATABASE_URL` — not inside CI.
+The three `CashifyResearch*` tables have already been created. Check their
+presence and existing row counts through read-only database access before a
+pilot. Any future schema change needs its own reviewed migration plan and
+approval. Do not use `prisma db push` against production from this guide.
 
 ### 2. Authenticate as a Cashify user (local, manual OTP)
 
@@ -127,11 +111,9 @@ data (device identity, storage, selected conditions, and the final
 quotation) — the campaign brief requires this, and it is the only way to
 catch a selector/DOM assumption that silently drifted.
 
-Then run a small GitHub Actions pilot: dispatch
-`cashify-research-campaign.yml` with `brand=Apple`, `batch_size=5`. Confirm
-the job summary and artifact show sane results, and confirm the existing
-weekly refresh and customer quote flow are unaffected (they read entirely
-different tables).
+An earlier bounded GitHub Actions pilot succeeded. Review its job summary,
+artifact, and stored research observations before permitting another pilot.
+Use a small, explicit brand/model filter and batch size for any further run.
 
 **Do not dispatch the full, unscoped campaign until the pilot has been
 manually reviewed and approved.**
@@ -182,10 +164,10 @@ the same owner-approval process as any other pricing change (AGENTS.md,
 
 ## Known, pre-existing, out-of-scope risk
 
-`cashify-sessions/*.json` are tracked in this repository's git history
-(pre-existing, documented in `PRICING_REFERENCE_DATA_ARCHITECTURE.md` §9b —
-not introduced by this campaign). Anyone with repository access has those
-session cookies. This campaign does not make that worse (CI never commits
-the materialized session file), but be aware when running `research:login`
-locally: don't `git add cashify-sessions/` unless you mean to continue that
-existing practice.
+`cashify-sessions/*.json` and `cashify-session.json` are ignored because
+they are Playwright storageState files containing live Cashify session
+cookies. CI materializes its session only from `CASHIFY_SESSION_STATE` at
+runtime and never logs its contents. Historical commits contained tracked
+session files; rotate the affected Cashify sessions and coordinate any
+history-cleanup decision with repository owners. Do not add local session
+files to Git.
