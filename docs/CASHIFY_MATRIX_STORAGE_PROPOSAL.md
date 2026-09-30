@@ -59,7 +59,12 @@ combined scratches, and closing baseline from that block. It stops on the
 first unsupported answer, challenge, or quote failure. Rerun the **whole**
 block after interruption; do not splice rows from different run IDs.
 
-The reachable local attempt was rejected at the opening baseline because Cashify
-showed "Battery Faulty" rather than the plan's battery-health-threshold card.
-No condition pair or closing baseline was collected. The option's meaning and
-model coverage need independent verification before this block is retried.
+The first reachable local attempt was rejected at the opening baseline because
+Cashify showed an unselected "Battery Faulty" card rather than the planned
+battery-health-threshold card. The corrected collector records that card as
+additional unselected P3 evidence without equating its meaning to a health
+percentage. A selected unknown card still invalidates the experiment. The one
+authorized fresh-session retry verified its opening baseline with a final-price
+screenshot, then stopped at the screen-scratch subpage because the collector
+could not verify the question heading for its requested answer. No pair or
+closing baseline was collected; a further live retry needs separate approval.

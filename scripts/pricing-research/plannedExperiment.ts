@@ -9,9 +9,13 @@ export type MatrixStatus = 'COMPLETED' | 'UNSUPPORTED' | 'NOT_ASKED' |
 
 export interface ActualQuestion {
   factorId: string | null;
+  sourcePage: string | null;
   questionText: string;
   status: 'ASKED' | 'NOT_ASKED' | 'UNKNOWN';
+  /** Verbatim displayed option, or null when the factor was not rendered. */
   optionText: string | null;
+  /** Grid cards can be explicitly unselected; a clicked radio is selected. */
+  selectionState: 'SELECTED' | 'UNSELECTED' | null;
   matchedPlan: boolean;
 }
 
@@ -99,7 +103,9 @@ export function verifyPlannedTrace(
 ): TraceVerdict {
   assertPlannedExperiment(device, experiment);
   const used = new Set<number>();
-  const questions: ActualQuestion[] = [];
+  const ordered: Array<{ index: number; question: ActualQuestion }> = [];
+  const record = (question: ActualQuestion, index: number | null) =>
+    ordered.push({ index: index ?? Number.MAX_SAFE_INTEGER, question });
   const failures: string[] = [];
   let absentChanged = false;
   const selectedDefectPages = new Set(compilePlannedAnswers(device, experiment).defects ?? []);
@@ -110,13 +116,15 @@ export function verifyPlannedTrace(
     panel_missing: 'Device panel missing/broken',
   };
   for (const [id, label] of Object.entries(triggers)) {
-    const hits = observed.map((q, i) => ({ q, i })).filter(({ q }) => norm(q.questionText) === norm(label));
+    const hits = observed.map((q, i) => ({ q, i })).filter(({ q }) =>
+      q.sourcePage === 'P2' && norm(q.questionText) === norm(label));
     const matched = hits.length === 1 && hits[0].q.selectedAnswer === gridAnswer(selectedDefectPages.has(id as any));
     if (!matched) failures.push(`defect-page checkbox not verified: ${id}`);
     if (hits.length === 1) {
       used.add(hits[0].i);
-      questions.push({ factorId: null, questionText: hits[0].q.questionText, status: 'ASKED',
-        optionText: hits[0].q.selectedAnswer, matchedPlan: matched });
+      record({ factorId: null, sourcePage: 'P2', questionText: hits[0].q.questionText, status: 'ASKED',
+        optionText: hits[0].q.questionText,
+        selectionState: hits[0].q.selectedAnswer === 'Selected' ? 'SELECTED' : 'UNSELECTED', matchedPlan: matched }, hits[0].i);
     }
   }
   for (const f of FACTORS) {
@@ -127,6 +135,7 @@ export function verifyPlannedTrace(
     const shouldRender = levelId !== null && (!f.opensVia || triggerSelected);
     const candidates = observed.map((q, i) => ({ q, i })).filter(({ q, i }) => {
       if (used.has(i)) return false;
+      if (q.sourcePage !== f.page) return false;
       if (f.page === 'P1' && f.id !== 'eSim') return norm(q.questionText) === norm(f.questionText);
       if (f.id === 'mobileAge') return norm(q.questionText) === norm(f.questionText);
       if (f.page === 'P3' || f.page === 'P4') return norm(q.questionText) === norm(f.questionText);
@@ -153,16 +162,25 @@ export function verifyPlannedTrace(
       if (levelId === null) matched = false;
       if (!matched) failures.push(`selected option mismatch: ${f.id}`);
     }
-    questions.push({ factorId: f.id, questionText: hit?.q.questionText ?? f.questionText,
-      status: hit ? 'ASKED' : 'NOT_ASKED', optionText: hit?.q.selectedAnswer ?? null, matchedPlan: matched });
+    record({ factorId: f.id, sourcePage: hit?.q.sourcePage ?? null,
+      questionText: hit?.q.questionText ?? '', status: hit ? 'ASKED' : 'NOT_ASKED',
+      optionText: hit ? isGrid(f) ? hit.q.questionText : hit.q.selectedAnswer : null,
+      selectionState: hit ? isGrid(f) && hit.q.selectedAnswer === 'Not selected' ? 'UNSELECTED' : 'SELECTED' : null,
+      matchedPlan: matched }, hit?.i ?? null);
   }
   for (let i = 0; i < observed.length; i++) if (!used.has(i)) {
-    questions.push({ factorId: null, questionText: observed[i].questionText, status: 'UNKNOWN',
-      optionText: observed[i].selectedAnswer, matchedPlan: false });
-    failures.push('unrecognized rendered questionnaire option');
+    const q = observed[i];
+    const safeNeutralFault = q.sourcePage === 'P3' && q.selectedAnswer === 'Not selected' && !!q.questionText.trim();
+    record({ factorId: null, sourcePage: q.sourcePage ?? null, questionText: q.questionText,
+      status: 'UNKNOWN', optionText: q.questionText,
+      selectionState: q.selectedAnswer === 'Selected' ? 'SELECTED' : q.selectedAnswer === 'Not selected' ? 'UNSELECTED' : null,
+      matchedPlan: safeNeutralFault }, i);
+    if (!safeNeutralFault) failures.push(q.sourcePage === 'P3' && q.selectedAnswer === 'Selected'
+      ? 'unplanned hardware fault was selected' : 'unrecognized rendered questionnaire option');
   }
   return { status: failures.length ? 'INVALID_ANSWER_MISMATCH' : absentChanged ? 'NOT_ASKED' : 'COMPLETED',
-    reason: failures.join('; ') || (absentChanged ? 'planned changed factor was not asked' : null), questions };
+    reason: failures.join('; ') || (absentChanged ? 'planned changed factor was not asked' : null),
+    questions: ordered.sort((a, b) => a.index - b.index).map((item) => item.question) };
 }
 
 export function classifyPlannedResult(result: CollectorResult, verdict: TraceVerdict): MatrixStatus {

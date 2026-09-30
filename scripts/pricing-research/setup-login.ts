@@ -19,11 +19,24 @@ async function main() {
     console.log('Visible Cashify browser is open. Sign in yourself; do not enter credentials or OTP in chat.');
     console.log(`In that browser, finish a quotation for ${model} (${storage}) and stop on its Selling price details screen. Do not schedule pickup.`);
     await input.question('Press Enter here only after that final quotation screen is visible...');
-    const first = validateFinalQuote(page.url(), await page.locator('body').innerText(), { model, storage });
-    await page.waitForTimeout(1200);
-    const second = validateFinalQuote(page.url(), await page.locator('body').innerText(), { model, storage });
-    if (!first.ok || !second.ok || first.price !== second.price) {
-      console.error(`Login was not saved: final-price gate failed (${second.reason ?? first.reason ?? 'unstable price'}).`);
+    // Cashify may open the questionnaire in a second tab. Only accept a stable
+    // final quotation from a currently open page in this fresh browser context.
+    const candidates = await Promise.all(context.pages().filter((candidate) => !candidate.isClosed()).map(async (candidate) => {
+      const first = validateFinalQuote(candidate.url(), await candidate.locator('body').innerText(), { model, storage });
+      await candidate.waitForTimeout(1200);
+      const second = validateFinalQuote(candidate.url(), await candidate.locator('body').innerText(), { model, storage });
+      const safeSegments = new Set(['sell', 'quote', 'details', 'sell-old-mobile-phone', 'used']);
+      const pathname = new URL(candidate.url()).pathname
+        .split('/')
+        .map((segment) => safeSegments.has(segment.toLowerCase()) ? segment : segment ? ':redacted' : '')
+        .join('/');
+      return { first, second, pathname };
+    }));
+    const verified = candidates.find(({ first, second }) => first.ok && second.ok && first.price === second.price);
+    if (!verified) {
+      // No page text, query string, account data, or session material is logged.
+      const diagnostics = candidates.map(({ second, pathname }) => `${pathname}: ${second.reason ?? 'unstable price'}`).join('; ');
+      console.error(`Login was not saved: final-price gate failed across ${candidates.length} tab(s) (${diagnostics}).`);
       process.exitCode = 2;
       return;
     }

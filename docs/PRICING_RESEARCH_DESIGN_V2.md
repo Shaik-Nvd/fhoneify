@@ -326,6 +326,7 @@ secrets.
 
 ```ts
 interface DesignObservation {
+  runId: string;             // one uninterrupted block attempt
   planVersion: 'cashify-design/2';
   experimentId: string;        // from the plan, stable
   blockId: string;
@@ -339,10 +340,12 @@ interface DesignObservation {
   answers: Record<string, string | null>;       // planned vector (factorId -> level id)
   questions: Array<{                            // what was actually rendered, in order
     factorId: string | null;   // null = a question the plan does not know
-    questionText: string;      // verbatim as rendered
+    sourcePage: string | null;
+    questionText: string;      // verbatim when rendered; empty if NOT_ASKED
     status: 'ASKED' | 'NOT_ASKED' | 'UNKNOWN';
-    optionText: string | null; // verbatim option clicked
-    matchedPlan: boolean;      // selected option == planned level's option text
+    optionText: string | null; // verbatim displayed option; null if absent
+    selectionState: 'SELECTED' | 'UNSELECTED' | null;
+    matchedPlan: boolean;      // verified against the plan, or safe extra unselected P3 fault
   }>;
   changedFactors: string[];    // from the plan's `changes`
   checkboxesTicked: string[];  // incl. forceCheckboxes
@@ -354,6 +357,7 @@ interface DesignObservation {
   sessionValidity: 'VALID' | 'EXPIRED' | 'CHALLENGED';   // no cookie/token contents
   sessionPoolIndex: number | null;                         // which pool slot, not the file
   evidenceRef: string | null;  // screenshot/HTML artifact path of the final-price screen
+  evidenceSha256: string | null;
   questionnaireFingerprint: string | null;
   collectorVersion: string;
 }
@@ -526,7 +530,10 @@ changing Codex's code today. These are the interface requirements:
    `requiresRuntimeConfirmation`, the option must be found by exact text. If
    it isn't, stop and return `NOT_ASKED` with the rendered question list. For
    UNKNOWN factors at their baseline, click the baseline option if it is
-   present. Record whether the age page rendered.
+   present. Record whether the age page rendered. A genuinely absent planned
+   battery-health option is NOT_ASKED, never interpreted as "Battery Faulty".
+   An additional P3 fault card may be retained only if its actual DOM state
+   is UNSELECTED; an unexpected selected card invalidates the experiment.
 5. **Output:** one `DesignObservation` (§5), including verbatim question and
    option text for everything rendered, the live Get Upto, fingerprint,
    evidence reference and session-validity status. Any planned answer that

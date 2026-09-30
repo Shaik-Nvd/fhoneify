@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import type { ActualQuestion, MatrixStatus } from './plannedExperiment';
-import { FACTORS } from '../research-design/factors';
+import { DEFECT_CHECKBOX, FACTORS, getLevel } from '../research-design/factors';
 
 export interface MatrixObservation {
   runId: string;
@@ -45,10 +45,43 @@ function validateObservation(row: MatrixObservation): void {
   if (row.status === 'COMPLETED') {
     const factorIds = FACTORS.map((f) => f.id);
     const actualIds = row.questions.filter((q) => q.factorId !== null).map((q) => q.factorId);
+    const normalized = (text: string) => text.toLowerCase().replace(/\s+/g, ' ').trim();
+    const triggerLabels = Object.values(DEFECT_CHECKBOX);
+    const triggerQuestions = row.questions.filter((q) => q.factorId === null && q.status === 'ASKED');
+    const triggerStateValid = triggerQuestions.length === triggerLabels.length &&
+      triggerLabels.every((label) => triggerQuestions.some((q) =>
+        q.sourcePage === 'P2' && q.questionText === label && q.optionText === label &&
+        q.selectionState === (row.checkboxesTicked.includes(label) ? 'SELECTED' : 'UNSELECTED')));
+    const factorsValid = FACTORS.every((f) => {
+      const q = row.questions.find((item) => item.factorId === f.id);
+      const levelId = row.answers[f.id];
+      if (!q) return false;
+      if (q.status === 'NOT_ASKED') {
+        return !row.changedFactors.includes(f.id) &&
+          (levelId === null || (f.opensVia ? !row.checkboxesTicked.includes(f.opensVia) : f.gate !== 'ALWAYS'));
+      }
+      if (levelId === null || q.status !== 'ASKED' || q.sourcePage !== f.page) return false;
+      const expectedText = getLevel(f.id, levelId).optionText;
+      if (f.page === 'P3' || f.page === 'P4') {
+        const expectedState = levelId === (f.page === 'P3' ? 'faulty' : 'present') ? 'SELECTED' : 'UNSELECTED';
+        return normalized(q.questionText) === normalized(f.questionText) &&
+          q.optionText === q.questionText && q.selectionState === expectedState;
+      }
+      return normalized(q.optionText ?? '') === normalized(expectedText) && q.selectionState === 'SELECTED';
+    });
+    const invalidQuestion = row.questions.some((q) => {
+      if (!q.matchedPlan) return true;
+      if (q.status === 'NOT_ASKED') return q.factorId === null || q.questionText !== '' ||
+        q.optionText !== null || q.selectionState !== null;
+      if (!q.questionText || !q.optionText || !q.sourcePage || q.selectionState === null) return true;
+      if (q.status === 'UNKNOWN') return q.factorId !== null || q.sourcePage !== 'P3' ||
+        q.selectionState !== 'UNSELECTED' || q.optionText !== q.questionText;
+      return false;
+    });
     if (!Number.isSafeInteger(row.finalPrice) || row.finalPrice! <= 0 ||
       !Number.isSafeInteger(row.getUptoAtCollection) || row.getUptoAtCollection! <= 0 ||
       !row.questionnaireFingerprint || !row.evidenceRef || !row.evidenceSha256 ||
-      row.questions.some((q) => !q.matchedPlan || q.status === 'UNKNOWN') ||
+      invalidQuestion || !triggerStateValid || !factorsValid ||
       JSON.stringify(Object.keys(row.answers).sort()) !== JSON.stringify([...factorIds].sort()) ||
       JSON.stringify(actualIds.sort()) !== JSON.stringify([...factorIds].sort())) {
       throw new Error('completed matrix observation lacks verified quotation evidence');

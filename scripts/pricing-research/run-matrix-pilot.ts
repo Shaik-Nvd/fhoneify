@@ -90,6 +90,16 @@ const arg = (name: string) => {
 };
 const flag = (name: string) => process.argv.includes(`--${name}`);
 
+export function assertFreshSessionMetadata(fileName: string, modifiedAtMs: number, nowMs = Date.now()): void {
+  const createdAt = /^session-(\d+)\.json$/.exec(fileName);
+  const namedAt = createdAt ? Number(createdAt[1]) : NaN;
+  if (!Number.isSafeInteger(namedAt) || !Number.isFinite(modifiedAtMs) ||
+    Math.abs(nowMs - namedAt) > 2 * 60 * 60 * 1000 ||
+    Math.abs(modifiedAtMs - namedAt) > 2 * 60 * 60 * 1000) {
+    throw new Error('matrix pilot requires a newly authenticated local session, not a historical session file');
+  }
+}
+
 async function main() {
   const planFile = path.resolve(arg('plan') ?? path.join(__dirname, '../research-design/output/experiment-plan.json'));
   const blockId = arg('block-id');
@@ -109,6 +119,8 @@ async function main() {
   }
   const sessions = describeSessionPool(sessionFileName);
   if (sessions.length !== 1 || !sessions[0].valid) throw new Error('selected local session is unavailable or expired; authenticate manually');
+  const sessionStat = fs.statSync(sessions[0].file);
+  assertFreshSessionMetadata(sessionFileName, sessionStat.mtimeMs);
   const dbPath = path.resolve(arg('db') ?? path.join(process.cwd(), 'research-evidence/matrix.sqlite'));
   const evidenceRoot = path.resolve(process.cwd(), 'research-evidence');
   if (!dbPath.startsWith(evidenceRoot + path.sep) || !dbPath.endsWith('.sqlite')) {
@@ -125,7 +137,9 @@ async function main() {
         verifyPlannedAnswers: (questions) => verifyPlannedTrace(pilot.device, experiment, questions) });
       const verdict = verifyPlannedTrace(pilot.device, experiment, result.questionsAsked ?? []);
       const status: MatrixStatus = result.status === 'AUTH_REQUIRED' ? 'AUTH_REQUIRED' :
-        result.status === 'FAILED' ? 'FAILED' : verdict.status !== 'COMPLETED' ? verdict.status :
+        result.status === 'FAILED' ? 'FAILED' :
+        result.status === 'UNSUPPORTED' && result.unsupportedReason !== verdict.reason ? 'UNSUPPORTED' :
+        verdict.status !== 'COMPLETED' ? verdict.status :
         result.status === 'COMPLETED' ?
           (result.originalGetUptoReference && result.finalQuote && result.evidence && result.questionnaireFingerprint ? 'COMPLETED' : 'FAILED') :
           'UNSUPPORTED';
@@ -138,7 +152,8 @@ async function main() {
         answers: experiment.answers, questions: status === 'COMPLETED' ? verdict.questions :
           result.questionsAsked?.length ? verdict.questions.filter((q) => q.status !== 'NOT_ASKED') : [],
         changedFactors: experiment.changes.map((c) => c.factorId),
-        checkboxesTicked: verdict.questions.filter((q) => q.factorId === null && q.optionText === 'Selected').map((q) => q.questionText),
+        checkboxesTicked: verdict.questions.filter((q) => q.sourcePage === 'P2' && q.selectionState === 'SELECTED')
+          .map((q) => q.questionText),
         agePageRendered: result.questionsAsked?.length ? verdict.questions.find((q) => q.factorId === 'mobileAge')?.status === 'ASKED' : null,
         finalPrice: status === 'COMPLETED' ? result.finalQuote ?? null : null,
         status, statusReason: status === 'COMPLETED' ? null :
