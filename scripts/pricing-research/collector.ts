@@ -93,6 +93,9 @@ export interface CollectOptions {
   evidenceId?: string;
   /** A fresh, explicitly selected session; never rotate through exposed historical files. */
   sessionFileName?: string;
+  /** Matrix-only gate: reject any missing or mismatched planned answer before
+   * reading/storing a final price. Legacy A/B/C callers leave this unset. */
+  verifyPlannedAnswers?: (observed: QuestionAnswerRecord[]) => { status: string; reason: string | null };
 }
 
 const CAPTCHA_MARKERS = [/i'?m not a robot/i, /verify you are human/i, /recaptcha/i, /hcaptcha/i];
@@ -121,6 +124,22 @@ function assertSafeToSelect(text: string): void {
   if (hit) {
     throw new Error(`refusing to click a forbidden action button ("${text}" matched ${hit})`);
   }
+}
+
+function safeCollectorFailure(error: unknown): string {
+  const message = error instanceof Error ? error.message : '';
+  const networkCode = message.match(/net::(ERR_[A-Z_]+)/)?.[1];
+  if (networkCode) return `Cashify navigation failed: ${networkCode}`;
+  if (/timeout/i.test(message)) return 'Cashify questionnaire timed out';
+  const known = [
+    'requested defect option not visible', 'requested hardware option not visible',
+    'requested charger option not visible', 'requested box option not visible',
+    'requested mobile-age answer was not visible',
+    'question label could not be verified', 'selected answer state could not be verified',
+    'questionnaire option grid could not be fully identified',
+    'questionnaire option state did not match requested answer',
+  ];
+  return known.find((reason) => message.includes(reason)) ?? 'questionnaire action failed (selector or navigation)';
 }
 
 /**
@@ -692,6 +711,16 @@ export async function collectCashifyQuote(
         continue;
       }
 
+      if (opts.verifyPlannedAnswers) {
+        const verdict = opts.verifyPlannedAnswers(questions);
+        if (verdict.status !== 'COMPLETED') {
+          return { status: 'UNSUPPORTED', sourceUrl: deviceUrl,
+            originalGetUptoReference: originalGetUptoReference ?? undefined,
+            questionsAsked: questions, answersSelected: { requested: answers, observed: questions },
+            unsupportedReason: verdict.reason ?? 'planned answer vector was not verified' };
+        }
+      }
+
       const fingerprint = stableFingerprint(questions);
       const expected = { model: device.model, storage: spacedStorage };
       const first = validateFinalQuote(page.url(), await pageVisibleText(page), expected);
@@ -732,7 +761,7 @@ export async function collectCashifyQuote(
       } else {
         // Playwright exceptions may include page text and URLs. Neither
         // belongs in a database errorReason or CI log.
-        lastError = 'questionnaire action failed (selector or navigation)';
+        lastError = safeCollectorFailure(error);
       }
       // Loop continues and tries the next session file.
     } finally {
