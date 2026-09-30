@@ -13,6 +13,16 @@ import type { QuestionAnswerRecord } from '../pricing-research/collector';
 const plan = loadMatrixPlan(path.resolve(__dirname, '../research-design/output/experiment-plan.json'));
 const pilot = selectP08Pilot(plan, '0i55edv:blk2');
 const [open, screen, body, pair, close] = pilot.experiments;
+const c51Supplement = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../pricing-research/phase2/poco-c51-p08.json'), 'utf8')) as PlannedExperiment;
+const phase2Pilots = [selectP08Pilot(plan, '0ip731n:blk1', c51Supplement),
+  selectP08Pilot(plan, '09l641s:blk2'), selectP08Pilot(plan, '1wrfoy8:blk2')];
+assert.equal(phase2Pilots.reduce((count, item) => count + item.experiments.length, 0), 15);
+assert.equal(plan.experiments.some((e) => e.experimentId === c51Supplement.experimentId), false);
+assert.throws(() => selectP08Pilot(plan, '04zdrb8:blk1'), /held-out validation/);
+assert.throws(() => selectP08Pilot(plan, '0ip731n:blk1', { ...c51Supplement,
+  answers: { ...c51Supplement.answers, originalScreen: 'no' } }), /undeclared planned change/);
+assert.throws(() => selectP08Pilot(plan, '09l641s:blk2', { ...c51Supplement,
+  blockId: '09l641s:blk2' }), /identity/);
 const sessionNow = 1790800000000;
 assert.doesNotThrow(() => assertFreshSessionMetadata(`session-${sessionNow}.json`, sessionNow, sessionNow));
 assert.throws(() => assertFreshSessionMetadata(`session-${sessionNow - 86400000}.json`, sessionNow, sessionNow), /newly authenticated/);
@@ -53,6 +63,13 @@ function trace(device: PlannedDevice, experiment: PlannedExperiment): QuestionAn
 }
 
 assert.equal(pilot.experiments.length, 5);
+for (const selected of phase2Pilots) {
+  assert.notEqual(selected.device.role, 'VALIDATION');
+  for (const experiment of selected.experiments) {
+    const verdict = verifyPlannedTrace(selected.device, experiment, trace(selected.device, experiment));
+    assert.equal(verdict.status, 'COMPLETED', `${experiment.experimentId}: ${verdict.reason}`);
+  }
+}
 assert.deepEqual(pilot.experiments.map((e) => e.kinds[0]), ['BASELINE_OPEN', 'OFAT', 'OFAT', 'PAIR', 'BASELINE_CLOSE']);
 assert.equal(pair.referenceExperimentIds.length, 2);
 for (const e of pilot.experiments) {

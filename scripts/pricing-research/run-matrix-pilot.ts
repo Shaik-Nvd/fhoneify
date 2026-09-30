@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { collectCashifyQuote, describeSessionPool } from './collector';
-import { compilePlannedAnswers, verifyPlannedTrace, type MatrixStatus } from './plannedExperiment';
+import { assertPlannedExperiment, compilePlannedAnswers, verifyPlannedTrace, type MatrixStatus } from './plannedExperiment';
 import { LocalMatrixStore, type MatrixObservation } from './matrixStore';
 import { blockValidity } from '../research-design/analysis';
 import { expandAnswers, type Plan } from '../research-design/plan';
@@ -61,19 +61,30 @@ export function loadMatrixPlan(file: string): Plan {
   return plan;
 }
 
-/** Use an existing Claude P08 pair and its two referenced singles, not a new planner. */
-export function selectP08Pilot(plan: Plan, blockId: string): { block: PlannedBlock; device: PlannedDevice; experiments: PlannedExperiment[] } {
+/** Use Claude's P08 pair/singles, or one explicit reviewed training pair supplement. */
+export function selectP08Pilot(plan: Plan, blockId: string, supplement?: PlannedExperiment): { block: PlannedBlock; device: PlannedDevice; experiments: PlannedExperiment[] } {
   const block = plan.blocks.find((b) => b.blockId === blockId);
   if (!block) throw new Error('requested block ID not in plan');
   const device = plan.devices.find((d) => d.deviceKey === block.deviceKey);
   if (!device) throw new Error('block device missing from plan');
+  if (device.role === 'VALIDATION' || block.role === 'VALIDATION') throw new Error('P08 pilots must not consume held-out validation devices');
   const members = plan.experiments.filter((e) => e.blockId === blockId).sort((a, b) => a.order - b.order);
+  if (supplement) {
+    assertPlannedExperiment(device, supplement);
+    if (supplement.blockId !== blockId || supplement.role !== device.role || supplement.blind ||
+      !supplement.kinds.includes('PAIR') || plan.experiments.some((e) => e.experimentId === supplement.experimentId) ||
+      members.some((e) => e.kinds.includes('PAIR') && e.purposes.some((p) => p.startsWith('pair P08:')))) {
+      throw new Error('P08 supplement must be one explicit new training pair in the requested block');
+    }
+    members.push(supplement);
+  }
   const pair = members.find((e) => e.kinds.includes('PAIR') && e.purposes.some((p) => p.startsWith('pair P08:')));
   const open = members.find((e) => e.kinds.includes('BASELINE_OPEN'));
   const close = members.find((e) => e.kinds.includes('BASELINE_CLOSE'));
   const singles = pair?.referenceExperimentIds.map((id) => members.find((e) => e.experimentId === id));
   if (!pair || !open || !close || !singles || singles.length !== 2 || singles.some((e) => !e) ||
     pair.baselineExperimentId !== open.experimentId || close.baselineExperimentId !== open.experimentId ||
+    pair.changes.length !== 2 || pair.forceCheckboxes.length !== 0 ||
     !pair.changes.some((c) => c.factorId === 'screenCondition' && c.to === 'scratch_gt2') ||
     !pair.changes.some((c) => c.factorId === 'bodyScratches' && c.to === 'scratch_gt2')) {
     throw new Error('block does not contain the complete screen/body P08 pilot');
@@ -81,6 +92,16 @@ export function selectP08Pilot(plan: Plan, blockId: string): { block: PlannedBlo
   const experiments = [open, ...(singles as PlannedExperiment[]), pair, close];
   if (new Set(experiments.map((e) => e.experimentId)).size !== 5 ||
     experiments.some((e) => e.deviceKey !== device.deviceKey)) throw new Error('P08 pilot identities are not unique');
+  for (let i = 0; i < experiments.length; i++) {
+    const experiment = experiments[i];
+    assertPlannedExperiment(device, experiment);
+    const wanted: PlannedExperiment['answers'] = { ...open.answers,
+      ...(i === 1 || i === 3 ? { screenCondition: 'scratch_gt2' } : {}),
+      ...(i === 2 || i === 3 ? { bodyScratches: 'scratch_gt2' } : {}) };
+    if (experiment.forceCheckboxes.length || Object.keys(wanted).some((factor) => experiment.answers[factor] !== wanted[factor])) {
+      throw new Error('P08 answer vector contains an unintended change');
+    }
+  }
   return { block, device, experiments };
 }
 
@@ -105,7 +126,9 @@ async function main() {
   const blockId = arg('block-id');
   if (!blockId) throw new Error('--block-id is required; no unscoped matrix runs');
   const plan = loadMatrixPlan(planFile);
-  const pilot = selectP08Pilot(plan, blockId);
+  const supplementFile = arg('supplement-file');
+  const supplement = supplementFile ? JSON.parse(fs.readFileSync(path.resolve(supplementFile), 'utf8')) as PlannedExperiment : undefined;
+  const pilot = selectP08Pilot(plan, blockId, supplement);
   if (flag('dry-run')) {
     console.log(JSON.stringify({ dryRun: true, blockId, device: {
       brand: pilot.device.brand, model: pilot.device.model, ram: pilot.device.ram, storage: pilot.device.storage,
