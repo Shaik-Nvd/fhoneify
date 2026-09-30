@@ -157,15 +157,20 @@ const cipher = fs.readFileSync(path.join(tmp, 'upload', sealed.cipherFile));
 assert.equal(sha256(cipher), sealed.cipherSha256);
 assert.equal(cipher.includes(Buffer.from('30000')), false);
 assert.equal(cipher.includes(Buffer.from(device.model)), false);
-const opened = openBundle(cipher, keys.privateKey);
-assert.equal(opened.bundle.observation.finalPrice, 30000);
-assert.equal(opened.screenshot!.toString(), 'fake-png-bytes');
-const tampered = Buffer.from(cipher); tampered[tampered.length - 1] ^= 1;
-assert.throws(() => openBundle(tampered, keys.privateKey));
+if (process.env.GITHUB_ACTIONS === 'true') {
+  // On a runner, private-key work must be refused outright; the round trip is covered on the laptop.
+  assert.throws(() => openBundle(cipher, keys.privateKey), /laptop-only/);
+} else {
+  const opened = openBundle(cipher, keys.privateKey);
+  assert.equal(opened.bundle.observation.finalPrice, 30000);
+  assert.equal(opened.screenshot!.toString(), 'fake-png-bytes');
+  const tampered = Buffer.from(cipher); tampered[tampered.length - 1] ^= 1;
+  assert.throws(() => openBundle(tampered, keys.privateKey));
+  process.env.GITHUB_ACTIONS = 'true';
+  assert.throws(() => openBundle(cipher, keys.privateKey), /laptop-only/);
+  delete process.env.GITHUB_ACTIONS;
+}
 assert.throws(() => sealAttempt(row, keys.privateKey, path.join(tmp, 'x')), /public SPKI/);
-process.env.GITHUB_ACTIONS = 'true';
-assert.throws(() => openBundle(cipher, keys.privateKey), /laptop-only/);
-delete process.env.GITHUB_ACTIONS;
 assert.match(publicKeyFingerprintOk(), /^[a-f0-9]{64}$/);
 function publicKeyFingerprintOk() { loadPublicKey(); return JSON.parse(fs.readFileSync(path.join(root, 'scripts/pricing-research/hosted/research-public-key.json'), 'utf8')).fingerprintSha256; }
 assert.equal(/PRIVATE/.test(fs.readFileSync(path.join(root, 'scripts/pricing-research/hosted/research-public.pem'), 'utf8')), false);
