@@ -1,6 +1,6 @@
 # 🚀 Fhoneify
 
-India's modern smartphone resale platform — built to make selling and buying pre-owned smartphones simple, transparent, and reliable.
+India's modern smartphone resale platform built to make selling and buying pre-owned smartphones simple, transparent, and reliable.
 
 Fhoneify is a production-ready, Cashify-inspired smartphone resale platform designed for the Indian market. The platform supports the complete device resale lifecycle — from authentication and device valuation to seller listings, buyer orders, payments, payouts, and administration.
 
