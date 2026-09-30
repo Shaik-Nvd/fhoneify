@@ -10009,6 +10009,16 @@ export const SEED_DEVICES: any[] = [
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-1-8-gb-256-gb"
   },
   {
+    "id": "11111111-2222-3333-4444-555555555555",
+    "brand": "Nothing",
+    "model": "Nothing Phone 4b",
+    "storage": "128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 29999,
+    "cashifyLink": ""
+  },
+  {
     "id": "46b51000-0faa-4aba-9046-cbd14daab26f",
     "brand": "Nothing",
     "model": "Nothing Phone 2",
