@@ -23,12 +23,14 @@
 import type { Browser, BrowserContext, ElementHandle, Page } from 'playwright';
 import crypto from 'crypto';
 import fs from 'fs';
+import path from 'path';
 import {
   getCashifyBrowser,
   getCashifySessionFiles,
   resolveHeadless,
 } from '../../server/modules/quote/cashifyScraper';
 import type { CashifyResearchAnswers } from './profiles';
+import { hasAuthGate, validateFinalQuote, verifyOptionGrid } from './quoteEvidence';
 
 /** Playwright's own $/$$ return this generic instantiation - kept as an
  * alias so the rest of the file does not repeat it. */
@@ -52,11 +54,12 @@ export interface CollectorResult {
   sourceUrl?: string;
   originalGetUptoReference?: number;
   questionsAsked?: QuestionAnswerRecord[];
-  answersSelected?: CashifyResearchAnswers;
+  answersSelected?: { requested: CashifyResearchAnswers; observed: QuestionAnswerRecord[]; questionnaireFingerprint?: string };
   finalQuote?: number;
   unsupportedReason?: string;
   errorReason?: string;
   questionnaireFingerprint?: string;
+  evidence?: { screenshotPath: string; screenshotSha256: string; capturedAt: string };
 }
 
 export interface CollectDeviceInput {
@@ -71,8 +74,10 @@ export interface CollectDeviceInput {
 /** Reports each session file's on-disk validity without any network call -
  * used by run-batch.ts to print session-pool health before starting, and by
  * a standalone `research:session-status` check. */
-export function describeSessionPool(): Array<{ file: string; valid: boolean; reason: string }> {
-  return getCashifySessionFiles().map((f) => ({ file: f, ...isSessionLikelyValid(f) }));
+export function describeSessionPool(sessionFileName?: string): Array<{ file: string; valid: boolean; reason: string }> {
+  return getCashifySessionFiles()
+    .filter((f) => !sessionFileName || path.basename(f) === sessionFileName)
+    .map((f) => ({ file: f, ...isSessionLikelyValid(f) }));
 }
 
 export interface CollectOptions {
@@ -83,24 +88,12 @@ export interface CollectOptions {
   headless?: boolean;
   /** Per-action timeout in ms. */
   actionTimeoutMs?: number;
+  /** Local, ignored artifact directory; a COMPLETED row requires a screenshot. */
+  evidenceDir?: string;
+  evidenceId?: string;
+  /** A fresh, explicitly selected session; never rotate through exposed historical files. */
+  sessionFileName?: string;
 }
-
-const AUTH_MARKERS = [
-  /log ?in to continue/i,
-  /sign in to your account/i,
-  /enter otp/i,
-  /verify (your )?mobile number/i,
-  /session (has )?expired/i,
-  /please log ?in/i,
-  // Cashify's actual final-price gate for an unauthenticated/expired session:
-  // a modal headed "Login/Signup" that masks the real number behind
-  // "Login to unlock the best price" and a placeholder like "₹ XX,XXX" -
-  // confirmed live via a direct diagnostic run. Missing this let a stale
-  // session run to completion and record a garbage (unparseable) price
-  // instead of AUTH_REQUIRED.
-  /login\s*\/\s*signup/i,
-  /login to unlock/i,
-];
 
 const CAPTCHA_MARKERS = [/i'?m not a robot/i, /verify you are human/i, /recaptcha/i, /hcaptcha/i];
 
@@ -131,13 +124,9 @@ function assertSafeToSelect(text: string): void {
 }
 
 /**
- * Cashify's own auth cookie, confirmed empirically (not assumed): captured
- * session files always carry a `_cs__user_auth__v1` cookie whose `expires`
- * timestamp is Cashify's own statement of how long that login is good for
- * (~14 days observed). A local pre-flight check against this - no network
- * call - is what "do not repeatedly reuse sessions already confirmed
- * invalid" means in practice: skip a session whose own cookie says it's
- * already dead, rather than spending a real page load discovering that.
+ * A Cashify auth-cookie expiry is only a local preflight hint. Even a live
+ * cookie does not prove authentication; every completed observation must
+ * pass the live final quotation gate.
  *
  * Deliberately local-only: this never deletes or rewrites the session files
  * on disk. They are shared with the production on-demand scraper
@@ -161,16 +150,9 @@ export function isSessionLikelyValid(sessionFile: string): { valid: boolean; rea
         : { valid: false, reason: `auth cookie expired at ${new Date(authCookie.expires * 1000).toISOString()}` };
     }
 
-    // Defensive fallback if Cashify ever renames the cookie: require at
-    // least one non-expired cashify.in cookie rather than refusing outright.
-    const anyLive = cookies.some(
-      (c) => (c.domain ?? '').includes('cashify.in') && (typeof c.expires !== 'number' || c.expires <= 0 || c.expires > nowSec)
-    );
-    return anyLive
-      ? { valid: true, reason: 'no _cs__user_auth__v1 cookie found; a live cashify.in cookie exists' }
-      : { valid: false, reason: 'no _cs__user_auth__v1 cookie and no live cashify.in cookie found' };
+    return { valid: false, reason: 'auth cookie missing; live login is not established' };
   } catch (e: any) {
-    return { valid: false, reason: `could not read/parse session file: ${e?.message ?? e}` };
+    return { valid: false, reason: 'could not read or parse session file' };
   }
 }
 
@@ -192,8 +174,34 @@ async function pageVisibleText(page: Page): Promise<string> {
 
 async function detectAuthRequired(page: Page): Promise<boolean> {
   const text = await pageVisibleText(page);
-  if (AUTH_MARKERS.some((re) => re.test(text))) return true;
-  return /\/(login|signin|auth)(\/|$|\?)/i.test(page.url());
+  return hasAuthGate(text, page.url());
+}
+
+async function captureFinalCard(page: Page, device: CollectDeviceInput, evidenceDir: string, evidenceId?: string) {
+  const clip = await page.evaluate(({ model, storage }) => {
+    const elements = document.querySelectorAll('*');
+    for (const element of elements) {
+      const label = ((element as HTMLElement).innerText || '').trim();
+      if (!/^Selling price\s*:?$/i.test(label)) continue;
+      let container = element.parentElement;
+      for (let hop = 0; hop < 7 && container; hop++, container = container.parentElement) {
+        const text = (container as HTMLElement).innerText || '';
+        if (!text.toLowerCase().includes(model.toLowerCase()) || !text.toLowerCase().includes(storage.toLowerCase())) continue;
+        if (!/Selling price\s*:?\s*₹\s*[\d,]+/i.test(text)) continue;
+        const rect = container.getBoundingClientRect();
+        if (rect.width > 1100 || rect.height > 600 || rect.width < 200 || rect.height < 80) return null;
+        return { x: Math.max(0, rect.x), y: Math.max(0, rect.y), width: rect.width, height: rect.height };
+      }
+    }
+    return null;
+  }, { model: device.model, storage: device.storage });
+  if (!clip) return null;
+  fs.mkdirSync(evidenceDir, { recursive: true });
+  const safeId = evidenceId?.replace(/[^a-zA-Z0-9-]/g, '') || crypto.randomUUID();
+  const screenshotPath = path.join(evidenceDir, `final-${safeId}-${Date.now()}.png`);
+  await page.screenshot({ path: screenshotPath, clip });
+  const screenshotSha256 = crypto.createHash('sha256').update(fs.readFileSync(screenshotPath)).digest('hex');
+  return { screenshotPath, screenshotSha256, capturedAt: new Date().toISOString() };
 }
 
 async function detectCaptcha(page: Page): Promise<boolean> {
@@ -201,6 +209,13 @@ async function detectCaptcha(page: Page): Promise<boolean> {
   if (CAPTCHA_MARKERS.some((re) => re.test(text))) return true;
   const frame = await page.$('iframe[src*="captcha" i], iframe[title*="captcha" i]');
   return !!frame;
+}
+
+class AuthGateError extends Error {}
+
+async function assertNoChallenge(page: Page): Promise<void> {
+  if (await detectAuthRequired(page)) throw new AuthGateError('login prompt appeared during questionnaire');
+  if (await detectCaptcha(page)) throw new AuthGateError('CAPTCHA appeared during questionnaire');
 }
 
 async function detectNotFound(page: Page, responseStatus?: number): Promise<string | null> {
@@ -259,9 +274,37 @@ interface WalkContext {
  * to click anything matching FORBIDDEN_ANSWER_TEXT. */
 async function recordAndClick(ctx: WalkContext, handle: ElHandle, selectedAnswer: string): Promise<void> {
   assertSafeToSelect(selectedAnswer);
-  const label = (await readQuestionLabel(ctx.page, handle)) ?? '(question text not detected)';
-  ctx.questions.push({ questionText: label, selectedAnswer });
+  await assertNoChallenge(ctx.page);
+  const label = await readQuestionLabel(ctx.page, handle);
+  if (!label || label.toLowerCase() === selectedAnswer.toLowerCase()) {
+    throw new Error('question label could not be verified');
+  }
   await handle.click({ timeout: ctx.actionTimeoutMs });
+  await assertNoChallenge(ctx.page);
+  const selected = await handle.evaluate((el: Element) => {
+    let node: Element | null = el;
+    for (let hop = 0; hop < 3 && node; hop++, node = node.parentElement) {
+      const item = node as HTMLElement;
+      if (item.getAttribute('aria-checked') === 'true' || item.getAttribute('aria-selected') === 'true' ||
+        (item instanceof HTMLInputElement && item.checked) ||
+        (item.classList.contains('border-primary') && !!item.querySelector('.bg-primary')) ||
+        (item.classList.contains('border-primary') && item.classList.contains('bg-primary'))) return true;
+    }
+    return false;
+  }).catch(() => false);
+  if (!selected) throw new Error('selected answer state could not be verified');
+  ctx.questions.push({ questionText: label, selectedAnswer });
+}
+
+/** Cashify's defect, hardware and accessory grids expose each choice as a
+ * card. Read every visible card, including the explicitly unselected ones. */
+async function captureGridVector(ctx: WalkContext, expectedSelected: string[]): Promise<void> {
+  const choices = await ctx.page.locator('div.flex.flex-col.items-center.w-full.flex-1').evaluateAll((elements) =>
+    elements.map((el) => ({
+      text: ((el as HTMLElement).innerText || '').replace(/\s+/g, ' ').trim(),
+      selected: el.classList.contains('bg-primary') && el.classList.contains('border-primary'),
+    })));
+  ctx.questions.push(...verifyOptionGrid(choices, expectedSelected));
 }
 
 async function clickByText(page: Page, text: string, timeoutMs: number): Promise<ElHandle | null> {
@@ -279,6 +322,43 @@ const YES_NO_FIELDS: Array<keyof CashifyResearchAnswers> = [
   'warranty',
   'validBill',
 ];
+
+const YES_NO_QUESTION_PATTERNS: Record<string, RegExp> = {
+  calls: /make and receive calls/i,
+  touch: /touch(?:screen| screen)?(?: is)? working|touch functionality/i,
+  originalScreen: /(?:original (?:screen|display)|(?:screen|display) original)/i,
+  warranty: /under manufacturer warranty/i,
+  validBill: /gst valid bill/i,
+};
+
+export function classifyYesNoQuestion(question: string): keyof CashifyResearchAnswers | null {
+  const matches = YES_NO_FIELDS.filter((field) => YES_NO_QUESTION_PATTERNS[field].test(question));
+  return matches.length === 1 ? matches[0] : null;
+}
+
+async function associatedYesNoQuestion(handle: ElHandle): Promise<string | null> {
+  return handle.evaluate((el: Element) => {
+    let node: Element | null = el.parentElement;
+    for (let hop = 0; hop < 8 && node; hop++, node = node.parentElement) {
+      const text = ((node as HTMLElement).innerText || '').replace(/\s+/g, ' ').trim();
+      // Instructions may themselves say "Yes" and "No", so counting words
+      // confuses a real question with the answer controls. The first question
+      // sentence is stable even when help text and option order change.
+      const question = text.match(/^(.{4,220}?\?)/)?.[1];
+      if (question && text.length <= 500) return question.trim();
+    }
+    return null;
+  }).catch(() => null);
+}
+
+async function assertYesNoSelected(handle: ElHandle): Promise<void> {
+  const selected = await handle.evaluate((el: Element) => {
+    const choice = el.parentElement;
+    return !!choice?.classList.contains('border-primary') &&
+      !!choice.querySelector('.bg-primary');
+  }).catch(() => false);
+  if (!selected) throw new Error('Yes/No answer selection could not be verified');
+}
 
 const DEFECT_CHECKBOX_TEXT: Record<'broken_screen' | 'screen_spot' | 'body_scratch' | 'panel_missing', string> = {
   broken_screen: 'Broken/scratch on device screen',
@@ -337,7 +417,8 @@ export async function collectCashifyQuote(
   opts: CollectOptions = {}
 ): Promise<CollectorResult> {
   const actionTimeoutMs = opts.actionTimeoutMs ?? 8000;
-  const allSessionFiles = getCashifySessionFiles();
+  const allSessionFiles = getCashifySessionFiles().filter((f) =>
+    !opts.sessionFileName || path.basename(f) === opts.sessionFileName);
   if (allSessionFiles.length === 0) {
     return { status: 'FAILED', errorReason: 'no Cashify session files available (run setup-cashify first)' };
   }
@@ -439,21 +520,49 @@ export async function collectCashifyQuote(
       const questions: QuestionAnswerRecord[] = [];
       const ctx: WalkContext = { page, questions, actionTimeoutMs };
 
-      // PAGE 1: Yes/No questions, positional in the same order
-      // scrapeCashifyPrice() relies on (calls, touch, originalScreen,
-      // warranty, GST bill) - fragile, but it is what Cashify's DOM gives.
+      // PAGE 1: associate each pair with its *visible question*, never its
+      // position. An extra/missing/reordered question is not guessed.
       const yesBtns = await page.$$('text="Yes"');
       const noBtns = await page.$$('text="No"');
-      const pairCount = Math.min(yesBtns.length, noBtns.length, YES_NO_FIELDS.length);
-      for (let i = 0; i < pairCount; i++) {
-        const field = YES_NO_FIELDS[i];
-        const value = answers[field];
-        if (value === false) {
-          await recordAndClick(ctx, noBtns[i], 'No');
-        } else {
-          await recordAndClick(ctx, yesBtns[i], 'Yes');
+      if (yesBtns.length === 0 || yesBtns.length !== noBtns.length) {
+        return { status: 'UNSUPPORTED', sourceUrl: deviceUrl, unsupportedReason: 'Yes/No question pairs are incomplete or absent' };
+      }
+      const mapped = new Map<keyof CashifyResearchAnswers, { text: string; yes: ElHandle; no: ElHandle }>();
+      for (const yes of yesBtns) {
+        const text = await associatedYesNoQuestion(yes);
+        const field = text ? classifyYesNoQuestion(text) : null;
+        if (!text || !field || mapped.has(field)) {
+          return { status: 'UNSUPPORTED', sourceUrl: deviceUrl, unsupportedReason: 'unrecognized or duplicate Yes/No question label' };
+        }
+        const matchingNo: ElHandle[] = [];
+        for (const no of noBtns) {
+          if ((await associatedYesNoQuestion(no)) === text) matchingNo.push(no);
+        }
+        if (matchingNo.length !== 1) {
+          return { status: 'UNSUPPORTED', sourceUrl: deviceUrl, unsupportedReason: 'Yes/No options could not be paired by question label' };
+        }
+        mapped.set(field, { text, yes, no: matchingNo[0] });
+      }
+      if (!mapped.has('calls')) {
+        return { status: 'UNSUPPORTED', sourceUrl: deviceUrl, unsupportedReason: 'required calls question not found' };
+      }
+      let authDuringQuestion = false;
+      for (const field of YES_NO_FIELDS) {
+        const pair = mapped.get(field);
+        if (!pair) continue;
+        const selectedAnswer = answers[field] === false ? 'No' : 'Yes';
+        assertSafeToSelect(selectedAnswer);
+        const choice = selectedAnswer === 'No' ? pair.no : pair.yes;
+        await choice.click({ timeout: actionTimeoutMs });
+        await assertYesNoSelected(choice);
+        questions.push({ questionText: pair.text, selectedAnswer });
+        if (await detectAuthRequired(page)) {
+          lastAuthRequired = { status: 'AUTH_REQUIRED', sourceUrl: deviceUrl, questionsAsked: questions, errorReason: 'login prompt during Yes/No questions' };
+          authDuringQuestion = true;
+          break;
         }
       }
+      if (authDuringQuestion) continue;
 
       // eSIM question, if present.
       const singleEsim = await page.$('text="Single eSIM"');
@@ -467,7 +576,8 @@ export async function collectCashifyQuote(
       }
 
       const continue1 = await page.$('text="Continue"');
-      if (continue1) await continue1.click();
+      if (!continue1) throw new Error('questionnaire page did not offer Continue');
+      await continue1.click();
       await page.waitForTimeout(1500);
 
       if (await detectAuthRequired(page)) {
@@ -485,11 +595,15 @@ export async function collectCashifyQuote(
       for (const [id, text] of Object.entries(DEFECT_CHECKBOX_TEXT) as Array<[keyof typeof DEFECT_CHECKBOX_TEXT, string]>) {
         if (answers.defects?.includes(id)) {
           const el = await page.$(`text="${text}"`);
-          if (el) await recordAndClick(ctx, el, text);
+          if (!el) throw new Error('requested defect option not visible');
+          await assertNoChallenge(page);
+          await el.click({ timeout: actionTimeoutMs });
         }
       }
+      await captureGridVector(ctx, (answers.defects ?? []).map((id) => DEFECT_CHECKBOX_TEXT[id]));
       const continue2 = await page.$('text="Continue"');
-      if (continue2) await continue2.click();
+      if (!continue2) throw new Error('defect page did not offer Continue');
+      await continue2.click();
       await page.waitForTimeout(1500);
 
       // Sub-pages for whichever defects were selected, in the same order
@@ -503,42 +617,56 @@ export async function collectCashifyQuote(
           if (el) await recordAndClick(ctx, el, value);
         }
         const cont = await page.$('text="Continue"');
-        if (cont) await cont.click();
+        if (!cont) throw new Error('defect detail page did not offer Continue');
+        await cont.click();
         await page.waitForTimeout(1500);
       }
 
       // PAGE 3: Functional/hardware defects.
       for (const hwId of answers.hardware ?? []) {
         const text = HARDWARE_TEXT[hwId];
-        if (!text) continue;
+        if (!text) throw new Error('unrecognized requested hardware option');
         const el = await page.$(`text="${text}"`);
-        if (el) await recordAndClick(ctx, el, text);
+        if (!el) throw new Error('requested hardware option not visible');
+        await assertNoChallenge(page);
+        await el.click({ timeout: actionTimeoutMs });
       }
+      await captureGridVector(ctx, (answers.hardware ?? []).map((id) => HARDWARE_TEXT[id]));
       const continue3 = await page.$('text="Continue"');
-      if (continue3) await continue3.click();
+      if (!continue3) throw new Error('hardware page did not offer Continue');
+      await continue3.click();
       await page.waitForTimeout(1500);
 
       // PAGE 4: Accessories.
       if (answers.accessories?.includes('charger')) {
         const el = await page.$('text=Original Charger of device');
-        if (el) await recordAndClick(ctx, el, 'Original Charger of device');
+        if (!el) throw new Error('requested charger option not visible');
+        await assertNoChallenge(page);
+        await el.click({ timeout: actionTimeoutMs });
       }
       if (answers.accessories?.includes('box')) {
         const el = await page.$('text=Box with same IMEI');
-        if (el) await recordAndClick(ctx, el, 'Box with same IMEI');
+        if (!el) throw new Error('requested box option not visible');
+        await assertNoChallenge(page);
+        await el.click({ timeout: actionTimeoutMs });
       }
+      await captureGridVector(ctx, [
+        ...(answers.accessories?.includes('charger') ? ['Original Charger of Device'] : []),
+        ...(answers.accessories?.includes('box') ? ['Original Box with same IMEI'] : []),
+      ]);
       const continue4 = await page.$('text="Continue"');
-      if (continue4) await continue4.click();
+      if (!continue4) throw new Error('accessory page did not offer Continue');
+      await continue4.click();
       await page.waitForTimeout(1500);
 
-      // PAGE 5: Mobile age, only if Cashify is actually showing it for this
-      // run (either the page title rendered, or warranty+bill both true,
-      // matching scrapeCashifyPrice()'s own detection).
+      // PAGE 5: Mobile age only when Cashify actually displays that question.
+      // Requested warranty/bill values do not imply the question exists.
       const agePageTitle = await page.$('text=What is your mobile age?');
-      if (agePageTitle || (answers.warranty === true && answers.validBill === true)) {
+      if (agePageTitle) {
         const ageText = AGE_TEXT[answers.mobileAge ?? 'above11'] ?? AGE_TEXT.above11;
-        const ageBtn = (await page.$(`text="${ageText}"`)) ?? (await page.$(`text="${AGE_TEXT.above11}"`));
-        if (ageBtn) await recordAndClick(ctx, ageBtn, ageText);
+        const ageBtn = await page.$(`text="${ageText}"`);
+        if (!ageBtn) throw new Error('requested mobile-age answer was not visible');
+        await recordAndClick(ctx, ageBtn, ageText);
       }
 
       await page.waitForTimeout(3000);
@@ -564,73 +692,48 @@ export async function collectCashifyQuote(
         continue;
       }
 
-      const priceText = await page
-        .evaluate(() => {
-          const sellingLabel = Array.from(document.querySelectorAll('*')).find((el) =>
-            (el.textContent || '').trim().toLowerCase().includes('selling price')
-          );
-          if (sellingLabel) {
-            let curr = sellingLabel.nextElementSibling;
-            while (curr) {
-              if (curr.textContent?.includes('₹')) return curr.textContent.trim();
-              curr = curr.nextElementSibling;
-            }
-            const parent = sellingLabel.parentElement;
-            if (parent?.nextElementSibling?.textContent?.includes('₹')) {
-              return parent.nextElementSibling.textContent.trim();
-            }
-          }
-          const priceElements = Array.from(document.querySelectorAll('span, div, h1, h2, h3, h4, h5, h6')).filter((el) => {
-            const t = el.textContent?.trim() || '';
-            return t.includes('₹') && t.length < 15;
-          });
-          return priceElements.length > 0 ? priceElements[0].textContent?.trim() ?? null : null;
-        })
-        .catch(() => null);
-
       const fingerprint = stableFingerprint(questions);
-
-      if (!priceText) {
+      const expected = { model: device.model, storage: spacedStorage };
+      const first = validateFinalQuote(page.url(), await pageVisibleText(page), expected);
+      await page.waitForTimeout(1200); // catches delayed login overlays and unstable prices
+      const second = validateFinalQuote(page.url(), await pageVisibleText(page), expected);
+      if (await detectAuthRequired(page)) {
+        lastAuthRequired = { status: 'AUTH_REQUIRED', sourceUrl: deviceUrl, questionsAsked: questions, errorReason: 'login modal at final-price gate' };
+        continue;
+      }
+      if (!first.ok || !second.ok || first.price !== second.price) {
         return {
-          status: 'FAILED',
-          sourceUrl: deviceUrl,
+          status: 'FAILED', sourceUrl: deviceUrl,
           originalGetUptoReference: originalGetUptoReference ?? undefined,
-          questionsAsked: questions,
-          answersSelected: answers,
-          errorReason: 'could not extract final price from the page',
+          questionsAsked: questions, answersSelected: { requested: answers, observed: questions },
+          errorReason: `final quotation rejected: ${second.reason ?? first.reason ?? 'unstable price'}`,
           questionnaireFingerprint: fingerprint,
         };
       }
-
-      const finalQuote = parseInt(priceText.replace(/[^0-9]/g, ''), 10);
-
-      if (!Number.isFinite(finalQuote)) {
-        // priceText was found but contained no digits - e.g. a masked
-        // placeholder like "₹ XX,XXX" behind a login gate the
-        // AUTH_MARKERS check above didn't catch. Never record this as
-        // COMPLETED with a missing price: that would look like verified data.
-        return {
-          status: 'FAILED',
-          sourceUrl: deviceUrl,
-          originalGetUptoReference: originalGetUptoReference ?? undefined,
-          questionsAsked: questions,
-          answersSelected: answers,
-          errorReason: `extracted price text did not contain a parseable number: "${priceText}"`,
-          questionnaireFingerprint: fingerprint,
-        };
+      const evidence = await captureFinalCard(page, { ...device, storage: spacedStorage }, opts.evidenceDir ?? path.resolve('research-evidence'), opts.evidenceId);
+      if (!evidence) {
+        return { status: 'FAILED', sourceUrl: deviceUrl, questionsAsked: questions, answersSelected: { requested: answers, observed: questions },
+          errorReason: 'could not capture a cropped final card showing model, variant and Selling price', questionnaireFingerprint: fingerprint };
       }
-
+      const last = validateFinalQuote(page.url(), await pageVisibleText(page), expected);
+      if (!last.ok || last.price !== first.price) {
+        return { status: 'AUTH_REQUIRED', sourceUrl: deviceUrl, questionsAsked: questions,
+          errorReason: 'final quotation changed or authentication gate appeared after screenshot' };
+      }
       return {
-        status: 'COMPLETED',
-        sourceUrl: deviceUrl,
+        status: 'COMPLETED', sourceUrl: page.url(),
         originalGetUptoReference: originalGetUptoReference ?? undefined,
-        questionsAsked: questions,
-        answersSelected: answers,
-        finalQuote: Number.isFinite(finalQuote) ? finalQuote : undefined,
-        questionnaireFingerprint: fingerprint,
+        questionsAsked: questions, answersSelected: { requested: answers, observed: questions, questionnaireFingerprint: fingerprint },
+        finalQuote: first.price, questionnaireFingerprint: fingerprint, evidence,
       };
     } catch (error: any) {
-      lastError = error?.message ?? String(error);
+      if (error instanceof AuthGateError) {
+        lastAuthRequired = { status: 'AUTH_REQUIRED', errorReason: error.message };
+      } else {
+        // Playwright exceptions may include page text and URLs. Neither
+        // belongs in a database errorReason or CI log.
+        lastError = 'questionnaire action failed (selector or navigation)';
+      }
       // Loop continues and tries the next session file.
     } finally {
       if (context) await context.close().catch(() => {});

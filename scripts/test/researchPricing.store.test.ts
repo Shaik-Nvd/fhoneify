@@ -86,6 +86,7 @@ test('a successful outcome updates the checkpoint and appends exactly one observ
         cashifyResearchObservation: {
           create: async (args: unknown) => {
             observations.push(args);
+            return { id: 'observation-1' };
           },
         },
       }),
@@ -98,7 +99,7 @@ test('a successful outcome updates the checkpoint and appends exactly one observ
     'current-worker'
   );
 
-  assert.deepEqual(result, { written: true });
+  assert.deepEqual(result, { written: true, observationId: 'observation-1' });
   assert.equal(updates.length, 1);
   assert.equal(observations.length, 1);
   assert.deepEqual((updates[0] as any).where, { id: row.id, claimedBy: 'current-worker' });

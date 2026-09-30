@@ -31,4 +31,5 @@ tsconfig.next.tsbuildinfo
 # must be supplied from a secret at runtime, never committed.
 cashify-session.json
 cashify-sessions/*.json
+research-evidence/
 

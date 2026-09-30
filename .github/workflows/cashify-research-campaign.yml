@@ -5,8 +5,8 @@ name: Cashify pricing research campaign (one-time, manual only)
 # on a schedule and never touches ReferencePrice/CashifyQuestionnaireProfile.
 # It authenticates as a real Cashify user (session provided via the
 # CASHIFY_SESSION_STATE secret, same mechanism the existing refresh uses) and
-# walks the real condition questionnaire to collect up to 3 quotes per device
-# variant into isolated CashifyResearch* tables.
+# is currently dry-run only. Hosted collection is gated until quotation
+# screenshots have an approved durable destination; local pilots can run.
 #
 # GitHub-hosted runners only, within their normal limits: each dispatch
 # processes one bounded batch (--batch-size) and exits. Progress is
@@ -42,10 +42,10 @@ on:
         type: string
         default: 'A,B,C'
       resume:
-        description: 'true = collect (resumes automatically from checkpointed state); false = dry-run only, prints the plan and collects nothing'
+        description: 'Collection is currently disabled on hosted runners; leave false for a dry-run'
         required: false
         type: boolean
-        default: true
+        default: false
 
 permissions:
   contents: read
@@ -125,6 +125,13 @@ jobs:
           INPUT_RESUME: ${{ inputs.resume }}
         run: |
           set -o pipefail
+          # A hosted runner discards local screenshot evidence on exit. Until
+          # an explicitly reviewed durable evidence destination exists, do
+          # not allow a CI dispatch to produce unreviewable COMPLETED rows.
+          if [ "$INPUT_RESUME" != "false" ]; then
+            echo "::error::Collection is disabled on hosted runners until cropped quotation evidence has an approved durable destination. Use a local controlled pilot; dry-run remains available."
+            exit 1
+          fi
           ARGS=(--batch-size "${INPUT_BATCH_SIZE:-25}" --profiles "${INPUT_PROFILES:-A,B,C}" --json batch-report.json)
           if [ -n "$INPUT_BRAND" ]; then ARGS+=(--brand "$INPUT_BRAND"); fi
           if [ -n "$INPUT_MODEL" ]; then ARGS+=(--model "$INPUT_MODEL"); fi
@@ -132,8 +139,8 @@ jobs:
           if [ "$INPUT_RESUME" = "false" ]; then ARGS+=(--dry-run); fi
 
           set +e
-          npm run research:collect -- "${ARGS[@]}" 2>&1 | tee research-batch.log
-          code=${PIPESTATUS[0]}
+          npm run research:collect -- "${ARGS[@]}"
+          code=$?
           set -e
 
           # Exit code 2 = the batch stopped early on AUTH_REQUIRED. Report it
@@ -168,12 +175,11 @@ jobs:
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY" || true
 
-      - name: Upload the full log and batch report
+      - name: Upload the batch report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: cashify-research-batch-${{ github.run_id }}
           path: |
-            research-batch.log
             batch-report.json
           retention-days: 30
