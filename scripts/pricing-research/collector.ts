@@ -294,6 +294,14 @@ export async function collectCashifyQuote(
   const browser: Browser = await getCashifyBrowser({ headless: resolveHeadless(opts.headless ?? true) });
 
   let lastError: string | null = null;
+  // A rotating pool can (and did, in the safety pilot) contain a mix of
+  // fresh and expired sessions. Treating AUTH_REQUIRED as an immediate
+  // return made the whole batch's outcome depend on random session-shuffle
+  // luck: an expired session picked first blocked a device even though a
+  // working session existed in the same pool. Now every session is tried
+  // (matching how a thrown error already falls through via `continue`), and
+  // AUTH_REQUIRED is only the final answer if every single session hit it.
+  let lastAuthRequired: CollectorResult | null = null;
 
   for (const sessionFile of sessionFiles) {
     let context: BrowserContext | null = null;
@@ -315,10 +323,12 @@ export async function collectCashifyQuote(
         return { status: 'UNSUPPORTED', sourceUrl: deviceUrl, unsupportedReason: `device/variant not found: ${notFoundReason}` };
       }
       if (await detectAuthRequired(page)) {
-        return { status: 'AUTH_REQUIRED', sourceUrl: deviceUrl, errorReason: 'login/OTP prompt detected before questionnaire started' };
+        lastAuthRequired = { status: 'AUTH_REQUIRED', sourceUrl: deviceUrl, errorReason: 'login/OTP prompt detected before questionnaire started' };
+        continue;
       }
       if (await detectCaptcha(page)) {
-        return { status: 'AUTH_REQUIRED', sourceUrl: deviceUrl, errorReason: 'CAPTCHA detected before questionnaire started' };
+        lastAuthRequired = { status: 'AUTH_REQUIRED', sourceUrl: deviceUrl, errorReason: 'CAPTCHA detected before questionnaire started' };
+        continue;
       }
 
       // Select the storage variant chip.
@@ -351,12 +361,13 @@ export async function collectCashifyQuote(
       await getExactValueBtn.click();
 
       if (await detectAuthRequired(page)) {
-        return {
+        lastAuthRequired = {
           status: 'AUTH_REQUIRED',
           sourceUrl: deviceUrl,
           originalGetUptoReference: originalGetUptoReference ?? undefined,
           errorReason: 'login/OTP prompt detected after opening questionnaire',
         };
+        continue;
       }
 
       await page.waitForSelector('text=/make and receive calls/i', { timeout: 10000 }).catch(() => {});
@@ -396,13 +407,14 @@ export async function collectCashifyQuote(
       await page.waitForTimeout(1500);
 
       if (await detectAuthRequired(page)) {
-        return {
+        lastAuthRequired = {
           status: 'AUTH_REQUIRED',
           sourceUrl: deviceUrl,
           originalGetUptoReference: originalGetUptoReference ?? undefined,
           questionsAsked: questions,
           errorReason: 'login prompt mid-questionnaire',
         };
+        continue;
       }
 
       // PAGE 2: Screen/body defect checkboxes.
@@ -468,22 +480,24 @@ export async function collectCashifyQuote(
       await page.waitForTimeout(3000);
 
       if (await detectAuthRequired(page)) {
-        return {
+        lastAuthRequired = {
           status: 'AUTH_REQUIRED',
           sourceUrl: deviceUrl,
           originalGetUptoReference: originalGetUptoReference ?? undefined,
           questionsAsked: questions,
           errorReason: 'login prompt before final price',
         };
+        continue;
       }
       if (await detectCaptcha(page)) {
-        return {
+        lastAuthRequired = {
           status: 'AUTH_REQUIRED',
           sourceUrl: deviceUrl,
           originalGetUptoReference: originalGetUptoReference ?? undefined,
           questionsAsked: questions,
           errorReason: 'CAPTCHA before final price',
         };
+        continue;
       }
 
       const priceText = await page
@@ -559,5 +573,9 @@ export async function collectCashifyQuote(
     }
   }
 
+  // AUTH_REQUIRED is more specific and more actionable than a generic
+  // failure (it tells the operator exactly what to do: re-authenticate),
+  // so prefer it over lastError when every session in the pool hit it.
+  if (lastAuthRequired) return lastAuthRequired;
   return { status: 'FAILED', errorReason: lastError ?? 'all Cashify sessions failed' };
 }
