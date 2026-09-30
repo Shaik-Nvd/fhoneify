@@ -32,11 +32,11 @@ on:
         type: string
         default: '100'
       mode:
-        description: 'dry-run = validation only, no Cashify request, no ledger write'
+        description: 'dry-run = validation only; evidence-selftest = upload/verify a synthetic encrypted record; neither contacts Cashify or writes the ledger'
         required: true
         type: choice
         default: dry-run
-        options: [dry-run, collect]
+        options: [dry-run, evidence-selftest, collect]
       pace_seconds:
         description: 'Pause between quotations (minimum 10)'
         required: false
@@ -126,6 +126,13 @@ jobs:
           git push origin HEAD:research/cashify-hosted-ledger
           echo "reserved=true" >> "$GITHUB_OUTPUT"
 
+      - name: Seal a synthetic evidence record (self-test only)
+        id: selftest
+        if: inputs.mode == 'evidence-selftest'
+        run: |
+          npx tsx scripts/pricing-research/hosted/run-hosted.ts selftest --out hosted-out
+          echo "sealed=true" >> "$GITHUB_OUTPUT"
+
       - name: Collect reserved blocks
         if: steps.reserve.outputs.reserved == 'true'
         timeout-minutes: 300
@@ -142,7 +149,7 @@ jobs:
 
       - name: Upload encrypted evidence (90-day retention)
         id: upload
-        if: always() && steps.reserve.outputs.reserved == 'true'
+        if: always() && (steps.reserve.outputs.reserved == 'true' || steps.selftest.outputs.sealed == 'true')
         uses: actions/upload-artifact@v4
         with:
           name: cashify-hosted-${{ github.run_id }}-${{ github.run_attempt }}
@@ -153,7 +160,7 @@ jobs:
           if-no-files-found: error
 
       - name: Read the artifact back and verify hashes
-        if: always() && steps.reserve.outputs.reserved == 'true' && steps.upload.outputs.artifact-id != ''
+        if: always() && (steps.reserve.outputs.reserved == 'true' || steps.selftest.outputs.sealed == 'true') && steps.upload.outputs.artifact-id != ''
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: >-

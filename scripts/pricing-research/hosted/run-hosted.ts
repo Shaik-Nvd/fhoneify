@@ -240,15 +240,40 @@ function cmdPreflight() {
   console.log(`[hosted] preflight ok: ${queue.entries.length} queued blocks, key ${publicKeyFingerprint(pem).slice(0, 16)}, session wrapper valid and removed`);
 }
 
+/** Exercises seal -> upload -> read-back -> laptop decrypt with a synthetic, price-free record. No Cashify request. */
+function cmdSelftest() {
+  const plan = loadMatrixPlan(PLAN_FILE);
+  const queue = loadVerifiedQueue(plan);
+  const pem = loadPublicKey();
+  const uploadDir = path.join(path.resolve(need('out')), 'upload');
+  const e = plan.experiments.find((x) => x.experimentId === queue.entries[0].experimentIds[0])!;
+  const d = plan.devices.find((x) => x.deviceKey === e.deviceKey)!;
+  const now = new Date().toISOString();
+  const row: MatrixObservation = { runId: 'evidence-selftest', planVersion: plan.planVersion, experimentId: 'evidence-selftest',
+    blockId: 'evidence-selftest', baselineExperimentId: null, referenceExperimentIds: [], deviceKey: d.deviceKey, brand: d.brand,
+    model: d.model, ram: d.ram, storage: d.storage, candidateFamily: d.strata.fhoneifyFamily, getUptoAtCollection: null,
+    getUptoOffline: null, answers: e.answers, questions: [], changedFactors: [], checkboxesTicked: [], agePageRendered: null,
+    finalPrice: null, status: 'FAILED', statusReason: 'evidence pipeline self-test; not a quotation', collectedAt: now,
+    sessionValidity: 'VALID', sessionPoolIndex: null, evidenceRef: null, evidenceSha256: null, questionnaireFingerprint: null,
+    collectorVersion: 'cashify-matrix/1' };
+  const sealed = sealAttempt(row, pem, uploadDir);
+  writeJsonAtomic(path.join(uploadDir, 'manifest.json'), { version: 1, campaignId: queue.campaignId, runKey: 'selftest',
+    startedAt: now, finishedAt: now, complete: true, stopReason: 'evidence self-test', attempts: [{ experimentId: row.experimentId,
+      blockId: row.blockId, deviceKey: row.deviceKey, startedAt: now, outcome: { status: 'FAILED', reason: row.statusReason,
+        collectedAt: now, ...sealed, evidenceSha256: null } }], blocks: [], deviceStops: [] } satisfies RunManifest);
+  console.log(`[hosted] self-test bundle sealed (${sealed.cipherFile}); no quotation attempted`);
+}
+
 async function main() {
   const command = process.argv[2];
+  if (command === 'selftest') return cmdSelftest();
   if (command === 'preflight') return cmdPreflight();
   if (command === 'reserve') return cmdReserve();
   if (command === 'collect') return cmdCollect();
   if (command === 'verify') return cmdVerify();
   if (command === 'finalize') return cmdFinalize();
   if (command === 'summary') return cmdSummary();
-  throw new Error('usage: run-hosted.ts preflight|reserve|collect|verify|finalize|summary ...');
+  throw new Error('usage: run-hosted.ts selftest|preflight|reserve|collect|verify|finalize|summary ...');
 }
 
 if (require.main === module) main().catch((error) => {
