@@ -24,6 +24,7 @@
  *   --profiles LIST      comma list from A,B,C (default A,B,C)
  *   --dry-run            ensure experiments and print the plan, collect nothing
  *   --headed             force a visible browser (also CASHIFY_SCRAPER_HEADED=true)
+ *   --force              re-run devices that already have a COMPLETED experiment for this profile (resets it to PENDING first)
  *   --claim-ttl-ms N     abandoned-claim TTL (default 900000 = 15 min)
  *   --json <file>        write the run summary to a file
  */
@@ -81,6 +82,7 @@ async function main() {
   const maxExperiments = arg('max-experiments') ? Number(arg('max-experiments')) : batchSize;
   const claimTtlMs = arg('claim-ttl-ms') ? Number(arg('claim-ttl-ms')) : 15 * 60 * 1000;
   const headed = flag('headed');
+  const force = flag('force');
 
   const research = getResearchStore();
   const questionnaireStore = getQuestionnaireProfileStore();
@@ -109,7 +111,7 @@ async function main() {
   const ensured = await research.ensureExperiments(
     deviceRows,
     profileCodes.map((c) => PROFILE_ENUM[c]),
-    { batchId: batch.id }
+    { batchId: batch.id, force }
   );
   console.log(`[research] ensured experiments: +${ensured.created} new, ${ensured.alreadyExisted} already existed, ${ensured.skippedCompleted} already completed`);
 

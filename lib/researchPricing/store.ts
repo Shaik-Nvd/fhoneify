@@ -258,8 +258,8 @@ export class PostgresResearchStore implements ResearchStore {
           status = 'PENDING'
           OR (status IN ('IN_PROGRESS', 'AUTH_REQUIRED') AND "claimedAt" IS NOT NULL AND "claimedAt" < ${staleBefore})
         )
-        AND (${opts.brandFilter ?? null}::text IS NULL OR brand = ${opts.brandFilter ?? null})
-        AND (${opts.modelFilter ?? null}::text IS NULL OR model = ${opts.modelFilter ?? null})
+        AND (${opts.brandFilter ?? null}::text IS NULL OR brand ILIKE ${opts.brandFilter ?? null})
+        AND (${opts.modelFilter ?? null}::text IS NULL OR model ILIKE ${opts.modelFilter ? `%${opts.modelFilter}%` : null})
         AND (${profiles}::"ResearchProfile"[] IS NULL OR profile = ANY(${profiles}::"ResearchProfile"[]))
         ORDER BY "createdAt" ASC
         FOR UPDATE SKIP LOCKED
@@ -353,9 +353,14 @@ export class PostgresResearchStore implements ResearchStore {
     authRequired: number;
     failed: number;
   }> {
+    // Case-insensitive brand match, case-insensitive substring model match -
+    // must mirror run-batch.ts's catalog filtering (exact-brand,
+    // substring-model, both case-insensitive) and claimNext()'s ILIKE
+    // filters, or a progress check can disagree with what was actually
+    // ensured/claimed.
     const where = {
-      ...(filter?.brandFilter ? { brand: filter.brandFilter } : {}),
-      ...(filter?.modelFilter ? { model: filter.modelFilter } : {}),
+      ...(filter?.brandFilter ? { brand: { equals: filter.brandFilter, mode: 'insensitive' as const } } : {}),
+      ...(filter?.modelFilter ? { model: { contains: filter.modelFilter, mode: 'insensitive' as const } } : {}),
     };
 
     const [total, pending, inProgress, completed, unsupported, authRequired, failed] = await Promise.all([
@@ -375,7 +380,7 @@ export class PostgresResearchStore implements ResearchStore {
     const rows = await this.prisma.cashifyResearchExperiment.findMany({
       where: {
         status: 'COMPLETED',
-        ...(filter?.brandFilter ? { brand: filter.brandFilter } : {}),
+        ...(filter?.brandFilter ? { brand: { equals: filter.brandFilter, mode: 'insensitive' as const } } : {}),
       },
       include: filter?.includeHistory
         ? { observations: { orderBy: { recordedAt: 'asc' } } }

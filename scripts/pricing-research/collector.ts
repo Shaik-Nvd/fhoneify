@@ -84,6 +84,14 @@ const AUTH_MARKERS = [
   /verify (your )?mobile number/i,
   /session (has )?expired/i,
   /please log ?in/i,
+  // Cashify's actual final-price gate for an unauthenticated/expired session:
+  // a modal headed "Login/Signup" that masks the real number behind
+  // "Login to unlock the best price" and a placeholder like "₹ XX,XXX" -
+  // confirmed live via a direct diagnostic run. Missing this let a stale
+  // session run to completion and record a garbage (unparseable) price
+  // instead of AUTH_REQUIRED.
+  /login\s*\/\s*signup/i,
+  /login to unlock/i,
 ];
 
 const CAPTCHA_MARKERS = [/i'?m not a robot/i, /verify you are human/i, /recaptcha/i, /hcaptcha/i];
@@ -120,9 +128,14 @@ function stableFingerprint(questions: QuestionAnswerRecord[]): string {
 }
 
 async function pageVisibleText(page: Page): Promise<string> {
-  return page
-    .evaluate(() => (document.querySelector('main') ?? document.body)?.innerText ?? '')
-    .catch(() => '');
+  // document.body, never main-only: Cashify's login-gate modal (and likely
+  // any other modal/dialog) renders as a portal appended to <body>, outside
+  // <main> - scanning main missed it entirely, so detectAuthRequired() never
+  // fired and a stale session ran through to a masked, unparseable price
+  // instead of stopping at AUTH_REQUIRED. body always includes everything
+  // main would (main is nested inside it), so this is strictly more
+  // inclusive, never less.
+  return page.evaluate(() => document.body?.innerText ?? '').catch(() => '');
 }
 
 async function detectAuthRequired(page: Page): Promise<boolean> {
@@ -155,12 +168,17 @@ async function detectNotFound(page: Page, responseStatus?: number): Promise<stri
 async function readQuestionLabel(page: Page, handle: ElHandle): Promise<string | null> {
   return page
     .evaluate((el: Element) => {
-      const isLabelText = (raw: string) => {
-        const s = raw.replace(/\s+/g, ' ').trim();
-        if (s.length < 4 || s.length > 220) return false;
-        if (/^(yes|no)$/i.test(s)) return false;
-        return /[a-zA-Z]/.test(s);
-      };
+      // No nested named helper function here (e.g. a `const isLabelText = ...`
+      // inside this callback): tsx/esbuild's dev transform injects an
+      // `__name(fn, "...")` call to preserve Function.prototype.name, but
+      // Playwright serializes only this callback's source as a standalone
+      // string to run in the page - the `__name` helper itself is never
+      // shipped, so the injected call throws `ReferenceError: __name is not
+      // defined` inside the page and the whole evaluate rejects. Confirmed by
+      // direct diagnostic against a live Playwright session - every question
+      // label lookup was silently failing on this, not a DOM-shape mismatch.
+      // Keep this callback's body flat (no nested const/function) if it is
+      // ever extended.
       let node: Element | null = el;
       for (let hop = 0; hop < 8 && node; hop++) {
         const container: Element | null = node.parentElement;
@@ -168,7 +186,9 @@ async function readQuestionLabel(page: Page, handle: ElHandle): Promise<string |
         const leaves = Array.from(container.querySelectorAll('*')).filter((n) => n.children.length === 0);
         for (const leaf of leaves) {
           const t = (leaf.textContent || '').trim();
-          if (isLabelText(t)) return t.replace(/\s+/g, ' ').trim();
+          const s = t.replace(/\s+/g, ' ').trim();
+          const isLabelText = s.length >= 4 && s.length <= 220 && !/^(yes|no)$/i.test(s) && /[a-zA-Z]/.test(s);
+          if (isLabelText) return s;
         }
         node = container;
       }
@@ -469,7 +489,7 @@ export async function collectCashifyQuote(
       const priceText = await page
         .evaluate(() => {
           const sellingLabel = Array.from(document.querySelectorAll('*')).find((el) =>
-            el.textContent?.trim().includes('Selling price')
+            (el.textContent || '').trim().toLowerCase().includes('selling price')
           );
           if (sellingLabel) {
             let curr = sellingLabel.nextElementSibling;
@@ -505,6 +525,22 @@ export async function collectCashifyQuote(
       }
 
       const finalQuote = parseInt(priceText.replace(/[^0-9]/g, ''), 10);
+
+      if (!Number.isFinite(finalQuote)) {
+        // priceText was found but contained no digits - e.g. a masked
+        // placeholder like "₹ XX,XXX" behind a login gate the
+        // AUTH_MARKERS check above didn't catch. Never record this as
+        // COMPLETED with a missing price: that would look like verified data.
+        return {
+          status: 'FAILED',
+          sourceUrl: deviceUrl,
+          originalGetUptoReference: originalGetUptoReference ?? undefined,
+          questionsAsked: questions,
+          answersSelected: answers,
+          errorReason: `extracted price text did not contain a parseable number: "${priceText}"`,
+          questionnaireFingerprint: fingerprint,
+        };
+      }
 
       return {
         status: 'COMPLETED',
