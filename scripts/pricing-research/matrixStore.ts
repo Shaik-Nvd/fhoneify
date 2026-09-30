@@ -4,6 +4,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import type { ActualQuestion, MatrixStatus } from './plannedExperiment';
 import { DEFECT_CHECKBOX, FACTORS, getLevel } from '../research-design/factors';
+import { hasVerifiedDefectSelection } from './defectQuestion';
 
 export interface MatrixObservation {
   runId: string;
@@ -62,6 +63,7 @@ function validateObservation(row: MatrixObservation): void {
       }
       if (levelId === null || q.status !== 'ASKED' || q.sourcePage !== f.page) return false;
       const expectedText = getLevel(f.id, levelId).optionText;
+      if (f.opensVia && !hasVerifiedDefectSelection(q.optionStates, expectedText)) return false;
       if (f.page === 'P3' || f.page === 'P4') {
         const expectedState = levelId === (f.page === 'P3' ? 'faulty' : 'present') ? 'SELECTED' : 'UNSELECTED';
         return normalized(q.questionText) === normalized(f.questionText) &&

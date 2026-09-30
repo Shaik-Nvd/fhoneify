@@ -36,7 +36,8 @@ function trace(device: PlannedDevice, experiment: PlannedExperiment): QuestionAn
   for (const f of FACTORS.filter((f) => f.opensVia)) {
     if (experiment.answers[f.id] === null || !answers.defects?.some((id) => defectLabels[id] === f.opensVia)) continue;
     q.push({ questionText: `Displayed ${f.id} question`, selectedAnswer: getLevel(f.id, experiment.answers[f.id]!).optionText,
-      sourcePage: f.page });
+      sourcePage: f.page, optionStates: [f.baseline, ...f.levels].filter((level) => !level.optionText.startsWith('__'))
+        .map((level) => ({ text: level.optionText, selected: level.id === experiment.answers[f.id] })) });
   }
   for (const f of FACTORS.filter((f) => f.page === 'P3' || f.page === 'P4')) {
     if (experiment.answers[f.id] === null) continue;
@@ -128,6 +129,14 @@ try {
     questionnaireFingerprint: 'test-fingerprint', collectorVersion: 'cashify-matrix/1',
   };
   store.record(row);
+  const screenRow: MatrixObservation = { ...row, runId: 'run-screen', experimentId: screen.experimentId,
+    baselineExperimentId: open.experimentId, answers: screen.answers, changedFactors: ['screenCondition'],
+    checkboxesTicked: ['Broken/scratch on device screen'],
+    questions: verifyPlannedTrace(pilot.device, screen, trace(pilot.device, screen)).questions };
+  store.record(screenRow);
+  assert.equal(store.listRun('run-screen')[0].questions.find((q) => q.factorId === 'screenCondition')?.optionStates?.length, 4);
+  assert.throws(() => store.record({ ...screenRow, runId: 'run-screen-bad', questions: screenRow.questions.map((q) =>
+    q.factorId === 'screenCondition' ? { ...q, optionStates: undefined } : q) }), /lacks verified quotation evidence/);
   assert.equal(store.get(plan.planVersion, open.experimentId)?.questions.find((q) => q.questionText === 'Battery Faulty')?.selectionState,
     'UNSELECTED');
   assert.throws(() => store.record({ ...row, runId: 'run-bad', questions: row.questions.map((q) =>

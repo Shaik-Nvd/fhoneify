@@ -31,6 +31,7 @@ import {
 } from '../../server/modules/quote/cashifyScraper';
 import type { CashifyResearchAnswers } from './profiles';
 import { hasAuthGate, validateFinalQuote, verifyOptionGrid } from './quoteEvidence';
+import { inspectDefectQuestion, verifyDefectSelection } from './defectQuestion';
 
 /** Playwright's own $/$$ return this generic instantiation - kept as an
  * alias so the rest of the file does not repeat it. */
@@ -43,6 +44,7 @@ export interface QuestionAnswerRecord {
   selectedAnswer: string;
   /** Actual questionnaire surface, not inferred from a planned factor. */
   sourcePage?: string;
+  optionStates?: Array<{ text: string; selected: boolean }>;
 }
 
 /**
@@ -140,6 +142,9 @@ function safeCollectorFailure(error: unknown): string {
     'question label could not be verified', 'selected answer state could not be verified',
     'questionnaire option grid could not be fully identified',
     'questionnaire option state did not match requested answer',
+    'defect question structure not verified', 'defect question heading missing or ambiguous',
+    'defect option identity or selection state ambiguous', 'defect answer selection could not be verified',
+    'defect question changed during selection',
   ];
   return known.find((reason) => message.includes(reason)) ?? 'questionnaire action failed (selector or navigation)';
 }
@@ -298,6 +303,32 @@ interface WalkContext {
 async function recordAndClick(ctx: WalkContext, handle: ElHandle, selectedAnswer: string): Promise<void> {
   assertSafeToSelect(selectedAnswer);
   await assertNoChallenge(ctx.page);
+  if (ctx.sourcePage.startsWith('P2-')) {
+    const saveRejected = (html: string | null) => {
+      if (!html) return;
+      const destination = path.resolve('research-evidence/diagnostic');
+      fs.mkdirSync(destination, { recursive: true });
+      fs.writeFileSync(path.join(destination, `rejected-${ctx.sourcePage}-${Date.now()}.html`), html);
+    };
+    const before = await handle.evaluate(inspectDefectQuestion);
+    if (!before.ok || before.options.filter((option) => option.text === selectedAnswer).length !== 1) {
+      saveRejected(before.sanitizedHtml);
+      throw new Error(before.reason ?? 'defect question structure not verified');
+    }
+    await handle.click({ timeout: ctx.actionTimeoutMs });
+    await assertNoChallenge(ctx.page);
+    const after = await handle.evaluate(inspectDefectQuestion);
+    try {
+      verifyDefectSelection(after, selectedAnswer);
+      if (after.questionText !== before.questionText ||
+        JSON.stringify(after.options.map((option) => option.text)) !== JSON.stringify(before.options.map((option) => option.text))) {
+        throw new Error('defect question changed during selection');
+      }
+    } catch (error) { saveRejected(after.sanitizedHtml); throw error; }
+    ctx.questions.push({ questionText: after.questionText!, selectedAnswer, sourcePage: ctx.sourcePage,
+      optionStates: after.options });
+    return;
+  }
   const label = await readQuestionLabel(ctx.page, handle);
   if (!label || label.toLowerCase() === selectedAnswer.toLowerCase()) {
     throw new Error('question label could not be verified');

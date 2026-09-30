@@ -68,3 +68,17 @@ authorized fresh-session retry verified its opening baseline with a final-price
 screenshot, then stopped at the screen-scratch subpage because the collector
 could not verify the question heading for its requested answer. No pair or
 closing baseline was collected; a further live retry needs separate approval.
+
+The subsequent one-page diagnostic captured only the POCO F4 screen question
+component. It proved that the old ancestor-leaf search returned the option's
+own text before reaching the sibling "Screen Physical Condition" header.
+Defect details now require the captured header/grid relationship, one heading,
+unique option labels, and consistent selected/unselected card classes. The
+collector rechecks the same heading and options after clicking and stores the
+complete `optionStates` vector. The plan verifier and local store both require
+that vector for rendered defect details. Ambiguous components remain rejected;
+bounded sanitized component evidence is retained locally on rejection.
+
+Offline tests use the captured screen fixture and derived body-layout cases;
+the body cases are not represented as live Cashify observations. A new five-quote
+P08 pilot is prepared only after these tests pass and awaits the owner's approval.

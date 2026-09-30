@@ -3,6 +3,7 @@ import type { CashifyResearchAnswers } from './profiles';
 import type { CollectorResult, QuestionAnswerRecord } from './collector';
 import type { PlannedDevice, PlannedExperiment } from '../research-design/design';
 import { FACTORS, getLevel, type Factor } from '../research-design/factors';
+import { hasVerifiedDefectSelection } from './defectQuestion';
 
 export type MatrixStatus = 'COMPLETED' | 'UNSUPPORTED' | 'NOT_ASKED' |
   'INVALID_ANSWER_MISMATCH' | 'AUTH_REQUIRED' | 'FAILED';
@@ -16,6 +17,7 @@ export interface ActualQuestion {
   optionText: string | null;
   /** Grid cards can be explicitly unselected; a clicked radio is selected. */
   selectionState: 'SELECTED' | 'UNSELECTED' | null;
+  optionStates?: Array<{ text: string; selected: boolean }>;
   matchedPlan: boolean;
 }
 
@@ -159,6 +161,7 @@ export function verifyPlannedTrace(
         matched = false; // an option label is not a verified question heading
       }
       if (f.opensVia && !triggerSelected) matched = false;
+      if (f.opensVia && !hasVerifiedDefectSelection(hit.q.optionStates, expected)) matched = false;
       if (levelId === null) matched = false;
       if (!matched) failures.push(`selected option mismatch: ${f.id}`);
     }
@@ -166,6 +169,7 @@ export function verifyPlannedTrace(
       questionText: hit?.q.questionText ?? '', status: hit ? 'ASKED' : 'NOT_ASKED',
       optionText: hit ? isGrid(f) ? hit.q.questionText : hit.q.selectedAnswer : null,
       selectionState: hit ? isGrid(f) && hit.q.selectedAnswer === 'Not selected' ? 'UNSELECTED' : 'SELECTED' : null,
+      ...(hit?.q.optionStates ? { optionStates: hit.q.optionStates } : {}),
       matchedPlan: matched }, hit?.i ?? null);
   }
   for (let i = 0; i < observed.length; i++) if (!used.has(i)) {
