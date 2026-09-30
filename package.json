@@ -49,6 +49,7 @@
     "research:progress": "tsx scripts/pricing-research/progress.ts",
     "research:analyze": "tsx scripts/pricing-research/analyze.ts",
     "test:research:store": "tsx scripts/test/researchPricing.store.test.ts",
+    "test:research:poco": "tsx scripts/test/pricing.poco-evidence.test.ts",
     "test:pricing:conditions": "tsx scripts/test/pricing.condition-matrix.test.ts",
     "test:pricing:consistency": "tsx scripts/test/pricing.quote-consistency.test.ts",
     "test:pricing:calibration": "tsx scripts/test/pricing.calibration.test.ts",
