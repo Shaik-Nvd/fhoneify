@@ -36,6 +36,18 @@ export interface MatrixObservation {
   evidenceSha256: string | null;
   questionnaireFingerprint: string | null;
   collectorVersion: string;
+  /** Hosted completion requires an encrypted artifact verified by read-back. */
+  encryptedArtifact?: { id: number; url: string; cipherSha256: string; expiresAt: string };
+}
+export function assertEncryptedArtifact(row: MatrixObservation): void {
+  if (row.status !== 'COMPLETED') return;
+  const r = row.encryptedArtifact;
+  if (!r || !Number.isSafeInteger(r.id) || r.id <= 0 ||
+    !/^https:\/\/github\.com\/Shaik-Nvd\/fhoneify\/actions\/runs\/\d+\/artifacts\/\d+$/.test(r.url) ||
+    !/^[a-f0-9]{64}$/.test(r.cipherSha256) || !Number.isFinite(Date.parse(r.expiresAt)) ||
+    Date.parse(r.expiresAt) < Date.parse(row.collectedAt) + 89 * 86400000) {
+    throw new Error('hosted completion requires verified encrypted evidence with 90-day artifact retention');
+  }
 }
 
 function validateObservation(row: MatrixObservation): void {
@@ -100,7 +112,7 @@ function validateObservation(row: MatrixObservation): void {
 export class LocalMatrixStore {
   private db: any;
 
-  constructor(file: string) {
+  constructor(file: string, private readonly requireDurable = false) {
     const absolute = path.resolve(file);
     fs.mkdirSync(path.dirname(absolute), { recursive: true });
     const { DatabaseSync } = require('node:sqlite');
@@ -150,6 +162,7 @@ export class LocalMatrixStore {
 
   record(row: MatrixObservation): void {
     validateObservation(row);
+    if (this.requireDurable) assertEncryptedArtifact(row);
     const json = JSON.stringify(row);
     this.db.exec('BEGIN IMMEDIATE');
     try {

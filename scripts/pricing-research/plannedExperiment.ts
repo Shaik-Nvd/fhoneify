@@ -35,7 +35,8 @@ const isGrid = (f: Factor) => f.page === 'P3' || f.page === 'P4';
 export function assertPlannedExperiment(device: PlannedDevice, experiment: PlannedExperiment): void {
   if (device.deviceKey !== experiment.deviceKey || !experiment.experimentId || !experiment.blockId ||
     !Number.isInteger(experiment.order) || !device.brand || !device.model || !device.storage ||
-    (device.ram && !norm(device.storage).includes(norm(device.ram)))) {
+    // RAM/storage variants ("8 GB/128 GB") must name their RAM; Apple variants are storage-only ("256GB").
+    (device.ram && device.storage.includes('/') && !norm(device.storage).includes(norm(device.ram)))) {
     throw new Error('planned experiment identity or RAM/storage is incomplete');
   }
   const keys = Object.keys(experiment.answers).sort();

@@ -32,4 +32,5 @@ tsconfig.next.tsbuildinfo
 cashify-session.json
 cashify-sessions/*.json
 research-evidence/
+**/private.pem
 

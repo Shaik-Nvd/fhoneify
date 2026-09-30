@@ -111,6 +111,53 @@ const arg = (name: string) => {
 };
 const flag = (name: string) => process.argv.includes(`--${name}`);
 
+/** Shared evidence/answer gates for local pilots and the bounded hosted runner. */
+export async function collectMatrixExperiment(
+  pilot: { block: PlannedBlock; device: PlannedDevice }, experiment: PlannedExperiment,
+  options: { runId: string; planVersion: string; sessionFileName: string; evidenceDir: string; headless: boolean;
+    /** Refresh-verified page for devices without a curated catalog link (hosted campaign). */
+    cashifyUrl?: string; sessionPoolIndex?: number },
+): Promise<MatrixObservation> {
+  if (experiment.blockId !== pilot.block.blockId || experiment.deviceKey !== pilot.device.deviceKey) {
+    throw new Error('experiment does not belong to the selected block/device');
+  }
+  const result = await collectCashifyQuote({ brand: pilot.device.brand, model: pilot.device.model,
+    storage: pilot.device.storage, cashifyUrl: pilot.device.cashifyLink ?? options.cashifyUrl ?? undefined },
+  compilePlannedAnswers(pilot.device, experiment),
+  { headless: options.headless, sessionFileName: options.sessionFileName, evidenceDir: options.evidenceDir,
+    evidenceId: experiment.experimentId,
+    verifyPlannedAnswers: (questions) => verifyPlannedTrace(pilot.device, experiment, questions) });
+  const verdict = verifyPlannedTrace(pilot.device, experiment, result.questionsAsked ?? []);
+  const status: MatrixStatus = result.status === 'AUTH_REQUIRED' ? 'AUTH_REQUIRED' :
+    result.status === 'FAILED' ? 'FAILED' :
+    result.status === 'UNSUPPORTED' && result.unsupportedReason !== verdict.reason ? 'UNSUPPORTED' :
+    verdict.status !== 'COMPLETED' ? verdict.status :
+    result.status === 'COMPLETED' ?
+      (result.originalGetUptoReference && result.finalQuote && result.evidence && result.questionnaireFingerprint ? 'COMPLETED' : 'FAILED') :
+      'UNSUPPORTED';
+  return {
+    runId: options.runId, planVersion: options.planVersion, experimentId: experiment.experimentId, blockId: pilot.block.blockId,
+    baselineExperimentId: experiment.baselineExperimentId, referenceExperimentIds: experiment.referenceExperimentIds,
+    deviceKey: pilot.device.deviceKey, brand: pilot.device.brand, model: pilot.device.model,
+    ram: pilot.device.ram, storage: pilot.device.storage, candidateFamily: pilot.device.strata.fhoneifyFamily,
+    getUptoAtCollection: result.originalGetUptoReference ?? null, getUptoOffline: pilot.device.getUpto,
+    answers: experiment.answers, questions: status === 'COMPLETED' ? verdict.questions :
+      result.questionsAsked?.length ? verdict.questions.filter((q) => q.status !== 'NOT_ASKED') : [],
+    changedFactors: experiment.changes.map((c) => c.factorId),
+    checkboxesTicked: verdict.questions.filter((q) => q.sourcePage === 'P2' && q.selectionState === 'SELECTED')
+      .map((q) => q.questionText),
+    agePageRendered: result.questionsAsked?.length ? verdict.questions.find((q) => q.factorId === 'mobileAge')?.status === 'ASKED' : null,
+    finalPrice: status === 'COMPLETED' ? result.finalQuote ?? null : null,
+    status, statusReason: status === 'COMPLETED' ? null :
+      result.errorReason ?? result.unsupportedReason ?? verdict.reason ?? 'collector evidence is incomplete',
+    collectedAt: new Date().toISOString(), sessionValidity: status === 'AUTH_REQUIRED' ? 'CHALLENGED' : 'VALID',
+    sessionPoolIndex: options.sessionPoolIndex ?? 0, evidenceRef: status === 'COMPLETED' ? result.evidence?.screenshotPath ?? null : null,
+    evidenceSha256: status === 'COMPLETED' ? result.evidence?.screenshotSha256 ?? null : null,
+    questionnaireFingerprint: status === 'COMPLETED' ? result.questionnaireFingerprint ?? null : null,
+    collectorVersion: 'cashify-matrix/1',
+  };
+}
+
 export function assertFreshSessionMetadata(fileName: string, modifiedAtMs: number, nowMs = Date.now()): void {
   const createdAt = /^session-(\d+)\.json$/.exec(fileName);
   const namedAt = createdAt ? Number(createdAt[1]) : NaN;
@@ -153,40 +200,9 @@ async function main() {
   const store = new LocalMatrixStore(dbPath);
   try {
     for (const experiment of pilot.experiments) {
-      const answers = compilePlannedAnswers(pilot.device, experiment);
-      const result = await collectCashifyQuote({ brand: pilot.device.brand, model: pilot.device.model,
-        storage: pilot.device.storage, cashifyUrl: pilot.device.cashifyLink ?? undefined }, answers,
-      { headless: false, sessionFileName, evidenceDir: path.join(evidenceRoot, 'matrix'), evidenceId: experiment.experimentId,
-        verifyPlannedAnswers: (questions) => verifyPlannedTrace(pilot.device, experiment, questions) });
-      const verdict = verifyPlannedTrace(pilot.device, experiment, result.questionsAsked ?? []);
-      const status: MatrixStatus = result.status === 'AUTH_REQUIRED' ? 'AUTH_REQUIRED' :
-        result.status === 'FAILED' ? 'FAILED' :
-        result.status === 'UNSUPPORTED' && result.unsupportedReason !== verdict.reason ? 'UNSUPPORTED' :
-        verdict.status !== 'COMPLETED' ? verdict.status :
-        result.status === 'COMPLETED' ?
-          (result.originalGetUptoReference && result.finalQuote && result.evidence && result.questionnaireFingerprint ? 'COMPLETED' : 'FAILED') :
-          'UNSUPPORTED';
-      const row: MatrixObservation = {
-        runId, planVersion: plan.planVersion, experimentId: experiment.experimentId, blockId,
-        baselineExperimentId: experiment.baselineExperimentId, referenceExperimentIds: experiment.referenceExperimentIds,
-        deviceKey: pilot.device.deviceKey, brand: pilot.device.brand, model: pilot.device.model,
-        ram: pilot.device.ram, storage: pilot.device.storage, candidateFamily: pilot.device.strata.fhoneifyFamily,
-        getUptoAtCollection: result.originalGetUptoReference ?? null, getUptoOffline: pilot.device.getUpto,
-        answers: experiment.answers, questions: status === 'COMPLETED' ? verdict.questions :
-          result.questionsAsked?.length ? verdict.questions.filter((q) => q.status !== 'NOT_ASKED') : [],
-        changedFactors: experiment.changes.map((c) => c.factorId),
-        checkboxesTicked: verdict.questions.filter((q) => q.sourcePage === 'P2' && q.selectionState === 'SELECTED')
-          .map((q) => q.questionText),
-        agePageRendered: result.questionsAsked?.length ? verdict.questions.find((q) => q.factorId === 'mobileAge')?.status === 'ASKED' : null,
-        finalPrice: status === 'COMPLETED' ? result.finalQuote ?? null : null,
-        status, statusReason: status === 'COMPLETED' ? null :
-          result.errorReason ?? result.unsupportedReason ?? verdict.reason ?? 'collector evidence is incomplete',
-        collectedAt: new Date().toISOString(), sessionValidity: status === 'AUTH_REQUIRED' ? 'CHALLENGED' : 'VALID',
-        sessionPoolIndex: 0, evidenceRef: status === 'COMPLETED' ? result.evidence?.screenshotPath ?? null : null,
-        evidenceSha256: status === 'COMPLETED' ? result.evidence?.screenshotSha256 ?? null : null,
-        questionnaireFingerprint: status === 'COMPLETED' ? result.questionnaireFingerprint ?? null : null,
-        collectorVersion: 'cashify-matrix/1',
-      };
+      const row = await collectMatrixExperiment(pilot, experiment, { runId, planVersion: plan.planVersion,
+        sessionFileName, evidenceDir: path.join(evidenceRoot, 'matrix'), headless: false });
+      const status = row.status;
       store.record(row);
       console.log(`[matrix] ${experiment.kinds[0]} ${experiment.experimentId}: ${status}`);
       if (status !== 'COMPLETED') {
