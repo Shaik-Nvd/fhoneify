@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import api from '@/lib/api';
@@ -33,6 +33,8 @@ export default function TopSellingModels() {
   const router = useRouter();
   // Get Upto comes only from the server (ReferencePrice + uplift).
   const [getUpto, setGetUpto] = useState<Record<string, number>>({});
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -50,6 +52,38 @@ export default function TopSellingModels() {
     return () => { cancelled = true; };
   }, []);
 
+  // Auto-scroll logic
+  useEffect(() => {
+    if (isHovered || !scrollRef.current) return;
+    
+    const interval = setInterval(() => {
+      if (scrollRef.current) {
+        const maxScroll = scrollRef.current.scrollWidth - scrollRef.current.clientWidth;
+        // If we reached the end, scroll back to the beginning smoothly
+        if (scrollRef.current.scrollLeft >= maxScroll - 10) {
+          scrollRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          // Scroll right by approximately one card width + gap (280px + 24px = 304px)
+          scrollRef.current.scrollBy({ left: 304, behavior: 'smooth' });
+        }
+      }
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [isHovered]);
+
+  const scrollLeft = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: -304, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: 304, behavior: 'smooth' });
+    }
+  };
+
   const handleSellClick = (brand: string, model: string) => {
     const fullModel = model.startsWith(brand) ? model : `${brand} ${model}`;
     router.push(`/quote?brand=${encodeURIComponent(brand)}&model=${encodeURIComponent(fullModel)}`);
@@ -66,49 +100,77 @@ export default function TopSellingModels() {
       <h2 className="text-3xl md:text-5xl font-black text-foreground mb-4 text-center relative z-10 tracking-tight drop-shadow-md">
         Top Selling Mobile Phones
       </h2>
-      <p className="text-muted text-center max-w-2xl mx-auto mb-12 relative z-10">Discover the most sought-after devices at unbeatable resale values.</p>
+      <p className="text-muted text-center max-w-2xl mx-auto mb-8 relative z-10">Discover the most sought-after devices at unbeatable resale values.</p>
 
-      {/* Simple, smooth horizontal scroll container */}
       <div 
-        className="w-full max-w-7xl mx-auto flex overflow-x-auto gap-6 pb-8 pt-4 snap-x snap-mandatory px-4 relative z-10"
-        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        className="relative w-full max-w-7xl mx-auto group"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
-        {TOP_MODELS.map((item, i) => (
-          <div 
-            key={item.id} 
-            className="snap-center shrink-0 w-[280px] bg-surface border border-[var(--gold)]/20 rounded-3xl p-6 flex flex-col justify-between items-center shadow-xl transition-all duration-300 hover:-translate-y-2 hover:border-[var(--gold)]/50 hover:shadow-[0_20px_50px_rgba(212,175,55,0.15)]"
-          >
-            <div className="relative w-32 h-32 bg-gradient-to-b from-white to-[#f0f0f0] rounded-2xl flex items-center justify-center p-3 mb-6 shrink-0 shadow-inner ring-1 ring-black/5">
-              <Image 
-                src={item.image} 
-                alt={item.model} 
-                fill 
-                className="object-contain p-2 drop-shadow-xl" 
-                sizes="128px"
-                priority={i < 4}
-              />
-            </div>
-            
-            <div className="text-center mb-2">
-              <div className="text-foreground font-bold text-2xl mb-1 tracking-tight">{item.brand} {item.model}</div>
-              <div className="text-muted text-sm">({item.storage})</div>
-            </div>
-            
-            <div className="text-center mb-8">
-              <div className="text-muted text-xs uppercase tracking-wider mb-1">Get Upto</div>
-              <div className="text-[var(--gold)] font-black text-3xl">
-                {getUpto[item.id] ? `₹${getUpto[item.id].toLocaleString('en-IN')}` : '…'}
-              </div>
-            </div>
-            
-            <button 
-              onClick={() => handleSellClick(item.brand, item.model)}
-              className="w-full bg-[var(--gold)] hover:bg-[#f0c040] text-black font-bold py-3 px-6 rounded-xl transition-colors text-base"
+        {/* Navigation Arrows */}
+        <button 
+          onClick={scrollLeft}
+          className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-6 z-20 w-12 h-12 bg-surface/80 backdrop-blur-sm border border-[var(--gold)]/30 rounded-full flex items-center justify-center text-foreground shadow-lg hover:bg-[var(--gold)] hover:text-black hover:border-transparent transition-all opacity-0 group-hover:opacity-100 disabled:opacity-0"
+          aria-label="Scroll Left"
+        >
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+
+        <button 
+          onClick={scrollRight}
+          className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-6 z-20 w-12 h-12 bg-surface/80 backdrop-blur-sm border border-[var(--gold)]/30 rounded-full flex items-center justify-center text-foreground shadow-lg hover:bg-[var(--gold)] hover:text-black hover:border-transparent transition-all opacity-0 group-hover:opacity-100 disabled:opacity-0"
+          aria-label="Scroll Right"
+        >
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+
+        {/* Scroll Container */}
+        <div 
+          ref={scrollRef}
+          className="flex overflow-x-auto gap-6 pb-8 pt-4 snap-x snap-mandatory scroll-smooth px-4 relative z-10"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
+          {TOP_MODELS.map((item, i) => (
+            <div 
+              key={item.id} 
+              className="snap-center shrink-0 w-[280px] bg-surface border border-[var(--gold)]/20 rounded-3xl p-6 flex flex-col justify-between items-center shadow-xl transition-all duration-300 hover:-translate-y-2 hover:border-[var(--gold)]/50 hover:shadow-[0_20px_50px_rgba(212,175,55,0.15)]"
             >
-              Sell Now
-            </button>
-          </div>
-        ))}
+              <div className="relative w-32 h-32 bg-gradient-to-b from-white to-[#f0f0f0] rounded-2xl flex items-center justify-center p-3 mb-6 shrink-0 shadow-inner ring-1 ring-black/5">
+                <Image 
+                  src={item.image} 
+                  alt={item.model} 
+                  fill 
+                  className="object-contain p-2 drop-shadow-xl" 
+                  sizes="128px"
+                  priority={i < 4}
+                />
+              </div>
+              
+              <div className="text-center mb-2">
+                <div className="text-foreground font-bold text-2xl mb-1 tracking-tight">{item.brand} {item.model}</div>
+                <div className="text-muted text-sm">({item.storage})</div>
+              </div>
+              
+              <div className="text-center mb-8">
+                <div className="text-muted text-xs uppercase tracking-wider mb-1">Get Upto</div>
+                <div className="text-[var(--gold)] font-black text-3xl">
+                  {getUpto[item.id] ? `₹${getUpto[item.id].toLocaleString('en-IN')}` : '…'}
+                </div>
+              </div>
+              
+              <button 
+                onClick={() => handleSellClick(item.brand, item.model)}
+                className="w-full bg-[var(--gold)] hover:bg-[#f0c040] text-black font-bold py-3 px-6 rounded-xl transition-colors text-base"
+              >
+                Sell Now
+              </button>
+            </div>
+          ))}
+        </div>
       </div>
 
       <style jsx>{`
