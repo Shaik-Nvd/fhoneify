@@ -35,7 +35,7 @@ Repo: https://github.com/Shaik-Nvd/fhoneify, default branch `main`.
 4. Do not redesign the reference-price architecture or the signed quote-token design.
 5. Before anything that could overwrite or delete production data, stop and show exactly what would happen first.
 6. Never force-push. Never rewrite `main` history.
-7. **`npm run start:api` runs `prisma db push` against production.** Do not use it locally; see §6.
+7. **`npm run start:api` no longer runs `prisma db push`** (removed after it tried to drop the CashifyResearch* tables and blocked Render startup). Schema changes are applied deliberately and reviewed with `npm run db:drift`; never use `--accept-data-loss`.
 8. **`scripts/test/pricing.quote-integration.test.ts` and the reference-price scripts write to the production DB** through `.env`. Run tests with an unreachable DB URL (§6) unless you mean to touch production.
 9. Keep the server authoritative: the browser must never compute a customer's price (a test enforces this, §5).
 
