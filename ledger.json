@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "campaignId": "cashify-hosted-2026-10",
+  "queueSha256": "5e9ea585cad032373b9fcca322a304a3c102aa89b4d29a662e5fe4cd24b3ead0",
+  "globalCap": 1500,
+  "stageCaps": {
+    "1": 100,
+    "2": 500,
+    "3": 1500
+  },
+  "approvedStage": 1,
+  "stageDecisions": [],
+  "reservations": [],
+  "blocks": {},
+  "experiments": {},
+  "deviceStops": {}
+}
