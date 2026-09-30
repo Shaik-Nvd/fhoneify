@@ -26,6 +26,7 @@
  *   --headed             force a visible browser (also CASHIFY_SCRAPER_HEADED=true)
  *   --force              re-run devices that already have a COMPLETED experiment for this profile (resets it to PENDING first)
  *   --claim-ttl-ms N     abandoned-claim TTL (default 900000 = 15 min)
+ *   --pace-ms N          idle delay between experiments within this batch (default 0 - no extra delay beyond the questionnaire walk's own waits)
  *   --json <file>        write the run summary to a file
  */
 import 'dotenv/config';
@@ -37,8 +38,10 @@ import { getQuestionnaireProfileStore, disconnectReferencePriceRepository } from
 import { getResearchStore } from '../../lib/researchPricing/getResearchStore';
 import type { ResearchExperimentRow } from '../../lib/researchPricing/store';
 import { buildProfileA, buildProfileB, buildProfileC, type QuestionnaireProfileInput } from './profiles';
-import { collectCashifyQuote } from './collector';
+import { collectCashifyQuote, describeSessionPool } from './collector';
 import { materializeResearchSessionFromEnv } from './sessionMaterializer';
+
+const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 function arg(name: string): string | undefined {
   const i = process.argv.indexOf(`--${name}`);
@@ -81,11 +84,23 @@ async function main() {
   const batchSize = arg('batch-size') ? Number(arg('batch-size')) : 10;
   const maxExperiments = arg('max-experiments') ? Number(arg('max-experiments')) : batchSize;
   const claimTtlMs = arg('claim-ttl-ms') ? Number(arg('claim-ttl-ms')) : 15 * 60 * 1000;
+  const paceMs = arg('pace-ms') ? Number(arg('pace-ms')) : 0;
   const headed = flag('headed');
   const force = flag('force');
 
   const research = getResearchStore();
   const questionnaireStore = getQuestionnaireProfileStore();
+
+  const sessionPool = describeSessionPool();
+  const usableSessions = sessionPool.filter((s) => s.valid).length;
+  console.log(`[research] session pool: ${usableSessions}/${sessionPool.length} usable`);
+  for (const s of sessionPool) console.log(`[research]   ${s.valid ? 'valid  ' : 'expired'} ${s.file} - ${s.reason}`);
+  if (usableSessions === 0) {
+    console.error('[research] no usable Cashify sessions - run "npm run research:login" before collecting. Stopping without attempting any network request.');
+    await teardown();
+    process.exitCode = 2;
+    return;
+  }
 
   const batch = await research.createBatch({
     batchLabel: `${brand ?? 'all-brands'}${modelSub ? `:${modelSub}` : ''}-${new Date().toISOString()}`,
@@ -186,6 +201,7 @@ async function main() {
       console.error(`[research] unexpected error on ${claimed.deviceKey} (${claimed.profile}), claim released for retry:`, error?.message ?? error);
     }
     collected++;
+    if (paceMs > 0 && collected < maxExperiments && collected < batchSize && !authRequiredHit) await sleep(paceMs);
   }
 
   await research.finishBatch(batch.id, `collected=${collected} authRequiredHit=${authRequiredHit}`);

@@ -22,6 +22,7 @@
  */
 import type { Browser, BrowserContext, ElementHandle, Page } from 'playwright';
 import crypto from 'crypto';
+import fs from 'fs';
 import {
   getCashifyBrowser,
   getCashifySessionFiles,
@@ -65,6 +66,13 @@ export interface CollectDeviceInput {
   /** Curated Cashify URL from the catalog, when known - preferred over a
    * generated slug, same precedence scrapeCashifyPrice() gives it. */
   cashifyUrl?: string;
+}
+
+/** Reports each session file's on-disk validity without any network call -
+ * used by run-batch.ts to print session-pool health before starting, and by
+ * a standalone `research:session-status` check. */
+export function describeSessionPool(): Array<{ file: string; valid: boolean; reason: string }> {
+  return getCashifySessionFiles().map((f) => ({ file: f, ...isSessionLikelyValid(f) }));
 }
 
 export interface CollectOptions {
@@ -119,6 +127,50 @@ function assertSafeToSelect(text: string): void {
   const hit = FORBIDDEN_ANSWER_TEXT.find((re) => re.test(text));
   if (hit) {
     throw new Error(`refusing to click a forbidden action button ("${text}" matched ${hit})`);
+  }
+}
+
+/**
+ * Cashify's own auth cookie, confirmed empirically (not assumed): captured
+ * session files always carry a `_cs__user_auth__v1` cookie whose `expires`
+ * timestamp is Cashify's own statement of how long that login is good for
+ * (~14 days observed). A local pre-flight check against this - no network
+ * call - is what "do not repeatedly reuse sessions already confirmed
+ * invalid" means in practice: skip a session whose own cookie says it's
+ * already dead, rather than spending a real page load discovering that.
+ *
+ * Deliberately local-only: this never deletes or rewrites the session files
+ * on disk. They are shared with the production on-demand scraper
+ * (server/modules/quote/cashifyScraper.ts) via the same cashify-sessions/
+ * directory, and AGENTS.md says not to touch that path - pruning files here
+ * would be exactly that.
+ */
+export function isSessionLikelyValid(sessionFile: string): { valid: boolean; reason: string } {
+  try {
+    const data = JSON.parse(fs.readFileSync(sessionFile, 'utf8'));
+    const cookies: Array<{ name: string; domain?: string; expires?: number }> = data.cookies ?? [];
+    const nowSec = Date.now() / 1000;
+
+    const authCookie = cookies.find((c) => c.name === '_cs__user_auth__v1');
+    if (authCookie) {
+      if (typeof authCookie.expires !== 'number' || authCookie.expires <= 0) {
+        return { valid: true, reason: 'auth cookie has no expiry (session cookie) - assume valid' };
+      }
+      return authCookie.expires > nowSec
+        ? { valid: true, reason: `auth cookie valid until ${new Date(authCookie.expires * 1000).toISOString()}` }
+        : { valid: false, reason: `auth cookie expired at ${new Date(authCookie.expires * 1000).toISOString()}` };
+    }
+
+    // Defensive fallback if Cashify ever renames the cookie: require at
+    // least one non-expired cashify.in cookie rather than refusing outright.
+    const anyLive = cookies.some(
+      (c) => (c.domain ?? '').includes('cashify.in') && (typeof c.expires !== 'number' || c.expires <= 0 || c.expires > nowSec)
+    );
+    return anyLive
+      ? { valid: true, reason: 'no _cs__user_auth__v1 cookie found; a live cashify.in cookie exists' }
+      : { valid: false, reason: 'no _cs__user_auth__v1 cookie and no live cashify.in cookie found' };
+  } catch (e: any) {
+    return { valid: false, reason: `could not read/parse session file: ${e?.message ?? e}` };
   }
 }
 
@@ -285,9 +337,21 @@ export async function collectCashifyQuote(
   opts: CollectOptions = {}
 ): Promise<CollectorResult> {
   const actionTimeoutMs = opts.actionTimeoutMs ?? 8000;
-  const sessionFiles = getCashifySessionFiles();
-  if (sessionFiles.length === 0) {
+  const allSessionFiles = getCashifySessionFiles();
+  if (allSessionFiles.length === 0) {
     return { status: 'FAILED', errorReason: 'no Cashify session files available (run setup-cashify first)' };
+  }
+
+  // Skip sessions the file itself already says are dead - no network call
+  // spent confirming what the cookie's own expiry already tells us.
+  const checked = allSessionFiles.map((f) => ({ file: f, ...isSessionLikelyValid(f) }));
+  let sessionFiles = checked.filter((c) => c.valid).map((c) => c.file);
+  if (sessionFiles.length === 0) {
+    const reasons = checked.map((c) => `${c.file}: ${c.reason}`).join('; ');
+    return {
+      status: 'AUTH_REQUIRED',
+      errorReason: `every session in the pool is pre-confirmed expired (no network request attempted): ${reasons}`,
+    };
   }
   sessionFiles.sort(() => Math.random() - 0.5);
 

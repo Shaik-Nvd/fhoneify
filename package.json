@@ -44,6 +44,7 @@
     "pricing:families": "tsx scripts/pricing/catalog-family-report.ts",
     "pricing:prepare-validation": "tsx scripts/pricing/prepare-cashify-validation.ts",
     "research:login": "node scripts/setup-cashify.js",
+    "research:session-status": "tsx scripts/pricing-research/session-status.ts",
     "research:collect": "tsx scripts/pricing-research/run-batch.ts",
     "research:progress": "tsx scripts/pricing-research/progress.ts",
     "research:analyze": "tsx scripts/pricing-research/analyze.ts",
