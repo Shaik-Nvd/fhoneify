@@ -59,7 +59,7 @@ combined scratches, and closing baseline from that block. It stops on the
 first unsupported answer, challenge, or quote failure. Rerun the **whole**
 block after interruption; do not splice rows from different run IDs.
 
-The first local attempt was rejected at the opening baseline because Cashify
+The reachable local attempt was rejected at the opening baseline because Cashify
 showed "Battery Faulty" rather than the plan's battery-health-threshold card.
 No condition pair or closing baseline was collected. The option's meaning and
 model coverage need independent verification before this block is retried.

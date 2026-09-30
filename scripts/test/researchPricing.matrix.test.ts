@@ -54,6 +54,8 @@ for (const e of pilot.experiments) {
 assert.deepEqual(compilePlannedAnswers(pilot.device, pair).defects, ['broken_screen', 'body_scratch']);
 assert.equal(close.baselineExperimentId, open.experimentId);
 assert.equal(pilot.device.questionStates.hw_battery_service.status, 'UNKNOWN');
+const absentBatteryCard = trace(pilot.device, open).filter((q) => q.questionText !== 'Battery in Service (Health < 80%)');
+assert.equal(verifyPlannedTrace(pilot.device, open, absentBatteryCard).status, 'COMPLETED');
 const changedBatteryCard = trace(pilot.device, open);
 changedBatteryCard.find((q) => q.questionText === 'Battery in Service (Health < 80%)')!.questionText = 'Battery Faulty';
 assert.equal(verifyPlannedTrace(pilot.device, open, changedBatteryCard).status, 'INVALID_ANSWER_MISMATCH');
