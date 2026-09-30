@@ -50,6 +50,11 @@ export interface ResearchStore {
   claimNext(opts: {
     workerId: string;
     claimTtlMs: number;
+    deviceKeys?: string[];
+    /** Explicit, scoped retry after a collector selector bug is fixed. */
+    retryUnsupported?: boolean;
+    /** Explicit re-verification; append an observation, retain prior history. */
+    reverifyCompleted?: boolean;
     brandFilter?: string;
     modelFilter?: string;
     profiles?: ResearchProfile[];
@@ -77,7 +82,18 @@ export interface ResearchStore {
      * real collection path must pass it.
      */
     workerId?: string
-  ): Promise<{ written: boolean }>;
+  ): Promise<{ written: boolean; observationId?: string }>;
+
+  getRecordedEvidence(observationId: string): Promise<{
+    id: string;
+    experimentId: string;
+    status: string;
+    finalQuote: number | null;
+    questionsAsked: unknown;
+    answersSelected: unknown;
+    recordedAt: Date;
+    questionnaireFingerprint: string | null;
+  } | null>;
 
   releaseClaim(experimentId: string, workerId?: string): Promise<void>;
 
@@ -242,12 +258,16 @@ export class PostgresResearchStore implements ResearchStore {
   async claimNext(opts: {
     workerId: string;
     claimTtlMs: number;
+    deviceKeys?: string[];
+    retryUnsupported?: boolean;
+    reverifyCompleted?: boolean;
     brandFilter?: string;
     modelFilter?: string;
     profiles?: ResearchProfile[];
   }): Promise<ResearchExperimentRow | null> {
     const staleBefore = new Date(Date.now() - opts.claimTtlMs);
     const profiles = opts.profiles && opts.profiles.length > 0 ? opts.profiles : null;
+    const deviceKeys = opts.deviceKeys && opts.deviceKeys.length > 0 ? opts.deviceKeys : null;
 
     const rows = await this.prisma.$queryRaw<any[]>`
       UPDATE "CashifyResearchExperiment" AS e
@@ -256,10 +276,14 @@ export class PostgresResearchStore implements ResearchStore {
         SELECT id FROM "CashifyResearchExperiment"
         WHERE (
           status = 'PENDING'
-          OR (status IN ('IN_PROGRESS', 'AUTH_REQUIRED') AND "claimedAt" IS NOT NULL AND "claimedAt" < ${staleBefore})
+          OR status = 'AUTH_REQUIRED'
+          OR (${opts.retryUnsupported === true} AND status = 'UNSUPPORTED')
+          OR (${opts.reverifyCompleted === true} AND status = 'COMPLETED')
+          OR (status = 'IN_PROGRESS' AND "claimedAt" IS NOT NULL AND "claimedAt" < ${staleBefore})
         )
         AND (${opts.brandFilter ?? null}::text IS NULL OR brand ILIKE ${opts.brandFilter ?? null})
         AND (${opts.modelFilter ?? null}::text IS NULL OR model ILIKE ${opts.modelFilter ? `%${opts.modelFilter}%` : null})
+        AND (${deviceKeys}::text[] IS NULL OR "deviceKey" = ANY(${deviceKeys}::text[]))
         AND (${profiles}::"ResearchProfile"[] IS NULL OR profile = ANY(${profiles}::"ResearchProfile"[]))
         ORDER BY "createdAt" ASC
         FOR UPDATE SKIP LOCKED
@@ -293,7 +317,7 @@ export class PostgresResearchStore implements ResearchStore {
       questionnaireFingerprint?: string;
     },
     workerId?: string
-  ): Promise<{ written: boolean }> {
+  ): Promise<{ written: boolean; observationId?: string }> {
     return this.prisma.$transaction(async (tx) => {
       const updateResult = await tx.cashifyResearchExperiment.updateMany({
         where: workerId ? { id: experimentId, claimedBy: workerId } : { id: experimentId },
@@ -320,7 +344,7 @@ export class PostgresResearchStore implements ResearchStore {
         return { written: false };
       }
 
-      await tx.cashifyResearchObservation.create({
+      const observation = await tx.cashifyResearchObservation.create({
         data: {
           experimentId,
           status: outcome.status,
@@ -331,8 +355,30 @@ export class PostgresResearchStore implements ResearchStore {
         },
       });
 
-      return { written: true };
+      return { written: true, observationId: observation.id };
     });
+  }
+
+  async getRecordedEvidence(observationId: string) {
+    const observation = await this.prisma.cashifyResearchObservation.findUnique({
+      where: { id: observationId },
+      select: {
+        id: true, experimentId: true, status: true, finalQuote: true,
+        questionsAsked: true, answersSelected: true, recordedAt: true,
+        experiment: { select: { questionnaireFingerprint: true } },
+      },
+    });
+    if (!observation) return null;
+    return {
+      id: observation.id,
+      experimentId: observation.experimentId,
+      status: observation.status,
+      finalQuote: observation.finalQuote,
+      questionsAsked: observation.questionsAsked,
+      answersSelected: observation.answersSelected,
+      recordedAt: observation.recordedAt,
+      questionnaireFingerprint: observation.experiment.questionnaireFingerprint,
+    };
   }
 
   async releaseClaim(experimentId: string, workerId?: string): Promise<void> {

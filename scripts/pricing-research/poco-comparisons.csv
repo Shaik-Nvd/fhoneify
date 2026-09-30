@@ -1,0 +1,47 @@
+evidence,model,cashify_ram_gb,cashify_storage_gb,fhoneify_ram_gb,fhoneify_storage_gb,cashify_reference,cashify_final,fhoneify_final,cashify_answers,fhoneify_answers,quality,note
+case 1.png,POCO F1,8,256,8,256,,3270,3829,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 2.png,POCO F3 GT,8,256,8,256,,7290,8439,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case3.png,POCO F4 5G,12,256,12,256,,7050,8141,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 4.png,POCO F5 5G,12,256,12,256,,9250,10245,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 5.png,POCO F6 5G,12,512,12,512,,10330,11266,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 6.png,POCO F7 5G,12,512,12,512,,14540,15414,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 7.png,POCO X2,8,256,8,256,,4210,5050,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 8.png,POCO X3,8,128,8,128,,4520,5349,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 9.png,POCO X3 Pro,8,128,8,128,,4750,5757,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 10.png,POCO X4 Pro 5G,8,128,8,128,,7080,8141,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 11.png,POCO X5 Pro 5G,8,256,8,256,,7710,8560,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 12.png,POCO X5 5G,8,256,8,256,,7130,7979,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 13.png,POCO X6 5G,12,512,12,512,,8260,9224,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 14.png,POCO X6 Pro 5G,12,512,12,512,,10810,11780,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 15.png,POCO X6 Neo 5G,12,256,12,256,,6040,6959,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 16.png,POCO X7 5G,8,256,8,256,,7970,9112,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 17.png,POCO X7 Pro 5G,12,256,12,256,,10780,12049,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 18.png,POCO X8 Pro,12,256,12,256,,15740,16760,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 19.png,POCO X8 Pro Max 5G,12,512,12,256,,20760,20381,,,variant_mismatch,Cashify is 12/512 but Fhoneify is 12/256
+case 20.png,POCO M2 Pro,6,128,6,128,,4450,5270,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 21.png,POCO M2,8,128,8,128,,3860,4634,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 22.png,POCO M3,6,128,6,128,,4150,922,,,unverified_answers,Large negative gap; answers not visible
+case 23.png,POCO M3 Pro 5G,6,128,6,128,,5750,6740,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 24.png,POCO M2 Reloaded,4,64,4,64,,2510,3273,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 25.png,POCO M4 Pro 5G,8,128,8,128,,6380,7385,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 26.png,POCO M4 Pro,8,128,8,128,,4810,5845,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 27.png,POCO M4 5G,6,128,6,128,,5450,6372,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 28.png,POCO M5,6,128,6,128,,3420,4335,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 29.png,POCO M6 Pro 5G,8,256,8,256,,6030,6810,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 30.png,POCO M6 5G,8,256,8,256,,4380,5133,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 31.png,POCO M7 Pro 5G,8,256,8,256,,5990,9254,,,unverified_answers,Large positive gap; answers not visible
+case 32.png,POCO M6 Plus 5G,8,128,8,128,,4360,5304,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 33.png,POCO M7 5G,8,128,8,128,,4260,5193,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 34.png,POCO M7 Plus 5G,8,128,8,128,,6140,7167,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 35.png,POCO M8 5G,8,256,8,256,,10850,11676,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 36.png,POCO C3,4,64,4,64,,2910,3640,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 37.png,POCO C31,4,64,4,64,,3320,4057,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 38.png,POCO C50,3,32,3,32,,3170,3799,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 39.png,POCO C55,6,128,6,128,,3630,4269,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 40.png,POCO C61,6,128,6,128,,3550,4179,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 41.png,POCO C65,8,256,8,256,,3840,4477,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 42.png,POCO C71,6,128,6,128,,2820,3554,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 43.png,POCO C75 5G,4,128,4,128,,3970,4708,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 44.png,POCO C85 5G,8,128,8,128,,6280,7018,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+case 45.png,POCO C85x,4,128,4,128,,5580,6325,,,unverified_answers,Final prices visible; questionnaire and Get Upto not visible
+missing 2.png,,,,,,,,,,,no_quote,Model-selection screen only
