@@ -80,5 +80,8 @@ that vector for rendered defect details. Ambiguous components remain rejected;
 bounded sanitized component evidence is retained locally on rejection.
 
 Offline tests use the captured screen fixture and derived body-layout cases;
-the body cases are not represented as live Cashify observations. A new five-quote
-P08 pilot is prepared only after these tests pass and awaits the owner's approval.
+the body cases are not represented as live Cashify observations. After the owner
+approved one five-quote P08 pilot, all five actual quotations passed, including
+the screen and body detail associations. The closing baseline matched the opening
+baseline exactly. See `CASHIFY_P08_PILOT_2026-10-01.md` for the bounded result and
+local evidence references; this does not authorize further collection.
