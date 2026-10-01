@@ -663,6 +663,7 @@ export function calculateXiaomiPrice(
       ageRetention: questionnaireAgeFactor(ageMultiplier, semantics),
       diagnostics,
       deadPhonePrice,
+      warrantyNotAsked: semantics.warrantyMode === 'NOT_ASKED',
     });
     return finalizeConditionQuote(reference, diagnostics.calls === false ? deadPhonePrice : value);
   }

@@ -4,7 +4,7 @@
  * The ₹ tables are the existing percentage rules taken at an anchor A
  * (tableFromPercentRules), so for the benchmark answers:
  *   C0 = R x retention + box                     (clean, warranty No)
- *   D1 = C0 - C1 = min(screenReplacement, localDisplay + lines) = 0.49 A
+ *   D1 = C0 - C1 = localDisplay + worst display defect (lines)  = 0.49 A
  *   D2 = C0 - C2 = scratchesHeavy + charging                    = 0.25 A
  * Retention is measured where a combo 0 capture exists, else --retention.
  * A1 = D1 / 0.49 and A2 = D2 / 0.25 must agree if the old relative weights
@@ -32,7 +32,7 @@ const box = COMMON_BONUSES.box;
 
 // Coefficients of A in D1 and D2, read from the real table builder.
 const unit = tableFromPercentRules('unit', 100000);
-const k1 = Math.min(unit.screenReplacement, unit.screen.localDisplay + unit.screen.lines) / 100000;
+const k1 = (unit.screen.localDisplay + unit.screen.lines) / 100000;
 const k2 = (unit.screen.scratchesHeavy + unit.functional.charging) / 100000;
 
 interface M { model: string; R: number; ret: number; measured: boolean; c0: number; c1: number; c2: number }

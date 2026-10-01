@@ -14,20 +14,18 @@ import type { InrDeductionConfig, InrGroupTable } from './inrDeductions';
 
 const roundTo10 = (value: number) => Math.round(value / 10) * 10;
 
-/** The percentage rules expressed in ₹ at `anchor` (a typical Get Upto for
- * the group). */
-export function tableFromPercentRules(label: string, anchor: number): InrGroupTable {
+/** The percentage rules expressed in ₹ at repair-cost anchor `anchor`.
+ * `touchRetention` is the brand's failed-touch retention (Xiaomi 0.4). */
+export function tableFromPercentRules(label: string, anchor: number, touchRetention = 0.4): InrGroupTable {
   const s = GRANULAR_CONDITION_PENALTIES.screen;
   const b = GRANULAR_CONDITION_PENALTIES.body;
   const at = (share: number) => roundTo10(share * anchor);
-  const localDisplay = 1 - CASHIFY_CALIBRATION.localDisplay.androidRetention;
   return {
     label,
-    // The heaviest screen charge the percentage model could stack on an
-    // intact-glass phone: local display + visible lines.
-    screenReplacement: at(localDisplay + s.lines),
+    touchFailure: at(1 - touchRetention),
     screen: {
-      localDisplay: at(localDisplay),
+      localDisplay: at(1 - CASHIFY_CALIBRATION.localDisplay.androidRetention),
+      localDisplayNotAsked: at(1 - CASHIFY_CALIBRATION.localDisplay.notAskedAndroidRetention),
       cracked: at(s.cracked),
       chipped: at(s.chipped),
       scratchesHeavy: at(s.scratchesHeavy),
@@ -50,7 +48,6 @@ export function tableFromPercentRules(label: string, anchor: number): InrGroupTa
       looseScreen: at(b.looseScreen),
     },
     functional: Object.fromEntries(Object.entries(COMMON_FUNCTIONAL_PENALTIES).map(([fault, share]) => [fault, at(share)])),
-    functionalDefault: at(0.1),
     box: COMMON_BONUSES.box,
   };
 }
