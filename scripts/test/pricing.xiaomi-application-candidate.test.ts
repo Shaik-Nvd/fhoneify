@@ -6,7 +6,7 @@ import { xiaomiInrDeductions } from '../../lib/pricing/inrDeductionTables';
 import { inrConditionValue } from '../../lib/pricing/inrDeductions';
 const d={...COMBO_0,warranty:false,validBill:true,mobileAge:null,eSim:null,accessories:['box'],originalScreen:false,hardware:['charging']};
 const q={warrantyMode:'ASKED',billMode:'ASKED',ageMode:'NOT_ASKED',source:'profile'} as const;
-const base={model:'Xiaomi 17',storage:'12 GB/512 GB',diagnostics:d,questionnaire:q,eSimMode:'NOT_ASKED',
+const base={model:'Xiaomi 17',storage:'12 GB/512 GB',diagnostics:d,questionnaire:q,eSimMode:'NOT_ASKED',now:new Date('2026-10-01T18:00:00Z'),
   reference:{cashifyGetUptoReference:57750,source:'reference_repository',referenceStatus:'fresh',referenceSource:'cashify',referenceLastVerifiedAt:'2026-10-01T15:00:00Z'}} as const;
 let checks=0;
 const ok=calculateXiaomiApplicationCandidate(base);assert(ok.supported);assert.equal(ok.quote.cashifyConditionEquivalent,32220);checks++;

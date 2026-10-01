@@ -1,0 +1,992 @@
+{
+  "sourceJob": "xiaomi-severe-followup-2026-10-01",
+  "planSha256": "fc0af11db030ca18abe9ef9cc0dd70177ef50335d94eb254becf68cfacd8c6f0",
+  "jointSha256": "a7edb27e47b8b432759456600b669fde59ec1ef42d49ba7af9144be38a5239c0",
+  "observationsSha256": "e4870dd77517ad168f22dfff37915729cc98d8a659522550b7dc2b7834124a56",
+  "registeredAt": "2026-10-01T17:32:06.111Z",
+  "jointRegisteredAt": "2026-10-01T17:39:32.261Z",
+  "semantics": {
+    "warrantyMode": "ASKED",
+    "billMode": "ASKED",
+    "ageMode": "NOT_ASKED"
+  },
+  "eSimMode": "NOT_ASKED",
+  "developmentIds": [
+    "N-PORT",
+    "N-SPEAKER",
+    "N-FRONT",
+    "N-BACK",
+    "N-WIFI",
+    "N-FINGER"
+  ],
+  "baselineId": "N-OPEN",
+  "cases": [
+    {
+      "id": "N-OPEN",
+      "model": "Xiaomi Redmi Note 15 Pro Plus 5G",
+      "storage": "12 GB/512 GB",
+      "reference": 29250,
+      "status": "COMPLETED",
+      "statusReason": null,
+      "cashify": 21780,
+      "collectedAt": "2026-10-01T17:36:43.623Z",
+      "diagnostics": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": true,
+        "defects": [],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": null,
+        "bodyDents": null,
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [],
+        "accessories": [
+          "box"
+        ],
+        "warranty": false,
+        "validBill": true,
+        "eSim": null,
+        "mobileAge": null
+      },
+      "originalPredictions": {
+        "main": 22025,
+        "INR": 22030,
+        "preservedV1": null,
+        "v1Supported": false,
+        "application": null,
+        "applicationSupported": false,
+        "applicationReason": "No development evidence for this exact model and variant"
+      },
+      "additiveFrozenPrediction": null,
+      "role": "control"
+    },
+    {
+      "id": "N-PORT",
+      "model": "Xiaomi Redmi Note 15 Pro Plus 5G",
+      "storage": "12 GB/512 GB",
+      "reference": 29250,
+      "status": "COMPLETED",
+      "statusReason": null,
+      "cashify": 20780,
+      "collectedAt": "2026-10-01T17:37:07.807Z",
+      "diagnostics": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": true,
+        "defects": [],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": null,
+        "bodyDents": null,
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [
+          "charging"
+        ],
+        "accessories": [
+          "box"
+        ],
+        "warranty": false,
+        "validBill": true,
+        "eSim": null,
+        "mobileAge": null
+      },
+      "originalPredictions": {
+        "main": 19861,
+        "INR": 21370,
+        "preservedV1": null,
+        "v1Supported": false,
+        "application": null,
+        "applicationSupported": false,
+        "applicationReason": "No development evidence for this exact model and variant"
+      },
+      "additiveFrozenPrediction": null,
+      "role": "development"
+    },
+    {
+      "id": "N-SPEAKER",
+      "model": "Xiaomi Redmi Note 15 Pro Plus 5G",
+      "storage": "12 GB/512 GB",
+      "reference": 29250,
+      "status": "COMPLETED",
+      "statusReason": null,
+      "cashify": 21380,
+      "collectedAt": "2026-10-01T17:37:32.134Z",
+      "diagnostics": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": true,
+        "defects": [],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": null,
+        "bodyDents": null,
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [
+          "speaker"
+        ],
+        "accessories": [
+          "box"
+        ],
+        "warranty": false,
+        "validBill": true,
+        "eSim": null,
+        "mobileAge": null
+      },
+      "originalPredictions": {
+        "main": 19861,
+        "INR": 21370,
+        "preservedV1": null,
+        "v1Supported": false,
+        "application": null,
+        "applicationSupported": false,
+        "applicationReason": "No development evidence for this exact model and variant"
+      },
+      "additiveFrozenPrediction": null,
+      "role": "development"
+    },
+    {
+      "id": "N-FRONT",
+      "model": "Xiaomi Redmi Note 15 Pro Plus 5G",
+      "storage": "12 GB/512 GB",
+      "reference": 29250,
+      "status": "COMPLETED",
+      "statusReason": null,
+      "cashify": 19780,
+      "collectedAt": "2026-10-01T17:37:56.373Z",
+      "diagnostics": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": true,
+        "defects": [],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": null,
+        "bodyDents": null,
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [
+          "front_camera"
+        ],
+        "accessories": [
+          "box"
+        ],
+        "warranty": false,
+        "validBill": true,
+        "eSim": null,
+        "mobileAge": null
+      },
+      "originalPredictions": {
+        "main": 19313,
+        "INR": 21200,
+        "preservedV1": null,
+        "v1Supported": false,
+        "application": null,
+        "applicationSupported": false,
+        "applicationReason": "No development evidence for this exact model and variant"
+      },
+      "additiveFrozenPrediction": null,
+      "role": "development"
+    },
+    {
+      "id": "N-BACK",
+      "model": "Xiaomi Redmi Note 15 Pro Plus 5G",
+      "storage": "12 GB/512 GB",
+      "reference": 29250,
+      "status": "COMPLETED",
+      "statusReason": null,
+      "cashify": 18580,
+      "collectedAt": "2026-10-01T17:38:20.599Z",
+      "diagnostics": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": true,
+        "defects": [],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": null,
+        "bodyDents": null,
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [
+          "back_camera"
+        ],
+        "accessories": [
+          "box"
+        ],
+        "warranty": false,
+        "validBill": true,
+        "eSim": null,
+        "mobileAge": null
+      },
+      "originalPredictions": {
+        "main": 17198,
+        "INR": 20560,
+        "preservedV1": null,
+        "v1Supported": false,
+        "application": null,
+        "applicationSupported": false,
+        "applicationReason": "No development evidence for this exact model and variant"
+      },
+      "additiveFrozenPrediction": null,
+      "role": "development"
+    },
+    {
+      "id": "N-WIFI",
+      "model": "Xiaomi Redmi Note 15 Pro Plus 5G",
+      "storage": "12 GB/512 GB",
+      "reference": 29250,
+      "status": "COMPLETED",
+      "statusReason": null,
+      "cashify": 13010,
+      "collectedAt": "2026-10-01T17:38:44.950Z",
+      "diagnostics": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": true,
+        "defects": [],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": null,
+        "bodyDents": null,
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [
+          "wifi"
+        ],
+        "accessories": [
+          "box"
+        ],
+        "warranty": false,
+        "validBill": true,
+        "eSim": null,
+        "mobileAge": null
+      },
+      "originalPredictions": {
+        "main": 19428,
+        "INR": 21240,
+        "preservedV1": null,
+        "v1Supported": false,
+        "application": null,
+        "applicationSupported": false,
+        "applicationReason": "No development evidence for this exact model and variant"
+      },
+      "additiveFrozenPrediction": null,
+      "role": "development"
+    },
+    {
+      "id": "N-FINGER",
+      "model": "Xiaomi Redmi Note 15 Pro Plus 5G",
+      "storage": "12 GB/512 GB",
+      "reference": 29250,
+      "status": "COMPLETED",
+      "statusReason": null,
+      "cashify": 15930,
+      "collectedAt": "2026-10-01T17:39:32.256Z",
+      "diagnostics": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": true,
+        "defects": [],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": null,
+        "bodyDents": null,
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [
+          "fingerprint"
+        ],
+        "accessories": [
+          "box"
+        ],
+        "warranty": false,
+        "validBill": true,
+        "eSim": null,
+        "mobileAge": null
+      },
+      "originalPredictions": {
+        "main": 18778,
+        "INR": 21040,
+        "preservedV1": null,
+        "v1Supported": false,
+        "application": null,
+        "applicationSupported": false,
+        "applicationReason": "No development evidence for this exact model and variant"
+      },
+      "additiveFrozenPrediction": null,
+      "role": "development"
+    },
+    {
+      "id": "N-CAMPAIR",
+      "model": "Xiaomi Redmi Note 15 Pro Plus 5G",
+      "storage": "12 GB/512 GB",
+      "reference": 29250,
+      "status": "COMPLETED",
+      "statusReason": null,
+      "cashify": 16580,
+      "collectedAt": "2026-10-01T17:39:56.389Z",
+      "diagnostics": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": true,
+        "defects": [],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": null,
+        "bodyDents": null,
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [
+          "front_camera",
+          "back_camera"
+        ],
+        "accessories": [
+          "box"
+        ],
+        "warranty": false,
+        "validBill": true,
+        "eSim": null,
+        "mobileAge": null
+      },
+      "originalPredictions": {
+        "main": 14486,
+        "INR": 19730,
+        "preservedV1": null,
+        "v1Supported": false,
+        "application": null,
+        "applicationSupported": false,
+        "applicationReason": "No development evidence for this exact model and variant"
+      },
+      "additiveFrozenPrediction": 16580,
+      "role": "holdout"
+    },
+    {
+      "id": "N-AUDIOPORT",
+      "model": "Xiaomi Redmi Note 15 Pro Plus 5G",
+      "storage": "12 GB/512 GB",
+      "reference": 29250,
+      "status": "COMPLETED",
+      "statusReason": null,
+      "cashify": 20380,
+      "collectedAt": "2026-10-01T17:40:20.533Z",
+      "diagnostics": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": true,
+        "defects": [],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": null,
+        "bodyDents": null,
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [
+          "speaker",
+          "charging"
+        ],
+        "accessories": [
+          "box"
+        ],
+        "warranty": false,
+        "validBill": true,
+        "eSim": null,
+        "mobileAge": null
+      },
+      "originalPredictions": {
+        "main": 17696,
+        "INR": 20710,
+        "preservedV1": null,
+        "v1Supported": false,
+        "application": null,
+        "applicationSupported": false,
+        "applicationReason": "No development evidence for this exact model and variant"
+      },
+      "additiveFrozenPrediction": 20380,
+      "role": "holdout"
+    },
+    {
+      "id": "N-FOUR",
+      "model": "Xiaomi Redmi Note 15 Pro Plus 5G",
+      "storage": "12 GB/512 GB",
+      "reference": 29250,
+      "status": "COMPLETED",
+      "statusReason": null,
+      "cashify": 7410,
+      "collectedAt": "2026-10-01T17:40:44.785Z",
+      "diagnostics": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": true,
+        "defects": [],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": null,
+        "bodyDents": null,
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [
+          "front_camera",
+          "back_camera",
+          "wifi",
+          "speaker"
+        ],
+        "accessories": [
+          "box"
+        ],
+        "warranty": false,
+        "validBill": true,
+        "eSim": null,
+        "mobileAge": null
+      },
+      "originalPredictions": {
+        "main": 9724,
+        "INR": 18280,
+        "preservedV1": null,
+        "v1Supported": false,
+        "application": null,
+        "applicationSupported": false,
+        "applicationReason": "No development evidence for this exact model and variant"
+      },
+      "additiveFrozenPrediction": 7410,
+      "role": "holdout"
+    },
+    {
+      "id": "N-FIVE",
+      "model": "Xiaomi Redmi Note 15 Pro Plus 5G",
+      "storage": "12 GB/512 GB",
+      "reference": 29250,
+      "status": "COMPLETED",
+      "statusReason": null,
+      "cashify": 6410,
+      "collectedAt": "2026-10-01T17:41:09.159Z",
+      "diagnostics": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": true,
+        "defects": [],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": null,
+        "bodyDents": null,
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [
+          "front_camera",
+          "back_camera",
+          "wifi",
+          "speaker",
+          "charging"
+        ],
+        "accessories": [
+          "box"
+        ],
+        "warranty": false,
+        "validBill": true,
+        "eSim": null,
+        "mobileAge": null
+      },
+      "originalPredictions": {
+        "main": 7560,
+        "INR": 17620,
+        "preservedV1": null,
+        "v1Supported": false,
+        "application": null,
+        "applicationSupported": false,
+        "applicationReason": "No development evidence for this exact model and variant"
+      },
+      "additiveFrozenPrediction": 6410,
+      "role": "holdout"
+    },
+    {
+      "id": "N-SIX",
+      "model": "Xiaomi Redmi Note 15 Pro Plus 5G",
+      "storage": "12 GB/512 GB",
+      "reference": 29250,
+      "status": "COMPLETED",
+      "statusReason": null,
+      "cashify": 560,
+      "collectedAt": "2026-10-01T17:41:33.496Z",
+      "diagnostics": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": true,
+        "defects": [],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": null,
+        "bodyDents": null,
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [
+          "front_camera",
+          "back_camera",
+          "wifi",
+          "speaker",
+          "charging",
+          "fingerprint"
+        ],
+        "accessories": [
+          "box"
+        ],
+        "warranty": false,
+        "validBill": true,
+        "eSim": null,
+        "mobileAge": null
+      },
+      "originalPredictions": {
+        "main": 4313,
+        "INR": 16630,
+        "preservedV1": null,
+        "v1Supported": false,
+        "application": null,
+        "applicationSupported": false,
+        "applicationReason": "No development evidence for this exact model and variant"
+      },
+      "additiveFrozenPrediction": 560,
+      "role": "repeat"
+    },
+    {
+      "id": "N-CLOSE",
+      "model": "Xiaomi Redmi Note 15 Pro Plus 5G",
+      "storage": "12 GB/512 GB",
+      "reference": 29250,
+      "status": "COMPLETED",
+      "statusReason": null,
+      "cashify": 21780,
+      "collectedAt": "2026-10-01T17:41:57.542Z",
+      "diagnostics": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": true,
+        "defects": [],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": null,
+        "bodyDents": null,
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [],
+        "accessories": [
+          "box"
+        ],
+        "warranty": false,
+        "validBill": true,
+        "eSim": null,
+        "mobileAge": null
+      },
+      "originalPredictions": {
+        "main": 22025,
+        "INR": 22030,
+        "preservedV1": null,
+        "v1Supported": false,
+        "application": null,
+        "applicationSupported": false,
+        "applicationReason": "No development evidence for this exact model and variant"
+      },
+      "additiveFrozenPrediction": null,
+      "role": "control"
+    },
+    {
+      "id": "X-OPEN",
+      "model": "Xiaomi 17",
+      "storage": "12 GB/512 GB",
+      "reference": 57750,
+      "status": "COMPLETED",
+      "statusReason": null,
+      "cashify": 42720,
+      "collectedAt": "2026-10-01T17:42:21.683Z",
+      "diagnostics": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": true,
+        "defects": [],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": null,
+        "bodyDents": null,
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [],
+        "accessories": [
+          "box"
+        ],
+        "warranty": false,
+        "validBill": true,
+        "eSim": null,
+        "mobileAge": null
+      },
+      "originalPredictions": {
+        "main": 43693,
+        "INR": 44500,
+        "preservedV1": 42720,
+        "v1Supported": true,
+        "application": 42720,
+        "applicationSupported": true,
+        "applicationReason": null
+      },
+      "additiveFrozenPrediction": null,
+      "role": "control"
+    },
+    {
+      "id": "X-LOCAL-SPEAKER",
+      "model": "Xiaomi 17",
+      "storage": "12 GB/512 GB",
+      "reference": 57750,
+      "status": "COMPLETED",
+      "statusReason": null,
+      "cashify": 33320,
+      "collectedAt": "2026-10-01T17:42:45.688Z",
+      "diagnostics": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": false,
+        "defects": [],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": null,
+        "bodyDents": null,
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [
+          "speaker"
+        ],
+        "accessories": [
+          "box"
+        ],
+        "warranty": false,
+        "validBill": true,
+        "eSim": null,
+        "mobileAge": null
+      },
+      "originalPredictions": {
+        "main": 31132,
+        "INR": 34920,
+        "preservedV1": null,
+        "v1Supported": false,
+        "application": null,
+        "applicationSupported": false,
+        "applicationReason": "Only non-original display and charging faults, singly or combined, are experimental candidates"
+      },
+      "additiveFrozenPrediction": null,
+      "role": "holdout"
+    },
+    {
+      "id": "X-CLOSE",
+      "model": "Xiaomi 17",
+      "storage": "12 GB/512 GB",
+      "reference": 57750,
+      "status": "COMPLETED",
+      "statusReason": null,
+      "cashify": 42720,
+      "collectedAt": "2026-10-01T17:43:09.928Z",
+      "diagnostics": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": true,
+        "defects": [],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": null,
+        "bodyDents": null,
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [],
+        "accessories": [
+          "box"
+        ],
+        "warranty": false,
+        "validBill": true,
+        "eSim": null,
+        "mobileAge": null
+      },
+      "originalPredictions": {
+        "main": 43693,
+        "INR": 44500,
+        "preservedV1": 42720,
+        "v1Supported": true,
+        "application": 42720,
+        "applicationSupported": true,
+        "applicationReason": null
+      },
+      "additiveFrozenPrediction": null,
+      "role": "control"
+    },
+    {
+      "id": "T-OPEN",
+      "model": "Xiaomi Redmi Turbo 5",
+      "storage": "12 GB/256 GB",
+      "reference": 26750,
+      "status": "COMPLETED",
+      "statusReason": null,
+      "cashify": 19640,
+      "collectedAt": "2026-10-01T17:43:34.107Z",
+      "diagnostics": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": true,
+        "defects": [],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": null,
+        "bodyDents": null,
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [],
+        "accessories": [
+          "box"
+        ],
+        "warranty": false,
+        "validBill": true,
+        "eSim": null,
+        "mobileAge": null
+      },
+      "originalPredictions": {
+        "main": 20443,
+        "INR": 20820,
+        "preservedV1": 19640,
+        "v1Supported": true,
+        "application": 19640,
+        "applicationSupported": true,
+        "applicationReason": null
+      },
+      "additiveFrozenPrediction": null,
+      "role": "control"
+    },
+    {
+      "id": "T-PORT-FRONT",
+      "model": "Xiaomi Redmi Turbo 5",
+      "storage": "12 GB/256 GB",
+      "reference": 26750,
+      "status": "COMPLETED",
+      "statusReason": null,
+      "cashify": 16640,
+      "collectedAt": "2026-10-01T17:43:58.206Z",
+      "diagnostics": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": true,
+        "defects": [],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": null,
+        "bodyDents": null,
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [
+          "charging",
+          "front_camera"
+        ],
+        "accessories": [
+          "box"
+        ],
+        "warranty": false,
+        "validBill": true,
+        "eSim": null,
+        "mobileAge": null
+      },
+      "originalPredictions": {
+        "main": 15922,
+        "INR": 17360,
+        "preservedV1": null,
+        "v1Supported": false,
+        "application": null,
+        "applicationSupported": false,
+        "applicationReason": "Only non-original display and charging faults, singly or combined, are experimental candidates"
+      },
+      "additiveFrozenPrediction": null,
+      "role": "holdout"
+    },
+    {
+      "id": "T-CLOSE",
+      "model": "Xiaomi Redmi Turbo 5",
+      "storage": "12 GB/256 GB",
+      "reference": 26750,
+      "status": "COMPLETED",
+      "statusReason": null,
+      "cashify": 19640,
+      "collectedAt": "2026-10-01T17:44:22.200Z",
+      "diagnostics": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": true,
+        "defects": [],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": null,
+        "bodyDents": null,
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [],
+        "accessories": [
+          "box"
+        ],
+        "warranty": false,
+        "validBill": true,
+        "eSim": null,
+        "mobileAge": null
+      },
+      "originalPredictions": {
+        "main": 20443,
+        "INR": 20820,
+        "preservedV1": 19640,
+        "v1Supported": true,
+        "application": 19640,
+        "applicationSupported": true,
+        "applicationReason": null
+      },
+      "additiveFrozenPrediction": null,
+      "role": "control"
+    }
+  ],
+  "priorNoteObservations": [
+    {
+      "job": "xiaomi-validation",
+      "id": "V6",
+      "status": "COMPLETED",
+      "cashify": 21780,
+      "statusReason": null,
+      "collectedAt": "2026-10-01T14:03:39.250Z",
+      "hardware": []
+    },
+    {
+      "job": "xiaomi-validation",
+      "id": "V8",
+      "status": "COMPLETED",
+      "cashify": 19100,
+      "statusReason": null,
+      "collectedAt": "2026-10-01T14:04:05.737Z",
+      "hardware": []
+    },
+    {
+      "job": "xiaomi-validation",
+      "id": "NOTE-TOUCH",
+      "status": "COMPLETED",
+      "cashify": 17280,
+      "statusReason": null,
+      "collectedAt": "2026-10-01T14:05:42.808Z",
+      "hardware": []
+    },
+    {
+      "job": "xiaomi-validation",
+      "id": "NOTE-CAP",
+      "status": "FAILED",
+      "cashify": null,
+      "statusReason": "final quotation rejected: final price missing or masked",
+      "collectedAt": "2026-10-01T14:06:07.386Z",
+      "hardware": [
+        "back_camera",
+        "front_camera",
+        "charging",
+        "speaker",
+        "microphone",
+        "wifi",
+        "fingerprint",
+        "audio_receiver"
+      ]
+    },
+    {
+      "job": "xiaomi-validation",
+      "id": "CLOSE-V6",
+      "status": "COMPLETED",
+      "cashify": 21780,
+      "statusReason": null,
+      "collectedAt": "2026-10-01T14:10:17.090Z",
+      "hardware": []
+    },
+    {
+      "job": "xiaomi-candidate-2026-10-01",
+      "id": "NOTE-W-OPEN",
+      "status": "FAILED",
+      "cashify": null,
+      "statusReason": "question label could not be verified",
+      "collectedAt": "2026-10-01T15:15:22.843Z",
+      "hardware": []
+    },
+    {
+      "job": "xiaomi-candidate-2026-10-01",
+      "id": "NOTE-W-CLOSE",
+      "status": "FAILED",
+      "cashify": null,
+      "statusReason": "question label could not be verified",
+      "collectedAt": "2026-10-01T15:20:02.476Z",
+      "hardware": []
+    },
+    {
+      "job": "xiaomi-candidate-2026-10-01",
+      "id": "NOTE-N-OPEN",
+      "status": "FAILED",
+      "cashify": null,
+      "statusReason": "final quotation rejected: expected one Selling price label; found 0",
+      "collectedAt": "2026-10-01T15:26:43.629Z",
+      "hardware": []
+    },
+    {
+      "job": "xiaomi-candidate-2026-10-01",
+      "id": "NOTE-N-OPEN",
+      "status": "COMPLETED",
+      "cashify": 21780,
+      "statusReason": null,
+      "collectedAt": "2026-10-01T15:49:34.845Z",
+      "hardware": []
+    },
+    {
+      "job": "xiaomi-candidate-2026-10-01",
+      "id": "NOTE-SEVERE",
+      "status": "COMPLETED",
+      "cashify": 560,
+      "statusReason": null,
+      "collectedAt": "2026-10-01T15:49:59.126Z",
+      "hardware": [
+        "back_camera",
+        "front_camera",
+        "charging",
+        "speaker",
+        "wifi",
+        "fingerprint"
+      ]
+    }
+  ],
+  "priorRoutingOnlyAttempts": 2
+}
