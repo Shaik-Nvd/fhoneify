@@ -1,5 +1,7 @@
 import { CASHIFY_CALIBRATION } from './pricing/calibration';
 import { UNKNOWN_QUESTIONNAIRE, type QuestionnaireSemantics } from './pricing/questionnaireSemantics';
+import { inrConditionValue, warrantyRetentionFor, type InrDeductionConfig } from './pricing/inrDeductions';
+import { xiaomiInrDeductions } from './pricing/inrDeductionTables';
 
 export interface ModelParams {
   warrantyPenalty: number;
@@ -608,7 +610,13 @@ export function calculateSamsungPrice(model: string, reference: CashifyGetUptoRe
 // BRAND 3: XIAOMI / REDMI / POCO ENGINE
 // ============================================================================
 
-export function calculateXiaomiPrice(model: string, reference: CashifyGetUptoReference, diagnostics: DiagnosticsType, semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE): PricingResult {
+export function calculateXiaomiPrice(
+  model: string,
+  reference: CashifyGetUptoReference,
+  diagnostics: DiagnosticsType,
+  semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE,
+  inrConfig: InrDeductionConfig = xiaomiInrDeductions()
+): PricingResult {
   if (!reference || reference <= 0) return { cashifyConditionEquivalent: 0, fhoneifyPrice: 0 };
 
   const lowerModel = String(model || "").toLowerCase();
@@ -626,9 +634,12 @@ export function calculateXiaomiPrice(model: string, reference: CashifyGetUptoRef
     physicalScale: 1.0,
   };
 
+  // Out of warranty: Cashify's cut for a clean phone of this model, where
+  // measured (fixed-₹ model only); otherwise the family age table.
+  const outOfWarranty = (inrConfig.enabled && warrantyRetentionFor(inrConfig, model)) || ageConfig.above11;
   let ageMultiplier = ageConfig.below3;
   if (diagnostics.warranty === false || diagnostics.mobileAge === "above11") {
-    ageMultiplier = ageConfig.above11;
+    ageMultiplier = outOfWarranty;
   } else if (diagnostics.mobileAge) {
     const k = diagnostics.mobileAge.toLowerCase();
     if (k.includes("3") && k.includes("6")) ageMultiplier = ageConfig["3to6"];
@@ -638,12 +649,25 @@ export function calculateXiaomiPrice(model: string, reference: CashifyGetUptoRef
   const hasValidBill = diagnostics.validBill === true || (diagnostics.accessories || []).includes("bill");
   if (!hasValidBill && diagnostics.warranty !== false) ageMultiplier -= 0.08;
 
+  const deadPhonePrice = reference <= 5000 ? 200 : 1200;
+  if (inrConfig.enabled) {
+    const { value } = inrConditionValue({
+      config: inrConfig,
+      model,
+      reference,
+      ageRetention: questionnaireAgeFactor(ageMultiplier, semantics),
+      diagnostics,
+      deadPhonePrice,
+    });
+    return finalizeConditionQuote(reference, diagnostics.calls === false ? deadPhonePrice : value);
+  }
+
   const hasBox = (diagnostics.accessories || []).includes("box") || diagnostics.box === true;
   const boxBonus = hasBox ? COMMON_BONUSES.box : 0;
 
   const adjustments = calculateConditionAdjustments(diagnostics, params, { questionnaire: semantics });
   let cashifyPrice = reference * questionnaireAgeFactor(ageMultiplier, semantics) * adjustments.conditionRetention + boxBonus;
-  if (diagnostics.calls === false) cashifyPrice = reference <= 5000 ? 200 : 1200;
+  if (diagnostics.calls === false) cashifyPrice = deadPhonePrice;
 
   return finalizeConditionQuote(reference, cashifyPrice);
 }
