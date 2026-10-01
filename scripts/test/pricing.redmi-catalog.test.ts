@@ -28,7 +28,7 @@ for (const device of added) {
   assert.equal(resolveReference({ device, snapshot: {} }), null, `${device.model}: unverified price fallback`);
   assert.equal(refresh.entries.filter(entry => deviceKey(entry.device) === deviceKey(device)).length, 1);
   assert.equal(refresh.entries.find(entry => deviceKey(entry.device) === deviceKey(device))?.cashifyLink, device.cashifyLink);
-  assert.equal(inr.modelGroups[device.model], undefined, `${device.model}: INR model activated`);
+  assert.equal(inr.modelGroups[device.model.toLowerCase().trim()], undefined, `${device.model}: INR model activated`);
 }
 assert.equal(SEED_DEVICES.some(d => d.model === 'Xiaomi Redmi Note 11' && d.storage === '4 GB/128 GB'), false);
 assert.equal(SEED_DEVICES.some(d => d.model === 'Xiaomi Redmi Note 12' && d.storage === '6 GB/128 GB' && d.cashifyLink.includes('5g')), false);

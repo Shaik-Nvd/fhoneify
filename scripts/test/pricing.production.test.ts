@@ -180,8 +180,13 @@ async function run() {
     assert.ok(checked > 6000, `expected to check the full catalog, checked ${checked}`);
   });
 
-  await test('every catalog device resolves a base price (nothing falls through to an invented number)', () => {
-    const unresolved = catalog.filter((d) => !resolveReference({ device: d }));
+  await test('priced catalog devices resolve; explicitly pending entries have no invented fallback', () => {
+    for (const d of catalog.filter(d => d.referencePriceStatus === 'pending')) {
+      assert.equal(d.basePrice, undefined);
+      assert.equal(resolveReference({ device: d }), null);
+      assert.equal(snapshotPrices[materializedSnapshotKey(d.model, d.storage)], undefined);
+    }
+    const unresolved = catalog.filter((d) => d.referencePriceStatus !== 'pending' && !resolveReference({ device: d }));
     assert.equal(unresolved.length, 0, `unresolved: ${unresolved.slice(0, 3).map((d) => d.model).join(', ')}`);
   });
 
