@@ -2,6 +2,25 @@
 
 Branch `fix/xiaomi-inr-deductions`. Status: **calibrated and enabled for 9 models. All 20 benchmark cases are within ±3% (max 1.78%, mean 0.71%).** Nothing is deployed.
 
+## Independent evidence and opt-in candidate (2026-10-01)
+
+The benchmark status above is calibration only. The cap-corrected engine's
+original independent holdout is 5.51% MAPE, 14.45% maximum, 3/9 within 3%.
+See [the separate candidate validation report](XIAOMI_CANDIDATE_VALIDATION_2026-10-01.md)
+for the preserved frozen results, error decomposition and new observations.
+
+An opt-in research module now supports only Xiaomi 17 12/512 and Turbo 5
+12/256 under the verified warranty-No, bill-Yes, box-only, age/eSIM-not-asked
+route. It pins independently observed clean baselines and display/charging
+costs; both new combined-fault predictions match exactly. It is not imported
+by production, and the active nine-model tables remain unchanged.
+
+Note 15 Pro+ remains blocked: the new valid six-fault Cashify Selling price
+is INR 560 versus the existing INR model's 16,630. The cracked-glass route
+omits age despite the initial warranty-Yes answer; do not force an
+in-warranty plus Below-3-months state or infer a new coefficient. Raw evidence
+stays local and ignored. Production activation still requires separate approval.
+
 ## Old formula
 
 Call chain: `app/quote/page.tsx` → `POST /api/quote/price` → `lib/pricing/pricingService.ts` `quote()` → `lib/pricing/engine.ts` `resolveReference` + `priceDevice` → `lib/pricingCalculator.ts` `calculateFhoneifyPrice` → `calculateXiaomiPrice`.

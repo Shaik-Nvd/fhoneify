@@ -1,0 +1,276 @@
+{
+  "results": [
+    {
+      "name": "active",
+      "developmentOnly": true,
+      "n": 6,
+      "mape": 6.9086889072765425,
+      "maxAPE": 14.450127877237852,
+      "rows": [
+        {
+          "id": "V1",
+          "observed": 33720,
+          "predicted": 38220,
+          "error": 4500,
+          "ape": 13.345195729537366
+        },
+        {
+          "id": "V2",
+          "observed": 15640,
+          "predicted": 17900,
+          "error": 2260,
+          "ape": 14.450127877237852
+        },
+        {
+          "id": "V3",
+          "observed": 41220,
+          "predicted": 41200,
+          "error": -20,
+          "ape": 0.048520135856380396
+        },
+        {
+          "id": "V4",
+          "observed": 18640,
+          "predicted": 19280,
+          "error": 640,
+          "ape": 3.4334763948497855
+        },
+        {
+          "id": "V7",
+          "observed": 19640,
+          "predicted": 20820,
+          "error": 1180,
+          "ape": 6.008146639511201
+        },
+        {
+          "id": "C0-V1",
+          "observed": 42720,
+          "predicted": 44500,
+          "error": 1780,
+          "ape": 4.166666666666667
+        }
+      ]
+    },
+    {
+      "name": "baseline-only",
+      "developmentOnly": true,
+      "n": 6,
+      "mape": 3.705934699660183,
+      "maxAPE": 8.066429418742587,
+      "rows": [
+        {
+          "id": "V1",
+          "observed": 33720,
+          "predicted": 36440,
+          "error": 2720,
+          "ape": 8.066429418742587
+        },
+        {
+          "id": "V2",
+          "observed": 15640,
+          "predicted": 16720,
+          "error": 1080,
+          "ape": 6.90537084398977
+        },
+        {
+          "id": "V3",
+          "observed": 41220,
+          "predicted": 39420,
+          "error": -1800,
+          "ape": 4.366812227074236
+        },
+        {
+          "id": "V4",
+          "observed": 18640,
+          "predicted": 18100,
+          "error": -540,
+          "ape": 2.8969957081545066
+        },
+        {
+          "id": "V7",
+          "observed": 19640,
+          "predicted": 19640,
+          "error": 0,
+          "ape": 0
+        },
+        {
+          "id": "C0-V1",
+          "observed": 42720,
+          "predicted": 42720,
+          "error": 0,
+          "ape": 0
+        }
+      ]
+    },
+    {
+      "name": "defect-only",
+      "developmentOnly": true,
+      "n": 6,
+      "mape": 5.607850140740479,
+      "maxAPE": 7.544757033248082,
+      "rows": [
+        {
+          "id": "V1",
+          "observed": 33720,
+          "predicted": 35500,
+          "error": 1780,
+          "ape": 5.27876631079478
+        },
+        {
+          "id": "V2",
+          "observed": 15640,
+          "predicted": 16820,
+          "error": 1180,
+          "ape": 7.544757033248082
+        },
+        {
+          "id": "V3",
+          "observed": 41220,
+          "predicted": 43000,
+          "error": 1780,
+          "ape": 4.318292091217855
+        },
+        {
+          "id": "V4",
+          "observed": 18640,
+          "predicted": 19820,
+          "error": 1180,
+          "ape": 6.330472103004292
+        },
+        {
+          "id": "V7",
+          "observed": 19640,
+          "predicted": 20820,
+          "error": 1180,
+          "ape": 6.008146639511201
+        },
+        {
+          "id": "C0-V1",
+          "observed": 42720,
+          "predicted": 44500,
+          "error": 1780,
+          "ape": 4.166666666666667
+        }
+      ]
+    },
+    {
+      "name": "model-specific-both",
+      "developmentOnly": true,
+      "n": 6,
+      "mape": 0,
+      "maxAPE": 0,
+      "rows": [
+        {
+          "id": "V1",
+          "observed": 33720,
+          "predicted": 33720,
+          "error": 0,
+          "ape": 0
+        },
+        {
+          "id": "V2",
+          "observed": 15640,
+          "predicted": 15640,
+          "error": 0,
+          "ape": 0
+        },
+        {
+          "id": "V3",
+          "observed": 41220,
+          "predicted": 41220,
+          "error": 0,
+          "ape": 0
+        },
+        {
+          "id": "V4",
+          "observed": 18640,
+          "predicted": 18640,
+          "error": 0,
+          "ape": 0
+        },
+        {
+          "id": "V7",
+          "observed": 19640,
+          "predicted": 19640,
+          "error": 0,
+          "ape": 0
+        },
+        {
+          "id": "C0-V1",
+          "observed": 42720,
+          "predicted": 42720,
+          "error": 0,
+          "ape": 0
+        }
+      ]
+    },
+    {
+      "name": "pooled-shares",
+      "developmentOnly": true,
+      "n": 6,
+      "mape": 1.0680194236890526,
+      "maxAPE": 1.7703862660944205,
+      "rows": [
+        {
+          "id": "V1",
+          "observed": 33720,
+          "predicted": 33540,
+          "error": -180,
+          "ape": 0.5338078291814946
+        },
+        {
+          "id": "V2",
+          "observed": 15640,
+          "predicted": 15730,
+          "error": 90,
+          "ape": 0.5754475703324808
+        },
+        {
+          "id": "V3",
+          "observed": 41220,
+          "predicted": 40510,
+          "error": -710,
+          "ape": 1.722464822901504
+        },
+        {
+          "id": "V4",
+          "observed": 18640,
+          "predicted": 18970,
+          "error": 330,
+          "ape": 1.7703862660944205
+        },
+        {
+          "id": "V7",
+          "observed": 19640,
+          "predicted": 19820,
+          "error": 180,
+          "ape": 0.9164969450101833
+        },
+        {
+          "id": "C0-V1",
+          "observed": 42720,
+          "predicted": 42340,
+          "error": -380,
+          "ape": 0.8895131086142322
+        }
+      ]
+    }
+  ],
+  "pooledHypothesis": {
+    "retention": 0.7265800865800865,
+    "displayShare": 0.26649170682461687,
+    "chargingShare": 0.055273047771529527
+  },
+  "anchorOnlyIncompatible": {
+    "xiaomi17": {
+      "displayRequiredAnchor": 47368.42105263158,
+      "chargingRequiredAnchor": 15000
+    },
+    "turbo5": {
+      "displayRequiredAnchor": 21052.631578947367,
+      "chargingRequiredAnchor": 10000
+    }
+  },
+  "chosen": "model-specific-both; opt-in, two exact variants, only measured defects plus unseen combination",
+  "independentSuccess": false
+}
