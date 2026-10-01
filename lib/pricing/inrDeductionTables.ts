@@ -48,6 +48,7 @@ export function tableFromPercentRules(label: string, anchor: number, touchRetent
       looseScreen: at(b.looseScreen),
     },
     functional: Object.fromEntries(Object.entries(COMMON_FUNCTIONAL_PENALTIES).map(([fault, share]) => [fault, at(share)])),
+    functionalCap: anchor,
     box: COMMON_BONUSES.box,
   };
 }
@@ -77,7 +78,7 @@ export function xiaomiInrDeductions(): InrDeductionConfig {
 }
 
 const buildXiaomiConfig = (): InrDeductionConfig => ({
-  version: 'xiaomi-inr/2026-10-01',
+  version: 'xiaomi-inr/2026-10-01-functional-cap',
   enabled: true,
   groups: {
     // One anchor for four models, 8 benchmark cases, all within ±1.8%.

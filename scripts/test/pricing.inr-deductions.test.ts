@@ -34,6 +34,7 @@ const GROUP: InrGroupTable = {
   },
   body: { scratchesHeavy: 900, scratchesLight: 300, dentsMajor: 1400, dentsMinor: 500, panelMissing: 2500, panelCracked: 2000, bent: 3000, looseScreen: 1800 },
   functional: { charging: 1700, back_camera: 4000 },
+  functionalCap: 10000,
   box: 380,
 };
 
@@ -101,6 +102,28 @@ test('functional faults add; unrecognized faults cost nothing', () => {
   assert.equal(deduction({ ...CLEAN, hardware: ['charging', 'back_camera'] }), 5700);
   assert.equal(deduction({ ...CLEAN, hardware: ['charging', 'charging'] }), 1700);
   assert.equal(deduction({ ...CLEAN, hardware: ['Battery in Service'] }), 0);
+});
+
+test('functional faults saturate at the repair anchor, preserving the old aggregate cap', () => {
+  const shipped = xiaomiInrDeductions();
+  const group = 'redmi-note-15-pro-plus';
+  const faults = ['fingerprint', 'battery_service', 'front_camera', 'back_camera', 'wifi', 'speaker', 'audio_receiver', 'charging'];
+  const table = shipped.groups[group];
+  // Existing weights at A=₹6,610 sum to ₹7,050 before the aggregate cap.
+  assert.equal(faults.reduce((sum, fault) => sum + table.functional[fault], 0), 7050);
+  const diagnostic = { ...CLEAN, warranty: true, mobileAge: 'below3', hardware: faults };
+  const capped = inrConditionValue({ config: shipped, group, reference: 28100, ageRetention: 1, diagnostics: diagnostic, deadPhonePrice: 1200 });
+  assert.equal(capped.functional, 6610);
+  assert.equal(capped.value, 21870);
+  const moreFaults = { ...diagnostic, hardware: [...faults, 'microphone', 'unknown', 'charging'] };
+  const saturated = inrConditionValue({ config: shipped, group, reference: 28100, ageRetention: 1, diagnostics: moreFaults, deadPhonePrice: 1200 });
+  assert.equal(saturated.functional, capped.functional);
+  assert.equal(saturated.value, capped.value);
+  // The cap covers functional faults only: screen charges still add.
+  const cracked = inrConditionValue({ config: shipped, group, reference: 28100, ageRetention: 1,
+    diagnostics: { ...moreFaults, screenCondition: 'Screen cracked/ glass broken' }, deadPhonePrice: 1200 });
+  assert.equal(cracked.functional, 6610);
+  assert.equal(cracked.value, 19560);
 });
 
 test('local display and body damage overlap: larger in full plus 0.327 x smaller', () => {
@@ -190,7 +213,7 @@ test('shipped tables: every group is complete, positive, and capped sensibly', (
   for (const tier of shipped.tierGroups) assert.ok(shipped.groups[tier.group], `tier group ${tier.group} missing`);
   for (const group of Object.values(shipped.modelGroups)) assert.ok(shipped.groups[group], `model group ${group} missing`);
   for (const [name, t] of Object.entries(shipped.groups)) {
-    const all = [t.touchFailure, ...Object.values(t.screen), ...Object.values(t.body), ...Object.values(t.functional)];
+    const all = [t.touchFailure, t.functionalCap, ...Object.values(t.screen), ...Object.values(t.body), ...Object.values(t.functional)];
     assert.ok(all.every((v) => Number.isFinite(v) && v >= 0), `${name}: non-finite or negative value`);
   }
   assert.ok(shipped.defaultWarrantyRetention === null || (shipped.defaultWarrantyRetention > 0 && shipped.defaultWarrantyRetention <= 1));

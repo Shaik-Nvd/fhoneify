@@ -128,3 +128,11 @@ Unchanged across 48 rows: Apple, Samsung, OnePlus, Oppo, Vivo, Realme, Google, N
 1. **Only "screen not original"** (everything else clean, warranty No): one flagship plus one Redmi. Splits localDisplay from display defects and tests the cap (assumption 1).
 2. **Only "charging port not working"**: same two phones. Splits Combo 2 (assumption 2).
 3. **Clean, warranty No** for 17T, Redmi Note 15 Pro+ and Redmi Turbo 5. Replaces the 0.764 / 0.74 retention guesses for the single-model groups (assumptions 4 and 5).
+
+## Functional aggregate cap correction (2026-10-01)
+
+The INR implementation now caps the sum of recognized, deduplicated functional-fault deductions at its existing repair-cost anchor. This restores the old aggregate functional penalty's 100% cap without changing any weight or anchor. Screen/body deductions remain separate.
+
+At the Redmi Note 15 Pro+ anchor of INR 6,610, the eight-fault regression summed to INR 7,050 before correction. It now charges INR 6,610. The targeted unit suite went from 21 passing and one failing new regression to 22 passing; the calibration remains 20/20 within 3% (mean 0.71%, maximum 1.78%). Those calibration rows are fitted evidence, not independent validation.
+
+The original independent V1-V10 register in ignored local research storage remains immutable. V1-V9 predictions are unchanged by this correction. Additional cap observations are separately preregistered; they do not replace the original cases. Production activation remains gated on independently verified final Selling prices and questionnaire profiles.

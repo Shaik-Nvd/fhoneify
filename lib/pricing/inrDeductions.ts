@@ -65,6 +65,9 @@ export interface InrGroupTable {
    * Unrecognized faults cost nothing, as in the percentage model
    * (lib/pricing/diagnostics.ts). */
   functional: Record<string, number>;
+  /** The old aggregate functional penalty saturates at 100% of its base.
+   * In the INR model that base is this group's unchanged repair anchor. */
+  functionalCap: number;
   box: number;
 }
 
@@ -180,7 +183,7 @@ function bodyDeduction(d: DiagnosticsType, t: InrGroupTable): number {
 function functionalDeduction(d: DiagnosticsType, t: InrGroupTable): number {
   let total = 0;
   for (const fault of new Set(d.hardware || [])) total += t.functional[fault] ?? 0;
-  return total;
+  return Math.min(total, t.functionalCap);
 }
 
 /**
