@@ -1,6 +1,6 @@
 import { CASHIFY_CALIBRATION } from './pricing/calibration';
 import { UNKNOWN_QUESTIONNAIRE, type QuestionnaireSemantics } from './pricing/questionnaireSemantics';
-import { inrConditionValue, warrantyRetentionFor, type InrDeductionConfig } from './pricing/inrDeductions';
+import { inrConditionValue, resolveInrGroup, type InrDeductionConfig } from './pricing/inrDeductions';
 import { xiaomiInrDeductions } from './pricing/inrDeductionTables';
 
 export interface ModelParams {
@@ -634,9 +634,14 @@ export function calculateXiaomiPrice(
     physicalScale: 1.0,
   };
 
-  // Out of warranty: Cashify's cut for a clean phone of this model, where
-  // measured (fixed-₹ model only); otherwise the family age table.
-  const outOfWarranty = (inrConfig.enabled && warrantyRetentionFor(inrConfig, model)) || ageConfig.above11;
+  // Models with a calibrated repair-cost group use fixed-₹ deductions; out of
+  // warranty they keep Cashify's measured clean-phone share (Redmi Note has
+  // no measurement yet and keeps its age table).
+  const inrGroup = resolveInrGroup(inrConfig, model, reference);
+  const outOfWarranty = !inrGroup
+    ? ageConfig.above11
+    : inrConfig.warrantyRetention[lowerModel.trim()] ??
+      (isRedmiNote ? ageConfig.above11 : inrConfig.defaultWarrantyRetention ?? ageConfig.above11);
   let ageMultiplier = ageConfig.below3;
   if (diagnostics.warranty === false || diagnostics.mobileAge === "above11") {
     ageMultiplier = outOfWarranty;
@@ -650,10 +655,10 @@ export function calculateXiaomiPrice(
   if (!hasValidBill && diagnostics.warranty !== false) ageMultiplier -= 0.08;
 
   const deadPhonePrice = reference <= 5000 ? 200 : 1200;
-  if (inrConfig.enabled) {
+  if (inrGroup) {
     const { value } = inrConditionValue({
       config: inrConfig,
-      model,
+      group: inrGroup,
       reference,
       ageRetention: questionnaireAgeFactor(ageMultiplier, semantics),
       diagnostics,

@@ -45,12 +45,13 @@ const CONFIG: InrDeductionConfig = {
   modelGroups: { 'xiaomi pinned': 'cheap' },
   tierGroups: [{ maxReference: 10000, group: 'cheap' }, { maxReference: null, group: 'test' }],
   warrantyRetention: { 'xiaomi measured': 0.62 },
+  defaultWarrantyRetention: null,
   roundTo: 10,
 };
 
 const CLEAN: DiagnosticsType = { ...COMBO_0 };
-const value = (d: DiagnosticsType, reference = 50000, ageRetention = 1, model = 'Xiaomi Test') =>
-  inrConditionValue({ config: CONFIG, model, reference, ageRetention, diagnostics: d, deadPhonePrice: 1200 });
+const value = (d: DiagnosticsType, reference = 50000, ageRetention = 1, group = 'test') =>
+  inrConditionValue({ config: CONFIG, group, reference, ageRetention, diagnostics: d, deadPhonePrice: 1200 });
 
 test('clean phone: R x retention + box, rounded to ₹10', () => {
   assert.equal(value(CLEAN, 50000, 0.7).value, 35380);
@@ -104,6 +105,24 @@ test('group: explicit model membership, then Get Upto tier', () => {
   assert.equal(resolveInrGroup(CONFIG, 'Xiaomi Pinned', 90000), 'cheap');
   assert.equal(resolveInrGroup(CONFIG, 'Xiaomi Other', 9000), 'cheap');
   assert.equal(resolveInrGroup(CONFIG, 'Xiaomi Other', 10001), 'test');
+  assert.equal(resolveInrGroup({ ...CONFIG, tierGroups: [] }, 'Xiaomi Other', 10001), null);
+  assert.equal(resolveInrGroup({ ...CONFIG, enabled: false }, 'Xiaomi Pinned', 90000), null);
+});
+
+test('without a group the percentage model prices the phone unchanged', () => {
+  const off = { ...CONFIG, enabled: false };
+  const onlyPinned = { ...CONFIG, tierGroups: [] };
+  for (const d of [COMBO_0, COMBO_1, COMBO_2]) {
+    assert.deepEqual(calculateXiaomiPrice('Xiaomi Other', 40000, d, undefined, onlyPinned), calculateXiaomiPrice('Xiaomi Other', 40000, d, undefined, off));
+  }
+});
+
+test('out-of-warranty retention: own measurement, then default, Redmi Note keeps its age table', () => {
+  const withDefault = { ...CONFIG, defaultWarrantyRetention: 0.8 };
+  const at = (model: string) => calculateXiaomiPrice(model, 40000, COMBO_0, undefined, withDefault).cashifyConditionEquivalent;
+  assert.equal(at('Xiaomi Measured'), Math.round((40000 * 0.62 + 380) / 10) * 10);
+  assert.equal(at('Xiaomi Other'), 40000 * 0.8 + 380);
+  assert.equal(at('Xiaomi Redmi Note 99'), Math.round((40000 * 0.74 + 380) / 10) * 10);
 });
 
 test('more damage never pays more (every pair of single answers)', () => {
@@ -169,14 +188,22 @@ test('percent-rule tables keep the old relative weights', () => {
 });
 
 test('enabled shipped tables never break the engine guardrails on catalog Xiaomi devices', () => {
-  const on = { ...xiaomiInrDeductions(), enabled: true };
+  const shipped = xiaomiInrDeductions();
+  // Every group, at every catalog Xiaomi price (worst case: a group applied
+  // well outside its own price range), with heavy damage included.
   const xiaomi = (SEED_DEVICES as { brand: string; model: string; basePrice?: number }[]).filter((d) => d.brand === 'Xiaomi' && d.basePrice);
-  for (const d of xiaomi) {
-    for (const diag of [COMBO_0, COMBO_1, COMBO_2, PERFECT_CONDITION_DIAGNOSTICS]) {
-      const r = calculateXiaomiPrice(d.model, d.basePrice!, diag, undefined, on);
-      assert.ok(Number.isInteger(r.cashifyConditionEquivalent) && r.cashifyConditionEquivalent % 10 === 0, `${d.model}: not a ₹10 multiple`);
-      assert.ok(r.fhoneifyPrice >= r.cashifyConditionEquivalent, `${d.model}: uplift below equivalent`);
-      assert.ok(r.cashifyConditionEquivalent <= d.basePrice! + 380 + 10, `${d.model}: above reference + box`);
+  const wrecked = { ...COMBO_1, touch: false, hardware: ['charging', 'back_camera', 'wifi'], bodyBent: 'Bent/ curved panel' };
+  for (const group of Object.keys(shipped.groups)) {
+    const on = { ...shipped, modelGroups: {}, tierGroups: [{ maxReference: null, group }] };
+    for (const d of xiaomi) {
+      for (const diag of [COMBO_0, COMBO_1, COMBO_2, PERFECT_CONDITION_DIAGNOSTICS, wrecked]) {
+        const r = calculateXiaomiPrice(d.model, d.basePrice!, diag, undefined, on);
+        const where = `${group} on ${d.model} @ ${d.basePrice}`;
+        assert.ok(Number.isInteger(r.cashifyConditionEquivalent) && r.cashifyConditionEquivalent % 10 === 0, `${where}: not a ₹10 multiple`);
+        assert.ok(r.fhoneifyPrice >= r.cashifyConditionEquivalent, `${where}: uplift below equivalent`);
+        assert.ok(r.cashifyConditionEquivalent <= d.basePrice! + 380 + 10, `${where}: above reference + box`);
+        assert.ok(r.cashifyConditionEquivalent >= (d.basePrice! <= 5000 ? 200 : 1200), `${where}: below the dead-phone price`);
+      }
     }
   }
 });

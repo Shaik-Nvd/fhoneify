@@ -56,9 +56,20 @@ export function tableFromPercentRules(label: string, anchor: number): InrGroupTa
 }
 
 /**
- * PROVISIONAL until calibrated against the owner's 2026-10-01 captures
- * (clean + warranty No per model). `enabled: false` keeps Xiaomi on the
- * percentage model until scripts/calibrate-pricing.ts passes.
+ * Calibrated 2026-10-01 against the Cashify benchmark
+ * (scripts/pricing/fixtures/cashify-benchmark-2026-10-01.json; fit with
+ * scripts/pricing/fit-inr-tables.ts, checked with npm run pricing:calibrate).
+ *
+ * Each group is the old percentage rules taken at a repair-cost anchor A
+ * instead of at the phone's age-adjusted price. On all nine models Cashify's
+ * two condition deductions keep the old rules' ratio (0.25 A : 0.49 A,
+ * observed 0.47-0.54), while A itself does not follow price: the four
+ * current flagships share one anchor from ₹37k to ₹75k Get Upto.
+ *
+ * Only models listed in modelGroups use fixed-₹ deductions; every other
+ * Xiaomi / Redmi / POCO model keeps the percentage model (no tier fallback)
+ * until Cashify evidence covers it. A group serves every storage variant of
+ * its models - repair cost does not depend on storage.
  *
  * Built lazily: pricingCalculator.ts imports this module and this module
  * reads pricingCalculator's constants, so nothing may run at import time.
@@ -69,21 +80,43 @@ export function xiaomiInrDeductions(): InrDeductionConfig {
 }
 
 const buildXiaomiConfig = (): InrDeductionConfig => ({
-  version: 'xiaomi-inr/provisional',
-  enabled: false,
+  version: 'xiaomi-inr/2026-10-01',
+  enabled: true,
   groups: {
-    budget: tableFromPercentRules('Budget (Get Upto <= ₹15k)', 10000),
-    midrange: tableFromPercentRules('Mid-range (₹15k-30k)', 22000),
-    upper: tableFromPercentRules('Upper mid-range (₹30k-45k)', 37000),
-    flagship: tableFromPercentRules('Flagship (> ₹45k)', 60000),
+    // One anchor for four models, 8 benchmark cases, all within ±1.8%.
+    'xiaomi-flagship': tableFromPercentRules('Xiaomi 15 / 15 Ultra / 17 / 17 Ultra', 33040),
+    // Single-model groups: each anchor is fitted from that model's own two
+    // cases (one degree of freedom left per model). Adding 14 Ultra to the
+    // flagship group puts it at -3.9%; 14 + 17T together put 17T at +4.9%.
+    'xiaomi-14-ultra': tableFromPercentRules('Xiaomi 14 Ultra', 31260),
+    'xiaomi-17t': tableFromPercentRules('Xiaomi 17T', 28810),
+    'xiaomi-14': tableFromPercentRules('Xiaomi 14', 27000),
+    'redmi-turbo-5': tableFromPercentRules('Xiaomi Redmi Turbo 5', 15350),
+    // Low anchor: Cashify deducts only ₹1.5k between the two combos here.
+    // Its Get Upto (₹28,100) is from 2026-09-20 and the Note out-of-warranty
+    // retention (0.74) is unmeasured - recheck both first if this drifts.
+    'redmi-note-15-pro-plus': tableFromPercentRules('Xiaomi Redmi Note 15 Pro Plus 5G', 6610),
   },
-  modelGroups: {},
-  tierGroups: [
-    { maxReference: 15000, group: 'budget' },
-    { maxReference: 30000, group: 'midrange' },
-    { maxReference: 45000, group: 'upper' },
-    { maxReference: null, group: 'flagship' },
-  ],
-  warrantyRetention: {},
+  modelGroups: {
+    'xiaomi 15': 'xiaomi-flagship',
+    'xiaomi 15 ultra': 'xiaomi-flagship',
+    'xiaomi 17': 'xiaomi-flagship',
+    'xiaomi 17 ultra': 'xiaomi-flagship',
+    'xiaomi 14 ultra': 'xiaomi-14-ultra',
+    'xiaomi 17t': 'xiaomi-17t',
+    'xiaomi 14': 'xiaomi-14',
+    'xiaomi redmi turbo 5': 'redmi-turbo-5',
+    'xiaomi redmi note 15 pro plus 5g': 'redmi-note-15-pro-plus',
+  },
+  tierGroups: [],
+  // Clean, warranty No, bill, box (owner captures 2026-10-01):
+  // Xiaomi 14 ₹21,380 on ₹27,400; 14 Ultra ₹29,330 on ₹37,980.
+  warrantyRetention: {
+    'xiaomi 14': 0.7664,
+    'xiaomi 14 ultra': 0.7622,
+  },
+  // Mean of the two measurements above, for listed non-Note models without
+  // their own capture (0.764 fits the benchmark better than the old 0.75).
+  defaultWarrantyRetention: 0.764,
   roundTo: 10,
 });

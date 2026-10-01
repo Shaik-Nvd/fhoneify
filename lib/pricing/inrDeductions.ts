@@ -68,11 +68,15 @@ export interface InrDeductionConfig {
   /** Lowercase catalog model name -> group. Checked before tierGroups. */
   modelGroups: Record<string, string>;
   /** Fallback by Cashify Get Upto, ascending; first `maxReference >= R` wins,
-   * null = no upper bound. */
+   * null = no upper bound. Empty = models without an explicit group keep
+   * the percentage model. */
   tierGroups: { maxReference: number | null; group: string }[];
   /** Lowercase catalog model name -> share of Get Upto Cashify pays for a
-   * clean phone answered "warranty: No". Absent = the brand's age table. */
+   * clean phone answered "warranty: No". */
   warrantyRetention: Record<string, number>;
+  /** Out-of-warranty retention for fixed-₹ models without their own
+   * measurement. null = the brand's age table. */
+  defaultWarrantyRetention: number | null;
   roundTo: number;
 }
 
@@ -87,16 +91,13 @@ export interface InrConditionBreakdown {
 
 const lower = (value: unknown) => String(value ?? '').toLowerCase();
 
-export function resolveInrGroup(config: InrDeductionConfig, model: string, reference: number): string {
+/** The model's repair-cost group, or null when the fixed-₹ model does not
+ * cover it (disabled, or no explicit group and no tier fallback). */
+export function resolveInrGroup(config: InrDeductionConfig, model: string, reference: number): string | null {
+  if (!config.enabled) return null;
   const explicit = config.modelGroups[lower(model).trim()];
   if (explicit) return explicit;
-  const tier = config.tierGroups.find((t) => t.maxReference === null || reference <= t.maxReference);
-  if (!tier) throw new Error(`inrDeductions: no tier group covers reference ${reference}`);
-  return tier.group;
-}
-
-export function warrantyRetentionFor(config: InrDeductionConfig, model: string): number | undefined {
-  return config.warrantyRetention[lower(model).trim()];
+  return config.tierGroups.find((t) => t.maxReference === null || reference <= t.maxReference)?.group ?? null;
 }
 
 function screenDeduction(d: DiagnosticsType, t: InrGroupTable): number {
@@ -168,14 +169,13 @@ function functionalDeduction(d: DiagnosticsType, t: InrGroupTable): number {
  */
 export function inrConditionValue(params: {
   config: InrDeductionConfig;
-  model: string;
+  group: string;
   reference: number;
   ageRetention: number;
   diagnostics: DiagnosticsType;
   deadPhonePrice: number;
 }): InrConditionBreakdown {
-  const { config, model, reference, ageRetention, diagnostics, deadPhonePrice } = params;
-  const group = resolveInrGroup(config, model, reference);
+  const { config, group, reference, ageRetention, diagnostics, deadPhonePrice } = params;
   const table = config.groups[group];
   if (!table) throw new Error(`inrDeductions: unknown group "${group}"`);
 
