@@ -77,8 +77,22 @@ export function xiaomiInrDeductions(): InrDeductionConfig {
   return (xiaomiConfig ??= buildXiaomiConfig());
 }
 
+/**
+ * Redmi Note 10 Pro Max 6/128 (AMOLED). Verified Cashify quotes 2026-10-02
+ * (scripts/pricing/fixtures/xiaomi-workbook-verified-development-2026-10-02.json,
+ * FM037, Get Upto ₹5,970, warranty NOT_ASKED, stable closing control):
+ * clean ₹5,950, visible lines ₹2,890, heavy spots ₹2,890 - both display
+ * faults cost ₹3,060, about half the phone. The percentage model took ~₹1.8k
+ * and overpaid 58-68%. The anchor is fitted so lines = 0.30 A = ₹3,060; heavy
+ * spots are pinned to the same observed ₹3,060.
+ */
+function redmiNote10ProMaxTable(): InrGroupTable {
+  const table = tableFromPercentRules('Xiaomi Redmi Note 10 Pro Max', 10200);
+  return { ...table, screen: { ...table.screen, lines: 3060, spotsHeavy: 3060 } };
+}
+
 const buildXiaomiConfig = (): InrDeductionConfig => ({
-  version: 'xiaomi-inr/2026-10-01-functional-cap',
+  version: 'xiaomi-inr/2026-10-02-note10pm-display',
   enabled: true,
   groups: {
     // One anchor for four models, 8 benchmark cases, all within ±1.8%.
@@ -94,6 +108,7 @@ const buildXiaomiConfig = (): InrDeductionConfig => ({
     // Its Get Upto (₹28,100) is from 2026-09-20 and the Note out-of-warranty
     // retention (0.74) is unmeasured - recheck both first if this drifts.
     'redmi-note-15-pro-plus': tableFromPercentRules('Xiaomi Redmi Note 15 Pro Plus 5G', 6610),
+    'redmi-note-10-pro-max': redmiNote10ProMaxTable(),
   },
   modelGroups: {
     'xiaomi 15': 'xiaomi-flagship',
@@ -105,6 +120,7 @@ const buildXiaomiConfig = (): InrDeductionConfig => ({
     'xiaomi 14': 'xiaomi-14',
     'xiaomi redmi turbo 5': 'redmi-turbo-5',
     'xiaomi redmi note 15 pro plus 5g': 'redmi-note-15-pro-plus',
+    'xiaomi redmi note 10 pro max': 'redmi-note-10-pro-max',
   },
   tierGroups: [],
   // Clean, warranty No, bill, box (owner captures 2026-10-01):
