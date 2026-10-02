@@ -13,6 +13,8 @@ import {
   resolveReference,
 } from './engine';
 import { UNKNOWN_QUESTIONNAIRE, type QuestionnaireSemantics } from './questionnaireSemantics';
+import { releaseCandidateOutcome, type ReleaseCandidateOutcome } from './releaseCandidate';
+import { applyCompetitorUplift } from '../pricingCalculator';
 import { getUptoIncludesAccessories, hasBox, withoutBoxBonus, type AccessoryBasis } from './accessoryBasis';
 import type { QuestionnaireProfileStore } from '../referencePricing/questionnaire/store';
 import { questionnaireModelKey } from '../referencePricing/questionnaire/types';
@@ -54,7 +56,9 @@ export type PricingErrorCode =
   | 'INVALID_DIAGNOSTICS'
   | 'DEVICE_NOT_FOUND'
   | 'REFERENCE_PRICE_UNAVAILABLE'
-  | 'PRICING_INVARIANT_VIOLATION';
+  | 'PRICING_INVARIANT_VIOLATION'
+  /** Release candidate only: no instant binding price for this condition. */
+  | 'MANUAL_INSPECTION_REQUIRED';
 
 export interface PricingFailure {
   ok: false;
@@ -192,6 +196,7 @@ export function createPricingService(deps: PricingServiceDeps) {
     let result;
     let startingPrice;
     let accessoryBasis: AccessoryBasis = 'LEGACY_BOX_BONUS';
+    let rc: ReleaseCandidateOutcome | null = null;
     try {
       // The quote page passes the brand/model exactly as selected; pricing
       // with the catalog's own strings keeps the engine's model matching
@@ -202,6 +207,18 @@ export function createPricingService(deps: PricingServiceDeps) {
           result = priceDevice(device.brand, device.model, base.cashifyGetUptoReference, withoutBoxBonus(diagnostics), questionnaire);
           accessoryBasis = 'GET_UPTO_INCLUDES_BOX_AND_CHARGER';
         } else accessoryBasis = 'GET_UPTO_INCLUDES_BOX_MISSING_BOX_UNMEASURED';
+      }
+      if (releaseCandidate) {
+        rc = releaseCandidateOutcome({ device, reference: base.cashifyGetUptoReference, referenceFresh: base.referenceStatus === 'fresh',
+          questionnaire, diagnostics, now: at });
+        if (rc.kind === 'MANUAL_INSPECTION_REQUIRED') {
+          deps.logger.info({ deviceKey: key, reason: rc.reason }, 'Release candidate: manual inspection required');
+          return { ok: false, code: 'MANUAL_INSPECTION_REQUIRED', message: 'This condition needs an inspection before we can quote a price' };
+        }
+        if (rc.kind === 'VERIFIED') {
+          result = { cashifyConditionEquivalent: rc.cashifyConditionEquivalent,
+            fhoneifyPrice: applyCompetitorUplift(base.cashifyGetUptoReference, rc.cashifyConditionEquivalent) };
+        }
       }
       // Get Upto: the reference plus the uplift, nothing else.
       startingPrice = computeFhoneifyGetUpto(base.cashifyGetUptoReference);
@@ -249,6 +266,9 @@ export function createPricingService(deps: PricingServiceDeps) {
         referenceSource: base.referenceSource,
         cashifyConditionEquivalent: result.cashifyConditionEquivalent,
         accessoryBasis,
+        ...(rc ? { releaseCandidate: rc.kind === 'VERIFIED'
+          ? { kind: rc.kind, rule: rc.rule, evidence: rc.evidence, conditionClass: rc.conditionClass }
+          : { kind: 'LEGACY' as const, rule: 'UNVALIDATED_LEGACY', evidence: null, conditionClass: rc.conditionClass } } : {}),
       },
     };
   }

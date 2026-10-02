@@ -50,6 +50,7 @@ const PRICING_ERROR_STATUS: Record<PricingErrorCode, number> = {
   DEVICE_NOT_FOUND: 404,
   REFERENCE_PRICE_UNAVAILABLE: 409,
   PRICING_INVARIANT_VIOLATION: 500,
+  MANUAL_INSPECTION_REQUIRED: 422,
 };
 
 // The live Cashify scraper carries unresolved legal/ToS exposure
