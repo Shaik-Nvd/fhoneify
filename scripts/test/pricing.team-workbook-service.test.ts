@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import fixture from '../pricing/fixtures/team-workbook-development-2026-10-02.json';
 import cases from '../pricing/fixtures/team-workbook-development-cases-2026-10-02.json';
+import ownerCorrection from '../pricing/fixtures/owner-correction-2026-10-02.json';
 import { createTeamWorkbookResearchQuoteService, type WorkbookRouteEvidence } from '../../lib/pricing/teamWorkbookResearchQuoteService';
 import { createPricingService, type PricingServiceDeps } from '../../lib/pricing/pricingService';
 import { findCatalogDevice } from '../../lib/pricing/catalog';
@@ -35,17 +36,23 @@ const preview = createTeamWorkbookResearchQuoteService(service, { enabled: true,
 let checks = 0;
 const request = (r: typeof cases[number]) => ({ brand: r.brand, model: r.model,
   storage: findCatalogDevice(r.brand, r.model, r.storage)?.storage ?? r.storage.replace(/\s+/g, ''), diagnostics: r.diagnostics });
+const uncertain = new Set(ownerCorrection.devices.filter(d => d.verdict === 'UNCERTAIN').map(d => d.deviceId));
+let quarantined = 0;
 async function main() {
   for (const r of cases) {
     const p = await preview.quote(request(r));
     if (r.caseId.startsWith('FM003')) {
       assert(!p.ok && 'reasonCode' in p && p.reasonCode === 'REFERENCE_BASELINE_INCONSISTENT'); checks++; continue;
     }
+    if (uncertain.has(r.caseId.slice(0, 5))) {
+      assert(!p.ok && 'reasonCode' in p && p.reasonCode === 'OWNER_CORRECTION_UNMATCHED_WARRANTY', r.caseId); checks++; quarantined++; continue;
+    }
     assert(p.ok && 'provisional' in p && p.provisional && p.researchOnly, r.caseId);
     assert.equal(p.cashifyConditionEquivalent, r.observed); assert.equal('quoteToken' in p, false);
     assert.equal(p.calibrationObservedAt, null); assert.equal(p.evidenceQuality, 'TESTER_REPORTED_UNVERIFIED');
     assert.deepEqual(p.customerPayout, customerPayout(p.fhoneifyPrice, false)); checks++;
   }
+  assert.equal(quarantined, 27); checks++; // FM006/008/011/012/015/018/019/020/022, A/B/C each
   const row = cases[0], input = request(row);
   const strictResult = await strict.quote(input); assert(!strictResult.ok && 'reasonCode' in strictResult && strictResult.reasonCode === 'CALIBRATION_UNVERIFIED'); checks++;
   assert.deepEqual(await disabled.quote(input), await service.quote(input)); checks++;

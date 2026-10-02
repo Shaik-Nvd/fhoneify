@@ -2,6 +2,7 @@
  * accepts lead prices. The existing authoritative service remains untouched.
  */
 import fixture from '../../scripts/pricing/fixtures/team-workbook-development-2026-10-02.json';
+import ownerCorrection from '../../scripts/pricing/fixtures/owner-correction-2026-10-02.json';
 import type { PricingService } from './pricingService';
 import { parseDiagnostics } from './diagnostics';
 import { customerPayout } from './payout';
@@ -30,6 +31,11 @@ export function createTeamWorkbookResearchQuoteService(service: PricingService, 
     const spec = fixture.specs.find(s => s.brand === current.device.brand && s.model === current.device.model && workbookStorageIdentity(s.storage) === workbookStorageIdentity(current.device.storage));
     if (!spec) return unsupported('UNVALIDATED_VARIANT', 'No fitting data for this exact variant; whole-device holdouts are not calibration');
     if (spec.cleanRetention > 1) return unsupported('REFERENCE_BASELINE_INCONSISTENT', 'Reported clean price exceeds reported Get Upto; preserve the anomaly until reference and baseline provenance are verified');
+    // Owner correction: tester A was warranty Yes, B/C warranty No. Without a
+    // matched warranty-No clean control, A-minus-B/C may mix warranty with damage.
+    if (ownerCorrection.devices.find(d => d.deviceId === spec.deviceId)?.verdict === 'UNCERTAIN') {
+      return unsupported('OWNER_CORRECTION_UNMATCHED_WARRANTY', 'Tester A/B/C warranty answers differ and no matched warranty-No clean control exists; component costs are not isolated damage deductions');
+    }
     const at = options.now?.() ?? new Date();
     const fresh = (timestamp: string | null) => timestamp !== null && Number.isFinite(Date.parse(timestamp)) &&
       Date.parse(timestamp) <= at.getTime() && classifyFreshness({ lastVerifiedAt: timestamp, consecutiveFailures: 0, now: at }) === 'fresh';
