@@ -1,0 +1,75 @@
+{
+  "version": "fresh-glass-research/2026-10-02-v1",
+  "ratioSource": "Unchanged prior team workbook shared loss ratio 50980/25190",
+  "evaluationRole": "RETROSPECTIVE_RUNTIME_IMPLEMENTATION; prior prospective conditional holdout remains separate",
+  "specs": [
+    {
+      "deviceId": "FM004",
+      "brand": "Apple",
+      "model": "Apple iPhone 12 Pro",
+      "storage": "256 GB",
+      "validatedGetUpto": 24460,
+      "cleanRetention": 1.0122649223221587,
+      "heavyScratchLoss": 3970,
+      "calibratedAt": "2026-10-02T11:46:19.503Z",
+      "developmentRole": "FRESH_A_B_CONTROL_CALIBRATION_ONLY_NO_C_PARAMETERS",
+      "source": [
+        {
+          "id": "FM004_LIVE_A",
+          "collectedAt": "2026-10-02T11:45:33.265Z",
+          "observed": 24760,
+          "reference": 24460,
+          "screenshotSha256": "6ca05a97dd0d6ef9445a0706861c0bfe0307f29ec3cd701824588a245d35fbac"
+        },
+        {
+          "id": "FM004_LIVE_B",
+          "collectedAt": "2026-10-02T11:45:48.885Z",
+          "observed": 20790,
+          "reference": 24460,
+          "screenshotSha256": "72f3d6ab7a8c20fe0134962466d3ada994b93501fe8dd3fe2625d07c5c768e3f"
+        },
+        {
+          "id": "FM004_LIVE_CLOSE_A",
+          "collectedAt": "2026-10-02T11:46:19.503Z",
+          "observed": 24760,
+          "reference": 24460,
+          "screenshotSha256": "6ca05a97dd0d6ef9445a0706861c0bfe0307f29ec3cd701824588a245d35fbac"
+        }
+      ]
+    },
+    {
+      "deviceId": "FM017",
+      "brand": "Samsung",
+      "model": "Samsung Galaxy S23 FE 5G",
+      "storage": "8 GB/128 GB",
+      "validatedGetUpto": 18060,
+      "cleanRetention": 0.9988925802879292,
+      "heavyScratchLoss": 3090,
+      "calibratedAt": "2026-10-02T11:47:20.243Z",
+      "developmentRole": "FRESH_A_B_CONTROL_CALIBRATION_ONLY_NO_C_PARAMETERS",
+      "source": [
+        {
+          "id": "FM017_LIVE_A",
+          "collectedAt": "2026-10-02T11:46:33.720Z",
+          "observed": 18040,
+          "reference": 18060,
+          "screenshotSha256": "f0432f7ed57578b93af006bfa91c98852efd974ad9fb2bd7f388ba8af2d782d1"
+        },
+        {
+          "id": "FM017_LIVE_B",
+          "collectedAt": "2026-10-02T11:46:50.096Z",
+          "observed": 14950,
+          "reference": 18060,
+          "screenshotSha256": "e455efc2766a2dc8e94c8b4bebdeebea827a675a5167baa0274f0bb949dfc330"
+        },
+        {
+          "id": "FM017_LIVE_CLOSE_A",
+          "collectedAt": "2026-10-02T11:47:20.243Z",
+          "observed": 18040,
+          "reference": 18060,
+          "screenshotSha256": "f0432f7ed57578b93af006bfa91c98852efd974ad9fb2bd7f388ba8af2d782d1"
+        }
+      ]
+    }
+  ]
+}
