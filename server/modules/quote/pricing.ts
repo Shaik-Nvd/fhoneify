@@ -28,5 +28,7 @@ export const pricingService = createPricingService({
   strictReferenceMode: process.env.QUOTE_STRICT_REFERENCE_MODE === 'true',
   referenceLookupTimeoutMs: positiveInt(process.env.REFERENCE_PRICE_LOOKUP_TIMEOUT_MS, 1500),
   questionnaireStore: getQuestionnaireProfileStore(),
+  // Off unless explicitly 'on': legacy pricing stays the production default.
+  pricingMode: process.env.PRICING_RELEASE_CANDIDATE === 'on' ? 'release-candidate' : 'legacy',
   logger,
 });

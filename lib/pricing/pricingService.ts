@@ -13,6 +13,7 @@ import {
   resolveReference,
 } from './engine';
 import { UNKNOWN_QUESTIONNAIRE, type QuestionnaireSemantics } from './questionnaireSemantics';
+import { getUptoIncludesAccessories, hasBox, withoutBoxBonus, type AccessoryBasis } from './accessoryBasis';
 import type { QuestionnaireProfileStore } from '../referencePricing/questionnaire/store';
 import { questionnaireModelKey } from '../referencePricing/questionnaire/types';
 import { QUOTE_TOKEN_VERSION, canonicalDiagnosticsHash, signQuoteToken, verifyQuoteToken } from './quoteToken';
@@ -45,6 +46,8 @@ export interface PricingServiceDeps {
   /** Cashify questionnaire profiles per model. Absent or unreadable = the
    * explicit UNKNOWN fallback (every question asked, answers priced as given). */
   questionnaireStore?: QuestionnaireProfileStore;
+  /** PRICING_RELEASE_CANDIDATE=on selects 'release-candidate'; default legacy. */
+  pricingMode?: 'legacy' | 'release-candidate';
 }
 
 export type PricingErrorCode =
@@ -85,6 +88,7 @@ export interface AuthoritativeQuote {
     baseSource: BaseSource;
     referenceSource: string | null;
     cashifyConditionEquivalent: number;
+    accessoryBasis: AccessoryBasis;
   };
 }
 
@@ -128,7 +132,11 @@ async function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
   }
 }
 
+export const RELEASE_CANDIDATE_PRICING_VERSION = `${PRICING_ENGINE_VERSION}+rc-accessory-basis-2026-10-03`;
+
 export function createPricingService(deps: PricingServiceDeps) {
+  const releaseCandidate = deps.pricingMode === 'release-candidate';
+  const pricingVersion = releaseCandidate ? RELEASE_CANDIDATE_PRICING_VERSION : PRICING_ENGINE_VERSION;
   if (!deps.signingSecret || deps.signingSecret.length < 32) {
     throw new Error('Quote signing secret must be at least 32 characters');
   }
@@ -183,11 +191,18 @@ export function createPricingService(deps: PricingServiceDeps) {
 
     let result;
     let startingPrice;
+    let accessoryBasis: AccessoryBasis = 'LEGACY_BOX_BONUS';
     try {
       // The quote page passes the brand/model exactly as selected; pricing
       // with the catalog's own strings keeps the engine's model matching
       // identical for both.
       result = priceDevice(device.brand, device.model, base.cashifyGetUptoReference, diagnostics, questionnaire);
+      if (releaseCandidate && getUptoIncludesAccessories(questionnaire)) {
+        if (hasBox(diagnostics)) {
+          result = priceDevice(device.brand, device.model, base.cashifyGetUptoReference, withoutBoxBonus(diagnostics), questionnaire);
+          accessoryBasis = 'GET_UPTO_INCLUDES_BOX_AND_CHARGER';
+        } else accessoryBasis = 'GET_UPTO_INCLUDES_BOX_MISSING_BOX_UNMEASURED';
+      }
       // Get Upto: the reference plus the uplift, nothing else.
       startingPrice = computeFhoneifyGetUpto(base.cashifyGetUptoReference);
     } catch (err) {
@@ -202,7 +217,7 @@ export function createPricingService(deps: PricingServiceDeps) {
     const iat = Math.floor(at.getTime() / 1000);
     const exp = iat + deps.tokenTtlSeconds;
     const quoteToken = signQuoteToken(
-      { v: QUOTE_TOKEN_VERSION, dk: key, dh: diagnosticsHash, p: result.fhoneifyPrice, pv: PRICING_ENGINE_VERSION, iat, exp },
+      { v: QUOTE_TOKEN_VERSION, dk: key, dh: diagnosticsHash, p: result.fhoneifyPrice, pv: pricingVersion, iat, exp },
       deps.signingSecret
     );
 
@@ -221,7 +236,7 @@ export function createPricingService(deps: PricingServiceDeps) {
       startingPrice,
       quoteToken,
       expiresAt: new Date(exp * 1000).toISOString(),
-      pricingVersion: PRICING_ENGINE_VERSION,
+      pricingVersion,
       referenceStatus: base.referenceStatus,
       referenceLastVerifiedAt: base.referenceLastVerifiedAt,
       referenceLookupDegraded: reference.degraded,
@@ -233,6 +248,7 @@ export function createPricingService(deps: PricingServiceDeps) {
         baseSource: base.source,
         referenceSource: base.referenceSource,
         cashifyConditionEquivalent: result.cashifyConditionEquivalent,
+        accessoryBasis,
       },
     };
   }
@@ -306,7 +322,7 @@ export function createPricingService(deps: PricingServiceDeps) {
     const audit: LeadPricingAudit = {
       priceSource: tokenPrice !== null ? 'quote_token' : 'recomputed',
       fhoneifyPrice: price,
-      pricingVersion: PRICING_ENGINE_VERSION,
+      pricingVersion,
       pricedAt: now().toISOString(),
       tokenIssuedAt,
       tokenRejectedReason,
