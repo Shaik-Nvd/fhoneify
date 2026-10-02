@@ -22,11 +22,12 @@ Affected derived artifacts: `teamWorkbookCandidate` fixture (16 development spec
 
 Existing evidence search: older jobs (`xiaomi-candidate`, `xiaomi-severe-followup`, `xiaomi-validation`) cover Xiaomi only; FM004/FM017 already had verified live warranty-NOT_ASKED controls. No other reusable control existed.
 
-Collection (`scratch/cashify-matrix-integration/research-evidence/owner-correction-2026-10-02/`, own ledger, cap 40): **37 attempts, 23 accepted**. Plan frozen before collection; headless; no pickups; stopped short of the cap because the remaining failures repeated.
+Collection (`scratch/cashify-matrix-integration/research-evidence/owner-correction-2026-10-02/`, own ledger, cap 40): **40 attempts, 23 accepted — budget exhausted**. Plans frozen before each run; headless; no pickups.
 
 - Warranty-No clean controls accepted: FM001, 002, 003, 005, 007, 009, 013, 014, 016.
 - Not obtained: FM006/008/010/011/012 (Cashify asks eSIM; workbook gives no eSIM answer — not guessed), FM015/018 (questionnaire timeout twice), FM019/022 (S Pen selection mismatch), FM020/021 (constructed device page 404).
 - All six budget-blocked workbook cases collected, each with a fresh opening control at the same Get Upto: FM024_C 5,520 (A 9,690), FM032_C 11,700 (A 40,310), FM039_C 13,300 (A 16,500), FM040_C 1,570 (A 1,740), FM042_C 19,880 (A 21,380), FM045_C 43,790 (A 45,290). **Workbook coverage is now 150/150.**
+- Owner eSIM answer (Single eSIM) applied to the last 3 attempts (iPhone 14 Pro Max, 15 Pro Max, 17): all 3 FAILED "question label could not be verified". The collector's label check needs a heading distinct from the option text; eSIM has never been collected before (earlier runs refused it) and no expected eSIM heading is configured (mobile age has one). Fix requires the actual Cashify heading, then a collector change; iPhone 14 Pro Max, 15 Pro Max, 16 Pro Max, 17 and 17 Pro Max remain uncertain.
 - Box contrast (FM037 Note 10 Pro Max 6/128, Get Upto 5,970, warranty NOT_ASKED): box Yes 5,950, box No 5,650.
 
 ## 3. Conclusions preserved, changed or uncertain
@@ -48,7 +49,7 @@ Consequences:
 
 Comparing engine output before/after for 15 conditions in two regimes: besides the measured lines/heavy spots, the ₹10,200 anchor changed 12 unmeasured conditions (cracked −1,481/−2,022, dead touch −1,568, back camera −939/−1,283, local screen −1,456, body, functional), the warranty-ASKED regime, and the unmeasured 6/64 and 8/128 variants (model-level group). It was reverted in `08d4a32`. The supported behaviour (6/128, warranty NOT_ASKED, clean/lines/heavy spots, ₹3,060) is already priced exactly — and everything else refused — by Codex's disabled `xiaomiWorkbookEvidenceCandidate`.
 
-**₹400 discrepancy traced.** On all 10 OnePlus/Xiaomi collector blocks whose trace shows warranty NOT_ASKED with box+charger Yes (FM023/024/025/026/033/035/036/037/040/041; FM043 excluded, see §6), clean Selling = Get Upto − 20, so Cashify's Get Upto already corresponds to a box-and-charger phone. Box No costs 300 on FM037. Charger present vs missing at unchanged Get Upto (cross-day): +1,000 Xiaomi 17, +800 Xiaomi 15, +600 Turbo 5, +350 Note 15 Pro+. The active engine computes `reference × retention − deductions + 380` when the box is present, so on these routes it overstates the Cashify-equivalent by ~400 (380 box + rounding) before uplift; with box absent it is ~300 high. This is accessory accounting inside the Cashify-equivalent, distinct from the protected uplift applied afterwards. The box bonus is a protected value and was **not** changed; owner decision required (e.g. treat Get Upto as box-inclusive and deduct a measured box-missing amount instead).
+**₹400 discrepancy traced.** On all 10 OnePlus/Xiaomi collector blocks whose trace shows warranty NOT_ASKED with box+charger Yes (FM023/024/025/026/033/035/036/037/040/041; FM043 excluded, see §6), clean Selling = Get Upto − 20, so Cashify's Get Upto already corresponds to a box-and-charger phone. Box No costs 300 on FM037. Charger present vs missing at unchanged Get Upto (cross-day): +1,000 Xiaomi 17, +800 Xiaomi 15, +600 Turbo 5, +350 Note 15 Pro+. The active engine computes `reference × retention − deductions + 380` when the box is present, so on these routes it overstates the Cashify-equivalent by ~400 (380 box + rounding) before uplift; with box absent it is ~300 high. This is accessory accounting inside the Cashify-equivalent, distinct from the protected uplift applied afterwards. **Owner decision (2026-10-02): keep the box bonus.** The ~₹400 above Cashify on box-present warranty-NOT_ASKED routes is accepted, not an open defect.
 
 ## 5. OnePlus display fixes (disabled preview)
 
@@ -78,8 +79,8 @@ All 23 offline pricing suites pass with an unreachable database sentinel (includ
 
 ## Remaining tasks
 
-1. Owner: eSIM answer for iPhone 14 Pro Max and newer (blocks 5 controls); decision on box accounting (₹380 bonus vs box-inclusive Get Upto).
-2. Collector: S Pen option selection (S26 Ultra, Note 10 Lite), Fold5/Flip6 exact device links, A72/S25 Edge timeouts. 3 attempts remain in this authorization.
+1. Collector: configure the eSIM question heading (owner answer: Single eSIM), S Pen option selection (S26 Ultra, Note 10 Lite), Fold5/Flip6 exact device links, A72/S25 Edge timeouts. Collection budget exhausted; needs a new authorization (≈9 controls).
+2. Box bonus: decided — keep.
 3. Investigate why production references trail live Get Upto; recalibrate previews against refreshed references before any activation.
 4. Add production references for Xiaomi 14 12/512 and 14 Ultra 16/512; resolve the Xiaomi 14 Ultra trace-vs-profile route conflict (likely collector warranty-label detection).
 5. Independent (preregistered) validation for OnePlus display on further variants before broadening scope; conditional-route schema for age/eSIM/accessories.

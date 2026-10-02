@@ -16,7 +16,7 @@
   },
   "collection": {
     "maxAttempts": 40,
-    "attempted": 37,
+    "attempted": 40,
     "accepted": 23,
     "ledgerPath": "scratch/cashify-matrix-integration/research-evidence/owner-correction-2026-10-02/attempt-ledger.jsonl",
     "observations": [
@@ -685,6 +685,60 @@
           "sPen": "NOT_ASKED"
         },
         "evidenceSha256": "da9d71907ac9939bd2854f39b32d86cde0756c785c2f7b4d6ffc6b454886a8b0"
+      },
+      {
+        "experimentId": "FM006_WNO_ESIM_A",
+        "status": "FAILED",
+        "reason": "question label could not be verified",
+        "getUpto": null,
+        "finalPrice": null,
+        "collectedAt": "2026-10-02T17:51:05.653Z",
+        "route": {
+          "warranty": "NOT_ASKED",
+          "validBill": "NOT_ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "NOT_ASKED",
+          "charger": "NOT_ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": null
+      },
+      {
+        "experimentId": "FM008_WNO_ESIM_A",
+        "status": "FAILED",
+        "reason": "question label could not be verified",
+        "getUpto": null,
+        "finalPrice": null,
+        "collectedAt": "2026-10-02T17:51:08.132Z",
+        "route": {
+          "warranty": "ASKED",
+          "validBill": "ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "NOT_ASKED",
+          "charger": "NOT_ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": null
+      },
+      {
+        "experimentId": "FM011_WNO_ESIM_A",
+        "status": "FAILED",
+        "reason": "question label could not be verified",
+        "getUpto": null,
+        "finalPrice": null,
+        "collectedAt": "2026-10-02T17:51:10.513Z",
+        "route": {
+          "warranty": "ASKED",
+          "validBill": "ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "NOT_ASKED",
+          "charger": "NOT_ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": null
       }
     ]
   },
@@ -1132,5 +1186,32 @@
     "boxYesCharger": 5950,
     "boxNoCharger": 5650,
     "finding": "Get Upto already corresponds to a box+charger phone (clean = Get Upto - 20 on all warranty-NOT_ASKED collector blocks); a missing box costs 300 here. The engine adds its 380 box bonus on top of Get Upto, so it overstates by about 400 for box-present phones on these routes. The box bonus is protected and unchanged pending an owner decision."
+  },
+  "ownerDecisions": {
+    "decidedAt": "2026-10-02",
+    "eSim": {
+      "answer": "Single eSIM (owner: single SIM) where asked",
+      "appliesTo": "manual tester captures and eSIM-asking controls"
+    },
+    "boxBonus": {
+      "decision": "KEEP",
+      "note": "The 380 box bonus stays as is, although Cashify Get Upto already corresponds to a box-and-charger phone; the resulting ~400 above Cashify on box-present warranty-NOT_ASKED routes is accepted by the owner."
+    }
+  },
+  "esimControls": {
+    "attempted": [
+      "FM006_WNO_ESIM_A",
+      "FM008_WNO_ESIM_A",
+      "FM011_WNO_ESIM_A"
+    ],
+    "outcome": "FAILED: question label could not be verified",
+    "cause": "Collector recordAndClick requires a question heading distinct from the option text; the eSIM block has never been collected before (always refused), and no expected eSIM heading is configured, unlike mobile age. Needs the real Cashify heading, then a collector fix.",
+    "stillMissing": [
+      "FM006",
+      "FM008",
+      "FM010",
+      "FM011",
+      "FM012"
+    ]
   }
 }
