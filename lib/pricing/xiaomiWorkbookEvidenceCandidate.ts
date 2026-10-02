@@ -13,12 +13,25 @@ export function verifiedNotAskedCleanBaseline(reference: number, route: Workbook
     route.boxMode !== 'ASKED' || route.chargerMode !== 'ASKED' || route.sPenMode !== 'NOT_ASKED') return null;
   return Math.round((reference - 20) / 10) * 10;
 }
-export function calculateXiaomiWorkbookEvidenceCandidate(input: {
+export interface WorkbookEvidenceSpec {
+  model: string; storage: string; validatedGetUpto: number; calibratedAt: string;
+  modes: Record<'warranty' | 'validBill' | 'mobileAge' | 'eSim' | 'box' | 'charger' | 'sPen', string>;
+  baseline: { kind: string; offset?: number; retention?: number };
+  componentCosts: Partial<Record<WorkbookComponent, number>>;
+  supportedProfiles: readonly (readonly string[])[];
+}
+export interface WorkbookEvidenceInput {
   model: string; storage: string; reference: number; diagnostics: DiagnosticsType; route: WorkbookRoute; now?: Date;
   baseline?: { kind: 'measured_clean_control'; cleanSellingPrice: number };
-}) {
+}
+export function calculateXiaomiWorkbookEvidenceCandidate(input: WorkbookEvidenceInput) {
+  return calculateVerifiedWorkbookCandidate(fixture.specs, XIAOMI_WORKBOOK_CANDIDATE_VERSION, input);
+}
+/** Exact-variant, exact-route, measured-component pricing shared by the
+ * fresh verified workbook candidates (Xiaomi, OnePlus display). */
+export function calculateVerifiedWorkbookCandidate(specs: readonly WorkbookEvidenceSpec[], version: string, input: WorkbookEvidenceInput) {
   const reject = (reason: string) => ({ supported: false as const, reason });
-  const spec = fixture.specs.find(s => s.model === input.model && workbookStorageIdentity(s.storage) === workbookStorageIdentity(input.storage));
+  const spec = specs.find(s => s.model === input.model && workbookStorageIdentity(s.storage) === workbookStorageIdentity(input.storage));
   if (!spec) return reject('Exact variant is not in fresh verified development scope');
   const at = input.now ?? new Date();
   if (Date.parse(spec.calibratedAt) > at.getTime() || classifyFreshness({ lastVerifiedAt: spec.calibratedAt, consecutiveFailures: 0, now: at }) !== 'fresh') return reject('Calibration is stale or future-dated');
@@ -41,7 +54,7 @@ export function calculateXiaomiWorkbookEvidenceCandidate(input: {
   if (baseline == null || !Number.isFinite(baseline) || baseline <= 0) return reject('No validated clean baseline');
   const value = Math.round((baseline - deduction) / 10) * 10;
   if (!Number.isFinite(value) || value <= 0) return reject('No validated positive priced outcome');
-  return { supported: true as const, version: XIAOMI_WORKBOOK_CANDIDATE_VERSION, evidenceQuality: 'VERIFIED_TRACE_SCREENSHOT' as const,
+  return { supported: true as const, version, evidenceQuality: 'VERIFIED_TRACE_SCREENSHOT' as const,
     baselineKind: input.baseline ? 'measured_clean_control' as const : spec.baseline.kind,
     cleanBaseline: baseline, componentDeduction: deduction,
     quote: { cashifyConditionEquivalent: value, fhoneifyPrice: applyCompetitorUplift(input.reference, value) } };
