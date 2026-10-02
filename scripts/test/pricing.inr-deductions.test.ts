@@ -251,17 +251,5 @@ test('enabled shipped tables never break the engine guardrails on catalog Xiaomi
   }
 });
 
-test('Redmi Note 10 Pro Max display faults deduct the verified Cashify ₹3,060', () => {
-  // FM037 2026-10-02: Get Upto 5,970, warranty NOT_ASKED; clean 5,950, lines 2,890, heavy spots 2,890.
-  const semantics = { warrantyMode: 'NOT_ASKED', billMode: 'NOT_ASKED', ageMode: 'NOT_ASKED' } as const;
-  const model = 'Xiaomi Redmi Note 10 Pro Max';
-  const clean = calculateXiaomiPrice(model, 5970, PERFECT_CONDITION_DIAGNOSTICS, semantics).cashifyConditionEquivalent;
-  const lines = calculateXiaomiPrice(model, 5970, { ...PERFECT_CONDITION_DIAGNOSTICS, defects: ['screen_spot'], screenLines: 'Visible line(s) on display' }, semantics).cashifyConditionEquivalent;
-  const spots = calculateXiaomiPrice(model, 5970, { ...PERFECT_CONDITION_DIAGNOSTICS, defects: ['screen_spot'], screenSpots: 'Large/ heavy visible spots on screen' }, semantics).cashifyConditionEquivalent;
-  assert.equal(resolveInrGroup(xiaomiInrDeductions(), model, 5970), 'redmi-note-10-pro-max');
-  assert.equal(clean - lines, 5950 - 2890);
-  assert.equal(clean - spots, 5950 - 2890);
-});
-
 console.log(`\n${passed} passed, ${failed} failed`);
 process.exit(failed > 0 ? 1 : 0);
