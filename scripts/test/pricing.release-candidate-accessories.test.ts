@@ -60,6 +60,14 @@ async function main() {
   const asked = { ...clean, warranty: false, validBill: true };
   const ra = await q(rc, asked, open), la = await q(legacy, asked, open); assert(ra.ok && la.ok);
   assert.equal(ra.internal.accessoryBasis, 'CALIBRATED_ROUTE_ACCESSORIES'); assert.equal(ra.internal.cashifyConditionEquivalent, 40310); checks++;
+  // Open uses a one-point conditional-retention baseline. A changed fresh
+  // Get Upto must not be treated as a reference-relative offset formula.
+  const openKey = deviceKey(open), originalOpen = records.get(openKey)!;
+  try {
+    records.set(openKey, { ...originalOpen, currentPrice: 51410 });
+    const changed = await q(rc, { ...clean, warranty: false, validBill: true }, open);
+    assert(!changed.ok); assert.equal(changed.code, 'MANUAL_INSPECTION_REQUIRED'); checks++;
+  } finally { records.set(openKey, originalOpen); }
   // Tokens: RC token verifies only against an RC service quote of the same answers.
   assert.notEqual(r.quoteToken, l.quoteToken); checks++;
   // NOT_ASKED alone grants no correction to an unmeasured model.

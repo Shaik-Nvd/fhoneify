@@ -98,7 +98,16 @@ export function releaseCandidateOutcome(input: {
   if (!route || !fresh(route.observedAt) || !/^[a-f0-9]{64}$/.test(route.evidenceSha256) || q.source !== 'profile' || q.status !== 'OK' || !fresh(q.observedAt) ||
     (['warrantyMode', 'billMode', 'ageMode'] as const).some(k => q[k] !== route.semantics[k])) return manual('Fresh exact-variant route evidence and compatible stored questionnaire required');
   if (!input.referenceFresh || !input.referenceExact || input.referenceSource !== 'cashify' || input.baseSource !== 'reference_repository' || !fresh(input.referenceLastVerifiedAt)) return manual('Fresh exact Cashify repository reference required');
-  if (input.reference !== spec.validatedGetUpto) return manual('Changed reference domain requires baseline revalidation');
+  // A fixed historical Get Upto amount is a guard for one-point retention
+  // baselines. Offset baselines are explicitly expressed against the live
+  // Cashify reference and were measured as clean Selling = Get Upto - 20 on
+  // the exact route. Keep exact/fresh reference and route checks above; do not
+  // pin that supported formula to the old observed amount.
+  const referenceRelativeOffset = (spec.family === 'xiaomi-workbook' || spec.family === 'oneplus-display') &&
+    spec.baseline.kind === 'reference_minus_observed_offset';
+  if (input.reference !== spec.validatedGetUpto && !referenceRelativeOffset) {
+    return manual('Changed reference domain requires baseline revalidation');
+  }
   if (spec.family === 'fresh-glass' && spec.cleanRetention > 1) return manual('Clean-above-Get-Upto headline compatibility requires explicit production approval');
   // The UI derives above11 for warranty-No; it is not a selected age answer.
   const d = { ...input.diagnostics };

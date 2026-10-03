@@ -242,12 +242,20 @@ async function run() {
       const lead = await post('/api/quote/leads', { ...input, diagnostics: undefined, answers: diagnostics, phone: '0000000000', quoteToken: old.quoteToken });
       assert.equal(lead.status, 422); assert.equal(leads.length, count);
     });
-    await check('reference drift and non-exact identity require revalidation', async () => {
+    await check('fresh exact reference reanchors the measured offset baseline through the signed lead flow', async () => {
       const key = deviceKey(nord); const original = records.get(key)!;
       try {
-        for (const replacement of [{ ...original, currentPrice: original.currentPrice! - 80 }, { ...original, matchConfidence: 'high' as const }]) {
-          records.set(key, replacement); const result = await release.quote(requestFor(display)); assert(!result.ok); assert.equal(result.code, 'MANUAL_INSPECTION_REQUIRED');
-        }
+        records.set(key, { ...original, currentPrice: 8260 });
+        const result = await release.quote(requestFor(display)); assert(result.ok);
+        assert.equal(result.internal.releaseCandidate?.kind, 'VERIFIED');
+        assert.equal(result.internal.cashifyConditionEquivalent, 3560, '8260 reference less measured 20 clean offset and 4680 display component');
+        active = release;
+        const response = await post('/api/quote/price', requestFor(display)); assert.equal(response.status, 200);
+        assert.equal(response.body.data.fhoneifyPrice, result.fhoneifyPrice);
+        const lead = await post('/api/quote/leads', leadFor(display, result.quoteToken, result.fhoneifyPrice));
+        assert.equal(lead.status, 200); assert.equal(leads.at(-1)?.quotedPrice, result.fhoneifyPrice);
+        records.set(key, { ...original, currentPrice: 8260, matchConfidence: 'high' });
+        const nonExact = await release.quote(requestFor(display)); assert(!nonExact.ok); assert.equal(nonExact.code, 'MANUAL_INSPECTION_REQUIRED');
       } finally { records.set(key, original); }
     });
     await check('expired or future-dated route evidence never signs a quote', async () => {
