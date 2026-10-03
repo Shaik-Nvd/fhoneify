@@ -4,8 +4,26 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useAuthStore } from '@/lib/authStore';
 import { useCartStore } from '@/lib/cartStore';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { ArrowRight, ChevronDown, Menu, ShoppingBag, X } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
+
+type NavLink = { label: string; href: string };
+type NavCategory = { id: string; title: string; href?: string; items?: NavLink[] };
+
+const NAV_CATEGORIES: NavCategory[] = [
+  { id: 'quote', title: 'Sell Phone', href: '/quote' },
+  { id: 'buy', title: 'Buy Phones', href: '/buy' },
+  {
+    id: 'services',
+    title: 'Services',
+    items: [
+      { label: 'Repair', href: '/repair' },
+      { label: 'Find a Store', href: '/stores' },
+    ],
+  },
+  { id: 'blog', title: 'Blog', href: '/blog' },
+];
 
 export default function Navbar() {
   const router = useRouter();
@@ -13,19 +31,88 @@ export default function Navbar() {
   const { user, isAuthenticated, logout } = useAuthStore();
   const cartCount = useCartStore((s) => s.items.length);
   const [mounted, setMounted] = useState(false);
-  const [hoveredMenu, setHoveredMenu] = useState<string | null>(null);
+  const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const [isMobile, setIsMobile] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const sheetRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setMounted(true);
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
-  
+
+  // The mobile menu only exists below 1024px; close it if the viewport grows
+  // past that so the scroll lock and focus trap can't outlive it.
+  useEffect(() => {
+    const desktop = window.matchMedia('(min-width: 1024px)');
+    const onChange = () => { if (desktop.matches) setIsMobileMenuOpen(false); };
+    desktop.addEventListener('change', onChange);
+    return () => desktop.removeEventListener('change', onChange);
+  }, []);
+
+  // Close menus whenever the route changes.
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+    setOpenMenu(null);
+  }, [pathname]);
+
+  // Escape closes any open menu; the mobile sheet returns focus to its trigger.
+  useEffect(() => {
+    if (!isMobileMenuOpen && !openMenu) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== 'Escape') return;
+      if (isMobileMenuOpen) {
+        setIsMobileMenuOpen(false);
+        menuButtonRef.current?.focus();
+      }
+      setOpenMenu(null);
+    };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [isMobileMenuOpen, openMenu]);
+
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+    sheetRef.current?.querySelector<HTMLElement>('a, button')?.focus();
+
+    // Keep Tab inside the open menu (its toggle button plus the sheet).
+    const onTab = (e: KeyboardEvent) => {
+      if (e.key !== 'Tab' || !sheetRef.current || !menuButtonRef.current) return;
+      const items = [menuButtonRef.current, ...sheetRef.current.querySelectorAll<HTMLElement>('a[href], button:not([disabled])')];
+      const first = items[0];
+      const last = items[items.length - 1];
+      const active = document.activeElement as HTMLElement | null;
+      if (!active || !items.includes(active)) {
+        e.preventDefault();
+        first.focus();
+      } else if (e.shiftKey && active === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && active === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+    document.addEventListener('keydown', onTab);
+
+    // Lock the page behind the menu; the scroll position is kept and restored.
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', onTab);
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isMobileMenuOpen]);
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+    menuButtonRef.current?.focus();
+  };
+
   // Hide the D2C Navbar on Partner and ITAD pages
   if (pathname?.startsWith('/partner') || pathname?.startsWith('/itad')) {
     return null;
@@ -36,350 +123,249 @@ export default function Navbar() {
     router.push('/');
   };
 
-  const navCategories = [
-    {
-      id: 'buy',
-      title: 'Buy Phones',
-      href: '/buy'
-    },
-    {
-      id: 'quote',
-      title: 'Get Quote',
-      href: '/quote'
-    },
-    {
-      id: 'services',
-      title: 'Services',
-      items: [
-        { label: 'Repair', href: '/repair' },
-        { label: 'Find a Store', href: '/stores' },
-      ]
-    },
-    {
-      id: 'more',
-      title: 'Discover',
-      items: [
-        { label: 'Blog', href: '/blog' },
-      ]
-    }
-  ];
+  const isActive = (href: string) => pathname === href || (href !== '/' && pathname?.startsWith(href));
+  const showAuth = mounted && isAuthenticated && user;
 
   return (
-    <nav style={{
-      position: 'sticky',
-      top: 0,
-      zIndex: 50,
-      backgroundColor: 'var(--background)',
-      borderBottom: '1px solid var(--border)',
-      backdropFilter: 'blur(12px)',
-    }}>
-      <div style={{
-        maxWidth: '80rem',
-        margin: '0 auto',
-        padding: '0 1.5rem',
-        display: 'flex',
-        height: '64px',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-      }}>
+    <header
+      className={`bar-solid sticky top-0 z-50 border-b transition-[background-color,border-color,box-shadow] duration-200 ${
+        scrolled || isMobileMenuOpen
+          ? 'border-border bg-[color-mix(in_srgb,var(--background)_86%,transparent)] shadow-token-sm backdrop-blur-md'
+          : 'border-transparent bg-background'
+      }`}
+    >
+      <nav aria-label="Main" className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 md:px-6">
         <Link
           href="/"
-          style={{
-            fontSize: '1.25rem',
-            fontWeight: 700,
-            color: 'var(--gold)',
-            letterSpacing: '3px',
-            textDecoration: 'none',
-            textTransform: 'uppercase',
-          }}
+          className="text-[1.15rem] font-bold uppercase tracking-[0.22em] text-gold no-underline hover:text-gold-hover"
+          aria-label="Fhoneify home"
         >
           Fhoneify
         </Link>
 
-        {/* Middle Section: Categorized Navigation */}
-        <div className="hidden md:flex items-center gap-10">
-          {navCategories.map((category) => (
-            <div 
+        {/* Desktop links */}
+        <ul className="hidden items-center gap-1 lg:flex">
+          {NAV_CATEGORIES.map((category) => (
+            <li
               key={category.id}
-              style={{ position: 'relative' }} 
-              onMouseEnter={() => !category.href && setHoveredMenu(category.id)} 
-              onMouseLeave={() => !category.href && setHoveredMenu(null)}
+              className="relative"
+              onMouseEnter={() => category.items && setOpenMenu(category.id)}
+              onMouseLeave={() => category.items && setOpenMenu(null)}
+              onBlur={(e) => {
+                if (category.items && !e.currentTarget.contains(e.relatedTarget as Node)) setOpenMenu(null);
+              }}
             >
               {category.href ? (
                 <Link
                   href={category.href}
-                  style={{
-                    color: hoveredMenu === category.id ? 'var(--gold)' : '#a0a0a0',
-                    fontSize: '0.875rem',
-                    fontWeight: 500,
-                    textDecoration: 'none',
-                    transition: 'color 150ms',
-                  }}
-                  onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--foreground)'; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.color = '#a0a0a0'; }}
+                  aria-current={isActive(category.href) ? 'page' : undefined}
+                  className={`inline-flex h-10 items-center rounded-lg px-3 text-sm font-medium no-underline transition-colors hover:bg-surface hover:text-foreground ${
+                    isActive(category.href) ? 'text-foreground' : 'text-muted'
+                  }`}
                 >
                   {category.title}
                 </Link>
               ) : (
-                <span 
-                  onClick={() => setHoveredMenu(hoveredMenu === category.id ? null : category.id)}
-                  style={{ 
-                    color: hoveredMenu === category.id ? 'var(--gold)' : '#a0a0a0', 
-                    fontSize: '0.875rem', 
-                    fontWeight: 500, 
-                    cursor: 'pointer', 
-                    transition: 'color 150ms', 
-                    display: 'flex', 
-                    alignItems: 'center', 
-                    gap: '6px' 
-                  }}>
-                  {category.title}
-                  <span style={{ 
-                    fontSize: '0.55rem', 
-                    transform: hoveredMenu === category.id ? 'rotate(180deg)' : 'rotate(0deg)', 
-                    transition: 'transform 200ms ease' 
-                  }}>
-                    ▼
-                  </span>
-                </span>
+                <>
+                  <button
+                    type="button"
+                    aria-expanded={openMenu === category.id}
+                    aria-controls={`menu-${category.id}`}
+                    onClick={() => setOpenMenu(openMenu === category.id ? null : category.id)}
+                    className="inline-flex h-10 items-center gap-1.5 rounded-lg px-3 text-sm font-medium text-muted transition-colors hover:bg-surface hover:text-foreground"
+                  >
+                    {category.title}
+                    <ChevronDown
+                      aria-hidden="true"
+                      className={`h-3.5 w-3.5 transition-transform duration-200 ${openMenu === category.id ? 'rotate-180' : ''}`}
+                    />
+                  </button>
+                  {openMenu === category.id && category.items && (
+                    <div id={`menu-${category.id}`} className="absolute left-1/2 top-full w-48 -translate-x-1/2 pt-2">
+                      <ul className="rounded-xl border border-border bg-background p-1.5 shadow-token-lg">
+                        {category.items.map((item) => (
+                          <li key={item.href}>
+                            <Link
+                              href={item.href}
+                              className="flex h-10 items-center rounded-lg px-3 text-sm font-medium text-muted no-underline transition-colors hover:bg-surface hover:text-foreground"
+                            >
+                              {item.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </>
               )}
-              
-              {!category.href && hoveredMenu === category.id && category.items && (
-                <div style={{ 
-                  position: 'absolute', 
-                  top: '100%', 
-                  left: '50%', 
-                  transform: 'translateX(-50%)', 
-                  paddingTop: '1.5rem', 
-                  width: '180px' 
-                }}>
-                  <div style={{ 
-                    backgroundColor: 'var(--background)', 
-                    border: '1px solid var(--border)', 
-                    borderRadius: '12px', 
-                    padding: '0.5rem', 
-                    display: 'flex', 
-                    flexDirection: 'column', 
-                    gap: '0.25rem', 
-                    boxShadow: '0 10px 40px rgba(0,0,0,0.8)' 
-                  }}>
-                    {category.items.map(item => (
-                      <Link 
-                        key={item.href} 
-                        href={item.href}
-                        style={{ 
-                          color: 'var(--muted)', 
-                          textDecoration: 'none', 
-                          padding: '0.6rem 0.75rem', 
-                          borderRadius: '8px', 
-                          fontSize: '0.85rem', 
-                          fontWeight: 500, 
-                          transition: 'all 150ms' 
-                        }}
-                        onMouseEnter={(e) => { 
-                          e.currentTarget.style.backgroundColor = 'var(--surface-elevated)'; 
-                          e.currentTarget.style.color = 'var(--foreground)'; 
-                        }}
-                        onMouseLeave={(e) => { 
-                          e.currentTarget.style.backgroundColor = 'transparent'; 
-                          e.currentTarget.style.color = '#a0a0a0'; 
-                        }}
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
+            </li>
           ))}
+        </ul>
+
+        {/* Desktop actions */}
+        <div className="hidden items-center gap-2 lg:flex">
+          <ThemeToggle />
+          <CartLink count={mounted ? cartCount : 0} />
+          <span aria-hidden="true" className="mx-1 h-6 w-px bg-border" />
+          {showAuth ? (
+            <div className="flex items-center gap-3">
+              <div className="flex flex-col items-end leading-tight">
+                <span className="max-w-[10rem] truncate text-[0.8rem] font-semibold text-foreground">{user.name || user.phone}</span>
+                <span className="text-[0.7rem] text-muted">{user.role === 'admin' ? 'Administrator' : 'Customer'}</span>
+              </div>
+              {user.role === 'admin' && (
+                <Link href="/admin" className="text-sm font-semibold text-gold no-underline hover:text-gold-hover">
+                  Admin
+                </Link>
+              )}
+              <button
+                type="button"
+                onClick={handleLogout}
+                className="h-9 rounded-lg border border-danger/40 px-3 text-xs font-semibold text-danger transition-colors hover:bg-danger/10"
+              >
+                Logout
+              </button>
+            </div>
+          ) : (
+            <Link
+              href="/auth"
+              className="inline-flex h-10 items-center rounded-lg px-3 text-sm font-medium text-muted no-underline transition-colors hover:bg-surface hover:text-foreground"
+            >
+              Login
+            </Link>
+          )}
+          <Link href="/quote" className="btn-primary ml-1 whitespace-nowrap no-underline">
+            Sell your phone
+            <ArrowRight aria-hidden="true" className="h-4 w-4" />
+          </Link>
         </div>
 
-        {/* Right Section: Auth & Cart */}
-        {mounted && !isMobile && (
-          <div className="flex items-center gap-6">
-            <ThemeToggle />
-            <Link
-              href="/cart"
-              style={{ color: 'var(--muted)', fontSize: '1rem', fontWeight: 500, textDecoration: 'none', transition: 'color 150ms', position: 'relative' }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--gold)')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = '#a0a0a0')}
-            >
-              🛒
-              {cartCount > 0 && (
-                <span style={{
-                  position: 'absolute',
-                  top: '-8px',
-                  right: '-12px',
-                  backgroundColor: 'var(--gold)',
-                  color: 'var(--background)',
-                  fontSize: '10px',
-                  fontWeight: 700,
-                  width: '18px',
-                  height: '18px',
-                  borderRadius: '50%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}>
-                  {cartCount}
-                </span>
-              )}
-            </Link>
+        {/* Mobile actions */}
+        <div className="flex items-center gap-1 lg:hidden">
+          <ThemeToggle />
+          <CartLink count={mounted ? cartCount : 0} />
+          <button
+            ref={menuButtonRef}
+            type="button"
+            onClick={() => setIsMobileMenuOpen((open) => !open)}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
+            aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+            className="inline-flex h-11 w-11 items-center justify-center rounded-xl text-foreground transition-colors hover:bg-surface"
+          >
+            {isMobileMenuOpen ? <X aria-hidden="true" className="h-5 w-5" /> : <Menu aria-hidden="true" className="h-5 w-5" />}
+          </button>
+        </div>
+      </nav>
 
-            <div style={{ width: '1px', height: '24px', backgroundColor: '#2a2a2a' }}></div>
-
-            {isAuthenticated && user ? (
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
-                  <span style={{ color: 'var(--foreground)', fontSize: '0.8rem', fontWeight: 600 }}>{user.name || user.phone}</span>
-                  <span style={{ color: 'var(--muted)', fontSize: '0.7rem' }}>{user.role === 'admin' ? 'Administrator' : 'Customer'}</span>
-                </div>
-                
-
-
-                {user.role === 'admin' && (
+      {/* Mobile sheet */}
+      {isMobileMenuOpen && (
+        <div
+          aria-hidden="true"
+          onClick={closeMobileMenu}
+          className="absolute inset-x-0 top-full h-[100dvh] bg-black/50 lg:hidden"
+        />
+      )}
+      {isMobileMenuOpen && (
+        <div
+          id="mobile-menu"
+          ref={sheetRef}
+          className="absolute inset-x-0 top-full max-h-[calc(100dvh-4rem)] overflow-y-auto border-b border-border bg-background px-4 pb-6 pt-2 shadow-token-lg lg:hidden"
+        >
+          <ul className="flex flex-col">
+            {NAV_CATEGORIES.map((cat) =>
+              cat.href ? (
+                <li key={cat.id} className="border-b border-border">
                   <Link
-                    href="/admin"
-                    style={{ color: 'var(--gold)', fontSize: '0.875rem', fontWeight: 600, textDecoration: 'none', transition: 'color 150ms' }}
-                    onMouseEnter={(e) => (e.currentTarget.style.color = '#f0c040')}
-                    onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--gold)')}
+                    href={cat.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    aria-current={isActive(cat.href) ? 'page' : undefined}
+                    className="flex h-14 items-center justify-between text-base font-medium text-foreground no-underline"
                   >
-                    Admin
+                    {cat.title}
+                    <ArrowRight aria-hidden="true" className="h-4 w-4 text-muted" />
+                  </Link>
+                </li>
+              ) : (
+                <li key={cat.id} className="border-b border-border">
+                  <button
+                    type="button"
+                    onClick={() => setOpenMenu(openMenu === cat.id ? null : cat.id)}
+                    aria-expanded={openMenu === cat.id}
+                    className="flex h-14 w-full items-center justify-between text-left text-base font-medium text-foreground"
+                  >
+                    {cat.title}
+                    <ChevronDown
+                      aria-hidden="true"
+                      className={`h-4 w-4 text-muted transition-transform duration-200 ${openMenu === cat.id ? 'rotate-180' : ''}`}
+                    />
+                  </button>
+                  {openMenu === cat.id && cat.items && (
+                    <ul className="pb-2 pl-3">
+                      {cat.items.map((item) => (
+                        <li key={item.href}>
+                          <Link
+                            href={item.href}
+                            onClick={() => { setIsMobileMenuOpen(false); setOpenMenu(null); }}
+                            className="flex h-11 items-center text-[0.95rem] text-muted no-underline hover:text-foreground"
+                          >
+                            {item.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              )
+            )}
+          </ul>
+
+          <div className="mt-5 flex flex-col gap-3">
+            {showAuth ? (
+              <>
+                <span className="font-medium text-foreground">{user.name || user.phone}</span>
+                {user.role === 'admin' && (
+                  <Link href="/admin" onClick={() => setIsMobileMenuOpen(false)} className="font-semibold text-gold no-underline">
+                    Admin Panel
                   </Link>
                 )}
-
                 <button
-                  onClick={handleLogout}
-                  style={{
-                    padding: '6px 14px',
-                    fontSize: '0.75rem',
-                    fontWeight: 600,
-                    borderRadius: '6px',
-                    border: '1px solid rgba(255,59,48,0.4)',
-                    backgroundColor: 'transparent',
-                    color: '#FF3B30',
-                    transition: 'all 150ms',
-                    cursor: 'pointer',
-                    marginLeft: '0.5rem'
-                  }}
-                  onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = 'rgba(255,59,48,0.1)'; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; }}
+                  type="button"
+                  onClick={() => { handleLogout(); setIsMobileMenuOpen(false); }}
+                  className="h-11 text-left font-semibold text-danger"
                 >
                   Logout
                 </button>
-              </div>
-            ) : (
-              <Link
-                href="/auth"
-                style={{
-                  padding: '8px 24px',
-                  fontSize: '0.8rem',
-                  fontWeight: 600,
-                  borderRadius: '8px',
-                  backgroundColor: 'var(--gold)',
-                  color: 'var(--background)',
-                  textDecoration: 'none',
-                  transition: 'all 150ms',
-                }}
-                onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#f0c040'; e.currentTarget.style.transform = 'scale(1.02)'; }}
-                onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'var(--gold)'; e.currentTarget.style.transform = 'scale(1)'; }}
-              >
-                Login
-              </Link>
-            )}
-          </div>
-        )}
-
-        {/* Mobile Hamburger Icon */}
-        {mounted && isMobile && (
-          <div className="flex items-center gap-4">
-            <ThemeToggle />
-            <Link href="/cart" className="relative text-muted">
-              🛒
-              {cartCount > 0 && (
-                <span className="absolute -top-2 -right-3 bg-[var(--gold)] text-[#0a0a0a] text-[10px] font-bold w-[18px] h-[18px] rounded-full flex items-center justify-center">
-                  {cartCount}
-                </span>
-              )}
-            </Link>
-            <button 
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gold p-2 focus:outline-none"
-            >
-              <div className="space-y-1.5">
-                <span className={`block w-6 h-0.5 bg-current transition-transform ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-                <span className={`block w-6 h-0.5 bg-current transition-opacity ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
-                <span className={`block w-6 h-0.5 bg-current transition-transform ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
-              </div>
-            </button>
-          </div>
-        )}
-      </div>
-
-      {/* Mobile Menu Dropdown */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden bg-background border-t border-border px-4 py-6 flex flex-col gap-4 absolute w-full left-0 max-h-[80vh] overflow-y-auto shadow-2xl">
-          {navCategories.map((cat) => {
-            const isExpanded = hoveredMenu === cat.id; // Reusing hoveredMenu state for mobile accordion
-            return (
-              <div key={cat.id} className="flex flex-col border-b border-[#1a1a1a] pb-2">
-                {cat.href ? (
-                  <Link 
-                    href={cat.href}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="flex justify-between items-center w-full text-left py-2"
-                  >
-                    <span className="text-gold font-semibold text-sm tracking-wider uppercase">{cat.title}</span>
-                  </Link>
-                ) : (
-                  <>
-                    <button 
-                      onClick={() => setHoveredMenu(isExpanded ? null : cat.id)}
-                      className="flex justify-between items-center w-full text-left py-2"
-                    >
-                      <span className="text-gold font-semibold text-sm tracking-wider uppercase">{cat.title}</span>
-                      <span className={`text-gold text-xs transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}>▼</span>
-                    </button>
-                    
-                    {isExpanded && cat.items && (
-                      <div className="flex flex-col gap-3 pl-2 pt-2 pb-2 mt-1">
-                        {cat.items.map((item) => (
-                          <Link 
-                            key={item.href} 
-                            href={item.href} 
-                            onClick={() => { setIsMobileMenuOpen(false); setHoveredMenu(null); }} 
-                            className="text-muted hover:text-foreground transition-colors py-1 flex items-center gap-2"
-                          >
-                            <span className="w-1 h-1 bg-[var(--gold)] rounded-full opacity-50"></span>
-                            {item.label}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </>
-                )}
-              </div>
-            );
-          })}
-          
-          <div className="border-t border-border pt-6 flex flex-col gap-4">
-            {mounted && isAuthenticated && user ? (
-              <>
-                <span className="text-foreground font-medium">{user.name || user.phone}</span>
-                {user.role === 'admin' && (
-                  <Link href="/admin" onClick={() => setIsMobileMenuOpen(false)} className="text-gold font-semibold">Admin Panel</Link>
-                )}
-                <button onClick={() => { handleLogout(); setIsMobileMenuOpen(false); }} className="text-left text-[#FF3B30] font-semibold pt-2">Logout</button>
               </>
             ) : (
-              <Link href="/auth" onClick={() => setIsMobileMenuOpen(false)} className="bg-[var(--gold)] text-[#0a0a0a] text-center font-bold py-3 rounded-lg">
+              <Link href="/auth" onClick={() => setIsMobileMenuOpen(false)} className="btn-outline h-12 !text-base no-underline">
                 Login / Register
               </Link>
             )}
+            <Link href="/quote" onClick={() => setIsMobileMenuOpen(false)} className="btn-cta no-underline">
+              Sell your phone
+              <ArrowRight aria-hidden="true" className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       )}
-    </nav>
+    </header>
+  );
+}
+
+function CartLink({ count }: { count: number }) {
+  return (
+    <Link
+      href="/cart"
+      aria-label={count > 0 ? `Cart, ${count} item${count === 1 ? '' : 's'}` : 'Cart'}
+      className="relative inline-flex h-11 w-11 items-center justify-center rounded-xl text-muted no-underline transition-colors hover:bg-surface hover:text-foreground"
+    >
+      <ShoppingBag aria-hidden="true" className="h-5 w-5" />
+      {count > 0 && (
+        <span className="tabular absolute right-1 top-1 flex h-[18px] min-w-[18px] items-center justify-center rounded-full bg-gold px-1 text-[10px] font-bold text-on-gold">
+          {count}
+        </span>
+      )}
+    </Link>
   );
 }

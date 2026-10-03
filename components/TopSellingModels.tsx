@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useEffect, useState, useRef } from 'react';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import { ArrowRight, ChevronLeft, ChevronRight, Smartphone } from 'lucide-react';
 import Image from 'next/image';
 import api from '@/lib/api';
 
@@ -30,11 +31,11 @@ const TOP_MODELS: TopModel[] = [
 ];
 
 export default function TopSellingModels() {
-  const router = useRouter();
   // Get Upto comes only from the server (ReferencePrice + uplift).
   const [getUpto, setGetUpto] = useState<Record<string, number>>({});
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const [isHovered, setIsHovered] = useState(false);
+  const [pricesSettled, setPricesSettled] = useState(false);
+  const [brokenImages, setBrokenImages] = useState<Record<string, true>>({});
+  const scrollRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -48,136 +49,95 @@ export default function TopSellingModels() {
         });
         setGetUpto(prices);
       })
-      .catch(() => { /* cards stay without a price */ });
+      .catch(() => { /* cards stay without a price */ })
+      .finally(() => { if (!cancelled) setPricesSettled(true); });
     return () => { cancelled = true; };
   }, []);
 
-  // Auto-scroll logic
-  useEffect(() => {
-    if (isHovered || !scrollRef.current) return;
-    
-    const interval = setInterval(() => {
-      if (scrollRef.current) {
-        const maxScroll = scrollRef.current.scrollWidth - scrollRef.current.clientWidth;
-        // If we reached the end, scroll back to the beginning smoothly
-        if (scrollRef.current.scrollLeft >= maxScroll - 10) {
-          scrollRef.current.scrollTo({ left: 0, behavior: 'smooth' });
-        } else {
-          // Scroll right by approximately one card width + gap (280px + 24px = 304px)
-          scrollRef.current.scrollBy({ left: 304, behavior: 'smooth' });
-        }
-      }
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [isHovered]);
-
-  const scrollLeft = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: -304, behavior: 'smooth' });
-    }
+  const scrollByCards = (direction: 1 | -1) => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const card = el.querySelector('li');
+    const step = card ? card.getBoundingClientRect().width + 16 : 280;
+    el.scrollBy({ left: direction * step * 2, behavior: 'smooth' });
   };
 
-  const scrollRight = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: 304, behavior: 'smooth' });
-    }
-  };
-
-  const handleSellClick = (brand: string, model: string) => {
+  const quoteHref = (brand: string, model: string) => {
     const fullModel = model.startsWith(brand) ? model : `${brand} ${model}`;
-    router.push(`/quote?brand=${encodeURIComponent(brand)}&model=${encodeURIComponent(fullModel)}`);
+    return `/quote?brand=${encodeURIComponent(brand)}&model=${encodeURIComponent(fullModel)}`;
   };
 
   return (
-    <div className="w-full relative py-16 px-4 md:px-8 bg-transparent">
-      {/* Immersive Background Glows */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-[-10%] left-[20%] w-[40vw] h-[40vw] bg-[var(--gold)]/10 md:bg-[var(--gold)]/5 blur-3xl md:blur-[100px] rounded-full md:mix-blend-screen will-change-transform" />
-        <div className="absolute bottom-[-10%] right-[20%] w-[30vw] h-[30vw] bg-[#8a2be2]/15 md:bg-[#8a2be2]/10 blur-3xl md:blur-[100px] rounded-full md:mix-blend-screen will-change-transform" />
-      </div>
-
-      <h2 className="text-3xl md:text-5xl font-black text-foreground mb-4 text-center relative z-10 tracking-tight drop-shadow-md">
-        Top Selling Mobile Phones
-      </h2>
-      <p className="text-muted text-center max-w-2xl mx-auto mb-8 relative z-10">Discover the most sought-after devices at unbeatable resale values.</p>
-
-      <div 
-        className="relative w-full max-w-7xl mx-auto group"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        {/* Navigation Arrows */}
-        <button 
-          onClick={scrollLeft}
-          className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-6 z-20 w-12 h-12 bg-surface/80 backdrop-blur-sm border border-[var(--gold)]/30 rounded-full flex items-center justify-center text-foreground shadow-lg hover:bg-[var(--gold)] hover:text-black hover:border-transparent transition-all opacity-0 group-hover:opacity-100 disabled:opacity-0"
-          aria-label="Scroll Left"
-        >
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-
-        <button 
-          onClick={scrollRight}
-          className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-6 z-20 w-12 h-12 bg-surface/80 backdrop-blur-sm border border-[var(--gold)]/30 rounded-full flex items-center justify-center text-foreground shadow-lg hover:bg-[var(--gold)] hover:text-black hover:border-transparent transition-all opacity-0 group-hover:opacity-100 disabled:opacity-0"
-          aria-label="Scroll Right"
-        >
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-
-        {/* Scroll Container */}
-        <div 
-          ref={scrollRef}
-          className="flex overflow-x-auto gap-6 pb-8 pt-4 snap-x snap-mandatory scroll-smooth px-4 relative z-10"
-          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-        >
-          {TOP_MODELS.map((item, i) => (
-            <div 
-              key={item.id} 
-              className="snap-center shrink-0 w-[280px] bg-surface border border-[var(--gold)]/20 rounded-3xl p-6 flex flex-col justify-between items-center shadow-xl transition-all duration-300 hover:-translate-y-2 hover:border-[var(--gold)]/50 hover:shadow-[0_20px_50px_rgba(212,175,55,0.15)]"
-            >
-              <div className="relative w-32 h-32 bg-gradient-to-b from-white to-[#f0f0f0] rounded-2xl flex items-center justify-center p-3 mb-6 shrink-0 shadow-inner ring-1 ring-black/5">
-                <Image 
-                  src={item.image} 
-                  alt={item.model} 
-                  fill 
-                  className="object-contain p-2 drop-shadow-xl" 
-                  sizes="128px"
-                  priority={i < 4}
-                />
-              </div>
-              
-              <div className="text-center mb-2">
-                <div className="text-foreground font-bold text-2xl mb-1 tracking-tight">{item.brand} {item.model}</div>
-                <div className="text-muted text-sm">({item.storage})</div>
-              </div>
-              
-              <div className="text-center mb-8">
-                <div className="text-muted text-xs uppercase tracking-wider mb-1">Get Upto</div>
-                <div className="text-[var(--gold)] font-black text-3xl">
-                  {getUpto[item.id] ? `₹${getUpto[item.id].toLocaleString('en-IN')}` : '…'}
-                </div>
-              </div>
-              
-              <button 
-                onClick={() => handleSellClick(item.brand, item.model)}
-                className="w-full bg-[var(--gold)] hover:bg-[#f0c040] text-black font-bold py-3 px-6 rounded-xl transition-colors text-base"
-              >
-                Sell Now
-              </button>
-            </div>
-          ))}
+    <section aria-labelledby="top-models-title" className="mx-auto max-w-7xl px-4 py-14 md:px-6 md:py-20">
+      <div className="mb-8 flex items-end justify-between gap-4">
+        <div>
+          <h2 id="top-models-title" className="font-display text-[1.9rem] font-medium leading-tight tracking-[-0.02em] text-foreground md:text-[2.5rem]">
+            Top selling mobile phones
+          </h2>
+          <p className="mt-2 max-w-xl text-muted">The most sought-after devices and the most we pay for them.</p>
+        </div>
+        <div className="hidden shrink-0 gap-2 md:flex">
+          <button type="button" onClick={() => scrollByCards(-1)} aria-label="Scroll left" className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-background text-foreground transition-colors hover:border-gold hover:text-gold">
+            <ChevronLeft aria-hidden="true" className="h-5 w-5" />
+          </button>
+          <button type="button" onClick={() => scrollByCards(1)} aria-label="Scroll right" className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-background text-foreground transition-colors hover:border-gold hover:text-gold">
+            <ChevronRight aria-hidden="true" className="h-5 w-5" />
+          </button>
         </div>
       </div>
 
-      <style jsx>{`
-        div::-webkit-scrollbar {
-          display: none;
-        }
-      `}</style>
-    </div>
+      <ul
+        ref={scrollRef}
+        className="hide-scrollbar relative -mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth px-4 pb-4 md:mx-0 md:px-0"
+      >
+        {TOP_MODELS.map((item, i) => {
+          const price = getUpto[item.id];
+          return (
+            <li key={item.id} className="w-[min(72%,240px)] shrink-0 snap-start sm:w-[240px]">
+              <Link
+                href={quoteHref(item.brand, item.model)}
+                className="group relative flex h-full flex-col rounded-2xl border border-border bg-surface p-4 text-foreground no-underline shadow-token-sm transition-[border-color,box-shadow,transform] duration-200 hover:-translate-y-0.5 hover:border-gold hover:text-foreground hover:shadow-token-md"
+              >
+                <span className="relative block aspect-square w-full overflow-hidden rounded-xl bg-white">
+                  {brokenImages[item.id] ? (
+                    <span className="flex h-full w-full items-center justify-center text-[#b8ad95]">
+                      <Smartphone aria-hidden="true" className="h-14 w-14" strokeWidth={1.25} />
+                    </span>
+                  ) : (
+                    <Image
+                      src={item.image}
+                      alt=""
+                      fill
+                      className="object-contain p-5 transition-transform duration-300 group-hover:scale-[1.03]"
+                      sizes="240px"
+                      priority={i < 2}
+                      onError={() => setBrokenImages((prev) => ({ ...prev, [item.id]: true }))}
+                    />
+                  )}
+                </span>
+                <span className="mt-4 block text-base font-semibold leading-snug">{item.brand} {item.model}</span>
+                <span className="mt-0.5 block text-sm text-muted">{item.storage}</span>
+                <span className="mt-4 flex items-end justify-between gap-2 border-t border-border pt-3">
+                  <span className="flex flex-col">
+                    <span className="text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-muted">Get upto</span>
+                    {price ? (
+                      <span className="tabular text-xl font-bold text-gold">{`₹${price.toLocaleString('en-IN')}`}</span>
+                    ) : pricesSettled ? (
+                      <span className="text-sm font-semibold text-foreground">Check price</span>
+                    ) : (
+                      <span className="skeleton mt-1 block h-6 w-24"><span className="sr-only">Loading price</span></span>
+                    )}
+                  </span>
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gold text-on-gold transition-transform duration-200 group-hover:translate-x-0.5">
+                    <ArrowRight aria-hidden="true" className="h-4 w-4" />
+                    <span className="sr-only">Sell now</span>
+                  </span>
+                </span>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
   );
 }
