@@ -11,7 +11,7 @@ import { createXiaomiResearchQuoteService, type XiaomiResearchRouteEvidence } fr
 import { calculateTeamWorkbookCandidate, workbookStorageIdentity, type WorkbookRoute } from './teamWorkbookCandidate';
 
 export interface WorkbookRouteEvidence extends WorkbookRoute {
-  brand: string; model: string; storage: string; observedAt: string; evidenceSha256: string;
+  brand: string; model: string; storage: string; observedAt: string; evidenceSha256: string; baselineGetUpto?: number;
 }
 export function createTeamWorkbookResearchQuoteService(service: PricingService, options: {
   enabled?: boolean; now?: () => Date; routeEvidence?: readonly WorkbookRouteEvidence[];

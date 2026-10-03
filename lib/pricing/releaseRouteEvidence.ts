@@ -7,6 +7,7 @@ const row = z.object({
   brand: z.string().min(1), model: z.string().min(1), storage: z.string().min(1),
   source: z.literal('VERIFIED_COLLECTOR_TRACE'), status: z.literal('OK'),
   observedAt: z.string().datetime(), evidenceSha256: z.string().regex(/^[a-f0-9]{64}$/),
+  baselineGetUpto: z.number().positive().optional(),
   semantics: z.object({ warrantyMode: mode, billMode: mode, ageMode: mode }),
   boxMode: mode, chargerMode: mode, sPenMode: mode, eSimMode: mode,
 });

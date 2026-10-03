@@ -26,7 +26,7 @@ function add(brand: string, model: string, storage: string, price: number, mode:
 }
 const nord = add('OnePlus', 'OnePlus Nord', '8 GB/128 GB', 8340, 'NOT_ASKED');
 const open = add('OnePlus', 'Oneplus Open', '16 GB/512 GB', 51650, 'ASKED');
-const unmeasured = add('OnePlus', 'OnePlus 9 5G', '8 GB/128 GB', 9710, 'NOT_ASKED');
+const ablationMeasured = add('OnePlus', 'OnePlus 9 5G', '8 GB/128 GB', 9710, 'NOT_ASKED');
 const apple = add('Apple', 'Apple iPhone 12 Pro', '256GB', 24460, 'NOT_ASKED');
 const repository: PricingServiceDeps['repository'] = { async get(k) { return records.get(k) ?? null; }, async listAll() { return [...records.values()]; },
   async upsert(r) { records.set(r.deviceKey, r); }, async appendHistory() {}, async getHistory() { return []; } };
@@ -70,9 +70,32 @@ async function main() {
   } finally { records.set(openKey, originalOpen); }
   // Tokens: RC token verifies only against an RC service quote of the same answers.
   assert.notEqual(r.quoteToken, l.quoteToken); checks++;
-  // NOT_ASKED alone grants no correction to an unmeasured model.
-  const ru = await q(rc, clean, unmeasured), lu = await q(legacy, clean, unmeasured); assert(ru.ok && lu.ok);
-  assert.equal(ru.fhoneifyPrice, lu.fhoneifyPrice); assert.equal(ru.internal.accessoryBasis, 'LEGACY_BOX_BONUS'); checks++;
+  // The independently audited exact OnePlus 9 route uses the accessory
+  // correction; the disabled legacy engine keeps its historical quote.
+  const ru = await q(rc, clean, ablationMeasured), lu = await q(legacy, clean, ablationMeasured); assert(ru.ok && lu.ok);
+  assert.equal(ru.internal.cashifyConditionEquivalent, 9690); assert.equal(ru.internal.accessoryBasis, 'GET_UPTO_INCLUDES_BOX_AND_CHARGER');
+  assert.equal(lu.internal.accessoryBasis, 'LEGACY_BOX_BONUS'); assert.equal(lu.fhoneifyPrice - ru.fhoneifyPrice, 432); checks++;
+  const scratched = await q(rc, { ...clean, defects: ['screen_scratch'], screenCondition: 'More than 2 scratches on screen' }, ablationMeasured);
+  assert(scratched.ok); assert.equal(scratched.internal.cashifyConditionEquivalent, 8230, 'clean-baseline shift preserves the legacy scratch deduction'); checks++;
+  // Single-point accessory controls do not authorize a moved reference.
+  const nineKey = deviceKey(ablationMeasured), originalNine = records.get(nineKey)!;
+  try {
+    records.set(nineKey, { ...originalNine, currentPrice: 9720 });
+    const changed = await q(rc, clean, ablationMeasured); assert(!changed.ok); assert.equal(changed.code, 'MANUAL_INSPECTION_REQUIRED');
+  } finally { records.set(nineKey, originalNine); }
+  checks++;
+  const profileKey = questionnaireModelKey(ablationMeasured), savedProfile = profiles.profiles.get(profileKey)!;
+  try {
+    profiles.profiles.delete(profileKey);
+    const missingProfile = await q(rc, clean, ablationMeasured); assert(!missingProfile.ok);
+    assert(['INVALID_DIAGNOSTICS', 'MANUAL_INSPECTION_REQUIRED'].includes(missingProfile.code)); assert.equal('quoteToken' in missingProfile, false);
+    profiles.profiles.set(profileKey, { ...savedProfile, warrantyMode: 'ASKED' });
+    const mismatchedRoute = await q(rc, clean, ablationMeasured); assert(!mismatchedRoute.ok); assert.equal(mismatchedRoute.code, 'MANUAL_INSPECTION_REQUIRED');
+  } finally { profiles.profiles.set(profileKey, savedProfile); }
+  checks++;
+  // Missing box remains explicitly unsupported for this evidence route.
+  const missingNineBox = await q(rc, { ...clean, accessories: ['charger'] }, ablationMeasured);
+  assert(!missingNineBox.ok); assert.equal(missingNineBox.code, 'MANUAL_INSPECTION_REQUIRED'); checks++;
   // Preserve the research Apple result, but block binding headline activation.
   const ap = await q(rc, { ...clean, accessories: ['box'] }, apple); assert(!ap.ok);
   assert.equal(ap.code, 'MANUAL_INSPECTION_REQUIRED'); assert.equal('quoteToken' in ap, false); checks++;

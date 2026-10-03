@@ -346,7 +346,7 @@ async function run() {
     });
     await check('reviewed route loader preserves UNKNOWN and rejects missing fields without a default route', () => {
       const reviewed = loadReleaseRouteEvidence(path.resolve(__dirname, '../pricing/fixtures/release-route-evidence-2026-10-02.json'));
-      assert.equal(reviewed.length, 8); assert.deepEqual(loadReleaseRouteEvidence(), []);
+      assert.equal(reviewed.length, 21); assert.deepEqual(loadReleaseRouteEvidence(), []);
       const folder = mkdtempSync(path.join(tmpdir(), 'fhoneify-local-route-test-'));
       const file = path.join(folder, 'routes.json');
       const row = { ...routeEvidence[0], source: 'VERIFIED_COLLECTOR_TRACE', status: 'OK', chargerMode: 'UNKNOWN' };
