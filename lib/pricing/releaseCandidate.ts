@@ -3,12 +3,13 @@
 import xiaomiFixture from '../../scripts/pricing/fixtures/xiaomi-workbook-verified-development-2026-10-02.json';
 import onePlusFixture from '../../scripts/pricing/fixtures/oneplus-display-verified-development-2026-10-02.json';
 import glassFixture from '../../scripts/pricing/fixtures/fresh-glass-ab-development-2026-10-02.json';
+import measuredFixture from '../../scripts/pricing/fixtures/measured-point-candidates-2026-10-03.json';
 import { COMMON_FUNCTIONAL_PENALTIES, type DiagnosticsType } from '../pricingCalculator';
 import { isQuestionnaireProfileCurrent } from '../referencePricing/questionnaire/policy';
 import { isReleaseEvidenceCurrent } from './releaseEvidenceAge';
 import type { QuestionnaireSemantics } from './questionnaireSemantics';
 import type { WorkbookRouteEvidence } from './teamWorkbookResearchQuoteService';
-import { calculateXiaomiWorkbookEvidenceCandidate } from './xiaomiWorkbookEvidenceCandidate';
+import { calculateVerifiedWorkbookCandidate, calculateXiaomiWorkbookEvidenceCandidate } from './xiaomiWorkbookEvidenceCandidate';
 import { calculateOnePlusDisplayEvidenceCandidate } from './onePlusDisplayEvidenceCandidate';
 import { calculateFreshGlassEvidenceCandidate } from './freshGlassEvidenceCandidate';
 import { workbookStorageIdentity } from './teamWorkbookCandidate';
@@ -65,6 +66,9 @@ export const RC_ALLOWLIST = [
   ...xiaomiFixture.specs.map(s => ({ brand: 'Xiaomi', ...s, family: 'xiaomi-workbook' as const, evidence: `${xiaomiFixture.version}#${s.deviceId}` })),
   ...onePlusFixture.specs.map(s => ({ ...s, family: 'oneplus-display' as const, evidence: `${onePlusFixture.version}#${s.deviceId}` })),
   ...glassFixture.specs.map(s => ({ ...s, family: 'fresh-glass' as const, evidence: `${glassFixture.version}#${s.deviceId}` })),
+  // One-point calibrations from already-collected traced blocks (2026-10-02):
+  // bind only at the calibrated Get Upto, like 14 CIVI / Open.
+  ...measuredFixture.specs.map(s => ({ ...s, family: 'measured-point' as const, evidence: `${measuredFixture.version}#${s.deviceId}` })),
 ];
 export type ReleaseCandidateOutcome =
   | { kind: 'VERIFIED'; cashifyConditionEquivalent: number; rule: string; evidence: string; conditionClass: ConditionClass }
@@ -130,7 +134,10 @@ export function releaseCandidateOutcome(input: {
   const d = { ...input.diagnostics };
   if (route.semantics.warrantyMode === 'ASKED' && d.warranty === false && route.semantics.ageMode === 'NOT_ASKED' && d.mobileAge === 'above11') d.mobileAge = null;
   const args = { ...device, reference: input.reference, diagnostics: d, route, now: input.now };
-  const result = spec.family === 'xiaomi-workbook' ? calculateXiaomiWorkbookEvidenceCandidate(args) : spec.family === 'oneplus-display' ? calculateOnePlusDisplayEvidenceCandidate(args) : calculateFreshGlassEvidenceCandidate(args);
+  const result = spec.family === 'xiaomi-workbook' ? calculateXiaomiWorkbookEvidenceCandidate(args)
+    : spec.family === 'oneplus-display' ? calculateOnePlusDisplayEvidenceCandidate(args)
+    : spec.family === 'measured-point' ? calculateVerifiedWorkbookCandidate(measuredFixture.specs, measuredFixture.version, args)
+    : calculateFreshGlassEvidenceCandidate(args);
   if (!result.supported) return manual(result.reason);
   return { kind: 'VERIFIED', cashifyConditionEquivalent: result.quote.cashifyConditionEquivalent, rule: spec.family, evidence: spec.evidence, conditionClass: cls };
 }

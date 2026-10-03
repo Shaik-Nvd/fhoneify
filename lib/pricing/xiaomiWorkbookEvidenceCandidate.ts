@@ -17,6 +17,8 @@ export interface WorkbookEvidenceSpec {
   model: string; storage: string; validatedGetUpto: number; calibratedAt: string;
   modes: Record<'warranty' | 'validBill' | 'mobileAge' | 'eSim' | 'box' | 'charger' | 'sPen', string>;
   baseline: { kind: string; offset?: number; retention?: number };
+  /** Measured eSIM answer, required when the route asks the eSIM question. */
+  eSimAnswer?: string;
   componentCosts: Partial<Record<WorkbookComponent, number>>;
   supportedProfiles: readonly (readonly string[])[];
 }
@@ -38,9 +40,13 @@ export function calculateVerifiedWorkbookCandidate(specs: readonly WorkbookEvide
   const d = input.diagnostics, r = input.route, m = spec.modes;
   if (r.semantics.warrantyMode !== m.warranty || r.semantics.billMode !== m.validBill || r.semantics.ageMode !== m.mobileAge ||
     r.eSimMode !== m.eSim || r.boxMode !== m.box || r.chargerMode !== m.charger || r.sPenMode !== m.sPen) return reject('Conditional route differs from the verified observation block');
+  // Exactly the accessories the verified route asks about, all present; the
+  // eSIM answer only where asked and only the measured one.
+  const expectedAccessories = ['box', ...(m.charger === 'ASKED' ? ['charger'] : []), ...(m.sPen === 'ASKED' ? ['spen'] : [])];
   if ((m.warranty === 'ASKED' ? d.warranty !== false : d.warranty != null) ||
-    (m.validBill === 'ASKED' ? d.validBill !== true : d.validBill != null) || d.mobileAge != null || d.eSim != null ||
-    d.box === false || d.charger === false || signature(d.accessories ?? []) !== 'box|charger') return reject('Answers differ from verified Yes-if-asked and NOT_ASKED regime');
+    (m.validBill === 'ASKED' ? d.validBill !== true : d.validBill != null) || d.mobileAge != null ||
+    (m.eSim === 'ASKED' ? !spec.eSimAnswer || d.eSim !== spec.eSimAnswer : d.eSim != null) ||
+    d.box === false || d.charger === false || signature(d.accessories ?? []) !== signature(expectedAccessories)) return reject('Answers differ from verified Yes-if-asked and NOT_ASKED regime');
   const components = workbookComponents(d);
   if (!components || !spec.supportedProfiles.some(p => signature(p) === signature(components))) return reject('Unmeasured fault, interaction or combination');
   if (!Number.isFinite(input.reference) || input.reference <= 0) return reject('Invalid Get Upto');
