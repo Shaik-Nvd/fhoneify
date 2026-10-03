@@ -81,10 +81,12 @@ const leads: Array<{ quotedPrice: number; answers: Record<string, unknown>; [key
 const serveLegacy = process.argv.includes('--serve') && process.argv.includes('--legacy');
 if (process.argv.includes('--serve')) process.env.PRICING_RELEASE_CANDIDATE = serveLegacy ? 'off' : 'on';
 let active = serveLegacy ? legacy : release;
+// The server resolves its release mode once at startup; tests switch that object.
+let releaseConfig: { mode: 'legacy' | 'release-candidate' } = { mode: 'legacy' };
 
 async function startFixture(port: number): Promise<Server> {
   // Load real server modules only after the sentinel and local secrets exist.
-  const [{ default: express }, { default: prisma }, { pricingService }, { default: router }] = await Promise.all([
+  const [{ default: express }, { default: prisma }, { pricingService, pricingRelease }, { default: router }] = await Promise.all([
     import('express'), import('../../server/lib/prisma'), import('../../server/modules/quote/pricing'), import('../../server/modules/quote/routes'),
   ]);
   assert.equal(process.env.DATABASE_URL, sentinel, 'dotenv must never override the no-database sentinel');
@@ -95,6 +97,7 @@ async function startFixture(port: number): Promise<Server> {
     leads.push(data);
     return { ...data, id: `fixture-lead-${leads.length}`, createdAt: at } as never;
   } });
+  releaseConfig = pricingRelease;
   pricingService.quote = (input) => active.quote(input);
   pricingService.getUpto = (input) => active.getUpto(input);
   pricingService.verifyLeadPrice = (input) => active.verifyLeadPrice(input);
@@ -320,10 +323,10 @@ async function run() {
       assert.equal(leads.length, count);
     });
     await check('RC legacy bucket endpoint cannot price missing answers or six-fault Note15', async () => {
-      const priorMode = process.env.PRICING_RELEASE_CANDIDATE; active = release; const count = leads.length;
+      const priorMode = releaseConfig.mode; active = release; const count = leads.length;
       const note = findCatalogDevice('Xiaomi', 'Xiaomi Redmi Note 15 Pro Plus 5G', '12 GB/512 GB'); assert(note);
       try {
-        process.env.PRICING_RELEASE_CANDIDATE = 'on';
+        releaseConfig.mode = 'release-candidate';
         const missing = await post('/api/quote', { deviceId: nord.id, condition: 'like_new' });
         assert.equal(missing.status, 422); assert.equal(missing.body.code, 'MANUAL_INSPECTION_REQUIRED'); assert.equal(missing.body.data, undefined);
         const answers = { ...clean, hardware: ['charging', 'back_camera', 'front_camera', 'wifi', 'speaker', 'fingerprint'] };
@@ -331,13 +334,13 @@ async function run() {
         assert.equal(severe.status, 422); assert.equal(severe.body.code, 'MANUAL_INSPECTION_REQUIRED'); assert.equal(severe.body.data, undefined);
         assert.equal(leads.length, count);
       } finally {
-        if (priorMode === undefined) delete process.env.PRICING_RELEASE_CANDIDATE; else process.env.PRICING_RELEASE_CANDIDATE = priorMode;
+        releaseConfig.mode = priorMode;
       }
     });
     await check('eligible RC bucket request delegates the authoritative quote, independent of bucket multiplier', async () => {
-      const priorMode = process.env.PRICING_RELEASE_CANDIDATE; active = release; const count = leads.length;
+      const priorMode = releaseConfig.mode; active = release; const count = leads.length;
       try {
-        process.env.PRICING_RELEASE_CANDIDATE = 'on';
+        releaseConfig.mode = 'release-candidate';
         const exact = await post('/api/quote/price', requestFor(display)); assert.equal(exact.status, 200);
         for (const condition of ['like_new', 'poor']) {
           const bucket = await post('/api/quote', { deviceId: nord.id, condition, answers: display });
@@ -346,7 +349,7 @@ async function run() {
         }
         assert.equal(leads.length, count);
       } finally {
-        if (priorMode === undefined) delete process.env.PRICING_RELEASE_CANDIDATE; else process.env.PRICING_RELEASE_CANDIDATE = priorMode;
+        releaseConfig.mode = priorMode;
       }
     });
     await check('reviewed route loader preserves UNKNOWN and rejects missing fields without a default route', () => {

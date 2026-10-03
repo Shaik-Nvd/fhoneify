@@ -15,6 +15,7 @@ import { SEED_DEVICES } from '@/lib/seed_devices';
 // let the screen, the stored lead and a reloaded page disagree.
 import { PERFECT_CONDITION_DIAGNOSTICS } from '@/lib/pricing/perfectCondition';
 import { customerPayout } from '@/lib/pricing/payout';
+import { inspectionRequestLinks } from '@/lib/inspectionRequest';
 import { SignedQuote, clearQuoteSession, loadQuoteSession, sameDevice, saveQuoteSession } from '@/lib/pricing/quoteSession';
 import { warrantyVoidedByDiagnostics } from '@/lib/pricing/diagnostics';
 import { questionnaireFor } from '@/lib/pricing/questionnaire';
@@ -2894,7 +2895,12 @@ export default function QuotePage() {
               <p style={{ color: '#FF3B30' }}>{finalPriceError}</p>
               {manualInspectionRequired ? (
                 <>
-                  <p>We cannot offer a binding price for these answers. Please review your device condition.</p>
+                  <p>We can't give an instant price for these answers yet. Our team can inspect your phone and quote it for you, free and with no obligation.</p>
+                  <a href={inspectionRequestLinks({ brand: selectedBrand, model: getDisplayModelName(selectedBrand, selectedModel), storage: selectedStorage }).whatsapp}
+                    target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '12px', borderRadius: '8px', fontWeight: 600 }}>Request an inspection on WhatsApp</a>
+                  <p style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>
+                    Or email <a href={inspectionRequestLinks({ brand: selectedBrand, model: getDisplayModelName(selectedBrand, selectedModel), storage: selectedStorage }).email} style={{ textDecoration: 'underline' }}>support@fhoneify.in</a>. If an answer was wrong, you can change it.
+                  </p>
                   <button type="button" onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 3)} className="btn-outline">Review answers</button>
                 </>
               ) : <button type="button" onClick={() => calculateFinalPrice(diagnostics)} className="btn-primary" style={{ padding: '12px', borderRadius: '8px', fontWeight: 600 }}>Try again</button>}

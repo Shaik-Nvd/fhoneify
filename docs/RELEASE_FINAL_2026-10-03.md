@@ -12,6 +12,33 @@ The ±3% target is met for every candidate and accessory-corrected observation, 
 
 No deploy, push, merge, production query or production write occurred. Collection used 7 attempts (19/24 used, 5 remaining).
 
+## 0. Launch policy (owner, 2026-10-03, second pass): supersedes the fallback scope below
+
+In release mode, **only the verified scope issues a binding price**. That means the 7 candidate variants with their measured conditions, and the 13 accessory-route variants for clean or exactly ">2 body scratches"/"major dents".
+
+Every other variant and condition, including the former `UNVALIDATED_LEGACY` fallback, returns HTTP 422 `MANUAL_INSPECTION_REQUIRED`. There is no price and no token; the response carries only the nonbinding Get Upto for context. The quote page then offers **"Request an inspection on WhatsApp"**, prefilled with the device, plus an email link and "Review answers". This is implemented as an explicit policy in `releaseCandidateOutcome`, with a defensive check in the service. Legacy mode (rollback) is unchanged. Release version: `...+rc-verified-inputs-v6-no-legacy-binding-2026-10-03`.
+
+**Coverage reduction, measured on the 168 observation rows (refresh overlay).**
+
+| | Binding instant prices |
+|---|---:|
+| Legacy | 164 |
+| Release | **47** (29 candidate + 18 accessory) |
+
+The other 117 rows inspect, and 4 have no reference.
+
+Across the catalog, 20 of 2,258 variants (0.9%) can receive an instant price, and only for their listed conditions. Everything else, including every clean phone of an unlisted model, now needs an inspection request. This is a deliberate trade: the removed fallback missed ±3% on 40 of 71 observations, overpaid up to ₹1,600, and paid customers less than Cashify on 18 rows.
+
+**Accuracy of what still binds** (47 rows, all fitting or controls except where noted):
+
+- MAPE 0.44%; maximum APE 2.92%; maximum overpayment ₹0; 47/47 within ±3%.
+- Two independent predictions: −2.04% and −1.85%.
+- Customer payout beats Cashify on all 47 rows, by ₹29 to ₹1,513.
+
+**Switch.** `config/pricing-release.json` (`releaseCandidate`) is the reviewed, committed switch, because the host dashboard isn't reachable from this repository's tooling. An explicit host env `PRICING_RELEASE_CANDIDATE=on|off` overrides it; `off` is the immediate host-side rollback. Read or parse errors mean legacy. An unreadable evidence file in release mode means everything inspects; it never crashes the API or falls back to legacy. `GET /health` reports `commit` and `pricing` (mode, source, version, route count).
+
+**Revalidation before 16 Oct:** `docs/RELEASE_REVALIDATION_PROCEDURE.md`, using `scripts/pricing/revalidation-plan.ts`.
+
 ## 1. What changed in this pass
 
 | Commit | Change | Why |

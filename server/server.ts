@@ -13,6 +13,7 @@ import logger from './lib/logger';
 // Import all module routers
 import authRouter from './modules/auth/routes';
 import quoteRouter from './modules/quote/routes';
+import { pricingStatus } from './modules/quote/pricing';
 import sellRouter from './modules/sell/routes';
 import buyRouter from './modules/buy/routes';
 import adminRouter from './modules/admin/routes';
@@ -127,6 +128,10 @@ app.get('/health', (_req: Request, res: Response) => {
     referenceStore: store.backend,
     database: store.backend === 'postgres' ? (store.connected ? 'connected' : 'unavailable') : 'not_configured',
     databaseCheckedAt: store.checkedAt,
+    // Deployed commit (set by Render) and the active pricing mode, so a deploy
+    // or release switch is verified from responses, not assumed. No secrets.
+    commit: process.env.RENDER_GIT_COMMIT ? process.env.RENDER_GIT_COMMIT.slice(0, 12) : null,
+    pricing: pricingStatus,
   });
 });
 

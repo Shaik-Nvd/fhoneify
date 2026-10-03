@@ -152,7 +152,7 @@ async function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
 }
 
 const ACCESSORY_ROUTE_CONDITIONS = new Set(['clean', 'body']);
-export const RELEASE_CANDIDATE_PRICING_VERSION = `${PRICING_ENGINE_VERSION}+rc-verified-inputs-v5-reference-domain-2026-10-03`;
+export const RELEASE_CANDIDATE_PRICING_VERSION = `${PRICING_ENGINE_VERSION}+rc-verified-inputs-v6-no-legacy-binding-2026-10-03`;
 
 export function createPricingService(deps: PricingServiceDeps) {
   const releaseCandidate = deps.pricingMode === 'release-candidate';
@@ -284,6 +284,12 @@ export function createPricingService(deps: PricingServiceDeps) {
             fhoneifyPrice: applyCompetitorUplift(base.cashifyGetUptoReference, correctedEquivalent) };
           accessoryBasis = accessoryBasisForRoute(route!);
         }
+      }
+      // Defence in depth for the launch policy: in release mode a binding price
+      // comes only from a verified candidate or the accessory-corrected route.
+      if (rc && rc.kind !== 'VERIFIED' && !accessoryBasis.startsWith('GET_UPTO_INCLUDES')) {
+        return { ok: false, code: 'MANUAL_INSPECTION_REQUIRED', message: 'This condition needs an inspection before we can quote a price',
+          context: { questionnaire, startingPrice: computeFhoneifyGetUpto(base.cashifyGetUptoReference), pricingVersion } };
       }
       // Get Upto: the reference plus the uplift, nothing else.
       startingPrice = computeFhoneifyGetUpto(base.cashifyGetUptoReference);

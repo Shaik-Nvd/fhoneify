@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { z } from 'zod';
 import * as quoteService from './service';
-import { pricingService } from './pricing';
+import { pricingRelease, pricingService } from './pricing';
 import { parseDiagnostics } from '../../../lib/pricing/diagnostics';
 import type { PricingErrorCode } from '../../../lib/pricing/pricingService';
 import { buildLeadAnswers } from '../../../lib/pricing/payout';
@@ -86,7 +86,7 @@ export async function createQuote(req: Request, res: Response) {
     }
     // The old condition-bucket endpoint must not issue a second RC price.
     // Legacy mode keeps its original contract; RC needs the same real answers.
-    if (process.env.PRICING_RELEASE_CANDIDATE === 'on') {
+    if (pricingRelease.mode === 'release-candidate') {
       const device = quoteService.listDevices().find(d => d.id === deviceId);
       if (!device) return res.status(404).json({ success: false, error: 'Device not found' });
       if (!answers) return res.status(422).json({ success: false, code: 'MANUAL_INSPECTION_REQUIRED', error: 'Complete the device questions before requesting a price' });

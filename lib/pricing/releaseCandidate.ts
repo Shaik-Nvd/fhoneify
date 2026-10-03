@@ -12,6 +12,7 @@ import { calculateXiaomiWorkbookEvidenceCandidate } from './xiaomiWorkbookEviden
 import { calculateOnePlusDisplayEvidenceCandidate } from './onePlusDisplayEvidenceCandidate';
 import { calculateFreshGlassEvidenceCandidate } from './freshGlassEvidenceCandidate';
 import { workbookStorageIdentity } from './teamWorkbookCandidate';
+import { isBoxIncludedIdentity } from './accessoryBasis';
 
 export type ConditionClass = 'clean' | 'screenScratch' | 'crackedGlass' | 'display' | 'nonOriginalScreen' | 'touch' | 'body' | 'functional' | 'combined' | 'unknown';
 export const RC_POLICY: Record<ConditionClass, 'LEGACY' | 'MANUAL_INSPECTION_REQUIRED'> = {
@@ -92,8 +93,16 @@ export function releaseCandidateOutcome(input: {
     workbookStorageIdentity(device.storage) === workbookStorageIdentity('12 GB/512 GB') && input.diagnostics.hardware.length) return manual('Note functional pricing requires the separately validated additive regime');
   const matches = (s: { brand: string; model: string; storage: string }) => s.brand === device.brand && s.model === device.model && workbookStorageIdentity(s.storage) === workbookStorageIdentity(device.storage);
   const spec = RC_ALLOWLIST.find(matches);
-  if (!spec) return RC_POLICY[cls] === 'MANUAL_INSPECTION_REQUIRED' ? manual(`Unvalidated ${cls} condition`) :
-    { kind: 'LEGACY', flag: 'UNVALIDATED_LEGACY', reason: 'Variant outside measured release scope', conditionClass: cls };
+  if (!spec) {
+    if (RC_POLICY[cls] === 'MANUAL_INSPECTION_REQUIRED') return manual(`Unvalidated ${cls} condition`);
+    // Launch policy (owner, 2026-10-03): release mode issues no unvalidated
+    // legacy binding price. Only the measured accessory-route identities
+    // continue, and the service still enforces their route/reference/condition
+    // checks; everything else is inspected. Legacy mode is unaffected.
+    return isBoxIncludedIdentity(device)
+      ? { kind: 'LEGACY', flag: 'UNVALIDATED_LEGACY', reason: 'Accessory-route identity; service enforces measured scope', conditionClass: cls }
+      : manual('Instant pricing is limited to the verified release scope');
+  }
   const fresh = (t: string | null | undefined) => !!t && Number.isFinite(input.now.getTime()) && Number.isFinite(Date.parse(t)) && Date.parse(t) <= input.now.getTime() && classifyFreshness({ lastVerifiedAt: t, consecutiveFailures: 0, now: input.now }) === 'fresh';
   const route = input.routeEvidence?.find(matches);
   if (!route || !fresh(route.observedAt) || !/^[a-f0-9]{64}$/.test(route.evidenceSha256) || q.source !== 'profile' || q.status !== 'OK' || !isQuestionnaireProfileCurrent(q.observedAt, input.now) ||
