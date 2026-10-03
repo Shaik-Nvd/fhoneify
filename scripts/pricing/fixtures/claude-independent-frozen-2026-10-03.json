@@ -1,0 +1,23 @@
+{
+  "version": "claude-independent-frozen/2026-10-03",
+  "frozenAt": "2026-10-03T12:45:00Z (committed before attempt 13 was reserved)",
+  "service": "createPricingService release-candidate mode at commit 8058c97 (RELEASE_CANDIDATE_PRICING_VERSION ...+rc-verified-inputs-v5-reference-domain-2026-10-03); route fixture release-route-evidence-2026-10-02.json; fresh exact reference = captured Get Upto; stored profile NOT_ASKED/NOT_ASKED/NOT_ASKED",
+  "generator": "scripts/pricing/.freeze.tmp.ts (local, uncommitted helper; inputs reproduced in rows below)",
+  "rule": "Score against the Get Upto read on the same page. If it equals the calibration Get Upto, the prediction is the frozen value below. If it differs: clean = round10(GetUpto - 20) (service output), damaged = INSPECTION (unscored, recorded). Positive signed error = Fhoneify overpays.",
+  "roles": {
+    "IND": "INDEPENDENT: variant x condition never observed; accessory route rule (clean = Get Upto - 20 + legacy body delta, box bonus removed) applied out of sample",
+    "TR": "TEMPORAL_REPEAT of an already-calibrated candidate component on a new day; not unseen-condition validation",
+    "A": "same-block clean control; also a new-day check of clean = Get Upto - 20"
+  },
+  "budget": { "authorizedTotal": 24, "usedBefore": 12, "plannedThisRun": 8, "reserve": 4 },
+  "cases": [
+    { "id": "IND_11PM_A", "variant": "Apple iPhone 11 Pro Max 256 GB", "condition": "clean, box+charger", "calibrationGetUpto": 19110, "prediction": 19090 },
+    { "id": "IND_11PM_B", "variant": "Apple iPhone 11 Pro Max 256 GB", "condition": "body: more than 2 scratches; box+charger", "calibrationGetUpto": 19110, "prediction": 18630, "role": "INDEPENDENT" },
+    { "id": "IND_S21U_A", "variant": "Samsung Galaxy S21 Ultra 5G 12 GB/256 GB", "condition": "clean, box (charger NOT_ASKED)", "calibrationGetUpto": 17130, "prediction": 17110 },
+    { "id": "IND_S21U_B", "variant": "Samsung Galaxy S21 Ultra 5G 12 GB/256 GB", "condition": "body: major dent(s) or more than 2; box", "calibrationGetUpto": 17130, "prediction": 15860, "role": "INDEPENDENT" },
+    { "id": "IND_8PRO_A", "variant": "OnePlus 8 Pro 8 GB/128 GB", "condition": "clean, box+charger", "calibrationGetUpto": 11520, "prediction": 11500 },
+    { "id": "IND_8PRO_B", "variant": "OnePlus 8 Pro 8 GB/128 GB", "condition": "body: more than 2 scratches; box+charger", "calibrationGetUpto": 11520, "prediction": 10620, "role": "INDEPENDENT" },
+    { "id": "TR_N9P_A", "variant": "Xiaomi Redmi Note 9 Pro 4 GB/128 GB", "condition": "clean, box+charger", "calibrationGetUpto": 4990, "prediction": 4970 },
+    { "id": "TR_N9P_B", "variant": "Xiaomi Redmi Note 9 Pro 4 GB/128 GB", "condition": "screen cracked/glass broken; box+charger", "calibrationGetUpto": 4990, "prediction": 3540, "role": "TEMPORAL_REPEAT" }
+  ]
+}
