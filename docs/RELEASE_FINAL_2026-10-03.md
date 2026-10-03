@@ -45,6 +45,7 @@ Across the catalog, 20 of 2,258 variants (0.9%) can receive an instant price, an
 - Only the catalog differs:
   - Xiaomi 13 Pro 5G, 14, 14 Ultra and Redmi 10 Power gain RAM in their storage keys, matching Cashify's variant pages. Their new keys have no reference until the next weekly refresh; release mode inspects them in any case.
   - 15 Redmi variants are added as `pending`. They are refused without a reference.
+  - A browser session saved earlier with an old storage string for those 4 variants gets "device not found" and the customer restarts the quote. The frontend uses the same catalog.
 
 **Other review fixes:**
 - Questionnaire profiles stay usable for 38 days. That is the crawl's 30-day reuse plus its weekly run plus 1 day, so a profile never expires in the gap before its replacement lands.
@@ -107,7 +108,7 @@ All other conditions and missing accessories on these routes require inspection.
 - Xiaomi 14 Ultra 16/512 (₹9,030 legacy baseline overpayment);
 - Redmi Note 15 Pro+ 12/512 with any hardware fault.
 
-**Legacy fallback (`UNVALIDATED_LEGACY`).** Every other catalog variant with a single clean, screen-scratch, cracked-glass, body or functional condition. This is identical to today's production engine.
+**Legacy fallback: removed from release mode by §0.** Every other catalog variant and condition gets inspection, with no price. The legacy engine still prices them in rollback mode only.
 
 ### Why the seven preregistered holdouts get no price
 
