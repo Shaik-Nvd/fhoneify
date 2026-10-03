@@ -15,7 +15,7 @@ import {
 import { UNKNOWN_QUESTIONNAIRE, isQuestionMode, type QuestionnaireSemantics } from './questionnaireSemantics';
 import { releaseCandidateOutcome, type ReleaseCandidateOutcome } from './releaseCandidate';
 import type { WorkbookRouteEvidence } from './teamWorkbookResearchQuoteService';
-import { workbookStorageIdentity } from './teamWorkbookCandidate';
+import { workbookComponents, workbookStorageIdentity } from './teamWorkbookCandidate';
 import { classifyFreshness } from '../referencePricing/freshnessPolicy';
 import { applyCompetitorUplift } from '../pricingCalculator';
 import { accessoryBasisForRoute, cleanAccessoryBaselineDiagnostics, getUptoIncludesAccessories, hasBox, hasVerifiedBoxIncludedRoute, isBoxIncludedIdentity, withoutBoxBonus, type AccessoryBasis } from './accessoryBasis';
@@ -258,10 +258,13 @@ export function createPricingService(deps: PricingServiceDeps) {
               context: { questionnaire, startingPrice: computeFhoneifyGetUpto(base.cashifyGetUptoReference), pricingVersion } };
           }
           // Matched controls on these routes support the clean rule and the
-          // legacy body-scratch/dent deltas (6/6 within 3%, all underpaid);
-          // screen/glass deltas overpaid (OnePlus 9: +7.9%, +26.3%) and
-          // functional deltas were never measured here.
-          if (!ACCESSORY_ROUTE_CONDITIONS.has(rc.conditionClass)) {
+          // legacy deltas for exactly "More than 2 scratches" and "Major
+          // dent(s)" (6/6 within 3%, all underpaid; 2/2 independent within
+          // 2.04%). Screen/glass deltas overpaid (OnePlus 9: +7.9%, +26.3%);
+          // other body subtypes, panel, bent and functional were never measured.
+          const components = workbookComponents(diagnostics);
+          if (!ACCESSORY_ROUTE_CONDITIONS.has(rc.conditionClass) || !components || components.length > 1 ||
+            components.some(c => c !== 'body_heavy' && c !== 'body_dents')) {
             return { ok: false, code: 'MANUAL_INSPECTION_REQUIRED', message: 'This condition is not validated on the accessory-corrected route',
               context: { questionnaire, startingPrice: computeFhoneifyGetUpto(base.cashifyGetUptoReference), pricingVersion } };
           }

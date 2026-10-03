@@ -84,6 +84,12 @@ async function main() {
   const body = await q(rc, { ...clean, defects: ['body_scratch'], bodyScratches: 'More than 2 scratches' }, ablationMeasured), legacyBody = await q(legacy, { ...clean, defects: ['body_scratch'], bodyScratches: 'More than 2 scratches' }, ablationMeasured);
   assert(body.ok && legacyBody.ok); assert.equal(body.internal.accessoryBasis, 'GET_UPTO_INCLUDES_BOX_AND_CHARGER');
   assert(body.internal.cashifyConditionEquivalent < 9690 && body.internal.cashifyConditionEquivalent < legacyBody.internal.cashifyConditionEquivalent, 'body delta kept, box bonus removed'); checks++;
+  for (const unmeasured of [{ bodyScratches: '1-2 scratches' }, { bodyDents: '1-2 minor dents' }, { bodyPanel: 'Cracked/ broken side or back panel' },
+    { bodyBent: 'Bent/ curved panel' }, { bodyScratches: 'More than 2 scratches', bodyDents: 'Major dent(s) or more than 2' }]) {
+    const d = { ...clean, defects: [unmeasured.bodyPanel || unmeasured.bodyBent ? 'panel_missing' : 'body_scratch'], ...unmeasured };
+    const r = await q(rc, d, ablationMeasured); assert(!r.ok, JSON.stringify(unmeasured)); assert.equal(r.code, 'MANUAL_INSPECTION_REQUIRED');
+  }
+  checks++;
   // A moved reference keeps the cross-variant clean rule (Get Upto - 20) but
   // no condition delta: those were checked only at the calibrated reference.
   const nineKey = deviceKey(ablationMeasured), originalNine = records.get(nineKey)!;
