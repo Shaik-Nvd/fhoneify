@@ -974,6 +974,24 @@
       "chargerMode": "ASKED",
       "sPenMode": "ASKED",
       "eSimMode": "NOT_ASKED"
+    },
+    {
+      "brand": "Apple",
+      "model": "Apple iPhone 17",
+      "storage": "256 GB",
+      "source": "VERIFIED_COLLECTOR_TRACE",
+      "status": "OK",
+      "observedAt": "2026-10-03T10:59:37.323Z",
+      "evidenceSha256": "406ac9f42e09bd033c7fd9dda28625cf508ece211356ccafeec18e22f3c3d30b",
+      "semantics": {
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED"
+      },
+      "boxMode": "ASKED",
+      "chargerMode": "NOT_ASKED",
+      "sPenMode": "NOT_ASKED",
+      "eSimMode": "ASKED"
     }
   ]
 }

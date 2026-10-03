@@ -21,6 +21,7 @@ import fs from 'node:fs';
 import crypto from 'node:crypto';
 import fixture from './fixtures/release-candidate-observations-2026-10-02.json';
 import followup from './fixtures/release-followup-results-2026-10-03.json';
+import prospective from './fixtures/claude-prospective-results-2026-10-03.json';
 import oldRoutes from './fixtures/release-route-evidence-2026-10-02.json';
 import { RC_ALLOWLIST, conditionClass } from '../../lib/pricing/releaseCandidate';
 import { isBoxIncludedIdentity } from '../../lib/pricing/accessoryBasis';
@@ -57,6 +58,21 @@ function fromFollowup(): Obs[] {
       components: [], cls: 'clean' };
   });
 }
+/** 2026-10-03 traced controls (CONTROL label only). The iPhone 17 B/C tester
+ * deductions remain provisional and are never used. */
+function fromProspective(): Obs[] {
+  return (prospective.rows as any[]).filter(r => r.status === 'COMPLETED' && r.frozenPrediction == null && /^FM011_/.test(r.experimentId)).map(r => {
+    const mode = (v: string): Mode => v.startsWith('ASKED') ? 'ASKED' : 'NOT_ASKED';
+    const val = (v: string) => v.startsWith('ASKED:') ? v.slice(6) : null;
+    const norm: Record<string, string> = { No: 'no', Yes: 'yes', 'Single eSIM': 'single', 'Original Box with same IMEI': 'present', 'Original Charger of Device': 'present' };
+    const a = (k: string) => { const v = val(r.route[k]); return v == null ? null : norm[v] ?? v; };
+    return { id: `claude-prospective-2026-10-03:${r.experimentId}`, brand: 'Apple', model: 'Apple iPhone 17', storage: '256 GB', getUpto: r.getUpto, observed: r.finalPrice,
+      collectedAt: r.collectedAt, sha: r.evidenceSha256, block: `prospective:${r.experimentId}`,
+      modes: Object.fromEntries(['warranty', 'validBill', 'mobileAge', 'eSim', 'box', 'charger', 'sPen'].map(k => [k, mode(r.route[k])])),
+      answers: { warranty: a('warranty'), validBill: a('validBill'), box: a('box'), charger: a('charger'), sPen: a('sPen'), eSim: a('eSim') },
+      components: [], cls: 'clean' };
+  });
+}
 /** Verified regime: warranty No / bill Yes where asked; box, and charger/S Pen where asked, present. */
 function inRegime(o: Obs) {
   const a = o.answers, m = o.modes;
@@ -66,13 +82,14 @@ function inRegime(o: Obs) {
 }
 
 export function buildMeasuredPointSpecs() {
-  const all = [...fromFixture(), ...fromFollowup()];
+  const all = [...fromFixture(), ...fromFollowup(), ...fromProspective()];
   const groups = new Map<string, Obs[]>();
   for (const o of all) (groups.get(ident(o.brand, o.model, o.storage)) ?? groups.set(ident(o.brand, o.model, o.storage), []).get(ident(o.brand, o.model, o.storage))!).push(o);
   const specs: any[] = [], skipped: any[] = [];
   for (const [key, obs] of groups) {
     const { brand, model, storage } = obs[0];
-    if (RC_ALLOWLIST.some(s => s.brand === brand && s.model === model && workbookStorageIdentity(s.storage) === workbookStorageIdentity(storage)) ||
+    // Launch-scope specs only: this generator's own previous output is rebuilt, not skipped.
+    if (RC_ALLOWLIST.some(s => s.family !== 'measured-point' && s.brand === brand && s.model === model && workbookStorageIdentity(s.storage) === workbookStorageIdentity(storage)) ||
       isBoxIncludedIdentity({ brand, model, storage })) continue;
     if (BLOCKED.has(model)) { skipped.push({ key, reason: 'Blocked by release policy' }); continue; }
     // Latest regime-matched traced clean control defines the calibration point.
@@ -124,7 +141,7 @@ function routeRows(specs: any[]) {
 
 if (require.main === module) {
   const { specs, skipped } = buildMeasuredPointSpecs();
-  const fx = { version: 'measured-point-research/2026-10-03', builtFrom: ['release-candidate-observations-2026-10-02.json', 'release-followup-results-2026-10-03.json'], specs };
+  const fx = { version: 'measured-point-research/2026-10-03', builtFrom: ['release-candidate-observations-2026-10-02.json', 'release-followup-results-2026-10-03.json', 'claude-prospective-results-2026-10-03.json'], specs };
   const routes = { version: 'release-route-evidence/2026-10-03-measured-point-expansion', rows: [...oldRoutes.rows, ...routeRows(specs)] };
   for (const s of specs) console.log(`${s.brand} ${s.model} ${s.storage}`.padEnd(46), 'GU', s.validatedGetUpto, 'clean', Math.round(s.validatedGetUpto * s.baseline.retention),
     'modes', Object.values(s.modes).map((v: any) => v[0]).join(''), JSON.stringify(s.componentCosts), s.notes ?? '');

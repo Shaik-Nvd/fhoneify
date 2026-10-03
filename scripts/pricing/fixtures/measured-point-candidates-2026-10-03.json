@@ -2,7 +2,8 @@
   "version": "measured-point-research/2026-10-03",
   "builtFrom": [
     "release-candidate-observations-2026-10-02.json",
-    "release-followup-results-2026-10-03.json"
+    "release-followup-results-2026-10-03.json",
+    "claude-prospective-results-2026-10-03.json"
   ],
   "specs": [
     {
@@ -1117,6 +1118,43 @@
           "reference": 5600,
           "collectedAt": "2026-10-02T19:29:25.033Z",
           "screenshotSha256": "f3b13137bedd6f377bda3025f853b9c61178c114622d9b28f8a54f42c16ef0d6"
+        }
+      ]
+    },
+    {
+      "deviceId": "Apple|Apple iPhone 17|256gb",
+      "brand": "Apple",
+      "model": "Apple iPhone 17",
+      "storage": "256 GB",
+      "validatedGetUpto": 65000,
+      "modes": {
+        "warranty": "ASKED",
+        "validBill": "ASKED",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "ASKED",
+        "box": "ASKED",
+        "charger": "NOT_ASKED",
+        "sPen": "NOT_ASKED"
+      },
+      "eSimAnswer": "Single eSIM",
+      "baseline": {
+        "kind": "conditional_retention",
+        "retention": 0.7570769230769231
+      },
+      "componentCosts": {},
+      "supportedProfiles": [
+        []
+      ],
+      "calibratedAt": "2026-10-03T10:59:37.323Z",
+      "evidenceQuality": "VERIFIED_TRACE_SCREENSHOT",
+      "role": "ONE_POINT_CALIBRATION_NOT_VALIDATION",
+      "source": [
+        {
+          "experimentId": "claude-prospective-2026-10-03:FM011_ESIM_TR_A",
+          "observed": 49210,
+          "reference": 65000,
+          "collectedAt": "2026-10-03T10:59:37.323Z",
+          "screenshotSha256": "406ac9f42e09bd033c7fd9dda28625cf508ece211356ccafeec18e22f3c3d30b"
         }
       ]
     }
