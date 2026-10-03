@@ -242,20 +242,25 @@ async function run() {
       const lead = await post('/api/quote/leads', { ...input, diagnostics: undefined, answers: diagnostics, phone: '0000000000', quoteToken: old.quoteToken });
       assert.equal(lead.status, 422); assert.equal(leads.length, count);
     });
-    await check('fresh exact reference reanchors the measured offset baseline through the signed lead flow', async () => {
+    await check('moved reference: clean baseline follows it, measured deductions stay at the calibrated reference', async () => {
       const key = deviceKey(nord); const original = records.get(key)!;
       try {
         records.set(key, { ...original, currentPrice: 8260 });
-        const result = await release.quote(requestFor(display)); assert(result.ok);
+        const result = await release.quote(requestFor(clean)); assert(result.ok);
         assert.equal(result.internal.releaseCandidate?.kind, 'VERIFIED');
-        assert.equal(result.internal.cashifyConditionEquivalent, 3560, '8260 reference less measured 20 clean offset and 4680 display component');
+        assert.equal(result.internal.cashifyConditionEquivalent, 8240, '8260 reference less the measured 20 clean offset');
         active = release;
-        const response = await post('/api/quote/price', requestFor(display)); assert.equal(response.status, 200);
+        const response = await post('/api/quote/price', requestFor(clean)); assert.equal(response.status, 200);
         assert.equal(response.body.data.fhoneifyPrice, result.fhoneifyPrice);
-        const lead = await post('/api/quote/leads', leadFor(display, result.quoteToken, result.fhoneifyPrice));
+        const lead = await post('/api/quote/leads', leadFor(clean, result.quoteToken, result.fhoneifyPrice));
         assert.equal(lead.status, 200); assert.equal(leads.at(-1)?.quotedPrice, result.fhoneifyPrice);
+        const damaged = await release.quote(requestFor(display)); assert(!damaged.ok);
+        assert.equal(damaged.code, 'MANUAL_INSPECTION_REQUIRED', 'the 4680 display deduction was measured only at 8340');
+        const count = leads.length;
+        const bypass = await post('/api/quote/leads', leadFor(display, result.quoteToken, result.fhoneifyPrice));
+        assert.equal(bypass.status, 422); assert.equal(leads.length, count, 'a clean token cannot carry a damaged lead');
         records.set(key, { ...original, currentPrice: 8260, matchConfidence: 'high' });
-        const nonExact = await release.quote(requestFor(display)); assert(!nonExact.ok); assert.equal(nonExact.code, 'MANUAL_INSPECTION_REQUIRED');
+        const nonExact = await release.quote(requestFor(clean)); assert(!nonExact.ok); assert.equal(nonExact.code, 'MANUAL_INSPECTION_REQUIRED');
       } finally { records.set(key, original); }
     });
     await check('expired or future-dated route evidence never signs a quote', async () => {

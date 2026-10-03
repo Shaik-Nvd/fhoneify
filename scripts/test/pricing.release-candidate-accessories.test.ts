@@ -77,12 +77,26 @@ async function main() {
   assert.equal(lu.internal.accessoryBasis, 'LEGACY_BOX_BONUS'); assert.equal(lu.fhoneifyPrice - ru.fhoneifyPrice, 432); checks++;
   const scratched = await q(rc, { ...clean, defects: ['screen_scratch'], screenCondition: 'More than 2 scratches on screen' }, ablationMeasured);
   assert(scratched.ok); assert.equal(scratched.internal.cashifyConditionEquivalent, 8230, 'clean-baseline shift preserves the legacy scratch deduction'); checks++;
-  // Single-point accessory controls do not authorize a moved reference.
+  // A moved reference keeps the cross-variant clean rule (Get Upto - 20) but
+  // no condition delta: those were checked only at the calibrated reference.
   const nineKey = deviceKey(ablationMeasured), originalNine = records.get(nineKey)!;
   try {
     records.set(nineKey, { ...originalNine, currentPrice: 9720 });
-    const changed = await q(rc, clean, ablationMeasured); assert(!changed.ok); assert.equal(changed.code, 'MANUAL_INSPECTION_REQUIRED');
+    const changed = await q(rc, clean, ablationMeasured); assert(changed.ok); assert.equal(changed.internal.cashifyConditionEquivalent, 9700);
+    const changedScratch = await q(rc, { ...clean, defects: ['screen_scratch'], screenCondition: 'More than 2 scratches on screen' }, ablationMeasured);
+    assert(!changedScratch.ok); assert.equal(changedScratch.code, 'MANUAL_INSPECTION_REQUIRED'); assert.equal('quoteToken' in changedScratch, false);
   } finally { records.set(nineKey, originalNine); }
+  checks++;
+  // Stored questionnaire profiles follow the crawl's own 30-day reuse policy,
+  // not the 14-day Get Upto window; future-dated and expired ones are refused.
+  const ageKey = questionnaireModelKey(ablationMeasured), ageProfile = profiles.profiles.get(ageKey)!;
+  try {
+    for (const [observedAt, ok] of [['2026-09-24T03:30:00Z', true], ['2026-09-03T11:00:00Z', false], ['2026-10-04T11:00:00Z', false]] as const) {
+      profiles.profiles.set(ageKey, { ...ageProfile, observedAt });
+      const aged = await q(rc, clean, ablationMeasured); assert.equal(aged.ok, ok, observedAt);
+      if (!aged.ok) assert.equal(aged.code, 'MANUAL_INSPECTION_REQUIRED');
+    }
+  } finally { profiles.profiles.set(ageKey, ageProfile); }
   checks++;
   const profileKey = questionnaireModelKey(ablationMeasured), savedProfile = profiles.profiles.get(profileKey)!;
   try {

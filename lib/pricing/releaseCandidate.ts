@@ -5,6 +5,7 @@ import onePlusFixture from '../../scripts/pricing/fixtures/oneplus-display-verif
 import glassFixture from '../../scripts/pricing/fixtures/fresh-glass-ab-development-2026-10-02.json';
 import { COMMON_FUNCTIONAL_PENALTIES, type DiagnosticsType } from '../pricingCalculator';
 import { classifyFreshness } from '../referencePricing/freshnessPolicy';
+import { isQuestionnaireProfileCurrent } from '../referencePricing/questionnaire/policy';
 import type { QuestionnaireSemantics } from './questionnaireSemantics';
 import type { WorkbookRouteEvidence } from './teamWorkbookResearchQuoteService';
 import { calculateXiaomiWorkbookEvidenceCandidate } from './xiaomiWorkbookEvidenceCandidate';
@@ -95,7 +96,7 @@ export function releaseCandidateOutcome(input: {
     { kind: 'LEGACY', flag: 'UNVALIDATED_LEGACY', reason: 'Variant outside measured release scope', conditionClass: cls };
   const fresh = (t: string | null | undefined) => !!t && Number.isFinite(input.now.getTime()) && Number.isFinite(Date.parse(t)) && Date.parse(t) <= input.now.getTime() && classifyFreshness({ lastVerifiedAt: t, consecutiveFailures: 0, now: input.now }) === 'fresh';
   const route = input.routeEvidence?.find(matches);
-  if (!route || !fresh(route.observedAt) || !/^[a-f0-9]{64}$/.test(route.evidenceSha256) || q.source !== 'profile' || q.status !== 'OK' || !fresh(q.observedAt) ||
+  if (!route || !fresh(route.observedAt) || !/^[a-f0-9]{64}$/.test(route.evidenceSha256) || q.source !== 'profile' || q.status !== 'OK' || !isQuestionnaireProfileCurrent(q.observedAt, input.now) ||
     (['warrantyMode', 'billMode', 'ageMode'] as const).some(k => q[k] !== route.semantics[k])) return manual('Fresh exact-variant route evidence and compatible stored questionnaire required');
   if (!input.referenceFresh || !input.referenceExact || input.referenceSource !== 'cashify' || input.baseSource !== 'reference_repository' || !fresh(input.referenceLastVerifiedAt)) return manual('Fresh exact Cashify repository reference required');
   // A fixed historical Get Upto amount is a guard for one-point retention
@@ -107,6 +108,13 @@ export function releaseCandidateOutcome(input: {
     spec.baseline.kind === 'reference_minus_observed_offset';
   if (input.reference !== spec.validatedGetUpto && !referenceRelativeOffset) {
     return manual('Changed reference domain requires baseline revalidation');
+  }
+  // Rupee deductions were measured only at the calibration Get Upto. Moving
+  // the clean baseline with the reference is supported by the cross-variant
+  // Get Upto - 20 evidence; carrying a fixed deduction to an unobserved
+  // reference is not, so damaged phones need inspection until revalidated.
+  if (input.reference !== spec.validatedGetUpto && cls !== 'clean') {
+    return manual('Measured deductions apply only at the calibrated reference; changed reference requires revalidation');
   }
   if (spec.family === 'fresh-glass' && spec.cleanRetention > 1) return manual('Clean-above-Get-Upto headline compatibility requires explicit production approval');
   // The UI derives above11 for warranty-No; it is not a selected age answer.

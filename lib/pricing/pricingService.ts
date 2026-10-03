@@ -21,6 +21,7 @@ import { applyCompetitorUplift } from '../pricingCalculator';
 import { accessoryBasisForRoute, cleanAccessoryBaselineDiagnostics, getUptoIncludesAccessories, hasBox, hasVerifiedBoxIncludedRoute, isBoxIncludedIdentity, withoutBoxBonus, type AccessoryBasis } from './accessoryBasis';
 import type { QuestionnaireProfileStore } from '../referencePricing/questionnaire/store';
 import { questionnaireModelKey } from '../referencePricing/questionnaire/types';
+import { isQuestionnaireProfileCurrent } from '../referencePricing/questionnaire/policy';
 import { QUOTE_TOKEN_VERSION, canonicalDiagnosticsHash, signQuoteToken, verifyQuoteToken } from './quoteToken';
 
 /**
@@ -150,7 +151,7 @@ async function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
   }
 }
 
-export const RELEASE_CANDIDATE_PRICING_VERSION = `${PRICING_ENGINE_VERSION}+rc-verified-inputs-v4-box-baseline-2026-10-03`;
+export const RELEASE_CANDIDATE_PRICING_VERSION = `${PRICING_ENGINE_VERSION}+rc-verified-inputs-v5-reference-domain-2026-10-03`;
 
 export function createPricingService(deps: PricingServiceDeps) {
   const releaseCandidate = deps.pricingMode === 'release-candidate';
@@ -245,14 +246,13 @@ export function createPricingService(deps: PricingServiceDeps) {
         if (rc.kind === 'LEGACY' && isBoxIncludedIdentity(device)) {
           const routeFresh = route && /^[a-f0-9]{64}$/.test(route.evidenceSha256) && Date.parse(route.observedAt) <= at.getTime() &&
             classifyFreshness({ lastVerifiedAt: route.observedAt, consecutiveFailures: 0, now: at }) === 'fresh';
-          const profileFresh = questionnaire.status === 'OK' && !!questionnaire.observedAt && Date.parse(questionnaire.observedAt) <= at.getTime() &&
-            classifyFreshness({ lastVerifiedAt: questionnaire.observedAt, consecutiveFailures: 0, now: at }) === 'fresh';
+          const profileFresh = questionnaire.status === 'OK' && isQuestionnaireProfileCurrent(questionnaire.observedAt, at);
           const exactReference = base.source === 'reference_repository' && base.referenceStatus === 'fresh' && base.referenceSource === 'cashify' &&
             !!base.referenceLastVerifiedAt && reference.record?.matchConfidence === 'exact' && reference.record?.deviceKey === key &&
             reference.record.brand === device.brand && reference.record.model === device.model &&
             workbookStorageIdentity(reference.record.storage) === workbookStorageIdentity(device.storage) && !reference.degraded;
           if (!routeFresh || !profileFresh || !exactReference || !hasVerifiedBoxIncludedRoute(device, questionnaire, route) ||
-            route!.baselineGetUpto !== base.cashifyGetUptoReference) {
+            route!.baselineGetUpto == null || (route!.baselineGetUpto !== base.cashifyGetUptoReference && rc.conditionClass !== 'clean')) {
             return { ok: false, code: 'MANUAL_INSPECTION_REQUIRED', message: 'Accessory route or clean-reference evidence needs revalidation',
               context: { questionnaire, startingPrice: computeFhoneifyGetUpto(base.cashifyGetUptoReference), pricingVersion } };
           }
