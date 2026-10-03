@@ -1,0 +1,15 @@
+{
+  "version": "measured-point-temporal-frozen/2026-10-03",
+  "frozenAt": "2026-10-03T20:00:00Z (committed before attempt 20 was reserved)",
+  "service": "createPricingService release-candidate at commit 23f77a2 with scripts/pricing/fixtures/release-route-evidence-2026-10-03-expansion.json; stored profile = traced route; fresh exact reference = captured Get Upto",
+  "role": "TEMPORAL_REPEAT of one-point calibrations collected 2026-10-02: tests whether the calibrated clean retention / matched deduction still holds on a later day. Not unseen-condition validation.",
+  "rule": "Score only if the captured Get Upto equals the calibration Get Upto (the service inspects otherwise). If Get Upto moved, record it as REFERENCE_MOVED (the spec would correctly inspect) and do not retry. No same-session clean control is collected (budget), so a mismatch cannot be split into baseline vs deduction error.",
+  "budget": { "authorizedTotal": 24, "usedBefore": 19, "planned": 5 },
+  "cases": [
+    { "id": "TMP_OP13_GLASS", "variant": "OnePlus 13 16 GB/512 GB", "answers": "warranty No, bill Yes, box+charger, screen cracked/glass broken", "calibrationGetUpto": 43950, "prediction": 22170 },
+    { "id": "TMP_X15U_CHARGING", "variant": "Xiaomi 15 Ultra 16 GB/512 GB", "answers": "warranty No, bill Yes, box+charger, charging port fault only", "calibrationGetUpto": 59830, "prediction": 43790 },
+    { "id": "TMP_IP16_CLEAN", "variant": "Apple iPhone 16 256 GB", "answers": "warranty No, bill Yes, box (charger not asked), clean", "calibrationGetUpto": 54720, "prediction": 44400 },
+    { "id": "TMP_N12PP_SCRATCH", "variant": "Xiaomi Redmi Note 12 Pro Plus 5G 8 GB/256 GB", "answers": "warranty No, bill Yes, box+charger, more than 2 screen scratches", "calibrationGetUpto": 12490, "prediction": 8520 },
+    { "id": "TMP_FOLD5_CLEAN", "variant": "Samsung Galaxy Z Fold5 12 GB/256 GB", "answers": "warranty No, bill Yes, box (charger not asked), clean", "calibrationGetUpto": 49740, "prediction": 37820 }
+  ]
+}

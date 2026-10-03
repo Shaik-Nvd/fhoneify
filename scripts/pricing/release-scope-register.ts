@@ -37,7 +37,9 @@ const OVERLAY_VERIFIED_AT = '2026-10-03T05:26:14.165Z'; // dry-run Finished time
 const assumedProfileDate = '2026-10-03T11:00:00.000Z';
 const mode = (v: unknown) => isQuestionMode(v) ? v : 'UNKNOWN';
 const appleStorage = (v: string) => v.replace(/\s+GB/g, 'GB');
-const routes: WorkbookRouteEvidence[] = routeFixture.rows.map(r => ({
+const argRoutes = process.argv.indexOf('--routes');
+const routeSource: { rows: any[] } = argRoutes >= 0 ? JSON.parse(fs.readFileSync(process.argv[argRoutes + 1], 'utf8')) : routeFixture;
+const routes: WorkbookRouteEvidence[] = routeSource.rows.map((r: any) => ({
   ...r, semantics: { warrantyMode: mode(r.semantics.warrantyMode), billMode: mode(r.semantics.billMode), ageMode: mode(r.semantics.ageMode) },
   boxMode: mode(r.boxMode), chargerMode: mode(r.chargerMode), sPenMode: mode(r.sPenMode), eSimMode: mode(r.eSimMode),
 }));

@@ -19,7 +19,7 @@
     "test:pricing:cashify-matching": "tsx scripts/test/referencePricing.cashify-matching.test.ts",
     "test:pricing:refresh-e2e": "tsx scripts/test/referencePricing.refresh-e2e.test.ts",
     "test:pricing:production": "tsx scripts/test/pricing.production.test.ts",
-    "test:pricing:release": "tsx scripts/test/pricing.release-policy.test.ts && tsx scripts/test/pricing.release-candidate-accessories.test.ts && tsx scripts/test/pricing.release-flow.test.ts",
+    "test:pricing:release": "tsx scripts/test/pricing.release-policy.test.ts && tsx scripts/test/pricing.measured-point.test.ts && tsx scripts/test/pricing.release-candidate-accessories.test.ts && tsx scripts/test/pricing.release-flow.test.ts",
     "test:pricing:all": "npm run test:pricing && npm run test:pricing:production && npm run test:pricing:reference && npm run test:pricing:reference-data && npm run test:pricing:quote-integration && npm run test:pricing:consistency && npm run test:pricing:get-upto && npm run test:pricing:inr-deductions",
     "test:refresh:all": "npm run test:pricing:cashify-matching && npm run test:pricing:refresh && npm run test:pricing:refresh-e2e",
     "reference-prices:migrate": "tsx scripts/reference-pricing/migrate-legacy-snapshots.ts",
