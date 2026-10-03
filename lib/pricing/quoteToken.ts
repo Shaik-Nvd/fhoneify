@@ -83,8 +83,14 @@ export function verifyQuoteToken(token: string, secret: string, nowSeconds: numb
   if (
     typeof payload.dk !== 'string' ||
     typeof payload.dh !== 'string' ||
+    typeof payload.pv !== 'string' ||
+    !payload.pv ||
     !Number.isInteger(payload.p) ||
-    !Number.isFinite(payload.exp)
+    payload.p <= 0 ||
+    !Number.isInteger(payload.iat) ||
+    payload.iat < 0 ||
+    !Number.isInteger(payload.exp) ||
+    payload.exp <= payload.iat
   ) {
     return { ok: false, reason: 'malformed' };
   }

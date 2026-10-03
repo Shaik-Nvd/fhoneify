@@ -1,0 +1,229 @@
+{
+  "fixtureRows": 171,
+  "evidenceRoot": "scratch/cashify-matrix-integration/research-evidence (ignored, local)",
+  "sourceCheck": {
+    "rowsWithIssues": 0,
+    "issues": [],
+    "screenshotsRehashed": 171,
+    "screenshotsMissingOnDisk": [],
+    "retriedIds": [
+      {
+        "id": "xiaomi-validation:V3",
+        "earlierNonCompleted": 2
+      },
+      {
+        "id": "xiaomi-validation:V4",
+        "earlierNonCompleted": 1
+      },
+      {
+        "id": "xiaomi-candidate-2026-10-01:17-OPEN",
+        "earlierNonCompleted": 1
+      },
+      {
+        "id": "xiaomi-candidate-2026-10-01:NOTE-N-OPEN",
+        "earlierNonCompleted": 1
+      }
+    ]
+  },
+  "duplicates": {
+    "duplicateRowIds": [],
+    "sharedScreenshotGroups": [
+      {
+        "sha": "d48ce851c75ceaa046f1b79762530d1f0e68ac23f7379b115eff93e5c9ed5f1a",
+        "ids": [
+          "xiaomi-validation:C0-V1",
+          "xiaomi-validation:CLOSE-V1",
+          "xiaomi-candidate-2026-10-01:17-OPEN",
+          "xiaomi-candidate-2026-10-01:17-CLOSE",
+          "xiaomi-severe-followup-2026-10-01:X-OPEN",
+          "xiaomi-severe-followup-2026-10-01:X-CLOSE"
+        ]
+      },
+      {
+        "sha": "9ab0106e01845a7dde6c2ec7b7dcbf4e05de8d0837a3505d108634bc8a1a4d19",
+        "ids": [
+          "xiaomi-validation:V7",
+          "xiaomi-validation:CLOSE-V7",
+          "xiaomi-candidate-2026-10-01:T5-OPEN",
+          "xiaomi-candidate-2026-10-01:T5-CLOSE",
+          "xiaomi-severe-followup-2026-10-01:T-OPEN",
+          "xiaomi-severe-followup-2026-10-01:T-CLOSE"
+        ]
+      },
+      {
+        "sha": "ca314fadd517173786243f75a72d0477ba1a386fc2f52eb041f809dd0a20f728",
+        "ids": [
+          "xiaomi-validation:V6",
+          "xiaomi-validation:CLOSE-V6",
+          "xiaomi-candidate-2026-10-01:NOTE-N-OPEN",
+          "xiaomi-severe-followup-2026-10-01:N-OPEN",
+          "xiaomi-severe-followup-2026-10-01:N-CLOSE"
+        ]
+      },
+      {
+        "sha": "92ccbe05333a43bdf4e38c9206275cfaf905cc34dc05c747f37abeee5b7614e3",
+        "ids": [
+          "xiaomi-validation:C0-V9",
+          "xiaomi-validation:CLOSE-V9",
+          "team-workbook-2026-10-02:FM047_FINAL_A"
+        ]
+      },
+      {
+        "sha": "a8d22948272466b72a005a1027cf4431cd2e65a228db7c5bb5e556e1eed9c35c",
+        "ids": [
+          "xiaomi-validation:V9",
+          "team-workbook-2026-10-02:FM047_FINAL_B"
+        ]
+      },
+      {
+        "sha": "e246360c8e0d716eefd7b6356fa7fe88c4d2417e2a29ccdd685c6e33afc1d6e3",
+        "ids": [
+          "xiaomi-candidate-2026-10-01:15-OPEN",
+          "xiaomi-candidate-2026-10-01:15-CLOSE"
+        ]
+      },
+      {
+        "sha": "07b4b2b3e05a3e07282143253daa22200aa626246a57806b34b1495e7f6adfcf",
+        "ids": [
+          "xiaomi-candidate-2026-10-01:NOTE-SEVERE",
+          "xiaomi-severe-followup-2026-10-01:N-SIX"
+        ]
+      },
+      {
+        "sha": "2e6ffb68b81574f1b56bb8e3da9015a356ef2c4b40a6c49d69a1288f649693cf",
+        "ids": [
+          "team-workbook-2026-10-02:FM023_A",
+          "team-workbook-2026-10-02:FM023_CLOSE_A"
+        ]
+      },
+      {
+        "sha": "77d7d811df46be7c6106a7e5a0bbbfa6b271369c3a321c365d5a51a99b068cfc",
+        "ids": [
+          "team-workbook-2026-10-02:FM025_A",
+          "team-workbook-2026-10-02:FM025_CLOSE_A"
+        ]
+      },
+      {
+        "sha": "d4c58e9530502b889b73fdd8569db460f22095c821a36e6572fc0f1ad1c5f4ba",
+        "ids": [
+          "team-workbook-2026-10-02:FM025_B",
+          "team-workbook-2026-10-02:FM025_C"
+        ]
+      },
+      {
+        "sha": "f204d217ed61f083287dfa82dd3deedad0d44f0cc8c26ceb6ca262bf01c3aa79",
+        "ids": [
+          "team-workbook-2026-10-02:FM026_A",
+          "team-workbook-2026-10-02:FM026_CLOSE_A"
+        ]
+      },
+      {
+        "sha": "d279a154d3925aa3b9cc6bdf5ca5e072823d231db7f33544ca95a3dfea7a580c",
+        "ids": [
+          "team-workbook-2026-10-02:FM027_A",
+          "team-workbook-2026-10-02:FM027_CLOSE_A"
+        ]
+      },
+      {
+        "sha": "b38252ee3414ace07b3f7c986d8cdb681bd73854536635451831873776deafa5",
+        "ids": [
+          "team-workbook-2026-10-02:FM028_A",
+          "team-workbook-2026-10-02:FM028_CLOSE_A"
+        ]
+      },
+      {
+        "sha": "dce8bb50d78f0954a4d5baf00d4d6fbd9dea5eb6fdde7221824be278e9a0c923",
+        "ids": [
+          "team-workbook-2026-10-02:FM029_A",
+          "team-workbook-2026-10-02:FM029_CLOSE_A"
+        ]
+      },
+      {
+        "sha": "93217584b35a6111c79b701b2b9e40d176c771fcfe202ac8aede1def6f29569e",
+        "ids": [
+          "team-workbook-2026-10-02:FM030_A",
+          "team-workbook-2026-10-02:FM030_CLOSE_A"
+        ]
+      },
+      {
+        "sha": "6133308a64d14bac17b3c344c40e7b99c776df58502f0f26f5b26ea626006980",
+        "ids": [
+          "team-workbook-2026-10-02:FM033_A",
+          "team-workbook-2026-10-02:FM033_CLOSE_A"
+        ]
+      },
+      {
+        "sha": "d12a22e7d9bc9ac98ff966b212aadb867658a972dfa649ec5aaa75719023fb0c",
+        "ids": [
+          "team-workbook-2026-10-02:FM034_A",
+          "team-workbook-2026-10-02:FM034_CLOSE_A"
+        ]
+      },
+      {
+        "sha": "57579b1da71fe140cef9bf68eed14ced085c36df22e034d02178daa08bbe071f",
+        "ids": [
+          "team-workbook-2026-10-02:FM035_A",
+          "team-workbook-2026-10-02:FM035_CLOSE_A"
+        ]
+      },
+      {
+        "sha": "4ab6d96dac65fca85c81fa85688175f9c61a5ed8aae65e5e0756b20620faa7f2",
+        "ids": [
+          "team-workbook-2026-10-02:FM036_A",
+          "team-workbook-2026-10-02:FM036_CLOSE_A"
+        ]
+      },
+      {
+        "sha": "c766ef0512aef013de317cd47e702bce463dd08243b013bd0a6f4c712f4dd055",
+        "ids": [
+          "team-workbook-2026-10-02:FM037_A",
+          "team-workbook-2026-10-02:FM037_CLOSE_A"
+        ]
+      },
+      {
+        "sha": "35d9f908197273e435837b34cf4c396e3f8412cf53af9bc99506d3bc178416fd",
+        "ids": [
+          "team-workbook-2026-10-02:FM037_B",
+          "team-workbook-2026-10-02:FM037_C"
+        ]
+      },
+      {
+        "sha": "c7b7f023154b65fdcd94827db35dd0458a4bc6e8b2a30f1311fad8b59f5d81a9",
+        "ids": [
+          "team-workbook-2026-10-02:FM038_A",
+          "team-workbook-2026-10-02:FM038_CLOSE_A"
+        ]
+      },
+      {
+        "sha": "6ca05a97dd0d6ef9445a0706861c0bfe0307f29ec3cd701824588a245d35fbac",
+        "ids": [
+          "team-workbook-2026-10-02:FM004_LIVE_A",
+          "team-workbook-2026-10-02:FM004_LIVE_CLOSE_A"
+        ]
+      },
+      {
+        "sha": "f0432f7ed57578b93af006bfa91c98852efd974ad9fb2bd7f388ba8af2d782d1",
+        "ids": [
+          "team-workbook-2026-10-02:FM017_LIVE_A",
+          "team-workbook-2026-10-02:FM017_LIVE_CLOSE_A"
+        ]
+      }
+    ],
+    "repeatedIdenticalObservationGroups": 28,
+    "rowsInRepeatGroups": 69,
+    "independentObservationUnits": 130
+  },
+  "matchedControls": {
+    "damagedRows": 87,
+    "withMatchedCleanControl": 87,
+    "unmatched": []
+  },
+  "roles": {
+    "CLEAN_CONTROL_OR_BASELINE_OBSERVATION": 80,
+    "ORIGINAL_FAILED_HOLDOUT_NOW_DEVELOPMENT": 9,
+    "DEVELOPMENT_OR_ESTABLISHED_OBSERVATION": 74,
+    "PRESERVED_PREREGISTERED_COMBINED_HOLDOUT": 2,
+    "PRESERVED_PREREGISTERED_ADDITIVE_HOLDOUT": 4,
+    "PRESERVED_PREREGISTERED_CONDITIONAL_GLASS_HOLDOUT": 2
+  }
+}

@@ -9,7 +9,7 @@ import referenceStore from '../../server/data/reference-prices/store.json';
 import snapshot from '../../lib/cashify_prices.json';
 import { SEED_DEVICES } from '../../lib/seed_devices';
 import { applyCompetitorUplift, type DiagnosticsType } from '../../lib/pricingCalculator';
-import { computeFhoneifyGetUpto, maxPlausiblePrice, priceDevice, resolveReference } from '../../lib/pricing/engine';
+import { computeFhoneifyGetUpto, materializedSnapshotKey, maxPlausiblePrice, priceDevice, resolveReference } from '../../lib/pricing/engine';
 import { pricingFamilyKey } from '../../lib/pricing/families';
 import type { QuestionnaireSemantics } from '../../lib/pricing/questionnaireSemantics';
 import { deviceKey, type ReferencePriceRecord } from '../../lib/referencePricing/types';
@@ -87,6 +87,7 @@ const upliftIndependent = (reference: number, eq: number) => {
 };
 
 let devices = 0;
+let pendingDevices = 0;
 let quotes = 0;
 const families = new Set<string>();
 
@@ -94,6 +95,13 @@ for (const device of SEED_DEVICES as any[]) {
   if (!device.brand || !device.model || !device.storage) continue;
   const name = `${device.brand} | ${device.model} | ${device.storage}`;
   const ref = resolveReference({ device, repositoryRecord: records[deviceKey(device)] ?? null, snapshot: snapshot as Record<string, number>, now: new Date('2026-09-24T12:00:00+05:30') });
+  if (device.referencePriceStatus === 'pending') {
+    pendingDevices++;
+    check('pending catalog entries stay unpriced', !ref && device.basePrice === undefined &&
+      (snapshot as Record<string, number>)[materializedSnapshotKey(device.model, device.storage)] === undefined,
+      name, '-', () => 'pending entry acquired an unverified reference or base price');
+    continue;
+  }
   if (!ref) { failures.push({ invariant: 'catalog entry resolves to a reference', device: name, regime: '-', detail: 'no reference, snapshot or basePrice' }); continue; }
   devices++;
   families.add(pricingFamilyKey(device.brand, device.model));
@@ -186,5 +194,5 @@ if (blocking.length) {
   console.log(`\nFAIL: ${blocking.length} blocking property failure(s)`);
   process.exitCode = 1;
 } else {
-  console.log(`\nPASS: ${devices} devices, ${quotes} quotes, ${families.size} families, ${invariantCounts.size} invariants (${failures.length - blocking.length} known-policy no-calls reports)`);
+  console.log(`\nPASS: ${devices} priced devices, ${pendingDevices} verified unpriced pending entries, ${quotes} quotes, ${families.size} families, ${invariantCounts.size} invariants (${failures.length - blocking.length} known-policy no-calls reports)`);
 }

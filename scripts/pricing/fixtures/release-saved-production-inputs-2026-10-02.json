@@ -1,0 +1,1889 @@
+{
+  "version": "release-saved-production-inputs/2026-10-02",
+  "source": "Owner-approved saved READ ONLY export; this extraction executed no production query",
+  "queriedAt": "2026-10-02T18:11:27.676Z",
+  "transaction": "READ ONLY",
+  "sourceSha256": "a4a53af8f82c8e37d53839776aac835b5a193805d1fd816f296dc5b90aebb772",
+  "note": "Exact source/confidence/reference verification date and questionnaire status/observation date are preserved. Missing records remain null. Recent history and unrelated fields are omitted. This is a historical snapshot, not a current production query; current lower prices alone do not prove staleness.",
+  "rows": [
+    {
+      "deviceId": "FM001",
+      "expectedKey": "apple|apple iphone 8|128gb",
+      "reference": {
+        "deviceKey": "apple|apple iphone 8|128gb",
+        "brand": "Apple",
+        "model": "Apple iPhone 8",
+        "storage": "128GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-8-2-gb-128-gb",
+        "currentPrice": 5850,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via dictionary; device name \"Apple iPhone 8\" and variant \"2 GB/128 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-8-2-gb-128-gb (storage matches (128gb); catalog omits RAM and Cashify offers exactly one configuration at this storage (2 GB/128 GB)); price text \"₹5,850\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T08:31:38.796Z",
+        "lastAttemptedAt": "2026-09-27T08:31:38.796Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T08:31:38.796Z"
+      },
+      "questionnaire": {
+        "modelKey": "apple|apple iphone 8",
+        "status": "OK",
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-8",
+        "observedAt": "2026-09-24T15:02:28.025Z"
+      }
+    },
+    {
+      "deviceId": "FM002",
+      "expectedKey": "apple|apple iphone xs max|256gb",
+      "reference": {
+        "deviceKey": "apple|apple iphone xs max|256gb",
+        "brand": "Apple",
+        "model": "Apple iPhone XS Max",
+        "storage": "256GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-xs-max-4-gb-256-gb",
+        "currentPrice": 12510,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via dictionary; device name \"Apple iPhone XS Max\" and variant \"4 GB/256 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-xs-max-4-gb-256-gb (storage matches (256gb); catalog omits RAM and Cashify offers exactly one configuration at this storage (4 GB/256 GB)); price text \"₹12,510\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T08:34:38.653Z",
+        "lastAttemptedAt": "2026-09-27T08:34:38.653Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T08:34:38.653Z"
+      },
+      "questionnaire": {
+        "modelKey": "apple|apple iphone xs max",
+        "status": "OK",
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-xs-max",
+        "observedAt": "2026-09-24T15:03:47.736Z"
+      }
+    },
+    {
+      "deviceId": "FM003",
+      "expectedKey": "apple|apple iphone 11 pro max|256gb",
+      "reference": {
+        "deviceKey": "apple|apple iphone 11 pro max|256gb",
+        "brand": "Apple",
+        "model": "Apple iPhone 11 Pro Max",
+        "storage": "256GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-11-pro-max-4-gb-256-gb",
+        "currentPrice": 18570,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via dictionary; device name \"Apple iPhone 11 Pro Max\" and variant \"4 GB/256 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-11-pro-max-4-gb-256-gb (storage matches (256gb); catalog omits RAM and Cashify offers exactly one configuration at this storage (4 GB/256 GB)); price text \"₹18,570\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T08:35:05.414Z",
+        "lastAttemptedAt": "2026-09-27T08:35:05.414Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T08:35:05.414Z"
+      },
+      "questionnaire": {
+        "modelKey": "apple|apple iphone 11 pro max",
+        "status": "OK",
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-11-pro-max",
+        "observedAt": "2026-09-24T15:03:56.069Z"
+      }
+    },
+    {
+      "deviceId": "FM004",
+      "expectedKey": "apple|apple iphone 12 pro|256gb",
+      "reference": {
+        "deviceKey": "apple|apple iphone 12 pro|256gb",
+        "brand": "Apple",
+        "model": "Apple iPhone 12 Pro",
+        "storage": "256GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-12-pro-6-gb-256-gb",
+        "currentPrice": 24220,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via dictionary; device name \"Apple iPhone 12 Pro\" and variant \"6 GB/256 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-12-pro-6-gb-256-gb (storage matches (256gb); catalog omits RAM and Cashify offers exactly one configuration at this storage (6 GB/256 GB)); price text \"₹24,220\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T08:35:30.946Z",
+        "lastAttemptedAt": "2026-09-27T08:35:30.946Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T08:35:30.946Z"
+      },
+      "questionnaire": {
+        "modelKey": "apple|apple iphone 12 pro",
+        "status": "OK",
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-12-pro",
+        "observedAt": "2026-09-24T15:02:54.718Z"
+      }
+    },
+    {
+      "deviceId": "FM005",
+      "expectedKey": "apple|apple iphone 14|256gb",
+      "reference": {
+        "deviceKey": "apple|apple iphone 14|256gb",
+        "brand": "Apple",
+        "model": "Apple iPhone 14",
+        "storage": "256GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-14-6-gb-256-gb",
+        "currentPrice": 28030,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via dictionary; device name \"Apple iPhone 14\" and variant \"6 GB/256 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-14-6-gb-256-gb (storage matches (256gb); catalog omits RAM and Cashify offers exactly one configuration at this storage (6 GB/256 GB)); price text \"₹28,030\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T08:36:24.103Z",
+        "lastAttemptedAt": "2026-09-27T08:36:24.103Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T08:36:24.103Z"
+      },
+      "questionnaire": {
+        "modelKey": "apple|apple iphone 14",
+        "status": "OK",
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-14",
+        "observedAt": "2026-09-24T15:02:56.160Z"
+      }
+    },
+    {
+      "deviceId": "FM006",
+      "expectedKey": "apple|apple iphone 14 pro max|256gb",
+      "reference": {
+        "deviceKey": "apple|apple iphone 14 pro max|256gb",
+        "brand": "Apple",
+        "model": "Apple iPhone 14 Pro Max",
+        "storage": "256GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-14-pro-max-6-gb-256-gb",
+        "currentPrice": 45080,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via dictionary; device name \"Apple iPhone 14 Pro Max\" and variant \"6 GB/256 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-14-pro-max-6-gb-256-gb (storage matches (256gb); catalog omits RAM and Cashify offers exactly one configuration at this storage (6 GB/256 GB)); price text \"₹45,080\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T08:36:46.253Z",
+        "lastAttemptedAt": "2026-09-27T08:36:46.253Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T08:36:46.253Z"
+      },
+      "questionnaire": {
+        "modelKey": "apple|apple iphone 14 pro max",
+        "status": "OK",
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?",
+          "How many eSIMs does your device support?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-14-pro-max",
+        "observedAt": "2026-09-24T15:03:26.330Z"
+      }
+    },
+    {
+      "deviceId": "FM007",
+      "expectedKey": "apple|apple iphone 15|256gb",
+      "reference": {
+        "deviceKey": "apple|apple iphone 15|256gb",
+        "brand": "Apple",
+        "model": "Apple iPhone 15",
+        "storage": "256GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-15-6-gb-256-gb",
+        "currentPrice": 43270,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via dictionary; device name \"Apple iPhone 15\" and variant \"6 GB/256 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-15-6-gb-256-gb (storage matches (256gb); catalog omits RAM and Cashify offers exactly one configuration at this storage (6 GB/256 GB)); price text \"₹43,270\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T08:36:56.069Z",
+        "lastAttemptedAt": "2026-09-27T08:36:56.069Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T08:36:56.069Z"
+      },
+      "questionnaire": {
+        "modelKey": "apple|apple iphone 15",
+        "status": "OK",
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?",
+          "Is your device under manufacturer warranty?",
+          "Do you have GST valid bill with the same IMEI?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-15",
+        "observedAt": "2026-09-24T15:03:06.208Z"
+      }
+    },
+    {
+      "deviceId": "FM008",
+      "expectedKey": "apple|apple iphone 15 pro max|512gb",
+      "reference": {
+        "deviceKey": "apple|apple iphone 15 pro max|512gb",
+        "brand": "Apple",
+        "model": "Apple iPhone 15 Pro Max",
+        "storage": "512GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-15-pro-max-8-gb-512-gb",
+        "currentPrice": 72000,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via dictionary; device name \"Apple iPhone 15 Pro Max\" and variant \"8 GB/512 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-15-pro-max-8-gb-512-gb (storage matches (512gb); catalog omits RAM and Cashify offers exactly one configuration at this storage (8 GB/512 GB)); price text \"₹72,000\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T08:37:22.509Z",
+        "lastAttemptedAt": "2026-09-27T08:37:22.509Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T08:37:22.509Z"
+      },
+      "questionnaire": {
+        "modelKey": "apple|apple iphone 15 pro max",
+        "status": "OK",
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?",
+          "Is your device under manufacturer warranty?",
+          "Do you have GST valid bill with the same IMEI?",
+          "How many eSIMs does your device support?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-15-pro-max",
+        "observedAt": "2026-09-24T15:03:16.395Z"
+      }
+    },
+    {
+      "deviceId": "FM009",
+      "expectedKey": "apple|apple iphone 16|256gb",
+      "reference": {
+        "deviceKey": "apple|apple iphone 16|256gb",
+        "brand": "Apple",
+        "model": "Apple iPhone 16",
+        "storage": "256GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-16-8-gb-256-gb",
+        "currentPrice": 53280,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via dictionary; device name \"Apple iPhone 16\" and variant \"8 GB/256 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-16-8-gb-256-gb (storage matches (256gb); catalog omits RAM and Cashify offers exactly one configuration at this storage (8 GB/256 GB)); price text \"₹53,280\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T08:37:30.670Z",
+        "lastAttemptedAt": "2026-09-27T08:37:30.670Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T08:37:30.670Z"
+      },
+      "questionnaire": {
+        "modelKey": "apple|apple iphone 16",
+        "status": "OK",
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?",
+          "Is your device under manufacturer warranty?",
+          "Do you have GST valid bill with the same IMEI?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-16",
+        "observedAt": "2026-09-24T15:03:09.429Z"
+      }
+    },
+    {
+      "deviceId": "FM010",
+      "expectedKey": "apple|apple iphone 16 pro max|512gb",
+      "reference": {
+        "deviceKey": "apple|apple iphone 16 pro max|512gb",
+        "brand": "Apple",
+        "model": "Apple iPhone 16 Pro Max",
+        "storage": "512GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-16-pro-max-8-gb-512-gb",
+        "currentPrice": 87010,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via dictionary; device name \"Apple iPhone 16 Pro Max\" and variant \"8 GB/512 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-16-pro-max-8-gb-512-gb (storage matches (512gb); catalog omits RAM and Cashify offers exactly one configuration at this storage (8 GB/512 GB)); price text \"₹87,010\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T08:37:55.218Z",
+        "lastAttemptedAt": "2026-09-27T08:37:55.218Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T08:37:55.218Z"
+      },
+      "questionnaire": {
+        "modelKey": "apple|apple iphone 16 pro max",
+        "status": "OK",
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?",
+          "Is your device under manufacturer warranty?",
+          "Do you have GST valid bill with the same IMEI?",
+          "How many eSIMs does your device support?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-16-pro-max",
+        "observedAt": "2026-09-24T15:03:59.234Z"
+      }
+    },
+    {
+      "deviceId": "FM011",
+      "expectedKey": "apple|apple iphone 17|256gb",
+      "reference": {
+        "deviceKey": "apple|apple iphone 17|256gb",
+        "brand": "Apple",
+        "model": "Apple iPhone 17",
+        "storage": "256GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-17-8-gb-256-gb",
+        "currentPrice": 63500,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via dictionary; device name \"Apple iPhone 17\" and variant \"8 GB/256 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-17-8-gb-256-gb (storage matches (256gb); catalog omits RAM and Cashify offers exactly one configuration at this storage (8 GB/256 GB)); price text \"₹63,500\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T08:38:09.812Z",
+        "lastAttemptedAt": "2026-09-27T08:38:09.812Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T08:38:09.812Z"
+      },
+      "questionnaire": {
+        "modelKey": "apple|apple iphone 17",
+        "status": "OK",
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?",
+          "Is your device under manufacturer warranty?",
+          "Do you have GST valid bill with the same IMEI?",
+          "How many eSIMs does your device support?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-17",
+        "observedAt": "2026-09-24T15:03:59.308Z"
+      }
+    },
+    {
+      "deviceId": "FM012",
+      "expectedKey": "apple|apple iphone 17 pro max|512gb",
+      "reference": {
+        "deviceKey": "apple|apple iphone 17 pro max|512gb",
+        "brand": "Apple",
+        "model": "Apple iPhone 17 Pro Max",
+        "storage": "512GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-17-pro-max-12-gb-512-gb",
+        "currentPrice": 117000,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via dictionary; device name \"Apple iPhone 17 Pro Max\" and variant \"12 GB/512 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-17-pro-max-12-gb-512-gb (storage matches (512gb); catalog omits RAM and Cashify offers exactly one configuration at this storage (12 GB/512 GB)); price text \"₹1,17,000\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T08:38:39.220Z",
+        "lastAttemptedAt": "2026-09-27T08:38:39.220Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T08:38:39.220Z"
+      },
+      "questionnaire": {
+        "modelKey": "apple|apple iphone 17 pro max",
+        "status": "OK",
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?",
+          "Is your device under manufacturer warranty?",
+          "Do you have GST valid bill with the same IMEI?",
+          "How many eSIMs does your device support?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-17-pro-max",
+        "observedAt": "2026-09-24T15:04:11.121Z"
+      }
+    },
+    {
+      "deviceId": "FM013",
+      "expectedKey": "samsung|samsung galaxy m32|4 gb/64 gb",
+      "reference": {
+        "deviceKey": "samsung|samsung galaxy m32|4 gb/64 gb",
+        "brand": "Samsung",
+        "model": "Samsung Galaxy M32",
+        "storage": "4 GB/64 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m32-4-gb-64-gb",
+        "currentPrice": 3530,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via catalog; device name \"Samsung Galaxy M32\" and variant \"4 GB/64 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m32-4-gb-64-gb (RAM and storage both match (4gb/64gb)); price text \"₹3,530\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T09:51:28.755Z",
+        "lastAttemptedAt": "2026-09-27T09:51:28.755Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T09:51:28.755Z"
+      },
+      "questionnaire": {
+        "modelKey": "samsung|samsung galaxy m32",
+        "status": "OK",
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m32-4-gb-64-gb",
+        "observedAt": "2026-09-24T19:02:13.265Z"
+      }
+    },
+    {
+      "deviceId": "FM014",
+      "expectedKey": "samsung|samsung galaxy a50s|4 gb/128 gb",
+      "reference": {
+        "deviceKey": "samsung|samsung galaxy a50s|4 gb/128 gb",
+        "brand": "Samsung",
+        "model": "Samsung Galaxy A50s",
+        "storage": "4 GB/128 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a50s-4-gb-128-gb",
+        "currentPrice": 2890,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via catalog; device name \"Samsung Galaxy A50s\" and variant \"4 GB/128 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a50s-4-gb-128-gb (RAM and storage both match (4gb/128gb)); price text \"₹2,890\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T09:48:19.873Z",
+        "lastAttemptedAt": "2026-09-27T09:48:19.873Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T09:48:19.873Z"
+      },
+      "questionnaire": {
+        "modelKey": "samsung|samsung galaxy a50s",
+        "status": "OK",
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a50s-6-gb-128-gb",
+        "observedAt": "2026-09-24T18:59:17.850Z"
+      }
+    },
+    {
+      "deviceId": "FM015",
+      "expectedKey": "samsung|samsung galaxy a72|8 gb/128 gb",
+      "reference": {
+        "deviceKey": "samsung|samsung galaxy a72|8 gb/128 gb",
+        "brand": "Samsung",
+        "model": "Samsung Galaxy A72",
+        "storage": "8 GB/128 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a72-8-gb-128-gb",
+        "currentPrice": 6330,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via catalog; device name \"Samsung Galaxy A72\" and variant \"8 GB/128 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a72-8-gb-128-gb (RAM and storage both match (8gb/128gb)); price text \"₹6,330\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T09:49:17.423Z",
+        "lastAttemptedAt": "2026-09-27T09:49:17.423Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T09:49:17.423Z"
+      },
+      "questionnaire": {
+        "modelKey": "samsung|samsung galaxy a72",
+        "status": "OK",
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a72-8-gb-128-gb",
+        "observedAt": "2026-09-24T19:00:09.685Z"
+      }
+    },
+    {
+      "deviceId": "FM016",
+      "expectedKey": "samsung|samsung galaxy s21 ultra 5g|12 gb/256 gb",
+      "reference": {
+        "deviceKey": "samsung|samsung galaxy s21 ultra 5g|12 gb/256 gb",
+        "brand": "Samsung",
+        "model": "Samsung Galaxy S21 Ultra 5G",
+        "storage": "12 GB/256 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s21-ultra-5g-12-gb-256-gb",
+        "currentPrice": 16630,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via catalog; device name \"Samsung Galaxy S21 Ultra 5G\" and variant \"12 GB/256 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s21-ultra-5g-12-gb-256-gb (RAM and storage both match (12gb/256gb)); price text \"₹16,630\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T09:52:47.824Z",
+        "lastAttemptedAt": "2026-09-27T09:52:47.824Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T09:52:47.824Z"
+      },
+      "questionnaire": {
+        "modelKey": "samsung|samsung galaxy s21 ultra 5g",
+        "status": "OK",
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s21-ultra-5g-12-gb-256-gb",
+        "observedAt": "2026-09-24T19:03:38.010Z"
+      }
+    },
+    {
+      "deviceId": "FM017",
+      "expectedKey": "samsung|samsung galaxy s23 fe 5g|8 gb/128 gb",
+      "reference": {
+        "deviceKey": "samsung|samsung galaxy s23 fe 5g|8 gb/128 gb",
+        "brand": "Samsung",
+        "model": "Samsung Galaxy S23 FE 5G",
+        "storage": "8 GB/128 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s23-fe-5g-8-gb-128-gb",
+        "currentPrice": 17880,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via catalog; device name \"Samsung Galaxy S23 FE 5G\" and variant \"8 GB/128 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s23-fe-5g-8-gb-128-gb (RAM and storage both match (8gb/128gb)); price text \"₹17,880\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T09:54:31.313Z",
+        "lastAttemptedAt": "2026-09-27T09:54:31.313Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T09:54:31.313Z"
+      },
+      "questionnaire": {
+        "modelKey": "samsung|samsung galaxy s23 fe 5g",
+        "status": "OK",
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s23-fe-5g-8-gb-256-gb",
+        "observedAt": "2026-09-24T19:05:04.939Z"
+      }
+    },
+    {
+      "deviceId": "FM018",
+      "expectedKey": "samsung|samsung galaxy s25 edge|12 gb/256 gb",
+      "reference": {
+        "deviceKey": "samsung|samsung galaxy s25 edge|12 gb/256 gb",
+        "brand": "Samsung",
+        "model": "Samsung Galaxy S25 Edge",
+        "storage": "12 GB/256 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s25-edge-12-gb-256-gb",
+        "currentPrice": 42480,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via catalog; device name \"Samsung Galaxy S25 Edge\" and variant \"12 GB/256 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s25-edge-12-gb-256-gb (RAM and storage both match (12gb/256gb)); price text \"₹42,480\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T09:56:10.546Z",
+        "lastAttemptedAt": "2026-09-27T09:56:10.546Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T09:56:10.546Z"
+      },
+      "questionnaire": {
+        "modelKey": "samsung|samsung galaxy s25 edge",
+        "status": "OK",
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?",
+          "Is your device under manufacturer warranty?",
+          "Do you have GST valid bill with the same IMEI?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s25-edge-12-gb-512-gb",
+        "observedAt": "2026-09-24T19:06:14.911Z"
+      }
+    },
+    {
+      "deviceId": "FM019",
+      "expectedKey": "samsung|samsung galaxy s26 ultra|12 gb/512 gb",
+      "reference": {
+        "deviceKey": "samsung|samsung galaxy s26 ultra|12 gb/512 gb",
+        "brand": "Samsung",
+        "model": "Samsung Galaxy S26 Ultra",
+        "storage": "12 GB/512 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s26-ultra-12-gb-512-gb",
+        "currentPrice": 86000,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via catalog; device name \"Samsung Galaxy S26 Ultra\" and variant \"12 GB/512 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s26-ultra-12-gb-512-gb (RAM and storage both match (12gb/512gb)); price text \"₹86,000\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T09:57:17.652Z",
+        "lastAttemptedAt": "2026-09-27T09:57:17.652Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T09:57:17.652Z"
+      },
+      "questionnaire": {
+        "modelKey": "samsung|samsung galaxy s26 ultra",
+        "status": "OK",
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?",
+          "Is your device under manufacturer warranty?",
+          "Do you have GST valid bill with the same IMEI?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s26-ultra-12-gb-256-gb",
+        "observedAt": "2026-09-24T15:04:30.157Z"
+      }
+    },
+    {
+      "deviceId": "FM020",
+      "expectedKey": "samsung|samsung galaxy z fold5|12 gb/256 gb",
+      "reference": {
+        "deviceKey": "samsung|samsung galaxy z fold5|12 gb/256 gb",
+        "brand": "Samsung",
+        "model": "Samsung Galaxy Z Fold5",
+        "storage": "12 GB/256 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-z-fold5-12-gb-256-gb",
+        "currentPrice": 49490,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via generated; device name \"Samsung Galaxy Z Fold5\" and variant \"12 GB/256 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-z-fold5-12-gb-256-gb (RAM and storage both match (12gb/256gb)); price text \"₹49,490\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T09:58:12.343Z",
+        "lastAttemptedAt": "2026-09-27T09:58:12.343Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T09:58:12.343Z"
+      },
+      "questionnaire": {
+        "modelKey": "samsung|samsung galaxy z fold5",
+        "status": "OK",
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?",
+          "Is your device under manufacturer warranty?",
+          "Do you have GST valid bill with the same IMEI?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-z-fold5-12-gb-1-tb",
+        "observedAt": "2026-09-24T19:07:49.890Z"
+      }
+    },
+    {
+      "deviceId": "FM021",
+      "expectedKey": "samsung|samsung galaxy z flip6 5g|12 gb/256 gb",
+      "reference": {
+        "deviceKey": "samsung|samsung galaxy z flip6 5g|12 gb/256 gb",
+        "brand": "Samsung",
+        "model": "Samsung Galaxy Z Flip6 5G",
+        "storage": "12 GB/256 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-z-flip6-5g-12-gb-256-gb",
+        "currentPrice": 38450,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via generated; device name \"Samsung Galaxy Z Flip6 5G\" and variant \"12 GB/256 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-z-flip6-5g-12-gb-256-gb (RAM and storage both match (12gb/256gb)); price text \"₹38,450\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T09:58:28.132Z",
+        "lastAttemptedAt": "2026-09-27T09:58:28.132Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T09:58:28.132Z"
+      },
+      "questionnaire": {
+        "modelKey": "samsung|samsung galaxy z flip6 5g",
+        "status": "OK",
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?",
+          "Is your device under manufacturer warranty?",
+          "Do you have GST valid bill with the same IMEI?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-z-flip6-5g-12-gb-256-gb",
+        "observedAt": "2026-09-24T19:08:03.462Z"
+      }
+    },
+    {
+      "deviceId": "FM022",
+      "expectedKey": "samsung|samsung galaxy note 10 lite|6 gb/128 gb",
+      "reference": {
+        "deviceKey": "samsung|samsung galaxy note 10 lite|6 gb/128 gb",
+        "brand": "Samsung",
+        "model": "Samsung Galaxy Note 10 Lite",
+        "storage": "6 GB/128 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-note-10-lite-6-gb-128-gb",
+        "currentPrice": 5550,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via catalog; device name \"Samsung Galaxy Note 10 Lite\" and variant \"6 GB/128 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-note-10-lite-6-gb-128-gb (RAM and storage both match (6gb/128gb)); price text \"₹5,550\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T09:52:03.025Z",
+        "lastAttemptedAt": "2026-09-27T09:52:03.025Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T09:52:03.025Z"
+      },
+      "questionnaire": {
+        "modelKey": "samsung|samsung galaxy note 10 lite",
+        "status": "OK",
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-note-10-lite-6-gb-128-gb",
+        "observedAt": "2026-09-24T19:02:56.191Z"
+      }
+    },
+    {
+      "deviceId": "FM023",
+      "expectedKey": "oneplus|oneplus 7 pro|8 gb/256 gb",
+      "reference": {
+        "deviceKey": "oneplus|oneplus 7 pro|8 gb/256 gb",
+        "brand": "OnePlus",
+        "model": "OnePlus 7 Pro",
+        "storage": "8 GB/256 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-7-pro-8-gb-256-gb",
+        "currentPrice": 7970,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via generated; device name \"OnePlus 7 Pro\" and variant \"8 GB/256 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-oneplus-7-pro-8-gb-256-gb (RAM and storage both match (8gb/256gb)); price text \"₹7,970\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T08:39:38.093Z",
+        "lastAttemptedAt": "2026-09-27T08:39:38.093Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T08:39:38.093Z"
+      },
+      "questionnaire": {
+        "modelKey": "oneplus|oneplus 7 pro",
+        "status": "OK",
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-7-pro-8-gb-256-gb",
+        "observedAt": "2026-09-24T15:04:44.029Z"
+      }
+    },
+    {
+      "deviceId": "FM024",
+      "expectedKey": "oneplus|oneplus 9 5g|8 gb/128 gb",
+      "reference": {
+        "deviceKey": "oneplus|oneplus 9 5g|8 gb/128 gb",
+        "brand": "OnePlus",
+        "model": "OnePlus 9 5G",
+        "storage": "8 GB/128 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-9-5g-8-gb-128-gb",
+        "currentPrice": 9610,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via generated; device name \"OnePlus 9 5G\" and variant \"8 GB/128 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-oneplus-9-5g-8-gb-128-gb (RAM and storage both match (8gb/128gb)); price text \"₹9,610\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T08:40:18.098Z",
+        "lastAttemptedAt": "2026-09-27T08:40:18.098Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T08:40:18.098Z"
+      },
+      "questionnaire": {
+        "modelKey": "oneplus|oneplus 9 5g",
+        "status": "OK",
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-9-5g-12-gb-256-gb",
+        "observedAt": "2026-09-24T15:05:03.491Z"
+      }
+    },
+    {
+      "deviceId": "FM025",
+      "expectedKey": "oneplus|oneplus nord|8 gb/128 gb",
+      "reference": {
+        "deviceKey": "oneplus|oneplus nord|8 gb/128 gb",
+        "brand": "OnePlus",
+        "model": "OnePlus Nord",
+        "storage": "8 GB/128 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-nord-8-gb-128-gb",
+        "currentPrice": 8260,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via generated; device name \"OnePlus Nord\" and variant \"8 GB/128 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-oneplus-nord-8-gb-128-gb (RAM and storage both match (8gb/128gb)); price text \"₹8,260\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T08:43:34.424Z",
+        "lastAttemptedAt": "2026-09-27T08:43:34.424Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T08:43:34.424Z"
+      },
+      "questionnaire": {
+        "modelKey": "oneplus|oneplus nord",
+        "status": "OK",
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-nord-12-gb-256-gb",
+        "observedAt": "2026-09-24T15:05:00.547Z"
+      }
+    },
+    {
+      "deviceId": "FM026",
+      "expectedKey": "oneplus|oneplus 8 pro|8 gb/128 gb",
+      "reference": {
+        "deviceKey": "oneplus|oneplus 8 pro|8 gb/128 gb",
+        "brand": "OnePlus",
+        "model": "OnePlus 8 Pro",
+        "storage": "8 GB/128 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-8-pro-8-gb-128-gb",
+        "currentPrice": 11400,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via generated; device name \"OnePlus 8 Pro\" and variant \"8 GB/128 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-oneplus-8-pro-8-gb-128-gb (RAM and storage both match (8gb/128gb)); price text \"₹11,400\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T08:40:04.244Z",
+        "lastAttemptedAt": "2026-09-27T08:40:04.244Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T08:40:04.244Z"
+      },
+      "questionnaire": {
+        "modelKey": "oneplus|oneplus 8 pro",
+        "status": "OK",
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-8-pro-12-gb-256-gb",
+        "observedAt": "2026-09-24T15:04:55.326Z"
+      }
+    },
+    {
+      "deviceId": "FM027",
+      "expectedKey": "oneplus|oneplus 12|12 gb/256 gb",
+      "reference": {
+        "deviceKey": "oneplus|oneplus 12|12 gb/256 gb",
+        "brand": "OnePlus",
+        "model": "OnePlus 12",
+        "storage": "12 GB/256 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-12-12-gb-256-gb",
+        "currentPrice": 32920,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via generated; device name \"OnePlus 12\" and variant \"12 GB/256 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-oneplus-12-12-gb-256-gb (RAM and storage both match (12gb/256gb)); price text \"₹32,920\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T08:41:43.849Z",
+        "lastAttemptedAt": "2026-09-27T08:41:43.849Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T08:41:43.849Z"
+      },
+      "questionnaire": {
+        "modelKey": "oneplus|oneplus 12",
+        "status": "OK",
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?",
+          "Is your device under manufacturer warranty?",
+          "Do you have GST valid bill with the same IMEI?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-12-12-gb-256-gb",
+        "observedAt": "2026-09-24T18:21:43.201Z"
+      }
+    },
+    {
+      "deviceId": "FM028",
+      "expectedKey": "oneplus|oneplus 13|16 gb/512 gb",
+      "reference": {
+        "deviceKey": "oneplus|oneplus 13|16 gb/512 gb",
+        "brand": "OnePlus",
+        "model": "OnePlus 13",
+        "storage": "16 GB/512 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-13-16-gb-512-gb",
+        "currentPrice": 43300,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via generated; device name \"OnePlus 13\" and variant \"16 GB/512 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-oneplus-13-16-gb-512-gb (RAM and storage both match (16gb/512gb)); price text \"₹43,300\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T08:42:14.707Z",
+        "lastAttemptedAt": "2026-09-27T08:42:14.707Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T08:42:14.707Z"
+      },
+      "questionnaire": {
+        "modelKey": "oneplus|oneplus 13",
+        "status": "OK",
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?",
+          "Is your device under manufacturer warranty?",
+          "Do you have GST valid bill with the same IMEI?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-13-24-gb-1-tb",
+        "observedAt": "2026-09-24T15:03:27.517Z"
+      }
+    },
+    {
+      "deviceId": "FM029",
+      "expectedKey": "oneplus|oneplus 15|12 gb/256 gb",
+      "reference": {
+        "deviceKey": "oneplus|oneplus 15|12 gb/256 gb",
+        "brand": "OnePlus",
+        "model": "OnePlus 15",
+        "storage": "12 GB/256 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-15-12-gb-256-gb",
+        "currentPrice": 56000,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via generated; device name \"OnePlus 15\" and variant \"12 GB/256 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-oneplus-15-12-gb-256-gb (RAM and storage both match (12gb/256gb)); price text \"₹56,000\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T08:42:41.998Z",
+        "lastAttemptedAt": "2026-09-27T08:42:41.998Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T08:42:41.998Z"
+      },
+      "questionnaire": {
+        "modelKey": "oneplus|oneplus 15",
+        "status": "OK",
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?",
+          "Is your device under manufacturer warranty?",
+          "Do you have GST valid bill with the same IMEI?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-15-12-gb-256-gb",
+        "observedAt": "2026-09-24T18:22:14.701Z"
+      }
+    },
+    {
+      "deviceId": "FM030",
+      "expectedKey": "oneplus|oneplus nord 5|12 gb/256 gb",
+      "reference": {
+        "deviceKey": "oneplus|oneplus nord 5|12 gb/256 gb",
+        "brand": "OnePlus",
+        "model": "OnePlus Nord 5",
+        "storage": "12 GB/256 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-nord-5-12-gb-256-gb",
+        "currentPrice": 23880,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via generated; device name \"OnePlus Nord 5\" and variant \"12 GB/256 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-oneplus-nord-5-12-gb-256-gb (RAM and storage both match (12gb/256gb)); price text \"₹23,880\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T08:42:30.694Z",
+        "lastAttemptedAt": "2026-09-27T08:42:30.694Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T08:42:30.694Z"
+      },
+      "questionnaire": {
+        "modelKey": "oneplus|oneplus nord 5",
+        "status": "OK",
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?",
+          "Is your device under manufacturer warranty?",
+          "Do you have GST valid bill with the same IMEI?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-nord-5-12-gb-512-gb",
+        "observedAt": "2026-09-24T18:22:10.808Z"
+      }
+    },
+    {
+      "deviceId": "FM031",
+      "expectedKey": "oneplus|oneplus nord ce 5|8 gb/256 gb",
+      "reference": {
+        "deviceKey": "oneplus|oneplus nord ce 5|8 gb/256 gb",
+        "brand": "OnePlus",
+        "model": "OnePlus Nord CE 5",
+        "storage": "8 GB/256 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-nord-ce-5-8-gb-256-gb",
+        "currentPrice": 19050,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via generated; device name \"OnePlus Nord CE 5\" and variant \"8 GB/256 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-oneplus-nord-ce-5-8-gb-256-gb (RAM and storage both match (8gb/256gb)); price text \"₹19,050\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T08:42:40.075Z",
+        "lastAttemptedAt": "2026-09-27T08:42:40.075Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T08:42:40.075Z"
+      },
+      "questionnaire": {
+        "modelKey": "oneplus|oneplus nord ce 5",
+        "status": "OK",
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?",
+          "Is your device under manufacturer warranty?",
+          "Do you have GST valid bill with the same IMEI?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-nord-ce-5-8-gb-128-gb",
+        "observedAt": "2026-09-24T18:22:13.064Z"
+      }
+    },
+    {
+      "deviceId": "FM032",
+      "expectedKey": "oneplus|oneplus open|16 gb/512 gb",
+      "reference": {
+        "deviceKey": "oneplus|oneplus open|16 gb/512 gb",
+        "brand": "OnePlus",
+        "model": "Oneplus Open",
+        "storage": "16 GB/512 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-open-16-gb-512-gb",
+        "currentPrice": 51410,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via generated; device name \"Oneplus Open\" and variant \"16 GB/512 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-oneplus-open-16-gb-512-gb (RAM and storage both match (16gb/512gb)); price text \"₹51,410\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T08:41:41.643Z",
+        "lastAttemptedAt": "2026-09-27T08:41:41.643Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T08:41:41.643Z"
+      },
+      "questionnaire": {
+        "modelKey": "oneplus|oneplus open",
+        "status": "OK",
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?",
+          "Is your device under manufacturer warranty?",
+          "Do you have GST valid bill with the same IMEI?"
+        ],
+        "variantsChecked": 1,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-open-16-gb-512-gb",
+        "observedAt": "2026-09-24T18:21:35.642Z"
+      }
+    },
+    {
+      "deviceId": "FM033",
+      "expectedKey": "xiaomi|xiaomi mi a2|4 gb/64 gb",
+      "reference": {
+        "deviceKey": "xiaomi|xiaomi mi a2|4 gb/64 gb",
+        "brand": "Xiaomi",
+        "model": "Xiaomi Mi A2",
+        "storage": "4 GB/64 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-mi-a2-4-gb-64-gb",
+        "currentPrice": 2500,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via catalog; device name \"Xiaomi Mi A2\" and variant \"4 GB/64 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-mi-a2-4-gb-64-gb (RAM and storage both match (4gb/64gb)); price text \"₹2,500\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T09:37:53.969Z",
+        "lastAttemptedAt": "2026-09-27T09:37:53.969Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T09:37:53.969Z"
+      },
+      "questionnaire": {
+        "modelKey": "xiaomi|xiaomi mi a2",
+        "status": "OK",
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-mi-a2-6-gb-128-gb",
+        "observedAt": "2026-09-24T18:50:29.959Z"
+      }
+    },
+    {
+      "deviceId": "FM034",
+      "expectedKey": "xiaomi|xiaomi 14 civi|8 gb/256 gb",
+      "reference": {
+        "deviceKey": "xiaomi|xiaomi 14 civi|8 gb/256 gb",
+        "brand": "Xiaomi",
+        "model": "Xiaomi 14 CIVI",
+        "storage": "8 GB/256 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-14-civi-8-gb-256-gb",
+        "currentPrice": 18720,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via catalog; device name \"Xiaomi 14 CIVI\" and variant \"8 GB/256 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-14-civi-8-gb-256-gb (RAM and storage both match (8gb/256gb)); price text \"₹18,720\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T09:45:08.648Z",
+        "lastAttemptedAt": "2026-09-27T09:45:08.648Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T09:45:08.648Z"
+      },
+      "questionnaire": {
+        "modelKey": "xiaomi|xiaomi 14 civi",
+        "status": "OK",
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?",
+          "Is your device under manufacturer warranty?",
+          "Do you have GST valid bill with the same IMEI?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-14-civi-8-gb-256-gb",
+        "observedAt": "2026-09-24T18:56:39.232Z"
+      }
+    },
+    {
+      "deviceId": "FM035",
+      "expectedKey": "xiaomi|xiaomi redmi 11 prime|4 gb/64 gb",
+      "reference": {
+        "deviceKey": "xiaomi|xiaomi redmi 11 prime|4 gb/64 gb",
+        "brand": "Xiaomi",
+        "model": "Xiaomi Redmi 11 Prime",
+        "storage": "4 GB/64 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-11-prime-4-gb-64-gb",
+        "currentPrice": 4550,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via catalog; device name \"Xiaomi Redmi 11 Prime\" and variant \"4 GB/64 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-11-prime-4-gb-64-gb (RAM and storage both match (4gb/64gb)); price text \"₹4,550\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T09:43:25.111Z",
+        "lastAttemptedAt": "2026-09-27T09:43:25.111Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T09:43:25.111Z"
+      },
+      "questionnaire": {
+        "modelKey": "xiaomi|xiaomi redmi 11 prime",
+        "status": "OK",
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-11-prime-6-gb-128-gb",
+        "observedAt": "2026-09-24T18:55:27.812Z"
+      }
+    },
+    {
+      "deviceId": "FM036",
+      "expectedKey": "xiaomi|xiaomi redmi note 9 pro|4 gb/128 gb",
+      "reference": {
+        "deviceKey": "xiaomi|xiaomi redmi note 9 pro|4 gb/128 gb",
+        "brand": "Xiaomi",
+        "model": "Xiaomi Redmi Note 9 Pro",
+        "storage": "4 GB/128 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-9-pro-4-gb-128-gb",
+        "currentPrice": 4940,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via catalog; device name \"Xiaomi Redmi Note 9 Pro\" and variant \"4 GB/128 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-9-pro-4-gb-128-gb (RAM and storage both match (4gb/128gb)); price text \"₹4,940\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T09:40:14.063Z",
+        "lastAttemptedAt": "2026-09-27T09:40:14.063Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T09:40:14.063Z"
+      },
+      "questionnaire": {
+        "modelKey": "xiaomi|xiaomi redmi note 9 pro",
+        "status": "OK",
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-9-pro-4-gb-128-gb",
+        "observedAt": "2026-09-24T18:52:37.812Z"
+      }
+    },
+    {
+      "deviceId": "FM037",
+      "expectedKey": "xiaomi|xiaomi redmi note 10 pro max|6 gb/128 gb",
+      "reference": {
+        "deviceKey": "xiaomi|xiaomi redmi note 10 pro max|6 gb/128 gb",
+        "brand": "Xiaomi",
+        "model": "Xiaomi Redmi Note 10 Pro Max",
+        "storage": "6 GB/128 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-10-pro-max-6-gb-128-gb",
+        "currentPrice": 5800,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via catalog; device name \"Xiaomi Redmi Note 10 Pro Max\" and variant \"6 GB/128 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-10-pro-max-6-gb-128-gb (RAM and storage both match (6gb/128gb)); price text \"₹5,800\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T09:41:35.054Z",
+        "lastAttemptedAt": "2026-09-27T09:41:35.054Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T09:41:35.054Z"
+      },
+      "questionnaire": {
+        "modelKey": "xiaomi|xiaomi redmi note 10 pro max",
+        "status": "OK",
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-10-pro-max-6-gb-128-gb",
+        "observedAt": "2026-09-24T18:53:45.536Z"
+      }
+    },
+    {
+      "deviceId": "FM038",
+      "expectedKey": "xiaomi|xiaomi redmi note 12 pro plus 5g|8 gb/256 gb",
+      "reference": {
+        "deviceKey": "xiaomi|xiaomi redmi note 12 pro plus 5g|8 gb/256 gb",
+        "brand": "Xiaomi",
+        "model": "Xiaomi Redmi Note 12 Pro Plus 5G",
+        "storage": "8 GB/256 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-12-pro-plus-5g-8-gb-256-gb",
+        "currentPrice": 11840,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via catalog; device name \"Xiaomi Redmi Note 12 Pro Plus 5G\" and variant \"8 GB/256 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-12-pro-plus-5g-8-gb-256-gb (RAM and storage both match (8gb/256gb)); price text \"₹11,840\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T09:43:31.921Z",
+        "lastAttemptedAt": "2026-09-27T09:43:31.921Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T09:43:31.921Z"
+      },
+      "questionnaire": {
+        "modelKey": "xiaomi|xiaomi redmi note 12 pro plus 5g",
+        "status": "OK",
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?",
+          "Is your device under manufacturer warranty?",
+          "Do you have GST valid bill with the same IMEI?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-12-pro-plus-5g-8-gb-256-gb",
+        "observedAt": "2026-09-24T18:55:32.917Z"
+      }
+    },
+    {
+      "deviceId": "FM039",
+      "expectedKey": "xiaomi|xiaomi redmi note 15 pro 5g|8 gb/128 gb",
+      "reference": {
+        "deviceKey": "xiaomi|xiaomi redmi note 15 pro 5g|8 gb/128 gb",
+        "brand": "Xiaomi",
+        "model": "Xiaomi Redmi Note 15 Pro 5G",
+        "storage": "8 GB/128 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-15-pro-5g-8-gb-128-gb",
+        "currentPrice": 21150,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via catalog; device name \"Xiaomi Redmi Note 15 Pro 5G\" and variant \"8 GB/128 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-15-pro-5g-8-gb-128-gb (RAM and storage both match (8gb/128gb)); price text \"₹21,150\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T09:46:19.241Z",
+        "lastAttemptedAt": "2026-09-27T09:46:19.241Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T09:46:19.241Z"
+      },
+      "questionnaire": {
+        "modelKey": "xiaomi|xiaomi redmi note 15 pro 5g",
+        "status": "OK",
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?",
+          "Is your device under manufacturer warranty?",
+          "Do you have GST valid bill with the same IMEI?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-15-pro-5g-8-gb-256-gb",
+        "observedAt": "2026-09-24T18:57:34.680Z"
+      }
+    },
+    {
+      "deviceId": "FM040",
+      "expectedKey": "xiaomi|xiaomi redmi 5|3 gb/32 gb",
+      "reference": {
+        "deviceKey": "xiaomi|xiaomi redmi 5|3 gb/32 gb",
+        "brand": "Xiaomi",
+        "model": "Xiaomi Redmi 5",
+        "storage": "3 GB/32 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-5-3-gb-32-gb",
+        "currentPrice": 1750,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via catalog; device name \"Xiaomi Redmi 5\" and variant \"3 GB/32 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-5-3-gb-32-gb (RAM and storage both match (3gb/32gb)); price text \"₹1,750\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T09:38:15.630Z",
+        "lastAttemptedAt": "2026-09-27T09:38:15.630Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T09:38:15.630Z"
+      },
+      "questionnaire": {
+        "modelKey": "xiaomi|xiaomi redmi 5",
+        "status": "OK",
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-5-3-gb-32-gb",
+        "observedAt": "2026-09-24T18:50:55.540Z"
+      }
+    },
+    {
+      "deviceId": "FM041",
+      "expectedKey": "xiaomi|xiaomi redmi k50i 5g|6 gb/128 gb",
+      "reference": {
+        "deviceKey": "xiaomi|xiaomi redmi k50i 5g|6 gb/128 gb",
+        "brand": "Xiaomi",
+        "model": "Xiaomi Redmi K50i 5G",
+        "storage": "6 GB/128 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi--k50i-6-gb-128-gb",
+        "currentPrice": 8640,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via catalog; device name \"Xiaomi Redmi K50i 5G\" and variant \"6 GB/128 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi--k50i-6-gb-128-gb (RAM and storage both match (6gb/128gb)); price text \"₹8,640\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T09:43:15.697Z",
+        "lastAttemptedAt": "2026-09-27T09:43:15.697Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T09:43:15.697Z"
+      },
+      "questionnaire": {
+        "modelKey": "xiaomi|xiaomi redmi k50i 5g",
+        "status": "OK",
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-k50i-8-gb-256-gb",
+        "observedAt": "2026-09-24T18:55:14.991Z"
+      }
+    },
+    {
+      "deviceId": "FM042",
+      "expectedKey": "xiaomi|xiaomi 14|12 gb/512 gb",
+      "reference": null,
+      "questionnaire": {
+        "modelKey": "xiaomi|xiaomi 14",
+        "status": "OK",
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?",
+          "Is your device under manufacturer warranty?",
+          "Do you have GST valid bill with the same IMEI?"
+        ],
+        "variantsChecked": 1,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-14-12-gb-512-gb",
+        "observedAt": "2026-09-24T19:50:29.652Z"
+      }
+    },
+    {
+      "deviceId": "FM043",
+      "expectedKey": "xiaomi|xiaomi 14 ultra|16 gb/512 gb",
+      "reference": null,
+      "questionnaire": {
+        "modelKey": "xiaomi|xiaomi 14 ultra",
+        "status": "OK",
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?",
+          "Is your device under manufacturer warranty?",
+          "Do you have GST valid bill with the same IMEI?"
+        ],
+        "variantsChecked": 1,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-14-ultra-16-gb-512-gb",
+        "observedAt": "2026-09-24T19:50:38.871Z"
+      }
+    },
+    {
+      "deviceId": "FM044",
+      "expectedKey": "xiaomi|xiaomi 15|12 gb/512 gb",
+      "reference": {
+        "deviceKey": "xiaomi|xiaomi 15|12 gb/512 gb",
+        "brand": "Xiaomi",
+        "model": "Xiaomi 15",
+        "storage": "12 GB/512 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-15-12-gb-512-gb",
+        "currentPrice": 37100,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via generated; device name \"Xiaomi 15\" and variant \"12 GB/512 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-15-12-gb-512-gb (RAM and storage both match (12gb/512gb)); price text \"₹37,100\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T09:58:57.535Z",
+        "lastAttemptedAt": "2026-09-27T09:58:57.535Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T09:58:57.535Z"
+      },
+      "questionnaire": {
+        "modelKey": "xiaomi|xiaomi 15",
+        "status": "OK",
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?",
+          "Is your device under manufacturer warranty?",
+          "Do you have GST valid bill with the same IMEI?"
+        ],
+        "variantsChecked": 1,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-15-12-gb-512-gb",
+        "observedAt": "2026-09-24T19:08:22.099Z"
+      }
+    },
+    {
+      "deviceId": "FM045",
+      "expectedKey": "xiaomi|xiaomi 15 ultra|16 gb/512 gb",
+      "reference": {
+        "deviceKey": "xiaomi|xiaomi 15 ultra|16 gb/512 gb",
+        "brand": "Xiaomi",
+        "model": "Xiaomi 15 Ultra",
+        "storage": "16 GB/512 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-15-ultra-16-gb-512-gb",
+        "currentPrice": 59580,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via generated; device name \"Xiaomi 15 Ultra\" and variant \"16 GB/512 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-15-ultra-16-gb-512-gb (RAM and storage both match (16gb/512gb)); price text \"₹59,580\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T09:59:05.815Z",
+        "lastAttemptedAt": "2026-09-27T09:59:05.815Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T09:59:05.815Z"
+      },
+      "questionnaire": {
+        "modelKey": "xiaomi|xiaomi 15 ultra",
+        "status": "OK",
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?",
+          "Is your device under manufacturer warranty?",
+          "Do you have GST valid bill with the same IMEI?"
+        ],
+        "variantsChecked": 1,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-15-ultra-16-gb-512-gb",
+        "observedAt": "2026-09-24T19:08:31.024Z"
+      }
+    },
+    {
+      "deviceId": "FM046",
+      "expectedKey": "xiaomi|xiaomi 17|12 gb/512 gb",
+      "reference": {
+        "deviceKey": "xiaomi|xiaomi 17|12 gb/512 gb",
+        "brand": "Xiaomi",
+        "model": "Xiaomi 17",
+        "storage": "12 GB/512 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-17-12-gb-512-gb",
+        "currentPrice": 57070,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via catalog; device name \"Xiaomi 17\" and variant \"12 GB/512 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-17-12-gb-512-gb (RAM and storage both match (12gb/512gb)); price text \"₹57,070\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T09:46:30.819Z",
+        "lastAttemptedAt": "2026-09-27T09:46:30.819Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T09:46:30.819Z"
+      },
+      "questionnaire": {
+        "modelKey": "xiaomi|xiaomi 17",
+        "status": "OK",
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?",
+          "Is your device under manufacturer warranty?",
+          "Do you have GST valid bill with the same IMEI?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-17-12-gb-256-gb",
+        "observedAt": "2026-09-24T18:57:39.653Z"
+      }
+    },
+    {
+      "deviceId": "FM047",
+      "expectedKey": "xiaomi|xiaomi 17 ultra|16 gb/512 gb",
+      "reference": {
+        "deviceKey": "xiaomi|xiaomi 17 ultra|16 gb/512 gb",
+        "brand": "Xiaomi",
+        "model": "Xiaomi 17 Ultra",
+        "storage": "16 GB/512 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-17-ultra-16-gb-512-gb",
+        "currentPrice": 75370,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via catalog; device name \"Xiaomi 17 Ultra\" and variant \"16 GB/512 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-17-ultra-16-gb-512-gb (RAM and storage both match (16gb/512gb)); price text \"₹75,370\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T09:57:46.394Z",
+        "lastAttemptedAt": "2026-09-27T09:57:46.394Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T09:57:46.394Z"
+      },
+      "questionnaire": {
+        "modelKey": "xiaomi|xiaomi 17 ultra",
+        "status": "OK",
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?",
+          "Is your device under manufacturer warranty?",
+          "Do you have GST valid bill with the same IMEI?"
+        ],
+        "variantsChecked": 1,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-17-ultra-16-gb-512-gb",
+        "observedAt": "2026-09-24T19:07:29.917Z"
+      }
+    },
+    {
+      "deviceId": "FM048",
+      "expectedKey": "xiaomi|xiaomi 17t|12 gb/512 gb",
+      "reference": {
+        "deviceKey": "xiaomi|xiaomi 17t|12 gb/512 gb",
+        "brand": "Xiaomi",
+        "model": "Xiaomi 17T",
+        "storage": "12 GB/512 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-17t-12-gb-512-gb",
+        "currentPrice": 39360,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via catalog; device name \"Xiaomi 17T\" and variant \"12 GB/512 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-17t-12-gb-512-gb (RAM and storage both match (12gb/512gb)); price text \"₹39,360\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T09:46:45.193Z",
+        "lastAttemptedAt": "2026-09-27T09:46:45.193Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T09:46:45.193Z"
+      },
+      "questionnaire": {
+        "modelKey": "xiaomi|xiaomi 17t",
+        "status": "OK",
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?",
+          "Is your device under manufacturer warranty?",
+          "Do you have GST valid bill with the same IMEI?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-17t-12-gb-512-gb",
+        "observedAt": "2026-09-24T18:57:53.543Z"
+      }
+    },
+    {
+      "deviceId": "FM049",
+      "expectedKey": "xiaomi|xiaomi redmi turbo 5|12 gb/256 gb",
+      "reference": {
+        "deviceKey": "xiaomi|xiaomi redmi turbo 5|12 gb/256 gb",
+        "brand": "Xiaomi",
+        "model": "Xiaomi Redmi Turbo 5",
+        "storage": "12 GB/256 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-turbo-5-12-gb-256-gb",
+        "currentPrice": 26080,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via generated; device name \"Xiaomi Redmi Turbo 5\" and variant \"12 GB/256 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-turbo-5-12-gb-256-gb (RAM and storage both match (12gb/256gb)); price text \"₹26,080\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T09:58:50.216Z",
+        "lastAttemptedAt": "2026-09-27T09:58:50.216Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T09:58:50.216Z"
+      },
+      "questionnaire": {
+        "modelKey": "xiaomi|xiaomi redmi turbo 5",
+        "status": "OK",
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?",
+          "Is your device under manufacturer warranty?",
+          "Do you have GST valid bill with the same IMEI?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-turbo-5-8-gb-256-gb",
+        "observedAt": "2026-09-24T19:08:18.195Z"
+      }
+    },
+    {
+      "deviceId": "FM050",
+      "expectedKey": "xiaomi|xiaomi redmi note 15 pro plus 5g|12 gb/512 gb",
+      "reference": {
+        "deviceKey": "xiaomi|xiaomi redmi note 15 pro plus 5g|12 gb/512 gb",
+        "brand": "Xiaomi",
+        "model": "Xiaomi Redmi Note 15 Pro Plus 5G",
+        "storage": "12 GB/512 GB",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-15-pro-plus-5g-12-gb-512-gb",
+        "currentPrice": 28100,
+        "matchConfidence": "EXACT",
+        "matchEvidence": "url via catalog; device name \"Xiaomi Redmi Note 15 Pro Plus 5G\" and variant \"12 GB/512 GB\" both verified on https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-15-pro-plus-5g-12-gb-512-gb (RAM and storage both match (12gb/512gb)); price text \"₹28,100\"",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T09:46:26.524Z",
+        "lastAttemptedAt": "2026-09-27T09:46:26.524Z",
+        "lastFailureAt": null,
+        "consecutiveFailures": 0,
+        "updatedAt": "2026-09-27T09:46:26.524Z"
+      },
+      "questionnaire": {
+        "modelKey": "xiaomi|xiaomi redmi note 15 pro plus 5g",
+        "status": "OK",
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED",
+        "questionLabels": [
+          "Tell us more about your device?",
+          "Are you able to make and receive calls?",
+          "Is your device's touch screen working properly?",
+          "Is your phone's screen original?",
+          "Is your device under manufacturer warranty?",
+          "Do you have GST valid bill with the same IMEI?"
+        ],
+        "variantsChecked": 2,
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-15-pro-plus-5g-8-gb-256-gb",
+        "observedAt": "2026-09-24T18:57:39.493Z"
+      }
+    }
+  ]
+}

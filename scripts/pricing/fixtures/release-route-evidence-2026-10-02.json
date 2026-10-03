@@ -1,0 +1,584 @@
+{
+  "version": "release-route-evidence/2026-10-02-box-inclusion-reviewed",
+  "note": "Verified collector route traces. The 18 exact all-NOT_ASKED box-present variants also carry baselineGetUpto from their matched clean Selling=GetUpto-20 observation; this supports only an exact-reference accessory correction, not a production profile update or independent damage validation. OnePlus Open has a same-day repeated opening control, not a final closing.",
+  "rows": [
+    {
+      "brand": "Xiaomi",
+      "model": "Xiaomi Mi A2",
+      "storage": "4 GB/64 GB",
+      "source": "VERIFIED_COLLECTOR_TRACE",
+      "status": "OK",
+      "observedAt": "2026-10-02T11:28:26.965Z",
+      "evidenceSha256": "6133308a64d14bac17b3c344c40e7b99c776df58502f0f26f5b26ea626006980",
+      "observationId": "team-workbook-2026-10-02:FM033_CLOSE_A",
+      "semantics": {
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED"
+      },
+      "boxMode": "ASKED",
+      "chargerMode": "ASKED",
+      "sPenMode": "NOT_ASKED",
+      "eSimMode": "NOT_ASKED",
+      "sourceObservations": [
+        {
+          "id": "team-workbook-2026-10-02:FM033_A",
+          "collectedAt": "2026-10-02T11:27:41.441Z",
+          "screenshotSha256": "6133308a64d14bac17b3c344c40e7b99c776df58502f0f26f5b26ea626006980"
+        },
+        {
+          "id": "team-workbook-2026-10-02:FM033_B",
+          "collectedAt": "2026-10-02T11:27:57.343Z",
+          "screenshotSha256": "09f72d9a9b95154a4b8b60a2618b3096b308f391376792485ac127e029d134d7"
+        },
+        {
+          "id": "team-workbook-2026-10-02:FM033_C",
+          "collectedAt": "2026-10-02T11:28:13.109Z",
+          "screenshotSha256": "4991ca99910f5df2072f796d1e20fc7ac80cd583be0253e97bb45a97a1ababc9"
+        },
+        {
+          "id": "team-workbook-2026-10-02:FM033_CLOSE_A",
+          "collectedAt": "2026-10-02T11:28:26.965Z",
+          "screenshotSha256": "6133308a64d14bac17b3c344c40e7b99c776df58502f0f26f5b26ea626006980"
+        }
+      ],
+      "questionnaireSha256": "cd7c3d1b15ce6eafbceae74b787dd657bbad5b07c20ce6bd359835ca0ef13bfd",
+      "baselineGetUpto": 2520
+    },
+    {
+      "brand": "Xiaomi",
+      "model": "Xiaomi 14 CIVI",
+      "storage": "8 GB/256 GB",
+      "source": "VERIFIED_COLLECTOR_TRACE",
+      "status": "OK",
+      "observedAt": "2026-10-02T11:29:29.033Z",
+      "evidenceSha256": "d12a22e7d9bc9ac98ff966b212aadb867658a972dfa649ec5aaa75719023fb0c",
+      "observationId": "team-workbook-2026-10-02:FM034_CLOSE_A",
+      "semantics": {
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED"
+      },
+      "boxMode": "ASKED",
+      "chargerMode": "ASKED",
+      "sPenMode": "NOT_ASKED",
+      "eSimMode": "NOT_ASKED",
+      "sourceObservations": [
+        {
+          "id": "team-workbook-2026-10-02:FM034_A",
+          "collectedAt": "2026-10-02T11:28:41.789Z",
+          "screenshotSha256": "d12a22e7d9bc9ac98ff966b212aadb867658a972dfa649ec5aaa75719023fb0c"
+        },
+        {
+          "id": "team-workbook-2026-10-02:FM034_B",
+          "collectedAt": "2026-10-02T11:28:57.616Z",
+          "screenshotSha256": "e6d9fc8876020db6d6c199f67bdc6ba48e19dd5faae7816dc3a5b30f63e1a10f"
+        },
+        {
+          "id": "team-workbook-2026-10-02:FM034_C",
+          "collectedAt": "2026-10-02T11:29:13.695Z",
+          "screenshotSha256": "2a1d10fd351ca10a4934a9e5cae47955740c0e7a15b6f3e603edaa7c0234de2a"
+        },
+        {
+          "id": "team-workbook-2026-10-02:FM034_CLOSE_A",
+          "collectedAt": "2026-10-02T11:29:29.033Z",
+          "screenshotSha256": "d12a22e7d9bc9ac98ff966b212aadb867658a972dfa649ec5aaa75719023fb0c"
+        }
+      ],
+      "questionnaireSha256": "3f0d00cd33252ad2a5c06c735bdfa486e818b02e1916cb975b91af4bf448e5da"
+    },
+    {
+      "brand": "Xiaomi",
+      "model": "Xiaomi Redmi Note 9 Pro",
+      "storage": "4 GB/128 GB",
+      "source": "VERIFIED_COLLECTOR_TRACE",
+      "status": "OK",
+      "observedAt": "2026-10-02T11:31:30.706Z",
+      "evidenceSha256": "4ab6d96dac65fca85c81fa85688175f9c61a5ed8aae65e5e0756b20620faa7f2",
+      "observationId": "team-workbook-2026-10-02:FM036_CLOSE_A",
+      "semantics": {
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED"
+      },
+      "boxMode": "ASKED",
+      "chargerMode": "ASKED",
+      "sPenMode": "NOT_ASKED",
+      "eSimMode": "NOT_ASKED",
+      "sourceObservations": [
+        {
+          "id": "team-workbook-2026-10-02:FM036_A",
+          "collectedAt": "2026-10-02T11:30:44.819Z",
+          "screenshotSha256": "4ab6d96dac65fca85c81fa85688175f9c61a5ed8aae65e5e0756b20620faa7f2"
+        },
+        {
+          "id": "team-workbook-2026-10-02:FM036_B",
+          "collectedAt": "2026-10-02T11:31:00.591Z",
+          "screenshotSha256": "f80eedcf60c88980a18ef62ae34ecb7c5f883bbdb73b0734902c3d37edaeb453"
+        },
+        {
+          "id": "team-workbook-2026-10-02:FM036_C",
+          "collectedAt": "2026-10-02T11:31:16.863Z",
+          "screenshotSha256": "dac16a8b2417af4fcc9640a97625ad841234742499fb3166e1ce0612680fb954"
+        },
+        {
+          "id": "team-workbook-2026-10-02:FM036_CLOSE_A",
+          "collectedAt": "2026-10-02T11:31:30.706Z",
+          "screenshotSha256": "4ab6d96dac65fca85c81fa85688175f9c61a5ed8aae65e5e0756b20620faa7f2"
+        }
+      ],
+      "questionnaireSha256": "cd7c3d1b15ce6eafbceae74b787dd657bbad5b07c20ce6bd359835ca0ef13bfd",
+      "baselineGetUpto": 4990
+    },
+    {
+      "brand": "Xiaomi",
+      "model": "Xiaomi Redmi Note 10 Pro Max",
+      "storage": "6 GB/128 GB",
+      "source": "VERIFIED_COLLECTOR_TRACE",
+      "status": "OK",
+      "observedAt": "2026-10-02T11:32:33.019Z",
+      "evidenceSha256": "c766ef0512aef013de317cd47e702bce463dd08243b013bd0a6f4c712f4dd055",
+      "observationId": "team-workbook-2026-10-02:FM037_CLOSE_A",
+      "semantics": {
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED"
+      },
+      "boxMode": "ASKED",
+      "chargerMode": "ASKED",
+      "sPenMode": "NOT_ASKED",
+      "eSimMode": "NOT_ASKED",
+      "sourceObservations": [
+        {
+          "id": "team-workbook-2026-10-02:FM037_A",
+          "collectedAt": "2026-10-02T11:31:45.448Z",
+          "screenshotSha256": "c766ef0512aef013de317cd47e702bce463dd08243b013bd0a6f4c712f4dd055"
+        },
+        {
+          "id": "team-workbook-2026-10-02:FM037_B",
+          "collectedAt": "2026-10-02T11:32:02.078Z",
+          "screenshotSha256": "35d9f908197273e435837b34cf4c396e3f8412cf53af9bc99506d3bc178416fd"
+        },
+        {
+          "id": "team-workbook-2026-10-02:FM037_C",
+          "collectedAt": "2026-10-02T11:32:18.900Z",
+          "screenshotSha256": "35d9f908197273e435837b34cf4c396e3f8412cf53af9bc99506d3bc178416fd"
+        },
+        {
+          "id": "team-workbook-2026-10-02:FM037_CLOSE_A",
+          "collectedAt": "2026-10-02T11:32:33.019Z",
+          "screenshotSha256": "c766ef0512aef013de317cd47e702bce463dd08243b013bd0a6f4c712f4dd055"
+        }
+      ],
+      "questionnaireSha256": "cd7c3d1b15ce6eafbceae74b787dd657bbad5b07c20ce6bd359835ca0ef13bfd",
+      "baselineGetUpto": 5970
+    },
+    {
+      "brand": "OnePlus",
+      "model": "OnePlus Nord",
+      "storage": "8 GB/128 GB",
+      "source": "VERIFIED_COLLECTOR_TRACE",
+      "status": "OK",
+      "observedAt": "2026-10-02T11:19:55.770Z",
+      "evidenceSha256": "77d7d811df46be7c6106a7e5a0bbbfa6b271369c3a321c365d5a51a99b068cfc",
+      "observationId": "team-workbook-2026-10-02:FM025_CLOSE_A",
+      "semantics": {
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED"
+      },
+      "boxMode": "ASKED",
+      "chargerMode": "ASKED",
+      "sPenMode": "NOT_ASKED",
+      "eSimMode": "NOT_ASKED",
+      "sourceObservations": [
+        {
+          "id": "team-workbook-2026-10-02:FM025_A",
+          "collectedAt": "2026-10-02T11:19:10.517Z",
+          "screenshotSha256": "77d7d811df46be7c6106a7e5a0bbbfa6b271369c3a321c365d5a51a99b068cfc"
+        },
+        {
+          "id": "team-workbook-2026-10-02:FM025_B",
+          "collectedAt": "2026-10-02T11:19:26.248Z",
+          "screenshotSha256": "d4c58e9530502b889b73fdd8569db460f22095c821a36e6572fc0f1ad1c5f4ba"
+        },
+        {
+          "id": "team-workbook-2026-10-02:FM025_C",
+          "collectedAt": "2026-10-02T11:19:41.968Z",
+          "screenshotSha256": "d4c58e9530502b889b73fdd8569db460f22095c821a36e6572fc0f1ad1c5f4ba"
+        },
+        {
+          "id": "team-workbook-2026-10-02:FM025_CLOSE_A",
+          "collectedAt": "2026-10-02T11:19:55.770Z",
+          "screenshotSha256": "77d7d811df46be7c6106a7e5a0bbbfa6b271369c3a321c365d5a51a99b068cfc"
+        }
+      ],
+      "questionnaireSha256": "cd7c3d1b15ce6eafbceae74b787dd657bbad5b07c20ce6bd359835ca0ef13bfd",
+      "baselineGetUpto": 8340
+    },
+    {
+      "brand": "OnePlus",
+      "model": "Oneplus Open",
+      "storage": "16 GB/512 GB",
+      "source": "VERIFIED_COLLECTOR_TRACE",
+      "status": "OK",
+      "observedAt": "2026-10-02T17:32:39.326Z",
+      "evidenceSha256": "f1744892801922d81d6383ebd9f610828ba2c424d252491c6ff3344f2c02bf1d",
+      "observationId": "owner-correction-2026-10-02:FM032_CORR_A",
+      "semantics": {
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "NOT_ASKED"
+      },
+      "boxMode": "ASKED",
+      "chargerMode": "ASKED",
+      "sPenMode": "NOT_ASKED",
+      "eSimMode": "NOT_ASKED",
+      "sourceObservations": [
+        {
+          "id": "team-workbook-2026-10-02:FM032_FINAL_A",
+          "collectedAt": "2026-10-02T11:57:13.350Z",
+          "screenshotSha256": "7777412d78fbb94f72860ba2733a0e34d893b66be9e5b00a3422de658e4c97f9"
+        },
+        {
+          "id": "team-workbook-2026-10-02:FM032_FINAL_B",
+          "collectedAt": "2026-10-02T11:57:39.151Z",
+          "screenshotSha256": "80ae486cc3d0fa7b6dea136335189b9044bdaf50217e5a014f13b1c11fa66cfb"
+        },
+        {
+          "id": "owner-correction-2026-10-02:FM032_CORR_A",
+          "collectedAt": "2026-10-02T17:32:39.326Z",
+          "screenshotSha256": "f1744892801922d81d6383ebd9f610828ba2c424d252491c6ff3344f2c02bf1d"
+        },
+        {
+          "id": "owner-correction-2026-10-02:FM032_CORR_C",
+          "collectedAt": "2026-10-02T17:33:05.206Z",
+          "screenshotSha256": "e2faee247108aba9c6dab938dafd8cf3f2aad53951c86bcbe9ff6b7fd0c5ab0a"
+        }
+      ],
+      "questionnaireSha256": "3f0d00cd33252ad2a5c06c735bdfa486e818b02e1916cb975b91af4bf448e5da"
+    },
+    {
+      "brand": "Apple",
+      "model": "Apple iPhone 12 Pro",
+      "storage": "256 GB",
+      "source": "VERIFIED_COLLECTOR_TRACE",
+      "status": "OK",
+      "observedAt": "2026-10-02T11:46:19.503Z",
+      "evidenceSha256": "6ca05a97dd0d6ef9445a0706861c0bfe0307f29ec3cd701824588a245d35fbac",
+      "observationId": "team-workbook-2026-10-02:FM004_LIVE_CLOSE_A",
+      "semantics": {
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED"
+      },
+      "boxMode": "ASKED",
+      "chargerMode": "NOT_ASKED",
+      "sPenMode": "NOT_ASKED",
+      "eSimMode": "NOT_ASKED",
+      "sourceObservations": [
+        {
+          "id": "team-workbook-2026-10-02:FM004_LIVE_A",
+          "collectedAt": "2026-10-02T11:45:33.265Z",
+          "screenshotSha256": "6ca05a97dd0d6ef9445a0706861c0bfe0307f29ec3cd701824588a245d35fbac"
+        },
+        {
+          "id": "team-workbook-2026-10-02:FM004_LIVE_B",
+          "collectedAt": "2026-10-02T11:45:48.885Z",
+          "screenshotSha256": "72f3d6ab7a8c20fe0134962466d3ada994b93501fe8dd3fe2625d07c5c768e3f"
+        },
+        {
+          "id": "team-workbook-2026-10-02:FM004_LIVE_CLOSE_A",
+          "collectedAt": "2026-10-02T11:46:19.503Z",
+          "screenshotSha256": "6ca05a97dd0d6ef9445a0706861c0bfe0307f29ec3cd701824588a245d35fbac"
+        }
+      ],
+      "questionnaireSha256": "02dde4a4b58616189c6e7644cc19f1ead5d49f533e834290009dcdce831456f2"
+    },
+    {
+      "brand": "Samsung",
+      "model": "Samsung Galaxy S23 FE 5G",
+      "storage": "8 GB/128 GB",
+      "source": "VERIFIED_COLLECTOR_TRACE",
+      "status": "OK",
+      "observedAt": "2026-10-02T11:47:20.243Z",
+      "evidenceSha256": "f0432f7ed57578b93af006bfa91c98852efd974ad9fb2bd7f388ba8af2d782d1",
+      "observationId": "team-workbook-2026-10-02:FM017_LIVE_CLOSE_A",
+      "semantics": {
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED"
+      },
+      "boxMode": "ASKED",
+      "chargerMode": "NOT_ASKED",
+      "sPenMode": "NOT_ASKED",
+      "eSimMode": "NOT_ASKED",
+      "sourceObservations": [
+        {
+          "id": "team-workbook-2026-10-02:FM017_LIVE_A",
+          "collectedAt": "2026-10-02T11:46:33.720Z",
+          "screenshotSha256": "f0432f7ed57578b93af006bfa91c98852efd974ad9fb2bd7f388ba8af2d782d1"
+        },
+        {
+          "id": "team-workbook-2026-10-02:FM017_LIVE_B",
+          "collectedAt": "2026-10-02T11:46:50.096Z",
+          "screenshotSha256": "e455efc2766a2dc8e94c8b4bebdeebea827a675a5167baa0274f0bb949dfc330"
+        },
+        {
+          "id": "team-workbook-2026-10-02:FM017_LIVE_CLOSE_A",
+          "collectedAt": "2026-10-02T11:47:20.243Z",
+          "screenshotSha256": "f0432f7ed57578b93af006bfa91c98852efd974ad9fb2bd7f388ba8af2d782d1"
+        }
+      ],
+      "questionnaireSha256": "02dde4a4b58616189c6e7644cc19f1ead5d49f533e834290009dcdce831456f2",
+      "baselineGetUpto": 18060
+    },
+    {
+      "brand": "Apple",
+      "model": "Apple iPhone 8",
+      "storage": "128 GB",
+      "source": "VERIFIED_COLLECTOR_TRACE",
+      "status": "OK",
+      "observedAt": "2026-10-02T17:37:19.181Z",
+      "evidenceSha256": "e0dfa0c32bc61b1fc87068ee17cb1c17571c1662cccbedbb75fb341d80e0b42f",
+      "semantics": {
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED"
+      },
+      "boxMode": "ASKED",
+      "chargerMode": "ASKED",
+      "sPenMode": "NOT_ASKED",
+      "eSimMode": "NOT_ASKED",
+      "baselineGetUpto": 5850
+    },
+    {
+      "brand": "Apple",
+      "model": "Apple iPhone XS Max",
+      "storage": "256 GB",
+      "source": "VERIFIED_COLLECTOR_TRACE",
+      "status": "OK",
+      "observedAt": "2026-10-02T17:28:44.002Z",
+      "evidenceSha256": "09ec1053e87ba6213c1c631047435eedbbdd32d220046ef931f400377effcd2a",
+      "semantics": {
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED"
+      },
+      "boxMode": "ASKED",
+      "chargerMode": "ASKED",
+      "sPenMode": "NOT_ASKED",
+      "eSimMode": "NOT_ASKED",
+      "baselineGetUpto": 12640
+    },
+    {
+      "brand": "Apple",
+      "model": "Apple iPhone 11 Pro Max",
+      "storage": "256 GB",
+      "source": "VERIFIED_COLLECTOR_TRACE",
+      "status": "OK",
+      "observedAt": "2026-10-02T17:28:58.052Z",
+      "evidenceSha256": "051848da4851a9b7e112180605db563d682782037b3de993c886ca91bee102bd",
+      "semantics": {
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED"
+      },
+      "boxMode": "ASKED",
+      "chargerMode": "ASKED",
+      "sPenMode": "NOT_ASKED",
+      "eSimMode": "NOT_ASKED",
+      "baselineGetUpto": 19110
+    },
+    {
+      "brand": "Apple",
+      "model": "Apple iPhone 14",
+      "storage": "256 GB",
+      "source": "VERIFIED_COLLECTOR_TRACE",
+      "status": "OK",
+      "observedAt": "2026-10-02T17:29:11.762Z",
+      "evidenceSha256": "26ce59a457b9272bfc84059a1fed146b3e66fb4eac52b577d0f43baaeb8aad21",
+      "semantics": {
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED"
+      },
+      "boxMode": "ASKED",
+      "chargerMode": "NOT_ASKED",
+      "sPenMode": "NOT_ASKED",
+      "eSimMode": "NOT_ASKED",
+      "baselineGetUpto": 28430
+    },
+    {
+      "brand": "Samsung",
+      "model": "Samsung Galaxy M32",
+      "storage": "4 GB/64 GB",
+      "source": "VERIFIED_COLLECTOR_TRACE",
+      "status": "OK",
+      "observedAt": "2026-10-02T17:30:10.798Z",
+      "evidenceSha256": "025da27dede9fad1738aebf9fa94ef552a208af5db83ce9f5f1f58bff076f310",
+      "semantics": {
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED"
+      },
+      "boxMode": "ASKED",
+      "chargerMode": "ASKED",
+      "sPenMode": "NOT_ASKED",
+      "eSimMode": "NOT_ASKED",
+      "baselineGetUpto": 3570
+    },
+    {
+      "brand": "Samsung",
+      "model": "Samsung Galaxy A50s",
+      "storage": "4 GB/128 GB",
+      "source": "VERIFIED_COLLECTOR_TRACE",
+      "status": "OK",
+      "observedAt": "2026-10-02T17:30:25.132Z",
+      "evidenceSha256": "bbe0a291b5db056bc0940246b2058fb1a550e1ef1ac427d8fc504bba57ef067d",
+      "semantics": {
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED"
+      },
+      "boxMode": "ASKED",
+      "chargerMode": "ASKED",
+      "sPenMode": "NOT_ASKED",
+      "eSimMode": "NOT_ASKED",
+      "baselineGetUpto": 2920
+    },
+    {
+      "brand": "Samsung",
+      "model": "Samsung Galaxy S21 Ultra 5G",
+      "storage": "12 GB/256 GB",
+      "source": "VERIFIED_COLLECTOR_TRACE",
+      "status": "OK",
+      "observedAt": "2026-10-02T17:30:58.911Z",
+      "evidenceSha256": "f764434c35ebaf9a7227f8f422f223c96116ee3d30ae274316b742a30a72ecc0",
+      "semantics": {
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED"
+      },
+      "boxMode": "ASKED",
+      "chargerMode": "NOT_ASKED",
+      "sPenMode": "NOT_ASKED",
+      "eSimMode": "NOT_ASKED",
+      "baselineGetUpto": 17130
+    },
+    {
+      "brand": "OnePlus",
+      "model": "OnePlus 7 Pro",
+      "storage": "8 GB/256 GB",
+      "source": "VERIFIED_COLLECTOR_TRACE",
+      "status": "OK",
+      "observedAt": "2026-10-02T11:18:55.550Z",
+      "evidenceSha256": "2e6ffb68b81574f1b56bb8e3da9015a356ef2c4b40a6c49d69a1288f649693cf",
+      "semantics": {
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED"
+      },
+      "boxMode": "ASKED",
+      "chargerMode": "ASKED",
+      "sPenMode": "NOT_ASKED",
+      "eSimMode": "NOT_ASKED",
+      "baselineGetUpto": 8050
+    },
+    {
+      "brand": "OnePlus",
+      "model": "OnePlus 8 Pro",
+      "storage": "8 GB/128 GB",
+      "source": "VERIFIED_COLLECTOR_TRACE",
+      "status": "OK",
+      "observedAt": "2026-10-02T11:20:52.058Z",
+      "evidenceSha256": "f204d217ed61f083287dfa82dd3deedad0d44f0cc8c26ceb6ca262bf01c3aa79",
+      "semantics": {
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED"
+      },
+      "boxMode": "ASKED",
+      "chargerMode": "ASKED",
+      "sPenMode": "NOT_ASKED",
+      "eSimMode": "NOT_ASKED",
+      "baselineGetUpto": 11520
+    },
+    {
+      "brand": "OnePlus",
+      "model": "OnePlus 9 5G",
+      "storage": "8 GB/128 GB",
+      "source": "VERIFIED_COLLECTOR_TRACE",
+      "status": "OK",
+      "observedAt": "2026-10-02T17:31:59.741Z",
+      "evidenceSha256": "f51716644cc41a34a69f31a5da2697de609680042fe1a5e15360f0027267b07e",
+      "semantics": {
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED"
+      },
+      "boxMode": "ASKED",
+      "chargerMode": "ASKED",
+      "sPenMode": "NOT_ASKED",
+      "eSimMode": "NOT_ASKED",
+      "baselineGetUpto": 9710
+    },
+    {
+      "brand": "Xiaomi",
+      "model": "Xiaomi Redmi 11 Prime",
+      "storage": "4 GB/64 GB",
+      "source": "VERIFIED_COLLECTOR_TRACE",
+      "status": "OK",
+      "observedAt": "2026-10-02T11:30:29.325Z",
+      "evidenceSha256": "57579b1da71fe140cef9bf68eed14ced085c36df22e034d02178daa08bbe071f",
+      "semantics": {
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED"
+      },
+      "boxMode": "ASKED",
+      "chargerMode": "ASKED",
+      "sPenMode": "NOT_ASKED",
+      "eSimMode": "NOT_ASKED",
+      "baselineGetUpto": 4600
+    },
+    {
+      "brand": "Xiaomi",
+      "model": "Xiaomi Redmi 5",
+      "storage": "3 GB/32 GB",
+      "source": "VERIFIED_COLLECTOR_TRACE",
+      "status": "OK",
+      "observedAt": "2026-10-02T17:34:17.737Z",
+      "evidenceSha256": "4f69ea50d861cdf3c44bf109d5f9a5c44545ed4e7ed9fbbd162cf299a50d6658",
+      "semantics": {
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED"
+      },
+      "boxMode": "ASKED",
+      "chargerMode": "ASKED",
+      "sPenMode": "NOT_ASKED",
+      "eSimMode": "NOT_ASKED",
+      "baselineGetUpto": 1760
+    },
+    {
+      "brand": "Xiaomi",
+      "model": "Xiaomi Redmi K50i 5G",
+      "storage": "6 GB/128 GB",
+      "source": "VERIFIED_COLLECTOR_TRACE",
+      "status": "OK",
+      "observedAt": "2026-10-02T11:51:41.951Z",
+      "evidenceSha256": "ddbeb9aa44b580a0dacd33c68a89c3edf246d4d6f4c2de98dd9a70e0bf33819f",
+      "semantics": {
+        "warrantyMode": "NOT_ASKED",
+        "billMode": "NOT_ASKED",
+        "ageMode": "NOT_ASKED"
+      },
+      "boxMode": "ASKED",
+      "chargerMode": "ASKED",
+      "sPenMode": "NOT_ASKED",
+      "eSimMode": "NOT_ASKED",
+      "baselineGetUpto": 8730
+    }
+  ]
+}

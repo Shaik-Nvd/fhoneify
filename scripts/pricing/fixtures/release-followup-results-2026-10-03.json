@@ -1,0 +1,1148 @@
+{
+  "version": "release-followup-results/2026-10-03",
+  "scope": "Local public evidence audit only. Original171, manual measurements and frozen predictions preserved. No production query, collection or activation performed by this audit.",
+  "budget": {
+    "authorized": 20,
+    "reserved": 20,
+    "remaining": 0,
+    "observations": 14,
+    "numericAccepted": 11,
+    "failedFinalAttempts": 3,
+    "routingOrReferenceChecks": 6
+  },
+  "hashes": {
+    "ledger": "a66b6d88305f67f6a6aa0f20beffeedcf3c17b2afbf4151ad6f6a6677126d67c",
+    "observations": "4a05b847fce1c43855fd0b2b3b525a12940bfcdbd329a71decc6dcbe69371392",
+    "recoveryPreregistration": "a9a5d0f103414a8b0549eaadf9cbdc816571099cedaf643ffedbcdfeef747c21",
+    "dryRun": "8a9d0c46fc3f24ce5cf23ab0976fd1ad37023da9772efc626586c061946a484c"
+  },
+  "checks": {
+    "uniqueSequentialReservations": true,
+    "all20PlanFileHashesMatched": true,
+    "allPlansBeforeReservation": true,
+    "all11ScreenshotHashesMatched": true,
+    "all11PredictionsBeforeFinalExtraction": true,
+    "all11TraceItemsMatchPlan": true,
+    "all4UltraRouteScreenshotHashesMatched": true
+  },
+  "reservations": [
+    {
+      "attempt": 1,
+      "id": "RC_ESIM_HEADING_ROUTE",
+      "reservedAt": "2026-10-02T19:15:20.546Z",
+      "preregistration": "routing-preregistration.json",
+      "planSha256": "09c412d62c90d1ced1b5bbe61ac10842752fe392ce278bf0ff2a63cbd669a85b",
+      "status": "ROUTING_OR_REFERENCE_CHECK",
+      "finalSelling": null
+    },
+    {
+      "attempt": 2,
+      "id": "RC_ESIM_HEADING_ROUTE_NETWORK_RETRY",
+      "reservedAt": "2026-10-02T19:16:31.371Z",
+      "preregistration": "RC_ESIM_HEADING_ROUTE_NETWORK_RETRY-preregistration.json",
+      "planSha256": "a1833686b7f616d23580c66c3dd4a31f3898a225c09a26e39c868f8fdf009270",
+      "status": "ROUTING_OR_REFERENCE_CHECK",
+      "finalSelling": null
+    },
+    {
+      "attempt": 3,
+      "id": "FM043_RC_WNO_OPEN",
+      "reservedAt": "2026-10-02T19:22:12.346Z",
+      "preregistration": "controls-preregistered.json",
+      "planSha256": "ceca75bf28847013c0440653a4debbe3b452abb9e3e1dfba4aa193e1ea8b6f03",
+      "status": "COMPLETED",
+      "finalSelling": 29330
+    },
+    {
+      "attempt": 4,
+      "id": "FM006_RC_WNO_OPEN",
+      "reservedAt": "2026-10-02T19:22:44.049Z",
+      "preregistration": "controls-preregistered.json",
+      "planSha256": "ceca75bf28847013c0440653a4debbe3b452abb9e3e1dfba4aa193e1ea8b6f03",
+      "status": "COMPLETED",
+      "finalSelling": 45990
+    },
+    {
+      "attempt": 5,
+      "id": "FM019_RC_WNO_OPEN",
+      "reservedAt": "2026-10-02T19:23:07.916Z",
+      "preregistration": "controls-preregistered.json",
+      "planSha256": "ceca75bf28847013c0440653a4debbe3b452abb9e3e1dfba4aa193e1ea8b6f03",
+      "status": "INVALID_ANSWER_MISMATCH",
+      "finalSelling": null
+    },
+    {
+      "attempt": 6,
+      "id": "FM022_RC_WNO_OPEN",
+      "reservedAt": "2026-10-02T19:23:30.470Z",
+      "preregistration": "controls-preregistered.json",
+      "planSha256": "ceca75bf28847013c0440653a4debbe3b452abb9e3e1dfba4aa193e1ea8b6f03",
+      "status": "INVALID_ANSWER_MISMATCH",
+      "finalSelling": null
+    },
+    {
+      "attempt": 7,
+      "id": "FM020_RC_WNO_OPEN",
+      "reservedAt": "2026-10-02T19:23:53.797Z",
+      "preregistration": "controls-preregistered.json",
+      "planSha256": "ceca75bf28847013c0440653a4debbe3b452abb9e3e1dfba4aa193e1ea8b6f03",
+      "status": "COMPLETED",
+      "finalSelling": 37820
+    },
+    {
+      "attempt": 8,
+      "id": "FM021_RC_WNO_OPEN",
+      "reservedAt": "2026-10-02T19:24:18.747Z",
+      "preregistration": "controls-preregistered.json",
+      "planSha256": "ceca75bf28847013c0440653a4debbe3b452abb9e3e1dfba4aa193e1ea8b6f03",
+      "status": "COMPLETED",
+      "finalSelling": 29230
+    },
+    {
+      "attempt": 9,
+      "id": "FM042_RC_WNO_OPEN",
+      "reservedAt": "2026-10-02T19:24:43.031Z",
+      "preregistration": "controls-preregistered.json",
+      "planSha256": "ceca75bf28847013c0440653a4debbe3b452abb9e3e1dfba4aa193e1ea8b6f03",
+      "status": "COMPLETED",
+      "finalSelling": 21380
+    },
+    {
+      "attempt": 10,
+      "id": "RC_S26_SPEN_DIAGNOSTIC",
+      "reservedAt": "2026-10-02T19:26:30.110Z",
+      "preregistration": "RC_S26_SPEN_DIAGNOSTIC-preregistration.json",
+      "planSha256": "4866b10d495b6a54ccc2c06b1fc7bb0540724e5696235c566d75bc6858968db3",
+      "status": "ROUTING_OR_REFERENCE_CHECK",
+      "finalSelling": null
+    },
+    {
+      "attempt": 11,
+      "id": "FM019_RC_WNO_SPEN_RETRY",
+      "reservedAt": "2026-10-02T19:28:36.211Z",
+      "preregistration": "spen-retry-preregistered.json",
+      "planSha256": "3f8f761839a0cd9d04ac6b3f21c46779af0aff8ab26cceaa8a5898795e25e348",
+      "status": "COMPLETED",
+      "finalSelling": 67040
+    },
+    {
+      "attempt": 12,
+      "id": "FM022_RC_WNO_SPEN_RETRY",
+      "reservedAt": "2026-10-02T19:29:01.496Z",
+      "preregistration": "spen-retry-preregistered.json",
+      "planSha256": "3f8f761839a0cd9d04ac6b3f21c46779af0aff8ab26cceaa8a5898795e25e348",
+      "status": "COMPLETED",
+      "finalSelling": 5580
+    },
+    {
+      "attempt": 13,
+      "id": "RC_REF_XIAOMI14",
+      "reservedAt": "2026-10-02T19:31:03.971Z",
+      "preregistration": "reference-route-preregistered.json",
+      "planSha256": "ea7b880e22f53d30b0ce92d0b1a431ae34cfc2e8f9a58db8da03f832df258332",
+      "status": "ROUTING_OR_REFERENCE_CHECK",
+      "finalSelling": null
+    },
+    {
+      "attempt": 14,
+      "id": "RC_REF_XIAOMI14ULTRA",
+      "reservedAt": "2026-10-02T19:31:08.417Z",
+      "preregistration": "reference-route-preregistered.json",
+      "planSha256": "ea7b880e22f53d30b0ce92d0b1a431ae34cfc2e8f9a58db8da03f832df258332",
+      "status": "ROUTING_OR_REFERENCE_CHECK",
+      "finalSelling": null
+    },
+    {
+      "attempt": 15,
+      "id": "RC_ULTRA_STABLE_P1_ROUTE",
+      "reservedAt": "2026-10-02T19:31:11.675Z",
+      "preregistration": "reference-route-preregistered.json",
+      "planSha256": "ea7b880e22f53d30b0ce92d0b1a431ae34cfc2e8f9a58db8da03f832df258332",
+      "status": "ROUTING_OR_REFERENCE_CHECK",
+      "finalSelling": null
+    },
+    {
+      "attempt": 16,
+      "id": "RC_NORD_TEMPORAL_OPEN",
+      "reservedAt": "2026-10-02T19:39:56.984Z",
+      "preregistration": "nord-prospective-preregistered.json",
+      "planSha256": "459c03ce008c01a3ea14223b27b28f626775d42a1c1efa2273ee1d39b3362282",
+      "status": "FAILED",
+      "finalSelling": null
+    },
+    {
+      "attempt": 17,
+      "id": "RC_NORD_TEMPORAL_LINES",
+      "reservedAt": "2026-10-02T19:40:05.751Z",
+      "preregistration": "nord-prospective-preregistered.json",
+      "planSha256": "459c03ce008c01a3ea14223b27b28f626775d42a1c1efa2273ee1d39b3362282",
+      "status": "COMPLETED",
+      "finalSelling": 3640
+    },
+    {
+      "attempt": 18,
+      "id": "RC_NORD_TEMPORAL_CLOSE",
+      "reservedAt": "2026-10-02T19:40:31.560Z",
+      "preregistration": "nord-prospective-preregistered.json",
+      "planSha256": "459c03ce008c01a3ea14223b27b28f626775d42a1c1efa2273ee1d39b3362282",
+      "status": "COMPLETED",
+      "finalSelling": 8320
+    },
+    {
+      "attempt": 19,
+      "id": "RC_NORD_LINES_RECOVERY",
+      "reservedAt": "2026-10-02T19:42:01.805Z",
+      "preregistration": "nord-recovery-preregistered.json",
+      "planSha256": "a9a5d0f103414a8b0549eaadf9cbdc816571099cedaf643ffedbcdfeef747c21",
+      "status": "COMPLETED",
+      "finalSelling": 3640
+    },
+    {
+      "attempt": 20,
+      "id": "RC_NORD_CLOSE_RECOVERY",
+      "reservedAt": "2026-10-02T19:42:27.801Z",
+      "preregistration": "nord-recovery-preregistered.json",
+      "planSha256": "a9a5d0f103414a8b0549eaadf9cbdc816571099cedaf643ffedbcdfeef747c21",
+      "status": "COMPLETED",
+      "finalSelling": 8320
+    }
+  ],
+  "accepted": [
+    {
+      "attempt": 3,
+      "id": "FM043_RC_WNO_OPEN",
+      "brand": "Xiaomi",
+      "model": "Xiaomi 14 Ultra",
+      "storage": "16 GB/512 GB",
+      "GetUpto": 37980,
+      "finalSelling": 29330,
+      "collectedAt": "2026-10-02T19:22:44.042Z",
+      "frozenAt": "2026-10-02T19:22:42.739Z",
+      "route": {
+        "warranty": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "validBill": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "mobileAge": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "eSim": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "box": {
+          "mode": "ASKED",
+          "selectedAnswer": "present",
+          "selectedLabel": "Original Box with same IMEI"
+        },
+        "charger": {
+          "mode": "ASKED",
+          "selectedAnswer": "present",
+          "selectedLabel": "Original Charger of Device"
+        },
+        "sPen": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        }
+      },
+      "conditions": {
+        "calls": "yes",
+        "touch": "yes",
+        "originalScreen": "yes",
+        "screenLines": "none",
+        "otherSelectedFaults": []
+      },
+      "screenshotSha256": "351afd9a016524cbfbe3bf92b451852cb2f705d280403b7d5782734980769282",
+      "predictionSha256": "8f2fe88d8777870b69d75b0cfdbccb83f1cbd70d92ef46a7f2a4ef3412e8603f",
+      "originalEnginePrediction": 38360,
+      "signedOriginalRupeeError": 9030,
+      "originalAbsolutePercentageError": 30.787589498806682,
+      "conditionalPrediction": null,
+      "conditionalSignedError": null,
+      "counterfactualCapturedFreshReference": null,
+      "savedProductionReference": null,
+      "savedProductionDecision": null,
+      "predictionKind": "UNSUPPORTED_NO_VERIFIED_RUNTIME_REFERENCE_PROFILE",
+      "conditionalAbsolutePercentageError": null
+    },
+    {
+      "attempt": 4,
+      "id": "FM006_RC_WNO_OPEN",
+      "brand": "Apple",
+      "model": "Apple iPhone 14 Pro Max",
+      "storage": "256 GB",
+      "GetUpto": 46010,
+      "finalSelling": 45990,
+      "collectedAt": "2026-10-02T19:23:07.901Z",
+      "frozenAt": "2026-10-02T19:23:06.593Z",
+      "route": {
+        "warranty": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "validBill": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "mobileAge": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "eSim": {
+          "mode": "ASKED",
+          "selectedAnswer": "single",
+          "selectedLabel": "Single eSIM"
+        },
+        "box": {
+          "mode": "ASKED",
+          "selectedAnswer": "present",
+          "selectedLabel": "Original Box with same IMEI"
+        },
+        "charger": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "sPen": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        }
+      },
+      "conditions": {
+        "calls": "yes",
+        "touch": "yes",
+        "originalScreen": "yes",
+        "screenLines": "none",
+        "otherSelectedFaults": []
+      },
+      "screenshotSha256": "1df561275ae308d0842e9a61ac0c4fba3661bdb6cec5a86fa13a3fe750aacb54",
+      "predictionSha256": "9b6b2841461c627f8400a25a3185a999ee5d25b9451be41507d44c7342d46eeb",
+      "originalEnginePrediction": 46390,
+      "signedOriginalRupeeError": 400,
+      "originalAbsolutePercentageError": 0.8697542944118286,
+      "conditionalPrediction": null,
+      "conditionalSignedError": null,
+      "counterfactualCapturedFreshReference": null,
+      "savedProductionReference": null,
+      "savedProductionDecision": null,
+      "predictionKind": "UNSUPPORTED_NO_VERIFIED_RUNTIME_REFERENCE_PROFILE",
+      "conditionalAbsolutePercentageError": null
+    },
+    {
+      "attempt": 7,
+      "id": "FM020_RC_WNO_OPEN",
+      "brand": "Samsung",
+      "model": "Samsung Galaxy Z Fold5",
+      "storage": "12 GB/256 GB",
+      "GetUpto": 49740,
+      "finalSelling": 37820,
+      "collectedAt": "2026-10-02T19:24:18.733Z",
+      "frozenAt": "2026-10-02T19:24:17.364Z",
+      "route": {
+        "warranty": {
+          "mode": "ASKED",
+          "selectedAnswer": "no",
+          "selectedLabel": "No"
+        },
+        "validBill": {
+          "mode": "ASKED",
+          "selectedAnswer": "yes",
+          "selectedLabel": "Yes"
+        },
+        "mobileAge": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "eSim": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "box": {
+          "mode": "ASKED",
+          "selectedAnswer": "present",
+          "selectedLabel": "Original Box with same IMEI"
+        },
+        "charger": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "sPen": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        }
+      },
+      "conditions": {
+        "calls": "yes",
+        "touch": "yes",
+        "originalScreen": "yes",
+        "screenLines": "none",
+        "otherSelectedFaults": []
+      },
+      "screenshotSha256": "e46385d37870ecb6e438ab53e06cd06234840ed20fdf7d33c688f2ad9c2cb167",
+      "predictionSha256": "d41777ac05ee217854e7f8b9fe39a01799cfefc4596637a833dd23608e9318d9",
+      "originalEnginePrediction": 38982,
+      "signedOriginalRupeeError": 1162,
+      "originalAbsolutePercentageError": 3.072448439978847,
+      "conditionalPrediction": null,
+      "conditionalSignedError": null,
+      "counterfactualCapturedFreshReference": null,
+      "savedProductionReference": null,
+      "savedProductionDecision": null,
+      "predictionKind": "UNSUPPORTED_NO_VERIFIED_RUNTIME_REFERENCE_PROFILE",
+      "conditionalAbsolutePercentageError": null
+    },
+    {
+      "attempt": 8,
+      "id": "FM021_RC_WNO_OPEN",
+      "brand": "Samsung",
+      "model": "Samsung Galaxy Z Flip6 5G",
+      "storage": "12 GB/256 GB",
+      "GetUpto": 38700,
+      "finalSelling": 29230,
+      "collectedAt": "2026-10-02T19:24:43.023Z",
+      "frozenAt": "2026-10-02T19:24:41.730Z",
+      "route": {
+        "warranty": {
+          "mode": "ASKED",
+          "selectedAnswer": "no",
+          "selectedLabel": "No"
+        },
+        "validBill": {
+          "mode": "ASKED",
+          "selectedAnswer": "yes",
+          "selectedLabel": "Yes"
+        },
+        "mobileAge": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "eSim": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "box": {
+          "mode": "ASKED",
+          "selectedAnswer": "present",
+          "selectedLabel": "Original Box with same IMEI"
+        },
+        "charger": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "sPen": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        }
+      },
+      "conditions": {
+        "calls": "yes",
+        "touch": "yes",
+        "originalScreen": "yes",
+        "screenLines": "none",
+        "otherSelectedFaults": []
+      },
+      "screenshotSha256": "dc0412ab4b0d5d73eb1bedaf7fb5b89bf3f20b75a7a4a9cadd66afc9d39df94b",
+      "predictionSha256": "ca8dcabec33fb2f2f443bf97aea9e3f64f4121e36e4e924c2bb46dad9655f1f8",
+      "originalEnginePrediction": 30414,
+      "signedOriginalRupeeError": 1184,
+      "originalAbsolutePercentageError": 4.050632911392405,
+      "conditionalPrediction": null,
+      "conditionalSignedError": null,
+      "counterfactualCapturedFreshReference": null,
+      "savedProductionReference": null,
+      "savedProductionDecision": null,
+      "predictionKind": "UNSUPPORTED_NO_VERIFIED_RUNTIME_REFERENCE_PROFILE",
+      "conditionalAbsolutePercentageError": null
+    },
+    {
+      "attempt": 9,
+      "id": "FM042_RC_WNO_OPEN",
+      "brand": "Xiaomi",
+      "model": "Xiaomi 14",
+      "storage": "12 GB/512 GB",
+      "GetUpto": 27400,
+      "finalSelling": 21380,
+      "collectedAt": "2026-10-02T19:25:07.322Z",
+      "frozenAt": "2026-10-02T19:25:05.978Z",
+      "route": {
+        "warranty": {
+          "mode": "ASKED",
+          "selectedAnswer": "no",
+          "selectedLabel": "No"
+        },
+        "validBill": {
+          "mode": "ASKED",
+          "selectedAnswer": "yes",
+          "selectedLabel": "Yes"
+        },
+        "mobileAge": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "eSim": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "box": {
+          "mode": "ASKED",
+          "selectedAnswer": "present",
+          "selectedLabel": "Original Box with same IMEI"
+        },
+        "charger": {
+          "mode": "ASKED",
+          "selectedAnswer": "present",
+          "selectedLabel": "Original Charger of Device"
+        },
+        "sPen": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        }
+      },
+      "conditions": {
+        "calls": "yes",
+        "touch": "yes",
+        "originalScreen": "yes",
+        "screenLines": "none",
+        "otherSelectedFaults": []
+      },
+      "screenshotSha256": "3940912ca32f7807205d8eb12890d8f65a541cdf55307866cbbaaef77275d0ba",
+      "predictionSha256": "4beb38360c8d14b156a976ce022fe7580121f98466b9c3f4dd42247b39d5ef0b",
+      "originalEnginePrediction": 21380,
+      "signedOriginalRupeeError": 0,
+      "originalAbsolutePercentageError": 0,
+      "conditionalPrediction": null,
+      "conditionalSignedError": null,
+      "counterfactualCapturedFreshReference": null,
+      "savedProductionReference": null,
+      "savedProductionDecision": null,
+      "predictionKind": "UNSUPPORTED_NO_VERIFIED_RUNTIME_REFERENCE_PROFILE",
+      "conditionalAbsolutePercentageError": null
+    },
+    {
+      "attempt": 11,
+      "id": "FM019_RC_WNO_SPEN_RETRY",
+      "brand": "Samsung",
+      "model": "Samsung Galaxy S26 Ultra",
+      "storage": "12 GB/512 GB",
+      "GetUpto": 86250,
+      "finalSelling": 67040,
+      "collectedAt": "2026-10-02T19:29:01.442Z",
+      "frozenAt": "2026-10-02T19:29:00.106Z",
+      "route": {
+        "warranty": {
+          "mode": "ASKED",
+          "selectedAnswer": "no",
+          "selectedLabel": "No"
+        },
+        "validBill": {
+          "mode": "ASKED",
+          "selectedAnswer": "yes",
+          "selectedLabel": "Yes"
+        },
+        "mobileAge": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "eSim": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "box": {
+          "mode": "ASKED",
+          "selectedAnswer": "present",
+          "selectedLabel": "Original Box with same IMEI"
+        },
+        "charger": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "sPen": {
+          "mode": "ASKED",
+          "selectedAnswer": "present",
+          "selectedLabel": "Original S Pen"
+        }
+      },
+      "conditions": {
+        "calls": "yes",
+        "touch": "yes",
+        "originalScreen": "yes",
+        "screenLines": "none",
+        "otherSelectedFaults": []
+      },
+      "screenshotSha256": "cc2144a4203a62dc2a8a3753e2b3594c88fe464278cd9d7201c37f1c61a9a7a7",
+      "predictionSha256": "2a4c9d5b7537f9631d24a69aa361692147930626c1b988ca005554c2235e5aca",
+      "originalEnginePrediction": 70582,
+      "signedOriginalRupeeError": 3542,
+      "originalAbsolutePercentageError": 5.283412887828162,
+      "conditionalPrediction": null,
+      "conditionalSignedError": null,
+      "counterfactualCapturedFreshReference": null,
+      "savedProductionReference": null,
+      "savedProductionDecision": null,
+      "predictionKind": "UNSUPPORTED_NO_VERIFIED_RUNTIME_REFERENCE_PROFILE",
+      "conditionalAbsolutePercentageError": null
+    },
+    {
+      "attempt": 12,
+      "id": "FM022_RC_WNO_SPEN_RETRY",
+      "brand": "Samsung",
+      "model": "Samsung Galaxy Note 10 Lite",
+      "storage": "6 GB/128 GB",
+      "GetUpto": 5600,
+      "finalSelling": 5580,
+      "collectedAt": "2026-10-02T19:29:25.033Z",
+      "frozenAt": "2026-10-02T19:29:23.744Z",
+      "route": {
+        "warranty": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "validBill": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "mobileAge": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "eSim": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "box": {
+          "mode": "ASKED",
+          "selectedAnswer": "present",
+          "selectedLabel": "Original Box with same IMEI"
+        },
+        "charger": {
+          "mode": "ASKED",
+          "selectedAnswer": "present",
+          "selectedLabel": "Original Charger of Device"
+        },
+        "sPen": {
+          "mode": "ASKED",
+          "selectedAnswer": "present",
+          "selectedLabel": "Original S Pen"
+        }
+      },
+      "conditions": {
+        "calls": "yes",
+        "touch": "yes",
+        "originalScreen": "yes",
+        "screenLines": "none",
+        "otherSelectedFaults": []
+      },
+      "screenshotSha256": "f3b13137bedd6f377bda3025f853b9c61178c114622d9b28f8a54f42c16ef0d6",
+      "predictionSha256": "aec1dc7774687591fb7823f448b6c9aef39ad4b2604e217ba6e190e07b22694e",
+      "originalEnginePrediction": 5980,
+      "signedOriginalRupeeError": 400,
+      "originalAbsolutePercentageError": 7.168458781362006,
+      "conditionalPrediction": null,
+      "conditionalSignedError": null,
+      "counterfactualCapturedFreshReference": null,
+      "savedProductionReference": null,
+      "savedProductionDecision": null,
+      "predictionKind": "UNSUPPORTED_NO_VERIFIED_RUNTIME_REFERENCE_PROFILE",
+      "conditionalAbsolutePercentageError": null
+    },
+    {
+      "attempt": 17,
+      "id": "RC_NORD_TEMPORAL_LINES",
+      "brand": "OnePlus",
+      "model": "OnePlus Nord",
+      "storage": "8 GB/128 GB",
+      "GetUpto": 8340,
+      "finalSelling": 3640,
+      "collectedAt": "2026-10-02T19:40:31.554Z",
+      "frozenAt": "2026-10-02T19:40:30.230Z",
+      "route": {
+        "warranty": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "validBill": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "mobileAge": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "eSim": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "box": {
+          "mode": "ASKED",
+          "selectedAnswer": "present",
+          "selectedLabel": "Original Box with same IMEI"
+        },
+        "charger": {
+          "mode": "ASKED",
+          "selectedAnswer": "present",
+          "selectedLabel": "Original Charger of Device"
+        },
+        "sPen": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        }
+      },
+      "conditions": {
+        "calls": "yes",
+        "touch": "yes",
+        "originalScreen": "yes",
+        "screenLines": "visible_lines",
+        "otherSelectedFaults": []
+      },
+      "screenshotSha256": "20be1365675a9e6ec983ff66620d2c9c5b0a5cf620e08a9cc8b3a09ae8b4df45",
+      "predictionSha256": "0d4aa5db13b513fbed7bb5d40502af07ef2a933b84886c3ce387a0490f4c733d",
+      "originalEnginePrediction": 6718,
+      "signedOriginalRupeeError": 3078,
+      "originalAbsolutePercentageError": 84.56043956043956,
+      "conditionalPrediction": 3640,
+      "conditionalSignedError": 0,
+      "counterfactualCapturedFreshReference": {
+        "kind": "VERIFIED",
+        "cashifyConditionEquivalent": 3640,
+        "rule": "oneplus-display",
+        "evidence": "oneplus-display-research/2026-10-02#FM025",
+        "conditionClass": "display"
+      },
+      "savedProductionReference": 8260,
+      "savedProductionDecision": {
+        "kind": "MANUAL_INSPECTION_REQUIRED",
+        "reason": "Changed reference domain requires baseline revalidation",
+        "conditionClass": "display"
+      },
+      "predictionKind": "VERIFIED",
+      "conditionalAbsolutePercentageError": 0
+    },
+    {
+      "attempt": 18,
+      "id": "RC_NORD_TEMPORAL_CLOSE",
+      "brand": "OnePlus",
+      "model": "OnePlus Nord",
+      "storage": "8 GB/128 GB",
+      "GetUpto": 8340,
+      "finalSelling": 8320,
+      "collectedAt": "2026-10-02T19:40:55.227Z",
+      "frozenAt": "2026-10-02T19:40:53.940Z",
+      "route": {
+        "warranty": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "validBill": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "mobileAge": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "eSim": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "box": {
+          "mode": "ASKED",
+          "selectedAnswer": "present",
+          "selectedLabel": "Original Box with same IMEI"
+        },
+        "charger": {
+          "mode": "ASKED",
+          "selectedAnswer": "present",
+          "selectedLabel": "Original Charger of Device"
+        },
+        "sPen": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        }
+      },
+      "conditions": {
+        "calls": "yes",
+        "touch": "yes",
+        "originalScreen": "yes",
+        "screenLines": "none",
+        "otherSelectedFaults": []
+      },
+      "screenshotSha256": "855581173b8d1ad83cce5912a7575bfe8f8dcdf3e362ab369c7b58add71c1aca",
+      "predictionSha256": "f1ef5ab4bd529cb9d32be114264fe2c3338d6092e20769085ca308bacad82954",
+      "originalEnginePrediction": 8720,
+      "signedOriginalRupeeError": 400,
+      "originalAbsolutePercentageError": 4.807692307692308,
+      "conditionalPrediction": 8320,
+      "conditionalSignedError": 0,
+      "counterfactualCapturedFreshReference": {
+        "kind": "VERIFIED",
+        "cashifyConditionEquivalent": 8320,
+        "rule": "oneplus-display",
+        "evidence": "oneplus-display-research/2026-10-02#FM025",
+        "conditionClass": "clean"
+      },
+      "savedProductionReference": 8260,
+      "savedProductionDecision": {
+        "kind": "MANUAL_INSPECTION_REQUIRED",
+        "reason": "Changed reference domain requires baseline revalidation",
+        "conditionClass": "clean"
+      },
+      "predictionKind": "VERIFIED",
+      "conditionalAbsolutePercentageError": 0
+    },
+    {
+      "attempt": 19,
+      "id": "RC_NORD_LINES_RECOVERY",
+      "brand": "OnePlus",
+      "model": "OnePlus Nord",
+      "storage": "8 GB/128 GB",
+      "GetUpto": 8340,
+      "finalSelling": 3640,
+      "collectedAt": "2026-10-02T19:42:27.787Z",
+      "frozenAt": "2026-10-02T19:42:26.503Z",
+      "route": {
+        "warranty": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "validBill": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "mobileAge": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "eSim": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "box": {
+          "mode": "ASKED",
+          "selectedAnswer": "present",
+          "selectedLabel": "Original Box with same IMEI"
+        },
+        "charger": {
+          "mode": "ASKED",
+          "selectedAnswer": "present",
+          "selectedLabel": "Original Charger of Device"
+        },
+        "sPen": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        }
+      },
+      "conditions": {
+        "calls": "yes",
+        "touch": "yes",
+        "originalScreen": "yes",
+        "screenLines": "visible_lines",
+        "otherSelectedFaults": []
+      },
+      "screenshotSha256": "20be1365675a9e6ec983ff66620d2c9c5b0a5cf620e08a9cc8b3a09ae8b4df45",
+      "predictionSha256": "df5b3ba6dc7b501eccf9dc9fa15144643dd4f0e5c5af0300e026886d01acea60",
+      "originalEnginePrediction": 6718,
+      "signedOriginalRupeeError": 3078,
+      "originalAbsolutePercentageError": 84.56043956043956,
+      "conditionalPrediction": 3640,
+      "conditionalSignedError": 0,
+      "counterfactualCapturedFreshReference": {
+        "kind": "VERIFIED",
+        "cashifyConditionEquivalent": 3640,
+        "rule": "oneplus-display",
+        "evidence": "oneplus-display-research/2026-10-02#FM025",
+        "conditionClass": "display"
+      },
+      "savedProductionReference": 8260,
+      "savedProductionDecision": {
+        "kind": "MANUAL_INSPECTION_REQUIRED",
+        "reason": "Changed reference domain requires baseline revalidation",
+        "conditionClass": "display"
+      },
+      "predictionKind": "VERIFIED",
+      "conditionalAbsolutePercentageError": 0
+    },
+    {
+      "attempt": 20,
+      "id": "RC_NORD_CLOSE_RECOVERY",
+      "brand": "OnePlus",
+      "model": "OnePlus Nord",
+      "storage": "8 GB/128 GB",
+      "GetUpto": 8340,
+      "finalSelling": 8320,
+      "collectedAt": "2026-10-02T19:42:51.425Z",
+      "frozenAt": "2026-10-02T19:42:50.119Z",
+      "route": {
+        "warranty": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "validBill": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "mobileAge": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "eSim": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        },
+        "box": {
+          "mode": "ASKED",
+          "selectedAnswer": "present",
+          "selectedLabel": "Original Box with same IMEI"
+        },
+        "charger": {
+          "mode": "ASKED",
+          "selectedAnswer": "present",
+          "selectedLabel": "Original Charger of Device"
+        },
+        "sPen": {
+          "mode": "NOT_ASKED",
+          "selectedAnswer": null,
+          "selectedLabel": null
+        }
+      },
+      "conditions": {
+        "calls": "yes",
+        "touch": "yes",
+        "originalScreen": "yes",
+        "screenLines": "none",
+        "otherSelectedFaults": []
+      },
+      "screenshotSha256": "855581173b8d1ad83cce5912a7575bfe8f8dcdf3e362ab369c7b58add71c1aca",
+      "predictionSha256": "3b8a9a0b61dd85c87f07519edef99335e63f78e635806bb60356275409362b46",
+      "originalEnginePrediction": 8720,
+      "signedOriginalRupeeError": 400,
+      "originalAbsolutePercentageError": 4.807692307692308,
+      "conditionalPrediction": 8320,
+      "conditionalSignedError": 0,
+      "counterfactualCapturedFreshReference": {
+        "kind": "VERIFIED",
+        "cashifyConditionEquivalent": 8320,
+        "rule": "oneplus-display",
+        "evidence": "oneplus-display-research/2026-10-02#FM025",
+        "conditionClass": "clean"
+      },
+      "savedProductionReference": 8260,
+      "savedProductionDecision": {
+        "kind": "MANUAL_INSPECTION_REQUIRED",
+        "reason": "Changed reference domain requires baseline revalidation",
+        "conditionClass": "clean"
+      },
+      "predictionKind": "VERIFIED",
+      "conditionalAbsolutePercentageError": 0
+    }
+  ],
+  "failedFinalAttempts": [
+    {
+      "id": "FM019_RC_WNO_OPEN",
+      "status": "INVALID_ANSWER_MISMATCH",
+      "reason": "selected option mismatch: sPen",
+      "finalSelling": null
+    },
+    {
+      "id": "FM022_RC_WNO_OPEN",
+      "status": "INVALID_ANSWER_MISMATCH",
+      "reason": "selected option mismatch: sPen",
+      "finalSelling": null
+    },
+    {
+      "id": "RC_NORD_TEMPORAL_OPEN",
+      "status": "FAILED",
+      "reason": "Cashify questionnaire timed out",
+      "finalSelling": null
+    }
+  ],
+  "routingCaveat": "Six charged non-final diagnostics/reference checks are not accepted Selling quotes. routing-outcome.json is a later duplicate-budget rejection; it cannot establish the original first diagnostic outcome. All reservations remain charged.",
+  "prospectiveTemporalValidation": {
+    "openingAttempt": 18,
+    "defectAttempt": 19,
+    "closingAttempt": 20,
+    "opening": "RC_NORD_TEMPORAL_CLOSE",
+    "defect": "RC_NORD_LINES_RECOVERY",
+    "closing": "RC_NORD_CLOSE_RECOVERY",
+    "registeredAt": "2026-10-02T19:41:57.104Z",
+    "device": {
+      "brand": "OnePlus",
+      "model": "OnePlus Nord",
+      "storage": "8 GB/128 GB"
+    },
+    "GetUpto": 8340,
+    "cleanOpening": 8320,
+    "lines": 3640,
+    "cleanClosing": 8320,
+    "matchedAnswersExcept": [
+      "screenLines"
+    ],
+    "sameSevenFactorModes": true,
+    "stableBaseline": true,
+    "conditionalPrediction": 3640,
+    "signedRupeeError": 0,
+    "absolutePercentageError": 0,
+    "numericDefectHoldouts": 1,
+    "unseenCondition": false,
+    "unseenEntireDevice": false,
+    "role": "Prospectively preregistered same-day temporal repeat of existing measured condition; no whole-device generalization claim",
+    "invalidEarlierBlock": "Attempt16 opening FAILED; attempts17/18 preserved, but attempt17 is not a fully bracketed primary holdout. New registration after18 explicitly reuses18 as opening before19/20.",
+    "capturedReferenceCounterfactual": "VERIFIED at8340 with compatible datedprofile/reference assumptions; no measured-clean runtime baseline",
+    "savedProductionReference": 8260,
+    "savedProductionDecision": "MANUAL_INSPECTION_REQUIRED",
+    "parameterHashes": [
+      {
+        "path": "lib/pricing/onePlusDisplayEvidenceCandidate.ts",
+        "preregisteredSha256": "fe904f6fbae48625f6a14f20b18c5a4cddafa39f92a6493b2180a8881fa9897a",
+        "currentSha256": "fe904f6fbae48625f6a14f20b18c5a4cddafa39f92a6493b2180a8881fa9897a",
+        "unchanged": true
+      },
+      {
+        "path": "lib/pricing/xiaomiWorkbookEvidenceCandidate.ts",
+        "preregisteredSha256": "ade076dd41fb13bee7b26c0abf8ac2b5e14a31fdebc934e833cfefbfafcc19be",
+        "currentSha256": "ade076dd41fb13bee7b26c0abf8ac2b5e14a31fdebc934e833cfefbfafcc19be",
+        "unchanged": true
+      },
+      {
+        "path": "lib/pricingCalculator.ts",
+        "preregisteredSha256": "a92be9cb6a61fa2bc960e9dbd05dbe77144e538e647e39f577c0ac553350433f",
+        "currentSha256": "a92be9cb6a61fa2bc960e9dbd05dbe77144e538e647e39f577c0ac553350433f",
+        "unchanged": true
+      },
+      {
+        "path": "scripts/pricing/fixtures/oneplus-display-verified-development-2026-10-02.json",
+        "preregisteredSha256": "e42158076188e406af996c2b7055fc01b83cb2032b1cfa989ed8a6c5af1b459e",
+        "currentSha256": "e42158076188e406af996c2b7055fc01b83cb2032b1cfa989ed8a6c5af1b459e",
+        "unchanged": true
+      }
+    ],
+    "releaseDecisionSourceHashAtPreregistration": "21d9e4b68dca0e353852cc6704cc770c3f93fd4092211a84c56fa5ee4fad3b9d",
+    "releaseDecisionPolicyMayChangeWithoutParameterRefitting": true
+  },
+  "ultraRouting": {
+    "capturedAt": "2026-10-02T19:31:29.919Z",
+    "waitAfterReadyMs": 15000,
+    "actualP1Questions": [
+      "Are you able to make and receive calls?",
+      "Is your device's touch screen working properly?",
+      "Is your phone's screen original?"
+    ],
+    "warrantyMode": "NOT_ASKED",
+    "billMode": "NOT_ASKED",
+    "screenshotSha256": [
+      "caf53d8051c665f26b2c404270bb53b712ae574a64d1d33dd823c6e9a1f9c23f",
+      "2732e80b7bf33bb8edf4e612fd01d5d2e73b680ed1e6a1085f92c577ce3cc479",
+      "300643c40ca3c41ec5a9e3b56f6aa8930a74536626514daec958d027c768fb73",
+      "095c02d04d59fec9723d0ad8716f0382dfc4b6aa3440f111fbe51032733a3b7a"
+    ],
+    "conclusion": "Repeated current route has three P1 questions, no warranty/bill. Clean29330 atGetUpto37980 demonstrates NOT_ASKED alone does not establish universalGetUpto-minus20 or accessory accounting. Historical dispute/exclusions remain preserved separately."
+  },
+  "referenceDryRun": {
+    "builtAt": "2026-10-02T19:47:56.540Z",
+    "productionQueried": false,
+    "productionWritten": false,
+    "networkRequests": 0,
+    "mechanism": "Existing runRefreshJob and ingestion with injected in-memory repository",
+    "diffs": [
+      {
+        "deviceKey": "xiaomi|xiaomi 14|12 gb/512 gb",
+        "brand": "Xiaomi",
+        "model": "Xiaomi 14",
+        "storage": "12 GB/512 GB",
+        "action": "INSERT",
+        "oldPrice": null,
+        "newPrice": 27400,
+        "oldLastVerifiedAt": null,
+        "newLastVerifiedAt": "2026-10-02T19:31:08.415Z",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-14-12-gb-512-gb",
+        "matchConfidence": "exact"
+      },
+      {
+        "deviceKey": "xiaomi|xiaomi 14 ultra|16 gb/512 gb",
+        "brand": "Xiaomi",
+        "model": "Xiaomi 14 Ultra",
+        "storage": "16 GB/512 GB",
+        "action": "INSERT",
+        "oldPrice": null,
+        "newPrice": 37980,
+        "oldLastVerifiedAt": null,
+        "newLastVerifiedAt": "2026-10-02T19:31:11.667Z",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-14-ultra-16-gb-512-gb",
+        "matchConfidence": "exact"
+      },
+      {
+        "deviceKey": "oneplus|oneplus nord|8 gb/128 gb",
+        "brand": "OnePlus",
+        "model": "OnePlus Nord",
+        "storage": "8 GB/128 GB",
+        "action": "UPDATE",
+        "oldPrice": 8260,
+        "newPrice": 8340,
+        "oldLastVerifiedAt": "2026-09-27T08:43:34.424Z",
+        "newLastVerifiedAt": "2026-10-02T19:42:50.119Z",
+        "source": "cashify",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-nord-8-gb-128-gb",
+        "matchConfidence": "exact"
+      }
+    ],
+    "caveats": [
+      "Old8260 is saved Oct2 production export, not a current Oct3 production read; recheck current record at approved application time.",
+      "Lower stored price does not itself prove staleness: Sep27 verification remains fresh under existing14/30day policy.",
+      "Only GetUpto27400/37980/8340 are proposed; clean Selling21380/29330/8320 are NOT reference amounts.",
+      "Uses existing runRefreshJob/ingestion on injected in-memory repository; no production store, run recorder or lock. Never apply this JSON as raw SQL.",
+      "Existing-record createdAt in temporary simulation is an explicit harness placeholder; normal refresh preserves actual stored metadata."
+    ]
+  }
+}

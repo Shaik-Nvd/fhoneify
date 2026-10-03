@@ -1,0 +1,208 @@
+{
+  "capturedAt": "2026-10-01",
+  "notes": [
+    "target = Cashify 'Selling price' = Cashify base - 20 (Sanchar Saathi fee).",
+    "fhoneifyNow = displayed Estimated value on 2026-10-01 (engine quote - 99).",
+    "getUpto = Cashify public 'Get Upto' for the variant. Source: lib/cashify_prices.json (Cashify-verified 2026-09-20) except where getUptoSource says otherwise; 17 Ultra 75,370 was re-confirmed by the owner on 2026-10-01. null = not yet known.",
+    "combo 0 rows (clean, warranty No) are pending owner capture; target null = reported, not gated.",
+    "combo 0 = clean, warranty No, bill Yes, original box. Xiaomi 14 / 14 Ultra captured by the owner 2026-10-01 (\"final quote\"); compared like the other targets."
+  ],
+  "references": {
+    "Xiaomi 17T|12 GB/512 GB": {
+      "getUpto": 39360,
+      "getUptoSource": "lib/cashify_prices.json 2026-09-20"
+    },
+    "Xiaomi Redmi Note 15 Pro Plus 5G|12 GB/512 GB": {
+      "getUpto": 28100,
+      "getUptoSource": "lib/cashify_prices.json 2026-09-20"
+    },
+    "Xiaomi Redmi Turbo 5|12 GB/256 GB": {
+      "getUpto": 26080,
+      "getUptoSource": "lib/cashify_prices.json 2026-09-20"
+    },
+    "Xiaomi 14|12 GB/512 GB": {
+      "getUpto": 27400,
+      "getUptoSource": "owner 2026-10-01"
+    },
+    "Xiaomi 14 Ultra|16 GB/512 GB": {
+      "getUpto": 37980,
+      "getUptoSource": "owner 2026-10-01"
+    },
+    "Xiaomi 15|12 GB/512 GB": {
+      "getUpto": 37100,
+      "getUptoSource": "lib/cashify_prices.json 2026-09-20"
+    },
+    "Xiaomi 15 Ultra|16 GB/512 GB": {
+      "getUpto": 59580,
+      "getUptoSource": "lib/cashify_prices.json 2026-09-20"
+    },
+    "Xiaomi 17|12 GB/512 GB": {
+      "getUpto": 57070,
+      "getUptoSource": "lib/cashify_prices.json 2026-09-20"
+    },
+    "Xiaomi 17 Ultra|16 GB/512 GB": {
+      "getUpto": 75370,
+      "getUptoSource": "owner 2026-10-01 (matches lib/cashify_prices.json)"
+    }
+  },
+  "cases": [
+    {
+      "model": "Xiaomi 17T",
+      "storage": "12 GB/512 GB",
+      "combo": 1,
+      "cashifyBase": 16260,
+      "target": 16240,
+      "fhoneifyNow": 16262
+    },
+    {
+      "model": "Xiaomi Redmi Note 15 Pro Plus 5G",
+      "storage": "12 GB/512 GB",
+      "combo": 1,
+      "cashifyBase": 17980,
+      "target": 17960,
+      "fhoneifyNow": 11545
+    },
+    {
+      "model": "Xiaomi Redmi Turbo 5",
+      "storage": "12 GB/256 GB",
+      "combo": 1,
+      "cashifyBase": 12860,
+      "target": 12840,
+      "fhoneifyNow": 10878
+    },
+    {
+      "model": "Xiaomi 14",
+      "storage": "12 GB/512 GB",
+      "combo": 1,
+      "cashifyBase": 8200,
+      "target": 8180,
+      "fhoneifyNow": 11336
+    },
+    {
+      "model": "Xiaomi 14 Ultra",
+      "storage": "16 GB/512 GB",
+      "combo": 1,
+      "cashifyBase": 14020,
+      "target": 14000,
+      "fhoneifyNow": 15622
+    },
+    {
+      "model": "Xiaomi 15",
+      "storage": "12 GB/512 GB",
+      "combo": 1,
+      "cashifyBase": 12610,
+      "target": 12590,
+      "fhoneifyNow": 15346
+    },
+    {
+      "model": "Xiaomi 15 Ultra",
+      "storage": "16 GB/512 GB",
+      "combo": 1,
+      "cashifyBase": 29210,
+      "target": 29190,
+      "fhoneifyNow": 23997
+    },
+    {
+      "model": "Xiaomi 17",
+      "storage": "12 GB/512 GB",
+      "combo": 1,
+      "cashifyBase": 27440,
+      "target": 27420,
+      "fhoneifyNow": 22998
+    },
+    {
+      "model": "Xiaomi 17 Ultra",
+      "storage": "16 GB/512 GB",
+      "combo": 1,
+      "cashifyBase": 41970,
+      "target": 41950,
+      "fhoneifyNow": 30278
+    },
+    {
+      "model": "Xiaomi 17T",
+      "storage": "12 GB/512 GB",
+      "combo": 2,
+      "cashifyBase": 23660,
+      "target": 23640,
+      "fhoneifyNow": 23772
+    },
+    {
+      "model": "Xiaomi Redmi Note 15 Pro Plus 5G",
+      "storage": "12 GB/512 GB",
+      "combo": 2,
+      "cashifyBase": 19480,
+      "target": 19460,
+      "fhoneifyNow": 16836
+    },
+    {
+      "model": "Xiaomi Redmi Turbo 5",
+      "storage": "12 GB/256 GB",
+      "combo": 2,
+      "cashifyBase": 16310,
+      "target": 16290,
+      "fhoneifyNow": 15854
+    },
+    {
+      "model": "Xiaomi 14",
+      "storage": "12 GB/512 GB",
+      "combo": 2,
+      "cashifyBase": 14480,
+      "target": 14460,
+      "fhoneifyNow": 16528
+    },
+    {
+      "model": "Xiaomi 14 Ultra",
+      "storage": "16 GB/512 GB",
+      "combo": 2,
+      "cashifyBase": 21600,
+      "target": 21580,
+      "fhoneifyNow": 22830
+    },
+    {
+      "model": "Xiaomi 15",
+      "storage": "12 GB/512 GB",
+      "combo": 2,
+      "cashifyBase": 20840,
+      "target": 20820,
+      "fhoneifyNow": 22425
+    },
+    {
+      "model": "Xiaomi 15 Ultra",
+      "storage": "16 GB/512 GB",
+      "combo": 2,
+      "cashifyBase": 37720,
+      "target": 37700,
+      "fhoneifyNow": 35151
+    },
+    {
+      "model": "Xiaomi 17",
+      "storage": "12 GB/512 GB",
+      "combo": 2,
+      "cashifyBase": 35940,
+      "target": 35920,
+      "fhoneifyNow": 33682
+    },
+    {
+      "model": "Xiaomi 17 Ultra",
+      "storage": "16 GB/512 GB",
+      "combo": 2,
+      "cashifyBase": 50480,
+      "target": 50460,
+      "fhoneifyNow": 44388
+    },
+    {
+      "model": "Xiaomi 14",
+      "storage": "12 GB/512 GB",
+      "combo": 0,
+      "cashifyBase": null,
+      "target": 21380
+    },
+    {
+      "model": "Xiaomi 14 Ultra",
+      "storage": "16 GB/512 GB",
+      "combo": 0,
+      "cashifyBase": null,
+      "target": 29330
+    }
+  ]
+}

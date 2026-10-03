@@ -1,0 +1,120 @@
+{
+  "builtAt": "2026-10-03T05:26:52.037Z",
+  "mechanism": "scripts/reference-pricing/refresh-from-cashify.ts --dry-run (existing runRefreshJob + ingestion; DRY RUN repository discards writes; NULL run recorder; file lock only); run from a worktree without .env so no production database was reachable",
+  "productionQueried": false,
+  "productionWritten": false,
+  "liveCashifyFetches": 8,
+  "fetchedAt": "2026-10-03",
+  "savedExportSha256": "a4a53af8f82c8e37d53839776aac835b5a193805d1fd816f296dc5b90aebb772",
+  "caveats": [
+    "Old amounts are the saved 2026-10-02 approved export, not a new production read; recheck the current record at approval time.",
+    "A lower stored amount was an older valid verification (2026-09-27), not proof of a wrong variant; Cashify Get Upto rose before the 2026-10-02 calibration and was unchanged on 2026-10-03 for 7 of 8 scopes.",
+    "Never apply this JSON as raw SQL; apply only through the existing refresh job."
+  ],
+  "rows": [
+    {
+      "scope": "Xiaomi Xiaomi Mi A2 4 GB/64 GB",
+      "deviceKey": "xiaomi|xiaomi mi a2|4 gb/64 gb",
+      "savedProduction": {
+        "amount": 2500,
+        "lastVerifiedAt": "2026-09-27T09:37:53.969Z"
+      },
+      "calibration": 2520,
+      "liveDryRun": 2520,
+      "proposedAction": "UPDATE",
+      "equalsCalibrationAfterRefresh": true,
+      "resolution": "Run the existing refresh for this key (owner-approved production write); equality guard then passes with no guard change"
+    },
+    {
+      "scope": "Xiaomi Xiaomi 14 CIVI 8 GB/256 GB",
+      "deviceKey": "xiaomi|xiaomi 14 civi|8 gb/256 gb",
+      "savedProduction": {
+        "amount": 18720,
+        "lastVerifiedAt": "2026-09-27T09:45:08.648Z"
+      },
+      "calibration": 18900,
+      "liveDryRun": 18900,
+      "proposedAction": "UPDATE",
+      "equalsCalibrationAfterRefresh": true,
+      "resolution": "Run the existing refresh for this key (owner-approved production write); equality guard then passes with no guard change"
+    },
+    {
+      "scope": "Xiaomi Xiaomi Redmi Note 9 Pro 4 GB/128 GB",
+      "deviceKey": "xiaomi|xiaomi redmi note 9 pro|4 gb/128 gb",
+      "savedProduction": {
+        "amount": 4940,
+        "lastVerifiedAt": "2026-09-27T09:40:14.063Z"
+      },
+      "calibration": 4990,
+      "liveDryRun": 4990,
+      "proposedAction": "UPDATE",
+      "equalsCalibrationAfterRefresh": true,
+      "resolution": "Run the existing refresh for this key (owner-approved production write); equality guard then passes with no guard change"
+    },
+    {
+      "scope": "Xiaomi Xiaomi Redmi Note 10 Pro Max 6 GB/128 GB",
+      "deviceKey": "xiaomi|xiaomi redmi note 10 pro max|6 gb/128 gb",
+      "savedProduction": {
+        "amount": 5800,
+        "lastVerifiedAt": "2026-09-27T09:41:35.054Z"
+      },
+      "calibration": 5970,
+      "liveDryRun": 5970,
+      "proposedAction": "UPDATE",
+      "equalsCalibrationAfterRefresh": true,
+      "resolution": "Run the existing refresh for this key (owner-approved production write); equality guard then passes with no guard change"
+    },
+    {
+      "scope": "OnePlus OnePlus Nord 8 GB/128 GB",
+      "deviceKey": "oneplus|oneplus nord|8 gb/128 gb",
+      "savedProduction": {
+        "amount": 8260,
+        "lastVerifiedAt": "2026-09-27T08:43:34.424Z"
+      },
+      "calibration": 8340,
+      "liveDryRun": 8340,
+      "proposedAction": "UPDATE",
+      "equalsCalibrationAfterRefresh": true,
+      "resolution": "Run the existing refresh for this key (owner-approved production write); equality guard then passes with no guard change"
+    },
+    {
+      "scope": "OnePlus Oneplus Open 16 GB/512 GB",
+      "deviceKey": "oneplus|oneplus open|16 gb/512 gb",
+      "savedProduction": {
+        "amount": 51410,
+        "lastVerifiedAt": "2026-09-27T08:41:41.643Z"
+      },
+      "calibration": 51650,
+      "liveDryRun": 51650,
+      "proposedAction": "UPDATE",
+      "equalsCalibrationAfterRefresh": true,
+      "resolution": "Run the existing refresh for this key (owner-approved production write); equality guard then passes with no guard change"
+    },
+    {
+      "scope": "Apple Apple iPhone 12 Pro 256 GB",
+      "savedProduction": {
+        "amount": 24220,
+        "lastVerifiedAt": "2026-09-27T08:35:30.946Z"
+      },
+      "calibration": 24460,
+      "liveDryRun": 24780,
+      "proposedAction": "UPDATE",
+      "equalsCalibrationAfterRefresh": false,
+      "resolution": "Live Get Upto 24,780 differs from calibration 24,460: legitimate reference outside the measured domain; needs a new matched clean control/recalibration (and the separate clean-above-Get-Upto headline approval), not a wider guard",
+      "deviceKey": "apple|apple iphone 12 pro|256gb"
+    },
+    {
+      "scope": "Samsung Samsung Galaxy S23 FE 5G 8 GB/128 GB",
+      "deviceKey": "samsung|samsung galaxy s23 fe 5g|8 gb/128 gb",
+      "savedProduction": {
+        "amount": 17880,
+        "lastVerifiedAt": "2026-09-27T09:54:31.313Z"
+      },
+      "calibration": 18060,
+      "liveDryRun": 18060,
+      "proposedAction": "UPDATE",
+      "equalsCalibrationAfterRefresh": true,
+      "resolution": "Run the existing refresh for this key (owner-approved production write); equality guard then passes with no guard change"
+    }
+  ]
+}

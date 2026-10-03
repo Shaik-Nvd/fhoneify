@@ -15,6 +15,7 @@ import { SEED_DEVICES } from '@/lib/seed_devices';
 // let the screen, the stored lead and a reloaded page disagree.
 import { PERFECT_CONDITION_DIAGNOSTICS } from '@/lib/pricing/perfectCondition';
 import { customerPayout } from '@/lib/pricing/payout';
+import { inspectionRequestLinks } from '@/lib/inspectionRequest';
 import { SignedQuote, clearQuoteSession, loadQuoteSession, sameDevice, saveQuoteSession } from '@/lib/pricing/quoteSession';
 import { warrantyVoidedByDiagnostics } from '@/lib/pricing/diagnostics';
 import { questionnaireFor } from '@/lib/pricing/questionnaire';
@@ -227,8 +228,28 @@ export default function QuotePage() {
       : null;
     if (saved) {
       if (saved.answers) setDiagnostics(saved.answers as any);
-      setStartingQuote(saved.starting);
-      setFinalQuote(saved.final);
+      // Never display a saved price before the current server confirms its
+      // eligibility. Same-version quotes retain the existing token price lock.
+      if (saved.starting) fetchStartingQuote(saved.brand, saved.model, saved.storage);
+      if (saved.final) {
+        setIsFinalPriceLoading(true);
+        const old = saved.final;
+        const requestId = ++priceRequestIdRef.current;
+        requestSignedQuote(saved.brand, saved.model, saved.storage, old.diagnostics)
+          .then(current => {
+            if (requestId !== priceRequestIdRef.current) return;
+            setStartingContext({ device: current.device, getUpto: current.getUpto, questionnaire: current.questionnaire ?? UNKNOWN_QUESTIONNAIRE, pricingVersion: current.pricingVersion ?? '' });
+            setFinalQuote(old.pricingVersion === current.pricingVersion ? { ...old, questionnaire: current.questionnaire } : current);
+          })
+          .catch(err => {
+            if (requestId !== priceRequestIdRef.current) return;
+            setFinalQuote(null);
+            retainInspectionContext(err, saved.brand, saved.model, saved.storage);
+            setManualInspectionRequired(err?.response?.data?.code === 'MANUAL_INSPECTION_REQUIRED');
+            setFinalPriceError(describePricingError(err));
+          })
+          .finally(() => { if (requestId === priceRequestIdRef.current) setIsFinalPriceLoading(false); });
+      }
       setAppliedCoupon(saved.couponApplied);
     }
     setSessionRestored(true);
@@ -289,23 +310,27 @@ export default function QuotePage() {
   // shows. Each carries its token and the exact answers it was signed for,
   // which the lead sends back so the server stores this same price.
   const [startingQuote, setStartingQuote] = useState<SignedQuote | null>(null);
+  const [startingContext, setStartingContext] = useState<{ device: { brand: string; model: string; storage: string }; getUpto: number; questionnaire: QuestionnaireSemantics; pricingVersion: string } | null>(null);
   const [finalQuote, setFinalQuote] = useState<SignedQuote | null>(null);
   const [startingPriceError, setStartingPriceError] = useState<string | null>(null);
   const [finalPriceError, setFinalPriceError] = useState<string | null>(null);
+  const [manualInspectionRequired, setManualInspectionRequired] = useState(false);
   const [isFinalPriceLoading, setIsFinalPriceLoading] = useState(false);
   const [isStartingPriceLoading, setIsStartingPriceLoading] = useState(false);
   // A quote is only ever shown for the device it was signed for.
   const currentDevice = { brand: selectedBrand, model: selectedModel, storage: selectedStorage };
   const activeStartingQuote = startingQuote && sameDevice(startingQuote.device, currentDevice) ? startingQuote : null;
   const activeFinalQuote = finalQuote && sameDevice(finalQuote.device, currentDevice) ? finalQuote : null;
+  const activeStartingContext = startingContext && sameDevice(startingContext.device, currentDevice) ? startingContext : null;
   // Fhoneify Get Upto = Cashify Get Upto + uplift, with no answers applied.
-  const fhoneifyGetUpto = activeStartingQuote?.getUpto ?? null;
+  const fhoneifyGetUpto = activeStartingQuote?.getUpto ?? activeStartingContext?.getUpto ?? null;
   // Which questions Cashify's own questionnaire asks for this model. A
   // question Cashify does not ask is not shown and never sent as "No";
   // UNKNOWN (no stored profile yet) shows it - the safe, explicit fallback.
-  const modelQuestionnaire: QuestionnaireSemantics = activeStartingQuote?.questionnaire ?? UNKNOWN_QUESTIONNAIRE;
+  const modelQuestionnaire: QuestionnaireSemantics = activeStartingQuote?.questionnaire ?? activeStartingContext?.questionnaire ?? UNKNOWN_QUESTIONNAIRE;
   const asksWarrantyQuestion = showsQuestion(modelQuestionnaire.warrantyMode) && isWarrantyEligible(selectedBrand, selectedModel);
   const asksBillQuestion = showsQuestion(modelQuestionnaire.billMode) && isWarrantyEligible(selectedBrand, selectedModel);
+  const asksESimQuestion = modelQuestionnaire.eSimMode !== 'NOT_ASKED' && isESimEligible(selectedBrand, selectedModel);
   const asksAgeQuestion = modelQuestionnaire.ageMode === 'ASKED' ||
     (modelQuestionnaire.ageMode === 'UNKNOWN' && questionnaireFor({ brand: selectedBrand, model: selectedModel }).asksAge);
   const finalPrice = activeFinalQuote?.price ?? null;
@@ -981,25 +1006,43 @@ export default function QuotePage() {
     }
     const q = d.questionnaire;
     const questionnaire: QuestionnaireSemantics = q && isQuestionMode(q.warrantyMode) && isQuestionMode(q.billMode) && isQuestionMode(q.ageMode)
-      ? { warrantyMode: q.warrantyMode, billMode: q.billMode, ageMode: q.ageMode }
+      ? { warrantyMode: q.warrantyMode, billMode: q.billMode, ageMode: q.ageMode,
+        ...(isQuestionMode(q.boxMode) ? { boxMode: q.boxMode } : {}), ...(isQuestionMode(q.chargerMode) ? { chargerMode: q.chargerMode } : {}),
+        ...(isQuestionMode(q.sPenMode) ? { sPenMode: q.sPenMode } : {}), ...(isQuestionMode(q.eSimMode) ? { eSimMode: q.eSimMode } : {}) }
       : UNKNOWN_QUESTIONNAIRE;
-    return { device: { brand, model, storage }, price: d.fhoneifyPrice, getUpto: d.startingPrice, token: d.quoteToken, expiresAt: d.expiresAt, diagnostics: diag, questionnaire };
+    return { device: { brand, model, storage }, price: d.fhoneifyPrice, getUpto: d.startingPrice, token: d.quoteToken, expiresAt: d.expiresAt, diagnostics: diag, questionnaire, pricingVersion: d.pricingVersion };
   };
 
   const describePricingError = (err: any) =>
     err?.response?.data?.error || 'We could not fetch the price right now. Please try again.';
+
+  // An inspection decision still carries verified, nonbinding questionnaire
+  // context. Keep it when reviewing answers or restoring a rejected quote.
+  const retainInspectionContext = (err: any, brand: string, model: string, storage: string) => {
+    const c = err?.response?.data?.context;
+    if (err?.response?.data?.code !== 'MANUAL_INSPECTION_REQUIRED' ||
+      typeof c?.startingPrice !== 'number' || !Number.isFinite(c.startingPrice) || c.startingPrice <= 0 ||
+      !isQuestionMode(c.questionnaire?.warrantyMode) || !isQuestionMode(c.questionnaire?.billMode) ||
+      !isQuestionMode(c.questionnaire?.ageMode)) return false;
+    setStartingContext({ device: { brand, model, storage }, getUpto: c.startingPrice, questionnaire: c.questionnaire, pricingVersion: c.pricingVersion });
+    return true;
+  };
 
   /** "Get upto" = the server's startingPrice (Cashify Get Upto + uplift).
    * The quote is signed for perfect-condition answers, so "Schedule Pickup"
    * from this screen books that signed offer, shown on the next screen. */
   const fetchStartingQuote = (brand: string, model: string, storage: string) => {
     setStartingQuote(null);
+    setStartingContext(null);
     setStartingPriceError(null);
     setIsStartingPriceLoading(true);
     const requestId = ++startingRequestIdRef.current;
     requestSignedQuote(brand, model, storage, PERFECT_CONDITION_DIAGNOSTICS)
       .then((q) => { if (requestId === startingRequestIdRef.current) setStartingQuote(q); })
-      .catch((err) => { if (requestId === startingRequestIdRef.current) setStartingPriceError(describePricingError(err)); })
+      .catch((err) => {
+        if (requestId !== startingRequestIdRef.current) return;
+        if (!retainInspectionContext(err, brand, model, storage)) setStartingPriceError(describePricingError(err));
+      })
       .finally(() => { if (requestId === startingRequestIdRef.current) setIsStartingPriceLoading(false); });
   };
 
@@ -1189,15 +1232,19 @@ export default function QuotePage() {
     const diag = overrideDiagnostics || diagnostics;
     setFinalQuote(null);
     setFinalPriceError(null);
+    setManualInspectionRequired(false);
     setIsFinalPriceLoading(true);
     const requestId = ++priceRequestIdRef.current;
     requestSignedQuote(selectedBrand, selectedModel, selectedStorage, diag)
       .then((q) => {
         if (requestId !== priceRequestIdRef.current) return;
+        setStartingContext({ device: q.device, getUpto: q.getUpto, questionnaire: q.questionnaire ?? UNKNOWN_QUESTIONNAIRE, pricingVersion: q.pricingVersion ?? '' });
         setFinalQuote(q);
       })
       .catch((err) => {
         if (requestId !== priceRequestIdRef.current) return;
+        retainInspectionContext(err, selectedBrand, selectedModel, selectedStorage);
+        setManualInspectionRequired(err?.response?.data?.code === 'MANUAL_INSPECTION_REQUIRED');
         setFinalPriceError(describePricingError(err));
       })
       .finally(() => {
@@ -1226,7 +1273,7 @@ export default function QuotePage() {
   // server again - it never falls back to a local number or ₹0.
   useEffect(() => {
     if (!sessionRestored || !selectedStorage) return;
-    if (step === 2 && !activeStartingQuote && !isStartingPriceLoading && !startingPriceError) {
+    if (step >= 2 && !activeStartingQuote && !activeStartingContext && !isStartingPriceLoading && !startingPriceError) {
       fetchStartingQuote(selectedBrand, selectedModel, selectedStorage);
     }
     if ((step === 11 || step === 12) && !activeFinalQuote && !isFinalPriceLoading && !finalPriceError) {
@@ -1235,7 +1282,7 @@ export default function QuotePage() {
       else navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 3);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [sessionRestored, step, selectedBrand, selectedModel, selectedStorage, activeStartingQuote, activeFinalQuote, isStartingPriceLoading, isFinalPriceLoading, startingPriceError, finalPriceError]);
+  }, [sessionRestored, step, selectedBrand, selectedModel, selectedStorage, activeStartingQuote, activeStartingContext, activeFinalQuote, isStartingPriceLoading, isFinalPriceLoading, startingPriceError, finalPriceError]);
 
   const handleSendOtp = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -2341,7 +2388,7 @@ export default function QuotePage() {
                 )}
 
                 {/* eSIM Question (if eligible) */}
-                {isESimEligible(selectedBrand, selectedModel) && (
+                {asksESimQuestion && (
                   <div style={{ marginBottom: '2.5rem' }}>
                     <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem' }}>How many eSIMs does your device support?</h3>
                     <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Please select &quot;Dual eSIM&quot; if your device supports dual eSIMs. Otherwise, select &quot;Single eSIM&quot;.</p>
@@ -2366,7 +2413,7 @@ export default function QuotePage() {
                       finalDiag.mobileAge = null;
                     }
                     if (!asksBillQuestion) finalDiag.validBill = null;
-                    if (!isESimEligible(selectedBrand, selectedModel)) {
+                    if (!asksESimQuestion) {
                       finalDiag.eSim = null;
                     }
                     setDiagnostics(finalDiag);
@@ -2377,14 +2424,14 @@ export default function QuotePage() {
                     diagnostics.originalScreen === null || 
                     (asksWarrantyQuestion && diagnostics.warranty === null) ||
                     (asksBillQuestion && diagnostics.validBill === null) ||
-                    (isESimEligible(selectedBrand, selectedModel) && diagnostics.eSim === null)
+                    (asksESimQuestion && diagnostics.eSim === null)
                   } className="btn-primary" style={{ fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: (
                     diagnostics.calls !== null && 
                     diagnostics.touch !== null && 
                     diagnostics.originalScreen !== null && 
                     (!asksWarrantyQuestion || diagnostics.warranty !== null) &&
                     (!asksBillQuestion || diagnostics.validBill !== null) &&
-                    (!isESimEligible(selectedBrand, selectedModel) || diagnostics.eSim !== null)
+                    (!asksESimQuestion || diagnostics.eSim !== null)
                   ) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
@@ -2640,7 +2687,7 @@ export default function QuotePage() {
                     {id: 'box', label: 'Original Box with same IMEI', icon: '📦'},
                     ...(hasChargerInBox(selectedBrand, selectedModel) ? [{ id: 'charger', label: 'Original Charger', icon: '🔌' }] : []),
                     ...(hasSPen(selectedBrand, selectedModel) ? [{ id: 'spen', label: 'Original S Pen', icon: '🖊️' }] : [])
-                  ].map((a) => (
+                  ].filter(a => (a.id === 'box' ? modelQuestionnaire.boxMode : a.id === 'charger' ? modelQuestionnaire.chargerMode : a.id === 'spen' ? modelQuestionnaire.sPenMode : undefined) !== 'NOT_ASKED').map((a) => (
                     <button key={a.id} onClick={() => toggleArrayItem('accessories', a.id)} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem', padding: '3rem 1rem', borderRadius: '8px', border: diagnostics.accessories.includes(a.id) ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.accessories.includes(a.id) ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', color: diagnostics.accessories.includes(a.id) ? '#4CD964' : 'var(--foreground)', cursor: 'pointer' }}>
                       <span style={{ fontSize: '4rem' }}>{a.icon}</span>
                       <span style={{ fontSize: '0.9rem', textAlign: 'center', fontWeight: 500 }}>{a.label}</span>
@@ -2844,8 +2891,19 @@ export default function QuotePage() {
           <h2 style={{ fontSize: '1.25rem', fontWeight: 600 }}>{getDisplayModelName(selectedBrand, selectedModel)} ({selectedStorage})</h2>
           {finalPriceError ? (
             <>
+              {manualInspectionRequired && <h3>Inspection required</h3>}
               <p style={{ color: '#FF3B30' }}>{finalPriceError}</p>
-              <button type="button" onClick={() => calculateFinalPrice(diagnostics)} className="btn-primary" style={{ padding: '12px', borderRadius: '8px', fontWeight: 600 }}>Try again</button>
+              {manualInspectionRequired ? (
+                <>
+                  <p>We can&apos;t give an instant price for these answers yet. Our team can inspect your phone and quote it for you, free and with no obligation.</p>
+                  <a href={inspectionRequestLinks({ brand: selectedBrand, model: getDisplayModelName(selectedBrand, selectedModel), storage: selectedStorage }).whatsapp}
+                    target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '12px', borderRadius: '8px', fontWeight: 600 }}>Request an inspection on WhatsApp</a>
+                  <p style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>
+                    Or email <a href={inspectionRequestLinks({ brand: selectedBrand, model: getDisplayModelName(selectedBrand, selectedModel), storage: selectedStorage }).email} style={{ textDecoration: 'underline' }}>support@fhoneify.in</a>. If an answer was wrong, you can change it.
+                  </p>
+                  <button type="button" onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 3)} className="btn-outline">Review answers</button>
+                </>
+              ) : <button type="button" onClick={() => calculateFinalPrice(diagnostics)} className="btn-primary" style={{ padding: '12px', borderRadius: '8px', fontWeight: 600 }}>Try again</button>}
             </>
           ) : (
             <p style={{ color: 'var(--muted)' }} aria-live="polite">Calculating your exact price…</p>
@@ -2855,7 +2913,7 @@ export default function QuotePage() {
 
       {/* STAGE 11: FINAL EXACT PRICE */}
       {step === 11 && finalPrice != null && (
-        <div className="card flex flex-col gap-2 md:gap-4 bg-surface border border-border p-4 md:p-8 rounded-xl max-w-[600px] mx-auto text-left">
+        <div data-pricing-version={activeFinalQuote?.pricingVersion} className="card flex flex-col gap-2 md:gap-4 bg-surface border border-border p-4 md:p-8 rounded-xl max-w-[600px] mx-auto text-left">
           <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', borderBottom: '1px solid var(--border)', paddingBottom: '1rem', marginBottom: '0.5rem' }}>
             <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} style={{ width: '60px', height: 'auto', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
             <div>
@@ -3109,6 +3167,14 @@ export default function QuotePage() {
               router.push('/');
             } catch (err: any) {
               console.error("Failed to schedule pickup", err);
+              if (err?.response?.data?.code === 'MANUAL_INSPECTION_REQUIRED') {
+                setFinalQuote(null);
+                retainInspectionContext(err, selectedBrand, selectedModel, selectedStorage);
+                setManualInspectionRequired(true);
+                setFinalPriceError(describePricingError(err));
+                navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11);
+                return;
+              }
               const message = err?.response?.data?.error || err?.message;
               alert("Something went wrong: " + (message || "Please try again."));
             } finally {

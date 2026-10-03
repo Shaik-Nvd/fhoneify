@@ -1,0 +1,593 @@
+{
+  "generatedFrom": {
+    "saved": "a4a53af8f82c8e37d53839776aac835b5a193805d1fd816f296dc5b90aebb772",
+    "savedQueriedAt": "2026-10-02T18:11:27.676Z",
+    "reviewTime": "2026-10-03T12:00:00.000Z"
+  },
+  "register": [
+    {
+      "scope": "Xiaomi Xiaomi Mi A2 4 GB/64 GB",
+      "family": "xiaomi-workbook",
+      "evidence": "xiaomi-workbook-research/2026-10-02-v1#FM033",
+      "storedReference": {
+        "amount": 2500,
+        "source": "cashify",
+        "matchConfidence": "EXACT",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T09:37:53.969Z",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-mi-a2-4-gb-64-gb"
+      },
+      "calibrationReference": {
+        "amount": 2520,
+        "capturedAt": "2026-10-02T11:28:26.965Z",
+        "calibratedAt": "2026-10-02T11:28:26.965Z"
+      },
+      "referenceDeltaRs": -20,
+      "referencePredatesCalibration": true,
+      "cleanBaselineRule": {
+        "kind": "reference_minus_observed_offset",
+        "offset": 20
+      },
+      "questionnaire": {
+        "status": "OK",
+        "observedAt": "2026-09-24T18:50:29.959Z",
+        "warranty": "NOT_ASKED",
+        "bill": "NOT_ASKED",
+        "age": "NOT_ASKED"
+      },
+      "route": {
+        "observedAt": "2026-10-02T11:28:26.965Z",
+        "semantics": {
+          "warrantyMode": "NOT_ASKED",
+          "billMode": "NOT_ASKED",
+          "ageMode": "NOT_ASKED"
+        },
+        "box": "ASKED",
+        "charger": "ASKED",
+        "sPen": "NOT_ASKED",
+        "eSim": "NOT_ASKED"
+      },
+      "guards": {
+        "atExport": {
+          "routeEvidencePresentAndFresh": true,
+          "profileStoredOkFresh": true,
+          "profileModesMatchRoute": true,
+          "referenceCashifyExactFresh": true,
+          "referenceEqualsCalibration": false,
+          "calibrationFresh": true
+        },
+        "atReview": {
+          "routeEvidencePresentAndFresh": true,
+          "profileStoredOkFresh": true,
+          "profileModesMatchRoute": true,
+          "referenceCashifyExactFresh": true,
+          "referenceEqualsCalibration": false,
+          "calibrationFresh": true
+        }
+      },
+      "failingAtExport": [
+        "referenceEqualsCalibration"
+      ],
+      "failingAtReview": [
+        "referenceEqualsCalibration"
+      ],
+      "category": "GUARD_PINNED_TO_CALIBRATION_AMOUNT",
+      "counterfactual": {
+        "cleanAtStoredReference": 2480,
+        "measuredCleanAtCalibration": 2500,
+        "differenceRs": -20
+      }
+    },
+    {
+      "scope": "Xiaomi Xiaomi 14 CIVI 8 GB/256 GB",
+      "family": "xiaomi-workbook",
+      "evidence": "xiaomi-workbook-research/2026-10-02-v1#FM034",
+      "storedReference": {
+        "amount": 18720,
+        "source": "cashify",
+        "matchConfidence": "EXACT",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T09:45:08.648Z",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-14-civi-8-gb-256-gb"
+      },
+      "calibrationReference": {
+        "amount": 18900,
+        "capturedAt": "2026-10-02T11:29:29.033Z",
+        "calibratedAt": "2026-10-02T11:29:29.033Z"
+      },
+      "referenceDeltaRs": -180,
+      "referencePredatesCalibration": true,
+      "cleanBaselineRule": {
+        "kind": "conditional_retention",
+        "retention": 0.771957671957672
+      },
+      "questionnaire": {
+        "status": "OK",
+        "observedAt": "2026-09-24T18:56:39.232Z",
+        "warranty": "ASKED",
+        "bill": "ASKED",
+        "age": "NOT_ASKED"
+      },
+      "route": {
+        "observedAt": "2026-10-02T11:29:29.033Z",
+        "semantics": {
+          "warrantyMode": "ASKED",
+          "billMode": "ASKED",
+          "ageMode": "NOT_ASKED"
+        },
+        "box": "ASKED",
+        "charger": "ASKED",
+        "sPen": "NOT_ASKED",
+        "eSim": "NOT_ASKED"
+      },
+      "guards": {
+        "atExport": {
+          "routeEvidencePresentAndFresh": true,
+          "profileStoredOkFresh": true,
+          "profileModesMatchRoute": true,
+          "referenceCashifyExactFresh": true,
+          "referenceEqualsCalibration": false,
+          "calibrationFresh": true
+        },
+        "atReview": {
+          "routeEvidencePresentAndFresh": true,
+          "profileStoredOkFresh": true,
+          "profileModesMatchRoute": true,
+          "referenceCashifyExactFresh": true,
+          "referenceEqualsCalibration": false,
+          "calibrationFresh": true
+        }
+      },
+      "failingAtExport": [
+        "referenceEqualsCalibration"
+      ],
+      "failingAtReview": [
+        "referenceEqualsCalibration"
+      ],
+      "category": "GUARD_PINNED_TO_CALIBRATION_AMOUNT",
+      "counterfactual": {
+        "cleanAtStoredReference": 14450,
+        "measuredCleanAtCalibration": 14590,
+        "differenceRs": -140
+      }
+    },
+    {
+      "scope": "Xiaomi Xiaomi Redmi Note 9 Pro 4 GB/128 GB",
+      "family": "xiaomi-workbook",
+      "evidence": "xiaomi-workbook-research/2026-10-02-v1#FM036",
+      "storedReference": {
+        "amount": 4940,
+        "source": "cashify",
+        "matchConfidence": "EXACT",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T09:40:14.063Z",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-9-pro-4-gb-128-gb"
+      },
+      "calibrationReference": {
+        "amount": 4990,
+        "capturedAt": "2026-10-02T11:31:30.706Z",
+        "calibratedAt": "2026-10-02T11:31:30.706Z"
+      },
+      "referenceDeltaRs": -50,
+      "referencePredatesCalibration": true,
+      "cleanBaselineRule": {
+        "kind": "reference_minus_observed_offset",
+        "offset": 20
+      },
+      "questionnaire": {
+        "status": "OK",
+        "observedAt": "2026-09-24T18:52:37.812Z",
+        "warranty": "NOT_ASKED",
+        "bill": "NOT_ASKED",
+        "age": "NOT_ASKED"
+      },
+      "route": {
+        "observedAt": "2026-10-02T11:31:30.706Z",
+        "semantics": {
+          "warrantyMode": "NOT_ASKED",
+          "billMode": "NOT_ASKED",
+          "ageMode": "NOT_ASKED"
+        },
+        "box": "ASKED",
+        "charger": "ASKED",
+        "sPen": "NOT_ASKED",
+        "eSim": "NOT_ASKED"
+      },
+      "guards": {
+        "atExport": {
+          "routeEvidencePresentAndFresh": true,
+          "profileStoredOkFresh": true,
+          "profileModesMatchRoute": true,
+          "referenceCashifyExactFresh": true,
+          "referenceEqualsCalibration": false,
+          "calibrationFresh": true
+        },
+        "atReview": {
+          "routeEvidencePresentAndFresh": true,
+          "profileStoredOkFresh": true,
+          "profileModesMatchRoute": true,
+          "referenceCashifyExactFresh": true,
+          "referenceEqualsCalibration": false,
+          "calibrationFresh": true
+        }
+      },
+      "failingAtExport": [
+        "referenceEqualsCalibration"
+      ],
+      "failingAtReview": [
+        "referenceEqualsCalibration"
+      ],
+      "category": "GUARD_PINNED_TO_CALIBRATION_AMOUNT",
+      "counterfactual": {
+        "cleanAtStoredReference": 4920,
+        "measuredCleanAtCalibration": 4970,
+        "differenceRs": -50
+      }
+    },
+    {
+      "scope": "Xiaomi Xiaomi Redmi Note 10 Pro Max 6 GB/128 GB",
+      "family": "xiaomi-workbook",
+      "evidence": "xiaomi-workbook-research/2026-10-02-v1#FM037",
+      "storedReference": {
+        "amount": 5800,
+        "source": "cashify",
+        "matchConfidence": "EXACT",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T09:41:35.054Z",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-10-pro-max-6-gb-128-gb"
+      },
+      "calibrationReference": {
+        "amount": 5970,
+        "capturedAt": "2026-10-02T11:32:33.019Z",
+        "calibratedAt": "2026-10-02T11:32:33.019Z"
+      },
+      "referenceDeltaRs": -170,
+      "referencePredatesCalibration": true,
+      "cleanBaselineRule": {
+        "kind": "reference_minus_observed_offset",
+        "offset": 20
+      },
+      "questionnaire": {
+        "status": "OK",
+        "observedAt": "2026-09-24T18:53:45.536Z",
+        "warranty": "NOT_ASKED",
+        "bill": "NOT_ASKED",
+        "age": "NOT_ASKED"
+      },
+      "route": {
+        "observedAt": "2026-10-02T11:32:33.019Z",
+        "semantics": {
+          "warrantyMode": "NOT_ASKED",
+          "billMode": "NOT_ASKED",
+          "ageMode": "NOT_ASKED"
+        },
+        "box": "ASKED",
+        "charger": "ASKED",
+        "sPen": "NOT_ASKED",
+        "eSim": "NOT_ASKED"
+      },
+      "guards": {
+        "atExport": {
+          "routeEvidencePresentAndFresh": true,
+          "profileStoredOkFresh": true,
+          "profileModesMatchRoute": true,
+          "referenceCashifyExactFresh": true,
+          "referenceEqualsCalibration": false,
+          "calibrationFresh": true
+        },
+        "atReview": {
+          "routeEvidencePresentAndFresh": true,
+          "profileStoredOkFresh": true,
+          "profileModesMatchRoute": true,
+          "referenceCashifyExactFresh": true,
+          "referenceEqualsCalibration": false,
+          "calibrationFresh": true
+        }
+      },
+      "failingAtExport": [
+        "referenceEqualsCalibration"
+      ],
+      "failingAtReview": [
+        "referenceEqualsCalibration"
+      ],
+      "category": "GUARD_PINNED_TO_CALIBRATION_AMOUNT",
+      "counterfactual": {
+        "cleanAtStoredReference": 5780,
+        "measuredCleanAtCalibration": 5950,
+        "differenceRs": -170
+      }
+    },
+    {
+      "scope": "OnePlus OnePlus Nord 8 GB/128 GB",
+      "family": "oneplus-display",
+      "evidence": "oneplus-display-research/2026-10-02#FM025",
+      "storedReference": {
+        "amount": 8260,
+        "source": "cashify",
+        "matchConfidence": "EXACT",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T08:43:34.424Z",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-nord-8-gb-128-gb"
+      },
+      "calibrationReference": {
+        "amount": 8340,
+        "capturedAt": "2026-10-02T11:19:55.770Z",
+        "calibratedAt": "2026-10-02T11:19:55.770Z"
+      },
+      "referenceDeltaRs": -80,
+      "referencePredatesCalibration": true,
+      "cleanBaselineRule": {
+        "kind": "reference_minus_observed_offset",
+        "offset": 20
+      },
+      "questionnaire": {
+        "status": "OK",
+        "observedAt": "2026-09-24T15:05:00.547Z",
+        "warranty": "NOT_ASKED",
+        "bill": "NOT_ASKED",
+        "age": "NOT_ASKED"
+      },
+      "route": {
+        "observedAt": "2026-10-02T11:19:55.770Z",
+        "semantics": {
+          "warrantyMode": "NOT_ASKED",
+          "billMode": "NOT_ASKED",
+          "ageMode": "NOT_ASKED"
+        },
+        "box": "ASKED",
+        "charger": "ASKED",
+        "sPen": "NOT_ASKED",
+        "eSim": "NOT_ASKED"
+      },
+      "guards": {
+        "atExport": {
+          "routeEvidencePresentAndFresh": true,
+          "profileStoredOkFresh": true,
+          "profileModesMatchRoute": true,
+          "referenceCashifyExactFresh": true,
+          "referenceEqualsCalibration": false,
+          "calibrationFresh": true
+        },
+        "atReview": {
+          "routeEvidencePresentAndFresh": true,
+          "profileStoredOkFresh": true,
+          "profileModesMatchRoute": true,
+          "referenceCashifyExactFresh": true,
+          "referenceEqualsCalibration": false,
+          "calibrationFresh": true
+        }
+      },
+      "failingAtExport": [
+        "referenceEqualsCalibration"
+      ],
+      "failingAtReview": [
+        "referenceEqualsCalibration"
+      ],
+      "category": "GUARD_PINNED_TO_CALIBRATION_AMOUNT",
+      "counterfactual": {
+        "cleanAtStoredReference": 8240,
+        "measuredCleanAtCalibration": 8320,
+        "differenceRs": -80
+      }
+    },
+    {
+      "scope": "OnePlus Oneplus Open 16 GB/512 GB",
+      "family": "oneplus-display",
+      "evidence": "oneplus-display-research/2026-10-02#FM032",
+      "storedReference": {
+        "amount": 51410,
+        "source": "cashify",
+        "matchConfidence": "EXACT",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T08:41:41.643Z",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-open-16-gb-512-gb"
+      },
+      "calibrationReference": {
+        "amount": 51650,
+        "capturedAt": "2026-10-02T17:33:05.206Z",
+        "calibratedAt": "2026-10-02T17:33:05.206Z"
+      },
+      "referenceDeltaRs": -240,
+      "referencePredatesCalibration": true,
+      "cleanBaselineRule": {
+        "kind": "conditional_retention",
+        "retention": 0.7804453049370764
+      },
+      "questionnaire": {
+        "status": "OK",
+        "observedAt": "2026-09-24T18:21:35.642Z",
+        "warranty": "ASKED",
+        "bill": "ASKED",
+        "age": "NOT_ASKED"
+      },
+      "route": {
+        "observedAt": "2026-10-02T17:32:39.326Z",
+        "semantics": {
+          "warrantyMode": "ASKED",
+          "billMode": "ASKED",
+          "ageMode": "NOT_ASKED"
+        },
+        "box": "ASKED",
+        "charger": "ASKED",
+        "sPen": "NOT_ASKED",
+        "eSim": "NOT_ASKED"
+      },
+      "guards": {
+        "atExport": {
+          "routeEvidencePresentAndFresh": true,
+          "profileStoredOkFresh": true,
+          "profileModesMatchRoute": true,
+          "referenceCashifyExactFresh": true,
+          "referenceEqualsCalibration": false,
+          "calibrationFresh": true
+        },
+        "atReview": {
+          "routeEvidencePresentAndFresh": true,
+          "profileStoredOkFresh": true,
+          "profileModesMatchRoute": true,
+          "referenceCashifyExactFresh": true,
+          "referenceEqualsCalibration": false,
+          "calibrationFresh": true
+        }
+      },
+      "failingAtExport": [
+        "referenceEqualsCalibration"
+      ],
+      "failingAtReview": [
+        "referenceEqualsCalibration"
+      ],
+      "category": "GUARD_PINNED_TO_CALIBRATION_AMOUNT",
+      "counterfactual": {
+        "cleanAtStoredReference": 40120,
+        "measuredCleanAtCalibration": 40310,
+        "differenceRs": -190
+      }
+    },
+    {
+      "scope": "Apple Apple iPhone 12 Pro 256 GB",
+      "family": "fresh-glass",
+      "evidence": "fresh-glass-research/2026-10-02-v1#FM004",
+      "storedReference": {
+        "amount": 24220,
+        "source": "cashify",
+        "matchConfidence": "EXACT",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T08:35:30.946Z",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-12-pro-6-gb-256-gb"
+      },
+      "calibrationReference": {
+        "amount": 24460,
+        "capturedAt": "2026-10-02T11:46:19.503Z",
+        "calibratedAt": "2026-10-02T11:46:19.503Z"
+      },
+      "referenceDeltaRs": -240,
+      "referencePredatesCalibration": true,
+      "cleanBaselineRule": {
+        "kind": "clean_retention",
+        "retention": 1.0122649223221587
+      },
+      "questionnaire": {
+        "status": "OK",
+        "observedAt": "2026-09-24T15:02:54.718Z",
+        "warranty": "NOT_ASKED",
+        "bill": "NOT_ASKED",
+        "age": "NOT_ASKED"
+      },
+      "route": {
+        "observedAt": "2026-10-02T11:46:19.503Z",
+        "semantics": {
+          "warrantyMode": "NOT_ASKED",
+          "billMode": "NOT_ASKED",
+          "ageMode": "NOT_ASKED"
+        },
+        "box": "ASKED",
+        "charger": "NOT_ASKED",
+        "sPen": "NOT_ASKED",
+        "eSim": "NOT_ASKED"
+      },
+      "guards": {
+        "atExport": {
+          "routeEvidencePresentAndFresh": true,
+          "profileStoredOkFresh": true,
+          "profileModesMatchRoute": true,
+          "referenceCashifyExactFresh": true,
+          "referenceEqualsCalibration": false,
+          "calibrationFresh": true
+        },
+        "atReview": {
+          "routeEvidencePresentAndFresh": true,
+          "profileStoredOkFresh": true,
+          "profileModesMatchRoute": true,
+          "referenceCashifyExactFresh": true,
+          "referenceEqualsCalibration": false,
+          "calibrationFresh": true
+        }
+      },
+      "failingAtExport": [
+        "referenceEqualsCalibration"
+      ],
+      "failingAtReview": [
+        "referenceEqualsCalibration"
+      ],
+      "category": "GUARD_PINNED_TO_CALIBRATION_AMOUNT",
+      "counterfactual": {
+        "cleanAtStoredReference": 24520,
+        "measuredCleanAtCalibration": 24760,
+        "differenceRs": -240
+      }
+    },
+    {
+      "scope": "Samsung Samsung Galaxy S23 FE 5G 8 GB/128 GB",
+      "family": "fresh-glass",
+      "evidence": "fresh-glass-research/2026-10-02-v1#FM017",
+      "storedReference": {
+        "amount": 17880,
+        "source": "cashify",
+        "matchConfidence": "EXACT",
+        "status": "FRESH",
+        "lastVerifiedAt": "2026-09-27T09:54:31.313Z",
+        "sourceUrl": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s23-fe-5g-8-gb-128-gb"
+      },
+      "calibrationReference": {
+        "amount": 18060,
+        "capturedAt": "2026-10-02T11:47:20.243Z",
+        "calibratedAt": "2026-10-02T11:47:20.243Z"
+      },
+      "referenceDeltaRs": -180,
+      "referencePredatesCalibration": true,
+      "cleanBaselineRule": {
+        "kind": "clean_retention",
+        "retention": 0.9988925802879292
+      },
+      "questionnaire": {
+        "status": "OK",
+        "observedAt": "2026-09-24T19:05:04.939Z",
+        "warranty": "NOT_ASKED",
+        "bill": "NOT_ASKED",
+        "age": "NOT_ASKED"
+      },
+      "route": {
+        "observedAt": "2026-10-02T11:47:20.243Z",
+        "semantics": {
+          "warrantyMode": "NOT_ASKED",
+          "billMode": "NOT_ASKED",
+          "ageMode": "NOT_ASKED"
+        },
+        "box": "ASKED",
+        "charger": "NOT_ASKED",
+        "sPen": "NOT_ASKED",
+        "eSim": "NOT_ASKED"
+      },
+      "guards": {
+        "atExport": {
+          "routeEvidencePresentAndFresh": true,
+          "profileStoredOkFresh": true,
+          "profileModesMatchRoute": true,
+          "referenceCashifyExactFresh": true,
+          "referenceEqualsCalibration": false,
+          "calibrationFresh": true
+        },
+        "atReview": {
+          "routeEvidencePresentAndFresh": true,
+          "profileStoredOkFresh": true,
+          "profileModesMatchRoute": true,
+          "referenceCashifyExactFresh": true,
+          "referenceEqualsCalibration": false,
+          "calibrationFresh": true
+        }
+      },
+      "failingAtExport": [
+        "referenceEqualsCalibration"
+      ],
+      "failingAtReview": [
+        "referenceEqualsCalibration"
+      ],
+      "category": "GUARD_PINNED_TO_CALIBRATION_AMOUNT",
+      "counterfactual": {
+        "cleanAtStoredReference": 17860,
+        "measuredCleanAtCalibration": 18040,
+        "differenceRs": -180
+      }
+    }
+  ]
+}

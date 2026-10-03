@@ -1,0 +1,1217 @@
+{
+  "version": "owner-correction/2026-10-02",
+  "ownerCorrection": {
+    "testerA": {
+      "warranty": "yes if asked",
+      "mobileAge": "Above 11 months if asked",
+      "box": "present",
+      "charger": "present"
+    },
+    "testerBC": {
+      "warranty": "no if asked",
+      "box": "present",
+      "charger": "present"
+    },
+    "note": "Applies only to the 66 manually supplied workbook prices. Raw records are unchanged; collector observations keep their own verified traces."
+  },
+  "collection": {
+    "maxAttempts": 40,
+    "attempted": 40,
+    "accepted": 23,
+    "ledgerPath": "scratch/cashify-matrix-integration/research-evidence/owner-correction-2026-10-02/attempt-ledger.jsonl",
+    "observations": [
+      {
+        "experimentId": "FM001_WNO_A",
+        "status": "FAILED",
+        "reason": "Cashify questionnaire timed out",
+        "getUpto": null,
+        "finalPrice": null,
+        "collectedAt": "2026-10-02T17:28:29.550Z",
+        "route": {
+          "warranty": "NOT_ASKED",
+          "validBill": "NOT_ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "NOT_ASKED",
+          "charger": "NOT_ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": null
+      },
+      {
+        "experimentId": "FM002_WNO_A",
+        "status": "COMPLETED",
+        "reason": null,
+        "getUpto": 12640,
+        "finalPrice": 12620,
+        "collectedAt": "2026-10-02T17:28:44.002Z",
+        "route": {
+          "warranty": "NOT_ASKED",
+          "validBill": "NOT_ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "ASKED",
+          "charger": "ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": "09ec1053e87ba6213c1c631047435eedbbdd32d220046ef931f400377effcd2a"
+      },
+      {
+        "experimentId": "FM003_WNO_A",
+        "status": "COMPLETED",
+        "reason": null,
+        "getUpto": 19110,
+        "finalPrice": 19090,
+        "collectedAt": "2026-10-02T17:28:58.052Z",
+        "route": {
+          "warranty": "NOT_ASKED",
+          "validBill": "NOT_ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "ASKED",
+          "charger": "ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": "051848da4851a9b7e112180605db563d682782037b3de993c886ca91bee102bd"
+      },
+      {
+        "experimentId": "FM005_WNO_A",
+        "status": "COMPLETED",
+        "reason": null,
+        "getUpto": 28430,
+        "finalPrice": 28410,
+        "collectedAt": "2026-10-02T17:29:11.762Z",
+        "route": {
+          "warranty": "NOT_ASKED",
+          "validBill": "NOT_ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "ASKED",
+          "charger": "NOT_ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": "26ce59a457b9272bfc84059a1fed146b3e66fb4eac52b577d0f43baaeb8aad21"
+      },
+      {
+        "experimentId": "FM006_WNO_A",
+        "status": "UNSUPPORTED",
+        "reason": "frozen eSim answer is unspecified but Cashify asks it",
+        "getUpto": 46010,
+        "finalPrice": null,
+        "collectedAt": "2026-10-02T17:29:14.759Z",
+        "route": {
+          "warranty": "NOT_ASKED",
+          "validBill": "NOT_ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "NOT_ASKED",
+          "charger": "NOT_ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": null
+      },
+      {
+        "experimentId": "FM007_WNO_A",
+        "status": "COMPLETED",
+        "reason": null,
+        "getUpto": 44220,
+        "finalPrice": 35900,
+        "collectedAt": "2026-10-02T17:29:28.631Z",
+        "route": {
+          "warranty": "ASKED",
+          "validBill": "ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "ASKED",
+          "charger": "NOT_ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": "ab43d1d67918a45c46531680256781a79bbda7d7f812473dcc1e69c1d69d97b1"
+      },
+      {
+        "experimentId": "FM008_WNO_A",
+        "status": "UNSUPPORTED",
+        "reason": "frozen eSim answer is unspecified but Cashify asks it",
+        "getUpto": 73320,
+        "finalPrice": null,
+        "collectedAt": "2026-10-02T17:29:32.222Z",
+        "route": {
+          "warranty": "ASKED",
+          "validBill": "ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "NOT_ASKED",
+          "charger": "NOT_ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": null
+      },
+      {
+        "experimentId": "FM009_WNO_A",
+        "status": "COMPLETED",
+        "reason": null,
+        "getUpto": 54720,
+        "finalPrice": 44400,
+        "collectedAt": "2026-10-02T17:29:46.205Z",
+        "route": {
+          "warranty": "ASKED",
+          "validBill": "ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "ASKED",
+          "charger": "NOT_ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": "06a6bfb2c5807d04d1d9f46e2c168d3bfed0fd783d92dd0efdf2cee783180285"
+      },
+      {
+        "experimentId": "FM010_WNO_A",
+        "status": "UNSUPPORTED",
+        "reason": "frozen eSim answer is unspecified but Cashify asks it",
+        "getUpto": 90000,
+        "finalPrice": null,
+        "collectedAt": "2026-10-02T17:29:49.696Z",
+        "route": {
+          "warranty": "ASKED",
+          "validBill": "ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "NOT_ASKED",
+          "charger": "NOT_ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": null
+      },
+      {
+        "experimentId": "FM011_WNO_A",
+        "status": "UNSUPPORTED",
+        "reason": "frozen eSim answer is unspecified but Cashify asks it",
+        "getUpto": 65000,
+        "finalPrice": null,
+        "collectedAt": "2026-10-02T17:29:53.373Z",
+        "route": {
+          "warranty": "ASKED",
+          "validBill": "ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "NOT_ASKED",
+          "charger": "NOT_ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": null
+      },
+      {
+        "experimentId": "FM012_WNO_A",
+        "status": "UNSUPPORTED",
+        "reason": "frozen eSim answer is unspecified but Cashify asks it",
+        "getUpto": 118320,
+        "finalPrice": null,
+        "collectedAt": "2026-10-02T17:29:56.830Z",
+        "route": {
+          "warranty": "ASKED",
+          "validBill": "ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "NOT_ASKED",
+          "charger": "NOT_ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": null
+      },
+      {
+        "experimentId": "FM013_WNO_A",
+        "status": "COMPLETED",
+        "reason": null,
+        "getUpto": 3570,
+        "finalPrice": 3550,
+        "collectedAt": "2026-10-02T17:30:10.798Z",
+        "route": {
+          "warranty": "NOT_ASKED",
+          "validBill": "NOT_ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "ASKED",
+          "charger": "ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": "025da27dede9fad1738aebf9fa94ef552a208af5db83ce9f5f1f58bff076f310"
+      },
+      {
+        "experimentId": "FM014_WNO_A",
+        "status": "COMPLETED",
+        "reason": null,
+        "getUpto": 2920,
+        "finalPrice": 2900,
+        "collectedAt": "2026-10-02T17:30:25.132Z",
+        "route": {
+          "warranty": "NOT_ASKED",
+          "validBill": "NOT_ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "ASKED",
+          "charger": "ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": "bbe0a291b5db056bc0940246b2058fb1a550e1ef1ac427d8fc504bba57ef067d"
+      },
+      {
+        "experimentId": "FM015_WNO_A",
+        "status": "FAILED",
+        "reason": "Cashify questionnaire timed out",
+        "getUpto": null,
+        "finalPrice": null,
+        "collectedAt": "2026-10-02T17:30:45.048Z",
+        "route": {
+          "warranty": "NOT_ASKED",
+          "validBill": "NOT_ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "NOT_ASKED",
+          "charger": "NOT_ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": null
+      },
+      {
+        "experimentId": "FM016_WNO_A",
+        "status": "COMPLETED",
+        "reason": null,
+        "getUpto": 17130,
+        "finalPrice": 17110,
+        "collectedAt": "2026-10-02T17:30:58.911Z",
+        "route": {
+          "warranty": "NOT_ASKED",
+          "validBill": "NOT_ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "ASKED",
+          "charger": "NOT_ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": "f764434c35ebaf9a7227f8f422f223c96116ee3d30ae274316b742a30a72ecc0"
+      },
+      {
+        "experimentId": "FM018_WNO_A",
+        "status": "FAILED",
+        "reason": "Cashify questionnaire timed out",
+        "getUpto": null,
+        "finalPrice": null,
+        "collectedAt": "2026-10-02T17:31:19.103Z",
+        "route": {
+          "warranty": "NOT_ASKED",
+          "validBill": "NOT_ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "NOT_ASKED",
+          "charger": "NOT_ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": null
+      },
+      {
+        "experimentId": "FM019_WNO_A",
+        "status": "INVALID_ANSWER_MISMATCH",
+        "reason": "selected option mismatch: sPen",
+        "getUpto": 86250,
+        "finalPrice": null,
+        "collectedAt": "2026-10-02T17:31:31.697Z",
+        "route": {
+          "warranty": "ASKED",
+          "validBill": "ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "ASKED",
+          "charger": "NOT_ASKED",
+          "sPen": "ASKED"
+        },
+        "evidenceSha256": null
+      },
+      {
+        "experimentId": "FM020_WNO_A",
+        "status": "UNSUPPORTED",
+        "reason": "device/variant not found: HTTP 404 for device page",
+        "getUpto": null,
+        "finalPrice": null,
+        "collectedAt": "2026-10-02T17:31:32.159Z",
+        "route": {
+          "warranty": "NOT_ASKED",
+          "validBill": "NOT_ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "NOT_ASKED",
+          "charger": "NOT_ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": null
+      },
+      {
+        "experimentId": "FM021_WNO_A",
+        "status": "UNSUPPORTED",
+        "reason": "device/variant not found: HTTP 404 for device page",
+        "getUpto": null,
+        "finalPrice": null,
+        "collectedAt": "2026-10-02T17:31:32.532Z",
+        "route": {
+          "warranty": "NOT_ASKED",
+          "validBill": "NOT_ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "NOT_ASKED",
+          "charger": "NOT_ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": null
+      },
+      {
+        "experimentId": "FM022_WNO_A",
+        "status": "INVALID_ANSWER_MISMATCH",
+        "reason": "selected option mismatch: sPen",
+        "getUpto": 5600,
+        "finalPrice": null,
+        "collectedAt": "2026-10-02T17:31:45.339Z",
+        "route": {
+          "warranty": "NOT_ASKED",
+          "validBill": "NOT_ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "ASKED",
+          "charger": "ASKED",
+          "sPen": "ASKED"
+        },
+        "evidenceSha256": null
+      },
+      {
+        "experimentId": "FM024_CORR_A",
+        "status": "COMPLETED",
+        "reason": null,
+        "getUpto": 9710,
+        "finalPrice": 9690,
+        "collectedAt": "2026-10-02T17:31:59.741Z",
+        "route": {
+          "warranty": "NOT_ASKED",
+          "validBill": "NOT_ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "ASKED",
+          "charger": "ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": "f51716644cc41a34a69f31a5da2697de609680042fe1a5e15360f0027267b07e"
+      },
+      {
+        "experimentId": "FM024_CORR_C",
+        "status": "COMPLETED",
+        "reason": null,
+        "getUpto": 9710,
+        "finalPrice": 5520,
+        "collectedAt": "2026-10-02T17:32:14.876Z",
+        "route": {
+          "warranty": "NOT_ASKED",
+          "validBill": "NOT_ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "ASKED",
+          "charger": "ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": "5a8d6bb5b7963606fe01f86291b1875d53574ff86cbac53f2c88153e16911487"
+      },
+      {
+        "experimentId": "FM032_CORR_A",
+        "status": "COMPLETED",
+        "reason": null,
+        "getUpto": 51650,
+        "finalPrice": 40310,
+        "collectedAt": "2026-10-02T17:32:39.326Z",
+        "route": {
+          "warranty": "ASKED",
+          "validBill": "ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "ASKED",
+          "charger": "ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": "f1744892801922d81d6383ebd9f610828ba2c424d252491c6ff3344f2c02bf1d"
+      },
+      {
+        "experimentId": "FM032_CORR_C",
+        "status": "COMPLETED",
+        "reason": null,
+        "getUpto": 51650,
+        "finalPrice": 11700,
+        "collectedAt": "2026-10-02T17:33:05.206Z",
+        "route": {
+          "warranty": "ASKED",
+          "validBill": "ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "ASKED",
+          "charger": "ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": "e2faee247108aba9c6dab938dafd8cf3f2aad53951c86bcbe9ff6b7fd0c5ab0a"
+      },
+      {
+        "experimentId": "FM039_CORR_A",
+        "status": "COMPLETED",
+        "reason": null,
+        "getUpto": 21820,
+        "finalPrice": 16500,
+        "collectedAt": "2026-10-02T17:33:29.571Z",
+        "route": {
+          "warranty": "ASKED",
+          "validBill": "ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "ASKED",
+          "charger": "ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": "10dc67637ae694ff6c12ea371e260a918b61a6c1c1e0498d96e2efb387ab0c31"
+      },
+      {
+        "experimentId": "FM039_CORR_C",
+        "status": "COMPLETED",
+        "reason": null,
+        "getUpto": 21820,
+        "finalPrice": 13300,
+        "collectedAt": "2026-10-02T17:33:53.687Z",
+        "route": {
+          "warranty": "ASKED",
+          "validBill": "ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "ASKED",
+          "charger": "ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": "41c985f3a75f80e33c7ee9c6b5d9cce2bc7aacb9ef1964e54acb68cb8a9b75aa"
+      },
+      {
+        "experimentId": "FM040_CORR_A",
+        "status": "COMPLETED",
+        "reason": null,
+        "getUpto": 1760,
+        "finalPrice": 1740,
+        "collectedAt": "2026-10-02T17:34:17.737Z",
+        "route": {
+          "warranty": "NOT_ASKED",
+          "validBill": "NOT_ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "ASKED",
+          "charger": "ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": "4f69ea50d861cdf3c44bf109d5f9a5c44545ed4e7ed9fbbd162cf299a50d6658"
+      },
+      {
+        "experimentId": "FM040_CORR_C",
+        "status": "COMPLETED",
+        "reason": null,
+        "getUpto": 1760,
+        "finalPrice": 1570,
+        "collectedAt": "2026-10-02T17:34:43.594Z",
+        "route": {
+          "warranty": "NOT_ASKED",
+          "validBill": "NOT_ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "ASKED",
+          "charger": "ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": "3b37306cf8220984694bc8df027345f07b370a6f1c36fef6d09e9c12e8c35730"
+      },
+      {
+        "experimentId": "FM042_CORR_A",
+        "status": "COMPLETED",
+        "reason": null,
+        "getUpto": 27400,
+        "finalPrice": 21380,
+        "collectedAt": "2026-10-02T17:35:08.058Z",
+        "route": {
+          "warranty": "ASKED",
+          "validBill": "ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "ASKED",
+          "charger": "ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": "3940912ca32f7807205d8eb12890d8f65a541cdf55307866cbbaaef77275d0ba"
+      },
+      {
+        "experimentId": "FM042_CORR_C",
+        "status": "COMPLETED",
+        "reason": null,
+        "getUpto": 27400,
+        "finalPrice": 19880,
+        "collectedAt": "2026-10-02T17:35:32.237Z",
+        "route": {
+          "warranty": "ASKED",
+          "validBill": "ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "ASKED",
+          "charger": "ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": "9f028906a8c6a0f2bceeb5451da1ce52268c4fac39606e42d76edb9cc2869a8d"
+      },
+      {
+        "experimentId": "FM045_CORR_A",
+        "status": "COMPLETED",
+        "reason": null,
+        "getUpto": 59830,
+        "finalPrice": 45290,
+        "collectedAt": "2026-10-02T17:35:56.416Z",
+        "route": {
+          "warranty": "ASKED",
+          "validBill": "ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "ASKED",
+          "charger": "ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": "89dfea293cac03257984d932ce95fa827398bb33b3d97fdbb536f75a1312d77e"
+      },
+      {
+        "experimentId": "FM045_CORR_C",
+        "status": "COMPLETED",
+        "reason": null,
+        "getUpto": 59830,
+        "finalPrice": 43790,
+        "collectedAt": "2026-10-02T17:36:20.513Z",
+        "route": {
+          "warranty": "ASKED",
+          "validBill": "ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "ASKED",
+          "charger": "ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": "9695b693c97362f85a523ab9c78919f13d2444cfd6a05059a81bb2263b082df7"
+      },
+      {
+        "experimentId": "FM001_WNO_RETRY_A",
+        "status": "COMPLETED",
+        "reason": null,
+        "getUpto": 5850,
+        "finalPrice": 5830,
+        "collectedAt": "2026-10-02T17:37:19.181Z",
+        "route": {
+          "warranty": "NOT_ASKED",
+          "validBill": "NOT_ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "ASKED",
+          "charger": "ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": "e0dfa0c32bc61b1fc87068ee17cb1c17571c1662cccbedbb75fb341d80e0b42f"
+      },
+      {
+        "experimentId": "FM015_WNO_RETRY_A",
+        "status": "FAILED",
+        "reason": "Cashify questionnaire timed out",
+        "getUpto": null,
+        "finalPrice": null,
+        "collectedAt": "2026-10-02T17:37:38.798Z",
+        "route": {
+          "warranty": "NOT_ASKED",
+          "validBill": "NOT_ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "NOT_ASKED",
+          "charger": "NOT_ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": null
+      },
+      {
+        "experimentId": "FM018_WNO_RETRY_A",
+        "status": "FAILED",
+        "reason": "Cashify questionnaire timed out",
+        "getUpto": null,
+        "finalPrice": null,
+        "collectedAt": "2026-10-02T17:37:58.438Z",
+        "route": {
+          "warranty": "NOT_ASKED",
+          "validBill": "NOT_ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "NOT_ASKED",
+          "charger": "NOT_ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": null
+      },
+      {
+        "experimentId": "FM037_BOXREF_A",
+        "status": "COMPLETED",
+        "reason": null,
+        "getUpto": 5970,
+        "finalPrice": 5950,
+        "collectedAt": "2026-10-02T17:38:11.794Z",
+        "route": {
+          "warranty": "NOT_ASKED",
+          "validBill": "NOT_ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "ASKED",
+          "charger": "ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": "d06507bd1c9c7afee8c4f5320861942bb3114172779dfc6e4043653f9e8cf005"
+      },
+      {
+        "experimentId": "FM037_BOXREF_BOXNO",
+        "status": "COMPLETED",
+        "reason": null,
+        "getUpto": 5970,
+        "finalPrice": 5650,
+        "collectedAt": "2026-10-02T17:38:25.277Z",
+        "route": {
+          "warranty": "NOT_ASKED",
+          "validBill": "NOT_ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "ASKED",
+          "charger": "ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": "da9d71907ac9939bd2854f39b32d86cde0756c785c2f7b4d6ffc6b454886a8b0"
+      },
+      {
+        "experimentId": "FM006_WNO_ESIM_A",
+        "status": "FAILED",
+        "reason": "question label could not be verified",
+        "getUpto": null,
+        "finalPrice": null,
+        "collectedAt": "2026-10-02T17:51:05.653Z",
+        "route": {
+          "warranty": "NOT_ASKED",
+          "validBill": "NOT_ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "NOT_ASKED",
+          "charger": "NOT_ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": null
+      },
+      {
+        "experimentId": "FM008_WNO_ESIM_A",
+        "status": "FAILED",
+        "reason": "question label could not be verified",
+        "getUpto": null,
+        "finalPrice": null,
+        "collectedAt": "2026-10-02T17:51:08.132Z",
+        "route": {
+          "warranty": "ASKED",
+          "validBill": "ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "NOT_ASKED",
+          "charger": "NOT_ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": null
+      },
+      {
+        "experimentId": "FM011_WNO_ESIM_A",
+        "status": "FAILED",
+        "reason": "question label could not be verified",
+        "getUpto": null,
+        "finalPrice": null,
+        "collectedAt": "2026-10-02T17:51:10.513Z",
+        "route": {
+          "warranty": "ASKED",
+          "validBill": "ASKED",
+          "mobileAge": "NOT_ASKED",
+          "eSim": "NOT_ASKED",
+          "box": "NOT_ASKED",
+          "charger": "NOT_ASKED",
+          "sPen": "NOT_ASKED"
+        },
+        "evidenceSha256": null
+      }
+    ]
+  },
+  "devices": [
+    {
+      "deviceId": "FM001",
+      "model": "Apple iPhone 8",
+      "variant": "128 GB",
+      "verdict": "PRESERVED",
+      "reason": "Cashify does not ask warranty for this variant; correction cannot change the route. Control 5830 vs tester A 5830",
+      "testerA": 5830,
+      "testerGetUpto": 5850,
+      "control": {
+        "id": "FM001_WNO_RETRY_A",
+        "getUpto": 5850,
+        "clean": 5830,
+        "collectedAt": "2026-10-02T17:37:19.181Z",
+        "warranty": "NOT_ASKED"
+      },
+      "previousDeductions": {
+        "B:SCREEN SCRATCHES": 940,
+        "C:CRACKED GLASS": 1900
+      },
+      "matchedDeductions": {
+        "B:SCREEN SCRATCHES": 940,
+        "C:CRACKED GLASS": 1900
+      }
+    },
+    {
+      "deviceId": "FM002",
+      "model": "Apple iPhone XS Max",
+      "variant": "256 GB",
+      "verdict": "PRESERVED",
+      "reason": "Cashify does not ask warranty for this variant; correction cannot change the route. Control 12620 vs tester A 12620",
+      "testerA": 12620,
+      "testerGetUpto": 12640,
+      "control": {
+        "id": "FM002_WNO_A",
+        "getUpto": 12640,
+        "clean": 12620,
+        "collectedAt": "2026-10-02T17:28:44.002Z",
+        "warranty": "NOT_ASKED"
+      },
+      "previousDeductions": {
+        "B:DISPLAY LINES": 6970,
+        "C:HEAVY SPOTS": 6970
+      },
+      "matchedDeductions": {
+        "B:DISPLAY LINES": 6970,
+        "C:HEAVY SPOTS": 6970
+      }
+    },
+    {
+      "deviceId": "FM003",
+      "model": "Apple iPhone 11 Pro Max",
+      "variant": "256 GB",
+      "verdict": "UNCERTAIN",
+      "reason": "Get Upto changed (tester 18740, control 19110); undated tester B/C cannot be paired with the new control",
+      "testerA": 19460,
+      "testerGetUpto": 18740,
+      "control": {
+        "id": "FM003_WNO_A",
+        "getUpto": 19110,
+        "clean": 19090,
+        "collectedAt": "2026-10-02T17:28:58.052Z",
+        "warranty": "NOT_ASKED"
+      },
+      "previousDeductions": {
+        "B:NON-ORIGINAL SCREEN": 12000,
+        "C:TOUCH FAILURE": 11310
+      },
+      "matchedDeductions": null
+    },
+    {
+      "deviceId": "FM004",
+      "model": "Apple iPhone 12 Pro",
+      "variant": "256 GB",
+      "verdict": "PRESERVED",
+      "reason": "Cashify does not ask warranty for this variant; correction cannot change the route. Control 24760 vs tester A 25080",
+      "testerA": 25080,
+      "testerGetUpto": 24460,
+      "control": {
+        "id": "FM004_LIVE_A",
+        "getUpto": 24460,
+        "clean": 24760,
+        "collectedAt": "2026-10-02T11:45:33.265Z",
+        "warranty": "NOT_ASKED"
+      },
+      "previousDeductions": {
+        "B:SCREEN SCRATCHES": 3970,
+        "C:CRACKED GLASS": 8030
+      },
+      "matchedDeductions": {
+        "B:SCREEN SCRATCHES": 3650,
+        "C:CRACKED GLASS": 7710
+      }
+    },
+    {
+      "deviceId": "FM005",
+      "model": "Apple iPhone 14",
+      "variant": "256 GB",
+      "verdict": "PRESERVED",
+      "reason": "Cashify does not ask warranty for this variant; correction cannot change the route. Control 28410 vs tester A 28410",
+      "testerA": 28410,
+      "testerGetUpto": 28430,
+      "control": {
+        "id": "FM005_WNO_A",
+        "getUpto": 28430,
+        "clean": 28410,
+        "collectedAt": "2026-10-02T17:29:11.762Z",
+        "warranty": "NOT_ASKED"
+      },
+      "previousDeductions": {
+        "B:SCREEN SCRATCHES": 5290,
+        "C:TWO DEFECTS": 6170
+      },
+      "matchedDeductions": {
+        "B:SCREEN SCRATCHES": 5290,
+        "C:TWO DEFECTS": 6170
+      }
+    },
+    {
+      "deviceId": "FM006",
+      "model": "Apple iPhone 14 Pro Max",
+      "variant": "256 GB",
+      "verdict": "UNCERTAIN",
+      "reason": "No matched warranty-No clean control (UNSUPPORTED: frozen eSim answer is unspecified but Cashify asks it)",
+      "testerA": 44070,
+      "testerGetUpto": 45480,
+      "control": null,
+      "previousDeductions": {
+        "B:SCREEN SCRATCHES": 6320,
+        "C:CRACKED GLASS": 12790
+      },
+      "matchedDeductions": null
+    },
+    {
+      "deviceId": "FM007",
+      "model": "Apple iPhone 15",
+      "variant": "256 GB",
+      "verdict": "PRESERVED_NUMERICALLY",
+      "reason": "Warranty asked; warranty-No control equals tester A (35900) at the same Get Upto. Whether tester A was priced as Yes+>11m or No is unproven, but the clean value matches",
+      "testerA": 35900,
+      "testerGetUpto": 44220,
+      "control": {
+        "id": "FM007_WNO_A",
+        "getUpto": 44220,
+        "clean": 35900,
+        "collectedAt": "2026-10-02T17:29:28.631Z",
+        "warranty": "ASKED"
+      },
+      "previousDeductions": {
+        "B:NON-ORIGINAL SCREEN": 10500,
+        "C:TOUCH FAILURE": 21000
+      },
+      "matchedDeductions": {
+        "B:NON-ORIGINAL SCREEN": 10500,
+        "C:TOUCH FAILURE": 21000
+      }
+    },
+    {
+      "deviceId": "FM008",
+      "model": "Apple iPhone 15 Pro Max",
+      "variant": "512 GB",
+      "verdict": "UNCERTAIN",
+      "reason": "No matched warranty-No clean control (UNSUPPORTED: frozen eSim answer is unspecified but Cashify asks it)",
+      "testerA": 57110,
+      "testerGetUpto": 72480,
+      "control": null,
+      "previousDeductions": {
+        "B:DISPLAY LINES": 19550,
+        "C:HEAVY SPOTS": 19550
+      },
+      "matchedDeductions": null
+    },
+    {
+      "deviceId": "FM009",
+      "model": "Apple iPhone 16",
+      "variant": "256 GB",
+      "verdict": "PRESERVED_NUMERICALLY",
+      "reason": "Warranty asked; warranty-No control equals tester A (44400) at the same Get Upto. Whether tester A was priced as Yes+>11m or No is unproven, but the clean value matches",
+      "testerA": 44400,
+      "testerGetUpto": 54720,
+      "control": {
+        "id": "FM009_WNO_A",
+        "getUpto": 54720,
+        "clean": 44400,
+        "collectedAt": "2026-10-02T17:29:46.205Z",
+        "warranty": "ASKED"
+      },
+      "previousDeductions": {
+        "B:CHARGING FAULT": 2500,
+        "C:BACK CAMERA FAULT": 6000
+      },
+      "matchedDeductions": {
+        "B:CHARGING FAULT": 2500,
+        "C:BACK CAMERA FAULT": 6000
+      }
+    },
+    {
+      "deviceId": "FM010",
+      "model": "Apple iPhone 16 Pro Max",
+      "variant": "512 GB",
+      "verdict": "UNCERTAIN",
+      "reason": "No matched warranty-No clean control (UNSUPPORTED: frozen eSim answer is unspecified but Cashify asks it)",
+      "testerA": 69520,
+      "testerGetUpto": 88270,
+      "control": null,
+      "previousDeductions": {
+        "B:SCREEN SCRATCHES": 8230,
+        "C:CRACKED GLASS": 16660
+      },
+      "matchedDeductions": null
+    },
+    {
+      "deviceId": "FM011",
+      "model": "Apple iPhone 17",
+      "variant": "256 GB",
+      "verdict": "UNCERTAIN",
+      "reason": "No matched warranty-No clean control (UNSUPPORTED: frozen eSim answer is unspecified but Cashify asks it)",
+      "testerA": 46750,
+      "testerGetUpto": 65000,
+      "control": null,
+      "previousDeductions": {
+        "B:SCREEN SCRATCHES": 8820,
+        "C:TWO DEFECTS": 11570
+      },
+      "matchedDeductions": null
+    },
+    {
+      "deviceId": "FM012",
+      "model": "Apple iPhone 17 Pro Max",
+      "variant": "512 GB",
+      "verdict": "UNCERTAIN",
+      "reason": "No matched warranty-No clean control (UNSUPPORTED: frozen eSim answer is unspecified but Cashify asks it)",
+      "testerA": 86060,
+      "testerGetUpto": 117000,
+      "control": null,
+      "previousDeductions": {
+        "B:CHARGING FAULT": 2500,
+        "C:BACK CAMERA FAULT": 6200
+      },
+      "matchedDeductions": null
+    },
+    {
+      "deviceId": "FM013",
+      "model": "Samsung Galaxy M32",
+      "variant": "4 GB/64 GB",
+      "verdict": "PRESERVED",
+      "reason": "Cashify does not ask warranty for this variant; correction cannot change the route. Control 3550 vs tester A 3550",
+      "testerA": 3550,
+      "testerGetUpto": 3570,
+      "control": {
+        "id": "FM013_WNO_A",
+        "getUpto": 3570,
+        "clean": 3550,
+        "collectedAt": "2026-10-02T17:30:10.798Z",
+        "warranty": "NOT_ASKED"
+      },
+      "previousDeductions": {
+        "B:BODY SCRATCHES": 210,
+        "C:BODY DENTS": 370
+      },
+      "matchedDeductions": {
+        "B:BODY SCRATCHES": 210,
+        "C:BODY DENTS": 370
+      }
+    },
+    {
+      "deviceId": "FM014",
+      "model": "Samsung Galaxy A50s",
+      "variant": "4 GB/128 GB",
+      "verdict": "PRESERVED",
+      "reason": "Cashify does not ask warranty for this variant; correction cannot change the route. Control 2900 vs tester A 2900",
+      "testerA": 2900,
+      "testerGetUpto": 2920,
+      "control": {
+        "id": "FM014_WNO_A",
+        "getUpto": 2920,
+        "clean": 2900,
+        "collectedAt": "2026-10-02T17:30:25.132Z",
+        "warranty": "NOT_ASKED"
+      },
+      "previousDeductions": {
+        "B:BODY SCRATCHES": 170,
+        "C:BODY DENTS": 290
+      },
+      "matchedDeductions": {
+        "B:BODY SCRATCHES": 170,
+        "C:BODY DENTS": 290
+      }
+    },
+    {
+      "deviceId": "FM015",
+      "model": "Samsung Galaxy A72",
+      "variant": "8 GB/128 GB",
+      "verdict": "UNCERTAIN",
+      "reason": "No matched warranty-No clean control (FAILED: Cashify questionnaire timed out; FAILED: Cashify questionnaire timed out)",
+      "testerA": 6380,
+      "testerGetUpto": 6400,
+      "control": null,
+      "previousDeductions": {
+        "B:DISPLAY LINES": 4190,
+        "C:HEAVY SPOTS": 4190
+      },
+      "matchedDeductions": null
+    },
+    {
+      "deviceId": "FM016",
+      "model": "Samsung Galaxy S21 Ultra 5G",
+      "variant": "12 GB/256 GB",
+      "verdict": "PRESERVED",
+      "reason": "Cashify does not ask warranty for this variant; correction cannot change the route. Control 17110 vs tester A 17110",
+      "testerA": 17110,
+      "testerGetUpto": 17130,
+      "control": {
+        "id": "FM016_WNO_A",
+        "getUpto": 17130,
+        "clean": 17110,
+        "collectedAt": "2026-10-02T17:30:58.911Z",
+        "warranty": "NOT_ASKED"
+      },
+      "previousDeductions": {
+        "B:NON-ORIGINAL SCREEN": 5850,
+        "C:TOUCH FAILURE": 11700
+      },
+      "matchedDeductions": {
+        "B:NON-ORIGINAL SCREEN": 5850,
+        "C:TOUCH FAILURE": 11700
+      }
+    },
+    {
+      "deviceId": "FM017",
+      "model": "Samsung Galaxy S23 FE 5G",
+      "variant": "8 GB/128 GB",
+      "verdict": "PRESERVED",
+      "reason": "Cashify does not ask warranty for this variant; correction cannot change the route. Control 18040 vs tester A 18040",
+      "testerA": 18040,
+      "testerGetUpto": 18060,
+      "control": {
+        "id": "FM017_LIVE_A",
+        "getUpto": 18060,
+        "clean": 18040,
+        "collectedAt": "2026-10-02T11:46:33.720Z",
+        "warranty": "NOT_ASKED"
+      },
+      "previousDeductions": {
+        "B:SCREEN SCRATCHES": 3090,
+        "C:CRACKED GLASS": 6250
+      },
+      "matchedDeductions": {
+        "B:SCREEN SCRATCHES": 3090,
+        "C:CRACKED GLASS": 6250
+      }
+    },
+    {
+      "deviceId": "FM018",
+      "model": "Samsung Galaxy S25 Edge",
+      "variant": "12 GB/256 GB",
+      "verdict": "UNCERTAIN",
+      "reason": "No matched warranty-No clean control (FAILED: Cashify questionnaire timed out; FAILED: Cashify questionnaire timed out)",
+      "testerA": 33910,
+      "testerGetUpto": 42720,
+      "control": null,
+      "previousDeductions": {
+        "B:SCREEN SCRATCHES": 5290,
+        "C:TWO DEFECTS": 6690
+      },
+      "matchedDeductions": null
+    },
+    {
+      "deviceId": "FM019",
+      "model": "Samsung Galaxy S26 Ultra",
+      "variant": "12 GB/512 GB",
+      "verdict": "UNCERTAIN",
+      "reason": "No matched warranty-No clean control (INVALID_ANSWER_MISMATCH: selected option mismatch: sPen)",
+      "testerA": 67040,
+      "testerGetUpto": 86250,
+      "control": null,
+      "previousDeductions": {
+        "B:SCREEN SCRATCHES": 6170,
+        "C:CRACKED GLASS": 12490
+      },
+      "matchedDeductions": null
+    },
+    {
+      "deviceId": "FM020",
+      "model": "Samsung Galaxy Z Fold5",
+      "variant": "12 GB/256 GB",
+      "verdict": "UNCERTAIN",
+      "reason": "No matched warranty-No clean control (UNSUPPORTED: device/variant not found: HTTP 404 for device page)",
+      "testerA": 37820,
+      "testerGetUpto": 49740,
+      "control": null,
+      "previousDeductions": {
+        "B:SCREEN SCRATCHES": 11760,
+        "C:CRACKED GLASS": 23800
+      },
+      "matchedDeductions": null
+    },
+    {
+      "deviceId": "FM021",
+      "model": "Samsung Galaxy Z Flip6 5G",
+      "variant": "12 GB/256 GB",
+      "verdict": "UNCERTAIN",
+      "reason": "No matched warranty-No clean control (UNSUPPORTED: device/variant not found: HTTP 404 for device page)",
+      "testerA": 29230,
+      "testerGetUpto": 38700,
+      "control": null,
+      "previousDeductions": {
+        "B:DISPLAY LINES": 20400,
+        "C:HEAVY SPOTS": 20400
+      },
+      "matchedDeductions": null
+    },
+    {
+      "deviceId": "FM022",
+      "model": "Samsung Galaxy Note 10 Lite",
+      "variant": "6 GB/128 GB",
+      "verdict": "UNCERTAIN",
+      "reason": "No matched warranty-No clean control (INVALID_ANSWER_MISMATCH: selected option mismatch: sPen)",
+      "testerA": 5580,
+      "testerGetUpto": 5600,
+      "control": null,
+      "previousDeductions": {
+        "B:CHARGING FAULT": 1000,
+        "C:BACK CAMERA FAULT": 2500
+      },
+      "matchedDeductions": null
+    }
+  ],
+  "sharedGlass": {
+    "trainingIds": [
+      "FM001",
+      "FM006",
+      "FM019",
+      "FM020"
+    ],
+    "verdict": "DERIVATION_UNCERTAIN",
+    "reason": "3 of 4 training devices lack a matched warranty-No control; the two prospective fresh holdouts (iPhone 12 Pro 256GB, S23 FE 8/128, warranty NOT_ASKED) remain 2/2 exact and are unaffected"
+  },
+  "boxAccounting": {
+    "device": "Xiaomi Redmi Note 10 Pro Max 6 GB/128 GB",
+    "getUpto": 5970,
+    "boxYesCharger": 5950,
+    "boxNoCharger": 5650,
+    "finding": "Get Upto already corresponds to a box+charger phone (clean = Get Upto - 20 on all warranty-NOT_ASKED collector blocks); a missing box costs 300 here. The engine adds its 380 box bonus on top of Get Upto, so it overstates by about 400 for box-present phones on these routes. The box bonus is protected and unchanged pending an owner decision."
+  },
+  "ownerDecisions": {
+    "decidedAt": "2026-10-02",
+    "eSim": {
+      "answer": "Single eSIM (owner: single SIM) where asked",
+      "appliesTo": "manual tester captures and eSIM-asking controls"
+    },
+    "boxBonus": {
+      "decision": "KEEP",
+      "note": "The 380 box bonus stays as is, although Cashify Get Upto already corresponds to a box-and-charger phone; the resulting ~400 above Cashify on box-present warranty-NOT_ASKED routes is accepted by the owner."
+    }
+  },
+  "esimControls": {
+    "attempted": [
+      "FM006_WNO_ESIM_A",
+      "FM008_WNO_ESIM_A",
+      "FM011_WNO_ESIM_A"
+    ],
+    "outcome": "FAILED: question label could not be verified",
+    "cause": "Collector recordAndClick requires a question heading distinct from the option text; the eSIM block has never been collected before (always refused), and no expected eSIM heading is configured, unlike mobile age. Needs the real Cashify heading, then a collector fix.",
+    "stillMissing": [
+      "FM006",
+      "FM008",
+      "FM010",
+      "FM011",
+      "FM012"
+    ]
+  }
+}

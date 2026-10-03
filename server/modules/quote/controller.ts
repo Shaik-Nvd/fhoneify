@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { z } from 'zod';
 import * as quoteService from './service';
-import { pricingService } from './pricing';
+import { pricingRelease, pricingService } from './pricing';
 import { parseDiagnostics } from '../../../lib/pricing/diagnostics';
 import type { PricingErrorCode } from '../../../lib/pricing/pricingService';
 import { buildLeadAnswers } from '../../../lib/pricing/payout';
@@ -50,6 +50,7 @@ const PRICING_ERROR_STATUS: Record<PricingErrorCode, number> = {
   DEVICE_NOT_FOUND: 404,
   REFERENCE_PRICE_UNAVAILABLE: 409,
   PRICING_INVARIANT_VIOLATION: 500,
+  MANUAL_INSPECTION_REQUIRED: 422,
 };
 
 // The live Cashify scraper carries unresolved legal/ToS exposure
@@ -82,6 +83,17 @@ export async function createQuote(req: Request, res: Response) {
       const parsed = parseDiagnostics(result.data.answers);
       if (!parsed.ok) return res.status(400).json({ success: false, error: parsed.error, code: 'INVALID_DIAGNOSTICS' });
       answers = parsed.value;
+    }
+    // The old condition-bucket endpoint must not issue a second RC price.
+    // Legacy mode keeps its original contract; RC needs the same real answers.
+    if (pricingRelease.mode === 'release-candidate') {
+      const device = quoteService.listDevices().find(d => d.id === deviceId);
+      if (!device) return res.status(404).json({ success: false, error: 'Device not found' });
+      if (!answers) return res.status(422).json({ success: false, code: 'MANUAL_INSPECTION_REQUIRED', error: 'Complete the device questions before requesting a price' });
+      const outcome = await pricingService.quote({ brand: device.brand, model: device.model, storage: device.storage, diagnostics: answers });
+      if (!outcome.ok) return res.status(PRICING_ERROR_STATUS[outcome.code]).json({ success: false, error: outcome.message, code: outcome.code });
+      const { internal, ok, ...publicQuote } = outcome;
+      return res.json({ success: true, data: publicQuote });
     }
     const quoteResult = await quoteService.generateQuote(deviceId, condition, undefined, answers);
     if (!quoteResult) {
@@ -135,12 +147,13 @@ export async function priceQuote(req: Request, res: Response) {
 
     const outcome = await pricingService.quote(body.data);
     if (!outcome.ok) {
-      return res.status(PRICING_ERROR_STATUS[outcome.code]).json({ success: false, error: outcome.message, code: outcome.code });
+      return res.status(PRICING_ERROR_STATUS[outcome.code]).json({ success: false, error: outcome.message, code: outcome.code, ...(outcome.context ? { context: outcome.context } : {}) });
     }
 
     const { internal, ok, ...publicQuote } = outcome;
     logger.info(
-      { deviceKey: internal.deviceKey, fhoneifyPrice: outcome.fhoneifyPrice, baseSource: internal.baseSource, referenceStatus: outcome.referenceStatus, pricingVersion: outcome.pricingVersion },
+      { deviceKey: internal.deviceKey, fhoneifyPrice: outcome.fhoneifyPrice, baseSource: internal.baseSource, referenceStatus: outcome.referenceStatus, pricingVersion: outcome.pricingVersion,
+        reference: internal.cashifyGetUptoReference, questionnaire: outcome.questionnaire, rule: internal.releaseCandidate, accessoryBasis: internal.accessoryBasis, routeEvidenceSha256: internal.routeEvidenceSha256 },
       'Authoritative quote issued'
     );
     return res.json({ success: true, data: publicQuote });

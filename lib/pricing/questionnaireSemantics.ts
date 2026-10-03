@@ -9,6 +9,11 @@ export interface QuestionnaireSemantics {
   warrantyMode: QuestionMode;
   billMode: QuestionMode;
   ageMode: QuestionMode;
+  /** Conditional exact-variant evidence, when available. Missing is UNKNOWN. */
+  boxMode?: QuestionMode;
+  chargerMode?: QuestionMode;
+  sPenMode?: QuestionMode;
+  eSimMode?: QuestionMode;
 }
 
 /** No stored profile yet: the conservative, explicit fallback. The quote page

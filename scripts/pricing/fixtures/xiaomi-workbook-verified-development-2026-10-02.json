@@ -1,0 +1,261 @@
+{
+  "version": "xiaomi-workbook-research/2026-10-02-v1",
+  "specs": [
+    {
+      "deviceId": "FM033",
+      "model": "Xiaomi Mi A2",
+      "storage": "4 GB/64 GB",
+      "validatedGetUpto": 2520,
+      "modes": {
+        "warranty": "NOT_ASKED",
+        "validBill": "NOT_ASKED",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "NOT_ASKED",
+        "box": "ASKED",
+        "charger": "ASKED",
+        "sPen": "NOT_ASKED"
+      },
+      "baseline": {
+        "kind": "reference_minus_observed_offset",
+        "offset": 20
+      },
+      "componentCosts": {
+        "body_heavy": 150,
+        "body_dents": 250
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "body_heavy"
+        ],
+        [
+          "body_dents"
+        ]
+      ],
+      "calibratedAt": "2026-10-02T11:28:26.965Z",
+      "evidenceQuality": "VERIFIED_TRACE_SCREENSHOT",
+      "source": [
+        {
+          "experimentId": "FM033_A",
+          "observed": 2500,
+          "reference": 2520,
+          "collectedAt": "2026-10-02T11:27:41.441Z",
+          "screenshotSha256": "6133308a64d14bac17b3c344c40e7b99c776df58502f0f26f5b26ea626006980"
+        },
+        {
+          "experimentId": "FM033_B",
+          "observed": 2350,
+          "reference": 2520,
+          "collectedAt": "2026-10-02T11:27:57.343Z",
+          "screenshotSha256": "09f72d9a9b95154a4b8b60a2618b3096b308f391376792485ac127e029d134d7"
+        },
+        {
+          "experimentId": "FM033_C",
+          "observed": 2250,
+          "reference": 2520,
+          "collectedAt": "2026-10-02T11:28:13.109Z",
+          "screenshotSha256": "4991ca99910f5df2072f796d1e20fc7ac80cd583be0253e97bb45a97a1ababc9"
+        },
+        {
+          "experimentId": "FM033_CLOSE_A",
+          "observed": 2500,
+          "reference": 2520,
+          "collectedAt": "2026-10-02T11:28:26.965Z",
+          "screenshotSha256": "6133308a64d14bac17b3c344c40e7b99c776df58502f0f26f5b26ea626006980"
+        }
+      ]
+    },
+    {
+      "deviceId": "FM034",
+      "model": "Xiaomi 14 CIVI",
+      "storage": "8 GB/256 GB",
+      "validatedGetUpto": 18900,
+      "modes": {
+        "warranty": "ASKED",
+        "validBill": "ASKED",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "NOT_ASKED",
+        "box": "ASKED",
+        "charger": "ASKED",
+        "sPen": "NOT_ASKED"
+      },
+      "baseline": {
+        "kind": "conditional_retention",
+        "retention": 0.771957671957672
+      },
+      "componentCosts": {
+        "screen_heavy": 2820,
+        "glass_cracked": 5710
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "screen_heavy"
+        ],
+        [
+          "glass_cracked"
+        ]
+      ],
+      "calibratedAt": "2026-10-02T11:29:29.033Z",
+      "evidenceQuality": "VERIFIED_TRACE_SCREENSHOT",
+      "source": [
+        {
+          "experimentId": "FM034_A",
+          "observed": 14590,
+          "reference": 18900,
+          "collectedAt": "2026-10-02T11:28:41.789Z",
+          "screenshotSha256": "d12a22e7d9bc9ac98ff966b212aadb867658a972dfa649ec5aaa75719023fb0c"
+        },
+        {
+          "experimentId": "FM034_B",
+          "observed": 11770,
+          "reference": 18900,
+          "collectedAt": "2026-10-02T11:28:57.616Z",
+          "screenshotSha256": "e6d9fc8876020db6d6c199f67bdc6ba48e19dd5faae7816dc3a5b30f63e1a10f"
+        },
+        {
+          "experimentId": "FM034_C",
+          "observed": 8880,
+          "reference": 18900,
+          "collectedAt": "2026-10-02T11:29:13.695Z",
+          "screenshotSha256": "2a1d10fd351ca10a4934a9e5cae47955740c0e7a15b6f3e603edaa7c0234de2a"
+        },
+        {
+          "experimentId": "FM034_CLOSE_A",
+          "observed": 14590,
+          "reference": 18900,
+          "collectedAt": "2026-10-02T11:29:29.033Z",
+          "screenshotSha256": "d12a22e7d9bc9ac98ff966b212aadb867658a972dfa649ec5aaa75719023fb0c"
+        }
+      ]
+    },
+    {
+      "deviceId": "FM036",
+      "model": "Xiaomi Redmi Note 9 Pro",
+      "storage": "4 GB/128 GB",
+      "validatedGetUpto": 4990,
+      "modes": {
+        "warranty": "NOT_ASKED",
+        "validBill": "NOT_ASKED",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "NOT_ASKED",
+        "box": "ASKED",
+        "charger": "ASKED",
+        "sPen": "NOT_ASKED"
+      },
+      "baseline": {
+        "kind": "reference_minus_observed_offset",
+        "offset": 20
+      },
+      "componentCosts": {
+        "screen_heavy": 700,
+        "glass_cracked": 1430
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "screen_heavy"
+        ],
+        [
+          "glass_cracked"
+        ]
+      ],
+      "calibratedAt": "2026-10-02T11:31:30.706Z",
+      "evidenceQuality": "VERIFIED_TRACE_SCREENSHOT",
+      "source": [
+        {
+          "experimentId": "FM036_A",
+          "observed": 4970,
+          "reference": 4990,
+          "collectedAt": "2026-10-02T11:30:44.819Z",
+          "screenshotSha256": "4ab6d96dac65fca85c81fa85688175f9c61a5ed8aae65e5e0756b20620faa7f2"
+        },
+        {
+          "experimentId": "FM036_B",
+          "observed": 4270,
+          "reference": 4990,
+          "collectedAt": "2026-10-02T11:31:00.591Z",
+          "screenshotSha256": "f80eedcf60c88980a18ef62ae34ecb7c5f883bbdb73b0734902c3d37edaeb453"
+        },
+        {
+          "experimentId": "FM036_C",
+          "observed": 3540,
+          "reference": 4990,
+          "collectedAt": "2026-10-02T11:31:16.863Z",
+          "screenshotSha256": "dac16a8b2417af4fcc9640a97625ad841234742499fb3166e1ce0612680fb954"
+        },
+        {
+          "experimentId": "FM036_CLOSE_A",
+          "observed": 4970,
+          "reference": 4990,
+          "collectedAt": "2026-10-02T11:31:30.706Z",
+          "screenshotSha256": "4ab6d96dac65fca85c81fa85688175f9c61a5ed8aae65e5e0756b20620faa7f2"
+        }
+      ]
+    },
+    {
+      "deviceId": "FM037",
+      "model": "Xiaomi Redmi Note 10 Pro Max",
+      "storage": "6 GB/128 GB",
+      "validatedGetUpto": 5970,
+      "modes": {
+        "warranty": "NOT_ASKED",
+        "validBill": "NOT_ASKED",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "NOT_ASKED",
+        "box": "ASKED",
+        "charger": "ASKED",
+        "sPen": "NOT_ASKED"
+      },
+      "baseline": {
+        "kind": "reference_minus_observed_offset",
+        "offset": 20
+      },
+      "componentCosts": {
+        "display_lines": 3060,
+        "display_spots": 3060
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "display_lines"
+        ],
+        [
+          "display_spots"
+        ]
+      ],
+      "calibratedAt": "2026-10-02T11:32:33.019Z",
+      "evidenceQuality": "VERIFIED_TRACE_SCREENSHOT",
+      "source": [
+        {
+          "experimentId": "FM037_A",
+          "observed": 5950,
+          "reference": 5970,
+          "collectedAt": "2026-10-02T11:31:45.448Z",
+          "screenshotSha256": "c766ef0512aef013de317cd47e702bce463dd08243b013bd0a6f4c712f4dd055"
+        },
+        {
+          "experimentId": "FM037_B",
+          "observed": 2890,
+          "reference": 5970,
+          "collectedAt": "2026-10-02T11:32:02.078Z",
+          "screenshotSha256": "35d9f908197273e435837b34cf4c396e3f8412cf53af9bc99506d3bc178416fd"
+        },
+        {
+          "experimentId": "FM037_C",
+          "observed": 2890,
+          "reference": 5970,
+          "collectedAt": "2026-10-02T11:32:18.900Z",
+          "screenshotSha256": "35d9f908197273e435837b34cf4c396e3f8412cf53af9bc99506d3bc178416fd"
+        },
+        {
+          "experimentId": "FM037_CLOSE_A",
+          "observed": 5950,
+          "reference": 5970,
+          "collectedAt": "2026-10-02T11:32:33.019Z",
+          "screenshotSha256": "c766ef0512aef013de317cd47e702bce463dd08243b013bd0a6f4c712f4dd055"
+        }
+      ]
+    }
+  ]
+}

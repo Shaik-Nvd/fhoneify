@@ -1,0 +1,230 @@
+{
+  "at": "2026-10-03T12:00:00.000Z",
+  "productionAgeAnchor": "2026-10-02T12:00:00.000Z",
+  "assumptions": {
+    "captured": "Observed Get Upto and actual route, represented by synthetic fresh/exact repository and profile metadata; no measured-clean runtime substitution.",
+    "production": "Actual saved production prices/three modes and approximate age. Source/exact confidence/profile status/date are synthetic sensitivity assumptions, not proven availability.",
+    "local": "Actual checked-in repository/materialized inputs and absent local profiles: UNKNOWN fallback; no invented freshness/profile metadata.",
+    "savedProductionMetadata": "Owner-approved historical READ ONLY export: actual source/confidence/status/verification dates and profile status/date; no synthetic readiness metadata. No new production query. Snapshot queriedAt 2026-10-02T18:11:27.676Z",
+    "independence": "Historical aggregate contains fitting, repeats, controls and preserved holdouts. Numeric refusals are not zero-error quotes. Measured-clean diagnostic results remain separate in preserved reports."
+  },
+  "scenarios": {
+    "captured:legacy": {
+      "attempts": 168,
+      "numeric": 168,
+      "refused": 0,
+      "refusals": {},
+      "mape": 45.831576304818135,
+      "mae": 1568.375,
+      "maxApe": 2869.6428571428573,
+      "maxAbsoluteRupeeError": 20053,
+      "maxOverpayment": 20053,
+      "overpayments": 125,
+      "underpayments": 41,
+      "exact": 2,
+      "within3": 53
+    },
+    "captured:release-candidate": {
+      "attempts": 168,
+      "numeric": 130,
+      "refused": 38,
+      "refusals": {
+        "MANUAL_INSPECTION_REQUIRED": 38
+      },
+      "mape": 3.908846768459302,
+      "mae": 641.3923076923077,
+      "maxApe": 33.53260869565217,
+      "maxAbsoluteRupeeError": 3948,
+      "maxOverpayment": 2120,
+      "overpayments": 65,
+      "underpayments": 34,
+      "exact": 31,
+      "within3": 67
+    },
+    "production:legacy": {
+      "attempts": 168,
+      "numeric": 164,
+      "refused": 4,
+      "refusals": {
+        "REFERENCE_PRICE_UNAVAILABLE": 4
+      },
+      "mape": 44.34752786214993,
+      "mae": 1519.0487804878048,
+      "maxApe": 2716.0714285714284,
+      "maxAbsoluteRupeeError": 19907,
+      "maxOverpayment": 19907,
+      "overpayments": 104,
+      "underpayments": 59,
+      "exact": 1,
+      "within3": 60
+    },
+    "production:release-candidate": {
+      "attempts": 168,
+      "numeric": 98,
+      "refused": 70,
+      "refusals": {
+        "MANUAL_INSPECTION_REQUIRED": 66,
+        "REFERENCE_PRICE_UNAVAILABLE": 4
+      },
+      "mape": 5.31310959701946,
+      "mae": 885.8061224489796,
+      "maxApe": 32.22826086956522,
+      "maxAbsoluteRupeeError": 4721,
+      "maxOverpayment": 1779,
+      "overpayments": 51,
+      "underpayments": 46,
+      "exact": 1,
+      "within3": 39
+    },
+    "local:legacy": {
+      "attempts": 168,
+      "numeric": 108,
+      "refused": 60,
+      "refusals": {
+        "INVALID_DIAGNOSTICS": 56,
+        "REFERENCE_PRICE_UNAVAILABLE": 4
+      },
+      "mape": 62.78730355084466,
+      "mae": 2206.425925925926,
+      "maxApe": 2769.6428571428573,
+      "maxAbsoluteRupeeError": 21674,
+      "maxOverpayment": 21674,
+      "overpayments": 65,
+      "underpayments": 43,
+      "exact": 0,
+      "within3": 42
+    },
+    "local:release-candidate": {
+      "attempts": 168,
+      "numeric": 71,
+      "refused": 97,
+      "refusals": {
+        "MANUAL_INSPECTION_REQUIRED": 37,
+        "INVALID_DIAGNOSTICS": 56,
+        "REFERENCE_PRICE_UNAVAILABLE": 4
+      },
+      "mape": 4.097888754251581,
+      "mae": 1147.225352112676,
+      "maxApe": 17.94150417827298,
+      "maxAbsoluteRupeeError": 6441,
+      "maxOverpayment": 6441,
+      "overpayments": 36,
+      "underpayments": 35,
+      "exact": 0,
+      "within3": 32
+    },
+    "saved-production-metadata:legacy": {
+      "attempts": 168,
+      "numeric": 164,
+      "refused": 4,
+      "refusals": {
+        "REFERENCE_PRICE_UNAVAILABLE": 4
+      },
+      "mape": 44.34752786214993,
+      "mae": 1519.0487804878048,
+      "maxApe": 2716.0714285714284,
+      "maxAbsoluteRupeeError": 19907,
+      "maxOverpayment": 19907,
+      "overpayments": 104,
+      "underpayments": 59,
+      "exact": 1,
+      "within3": 60
+    },
+    "saved-production-metadata:release-candidate": {
+      "attempts": 168,
+      "numeric": 98,
+      "refused": 70,
+      "refusals": {
+        "MANUAL_INSPECTION_REQUIRED": 66,
+        "REFERENCE_PRICE_UNAVAILABLE": 4
+      },
+      "mape": 5.31310959701946,
+      "mae": 885.8061224489796,
+      "maxApe": 32.22826086956522,
+      "maxAbsoluteRupeeError": 4721,
+      "maxOverpayment": 1779,
+      "overpayments": 51,
+      "underpayments": 46,
+      "exact": 1,
+      "within3": 39
+    }
+  },
+  "strictKnownProductionAvailability": {
+    "numeric": 0,
+    "total": 8,
+    "rows": [
+      {
+        "model": "Xiaomi Mi A2",
+        "storage": "4 GB/64 GB",
+        "outcome": {
+          "kind": "MANUAL_INSPECTION_REQUIRED",
+          "reason": "Changed reference domain requires baseline revalidation",
+          "conditionClass": "clean"
+        }
+      },
+      {
+        "model": "Xiaomi 14 CIVI",
+        "storage": "8 GB/256 GB",
+        "outcome": {
+          "kind": "MANUAL_INSPECTION_REQUIRED",
+          "reason": "Changed reference domain requires baseline revalidation",
+          "conditionClass": "clean"
+        }
+      },
+      {
+        "model": "Xiaomi Redmi Note 9 Pro",
+        "storage": "4 GB/128 GB",
+        "outcome": {
+          "kind": "MANUAL_INSPECTION_REQUIRED",
+          "reason": "Changed reference domain requires baseline revalidation",
+          "conditionClass": "clean"
+        }
+      },
+      {
+        "model": "Xiaomi Redmi Note 10 Pro Max",
+        "storage": "6 GB/128 GB",
+        "outcome": {
+          "kind": "MANUAL_INSPECTION_REQUIRED",
+          "reason": "Changed reference domain requires baseline revalidation",
+          "conditionClass": "clean"
+        }
+      },
+      {
+        "model": "OnePlus Nord",
+        "storage": "8 GB/128 GB",
+        "outcome": {
+          "kind": "MANUAL_INSPECTION_REQUIRED",
+          "reason": "Changed reference domain requires baseline revalidation",
+          "conditionClass": "clean"
+        }
+      },
+      {
+        "model": "Oneplus Open",
+        "storage": "16 GB/512 GB",
+        "outcome": {
+          "kind": "MANUAL_INSPECTION_REQUIRED",
+          "reason": "Changed reference domain requires baseline revalidation",
+          "conditionClass": "clean"
+        }
+      },
+      {
+        "model": "Apple iPhone 12 Pro",
+        "storage": "256 GB",
+        "outcome": {
+          "kind": "MANUAL_INSPECTION_REQUIRED",
+          "reason": "Changed reference domain requires baseline revalidation",
+          "conditionClass": "clean"
+        }
+      },
+      {
+        "model": "Samsung Galaxy S23 FE 5G",
+        "storage": "8 GB/128 GB",
+        "outcome": {
+          "kind": "MANUAL_INSPECTION_REQUIRED",
+          "reason": "Changed reference domain requires baseline revalidation",
+          "conditionClass": "clean"
+        }
+      }
+    ]
+  }
+}

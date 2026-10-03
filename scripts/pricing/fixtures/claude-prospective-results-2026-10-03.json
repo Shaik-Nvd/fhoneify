@@ -1,0 +1,134 @@
+{
+  "version": "claude-prospective/2026-10-03",
+  "frozenPredictionsSha256": "44d8b243a5993e0b9281023ced995f13014e604810d9649401aadb3129273da8",
+  "frozenAt": "2026-10-03T16:30:00Z (file written before the first attempt)",
+  "budget": {
+    "authorizedTotal": 24,
+    "usedBefore": 8,
+    "usedThisRun": 4,
+    "remaining": 12,
+    "ledger": "scratch/pricing-coordination/claude-evidence/attempt-ledger.jsonl"
+  },
+  "labels": {
+    "OPEN": "TEMPORAL_REPEAT of already-measured conditions (same exact variant, route and Get Upto). Not unseen-condition validation.",
+    "FM011": "CONTROL, not a prediction"
+  },
+  "rows": [
+    {
+      "experimentId": "OPEN_TR_A",
+      "status": "FAILED",
+      "reason": "Cashify questionnaire timed out",
+      "getUpto": null,
+      "finalPrice": null,
+      "collectedAt": "2026-10-03T10:58:25.041Z",
+      "evidenceSha256": null,
+      "route": {
+        "warranty": "NOT_ASKED",
+        "validBill": "NOT_ASKED",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "NOT_ASKED",
+        "box": "NOT_ASKED",
+        "charger": "NOT_ASKED",
+        "sPen": "NOT_ASKED"
+      },
+      "frozenPrediction": null
+    },
+    {
+      "experimentId": "OPEN_TR_B",
+      "status": "COMPLETED",
+      "reason": null,
+      "getUpto": 51650,
+      "finalPrice": 11700,
+      "collectedAt": "2026-10-03T10:58:53.627Z",
+      "evidenceSha256": "e2faee247108aba9c6dab938dafd8cf3f2aad53951c86bcbe9ff6b7fd0c5ab0a",
+      "route": {
+        "warranty": "ASKED:No",
+        "validBill": "ASKED:Yes",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "NOT_ASKED",
+        "box": "ASKED:Original Box with same IMEI",
+        "charger": "ASKED:Original Charger of Device",
+        "sPen": "NOT_ASKED"
+      },
+      "frozenPrediction": 11700,
+      "signedErrorRs": 0
+    },
+    {
+      "experimentId": "OPEN_TR_C",
+      "status": "COMPLETED",
+      "reason": null,
+      "getUpto": 51650,
+      "finalPrice": 11700,
+      "collectedAt": "2026-10-03T10:59:21.004Z",
+      "evidenceSha256": "e2faee247108aba9c6dab938dafd8cf3f2aad53951c86bcbe9ff6b7fd0c5ab0a",
+      "route": {
+        "warranty": "ASKED:No",
+        "validBill": "ASKED:Yes",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "NOT_ASKED",
+        "box": "ASKED:Original Box with same IMEI",
+        "charger": "ASKED:Original Charger of Device",
+        "sPen": "NOT_ASKED"
+      },
+      "frozenPrediction": 11700,
+      "signedErrorRs": 0
+    },
+    {
+      "experimentId": "FM011_ESIM_TR_A",
+      "status": "COMPLETED",
+      "reason": null,
+      "getUpto": 65000,
+      "finalPrice": 49210,
+      "collectedAt": "2026-10-03T10:59:37.323Z",
+      "evidenceSha256": "406ac9f42e09bd033c7fd9dda28625cf508ece211356ccafeec18e22f3c3d30b",
+      "route": {
+        "warranty": "ASKED:No",
+        "validBill": "ASKED:Yes",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "ASKED:Single eSIM",
+        "box": "ASKED:Original Box with same IMEI",
+        "charger": "NOT_ASKED",
+        "sPen": "NOT_ASKED"
+      },
+      "frozenPrediction": null
+    }
+  ],
+  "openResult": "Lines and heavy spots: frozen 11,700 vs observed 11,700 (0 error) at Get Upto 51,650. Clean attempt timed out (charged, not retried); clean 40,310 was observed twice on 2026-10-02 at the same Get Upto.",
+  "iphone17": {
+    "testerA": {
+      "price": 46750,
+      "getUpto": 65000,
+      "answers": "warranty Yes, Above 11 months (owner correction), Single eSIM"
+    },
+    "control": {
+      "experimentId": "FM011_ESIM_TR_A",
+      "status": "COMPLETED",
+      "reason": null,
+      "getUpto": 65000,
+      "finalPrice": 49210,
+      "collectedAt": "2026-10-03T10:59:37.323Z",
+      "evidenceSha256": "406ac9f42e09bd033c7fd9dda28625cf508ece211356ccafeec18e22f3c3d30b",
+      "route": {
+        "warranty": "ASKED:No",
+        "validBill": "ASKED:Yes",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "ASKED:Single eSIM",
+        "box": "ASKED:Original Box with same IMEI",
+        "charger": "NOT_ASKED",
+        "sPen": "NOT_ASKED"
+      },
+      "frozenPrediction": null
+    },
+    "pairable": true,
+    "verdict": "CHANGED: warranty-No clean 49,210 differs from tester A 46,750 at the same Get Upto, so tester A-minus-B/C mixed warranty with damage for this device.",
+    "matchedDeductions": {
+      "B:SCREEN SCRATCHES (37,930)": 11280,
+      "C:TWO DEFECTS (35,180)": 14030
+    },
+    "previousDeductions": {
+      "B": 8820,
+      "C": 11570
+    },
+    "caveat": "Tester B/C are undated; pairing relies on identical Get Upto (65,000) and the corrected answers (warranty No, Single eSIM, box/charger Yes)."
+  }
+}

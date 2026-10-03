@@ -1,0 +1,446 @@
+{
+  "registeredAt": "2026-10-01T12:57:19.768Z",
+  "head": "8d2f8c329f4d7faad133fe366679f3126ce4da3e",
+  "purpose": "Independent Xiaomi validation, separate from PR #8",
+  "noRefitting": true,
+  "illustrativePricesAreNotSameDayVerified": true,
+  "round10": "Math.round(x / 10) * 10",
+  "fee": 99,
+  "couponApplied": false,
+  "cases": [
+    {
+      "id": "V1",
+      "brand": "Xiaomi",
+      "model": "Xiaomi 17",
+      "storage": "12 GB/512 GB",
+      "diagnostics": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": false,
+        "defects": [],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": null,
+        "bodyDents": null,
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [],
+        "accessories": [
+          "box"
+        ],
+        "warranty": false,
+        "validBill": true,
+        "eSim": null,
+        "mobileAge": null
+      },
+      "questionnaire": {
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "UNKNOWN"
+      },
+      "registeredFormula": "same-day Cashify Selling C0 - 6280",
+      "fixedDeduction": 6280,
+      "baselineControl": "Xiaomi 17 same-day C0",
+      "fixedRetention": null,
+      "sameDayModelFormula": "max(1200, round10(0.764 * R + 380 - 6280))",
+      "illustrativeReference": 57070,
+      "illustrativeEquivalent": 37700,
+      "illustrativeQuote": 39208,
+      "illustrativePayoutWithoutCoupon": 39109,
+      "observation": null
+    },
+    {
+      "id": "V2",
+      "brand": "Xiaomi",
+      "model": "Xiaomi Redmi Turbo 5",
+      "storage": "12 GB/256 GB",
+      "diagnostics": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": false,
+        "defects": [],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": null,
+        "bodyDents": null,
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [],
+        "accessories": [
+          "box"
+        ],
+        "warranty": false,
+        "validBill": true,
+        "eSim": null,
+        "mobileAge": null
+      },
+      "questionnaire": {
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "UNKNOWN"
+      },
+      "registeredFormula": "same-day Cashify Selling C0 - 2920",
+      "fixedDeduction": 2920,
+      "baselineControl": "V7",
+      "fixedRetention": null,
+      "sameDayModelFormula": "max(1200, round10(0.764 * R + 380 - 2920))",
+      "illustrativeReference": 26080,
+      "illustrativeEquivalent": 17390,
+      "illustrativeQuote": 18433,
+      "illustrativePayoutWithoutCoupon": 18334,
+      "observation": null
+    },
+    {
+      "id": "V3",
+      "brand": "Xiaomi",
+      "model": "Xiaomi 17",
+      "storage": "12 GB/512 GB",
+      "diagnostics": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": true,
+        "defects": [],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": null,
+        "bodyDents": null,
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [
+          "charging"
+        ],
+        "accessories": [
+          "box"
+        ],
+        "warranty": false,
+        "validBill": true,
+        "eSim": null,
+        "mobileAge": null
+      },
+      "questionnaire": {
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "UNKNOWN"
+      },
+      "registeredFormula": "same-day Cashify Selling C0 - 3300",
+      "fixedDeduction": 3300,
+      "baselineControl": "Xiaomi 17 same-day C0",
+      "fixedRetention": null,
+      "sameDayModelFormula": "max(1200, round10(0.764 * R + 380 - 3300))",
+      "illustrativeReference": 57070,
+      "illustrativeEquivalent": 40680,
+      "illustrativeQuote": 42307,
+      "illustrativePayoutWithoutCoupon": 42208,
+      "observation": null
+    },
+    {
+      "id": "V4",
+      "brand": "Xiaomi",
+      "model": "Xiaomi Redmi Turbo 5",
+      "storage": "12 GB/256 GB",
+      "diagnostics": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": true,
+        "defects": [],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": null,
+        "bodyDents": null,
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [
+          "charging"
+        ],
+        "accessories": [
+          "box"
+        ],
+        "warranty": false,
+        "validBill": true,
+        "eSim": null,
+        "mobileAge": null
+      },
+      "questionnaire": {
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "UNKNOWN"
+      },
+      "registeredFormula": "same-day Cashify Selling C0 - 1540",
+      "fixedDeduction": 1540,
+      "baselineControl": "V7",
+      "fixedRetention": null,
+      "sameDayModelFormula": "max(1200, round10(0.764 * R + 380 - 1540))",
+      "illustrativeReference": 26080,
+      "illustrativeEquivalent": 18770,
+      "illustrativeQuote": 19896,
+      "illustrativePayoutWithoutCoupon": 19797,
+      "observation": null
+    },
+    {
+      "id": "V5",
+      "brand": "Xiaomi",
+      "model": "Xiaomi 17T",
+      "storage": "12 GB/512 GB",
+      "diagnostics": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": true,
+        "defects": [],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": null,
+        "bodyDents": null,
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [],
+        "accessories": [
+          "box"
+        ],
+        "warranty": false,
+        "validBill": true,
+        "eSim": null,
+        "mobileAge": null
+      },
+      "questionnaire": {
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "UNKNOWN"
+      },
+      "registeredFormula": "round10(0.764 * same-day Get Upto + 380)",
+      "fixedDeduction": 0,
+      "baselineControl": null,
+      "fixedRetention": 0.764,
+      "sameDayModelFormula": "max(1200, round10(0.764 * R + 380 - 0))",
+      "illustrativeReference": 39360,
+      "illustrativeEquivalent": 30450,
+      "illustrativeQuote": 32277,
+      "illustrativePayoutWithoutCoupon": 32178,
+      "observation": null
+    },
+    {
+      "id": "V6",
+      "brand": "Xiaomi",
+      "model": "Xiaomi Redmi Note 15 Pro Plus 5G",
+      "storage": "12 GB/512 GB",
+      "diagnostics": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": true,
+        "defects": [],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": null,
+        "bodyDents": null,
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [],
+        "accessories": [
+          "box"
+        ],
+        "warranty": false,
+        "validBill": true,
+        "eSim": null,
+        "mobileAge": null
+      },
+      "questionnaire": {
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "UNKNOWN"
+      },
+      "registeredFormula": "round10(0.74 * same-day Get Upto + 380)",
+      "fixedDeduction": 0,
+      "baselineControl": null,
+      "fixedRetention": 0.74,
+      "sameDayModelFormula": "max(1200, round10(0.74 * R + 380 - 0))",
+      "illustrativeReference": 28100,
+      "illustrativeEquivalent": 21170,
+      "illustrativeQuote": 22440,
+      "illustrativePayoutWithoutCoupon": 22341,
+      "observation": null
+    },
+    {
+      "id": "V7",
+      "brand": "Xiaomi",
+      "model": "Xiaomi Redmi Turbo 5",
+      "storage": "12 GB/256 GB",
+      "diagnostics": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": true,
+        "defects": [],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": null,
+        "bodyDents": null,
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [],
+        "accessories": [
+          "box"
+        ],
+        "warranty": false,
+        "validBill": true,
+        "eSim": null,
+        "mobileAge": null
+      },
+      "questionnaire": {
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "UNKNOWN"
+      },
+      "registeredFormula": "round10(0.764 * same-day Get Upto + 380)",
+      "fixedDeduction": 0,
+      "baselineControl": null,
+      "fixedRetention": 0.764,
+      "sameDayModelFormula": "max(1200, round10(0.764 * R + 380 - 0))",
+      "illustrativeReference": 26080,
+      "illustrativeEquivalent": 20310,
+      "illustrativeQuote": 21529,
+      "illustrativePayoutWithoutCoupon": 21430,
+      "observation": null
+    },
+    {
+      "id": "V8",
+      "brand": "Xiaomi",
+      "model": "Xiaomi Redmi Note 15 Pro Plus 5G",
+      "storage": "12 GB/512 GB",
+      "diagnostics": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": true,
+        "defects": [
+          "screen_scratch"
+        ],
+        "screenCondition": "Screen cracked/ glass broken",
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": null,
+        "bodyDents": null,
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [],
+        "accessories": [
+          "box"
+        ],
+        "warranty": false,
+        "validBill": true,
+        "eSim": null,
+        "mobileAge": null
+      },
+      "questionnaire": {
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "UNKNOWN"
+      },
+      "registeredFormula": "same-day Cashify Selling C0 - 2310",
+      "fixedDeduction": 2310,
+      "baselineControl": "V6",
+      "fixedRetention": null,
+      "sameDayModelFormula": "max(1200, round10(0.74 * R + 380 - 2310))",
+      "illustrativeReference": 28100,
+      "illustrativeEquivalent": 18860,
+      "illustrativeQuote": 19992,
+      "illustrativePayoutWithoutCoupon": 19893,
+      "observation": null
+    },
+    {
+      "id": "V9",
+      "brand": "Xiaomi",
+      "model": "Xiaomi 17 Ultra",
+      "storage": "16 GB/512 GB",
+      "diagnostics": {
+        "calls": true,
+        "touch": false,
+        "originalScreen": true,
+        "defects": [],
+        "screenCondition": null,
+        "screenSpots": null,
+        "screenLines": null,
+        "screenDiscoloration": null,
+        "bodyScratches": null,
+        "bodyDents": null,
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [],
+        "accessories": [
+          "box"
+        ],
+        "warranty": false,
+        "validBill": true,
+        "eSim": null,
+        "mobileAge": null
+      },
+      "questionnaire": {
+        "warrantyMode": "ASKED",
+        "billMode": "ASKED",
+        "ageMode": "UNKNOWN"
+      },
+      "registeredFormula": "same-day Cashify Selling C0 - 19820",
+      "fixedDeduction": 19820,
+      "baselineControl": "Xiaomi 17 Ultra same-day C0",
+      "fixedRetention": null,
+      "sameDayModelFormula": "max(1200, round10(0.764 * R + 380 - 19820))",
+      "illustrativeReference": 75370,
+      "illustrativeEquivalent": 38140,
+      "illustrativeQuote": 39666,
+      "illustrativePayoutWithoutCoupon": 39567,
+      "observation": null
+    },
+    {
+      "id": "V10",
+      "model": "Xiaomi 17 Ultra",
+      "storage": null,
+      "status": "BLOCKED_UNSPECIFIED_VARIANT",
+      "reason": "Handoff does not specify a variant. Catalog has only the calibrated 16 GB/512 GB variant; do not invent another available variant.",
+      "diagnostics": {
+        "calls": true,
+        "touch": true,
+        "originalScreen": false,
+        "defects": [
+          "screen_spot"
+        ],
+        "screenCondition": null,
+        "screenSpots": "Large/ heavy visible spots on screen",
+        "screenLines": "Visible line(s) on display",
+        "screenDiscoloration": "Major Discoloration",
+        "bodyScratches": null,
+        "bodyDents": null,
+        "bodyPanel": null,
+        "bodyBent": null,
+        "hardware": [],
+        "accessories": [
+          "box"
+        ],
+        "warranty": false,
+        "validBill": true,
+        "eSim": null,
+        "mobileAge": null
+      },
+      "registeredFormula": "max(1200, round10(0.764 * same-day Get Upto R_prime + 380 - 16190))",
+      "fixedDeduction": 16190,
+      "exactVariantMustBeRegisteredBeforeQuote": true,
+      "catalogVariants": [
+        {
+          "model": "Xiaomi 17 Ultra",
+          "storage": "16 GB/512 GB",
+          "basePrice": 77150
+        }
+      ]
+    }
+  ]
+}

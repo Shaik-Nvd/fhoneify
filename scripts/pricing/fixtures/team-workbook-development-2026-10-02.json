@@ -1,0 +1,486 @@
+{
+  "version": "team-workbook-research/2026-10-02-v1",
+  "provenance": "TESTER_REPORTED",
+  "observedAt": null,
+  "calibrationDateUnknown": true,
+  "sharedGlass": {
+    "ratio": 2.0238189757840415,
+    "heavyScratchTotal": 25190,
+    "glassTotal": 50980,
+    "trainingIds": [
+      "FM001",
+      "FM006",
+      "FM019",
+      "FM020"
+    ]
+  },
+  "specs": [
+    {
+      "deviceId": "FM001",
+      "brand": "Apple",
+      "model": "Apple iPhone 8",
+      "storage": "128 GB",
+      "validatedGetUpto": 5850,
+      "cleanRetention": 0.9965811965811966,
+      "observedAt": null,
+      "evidenceQuality": "TESTER_REPORTED_UNVERIFIED",
+      "sourceSha256": "57f7b74f16e9d95ec1a17ba3f0b8ddc891cca3fe35a06bc983513ca0ec3bc0aa",
+      "priceCells": [
+        "G7",
+        "H7",
+        "I7"
+      ],
+      "glassRule": "shared_heavy_scratch_anchor",
+      "componentCosts": {
+        "screen_heavy": 940
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "screen_heavy"
+        ],
+        [
+          "glass_cracked"
+        ]
+      ]
+    },
+    {
+      "deviceId": "FM002",
+      "brand": "Apple",
+      "model": "Apple iPhone XS Max",
+      "storage": "256 GB",
+      "validatedGetUpto": 12640,
+      "cleanRetention": 0.9984177215189873,
+      "observedAt": null,
+      "evidenceQuality": "TESTER_REPORTED_UNVERIFIED",
+      "sourceSha256": "57f7b74f16e9d95ec1a17ba3f0b8ddc891cca3fe35a06bc983513ca0ec3bc0aa",
+      "priceCells": [
+        "G8",
+        "H8",
+        "I8"
+      ],
+      "componentCosts": {
+        "display_lines": 6970,
+        "display_spots": 6970
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "display_lines"
+        ],
+        [
+          "display_spots"
+        ]
+      ]
+    },
+    {
+      "deviceId": "FM003",
+      "brand": "Apple",
+      "model": "Apple iPhone 11 Pro Max",
+      "storage": "256 GB",
+      "validatedGetUpto": 18740,
+      "cleanRetention": 1.038420490928495,
+      "observedAt": null,
+      "evidenceQuality": "TESTER_REPORTED_UNVERIFIED",
+      "sourceSha256": "57f7b74f16e9d95ec1a17ba3f0b8ddc891cca3fe35a06bc983513ca0ec3bc0aa",
+      "priceCells": [
+        "G9",
+        "H9",
+        "I9"
+      ],
+      "componentCosts": {
+        "original_screen": 12000,
+        "touch": 11310
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "original_screen"
+        ],
+        [
+          "touch"
+        ]
+      ]
+    },
+    {
+      "deviceId": "FM005",
+      "brand": "Apple",
+      "model": "Apple iPhone 14",
+      "storage": "256 GB",
+      "validatedGetUpto": 28430,
+      "cleanRetention": 0.9992965177629265,
+      "observedAt": null,
+      "evidenceQuality": "TESTER_REPORTED_UNVERIFIED",
+      "sourceSha256": "57f7b74f16e9d95ec1a17ba3f0b8ddc891cca3fe35a06bc983513ca0ec3bc0aa",
+      "priceCells": [
+        "G11",
+        "H11",
+        "I11"
+      ],
+      "componentCosts": {
+        "screen_heavy": 5290,
+        "body_heavy": 880
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "screen_heavy"
+        ],
+        [
+          "screen_heavy",
+          "body_heavy"
+        ]
+      ]
+    },
+    {
+      "deviceId": "FM006",
+      "brand": "Apple",
+      "model": "Apple iPhone 14 Pro Max",
+      "storage": "256 GB",
+      "validatedGetUpto": 45480,
+      "cleanRetention": 0.9689973614775725,
+      "observedAt": null,
+      "evidenceQuality": "TESTER_REPORTED_UNVERIFIED",
+      "sourceSha256": "57f7b74f16e9d95ec1a17ba3f0b8ddc891cca3fe35a06bc983513ca0ec3bc0aa",
+      "priceCells": [
+        "G12",
+        "H12",
+        "I12"
+      ],
+      "glassRule": "shared_heavy_scratch_anchor",
+      "componentCosts": {
+        "screen_heavy": 6320
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "screen_heavy"
+        ],
+        [
+          "glass_cracked"
+        ]
+      ]
+    },
+    {
+      "deviceId": "FM008",
+      "brand": "Apple",
+      "model": "Apple iPhone 15 Pro Max",
+      "storage": "512 GB",
+      "validatedGetUpto": 72480,
+      "cleanRetention": 0.7879415011037527,
+      "observedAt": null,
+      "evidenceQuality": "TESTER_REPORTED_UNVERIFIED",
+      "sourceSha256": "57f7b74f16e9d95ec1a17ba3f0b8ddc891cca3fe35a06bc983513ca0ec3bc0aa",
+      "priceCells": [
+        "G14",
+        "H14",
+        "I14"
+      ],
+      "componentCosts": {
+        "display_lines": 19550,
+        "display_spots": 19550
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "display_lines"
+        ],
+        [
+          "display_spots"
+        ]
+      ]
+    },
+    {
+      "deviceId": "FM009",
+      "brand": "Apple",
+      "model": "Apple iPhone 16",
+      "storage": "256 GB",
+      "validatedGetUpto": 54720,
+      "cleanRetention": 0.8114035087719298,
+      "observedAt": null,
+      "evidenceQuality": "TESTER_REPORTED_UNVERIFIED",
+      "sourceSha256": "57f7b74f16e9d95ec1a17ba3f0b8ddc891cca3fe35a06bc983513ca0ec3bc0aa",
+      "priceCells": [
+        "G15",
+        "H15",
+        "I15"
+      ],
+      "componentCosts": {
+        "charging": 2500,
+        "back_camera": 6000
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "charging"
+        ],
+        [
+          "back_camera"
+        ]
+      ]
+    },
+    {
+      "deviceId": "FM011",
+      "brand": "Apple",
+      "model": "Apple iPhone 17",
+      "storage": "256 GB",
+      "validatedGetUpto": 65000,
+      "cleanRetention": 0.7192307692307692,
+      "observedAt": null,
+      "evidenceQuality": "TESTER_REPORTED_UNVERIFIED",
+      "sourceSha256": "57f7b74f16e9d95ec1a17ba3f0b8ddc891cca3fe35a06bc983513ca0ec3bc0aa",
+      "priceCells": [
+        "G17",
+        "H17",
+        "I17"
+      ],
+      "componentCosts": {
+        "screen_heavy": 8820,
+        "body_heavy": 2750
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "screen_heavy"
+        ],
+        [
+          "screen_heavy",
+          "body_heavy"
+        ]
+      ]
+    },
+    {
+      "deviceId": "FM012",
+      "brand": "Apple",
+      "model": "Apple iPhone 17 Pro Max",
+      "storage": "512 GB",
+      "validatedGetUpto": 117000,
+      "cleanRetention": 0.7355555555555555,
+      "observedAt": null,
+      "evidenceQuality": "TESTER_REPORTED_UNVERIFIED",
+      "sourceSha256": "57f7b74f16e9d95ec1a17ba3f0b8ddc891cca3fe35a06bc983513ca0ec3bc0aa",
+      "priceCells": [
+        "G18",
+        "H18",
+        "I18"
+      ],
+      "componentCosts": {
+        "charging": 2500,
+        "back_camera": 6200
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "charging"
+        ],
+        [
+          "back_camera"
+        ]
+      ]
+    },
+    {
+      "deviceId": "FM013",
+      "brand": "Samsung",
+      "model": "Samsung Galaxy M32",
+      "storage": "4 GB/64 GB",
+      "validatedGetUpto": 3570,
+      "cleanRetention": 0.9943977591036415,
+      "observedAt": null,
+      "evidenceQuality": "TESTER_REPORTED_UNVERIFIED",
+      "sourceSha256": "57f7b74f16e9d95ec1a17ba3f0b8ddc891cca3fe35a06bc983513ca0ec3bc0aa",
+      "priceCells": [
+        "G19",
+        "H19",
+        "I19"
+      ],
+      "componentCosts": {
+        "body_heavy": 210,
+        "body_dents": 370
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "body_heavy"
+        ],
+        [
+          "body_dents"
+        ]
+      ]
+    },
+    {
+      "deviceId": "FM015",
+      "brand": "Samsung",
+      "model": "Samsung Galaxy A72",
+      "storage": "8 GB/128 GB",
+      "validatedGetUpto": 6400,
+      "cleanRetention": 0.996875,
+      "observedAt": null,
+      "evidenceQuality": "TESTER_REPORTED_UNVERIFIED",
+      "sourceSha256": "57f7b74f16e9d95ec1a17ba3f0b8ddc891cca3fe35a06bc983513ca0ec3bc0aa",
+      "priceCells": [
+        "G21",
+        "H21",
+        "I21"
+      ],
+      "componentCosts": {
+        "display_lines": 4190,
+        "display_spots": 4190
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "display_lines"
+        ],
+        [
+          "display_spots"
+        ]
+      ]
+    },
+    {
+      "deviceId": "FM016",
+      "brand": "Samsung",
+      "model": "Samsung Galaxy S21 Ultra 5G",
+      "storage": "12 GB/256 GB",
+      "validatedGetUpto": 17130,
+      "cleanRetention": 0.9988324576765908,
+      "observedAt": null,
+      "evidenceQuality": "TESTER_REPORTED_UNVERIFIED",
+      "sourceSha256": "57f7b74f16e9d95ec1a17ba3f0b8ddc891cca3fe35a06bc983513ca0ec3bc0aa",
+      "priceCells": [
+        "G22",
+        "H22",
+        "I22"
+      ],
+      "componentCosts": {
+        "original_screen": 5850,
+        "touch": 11700
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "original_screen"
+        ],
+        [
+          "touch"
+        ]
+      ]
+    },
+    {
+      "deviceId": "FM018",
+      "brand": "Samsung",
+      "model": "Samsung Galaxy S25 Edge",
+      "storage": "12 GB/256 GB",
+      "validatedGetUpto": 42720,
+      "cleanRetention": 0.7937734082397003,
+      "observedAt": null,
+      "evidenceQuality": "TESTER_REPORTED_UNVERIFIED",
+      "sourceSha256": "57f7b74f16e9d95ec1a17ba3f0b8ddc891cca3fe35a06bc983513ca0ec3bc0aa",
+      "priceCells": [
+        "G24",
+        "H24",
+        "I24"
+      ],
+      "componentCosts": {
+        "screen_heavy": 5290,
+        "body_heavy": 1400
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "screen_heavy"
+        ],
+        [
+          "screen_heavy",
+          "body_heavy"
+        ]
+      ]
+    },
+    {
+      "deviceId": "FM019",
+      "brand": "Samsung",
+      "model": "Samsung Galaxy S26 Ultra",
+      "storage": "12 GB/512 GB",
+      "validatedGetUpto": 86250,
+      "cleanRetention": 0.7772753623188405,
+      "observedAt": null,
+      "evidenceQuality": "TESTER_REPORTED_UNVERIFIED",
+      "sourceSha256": "57f7b74f16e9d95ec1a17ba3f0b8ddc891cca3fe35a06bc983513ca0ec3bc0aa",
+      "priceCells": [
+        "G25",
+        "H25",
+        "I25"
+      ],
+      "glassRule": "shared_heavy_scratch_anchor",
+      "componentCosts": {
+        "screen_heavy": 6170
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "screen_heavy"
+        ],
+        [
+          "glass_cracked"
+        ]
+      ]
+    },
+    {
+      "deviceId": "FM020",
+      "brand": "Samsung",
+      "model": "Samsung Galaxy Z Fold5",
+      "storage": "12 GB/256 GB",
+      "validatedGetUpto": 49740,
+      "cleanRetention": 0.7603538399678327,
+      "observedAt": null,
+      "evidenceQuality": "TESTER_REPORTED_UNVERIFIED",
+      "sourceSha256": "57f7b74f16e9d95ec1a17ba3f0b8ddc891cca3fe35a06bc983513ca0ec3bc0aa",
+      "priceCells": [
+        "G26",
+        "H26",
+        "I26"
+      ],
+      "glassRule": "shared_heavy_scratch_anchor",
+      "componentCosts": {
+        "screen_heavy": 11760
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "screen_heavy"
+        ],
+        [
+          "glass_cracked"
+        ]
+      ]
+    },
+    {
+      "deviceId": "FM022",
+      "brand": "Samsung",
+      "model": "Samsung Galaxy Note 10 Lite",
+      "storage": "6 GB/128 GB",
+      "validatedGetUpto": 5600,
+      "cleanRetention": 0.9964285714285714,
+      "observedAt": null,
+      "evidenceQuality": "TESTER_REPORTED_UNVERIFIED",
+      "sourceSha256": "57f7b74f16e9d95ec1a17ba3f0b8ddc891cca3fe35a06bc983513ca0ec3bc0aa",
+      "priceCells": [
+        "G28",
+        "H28",
+        "I28"
+      ],
+      "componentCosts": {
+        "charging": 1000,
+        "back_camera": 2500
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "charging"
+        ],
+        [
+          "back_camera"
+        ]
+      ]
+    }
+  ]
+}

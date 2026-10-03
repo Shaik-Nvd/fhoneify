@@ -1,0 +1,1693 @@
+[
+  {
+    "caseId": "FM001_A",
+    "brand": "Apple",
+    "model": "Apple iPhone 8",
+    "storage": "128 GB",
+    "reference": 5850,
+    "condition": "CLEAN",
+    "observed": 5830,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [],
+      "hardware": [],
+      "screenCondition": null,
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM001_B",
+    "brand": "Apple",
+    "model": "Apple iPhone 8",
+    "storage": "128 GB",
+    "reference": 5850,
+    "condition": "SCREEN SCRATCHES",
+    "observed": 4890,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [
+        "screen_scratch"
+      ],
+      "hardware": [],
+      "screenCondition": "More than 2 scratches on screen",
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM001_C",
+    "brand": "Apple",
+    "model": "Apple iPhone 8",
+    "storage": "128 GB",
+    "reference": 5850,
+    "condition": "CRACKED GLASS",
+    "observed": 3930,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [
+        "screen_scratch"
+      ],
+      "hardware": [],
+      "screenCondition": "Screen cracked/ glass broken",
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM002_A",
+    "brand": "Apple",
+    "model": "Apple iPhone XS Max",
+    "storage": "256 GB",
+    "reference": 12640,
+    "condition": "CLEAN",
+    "observed": 12620,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [],
+      "hardware": [],
+      "screenCondition": null,
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM002_B",
+    "brand": "Apple",
+    "model": "Apple iPhone XS Max",
+    "storage": "256 GB",
+    "reference": 12640,
+    "condition": "DISPLAY LINES",
+    "observed": 5650,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [
+        "screen_spot"
+      ],
+      "hardware": [],
+      "screenCondition": null,
+      "screenSpots": null,
+      "screenLines": "Visible line(s) on display",
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM002_C",
+    "brand": "Apple",
+    "model": "Apple iPhone XS Max",
+    "storage": "256 GB",
+    "reference": 12640,
+    "condition": "HEAVY SPOTS",
+    "observed": 5650,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [
+        "screen_spot"
+      ],
+      "hardware": [],
+      "screenCondition": null,
+      "screenSpots": "Large/ heavy visible spots on screen",
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM003_A",
+    "brand": "Apple",
+    "model": "Apple iPhone 11 Pro Max",
+    "storage": "256 GB",
+    "reference": 18740,
+    "condition": "CLEAN",
+    "observed": 19460,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [],
+      "hardware": [],
+      "screenCondition": null,
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM003_B",
+    "brand": "Apple",
+    "model": "Apple iPhone 11 Pro Max",
+    "storage": "256 GB",
+    "reference": 18740,
+    "condition": "NON-ORIGINAL SCREEN",
+    "observed": 7460,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": false,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [],
+      "hardware": [],
+      "screenCondition": null,
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM003_C",
+    "brand": "Apple",
+    "model": "Apple iPhone 11 Pro Max",
+    "storage": "256 GB",
+    "reference": 18740,
+    "condition": "TOUCH FAILURE",
+    "observed": 8150,
+    "diagnostics": {
+      "calls": true,
+      "touch": false,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [],
+      "hardware": [],
+      "screenCondition": null,
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM005_A",
+    "brand": "Apple",
+    "model": "Apple iPhone 14",
+    "storage": "256 GB",
+    "reference": 28430,
+    "condition": "CLEAN",
+    "observed": 28410,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [],
+      "hardware": [],
+      "screenCondition": null,
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM005_B",
+    "brand": "Apple",
+    "model": "Apple iPhone 14",
+    "storage": "256 GB",
+    "reference": 28430,
+    "condition": "SCREEN SCRATCHES",
+    "observed": 23120,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [
+        "screen_scratch"
+      ],
+      "hardware": [],
+      "screenCondition": "More than 2 scratches on screen",
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM005_C",
+    "brand": "Apple",
+    "model": "Apple iPhone 14",
+    "storage": "256 GB",
+    "reference": 28430,
+    "condition": "TWO DEFECTS",
+    "observed": 22240,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [
+        "screen_scratch",
+        "body_scratch"
+      ],
+      "hardware": [],
+      "screenCondition": "More than 2 scratches on screen",
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": "More than 2 scratches",
+      "bodyDents": "No dents",
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM006_A",
+    "brand": "Apple",
+    "model": "Apple iPhone 14 Pro Max",
+    "storage": "256 GB",
+    "reference": 45480,
+    "condition": "CLEAN",
+    "observed": 44070,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [],
+      "hardware": [],
+      "screenCondition": null,
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM006_B",
+    "brand": "Apple",
+    "model": "Apple iPhone 14 Pro Max",
+    "storage": "256 GB",
+    "reference": 45480,
+    "condition": "SCREEN SCRATCHES",
+    "observed": 37750,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [
+        "screen_scratch"
+      ],
+      "hardware": [],
+      "screenCondition": "More than 2 scratches on screen",
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM006_C",
+    "brand": "Apple",
+    "model": "Apple iPhone 14 Pro Max",
+    "storage": "256 GB",
+    "reference": 45480,
+    "condition": "CRACKED GLASS",
+    "observed": 31280,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [
+        "screen_scratch"
+      ],
+      "hardware": [],
+      "screenCondition": "Screen cracked/ glass broken",
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM008_A",
+    "brand": "Apple",
+    "model": "Apple iPhone 15 Pro Max",
+    "storage": "512 GB",
+    "reference": 72480,
+    "condition": "CLEAN",
+    "observed": 57110,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [],
+      "hardware": [],
+      "screenCondition": null,
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM008_B",
+    "brand": "Apple",
+    "model": "Apple iPhone 15 Pro Max",
+    "storage": "512 GB",
+    "reference": 72480,
+    "condition": "DISPLAY LINES",
+    "observed": 37560,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [
+        "screen_spot"
+      ],
+      "hardware": [],
+      "screenCondition": null,
+      "screenSpots": null,
+      "screenLines": "Visible line(s) on display",
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM008_C",
+    "brand": "Apple",
+    "model": "Apple iPhone 15 Pro Max",
+    "storage": "512 GB",
+    "reference": 72480,
+    "condition": "HEAVY SPOTS",
+    "observed": 37560,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [
+        "screen_spot"
+      ],
+      "hardware": [],
+      "screenCondition": null,
+      "screenSpots": "Large/ heavy visible spots on screen",
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM009_A",
+    "brand": "Apple",
+    "model": "Apple iPhone 16",
+    "storage": "256 GB",
+    "reference": 54720,
+    "condition": "CLEAN",
+    "observed": 44400,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [],
+      "hardware": [],
+      "screenCondition": null,
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM009_B",
+    "brand": "Apple",
+    "model": "Apple iPhone 16",
+    "storage": "256 GB",
+    "reference": 54720,
+    "condition": "CHARGING FAULT",
+    "observed": 41900,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [],
+      "hardware": [
+        "charging"
+      ],
+      "screenCondition": null,
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM009_C",
+    "brand": "Apple",
+    "model": "Apple iPhone 16",
+    "storage": "256 GB",
+    "reference": 54720,
+    "condition": "BACK CAMERA FAULT",
+    "observed": 38400,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [],
+      "hardware": [
+        "back_camera"
+      ],
+      "screenCondition": null,
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM011_A",
+    "brand": "Apple",
+    "model": "Apple iPhone 17",
+    "storage": "256 GB",
+    "reference": 65000,
+    "condition": "CLEAN",
+    "observed": 46750,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [],
+      "hardware": [],
+      "screenCondition": null,
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM011_B",
+    "brand": "Apple",
+    "model": "Apple iPhone 17",
+    "storage": "256 GB",
+    "reference": 65000,
+    "condition": "SCREEN SCRATCHES",
+    "observed": 37930,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [
+        "screen_scratch"
+      ],
+      "hardware": [],
+      "screenCondition": "More than 2 scratches on screen",
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM011_C",
+    "brand": "Apple",
+    "model": "Apple iPhone 17",
+    "storage": "256 GB",
+    "reference": 65000,
+    "condition": "TWO DEFECTS",
+    "observed": 35180,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [
+        "screen_scratch",
+        "body_scratch"
+      ],
+      "hardware": [],
+      "screenCondition": "More than 2 scratches on screen",
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": "More than 2 scratches",
+      "bodyDents": "No dents",
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM012_A",
+    "brand": "Apple",
+    "model": "Apple iPhone 17 Pro Max",
+    "storage": "512 GB",
+    "reference": 117000,
+    "condition": "CLEAN",
+    "observed": 86060,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [],
+      "hardware": [],
+      "screenCondition": null,
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM012_B",
+    "brand": "Apple",
+    "model": "Apple iPhone 17 Pro Max",
+    "storage": "512 GB",
+    "reference": 117000,
+    "condition": "CHARGING FAULT",
+    "observed": 83560,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [],
+      "hardware": [
+        "charging"
+      ],
+      "screenCondition": null,
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM012_C",
+    "brand": "Apple",
+    "model": "Apple iPhone 17 Pro Max",
+    "storage": "512 GB",
+    "reference": 117000,
+    "condition": "BACK CAMERA FAULT",
+    "observed": 79860,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [],
+      "hardware": [
+        "back_camera"
+      ],
+      "screenCondition": null,
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM013_A",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M32",
+    "storage": "4 GB/64 GB",
+    "reference": 3570,
+    "condition": "CLEAN",
+    "observed": 3550,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [],
+      "hardware": [],
+      "screenCondition": null,
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM013_B",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M32",
+    "storage": "4 GB/64 GB",
+    "reference": 3570,
+    "condition": "BODY SCRATCHES",
+    "observed": 3340,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [
+        "body_scratch"
+      ],
+      "hardware": [],
+      "screenCondition": null,
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": "More than 2 scratches",
+      "bodyDents": "No dents",
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM013_C",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M32",
+    "storage": "4 GB/64 GB",
+    "reference": 3570,
+    "condition": "BODY DENTS",
+    "observed": 3180,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [
+        "body_scratch"
+      ],
+      "hardware": [],
+      "screenCondition": null,
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": "No scratches",
+      "bodyDents": "Major dent(s) or more than 2",
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM015_A",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A72",
+    "storage": "8 GB/128 GB",
+    "reference": 6400,
+    "condition": "CLEAN",
+    "observed": 6380,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [],
+      "hardware": [],
+      "screenCondition": null,
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM015_B",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A72",
+    "storage": "8 GB/128 GB",
+    "reference": 6400,
+    "condition": "DISPLAY LINES",
+    "observed": 2190,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [
+        "screen_spot"
+      ],
+      "hardware": [],
+      "screenCondition": null,
+      "screenSpots": null,
+      "screenLines": "Visible line(s) on display",
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM015_C",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A72",
+    "storage": "8 GB/128 GB",
+    "reference": 6400,
+    "condition": "HEAVY SPOTS",
+    "observed": 2190,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [
+        "screen_spot"
+      ],
+      "hardware": [],
+      "screenCondition": null,
+      "screenSpots": "Large/ heavy visible spots on screen",
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM016_A",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S21 Ultra 5G",
+    "storage": "12 GB/256 GB",
+    "reference": 17130,
+    "condition": "CLEAN",
+    "observed": 17110,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [],
+      "hardware": [],
+      "screenCondition": null,
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM016_B",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S21 Ultra 5G",
+    "storage": "12 GB/256 GB",
+    "reference": 17130,
+    "condition": "NON-ORIGINAL SCREEN",
+    "observed": 11260,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": false,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [],
+      "hardware": [],
+      "screenCondition": null,
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM016_C",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S21 Ultra 5G",
+    "storage": "12 GB/256 GB",
+    "reference": 17130,
+    "condition": "TOUCH FAILURE",
+    "observed": 5410,
+    "diagnostics": {
+      "calls": true,
+      "touch": false,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [],
+      "hardware": [],
+      "screenCondition": null,
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM018_A",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S25 Edge",
+    "storage": "12 GB/256 GB",
+    "reference": 42720,
+    "condition": "CLEAN",
+    "observed": 33910,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [],
+      "hardware": [],
+      "screenCondition": null,
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM018_B",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S25 Edge",
+    "storage": "12 GB/256 GB",
+    "reference": 42720,
+    "condition": "SCREEN SCRATCHES",
+    "observed": 28620,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [
+        "screen_scratch"
+      ],
+      "hardware": [],
+      "screenCondition": "More than 2 scratches on screen",
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM018_C",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S25 Edge",
+    "storage": "12 GB/256 GB",
+    "reference": 42720,
+    "condition": "TWO DEFECTS",
+    "observed": 27220,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [
+        "screen_scratch",
+        "body_scratch"
+      ],
+      "hardware": [],
+      "screenCondition": "More than 2 scratches on screen",
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": "More than 2 scratches",
+      "bodyDents": "No dents",
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM019_A",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S26 Ultra",
+    "storage": "12 GB/512 GB",
+    "reference": 86250,
+    "condition": "CLEAN",
+    "observed": 67040,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [],
+      "hardware": [],
+      "screenCondition": null,
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM019_B",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S26 Ultra",
+    "storage": "12 GB/512 GB",
+    "reference": 86250,
+    "condition": "SCREEN SCRATCHES",
+    "observed": 60870,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [
+        "screen_scratch"
+      ],
+      "hardware": [],
+      "screenCondition": "More than 2 scratches on screen",
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM019_C",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S26 Ultra",
+    "storage": "12 GB/512 GB",
+    "reference": 86250,
+    "condition": "CRACKED GLASS",
+    "observed": 54550,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [
+        "screen_scratch"
+      ],
+      "hardware": [],
+      "screenCondition": "Screen cracked/ glass broken",
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM020_A",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Fold5",
+    "storage": "12 GB/256 GB",
+    "reference": 49740,
+    "condition": "CLEAN",
+    "observed": 37820,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [],
+      "hardware": [],
+      "screenCondition": null,
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM020_B",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Fold5",
+    "storage": "12 GB/256 GB",
+    "reference": 49740,
+    "condition": "SCREEN SCRATCHES",
+    "observed": 26060,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [
+        "screen_scratch"
+      ],
+      "hardware": [],
+      "screenCondition": "More than 2 scratches on screen",
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM020_C",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Fold5",
+    "storage": "12 GB/256 GB",
+    "reference": 49740,
+    "condition": "CRACKED GLASS",
+    "observed": 14020,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [
+        "screen_scratch"
+      ],
+      "hardware": [],
+      "screenCondition": "Screen cracked/ glass broken",
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM022_A",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Note 10 Lite",
+    "storage": "6 GB/128 GB",
+    "reference": 5600,
+    "condition": "CLEAN",
+    "observed": 5580,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [],
+      "hardware": [],
+      "screenCondition": null,
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM022_B",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Note 10 Lite",
+    "storage": "6 GB/128 GB",
+    "reference": 5600,
+    "condition": "CHARGING FAULT",
+    "observed": 4580,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [],
+      "hardware": [
+        "charging"
+      ],
+      "screenCondition": null,
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  },
+  {
+    "caseId": "FM022_C",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Note 10 Lite",
+    "storage": "6 GB/128 GB",
+    "reference": 5600,
+    "condition": "BACK CAMERA FAULT",
+    "observed": 3080,
+    "diagnostics": {
+      "calls": true,
+      "touch": true,
+      "originalScreen": true,
+      "warranty": false,
+      "validBill": true,
+      "mobileAge": "above11",
+      "eSim": null,
+      "accessories": [
+        "box",
+        "charger"
+      ],
+      "box": true,
+      "charger": true,
+      "defects": [],
+      "hardware": [
+        "back_camera"
+      ],
+      "screenCondition": null,
+      "screenSpots": null,
+      "screenLines": null,
+      "screenDiscoloration": null,
+      "bodyScratches": null,
+      "bodyDents": null,
+      "bodyPanel": null,
+      "bodyBent": null
+    }
+  }
+]

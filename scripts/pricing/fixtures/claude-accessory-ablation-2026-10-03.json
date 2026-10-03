@@ -1,0 +1,1411 @@
+{
+  "source": "release-candidate-observations-2026-10-02.json",
+  "rows": [
+    {
+      "id": "xiaomi-validation:C0-V1",
+      "variant": "Xiaomi Xiaomi 17 12 GB/512 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 57750,
+      "observed": 42720,
+      "observedMinusGetUpto": -15030,
+      "errWithBonus": 1780,
+      "errWithoutBonus": 1400
+    },
+    {
+      "id": "xiaomi-validation:CLOSE-V1",
+      "variant": "Xiaomi Xiaomi 17 12 GB/512 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 57750,
+      "observed": 42720,
+      "observedMinusGetUpto": -15030,
+      "errWithBonus": 1780,
+      "errWithoutBonus": 1400
+    },
+    {
+      "id": "xiaomi-validation:V7",
+      "variant": "Xiaomi Xiaomi Redmi Turbo 5 12 GB/256 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 26750,
+      "observed": 19640,
+      "observedMinusGetUpto": -7110,
+      "errWithBonus": 1180,
+      "errWithoutBonus": 800
+    },
+    {
+      "id": "xiaomi-validation:CLOSE-V7",
+      "variant": "Xiaomi Xiaomi Redmi Turbo 5 12 GB/256 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 26750,
+      "observed": 19640,
+      "observedMinusGetUpto": -7110,
+      "errWithBonus": 1180,
+      "errWithoutBonus": 800
+    },
+    {
+      "id": "xiaomi-validation:V5",
+      "variant": "Xiaomi Xiaomi 17T 12 GB/512 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 40750,
+      "observed": 29840,
+      "observedMinusGetUpto": -10910,
+      "errWithBonus": 1670,
+      "errWithoutBonus": 1290
+    },
+    {
+      "id": "xiaomi-validation:V6",
+      "variant": "Xiaomi Xiaomi Redmi Note 15 Pro Plus 5G 12 GB/512 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 29250,
+      "observed": 21780,
+      "observedMinusGetUpto": -7470,
+      "errWithBonus": 250,
+      "errWithoutBonus": -130
+    },
+    {
+      "id": "xiaomi-validation:C0-V9",
+      "variant": "Xiaomi Xiaomi 17 Ultra 16 GB/512 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:NOT_ASKED",
+      "getUpto": 75620,
+      "observed": 57250,
+      "observedMinusGetUpto": -18370,
+      "errWithBonus": 900,
+      "errWithoutBonus": 520
+    },
+    {
+      "id": "xiaomi-validation:CLOSE-V9",
+      "variant": "Xiaomi Xiaomi 17 Ultra 16 GB/512 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:NOT_ASKED",
+      "getUpto": 75620,
+      "observed": 57250,
+      "observedMinusGetUpto": -18370,
+      "errWithBonus": 900,
+      "errWithoutBonus": 520
+    },
+    {
+      "id": "xiaomi-validation:CLOSE-V6",
+      "variant": "Xiaomi Xiaomi Redmi Note 15 Pro Plus 5G 12 GB/512 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 29250,
+      "observed": 21780,
+      "observedMinusGetUpto": -7470,
+      "errWithBonus": 250,
+      "errWithoutBonus": -130
+    },
+    {
+      "id": "xiaomi-candidate-2026-10-01:17-OPEN",
+      "variant": "Xiaomi Xiaomi 17 12 GB/512 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 57750,
+      "observed": 42720,
+      "observedMinusGetUpto": -15030,
+      "errWithBonus": 1780,
+      "errWithoutBonus": 1400
+    },
+    {
+      "id": "xiaomi-candidate-2026-10-01:17-CLOSE",
+      "variant": "Xiaomi Xiaomi 17 12 GB/512 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 57750,
+      "observed": 42720,
+      "observedMinusGetUpto": -15030,
+      "errWithBonus": 1780,
+      "errWithoutBonus": 1400
+    },
+    {
+      "id": "xiaomi-candidate-2026-10-01:T5-OPEN",
+      "variant": "Xiaomi Xiaomi Redmi Turbo 5 12 GB/256 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 26750,
+      "observed": 19640,
+      "observedMinusGetUpto": -7110,
+      "errWithBonus": 1180,
+      "errWithoutBonus": 800
+    },
+    {
+      "id": "xiaomi-candidate-2026-10-01:T5-CLOSE",
+      "variant": "Xiaomi Xiaomi Redmi Turbo 5 12 GB/256 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 26750,
+      "observed": 19640,
+      "observedMinusGetUpto": -7110,
+      "errWithBonus": 1180,
+      "errWithoutBonus": 800
+    },
+    {
+      "id": "xiaomi-candidate-2026-10-01:15-OPEN",
+      "variant": "Xiaomi Xiaomi 15 12 GB/512 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 37350,
+      "observed": 27470,
+      "observedMinusGetUpto": -9880,
+      "errWithBonus": 1450,
+      "errWithoutBonus": 1070
+    },
+    {
+      "id": "xiaomi-candidate-2026-10-01:15-CLOSE",
+      "variant": "Xiaomi Xiaomi 15 12 GB/512 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 37350,
+      "observed": 27470,
+      "observedMinusGetUpto": -9880,
+      "errWithBonus": 1450,
+      "errWithoutBonus": 1070
+    },
+    {
+      "id": "xiaomi-candidate-2026-10-01:NOTE-N-OPEN",
+      "variant": "Xiaomi Xiaomi Redmi Note 15 Pro Plus 5G 12 GB/512 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 29250,
+      "observed": 21780,
+      "observedMinusGetUpto": -7470,
+      "errWithBonus": 250,
+      "errWithoutBonus": -130
+    },
+    {
+      "id": "xiaomi-severe-followup-2026-10-01:N-OPEN",
+      "variant": "Xiaomi Xiaomi Redmi Note 15 Pro Plus 5G 12 GB/512 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 29250,
+      "observed": 21780,
+      "observedMinusGetUpto": -7470,
+      "errWithBonus": 250,
+      "errWithoutBonus": -130
+    },
+    {
+      "id": "xiaomi-severe-followup-2026-10-01:N-CLOSE",
+      "variant": "Xiaomi Xiaomi Redmi Note 15 Pro Plus 5G 12 GB/512 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 29250,
+      "observed": 21780,
+      "observedMinusGetUpto": -7470,
+      "errWithBonus": 250,
+      "errWithoutBonus": -130
+    },
+    {
+      "id": "xiaomi-severe-followup-2026-10-01:X-OPEN",
+      "variant": "Xiaomi Xiaomi 17 12 GB/512 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 57750,
+      "observed": 42720,
+      "observedMinusGetUpto": -15030,
+      "errWithBonus": 1780,
+      "errWithoutBonus": 1400
+    },
+    {
+      "id": "xiaomi-severe-followup-2026-10-01:X-CLOSE",
+      "variant": "Xiaomi Xiaomi 17 12 GB/512 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 57750,
+      "observed": 42720,
+      "observedMinusGetUpto": -15030,
+      "errWithBonus": 1780,
+      "errWithoutBonus": 1400
+    },
+    {
+      "id": "xiaomi-severe-followup-2026-10-01:T-OPEN",
+      "variant": "Xiaomi Xiaomi Redmi Turbo 5 12 GB/256 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 26750,
+      "observed": 19640,
+      "observedMinusGetUpto": -7110,
+      "errWithBonus": 1180,
+      "errWithoutBonus": 800
+    },
+    {
+      "id": "xiaomi-severe-followup-2026-10-01:T-CLOSE",
+      "variant": "Xiaomi Xiaomi Redmi Turbo 5 12 GB/256 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 26750,
+      "observed": 19640,
+      "observedMinusGetUpto": -7110,
+      "errWithBonus": 1180,
+      "errWithoutBonus": 800
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM023_A",
+      "variant": "OnePlus OnePlus 7 Pro 8 GB/256 GB",
+      "regime": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 8050,
+      "observed": 8030,
+      "observedMinusGetUpto": -20,
+      "errWithBonus": 400,
+      "errWithoutBonus": 20
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM023_CLOSE_A",
+      "variant": "OnePlus OnePlus 7 Pro 8 GB/256 GB",
+      "regime": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 8050,
+      "observed": 8030,
+      "observedMinusGetUpto": -20,
+      "errWithBonus": 400,
+      "errWithoutBonus": 20
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM025_A",
+      "variant": "OnePlus OnePlus Nord 8 GB/128 GB",
+      "regime": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 8340,
+      "observed": 8320,
+      "observedMinusGetUpto": -20,
+      "errWithBonus": 400,
+      "errWithoutBonus": 20
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM025_CLOSE_A",
+      "variant": "OnePlus OnePlus Nord 8 GB/128 GB",
+      "regime": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 8340,
+      "observed": 8320,
+      "observedMinusGetUpto": -20,
+      "errWithBonus": 400,
+      "errWithoutBonus": 20
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM026_A",
+      "variant": "OnePlus OnePlus 8 Pro 8 GB/128 GB",
+      "regime": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 11520,
+      "observed": 11500,
+      "observedMinusGetUpto": -20,
+      "errWithBonus": 400,
+      "errWithoutBonus": 20
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM026_CLOSE_A",
+      "variant": "OnePlus OnePlus 8 Pro 8 GB/128 GB",
+      "regime": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 11520,
+      "observed": 11500,
+      "observedMinusGetUpto": -20,
+      "errWithBonus": 400,
+      "errWithoutBonus": 20
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM027_A",
+      "variant": "OnePlus OnePlus 12 12 GB/256 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 33150,
+      "observed": 26470,
+      "observedMinusGetUpto": -6680,
+      "errWithBonus": -2056,
+      "errWithoutBonus": -2436
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM027_CLOSE_A",
+      "variant": "OnePlus OnePlus 12 12 GB/256 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 33150,
+      "observed": 26470,
+      "observedMinusGetUpto": -6680,
+      "errWithBonus": -2056,
+      "errWithoutBonus": -2436
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM028_A",
+      "variant": "OnePlus OnePlus 13 16 GB/512 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 43950,
+      "observed": 33480,
+      "observedMinusGetUpto": -10470,
+      "errWithBonus": -1236,
+      "errWithoutBonus": -1616
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM028_CLOSE_A",
+      "variant": "OnePlus OnePlus 13 16 GB/512 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 43950,
+      "observed": 33480,
+      "observedMinusGetUpto": -10470,
+      "errWithBonus": -1236,
+      "errWithoutBonus": -1616
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM029_A",
+      "variant": "OnePlus OnePlus 15 12 GB/256 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 57250,
+      "observed": 44250,
+      "observedMinusGetUpto": -13000,
+      "errWithBonus": -2364,
+      "errWithoutBonus": -2744
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM029_CLOSE_A",
+      "variant": "OnePlus OnePlus 15 12 GB/256 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 57250,
+      "observed": 44250,
+      "observedMinusGetUpto": -13000,
+      "errWithBonus": -2364,
+      "errWithoutBonus": -2744
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM030_A",
+      "variant": "OnePlus OnePlus Nord 5 12 GB/256 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 24540,
+      "observed": 18560,
+      "observedMinusGetUpto": -5980,
+      "errWithBonus": -388,
+      "errWithoutBonus": -768
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM030_CLOSE_A",
+      "variant": "OnePlus OnePlus Nord 5 12 GB/256 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 24540,
+      "observed": 18560,
+      "observedMinusGetUpto": -5980,
+      "errWithBonus": -388,
+      "errWithoutBonus": -768
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM033_A",
+      "variant": "Xiaomi Xiaomi Mi A2 4 GB/64 GB",
+      "regime": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 2520,
+      "observed": 2500,
+      "observedMinusGetUpto": -20,
+      "errWithBonus": 400,
+      "errWithoutBonus": 20
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM033_CLOSE_A",
+      "variant": "Xiaomi Xiaomi Mi A2 4 GB/64 GB",
+      "regime": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 2520,
+      "observed": 2500,
+      "observedMinusGetUpto": -20,
+      "errWithBonus": 400,
+      "errWithoutBonus": 20
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM034_A",
+      "variant": "Xiaomi Xiaomi 14 CIVI 8 GB/256 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 18900,
+      "observed": 14590,
+      "observedMinusGetUpto": -4310,
+      "errWithBonus": -35,
+      "errWithoutBonus": -415
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM034_CLOSE_A",
+      "variant": "Xiaomi Xiaomi 14 CIVI 8 GB/256 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 18900,
+      "observed": 14590,
+      "observedMinusGetUpto": -4310,
+      "errWithBonus": -35,
+      "errWithoutBonus": -415
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM035_A",
+      "variant": "Xiaomi Xiaomi Redmi 11 Prime 4 GB/64 GB",
+      "regime": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 4600,
+      "observed": 4580,
+      "observedMinusGetUpto": -20,
+      "errWithBonus": 400,
+      "errWithoutBonus": 20
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM035_CLOSE_A",
+      "variant": "Xiaomi Xiaomi Redmi 11 Prime 4 GB/64 GB",
+      "regime": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 4600,
+      "observed": 4580,
+      "observedMinusGetUpto": -20,
+      "errWithBonus": 400,
+      "errWithoutBonus": 20
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM036_A",
+      "variant": "Xiaomi Xiaomi Redmi Note 9 Pro 4 GB/128 GB",
+      "regime": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 4990,
+      "observed": 4970,
+      "observedMinusGetUpto": -20,
+      "errWithBonus": 400,
+      "errWithoutBonus": 20
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM036_CLOSE_A",
+      "variant": "Xiaomi Xiaomi Redmi Note 9 Pro 4 GB/128 GB",
+      "regime": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 4990,
+      "observed": 4970,
+      "observedMinusGetUpto": -20,
+      "errWithBonus": 400,
+      "errWithoutBonus": 20
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM037_A",
+      "variant": "Xiaomi Xiaomi Redmi Note 10 Pro Max 6 GB/128 GB",
+      "regime": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 5970,
+      "observed": 5950,
+      "observedMinusGetUpto": -20,
+      "errWithBonus": 400,
+      "errWithoutBonus": 20
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM037_CLOSE_A",
+      "variant": "Xiaomi Xiaomi Redmi Note 10 Pro Max 6 GB/128 GB",
+      "regime": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 5970,
+      "observed": 5950,
+      "observedMinusGetUpto": -20,
+      "errWithBonus": 400,
+      "errWithoutBonus": 20
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM038_A",
+      "variant": "Xiaomi Xiaomi Redmi Note 12 Pro Plus 5G 8 GB/256 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 12490,
+      "observed": 9990,
+      "observedMinusGetUpto": -2500,
+      "errWithBonus": -367,
+      "errWithoutBonus": -747
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM038_CLOSE_A",
+      "variant": "Xiaomi Xiaomi Redmi Note 12 Pro Plus 5G 8 GB/256 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 12490,
+      "observed": 9990,
+      "observedMinusGetUpto": -2500,
+      "errWithBonus": -367,
+      "errWithoutBonus": -747
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM004_LIVE_A",
+      "variant": "Apple Apple iPhone 12 Pro 256 GB",
+      "regime": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:NOT_ASKED",
+      "getUpto": 24460,
+      "observed": 24760,
+      "observedMinusGetUpto": 300,
+      "errWithBonus": 80,
+      "errWithoutBonus": -300
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM004_LIVE_CLOSE_A",
+      "variant": "Apple Apple iPhone 12 Pro 256 GB",
+      "regime": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:NOT_ASKED",
+      "getUpto": 24460,
+      "observed": 24760,
+      "observedMinusGetUpto": 300,
+      "errWithBonus": 80,
+      "errWithoutBonus": -300
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM017_LIVE_A",
+      "variant": "Samsung Samsung Galaxy S23 FE 5G 8 GB/128 GB",
+      "regime": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:NOT_ASKED",
+      "getUpto": 18060,
+      "observed": 18040,
+      "observedMinusGetUpto": -20,
+      "errWithBonus": 400,
+      "errWithoutBonus": 20
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM017_LIVE_CLOSE_A",
+      "variant": "Samsung Samsung Galaxy S23 FE 5G 8 GB/128 GB",
+      "regime": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:NOT_ASKED",
+      "getUpto": 18060,
+      "observed": 18040,
+      "observedMinusGetUpto": -20,
+      "errWithBonus": 400,
+      "errWithoutBonus": 20
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM046_FINAL_A",
+      "variant": "Xiaomi Xiaomi 17 12 GB/512 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 57750,
+      "observed": 43720,
+      "observedMinusGetUpto": -14030,
+      "errWithBonus": 780,
+      "errWithoutBonus": 400
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM049_FINAL_A",
+      "variant": "Xiaomi Xiaomi Redmi Turbo 5 12 GB/256 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 26750,
+      "observed": 20240,
+      "observedMinusGetUpto": -6510,
+      "errWithBonus": 580,
+      "errWithoutBonus": 200
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM050_FINAL_A",
+      "variant": "Xiaomi Xiaomi Redmi Note 15 Pro Plus 5G 12 GB/512 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 29250,
+      "observed": 22130,
+      "observedMinusGetUpto": -7120,
+      "errWithBonus": -100,
+      "errWithoutBonus": -480
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM041_FINAL_A",
+      "variant": "Xiaomi Xiaomi Redmi K50i 5G 6 GB/128 GB",
+      "regime": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 8730,
+      "observed": 8710,
+      "observedMinusGetUpto": -20,
+      "errWithBonus": 400,
+      "errWithoutBonus": 20
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM031_FINAL_A",
+      "variant": "OnePlus OnePlus Nord CE 5 8 GB/256 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 19540,
+      "observed": 14780,
+      "observedMinusGetUpto": -4760,
+      "errWithBonus": -233,
+      "errWithoutBonus": -613
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM044_FINAL_A",
+      "variant": "Xiaomi Xiaomi 15 12 GB/512 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 37350,
+      "observed": 28270,
+      "observedMinusGetUpto": -9080,
+      "errWithBonus": 650,
+      "errWithoutBonus": 270
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM047_FINAL_A",
+      "variant": "Xiaomi Xiaomi 17 Ultra 16 GB/512 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:NOT_ASKED",
+      "getUpto": 75620,
+      "observed": 57250,
+      "observedMinusGetUpto": -18370,
+      "errWithBonus": 900,
+      "errWithoutBonus": 520
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM024_FINAL_A",
+      "variant": "OnePlus OnePlus 9 5G 8 GB/128 GB",
+      "regime": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 9710,
+      "observed": 9690,
+      "observedMinusGetUpto": -20,
+      "errWithBonus": 400,
+      "errWithoutBonus": 20
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM032_FINAL_A",
+      "variant": "OnePlus Oneplus Open 16 GB/512 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 51650,
+      "observed": 40310,
+      "observedMinusGetUpto": -11340,
+      "errWithBonus": 1214,
+      "errWithoutBonus": 834
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM039_FINAL_A",
+      "variant": "Xiaomi Xiaomi Redmi Note 15 Pro 5G 8 GB/128 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 21820,
+      "observed": 16500,
+      "observedMinusGetUpto": -5320,
+      "errWithBonus": 27,
+      "errWithoutBonus": -353
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM040_FINAL_A",
+      "variant": "Xiaomi Xiaomi Redmi 5 3 GB/32 GB",
+      "regime": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 1760,
+      "observed": 1740,
+      "observedMinusGetUpto": -20,
+      "errWithBonus": 400,
+      "errWithoutBonus": 20
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM042_FINAL_A",
+      "variant": "Xiaomi Xiaomi 14 12 GB/512 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 27400,
+      "observed": 21380,
+      "observedMinusGetUpto": -6020,
+      "errWithBonus": 0,
+      "errWithoutBonus": -380
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM045_FINAL_A",
+      "variant": "Xiaomi Xiaomi 15 Ultra 16 GB/512 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 59830,
+      "observed": 45290,
+      "observedMinusGetUpto": -14540,
+      "errWithBonus": 800,
+      "errWithoutBonus": 420
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM048_FINAL_A",
+      "variant": "Xiaomi Xiaomi 17T 12 GB/512 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 40750,
+      "observed": 30840,
+      "observedMinusGetUpto": -9910,
+      "errWithBonus": 670,
+      "errWithoutBonus": 290
+    },
+    {
+      "id": "owner-correction-2026-10-02:FM002_WNO_A",
+      "variant": "Apple Apple iPhone XS Max 256 GB",
+      "regime": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 12640,
+      "observed": 12620,
+      "observedMinusGetUpto": -20,
+      "errWithBonus": 400,
+      "errWithoutBonus": 20
+    },
+    {
+      "id": "owner-correction-2026-10-02:FM003_WNO_A",
+      "variant": "Apple Apple iPhone 11 Pro Max 256 GB",
+      "regime": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 19110,
+      "observed": 19090,
+      "observedMinusGetUpto": -20,
+      "errWithBonus": 400,
+      "errWithoutBonus": 20
+    },
+    {
+      "id": "owner-correction-2026-10-02:FM005_WNO_A",
+      "variant": "Apple Apple iPhone 14 256 GB",
+      "regime": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:NOT_ASKED",
+      "getUpto": 28430,
+      "observed": 28410,
+      "observedMinusGetUpto": -20,
+      "errWithBonus": 400,
+      "errWithoutBonus": 20
+    },
+    {
+      "id": "owner-correction-2026-10-02:FM007_WNO_A",
+      "variant": "Apple Apple iPhone 15 256 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:NOT_ASKED",
+      "getUpto": 44220,
+      "observed": 35900,
+      "observedMinusGetUpto": -8320,
+      "errWithBonus": -2372,
+      "errWithoutBonus": -2752
+    },
+    {
+      "id": "owner-correction-2026-10-02:FM009_WNO_A",
+      "variant": "Apple Apple iPhone 16 256 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:NOT_ASKED",
+      "getUpto": 54720,
+      "observed": 44400,
+      "observedMinusGetUpto": -10320,
+      "errWithBonus": -1359,
+      "errWithoutBonus": -1739
+    },
+    {
+      "id": "owner-correction-2026-10-02:FM013_WNO_A",
+      "variant": "Samsung Samsung Galaxy M32 4 GB/64 GB",
+      "regime": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 3570,
+      "observed": 3550,
+      "observedMinusGetUpto": -20,
+      "errWithBonus": 400,
+      "errWithoutBonus": 300
+    },
+    {
+      "id": "owner-correction-2026-10-02:FM014_WNO_A",
+      "variant": "Samsung Samsung Galaxy A50s 4 GB/128 GB",
+      "regime": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 2920,
+      "observed": 2900,
+      "observedMinusGetUpto": -20,
+      "errWithBonus": 400,
+      "errWithoutBonus": 300
+    },
+    {
+      "id": "owner-correction-2026-10-02:FM016_WNO_A",
+      "variant": "Samsung Samsung Galaxy S21 Ultra 5G 12 GB/256 GB",
+      "regime": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:NOT_ASKED",
+      "getUpto": 17130,
+      "observed": 17110,
+      "observedMinusGetUpto": -20,
+      "errWithBonus": 400,
+      "errWithoutBonus": 20
+    },
+    {
+      "id": "owner-correction-2026-10-02:FM024_CORR_A",
+      "variant": "OnePlus OnePlus 9 5G 8 GB/128 GB",
+      "regime": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 9710,
+      "observed": 9690,
+      "observedMinusGetUpto": -20,
+      "errWithBonus": 400,
+      "errWithoutBonus": 20
+    },
+    {
+      "id": "owner-correction-2026-10-02:FM032_CORR_A",
+      "variant": "OnePlus Oneplus Open 16 GB/512 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 51650,
+      "observed": 40310,
+      "observedMinusGetUpto": -11340,
+      "errWithBonus": 1214,
+      "errWithoutBonus": 834
+    },
+    {
+      "id": "owner-correction-2026-10-02:FM039_CORR_A",
+      "variant": "Xiaomi Xiaomi Redmi Note 15 Pro 5G 8 GB/128 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 21820,
+      "observed": 16500,
+      "observedMinusGetUpto": -5320,
+      "errWithBonus": 27,
+      "errWithoutBonus": -353
+    },
+    {
+      "id": "owner-correction-2026-10-02:FM040_CORR_A",
+      "variant": "Xiaomi Xiaomi Redmi 5 3 GB/32 GB",
+      "regime": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 1760,
+      "observed": 1740,
+      "observedMinusGetUpto": -20,
+      "errWithBonus": 400,
+      "errWithoutBonus": 20
+    },
+    {
+      "id": "owner-correction-2026-10-02:FM042_CORR_A",
+      "variant": "Xiaomi Xiaomi 14 12 GB/512 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 27400,
+      "observed": 21380,
+      "observedMinusGetUpto": -6020,
+      "errWithBonus": 0,
+      "errWithoutBonus": -380
+    },
+    {
+      "id": "owner-correction-2026-10-02:FM045_CORR_A",
+      "variant": "Xiaomi Xiaomi 15 Ultra 16 GB/512 GB",
+      "regime": "ASKED/ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 59830,
+      "observed": 45290,
+      "observedMinusGetUpto": -14540,
+      "errWithBonus": 800,
+      "errWithoutBonus": 420
+    },
+    {
+      "id": "owner-correction-2026-10-02:FM001_WNO_RETRY_A",
+      "variant": "Apple Apple iPhone 8 128 GB",
+      "regime": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 5850,
+      "observed": 5830,
+      "observedMinusGetUpto": -20,
+      "errWithBonus": 400,
+      "errWithoutBonus": 20
+    },
+    {
+      "id": "owner-correction-2026-10-02:FM037_BOXREF_A",
+      "variant": "Xiaomi Xiaomi Redmi Note 10 Pro Max 6 GB/128 GB",
+      "regime": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED",
+      "getUpto": 5970,
+      "observed": 5950,
+      "observedMinusGetUpto": -20,
+      "errWithBonus": 400,
+      "errWithoutBonus": 20
+    }
+  ],
+  "summary": [
+    {
+      "key": "ASKED/ASKED/NOT_ASKED charger:ASKED | Xiaomi Xiaomi 17 12 GB/512 GB",
+      "n": 7,
+      "observedMinusGetUpto": [
+        -15030,
+        -14030
+      ],
+      "errWithBonus": [
+        1780,
+        780
+      ],
+      "errWithoutBonus": [
+        1400,
+        400
+      ],
+      "verdict": "REMOVAL_HELPS"
+    },
+    {
+      "key": "ASKED/ASKED/NOT_ASKED charger:ASKED | Xiaomi Xiaomi Redmi Turbo 5 12 GB/256 GB",
+      "n": 7,
+      "observedMinusGetUpto": [
+        -7110,
+        -6510
+      ],
+      "errWithBonus": [
+        1180,
+        580
+      ],
+      "errWithoutBonus": [
+        800,
+        200
+      ],
+      "verdict": "REMOVAL_HELPS"
+    },
+    {
+      "key": "ASKED/ASKED/NOT_ASKED charger:ASKED | Xiaomi Xiaomi 17T 12 GB/512 GB",
+      "n": 2,
+      "observedMinusGetUpto": [
+        -10910,
+        -9910
+      ],
+      "errWithBonus": [
+        1670,
+        670
+      ],
+      "errWithoutBonus": [
+        1290,
+        290
+      ],
+      "verdict": "REMOVAL_HELPS"
+    },
+    {
+      "key": "ASKED/ASKED/NOT_ASKED charger:ASKED | Xiaomi Xiaomi Redmi Note 15 Pro Plus 5G 12 GB/512 GB",
+      "n": 6,
+      "observedMinusGetUpto": [
+        -7470,
+        -7120
+      ],
+      "errWithBonus": [
+        250,
+        -100
+      ],
+      "errWithoutBonus": [
+        -130,
+        -480
+      ],
+      "verdict": "MIXED"
+    },
+    {
+      "key": "ASKED/ASKED/NOT_ASKED charger:NOT_ASKED | Xiaomi Xiaomi 17 Ultra 16 GB/512 GB",
+      "n": 3,
+      "observedMinusGetUpto": [
+        -18370
+      ],
+      "errWithBonus": [
+        900
+      ],
+      "errWithoutBonus": [
+        520
+      ],
+      "verdict": "REMOVAL_HELPS"
+    },
+    {
+      "key": "ASKED/ASKED/NOT_ASKED charger:ASKED | Xiaomi Xiaomi 15 12 GB/512 GB",
+      "n": 3,
+      "observedMinusGetUpto": [
+        -9880,
+        -9080
+      ],
+      "errWithBonus": [
+        1450,
+        650
+      ],
+      "errWithoutBonus": [
+        1070,
+        270
+      ],
+      "verdict": "REMOVAL_HELPS"
+    },
+    {
+      "key": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED | OnePlus OnePlus 7 Pro 8 GB/256 GB",
+      "n": 2,
+      "observedMinusGetUpto": [
+        -20
+      ],
+      "errWithBonus": [
+        400
+      ],
+      "errWithoutBonus": [
+        20
+      ],
+      "verdict": "REMOVAL_HELPS"
+    },
+    {
+      "key": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED | OnePlus OnePlus Nord 8 GB/128 GB",
+      "n": 2,
+      "observedMinusGetUpto": [
+        -20
+      ],
+      "errWithBonus": [
+        400
+      ],
+      "errWithoutBonus": [
+        20
+      ],
+      "verdict": "REMOVAL_HELPS"
+    },
+    {
+      "key": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED | OnePlus OnePlus 8 Pro 8 GB/128 GB",
+      "n": 2,
+      "observedMinusGetUpto": [
+        -20
+      ],
+      "errWithBonus": [
+        400
+      ],
+      "errWithoutBonus": [
+        20
+      ],
+      "verdict": "REMOVAL_HELPS"
+    },
+    {
+      "key": "ASKED/ASKED/NOT_ASKED charger:ASKED | OnePlus OnePlus 12 12 GB/256 GB",
+      "n": 2,
+      "observedMinusGetUpto": [
+        -6680
+      ],
+      "errWithBonus": [
+        -2056
+      ],
+      "errWithoutBonus": [
+        -2436
+      ],
+      "verdict": "REMOVAL_HURTS (bonus compensates a low baseline)"
+    },
+    {
+      "key": "ASKED/ASKED/NOT_ASKED charger:ASKED | OnePlus OnePlus 13 16 GB/512 GB",
+      "n": 2,
+      "observedMinusGetUpto": [
+        -10470
+      ],
+      "errWithBonus": [
+        -1236
+      ],
+      "errWithoutBonus": [
+        -1616
+      ],
+      "verdict": "REMOVAL_HURTS (bonus compensates a low baseline)"
+    },
+    {
+      "key": "ASKED/ASKED/NOT_ASKED charger:ASKED | OnePlus OnePlus 15 12 GB/256 GB",
+      "n": 2,
+      "observedMinusGetUpto": [
+        -13000
+      ],
+      "errWithBonus": [
+        -2364
+      ],
+      "errWithoutBonus": [
+        -2744
+      ],
+      "verdict": "REMOVAL_HURTS (bonus compensates a low baseline)"
+    },
+    {
+      "key": "ASKED/ASKED/NOT_ASKED charger:ASKED | OnePlus OnePlus Nord 5 12 GB/256 GB",
+      "n": 2,
+      "observedMinusGetUpto": [
+        -5980
+      ],
+      "errWithBonus": [
+        -388
+      ],
+      "errWithoutBonus": [
+        -768
+      ],
+      "verdict": "REMOVAL_HURTS (bonus compensates a low baseline)"
+    },
+    {
+      "key": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED | Xiaomi Xiaomi Mi A2 4 GB/64 GB",
+      "n": 2,
+      "observedMinusGetUpto": [
+        -20
+      ],
+      "errWithBonus": [
+        400
+      ],
+      "errWithoutBonus": [
+        20
+      ],
+      "verdict": "REMOVAL_HELPS"
+    },
+    {
+      "key": "ASKED/ASKED/NOT_ASKED charger:ASKED | Xiaomi Xiaomi 14 CIVI 8 GB/256 GB",
+      "n": 2,
+      "observedMinusGetUpto": [
+        -4310
+      ],
+      "errWithBonus": [
+        -35
+      ],
+      "errWithoutBonus": [
+        -415
+      ],
+      "verdict": "REMOVAL_HURTS (bonus compensates a low baseline)"
+    },
+    {
+      "key": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED | Xiaomi Xiaomi Redmi 11 Prime 4 GB/64 GB",
+      "n": 2,
+      "observedMinusGetUpto": [
+        -20
+      ],
+      "errWithBonus": [
+        400
+      ],
+      "errWithoutBonus": [
+        20
+      ],
+      "verdict": "REMOVAL_HELPS"
+    },
+    {
+      "key": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED | Xiaomi Xiaomi Redmi Note 9 Pro 4 GB/128 GB",
+      "n": 2,
+      "observedMinusGetUpto": [
+        -20
+      ],
+      "errWithBonus": [
+        400
+      ],
+      "errWithoutBonus": [
+        20
+      ],
+      "verdict": "REMOVAL_HELPS"
+    },
+    {
+      "key": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED | Xiaomi Xiaomi Redmi Note 10 Pro Max 6 GB/128 GB",
+      "n": 3,
+      "observedMinusGetUpto": [
+        -20
+      ],
+      "errWithBonus": [
+        400
+      ],
+      "errWithoutBonus": [
+        20
+      ],
+      "verdict": "REMOVAL_HELPS"
+    },
+    {
+      "key": "ASKED/ASKED/NOT_ASKED charger:ASKED | Xiaomi Xiaomi Redmi Note 12 Pro Plus 5G 8 GB/256 GB",
+      "n": 2,
+      "observedMinusGetUpto": [
+        -2500
+      ],
+      "errWithBonus": [
+        -367
+      ],
+      "errWithoutBonus": [
+        -747
+      ],
+      "verdict": "REMOVAL_HURTS (bonus compensates a low baseline)"
+    },
+    {
+      "key": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:NOT_ASKED | Apple Apple iPhone 12 Pro 256 GB",
+      "n": 2,
+      "observedMinusGetUpto": [
+        300
+      ],
+      "errWithBonus": [
+        80
+      ],
+      "errWithoutBonus": [
+        -300
+      ],
+      "verdict": "REMOVAL_HURTS (bonus compensates a low baseline)"
+    },
+    {
+      "key": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:NOT_ASKED | Samsung Samsung Galaxy S23 FE 5G 8 GB/128 GB",
+      "n": 2,
+      "observedMinusGetUpto": [
+        -20
+      ],
+      "errWithBonus": [
+        400
+      ],
+      "errWithoutBonus": [
+        20
+      ],
+      "verdict": "REMOVAL_HELPS"
+    },
+    {
+      "key": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED | Xiaomi Xiaomi Redmi K50i 5G 6 GB/128 GB",
+      "n": 1,
+      "observedMinusGetUpto": [
+        -20
+      ],
+      "errWithBonus": [
+        400
+      ],
+      "errWithoutBonus": [
+        20
+      ],
+      "verdict": "REMOVAL_HELPS"
+    },
+    {
+      "key": "ASKED/ASKED/NOT_ASKED charger:ASKED | OnePlus OnePlus Nord CE 5 8 GB/256 GB",
+      "n": 1,
+      "observedMinusGetUpto": [
+        -4760
+      ],
+      "errWithBonus": [
+        -233
+      ],
+      "errWithoutBonus": [
+        -613
+      ],
+      "verdict": "REMOVAL_HURTS (bonus compensates a low baseline)"
+    },
+    {
+      "key": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED | OnePlus OnePlus 9 5G 8 GB/128 GB",
+      "n": 2,
+      "observedMinusGetUpto": [
+        -20
+      ],
+      "errWithBonus": [
+        400
+      ],
+      "errWithoutBonus": [
+        20
+      ],
+      "verdict": "REMOVAL_HELPS"
+    },
+    {
+      "key": "ASKED/ASKED/NOT_ASKED charger:ASKED | OnePlus Oneplus Open 16 GB/512 GB",
+      "n": 2,
+      "observedMinusGetUpto": [
+        -11340
+      ],
+      "errWithBonus": [
+        1214
+      ],
+      "errWithoutBonus": [
+        834
+      ],
+      "verdict": "REMOVAL_HELPS"
+    },
+    {
+      "key": "ASKED/ASKED/NOT_ASKED charger:ASKED | Xiaomi Xiaomi Redmi Note 15 Pro 5G 8 GB/128 GB",
+      "n": 2,
+      "observedMinusGetUpto": [
+        -5320
+      ],
+      "errWithBonus": [
+        27
+      ],
+      "errWithoutBonus": [
+        -353
+      ],
+      "verdict": "REMOVAL_HURTS (bonus compensates a low baseline)"
+    },
+    {
+      "key": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED | Xiaomi Xiaomi Redmi 5 3 GB/32 GB",
+      "n": 2,
+      "observedMinusGetUpto": [
+        -20
+      ],
+      "errWithBonus": [
+        400
+      ],
+      "errWithoutBonus": [
+        20
+      ],
+      "verdict": "REMOVAL_HELPS"
+    },
+    {
+      "key": "ASKED/ASKED/NOT_ASKED charger:ASKED | Xiaomi Xiaomi 14 12 GB/512 GB",
+      "n": 2,
+      "observedMinusGetUpto": [
+        -6020
+      ],
+      "errWithBonus": [
+        0
+      ],
+      "errWithoutBonus": [
+        -380
+      ],
+      "verdict": "REMOVAL_HURTS (bonus compensates a low baseline)"
+    },
+    {
+      "key": "ASKED/ASKED/NOT_ASKED charger:ASKED | Xiaomi Xiaomi 15 Ultra 16 GB/512 GB",
+      "n": 2,
+      "observedMinusGetUpto": [
+        -14540
+      ],
+      "errWithBonus": [
+        800
+      ],
+      "errWithoutBonus": [
+        420
+      ],
+      "verdict": "REMOVAL_HELPS"
+    },
+    {
+      "key": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED | Apple Apple iPhone XS Max 256 GB",
+      "n": 1,
+      "observedMinusGetUpto": [
+        -20
+      ],
+      "errWithBonus": [
+        400
+      ],
+      "errWithoutBonus": [
+        20
+      ],
+      "verdict": "REMOVAL_HELPS"
+    },
+    {
+      "key": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED | Apple Apple iPhone 11 Pro Max 256 GB",
+      "n": 1,
+      "observedMinusGetUpto": [
+        -20
+      ],
+      "errWithBonus": [
+        400
+      ],
+      "errWithoutBonus": [
+        20
+      ],
+      "verdict": "REMOVAL_HELPS"
+    },
+    {
+      "key": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:NOT_ASKED | Apple Apple iPhone 14 256 GB",
+      "n": 1,
+      "observedMinusGetUpto": [
+        -20
+      ],
+      "errWithBonus": [
+        400
+      ],
+      "errWithoutBonus": [
+        20
+      ],
+      "verdict": "REMOVAL_HELPS"
+    },
+    {
+      "key": "ASKED/ASKED/NOT_ASKED charger:NOT_ASKED | Apple Apple iPhone 15 256 GB",
+      "n": 1,
+      "observedMinusGetUpto": [
+        -8320
+      ],
+      "errWithBonus": [
+        -2372
+      ],
+      "errWithoutBonus": [
+        -2752
+      ],
+      "verdict": "REMOVAL_HURTS (bonus compensates a low baseline)"
+    },
+    {
+      "key": "ASKED/ASKED/NOT_ASKED charger:NOT_ASKED | Apple Apple iPhone 16 256 GB",
+      "n": 1,
+      "observedMinusGetUpto": [
+        -10320
+      ],
+      "errWithBonus": [
+        -1359
+      ],
+      "errWithoutBonus": [
+        -1739
+      ],
+      "verdict": "REMOVAL_HURTS (bonus compensates a low baseline)"
+    },
+    {
+      "key": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED | Samsung Samsung Galaxy M32 4 GB/64 GB",
+      "n": 1,
+      "observedMinusGetUpto": [
+        -20
+      ],
+      "errWithBonus": [
+        400
+      ],
+      "errWithoutBonus": [
+        300
+      ],
+      "verdict": "REMOVAL_HELPS"
+    },
+    {
+      "key": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED | Samsung Samsung Galaxy A50s 4 GB/128 GB",
+      "n": 1,
+      "observedMinusGetUpto": [
+        -20
+      ],
+      "errWithBonus": [
+        400
+      ],
+      "errWithoutBonus": [
+        300
+      ],
+      "verdict": "REMOVAL_HELPS"
+    },
+    {
+      "key": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:NOT_ASKED | Samsung Samsung Galaxy S21 Ultra 5G 12 GB/256 GB",
+      "n": 1,
+      "observedMinusGetUpto": [
+        -20
+      ],
+      "errWithBonus": [
+        400
+      ],
+      "errWithoutBonus": [
+        20
+      ],
+      "verdict": "REMOVAL_HELPS"
+    },
+    {
+      "key": "NOT_ASKED/NOT_ASKED/NOT_ASKED charger:ASKED | Apple Apple iPhone 8 128 GB",
+      "n": 1,
+      "observedMinusGetUpto": [
+        -20
+      ],
+      "errWithBonus": [
+        400
+      ],
+      "errWithoutBonus": [
+        20
+      ],
+      "verdict": "REMOVAL_HELPS"
+    }
+  ],
+  "recommendation": {
+    "accessoryCorrectionEligibleVariants": [
+      "OnePlus OnePlus 7 Pro 8 GB/256 GB",
+      "OnePlus OnePlus Nord 8 GB/128 GB",
+      "OnePlus OnePlus 8 Pro 8 GB/128 GB",
+      "Xiaomi Xiaomi Mi A2 4 GB/64 GB",
+      "Xiaomi Xiaomi Redmi 11 Prime 4 GB/64 GB",
+      "Xiaomi Xiaomi Redmi Note 9 Pro 4 GB/128 GB",
+      "Xiaomi Xiaomi Redmi Note 10 Pro Max 6 GB/128 GB",
+      "Samsung Samsung Galaxy S23 FE 5G 8 GB/128 GB",
+      "Xiaomi Xiaomi Redmi K50i 5G 6 GB/128 GB",
+      "OnePlus OnePlus 9 5G 8 GB/128 GB",
+      "Xiaomi Xiaomi Redmi 5 3 GB/32 GB",
+      "Apple Apple iPhone XS Max 256 GB",
+      "Apple Apple iPhone 11 Pro Max 256 GB",
+      "Apple Apple iPhone 14 256 GB",
+      "Samsung Samsung Galaxy M32 4 GB/64 GB",
+      "Samsung Samsung Galaxy A50s 4 GB/128 GB",
+      "Samsung Samsung Galaxy S21 Ultra 5G 12 GB/256 GB",
+      "Apple Apple iPhone 8 128 GB"
+    ],
+    "rule": "Exact variant has a verified clean box-present observation on the all-NOT_ASKED warranty/bill/age route with clean Selling = Get Upto - 20",
+    "excludedNotAsked": [
+      {
+        "variant": "Apple Apple iPhone 12 Pro 256 GB",
+        "observedMinusGetUpto": [
+          300
+        ]
+      },
+      {
+        "variant": "Xiaomi Xiaomi 14 Ultra 16 GB/512 GB",
+        "reason": "route-disputed rows excluded from the fixture"
+      }
+    ],
+    "askedRegime": "Keep the legacy box bonus: on 11 of 18 exact variants it compensates a low warranty-No retention baseline; removing it there worsens error.",
+    "samsungNote": "A50s and M32 retain +300 after removal (separate Samsung low-end offset); correction still reduces error 400 -> 300."
+  }
+}

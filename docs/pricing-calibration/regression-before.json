@@ -1,0 +1,572 @@
+[
+  {
+    "brand": "Apple",
+    "model": "Apple iPhone 15",
+    "storage": "512GB",
+    "reference": 45570,
+    "source": "materialized_snapshot",
+    "combo": 0,
+    "cashifyEq": 34540,
+    "fhoneify": 36540
+  },
+  {
+    "brand": "Apple",
+    "model": "Apple iPhone 15",
+    "storage": "512GB",
+    "reference": 45570,
+    "source": "materialized_snapshot",
+    "combo": 1,
+    "cashifyEq": 19134,
+    "fhoneify": 20282
+  },
+  {
+    "brand": "Apple",
+    "model": "Apple iPhone 15",
+    "storage": "512GB",
+    "reference": 45570,
+    "source": "materialized_snapshot",
+    "combo": 2,
+    "cashifyEq": 26000,
+    "fhoneify": 27560
+  },
+  {
+    "brand": "Apple",
+    "model": "Apple iPhone 14",
+    "storage": "128GB",
+    "reference": 27220,
+    "source": "materialized_snapshot",
+    "combo": 0,
+    "cashifyEq": 20785,
+    "fhoneify": 22032
+  },
+  {
+    "brand": "Apple",
+    "model": "Apple iPhone 14",
+    "storage": "128GB",
+    "reference": 27220,
+    "source": "materialized_snapshot",
+    "combo": 1,
+    "cashifyEq": 10358,
+    "fhoneify": 10979
+  },
+  {
+    "brand": "Apple",
+    "model": "Apple iPhone 14",
+    "storage": "128GB",
+    "reference": 27220,
+    "source": "materialized_snapshot",
+    "combo": 2,
+    "cashifyEq": 14663,
+    "fhoneify": 15543
+  },
+  {
+    "brand": "Apple",
+    "model": "Apple iPhone 16 Pro",
+    "storage": "256GB",
+    "reference": 76920,
+    "source": "materialized_snapshot",
+    "combo": 0,
+    "cashifyEq": 57736,
+    "fhoneify": 59736
+  },
+  {
+    "brand": "Apple",
+    "model": "Apple iPhone 16 Pro",
+    "storage": "256GB",
+    "reference": 76920,
+    "source": "materialized_snapshot",
+    "combo": 1,
+    "cashifyEq": 31008,
+    "fhoneify": 32248
+  },
+  {
+    "brand": "Apple",
+    "model": "Apple iPhone 16 Pro",
+    "storage": "256GB",
+    "reference": 76920,
+    "source": "materialized_snapshot",
+    "combo": 2,
+    "cashifyEq": 47412,
+    "fhoneify": 49308
+  },
+  {
+    "brand": "Apple",
+    "model": "Apple iPhone 13",
+    "storage": "128GB",
+    "reference": 23710,
+    "source": "materialized_snapshot",
+    "combo": 0,
+    "cashifyEq": 18153,
+    "fhoneify": 19242
+  },
+  {
+    "brand": "Apple",
+    "model": "Apple iPhone 13",
+    "storage": "128GB",
+    "reference": 23710,
+    "source": "materialized_snapshot",
+    "combo": 1,
+    "cashifyEq": 11204,
+    "fhoneify": 11876
+  },
+  {
+    "brand": "Apple",
+    "model": "Apple iPhone 13",
+    "storage": "128GB",
+    "reference": 23710,
+    "source": "materialized_snapshot",
+    "combo": 2,
+    "cashifyEq": 14599,
+    "fhoneify": 15475
+  },
+  {
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S24 5G",
+    "storage": "8 GB/256 GB",
+    "reference": 34710,
+    "source": "materialized_snapshot",
+    "combo": 0,
+    "cashifyEq": 27318,
+    "fhoneify": 28957
+  },
+  {
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S24 5G",
+    "storage": "8 GB/256 GB",
+    "reference": 34710,
+    "source": "materialized_snapshot",
+    "combo": 1,
+    "cashifyEq": 13310,
+    "fhoneify": 14109
+  },
+  {
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S24 5G",
+    "storage": "8 GB/256 GB",
+    "reference": 34710,
+    "source": "materialized_snapshot",
+    "combo": 2,
+    "cashifyEq": 21324,
+    "fhoneify": 22603
+  },
+  {
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S23 Ultra 5G",
+    "storage": "12 GB/256 GB",
+    "reference": 34210,
+    "source": "materialized_snapshot",
+    "combo": 0,
+    "cashifyEq": 26930,
+    "fhoneify": 28546
+  },
+  {
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S23 Ultra 5G",
+    "storage": "12 GB/256 GB",
+    "reference": 34210,
+    "source": "materialized_snapshot",
+    "combo": 1,
+    "cashifyEq": 12327,
+    "fhoneify": 13067
+  },
+  {
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S23 Ultra 5G",
+    "storage": "12 GB/256 GB",
+    "reference": 34210,
+    "source": "materialized_snapshot",
+    "combo": 2,
+    "cashifyEq": 18965,
+    "fhoneify": 20103
+  },
+  {
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A54 5G",
+    "storage": "8 GB/128 GB",
+    "reference": 12690,
+    "source": "materialized_snapshot",
+    "combo": 0,
+    "cashifyEq": 10007,
+    "fhoneify": 10808
+  },
+  {
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A54 5G",
+    "storage": "8 GB/128 GB",
+    "reference": 12690,
+    "source": "materialized_snapshot",
+    "combo": 1,
+    "cashifyEq": 6012,
+    "fhoneify": 6493
+  },
+  {
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A54 5G",
+    "storage": "8 GB/128 GB",
+    "reference": 12690,
+    "source": "materialized_snapshot",
+    "combo": 2,
+    "cashifyEq": 8154,
+    "fhoneify": 8806
+  },
+  {
+    "brand": "OnePlus",
+    "model": "OnePlus 13",
+    "storage": "16 GB/512 GB",
+    "reference": 43300,
+    "source": "materialized_snapshot",
+    "combo": 0,
+    "cashifyEq": 31773,
+    "fhoneify": 33679
+  },
+  {
+    "brand": "OnePlus",
+    "model": "OnePlus 13",
+    "storage": "16 GB/512 GB",
+    "reference": 43300,
+    "source": "materialized_snapshot",
+    "combo": 1,
+    "cashifyEq": 18274,
+    "fhoneify": 19370
+  },
+  {
+    "brand": "OnePlus",
+    "model": "OnePlus 13",
+    "storage": "16 GB/512 GB",
+    "reference": 43300,
+    "source": "materialized_snapshot",
+    "combo": 2,
+    "cashifyEq": 24395,
+    "fhoneify": 25859
+  },
+  {
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 4",
+    "storage": "12 GB/256 GB",
+    "reference": 20540,
+    "source": "materialized_snapshot",
+    "combo": 0,
+    "cashifyEq": 15272,
+    "fhoneify": 16188
+  },
+  {
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 4",
+    "storage": "12 GB/256 GB",
+    "reference": 20540,
+    "source": "materialized_snapshot",
+    "combo": 1,
+    "cashifyEq": 8868,
+    "fhoneify": 9400
+  },
+  {
+    "brand": "OnePlus",
+    "model": "OnePlus Nord 4",
+    "storage": "12 GB/256 GB",
+    "reference": 20540,
+    "source": "materialized_snapshot",
+    "combo": 2,
+    "cashifyEq": 11772,
+    "fhoneify": 12478
+  },
+  {
+    "brand": "Oppo",
+    "model": "OPPO Reno11 5G",
+    "storage": "8 GB/256 GB",
+    "reference": 16670,
+    "source": "materialized_snapshot",
+    "combo": 0,
+    "cashifyEq": 12249,
+    "fhoneify": 13229
+  },
+  {
+    "brand": "Oppo",
+    "model": "OPPO Reno11 5G",
+    "storage": "8 GB/256 GB",
+    "reference": 16670,
+    "source": "materialized_snapshot",
+    "combo": 1,
+    "cashifyEq": 6433,
+    "fhoneify": 6948
+  },
+  {
+    "brand": "Oppo",
+    "model": "OPPO Reno11 5G",
+    "storage": "8 GB/256 GB",
+    "reference": 16670,
+    "source": "materialized_snapshot",
+    "combo": 2,
+    "cashifyEq": 9282,
+    "fhoneify": 10025
+  },
+  {
+    "brand": "Oppo",
+    "model": "OPPO Find X8 Pro 5G",
+    "storage": "16 GB/512 GB",
+    "reference": 45320,
+    "source": "materialized_snapshot",
+    "combo": 0,
+    "cashifyEq": 32648,
+    "fhoneify": 34607
+  },
+  {
+    "brand": "Oppo",
+    "model": "OPPO Find X8 Pro 5G",
+    "storage": "16 GB/512 GB",
+    "reference": 45320,
+    "source": "materialized_snapshot",
+    "combo": 1,
+    "cashifyEq": 16837,
+    "fhoneify": 17847
+  },
+  {
+    "brand": "Oppo",
+    "model": "OPPO Find X8 Pro 5G",
+    "storage": "16 GB/512 GB",
+    "reference": 45320,
+    "source": "materialized_snapshot",
+    "combo": 2,
+    "cashifyEq": 24581,
+    "fhoneify": 26056
+  },
+  {
+    "brand": "Vivo",
+    "model": "Vivo V30 Pro",
+    "storage": "8 GB/256 GB",
+    "reference": 20940,
+    "source": "materialized_snapshot",
+    "combo": 0,
+    "cashifyEq": 16085,
+    "fhoneify": 17050
+  },
+  {
+    "brand": "Vivo",
+    "model": "Vivo V30 Pro",
+    "storage": "8 GB/256 GB",
+    "reference": 20940,
+    "source": "materialized_snapshot",
+    "combo": 1,
+    "cashifyEq": 9332,
+    "fhoneify": 9892
+  },
+  {
+    "brand": "Vivo",
+    "model": "Vivo V30 Pro",
+    "storage": "8 GB/256 GB",
+    "reference": 20940,
+    "source": "materialized_snapshot",
+    "combo": 2,
+    "cashifyEq": 12630,
+    "fhoneify": 13388
+  },
+  {
+    "brand": "Realme",
+    "model": "Realme 12 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "reference": 15210,
+    "source": "materialized_snapshot",
+    "combo": 0,
+    "cashifyEq": 11788,
+    "fhoneify": 12731
+  },
+  {
+    "brand": "Realme",
+    "model": "Realme 12 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "reference": 15210,
+    "source": "materialized_snapshot",
+    "combo": 1,
+    "cashifyEq": 7225,
+    "fhoneify": 7803
+  },
+  {
+    "brand": "Realme",
+    "model": "Realme 12 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "reference": 15210,
+    "source": "materialized_snapshot",
+    "combo": 2,
+    "cashifyEq": 9734,
+    "fhoneify": 10513
+  },
+  {
+    "brand": "Google",
+    "model": "Google Pixel 8",
+    "storage": "8 GB/128 GB",
+    "reference": 24800,
+    "source": "materialized_snapshot",
+    "combo": 0,
+    "cashifyEq": 18980,
+    "fhoneify": 20119
+  },
+  {
+    "brand": "Google",
+    "model": "Google Pixel 8",
+    "storage": "8 GB/128 GB",
+    "reference": 24800,
+    "source": "materialized_snapshot",
+    "combo": 1,
+    "cashifyEq": 11540,
+    "fhoneify": 12232
+  },
+  {
+    "brand": "Google",
+    "model": "Google Pixel 8",
+    "storage": "8 GB/128 GB",
+    "reference": 24800,
+    "source": "materialized_snapshot",
+    "combo": 2,
+    "cashifyEq": 15632,
+    "fhoneify": 16570
+  },
+  {
+    "brand": "Nothing",
+    "model": "Nothing Phone 2",
+    "storage": "12 GB/256 GB",
+    "reference": 20210,
+    "source": "materialized_snapshot",
+    "combo": 0,
+    "cashifyEq": 18165,
+    "fhoneify": 19255
+  },
+  {
+    "brand": "Nothing",
+    "model": "Nothing Phone 2",
+    "storage": "12 GB/256 GB",
+    "reference": 20210,
+    "source": "materialized_snapshot",
+    "combo": 1,
+    "cashifyEq": 9450,
+    "fhoneify": 10017
+  },
+  {
+    "brand": "Nothing",
+    "model": "Nothing Phone 2",
+    "storage": "12 GB/256 GB",
+    "reference": 20210,
+    "source": "materialized_snapshot",
+    "combo": 2,
+    "cashifyEq": 13719,
+    "fhoneify": 14542
+  },
+  {
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 13 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "reference": 13550,
+    "source": "materialized_snapshot",
+    "combo": 0,
+    "cashifyEq": 10407,
+    "fhoneify": 11240
+  },
+  {
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 13 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "reference": 13550,
+    "source": "materialized_snapshot",
+    "combo": 1,
+    "cashifyEq": 5494,
+    "fhoneify": 5934
+  },
+  {
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 13 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "reference": 13550,
+    "source": "materialized_snapshot",
+    "combo": 2,
+    "cashifyEq": 7900,
+    "fhoneify": 8532
+  },
+  {
+    "brand": "Xiaomi",
+    "model": "Xiaomi 17T",
+    "storage": "12 GB/512 GB",
+    "reference": 39360,
+    "source": "materialized_snapshot",
+    "combo": 0,
+    "cashifyEq": 29900,
+    "fhoneify": 31694
+  },
+  {
+    "brand": "Xiaomi",
+    "model": "Xiaomi 17T",
+    "storage": "12 GB/512 GB",
+    "reference": 39360,
+    "source": "materialized_snapshot",
+    "combo": 1,
+    "cashifyEq": 15435,
+    "fhoneify": 16361
+  },
+  {
+    "brand": "Xiaomi",
+    "model": "Xiaomi 17T",
+    "storage": "12 GB/512 GB",
+    "reference": 39360,
+    "source": "materialized_snapshot",
+    "combo": 2,
+    "cashifyEq": 22520,
+    "fhoneify": 23871
+  },
+  {
+    "brand": "Xiaomi",
+    "model": "Xiaomi 17 Ultra",
+    "storage": "16 GB/512 GB",
+    "reference": 75370,
+    "source": "materialized_snapshot",
+    "combo": 0,
+    "cashifyEq": 56908,
+    "fhoneify": 58908
+  },
+  {
+    "brand": "Xiaomi",
+    "model": "Xiaomi 17 Ultra",
+    "storage": "16 GB/512 GB",
+    "reference": 75370,
+    "source": "materialized_snapshot",
+    "combo": 1,
+    "cashifyEq": 29209,
+    "fhoneify": 30377
+  },
+  {
+    "brand": "Xiaomi",
+    "model": "Xiaomi 17 Ultra",
+    "storage": "16 GB/512 GB",
+    "reference": 75370,
+    "source": "materialized_snapshot",
+    "combo": 2,
+    "cashifyEq": 42776,
+    "fhoneify": 44487
+  },
+  {
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Turbo 5",
+    "storage": "12 GB/256 GB",
+    "reference": 26080,
+    "source": "materialized_snapshot",
+    "combo": 0,
+    "cashifyEq": 19940,
+    "fhoneify": 21136
+  },
+  {
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Turbo 5",
+    "storage": "12 GB/256 GB",
+    "reference": 26080,
+    "source": "materialized_snapshot",
+    "combo": 1,
+    "cashifyEq": 10356,
+    "fhoneify": 10977
+  },
+  {
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Turbo 5",
+    "storage": "12 GB/256 GB",
+    "reference": 26080,
+    "source": "materialized_snapshot",
+    "combo": 2,
+    "cashifyEq": 15050,
+    "fhoneify": 15953
+  }
+]

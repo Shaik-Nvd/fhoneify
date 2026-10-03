@@ -21575,7 +21575,7 @@ export const SEED_DEVICES: any[] = [
     "id": "xiaomi-redmi-10-power-8-128",
     "brand": "Xiaomi",
     "model": "Xiaomi Redmi 10 Power",
-    "storage": "128 GB",
+    "storage": "8 GB/128 GB",
     "ram": "8 GB",
     "color": "Default",
     "basePrice": 5120
@@ -21584,7 +21584,7 @@ export const SEED_DEVICES: any[] = [
     "id": "xiaomi-14-12-512",
     "brand": "Xiaomi",
     "model": "Xiaomi 14",
-    "storage": "512 GB",
+    "storage": "12 GB/512 GB",
     "ram": "12 GB",
     "color": "Default",
     "basePrice": 27210,
@@ -21594,7 +21594,7 @@ export const SEED_DEVICES: any[] = [
     "id": "xiaomi-14-ultra-16-512",
     "brand": "Xiaomi",
     "model": "Xiaomi 14 Ultra",
-    "storage": "512 GB",
+    "storage": "16 GB/512 GB",
     "ram": "16 GB",
     "color": "Default",
     "basePrice": 37780,
@@ -21604,7 +21604,7 @@ export const SEED_DEVICES: any[] = [
     "id": "xiaomi-13-pro-5g-12-256",
     "brand": "Xiaomi",
     "model": "Xiaomi 13 Pro 5G",
-    "storage": "256 GB",
+    "storage": "12 GB/256 GB",
     "ram": "12 GB",
     "color": "Default",
     "basePrice": 25190,
@@ -21973,5 +21973,155 @@ export const SEED_DEVICES: any[] = [
     "ram": "16 GB",
     "color": "Default",
     "basePrice": 142469
+  },
+  {
+    "id": "xiaomi-redmi-note-11-4-gb-64-gb",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-11-4-gb-64-gb"
+  },
+  {
+    "id": "xiaomi-redmi-note-11-6-gb-128-gb",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-11-6-gb-128-gb"
+  },
+  {
+    "id": "xiaomi-redmi-note-11-pro-6-gb-128-gb",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11 Pro",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-11-pro-6-gb-128-gb"
+  },
+  {
+    "id": "xiaomi-redmi-note-11-pro-8-gb-128-gb",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-11-pro-8-gb-128-gb"
+  },
+  {
+    "id": "xiaomi-redmi-note-11-se-6-gb-64-gb",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11 SE",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-11-se-6-gb-64-gb"
+  },
+  {
+    "id": "xiaomi-redmi-note-12-6-gb-64-gb",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 12",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-12-6-gb-64-gb"
+  },
+  {
+    "id": "xiaomi-redmi-note-12-6-gb-128-gb",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 12",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-12-6-gb-128-gb"
+  },
+  {
+    "id": "xiaomi-redmi-note-14-se-5g-6-gb-128-gb",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 14 SE 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-14-se-5g-6-gb-128-gb"
+  },
+  {
+    "id": "xiaomi-redmi-note-15-se-5g-6-gb-128-gb",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 15 SE 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-15-se-5g-6-gb-128-gb"
+  },
+  {
+    "id": "xiaomi-redmi-note-15-se-5g-8-gb-128-gb",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 15 SE 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-15-se-5g-8-gb-128-gb"
+  },
+  {
+    "id": "xiaomi-redmi-note-15-se-5g-8-gb-256-gb",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 15 SE 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-15-se-5g-8-gb-256-gb"
+  },
+  {
+    "id": "xiaomi-redmi-note-17-5g-6-gb-128-gb",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 17 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-17-5g-6-gb-128-gb"
+  },
+  {
+    "id": "xiaomi-redmi-note-17-5g-8-gb-128-gb",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 17 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-17-5g-8-gb-128-gb"
+  },
+  {
+    "id": "xiaomi-redmi-note-17-pro-5g-8-gb-256-gb",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 17 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-17-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "xiaomi-redmi-note-17-pro-5g-8-gb-128-gb",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 17 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-17-pro-5g-8-gb-128-gb"
   }
 ];

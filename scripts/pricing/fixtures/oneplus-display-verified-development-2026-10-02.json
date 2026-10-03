@@ -1,0 +1,136 @@
+{
+  "version": "oneplus-display-research/2026-10-02",
+  "note": "Disabled research preview. Exact variants, exact verified routes and single measured display faults only; every other condition, variant, regime or combination is unsupported.",
+  "specs": [
+    {
+      "deviceId": "FM025",
+      "brand": "OnePlus",
+      "model": "OnePlus Nord",
+      "storage": "8 GB/128 GB",
+      "validatedGetUpto": 8340,
+      "modes": {
+        "warranty": "NOT_ASKED",
+        "validBill": "NOT_ASKED",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "NOT_ASKED",
+        "box": "ASKED",
+        "charger": "ASKED",
+        "sPen": "NOT_ASKED"
+      },
+      "baseline": {
+        "kind": "reference_minus_observed_offset",
+        "offset": 20
+      },
+      "componentCosts": {
+        "display_lines": 4680,
+        "display_spots": 4680
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "display_lines"
+        ],
+        [
+          "display_spots"
+        ]
+      ],
+      "calibratedAt": "2026-10-02T11:19:55.770Z",
+      "evidenceQuality": "VERIFIED_TRACE_SCREENSHOT",
+      "source": [
+        {
+          "experimentId": "FM025_A",
+          "observed": 8320,
+          "reference": 8340,
+          "collectedAt": "2026-10-02T11:19:10.517Z",
+          "screenshotSha256": "77d7d811df46be7c6106a7e5a0bbbfa6b271369c3a321c365d5a51a99b068cfc"
+        },
+        {
+          "experimentId": "FM025_B",
+          "observed": 3640,
+          "reference": 8340,
+          "collectedAt": "2026-10-02T11:19:26.248Z",
+          "screenshotSha256": "d4c58e9530502b889b73fdd8569db460f22095c821a36e6572fc0f1ad1c5f4ba"
+        },
+        {
+          "experimentId": "FM025_C",
+          "observed": 3640,
+          "reference": 8340,
+          "collectedAt": "2026-10-02T11:19:41.968Z",
+          "screenshotSha256": "d4c58e9530502b889b73fdd8569db460f22095c821a36e6572fc0f1ad1c5f4ba"
+        },
+        {
+          "experimentId": "FM025_CLOSE_A",
+          "observed": 8320,
+          "reference": 8340,
+          "collectedAt": "2026-10-02T11:19:55.770Z",
+          "screenshotSha256": "77d7d811df46be7c6106a7e5a0bbbfa6b271369c3a321c365d5a51a99b068cfc"
+        }
+      ]
+    },
+    {
+      "deviceId": "FM032",
+      "brand": "OnePlus",
+      "model": "Oneplus Open",
+      "storage": "16 GB/512 GB",
+      "validatedGetUpto": 51650,
+      "modes": {
+        "warranty": "ASKED",
+        "validBill": "ASKED",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "NOT_ASKED",
+        "box": "ASKED",
+        "charger": "ASKED",
+        "sPen": "NOT_ASKED"
+      },
+      "baseline": {
+        "kind": "conditional_retention",
+        "retention": 0.7804453049370764
+      },
+      "componentCosts": {
+        "display_lines": 28610,
+        "display_spots": 28610
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "display_lines"
+        ],
+        [
+          "display_spots"
+        ]
+      ],
+      "calibratedAt": "2026-10-02T17:33:05.206Z",
+      "evidenceQuality": "VERIFIED_TRACE_SCREENSHOT",
+      "source": [
+        {
+          "experimentId": "FM032_FINAL_A",
+          "observed": 40310,
+          "reference": 51650,
+          "collectedAt": "2026-10-02T11:57:13.350Z",
+          "screenshotSha256": "7777412d78fbb94f72860ba2733a0e34d893b66be9e5b00a3422de658e4c97f9"
+        },
+        {
+          "experimentId": "FM032_FINAL_B",
+          "observed": 11700,
+          "reference": 51650,
+          "collectedAt": "2026-10-02T11:57:39.151Z",
+          "screenshotSha256": "80ae486cc3d0fa7b6dea136335189b9044bdaf50217e5a014f13b1c11fa66cfb"
+        },
+        {
+          "experimentId": "FM032_CORR_A",
+          "observed": 40310,
+          "reference": 51650,
+          "collectedAt": "2026-10-02T17:32:39.326Z",
+          "screenshotSha256": "f1744892801922d81d6383ebd9f610828ba2c424d252491c6ff3344f2c02bf1d"
+        },
+        {
+          "experimentId": "FM032_CORR_C",
+          "observed": 11700,
+          "reference": 51650,
+          "collectedAt": "2026-10-02T17:33:05.206Z",
+          "screenshotSha256": "e2faee247108aba9c6dab938dafd8cf3f2aad53951c86bcbe9ff6b7fd0c5ab0a"
+        }
+      ]
+    }
+  ]
+}
