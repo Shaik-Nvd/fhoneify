@@ -1,0 +1,101 @@
+{
+  "version": "claude-owner-correction-update/2026-10-03",
+  "note": "Supersedes owner-correction-2026-10-02 verdicts for these devices only, using verified controls collected in release-review-2026-10-03 (collector worktree). Raw records unchanged.",
+  "esimQuestion": {
+    "exactText": "How many eSIMs does your device support?",
+    "options": [
+      "Single eSIM",
+      "Dual eSIM"
+    ],
+    "source": "release-review-2026-10-03/FM006_RC_WNO_OPEN-routing.json",
+    "ownerAnswerOnRecord": "single SIM",
+    "ambiguity": "The question asks device capability, not usage; owner answer \"single SIM\" does not state the capability for iPhone 14 Pro Max 256GB, 15 Pro Max 512GB, 16 Pro Max 512GB, 17 256GB, 17 Pro Max 512GB. Owner confirmation required before these controls are treated as matched."
+  },
+  "sPen": {
+    "exactText": "Original S Pen",
+    "intended": "Selected (original S Pen Yes) where asked",
+    "finding": "First attempts left it Not selected (INVALID_ANSWER_MISMATCH); retries completed with it Selected; NOT_ASKED preserved for devices without the question."
+  },
+  "rows": [
+    {
+      "deviceId": "FM006",
+      "model": "Apple iPhone 14 Pro Max",
+      "variant": "256 GB",
+      "control": {
+        "experimentId": "FM006_RC_WNO_OPEN",
+        "getUpto": 46010,
+        "clean": 45990,
+        "collectedAt": "2026-10-02T19:23:07.901Z",
+        "evidenceSha256": "1df561275ae308d0842e9a61ac0c4fba3661bdb6cec5a86fa13a3fe750aacb54"
+      },
+      "testerA": 44070,
+      "testerGetUpto": 45480,
+      "previousVerdict": "UNCERTAIN",
+      "updatedVerdict": "UNCERTAIN (Get Upto changed)"
+    },
+    {
+      "deviceId": "FM019",
+      "model": "Samsung Galaxy S26 Ultra",
+      "variant": "12 GB/512 GB",
+      "control": {
+        "experimentId": "FM019_RC_WNO_SPEN_RETRY",
+        "getUpto": 86250,
+        "clean": 67040,
+        "collectedAt": "2026-10-02T19:29:01.442Z",
+        "evidenceSha256": "cc2144a4203a62dc2a8a3753e2b3594c88fe464278cd9d7201c37f1c61a9a7a7"
+      },
+      "testerA": 67040,
+      "testerGetUpto": 86250,
+      "previousVerdict": "UNCERTAIN",
+      "updatedVerdict": "PRESERVED_NUMERICALLY"
+    },
+    {
+      "deviceId": "FM020",
+      "model": "Samsung Galaxy Z Fold5",
+      "variant": "12 GB/256 GB",
+      "control": {
+        "experimentId": "FM020_RC_WNO_OPEN",
+        "getUpto": 49740,
+        "clean": 37820,
+        "collectedAt": "2026-10-02T19:24:18.733Z",
+        "evidenceSha256": "e46385d37870ecb6e438ab53e06cd06234840ed20fdf7d33c688f2ad9c2cb167"
+      },
+      "testerA": 37820,
+      "testerGetUpto": 49740,
+      "previousVerdict": "UNCERTAIN",
+      "updatedVerdict": "PRESERVED_NUMERICALLY"
+    },
+    {
+      "deviceId": "FM021",
+      "model": "Samsung Galaxy Z Flip6 5G",
+      "variant": "12 GB/256 GB",
+      "control": {
+        "experimentId": "FM021_RC_WNO_OPEN",
+        "getUpto": 38700,
+        "clean": 29230,
+        "collectedAt": "2026-10-02T19:24:43.023Z",
+        "evidenceSha256": "dc0412ab4b0d5d73eb1bedaf7fb5b89bf3f20b75a7a4a9cadd66afc9d39df94b"
+      },
+      "testerA": 29230,
+      "testerGetUpto": 38700,
+      "previousVerdict": "UNCERTAIN",
+      "updatedVerdict": "PRESERVED_NUMERICALLY"
+    },
+    {
+      "deviceId": "FM022",
+      "model": "Samsung Galaxy Note 10 Lite",
+      "variant": "6 GB/128 GB",
+      "control": {
+        "experimentId": "FM022_RC_WNO_SPEN_RETRY",
+        "getUpto": 5600,
+        "clean": 5580,
+        "collectedAt": "2026-10-02T19:29:25.033Z",
+        "evidenceSha256": "f3b13137bedd6f377bda3025f853b9c61178c114622d9b28f8a54f42c16ef0d6"
+      },
+      "testerA": 5580,
+      "testerGetUpto": 5600,
+      "previousVerdict": "UNCERTAIN",
+      "updatedVerdict": "PRESERVED_NUMERICALLY"
+    }
+  ]
+}
