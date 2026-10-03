@@ -2,7 +2,7 @@ import { MessageCircle, ShieldCheck } from 'lucide-react';
 
 export default function WarrantyClaim() {
   return (
-    <div className="rounded-3xl border border-border bg-surface p-6 shadow-sm sm:p-8">
+    <div className="rounded-3xl border border-border bg-surface p-6 shadow-token-sm sm:p-8">
       <div className="flex items-center gap-3">
         <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gold-soft text-gold">
           <ShieldCheck aria-hidden="true" className="h-5 w-5" />

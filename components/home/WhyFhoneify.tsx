@@ -1,12 +1,11 @@
-import { MousePointerClick, ReceiptText, ShieldCheck, Tag, Truck, Wallet } from 'lucide-react';
+import { MousePointerClick, Timer, Truck, Wallet } from 'lucide-react';
 
+// Only claims documented for Fhoneify (see Fhoneify_User_Manual.md, "Sell").
 const FEATURES = [
-  { Icon: Tag, title: 'Best prices', desc: 'Objective AI-based pricing' },
-  { Icon: Wallet, title: 'Instant payment', desc: 'Instant money transfer in your preferred mode at time of pick up or store drop off' },
-  { Icon: MousePointerClick, title: 'Simple & convenient', desc: 'Check price, schedule pickup & get paid' },
-  { Icon: Truck, title: 'Free doorstep pickup', desc: 'No fees for pickup. Currently operating exclusively in Bengaluru' },
-  { Icon: ShieldCheck, title: 'Factory-grade data wipe', desc: '100% safe and data security guaranteed' },
-  { Icon: ReceiptText, title: 'Valid purchase invoice', desc: 'Genuine bill of sale' },
+  { Icon: Timer, title: 'Instant quote', desc: 'Answer a few questions about your phone and see its value straight away.' },
+  { Icon: Truck, title: 'Free doorstep pickup', desc: 'No fees for pickup. Currently operating exclusively in Bengaluru.' },
+  { Icon: Wallet, title: 'Instant payment', desc: 'Paid instantly via UPI once your phone is verified at your doorstep.' },
+  { Icon: MousePointerClick, title: 'Simple & convenient', desc: 'Check price, schedule pickup & get paid.' },
 ];
 
 export default function WhyFhoneify() {
@@ -18,7 +17,7 @@ export default function WhyFhoneify() {
             Why sell with Fhoneify
           </h2>
           <p className="mt-3 max-w-md text-muted md:text-lg">
-            A fair price, a pickup at your door and your data wiped before the phone goes anywhere.
+            An instant quote, a free pickup at your door and payment before your phone leaves your hands.
           </p>
         </div>
 

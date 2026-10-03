@@ -45,6 +45,15 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  // The mobile menu only exists below 1024px; close it if the viewport grows
+  // past that so the scroll lock and focus trap can't outlive it.
+  useEffect(() => {
+    const desktop = window.matchMedia('(min-width: 1024px)');
+    const onChange = () => { if (desktop.matches) setIsMobileMenuOpen(false); };
+    desktop.addEventListener('change', onChange);
+    return () => desktop.removeEventListener('change', onChange);
+  }, []);
+
   // Close menus whenever the route changes.
   useEffect(() => {
     setIsMobileMenuOpen(false);
@@ -67,8 +76,42 @@ export default function Navbar() {
   }, [isMobileMenuOpen, openMenu]);
 
   useEffect(() => {
-    if (isMobileMenuOpen) sheetRef.current?.querySelector<HTMLElement>('a, button')?.focus();
+    if (!isMobileMenuOpen) return;
+    sheetRef.current?.querySelector<HTMLElement>('a, button')?.focus();
+
+    // Keep Tab inside the open menu (its toggle button plus the sheet).
+    const onTab = (e: KeyboardEvent) => {
+      if (e.key !== 'Tab' || !sheetRef.current || !menuButtonRef.current) return;
+      const items = [menuButtonRef.current, ...sheetRef.current.querySelectorAll<HTMLElement>('a[href], button:not([disabled])')];
+      const first = items[0];
+      const last = items[items.length - 1];
+      const active = document.activeElement as HTMLElement | null;
+      if (!active || !items.includes(active)) {
+        e.preventDefault();
+        first.focus();
+      } else if (e.shiftKey && active === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && active === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+    document.addEventListener('keydown', onTab);
+
+    // Lock the page behind the menu; the scroll position is kept and restored.
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', onTab);
+      document.body.style.overflow = previousOverflow;
+    };
   }, [isMobileMenuOpen]);
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+    menuButtonRef.current?.focus();
+  };
 
   // Hide the D2C Navbar on Partner and ITAD pages
   if (pathname?.startsWith('/partner') || pathname?.startsWith('/itad')) {
@@ -85,9 +128,9 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b transition-[background-color,border-color,box-shadow] duration-200 ${
+      className={`bar-solid sticky top-0 z-50 border-b transition-[background-color,border-color,box-shadow] duration-200 ${
         scrolled || isMobileMenuOpen
-          ? 'border-border bg-[color-mix(in_srgb,var(--background)_86%,transparent)] shadow-sm backdrop-blur-md'
+          ? 'border-border bg-[color-mix(in_srgb,var(--background)_86%,transparent)] shadow-token-sm backdrop-blur-md'
           : 'border-transparent bg-background'
       }`}
     >
@@ -139,7 +182,7 @@ export default function Navbar() {
                   </button>
                   {openMenu === category.id && category.items && (
                     <div id={`menu-${category.id}`} className="absolute left-1/2 top-full w-48 -translate-x-1/2 pt-2">
-                      <ul className="rounded-xl border border-border bg-background p-1.5 shadow-lg">
+                      <ul className="rounded-xl border border-border bg-background p-1.5 shadow-token-lg">
                         {category.items.map((item) => (
                           <li key={item.href}>
                             <Link
@@ -191,7 +234,7 @@ export default function Navbar() {
               Login
             </Link>
           )}
-          <Link href="/quote" className="btn-primary ml-1 no-underline">
+          <Link href="/quote" className="btn-primary ml-1 whitespace-nowrap no-underline">
             Sell your phone
             <ArrowRight aria-hidden="true" className="h-4 w-4" />
           </Link>
@@ -219,7 +262,7 @@ export default function Navbar() {
       {isMobileMenuOpen && (
         <div
           aria-hidden="true"
-          onClick={() => setIsMobileMenuOpen(false)}
+          onClick={closeMobileMenu}
           className="absolute inset-x-0 top-full h-[100dvh] bg-black/50 lg:hidden"
         />
       )}
@@ -227,7 +270,7 @@ export default function Navbar() {
         <div
           id="mobile-menu"
           ref={sheetRef}
-          className="absolute inset-x-0 top-full max-h-[calc(100dvh-4rem)] overflow-y-auto border-b border-border bg-background px-4 pb-6 pt-2 shadow-lg lg:hidden"
+          className="absolute inset-x-0 top-full max-h-[calc(100dvh-4rem)] overflow-y-auto border-b border-border bg-background px-4 pb-6 pt-2 shadow-token-lg lg:hidden"
         >
           <ul className="flex flex-col">
             {NAV_CATEGORIES.map((cat) =>
@@ -295,7 +338,7 @@ export default function Navbar() {
                 </button>
               </>
             ) : (
-              <Link href="/auth" onClick={() => setIsMobileMenuOpen(false)} className="btn-outline h-12 text-base no-underline">
+              <Link href="/auth" onClick={() => setIsMobileMenuOpen(false)} className="btn-outline h-12 !text-base no-underline">
                 Login / Register
               </Link>
             )}

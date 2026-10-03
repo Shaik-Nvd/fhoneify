@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 export default function ClosingCta() {
   return (
     <section aria-labelledby="closing-title" className="mx-auto max-w-7xl px-4 pb-16 md:px-6 md:pb-24">
-      <div className="relative overflow-hidden rounded-[28px] bg-[#0f0e0c] px-6 py-12 text-center text-[#f5f2ea] shadow-lg sm:px-10 md:py-16">
+      <div className="relative overflow-hidden rounded-[28px] bg-[#0f0e0c] px-6 py-12 text-center text-[#f5f2ea] shadow-token-lg sm:px-10 md:py-16">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute left-1/2 top-0 h-[140%] w-[90%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(212,175,55,0.22),transparent)]"
@@ -16,7 +16,7 @@ export default function ClosingCta() {
         <div className="relative mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <Link
             href="/quote"
-            className="btn-cta w-full bg-[#d4af37] text-[#15110a] no-underline hover:bg-[#e6c35a] hover:text-[#15110a] sm:w-auto"
+            className="btn-cta w-full !bg-[#d4af37] !text-[#15110a] no-underline hover:!bg-[#e6c35a] sm:w-auto"
           >
             Sell your phone
             <ArrowRight aria-hidden="true" className="h-5 w-5" />

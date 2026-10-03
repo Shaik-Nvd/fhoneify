@@ -34,7 +34,7 @@ export default function BrandPicker() {
           <li key={brand.name}>
             <Link
               href={`/quote?brand=${encodeURIComponent(brand.name)}`}
-              className="group flex h-full flex-col items-center gap-3 rounded-2xl border border-border bg-surface p-3 pb-3.5 text-foreground no-underline shadow-sm transition-[border-color,box-shadow,transform] duration-200 hover:-translate-y-0.5 hover:border-gold hover:text-foreground hover:shadow-md sm:p-4"
+              className="group flex h-full flex-col items-center gap-3 rounded-2xl border border-border bg-surface p-3 pb-3.5 text-foreground no-underline shadow-token-sm transition-[border-color,box-shadow,transform] duration-200 hover:-translate-y-0.5 hover:border-gold hover:text-foreground hover:shadow-token-md sm:p-4"
             >
               <span className="flex aspect-[16/10] w-full items-center justify-center overflow-hidden rounded-xl bg-white ring-1 ring-black/5">
                 <Image src={brand.logo} alt="" width={96} height={96} className="h-[74%] w-auto object-contain" />

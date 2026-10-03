@@ -31,9 +31,9 @@ const config: Config = {
         display: ['var(--font-display)', 'Georgia', 'serif'],
       },
       boxShadow: {
-        sm: 'var(--shadow-sm)',
-        md: 'var(--shadow-md)',
-        lg: 'var(--shadow-lg)',
+        'token-sm': 'var(--shadow-sm)',
+        'token-md': 'var(--shadow-md)',
+        'token-lg': 'var(--shadow-lg)',
         gold: '0 4px 20px rgba(212, 175, 55, 0.15)',
         'gold-lg': '0 8px 30px rgba(212, 175, 55, 0.25)',
       },

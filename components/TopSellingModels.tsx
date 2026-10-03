@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
-import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight, Smartphone } from 'lucide-react';
 import Image from 'next/image';
 import api from '@/lib/api';
 
@@ -34,6 +34,7 @@ export default function TopSellingModels() {
   // Get Upto comes only from the server (ReferencePrice + uplift).
   const [getUpto, setGetUpto] = useState<Record<string, number>>({});
   const [pricesSettled, setPricesSettled] = useState(false);
+  const [brokenImages, setBrokenImages] = useState<Record<string, true>>({});
   const scrollRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
@@ -95,17 +96,24 @@ export default function TopSellingModels() {
             <li key={item.id} className="w-[min(72%,240px)] shrink-0 snap-start sm:w-[240px]">
               <Link
                 href={quoteHref(item.brand, item.model)}
-                className="group relative flex h-full flex-col rounded-2xl border border-border bg-surface p-4 text-foreground no-underline shadow-sm transition-[border-color,box-shadow,transform] duration-200 hover:-translate-y-0.5 hover:border-gold hover:text-foreground hover:shadow-md"
+                className="group relative flex h-full flex-col rounded-2xl border border-border bg-surface p-4 text-foreground no-underline shadow-token-sm transition-[border-color,box-shadow,transform] duration-200 hover:-translate-y-0.5 hover:border-gold hover:text-foreground hover:shadow-token-md"
               >
                 <span className="relative block aspect-square w-full overflow-hidden rounded-xl bg-white">
-                  <Image
-                    src={item.image}
-                    alt=""
-                    fill
-                    className="object-contain p-5 transition-transform duration-300 group-hover:scale-[1.03]"
-                    sizes="240px"
-                    priority={i < 2}
-                  />
+                  {brokenImages[item.id] ? (
+                    <span className="flex h-full w-full items-center justify-center text-[#b8ad95]">
+                      <Smartphone aria-hidden="true" className="h-14 w-14" strokeWidth={1.25} />
+                    </span>
+                  ) : (
+                    <Image
+                      src={item.image}
+                      alt=""
+                      fill
+                      className="object-contain p-5 transition-transform duration-300 group-hover:scale-[1.03]"
+                      sizes="240px"
+                      priority={i < 2}
+                      onError={() => setBrokenImages((prev) => ({ ...prev, [item.id]: true }))}
+                    />
+                  )}
                 </span>
                 <span className="mt-4 block text-base font-semibold leading-snug">{item.brand} {item.model}</span>
                 <span className="mt-0.5 block text-sm text-muted">{item.storage}</span>
@@ -117,7 +125,7 @@ export default function TopSellingModels() {
                     ) : pricesSettled ? (
                       <span className="text-sm font-semibold text-foreground">Check price</span>
                     ) : (
-                      <span aria-label="Loading price" className="skeleton mt-1 block h-6 w-24" />
+                      <span className="skeleton mt-1 block h-6 w-24"><span className="sr-only">Loading price</span></span>
                     )}
                   </span>
                   <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gold text-on-gold transition-transform duration-200 group-hover:translate-x-0.5">

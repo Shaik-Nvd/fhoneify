@@ -27,7 +27,7 @@ export default function ProcessSteps() {
               {i < STEPS.length - 1 && (
                 <span aria-hidden="true" className="absolute bottom-[-2.5rem] left-6 top-12 w-px bg-border md:hidden" />
               )}
-              <span className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-border bg-background text-gold shadow-sm">
+              <span className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-border bg-background text-gold shadow-token-sm">
                 <Icon aria-hidden="true" className="h-5 w-5" />
               </span>
               <div>
@@ -39,7 +39,7 @@ export default function ProcessSteps() {
           ))}
         </ol>
 
-        <Link href="/quote" className="btn-primary mt-12 h-12 px-6 text-[0.95rem] no-underline">
+        <Link href="/quote" className="btn-primary mt-12 h-12 !px-6 !text-[0.95rem] no-underline">
           Start with a free quote
           <ArrowRight aria-hidden="true" className="h-4 w-4" />
         </Link>

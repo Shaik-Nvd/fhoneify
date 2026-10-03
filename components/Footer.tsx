@@ -82,7 +82,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-border">
-        <p className="mx-auto max-w-7xl px-4 py-5 text-xs text-muted md:px-6">© {new Date().getFullYear()} Fhoneify. All rights reserved.</p>
+        <p suppressHydrationWarning className="mx-auto max-w-7xl px-4 py-5 text-xs text-muted md:px-6">© {new Date().getFullYear()} Fhoneify. All rights reserved.</p>
       </div>
     </footer>
   );

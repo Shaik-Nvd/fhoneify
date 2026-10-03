@@ -4,7 +4,6 @@ import ProcessSteps from '@/components/home/ProcessSteps';
 import WhyFhoneify from '@/components/home/WhyFhoneify';
 import ClosingCta from '@/components/home/ClosingCta';
 import TopSellingModels from '@/components/TopSellingModels';
-import CustomerStories from '@/components/CustomerStories';
 import FAQs from '@/components/FAQs';
 import WarrantyClaim from '@/components/WarrantyClaim';
 
@@ -18,7 +17,6 @@ export default function LandingPage() {
       <ProcessSteps />
       <TopSellingModels />
       <WhyFhoneify />
-      <CustomerStories />
 
       <section aria-labelledby="faq-title" className="mx-auto max-w-7xl px-4 py-16 md:px-6 md:py-20">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr] lg:gap-16">

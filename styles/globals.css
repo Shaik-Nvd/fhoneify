@@ -117,7 +117,8 @@ button {
 input,
 textarea,
 select {
-  @apply rounded-lg border px-4 py-3 text-sm transition-all duration-150;
+  /* 16px on phones: iOS zooms into any focused field smaller than that. */
+  @apply rounded-lg border px-4 py-3 text-base transition-all duration-150 md:text-sm;
   background-color: var(--background);
   border-color: var(--border);
   color: var(--foreground);
@@ -135,6 +136,16 @@ textarea::placeholder {
   opacity: 0.85;
 }
 
+/* Fields explicitly sized below 16px (utility classes or inline rem values in
+   the quote flow) are raised on phones; larger fields such as OTP boxes keep
+   their size. */
+@media (max-width: 767px) {
+  :is(input, textarea, select):is(.text-xs, .text-sm),
+  :is(input, textarea, select)[style*='font-size: 0.'] {
+    font-size: 16px !important;
+  }
+}
+
 select option {
   background-color: var(--surface);
   color: var(--foreground);
@@ -147,7 +158,7 @@ select option {
 
 /* Buttons */
 .btn {
-  @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl px-5 text-sm font-semibold;
+  @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 text-sm font-semibold;
   min-height: 44px;
   transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease, box-shadow 200ms ease, transform 160ms ease;
   touch-action: manipulation;
@@ -179,7 +190,7 @@ select option {
 
 /* Large primary call to action (hero, closing band) */
 .btn-cta {
-  @apply btn-primary text-base;
+  @apply btn-primary whitespace-nowrap text-base;
   min-height: 56px;
   padding: 0 1.75rem;
   border-radius: 14px;
@@ -490,4 +501,14 @@ select option {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+  /* Loading spinners convey state, not decoration: keep them turning. */
+  .animate-spin {
+    animation-duration: 1s !important;
+    animation-iteration-count: infinite !important;
+  }
+}
+
+/* Translucent bars use color-mix(); older Safari gets a solid bar instead. */
+@supports not (background: color-mix(in srgb, red 50%, blue)) {
+  .bar-solid { background-color: var(--background) !important; }
 }

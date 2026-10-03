@@ -6,16 +6,12 @@ const FAQ_ITEMS = [
     a: 'Our smart AI-based pricing engine evaluates your phone based on its make, model, age, and condition. Simply answer a few quick questions about your device to get an instant, competitive quote.'
   },
   {
-    q: 'What should I do if my old phone is not turning on?',
-    a: 'We accept dead phones as well! When generating your quote, simply select the option indicating the device does not turn on. Our team will still evaluate it and offer a fair value for its salvageable components.'
-  },
-  {
     q: 'Can I cancel my sale if I change my mind?',
-    a: 'Yes, absolutely. You are under no obligation to sell until the pickup executive physically inspects and collects your device. If you change your mind before the handover, you can cancel the request from your dashboard for free.'
+    a: 'Yes, absolutely. You are under no obligation to sell until the pickup executive physically inspects and collects your device, so you can change your mind at any point before the handover.'
   },
   {
     q: 'How and when will I get paid?',
-    a: 'You receive your payment instantly at the time of pickup! Our executive will transfer the agreed amount via UPI, IMPS, or your preferred payment method directly to your account before leaving with the device.'
+    a: 'You receive your payment instantly at the time of pickup! Our executive will transfer the agreed amount via UPI or bank transfer directly to your account before leaving with the device.'
   }
 ];
 

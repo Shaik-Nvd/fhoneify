@@ -65,7 +65,7 @@ export default PhoneModel;
 function Chip({ className, z, icon, label }: { className: string; z: number; icon: React.ReactNode; label: string }) {
   return (
     <div
-      className={`phone-chip absolute flex items-center gap-[0.55em] whitespace-nowrap rounded-[0.9em] border border-border bg-background px-[0.85em] py-[0.6em] text-[0.82em] font-semibold text-foreground shadow-lg ${className}`}
+      className={`phone-chip absolute flex items-center gap-[0.55em] whitespace-nowrap rounded-[0.9em] border border-border bg-background px-[0.85em] py-[0.6em] text-[0.82em] font-semibold text-foreground shadow-token-lg ${className}`}
       style={{ '--z': `${z}px` } as React.CSSProperties}
     >
       <span className="flex h-[1.9em] w-[1.9em] items-center justify-center rounded-full bg-gold-soft text-gold">{icon}</span>

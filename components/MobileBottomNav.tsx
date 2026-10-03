@@ -17,7 +17,7 @@ export default function MobileBottomNav() {
   return (
     <nav
       aria-label="Quick navigation"
-      className="fixed bottom-0 left-0 z-50 flex w-full items-stretch justify-around border-t border-border bg-[color-mix(in_srgb,var(--surface)_94%,transparent)] px-2 pt-1.5 backdrop-blur-md md:hidden"
+      className="bar-solid fixed bottom-0 left-0 z-50 flex w-full items-stretch justify-around border-t border-border bg-[color-mix(in_srgb,var(--surface)_94%,transparent)] px-2 pt-1.5 backdrop-blur-md md:hidden"
       style={{ paddingBottom: 'max(env(safe-area-inset-bottom, 0px), 8px)' }}
     >
       {NAV_ITEMS.map(({ name, path, Icon, primary }) => {
@@ -33,7 +33,7 @@ export default function MobileBottomNav() {
           >
             <span
               className={`flex h-7 items-center justify-center rounded-full transition-colors ${
-                primary ? 'w-12 bg-gold text-on-gold' : 'w-7'
+                primary ? (isActive ? 'w-12 bg-gold text-on-gold' : 'w-12 bg-gold-soft text-gold') : 'w-7'
               }`}
             >
               <Icon aria-hidden="true" className="h-[18px] w-[18px]" strokeWidth={isActive || primary ? 2.25 : 1.9} />

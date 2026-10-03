@@ -1,13 +1,13 @@
 import Link from 'next/link';
-import { ArrowRight, ShieldCheck, Star, Truck, Wallet } from 'lucide-react';
+import { ArrowRight, MapPin, Star, Truck, Wallet } from 'lucide-react';
 import HeroPhone from './HeroPhone';
 
 const GOOGLE_REVIEWS_URL = 'https://www.google.com/search?q=fhoneify#lrd=0x3bae17bb4da7d305:0x238a115b32aa0950,1,,,,';
 
 const TRUST = [
   { Icon: Truck, label: 'Free doorstep pickup' },
-  { Icon: Wallet, label: 'Paid by UPI at pickup' },
-  { Icon: ShieldCheck, label: 'Factory-grade data wipe' },
+  { Icon: Wallet, label: 'Paid instantly via UPI' },
+  { Icon: MapPin, label: 'Serving Bengaluru' },
 ];
 
 export default function Hero() {
@@ -27,14 +27,9 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1.5 text-[0.8rem] font-medium text-muted no-underline transition-colors hover:border-gold hover:text-foreground"
           >
-            <span className="flex items-center gap-0.5 text-[#e8a317]" aria-hidden="true">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} className="h-3.5 w-3.5 fill-current" />
-              ))}
-            </span>
-            <span>
-              <span className="font-semibold text-foreground">4.9</span> from 37 Google reviews
-            </span>
+            <Star aria-hidden="true" className="h-3.5 w-3.5 fill-current text-[#e8a317]" />
+            <span>Read our reviews on Google</span>
+            <ArrowRight aria-hidden="true" className="h-3.5 w-3.5" />
           </a>
 
           <h1 className="font-display text-balance text-[2.6rem] font-medium leading-[1.02] tracking-[-0.03em] text-foreground sm:text-[3.4rem] lg:text-[4.4rem]">
@@ -43,7 +38,7 @@ export default function Hero() {
           </h1>
 
           <p className="mt-5 max-w-[34rem] text-[1.05rem] leading-relaxed text-muted sm:text-lg">
-            Answer a few quick questions for an instant quote. We pick your phone up for free across Bengaluru and pay you before we leave.
+            Answer a few quick questions for an instant quote. We pick your phone up for free across Bengaluru and pay you instantly via UPI once it&apos;s verified at your doorstep.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5">
