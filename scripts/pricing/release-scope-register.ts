@@ -18,7 +18,7 @@ import routeFixture from './fixtures/release-route-evidence-2026-10-02.json';
 import savedProduction from './fixtures/release-saved-production-inputs-2026-10-02.json';
 import dryRun from './fixtures/claude-reference-dry-run-2026-10-03.json';
 import { createPricingService, RELEASE_CANDIDATE_PRICING_VERSION } from '../../lib/pricing/pricingService';
-import { findCatalogDevice } from '../../lib/pricing/catalog';
+import { findCatalogDevice, type CatalogDevice } from '../../lib/pricing/catalog';
 import { RC_ALLOWLIST } from '../../lib/pricing/releaseCandidate';
 import { isBoxIncludedIdentity } from '../../lib/pricing/accessoryBasis';
 import { isQuestionMode, type QuestionnaireSemantics } from '../../lib/pricing/questionnaireSemantics';
@@ -51,7 +51,7 @@ function catalogDevice(brand: string, model: string, storage: string) {
   return findCatalogDevice(brand, model, brand === 'Apple' ? appleStorage(storage) : storage);
 }
 /** One isolated service per call: inputs never leak between rows. */
-function serviceFor(kind: Scenario, device: { brand: string; model: string; storage: string }, pricingMode: 'legacy' | 'release-candidate',
+function serviceFor(kind: Scenario, device: CatalogDevice, pricingMode: 'legacy' | 'release-candidate',
   captured?: { getUpto: number; route: { warranty: string; validBill: string; mobileAge: string } }, log?: string[]) {
   const records = new Map<string, ReferencePriceRecord>();
   const profiles = new InMemoryQuestionnaireProfileStore();
@@ -83,7 +83,7 @@ function serviceFor(kind: Scenario, device: { brand: string; model: string; stor
     logger: { info(o: any) { if (o?.reason) log?.push(o.reason); }, warn() {}, error() {} },
   });
 }
-async function price(kind: Scenario, device: { brand: string; model: string; storage: string }, pricingMode: 'legacy' | 'release-candidate', diagnostics: unknown,
+async function price(kind: Scenario, device: CatalogDevice, pricingMode: 'legacy' | 'release-candidate', diagnostics: unknown,
   captured?: Parameters<typeof serviceFor>[3]) {
   const log: string[] = [];
   const q = await serviceFor(kind, device, pricingMode, captured, log).quote({ ...device, diagnostics });
@@ -95,7 +95,7 @@ async function price(kind: Scenario, device: { brand: string; model: string; sto
     accessoryBasis: q.internal.accessoryBasis, rule: rc?.kind === 'VERIFIED' ? rc.evidence : null };
 }
 
-const CLEAN = { calls: true, touch: true, originalScreen: true, defects: [] as string[], screenCondition: 'No scratches on screen',
+const CLEAN = { calls: true, touch: true, originalScreen: true, defects: [] as string[], screenCondition: null as string | null, // the UI sends null unless a screen defect is ticked
   screenSpots: 'No spots on screen', screenLines: 'No line(s) on Display', screenDiscoloration: 'No Discoloration',
   bodyScratches: 'No scratches', bodyDents: 'No dents', bodyPanel: 'No defect on side or back panel', bodyBent: 'Phone not bent',
   hardware: [] as string[], accessories: ['box', 'charger'], warranty: null as boolean | null, validBill: null as boolean | null, eSim: null, mobileAge: null };
@@ -107,10 +107,11 @@ const COMPONENT: Record<string, Partial<typeof CLEAN>> = {
   body_heavy: { defects: ['body_scratch'], bodyScratches: 'More than 2 scratches' },
   body_dents: { defects: ['body_scratch'], bodyDents: 'Major dent(s) or more than 2' },
 };
-function routeAnswers(route: WorkbookRouteEvidence | undefined, extra: Partial<typeof CLEAN> = {}) {
-  const asked = route?.semantics.warrantyMode === 'ASKED';
+/** Warranty No / bill Yes where asked (route, else the saved profile), box and charger present. */
+function routeAnswers(route: WorkbookRouteEvidence | undefined, extra: Partial<typeof CLEAN> = {}, profile?: { warrantyMode?: string; billMode?: string } | null) {
+  const warranty = route?.semantics.warrantyMode ?? profile?.warrantyMode, bill = route?.semantics.billMode ?? profile?.billMode;
   return { ...CLEAN, accessories: route?.chargerMode === 'NOT_ASKED' ? ['box'] : ['box', 'charger'],
-    warranty: asked ? false : null, validBill: route?.semantics.billMode === 'ASKED' ? true : null, ...extra };
+    warranty: warranty === 'ASKED' ? false : null, validBill: bill === 'ASKED' ? true : null, ...extra };
 }
 const pct = (e: number, o: number) => Math.abs(e) / o * 100;
 const round2 = (n: number | null) => n == null ? null : Math.round(n * 100) / 100;
@@ -164,13 +165,17 @@ async function register() {
       : spec?.family === 'fresh-glass' && (spec as any).cleanRetention > 1 ? 'INSPECTION_HEADLINE_BLOCK'
       : spec ? 'CANDIDATE' : isBoxIncludedIdentity(device) ? 'ACCESSORY_ONLY'
       : device.model === 'Xiaomi Redmi Note 15 Pro Plus 5G' ? 'LEGACY_FALLBACK_HARDWARE_INSPECTION' : 'LEGACY_FALLBACK';
-    const components = spec && 'componentCosts' in spec ? Object.keys(spec.componentCosts) : spec?.family === 'fresh-glass' ? ['screen_heavy', 'glass_cracked'] : ['screen_heavy'];
+    const components = spec && 'componentCosts' in spec ? Object.keys(spec.componentCosts) : spec?.family === 'fresh-glass' ? ['screen_heavy', 'glass_cracked'] : ['screen_heavy', 'glass_cracked', 'body_heavy', 'body_dents'];
     const conditions: Record<string, any> = {};
     if (device) for (const kind of ['saved', 'overlay'] as const) {
       const c: Record<string, any> = {};
-      c.clean = await price(kind, device, 'release-candidate', routeAnswers(route));
-      for (const comp of components) c[comp] = await price(kind, device, 'release-candidate', routeAnswers(route, COMPONENT[comp]));
-      c.missingBox = await price(kind, device, 'release-candidate', routeAnswers(route, { accessories: route?.chargerMode === 'NOT_ASKED' ? [] : ['charger'] }));
+      c.clean = await price(kind, device, 'release-candidate', routeAnswers(route, {}, q));
+      for (const comp of components) {
+        c[comp] = await price(kind, device, 'release-candidate', routeAnswers(route, COMPONENT[comp], q));
+        c[comp + ':legacyMode'] = await price(kind, device, 'legacy', routeAnswers(route, COMPONENT[comp], q));
+      }
+      c.missingBox = await price(kind, device, 'release-candidate', routeAnswers(route, { accessories: route?.chargerMode === 'NOT_ASKED' ? [] : ['charger'] }, q));
+      c['clean:legacyMode'] = await price(kind, device, 'legacy', routeAnswers(route, {}, q));
       conditions[kind] = c;
     }
     const live = ref ? overlay.get(ref.deviceKey) : undefined;
