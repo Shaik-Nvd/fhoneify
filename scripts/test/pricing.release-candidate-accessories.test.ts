@@ -1,7 +1,8 @@
 /**
  * Release-candidate accessory basis (lib/pricing/accessoryBasis.ts): default
- * legacy pricing is unchanged; in RC mode the all-NOT_ASKED route drops the
- * double-counted box bonus, other routes keep it, and versions are separate.
+ * legacy pricing is unchanged; RC accessory accounting requires a measured
+ * exact variant, compatible inputs and verified route. NOT_ASKED alone grants
+ * no correction. Missing accessories remain unsupported.
  */
 import assert from 'node:assert/strict';
 import { createPricingService, RELEASE_CANDIDATE_PRICING_VERSION, type PricingServiceDeps } from '../../lib/pricing/pricingService';
