@@ -40,6 +40,7 @@ const fixtureDevices = [
   ['OnePlus', 'OnePlus Nord', '8 GB/128 GB', 8340],
   ['OnePlus', 'Oneplus Open', '16 GB/512 GB', 51650],
   ['Xiaomi', 'Xiaomi Redmi Note 15 Pro Plus 5G', '12 GB/512 GB', 23980],
+  ['Xiaomi', 'Xiaomi 14 Ultra', '16 GB/512 GB', 37980],
   ['Xiaomi', 'Xiaomi Redmi Note 10 Pro Max', '6 GB/128 GB', 9490],
   ['Apple', 'Apple iPhone 12 Pro', '6 GB/256 GB', 24460],
   ['Samsung', 'Samsung Galaxy S23 FE 5G', '8 GB/128 GB', 18060],
@@ -77,7 +78,9 @@ const display = { ...clean, defects: ['screen_spot'], screenLines: 'Visible line
 const manualTouch = { ...clean, touch: false };
 const requestFor = (diagnostics: unknown) => ({ brand: nord.brand, model: nord.model, storage: nord.storage, diagnostics });
 const leads: Array<{ quotedPrice: number; answers: Record<string, unknown>; [key: string]: unknown }> = [];
-let active = release;
+const serveLegacy = process.argv.includes('--serve') && process.argv.includes('--legacy');
+if (process.argv.includes('--serve')) process.env.PRICING_RELEASE_CANDIDATE = serveLegacy ? 'off' : 'on';
+let active = serveLegacy ? legacy : release;
 
 async function startFixture(port: number): Promise<Server> {
   // Load real server modules only after the sentinel and local secrets exist.
@@ -104,7 +107,7 @@ async function startFixture(port: number): Promise<Server> {
     if (_req.method === 'OPTIONS') { res.status(204).end(); return; }
     next();
   });
-  app.get('/health', (_req, res) => res.json({ fixture: true, database: 'disabled', mode: 'release-candidate', leadCount: leads.length }));
+  app.get('/health', (_req, res) => res.json({ fixture: true, database: 'disabled', mode: serveLegacy ? 'legacy' : 'release-candidate', leadCount: leads.length }));
   app.use('/api/quote', router);
   return await new Promise((resolve, reject) => {
     const server = app.listen(port, '127.0.0.1', () => resolve(server));
@@ -117,7 +120,7 @@ async function run() {
   const addr = server.address(); assert(addr && typeof addr !== 'string');
   const url = `http://127.0.0.1:${addr.port}`;
   if (process.argv.includes('--serve')) {
-    console.log(`LOCAL FIXTURE API ${url}: release mode, sentinel database, in-memory leads only; Nord 8/128 available`);
+    console.log(`LOCAL FIXTURE API ${url}: ${serveLegacy ? 'legacy' : 'release-candidate'} mode, sentinel database, in-memory leads only; Nord 8/128 available`);
     return;
   }
   let passed = 0; const failures: string[] = [];
@@ -346,6 +349,28 @@ async function run() {
         writeFileSync(file, JSON.stringify({ version: 'fixture', rows: [missingField] }));
         assert.throws(() => loadReleaseRouteEvidence(file), 'a missing visibility field must not become NOT_ASKED');
       } finally { unlinkSync(file); rmdirSync(folder); }
+    });
+    await check('exact Xiaomi14Ultra clean baseline cannot issue a release price or persist a lead', async () => {
+      const device = findCatalogDevice('Xiaomi', 'Xiaomi 14 Ultra', '16 GB/512 GB'); assert(device);
+      // Unselected physical-defect parents leave their child answers null in
+      // the real UI. Preserve those deployable inputs when checking legacy.
+      const uiClean = { ...clean, screenCondition: null, screenSpots: null, screenLines: null, screenDiscoloration: null, bodyPanel: null, bodyBent: null };
+      const input = { brand: device.brand, model: device.model, storage: device.storage, diagnostics: uiClean };
+      const old = await legacy.quote(input); assert(old.ok); assert.equal(old.pricingVersion, PRICING_ENGINE_VERSION);
+      assert.equal(old.internal.cashifyConditionEquivalent, 38360, 'legacy baseline and existing box bonus remain unchanged');
+      const untouched = await make().quote(input); assert(untouched.ok);
+      assert.equal(untouched.internal.cashifyConditionEquivalent, old.internal.cashifyConditionEquivalent);
+      assert.equal(untouched.fhoneifyPrice, old.fhoneifyPrice);
+      active = release; const count = leads.length;
+      const direct = await release.quote(input); assert(!direct.ok); assert.equal(direct.code, 'MANUAL_INSPECTION_REQUIRED');
+      const quote = await post('/api/quote/price', input);
+      assert.equal(quote.status, 422); assert.equal(quote.body.code, 'MANUAL_INSPECTION_REQUIRED'); assert.equal(quote.body.data, undefined);
+      for (const token of [undefined, old.quoteToken]) {
+        const lead = await post('/api/quote/leads', { brand: device.brand, model: device.model, storage: device.storage,
+          answers: uiClean, phone: '0000000000', quoteToken: token, quotedPrice: old.fhoneifyPrice });
+        assert.equal(lead.status, 422); assert.equal(lead.body.code, 'MANUAL_INSPECTION_REQUIRED');
+      }
+      assert.equal(leads.length, count);
     });
     console.log(`Release flow: ${passed} passed, ${failures.length} failed; ${leads.length} in-memory leads, zero database writes.`);
     if (failures.length) throw new Error(`Release flow regressions: ${failures.join('; ')}`);

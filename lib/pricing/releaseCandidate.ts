@@ -80,6 +80,11 @@ export function releaseCandidateOutcome(input: {
   const manual = (reason: string): ReleaseCandidateOutcome => ({ kind: 'MANUAL_INSPECTION_REQUIRED', reason, conditionClass: cls });
   if (cls === 'unknown') return manual('Incomplete, conflicting or unrecognized diagnostics');
   const { device, questionnaire: q } = input;
+  // The new exact-variant clean control exposes a material baseline error
+  // even with correct NOT_ASKED ownership routing. Reference/profile refresh
+  // must not enable legacy fallback until its baseline regime is validated.
+  if (device.brand === 'Xiaomi' && device.model === 'Xiaomi 14 Ultra' &&
+    workbookStorageIdentity(device.storage) === workbookStorageIdentity('16 GB/512 GB')) return manual('Ultra clean baseline requires separately validated pricing');
   // Measured Note single hardware losses expose material legacy overpayments;
   // its earlier additive research regime is not activated by this release.
   if (device.brand === 'Xiaomi' && device.model === 'Xiaomi Redmi Note 15 Pro Plus 5G' &&

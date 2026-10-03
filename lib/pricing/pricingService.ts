@@ -150,7 +150,7 @@ async function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
   }
 }
 
-export const RELEASE_CANDIDATE_PRICING_VERSION = `${PRICING_ENGINE_VERSION}+rc-verified-inputs-v2-2026-10-03`;
+export const RELEASE_CANDIDATE_PRICING_VERSION = `${PRICING_ENGINE_VERSION}+rc-verified-inputs-v3-2026-10-03`;
 
 export function createPricingService(deps: PricingServiceDeps) {
   const releaseCandidate = deps.pricingMode === 'release-candidate';
