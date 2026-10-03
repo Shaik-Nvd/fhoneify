@@ -2,7 +2,7 @@
  * active engine tables/caps and pending catalog variants remain unchanged. */
 import fixture from '../../scripts/pricing/fixtures/xiaomi-workbook-verified-development-2026-10-02.json';
 import { applyCompetitorUplift, type DiagnosticsType } from '../pricingCalculator';
-import { classifyFreshness } from '../referencePricing/freshnessPolicy';
+import { isReleaseEvidenceCurrent } from './releaseEvidenceAge';
 import { workbookComponents, workbookStorageIdentity, type WorkbookComponent, type WorkbookRoute } from './teamWorkbookCandidate';
 
 export const XIAOMI_WORKBOOK_CANDIDATE_VERSION = fixture.version;
@@ -34,7 +34,7 @@ export function calculateVerifiedWorkbookCandidate(specs: readonly WorkbookEvide
   const spec = specs.find(s => s.model === input.model && workbookStorageIdentity(s.storage) === workbookStorageIdentity(input.storage));
   if (!spec) return reject('Exact variant is not in fresh verified development scope');
   const at = input.now ?? new Date();
-  if (Date.parse(spec.calibratedAt) > at.getTime() || classifyFreshness({ lastVerifiedAt: spec.calibratedAt, consecutiveFailures: 0, now: at }) !== 'fresh') return reject('Calibration is stale or future-dated');
+  if (!isReleaseEvidenceCurrent(spec.calibratedAt, at)) return reject('Calibration is stale or future-dated');
   const d = input.diagnostics, r = input.route, m = spec.modes;
   if (r.semantics.warrantyMode !== m.warranty || r.semantics.billMode !== m.validBill || r.semantics.ageMode !== m.mobileAge ||
     r.eSimMode !== m.eSim || r.boxMode !== m.box || r.chargerMode !== m.charger || r.sPenMode !== m.sPen) return reject('Conditional route differs from the verified observation block');

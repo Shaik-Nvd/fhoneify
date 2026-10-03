@@ -13,7 +13,7 @@ Run between 2026-10-12 and 2026-10-15. This leaves a day to review and merge bef
 ## 1. Fresh inputs, read-only
 
 1. Make sure the weekly reference refresh has run, or dispatch it for the 20 keys. Read-only export, per key: `currentPrice`, `lastVerifiedAt`, `matchConfidence`, `consecutiveFailures`.
-2. Profiles. The weekly crawler re-learns a profile only once it is 30 days old: the 24 Sep profiles would be re-learned on about 28 Oct, but the release rejects them from 24 Oct. Dispatch `questionnaire-metadata-refresh.yml` with `force=true` for the affected brands, then confirm for every route model:
+2. Profiles. The weekly crawler re-learns a profile only once it is 30 days old: the 24 Sep profiles would be re-learned on about 28 Oct. The release accepts a profile for 38 days, until about 1 Nov. Re-learning them alongside the revalidation is still recommended: dispatch `questionnaire-metadata-refresh.yml` with `force=true` for the affected brands, then confirm for every route model:
    - `status=OK`;
    - `observedAt` is fresh;
    - the warranty/bill/age modes equal the route file.

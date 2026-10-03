@@ -22,9 +22,13 @@ export function refreshReason(
 }
 
 /** A stored profile is a structural fact (which questions Cashify shows), so
- * it stays usable for exactly as long as the weekly crawl reuses it rather
- * than under the 14-day Get Upto price freshness window. */
-export function isQuestionnaireProfileCurrent(observedAt: string | null | undefined, now: Date, maxAgeDays = QUESTIONNAIRE_MAX_AGE_DAYS): boolean {
+ * it stays usable for as long as the weekly crawl keeps it current, not under
+ * the 14-day Get Upto price freshness window. */
+/** The weekly crawl (Wednesdays) re-learns a profile only once it is
+ * QUESTIONNAIRE_MAX_AGE_DAYS old, so under normal operation a profile can be
+ * up to max age + 7 days old before its replacement lands; +1 day of slack. */
+export const QUESTIONNAIRE_USABLE_DAYS = QUESTIONNAIRE_MAX_AGE_DAYS + 8;
+export function isQuestionnaireProfileCurrent(observedAt: string | null | undefined, now: Date, maxAgeDays = QUESTIONNAIRE_USABLE_DAYS): boolean {
   const t = observedAt ? Date.parse(observedAt) : NaN;
   return Number.isFinite(t) && Number.isFinite(now.getTime()) && t <= now.getTime() && now.getTime() - t < maxAgeDays * 86400000;
 }

@@ -2895,7 +2895,7 @@ export default function QuotePage() {
               <p style={{ color: '#FF3B30' }}>{finalPriceError}</p>
               {manualInspectionRequired ? (
                 <>
-                  <p>We can't give an instant price for these answers yet. Our team can inspect your phone and quote it for you, free and with no obligation.</p>
+                  <p>We can&apos;t give an instant price for these answers yet. Our team can inspect your phone and quote it for you, free and with no obligation.</p>
                   <a href={inspectionRequestLinks({ brand: selectedBrand, model: getDisplayModelName(selectedBrand, selectedModel), storage: selectedStorage }).whatsapp}
                     target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '12px', borderRadius: '8px', fontWeight: 600 }}>Request an inspection on WhatsApp</a>
                   <p style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>

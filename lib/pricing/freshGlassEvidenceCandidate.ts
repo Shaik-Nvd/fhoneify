@@ -4,7 +4,7 @@
  * future independent validation. No current clean Selling runtime input. */
 import fixture from '../../scripts/pricing/fixtures/fresh-glass-ab-development-2026-10-02.json';
 import { applyCompetitorUplift, type DiagnosticsType } from '../pricingCalculator';
-import { classifyFreshness } from '../referencePricing/freshnessPolicy';
+import { isReleaseEvidenceCurrent } from './releaseEvidenceAge';
 import { estimateWorkbookGlassLoss, workbookComponents, workbookStorageIdentity, type WorkbookRoute } from './teamWorkbookCandidate';
 
 export const FRESH_GLASS_CANDIDATE_VERSION = fixture.version;
@@ -16,8 +16,7 @@ export function calculateFreshGlassEvidenceCandidate(input: {
   const spec = fixture.specs.find(s => s.brand === input.brand && s.model === input.model && workbookStorageIdentity(s.storage) === workbookStorageIdentity(input.storage));
   if (!spec) return reject('Only two exact fresh A/B-calibrated variants are supported');
   const at = input.now ?? new Date();
-  if (!Number.isFinite(at.getTime()) || Date.parse(spec.calibratedAt) > at.getTime() ||
-    classifyFreshness({ lastVerifiedAt: spec.calibratedAt, consecutiveFailures: 0, now: at }) !== 'fresh') return reject('Calibration is stale or future-dated');
+  if (!isReleaseEvidenceCurrent(spec.calibratedAt, at)) return reject('Calibration is stale or future-dated');
   const d = input.diagnostics, r = input.route;
   if (r.semantics.warrantyMode !== 'NOT_ASKED' || r.semantics.billMode !== 'NOT_ASKED' || r.semantics.ageMode !== 'NOT_ASKED' ||
     r.eSimMode !== 'NOT_ASKED' || r.boxMode !== 'ASKED' || r.chargerMode !== 'NOT_ASKED' || r.sPenMode !== 'NOT_ASKED' ||

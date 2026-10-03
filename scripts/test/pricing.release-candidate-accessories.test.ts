@@ -100,11 +100,12 @@ async function main() {
     assert(!changedScratch.ok); assert.equal(changedScratch.code, 'MANUAL_INSPECTION_REQUIRED'); assert.equal('quoteToken' in changedScratch, false);
   } finally { records.set(nineKey, originalNine); }
   checks++;
-  // Stored questionnaire profiles follow the crawl's own 30-day reuse policy,
-  // not the 14-day Get Upto window; future-dated and expired ones are refused.
+  // Stored questionnaire profiles follow the crawl's cycle (30-day reuse +
+  // weekly run + 1 day = 38 days), not the 14-day Get Upto window;
+  // future-dated and expired ones are refused.
   const ageKey = questionnaireModelKey(ablationMeasured), ageProfile = profiles.profiles.get(ageKey)!;
   try {
-    for (const [observedAt, ok] of [['2026-09-24T03:30:00Z', true], ['2026-09-03T11:00:00Z', false], ['2026-10-04T11:00:00Z', false]] as const) {
+    for (const [observedAt, ok] of [['2026-09-24T03:30:00Z', true], ['2026-09-03T11:00:00Z', true], ['2026-08-25T11:00:00Z', false], ['2026-10-04T11:00:00Z', false]] as const) {
       profiles.profiles.set(ageKey, { ...ageProfile, observedAt });
       const aged = await q(rc, clean, ablationMeasured); assert.equal(aged.ok, ok, observedAt);
       if (!aged.ok) assert.equal(aged.code, 'MANUAL_INSPECTION_REQUIRED');

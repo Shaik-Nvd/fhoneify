@@ -237,7 +237,7 @@ test('enabled shipped tables never break the engine guardrails on catalog Xiaomi
   const xiaomi = (SEED_DEVICES as { brand: string; model: string; basePrice?: number }[]).filter((d) => d.brand === 'Xiaomi' && d.basePrice);
   const wrecked = { ...COMBO_1, touch: false, hardware: ['charging', 'back_camera', 'wifi'], bodyBent: 'Bent/ curved panel' };
   for (const group of Object.keys(shipped.groups)) {
-    const on = { ...shipped, modelGroups: {}, tierGroups: [{ maxReference: null, group }] };
+    const on = { ...shipped, enabled: true, modelGroups: {}, tierGroups: [{ maxReference: null, group }] };
     for (const d of xiaomi) {
       for (const diag of [COMBO_0, COMBO_1, COMBO_2, PERFECT_CONDITION_DIAGNOSTICS, wrecked]) {
         const r = calculateXiaomiPrice(d.model, d.basePrice!, diag, undefined, on);

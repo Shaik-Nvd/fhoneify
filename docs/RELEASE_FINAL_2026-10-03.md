@@ -6,7 +6,7 @@ Branch `fix/xiaomi-inr-deductions`. The final SHA is in the commit that adds thi
 
 - 7 candidate variants;
 - 13 further accessory-corrected variants;
-- everything else is either inspection or the unchanged legacy engine, labelled `UNVALIDATED_LEGACY`.
+- everything else is inspection in release mode (§0). The unchanged legacy engine remains only as the rollback mode.
 
 The ±3% target is met for every candidate and accessory-corrected observation, but almost all of those observations are fitting or control data. Independent evidence is limited to two out-of-sample predictions, both within ±3% and both underpaying. Legacy fallback still misses ±3% on 40 of 71 observations.
 
@@ -37,7 +37,24 @@ Across the catalog, 20 of 2,258 variants (0.9%) can receive an instant price, an
 
 **Switch.** `config/pricing-release.json` (`releaseCandidate`) is the reviewed, committed switch, because the host dashboard isn't reachable from this repository's tooling. An explicit host env `PRICING_RELEASE_CANDIDATE=on|off` overrides it; `off` is the immediate host-side rollback. Read or parse errors mean legacy. An unreadable evidence file in release mode means everything inspects; it never crashes the API or falls back to legacy. `GET /health` reports `commit` and `pricing` (mode, source, version, route count).
 
+**Legacy (rollback) mode equals production.** The independent review found that the branch's Xiaomi ₹-deduction (INR) engine changed legacy prices for 9 Xiaomi models, and that the engine version string had also changed. For the launch:
+
+- The INR engine is **disabled** (`inrDeductionTables.ts` `enabled: false`; owner decisions on it are still open). The code and its tests are kept.
+- `PRICING_ENGINE_VERSION` is restored to production's `2026-09-25-internal-consistency`.
+- Legacy quotes were compared against `origin/main` over every common catalog variant × 4 references × 13 answer sets × 3 questionnaire modes. **346,944 combinations: 0 differences.**
+- Only the catalog differs:
+  - Xiaomi 13 Pro 5G, 14, 14 Ultra and Redmi 10 Power gain RAM in their storage keys, matching Cashify's variant pages. Their new keys have no reference until the next weekly refresh; release mode inspects them in any case.
+  - 15 Redmi variants are added as `pending`. They are refused without a reference.
+
+**Other review fixes:**
+- Questionnaire profiles stay usable for 38 days. That is the crawl's 30-day reuse plus its weekly run plus 1 day, so a profile never expires in the gap before its replacement lands.
+- Route and calibration evidence use a fixed 14-day clock (`releaseEvidenceAge.ts`). It does not depend on `REFERENCE_PRICE_WARNING_AGE_DAYS`.
+- Accessory routes refuse warranty, bill, age and eSIM answers, and any accessory other than box or charger, the same as candidates do.
+- `/health` reports `freshReleaseRoutes` and `firstRouteExpiry`.
+
 **Revalidation before 16 Oct:** `docs/RELEASE_REVALIDATION_PROCEDURE.md`, using `scripts/pricing/revalidation-plan.ts`.
+
+> Sections 1–8 are the earlier pass's analysis. Wherever they describe a binding legacy fallback, §0 supersedes them: in release mode it inspects. Sections 7–8 are rewritten for the launch.
 
 ## 1. What changed in this pass
 
@@ -265,31 +282,30 @@ Screenshots: `scratch/release-2026-10-03-final/ui/`.
 
 **API input finding (UI unaffected).** The legacy engine prices `screenCondition: 'No scratches on screen'` as a defect: −₹5,350 on iPhone 11 Pro Max. The quote UI never sends that string; it sends `null` unless a screen defect is ticked. Only a direct API caller could trigger it, and it can only underpay. Left unchanged, because legacy semantics are owner-protected.
 
-## 7. Activation (owner decision; nothing here was deployed)
+## 7. Activation and rollback (launch)
 
-1. Merge this branch to `main` and deploy the API with `PRICING_RELEASE_CANDIDATE` **unset**. Behaviour is unchanged; confirm legacy quotes are unchanged.
-2. Let the Sunday 4 Oct reference refresh complete, or dispatch it. Then read-only verify the 20 rows in §3 and their questionnaire profiles (`OK`, `observedAt` under 30 days, modes as in the route file).
-3. On Render, set:
-   - `PRICING_RELEASE_ROUTE_EVIDENCE_FILE=scripts/pricing/fixtures/release-route-evidence-2026-10-02.json` (in the image via `COPY . .`);
-   - `PRICING_RELEASE_CANDIDATE=on`.
+1. Merge to `main` with `config/pricing-release.json` `releaseCandidate: false`. Render (API) and Vercel (frontend) deploy from `main`.
+2. Verify `/health` shows `commit` and `pricing.mode: legacy`, and that existing behaviour is unchanged.
+3. Targeted refresh of the 7 keys through the normal workflow (`reference-price-refresh.yml`, `devices` input). Then read-only verify all 20 references and their profiles.
+4. A second PR flips `config/pricing-release.json` to `releaseCandidate: true` (route file `scripts/pricing/fixtures/release-route-evidence-2026-10-02.json`). Verify `/health` shows `release-candidate`, `freshReleaseRoutes: 21`, then smoke-test.
 
-   Restart. If the file variable is missing, every candidate and accessory route goes to inspection (fails closed).
-4. Smoke test `/api/quote/price`:
-   - Nord 8/128 clean, box+charger → `fhoneifyPrice` 8,986 at GU 8,340;
-   - touch No → 422 `MANUAL_INSPECTION_REQUIRED`.
-5. Before **16 Oct**, re-observe the route/calibration controls, or accept that scope shrinks to inspection.
+**Rollback, by fastest path:**
+- **Host (immediate):** set `PRICING_RELEASE_CANDIDATE=off` on Render and restart. It overrides the file. Do not merely unset it: with the file at `true`, unset means release mode.
+- **Repository:** merge a PR setting `releaseCandidate: false`.
+- **Full code rollback:** Render deploy of `d261b25` (`dep-db0g3ioae00c73eijcg0`); Vercel `dpl_6PbYfVxNbMAuYDL92PRWZ11y9R1h`.
 
-**Rollback:** unset `PRICING_RELEASE_CANDIDATE` and restart. Tokens carrying the release version are recomputed under legacy (verified in tests and in the browser). The UI needs no change, because its 422/inspection path ships already.
+Tokens carrying the release version are recomputed in legacy mode, and legacy tokens issued before the launch keep working after a rollback.
 
-## 8. Remaining blocks and owner decisions
+## 8. Remaining limitations
 
-- **Independent accuracy.** Only 2 independent observations. Broad ±3% is **not** established.
-- **Legacy fallback** (most of the catalog): 40/71 observations outside ±3%, maximum overpayment ₹1,600, and 18 rows where the customer payout is below Cashify. Owner decision: accept as `UNVALIDATED_LEGACY` or route to inspection.
-- **NOT_ASKED variants outside the 18:**
-  - iPhone 14 Pro Max, A72 and Note 10 Lite keep the legacy +₹380 box bonus, overpaying clean by about ₹400 vs the observed Get Upto − 20 pattern.
-  - Applying −20 generally is not authorised: iPhone 12 Pro is a counterexample at +300.
-- **Blocked:** iPhone 12 Pro (headline), Xiaomi 14 Ultra (baseline), Note 15 Pro+ hardware, combined/display/touch faults.
-- **Expiry:** candidate and route evidence expire about 16 Oct; profiles on 24 Oct.
+- **Coverage.** Instant binding prices cover 20 of 2,258 variants, and only for their listed conditions. Everything else needs an inspection request.
+- **Independent accuracy.** Only 2 independent observations, both within ±3% and both underpaying. Broad ±3% accuracy is not established.
+- **Expiry.** Evidence expires on **16 Oct 2026**, from 11:18 UTC per route; after that, everything inspects. Run `docs/RELEASE_REVALIDATION_PROCEDURE.md` before then.
+- **Moved references.** A moved reference sends damaged phones to inspection. CIVI, Open and S23 FE inspect entirely after any move.
+- **Blocked:**
+  - iPhone 12 Pro, Xiaomi 14 Ultra and Note 15 Pro+ hardware;
+  - the provisional iPhone 17 deductions, which are unused;
+  - the INR engine, which is disabled pending owner decisions.
 
 ## Reproduce
 

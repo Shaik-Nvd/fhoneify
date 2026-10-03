@@ -16,7 +16,7 @@ import { UNKNOWN_QUESTIONNAIRE, isQuestionMode, type QuestionnaireSemantics } fr
 import { releaseCandidateOutcome, type ReleaseCandidateOutcome } from './releaseCandidate';
 import type { WorkbookRouteEvidence } from './teamWorkbookResearchQuoteService';
 import { workbookComponents, workbookStorageIdentity } from './teamWorkbookCandidate';
-import { classifyFreshness } from '../referencePricing/freshnessPolicy';
+import { isReleaseEvidenceCurrent } from './releaseEvidenceAge';
 import { applyCompetitorUplift } from '../pricingCalculator';
 import { accessoryBasisForRoute, cleanAccessoryBaselineDiagnostics, getUptoIncludesAccessories, hasBox, hasVerifiedBoxIncludedRoute, isBoxIncludedIdentity, withoutBoxBonus, type AccessoryBasis } from './accessoryBasis';
 import type { QuestionnaireProfileStore } from '../referencePricing/questionnaire/store';
@@ -211,8 +211,7 @@ export function createPricingService(deps: PricingServiceDeps) {
 
     const route = releaseCandidate ? deps.releaseRouteEvidence?.find(r => r.brand === device.brand && r.model === device.model && workbookStorageIdentity(r.storage) === workbookStorageIdentity(device.storage)) : undefined;
     if (route && questionnaire.source === 'profile' && questionnaire.status === 'OK' &&
-      /^[a-f0-9]{64}$/.test(route.evidenceSha256) && Date.parse(route.observedAt) <= at.getTime() &&
-      classifyFreshness({ lastVerifiedAt: route.observedAt, consecutiveFailures: 0, now: at }) === 'fresh' &&
+      /^[a-f0-9]{64}$/.test(route.evidenceSha256) && isReleaseEvidenceCurrent(route.observedAt, at) &&
       (['warrantyMode', 'billMode', 'ageMode'] as const).every(k => questionnaire[k] === route.semantics[k])) {
       Object.assign(questionnaire, { boxMode: route.boxMode, chargerMode: route.chargerMode, sPenMode: route.sPenMode, eSimMode: route.eSimMode });
     }
@@ -235,7 +234,7 @@ export function createPricingService(deps: PricingServiceDeps) {
         if (rc.kind === 'MANUAL_INSPECTION_REQUIRED') {
           deps.logger.info({ deviceKey: key, reason: rc.reason, pricingVersion, reference: base.cashifyGetUptoReference, referenceSource: base.referenceSource,
             questionnaire, conditionClass: rc.conditionClass, routeEvidenceSha256: route?.evidenceSha256 ?? null }, 'Release candidate: manual inspection required');
-          return { ok: false, code: 'MANUAL_INSPECTION_REQUIRED', message: 'This condition needs an inspection before we can quote a price',
+          return { ok: false, code: 'MANUAL_INSPECTION_REQUIRED', message: 'We need to inspect this phone before we can quote a price',
             context: { questionnaire, startingPrice: computeFhoneifyGetUpto(base.cashifyGetUptoReference), pricingVersion } };
         }
         if (rc.kind === 'VERIFIED') {
@@ -245,8 +244,7 @@ export function createPricingService(deps: PricingServiceDeps) {
             fhoneifyPrice: applyCompetitorUplift(base.cashifyGetUptoReference, rc.cashifyConditionEquivalent) };
         }
         if (rc.kind === 'LEGACY' && isBoxIncludedIdentity(device)) {
-          const routeFresh = route && /^[a-f0-9]{64}$/.test(route.evidenceSha256) && Date.parse(route.observedAt) <= at.getTime() &&
-            classifyFreshness({ lastVerifiedAt: route.observedAt, consecutiveFailures: 0, now: at }) === 'fresh';
+          const routeFresh = route && /^[a-f0-9]{64}$/.test(route.evidenceSha256) && isReleaseEvidenceCurrent(route.observedAt, at);
           const profileFresh = questionnaire.status === 'OK' && isQuestionnaireProfileCurrent(questionnaire.observedAt, at);
           const exactReference = base.source === 'reference_repository' && base.referenceStatus === 'fresh' && base.referenceSource === 'cashify' &&
             !!base.referenceLastVerifiedAt && reference.record?.matchConfidence === 'exact' && reference.record?.deviceKey === key &&
@@ -268,7 +266,15 @@ export function createPricingService(deps: PricingServiceDeps) {
             return { ok: false, code: 'MANUAL_INSPECTION_REQUIRED', message: 'This condition is not validated on the accessory-corrected route',
               context: { questionnaire, startingPrice: computeFhoneifyGetUpto(base.cashifyGetUptoReference), pricingVersion } };
           }
+          // Same answer strictness as the verified candidates: on these
+          // NOT_ASKED routes no ownership/eSIM answer exists, and only box and
+          // charger are accessories Cashify asks about.
           const accessories = diagnostics.accessories ?? [];
+          if (diagnostics.warranty != null || diagnostics.validBill != null || diagnostics.mobileAge != null || diagnostics.eSim != null ||
+            accessories.some(a => a !== 'box' && a !== 'charger') || (diagnostics.box === true && !accessories.includes('box'))) {
+            return { ok: false, code: 'MANUAL_INSPECTION_REQUIRED', message: 'We need to inspect this phone before we can quote a price',
+              context: { questionnaire, startingPrice: computeFhoneifyGetUpto(base.cashifyGetUptoReference), pricingVersion } };
+          }
           const boxAndChargerPresent = hasBox(diagnostics) && diagnostics.box !== false &&
             (route!.chargerMode !== 'ASKED' || (diagnostics.charger !== false && (diagnostics.charger === true || accessories.includes('charger'))));
           if (!boxAndChargerPresent) {
@@ -288,7 +294,7 @@ export function createPricingService(deps: PricingServiceDeps) {
       // Defence in depth for the launch policy: in release mode a binding price
       // comes only from a verified candidate or the accessory-corrected route.
       if (rc && rc.kind !== 'VERIFIED' && !accessoryBasis.startsWith('GET_UPTO_INCLUDES')) {
-        return { ok: false, code: 'MANUAL_INSPECTION_REQUIRED', message: 'This condition needs an inspection before we can quote a price',
+        return { ok: false, code: 'MANUAL_INSPECTION_REQUIRED', message: 'We need to inspect this phone before we can quote a price',
           context: { questionnaire, startingPrice: computeFhoneifyGetUpto(base.cashifyGetUptoReference), pricingVersion } };
       }
       // Get Upto: the reference plus the uplift, nothing else.

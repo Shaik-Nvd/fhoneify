@@ -5,6 +5,7 @@ import { createPricingService, RELEASE_CANDIDATE_PRICING_VERSION } from '../../.
 import { PRICING_ENGINE_VERSION } from '../../../lib/pricing/engine';
 import { loadReleaseRouteEvidence } from '../../../lib/pricing/releaseRouteEvidence';
 import { resolvePricingReleaseConfig } from '../../../lib/pricing/releaseConfig';
+import { isReleaseEvidenceCurrent, RELEASE_EVIDENCE_MAX_AGE_DAYS } from '../../../lib/pricing/releaseEvidenceAge';
 import { getQuestionnaireProfileStore, getReferencePriceRepository } from '../../../lib/referencePricing/getStore';
 
 // A dedicated QUOTE_SIGNING_SECRET lets quote tokens be rotated without
@@ -43,13 +44,20 @@ function releaseRouteEvidence() {
 }
 
 const routes = releaseRouteEvidence();
-/** Public, secret-free status for /health. */
-export const pricingStatus = {
-  mode: pricingRelease.mode,
-  source: pricingRelease.source,
-  version: pricingRelease.mode === 'release-candidate' ? RELEASE_CANDIDATE_PRICING_VERSION : PRICING_ENGINE_VERSION,
-  releaseRoutes: routes.length,
-};
+/** Public, secret-free status for /health. Fresh routes are counted at
+ * request time, so evidence expiry is visible rather than silently inspecting. */
+export function pricingStatus(now = new Date()) {
+  const fresh = routes.filter(r => isReleaseEvidenceCurrent(r.observedAt, now));
+  const expiries = routes.map(r => Date.parse(r.observedAt) + RELEASE_EVIDENCE_MAX_AGE_DAYS * 86400000).filter(Number.isFinite);
+  return {
+    mode: pricingRelease.mode,
+    source: pricingRelease.source,
+    version: pricingRelease.mode === 'release-candidate' ? RELEASE_CANDIDATE_PRICING_VERSION : PRICING_ENGINE_VERSION,
+    releaseRoutes: routes.length,
+    freshReleaseRoutes: fresh.length,
+    firstRouteExpiry: expiries.length ? new Date(Math.min(...expiries)).toISOString() : null,
+  };
+}
 
 export const pricingService = createPricingService({
   repository: getReferencePriceRepository(),

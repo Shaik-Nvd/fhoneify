@@ -4,8 +4,8 @@ import xiaomiFixture from '../../scripts/pricing/fixtures/xiaomi-workbook-verifi
 import onePlusFixture from '../../scripts/pricing/fixtures/oneplus-display-verified-development-2026-10-02.json';
 import glassFixture from '../../scripts/pricing/fixtures/fresh-glass-ab-development-2026-10-02.json';
 import { COMMON_FUNCTIONAL_PENALTIES, type DiagnosticsType } from '../pricingCalculator';
-import { classifyFreshness } from '../referencePricing/freshnessPolicy';
 import { isQuestionnaireProfileCurrent } from '../referencePricing/questionnaire/policy';
+import { isReleaseEvidenceCurrent } from './releaseEvidenceAge';
 import type { QuestionnaireSemantics } from './questionnaireSemantics';
 import type { WorkbookRouteEvidence } from './teamWorkbookResearchQuoteService';
 import { calculateXiaomiWorkbookEvidenceCandidate } from './xiaomiWorkbookEvidenceCandidate';
@@ -103,7 +103,7 @@ export function releaseCandidateOutcome(input: {
       ? { kind: 'LEGACY', flag: 'UNVALIDATED_LEGACY', reason: 'Accessory-route identity; service enforces measured scope', conditionClass: cls }
       : manual('Instant pricing is limited to the verified release scope');
   }
-  const fresh = (t: string | null | undefined) => !!t && Number.isFinite(input.now.getTime()) && Number.isFinite(Date.parse(t)) && Date.parse(t) <= input.now.getTime() && classifyFreshness({ lastVerifiedAt: t, consecutiveFailures: 0, now: input.now }) === 'fresh';
+  const fresh = (t: string | null | undefined) => isReleaseEvidenceCurrent(t, input.now);
   const route = input.routeEvidence?.find(matches);
   if (!route || !fresh(route.observedAt) || !/^[a-f0-9]{64}$/.test(route.evidenceSha256) || q.source !== 'profile' || q.status !== 'OK' || !isQuestionnaireProfileCurrent(q.observedAt, input.now) ||
     (['warrantyMode', 'billMode', 'ageMode'] as const).some(k => q[k] !== route.semantics[k])) return manual('Fresh exact-variant route evidence and compatible stored questionnaire required');

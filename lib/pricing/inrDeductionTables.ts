@@ -79,7 +79,10 @@ export function xiaomiInrDeductions(): InrDeductionConfig {
 
 const buildXiaomiConfig = (): InrDeductionConfig => ({
   version: 'xiaomi-inr/2026-10-01-functional-cap',
-  enabled: true,
+  // Off for the launch: owner decisions (Note 15 Pro+ grouping, rounding) are
+  // open and legacy (rollback) pricing must equal production. Release mode
+  // never prices these models from legacy.
+  enabled: false,
   groups: {
     // One anchor for four models, 8 benchmark cases, all within ±1.8%.
     'xiaomi-flagship': tableFromPercentRules('Xiaomi 15 / 15 Ultra / 17 / 17 Ultra', 33040),

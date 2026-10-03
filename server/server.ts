@@ -131,7 +131,7 @@ app.get('/health', (_req: Request, res: Response) => {
     // Deployed commit (set by Render) and the active pricing mode, so a deploy
     // or release switch is verified from responses, not assumed. No secrets.
     commit: process.env.RENDER_GIT_COMMIT ? process.env.RENDER_GIT_COMMIT.slice(0, 12) : null,
-    pricing: pricingStatus,
+    pricing: pricingStatus(),
   });
 });
 

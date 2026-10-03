@@ -14,6 +14,8 @@ import { PRICING_ENGINE_VERSION } from '../../lib/pricing/engine';
 import { findCatalogDevice } from '../../lib/pricing/catalog';
 import { resolvePricingReleaseConfig, PRICING_RELEASE_CONFIG_FILE } from '../../lib/pricing/releaseConfig';
 import { loadReleaseRouteEvidence } from '../../lib/pricing/releaseRouteEvidence';
+import { isReleaseEvidenceCurrent } from '../../lib/pricing/releaseEvidenceAge';
+import { isQuestionnaireProfileCurrent } from '../../lib/referencePricing/questionnaire/policy';
 import { deviceKey, type ReferencePriceRecord } from '../../lib/referencePricing/types';
 import { InMemoryQuestionnaireProfileStore } from '../../lib/referencePricing/questionnaire/store';
 import { questionnaireModelKey } from '../../lib/referencePricing/questionnaire/types';
@@ -94,6 +96,21 @@ async function main() {
     for (const dev of [nord, eightPro]) {
       const r = await later.quote({ ...dev, diagnostics: clean }); assert(!r.ok, dev.model); assert.equal(r.code, 'MANUAL_INSPECTION_REQUIRED'); assert(r.context?.startingPrice);
     }
+  });
+  await check('accessory route refuses answers its NOT_ASKED route cannot have (same strictness as candidates)', async () => {
+    for (const extra of [{ warranty: false }, { validBill: true }, { mobileAge: 'above11' }, { eSim: 'Dual eSIM' }, { accessories: ['box', 'charger', 'spen'] },
+      { accessories: ['box', 'charger', 'bill'] }, { box: true, accessories: ['charger'] }]) {
+      const r = await q(rc, eightPro, { ...clean, ...extra }); assert(!r.ok, JSON.stringify(extra)); assert.equal(r.code, 'MANUAL_INSPECTION_REQUIRED');
+    }
+  });
+  await check('evidence clock is a fixed 14 days and the profile window follows the weekly crawl (38 days)', () => {
+    const now = new Date('2026-10-16T11:18:00Z');
+    assert.equal(isReleaseEvidenceCurrent('2026-10-02T11:18:55.550Z', now), true);
+    assert.equal(isReleaseEvidenceCurrent('2026-10-02T11:18:55.550Z', new Date('2026-10-16T11:19:00Z')), false);
+    assert.equal(isReleaseEvidenceCurrent('2026-10-17T00:00:00Z', now), false, 'future-dated');
+    assert.equal(isReleaseEvidenceCurrent('not a date', now), false);
+    assert.equal(isQuestionnaireProfileCurrent('2026-09-24T19:50:00Z', new Date('2026-10-28T03:30:00Z')), true, 'until the crawl re-learns it');
+    assert.equal(isQuestionnaireProfileCurrent('2026-09-24T19:50:00Z', new Date('2026-11-02T00:00:00Z')), false);
   });
   await check('release switch: env on/off wins, committed file next, failures are legacy', () => {
     const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'pricing-release-'));

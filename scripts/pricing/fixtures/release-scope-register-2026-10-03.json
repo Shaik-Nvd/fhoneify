@@ -1,6 +1,6 @@
 {
   "version": "release-scope-register/2026-10-03",
-  "pricingVersion": "fhoneify-pricing/2026-10-01-xiaomi-inr-functional-cap+rc-verified-inputs-v6-no-legacy-binding-2026-10-03",
+  "pricingVersion": "fhoneify-pricing/2026-09-25-internal-consistency+rc-verified-inputs-v6-no-legacy-binding-2026-10-03",
   "evaluatedAt": "2026-10-03T12:00:00.000Z",
   "inputs": {
     "release-candidate-observations-2026-10-02": "b53e6f160c0256294fad326ee3c7ce2e11948d6166a3fad1863109f5e248751c",
@@ -7025,8 +7025,8 @@
           },
           "screen_heavy:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 23760,
-            "fhoneifyPrice": 25186,
+            "estimate": 24031,
+            "fhoneifyPrice": 25473,
             "reference": 37100,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7038,8 +7038,8 @@
           },
           "glass_cracked:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 17160,
-            "fhoneifyPrice": 18190,
+            "estimate": 18466,
+            "fhoneifyPrice": 19574,
             "reference": 37100,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7051,8 +7051,8 @@
           },
           "body_heavy:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 26080,
-            "fhoneifyPrice": 27645,
+            "estimate": 25979,
+            "fhoneifyPrice": 27538,
             "reference": 37100,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7064,8 +7064,8 @@
           },
           "body_dents:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 24760,
-            "fhoneifyPrice": 26246,
+            "estimate": 24866,
+            "fhoneifyPrice": 26358,
             "reference": 37100,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7077,8 +7077,8 @@
           },
           "clean:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 28720,
-            "fhoneifyPrice": 30443,
+            "estimate": 28205,
+            "fhoneifyPrice": 29897,
             "reference": 37100,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7097,8 +7097,8 @@
           },
           "screen_heavy:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 23760,
-            "fhoneifyPrice": 25186,
+            "estimate": 24031,
+            "fhoneifyPrice": 25473,
             "reference": 37100,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7110,8 +7110,8 @@
           },
           "glass_cracked:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 17160,
-            "fhoneifyPrice": 18190,
+            "estimate": 18466,
+            "fhoneifyPrice": 19574,
             "reference": 37100,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7123,8 +7123,8 @@
           },
           "body_heavy:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 26080,
-            "fhoneifyPrice": 27645,
+            "estimate": 25979,
+            "fhoneifyPrice": 27538,
             "reference": 37100,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7136,8 +7136,8 @@
           },
           "body_dents:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 24760,
-            "fhoneifyPrice": 26246,
+            "estimate": 24866,
+            "fhoneifyPrice": 26358,
             "reference": 37100,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7149,8 +7149,8 @@
           },
           "clean:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 28720,
-            "fhoneifyPrice": 30443,
+            "estimate": 28205,
+            "fhoneifyPrice": 29897,
             "reference": 37100,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7194,8 +7194,8 @@
           },
           "screen_heavy:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 40940,
-            "fhoneifyPrice": 42578,
+            "estimate": 38362,
+            "fhoneifyPrice": 39896,
             "reference": 59580,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7207,8 +7207,8 @@
           },
           "glass_cracked:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 34340,
-            "fhoneifyPrice": 35714,
+            "estimate": 29425,
+            "fhoneifyPrice": 30602,
             "reference": 59580,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7220,8 +7220,8 @@
           },
           "body_heavy:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 43260,
-            "fhoneifyPrice": 44990,
+            "estimate": 41490,
+            "fhoneifyPrice": 43150,
             "reference": 59580,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7233,8 +7233,8 @@
           },
           "body_dents:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 41940,
-            "fhoneifyPrice": 43618,
+            "estimate": 39703,
+            "fhoneifyPrice": 41291,
             "reference": 59580,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7246,8 +7246,8 @@
           },
           "clean:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 45900,
-            "fhoneifyPrice": 47736,
+            "estimate": 45065,
+            "fhoneifyPrice": 46868,
             "reference": 59580,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7266,8 +7266,8 @@
           },
           "screen_heavy:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 40940,
-            "fhoneifyPrice": 42578,
+            "estimate": 38362,
+            "fhoneifyPrice": 39896,
             "reference": 59580,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7279,8 +7279,8 @@
           },
           "glass_cracked:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 34340,
-            "fhoneifyPrice": 35714,
+            "estimate": 29425,
+            "fhoneifyPrice": 30602,
             "reference": 59580,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7292,8 +7292,8 @@
           },
           "body_heavy:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 43260,
-            "fhoneifyPrice": 44990,
+            "estimate": 41490,
+            "fhoneifyPrice": 43150,
             "reference": 59580,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7305,8 +7305,8 @@
           },
           "body_dents:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 41940,
-            "fhoneifyPrice": 43618,
+            "estimate": 39703,
+            "fhoneifyPrice": 41291,
             "reference": 59580,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7318,8 +7318,8 @@
           },
           "clean:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 45900,
-            "fhoneifyPrice": 47736,
+            "estimate": 45065,
+            "fhoneifyPrice": 46868,
             "reference": 59580,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7363,8 +7363,8 @@
           },
           "screen_heavy:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 39020,
-            "fhoneifyPrice": 40581,
+            "estimate": 36762,
+            "fhoneifyPrice": 38232,
             "reference": 57070,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7376,8 +7376,8 @@
           },
           "glass_cracked:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 32420,
-            "fhoneifyPrice": 33717,
+            "estimate": 28202,
+            "fhoneifyPrice": 29330,
             "reference": 57070,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7389,8 +7389,8 @@
           },
           "body_heavy:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 41340,
-            "fhoneifyPrice": 42994,
+            "estimate": 39758,
+            "fhoneifyPrice": 41348,
             "reference": 57070,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7402,8 +7402,8 @@
           },
           "body_dents:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 40020,
-            "fhoneifyPrice": 41621,
+            "estimate": 38046,
+            "fhoneifyPrice": 39568,
             "reference": 57070,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7415,8 +7415,8 @@
           },
           "clean:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 43980,
-            "fhoneifyPrice": 45739,
+            "estimate": 43183,
+            "fhoneifyPrice": 44910,
             "reference": 57070,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7435,8 +7435,8 @@
           },
           "screen_heavy:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 39020,
-            "fhoneifyPrice": 40581,
+            "estimate": 36762,
+            "fhoneifyPrice": 38232,
             "reference": 57070,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7448,8 +7448,8 @@
           },
           "glass_cracked:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 32420,
-            "fhoneifyPrice": 33717,
+            "estimate": 28202,
+            "fhoneifyPrice": 29330,
             "reference": 57070,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7461,8 +7461,8 @@
           },
           "body_heavy:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 41340,
-            "fhoneifyPrice": 42994,
+            "estimate": 39758,
+            "fhoneifyPrice": 41348,
             "reference": 57070,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7474,8 +7474,8 @@
           },
           "body_dents:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 40020,
-            "fhoneifyPrice": 41621,
+            "estimate": 38046,
+            "fhoneifyPrice": 39568,
             "reference": 57070,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7487,8 +7487,8 @@
           },
           "clean:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 43980,
-            "fhoneifyPrice": 45739,
+            "estimate": 43183,
+            "fhoneifyPrice": 44910,
             "reference": 57070,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7532,8 +7532,8 @@
           },
           "screen_heavy:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 53000,
-            "fhoneifyPrice": 55000,
+            "estimate": 48428,
+            "fhoneifyPrice": 50365,
             "reference": 75370,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7545,8 +7545,8 @@
           },
           "glass_cracked:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 46400,
-            "fhoneifyPrice": 48256,
+            "estimate": 37123,
+            "fhoneifyPrice": 38608,
             "reference": 75370,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7558,8 +7558,8 @@
           },
           "body_heavy:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 55320,
-            "fhoneifyPrice": 57320,
+            "estimate": 52385,
+            "fhoneifyPrice": 54385,
             "reference": 75370,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7571,8 +7571,8 @@
           },
           "body_dents:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 54000,
-            "fhoneifyPrice": 56000,
+            "estimate": 50124,
+            "fhoneifyPrice": 52124,
             "reference": 75370,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7584,8 +7584,8 @@
           },
           "clean:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 57960,
-            "fhoneifyPrice": 59960,
+            "estimate": 56908,
+            "fhoneifyPrice": 58908,
             "reference": 75370,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7604,8 +7604,8 @@
           },
           "screen_heavy:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 53000,
-            "fhoneifyPrice": 55000,
+            "estimate": 48428,
+            "fhoneifyPrice": 50365,
             "reference": 75370,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7617,8 +7617,8 @@
           },
           "glass_cracked:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 46400,
-            "fhoneifyPrice": 48256,
+            "estimate": 37123,
+            "fhoneifyPrice": 38608,
             "reference": 75370,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7630,8 +7630,8 @@
           },
           "body_heavy:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 55320,
-            "fhoneifyPrice": 57320,
+            "estimate": 52385,
+            "fhoneifyPrice": 54385,
             "reference": 75370,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7643,8 +7643,8 @@
           },
           "body_dents:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 54000,
-            "fhoneifyPrice": 56000,
+            "estimate": 50124,
+            "fhoneifyPrice": 52124,
             "reference": 75370,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7656,8 +7656,8 @@
           },
           "clean:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 57960,
-            "fhoneifyPrice": 59960,
+            "estimate": 56908,
+            "fhoneifyPrice": 58908,
             "reference": 75370,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7701,8 +7701,8 @@
           },
           "screen_heavy:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 26130,
-            "fhoneifyPrice": 27698,
+            "estimate": 25472,
+            "fhoneifyPrice": 27000,
             "reference": 39360,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7714,8 +7714,8 @@
           },
           "glass_cracked:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 20370,
-            "fhoneifyPrice": 21592,
+            "estimate": 19568,
+            "fhoneifyPrice": 20742,
             "reference": 39360,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7727,8 +7727,8 @@
           },
           "body_heavy:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 28150,
-            "fhoneifyPrice": 29839,
+            "estimate": 27538,
+            "fhoneifyPrice": 29190,
             "reference": 39360,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7740,8 +7740,8 @@
           },
           "body_dents:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 26990,
-            "fhoneifyPrice": 28609,
+            "estimate": 26358,
+            "fhoneifyPrice": 27939,
             "reference": 39360,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7753,8 +7753,8 @@
           },
           "clean:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 30450,
-            "fhoneifyPrice": 32277,
+            "estimate": 29900,
+            "fhoneifyPrice": 31694,
             "reference": 39360,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7773,8 +7773,8 @@
           },
           "screen_heavy:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 26130,
-            "fhoneifyPrice": 27698,
+            "estimate": 25472,
+            "fhoneifyPrice": 27000,
             "reference": 39360,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7786,8 +7786,8 @@
           },
           "glass_cracked:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 20370,
-            "fhoneifyPrice": 21592,
+            "estimate": 19568,
+            "fhoneifyPrice": 20742,
             "reference": 39360,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7799,8 +7799,8 @@
           },
           "body_heavy:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 28150,
-            "fhoneifyPrice": 29839,
+            "estimate": 27538,
+            "fhoneifyPrice": 29190,
             "reference": 39360,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7812,8 +7812,8 @@
           },
           "body_dents:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 26990,
-            "fhoneifyPrice": 28609,
+            "estimate": 26358,
+            "fhoneifyPrice": 27939,
             "reference": 39360,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7825,8 +7825,8 @@
           },
           "clean:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 30450,
-            "fhoneifyPrice": 32277,
+            "estimate": 29900,
+            "fhoneifyPrice": 31694,
             "reference": 39360,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7870,8 +7870,8 @@
           },
           "screen_heavy:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 18010,
-            "fhoneifyPrice": 19091,
+            "estimate": 17006,
+            "fhoneifyPrice": 18026,
             "reference": 26080,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7883,8 +7883,8 @@
           },
           "glass_cracked:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 14940,
-            "fhoneifyPrice": 15836,
+            "estimate": 13094,
+            "fhoneifyPrice": 13880,
             "reference": 26080,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7896,8 +7896,8 @@
           },
           "body_heavy:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 19080,
-            "fhoneifyPrice": 20225,
+            "estimate": 18375,
+            "fhoneifyPrice": 19478,
             "reference": 26080,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7909,8 +7909,8 @@
           },
           "body_dents:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 18470,
-            "fhoneifyPrice": 19578,
+            "estimate": 17593,
+            "fhoneifyPrice": 18649,
             "reference": 26080,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7922,8 +7922,8 @@
           },
           "clean:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 20310,
-            "fhoneifyPrice": 21529,
+            "estimate": 19940,
+            "fhoneifyPrice": 21136,
             "reference": 26080,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7942,8 +7942,8 @@
           },
           "screen_heavy:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 18010,
-            "fhoneifyPrice": 19091,
+            "estimate": 17006,
+            "fhoneifyPrice": 18026,
             "reference": 26080,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7955,8 +7955,8 @@
           },
           "glass_cracked:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 14940,
-            "fhoneifyPrice": 15836,
+            "estimate": 13094,
+            "fhoneifyPrice": 13880,
             "reference": 26080,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7968,8 +7968,8 @@
           },
           "body_heavy:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 19080,
-            "fhoneifyPrice": 20225,
+            "estimate": 18375,
+            "fhoneifyPrice": 19478,
             "reference": 26080,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7981,8 +7981,8 @@
           },
           "body_dents:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 18470,
-            "fhoneifyPrice": 19578,
+            "estimate": 17593,
+            "fhoneifyPrice": 18649,
             "reference": 26080,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -7994,8 +7994,8 @@
           },
           "clean:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 20310,
-            "fhoneifyPrice": 21529,
+            "estimate": 19940,
+            "fhoneifyPrice": 21136,
             "reference": 26080,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -8039,8 +8039,8 @@
           },
           "screen_heavy:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 20180,
-            "fhoneifyPrice": 21391,
+            "estimate": 18055,
+            "fhoneifyPrice": 19138,
             "reference": 28100,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -8052,8 +8052,8 @@
           },
           "glass_cracked:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 18860,
-            "fhoneifyPrice": 19992,
+            "estimate": 13896,
+            "fhoneifyPrice": 14730,
             "reference": 28100,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -8065,8 +8065,8 @@
           },
           "body_heavy:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 20640,
-            "fhoneifyPrice": 21878,
+            "estimate": 19510,
+            "fhoneifyPrice": 20681,
             "reference": 28100,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -8078,8 +8078,8 @@
           },
           "body_dents:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 20380,
-            "fhoneifyPrice": 21603,
+            "estimate": 18679,
+            "fhoneifyPrice": 19800,
             "reference": 28100,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -8091,8 +8091,8 @@
           },
           "clean:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 21170,
-            "fhoneifyPrice": 22440,
+            "estimate": 21174,
+            "fhoneifyPrice": 22444,
             "reference": 28100,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -8111,8 +8111,8 @@
           },
           "screen_heavy:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 20180,
-            "fhoneifyPrice": 21391,
+            "estimate": 18055,
+            "fhoneifyPrice": 19138,
             "reference": 28100,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -8124,8 +8124,8 @@
           },
           "glass_cracked:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 18860,
-            "fhoneifyPrice": 19992,
+            "estimate": 13896,
+            "fhoneifyPrice": 14730,
             "reference": 28100,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -8137,8 +8137,8 @@
           },
           "body_heavy:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 20640,
-            "fhoneifyPrice": 21878,
+            "estimate": 19510,
+            "fhoneifyPrice": 20681,
             "reference": 28100,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -8150,8 +8150,8 @@
           },
           "body_dents:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 20380,
-            "fhoneifyPrice": 21603,
+            "estimate": 18679,
+            "fhoneifyPrice": 19800,
             "reference": 28100,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -8163,8 +8163,8 @@
           },
           "clean:legacyMode": {
             "decision": "LEGACY_MODE",
-            "estimate": 21170,
-            "fhoneifyPrice": 22440,
+            "estimate": 21174,
+            "fhoneifyPrice": 22444,
             "reference": 28100,
             "accessoryBasis": "LEGACY_BOX_BONUS",
             "rule": null
@@ -8499,8 +8499,8 @@
       "rcDecision": "INSPECTION",
       "rcReason": "Unvalidated combined condition",
       "rcEstimate": null,
-      "legacyEstimate": 34400,
-      "legacySignedError": 2180
+      "legacyEstimate": 30770,
+      "legacySignedError": -1450
     },
     {
       "id": "xiaomi-candidate-2026-10-01:T5-COMBINED",
@@ -8510,8 +8510,8 @@
       "rcDecision": "INSPECTION",
       "rcReason": "Unvalidated combined condition",
       "rcEstimate": null,
-      "legacyEstimate": 15850,
-      "legacySignedError": 1210
+      "legacyEstimate": 14268,
+      "legacySignedError": -372
     },
     {
       "id": "xiaomi-severe-followup-2026-10-01:N-CAMPAIR",
@@ -8521,8 +8521,8 @@
       "rcDecision": "INSPECTION",
       "rcReason": "Note functional pricing requires the separately validated additive regime",
       "rcEstimate": null,
-      "legacyEstimate": 18870,
-      "legacySignedError": 2290
+      "legacyEstimate": 13931,
+      "legacySignedError": -2649
     },
     {
       "id": "xiaomi-severe-followup-2026-10-01:N-AUDIOPORT",
@@ -8532,8 +8532,8 @@
       "rcDecision": "INSPECTION",
       "rcReason": "Note functional pricing requires the separately validated additive regime",
       "rcEstimate": null,
-      "legacyEstimate": 19850,
-      "legacySignedError": -530
+      "legacyEstimate": 17015,
+      "legacySignedError": -3365
     },
     {
       "id": "xiaomi-severe-followup-2026-10-01:N-FOUR",
@@ -8543,8 +8543,8 @@
       "rcDecision": "INSPECTION",
       "rcReason": "Note functional pricing requires the separately validated additive regime",
       "rcEstimate": null,
-      "legacyEstimate": 17420,
-      "legacySignedError": 10010
+      "legacyEstimate": 9357,
+      "legacySignedError": 1947
     },
     {
       "id": "xiaomi-severe-followup-2026-10-01:N-FIVE",
@@ -8554,8 +8554,8 @@
       "rcDecision": "INSPECTION",
       "rcReason": "Note functional pricing requires the separately validated additive regime",
       "rcEstimate": null,
-      "legacyEstimate": 16760,
-      "legacySignedError": 10350
+      "legacyEstimate": 7277,
+      "legacySignedError": 867
     },
     {
       "id": "team-workbook-2026-10-02:FM004_LIVE_C",
@@ -9298,15 +9298,15 @@
         "rows": 168,
         "numeric": 168,
         "refused": 0,
-        "mape": 45.83,
-        "mae": 1568.38,
-        "maxApe": 2869.64,
+        "mape": 18.75,
+        "mae": 1507.25,
+        "maxApe": 670.18,
         "maxSignedOverpayment": 20053,
-        "maxUnderpayment": -3948,
-        "within3": 53,
-        "outside3": 115,
-        "overpayments": 125,
-        "underpayments": 41
+        "maxUnderpayment": -16184,
+        "within3": 52,
+        "outside3": 116,
+        "overpayments": 103,
+        "underpayments": 65
       },
       "rc": {
         "rows": 168,
@@ -9458,15 +9458,15 @@
         "rows": 168,
         "numeric": 164,
         "refused": 4,
-        "mape": 44.35,
-        "mae": 1519.05,
-        "maxApe": 2716.07,
+        "mape": 18.73,
+        "mae": 1584.56,
+        "maxApe": 642.5,
         "maxSignedOverpayment": 19907,
-        "maxUnderpayment": -4721,
-        "within3": 60,
-        "outside3": 104,
-        "overpayments": 104,
-        "underpayments": 59
+        "maxUnderpayment": -16259,
+        "within3": 58,
+        "outside3": 106,
+        "overpayments": 85,
+        "underpayments": 78
       },
       "rc": {
         "rows": 168,
@@ -9618,15 +9618,15 @@
         "rows": 168,
         "numeric": 164,
         "refused": 4,
-        "mape": 44.63,
-        "mae": 1544,
-        "maxApe": 2716.07,
+        "mape": 19.02,
+        "mae": 1609.51,
+        "maxApe": 642.5,
         "maxSignedOverpayment": 20053,
-        "maxUnderpayment": -4721,
-        "within3": 56,
-        "outside3": 108,
-        "overpayments": 106,
-        "underpayments": 57
+        "maxUnderpayment": -16259,
+        "within3": 54,
+        "outside3": 110,
+        "overpayments": 87,
+        "underpayments": 76
       },
       "rc": {
         "rows": 168,
@@ -9781,14 +9781,14 @@
         "collectedAt": "2026-10-01T13:52:49.468Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 44500,
-          "fhoneifyPrice": 46280,
+          "estimate": 43693,
+          "fhoneifyPrice": 45441,
           "reference": 57750,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1780,
-          "ape": 4.17
+          "error": 973,
+          "ape": 2.28
         },
         "rc": {
           "decision": "INSPECTION",
@@ -9808,14 +9808,14 @@
         "collectedAt": "2026-10-01T13:53:14.195Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 38220,
-          "fhoneifyPrice": 39749,
+          "estimate": 35463,
+          "fhoneifyPrice": 36882,
           "reference": 57750,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 4500,
-          "ape": 13.35
+          "error": 1743,
+          "ape": 5.17
         },
         "rc": {
           "decision": "INSPECTION",
@@ -9835,14 +9835,14 @@
         "collectedAt": "2026-10-01T13:58:01.606Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 44500,
-          "fhoneifyPrice": 46280,
+          "estimate": 43693,
+          "fhoneifyPrice": 45441,
           "reference": 57750,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1780,
-          "ape": 4.17
+          "error": 973,
+          "ape": 2.28
         },
         "rc": {
           "decision": "INSPECTION",
@@ -9862,14 +9862,14 @@
         "collectedAt": "2026-10-01T13:58:25.894Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 20820,
-          "fhoneifyPrice": 22069,
+          "estimate": 20443,
+          "fhoneifyPrice": 21670,
           "reference": 26750,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1180,
-          "ape": 6.01
+          "error": 803,
+          "ape": 4.09
         },
         "rc": {
           "decision": "INSPECTION",
@@ -9889,14 +9889,14 @@
         "collectedAt": "2026-10-01T13:58:51.030Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 17900,
-          "fhoneifyPrice": 18974,
+          "estimate": 16631,
+          "fhoneifyPrice": 17629,
           "reference": 26750,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 2260,
-          "ape": 14.45
+          "error": 991,
+          "ape": 6.34
         },
         "rc": {
           "decision": "INSPECTION",
@@ -9916,14 +9916,14 @@
         "collectedAt": "2026-10-01T14:02:01.744Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 41200,
-          "fhoneifyPrice": 42848,
+          "estimate": 39361,
+          "fhoneifyPrice": 40935,
           "reference": 57750,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -20,
-          "ape": 0.05
+          "error": -1859,
+          "ape": 4.51
         },
         "rc": {
           "decision": "INSPECTION",
@@ -9943,14 +9943,14 @@
         "collectedAt": "2026-10-01T14:02:25.955Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 19280,
-          "fhoneifyPrice": 20437,
+          "estimate": 18436,
+          "fhoneifyPrice": 19542,
           "reference": 26750,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 640,
-          "ape": 3.43
+          "error": -204,
+          "ape": 1.09
         },
         "rc": {
           "decision": "INSPECTION",
@@ -9970,14 +9970,14 @@
         "collectedAt": "2026-10-01T14:02:50.661Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 20820,
-          "fhoneifyPrice": 22069,
+          "estimate": 20443,
+          "fhoneifyPrice": 21670,
           "reference": 26750,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1180,
-          "ape": 6.01
+          "error": 803,
+          "ape": 4.09
         },
         "rc": {
           "decision": "INSPECTION",
@@ -9997,14 +9997,14 @@
         "collectedAt": "2026-10-01T14:03:14.974Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 31510,
-          "fhoneifyPrice": 33401,
+          "estimate": 30943,
+          "fhoneifyPrice": 32800,
           "reference": 40750,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1670,
-          "ape": 5.6
+          "error": 1103,
+          "ape": 3.7
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10024,14 +10024,14 @@
         "collectedAt": "2026-10-01T14:03:39.250Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 22030,
-          "fhoneifyPrice": 23352,
+          "estimate": 22025,
+          "fhoneifyPrice": 23347,
           "reference": 29250,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 250,
-          "ape": 1.15
+          "error": 245,
+          "ape": 1.12
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10051,14 +10051,14 @@
         "collectedAt": "2026-10-01T14:04:05.737Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 19720,
-          "fhoneifyPrice": 20903,
+          "estimate": 14449,
+          "fhoneifyPrice": 15316,
           "reference": 29250,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 620,
-          "ape": 3.25
+          "error": -4651,
+          "ape": 24.35
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10078,14 +10078,14 @@
         "collectedAt": "2026-10-01T14:04:30.047Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 58150,
-          "fhoneifyPrice": 60150,
+          "estimate": 57095,
+          "fhoneifyPrice": 59095,
           "reference": 75620,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 900,
-          "ape": 1.57
+          "error": -155,
+          "ape": 0.27
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10105,14 +10105,14 @@
         "collectedAt": "2026-10-01T14:04:54.152Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 38330,
-          "fhoneifyPrice": 39863,
+          "estimate": 23066,
+          "fhoneifyPrice": 23989,
           "reference": 75620,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -920,
-          "ape": 2.34
+          "error": -16184,
+          "ape": 41.23
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10132,14 +10132,14 @@
         "collectedAt": "2026-10-01T14:05:18.641Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 58150,
-          "fhoneifyPrice": 60150,
+          "estimate": 57095,
+          "fhoneifyPrice": 59095,
           "reference": 75620,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 900,
-          "ape": 1.57
+          "error": -155,
+          "ape": 0.27
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10159,14 +10159,14 @@
         "collectedAt": "2026-10-01T14:05:42.808Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 18060,
-          "fhoneifyPrice": 19144,
+          "estimate": 9038,
+          "fhoneifyPrice": 9580,
           "reference": 29250,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 780,
-          "ape": 4.51
+          "error": -8242,
+          "ape": 47.7
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10186,14 +10186,14 @@
         "collectedAt": "2026-10-01T14:10:17.090Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 22030,
-          "fhoneifyPrice": 23352,
+          "estimate": 22025,
+          "fhoneifyPrice": 23347,
           "reference": 29250,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 250,
-          "ape": 1.15
+          "error": 245,
+          "ape": 1.12
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10213,14 +10213,14 @@
         "collectedAt": "2026-10-01T15:09:14.027Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 44500,
-          "fhoneifyPrice": 46280,
+          "estimate": 43693,
+          "fhoneifyPrice": 45441,
           "reference": 57750,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1780,
-          "ape": 4.17
+          "error": 973,
+          "ape": 2.28
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10240,14 +10240,14 @@
         "collectedAt": "2026-10-01T15:10:42.878Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 34920,
-          "fhoneifyPrice": 36317,
+          "estimate": 31132,
+          "fhoneifyPrice": 32377,
           "reference": 57750,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 2700,
-          "ape": 8.38
+          "error": -1088,
+          "ape": 3.38
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10267,14 +10267,14 @@
         "collectedAt": "2026-10-01T15:11:10.362Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 39540,
-          "fhoneifyPrice": 41122,
+          "estimate": 37196,
+          "fhoneifyPrice": 38684,
           "reference": 57750,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 2120,
-          "ape": 5.67
+          "error": -224,
+          "ape": 0.6
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10294,14 +10294,14 @@
         "collectedAt": "2026-10-01T15:11:35.386Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 44500,
-          "fhoneifyPrice": 46280,
+          "estimate": 43693,
+          "fhoneifyPrice": 45441,
           "reference": 57750,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1780,
-          "ape": 4.17
+          "error": 973,
+          "ape": 2.28
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10321,14 +10321,14 @@
         "collectedAt": "2026-10-01T15:11:59.897Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 20820,
-          "fhoneifyPrice": 22069,
+          "estimate": 20443,
+          "fhoneifyPrice": 21670,
           "reference": 26750,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1180,
-          "ape": 6.01
+          "error": 803,
+          "ape": 4.09
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10348,14 +10348,14 @@
         "collectedAt": "2026-10-01T15:12:24.841Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 16360,
-          "fhoneifyPrice": 17342,
+          "estimate": 14624,
+          "fhoneifyPrice": 15501,
           "reference": 26750,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1720,
-          "ape": 11.75
+          "error": -16,
+          "ape": 0.11
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10375,14 +10375,14 @@
         "collectedAt": "2026-10-01T15:12:51.747Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 18520,
-          "fhoneifyPrice": 19631,
+          "estimate": 17433,
+          "fhoneifyPrice": 18479,
           "reference": 26750,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1230,
-          "ape": 7.11
+          "error": 143,
+          "ape": 0.83
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10402,14 +10402,14 @@
         "collectedAt": "2026-10-01T15:13:16.351Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 20820,
-          "fhoneifyPrice": 22069,
+          "estimate": 20443,
+          "fhoneifyPrice": 21670,
           "reference": 26750,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1180,
-          "ape": 6.01
+          "error": 803,
+          "ape": 4.09
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10429,14 +10429,14 @@
         "collectedAt": "2026-10-01T15:13:43.375Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 28920,
-          "fhoneifyPrice": 30655,
+          "estimate": 28393,
+          "fhoneifyPrice": 30097,
           "reference": 37350,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1450,
-          "ape": 5.28
+          "error": 923,
+          "ape": 3.36
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10456,14 +10456,14 @@
         "collectedAt": "2026-10-01T15:14:09.239Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 22640,
-          "fhoneifyPrice": 23998,
+          "estimate": 23070,
+          "fhoneifyPrice": 24454,
           "reference": 37350,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 3920,
-          "ape": 20.94
+          "error": 4350,
+          "ape": 23.24
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10483,14 +10483,14 @@
         "collectedAt": "2026-10-01T15:14:35.705Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 25620,
-          "fhoneifyPrice": 27157,
+          "estimate": 25591,
+          "fhoneifyPrice": 27126,
           "reference": 37350,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -350,
-          "ape": 1.35
+          "error": -379,
+          "ape": 1.46
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10510,14 +10510,14 @@
         "collectedAt": "2026-10-01T15:15:01.803Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 28920,
-          "fhoneifyPrice": 30655,
+          "estimate": 28393,
+          "fhoneifyPrice": 30097,
           "reference": 37350,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1450,
-          "ape": 5.28
+          "error": 923,
+          "ape": 3.36
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10537,14 +10537,14 @@
         "collectedAt": "2026-10-01T15:49:34.845Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 22030,
-          "fhoneifyPrice": 23352,
+          "estimate": 22025,
+          "fhoneifyPrice": 23347,
           "reference": 29250,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 250,
-          "ape": 1.15
+          "error": 245,
+          "ape": 1.12
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10564,14 +10564,14 @@
         "collectedAt": "2026-10-01T15:49:59.126Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 16630,
-          "fhoneifyPrice": 17628,
+          "estimate": 4313,
+          "fhoneifyPrice": 4572,
           "reference": 29250,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 16070,
-          "ape": 2869.64
+          "error": 3753,
+          "ape": 670.18
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10591,14 +10591,14 @@
         "collectedAt": "2026-10-01T17:36:43.623Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 22030,
-          "fhoneifyPrice": 23352,
+          "estimate": 22025,
+          "fhoneifyPrice": 23347,
           "reference": 29250,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 250,
-          "ape": 1.15
+          "error": 245,
+          "ape": 1.12
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10618,14 +10618,14 @@
         "collectedAt": "2026-10-01T17:37:07.807Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 21370,
-          "fhoneifyPrice": 22652,
+          "estimate": 19861,
+          "fhoneifyPrice": 21053,
           "reference": 29250,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 590,
-          "ape": 2.84
+          "error": -919,
+          "ape": 4.42
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10645,14 +10645,14 @@
         "collectedAt": "2026-10-01T17:37:32.134Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 21370,
-          "fhoneifyPrice": 22652,
+          "estimate": 19861,
+          "fhoneifyPrice": 21053,
           "reference": 29250,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -10,
-          "ape": 0.05
+          "error": -1519,
+          "ape": 7.1
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10672,14 +10672,14 @@
         "collectedAt": "2026-10-01T17:37:56.373Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 21200,
-          "fhoneifyPrice": 22472,
+          "estimate": 19313,
+          "fhoneifyPrice": 20472,
           "reference": 29250,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1420,
-          "ape": 7.18
+          "error": -467,
+          "ape": 2.36
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10699,14 +10699,14 @@
         "collectedAt": "2026-10-01T17:38:20.599Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 20560,
-          "fhoneifyPrice": 21794,
+          "estimate": 17198,
+          "fhoneifyPrice": 18230,
           "reference": 29250,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1980,
-          "ape": 10.66
+          "error": -1382,
+          "ape": 7.44
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10726,14 +10726,14 @@
         "collectedAt": "2026-10-01T17:38:44.950Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 21240,
-          "fhoneifyPrice": 22514,
+          "estimate": 19428,
+          "fhoneifyPrice": 20594,
           "reference": 29250,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 8230,
-          "ape": 63.26
+          "error": 6418,
+          "ape": 49.33
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10753,14 +10753,14 @@
         "collectedAt": "2026-10-01T17:39:32.256Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 21040,
-          "fhoneifyPrice": 22302,
+          "estimate": 18778,
+          "fhoneifyPrice": 19905,
           "reference": 29250,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 5110,
-          "ape": 32.08
+          "error": 2848,
+          "ape": 17.88
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10780,14 +10780,14 @@
         "collectedAt": "2026-10-01T17:39:56.389Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 19730,
-          "fhoneifyPrice": 20914,
+          "estimate": 14486,
+          "fhoneifyPrice": 15355,
           "reference": 29250,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 3150,
-          "ape": 19
+          "error": -2094,
+          "ape": 12.63
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10807,14 +10807,14 @@
         "collectedAt": "2026-10-01T17:40:20.533Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 20710,
-          "fhoneifyPrice": 21953,
+          "estimate": 17696,
+          "fhoneifyPrice": 18758,
           "reference": 29250,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 330,
-          "ape": 1.62
+          "error": -2684,
+          "ape": 13.17
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10834,14 +10834,14 @@
         "collectedAt": "2026-10-01T17:40:44.785Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 18280,
-          "fhoneifyPrice": 19377,
+          "estimate": 9724,
+          "fhoneifyPrice": 10307,
           "reference": 29250,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 10870,
-          "ape": 146.69
+          "error": 2314,
+          "ape": 31.23
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10861,14 +10861,14 @@
         "collectedAt": "2026-10-01T17:41:09.159Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 17620,
-          "fhoneifyPrice": 18677,
+          "estimate": 7560,
+          "fhoneifyPrice": 8014,
           "reference": 29250,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 11210,
-          "ape": 174.88
+          "error": 1150,
+          "ape": 17.94
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10888,14 +10888,14 @@
         "collectedAt": "2026-10-01T17:41:33.496Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 16630,
-          "fhoneifyPrice": 17628,
+          "estimate": 4313,
+          "fhoneifyPrice": 4572,
           "reference": 29250,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 16070,
-          "ape": 2869.64
+          "error": 3753,
+          "ape": 670.18
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10915,14 +10915,14 @@
         "collectedAt": "2026-10-01T17:41:57.542Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 22030,
-          "fhoneifyPrice": 23352,
+          "estimate": 22025,
+          "fhoneifyPrice": 23347,
           "reference": 29250,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 250,
-          "ape": 1.15
+          "error": 245,
+          "ape": 1.12
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10942,14 +10942,14 @@
         "collectedAt": "2026-10-01T17:42:21.683Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 44500,
-          "fhoneifyPrice": 46280,
+          "estimate": 43693,
+          "fhoneifyPrice": 45441,
           "reference": 57750,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1780,
-          "ape": 4.17
+          "error": 973,
+          "ape": 2.28
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10969,14 +10969,14 @@
         "collectedAt": "2026-10-01T17:42:45.688Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 34920,
-          "fhoneifyPrice": 36317,
+          "estimate": 31132,
+          "fhoneifyPrice": 32377,
           "reference": 57750,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1600,
-          "ape": 4.8
+          "error": -2188,
+          "ape": 6.57
         },
         "rc": {
           "decision": "INSPECTION",
@@ -10996,14 +10996,14 @@
         "collectedAt": "2026-10-01T17:43:09.928Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 44500,
-          "fhoneifyPrice": 46280,
+          "estimate": 43693,
+          "fhoneifyPrice": 45441,
           "reference": 57750,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1780,
-          "ape": 4.17
+          "error": 973,
+          "ape": 2.28
         },
         "rc": {
           "decision": "INSPECTION",
@@ -11023,14 +11023,14 @@
         "collectedAt": "2026-10-01T17:43:34.107Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 20820,
-          "fhoneifyPrice": 22069,
+          "estimate": 20443,
+          "fhoneifyPrice": 21670,
           "reference": 26750,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1180,
-          "ape": 6.01
+          "error": 803,
+          "ape": 4.09
         },
         "rc": {
           "decision": "INSPECTION",
@@ -11050,14 +11050,14 @@
         "collectedAt": "2026-10-01T17:43:58.206Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 17360,
-          "fhoneifyPrice": 18402,
+          "estimate": 15922,
+          "fhoneifyPrice": 16877,
           "reference": 26750,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 720,
-          "ape": 4.33
+          "error": -718,
+          "ape": 4.31
         },
         "rc": {
           "decision": "INSPECTION",
@@ -11077,14 +11077,14 @@
         "collectedAt": "2026-10-01T17:44:22.200Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 20820,
-          "fhoneifyPrice": 22069,
+          "estimate": 20443,
+          "fhoneifyPrice": 21670,
           "reference": 26750,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1180,
-          "ape": 6.01
+          "error": 803,
+          "ape": 4.09
         },
         "rc": {
           "decision": "INSPECTION",
@@ -12867,14 +12867,14 @@
         "collectedAt": "2026-10-02T11:47:46.100Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 44500,
-          "fhoneifyPrice": 46280,
+          "estimate": 43693,
+          "fhoneifyPrice": 45441,
           "reference": 57750,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 780,
-          "ape": 1.78
+          "error": -27,
+          "ape": 0.06
         },
         "rc": {
           "decision": "INSPECTION",
@@ -12894,14 +12894,14 @@
         "collectedAt": "2026-10-02T11:48:11.094Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 38220,
-          "fhoneifyPrice": 39749,
+          "estimate": 35463,
+          "fhoneifyPrice": 36882,
           "reference": 57750,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 3500,
-          "ape": 10.08
+          "error": 743,
+          "ape": 2.14
         },
         "rc": {
           "decision": "INSPECTION",
@@ -12921,14 +12921,14 @@
         "collectedAt": "2026-10-02T11:48:35.830Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 41200,
-          "fhoneifyPrice": 42848,
+          "estimate": 39361,
+          "fhoneifyPrice": 40935,
           "reference": 57750,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -1020,
-          "ape": 2.42
+          "error": -2859,
+          "ape": 6.77
         },
         "rc": {
           "decision": "INSPECTION",
@@ -12948,14 +12948,14 @@
         "collectedAt": "2026-10-02T11:49:15.374Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 20820,
-          "fhoneifyPrice": 22069,
+          "estimate": 20443,
+          "fhoneifyPrice": 21670,
           "reference": 26750,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 580,
-          "ape": 2.87
+          "error": 203,
+          "ape": 1
         },
         "rc": {
           "decision": "INSPECTION",
@@ -12975,14 +12975,14 @@
         "collectedAt": "2026-10-02T11:49:39.798Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 17900,
-          "fhoneifyPrice": 18974,
+          "estimate": 16631,
+          "fhoneifyPrice": 17629,
           "reference": 26750,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1660,
-          "ape": 10.22
+          "error": 391,
+          "ape": 2.41
         },
         "rc": {
           "decision": "INSPECTION",
@@ -13002,14 +13002,14 @@
         "collectedAt": "2026-10-02T11:50:04.193Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 19280,
-          "fhoneifyPrice": 20437,
+          "estimate": 18436,
+          "fhoneifyPrice": 19542,
           "reference": 26750,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 40,
-          "ape": 0.21
+          "error": -804,
+          "ape": 4.18
         },
         "rc": {
           "decision": "INSPECTION",
@@ -13029,14 +13029,14 @@
         "collectedAt": "2026-10-02T11:50:28.353Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 22030,
-          "fhoneifyPrice": 23352,
+          "estimate": 22025,
+          "fhoneifyPrice": 23347,
           "reference": 29250,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -100,
-          "ape": 0.45
+          "error": -105,
+          "ape": 0.47
         },
         "rc": {
           "decision": "INSPECTION",
@@ -13056,14 +13056,14 @@
         "collectedAt": "2026-10-02T11:50:54.002Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 19720,
-          "fhoneifyPrice": 20903,
+          "estimate": 14449,
+          "fhoneifyPrice": 15316,
           "reference": 29250,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 270,
-          "ape": 1.39
+          "error": -5001,
+          "ape": 25.71
         },
         "rc": {
           "decision": "INSPECTION",
@@ -13083,14 +13083,14 @@
         "collectedAt": "2026-10-02T11:51:17.927Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 18060,
-          "fhoneifyPrice": 19144,
+          "estimate": 9038,
+          "fhoneifyPrice": 9580,
           "reference": 29250,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 430,
-          "ape": 2.44
+          "error": -8592,
+          "ape": 48.74
         },
         "rc": {
           "decision": "INSPECTION",
@@ -13277,14 +13277,14 @@
         "collectedAt": "2026-10-02T11:54:14.894Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 28920,
-          "fhoneifyPrice": 30655,
+          "estimate": 28393,
+          "fhoneifyPrice": 30097,
           "reference": 37350,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 650,
-          "ape": 2.3
+          "error": 123,
+          "ape": 0.44
         },
         "rc": {
           "decision": "INSPECTION",
@@ -13304,14 +13304,14 @@
         "collectedAt": "2026-10-02T11:54:38.746Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 22640,
-          "fhoneifyPrice": 23998,
+          "estimate": 23070,
+          "fhoneifyPrice": 24454,
           "reference": 37350,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 3120,
-          "ape": 15.98
+          "error": 3550,
+          "ape": 18.19
         },
         "rc": {
           "decision": "INSPECTION",
@@ -13331,14 +13331,14 @@
         "collectedAt": "2026-10-02T11:55:04.380Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 17360,
-          "fhoneifyPrice": 18402,
+          "estimate": 18588,
+          "fhoneifyPrice": 19703,
           "reference": 37350,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -490,
-          "ape": 2.75
+          "error": 738,
+          "ape": 4.13
         },
         "rc": {
           "decision": "INSPECTION",
@@ -13358,14 +13358,14 @@
         "collectedAt": "2026-10-02T11:55:28.340Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 58150,
-          "fhoneifyPrice": 60150,
+          "estimate": 57095,
+          "fhoneifyPrice": 59095,
           "reference": 75620,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 900,
-          "ape": 1.57
+          "error": -155,
+          "ape": 0.27
         },
         "rc": {
           "decision": "INSPECTION",
@@ -13385,14 +13385,14 @@
         "collectedAt": "2026-10-02T11:55:52.429Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 38330,
-          "fhoneifyPrice": 39863,
+          "estimate": 23066,
+          "fhoneifyPrice": 23989,
           "reference": 75620,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -920,
-          "ape": 2.34
+          "error": -16184,
+          "ape": 41.23
         },
         "rc": {
           "decision": "INSPECTION",
@@ -13412,14 +13412,14 @@
         "collectedAt": "2026-10-02T11:56:18.147Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 48240,
-          "fhoneifyPrice": 50170,
+          "estimate": 40081,
+          "fhoneifyPrice": 41684,
           "reference": 75620,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 6290,
-          "ape": 14.99
+          "error": -1869,
+          "ape": 4.46
         },
         "rc": {
           "decision": "INSPECTION",
@@ -13680,14 +13680,14 @@
         "collectedAt": "2026-10-02T11:59:41.148Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 21380,
-          "fhoneifyPrice": 22663,
+          "estimate": 20930,
+          "fhoneifyPrice": 22186,
           "reference": 27400,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 0,
-          "ape": 0
+          "error": -450,
+          "ape": 2.1
         },
         "rc": {
           "decision": "INSPECTION",
@@ -13707,14 +13707,14 @@
         "collectedAt": "2026-10-02T12:00:05.044Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 16250,
-          "fhoneifyPrice": 17225,
+          "estimate": 17026,
+          "fhoneifyPrice": 18048,
           "reference": 27400,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1870,
-          "ape": 13
+          "error": 2646,
+          "ape": 18.4
         },
         "rc": {
           "decision": "INSPECTION",
@@ -13734,14 +13734,14 @@
         "collectedAt": "2026-10-02T12:01:43.331Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 46090,
-          "fhoneifyPrice": 47934,
+          "estimate": 45253,
+          "fhoneifyPrice": 47063,
           "reference": 59830,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 800,
-          "ape": 1.77
+          "error": -37,
+          "ape": 0.08
         },
         "rc": {
           "decision": "INSPECTION",
@@ -13761,14 +13761,14 @@
         "collectedAt": "2026-10-02T12:02:09.025Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 34530,
-          "fhoneifyPrice": 35911,
+          "estimate": 29547,
+          "fhoneifyPrice": 30729,
           "reference": 59830,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -50,
-          "ape": 0.14
+          "error": -5033,
+          "ape": 14.55
         },
         "rc": {
           "decision": "INSPECTION",
@@ -13788,14 +13788,14 @@
         "collectedAt": "2026-10-02T12:02:33.341Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 31510,
-          "fhoneifyPrice": 33401,
+          "estimate": 30943,
+          "fhoneifyPrice": 32800,
           "reference": 40750,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 670,
-          "ape": 2.17
+          "error": 103,
+          "ape": 0.33
         },
         "rc": {
           "decision": "INSPECTION",
@@ -13815,14 +13815,14 @@
         "collectedAt": "2026-10-02T12:02:57.286Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 26040,
-          "fhoneifyPrice": 27602,
+          "estimate": 25136,
+          "fhoneifyPrice": 26644,
           "reference": 40750,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 3200,
-          "ape": 14.01
+          "error": 2296,
+          "ape": 10.05
         },
         "rc": {
           "decision": "INSPECTION",
@@ -13842,14 +13842,14 @@
         "collectedAt": "2026-10-02T12:03:21.172Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 28630,
-          "fhoneifyPrice": 30348,
+          "estimate": 27886,
+          "fhoneifyPrice": 29559,
           "reference": 40750,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -710,
-          "ape": 2.42
+          "error": -1454,
+          "ape": 4.96
         },
         "rc": {
           "decision": "INSPECTION",
@@ -14383,14 +14383,14 @@
         "collectedAt": "2026-10-02T17:35:08.058Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 21380,
-          "fhoneifyPrice": 22663,
+          "estimate": 20930,
+          "fhoneifyPrice": 22186,
           "reference": 27400,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 0,
-          "ape": 0
+          "error": -450,
+          "ape": 2.1
         },
         "rc": {
           "decision": "INSPECTION",
@@ -14410,14 +14410,14 @@
         "collectedAt": "2026-10-02T17:35:32.237Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 18680,
-          "fhoneifyPrice": 19801,
+          "estimate": 18875,
+          "fhoneifyPrice": 20008,
           "reference": 27400,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -1200,
-          "ape": 6.04
+          "error": -1005,
+          "ape": 5.06
         },
         "rc": {
           "decision": "INSPECTION",
@@ -14437,14 +14437,14 @@
         "collectedAt": "2026-10-02T17:35:56.416Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 46090,
-          "fhoneifyPrice": 47934,
+          "estimate": 45253,
+          "fhoneifyPrice": 47063,
           "reference": 59830,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 800,
-          "ape": 1.77
+          "error": -37,
+          "ape": 0.08
         },
         "rc": {
           "decision": "INSPECTION",
@@ -14464,14 +14464,14 @@
         "collectedAt": "2026-10-02T17:36:20.513Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 42790,
-          "fhoneifyPrice": 44502,
+          "estimate": 40765,
+          "fhoneifyPrice": 42396,
           "reference": 59830,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -1000,
-          "ape": 2.28
+          "error": -3025,
+          "ape": 6.91
         },
         "rc": {
           "decision": "INSPECTION",
@@ -14584,14 +14584,14 @@
         "collectedAt": "2026-10-01T13:52:49.468Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 43980,
-          "fhoneifyPrice": 45739,
+          "estimate": 43183,
+          "fhoneifyPrice": 44910,
           "reference": 57070,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1260,
-          "ape": 2.95
+          "error": 463,
+          "ape": 1.08
         },
         "rc": {
           "decision": "INSPECTION",
@@ -14611,14 +14611,14 @@
         "collectedAt": "2026-10-01T13:53:14.195Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 37700,
-          "fhoneifyPrice": 39208,
+          "estimate": 35050,
+          "fhoneifyPrice": 36452,
           "reference": 57070,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 3980,
-          "ape": 11.8
+          "error": 1330,
+          "ape": 3.94
         },
         "rc": {
           "decision": "INSPECTION",
@@ -14638,14 +14638,14 @@
         "collectedAt": "2026-10-01T13:58:01.606Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 43980,
-          "fhoneifyPrice": 45739,
+          "estimate": 43183,
+          "fhoneifyPrice": 44910,
           "reference": 57070,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1260,
-          "ape": 2.95
+          "error": 463,
+          "ape": 1.08
         },
         "rc": {
           "decision": "INSPECTION",
@@ -14665,14 +14665,14 @@
         "collectedAt": "2026-10-01T13:58:25.894Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 20310,
-          "fhoneifyPrice": 21529,
+          "estimate": 19940,
+          "fhoneifyPrice": 21136,
           "reference": 26080,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 670,
-          "ape": 3.41
+          "error": 300,
+          "ape": 1.53
         },
         "rc": {
           "decision": "INSPECTION",
@@ -14692,14 +14692,14 @@
         "collectedAt": "2026-10-01T13:58:51.030Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 17390,
-          "fhoneifyPrice": 18433,
+          "estimate": 16224,
+          "fhoneifyPrice": 17197,
           "reference": 26080,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1750,
-          "ape": 11.19
+          "error": 584,
+          "ape": 3.73
         },
         "rc": {
           "decision": "INSPECTION",
@@ -14719,14 +14719,14 @@
         "collectedAt": "2026-10-01T14:02:01.744Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 40680,
-          "fhoneifyPrice": 42307,
+          "estimate": 38902,
+          "fhoneifyPrice": 40458,
           "reference": 57070,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -540,
-          "ape": 1.31
+          "error": -2318,
+          "ape": 5.62
         },
         "rc": {
           "decision": "INSPECTION",
@@ -14746,14 +14746,14 @@
         "collectedAt": "2026-10-01T14:02:25.955Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 18770,
-          "fhoneifyPrice": 19896,
+          "estimate": 17984,
+          "fhoneifyPrice": 19063,
           "reference": 26080,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 130,
-          "ape": 0.7
+          "error": -656,
+          "ape": 3.52
         },
         "rc": {
           "decision": "INSPECTION",
@@ -14773,14 +14773,14 @@
         "collectedAt": "2026-10-01T14:02:50.661Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 20310,
-          "fhoneifyPrice": 21529,
+          "estimate": 19940,
+          "fhoneifyPrice": 21136,
           "reference": 26080,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 670,
-          "ape": 3.41
+          "error": 300,
+          "ape": 1.53
         },
         "rc": {
           "decision": "INSPECTION",
@@ -14800,14 +14800,14 @@
         "collectedAt": "2026-10-01T14:03:14.974Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 30450,
-          "fhoneifyPrice": 32277,
+          "estimate": 29900,
+          "fhoneifyPrice": 31694,
           "reference": 39360,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 610,
-          "ape": 2.04
+          "error": 60,
+          "ape": 0.2
         },
         "rc": {
           "decision": "INSPECTION",
@@ -14827,14 +14827,14 @@
         "collectedAt": "2026-10-01T14:03:39.250Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 21170,
-          "fhoneifyPrice": 22440,
+          "estimate": 21174,
+          "fhoneifyPrice": 22444,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -610,
-          "ape": 2.8
+          "error": -606,
+          "ape": 2.78
         },
         "rc": {
           "decision": "INSPECTION",
@@ -14854,14 +14854,14 @@
         "collectedAt": "2026-10-01T14:04:05.737Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 18860,
-          "fhoneifyPrice": 19992,
+          "estimate": 13896,
+          "fhoneifyPrice": 14730,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -240,
-          "ape": 1.26
+          "error": -5204,
+          "ape": 27.25
         },
         "rc": {
           "decision": "INSPECTION",
@@ -14881,14 +14881,14 @@
         "collectedAt": "2026-10-01T14:04:30.047Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 57960,
-          "fhoneifyPrice": 59960,
+          "estimate": 56908,
+          "fhoneifyPrice": 58908,
           "reference": 75370,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 710,
-          "ape": 1.24
+          "error": -342,
+          "ape": 0.6
         },
         "rc": {
           "decision": "INSPECTION",
@@ -14908,14 +14908,14 @@
         "collectedAt": "2026-10-01T14:04:54.152Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 38140,
-          "fhoneifyPrice": 39666,
+          "estimate": 22991,
+          "fhoneifyPrice": 23911,
           "reference": 75370,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -1110,
-          "ape": 2.83
+          "error": -16259,
+          "ape": 41.42
         },
         "rc": {
           "decision": "INSPECTION",
@@ -14935,14 +14935,14 @@
         "collectedAt": "2026-10-01T14:05:18.641Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 57960,
-          "fhoneifyPrice": 59960,
+          "estimate": 56908,
+          "fhoneifyPrice": 58908,
           "reference": 75370,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 710,
-          "ape": 1.24
+          "error": -342,
+          "ape": 0.6
         },
         "rc": {
           "decision": "INSPECTION",
@@ -14962,14 +14962,14 @@
         "collectedAt": "2026-10-01T14:05:42.808Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 17200,
-          "fhoneifyPrice": 18232,
+          "estimate": 8698,
+          "fhoneifyPrice": 9220,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -80,
-          "ape": 0.46
+          "error": -8582,
+          "ape": 49.66
         },
         "rc": {
           "decision": "INSPECTION",
@@ -14989,14 +14989,14 @@
         "collectedAt": "2026-10-01T14:10:17.090Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 21170,
-          "fhoneifyPrice": 22440,
+          "estimate": 21174,
+          "fhoneifyPrice": 22444,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -610,
-          "ape": 2.8
+          "error": -606,
+          "ape": 2.78
         },
         "rc": {
           "decision": "INSPECTION",
@@ -15016,14 +15016,14 @@
         "collectedAt": "2026-10-01T15:09:14.027Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 43980,
-          "fhoneifyPrice": 45739,
+          "estimate": 43183,
+          "fhoneifyPrice": 44910,
           "reference": 57070,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1260,
-          "ape": 2.95
+          "error": 463,
+          "ape": 1.08
         },
         "rc": {
           "decision": "INSPECTION",
@@ -15043,14 +15043,14 @@
         "collectedAt": "2026-10-01T15:10:42.878Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 34400,
-          "fhoneifyPrice": 35776,
+          "estimate": 30770,
+          "fhoneifyPrice": 32001,
           "reference": 57070,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 2180,
-          "ape": 6.77
+          "error": -1450,
+          "ape": 4.5
         },
         "rc": {
           "decision": "INSPECTION",
@@ -15070,14 +15070,14 @@
         "collectedAt": "2026-10-01T15:11:10.362Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 39020,
-          "fhoneifyPrice": 40581,
+          "estimate": 36762,
+          "fhoneifyPrice": 38232,
           "reference": 57070,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1600,
-          "ape": 4.28
+          "error": -658,
+          "ape": 1.76
         },
         "rc": {
           "decision": "INSPECTION",
@@ -15097,14 +15097,14 @@
         "collectedAt": "2026-10-01T15:11:35.386Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 43980,
-          "fhoneifyPrice": 45739,
+          "estimate": 43183,
+          "fhoneifyPrice": 44910,
           "reference": 57070,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1260,
-          "ape": 2.95
+          "error": 463,
+          "ape": 1.08
         },
         "rc": {
           "decision": "INSPECTION",
@@ -15124,14 +15124,14 @@
         "collectedAt": "2026-10-01T15:11:59.897Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 20310,
-          "fhoneifyPrice": 21529,
+          "estimate": 19940,
+          "fhoneifyPrice": 21136,
           "reference": 26080,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 670,
-          "ape": 3.41
+          "error": 300,
+          "ape": 1.53
         },
         "rc": {
           "decision": "INSPECTION",
@@ -15151,14 +15151,14 @@
         "collectedAt": "2026-10-01T15:12:24.841Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 15850,
-          "fhoneifyPrice": 16801,
+          "estimate": 14268,
+          "fhoneifyPrice": 15124,
           "reference": 26080,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1210,
-          "ape": 8.27
+          "error": -372,
+          "ape": 2.54
         },
         "rc": {
           "decision": "INSPECTION",
@@ -15178,14 +15178,14 @@
         "collectedAt": "2026-10-01T15:12:51.747Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 18010,
-          "fhoneifyPrice": 19091,
+          "estimate": 17006,
+          "fhoneifyPrice": 18026,
           "reference": 26080,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 720,
-          "ape": 4.16
+          "error": -284,
+          "ape": 1.64
         },
         "rc": {
           "decision": "INSPECTION",
@@ -15205,14 +15205,14 @@
         "collectedAt": "2026-10-01T15:13:16.351Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 20310,
-          "fhoneifyPrice": 21529,
+          "estimate": 19940,
+          "fhoneifyPrice": 21136,
           "reference": 26080,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 670,
-          "ape": 3.41
+          "error": 300,
+          "ape": 1.53
         },
         "rc": {
           "decision": "INSPECTION",
@@ -15232,14 +15232,14 @@
         "collectedAt": "2026-10-01T15:13:43.375Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 28720,
-          "fhoneifyPrice": 30443,
+          "estimate": 28205,
+          "fhoneifyPrice": 29897,
           "reference": 37100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1250,
-          "ape": 4.55
+          "error": 735,
+          "ape": 2.68
         },
         "rc": {
           "decision": "INSPECTION",
@@ -15259,14 +15259,14 @@
         "collectedAt": "2026-10-01T15:14:09.239Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 22440,
-          "fhoneifyPrice": 23786,
+          "estimate": 22918,
+          "fhoneifyPrice": 24293,
           "reference": 37100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 3720,
-          "ape": 19.87
+          "error": 4198,
+          "ape": 22.43
         },
         "rc": {
           "decision": "INSPECTION",
@@ -15286,14 +15286,14 @@
         "collectedAt": "2026-10-01T15:14:35.705Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 25420,
-          "fhoneifyPrice": 26945,
+          "estimate": 25423,
+          "fhoneifyPrice": 26948,
           "reference": 37100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -550,
-          "ape": 2.12
+          "error": -547,
+          "ape": 2.11
         },
         "rc": {
           "decision": "INSPECTION",
@@ -15313,14 +15313,14 @@
         "collectedAt": "2026-10-01T15:15:01.803Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 28720,
-          "fhoneifyPrice": 30443,
+          "estimate": 28205,
+          "fhoneifyPrice": 29897,
           "reference": 37100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1250,
-          "ape": 4.55
+          "error": 735,
+          "ape": 2.68
         },
         "rc": {
           "decision": "INSPECTION",
@@ -15340,14 +15340,14 @@
         "collectedAt": "2026-10-01T15:49:34.845Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 21170,
-          "fhoneifyPrice": 22440,
+          "estimate": 21174,
+          "fhoneifyPrice": 22444,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -610,
-          "ape": 2.8
+          "error": -606,
+          "ape": 2.78
         },
         "rc": {
           "decision": "INSPECTION",
@@ -15367,14 +15367,14 @@
         "collectedAt": "2026-10-01T15:49:59.126Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 15770,
-          "fhoneifyPrice": 16716,
+          "estimate": 4158,
+          "fhoneifyPrice": 4407,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 15210,
-          "ape": 2716.07
+          "error": 3598,
+          "ape": 642.5
         },
         "rc": {
           "decision": "INSPECTION",
@@ -15394,14 +15394,14 @@
         "collectedAt": "2026-10-01T17:36:43.623Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 21170,
-          "fhoneifyPrice": 22440,
+          "estimate": 21174,
+          "fhoneifyPrice": 22444,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -610,
-          "ape": 2.8
+          "error": -606,
+          "ape": 2.78
         },
         "rc": {
           "decision": "INSPECTION",
@@ -15421,14 +15421,14 @@
         "collectedAt": "2026-10-01T17:37:07.807Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 20510,
-          "fhoneifyPrice": 21741,
+          "estimate": 19095,
+          "fhoneifyPrice": 20241,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -270,
-          "ape": 1.3
+          "error": -1685,
+          "ape": 8.11
         },
         "rc": {
           "decision": "INSPECTION",
@@ -15448,14 +15448,14 @@
         "collectedAt": "2026-10-01T17:37:32.134Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 20510,
-          "fhoneifyPrice": 21741,
+          "estimate": 19095,
+          "fhoneifyPrice": 20241,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -870,
-          "ape": 4.07
+          "error": -2285,
+          "ape": 10.69
         },
         "rc": {
           "decision": "INSPECTION",
@@ -15475,14 +15475,14 @@
         "collectedAt": "2026-10-01T17:37:56.373Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 20340,
-          "fhoneifyPrice": 21560,
+          "estimate": 18569,
+          "fhoneifyPrice": 19683,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 560,
-          "ape": 2.83
+          "error": -1211,
+          "ape": 6.12
         },
         "rc": {
           "decision": "INSPECTION",
@@ -15502,14 +15502,14 @@
         "collectedAt": "2026-10-01T17:38:20.599Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 19700,
-          "fhoneifyPrice": 20882,
+          "estimate": 16537,
+          "fhoneifyPrice": 17529,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1120,
-          "ape": 6.03
+          "error": -2043,
+          "ape": 11
         },
         "rc": {
           "decision": "INSPECTION",
@@ -15529,14 +15529,14 @@
         "collectedAt": "2026-10-01T17:38:44.950Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 20380,
-          "fhoneifyPrice": 21603,
+          "estimate": 18679,
+          "fhoneifyPrice": 19800,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 7370,
-          "ape": 56.65
+          "error": 5669,
+          "ape": 43.57
         },
         "rc": {
           "decision": "INSPECTION",
@@ -15556,14 +15556,14 @@
         "collectedAt": "2026-10-01T17:39:32.256Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 20180,
-          "fhoneifyPrice": 21391,
+          "estimate": 18055,
+          "fhoneifyPrice": 19138,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 4250,
-          "ape": 26.68
+          "error": 2125,
+          "ape": 13.34
         },
         "rc": {
           "decision": "INSPECTION",
@@ -15583,14 +15583,14 @@
         "collectedAt": "2026-10-01T17:39:56.389Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 18870,
-          "fhoneifyPrice": 20002,
+          "estimate": 13931,
+          "fhoneifyPrice": 14767,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 2290,
-          "ape": 13.81
+          "error": -2649,
+          "ape": 15.98
         },
         "rc": {
           "decision": "INSPECTION",
@@ -15610,14 +15610,14 @@
         "collectedAt": "2026-10-01T17:40:20.533Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 19850,
-          "fhoneifyPrice": 21041,
+          "estimate": 17015,
+          "fhoneifyPrice": 18036,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -530,
-          "ape": 2.6
+          "error": -3365,
+          "ape": 16.51
         },
         "rc": {
           "decision": "INSPECTION",
@@ -15637,14 +15637,14 @@
         "collectedAt": "2026-10-01T17:40:44.785Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 17420,
-          "fhoneifyPrice": 18465,
+          "estimate": 9357,
+          "fhoneifyPrice": 9918,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 10010,
-          "ape": 135.09
+          "error": 1947,
+          "ape": 26.28
         },
         "rc": {
           "decision": "INSPECTION",
@@ -15664,14 +15664,14 @@
         "collectedAt": "2026-10-01T17:41:09.159Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 16760,
-          "fhoneifyPrice": 17766,
+          "estimate": 7277,
+          "fhoneifyPrice": 7714,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 10350,
-          "ape": 161.47
+          "error": 867,
+          "ape": 13.53
         },
         "rc": {
           "decision": "INSPECTION",
@@ -15691,14 +15691,14 @@
         "collectedAt": "2026-10-01T17:41:33.496Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 15770,
-          "fhoneifyPrice": 16716,
+          "estimate": 4158,
+          "fhoneifyPrice": 4407,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 15210,
-          "ape": 2716.07
+          "error": 3598,
+          "ape": 642.5
         },
         "rc": {
           "decision": "INSPECTION",
@@ -15718,14 +15718,14 @@
         "collectedAt": "2026-10-01T17:41:57.542Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 21170,
-          "fhoneifyPrice": 22440,
+          "estimate": 21174,
+          "fhoneifyPrice": 22444,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -610,
-          "ape": 2.8
+          "error": -606,
+          "ape": 2.78
         },
         "rc": {
           "decision": "INSPECTION",
@@ -15745,14 +15745,14 @@
         "collectedAt": "2026-10-01T17:42:21.683Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 43980,
-          "fhoneifyPrice": 45739,
+          "estimate": 43183,
+          "fhoneifyPrice": 44910,
           "reference": 57070,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1260,
-          "ape": 2.95
+          "error": 463,
+          "ape": 1.08
         },
         "rc": {
           "decision": "INSPECTION",
@@ -15772,14 +15772,14 @@
         "collectedAt": "2026-10-01T17:42:45.688Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 34400,
-          "fhoneifyPrice": 35776,
+          "estimate": 30770,
+          "fhoneifyPrice": 32001,
           "reference": 57070,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1080,
-          "ape": 3.24
+          "error": -2550,
+          "ape": 7.65
         },
         "rc": {
           "decision": "INSPECTION",
@@ -15799,14 +15799,14 @@
         "collectedAt": "2026-10-01T17:43:09.928Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 43980,
-          "fhoneifyPrice": 45739,
+          "estimate": 43183,
+          "fhoneifyPrice": 44910,
           "reference": 57070,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1260,
-          "ape": 2.95
+          "error": 463,
+          "ape": 1.08
         },
         "rc": {
           "decision": "INSPECTION",
@@ -15826,14 +15826,14 @@
         "collectedAt": "2026-10-01T17:43:34.107Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 20310,
-          "fhoneifyPrice": 21529,
+          "estimate": 19940,
+          "fhoneifyPrice": 21136,
           "reference": 26080,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 670,
-          "ape": 3.41
+          "error": 300,
+          "ape": 1.53
         },
         "rc": {
           "decision": "INSPECTION",
@@ -15853,14 +15853,14 @@
         "collectedAt": "2026-10-01T17:43:58.206Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 16850,
-          "fhoneifyPrice": 17861,
+          "estimate": 15533,
+          "fhoneifyPrice": 16465,
           "reference": 26080,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 210,
-          "ape": 1.26
+          "error": -1107,
+          "ape": 6.65
         },
         "rc": {
           "decision": "INSPECTION",
@@ -15880,14 +15880,14 @@
         "collectedAt": "2026-10-01T17:44:22.200Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 20310,
-          "fhoneifyPrice": 21529,
+          "estimate": 19940,
+          "fhoneifyPrice": 21136,
           "reference": 26080,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 670,
-          "ape": 3.41
+          "error": 300,
+          "ape": 1.53
         },
         "rc": {
           "decision": "INSPECTION",
@@ -17570,14 +17570,14 @@
         "collectedAt": "2026-10-02T11:47:46.100Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 43980,
-          "fhoneifyPrice": 45739,
+          "estimate": 43183,
+          "fhoneifyPrice": 44910,
           "reference": 57070,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 260,
-          "ape": 0.59
+          "error": -537,
+          "ape": 1.23
         },
         "rc": {
           "decision": "INSPECTION",
@@ -17597,14 +17597,14 @@
         "collectedAt": "2026-10-02T11:48:11.094Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 37700,
-          "fhoneifyPrice": 39208,
+          "estimate": 35050,
+          "fhoneifyPrice": 36452,
           "reference": 57070,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 2980,
-          "ape": 8.58
+          "error": 330,
+          "ape": 0.95
         },
         "rc": {
           "decision": "INSPECTION",
@@ -17624,14 +17624,14 @@
         "collectedAt": "2026-10-02T11:48:35.830Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 40680,
-          "fhoneifyPrice": 42307,
+          "estimate": 38902,
+          "fhoneifyPrice": 40458,
           "reference": 57070,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -1540,
-          "ape": 3.65
+          "error": -3318,
+          "ape": 7.86
         },
         "rc": {
           "decision": "INSPECTION",
@@ -17651,14 +17651,14 @@
         "collectedAt": "2026-10-02T11:49:15.374Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 20310,
-          "fhoneifyPrice": 21529,
+          "estimate": 19940,
+          "fhoneifyPrice": 21136,
           "reference": 26080,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 70,
-          "ape": 0.35
+          "error": -300,
+          "ape": 1.48
         },
         "rc": {
           "decision": "INSPECTION",
@@ -17678,14 +17678,14 @@
         "collectedAt": "2026-10-02T11:49:39.798Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 17390,
-          "fhoneifyPrice": 18433,
+          "estimate": 16224,
+          "fhoneifyPrice": 17197,
           "reference": 26080,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1150,
-          "ape": 7.08
+          "error": -16,
+          "ape": 0.1
         },
         "rc": {
           "decision": "INSPECTION",
@@ -17705,14 +17705,14 @@
         "collectedAt": "2026-10-02T11:50:04.193Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 18770,
-          "fhoneifyPrice": 19896,
+          "estimate": 17984,
+          "fhoneifyPrice": 19063,
           "reference": 26080,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -470,
-          "ape": 2.44
+          "error": -1256,
+          "ape": 6.53
         },
         "rc": {
           "decision": "INSPECTION",
@@ -17732,14 +17732,14 @@
         "collectedAt": "2026-10-02T11:50:28.353Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 21170,
-          "fhoneifyPrice": 22440,
+          "estimate": 21174,
+          "fhoneifyPrice": 22444,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -960,
-          "ape": 4.34
+          "error": -956,
+          "ape": 4.32
         },
         "rc": {
           "decision": "INSPECTION",
@@ -17759,14 +17759,14 @@
         "collectedAt": "2026-10-02T11:50:54.002Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 18860,
-          "fhoneifyPrice": 19992,
+          "estimate": 13896,
+          "fhoneifyPrice": 14730,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -590,
-          "ape": 3.03
+          "error": -5554,
+          "ape": 28.56
         },
         "rc": {
           "decision": "INSPECTION",
@@ -17786,14 +17786,14 @@
         "collectedAt": "2026-10-02T11:51:17.927Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 17200,
-          "fhoneifyPrice": 18232,
+          "estimate": 8698,
+          "fhoneifyPrice": 9220,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -430,
-          "ape": 2.44
+          "error": -8932,
+          "ape": 50.66
         },
         "rc": {
           "decision": "INSPECTION",
@@ -17980,14 +17980,14 @@
         "collectedAt": "2026-10-02T11:54:14.894Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 28720,
-          "fhoneifyPrice": 30443,
+          "estimate": 28205,
+          "fhoneifyPrice": 29897,
           "reference": 37100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 450,
-          "ape": 1.59
+          "error": -65,
+          "ape": 0.23
         },
         "rc": {
           "decision": "INSPECTION",
@@ -18007,14 +18007,14 @@
         "collectedAt": "2026-10-02T11:54:38.746Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 22440,
-          "fhoneifyPrice": 23786,
+          "estimate": 22918,
+          "fhoneifyPrice": 24293,
           "reference": 37100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 2920,
-          "ape": 14.96
+          "error": 3398,
+          "ape": 17.41
         },
         "rc": {
           "decision": "INSPECTION",
@@ -18034,14 +18034,14 @@
         "collectedAt": "2026-10-02T11:55:04.380Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 17160,
-          "fhoneifyPrice": 18190,
+          "estimate": 18466,
+          "fhoneifyPrice": 19574,
           "reference": 37100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -690,
-          "ape": 3.87
+          "error": 616,
+          "ape": 3.45
         },
         "rc": {
           "decision": "INSPECTION",
@@ -18061,14 +18061,14 @@
         "collectedAt": "2026-10-02T11:55:28.340Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 57960,
-          "fhoneifyPrice": 59960,
+          "estimate": 56908,
+          "fhoneifyPrice": 58908,
           "reference": 75370,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 710,
-          "ape": 1.24
+          "error": -342,
+          "ape": 0.6
         },
         "rc": {
           "decision": "INSPECTION",
@@ -18088,14 +18088,14 @@
         "collectedAt": "2026-10-02T11:55:52.429Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 38140,
-          "fhoneifyPrice": 39666,
+          "estimate": 22991,
+          "fhoneifyPrice": 23911,
           "reference": 75370,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -1110,
-          "ape": 2.83
+          "error": -16259,
+          "ape": 41.42
         },
         "rc": {
           "decision": "INSPECTION",
@@ -18115,14 +18115,14 @@
         "collectedAt": "2026-10-02T11:56:18.147Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 48050,
-          "fhoneifyPrice": 49972,
+          "estimate": 39949,
+          "fhoneifyPrice": 41547,
           "reference": 75370,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 6100,
-          "ape": 14.54
+          "error": -2001,
+          "ape": 4.77
         },
         "rc": {
           "decision": "INSPECTION",
@@ -18412,14 +18412,14 @@
         "collectedAt": "2026-10-02T12:01:43.331Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 45900,
-          "fhoneifyPrice": 47736,
+          "estimate": 45065,
+          "fhoneifyPrice": 46868,
           "reference": 59580,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 610,
-          "ape": 1.35
+          "error": -225,
+          "ape": 0.5
         },
         "rc": {
           "decision": "INSPECTION",
@@ -18439,14 +18439,14 @@
         "collectedAt": "2026-10-02T12:02:09.025Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 34340,
-          "fhoneifyPrice": 35714,
+          "estimate": 29425,
+          "fhoneifyPrice": 30602,
           "reference": 59580,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -240,
-          "ape": 0.69
+          "error": -5155,
+          "ape": 14.91
         },
         "rc": {
           "decision": "INSPECTION",
@@ -18466,14 +18466,14 @@
         "collectedAt": "2026-10-02T12:02:33.341Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 30450,
-          "fhoneifyPrice": 32277,
+          "estimate": 29900,
+          "fhoneifyPrice": 31694,
           "reference": 39360,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -390,
-          "ape": 1.26
+          "error": -940,
+          "ape": 3.05
         },
         "rc": {
           "decision": "INSPECTION",
@@ -18493,14 +18493,14 @@
         "collectedAt": "2026-10-02T12:02:57.286Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 24980,
-          "fhoneifyPrice": 26479,
+          "estimate": 24291,
+          "fhoneifyPrice": 25748,
           "reference": 39360,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 2140,
-          "ape": 9.37
+          "error": 1451,
+          "ape": 6.35
         },
         "rc": {
           "decision": "INSPECTION",
@@ -18520,14 +18520,14 @@
         "collectedAt": "2026-10-02T12:03:21.172Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 27570,
-          "fhoneifyPrice": 29224,
+          "estimate": 26948,
+          "fhoneifyPrice": 28565,
           "reference": 39360,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -1770,
-          "ape": 6.03
+          "error": -2392,
+          "ape": 8.15
         },
         "rc": {
           "decision": "INSPECTION",
@@ -19090,14 +19090,14 @@
         "collectedAt": "2026-10-02T17:35:56.416Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 45900,
-          "fhoneifyPrice": 47736,
+          "estimate": 45065,
+          "fhoneifyPrice": 46868,
           "reference": 59580,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 610,
-          "ape": 1.35
+          "error": -225,
+          "ape": 0.5
         },
         "rc": {
           "decision": "INSPECTION",
@@ -19117,14 +19117,14 @@
         "collectedAt": "2026-10-02T17:36:20.513Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 42600,
-          "fhoneifyPrice": 44304,
+          "estimate": 40597,
+          "fhoneifyPrice": 42221,
           "reference": 59580,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -1190,
-          "ape": 2.72
+          "error": -3193,
+          "ape": 7.29
         },
         "rc": {
           "decision": "INSPECTION",
@@ -19237,14 +19237,14 @@
         "collectedAt": "2026-10-01T13:52:49.468Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 43980,
-          "fhoneifyPrice": 45739,
+          "estimate": 43183,
+          "fhoneifyPrice": 44910,
           "reference": 57070,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1260,
-          "ape": 2.95
+          "error": 463,
+          "ape": 1.08
         },
         "rc": {
           "decision": "INSPECTION",
@@ -19264,14 +19264,14 @@
         "collectedAt": "2026-10-01T13:53:14.195Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 37700,
-          "fhoneifyPrice": 39208,
+          "estimate": 35050,
+          "fhoneifyPrice": 36452,
           "reference": 57070,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 3980,
-          "ape": 11.8
+          "error": 1330,
+          "ape": 3.94
         },
         "rc": {
           "decision": "INSPECTION",
@@ -19291,14 +19291,14 @@
         "collectedAt": "2026-10-01T13:58:01.606Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 43980,
-          "fhoneifyPrice": 45739,
+          "estimate": 43183,
+          "fhoneifyPrice": 44910,
           "reference": 57070,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1260,
-          "ape": 2.95
+          "error": 463,
+          "ape": 1.08
         },
         "rc": {
           "decision": "INSPECTION",
@@ -19318,14 +19318,14 @@
         "collectedAt": "2026-10-01T13:58:25.894Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 20310,
-          "fhoneifyPrice": 21529,
+          "estimate": 19940,
+          "fhoneifyPrice": 21136,
           "reference": 26080,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 670,
-          "ape": 3.41
+          "error": 300,
+          "ape": 1.53
         },
         "rc": {
           "decision": "INSPECTION",
@@ -19345,14 +19345,14 @@
         "collectedAt": "2026-10-01T13:58:51.030Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 17390,
-          "fhoneifyPrice": 18433,
+          "estimate": 16224,
+          "fhoneifyPrice": 17197,
           "reference": 26080,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1750,
-          "ape": 11.19
+          "error": 584,
+          "ape": 3.73
         },
         "rc": {
           "decision": "INSPECTION",
@@ -19372,14 +19372,14 @@
         "collectedAt": "2026-10-01T14:02:01.744Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 40680,
-          "fhoneifyPrice": 42307,
+          "estimate": 38902,
+          "fhoneifyPrice": 40458,
           "reference": 57070,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -540,
-          "ape": 1.31
+          "error": -2318,
+          "ape": 5.62
         },
         "rc": {
           "decision": "INSPECTION",
@@ -19399,14 +19399,14 @@
         "collectedAt": "2026-10-01T14:02:25.955Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 18770,
-          "fhoneifyPrice": 19896,
+          "estimate": 17984,
+          "fhoneifyPrice": 19063,
           "reference": 26080,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 130,
-          "ape": 0.7
+          "error": -656,
+          "ape": 3.52
         },
         "rc": {
           "decision": "INSPECTION",
@@ -19426,14 +19426,14 @@
         "collectedAt": "2026-10-01T14:02:50.661Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 20310,
-          "fhoneifyPrice": 21529,
+          "estimate": 19940,
+          "fhoneifyPrice": 21136,
           "reference": 26080,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 670,
-          "ape": 3.41
+          "error": 300,
+          "ape": 1.53
         },
         "rc": {
           "decision": "INSPECTION",
@@ -19453,14 +19453,14 @@
         "collectedAt": "2026-10-01T14:03:14.974Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 30450,
-          "fhoneifyPrice": 32277,
+          "estimate": 29900,
+          "fhoneifyPrice": 31694,
           "reference": 39360,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 610,
-          "ape": 2.04
+          "error": 60,
+          "ape": 0.2
         },
         "rc": {
           "decision": "INSPECTION",
@@ -19480,14 +19480,14 @@
         "collectedAt": "2026-10-01T14:03:39.250Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 21170,
-          "fhoneifyPrice": 22440,
+          "estimate": 21174,
+          "fhoneifyPrice": 22444,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -610,
-          "ape": 2.8
+          "error": -606,
+          "ape": 2.78
         },
         "rc": {
           "decision": "INSPECTION",
@@ -19507,14 +19507,14 @@
         "collectedAt": "2026-10-01T14:04:05.737Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 18860,
-          "fhoneifyPrice": 19992,
+          "estimate": 13896,
+          "fhoneifyPrice": 14730,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -240,
-          "ape": 1.26
+          "error": -5204,
+          "ape": 27.25
         },
         "rc": {
           "decision": "INSPECTION",
@@ -19534,14 +19534,14 @@
         "collectedAt": "2026-10-01T14:04:30.047Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 57960,
-          "fhoneifyPrice": 59960,
+          "estimate": 56908,
+          "fhoneifyPrice": 58908,
           "reference": 75370,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 710,
-          "ape": 1.24
+          "error": -342,
+          "ape": 0.6
         },
         "rc": {
           "decision": "INSPECTION",
@@ -19561,14 +19561,14 @@
         "collectedAt": "2026-10-01T14:04:54.152Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 38140,
-          "fhoneifyPrice": 39666,
+          "estimate": 22991,
+          "fhoneifyPrice": 23911,
           "reference": 75370,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -1110,
-          "ape": 2.83
+          "error": -16259,
+          "ape": 41.42
         },
         "rc": {
           "decision": "INSPECTION",
@@ -19588,14 +19588,14 @@
         "collectedAt": "2026-10-01T14:05:18.641Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 57960,
-          "fhoneifyPrice": 59960,
+          "estimate": 56908,
+          "fhoneifyPrice": 58908,
           "reference": 75370,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 710,
-          "ape": 1.24
+          "error": -342,
+          "ape": 0.6
         },
         "rc": {
           "decision": "INSPECTION",
@@ -19615,14 +19615,14 @@
         "collectedAt": "2026-10-01T14:05:42.808Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 17200,
-          "fhoneifyPrice": 18232,
+          "estimate": 8698,
+          "fhoneifyPrice": 9220,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -80,
-          "ape": 0.46
+          "error": -8582,
+          "ape": 49.66
         },
         "rc": {
           "decision": "INSPECTION",
@@ -19642,14 +19642,14 @@
         "collectedAt": "2026-10-01T14:10:17.090Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 21170,
-          "fhoneifyPrice": 22440,
+          "estimate": 21174,
+          "fhoneifyPrice": 22444,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -610,
-          "ape": 2.8
+          "error": -606,
+          "ape": 2.78
         },
         "rc": {
           "decision": "INSPECTION",
@@ -19669,14 +19669,14 @@
         "collectedAt": "2026-10-01T15:09:14.027Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 43980,
-          "fhoneifyPrice": 45739,
+          "estimate": 43183,
+          "fhoneifyPrice": 44910,
           "reference": 57070,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1260,
-          "ape": 2.95
+          "error": 463,
+          "ape": 1.08
         },
         "rc": {
           "decision": "INSPECTION",
@@ -19696,14 +19696,14 @@
         "collectedAt": "2026-10-01T15:10:42.878Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 34400,
-          "fhoneifyPrice": 35776,
+          "estimate": 30770,
+          "fhoneifyPrice": 32001,
           "reference": 57070,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 2180,
-          "ape": 6.77
+          "error": -1450,
+          "ape": 4.5
         },
         "rc": {
           "decision": "INSPECTION",
@@ -19723,14 +19723,14 @@
         "collectedAt": "2026-10-01T15:11:10.362Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 39020,
-          "fhoneifyPrice": 40581,
+          "estimate": 36762,
+          "fhoneifyPrice": 38232,
           "reference": 57070,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1600,
-          "ape": 4.28
+          "error": -658,
+          "ape": 1.76
         },
         "rc": {
           "decision": "INSPECTION",
@@ -19750,14 +19750,14 @@
         "collectedAt": "2026-10-01T15:11:35.386Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 43980,
-          "fhoneifyPrice": 45739,
+          "estimate": 43183,
+          "fhoneifyPrice": 44910,
           "reference": 57070,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1260,
-          "ape": 2.95
+          "error": 463,
+          "ape": 1.08
         },
         "rc": {
           "decision": "INSPECTION",
@@ -19777,14 +19777,14 @@
         "collectedAt": "2026-10-01T15:11:59.897Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 20310,
-          "fhoneifyPrice": 21529,
+          "estimate": 19940,
+          "fhoneifyPrice": 21136,
           "reference": 26080,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 670,
-          "ape": 3.41
+          "error": 300,
+          "ape": 1.53
         },
         "rc": {
           "decision": "INSPECTION",
@@ -19804,14 +19804,14 @@
         "collectedAt": "2026-10-01T15:12:24.841Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 15850,
-          "fhoneifyPrice": 16801,
+          "estimate": 14268,
+          "fhoneifyPrice": 15124,
           "reference": 26080,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1210,
-          "ape": 8.27
+          "error": -372,
+          "ape": 2.54
         },
         "rc": {
           "decision": "INSPECTION",
@@ -19831,14 +19831,14 @@
         "collectedAt": "2026-10-01T15:12:51.747Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 18010,
-          "fhoneifyPrice": 19091,
+          "estimate": 17006,
+          "fhoneifyPrice": 18026,
           "reference": 26080,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 720,
-          "ape": 4.16
+          "error": -284,
+          "ape": 1.64
         },
         "rc": {
           "decision": "INSPECTION",
@@ -19858,14 +19858,14 @@
         "collectedAt": "2026-10-01T15:13:16.351Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 20310,
-          "fhoneifyPrice": 21529,
+          "estimate": 19940,
+          "fhoneifyPrice": 21136,
           "reference": 26080,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 670,
-          "ape": 3.41
+          "error": 300,
+          "ape": 1.53
         },
         "rc": {
           "decision": "INSPECTION",
@@ -19885,14 +19885,14 @@
         "collectedAt": "2026-10-01T15:13:43.375Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 28720,
-          "fhoneifyPrice": 30443,
+          "estimate": 28205,
+          "fhoneifyPrice": 29897,
           "reference": 37100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1250,
-          "ape": 4.55
+          "error": 735,
+          "ape": 2.68
         },
         "rc": {
           "decision": "INSPECTION",
@@ -19912,14 +19912,14 @@
         "collectedAt": "2026-10-01T15:14:09.239Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 22440,
-          "fhoneifyPrice": 23786,
+          "estimate": 22918,
+          "fhoneifyPrice": 24293,
           "reference": 37100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 3720,
-          "ape": 19.87
+          "error": 4198,
+          "ape": 22.43
         },
         "rc": {
           "decision": "INSPECTION",
@@ -19939,14 +19939,14 @@
         "collectedAt": "2026-10-01T15:14:35.705Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 25420,
-          "fhoneifyPrice": 26945,
+          "estimate": 25423,
+          "fhoneifyPrice": 26948,
           "reference": 37100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -550,
-          "ape": 2.12
+          "error": -547,
+          "ape": 2.11
         },
         "rc": {
           "decision": "INSPECTION",
@@ -19966,14 +19966,14 @@
         "collectedAt": "2026-10-01T15:15:01.803Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 28720,
-          "fhoneifyPrice": 30443,
+          "estimate": 28205,
+          "fhoneifyPrice": 29897,
           "reference": 37100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1250,
-          "ape": 4.55
+          "error": 735,
+          "ape": 2.68
         },
         "rc": {
           "decision": "INSPECTION",
@@ -19993,14 +19993,14 @@
         "collectedAt": "2026-10-01T15:49:34.845Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 21170,
-          "fhoneifyPrice": 22440,
+          "estimate": 21174,
+          "fhoneifyPrice": 22444,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -610,
-          "ape": 2.8
+          "error": -606,
+          "ape": 2.78
         },
         "rc": {
           "decision": "INSPECTION",
@@ -20020,14 +20020,14 @@
         "collectedAt": "2026-10-01T15:49:59.126Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 15770,
-          "fhoneifyPrice": 16716,
+          "estimate": 4158,
+          "fhoneifyPrice": 4407,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 15210,
-          "ape": 2716.07
+          "error": 3598,
+          "ape": 642.5
         },
         "rc": {
           "decision": "INSPECTION",
@@ -20047,14 +20047,14 @@
         "collectedAt": "2026-10-01T17:36:43.623Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 21170,
-          "fhoneifyPrice": 22440,
+          "estimate": 21174,
+          "fhoneifyPrice": 22444,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -610,
-          "ape": 2.8
+          "error": -606,
+          "ape": 2.78
         },
         "rc": {
           "decision": "INSPECTION",
@@ -20074,14 +20074,14 @@
         "collectedAt": "2026-10-01T17:37:07.807Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 20510,
-          "fhoneifyPrice": 21741,
+          "estimate": 19095,
+          "fhoneifyPrice": 20241,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -270,
-          "ape": 1.3
+          "error": -1685,
+          "ape": 8.11
         },
         "rc": {
           "decision": "INSPECTION",
@@ -20101,14 +20101,14 @@
         "collectedAt": "2026-10-01T17:37:32.134Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 20510,
-          "fhoneifyPrice": 21741,
+          "estimate": 19095,
+          "fhoneifyPrice": 20241,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -870,
-          "ape": 4.07
+          "error": -2285,
+          "ape": 10.69
         },
         "rc": {
           "decision": "INSPECTION",
@@ -20128,14 +20128,14 @@
         "collectedAt": "2026-10-01T17:37:56.373Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 20340,
-          "fhoneifyPrice": 21560,
+          "estimate": 18569,
+          "fhoneifyPrice": 19683,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 560,
-          "ape": 2.83
+          "error": -1211,
+          "ape": 6.12
         },
         "rc": {
           "decision": "INSPECTION",
@@ -20155,14 +20155,14 @@
         "collectedAt": "2026-10-01T17:38:20.599Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 19700,
-          "fhoneifyPrice": 20882,
+          "estimate": 16537,
+          "fhoneifyPrice": 17529,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1120,
-          "ape": 6.03
+          "error": -2043,
+          "ape": 11
         },
         "rc": {
           "decision": "INSPECTION",
@@ -20182,14 +20182,14 @@
         "collectedAt": "2026-10-01T17:38:44.950Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 20380,
-          "fhoneifyPrice": 21603,
+          "estimate": 18679,
+          "fhoneifyPrice": 19800,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 7370,
-          "ape": 56.65
+          "error": 5669,
+          "ape": 43.57
         },
         "rc": {
           "decision": "INSPECTION",
@@ -20209,14 +20209,14 @@
         "collectedAt": "2026-10-01T17:39:32.256Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 20180,
-          "fhoneifyPrice": 21391,
+          "estimate": 18055,
+          "fhoneifyPrice": 19138,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 4250,
-          "ape": 26.68
+          "error": 2125,
+          "ape": 13.34
         },
         "rc": {
           "decision": "INSPECTION",
@@ -20236,14 +20236,14 @@
         "collectedAt": "2026-10-01T17:39:56.389Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 18870,
-          "fhoneifyPrice": 20002,
+          "estimate": 13931,
+          "fhoneifyPrice": 14767,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 2290,
-          "ape": 13.81
+          "error": -2649,
+          "ape": 15.98
         },
         "rc": {
           "decision": "INSPECTION",
@@ -20263,14 +20263,14 @@
         "collectedAt": "2026-10-01T17:40:20.533Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 19850,
-          "fhoneifyPrice": 21041,
+          "estimate": 17015,
+          "fhoneifyPrice": 18036,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -530,
-          "ape": 2.6
+          "error": -3365,
+          "ape": 16.51
         },
         "rc": {
           "decision": "INSPECTION",
@@ -20290,14 +20290,14 @@
         "collectedAt": "2026-10-01T17:40:44.785Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 17420,
-          "fhoneifyPrice": 18465,
+          "estimate": 9357,
+          "fhoneifyPrice": 9918,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 10010,
-          "ape": 135.09
+          "error": 1947,
+          "ape": 26.28
         },
         "rc": {
           "decision": "INSPECTION",
@@ -20317,14 +20317,14 @@
         "collectedAt": "2026-10-01T17:41:09.159Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 16760,
-          "fhoneifyPrice": 17766,
+          "estimate": 7277,
+          "fhoneifyPrice": 7714,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 10350,
-          "ape": 161.47
+          "error": 867,
+          "ape": 13.53
         },
         "rc": {
           "decision": "INSPECTION",
@@ -20344,14 +20344,14 @@
         "collectedAt": "2026-10-01T17:41:33.496Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 15770,
-          "fhoneifyPrice": 16716,
+          "estimate": 4158,
+          "fhoneifyPrice": 4407,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 15210,
-          "ape": 2716.07
+          "error": 3598,
+          "ape": 642.5
         },
         "rc": {
           "decision": "INSPECTION",
@@ -20371,14 +20371,14 @@
         "collectedAt": "2026-10-01T17:41:57.542Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 21170,
-          "fhoneifyPrice": 22440,
+          "estimate": 21174,
+          "fhoneifyPrice": 22444,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -610,
-          "ape": 2.8
+          "error": -606,
+          "ape": 2.78
         },
         "rc": {
           "decision": "INSPECTION",
@@ -20398,14 +20398,14 @@
         "collectedAt": "2026-10-01T17:42:21.683Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 43980,
-          "fhoneifyPrice": 45739,
+          "estimate": 43183,
+          "fhoneifyPrice": 44910,
           "reference": 57070,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1260,
-          "ape": 2.95
+          "error": 463,
+          "ape": 1.08
         },
         "rc": {
           "decision": "INSPECTION",
@@ -20425,14 +20425,14 @@
         "collectedAt": "2026-10-01T17:42:45.688Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 34400,
-          "fhoneifyPrice": 35776,
+          "estimate": 30770,
+          "fhoneifyPrice": 32001,
           "reference": 57070,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1080,
-          "ape": 3.24
+          "error": -2550,
+          "ape": 7.65
         },
         "rc": {
           "decision": "INSPECTION",
@@ -20452,14 +20452,14 @@
         "collectedAt": "2026-10-01T17:43:09.928Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 43980,
-          "fhoneifyPrice": 45739,
+          "estimate": 43183,
+          "fhoneifyPrice": 44910,
           "reference": 57070,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1260,
-          "ape": 2.95
+          "error": 463,
+          "ape": 1.08
         },
         "rc": {
           "decision": "INSPECTION",
@@ -20479,14 +20479,14 @@
         "collectedAt": "2026-10-01T17:43:34.107Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 20310,
-          "fhoneifyPrice": 21529,
+          "estimate": 19940,
+          "fhoneifyPrice": 21136,
           "reference": 26080,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 670,
-          "ape": 3.41
+          "error": 300,
+          "ape": 1.53
         },
         "rc": {
           "decision": "INSPECTION",
@@ -20506,14 +20506,14 @@
         "collectedAt": "2026-10-01T17:43:58.206Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 16850,
-          "fhoneifyPrice": 17861,
+          "estimate": 15533,
+          "fhoneifyPrice": 16465,
           "reference": 26080,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 210,
-          "ape": 1.26
+          "error": -1107,
+          "ape": 6.65
         },
         "rc": {
           "decision": "INSPECTION",
@@ -20533,14 +20533,14 @@
         "collectedAt": "2026-10-01T17:44:22.200Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 20310,
-          "fhoneifyPrice": 21529,
+          "estimate": 19940,
+          "fhoneifyPrice": 21136,
           "reference": 26080,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 670,
-          "ape": 3.41
+          "error": 300,
+          "ape": 1.53
         },
         "rc": {
           "decision": "INSPECTION",
@@ -22303,14 +22303,14 @@
         "collectedAt": "2026-10-02T11:47:46.100Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 43980,
-          "fhoneifyPrice": 45739,
+          "estimate": 43183,
+          "fhoneifyPrice": 44910,
           "reference": 57070,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 260,
-          "ape": 0.59
+          "error": -537,
+          "ape": 1.23
         },
         "rc": {
           "decision": "INSPECTION",
@@ -22330,14 +22330,14 @@
         "collectedAt": "2026-10-02T11:48:11.094Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 37700,
-          "fhoneifyPrice": 39208,
+          "estimate": 35050,
+          "fhoneifyPrice": 36452,
           "reference": 57070,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 2980,
-          "ape": 8.58
+          "error": 330,
+          "ape": 0.95
         },
         "rc": {
           "decision": "INSPECTION",
@@ -22357,14 +22357,14 @@
         "collectedAt": "2026-10-02T11:48:35.830Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 40680,
-          "fhoneifyPrice": 42307,
+          "estimate": 38902,
+          "fhoneifyPrice": 40458,
           "reference": 57070,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -1540,
-          "ape": 3.65
+          "error": -3318,
+          "ape": 7.86
         },
         "rc": {
           "decision": "INSPECTION",
@@ -22384,14 +22384,14 @@
         "collectedAt": "2026-10-02T11:49:15.374Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 20310,
-          "fhoneifyPrice": 21529,
+          "estimate": 19940,
+          "fhoneifyPrice": 21136,
           "reference": 26080,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 70,
-          "ape": 0.35
+          "error": -300,
+          "ape": 1.48
         },
         "rc": {
           "decision": "INSPECTION",
@@ -22411,14 +22411,14 @@
         "collectedAt": "2026-10-02T11:49:39.798Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 17390,
-          "fhoneifyPrice": 18433,
+          "estimate": 16224,
+          "fhoneifyPrice": 17197,
           "reference": 26080,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 1150,
-          "ape": 7.08
+          "error": -16,
+          "ape": 0.1
         },
         "rc": {
           "decision": "INSPECTION",
@@ -22438,14 +22438,14 @@
         "collectedAt": "2026-10-02T11:50:04.193Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 18770,
-          "fhoneifyPrice": 19896,
+          "estimate": 17984,
+          "fhoneifyPrice": 19063,
           "reference": 26080,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -470,
-          "ape": 2.44
+          "error": -1256,
+          "ape": 6.53
         },
         "rc": {
           "decision": "INSPECTION",
@@ -22465,14 +22465,14 @@
         "collectedAt": "2026-10-02T11:50:28.353Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 21170,
-          "fhoneifyPrice": 22440,
+          "estimate": 21174,
+          "fhoneifyPrice": 22444,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -960,
-          "ape": 4.34
+          "error": -956,
+          "ape": 4.32
         },
         "rc": {
           "decision": "INSPECTION",
@@ -22492,14 +22492,14 @@
         "collectedAt": "2026-10-02T11:50:54.002Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 18860,
-          "fhoneifyPrice": 19992,
+          "estimate": 13896,
+          "fhoneifyPrice": 14730,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -590,
-          "ape": 3.03
+          "error": -5554,
+          "ape": 28.56
         },
         "rc": {
           "decision": "INSPECTION",
@@ -22519,14 +22519,14 @@
         "collectedAt": "2026-10-02T11:51:17.927Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 17200,
-          "fhoneifyPrice": 18232,
+          "estimate": 8698,
+          "fhoneifyPrice": 9220,
           "reference": 28100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -430,
-          "ape": 2.44
+          "error": -8932,
+          "ape": 50.66
         },
         "rc": {
           "decision": "INSPECTION",
@@ -22713,14 +22713,14 @@
         "collectedAt": "2026-10-02T11:54:14.894Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 28720,
-          "fhoneifyPrice": 30443,
+          "estimate": 28205,
+          "fhoneifyPrice": 29897,
           "reference": 37100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 450,
-          "ape": 1.59
+          "error": -65,
+          "ape": 0.23
         },
         "rc": {
           "decision": "INSPECTION",
@@ -22740,14 +22740,14 @@
         "collectedAt": "2026-10-02T11:54:38.746Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 22440,
-          "fhoneifyPrice": 23786,
+          "estimate": 22918,
+          "fhoneifyPrice": 24293,
           "reference": 37100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 2920,
-          "ape": 14.96
+          "error": 3398,
+          "ape": 17.41
         },
         "rc": {
           "decision": "INSPECTION",
@@ -22767,14 +22767,14 @@
         "collectedAt": "2026-10-02T11:55:04.380Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 17160,
-          "fhoneifyPrice": 18190,
+          "estimate": 18466,
+          "fhoneifyPrice": 19574,
           "reference": 37100,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -690,
-          "ape": 3.87
+          "error": 616,
+          "ape": 3.45
         },
         "rc": {
           "decision": "INSPECTION",
@@ -22794,14 +22794,14 @@
         "collectedAt": "2026-10-02T11:55:28.340Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 57960,
-          "fhoneifyPrice": 59960,
+          "estimate": 56908,
+          "fhoneifyPrice": 58908,
           "reference": 75370,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 710,
-          "ape": 1.24
+          "error": -342,
+          "ape": 0.6
         },
         "rc": {
           "decision": "INSPECTION",
@@ -22821,14 +22821,14 @@
         "collectedAt": "2026-10-02T11:55:52.429Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 38140,
-          "fhoneifyPrice": 39666,
+          "estimate": 22991,
+          "fhoneifyPrice": 23911,
           "reference": 75370,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -1110,
-          "ape": 2.83
+          "error": -16259,
+          "ape": 41.42
         },
         "rc": {
           "decision": "INSPECTION",
@@ -22848,14 +22848,14 @@
         "collectedAt": "2026-10-02T11:56:18.147Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 48050,
-          "fhoneifyPrice": 49972,
+          "estimate": 39949,
+          "fhoneifyPrice": 41547,
           "reference": 75370,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 6100,
-          "ape": 14.54
+          "error": -2001,
+          "ape": 4.77
         },
         "rc": {
           "decision": "INSPECTION",
@@ -23155,14 +23155,14 @@
         "collectedAt": "2026-10-02T12:01:43.331Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 45900,
-          "fhoneifyPrice": 47736,
+          "estimate": 45065,
+          "fhoneifyPrice": 46868,
           "reference": 59580,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 610,
-          "ape": 1.35
+          "error": -225,
+          "ape": 0.5
         },
         "rc": {
           "decision": "INSPECTION",
@@ -23182,14 +23182,14 @@
         "collectedAt": "2026-10-02T12:02:09.025Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 34340,
-          "fhoneifyPrice": 35714,
+          "estimate": 29425,
+          "fhoneifyPrice": 30602,
           "reference": 59580,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -240,
-          "ape": 0.69
+          "error": -5155,
+          "ape": 14.91
         },
         "rc": {
           "decision": "INSPECTION",
@@ -23209,14 +23209,14 @@
         "collectedAt": "2026-10-02T12:02:33.341Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 30450,
-          "fhoneifyPrice": 32277,
+          "estimate": 29900,
+          "fhoneifyPrice": 31694,
           "reference": 39360,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -390,
-          "ape": 1.26
+          "error": -940,
+          "ape": 3.05
         },
         "rc": {
           "decision": "INSPECTION",
@@ -23236,14 +23236,14 @@
         "collectedAt": "2026-10-02T12:02:57.286Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 24980,
-          "fhoneifyPrice": 26479,
+          "estimate": 24291,
+          "fhoneifyPrice": 25748,
           "reference": 39360,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 2140,
-          "ape": 9.37
+          "error": 1451,
+          "ape": 6.35
         },
         "rc": {
           "decision": "INSPECTION",
@@ -23263,14 +23263,14 @@
         "collectedAt": "2026-10-02T12:03:21.172Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 27570,
-          "fhoneifyPrice": 29224,
+          "estimate": 26948,
+          "fhoneifyPrice": 28565,
           "reference": 39360,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -1770,
-          "ape": 6.03
+          "error": -2392,
+          "ape": 8.15
         },
         "rc": {
           "decision": "INSPECTION",
@@ -23843,14 +23843,14 @@
         "collectedAt": "2026-10-02T17:35:56.416Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 45900,
-          "fhoneifyPrice": 47736,
+          "estimate": 45065,
+          "fhoneifyPrice": 46868,
           "reference": 59580,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": 610,
-          "ape": 1.35
+          "error": -225,
+          "ape": 0.5
         },
         "rc": {
           "decision": "INSPECTION",
@@ -23870,14 +23870,14 @@
         "collectedAt": "2026-10-02T17:36:20.513Z",
         "legacy": {
           "decision": "LEGACY_MODE",
-          "estimate": 42600,
-          "fhoneifyPrice": 44304,
+          "estimate": 40597,
+          "fhoneifyPrice": 42221,
           "reference": 59580,
           "accessoryBasis": "LEGACY_BOX_BONUS",
           "rule": null,
           "ok": true,
-          "error": -1190,
-          "ape": 2.72
+          "error": -3193,
+          "ape": 7.29
         },
         "rc": {
           "decision": "INSPECTION",
