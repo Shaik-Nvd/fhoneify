@@ -151,6 +151,7 @@ async function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
   }
 }
 
+const ACCESSORY_ROUTE_CONDITIONS = new Set(['clean', 'body']);
 export const RELEASE_CANDIDATE_PRICING_VERSION = `${PRICING_ENGINE_VERSION}+rc-verified-inputs-v5-reference-domain-2026-10-03`;
 
 export function createPricingService(deps: PricingServiceDeps) {
@@ -254,6 +255,14 @@ export function createPricingService(deps: PricingServiceDeps) {
           if (!routeFresh || !profileFresh || !exactReference || !hasVerifiedBoxIncludedRoute(device, questionnaire, route) ||
             route!.baselineGetUpto == null || (route!.baselineGetUpto !== base.cashifyGetUptoReference && rc.conditionClass !== 'clean')) {
             return { ok: false, code: 'MANUAL_INSPECTION_REQUIRED', message: 'Accessory route or clean-reference evidence needs revalidation',
+              context: { questionnaire, startingPrice: computeFhoneifyGetUpto(base.cashifyGetUptoReference), pricingVersion } };
+          }
+          // Matched controls on these routes support the clean rule and the
+          // legacy body-scratch/dent deltas (6/6 within 3%, all underpaid);
+          // screen/glass deltas overpaid (OnePlus 9: +7.9%, +26.3%) and
+          // functional deltas were never measured here.
+          if (!ACCESSORY_ROUTE_CONDITIONS.has(rc.conditionClass)) {
+            return { ok: false, code: 'MANUAL_INSPECTION_REQUIRED', message: 'This condition is not validated on the accessory-corrected route',
               context: { questionnaire, startingPrice: computeFhoneifyGetUpto(base.cashifyGetUptoReference), pricingVersion } };
           }
           const accessories = diagnostics.accessories ?? [];

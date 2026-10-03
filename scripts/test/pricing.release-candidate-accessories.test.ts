@@ -76,7 +76,14 @@ async function main() {
   assert.equal(ru.internal.cashifyConditionEquivalent, 9690); assert.equal(ru.internal.accessoryBasis, 'GET_UPTO_INCLUDES_BOX_AND_CHARGER');
   assert.equal(lu.internal.accessoryBasis, 'LEGACY_BOX_BONUS'); assert.equal(lu.fhoneifyPrice - ru.fhoneifyPrice, 432); checks++;
   const scratched = await q(rc, { ...clean, defects: ['screen_scratch'], screenCondition: 'More than 2 scratches on screen' }, ablationMeasured);
-  assert(scratched.ok); assert.equal(scratched.internal.cashifyConditionEquivalent, 8230, 'clean-baseline shift preserves the legacy scratch deduction'); checks++;
+  assert(!scratched.ok); assert.equal(scratched.code, 'MANUAL_INSPECTION_REQUIRED', 'measured +7.9% screen-scratch overpayment on this route'); checks++;
+  const glass = await q(rc, { ...clean, defects: ['screen_scratch'], screenCondition: 'Screen cracked/ glass broken' }, ablationMeasured);
+  assert(!glass.ok); assert.equal(glass.code, 'MANUAL_INSPECTION_REQUIRED', 'measured +26.3% cracked-glass overpayment on this route');
+  const functional = await q(rc, { ...clean, hardware: ['wifi'] }, ablationMeasured);
+  assert(!functional.ok); assert.equal(functional.code, 'MANUAL_INSPECTION_REQUIRED'); checks++;
+  const body = await q(rc, { ...clean, defects: ['body_scratch'], bodyScratches: 'More than 2 scratches' }, ablationMeasured), legacyBody = await q(legacy, { ...clean, defects: ['body_scratch'], bodyScratches: 'More than 2 scratches' }, ablationMeasured);
+  assert(body.ok && legacyBody.ok); assert.equal(body.internal.accessoryBasis, 'GET_UPTO_INCLUDES_BOX_AND_CHARGER');
+  assert(body.internal.cashifyConditionEquivalent < 9690 && body.internal.cashifyConditionEquivalent < legacyBody.internal.cashifyConditionEquivalent, 'body delta kept, box bonus removed'); checks++;
   // A moved reference keeps the cross-variant clean rule (Get Upto - 20) but
   // no condition delta: those were checked only at the calibrated reference.
   const nineKey = deviceKey(ablationMeasured), originalNine = records.get(nineKey)!;
