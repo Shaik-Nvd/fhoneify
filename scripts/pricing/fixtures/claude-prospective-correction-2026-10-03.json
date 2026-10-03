@@ -1,0 +1,90 @@
+{
+  "version": "claude-prospective-correction/2026-10-03",
+  "sourceFixture": "claude-prospective-results-2026-10-03.json",
+  "rawObservationSourcesPreserved": [
+    "team-workbook-development-cases-2026-10-02.json",
+    "claude-prospective-results-2026-10-03.json"
+  ],
+  "pricingCoefficientsChanged": false,
+  "open16_512": {
+    "identity": "OnePlus Open 16 GB/512 GB",
+    "route": "warranty ASKED:No; bill ASKED:Yes; age/eSIM NOT_ASKED; original box and charger selected",
+    "frozenPrediction": 11700,
+    "observations": [
+      {
+        "experimentId": "OPEN_TR_B",
+        "getUpto": 51650,
+        "finalPrice": 11700,
+        "signedErrorRs": 0,
+        "evidenceSha256": "e2faee247108aba9c6dab938dafd8cf3f2aad53951c86bcbe9ff6b7fd0c5ab0a"
+      },
+      {
+        "experimentId": "OPEN_TR_C",
+        "getUpto": 51650,
+        "finalPrice": 11700,
+        "signedErrorRs": 0,
+        "evidenceSha256": "e2faee247108aba9c6dab938dafd8cf3f2aad53951c86bcbe9ff6b7fd0c5ab0a"
+      }
+    ],
+    "failedAttempt": {
+      "experimentId": "OPEN_TR_A",
+      "status": "FAILED",
+      "reason": "Cashify questionnaire timed out",
+      "getUpto": null,
+      "finalPrice": null
+    },
+    "interpretation": "Two successful temporal repeat attempts at the frozen price and reference; both point to the same screenshot hash, so they are not two distinct screenshot artifacts or independent validation. The clean attempt timed out. Prior clean quotes at ₹40,310 and the same ₹51,650 reference were on 2026-10-02; no completed fresh clean control exists for this block."
+  },
+  "iphone17_256": {
+    "identity": "Apple iPhone 17 256 GB",
+    "routeCorrection": {
+      "newControlTrace": "warranty ASKED:No; bill ASKED:Yes; eSIM ASKED:Single eSIM; age NOT_ASKED; box ASKED:present; charger NOT_ASKED",
+      "manualBCIntent": "warranty No; bill Yes; Single eSIM per owner correction; box and charger Yes per workbook instruction, only where asked; Above 11 months only where asked",
+      "manualBCTraceStatus": "not available; do not promote the intended answers into a verified route or selected-answer trace"
+    },
+    "sameReference": 65000,
+    "newVerifiedCleanControl": {
+      "experimentId": "FM011_ESIM_TR_A",
+      "getUpto": 65000,
+      "finalPrice": 49210,
+      "collectedAt": "2026-10-03T10:59:37.323Z",
+      "evidenceSha256": "406ac9f42e09bd033c7fd9dda28625cf508ece211356ccafeec18e22f3c3d30b"
+    },
+    "testerA": {
+      "caseId": "FM011_A",
+      "finalPrice": 46750,
+      "warranty": "ASKED:Yes",
+      "age": "Above 11 months (manual intent; not the new control route)",
+      "eSim": "Single eSIM (owner correction)",
+      "useAsWarrantyNoBaseline": false
+    },
+    "damagedTesterRows": [
+      {
+        "caseId": "FM011_B",
+        "condition": "More than 2 scratches on screen",
+        "rawFinalPrice": 37930,
+        "reference": 65000,
+        "rawPriorDerivedDeductionUsingTesterA": 8820,
+        "revisedMatchedReferenceDifferenceUsingNewClean": 11280,
+        "signedDeductionDifferenceVsPrior": 2460,
+        "status": "PROVISIONAL_UNDATED_TESTER_ROW"
+      },
+      {
+        "caseId": "FM011_C",
+        "condition": "More than 2 screen scratches plus more than 2 body scratches",
+        "rawFinalPrice": 35180,
+        "reference": 65000,
+        "rawPriorDerivedDeductionUsingTesterA": 11570,
+        "revisedMatchedReferenceDifferenceUsingNewClean": 14030,
+        "signedDeductionDifferenceVsPrior": 2460,
+        "status": "PROVISIONAL_UNDATED_TESTER_ROW"
+      }
+    ],
+    "comparability": {
+      "matched": ["exact model/variant", "reported Get Upto ₹65,000"],
+      "intendedAnswersConsistentAfterCorrection": ["warranty No", "bill Yes", "Single eSIM", "box present"],
+      "notEstablished": ["B/C observation timestamps", "B/C screenshot or answer-trace provenance", "B/C actual conditional question visibility and selected answers", "same-session timing with the new clean control"],
+      "conclusion": "The new clean control invalidates tester A as the warranty-No baseline. The revised ₹11,280 and ₹14,030 values are arithmetic against a same-variant, same-reference, intended-answer control, but actual questionnaire comparability is unverified because B/C are undated and lack traces. Do not fit or activate coefficients from them."
+    }
+  }
+}
