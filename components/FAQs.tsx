@@ -1,6 +1,4 @@
-'use client';
-
-import React, { useState } from 'react';
+import { Plus } from 'lucide-react';
 
 const FAQ_ITEMS = [
   {
@@ -22,57 +20,24 @@ const FAQ_ITEMS = [
 ];
 
 export default function FAQs() {
-  const [openIdx, setOpenIdx] = useState<number | null>(0);
-
-  const toggle = (idx: number) => {
-    if (openIdx === idx) {
-      setOpenIdx(null);
-    } else {
-      setOpenIdx(idx);
-    }
-  };
-
   return (
     <div className="w-full">
-      <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8">FAQs</h2>
-      
-      <div className="flex flex-col gap-3">
-        {FAQ_ITEMS.map((item, idx) => {
-          const isOpen = openIdx === idx;
-          return (
-            <div key={idx} className="bg-surface border border-border rounded-xl overflow-hidden transition-all duration-300">
-              <button 
-                onClick={() => toggle(idx)} 
-                className="w-full text-left px-5 py-4 flex justify-between items-center hover:bg-[#151515] transition-colors"
-              >
-                <span className="text-foreground font-medium pr-4">{item.q}</span>
-                <svg 
-                  className={`w-5 h-5 text-[#38b2ac] transform transition-transform duration-300 shrink-0 ${isOpen ? 'rotate-180' : ''}`} 
-                  fill="none" 
-                  stroke="currentColor" 
-                  strokeWidth="2" 
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"></path>
-                </svg>
-              </button>
-              
-              <div 
-                className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}
-              >
-                <div className="px-5 pb-5 pt-1 text-muted text-sm leading-relaxed border-t border-[#1a1a1a]">
-                  {item.a}
-                </div>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-      
-      <div className="mt-6 flex justify-center md:justify-start">
-        <button className="text-[#38b2ac] font-medium hover:text-foreground transition-colors">
-          Load More FAQs
-        </button>
+      <h2 id="faq-title" className="font-display text-[1.9rem] font-medium leading-tight tracking-[-0.02em] text-foreground md:text-[2.5rem]">
+        Questions, answered
+      </h2>
+
+      <div className="mt-8 border-b border-border">
+        {FAQ_ITEMS.map((item, idx) => (
+          <details key={item.q} className="group border-t border-border" open={idx === 0}>
+            <summary className="flex min-h-[64px] cursor-pointer list-none items-center justify-between gap-6 py-4 text-left text-[1.02rem] font-semibold text-foreground transition-colors hover:text-gold [&::-webkit-details-marker]:hidden">
+              {item.q}
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-border text-muted transition-transform duration-200 group-open:rotate-45 group-open:border-gold group-open:text-gold">
+                <Plus aria-hidden="true" className="h-4 w-4" />
+              </span>
+            </summary>
+            <p className="max-w-[62ch] pb-6 pr-12 leading-relaxed text-muted">{item.a}</p>
+          </details>
+        ))}
       </div>
     </div>
   );

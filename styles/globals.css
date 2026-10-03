@@ -3,31 +3,45 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --surface: #f3f4f6;
-  --surface-elevated: #e5e7eb;
+  --background: #faf8f3;
+  --surface: #f2eee5;
+  --surface-elevated: #e8e2d4;
   --gold: #8a6614;
   --gold-hover: #6a4f0f;
-  --foreground: #111111;
-  --muted: #4b5563;
-  --border: #d1d5db;
+  --on-gold: #ffffff;
+  --gold-soft: rgba(138, 102, 20, 0.1);
+  --foreground: #16130d;
+  --muted: #5a5446;
+  --border: #dcd4c3;
+  --ring: rgba(138, 102, 20, 0.55);
+  --shadow-sm: 0 1px 2px rgba(38, 30, 12, 0.06), 0 2px 6px rgba(38, 30, 12, 0.05);
+  --shadow-md: 0 2px 4px rgba(38, 30, 12, 0.05), 0 12px 28px -8px rgba(38, 30, 12, 0.16);
+  --shadow-lg: 0 4px 10px rgba(38, 30, 12, 0.06), 0 30px 60px -20px rgba(38, 30, 12, 0.28);
   --glass-bg: rgba(255, 255, 255, 0.7);
   --glass-border: rgba(0, 0, 0, 0.05);
   --glass-shadow: rgba(0, 0, 0, 0.05);
+  color-scheme: light;
 }
 
 .dark {
-  --background: #0a0a0a;
-  --surface: #111111;
-  --surface-elevated: #1a1a1a;
+  --background: #0b0b0a;
+  --surface: #141412;
+  --surface-elevated: #1d1c19;
   --gold: #d4af37;
-  --gold-hover: #f0c040;
-  --foreground: #ffffff;
-  --muted: #a0a0a0;
-  --border: #2a2a2a;
+  --gold-hover: #e6c35a;
+  --on-gold: #15110a;
+  --gold-soft: rgba(212, 175, 55, 0.1);
+  --foreground: #f5f2ea;
+  --muted: #a6a093;
+  --border: #2b2925;
+  --ring: rgba(212, 175, 55, 0.6);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4), 0 2px 6px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.35), 0 14px 30px -10px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 4px 10px rgba(0, 0, 0, 0.4), 0 34px 70px -24px rgba(0, 0, 0, 0.8);
   --glass-bg: rgba(17, 17, 17, 0.6);
   --glass-border: rgba(255, 255, 255, 0.05);
   --glass-shadow: rgba(0, 0, 0, 0.3);
+  color-scheme: dark;
 }
 
 * {
@@ -51,7 +65,7 @@ body {
 
 /* Gold text selection */
 ::selection {
-  background: rgba(212, 175, 55, 0.3);
+  background: color-mix(in srgb, var(--gold) 32%, transparent);
   color: var(--foreground);
 }
 
@@ -117,7 +131,8 @@ select:focus {
 }
 input::placeholder,
 textarea::placeholder {
-  color: #666;
+  color: var(--muted);
+  opacity: 0.85;
 }
 
 select option {
@@ -132,24 +147,42 @@ select option {
 
 /* Buttons */
 .btn {
-  @apply inline-flex items-center justify-center rounded-lg px-5 py-2.5 text-sm font-semibold;
-  transition: all 150ms ease;
+  @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl px-5 text-sm font-semibold;
+  min-height: 44px;
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease, box-shadow 200ms ease, transform 160ms ease;
+  touch-action: manipulation;
 }
 .btn:hover {
-  transform: scale(1.02);
+  transform: translateY(-1px);
 }
 .btn:active {
-  transform: scale(0.98);
+  transform: translateY(0) scale(0.985);
+}
+.btn:disabled,
+.btn[aria-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
 }
 
 .btn-primary {
   @apply btn;
   background-color: var(--gold);
-  color: var(--background);
+  color: var(--on-gold);
+  box-shadow: var(--shadow-sm);
 }
 .btn-primary:hover {
   background-color: var(--gold-hover);
-  color: var(--background);
+  color: var(--on-gold);
+  box-shadow: var(--shadow-md);
+}
+
+/* Large primary call to action (hero, closing band) */
+.btn-cta {
+  @apply btn-primary text-base;
+  min-height: 56px;
+  padding: 0 1.75rem;
+  border-radius: 14px;
 }
 
 .btn-secondary {
@@ -272,165 +305,11 @@ select option {
   color: #FF3B30;
 }
 
-/* Glassmorphism */
-.glass-panel {
-  background: var(--glass-bg);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--glass-border);
-  box-shadow: 0 8px 32px 0 var(--glass-shadow);
-}
-
-.glass-card {
-  @apply glass-panel rounded-xl p-6 transition-all duration-300;
-}
-.glass-card:hover {
-  border-color: rgba(212, 175, 55, 0.3);
-  box-shadow: 0 12px 40px 0 rgba(212, 175, 55, 0.1);
-}
-
-/* 3D Container */
-.perspective-container {
-  perspective: 1000px;
-}
-
-/* Custom Cursor */
-.custom-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  mix-blend-mode: exclusion;
-  background-color: var(--gold);
-  opacity: 0;
-  transition: width 0.2s, height 0.2s, background-color 0.2s, opacity 0.2s;
-}
-
-body:hover .custom-cursor {
-  opacity: 1;
-}
-
-@media (hover: none) and (pointer: coarse), (max-width: 768px) {
-  .custom-cursor {
-    display: none !important;
-  }
-}
-
-/* Animated Text Gradient */
-.text-gradient-animated {
-  background: linear-gradient(to right, var(--gold), #ffecd2, #fcb69f, var(--gold));
-  background-size: 200% auto;
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  animation: shine 4s linear infinite;
-}
-
-@keyframes shine {
-  to {
-    background-position: 200% center;
-  }
-}
-
-/* Floating Animation for CSS Phone */
-@keyframes float {
-  0% { transform: translateY(0px) rotateX(5deg) rotateY(-15deg); }
-  50% { transform: translateY(-20px) rotateX(10deg) rotateY(-10deg); }
-  100% { transform: translateY(0px) rotateX(5deg) rotateY(-15deg); }
-}
-
-.floating-phone {
-  animation: float 6s ease-in-out infinite;
-  transform-style: preserve-3d;
-}
-
-/* CSS Phone Mockup */
-.css-phone {
-  position: relative;
-  width: 280px;
-  height: 580px;
-  background: #111;
-  border-radius: 40px;
-  box-shadow: 
-    inset 0 0 0 2px #333,
-    inset 0 0 0 6px #000,
-    inset 0 0 20px rgba(255,255,255,0.1),
-    0 20px 50px rgba(0,0,0,0.5),
-    -10px 0 30px rgba(212,175,55,0.2);
-  overflow: hidden;
-  border: 1px solid rgba(212,175,55,0.3);
-}
-
-.css-phone::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 120px;
-  height: 30px;
-  background: #000;
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-  z-index: 10;
-}
-
-.css-phone-screen {
-  position: absolute;
-  top: 6px;
-  left: 6px;
-  right: 6px;
-  bottom: 6px;
-  background: linear-gradient(135deg, var(--surface-elevated), var(--background));
-  border-radius: 34px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Screen reflection */
-.css-phone-screen::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    to bottom right,
-    rgba(255,255,255,0) 0%,
-    rgba(255,255,255,0) 40%,
-    rgba(255,255,255,0.1) 50%,
-    rgba(255,255,255,0) 60%,
-    rgba(255,255,255,0) 100%
-  );
-  transform: rotate(30deg);
-  animation: glare 6s linear infinite;
-}
-
-@keyframes glare {
-  0% { transform: translateY(-50%) translateX(-50%) rotate(30deg); }
-  100% { transform: translateY(50%) translateX(50%) rotate(30deg); }
-}
 .alert-info {
   @apply mb-4 rounded-lg p-4 text-sm;
   background-color: rgba(212, 175, 55, 0.08);
   border: 1px solid rgba(212, 175, 55, 0.25);
   color: var(--gold);
-}
-
-/* Skeleton */
-.skeleton {
-  @apply rounded-lg;
-  background: linear-gradient(90deg, var(--surface-elevated) 25%, #222222 50%, var(--surface-elevated) 75%);
-  background-size: 200% 100%;
-  animation: shimmer 1.5s ease-in-out infinite;
 }
 
 /* Price */
@@ -441,8 +320,8 @@ body:hover .custom-cursor {
 
 /* Gold focus ring for all interactive elements */
 *:focus-visible {
-  outline: 2px solid rgba(212, 175, 55, 0.5);
-  outline-offset: 2px;
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
 }
 
 /* Eyebrow text */
@@ -492,8 +371,10 @@ body:hover .custom-cursor {
 }
 
 
+/* Skeleton */
 @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
 .skeleton {
+  @apply rounded-lg;
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   background-color: var(--border) !important;
 }
@@ -507,4 +388,106 @@ body:hover .custom-cursor {
 
 .whatsapp-pulse {
   animation: whatsapp-soft-pulse 2s infinite;
+}
+
+/* Display type */
+.font-display {
+  font-family: var(--font-display), Georgia, 'Times New Roman', serif;
+  font-optical-sizing: auto;
+}
+.text-balance {
+  text-wrap: balance;
+}
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  background: var(--gold);
+  color: var(--on-gold);
+  font-weight: 600;
+}
+.skip-link:focus {
+  top: 0.75rem;
+  color: var(--on-gold);
+}
+
+/* ---------- Hero phone (CSS 3D) ---------- */
+.phone-stage {
+  perspective: 1400px;
+  perspective-origin: 50% 40%;
+}
+.phone-enter {
+  animation: phone-enter 1.25s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes phone-enter {
+  from { transform: rotateY(-34deg) rotateX(10deg) translateY(18px); }
+  to { transform: none; }
+}
+.phone-device {
+  --pw: clamp(196px, 46vw, 240px);
+}
+@media (min-width: 768px) {
+  .phone-device { --pw: 260px; }
+}
+@media (min-width: 1024px) {
+  .phone-device { --pw: 236px; }
+}
+@media (min-width: 1280px) {
+  .phone-device { --pw: 280px; }
+}
+.phone-rig {
+  transform-style: preserve-3d;
+  transform: rotateX(var(--rx, 6deg)) rotateY(var(--ry, -16deg)) rotateZ(1.5deg);
+  will-change: transform;
+}
+.phone-rig > * {
+  transform-style: preserve-3d;
+}
+.phone-layer {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--phone-radius);
+}
+.phone-edge {
+  background: linear-gradient(100deg, #6f5a2a 0%, #c9a959 18%, #8a7039 42%, #e2c987 62%, #7a6431 100%);
+}
+.phone-glare {
+  background: radial-gradient(120% 70% at var(--gx, 30%) var(--gy, 18%), rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0) 55%);
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+.phone-chip {
+  transform: translateZ(var(--z, 60px));
+}
+@supports not (transform-style: preserve-3d) {
+  .phone-edge { display: none; }
+}
+
+/* Reduced motion: render every animated element in its final state */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
