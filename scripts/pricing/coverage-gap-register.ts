@@ -12,6 +12,7 @@
  */
 import fs from 'node:fs';
 import fixture from './fixtures/release-candidate-observations-2026-10-02.json';
+import followup from './fixtures/release-followup-results-2026-10-03.json';
 import routeFixture from './fixtures/release-route-evidence-2026-10-02.json';
 import saved from './fixtures/release-saved-production-inputs-2026-10-02.json';
 import { createPricingService } from '../../lib/pricing/pricingService';
@@ -42,8 +43,19 @@ function catalog(brand: string, model: string, storage: string) {
 }
 /** Workbook intent -> diagnostics (owner correction: A = warranty Yes/Above 11, B/C = warranty No, box+charger present). */
 function intentDiagnostics(r: any) {
-  const q = r.questionnaireIntent, letter = r.caseId.slice(-1);
-  const pick = (v: string, m: Record<string, string>) => v === 'none' ? null : m[v] ?? `UNMAPPED:${v}`;
+  const sourceClass = r.reconstruction?.sourceConditionClass;
+  const q = { ...(r.questionnaireIntent ?? {}) }, letter = r.caseId.slice(-1);
+  if (sourceClass === 'screen_heavy') q.screenCondition = 'more_than_2_scratches';
+  if (sourceClass === 'glass_cracked') q.screenCondition = 'cracked';
+  if (sourceClass === 'display_lines') q.screenLines = 'visible';
+  if (sourceClass === 'display_spots') q.screenSpots = 'large_heavy';
+  if (sourceClass === 'body_heavy') q.bodyScratches = 'more_than_2';
+  if (sourceClass === 'body_dents') q.bodyDents = 'major_or_more_than_2';
+  if (sourceClass === 'touch') q.touch = { intent: 'no' };
+  if (sourceClass === 'original_screen') q.originalScreen = { intent: 'no' };
+  if (sourceClass === 'charging') q.hardwareFaults = ['hw_charging'];
+  if (sourceClass === 'back_camera') q.hardwareFaults = ['hw_back_camera'];
+  const pick = (v: string | null | undefined, m: Record<string, string>) => v == null || v === 'none' ? null : m[v] ?? `UNMAPPED:${v}`;
   const d: any = { calls: q.calls?.intent !== 'no', touch: q.touch?.intent !== 'no', originalScreen: q.originalScreen?.intent !== 'no', defects: [],
     screenCondition: pick(q.screenCondition, { more_than_2_scratches: 'More than 2 scratches on screen', cracked: 'Screen cracked/ glass broken' }),
     screenSpots: pick(q.screenSpots, { large_heavy: 'Large/ heavy visible spots on screen' }), screenLines: pick(q.screenLines, { visible: 'Visible line(s) on display' }),
@@ -57,12 +69,39 @@ function intentDiagnostics(r: any) {
   return d;
 }
 
-type Obs = { id: string; caseId: string | null; getUpto: number; observed: number; collectedAt: string; route: any; diagnostics: any; block: string | null; baseline: string | null; role: string };
+type Obs = { id: string; caseId: string | null; brand?: string; model?: string; storage?: string; originalAnswers?: any; answers?: any;
+  getUpto: number; observed: number; collectedAt: string; route: any; diagnostics: any; block: string | null; baseline: string | null; role: string;
+  screenshotSha256?: string; provenance?: any };
 const auto: Obs[] = (fixture.observations as any[]).filter(o => !('excluded' in o)).map(o => {
   const m = o.id.split(':')[1].match(/(FM\d{3})_(?:[A-Z0-9]+_)*([ABC])$/);
-  return { id: o.id, caseId: m ? `${m[1]}_${m[2]}` : null, getUpto: o.getUpto, observed: o.observed, collectedAt: o.collectedAt, route: o.route,
-    diagnostics: o.diagnostics, block: o.provenance.blockId ?? null, baseline: o.provenance.baselineExperimentId ?? null, role: o.provenance.evaluationRole };
+  return { id: o.id, caseId: m ? `${m[1]}_${m[2]}` : null, brand: o.brand, model: o.model, storage: o.storage,
+    getUpto: o.getUpto, observed: o.observed, collectedAt: o.collectedAt, route: o.route,
+    diagnostics: o.diagnostics, originalAnswers: o.originalAnswers, answers: o.originalAnswers, screenshotSha256: o.screenshotSha256, provenance: o.provenance,
+    block: o.provenance.blockId ?? null, baseline: o.provenance.baselineExperimentId ?? null, role: o.provenance.evaluationRole } as any;
 });
+// Later exact-identity controls are merged as additional observations. Their
+// recorded answers remain attached to the observed price; production replay
+// inputs are built separately below and never inherit this measured price.
+const followupAuto: Obs[] = (followup.accepted as any[]).flatMap(o => {
+  const m = o.id.match(/^(FM\d{3})_/);
+  if (!m) return [];
+  const route: any = {}, originalAnswers: any = { ...o.conditions };
+  for (const k of ['warranty', 'validBill', 'mobileAge', 'eSim', 'box', 'charger', 'sPen']) {
+    route[k] = o.route[k].mode;
+    originalAnswers[k] = o.route[k].selectedAnswer;
+  }
+  const accessories = ['box', 'charger', 'sPen'].filter(k => originalAnswers[k] === 'present').map((k: string) => k === 'sPen' ? 'spen' : k);
+  const diagnostics: any = { calls: true, touch: true, originalScreen: true, warranty: false, validBill: true, mobileAge: null,
+    eSim: originalAnswers.eSim === 'single' ? 'single' : null, defects: [], hardware: [], accessories,
+    screenCondition: null, screenSpots: null, screenLines: null, screenDiscoloration: null, bodyScratches: null, bodyDents: null, bodyPanel: null, bodyBent: null };
+  return [{ id: `release-followup-2026-10-03:${o.id}`, caseId: `${m[1]}_A`, getUpto: o.GetUpto, observed: o.finalSelling,
+    collectedAt: o.collectedAt, route, diagnostics, answers: originalAnswers, screenshotSha256: o.screenshotSha256,
+    provenance: { source: 'release-followup-results-2026-10-03.json', attempt: o.attempt, frozenAt: o.frozenAt,
+      predictionSha256: o.predictionSha256, role: 'FOLLOWUP_CONTROL' },
+    block: `release-followup:${o.id}`, baseline: null, role: 'FOLLOWUP_CONTROL',
+    brand: o.brand, model: o.model, storage: o.storage, originalAnswers } as any];
+});
+const allAuto: Obs[] = [...auto, ...followupAuto];
 
 /** One service per input set; refusal reasons captured from the service's own log. */
 async function predict(device: CatalogDevice, diagnostics: unknown, reference: number | null, verifiedAt: string | null, profile: any) {
@@ -106,20 +145,27 @@ async function main() {
     const spec = device ? RC_ALLOWLIST.find(s => s.brand === device.brand && s.model === device.model && workbookStorageIdentity(s.storage) === workbookStorageIdentity(device.storage)) : undefined;
     const accessory = device ? isBoxIncludedIdentity(device) && !spec : false;
     const routeRow = device ? routes.find(x => x.model === device.model && workbookStorageIdentity(x.storage) === workbookStorageIdentity(device.storage)) : undefined;
-    const devAuto = auto.filter(o => o.caseId?.startsWith(deviceId + '_') || (device && o.caseId == null && false));
-    const allDev = (fixture.observations as any[]).filter(o => !('excluded' in o) && device && o.model === device.model &&
+    const devAuto = allAuto.filter(o => o.caseId?.startsWith(deviceId + '_') || (device && o.caseId == null && false));
+    const allDev = allAuto.filter((o: any) => device && o.model === device.model &&
       workbookStorageIdentity(o.brand === 'Apple' ? o.storage.replace(/\s+GB/g, 'GB') : o.storage) === workbookStorageIdentity(device.storage));
     const controls = allDev.filter(o => componentLabel(o.diagnostics) === 'clean' && (o.route.warranty !== 'ASKED' || o.originalAnswers?.warranty === 'no') &&
-      o.originalAnswers?.box === 'present' && (o.route.charger !== 'ASKED' || o.originalAnswers?.charger === 'present'))
-      .map(o => ({ id: o.id, getUpto: o.getUpto, observed: o.observed, collectedAt: o.collectedAt, offset: o.observed - o.getUpto, retention: +(o.observed / o.getUpto).toFixed(4) }));
+      (o.route.validBill !== 'ASKED' || o.originalAnswers?.validBill === 'yes') && o.route.mobileAge === 'NOT_ASKED' &&
+      (o.route.eSim !== 'ASKED' || o.originalAnswers?.eSim === 'single') && o.route.box === 'ASKED' && o.originalAnswers?.box === 'present' &&
+      (o.route.charger !== 'ASKED' || o.originalAnswers?.charger === 'present') && (o.route.sPen !== 'ASKED' || o.originalAnswers?.sPen === 'present'))
+      .map(o => ({ id: o.id, getUpto: o.getUpto, observed: o.observed, collectedAt: o.collectedAt, offset: o.observed - o.getUpto, retention: +(o.observed / o.getUpto).toFixed(4), route: o.route, answers: o.originalAnswers, provenance: o.provenance, screenshotSha256: o.screenshotSha256 }));
     const routeModes = [...new Set(allDev.map(o => JSON.stringify(o.route)))].map(s => JSON.parse(s));
     for (const r of rows) {
       const tester = r.testerObservation ? { price: r.testerObservation.finalSellingPrice, getUpto: r.testerObservation.getUpto, regime: r.caseId.endsWith('A') ? 'warranty Yes (owner correction)' : 'warranty No' } : null;
-      const obs = devAuto.filter(o => o.caseId === r.caseId).sort((a, b) => a.collectedAt.localeCompare(b.collectedAt));
+      const obs = allAuto.filter(o => o.caseId === r.caseId && (o as any).model === device?.model &&
+        workbookStorageIdentity((o as any).brand === 'Apple' ? (o as any).storage.replace(/\s+GB/g, 'GB') : (o as any).storage) === workbookStorageIdentity(device?.storage ?? '')).sort((a, b) => a.collectedAt.localeCompare(b.collectedAt));
       const latest = obs.at(-1);
+      const observationTrail = obs.map(o => ({ id: o.id, getUpto: o.getUpto, price: o.observed, collectedAt: o.collectedAt,
+        route: o.route, answers: o.originalAnswers, provenance: o.provenance, screenshotSha256: o.screenshotSha256 }));
+      const repeatClassification = obs.length < 2 ? 'SINGLE_OBSERVATION' : new Set(obs.map(o => `${o.getUpto}:${o.observed}`)).size === 1 ? 'EXACT_REPEAT' : 'DISAGREEING_REPEAT';
       const diag = latest?.diagnostics ?? intentDiagnostics(r);
       const label = componentLabel(diag);
-      const control = latest ? controls.filter(c => c.getUpto === latest.getUpto).sort((a, b) => Math.abs(Date.parse(a.collectedAt) - Date.parse(latest.collectedAt)) - Math.abs(Date.parse(b.collectedAt) - Date.parse(latest.collectedAt)))[0] : undefined;
+      const control = latest ? controls.filter(c => c.getUpto === latest.getUpto && JSON.stringify(c.route) === JSON.stringify(latest.route))
+        .sort((a, b) => Math.abs(Date.parse(a.collectedAt) - Date.parse(latest.collectedAt)) - Math.abs(Date.parse(b.collectedAt) - Date.parse(latest.collectedAt)))[0] : undefined;
       const atObs = device && latest ? await predict(device, latest.diagnostics, latest.getUpto, at.toISOString(), { warrantyMode: latest.route.warranty, billMode: latest.route.validBill, ageMode: latest.route.mobileAge, observedAt: at.toISOString() }) : null;
       // What a customer on the live UI would send for this condition: no ownership answers where
       // the profile says NOT_ASKED, warranty No / bill Yes where asked (the verified regime),
@@ -139,13 +185,17 @@ async function main() {
       else if (atObs && (atObs.decision === 'CANDIDATE' || atObs.decision === 'ACCESSORY')) next = 'PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto';
       else next = `EVIDENCE_PRESENT_NOT_ACTIVATED (${COMMON.has(label) ? 'common condition' : label})`;
       cases.push({ caseId: r.caseId, deviceId, variant: `${r0.brand} ${r0.model} ${r0.variant}`, condition: label, conditionText: r.conditionText.split(':')[0],
-        tester, traced: latest ? { price: latest.observed, getUpto: latest.getUpto, at: latest.collectedAt, route: latest.route, repeats: obs.length } : null,
+        tester, traced: latest ? { id: latest.id, price: latest.observed, getUpto: latest.getUpto, at: latest.collectedAt, route: latest.route,
+          answers: latest.originalAnswers, provenance: latest.provenance, repeats: obs.length, repeatClassification } : null,
+        observationTrail,
         control: control ? { price: control.observed, getUpto: control.getUpto, id: control.id } : null,
         measuredDeduction: control && latest && label !== 'clean' ? control.observed - latest.observed : null,
         predictedAtObservedGetUpto: atObs?.estimate ?? null, decisionAtObservedGetUpto: atObs?.decision ?? null, reasonAtObserved: atObs?.reason ?? null,
-        productionReference: prodRef, predictedInProduction: atProd.estimate, decisionInProduction: atProd.decision, guardReason: atProd.reason, nextAction: next });
+        productionReference: prodRef, predictedInProduction: atProd.estimate, decisionInProduction: atProd.decision, guardReason: atProd.reason,
+        replayEligibility: atProd.decision === 'CANDIDATE' || atProd.decision === 'ACCESSORY' ? 'REPLAY_ELIGIBLE_NOT_LIVE_PRODUCTION_PRICE' : 'NOT_REPLAY_ELIGIBLE',
+        syntheticProductionInput: { diagnostics: customer, questionnaireProfile: profile ? { warrantyMode: profile.warrantyMode, billMode: profile.billMode, ageMode: profile.ageMode } : null, reference: prodRef, referenceVerifiedAt: prodVerified }, nextAction: next });
     }
-    devices.push({ deviceId, variant: `${r0.brand} ${r0.model} ${r0.variant}`, catalog: !!device, scope: spec ? 'CANDIDATE' : accessory ? 'ACCESSORY' : 'NONE',
+      devices.push({ deviceId, variant: `${r0.brand} ${r0.model} ${r0.variant}`, catalog: !!device, scope: spec ? 'CANDIDATE' : accessory ? 'ACCESSORY' : 'NONE',
       productionReference: prodRef, profile: profile ? `${profile.warrantyMode}/${profile.billMode}/${profile.ageMode}` : null, routeEvidence: !!routeRow,
       tracedRoutes: routeModes, cleanControls: controls, tracedCases: rows.filter(r => devAuto.some(o => o.caseId === r.caseId)).map(r => r.caseId) });
   }
