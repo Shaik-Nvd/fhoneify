@@ -1,0 +1,310 @@
+{
+  "version": "claude-esim-correction/2026-10-03",
+  "question": {
+    "exactText": "How many eSIMs does your device support?",
+    "options": [
+      "Single eSIM",
+      "Dual eSIM"
+    ],
+    "source": "cashify-matrix-integration/research-evidence/release-review-2026-10-03/FM006_RC_WNO_OPEN-routing.json"
+  },
+  "ownerAnswer": {
+    "answeredAt": "2026-10-03",
+    "answer": "The manual testers selected Single eSIM",
+    "appliesTo": "manual (tester-reported) captures of devices where Cashify asks the eSIM question; automatic observations keep their recorded selections"
+  },
+  "resolution": "eSIM-asked devices resolved from collector traces (eSIM ASKED, incl. refusals stating Cashify asks it); names/variants from the workbook import (tester-observations.json).",
+  "affectedManualCaptures": [
+    {
+      "caseId": "FM006_A",
+      "deviceId": "FM006",
+      "model": "Apple iPhone 14 Pro Max",
+      "variant": "256 GB",
+      "priceCell": "G12",
+      "eSim": {
+        "intent": "Single eSIM",
+        "ifAsked": true,
+        "source": "OWNER_ANSWER_2026-10-03 (manual testers selected Single eSIM)"
+      },
+      "rawRecordUnchanged": true
+    },
+    {
+      "caseId": "FM006_B",
+      "deviceId": "FM006",
+      "model": "Apple iPhone 14 Pro Max",
+      "variant": "256 GB",
+      "priceCell": "H12",
+      "eSim": {
+        "intent": "Single eSIM",
+        "ifAsked": true,
+        "source": "OWNER_ANSWER_2026-10-03 (manual testers selected Single eSIM)"
+      },
+      "rawRecordUnchanged": true
+    },
+    {
+      "caseId": "FM006_C",
+      "deviceId": "FM006",
+      "model": "Apple iPhone 14 Pro Max",
+      "variant": "256 GB",
+      "priceCell": "I12",
+      "eSim": {
+        "intent": "Single eSIM",
+        "ifAsked": true,
+        "source": "OWNER_ANSWER_2026-10-03 (manual testers selected Single eSIM)"
+      },
+      "rawRecordUnchanged": true
+    },
+    {
+      "caseId": "FM008_A",
+      "deviceId": "FM008",
+      "model": "Apple iPhone 15 Pro Max",
+      "variant": "512 GB",
+      "priceCell": "G14",
+      "eSim": {
+        "intent": "Single eSIM",
+        "ifAsked": true,
+        "source": "OWNER_ANSWER_2026-10-03 (manual testers selected Single eSIM)"
+      },
+      "rawRecordUnchanged": true
+    },
+    {
+      "caseId": "FM008_B",
+      "deviceId": "FM008",
+      "model": "Apple iPhone 15 Pro Max",
+      "variant": "512 GB",
+      "priceCell": "H14",
+      "eSim": {
+        "intent": "Single eSIM",
+        "ifAsked": true,
+        "source": "OWNER_ANSWER_2026-10-03 (manual testers selected Single eSIM)"
+      },
+      "rawRecordUnchanged": true
+    },
+    {
+      "caseId": "FM008_C",
+      "deviceId": "FM008",
+      "model": "Apple iPhone 15 Pro Max",
+      "variant": "512 GB",
+      "priceCell": "I14",
+      "eSim": {
+        "intent": "Single eSIM",
+        "ifAsked": true,
+        "source": "OWNER_ANSWER_2026-10-03 (manual testers selected Single eSIM)"
+      },
+      "rawRecordUnchanged": true
+    },
+    {
+      "caseId": "FM010_A",
+      "deviceId": "FM010",
+      "model": "Apple iPhone 16 Pro Max",
+      "variant": "512 GB",
+      "priceCell": "G16",
+      "eSim": {
+        "intent": "Single eSIM",
+        "ifAsked": true,
+        "source": "OWNER_ANSWER_2026-10-03 (manual testers selected Single eSIM)"
+      },
+      "rawRecordUnchanged": true
+    },
+    {
+      "caseId": "FM010_B",
+      "deviceId": "FM010",
+      "model": "Apple iPhone 16 Pro Max",
+      "variant": "512 GB",
+      "priceCell": "H16",
+      "eSim": {
+        "intent": "Single eSIM",
+        "ifAsked": true,
+        "source": "OWNER_ANSWER_2026-10-03 (manual testers selected Single eSIM)"
+      },
+      "rawRecordUnchanged": true
+    },
+    {
+      "caseId": "FM010_C",
+      "deviceId": "FM010",
+      "model": "Apple iPhone 16 Pro Max",
+      "variant": "512 GB",
+      "priceCell": "I16",
+      "eSim": {
+        "intent": "Single eSIM",
+        "ifAsked": true,
+        "source": "OWNER_ANSWER_2026-10-03 (manual testers selected Single eSIM)"
+      },
+      "rawRecordUnchanged": true
+    },
+    {
+      "caseId": "FM011_A",
+      "deviceId": "FM011",
+      "model": "Apple iPhone 17",
+      "variant": "256 GB",
+      "priceCell": "G17",
+      "eSim": {
+        "intent": "Single eSIM",
+        "ifAsked": true,
+        "source": "OWNER_ANSWER_2026-10-03 (manual testers selected Single eSIM)"
+      },
+      "rawRecordUnchanged": true
+    },
+    {
+      "caseId": "FM011_B",
+      "deviceId": "FM011",
+      "model": "Apple iPhone 17",
+      "variant": "256 GB",
+      "priceCell": "H17",
+      "eSim": {
+        "intent": "Single eSIM",
+        "ifAsked": true,
+        "source": "OWNER_ANSWER_2026-10-03 (manual testers selected Single eSIM)"
+      },
+      "rawRecordUnchanged": true
+    },
+    {
+      "caseId": "FM011_C",
+      "deviceId": "FM011",
+      "model": "Apple iPhone 17",
+      "variant": "256 GB",
+      "priceCell": "I17",
+      "eSim": {
+        "intent": "Single eSIM",
+        "ifAsked": true,
+        "source": "OWNER_ANSWER_2026-10-03 (manual testers selected Single eSIM)"
+      },
+      "rawRecordUnchanged": true
+    },
+    {
+      "caseId": "FM012_A",
+      "deviceId": "FM012",
+      "model": "Apple iPhone 17 Pro Max",
+      "variant": "512 GB",
+      "priceCell": "G18",
+      "eSim": {
+        "intent": "Single eSIM",
+        "ifAsked": true,
+        "source": "OWNER_ANSWER_2026-10-03 (manual testers selected Single eSIM)"
+      },
+      "rawRecordUnchanged": true
+    },
+    {
+      "caseId": "FM012_B",
+      "deviceId": "FM012",
+      "model": "Apple iPhone 17 Pro Max",
+      "variant": "512 GB",
+      "priceCell": "H18",
+      "eSim": {
+        "intent": "Single eSIM",
+        "ifAsked": true,
+        "source": "OWNER_ANSWER_2026-10-03 (manual testers selected Single eSIM)"
+      },
+      "rawRecordUnchanged": true
+    },
+    {
+      "caseId": "FM012_C",
+      "deviceId": "FM012",
+      "model": "Apple iPhone 17 Pro Max",
+      "variant": "512 GB",
+      "priceCell": "I18",
+      "eSim": {
+        "intent": "Single eSIM",
+        "ifAsked": true,
+        "source": "OWNER_ANSWER_2026-10-03 (manual testers selected Single eSIM)"
+      },
+      "rawRecordUnchanged": true
+    }
+  ],
+  "unknownVisibility": [
+    {
+      "deviceId": "FM015",
+      "model": "Samsung Galaxy A72",
+      "variant": "8 GB/128 GB",
+      "eSim": "UNKNOWN (no completed trace; answer applies only if asked)"
+    },
+    {
+      "deviceId": "FM018",
+      "model": "Samsung Galaxy S25 Edge",
+      "variant": "12 GB/256 GB",
+      "eSim": "UNKNOWN (no completed trace; answer applies only if asked)"
+    }
+  ],
+  "controls": [
+    {
+      "deviceId": "FM006",
+      "model": "Apple iPhone 14 Pro Max",
+      "variant": "256 GB",
+      "testerGetUpto": 45480,
+      "latestObservedGetUpto": {
+        "experimentId": "FM006_RC_WNO_OPEN",
+        "getUpto": 46010,
+        "at": "2026-10-02T19:23:07.901Z",
+        "status": "COMPLETED",
+        "eSimSelected": "Single eSIM"
+      },
+      "matchingSingleEsimControl": null,
+      "pairable": false,
+      "need": "Single-eSIM control exists but Get Upto moved from the tester capture; undated tester B/C cannot be paired with it"
+    },
+    {
+      "deviceId": "FM008",
+      "model": "Apple iPhone 15 Pro Max",
+      "variant": "512 GB",
+      "testerGetUpto": 72480,
+      "latestObservedGetUpto": {
+        "experimentId": "FM008_WNO_A",
+        "getUpto": 73320,
+        "at": "2026-10-02T17:29:32.222Z",
+        "status": "UNSUPPORTED",
+        "eSimSelected": null
+      },
+      "matchingSingleEsimControl": null,
+      "pairable": false,
+      "need": "Latest Get Upto differs from tester; a new control would not pair with undated tester B/C"
+    },
+    {
+      "deviceId": "FM010",
+      "model": "Apple iPhone 16 Pro Max",
+      "variant": "512 GB",
+      "testerGetUpto": 88270,
+      "latestObservedGetUpto": {
+        "experimentId": "FM010_WNO_A",
+        "getUpto": 90000,
+        "at": "2026-10-02T17:29:49.696Z",
+        "status": "UNSUPPORTED",
+        "eSimSelected": null
+      },
+      "matchingSingleEsimControl": null,
+      "pairable": false,
+      "need": "Latest Get Upto differs from tester; a new control would not pair with undated tester B/C"
+    },
+    {
+      "deviceId": "FM011",
+      "model": "Apple iPhone 17",
+      "variant": "256 GB",
+      "testerGetUpto": 65000,
+      "latestObservedGetUpto": {
+        "experimentId": "FM011_WNO_A",
+        "getUpto": 65000,
+        "at": "2026-10-02T17:29:53.373Z",
+        "status": "UNSUPPORTED",
+        "eSimSelected": null
+      },
+      "matchingSingleEsimControl": null,
+      "pairable": true,
+      "need": "A Single-eSIM warranty-No control at the same Get Upto would pair with tester B/C"
+    },
+    {
+      "deviceId": "FM012",
+      "model": "Apple iPhone 17 Pro Max",
+      "variant": "512 GB",
+      "testerGetUpto": 117000,
+      "latestObservedGetUpto": {
+        "experimentId": "FM012_WNO_A",
+        "getUpto": 118320,
+        "at": "2026-10-02T17:29:56.830Z",
+        "status": "UNSUPPORTED",
+        "eSimSelected": null
+      },
+      "matchingSingleEsimControl": null,
+      "pairable": false,
+      "need": "Latest Get Upto differs from tester; a new control would not pair with undated tester B/C"
+    }
+  ]
+}
