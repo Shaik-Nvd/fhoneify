@@ -1,6 +1,6 @@
 {
-  "releaseCandidate": false,
+  "releaseCandidate": true,
   "routeEvidenceFile": "scripts/pricing/fixtures/release-route-evidence-2026-10-02.json",
   "approvedBy": "owner, 2026-10-03 (merge, deploy, refresh and activate after verification)",
-  "note": "Reviewed launch switch. An explicit PRICING_RELEASE_CANDIDATE=on|off on the host overrides this file; unset it to follow this file. See docs/RELEASE_FINAL_2026-10-03.md."
+  "note": "Activated 2026-10-03 after verification (PR #10 deployed with the switch off; 7 references refreshed through normal ingestion; 20 references and profiles verified read-only). Host PRICING_RELEASE_CANDIDATE=off overrides this file for an immediate rollback. Evidence expires 2026-10-16; see docs/RELEASE_REVALIDATION_PROCEDURE.md."
 }
