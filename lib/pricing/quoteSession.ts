@@ -37,6 +37,7 @@ export interface SignedQuote {
   /** Which questions Cashify asks for this model (from the API). Absent in
    * sessions saved before 2026-09-24: the page then asks everything. */
   questionnaire?: QuestionnaireSemantics;
+  pricingVersion?: string;
 }
 
 export interface QuoteSession extends QuoteSessionDevice {

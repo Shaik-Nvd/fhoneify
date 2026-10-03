@@ -11,6 +11,7 @@ import { deviceKey, type ReferencePriceRecord } from '../../lib/referencePricing
 import { InMemoryQuestionnaireProfileStore } from '../../lib/referencePricing/questionnaire/store';
 import { questionnaireModelKey } from '../../lib/referencePricing/questionnaire/types';
 import { applyCompetitorUplift } from '../../lib/pricingCalculator';
+import { loadReleaseRouteEvidence } from '../../lib/pricing/releaseRouteEvidence';
 
 const at = new Date('2026-10-03T12:00:00Z'), t = '2026-10-03T11:00:00Z';
 const records = new Map<string, ReferencePriceRecord>(), profiles = new InMemoryQuestionnaireProfileStore();
@@ -24,9 +25,12 @@ function add(brand: string, model: string, storage: string, price: number, mode:
 }
 const nord = add('OnePlus', 'OnePlus Nord', '8 GB/128 GB', 8340, 'NOT_ASKED');
 const open = add('OnePlus', 'Oneplus Open', '16 GB/512 GB', 51650, 'ASKED');
+const unmeasured = add('OnePlus', 'OnePlus 9 5G', '8 GB/128 GB', 9710, 'NOT_ASKED');
+const apple = add('Apple', 'Apple iPhone 12 Pro', '256GB', 24460, 'NOT_ASKED');
 const repository: PricingServiceDeps['repository'] = { async get(k) { return records.get(k) ?? null; }, async listAll() { return [...records.values()]; },
   async upsert(r) { records.set(r.deviceKey, r); }, async appendHistory() {}, async getHistory() { return []; } };
 const make = (pricingMode?: 'legacy' | 'release-candidate') => createPricingService({ repository, questionnaireStore: profiles, now: () => at, pricingMode,
+  releaseRouteEvidence: loadReleaseRouteEvidence('scripts/pricing/fixtures/release-route-evidence-2026-10-02.json'),
   signingSecret: 'local-fixture-signing-secret-at-least-thirty-two-characters', tokenTtlSeconds: 900, strictReferenceMode: true,
   referenceLookupTimeoutMs: 100, logger: { info() {}, warn() {}, error() {} } });
 const clean = { calls: true, touch: true, originalScreen: true, defects: [], screenCondition: null, screenSpots: null, screenLines: null, screenDiscoloration: null,
@@ -47,16 +51,22 @@ async function main() {
   assert(l.internal.cashifyConditionEquivalent - r.internal.cashifyConditionEquivalent >= 300, 'bonus removed');
   assert(Math.abs(r.internal.cashifyConditionEquivalent - 8320) < Math.abs(l.internal.cashifyConditionEquivalent - 8320)); checks++;
   assert.equal(r.fhoneifyPrice, applyCompetitorUplift(8340, r.internal.cashifyConditionEquivalent)); checks++;
-  // RC, box missing: no invented deduction; flagged.
+  // RC, missing box is unsupported, with no binding price or token.
   const noBox = await q(rc, { ...clean, accessories: ['charger'] }), legacyNoBox = await q(legacy, { ...clean, accessories: ['charger'] });
-  assert(noBox.ok && legacyNoBox.ok); assert.equal(noBox.internal.accessoryBasis, 'GET_UPTO_INCLUDES_BOX_MISSING_BOX_UNMEASURED');
-  assert.equal(noBox.internal.cashifyConditionEquivalent, legacyNoBox.internal.cashifyConditionEquivalent); checks++;
-  // RC, warranty-ASKED route: unverified, legacy box bonus kept.
+  assert(!noBox.ok && legacyNoBox.ok); assert.equal(noBox.code, 'MANUAL_INSPECTION_REQUIRED');
+  assert.equal('quoteToken' in noBox, false); checks++;
+  // RC, measured ASKED route uses its own candidate, no NOT_ASKED box claim.
   const asked = { ...clean, warranty: false, validBill: true };
   const ra = await q(rc, asked, open), la = await q(legacy, asked, open); assert(ra.ok && la.ok);
-  assert.equal(ra.internal.accessoryBasis, 'LEGACY_BOX_BONUS'); assert.equal(ra.fhoneifyPrice, la.fhoneifyPrice); checks++;
+  assert.equal(ra.internal.accessoryBasis, 'CALIBRATED_ROUTE_ACCESSORIES'); assert.equal(ra.internal.cashifyConditionEquivalent, 40310); checks++;
   // Tokens: RC token verifies only against an RC service quote of the same answers.
   assert.notEqual(r.quoteToken, l.quoteToken); checks++;
+  // NOT_ASKED alone grants no correction to an unmeasured model.
+  const ru = await q(rc, clean, unmeasured), lu = await q(legacy, clean, unmeasured); assert(ru.ok && lu.ok);
+  assert.equal(ru.fhoneifyPrice, lu.fhoneifyPrice); assert.equal(ru.internal.accessoryBasis, 'LEGACY_BOX_BONUS'); checks++;
+  // Preserve the research Apple result, but block binding headline activation.
+  const ap = await q(rc, { ...clean, accessories: ['box'] }, apple); assert(!ap.ok);
+  assert.equal(ap.code, 'MANUAL_INSPECTION_REQUIRED'); assert.equal('quoteToken' in ap, false); checks++;
   console.log(`PASS release-candidate accessory basis ${checks} checks; default legacy unchanged`);
 }
 main().catch((e) => { console.error(e); process.exitCode = 1; });

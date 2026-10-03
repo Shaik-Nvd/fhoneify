@@ -5,7 +5,7 @@
  */
 import fixture from '../../scripts/pricing/fixtures/team-workbook-development-2026-10-02.json';
 import { applyCompetitorUplift, type DiagnosticsType } from '../pricingCalculator';
-import type { QuestionnaireSemantics } from './questionnaireSemantics';
+import type { QuestionnaireSemantics, QuestionMode } from './questionnaireSemantics';
 
 export const TEAM_WORKBOOK_CANDIDATE_VERSION = fixture.version + '-input-guards-v2';
 export const TEAM_WORKBOOK_GLASS_TO_SCRATCH_RATIO = fixture.sharedGlass.ratio;
@@ -16,8 +16,8 @@ export type WorkbookComponent = 'screen_heavy' | 'glass_cracked' | 'display_line
   'original_screen' | 'touch' | 'charging' | 'back_camera' | 'body_heavy' | 'body_dents';
 export interface WorkbookRoute {
   semantics: QuestionnaireSemantics;
-  boxMode: 'ASKED' | 'NOT_ASKED'; chargerMode: 'ASKED' | 'NOT_ASKED';
-  sPenMode: 'ASKED' | 'NOT_ASKED'; eSimMode: 'NOT_ASKED';
+  boxMode: QuestionMode; chargerMode: QuestionMode;
+  sPenMode: QuestionMode; eSimMode: QuestionMode;
 }
 export type WorkbookCandidateResult = { supported: false; reason: string } | {
   supported: true; version: string; evidenceQuality: 'TESTER_REPORTED_UNVERIFIED';

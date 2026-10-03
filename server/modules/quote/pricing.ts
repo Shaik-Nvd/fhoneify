@@ -2,6 +2,7 @@ import crypto from 'crypto';
 import config from '../../config';
 import logger from '../../lib/logger';
 import { createPricingService } from '../../../lib/pricing/pricingService';
+import { loadReleaseRouteEvidence } from '../../../lib/pricing/releaseRouteEvidence';
 import { getQuestionnaireProfileStore, getReferencePriceRepository } from '../../../lib/referencePricing/getStore';
 
 // A dedicated QUOTE_SIGNING_SECRET lets quote tokens be rotated without
@@ -30,5 +31,6 @@ export const pricingService = createPricingService({
   questionnaireStore: getQuestionnaireProfileStore(),
   // Off unless explicitly 'on': legacy pricing stays the production default.
   pricingMode: process.env.PRICING_RELEASE_CANDIDATE === 'on' ? 'release-candidate' : 'legacy',
+  releaseRouteEvidence: process.env.PRICING_RELEASE_CANDIDATE === 'on' ? loadReleaseRouteEvidence(process.env.PRICING_RELEASE_ROUTE_EVIDENCE_FILE) : [],
   logger,
 });

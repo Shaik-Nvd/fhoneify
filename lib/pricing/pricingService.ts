@@ -12,10 +12,13 @@ import {
   priceDevice,
   resolveReference,
 } from './engine';
-import { UNKNOWN_QUESTIONNAIRE, type QuestionnaireSemantics } from './questionnaireSemantics';
+import { UNKNOWN_QUESTIONNAIRE, isQuestionMode, type QuestionnaireSemantics } from './questionnaireSemantics';
 import { releaseCandidateOutcome, type ReleaseCandidateOutcome } from './releaseCandidate';
+import type { WorkbookRouteEvidence } from './teamWorkbookResearchQuoteService';
+import { workbookStorageIdentity } from './teamWorkbookCandidate';
+import { classifyFreshness } from '../referencePricing/freshnessPolicy';
 import { applyCompetitorUplift } from '../pricingCalculator';
-import { getUptoIncludesAccessories, hasBox, withoutBoxBonus, type AccessoryBasis } from './accessoryBasis';
+import { getUptoIncludesAccessories, type AccessoryBasis } from './accessoryBasis';
 import type { QuestionnaireProfileStore } from '../referencePricing/questionnaire/store';
 import { questionnaireModelKey } from '../referencePricing/questionnaire/types';
 import { QUOTE_TOKEN_VERSION, canonicalDiagnosticsHash, signQuoteToken, verifyQuoteToken } from './quoteToken';
@@ -50,6 +53,8 @@ export interface PricingServiceDeps {
   questionnaireStore?: QuestionnaireProfileStore;
   /** PRICING_RELEASE_CANDIDATE=on selects 'release-candidate'; default legacy. */
   pricingMode?: 'legacy' | 'release-candidate';
+  /** Explicit, audited exact-variant conditional traces; absent never inferred. */
+  releaseRouteEvidence?: readonly WorkbookRouteEvidence[];
 }
 
 export type PricingErrorCode =
@@ -64,6 +69,8 @@ export interface PricingFailure {
   ok: false;
   code: PricingErrorCode;
   message: string;
+  /** Nonbinding context lets customers answer questions after a refused quote. */
+  context?: { questionnaire: QuestionnaireSemantics; startingPrice: number; pricingVersion: string };
 }
 
 export interface AuthoritativeQuote {
@@ -83,7 +90,7 @@ export interface AuthoritativeQuote {
   referenceLookupDegraded: boolean;
   /** Which questions Cashify asks for this model; the quote page shows
    * exactly these (UNKNOWN = asked, as the safe fallback). */
-  questionnaire: QuestionnaireSemantics & { source: 'profile' | 'fallback' };
+  questionnaire: QuestionnaireSemantics & { source: 'profile' | 'fallback'; observedAt?: string; status?: string };
   /** Server-side only - never send to clients. */
   internal: {
     deviceKey: string;
@@ -93,6 +100,8 @@ export interface AuthoritativeQuote {
     referenceSource: string | null;
     cashifyConditionEquivalent: number;
     accessoryBasis: AccessoryBasis;
+    releaseCandidate?: ReleaseCandidateOutcome;
+    routeEvidenceSha256?: string | null;
   };
 }
 
@@ -115,6 +124,11 @@ export interface LeadPricingAudit {
   referenceStatus: QuoteReferenceStatus | null;
   referenceSource: string | null;
   referenceLastVerifiedAt: string | null;
+  tokenPricingVersion?: string | null;
+  activePricingVersion?: string;
+  accessoryBasis?: AccessoryBasis | null;
+  releaseCandidate?: ReleaseCandidateOutcome | null;
+  routeEvidenceSha256?: string | null;
 }
 
 export interface VerifiedLeadPrice {
@@ -136,7 +150,7 @@ async function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
   }
 }
 
-export const RELEASE_CANDIDATE_PRICING_VERSION = `${PRICING_ENGINE_VERSION}+rc-accessory-basis-2026-10-03`;
+export const RELEASE_CANDIDATE_PRICING_VERSION = `${PRICING_ENGINE_VERSION}+rc-verified-inputs-v2-2026-10-03`;
 
 export function createPricingService(deps: PricingServiceDeps) {
   const releaseCandidate = deps.pricingMode === 'release-candidate';
@@ -157,12 +171,12 @@ export function createPricingService(deps: PricingServiceDeps) {
     }
   }
 
-  async function lookupQuestionnaire(device: { brand: string; model: string }): Promise<QuestionnaireSemantics & { source: 'profile' | 'fallback' }> {
+  async function lookupQuestionnaire(device: { brand: string; model: string }): Promise<AuthoritativeQuote['questionnaire']> {
     if (!deps.questionnaireStore) return { ...UNKNOWN_QUESTIONNAIRE, source: 'fallback' };
     const modelKey = questionnaireModelKey(device);
     try {
       const profile = await withTimeout(deps.questionnaireStore.get(modelKey), deps.referenceLookupTimeoutMs);
-      if (profile) return { warrantyMode: profile.warrantyMode, billMode: profile.billMode, ageMode: profile.ageMode, source: 'profile' };
+      if (profile) return { warrantyMode: isQuestionMode(profile.warrantyMode) ? profile.warrantyMode : 'UNKNOWN', billMode: isQuestionMode(profile.billMode) ? profile.billMode : 'UNKNOWN', ageMode: isQuestionMode(profile.ageMode) ? profile.ageMode : 'UNKNOWN', source: 'profile', ...(releaseCandidate ? { observedAt: profile.observedAt, status: profile.status } : {}) };
     } catch (err: any) {
       deps.logger.warn({ modelKey, err: err?.message }, 'Questionnaire profile lookup failed; using the UNKNOWN fallback');
     }
@@ -193,6 +207,13 @@ export function createPricingService(deps: PricingServiceDeps) {
       return { ok: false, code: 'REFERENCE_PRICE_UNAVAILABLE', message: 'Reference price unavailable for this device' };
     }
 
+    const route = releaseCandidate ? deps.releaseRouteEvidence?.find(r => r.brand === device.brand && r.model === device.model && workbookStorageIdentity(r.storage) === workbookStorageIdentity(device.storage)) : undefined;
+    if (route && questionnaire.source === 'profile' && questionnaire.status === 'OK' &&
+      /^[a-f0-9]{64}$/.test(route.evidenceSha256) && Date.parse(route.observedAt) <= at.getTime() &&
+      classifyFreshness({ lastVerifiedAt: route.observedAt, consecutiveFailures: 0, now: at }) === 'fresh' &&
+      (['warrantyMode', 'billMode', 'ageMode'] as const).every(k => questionnaire[k] === route.semantics[k])) {
+      Object.assign(questionnaire, { boxMode: route.boxMode, chargerMode: route.chargerMode, sPenMode: route.sPenMode, eSimMode: route.eSimMode });
+    }
     let result;
     let startingPrice;
     let accessoryBasis: AccessoryBasis = 'LEGACY_BOX_BONUS';
@@ -202,20 +223,22 @@ export function createPricingService(deps: PricingServiceDeps) {
       // with the catalog's own strings keeps the engine's model matching
       // identical for both.
       result = priceDevice(device.brand, device.model, base.cashifyGetUptoReference, diagnostics, questionnaire);
-      if (releaseCandidate && getUptoIncludesAccessories(questionnaire)) {
-        if (hasBox(diagnostics)) {
-          result = priceDevice(device.brand, device.model, base.cashifyGetUptoReference, withoutBoxBonus(diagnostics), questionnaire);
-          accessoryBasis = 'GET_UPTO_INCLUDES_BOX_AND_CHARGER';
-        } else accessoryBasis = 'GET_UPTO_INCLUDES_BOX_MISSING_BOX_UNMEASURED';
-      }
       if (releaseCandidate) {
         rc = releaseCandidateOutcome({ device, reference: base.cashifyGetUptoReference, referenceFresh: base.referenceStatus === 'fresh',
-          questionnaire, diagnostics, now: at });
+          referenceSource: base.referenceSource, baseSource: base.source, referenceLastVerifiedAt: base.referenceLastVerifiedAt,
+          referenceExact: reference.record?.matchConfidence === 'exact' && reference.record?.deviceKey === key &&
+            reference.record?.brand === device.brand && reference.record?.model === device.model &&
+            workbookStorageIdentity(reference.record?.storage ?? '') === workbookStorageIdentity(device.storage) && !reference.degraded,
+          questionnaire, routeEvidence: deps.releaseRouteEvidence, diagnostics, now: at });
         if (rc.kind === 'MANUAL_INSPECTION_REQUIRED') {
-          deps.logger.info({ deviceKey: key, reason: rc.reason }, 'Release candidate: manual inspection required');
-          return { ok: false, code: 'MANUAL_INSPECTION_REQUIRED', message: 'This condition needs an inspection before we can quote a price' };
+          deps.logger.info({ deviceKey: key, reason: rc.reason, pricingVersion, reference: base.cashifyGetUptoReference, referenceSource: base.referenceSource,
+            questionnaire, conditionClass: rc.conditionClass, routeEvidenceSha256: route?.evidenceSha256 ?? null }, 'Release candidate: manual inspection required');
+          return { ok: false, code: 'MANUAL_INSPECTION_REQUIRED', message: 'This condition needs an inspection before we can quote a price',
+            context: { questionnaire, startingPrice: computeFhoneifyGetUpto(base.cashifyGetUptoReference), pricingVersion } };
         }
         if (rc.kind === 'VERIFIED') {
+          accessoryBasis = 'CALIBRATED_ROUTE_ACCESSORIES';
+          if (getUptoIncludesAccessories(questionnaire, route, rc.rule !== 'fresh-glass')) accessoryBasis = 'GET_UPTO_INCLUDES_BOX_AND_CHARGER';
           result = { cashifyConditionEquivalent: rc.cashifyConditionEquivalent,
             fhoneifyPrice: applyCompetitorUplift(base.cashifyGetUptoReference, rc.cashifyConditionEquivalent) };
         }
@@ -266,9 +289,7 @@ export function createPricingService(deps: PricingServiceDeps) {
         referenceSource: base.referenceSource,
         cashifyConditionEquivalent: result.cashifyConditionEquivalent,
         accessoryBasis,
-        ...(rc ? { releaseCandidate: rc.kind === 'VERIFIED'
-          ? { kind: rc.kind, rule: rc.rule, evidence: rc.evidence, conditionClass: rc.conditionClass }
-          : { kind: 'LEGACY' as const, rule: 'UNVALIDATED_LEGACY', evidence: null, conditionClass: rc.conditionClass } } : {}),
+        ...(rc ? { releaseCandidate: rc, routeEvidenceSha256: route?.evidenceSha256 ?? null } : {}),
       },
     };
   }
@@ -308,16 +329,21 @@ export function createPricingService(deps: PricingServiceDeps) {
     clientQuotedPrice?: number | null;
   }): Promise<VerifiedLeadPrice | PricingFailure> {
     const current = await quote(input);
+    // A previously signed legacy price must not bypass an inspection decision.
+    if (!current.ok && current.code === 'MANUAL_INSPECTION_REQUIRED') return current;
     const clientQuotedPrice = typeof input.clientQuotedPrice === 'number' ? input.clientQuotedPrice : null;
 
     let tokenRejectedReason: string | null = null;
     let tokenPrice: number | null = null;
     let tokenIssuedAt: string | null = null;
+    let tokenPricingVersion: string | null = null;
 
     if (input.quoteToken) {
       const verification = verifyQuoteToken(input.quoteToken, deps.signingSecret, Math.floor(now().getTime() / 1000));
       if (!verification.ok) {
         tokenRejectedReason = verification.reason;
+      } else if (verification.payload.pv !== pricingVersion && (releaseCandidate || verification.payload.pv.includes('+rc-'))) {
+        tokenRejectedReason = 'pricing_version_changed';
       } else if (!current.ok && current.code === 'INVALID_DIAGNOSTICS') {
         tokenRejectedReason = 'invalid_diagnostics';
       } else {
@@ -329,6 +355,7 @@ export function createPricingService(deps: PricingServiceDeps) {
         else {
           tokenPrice = verification.payload.p;
           tokenIssuedAt = new Date(verification.payload.iat * 1000).toISOString();
+          tokenPricingVersion = verification.payload.pv;
         }
       }
     }
@@ -342,7 +369,7 @@ export function createPricingService(deps: PricingServiceDeps) {
     const audit: LeadPricingAudit = {
       priceSource: tokenPrice !== null ? 'quote_token' : 'recomputed',
       fhoneifyPrice: price,
-      pricingVersion,
+      pricingVersion: tokenPricingVersion ?? pricingVersion,
       pricedAt: now().toISOString(),
       tokenIssuedAt,
       tokenRejectedReason,
@@ -357,6 +384,10 @@ export function createPricingService(deps: PricingServiceDeps) {
       referenceStatus: current.ok ? current.referenceStatus : null,
       referenceSource: current.ok ? current.internal.referenceSource : null,
       referenceLastVerifiedAt: current.ok ? current.referenceLastVerifiedAt : null,
+      tokenPricingVersion, activePricingVersion: pricingVersion,
+      accessoryBasis: current.ok ? current.internal.accessoryBasis : null,
+      releaseCandidate: current.ok ? current.internal.releaseCandidate ?? null : null,
+      routeEvidenceSha256: current.ok ? current.internal.routeEvidenceSha256 ?? null : null,
     };
 
     if (tokenRejectedReason) {
