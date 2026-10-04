@@ -75,6 +75,17 @@ export type ReleaseCandidateOutcome =
   | { kind: 'MANUAL_INSPECTION_REQUIRED'; reason: string; conditionClass: ConditionClass }
   | { kind: 'LEGACY'; flag: 'UNVALIDATED_LEGACY'; reason: string; conditionClass: ConditionClass };
 
+/** Unconditional hybrid safeguards, independent of correction eligibility. */
+export function releaseSafetyInspectionReason(device: { brand: string; model: string; storage: string }, diagnostics: DiagnosticsType, allowNonworkingCalls = false): string | null {
+  const validation = allowNonworkingCalls && diagnostics.calls === false ? { ...diagnostics, calls: true } : diagnostics;
+  if (conditionClass(validation) === 'unknown') return 'Incomplete, conflicting or unrecognized diagnostics';
+  if (device.brand === 'Xiaomi' && device.model === 'Xiaomi 14 Ultra' &&
+    workbookStorageIdentity(device.storage) === workbookStorageIdentity('16 GB/512 GB')) return 'Ultra clean baseline requires separately validated pricing';
+  if (device.brand === 'Xiaomi' && device.model === 'Xiaomi Redmi Note 15 Pro Plus 5G' &&
+    workbookStorageIdentity(device.storage) === workbookStorageIdentity('12 GB/512 GB') && diagnostics.hardware.length) return 'Note functional pricing requires the separately validated additive regime';
+  return null;
+}
+
 export function releaseCandidateOutcome(input: {
   device: { brand: string; model: string; storage: string }; reference: number; referenceFresh: boolean;
   referenceSource: string | null; baseSource: string; referenceLastVerifiedAt: string | null;
@@ -84,17 +95,9 @@ export function releaseCandidateOutcome(input: {
 }): ReleaseCandidateOutcome {
   const cls = conditionClass(input.diagnostics);
   const manual = (reason: string): ReleaseCandidateOutcome => ({ kind: 'MANUAL_INSPECTION_REQUIRED', reason, conditionClass: cls });
-  if (cls === 'unknown') return manual('Incomplete, conflicting or unrecognized diagnostics');
   const { device, questionnaire: q } = input;
-  // The new exact-variant clean control exposes a material baseline error
-  // even with correct NOT_ASKED ownership routing. Reference/profile refresh
-  // must not enable legacy fallback until its baseline regime is validated.
-  if (device.brand === 'Xiaomi' && device.model === 'Xiaomi 14 Ultra' &&
-    workbookStorageIdentity(device.storage) === workbookStorageIdentity('16 GB/512 GB')) return manual('Ultra clean baseline requires separately validated pricing');
-  // Measured Note single hardware losses expose material legacy overpayments;
-  // its earlier additive research regime is not activated by this release.
-  if (device.brand === 'Xiaomi' && device.model === 'Xiaomi Redmi Note 15 Pro Plus 5G' &&
-    workbookStorageIdentity(device.storage) === workbookStorageIdentity('12 GB/512 GB') && input.diagnostics.hardware.length) return manual('Note functional pricing requires the separately validated additive regime');
+  const safetyReason = releaseSafetyInspectionReason(device, input.diagnostics);
+  if (safetyReason) return manual(safetyReason);
   const matches = (s: { brand: string; model: string; storage: string }) => s.brand === device.brand && s.model === device.model && workbookStorageIdentity(s.storage) === workbookStorageIdentity(device.storage);
   const spec = RC_ALLOWLIST.find(matches);
   if (!spec) {

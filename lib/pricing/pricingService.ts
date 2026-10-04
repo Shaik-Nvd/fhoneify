@@ -13,7 +13,7 @@ import {
   resolveReference,
 } from './engine';
 import { UNKNOWN_QUESTIONNAIRE, isQuestionMode, type QuestionnaireSemantics } from './questionnaireSemantics';
-import { releaseCandidateOutcome, type ReleaseCandidateOutcome } from './releaseCandidate';
+import { releaseCandidateOutcome, releaseSafetyInspectionReason, conditionClass, type ReleaseCandidateOutcome } from './releaseCandidate';
 import type { WorkbookRouteEvidence } from './teamWorkbookResearchQuoteService';
 import { workbookComponents, workbookStorageIdentity } from './teamWorkbookCandidate';
 import { isReleaseEvidenceCurrent } from './releaseEvidenceAge';
@@ -52,8 +52,8 @@ export interface PricingServiceDeps {
   /** Cashify questionnaire profiles per model. Absent or unreadable = the
    * explicit UNKNOWN fallback (every question asked, answers priced as given). */
   questionnaireStore?: QuestionnaireProfileStore;
-  /** PRICING_RELEASE_CANDIDATE=on selects 'release-candidate'; default legacy. */
-  pricingMode?: 'legacy' | 'release-candidate';
+  /** Hybrid overlays eligible corrections while keeping ordinary legacy quotes. */
+  pricingMode?: 'legacy' | 'release-candidate' | 'hybrid';
   /** Explicit, audited exact-variant conditional traces; absent never inferred. */
   releaseRouteEvidence?: readonly WorkbookRouteEvidence[];
 }
@@ -154,9 +154,12 @@ async function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
 const ACCESSORY_ROUTE_CONDITIONS = new Set(['clean', 'body']);
 export const RELEASE_CANDIDATE_PRICING_VERSION = `${PRICING_ENGINE_VERSION}+rc-verified-inputs-v6-no-legacy-binding-2026-10-03`;
 
+export const HYBRID_PRICING_VERSION = `${PRICING_ENGINE_VERSION}+rc-hybrid-v1-2026-10-04`;
+
 export function createPricingService(deps: PricingServiceDeps) {
-  const releaseCandidate = deps.pricingMode === 'release-candidate';
-  const pricingVersion = releaseCandidate ? RELEASE_CANDIDATE_PRICING_VERSION : PRICING_ENGINE_VERSION;
+  const hybrid = deps.pricingMode === 'hybrid';
+  const releaseCandidate = hybrid || deps.pricingMode === 'release-candidate';
+  const pricingVersion = hybrid ? HYBRID_PRICING_VERSION : releaseCandidate ? RELEASE_CANDIDATE_PRICING_VERSION : PRICING_ENGINE_VERSION;
   if (!deps.signingSecret || deps.signingSecret.length < 32) {
     throw new Error('Quote signing secret must be at least 32 characters');
   }
@@ -209,6 +212,8 @@ export function createPricingService(deps: PricingServiceDeps) {
       return { ok: false, code: 'REFERENCE_PRICE_UNAVAILABLE', message: 'Reference price unavailable for this device' };
     }
 
+    const legacyQuestionnaire = { ...questionnaire };
+    let quotePricingVersion = pricingVersion;
     const route = releaseCandidate ? deps.releaseRouteEvidence?.find(r => r.brand === device.brand && r.model === device.model && workbookStorageIdentity(r.storage) === workbookStorageIdentity(device.storage)) : undefined;
     if (route && questionnaire.source === 'profile' && questionnaire.status === 'OK' &&
       /^[a-f0-9]{64}$/.test(route.evidenceSha256) && isReleaseEvidenceCurrent(route.observedAt, at) &&
@@ -223,79 +228,100 @@ export function createPricingService(deps: PricingServiceDeps) {
       // The quote page passes the brand/model exactly as selected; pricing
       // with the catalog's own strings keeps the engine's model matching
       // identical for both.
-      result = priceDevice(device.brand, device.model, base.cashifyGetUptoReference, diagnostics, questionnaire);
+      result = priceDevice(device.brand, device.model, base.cashifyGetUptoReference, diagnostics, hybrid ? legacyQuestionnaire : questionnaire);
       if (releaseCandidate) {
-        rc = releaseCandidateOutcome({ device, reference: base.cashifyGetUptoReference, referenceFresh: base.referenceStatus === 'fresh',
-          referenceSource: base.referenceSource, baseSource: base.source, referenceLastVerifiedAt: base.referenceLastVerifiedAt,
-          referenceExact: reference.record?.matchConfidence === 'exact' && reference.record?.deviceKey === key &&
-            reference.record?.brand === device.brand && reference.record?.model === device.model &&
-            workbookStorageIdentity(reference.record?.storage ?? '') === workbookStorageIdentity(device.storage) && !reference.degraded,
-          questionnaire, routeEvidence: deps.releaseRouteEvidence, diagnostics, now: at });
-        if (rc.kind === 'MANUAL_INSPECTION_REQUIRED') {
-          deps.logger.info({ deviceKey: key, reason: rc.reason, pricingVersion, reference: base.cashifyGetUptoReference, referenceSource: base.referenceSource,
-            questionnaire, conditionClass: rc.conditionClass, routeEvidenceSha256: route?.evidenceSha256 ?? null }, 'Release candidate: manual inspection required');
-          return { ok: false, code: 'MANUAL_INSPECTION_REQUIRED', message: 'We need to inspect this phone before we can quote a price',
-            context: { questionnaire, startingPrice: computeFhoneifyGetUpto(base.cashifyGetUptoReference), pricingVersion } };
-        }
-        if (rc.kind === 'VERIFIED') {
-          accessoryBasis = 'CALIBRATED_ROUTE_ACCESSORIES';
-          if (getUptoIncludesAccessories(device, questionnaire, route, rc.rule !== 'fresh-glass')) accessoryBasis = accessoryBasisForRoute(route!);
-          result = { cashifyConditionEquivalent: rc.cashifyConditionEquivalent,
-            fhoneifyPrice: applyCompetitorUplift(base.cashifyGetUptoReference, rc.cashifyConditionEquivalent) };
-        }
-        if (rc.kind === 'LEGACY' && isBoxIncludedIdentity(device)) {
-          const routeFresh = route && /^[a-f0-9]{64}$/.test(route.evidenceSha256) && isReleaseEvidenceCurrent(route.observedAt, at);
-          const profileFresh = questionnaire.status === 'OK' && isQuestionnaireProfileCurrent(questionnaire.observedAt, at);
-          const exactReference = base.source === 'reference_repository' && base.referenceStatus === 'fresh' && base.referenceSource === 'cashify' &&
-            !!base.referenceLastVerifiedAt && reference.record?.matchConfidence === 'exact' && reference.record?.deviceKey === key &&
-            reference.record.brand === device.brand && reference.record.model === device.model &&
-            workbookStorageIdentity(reference.record.storage) === workbookStorageIdentity(device.storage) && !reference.degraded;
-          if (!routeFresh || !profileFresh || !exactReference || !hasVerifiedBoxIncludedRoute(device, questionnaire, route) ||
-            route!.baselineGetUpto == null || (route!.baselineGetUpto !== base.cashifyGetUptoReference && rc.conditionClass !== 'clean')) {
-            return { ok: false, code: 'MANUAL_INSPECTION_REQUIRED', message: 'Accessory route or clean-reference evidence needs revalidation',
-              context: { questionnaire, startingPrice: computeFhoneifyGetUpto(base.cashifyGetUptoReference), pricingVersion } };
-          }
-          // Matched controls on these routes support the clean rule and the
-          // legacy deltas for exactly "More than 2 scratches" and "Major
-          // dent(s)" (6/6 within 3%, all underpaid; 2/2 independent within
-          // 2.04%). Screen/glass deltas overpaid (OnePlus 9: +7.9%, +26.3%);
-          // other body subtypes, panel, bent and functional were never measured.
-          const components = workbookComponents(diagnostics);
-          if (!ACCESSORY_ROUTE_CONDITIONS.has(rc.conditionClass) || !components || components.length > 1 ||
-            components.some(c => c !== 'body_heavy' && c !== 'body_dents')) {
-            return { ok: false, code: 'MANUAL_INSPECTION_REQUIRED', message: 'This condition is not validated on the accessory-corrected route',
-              context: { questionnaire, startingPrice: computeFhoneifyGetUpto(base.cashifyGetUptoReference), pricingVersion } };
-          }
-          // Same answer strictness as the verified candidates: on these
-          // NOT_ASKED routes no ownership/eSIM answer exists, and only box and
-          // charger are accessories Cashify asks about.
-          const accessories = diagnostics.accessories ?? [];
-          if (diagnostics.warranty != null || diagnostics.validBill != null || diagnostics.mobileAge != null || diagnostics.eSim != null ||
-            accessories.some(a => a !== 'box' && a !== 'charger') || (diagnostics.box === true && !accessories.includes('box'))) {
+        const legacyResult = result;
+        let correctionRejectionReason: string | null = null;
+        const correctionFailure = (() : PricingFailure | undefined => {
+          rc = releaseCandidateOutcome({ device, reference: base.cashifyGetUptoReference, referenceFresh: base.referenceStatus === 'fresh',
+            referenceSource: base.referenceSource, baseSource: base.source, referenceLastVerifiedAt: base.referenceLastVerifiedAt,
+            referenceExact: reference.record?.matchConfidence === 'exact' && reference.record?.deviceKey === key &&
+              reference.record?.brand === device.brand && reference.record?.model === device.model &&
+              workbookStorageIdentity(reference.record?.storage ?? '') === workbookStorageIdentity(device.storage) && !reference.degraded,
+            questionnaire, routeEvidence: deps.releaseRouteEvidence, diagnostics, now: at });
+          if (rc.kind === 'MANUAL_INSPECTION_REQUIRED') {
+            correctionRejectionReason = rc.reason;
+            deps.logger.info({ deviceKey: key, reason: rc.reason, pricingVersion, reference: base.cashifyGetUptoReference, referenceSource: base.referenceSource,
+              questionnaire, conditionClass: rc.conditionClass, routeEvidenceSha256: route?.evidenceSha256 ?? null }, 'Release candidate: manual inspection required');
             return { ok: false, code: 'MANUAL_INSPECTION_REQUIRED', message: 'We need to inspect this phone before we can quote a price',
               context: { questionnaire, startingPrice: computeFhoneifyGetUpto(base.cashifyGetUptoReference), pricingVersion } };
           }
-          const boxAndChargerPresent = hasBox(diagnostics) && diagnostics.box !== false &&
-            (route!.chargerMode !== 'ASKED' || (diagnostics.charger !== false && (diagnostics.charger === true || accessories.includes('charger'))));
-          if (!boxAndChargerPresent) {
-            return { ok: false, code: 'MANUAL_INSPECTION_REQUIRED', message: 'Missing accessory deductions are not verified for this route',
-              context: { questionnaire, startingPrice: computeFhoneifyGetUpto(base.cashifyGetUptoReference), pricingVersion } };
+          if (rc.kind === 'VERIFIED') {
+            accessoryBasis = 'CALIBRATED_ROUTE_ACCESSORIES';
+            if (getUptoIncludesAccessories(device, questionnaire, route, rc.rule !== 'fresh-glass')) accessoryBasis = accessoryBasisForRoute(route!);
+            result = { cashifyConditionEquivalent: rc.cashifyConditionEquivalent,
+              fhoneifyPrice: applyCompetitorUplift(base.cashifyGetUptoReference, rc.cashifyConditionEquivalent) };
           }
-          const withoutBox = (d: typeof diagnostics) => priceDevice(device.brand, device.model, base.cashifyGetUptoReference, withoutBoxBonus(d), questionnaire);
-          const cleanEngine = withoutBox(cleanAccessoryBaselineDiagnostics(diagnostics));
-          const conditionEngine = withoutBox(diagnostics);
-          const measuredClean = Math.round((base.cashifyGetUptoReference - 20) / 10) * 10;
-          const correctedEquivalent = Math.max(0, Math.round((measuredClean + conditionEngine.cashifyConditionEquivalent - cleanEngine.cashifyConditionEquivalent) / 10) * 10);
-          result = { cashifyConditionEquivalent: correctedEquivalent,
-            fhoneifyPrice: applyCompetitorUplift(base.cashifyGetUptoReference, correctedEquivalent) };
-          accessoryBasis = accessoryBasisForRoute(route!);
+          if (rc.kind === 'LEGACY' && isBoxIncludedIdentity(device)) {
+            const routeFresh = route && /^[a-f0-9]{64}$/.test(route.evidenceSha256) && isReleaseEvidenceCurrent(route.observedAt, at);
+            const profileFresh = questionnaire.status === 'OK' && isQuestionnaireProfileCurrent(questionnaire.observedAt, at);
+            const exactReference = base.source === 'reference_repository' && base.referenceStatus === 'fresh' && base.referenceSource === 'cashify' &&
+              !!base.referenceLastVerifiedAt && reference.record?.matchConfidence === 'exact' && reference.record?.deviceKey === key &&
+              reference.record.brand === device.brand && reference.record.model === device.model &&
+              workbookStorageIdentity(reference.record.storage) === workbookStorageIdentity(device.storage) && !reference.degraded;
+            if (!routeFresh || !profileFresh || !exactReference || !hasVerifiedBoxIncludedRoute(device, questionnaire, route) ||
+              route!.baselineGetUpto == null || (route!.baselineGetUpto !== base.cashifyGetUptoReference && rc.conditionClass !== 'clean')) {
+              return { ok: false, code: 'MANUAL_INSPECTION_REQUIRED', message: 'Accessory route or clean-reference evidence needs revalidation',
+                context: { questionnaire, startingPrice: computeFhoneifyGetUpto(base.cashifyGetUptoReference), pricingVersion } };
+            }
+            // Matched controls on these routes support the clean rule and the
+            // legacy deltas for exactly "More than 2 scratches" and "Major
+            // dent(s)" (6/6 within 3%, all underpaid; 2/2 independent within
+            // 2.04%). Screen/glass deltas overpaid (OnePlus 9: +7.9%, +26.3%);
+            // other body subtypes, panel, bent and functional were never measured.
+            const components = workbookComponents(diagnostics);
+            if (!ACCESSORY_ROUTE_CONDITIONS.has(rc.conditionClass) || !components || components.length > 1 ||
+              components.some(c => c !== 'body_heavy' && c !== 'body_dents')) {
+              return { ok: false, code: 'MANUAL_INSPECTION_REQUIRED', message: 'This condition is not validated on the accessory-corrected route',
+                context: { questionnaire, startingPrice: computeFhoneifyGetUpto(base.cashifyGetUptoReference), pricingVersion } };
+            }
+            // Same answer strictness as the verified candidates: on these
+            // NOT_ASKED routes no ownership/eSIM answer exists, and only box and
+            // charger are accessories Cashify asks about.
+            const accessories = diagnostics.accessories ?? [];
+            if (diagnostics.warranty != null || diagnostics.validBill != null || diagnostics.mobileAge != null || diagnostics.eSim != null ||
+              accessories.some(a => a !== 'box' && a !== 'charger') || (diagnostics.box === true && !accessories.includes('box'))) {
+              return { ok: false, code: 'MANUAL_INSPECTION_REQUIRED', message: 'We need to inspect this phone before we can quote a price',
+                context: { questionnaire, startingPrice: computeFhoneifyGetUpto(base.cashifyGetUptoReference), pricingVersion } };
+            }
+            const boxAndChargerPresent = hasBox(diagnostics) && diagnostics.box !== false &&
+              (route!.chargerMode !== 'ASKED' || (diagnostics.charger !== false && (diagnostics.charger === true || accessories.includes('charger'))));
+            if (!boxAndChargerPresent) {
+              return { ok: false, code: 'MANUAL_INSPECTION_REQUIRED', message: 'Missing accessory deductions are not verified for this route',
+                context: { questionnaire, startingPrice: computeFhoneifyGetUpto(base.cashifyGetUptoReference), pricingVersion } };
+            }
+            const withoutBox = (d: typeof diagnostics) => priceDevice(device.brand, device.model, base.cashifyGetUptoReference, withoutBoxBonus(d), questionnaire);
+            const cleanEngine = withoutBox(cleanAccessoryBaselineDiagnostics(diagnostics));
+            const conditionEngine = withoutBox(diagnostics);
+            const measuredClean = Math.round((base.cashifyGetUptoReference - 20) / 10) * 10;
+            const correctedEquivalent = Math.max(0, Math.round((measuredClean + conditionEngine.cashifyConditionEquivalent - cleanEngine.cashifyConditionEquivalent) / 10) * 10);
+            result = { cashifyConditionEquivalent: correctedEquivalent,
+              fhoneifyPrice: applyCompetitorUplift(base.cashifyGetUptoReference, correctedEquivalent) };
+            accessoryBasis = accessoryBasisForRoute(route!);
+          }
+        // Defence in depth for the launch policy: in release mode a binding price
+        // comes only from a verified candidate or the accessory-corrected route.
+        if (rc && rc.kind !== 'VERIFIED' && !accessoryBasis.startsWith('GET_UPTO_INCLUDES')) {
+          return { ok: false, code: 'MANUAL_INSPECTION_REQUIRED', message: 'We need to inspect this phone before we can quote a price',
+            context: { questionnaire, startingPrice: computeFhoneifyGetUpto(base.cashifyGetUptoReference), pricingVersion } };
         }
-      }
-      // Defence in depth for the launch policy: in release mode a binding price
-      // comes only from a verified candidate or the accessory-corrected route.
-      if (rc && rc.kind !== 'VERIFIED' && !accessoryBasis.startsWith('GET_UPTO_INCLUDES')) {
-        return { ok: false, code: 'MANUAL_INSPECTION_REQUIRED', message: 'We need to inspect this phone before we can quote a price',
-          context: { questionnaire, startingPrice: computeFhoneifyGetUpto(base.cashifyGetUptoReference), pricingVersion } };
+          return undefined;
+        })();
+        if (correctionFailure) {
+          if (!hybrid || correctionFailure.code !== 'MANUAL_INSPECTION_REQUIRED' || releaseSafetyInspectionReason(device, diagnostics, true)) return correctionFailure;
+          // Evidence guards reject the correction, not ordinary quote availability.
+          // Restore the exact legacy calculation and questionnaire from this same
+          // reference/profile lookup; never infer or re-anchor a measured deduction.
+          result = legacyResult;
+          for (const field of ['boxMode', 'chargerMode', 'sPenMode', 'eSimMode'] as const) delete (questionnaire as unknown as Record<string, unknown>)[field];
+          Object.assign(questionnaire, legacyQuestionnaire);
+          accessoryBasis = 'LEGACY_BOX_BONUS';
+          rc = { kind: 'LEGACY', flag: 'UNVALIDATED_LEGACY', reason: correctionRejectionReason ?? correctionFailure.message, conditionClass: conditionClass(diagnostics) };
+          quotePricingVersion = `${HYBRID_PRICING_VERSION}+legacy-fallback`;
+          deps.logger.info({ deviceKey: key, reason: correctionRejectionReason ?? correctionFailure.message, pricingVersion: quotePricingVersion }, 'Hybrid correction ineligible; unchanged legacy quote selected');
+        } else if (hybrid) {
+          quotePricingVersion = `${HYBRID_PRICING_VERSION}+verified`;
+        }
       }
       // Get Upto: the reference plus the uplift, nothing else.
       startingPrice = computeFhoneifyGetUpto(base.cashifyGetUptoReference);
@@ -311,7 +337,7 @@ export function createPricingService(deps: PricingServiceDeps) {
     const iat = Math.floor(at.getTime() / 1000);
     const exp = iat + deps.tokenTtlSeconds;
     const quoteToken = signQuoteToken(
-      { v: QUOTE_TOKEN_VERSION, dk: key, dh: diagnosticsHash, p: result.fhoneifyPrice, pv: pricingVersion, iat, exp },
+      { v: QUOTE_TOKEN_VERSION, dk: key, dh: diagnosticsHash, p: result.fhoneifyPrice, pv: quotePricingVersion, iat, exp },
       deps.signingSecret
     );
 
@@ -330,7 +356,7 @@ export function createPricingService(deps: PricingServiceDeps) {
       startingPrice,
       quoteToken,
       expiresAt: new Date(exp * 1000).toISOString(),
-      pricingVersion,
+      pricingVersion: quotePricingVersion,
       referenceStatus: base.referenceStatus,
       referenceLastVerifiedAt: base.referenceLastVerifiedAt,
       referenceLookupDegraded: reference.degraded,
@@ -385,6 +411,7 @@ export function createPricingService(deps: PricingServiceDeps) {
     const current = await quote(input);
     // A previously signed legacy price must not bypass an inspection decision.
     if (!current.ok && current.code === 'MANUAL_INSPECTION_REQUIRED') return current;
+    const activePricingVersion = current.ok ? current.pricingVersion : pricingVersion;
     const clientQuotedPrice = typeof input.clientQuotedPrice === 'number' ? input.clientQuotedPrice : null;
 
     let tokenRejectedReason: string | null = null;
@@ -396,7 +423,7 @@ export function createPricingService(deps: PricingServiceDeps) {
       const verification = verifyQuoteToken(input.quoteToken, deps.signingSecret, Math.floor(now().getTime() / 1000));
       if (!verification.ok) {
         tokenRejectedReason = verification.reason;
-      } else if (verification.payload.pv !== pricingVersion && (releaseCandidate || verification.payload.pv.includes('+rc-'))) {
+      } else if (verification.payload.pv !== activePricingVersion && (releaseCandidate || verification.payload.pv.includes('+rc-'))) {
         tokenRejectedReason = 'pricing_version_changed';
       } else if (!current.ok && current.code === 'INVALID_DIAGNOSTICS') {
         tokenRejectedReason = 'invalid_diagnostics';
@@ -423,7 +450,7 @@ export function createPricingService(deps: PricingServiceDeps) {
     const audit: LeadPricingAudit = {
       priceSource: tokenPrice !== null ? 'quote_token' : 'recomputed',
       fhoneifyPrice: price,
-      pricingVersion: tokenPricingVersion ?? pricingVersion,
+      pricingVersion: tokenPricingVersion ?? activePricingVersion,
       pricedAt: now().toISOString(),
       tokenIssuedAt,
       tokenRejectedReason,
@@ -438,7 +465,7 @@ export function createPricingService(deps: PricingServiceDeps) {
       referenceStatus: current.ok ? current.referenceStatus : null,
       referenceSource: current.ok ? current.internal.referenceSource : null,
       referenceLastVerifiedAt: current.ok ? current.referenceLastVerifiedAt : null,
-      tokenPricingVersion, activePricingVersion: pricingVersion,
+      tokenPricingVersion, activePricingVersion,
       accessoryBasis: current.ok ? current.internal.accessoryBasis : null,
       releaseCandidate: current.ok ? current.internal.releaseCandidate ?? null : null,
       routeEvidenceSha256: current.ok ? current.internal.routeEvidenceSha256 ?? null : null,
