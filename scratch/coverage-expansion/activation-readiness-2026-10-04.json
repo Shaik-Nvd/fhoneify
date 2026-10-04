@@ -1,0 +1,39 @@
+{
+  "version": "activation-readiness/2026-10-04",
+  "queriedAt": "2026-10-04T08:32:12Z",
+  "source": "Supabase production read-only SQL through Supabase MCP",
+  "referenceRefresh": {
+    "latestRun": "2026-10-03T18:07:55.838Z",
+    "status": "SUCCESS",
+    "devicesDiscovered": 7,
+    "updatedCount": 7,
+    "unchangedCount": 0,
+    "failedCount": 0,
+    "note": "No Sunday 2026-10-04 reference refresh is present. The latest production run is Saturday 2026-10-03."
+  },
+  "questionnaireProfiles": {
+    "observedSince": "2026-10-03T00:00:00Z",
+    "count": 0,
+    "newestObservedAt": null,
+    "note": "No production questionnaire profile was refreshed on or after 2026-10-03."
+  },
+  "newMeasuredProfiles": {
+    "total": 23,
+    "sameAsCurrentProductionReference": 0,
+    "differentCurrentProductionReference": 18,
+    "currentProductionReferenceMissing": 5,
+    "activated": 0,
+    "decision": "KEEP_INSPECTION",
+    "reason": "Every spec is bound to a single measured Get Upto. All 18 available current production references differ from the measured references; five variants have no current reference. The current production route file also rejects all 23 specs."
+  },
+  "latestRefreshedProductionReferences": [
+    { "deviceKey": "samsung|samsung galaxy s23 fe 5g|8 gb/128 gb", "currentPrice": 18060, "lastVerifiedAt": "2026-10-03T18:08:12.713Z", "confidence": "EXACT", "status": "FRESH" },
+    { "deviceKey": "xiaomi|xiaomi 14 civi|8 gb/256 gb", "currentPrice": 18900, "lastVerifiedAt": "2026-10-03T18:08:07.058Z", "confidence": "EXACT", "status": "FRESH" },
+    { "deviceKey": "xiaomi|xiaomi redmi note 10 pro max|6 gb/128 gb", "currentPrice": 5970, "lastVerifiedAt": "2026-10-03T18:08:06.800Z", "confidence": "EXACT", "status": "FRESH" },
+    { "deviceKey": "xiaomi|xiaomi redmi note 9 pro|4 gb/128 gb", "currentPrice": 4990, "lastVerifiedAt": "2026-10-03T18:08:05.874Z", "confidence": "EXACT", "status": "FRESH" },
+    { "deviceKey": "xiaomi|xiaomi mi a2|4 gb/64 gb", "currentPrice": 2520, "lastVerifiedAt": "2026-10-03T18:07:58.246Z", "confidence": "EXACT", "status": "FRESH" },
+    { "deviceKey": "oneplus|oneplus nord|8 gb/128 gb", "currentPrice": 8340, "lastVerifiedAt": "2026-10-03T18:07:58.245Z", "confidence": "EXACT", "status": "FRESH" },
+    { "deviceKey": "oneplus|oneplus open|16 gb/512 gb", "currentPrice": 51650, "lastVerifiedAt": "2026-10-03T18:07:58.233Z", "confidence": "EXACT", "status": "FRESH" }
+  ],
+  "policy": "Collection remains disabled. Live release configuration, uplift, cap, fee, rounding, INR disablement, and rollback are unchanged."
+}

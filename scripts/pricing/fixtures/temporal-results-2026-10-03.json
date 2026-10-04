@@ -1,0 +1,99 @@
+{
+  "version": "measured-point-temporal-results/2026-10-03",
+  "frozenCommit": "a1063eb",
+  "frozenSha256": "ceba93d3da3384a1347cfd7a026387672f0bd40ad2b2ac18f8c8243706fbe8ca",
+  "planSha256": "10d899c5bebb0d4752071960e35afc08808cd75db19f985fb68c53d8330ef445",
+  "role": "TEMPORAL_REPEAT of one-point calibrations collected 2026-10-02: tests whether the calibrated clean retention / matched deduction still holds on a later day. Not unseen-condition validation.",
+  "budget": {
+    "authorizedTotal": 24,
+    "usedBefore": 19,
+    "usedThisRun": 5,
+    "remaining": 0
+  },
+  "summary": {
+    "scored": 3,
+    "exact": 3,
+    "failed": [
+      "TMP_OP13_GLASS: questionnaire timed out (charged, not retried)",
+      "TMP_FOLD5_CLEAN: collector device page HTTP 404 (charged; collector URL, not a pricing result)"
+    ],
+    "interpretation": "Three one-point calibrations (Xiaomi 15 Ultra charging, iPhone 16 clean, Redmi Note 12 Pro+ screen scratches) reproduced exactly about 31 hours after calibration at unchanged Get Upto. This is temporal stability evidence for those exact scopes, not unseen-condition or cross-variant validation; n=3."
+  },
+  "rows": [
+    {
+      "id": "TMP_OP13_GLASS",
+      "variant": "OnePlus 13 16 GB/512 GB",
+      "answers": "warranty No, bill Yes, box+charger, screen cracked/glass broken",
+      "status": "FAILED",
+      "reason": "Cashify questionnaire timed out",
+      "collectedAt": "2026-10-03T19:01:25.405Z",
+      "getUpto": null,
+      "calibrationGetUpto": 43950,
+      "frozenPrediction": 22170,
+      "observed": null,
+      "signedError": null,
+      "screenshotSha256": null,
+      "routeTraceAllMatchedPlan": false
+    },
+    {
+      "id": "TMP_X15U_CHARGING",
+      "variant": "Xiaomi 15 Ultra 16 GB/512 GB",
+      "answers": "warranty No, bill Yes, box+charger, charging port fault only",
+      "status": "COMPLETED",
+      "reason": null,
+      "collectedAt": "2026-10-03T19:01:49.898Z",
+      "getUpto": 59830,
+      "calibrationGetUpto": 59830,
+      "frozenPrediction": 43790,
+      "observed": 43790,
+      "signedError": 0,
+      "screenshotSha256": "9695b693c97362f85a523ab9c78919f13d2444cfd6a05059a81bb2263b082df7",
+      "routeTraceAllMatchedPlan": true
+    },
+    {
+      "id": "TMP_IP16_CLEAN",
+      "variant": "Apple iPhone 16 256 GB",
+      "answers": "warranty No, bill Yes, box (charger not asked), clean",
+      "status": "COMPLETED",
+      "reason": null,
+      "collectedAt": "2026-10-03T19:02:05.887Z",
+      "getUpto": 54720,
+      "calibrationGetUpto": 54720,
+      "frozenPrediction": 44400,
+      "observed": 44400,
+      "signedError": 0,
+      "screenshotSha256": "06a6bfb2c5807d04d1d9f46e2c168d3bfed0fd783d92dd0efdf2cee783180285",
+      "routeTraceAllMatchedPlan": true
+    },
+    {
+      "id": "TMP_N12PP_SCRATCH",
+      "variant": "Xiaomi Redmi Note 12 Pro Plus 5G 8 GB/256 GB",
+      "answers": "warranty No, bill Yes, box+charger, more than 2 screen scratches",
+      "status": "COMPLETED",
+      "reason": null,
+      "collectedAt": "2026-10-03T19:02:23.513Z",
+      "getUpto": 12490,
+      "calibrationGetUpto": 12490,
+      "frozenPrediction": 8520,
+      "observed": 8520,
+      "signedError": 0,
+      "screenshotSha256": "a5aafb84fff4f34f9ccb9664c6553315c140379a872d87250780149593efde92",
+      "routeTraceAllMatchedPlan": true
+    },
+    {
+      "id": "TMP_FOLD5_CLEAN",
+      "variant": "Samsung Galaxy Z Fold5 12 GB/256 GB",
+      "answers": "warranty No, bill Yes, box (charger not asked), clean",
+      "status": "UNSUPPORTED",
+      "reason": "device/variant not found: HTTP 404 for device page",
+      "collectedAt": "2026-10-03T19:02:24.160Z",
+      "getUpto": null,
+      "calibrationGetUpto": 49740,
+      "frozenPrediction": 37820,
+      "observed": null,
+      "signedError": null,
+      "screenshotSha256": null,
+      "routeTraceAllMatchedPlan": false
+    }
+  ]
+}

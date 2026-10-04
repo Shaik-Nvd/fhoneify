@@ -1,0 +1,1162 @@
+{
+  "version": "measured-point-research/2026-10-03",
+  "builtFrom": [
+    "release-candidate-observations-2026-10-02.json",
+    "release-followup-results-2026-10-03.json",
+    "claude-prospective-results-2026-10-03.json"
+  ],
+  "specs": [
+    {
+      "deviceId": "Xiaomi|Xiaomi 17|12gb/512gb",
+      "brand": "Xiaomi",
+      "model": "Xiaomi 17",
+      "storage": "12 GB/512 GB",
+      "validatedGetUpto": 57750,
+      "modes": {
+        "warranty": "ASKED",
+        "validBill": "ASKED",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "NOT_ASKED",
+        "box": "ASKED",
+        "charger": "ASKED",
+        "sPen": "NOT_ASKED"
+      },
+      "baseline": {
+        "kind": "conditional_retention",
+        "retention": 0.7570562770562771
+      },
+      "componentCosts": {
+        "charging": 1500
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "charging"
+        ]
+      ],
+      "calibratedAt": "2026-10-02T11:47:46.100Z",
+      "evidenceQuality": "VERIFIED_TRACE_SCREENSHOT",
+      "role": "ONE_POINT_CALIBRATION_NOT_VALIDATION",
+      "source": [
+        {
+          "experimentId": "team-workbook-2026-10-02:FM046_FINAL_A",
+          "observed": 43720,
+          "reference": 57750,
+          "collectedAt": "2026-10-02T11:47:46.100Z",
+          "screenshotSha256": "f6c625ffa3a8b251d8026990ff771b3364d616de015251dedb899e52844315bb"
+        },
+        {
+          "experimentId": "team-workbook-2026-10-02:FM046_FINAL_C",
+          "observed": 42220,
+          "reference": 57750,
+          "collectedAt": "2026-10-02T11:48:35.830Z",
+          "screenshotSha256": "f43090fec6351186b6669a2a76439a5fb5820bdc6c8c813321f899f0350d318f"
+        }
+      ]
+    },
+    {
+      "deviceId": "Xiaomi|Xiaomi Redmi Turbo 5|12gb/256gb",
+      "brand": "Xiaomi",
+      "model": "Xiaomi Redmi Turbo 5",
+      "storage": "12 GB/256 GB",
+      "validatedGetUpto": 26750,
+      "modes": {
+        "warranty": "ASKED",
+        "validBill": "ASKED",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "NOT_ASKED",
+        "box": "ASKED",
+        "charger": "ASKED",
+        "sPen": "NOT_ASKED"
+      },
+      "baseline": {
+        "kind": "conditional_retention",
+        "retention": 0.7566355140186916
+      },
+      "componentCosts": {
+        "charging": 1000
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "charging"
+        ]
+      ],
+      "calibratedAt": "2026-10-02T11:49:15.374Z",
+      "evidenceQuality": "VERIFIED_TRACE_SCREENSHOT",
+      "role": "ONE_POINT_CALIBRATION_NOT_VALIDATION",
+      "source": [
+        {
+          "experimentId": "team-workbook-2026-10-02:FM049_FINAL_A",
+          "observed": 20240,
+          "reference": 26750,
+          "collectedAt": "2026-10-02T11:49:15.374Z",
+          "screenshotSha256": "008f1754f5d62fd5e8ca36875dd5eb2f2cac7eb8421b3f8909e13e5b2da42fd2"
+        },
+        {
+          "experimentId": "team-workbook-2026-10-02:FM049_FINAL_C",
+          "observed": 19240,
+          "reference": 26750,
+          "collectedAt": "2026-10-02T11:50:04.193Z",
+          "screenshotSha256": "80a6535fc0305b4fedf029097fa1fa29abf4b4caeb5e393fc9d48e7e0e5132a4"
+        }
+      ]
+    },
+    {
+      "deviceId": "Xiaomi|Xiaomi 17T|12gb/512gb",
+      "brand": "Xiaomi",
+      "model": "Xiaomi 17T",
+      "storage": "12 GB/512 GB",
+      "validatedGetUpto": 40750,
+      "modes": {
+        "warranty": "ASKED",
+        "validBill": "ASKED",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "NOT_ASKED",
+        "box": "ASKED",
+        "charger": "ASKED",
+        "sPen": "NOT_ASKED"
+      },
+      "baseline": {
+        "kind": "conditional_retention",
+        "retention": 0.7568098159509202
+      },
+      "componentCosts": {
+        "charging": 1500
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "charging"
+        ]
+      ],
+      "calibratedAt": "2026-10-02T12:02:33.341Z",
+      "evidenceQuality": "VERIFIED_TRACE_SCREENSHOT",
+      "role": "ONE_POINT_CALIBRATION_NOT_VALIDATION",
+      "source": [
+        {
+          "experimentId": "team-workbook-2026-10-02:FM048_FINAL_A",
+          "observed": 30840,
+          "reference": 40750,
+          "collectedAt": "2026-10-02T12:02:33.341Z",
+          "screenshotSha256": "e35e4b81f2dde2844915ab4c858b164693e25dd51109c1a14e234535a65c99f6"
+        },
+        {
+          "experimentId": "team-workbook-2026-10-02:FM048_FINAL_C",
+          "observed": 29340,
+          "reference": 40750,
+          "collectedAt": "2026-10-02T12:03:21.172Z",
+          "screenshotSha256": "53fc50b5d420f207f8ad97c087987caca4cb8b0ac97f4e0b985927f9f0bf0b9c"
+        }
+      ]
+    },
+    {
+      "deviceId": "Xiaomi|Xiaomi Redmi Note 15 Pro Plus 5G|12gb/512gb",
+      "brand": "Xiaomi",
+      "model": "Xiaomi Redmi Note 15 Pro Plus 5G",
+      "storage": "12 GB/512 GB",
+      "validatedGetUpto": 29250,
+      "modes": {
+        "warranty": "ASKED",
+        "validBill": "ASKED",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "NOT_ASKED",
+        "box": "ASKED",
+        "charger": "ASKED",
+        "sPen": "NOT_ASKED"
+      },
+      "baseline": {
+        "kind": "conditional_retention",
+        "retention": 0.7565811965811966
+      },
+      "componentCosts": {
+        "glass_cracked": 2680
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "glass_cracked"
+        ]
+      ],
+      "calibratedAt": "2026-10-02T11:50:28.353Z",
+      "evidenceQuality": "VERIFIED_TRACE_SCREENSHOT",
+      "role": "ONE_POINT_CALIBRATION_NOT_VALIDATION",
+      "source": [
+        {
+          "experimentId": "team-workbook-2026-10-02:FM050_FINAL_A",
+          "observed": 22130,
+          "reference": 29250,
+          "collectedAt": "2026-10-02T11:50:28.353Z",
+          "screenshotSha256": "d0747140ac0a9b60f830ea77d2a1dbfa75d398846a0d2acbdd4ba6346c4a3a25"
+        },
+        {
+          "experimentId": "team-workbook-2026-10-02:FM050_FINAL_B",
+          "observed": 19450,
+          "reference": 29250,
+          "collectedAt": "2026-10-02T11:50:54.002Z",
+          "screenshotSha256": "1bdca65aad60d52e2fa9ae8235251c516a86d991aade775e91c67416b13fc7bc"
+        }
+      ]
+    },
+    {
+      "deviceId": "Xiaomi|Xiaomi 17 Ultra|16gb/512gb",
+      "brand": "Xiaomi",
+      "model": "Xiaomi 17 Ultra",
+      "storage": "16 GB/512 GB",
+      "validatedGetUpto": 75620,
+      "modes": {
+        "warranty": "ASKED",
+        "validBill": "ASKED",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "NOT_ASKED",
+        "box": "ASKED",
+        "charger": "NOT_ASKED",
+        "sPen": "NOT_ASKED"
+      },
+      "baseline": {
+        "kind": "conditional_retention",
+        "retention": 0.7570748479238297
+      },
+      "componentCosts": {},
+      "supportedProfiles": [
+        []
+      ],
+      "calibratedAt": "2026-10-01T14:04:30.047Z",
+      "evidenceQuality": "VERIFIED_TRACE_SCREENSHOT",
+      "role": "ONE_POINT_CALIBRATION_NOT_VALIDATION",
+      "source": [
+        {
+          "experimentId": "team-workbook-2026-10-02:FM047_FINAL_A",
+          "observed": 57250,
+          "reference": 75620,
+          "collectedAt": "2026-10-02T11:55:28.340Z",
+          "screenshotSha256": "92ccbe05333a43bdf4e38c9206275cfaf905cc34dc05c747f37abeee5b7614e3"
+        },
+        {
+          "experimentId": "xiaomi-validation:CLOSE-V9",
+          "observed": 57250,
+          "reference": 75620,
+          "collectedAt": "2026-10-01T14:05:18.641Z",
+          "screenshotSha256": "92ccbe05333a43bdf4e38c9206275cfaf905cc34dc05c747f37abeee5b7614e3"
+        },
+        {
+          "experimentId": "xiaomi-validation:C0-V9",
+          "observed": 57250,
+          "reference": 75620,
+          "collectedAt": "2026-10-01T14:04:30.047Z",
+          "screenshotSha256": "92ccbe05333a43bdf4e38c9206275cfaf905cc34dc05c747f37abeee5b7614e3"
+        }
+      ]
+    },
+    {
+      "deviceId": "Xiaomi|Xiaomi 15|12gb/512gb",
+      "brand": "Xiaomi",
+      "model": "Xiaomi 15",
+      "storage": "12 GB/512 GB",
+      "validatedGetUpto": 37350,
+      "modes": {
+        "warranty": "ASKED",
+        "validBill": "ASKED",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "NOT_ASKED",
+        "box": "ASKED",
+        "charger": "ASKED",
+        "sPen": "NOT_ASKED"
+      },
+      "baseline": {
+        "kind": "conditional_retention",
+        "retention": 0.7568942436412316
+      },
+      "componentCosts": {
+        "glass_cracked": 10420
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "glass_cracked"
+        ]
+      ],
+      "calibratedAt": "2026-10-02T11:54:14.894Z",
+      "evidenceQuality": "VERIFIED_TRACE_SCREENSHOT",
+      "role": "ONE_POINT_CALIBRATION_NOT_VALIDATION",
+      "source": [
+        {
+          "experimentId": "team-workbook-2026-10-02:FM044_FINAL_A",
+          "observed": 28270,
+          "reference": 37350,
+          "collectedAt": "2026-10-02T11:54:14.894Z",
+          "screenshotSha256": "72fac33fc8d463e955d295ba359153efe191a8baad3d21192836181b2a746bbc"
+        },
+        {
+          "experimentId": "team-workbook-2026-10-02:FM044_FINAL_C",
+          "observed": 17850,
+          "reference": 37350,
+          "collectedAt": "2026-10-02T11:55:04.380Z",
+          "screenshotSha256": "ebc7ec9029fa10ff20c2933f16ac7bcb1d6f3a3c09ab71c78767ec3102715fcf"
+        }
+      ]
+    },
+    {
+      "deviceId": "OnePlus|OnePlus 12|12gb/256gb",
+      "brand": "OnePlus",
+      "model": "OnePlus 12",
+      "storage": "12 GB/256 GB",
+      "validatedGetUpto": 33150,
+      "modes": {
+        "warranty": "ASKED",
+        "validBill": "ASKED",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "NOT_ASKED",
+        "box": "ASKED",
+        "charger": "ASKED",
+        "sPen": "NOT_ASKED"
+      },
+      "baseline": {
+        "kind": "conditional_retention",
+        "retention": 0.7984917043740574
+      },
+      "componentCosts": {
+        "screen_heavy": 4710
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "screen_heavy"
+        ]
+      ],
+      "calibratedAt": "2026-10-02T11:21:06.545Z",
+      "evidenceQuality": "VERIFIED_TRACE_SCREENSHOT",
+      "role": "ONE_POINT_CALIBRATION_NOT_VALIDATION",
+      "source": [
+        {
+          "experimentId": "team-workbook-2026-10-02:FM027_CLOSE_A",
+          "observed": 26470,
+          "reference": 33150,
+          "collectedAt": "2026-10-02T11:21:54.396Z",
+          "screenshotSha256": "d279a154d3925aa3b9cc6bdf5ca5e072823d231db7f33544ca95a3dfea7a580c"
+        },
+        {
+          "experimentId": "team-workbook-2026-10-02:FM027_A",
+          "observed": 26470,
+          "reference": 33150,
+          "collectedAt": "2026-10-02T11:21:06.545Z",
+          "screenshotSha256": "d279a154d3925aa3b9cc6bdf5ca5e072823d231db7f33544ca95a3dfea7a580c"
+        },
+        {
+          "experimentId": "team-workbook-2026-10-02:FM027_B",
+          "observed": 21760,
+          "reference": 33150,
+          "collectedAt": "2026-10-02T11:21:22.763Z",
+          "screenshotSha256": "c62f5ea4b2e9389e19b21af48db082d2a75a7230acc2ba9a15680181dea57bc6"
+        }
+      ]
+    },
+    {
+      "deviceId": "OnePlus|OnePlus 13|16gb/512gb",
+      "brand": "OnePlus",
+      "model": "OnePlus 13",
+      "storage": "16 GB/512 GB",
+      "validatedGetUpto": 43950,
+      "modes": {
+        "warranty": "ASKED",
+        "validBill": "ASKED",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "NOT_ASKED",
+        "box": "ASKED",
+        "charger": "ASKED",
+        "sPen": "NOT_ASKED"
+      },
+      "baseline": {
+        "kind": "conditional_retention",
+        "retention": 0.7617747440273037
+      },
+      "componentCosts": {
+        "screen_heavy": 5590,
+        "glass_cracked": 11310
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "screen_heavy"
+        ],
+        [
+          "glass_cracked"
+        ]
+      ],
+      "calibratedAt": "2026-10-02T11:22:09.487Z",
+      "evidenceQuality": "VERIFIED_TRACE_SCREENSHOT",
+      "role": "ONE_POINT_CALIBRATION_NOT_VALIDATION",
+      "source": [
+        {
+          "experimentId": "team-workbook-2026-10-02:FM028_CLOSE_A",
+          "observed": 33480,
+          "reference": 43950,
+          "collectedAt": "2026-10-02T11:22:58.704Z",
+          "screenshotSha256": "b38252ee3414ace07b3f7c986d8cdb681bd73854536635451831873776deafa5"
+        },
+        {
+          "experimentId": "team-workbook-2026-10-02:FM028_A",
+          "observed": 33480,
+          "reference": 43950,
+          "collectedAt": "2026-10-02T11:22:09.487Z",
+          "screenshotSha256": "b38252ee3414ace07b3f7c986d8cdb681bd73854536635451831873776deafa5"
+        },
+        {
+          "experimentId": "team-workbook-2026-10-02:FM028_B",
+          "observed": 27890,
+          "reference": 43950,
+          "collectedAt": "2026-10-02T11:22:26.944Z",
+          "screenshotSha256": "cdf3a4689de7fc41dbac14cf9fc6a9c0784ea9d69749586377cd91e10c5923d6"
+        },
+        {
+          "experimentId": "team-workbook-2026-10-02:FM028_C",
+          "observed": 22170,
+          "reference": 43950,
+          "collectedAt": "2026-10-02T11:22:42.854Z",
+          "screenshotSha256": "9184f6030d96e0cb01693d6a43869b692b5bbec0b6c65bb544cd8a2b7474512f"
+        }
+      ]
+    },
+    {
+      "deviceId": "OnePlus|OnePlus 15|12gb/256gb",
+      "brand": "OnePlus",
+      "model": "OnePlus 15",
+      "storage": "12 GB/256 GB",
+      "validatedGetUpto": 57250,
+      "modes": {
+        "warranty": "ASKED",
+        "validBill": "ASKED",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "NOT_ASKED",
+        "box": "ASKED",
+        "charger": "ASKED",
+        "sPen": "NOT_ASKED"
+      },
+      "baseline": {
+        "kind": "conditional_retention",
+        "retention": 0.7729257641921398
+      },
+      "componentCosts": {
+        "back_camera": 6000,
+        "charging": 2000
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "back_camera"
+        ],
+        [
+          "charging"
+        ]
+      ],
+      "calibratedAt": "2026-10-02T11:23:13.433Z",
+      "evidenceQuality": "VERIFIED_TRACE_SCREENSHOT",
+      "role": "ONE_POINT_CALIBRATION_NOT_VALIDATION",
+      "source": [
+        {
+          "experimentId": "team-workbook-2026-10-02:FM029_CLOSE_A",
+          "observed": 44250,
+          "reference": 57250,
+          "collectedAt": "2026-10-02T11:26:13.797Z",
+          "screenshotSha256": "dce8bb50d78f0954a4d5baf00d4d6fbd9dea5eb6fdde7221824be278e9a0c923"
+        },
+        {
+          "experimentId": "team-workbook-2026-10-02:FM029_A",
+          "observed": 44250,
+          "reference": 57250,
+          "collectedAt": "2026-10-02T11:23:13.433Z",
+          "screenshotSha256": "dce8bb50d78f0954a4d5baf00d4d6fbd9dea5eb6fdde7221824be278e9a0c923"
+        },
+        {
+          "experimentId": "team-workbook-2026-10-02:FM029_C",
+          "observed": 38250,
+          "reference": 57250,
+          "collectedAt": "2026-10-02T11:25:59.809Z",
+          "screenshotSha256": "370aca1f91251bf75e560635da7d6b1d9652a3fe2305ce3a7a12d0a40077233a"
+        },
+        {
+          "experimentId": "team-workbook-2026-10-02:FM029_B_RETRY",
+          "observed": 42250,
+          "reference": 57250,
+          "collectedAt": "2026-10-02T12:03:36.024Z",
+          "screenshotSha256": "065215f1649734c4ea64750683b7ec1a55fdb3804244d5d020043ca81685cdbc"
+        }
+      ]
+    },
+    {
+      "deviceId": "OnePlus|OnePlus Nord 5|12gb/256gb",
+      "brand": "OnePlus",
+      "model": "OnePlus Nord 5",
+      "storage": "12 GB/256 GB",
+      "validatedGetUpto": 24540,
+      "modes": {
+        "warranty": "ASKED",
+        "validBill": "ASKED",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "NOT_ASKED",
+        "box": "ASKED",
+        "charger": "ASKED",
+        "sPen": "NOT_ASKED"
+      },
+      "baseline": {
+        "kind": "conditional_retention",
+        "retention": 0.756316218418908
+      },
+      "componentCosts": {
+        "screen_heavy": 2350,
+        "glass_cracked": 4760
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "screen_heavy"
+        ],
+        [
+          "glass_cracked"
+        ]
+      ],
+      "calibratedAt": "2026-10-02T11:26:28.888Z",
+      "evidenceQuality": "VERIFIED_TRACE_SCREENSHOT",
+      "role": "ONE_POINT_CALIBRATION_NOT_VALIDATION",
+      "source": [
+        {
+          "experimentId": "team-workbook-2026-10-02:FM030_CLOSE_A",
+          "observed": 18560,
+          "reference": 24540,
+          "collectedAt": "2026-10-02T11:27:14.673Z",
+          "screenshotSha256": "93217584b35a6111c79b701b2b9e40d176c771fcfe202ac8aede1def6f29569e"
+        },
+        {
+          "experimentId": "team-workbook-2026-10-02:FM030_A",
+          "observed": 18560,
+          "reference": 24540,
+          "collectedAt": "2026-10-02T11:26:28.888Z",
+          "screenshotSha256": "93217584b35a6111c79b701b2b9e40d176c771fcfe202ac8aede1def6f29569e"
+        },
+        {
+          "experimentId": "team-workbook-2026-10-02:FM030_B",
+          "observed": 16210,
+          "reference": 24540,
+          "collectedAt": "2026-10-02T11:26:44.829Z",
+          "screenshotSha256": "da69da262ad33419fb632cf89abde5c278bfd681662d41183606a660130d0f5b"
+        },
+        {
+          "experimentId": "team-workbook-2026-10-02:FM030_C",
+          "observed": 13800,
+          "reference": 24540,
+          "collectedAt": "2026-10-02T11:27:00.424Z",
+          "screenshotSha256": "83468dbcfd622211894574ce0ec95c3da406f21ac681a169fa99a18687c88912"
+        }
+      ]
+    },
+    {
+      "deviceId": "Xiaomi|Xiaomi Redmi Note 12 Pro Plus 5G|8gb/256gb",
+      "brand": "Xiaomi",
+      "model": "Xiaomi Redmi Note 12 Pro Plus 5G",
+      "storage": "8 GB/256 GB",
+      "validatedGetUpto": 12490,
+      "modes": {
+        "warranty": "ASKED",
+        "validBill": "ASKED",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "NOT_ASKED",
+        "box": "ASKED",
+        "charger": "ASKED",
+        "sPen": "NOT_ASKED"
+      },
+      "baseline": {
+        "kind": "conditional_retention",
+        "retention": 0.799839871897518
+      },
+      "componentCosts": {
+        "screen_heavy": 1470,
+        "glass_cracked": 2980
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "screen_heavy"
+        ],
+        [
+          "glass_cracked"
+        ]
+      ],
+      "calibratedAt": "2026-10-02T11:32:47.729Z",
+      "evidenceQuality": "VERIFIED_TRACE_SCREENSHOT",
+      "role": "ONE_POINT_CALIBRATION_NOT_VALIDATION",
+      "source": [
+        {
+          "experimentId": "team-workbook-2026-10-02:FM038_CLOSE_A",
+          "observed": 9990,
+          "reference": 12490,
+          "collectedAt": "2026-10-02T11:33:33.320Z",
+          "screenshotSha256": "c7b7f023154b65fdcd94827db35dd0458a4bc6e8b2a30f1311fad8b59f5d81a9"
+        },
+        {
+          "experimentId": "team-workbook-2026-10-02:FM038_A",
+          "observed": 9990,
+          "reference": 12490,
+          "collectedAt": "2026-10-02T11:32:47.729Z",
+          "screenshotSha256": "c7b7f023154b65fdcd94827db35dd0458a4bc6e8b2a30f1311fad8b59f5d81a9"
+        },
+        {
+          "experimentId": "team-workbook-2026-10-02:FM038_B",
+          "observed": 8520,
+          "reference": 12490,
+          "collectedAt": "2026-10-02T11:33:03.634Z",
+          "screenshotSha256": "a9f9cd039b1f5b7a23e9da7783cef632e2d32c13a5fcf1d9f19af63116b7909d"
+        },
+        {
+          "experimentId": "team-workbook-2026-10-02:FM038_C",
+          "observed": 7010,
+          "reference": 12490,
+          "collectedAt": "2026-10-02T11:33:19.389Z",
+          "screenshotSha256": "9f1d2128b5ec7678f40720562238e00063dcda4700e4e1598f11ef01fdebfb8f"
+        }
+      ]
+    },
+    {
+      "deviceId": "OnePlus|OnePlus Nord CE 5|8gb/256gb",
+      "brand": "OnePlus",
+      "model": "OnePlus Nord CE 5",
+      "storage": "8 GB/256 GB",
+      "validatedGetUpto": 19540,
+      "modes": {
+        "warranty": "ASKED",
+        "validBill": "ASKED",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "NOT_ASKED",
+        "box": "ASKED",
+        "charger": "ASKED",
+        "sPen": "NOT_ASKED"
+      },
+      "baseline": {
+        "kind": "conditional_retention",
+        "retention": 0.7563971340839304
+      },
+      "componentCosts": {
+        "body_heavy": 870,
+        "body_dents": 1510
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "body_heavy"
+        ],
+        [
+          "body_dents"
+        ]
+      ],
+      "calibratedAt": "2026-10-02T11:52:59.047Z",
+      "evidenceQuality": "VERIFIED_TRACE_SCREENSHOT",
+      "role": "ONE_POINT_CALIBRATION_NOT_VALIDATION",
+      "source": [
+        {
+          "experimentId": "team-workbook-2026-10-02:FM031_FINAL_A",
+          "observed": 14780,
+          "reference": 19540,
+          "collectedAt": "2026-10-02T11:52:59.047Z",
+          "screenshotSha256": "f370b14ecf932adb4c049b0e68c4c5bebc66a8fe9a67c03b609211eb08026102"
+        },
+        {
+          "experimentId": "team-workbook-2026-10-02:FM031_FINAL_B",
+          "observed": 13910,
+          "reference": 19540,
+          "collectedAt": "2026-10-02T11:53:24.713Z",
+          "screenshotSha256": "bcb3631e93df9ea51a542af2b8e5d89158baa696f946d3c54080f1ca1b091a33"
+        },
+        {
+          "experimentId": "team-workbook-2026-10-02:FM031_FINAL_C",
+          "observed": 13270,
+          "reference": 19540,
+          "collectedAt": "2026-10-02T11:53:50.348Z",
+          "screenshotSha256": "76a333d9bc3cc143fc6d4e5454fd5f75cb9061beaea10843bbfc246090322834"
+        }
+      ]
+    },
+    {
+      "deviceId": "Xiaomi|Xiaomi Redmi Note 15 Pro 5G|8gb/128gb",
+      "brand": "Xiaomi",
+      "model": "Xiaomi Redmi Note 15 Pro 5G",
+      "storage": "8 GB/128 GB",
+      "validatedGetUpto": 21820,
+      "modes": {
+        "warranty": "ASKED",
+        "validBill": "ASKED",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "NOT_ASKED",
+        "box": "ASKED",
+        "charger": "ASKED",
+        "sPen": "NOT_ASKED"
+      },
+      "baseline": {
+        "kind": "conditional_retention",
+        "retention": 0.7561869844179652
+      },
+      "componentCosts": {
+        "charging": 1000,
+        "back_camera": 3200
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "charging"
+        ],
+        [
+          "back_camera"
+        ]
+      ],
+      "calibratedAt": "2026-10-02T11:58:03.056Z",
+      "evidenceQuality": "VERIFIED_TRACE_SCREENSHOT",
+      "role": "ONE_POINT_CALIBRATION_NOT_VALIDATION",
+      "source": [
+        {
+          "experimentId": "owner-correction-2026-10-02:FM039_CORR_A",
+          "observed": 16500,
+          "reference": 21820,
+          "collectedAt": "2026-10-02T17:33:29.571Z",
+          "screenshotSha256": "10dc67637ae694ff6c12ea371e260a918b61a6c1c1e0498d96e2efb387ab0c31"
+        },
+        {
+          "experimentId": "team-workbook-2026-10-02:FM039_FINAL_A",
+          "observed": 16500,
+          "reference": 21820,
+          "collectedAt": "2026-10-02T11:58:03.056Z",
+          "screenshotSha256": "2678e8b085ec5f4b6415ca3d54933988993ef0e0baeb9f95734317e283c402c6"
+        },
+        {
+          "experimentId": "team-workbook-2026-10-02:FM039_FINAL_B",
+          "observed": 15500,
+          "reference": 21820,
+          "collectedAt": "2026-10-02T11:58:27.253Z",
+          "screenshotSha256": "8b260a9b6ca307cd44ec726a0a4d92795f6b4351f14551a63e414a3e18e51c09"
+        },
+        {
+          "experimentId": "owner-correction-2026-10-02:FM039_CORR_C",
+          "observed": 13300,
+          "reference": 21820,
+          "collectedAt": "2026-10-02T17:33:53.687Z",
+          "screenshotSha256": "41c985f3a75f80e33c7ee9c6b5d9cce2bc7aacb9ef1964e54acb68cb8a9b75aa"
+        }
+      ]
+    },
+    {
+      "deviceId": "Xiaomi|Xiaomi 14|12gb/512gb",
+      "brand": "Xiaomi",
+      "model": "Xiaomi 14",
+      "storage": "12 GB/512 GB",
+      "validatedGetUpto": 27400,
+      "modes": {
+        "warranty": "ASKED",
+        "validBill": "ASKED",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "NOT_ASKED",
+        "box": "ASKED",
+        "charger": "ASKED",
+        "sPen": "NOT_ASKED"
+      },
+      "baseline": {
+        "kind": "conditional_retention",
+        "retention": 0.7802919708029197
+      },
+      "componentCosts": {
+        "charging": 1500
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "charging"
+        ]
+      ],
+      "calibratedAt": "2026-10-02T11:59:41.148Z",
+      "evidenceQuality": "VERIFIED_TRACE_SCREENSHOT",
+      "role": "ONE_POINT_CALIBRATION_NOT_VALIDATION",
+      "source": [
+        {
+          "experimentId": "release-followup-2026-10-02:FM042_RC_WNO_OPEN",
+          "observed": 21380,
+          "reference": 27400,
+          "collectedAt": "2026-10-02T19:25:07.322Z",
+          "screenshotSha256": "3940912ca32f7807205d8eb12890d8f65a541cdf55307866cbbaaef77275d0ba"
+        },
+        {
+          "experimentId": "owner-correction-2026-10-02:FM042_CORR_A",
+          "observed": 21380,
+          "reference": 27400,
+          "collectedAt": "2026-10-02T17:35:08.058Z",
+          "screenshotSha256": "3940912ca32f7807205d8eb12890d8f65a541cdf55307866cbbaaef77275d0ba"
+        },
+        {
+          "experimentId": "team-workbook-2026-10-02:FM042_FINAL_A",
+          "observed": 21380,
+          "reference": 27400,
+          "collectedAt": "2026-10-02T11:59:41.148Z",
+          "screenshotSha256": "aecf24a2b58df58b79b6c436a02f350f29d30599f0b822a7285d81a7cf255a1f"
+        },
+        {
+          "experimentId": "owner-correction-2026-10-02:FM042_CORR_C",
+          "observed": 19880,
+          "reference": 27400,
+          "collectedAt": "2026-10-02T17:35:32.237Z",
+          "screenshotSha256": "9f028906a8c6a0f2bceeb5451da1ce52268c4fac39606e42d76edb9cc2869a8d"
+        }
+      ]
+    },
+    {
+      "deviceId": "Xiaomi|Xiaomi 15 Ultra|16gb/512gb",
+      "brand": "Xiaomi",
+      "model": "Xiaomi 15 Ultra",
+      "storage": "16 GB/512 GB",
+      "validatedGetUpto": 59830,
+      "modes": {
+        "warranty": "ASKED",
+        "validBill": "ASKED",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "NOT_ASKED",
+        "box": "ASKED",
+        "charger": "ASKED",
+        "sPen": "NOT_ASKED"
+      },
+      "baseline": {
+        "kind": "conditional_retention",
+        "retention": 0.7569781046297844
+      },
+      "componentCosts": {
+        "glass_cracked": 10710,
+        "charging": 1500
+      },
+      "supportedProfiles": [
+        [],
+        [
+          "glass_cracked"
+        ],
+        [
+          "charging"
+        ]
+      ],
+      "calibratedAt": "2026-10-02T12:01:43.331Z",
+      "evidenceQuality": "VERIFIED_TRACE_SCREENSHOT",
+      "role": "ONE_POINT_CALIBRATION_NOT_VALIDATION",
+      "source": [
+        {
+          "experimentId": "owner-correction-2026-10-02:FM045_CORR_A",
+          "observed": 45290,
+          "reference": 59830,
+          "collectedAt": "2026-10-02T17:35:56.416Z",
+          "screenshotSha256": "89dfea293cac03257984d932ce95fa827398bb33b3d97fdbb536f75a1312d77e"
+        },
+        {
+          "experimentId": "team-workbook-2026-10-02:FM045_FINAL_A",
+          "observed": 45290,
+          "reference": 59830,
+          "collectedAt": "2026-10-02T12:01:43.331Z",
+          "screenshotSha256": "51c6824709acced65e0083b25ef7653b2aaad292d6a921b91412e9c1645570f2"
+        },
+        {
+          "experimentId": "team-workbook-2026-10-02:FM045_FINAL_B",
+          "observed": 34580,
+          "reference": 59830,
+          "collectedAt": "2026-10-02T12:02:09.025Z",
+          "screenshotSha256": "a8b2f5f9ddb68d7ab475bf31fabb6426d7cff4b7d7ce2de33caf1ed468c85fbb"
+        },
+        {
+          "experimentId": "owner-correction-2026-10-02:FM045_CORR_C",
+          "observed": 43790,
+          "reference": 59830,
+          "collectedAt": "2026-10-02T17:36:20.513Z",
+          "screenshotSha256": "9695b693c97362f85a523ab9c78919f13d2444cfd6a05059a81bb2263b082df7"
+        }
+      ]
+    },
+    {
+      "deviceId": "Apple|Apple iPhone 15|256gb",
+      "brand": "Apple",
+      "model": "Apple iPhone 15",
+      "storage": "256 GB",
+      "validatedGetUpto": 44220,
+      "modes": {
+        "warranty": "ASKED",
+        "validBill": "ASKED",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "NOT_ASKED",
+        "box": "ASKED",
+        "charger": "NOT_ASKED",
+        "sPen": "NOT_ASKED"
+      },
+      "baseline": {
+        "kind": "conditional_retention",
+        "retention": 0.8118498417005879
+      },
+      "componentCosts": {},
+      "supportedProfiles": [
+        []
+      ],
+      "calibratedAt": "2026-10-02T17:29:28.631Z",
+      "evidenceQuality": "VERIFIED_TRACE_SCREENSHOT",
+      "role": "ONE_POINT_CALIBRATION_NOT_VALIDATION",
+      "source": [
+        {
+          "experimentId": "owner-correction-2026-10-02:FM007_WNO_A",
+          "observed": 35900,
+          "reference": 44220,
+          "collectedAt": "2026-10-02T17:29:28.631Z",
+          "screenshotSha256": "ab43d1d67918a45c46531680256781a79bbda7d7f812473dcc1e69c1d69d97b1"
+        }
+      ]
+    },
+    {
+      "deviceId": "Apple|Apple iPhone 16|256gb",
+      "brand": "Apple",
+      "model": "Apple iPhone 16",
+      "storage": "256 GB",
+      "validatedGetUpto": 54720,
+      "modes": {
+        "warranty": "ASKED",
+        "validBill": "ASKED",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "NOT_ASKED",
+        "box": "ASKED",
+        "charger": "NOT_ASKED",
+        "sPen": "NOT_ASKED"
+      },
+      "baseline": {
+        "kind": "conditional_retention",
+        "retention": 0.8114035087719298
+      },
+      "componentCosts": {},
+      "supportedProfiles": [
+        []
+      ],
+      "calibratedAt": "2026-10-02T17:29:46.205Z",
+      "evidenceQuality": "VERIFIED_TRACE_SCREENSHOT",
+      "role": "ONE_POINT_CALIBRATION_NOT_VALIDATION",
+      "source": [
+        {
+          "experimentId": "owner-correction-2026-10-02:FM009_WNO_A",
+          "observed": 44400,
+          "reference": 54720,
+          "collectedAt": "2026-10-02T17:29:46.205Z",
+          "screenshotSha256": "06a6bfb2c5807d04d1d9f46e2c168d3bfed0fd783d92dd0efdf2cee783180285"
+        }
+      ]
+    },
+    {
+      "deviceId": "Apple|Apple iPhone 14 Pro Max|256gb",
+      "brand": "Apple",
+      "model": "Apple iPhone 14 Pro Max",
+      "storage": "256 GB",
+      "validatedGetUpto": 46010,
+      "modes": {
+        "warranty": "NOT_ASKED",
+        "validBill": "NOT_ASKED",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "ASKED",
+        "box": "ASKED",
+        "charger": "NOT_ASKED",
+        "sPen": "NOT_ASKED"
+      },
+      "eSimAnswer": "Single eSIM",
+      "baseline": {
+        "kind": "conditional_retention",
+        "retention": 0.9995653118887199
+      },
+      "componentCosts": {},
+      "supportedProfiles": [
+        []
+      ],
+      "calibratedAt": "2026-10-02T19:23:07.901Z",
+      "evidenceQuality": "VERIFIED_TRACE_SCREENSHOT",
+      "role": "ONE_POINT_CALIBRATION_NOT_VALIDATION",
+      "source": [
+        {
+          "experimentId": "release-followup-2026-10-02:FM006_RC_WNO_OPEN",
+          "observed": 45990,
+          "reference": 46010,
+          "collectedAt": "2026-10-02T19:23:07.901Z",
+          "screenshotSha256": "1df561275ae308d0842e9a61ac0c4fba3661bdb6cec5a86fa13a3fe750aacb54"
+        }
+      ]
+    },
+    {
+      "deviceId": "Samsung|Samsung Galaxy Z Fold5|12gb/256gb",
+      "brand": "Samsung",
+      "model": "Samsung Galaxy Z Fold5",
+      "storage": "12 GB/256 GB",
+      "validatedGetUpto": 49740,
+      "modes": {
+        "warranty": "ASKED",
+        "validBill": "ASKED",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "NOT_ASKED",
+        "box": "ASKED",
+        "charger": "NOT_ASKED",
+        "sPen": "NOT_ASKED"
+      },
+      "baseline": {
+        "kind": "conditional_retention",
+        "retention": 0.7603538399678327
+      },
+      "componentCosts": {},
+      "supportedProfiles": [
+        []
+      ],
+      "calibratedAt": "2026-10-02T19:24:18.733Z",
+      "evidenceQuality": "VERIFIED_TRACE_SCREENSHOT",
+      "role": "ONE_POINT_CALIBRATION_NOT_VALIDATION",
+      "source": [
+        {
+          "experimentId": "release-followup-2026-10-02:FM020_RC_WNO_OPEN",
+          "observed": 37820,
+          "reference": 49740,
+          "collectedAt": "2026-10-02T19:24:18.733Z",
+          "screenshotSha256": "e46385d37870ecb6e438ab53e06cd06234840ed20fdf7d33c688f2ad9c2cb167"
+        }
+      ]
+    },
+    {
+      "deviceId": "Samsung|Samsung Galaxy Z Flip6 5G|12gb/256gb",
+      "brand": "Samsung",
+      "model": "Samsung Galaxy Z Flip6 5G",
+      "storage": "12 GB/256 GB",
+      "validatedGetUpto": 38700,
+      "modes": {
+        "warranty": "ASKED",
+        "validBill": "ASKED",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "NOT_ASKED",
+        "box": "ASKED",
+        "charger": "NOT_ASKED",
+        "sPen": "NOT_ASKED"
+      },
+      "baseline": {
+        "kind": "conditional_retention",
+        "retention": 0.755297157622739
+      },
+      "componentCosts": {},
+      "supportedProfiles": [
+        []
+      ],
+      "calibratedAt": "2026-10-02T19:24:43.023Z",
+      "evidenceQuality": "VERIFIED_TRACE_SCREENSHOT",
+      "role": "ONE_POINT_CALIBRATION_NOT_VALIDATION",
+      "source": [
+        {
+          "experimentId": "release-followup-2026-10-02:FM021_RC_WNO_OPEN",
+          "observed": 29230,
+          "reference": 38700,
+          "collectedAt": "2026-10-02T19:24:43.023Z",
+          "screenshotSha256": "dc0412ab4b0d5d73eb1bedaf7fb5b89bf3f20b75a7a4a9cadd66afc9d39df94b"
+        }
+      ]
+    },
+    {
+      "deviceId": "Samsung|Samsung Galaxy S26 Ultra|12gb/512gb",
+      "brand": "Samsung",
+      "model": "Samsung Galaxy S26 Ultra",
+      "storage": "12 GB/512 GB",
+      "validatedGetUpto": 86250,
+      "modes": {
+        "warranty": "ASKED",
+        "validBill": "ASKED",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "NOT_ASKED",
+        "box": "ASKED",
+        "charger": "NOT_ASKED",
+        "sPen": "ASKED"
+      },
+      "baseline": {
+        "kind": "conditional_retention",
+        "retention": 0.7772753623188405
+      },
+      "componentCosts": {},
+      "supportedProfiles": [
+        []
+      ],
+      "calibratedAt": "2026-10-02T19:29:01.442Z",
+      "evidenceQuality": "VERIFIED_TRACE_SCREENSHOT",
+      "role": "ONE_POINT_CALIBRATION_NOT_VALIDATION",
+      "source": [
+        {
+          "experimentId": "release-followup-2026-10-02:FM019_RC_WNO_SPEN_RETRY",
+          "observed": 67040,
+          "reference": 86250,
+          "collectedAt": "2026-10-02T19:29:01.442Z",
+          "screenshotSha256": "cc2144a4203a62dc2a8a3753e2b3594c88fe464278cd9d7201c37f1c61a9a7a7"
+        }
+      ]
+    },
+    {
+      "deviceId": "Samsung|Samsung Galaxy Note 10 Lite|6gb/128gb",
+      "brand": "Samsung",
+      "model": "Samsung Galaxy Note 10 Lite",
+      "storage": "6 GB/128 GB",
+      "validatedGetUpto": 5600,
+      "modes": {
+        "warranty": "NOT_ASKED",
+        "validBill": "NOT_ASKED",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "NOT_ASKED",
+        "box": "ASKED",
+        "charger": "ASKED",
+        "sPen": "ASKED"
+      },
+      "baseline": {
+        "kind": "conditional_retention",
+        "retention": 0.9964285714285714
+      },
+      "componentCosts": {},
+      "supportedProfiles": [
+        []
+      ],
+      "calibratedAt": "2026-10-02T19:29:25.033Z",
+      "evidenceQuality": "VERIFIED_TRACE_SCREENSHOT",
+      "role": "ONE_POINT_CALIBRATION_NOT_VALIDATION",
+      "source": [
+        {
+          "experimentId": "release-followup-2026-10-02:FM022_RC_WNO_SPEN_RETRY",
+          "observed": 5580,
+          "reference": 5600,
+          "collectedAt": "2026-10-02T19:29:25.033Z",
+          "screenshotSha256": "f3b13137bedd6f377bda3025f853b9c61178c114622d9b28f8a54f42c16ef0d6"
+        }
+      ]
+    },
+    {
+      "deviceId": "Apple|Apple iPhone 17|256gb",
+      "brand": "Apple",
+      "model": "Apple iPhone 17",
+      "storage": "256 GB",
+      "validatedGetUpto": 65000,
+      "modes": {
+        "warranty": "ASKED",
+        "validBill": "ASKED",
+        "mobileAge": "NOT_ASKED",
+        "eSim": "ASKED",
+        "box": "ASKED",
+        "charger": "NOT_ASKED",
+        "sPen": "NOT_ASKED"
+      },
+      "eSimAnswer": "Single eSIM",
+      "baseline": {
+        "kind": "conditional_retention",
+        "retention": 0.7570769230769231
+      },
+      "componentCosts": {},
+      "supportedProfiles": [
+        []
+      ],
+      "calibratedAt": "2026-10-03T10:59:37.323Z",
+      "evidenceQuality": "VERIFIED_TRACE_SCREENSHOT",
+      "role": "ONE_POINT_CALIBRATION_NOT_VALIDATION",
+      "source": [
+        {
+          "experimentId": "claude-prospective-2026-10-03:FM011_ESIM_TR_A",
+          "observed": 49210,
+          "reference": 65000,
+          "collectedAt": "2026-10-03T10:59:37.323Z",
+          "screenshotSha256": "406ac9f42e09bd033c7fd9dda28625cf508ece211356ccafeec18e22f3c3d30b"
+        }
+      ]
+    }
+  ]
+}
