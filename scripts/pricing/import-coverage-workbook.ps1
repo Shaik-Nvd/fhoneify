@@ -26,7 +26,18 @@ try {
   $wbNs = [Xml.XmlNamespaceManager]::new($workbook.NameTable)
   $wbNs.AddNamespace('m', 'http://schemas.openxmlformats.org/spreadsheetml/2006/main')
   $worksheetName = $workbook.SelectSingleNode('//m:sheets/m:sheet[@sheetId="2"]', $wbNs).GetAttribute('name')
-  if ($worksheetName -ne '02 PRICE ENTRY') { throw "Unexpected source worksheet: $worksheetName" }
+  $guideName = $workbook.SelectSingleNode('//m:sheets/m:sheet[@sheetId="1"]', $wbNs).GetAttribute('name')
+  if ($worksheetName -ne '02 PRICE ENTRY' -or $guideName -ne '01 TEAM GUIDE') { throw "Unexpected source worksheets: $guideName / $worksheetName" }
+  $guide = Read-XmlEntry 'xl/worksheets/sheet1.xml'
+  $guideNs = [Xml.XmlNamespaceManager]::new($guide.NameTable)
+  $guideNs.AddNamespace('m', 'http://schemas.openxmlformats.org/spreadsheetml/2006/main')
+  $guideCells = @{}
+  foreach ($row in $guide.SelectNodes('//m:sheetData/m:row', $guideNs)) {
+    foreach ($cell in $row.SelectNodes('./m:c', $guideNs)) {
+      $value = $cell.SelectSingleNode('./m:v', $guideNs)
+      if ($value) { $guideCells[$cell.GetAttribute('r')] = $strings[[int]$value.InnerText] }
+    }
+  }
   $sheet = Read-XmlEntry 'xl/worksheets/sheet2.xml'
   $ns = [Xml.XmlNamespaceManager]::new($sheet.NameTable)
   $ns.AddNamespace('m', 'http://schemas.openxmlformats.org/spreadsheetml/2006/main')
@@ -70,7 +81,11 @@ try {
     foreach ($letter in @('A','B','C')) {
       $instructionColumn = @{ A = $null; B = 'D'; C = 'E' }[$letter]
       $priceColumn = @{ A = 'G'; B = 'H'; C = 'I' }[$letter]
-      $instruction = if ($letter -eq 'A') { 'PERSON A clean final price; instruction is clean baseline per workbook guide' } else { [string]$r[$instructionColumn] }
+      $instruction = if ($letter -eq 'A') { [string]$guideCells['E7'] } else { [string]$r[$instructionColumn] }
+      $instructionSourceCells = if ($letter -eq 'A') { @("${guideName}!E7", "${guideName}!B26") } else { @("${worksheetName}!${instructionColumn}${rowNumber}") }
+      $commonGuideCells = @("${guideName}!B18", "${guideName}!B19", "${guideName}!B20", "${guideName}!B21")
+      if ($letter -eq 'A') { $commonGuideCells += "${guideName}!B26" }
+      $commonInstructions = @($commonGuideCells | ForEach-Object { $reference = $_.Split('!')[1]; [ordered]@{ sourceCell = $_; rawInstruction = [string]$guideCells[$reference] } })
       $condition = if ($letter -eq 'A') { 'clean' } else { Classify $instruction }
       $rawPrice = $r[$priceColumn]
       $price = if ([string]::IsNullOrWhiteSpace([string]$rawPrice)) { $null } else { [int](($rawPrice -replace ',', '')) }
@@ -79,9 +94,9 @@ try {
       $cases.Add([ordered]@{
         caseId = $caseId; deviceId = $deviceId; brand = $brand; model = $model; variant = $r.C
         conditionText = $instruction; questionnaireIntent = @{}
-        testerObservation = if ($null -eq $price) { $null } else { [ordered]@{ finalSellingPrice = $price; getUpto = $getUpto; sourceCell = "${priceColumn}${rowNumber}"; provenance = 'ORIGINAL_WORKBOOK_CELL'; observedAt = $null; manualTrace = $null } }
-        originalWorkbook = [ordered]@{ workbookSha256 = $hash; sheet = 'TEAM PRICE ENTRY'; row = $rowNumber; phoneIdCell = "A$rowNumber"; modelCell = "B$rowNumber"; storageCell = "C$rowNumber"; instructionCell = if ($letter -eq 'A') { 'guide:A4' } else { "${instructionColumn}${rowNumber}" }; rawInstruction = $instruction; getUptoCell = "F$rowNumber"; getUpto = $getUpto; priceCell = "${priceColumn}${rowNumber}"; rawPrice = $rawPrice }
-        reconstruction = [ordered]@{ sourceCaseId = $caseId; sourceConditionClass = $condition; sourceArtifact = 'original workbook sheet2 source cells'; syntheticInputsSeparateFromObservations = $true }
+        testerObservation = if ($null -eq $price) { $null } else { [ordered]@{ finalSellingPrice = $price; getUpto = $getUpto; sourceCell = "${worksheetName}!${priceColumn}${rowNumber}"; provenance = 'ORIGINAL_WORKBOOK_CELL'; observedAt = $null; manualTrace = $null } }
+        originalWorkbook = [ordered]@{ workbookSha256 = $hash; priceWorksheet = $worksheetName; guideWorksheet = $guideName; row = $rowNumber; phoneIdCell = "${worksheetName}!A$rowNumber"; modelCell = "${worksheetName}!B$rowNumber"; storageCell = "${worksheetName}!C$rowNumber"; instructionSourceCells = $instructionSourceCells; rawInstruction = $instruction; commonInstructions = $commonInstructions; getUptoCell = "${worksheetName}!F$rowNumber"; getUpto = $getUpto; priceCell = "${worksheetName}!${priceColumn}${rowNumber}"; rawPrice = $rawPrice }
+        reconstruction = [ordered]@{ sourceCaseId = $caseId; sourceConditionClass = $condition; sourceArtifact = 'original workbook source cells in 01 TEAM GUIDE and 02 PRICE ENTRY'; syntheticInputsSeparateFromObservations = $true }
       })
     }
   }

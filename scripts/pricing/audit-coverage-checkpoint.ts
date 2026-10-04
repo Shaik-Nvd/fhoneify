@@ -101,6 +101,15 @@ const joinedCases = (replaySnapshot.cases as any[]).map((c: any) => {
     exclusions: [c.guardReason, c.reasonAtObserved].filter(Boolean),
   };
 });
+const workbookCombinedCases = (workbookRegister.cases as any[]).filter((c: any) => c.reconstruction?.sourceConditionClass?.startsWith('combined:'));
+const replayedCombinedCases = joinedCases.filter((c: any) => workbookCombinedCases.some((w: any) => w.caseId === c.caseId));
+assert.equal(workbookRegister.cases.length, 150, 'the canonical register must have 150 source-cell cases');
+assert.equal(workbookCombinedCases.length, 6, 'the workbook has six compound-condition cases');
+assert.equal(replayedCombinedCases.length, workbookCombinedCases.length, 'every workbook compound condition must be replayed');
+assert(replayedCombinedCases.every((c: any) => c.sourceReplayResult.decisionInProduction === 'MANUAL_INSPECTION_REQUIRED' && c.sourceReplayResult.replayEligibility === 'NOT_REPLAY_ELIGIBLE'),
+  'compound conditions must retain their combined faults and remain inspection-only');
+assert((workbookRegister.cases as any[]).every((c: any) => c.originalWorkbook?.priceWorksheet === '02 PRICE ENTRY' &&
+  c.originalWorkbook.priceCell.startsWith('02 PRICE ENTRY!') && c.originalWorkbook.instructionSourceCells.length > 0), 'source worksheet and cells must be explicit');
 
 const replayEligible = joinedCases.filter((c: any) => c.replayClassification?.startsWith('REPLAY_ELIGIBLE')).length;
 const mappedAutomaticObservationCount = joinedCases.reduce((n: number, c: any) => n + c.rawAutomaticObservations.length, 0);
@@ -190,6 +199,10 @@ const result = {
     referenceSnapshot: { savedSnapshotVersion: saved.version, savedSnapshotQueriedAt: saved.queriedAt, refreshedAt: '2026-10-03T18:08:00.000Z', refreshedKeys: refreshed, source: 'read-only post-refresh reference snapshot notes; no production query in this replay' },
     questionnaireProfileSnapshot: { version: saved.version, queriedAt: saved.queriedAt, rows: (saved.rows as any[]).length, source: 'release-saved-production-inputs-2026-10-02.json' } },
   replay: { caseCount: joinedCases.length, productionReplayEligible: replayEligible, statusCounts, previouslyReported34Reproduced: replayEligible === 34,
+    compoundConditionSafety: { sourceWorkbookCases: workbookCombinedCases.length, replayedCases: replayedCombinedCases.length,
+      allInspectionOnly: replayedCombinedCases.every((c: any) => c.sourceReplayResult.decisionInProduction === 'MANUAL_INSPECTION_REQUIRED' && c.sourceReplayResult.replayEligibility === 'NOT_REPLAY_ELIGIBLE'),
+      cases: replayedCombinedCases.map((c: any) => ({ caseId: c.caseId, sourceCondition: c.originalWorkbookSource?.reconstruction?.sourceConditionClass,
+        replayCondition: c.sourceReplayResult.condition, decision: c.sourceReplayResult.decisionInProduction, guardReason: c.sourceReplayResult.guardReason })) },
     automaticObservations: { sourceRows: auto.length, matchedToCanonical150: mappedAutomaticObservationCount },
     originalWorkbook: { caseRows: workbookRegister.cases.length, sourcePriceRows: originalWorkbookPriceCount, observationDatesAndManualTraces: 'UNKNOWN unless independently present in observation provenance' },
     observedDataCoverage: { observedCases: observedCaseIds.length, missingCases: missingObservedCaseIds, historical144Of150Superseded: observedCaseIds.length > 144 },

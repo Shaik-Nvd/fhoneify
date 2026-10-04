@@ -49,16 +49,19 @@ function catalog(brand: string, model: string, storage: string) {
 function intentDiagnostics(r: any) {
   const sourceClass = r.reconstruction?.sourceConditionClass;
   const q = { ...(r.questionnaireIntent ?? {}) }, letter = r.caseId.slice(-1);
-  if (sourceClass === 'screen_heavy') q.screenCondition = 'more_than_2_scratches';
-  if (sourceClass === 'glass_cracked') q.screenCondition = 'cracked';
-  if (sourceClass === 'display_lines') q.screenLines = 'visible';
-  if (sourceClass === 'display_spots') q.screenSpots = 'large_heavy';
-  if (sourceClass === 'body_heavy') q.bodyScratches = 'more_than_2';
-  if (sourceClass === 'body_dents') q.bodyDents = 'major_or_more_than_2';
-  if (sourceClass === 'touch') q.touch = { intent: 'no' };
-  if (sourceClass === 'original_screen') q.originalScreen = { intent: 'no' };
-  if (sourceClass === 'charging') q.hardwareFaults = ['hw_charging'];
-  if (sourceClass === 'back_camera') q.hardwareFaults = ['hw_back_camera'];
+  const conditionIntent: Record<string, Record<string, any>> = {
+    screen_heavy: { screenCondition: 'more_than_2_scratches' }, glass_cracked: { screenCondition: 'cracked' },
+    display_lines: { screenLines: 'visible' }, display_spots: { screenSpots: 'large_heavy' }, display_discoloration: { screenDiscoloration: 'major' },
+    body_heavy: { bodyScratches: 'more_than_2' }, body_dents: { bodyDents: 'major_or_more_than_2' },
+    touch: { touch: { intent: 'no' } }, original_screen: { originalScreen: { intent: 'no' } },
+    charging: { hardwareFaults: ['hw_charging'] }, back_camera: { hardwareFaults: ['hw_back_camera'] },
+  };
+  const sourceConditions = sourceClass?.startsWith('combined:') ? sourceClass.slice('combined:'.length).split('+') : [sourceClass];
+  for (const condition of sourceConditions) {
+    const mapped = conditionIntent[condition ?? ''];
+    if (!mapped) continue;
+    Object.assign(q, mapped);
+  }
   const pick = (v: string | null | undefined, m: Record<string, string>) => v == null || v === 'none' ? null : m[v] ?? `UNMAPPED:${v}`;
   const d: any = { calls: q.calls?.intent !== 'no', touch: q.touch?.intent !== 'no', originalScreen: q.originalScreen?.intent !== 'no', defects: [],
     screenCondition: pick(q.screenCondition, { more_than_2_scratches: 'More than 2 scratches on screen', cracked: 'Screen cracked/ glass broken' }),
