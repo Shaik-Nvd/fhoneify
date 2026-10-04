@@ -33,7 +33,14 @@ const BLOCKED = new Set(['Apple iPhone 12 Pro', 'Xiaomi 14 Ultra']);      // hea
 const HARDWARE_GUARDED = new Set(['Xiaomi Redmi Note 15 Pro Plus 5G']);  // release adapter refuses hardware faults
 const ident = (brand: string, model: string, storage: string) => `${brand}|${model}|${workbookStorageIdentity(storage)}`;
 
-type Mode = 'ASKED' | 'NOT_ASKED';
+type Mode = 'ASKED' | 'NOT_ASKED' | 'UNKNOWN';
+export function normalizeQuestionMode(value: unknown): Mode {
+  return value === 'ASKED' || (typeof value === 'string' && value.startsWith('ASKED:')) ? 'ASKED' : value === 'NOT_ASKED' ? 'NOT_ASKED' : 'UNKNOWN';
+}
+export function oldestEvidenceTimestamp(sources: readonly { collectedAt: string }[]): string {
+  if (sources.length === 0 || sources.some(s => !Number.isFinite(Date.parse(s.collectedAt)))) throw new Error('Every supported profile needs dated evidence');
+  return sources.map(s => s.collectedAt).sort()[0];
+}
 interface Obs { id: string; brand: string; model: string; storage: string; getUpto: number; observed: number; collectedAt: string; sha: string;
   block: string; modes: Record<string, Mode>; answers: Record<string, string | null>; components: string[] | null; cls: string }
 
@@ -49,7 +56,7 @@ function fromFixture(): Obs[] {
 }
 function fromFollowup(): Obs[] {
   return (followup.accepted as any[]).filter(a => /_RC_WNO_/.test(a.id)).map(a => {
-    const m = (k: string): Mode => a.route[k].mode === 'ASKED' ? 'ASKED' : 'NOT_ASKED';
+    const m = (k: string): Mode => normalizeQuestionMode(a.route[k]?.mode);
     const sel = (k: string) => a.route[k].selectedAnswer ?? null;
     return { id: `release-followup-2026-10-02:${a.id}`, brand: a.brand, model: a.model, storage: a.storage, getUpto: a.GetUpto, observed: a.finalSelling,
       collectedAt: a.collectedAt, sha: a.screenshotSha256 ?? a.evidenceSha256 ?? '', block: `followup:${a.id}`,
@@ -62,7 +69,7 @@ function fromFollowup(): Obs[] {
  * deductions remain provisional and are never used. */
 function fromProspective(): Obs[] {
   return (prospective.rows as any[]).filter(r => r.status === 'COMPLETED' && r.frozenPrediction == null && /^FM011_/.test(r.experimentId)).map(r => {
-    const mode = (v: string): Mode => v.startsWith('ASKED') ? 'ASKED' : 'NOT_ASKED';
+    const mode = (v: string): Mode => normalizeQuestionMode(v);
     const val = (v: string) => v.startsWith('ASKED:') ? v.slice(6) : null;
     const norm: Record<string, string> = { No: 'no', Yes: 'yes', 'Single eSIM': 'single', 'Original Box with same IMEI': 'present', 'Original Charger of Device': 'present' };
     const a = (k: string) => { const v = val(r.route[k]); return v == null ? null : norm[v] ?? v; };
@@ -76,7 +83,7 @@ function fromProspective(): Obs[] {
 /** Verified regime: warranty No / bill Yes where asked; box, and charger/S Pen where asked, present. */
 function inRegime(o: Obs) {
   const a = o.answers, m = o.modes;
-  return (m.warranty !== 'ASKED' || a.warranty === 'no') && (m.validBill !== 'ASKED' || a.validBill === 'yes') && m.box === 'ASKED' && a.box === 'present' &&
+  return Object.values(m).every(v => v === 'ASKED' || v === 'NOT_ASKED') && (m.warranty !== 'ASKED' || a.warranty === 'no') && (m.validBill !== 'ASKED' || a.validBill === 'yes') && m.box === 'ASKED' && a.box === 'present' &&
     (m.charger !== 'ASKED' || a.charger === 'present') && (m.sPen !== 'ASKED' || a.sPen === 'present') && m.mobileAge === 'NOT_ASKED' &&
     (m.eSim !== 'ASKED' || a.eSim === 'single');
 }
@@ -122,7 +129,10 @@ export function buildMeasuredPointSpecs() {
       ...(m.eSim === 'ASKED' ? { eSimAnswer: 'Single eSIM' } : {}),
       baseline: { kind: 'conditional_retention', retention: control.observed / control.getUpto },
       componentCosts, supportedProfiles: [[], ...Object.keys(componentCosts).map(c => [c])],
-      calibratedAt: sources.map(s => s.collectedAt).sort().at(-1),
+      // The entire supported profile is a single point. Its age is bounded by
+      // the oldest evidence it depends on; a later camera/clean capture cannot
+      // renew an older charging deduction.
+      calibratedAt: oldestEvidenceTimestamp(sources),
       evidenceQuality: 'VERIFIED_TRACE_SCREENSHOT', role: 'ONE_POINT_CALIBRATION_NOT_VALIDATION',
       source: sources.map(s => ({ experimentId: s.id, observed: s.observed, reference: s.getUpto, collectedAt: s.collectedAt, screenshotSha256: s.sha })),
       ...(notes.length ? { notes } : {}),
@@ -134,7 +144,7 @@ export function buildMeasuredPointSpecs() {
 function routeRows(specs: any[]) {
   return specs.map(s => ({ brand: s.brand, model: s.model, storage: s.storage, source: 'VERIFIED_COLLECTOR_TRACE', status: 'OK',
     // The clean control's own observation: evidence age starts there, never later.
-    observedAt: s.source[0].collectedAt, evidenceSha256: s.source[0].screenshotSha256,
+    observedAt: s.calibratedAt, evidenceSha256: s.source[0].screenshotSha256,
     semantics: { warrantyMode: s.modes.warranty, billMode: s.modes.validBill, ageMode: s.modes.mobileAge },
     boxMode: s.modes.box, chargerMode: s.modes.charger, sPenMode: s.modes.sPen, eSimMode: s.modes.eSim }));
 }

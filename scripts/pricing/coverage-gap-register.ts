@@ -28,7 +28,11 @@ import { InMemoryQuestionnaireProfileStore } from '../../lib/referencePricing/qu
 import { questionnaireModelKey } from '../../lib/referencePricing/questionnaire/types';
 
 const arg = (n: string) => { const i = process.argv.indexOf(n); return i >= 0 ? process.argv[i + 1] : undefined; };
-const register: any[] = JSON.parse(fs.readFileSync(arg('--register')!, 'utf8'));
+const parsedRegister = JSON.parse(fs.readFileSync(arg('--register')!, 'utf8'));
+const register: any[] = Array.isArray(parsedRegister) ? parsedRegister : parsedRegister.cases;
+if (!Array.isArray(register) || register.length !== 150 || new Set(register.map(r => r.caseId)).size !== 150) {
+  throw new Error('Expected a canonical 150-case register with unique exact case identities');
+}
 const at = new Date(arg('--at') ?? '2026-10-03T19:00:00Z');
 const mode = (v: unknown) => isQuestionMode(v) ? v : 'UNKNOWN';
 const routes = loadReleaseRouteEvidence(arg('--routes') ?? 'scripts/pricing/fixtures/release-route-evidence-2026-10-02.json');

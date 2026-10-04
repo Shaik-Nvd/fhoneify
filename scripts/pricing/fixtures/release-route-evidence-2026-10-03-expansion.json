@@ -657,7 +657,7 @@
       "storage": "16 GB/512 GB",
       "source": "VERIFIED_COLLECTOR_TRACE",
       "status": "OK",
-      "observedAt": "2026-10-02T11:55:28.340Z",
+      "observedAt": "2026-10-01T14:04:30.047Z",
       "evidenceSha256": "92ccbe05333a43bdf4e38c9206275cfaf905cc34dc05c747f37abeee5b7614e3",
       "semantics": {
         "warrantyMode": "ASKED",
@@ -693,7 +693,7 @@
       "storage": "12 GB/256 GB",
       "source": "VERIFIED_COLLECTOR_TRACE",
       "status": "OK",
-      "observedAt": "2026-10-02T11:21:54.396Z",
+      "observedAt": "2026-10-02T11:21:06.545Z",
       "evidenceSha256": "d279a154d3925aa3b9cc6bdf5ca5e072823d231db7f33544ca95a3dfea7a580c",
       "semantics": {
         "warrantyMode": "ASKED",
@@ -711,7 +711,7 @@
       "storage": "16 GB/512 GB",
       "source": "VERIFIED_COLLECTOR_TRACE",
       "status": "OK",
-      "observedAt": "2026-10-02T11:22:58.704Z",
+      "observedAt": "2026-10-02T11:22:09.487Z",
       "evidenceSha256": "b38252ee3414ace07b3f7c986d8cdb681bd73854536635451831873776deafa5",
       "semantics": {
         "warrantyMode": "ASKED",
@@ -729,7 +729,7 @@
       "storage": "12 GB/256 GB",
       "source": "VERIFIED_COLLECTOR_TRACE",
       "status": "OK",
-      "observedAt": "2026-10-02T11:26:13.797Z",
+      "observedAt": "2026-10-02T11:23:13.433Z",
       "evidenceSha256": "dce8bb50d78f0954a4d5baf00d4d6fbd9dea5eb6fdde7221824be278e9a0c923",
       "semantics": {
         "warrantyMode": "ASKED",
@@ -747,7 +747,7 @@
       "storage": "12 GB/256 GB",
       "source": "VERIFIED_COLLECTOR_TRACE",
       "status": "OK",
-      "observedAt": "2026-10-02T11:27:14.673Z",
+      "observedAt": "2026-10-02T11:26:28.888Z",
       "evidenceSha256": "93217584b35a6111c79b701b2b9e40d176c771fcfe202ac8aede1def6f29569e",
       "semantics": {
         "warrantyMode": "ASKED",
@@ -765,7 +765,7 @@
       "storage": "8 GB/256 GB",
       "source": "VERIFIED_COLLECTOR_TRACE",
       "status": "OK",
-      "observedAt": "2026-10-02T11:33:33.320Z",
+      "observedAt": "2026-10-02T11:32:47.729Z",
       "evidenceSha256": "c7b7f023154b65fdcd94827db35dd0458a4bc6e8b2a30f1311fad8b59f5d81a9",
       "semantics": {
         "warrantyMode": "ASKED",
@@ -801,7 +801,7 @@
       "storage": "8 GB/128 GB",
       "source": "VERIFIED_COLLECTOR_TRACE",
       "status": "OK",
-      "observedAt": "2026-10-02T17:33:29.571Z",
+      "observedAt": "2026-10-02T11:58:03.056Z",
       "evidenceSha256": "10dc67637ae694ff6c12ea371e260a918b61a6c1c1e0498d96e2efb387ab0c31",
       "semantics": {
         "warrantyMode": "ASKED",
@@ -819,7 +819,7 @@
       "storage": "12 GB/512 GB",
       "source": "VERIFIED_COLLECTOR_TRACE",
       "status": "OK",
-      "observedAt": "2026-10-02T19:25:07.322Z",
+      "observedAt": "2026-10-02T11:59:41.148Z",
       "evidenceSha256": "3940912ca32f7807205d8eb12890d8f65a541cdf55307866cbbaaef77275d0ba",
       "semantics": {
         "warrantyMode": "ASKED",
@@ -837,7 +837,7 @@
       "storage": "16 GB/512 GB",
       "source": "VERIFIED_COLLECTOR_TRACE",
       "status": "OK",
-      "observedAt": "2026-10-02T17:35:56.416Z",
+      "observedAt": "2026-10-02T12:01:43.331Z",
       "evidenceSha256": "89dfea293cac03257984d932ce95fa827398bb33b3d97fdbb536f75a1312d77e",
       "semantics": {
         "warrantyMode": "ASKED",

@@ -16,24 +16,26 @@ import temporalResults from './fixtures/temporal-results-2026-10-03.json';
 import saved from './fixtures/release-saved-production-inputs-2026-10-02.json';
 import routeFixture from './fixtures/release-route-evidence-2026-10-03-expansion.json';
 import manualOwnerCorrection from './fixtures/owner-correction-2026-10-02.json';
+import assert from 'node:assert/strict';
 
 const ROOT = path.resolve(__dirname, '../..');
 const PROJECT = path.resolve(ROOT, '..', '..', '..');
 const gapSnapshot = require(path.join(PROJECT, 'scratch/coverage-expansion/gap-after.json'));
 const replaySnapshot = require(path.join(ROOT, 'scratch/coverage-expansion/replayed-gap-2026-10-04.json'));
+const workbookRegister = require(path.join(ROOT, 'scratch/coverage-expansion/canonical-coverage-case-register.json'));
 const beforeSnapshot = require(path.join(PROJECT, 'scratch/coverage-expansion/gap-before.json'));
 const priorAfterSnapshot = require(path.join(PROJECT, 'scratch/coverage-expansion/gap-after.json'));
 const CAMPAIGN = path.join(PROJECT, 'scratch/cashify-matrix-integration/research-evidence/team-workbook-2026-10-02');
 const COORD = path.join(PROJECT, 'scratch/pricing-coordination/claude-evidence/attempt-ledger.jsonl');
 const HANDOFF = path.join(PROJECT, 'scratch/release-2026-10-03-final/cloud-handoff/evidence/attempt-ledger.jsonl');
-const BASE_SHA = execGit(['rev-parse', 'HEAD']);
+// Pin the preserved checkpoint from which this audit continuation was built.
+const BASE_SHA = 'b02667d52849d548215210e3d04be9877b276fed';
 
-function execGit(args: string[]) {
-  const cp = require('node:child_process').execFileSync('git', args, { cwd: ROOT, encoding: 'utf8' });
-  return cp.trim();
-}
 function sha(file: string) { return crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex'); }
-function source(name: string, file: string) { return { name, path: path.relative(PROJECT, file).replace(/\\/g, '/'), sha256: sha(file) }; }
+function source(name: string, file: string) {
+  const root = path.resolve(file).startsWith(`${ROOT}${path.sep}`) ? ROOT : PROJECT;
+  return { name, path: path.relative(root, file).replace(/\\/g, '/'), sha256: sha(file) };
+}
 function norm(v: string) { return v.toLowerCase().replace(/\s+/g, ' ').trim(); }
 function caseIdentity(caseId: string) { return caseId.match(/^(FM\d{3})_([ABC])$/)?.[0] ?? caseId; }
 function stableAttemptIdentity(r: any) {
@@ -50,6 +52,15 @@ const coordinatedLedger = readLedger(COORD);
 const handoffLedger = readLedger(HANDOFF);
 
 const auto = (observationFixture.observations as any[]).filter(x => x.provenance?.type === 'AUTOMATIC_COLLECTOR_OBSERVATION');
+function automaticCaseIdentity(id: string) {
+  const m = id.match(/(FM\d{3})_(?:[A-Z0-9]+_)*([ABC])$/);
+  return m ? `${m[1]}_${m[2]}` : null;
+}
+assert.equal(automaticCaseIdentity('team-workbook-2026-10-02:FM031_FINAL_A'), 'FM031_A');
+assert.equal(automaticCaseIdentity('team-workbook-2026-10-02:FM023_CLOSE_A'), 'FM023_A');
+assert.equal(automaticCaseIdentity('owner-correction-2026-10-02:FM045_CORR_A'), 'FM045_A');
+assert.equal(automaticCaseIdentity('owner-correction-2026-10-02:FM001_WNO_RETRY_A'), 'FM001_A');
+const workbookById = new Map((workbookRegister.cases as any[]).map((c: any) => [c.caseId, c]));
 const followAccepted = followup.accepted as any[];
 const followFailed = followup.failedFinalAttempts as any[];
 const manualByIdentity = new Map<string, any[]>();
@@ -64,8 +75,7 @@ function followCase(id: string) { const match = id.match(/^(FM\d{3})_/); return 
 const joinedCases = (replaySnapshot.cases as any[]).map((c: any) => {
   const cid = caseIdentity(c.caseId);
   const automatic = auto.filter(o => {
-    const m = o.id.match(/(FM\d{3})_(?:[A-Z0-9]+_)*([ABC])$/);
-    return m?.[0] === cid;
+    return automaticCaseIdentity(o.id) === cid;
   });
   const later = followAccepted.filter(o => followCase(o.id) === c.caseId);
   const laterFailures = followFailed.filter(o => followCase(o.id) === c.caseId);
@@ -75,6 +85,7 @@ const joinedCases = (replaySnapshot.cases as any[]).map((c: any) => {
   return {
     caseId: c.caseId,
     exactIdentity: { caseId: cid, deviceId: c.deviceId, variant: c.variant },
+    originalWorkbookSource: workbookById.get(cid) ?? null,
     sourceReplayResult: c,
     rawTesterObservation: c.tester,
     correctionOverlay: appliesOwnerWarranty ? { source: manualOwnerCorrection.version, correction: manualOwnerCorrection.ownerCorrection.testerA, target: 'raw manual tester A answers only; raw observation remains unchanged' } : null,
@@ -92,6 +103,8 @@ const joinedCases = (replaySnapshot.cases as any[]).map((c: any) => {
 });
 
 const replayEligible = joinedCases.filter((c: any) => c.replayClassification?.startsWith('REPLAY_ELIGIBLE')).length;
+const mappedAutomaticObservationCount = joinedCases.reduce((n: number, c: any) => n + c.rawAutomaticObservations.length, 0);
+const originalWorkbookPriceCount = (workbookRegister.cases as any[]).filter((c: any) => c.testerObservation).length;
 const statusCounts = Object.fromEntries([...new Set(joinedCases.map((x: any) => x.replayClassification))].map(k => [k, joinedCases.filter((x: any) => x.replayClassification === k).length]));
 const observedCaseIds = joinedCases.filter((c: any) => c.sourceReplayResult.tester || c.sourceReplayResult.traced || c.manualObservationTrail.length || c.releaseFollowupAccepted.length).map((c: any) => c.caseId);
 const missingObservedCaseIds = joinedCases.filter((c: any) => !c.sourceReplayResult.tester && !c.sourceReplayResult.traced && !c.manualObservationTrail.length && !c.releaseFollowupAccepted.length).map((c: any) => c.caseId);
@@ -138,10 +151,15 @@ function ledgerInventory() {
 
 const inputFiles = [
   source('150-case source replay result snapshot', path.join(PROJECT, 'scratch/coverage-expansion/gap-after.json')),
+  source('verified original workbook', path.join(ROOT, 'scripts/pricing/fixtures/Fhoneify_Cashify_Team_Testing_Clear_Instruct_with_iphone_samsung.xlsx')),
+  source('workbook source-cell importer', path.join(ROOT, 'scripts/pricing/import-coverage-workbook.ps1')),
   source('150-case pre-expansion replay snapshot', path.join(PROJECT, 'scratch/coverage-expansion/gap-before.json')),
   source('150-case scope replay with condition records', path.join(PROJECT, 'scratch/coverage-expansion/scope-after.json')),
-  source('reconstructed 150-case register used by the rerun', path.join(ROOT, 'scratch/coverage-expansion/reconstructed-case-register.json')),
+  source('canonical workbook-source 150-case register used by the rerun', path.join(ROOT, 'scratch/coverage-expansion/canonical-coverage-case-register.json')),
   source('rerun output from actual release pricing service', path.join(ROOT, 'scratch/coverage-expansion/replayed-gap-2026-10-04.json')),
+  source('deterministic replay runner', path.join(ROOT, 'scripts/pricing/coverage-gap-register.ts')),
+  source('measured-point spec builder', path.join(ROOT, 'scripts/pricing/build-measured-point-specs.ts')),
+  source('release candidate service decision', path.join(ROOT, 'lib/pricing/releaseCandidate.ts')),
   source('raw automatic observation fixture', path.join(ROOT, 'scripts/pricing/fixtures/release-candidate-observations-2026-10-02.json')),
   source('manual/correction observation file', path.join(CAMPAIGN, 'development-observations.json')),
   source('validation observation file', path.join(CAMPAIGN, 'validation-observations.json')),
@@ -166,12 +184,14 @@ const inputFiles = [
 ];
 
 const result = {
-  version: 'coverage-checkpoint-audit/2026-10-04', baseSha: BASE_SHA, replayTimestamp: gapSnapshot.evaluatedAt,
+  version: 'coverage-checkpoint-audit/2026-10-04', baseSha: BASE_SHA, replayTimestamp: replaySnapshot.evaluatedAt,
   classification: 'OFFLINE_REPLAY_ELIGIBILITY_ONLY; NOT EVIDENCE OF A LIVE CUSTOMER PRICE',
-  reproducibility: { inputFiles, originalCanonical150Register: 'MISSING_FROM_PRESERVED_BRANCH; rerun register is explicitly reconstructed from exact case IDs and condition labels in the preserved replay artifact',
+  reproducibility: { inputFiles, originalCanonical150Register: 'Recovered from workbook source cells (A6:I56); raw instructions and original cell values preserved separately from the warranty correction overlay',
     referenceSnapshot: { savedSnapshotVersion: saved.version, savedSnapshotQueriedAt: saved.queriedAt, refreshedAt: '2026-10-03T18:08:00.000Z', refreshedKeys: refreshed, source: 'read-only post-refresh reference snapshot notes; no production query in this replay' },
     questionnaireProfileSnapshot: { version: saved.version, queriedAt: saved.queriedAt, rows: (saved.rows as any[]).length, source: 'release-saved-production-inputs-2026-10-02.json' } },
-  replay: { caseCount: joinedCases.length, productionReplayEligible: replayEligible, statusCounts, saved34CountReproducedByServiceRerun: replayEligible === 34,
+  replay: { caseCount: joinedCases.length, productionReplayEligible: replayEligible, statusCounts, previouslyReported34Reproduced: replayEligible === 34,
+    automaticObservations: { sourceRows: auto.length, matchedToCanonical150: mappedAutomaticObservationCount },
+    originalWorkbook: { caseRows: workbookRegister.cases.length, sourcePriceRows: originalWorkbookPriceCount, observationDatesAndManualTraces: 'UNKNOWN unless independently present in observation provenance' },
     observedDataCoverage: { observedCases: observedCaseIds.length, missingCases: missingObservedCaseIds, historical144Of150Superseded: observedCaseIds.length > 144 },
     beforeAfter: { beforeObservedPointEligible: (beforeSnapshot.cases as any[]).filter(c => ['CANDIDATE', 'ACCESSORY'].includes(c.decisionAtObservedGetUpto)).length,
       afterObservedPointEligibleBeforeFollowupJoin: (priorAfterSnapshot.cases as any[]).filter(c => ['CANDIDATE', 'ACCESSORY'].includes(c.decisionAtObservedGetUpto)).length,
@@ -213,6 +233,7 @@ const result = {
 
 const out = path.join(ROOT, 'scratch/coverage-expansion/checkpoint-audit-2026-10-04.json');
 const md = path.join(ROOT, 'docs/COVERAGE_CHECKPOINT_AUDIT_2026-10-04.md');
-const summary = `# Coverage checkpoint audit (2026-10-04)\n\n- Branch base: ${BASE_SHA}\n- Replay timestamp: ${result.replayTimestamp}\n- 150-case production replay eligibility: ${replayEligible}/150. This is offline eligibility, not proof of a live customer price.\n- Exact-identity observation join: ${result.replay.observedDataCoverage.observedCases}/150 have a tester or traced observation after joining the later controls; missing: ${result.replay.observedDataCoverage.missingCases.join(', ')}. This supersedes the historical 144/150 count and six-missing-C claim.\n- Observed-point eligibility: ${result.replay.beforeAfter.beforeObservedPointEligible} before -> ${result.replay.beforeAfter.afterObservedPointEligibleBeforeFollowupJoin} in the earlier snapshot -> ${result.replay.beforeAfter.afterObservedPointEligibleWithFollowupJoin} after exact follow-up joins. Production-reference replay eligibility remains ${replayEligible}.\n- Research specs reviewed: ${specReview.length}; see the JSON artifact for exact variant, measured reference, questionnaire regime, clean control, supported conditions and guard. A generated spec is development fit, not independent validation.\n- Collection: 24/24 reservations in the coordinated release campaign; ${(result.collectionAccounting.campaigns[2] as any).stableAttemptIdentityOverlapWithHandoff.length} attempt identities overlap the handoff copy. Separate 20/20 release-review and 120-attempt workbook campaigns have no transferable allowance. Verified remaining new attempts: 0; collection disabled.\n- Holdouts and failures remain preserved in source evidence.\n\n## Reproduction and input limitation\n\nRun npx tsx scripts/pricing/reconstruct-coverage-case-inputs.ts, rerun the coverage-gap-register command shown at the top of scratch/coverage-expansion/replayed-gap-2026-10-04.md, then run npx tsx scripts/pricing/audit-coverage-checkpoint.ts --write. Input paths and SHA-256 hashes are in scratch/coverage-expansion/checkpoint-audit-2026-10-04.json. The raw canonical workbook register is absent from this branch; the rerun uses a reconstructed register from the exact case IDs and saved condition labels. This limitation is explicit, and original tester/collector observations remain separate from synthetic inputs.\n`;
+const summary = `# Coverage checkpoint audit (2026-10-04)\n\n- Branch base: ${BASE_SHA}\n- Replay timestamp: ${result.replayTimestamp}\n- 150-case production replay eligibility: ${replayEligible}/150. This is offline fixture eligibility, not proof of live prices.\n- Exact-identity observation join: ${result.replay.observedDataCoverage.observedCases}/150 have a workbook price, tester/traced observation or follow-up control; missing: ${result.replay.observedDataCoverage.missingCases.join(', ')}. Historical 144/150 is superseded.\n- Automatic observations: ${auto.length} raw source records; ${mappedAutomaticObservationCount} join to canonical identities, including FINAL/CLOSE/correction-prefixed IDs.\n- Original workbook: 150 condition rows recovered from source cells; ${joinedCases.reduce((n: number, c: any) => n + (c.sourceReplayResult.tester ? 1 : 0), 0)} source price-bearing tester records are joined. Observation dates/manual traces remain unknown unless separately recorded.\n- Observed-point eligibility: ${result.replay.beforeAfter.beforeObservedPointEligible} before -> ${result.replay.beforeAfter.afterObservedPointEligibleBeforeFollowupJoin} earlier -> ${result.replay.beforeAfter.afterObservedPointEligibleWithFollowupJoin} after exact follow-up joins. Production-reference replay eligibility remains ${replayEligible}.\n- Research specs reviewed: ${specReview.length}; parameterized checks cover every clean and measured-condition profile. All remain development fits, not independent validation, and the current route file rejects them to inspection. Exact references, controls, supported conditions and guard reasons are in JSON.\n- Collection: the authorized 24-attempt campaign is fully reserved; the 20/20 release-review fixture is a separate campaign. Verified remaining allowance is 0 and collection is disabled. Holdouts and failures remain preserved.\n\n## Reproduction\n\nRun powershell -File scripts/pricing/import-coverage-workbook.ps1 (bundled workbook SHA-256 57f7b74f16e9d95ec1a17ba3f0b8ddc891cca3fe35a06bc983513ca0ec3bc0aa), rerun npx tsx scripts/pricing/coverage-gap-register.ts --register scratch/coverage-expansion/canonical-coverage-case-register.json --at 2026-10-03T19:00:00Z --out scratch/coverage-expansion/replayed-gap-2026-10-04.json --md scratch/coverage-expansion/replayed-gap-2026-10-04.md, then npx tsx scripts/pricing/audit-coverage-checkpoint.ts --write. Workbook hash/size, input paths and hashes are recorded in scratch/coverage-expansion/checkpoint-audit-2026-10-04.json. Raw workbook instructions/prices and the owner correction overlay remain separate; synthetic production inputs never inherit observed prices.\n`;
 if (process.argv.includes('--write')) { fs.mkdirSync(path.dirname(out), { recursive: true }); fs.mkdirSync(path.dirname(md), { recursive: true }); fs.writeFileSync(out, JSON.stringify(result, null, 2) + '\n'); fs.writeFileSync(md, summary); }
-console.log(JSON.stringify({ baseSha: BASE_SHA, cases: joinedCases.length, productionReplayEligible: replayEligible, replayCountReproduced: replayEligible === 34, reviewedSpecs: specReview.length, collection: result.collectionAccounting, outputs: process.argv.includes('--write') ? [out, md] : [] }, null, 2));
+console.log(JSON.stringify({ baseSha: BASE_SHA, cases: joinedCases.length, productionReplayEligible: replayEligible, previouslyReported34Reproduced: replayEligible === 34,
+  mappedAutomaticObservationCount, originalWorkbookPriceCount, reviewedSpecs: specReview.length, collection: result.collectionAccounting, outputs: process.argv.includes('--write') ? [out, md] : [] }, null, 2));

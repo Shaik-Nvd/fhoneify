@@ -4,11 +4,11 @@
   "summary": {
     "cases": 150,
     "byNextAction": {
-      "PRICED_IN_PRODUCTION": 34,
-      "TESTER_ONLY": 43,
-      "EVIDENCE_PRESENT_NOT_ACTIVATED": 18,
-      "KEEP_INSPECTION": 6,
-      "PRICED_AT_CALIBRATION_GET_UPTO": 46,
+      "PRICED_IN_PRODUCTION": 35,
+      "TESTER_ONLY": 45,
+      "EVIDENCE_PRESENT_NOT_ACTIVATED": 58,
+      "PRICED_AT_CALIBRATION_GET_UPTO": 6,
+      "KEEP_INSPECTION": 3,
       "MISSING_OBSERVATION": 3
     },
     "devicesByScope": {
@@ -554,7 +554,7 @@
       "scope": "CANDIDATE",
       "productionReference": 45080,
       "profile": "NOT_ASKED/NOT_ASKED/NOT_ASKED",
-      "routeEvidence": true,
+      "routeEvidence": false,
       "tracedRoutes": [
         {
           "warranty": "NOT_ASKED",
@@ -618,7 +618,7 @@
       "scope": "CANDIDATE",
       "productionReference": 43270,
       "profile": "ASKED/ASKED/NOT_ASKED",
-      "routeEvidence": true,
+      "routeEvidence": false,
       "tracedRoutes": [
         {
           "warranty": "ASKED",
@@ -722,7 +722,7 @@
       "scope": "CANDIDATE",
       "productionReference": 53280,
       "profile": "ASKED/ASKED/NOT_ASKED",
-      "routeEvidence": true,
+      "routeEvidence": false,
       "tracedRoutes": [
         {
           "warranty": "ASKED",
@@ -826,7 +826,7 @@
       "scope": "CANDIDATE",
       "productionReference": 63500,
       "profile": "ASKED/ASKED/NOT_ASKED",
-      "routeEvidence": true,
+      "routeEvidence": false,
       "tracedRoutes": [],
       "cleanControls": [],
       "tracedCases": []
@@ -1311,7 +1311,7 @@
       "scope": "CANDIDATE",
       "productionReference": 86000,
       "profile": "ASKED/ASKED/NOT_ASKED",
-      "routeEvidence": true,
+      "routeEvidence": false,
       "tracedRoutes": [
         {
           "warranty": "ASKED",
@@ -1375,7 +1375,7 @@
       "scope": "CANDIDATE",
       "productionReference": 49490,
       "profile": "ASKED/ASKED/NOT_ASKED",
-      "routeEvidence": true,
+      "routeEvidence": false,
       "tracedRoutes": [
         {
           "warranty": "ASKED",
@@ -1439,7 +1439,7 @@
       "scope": "CANDIDATE",
       "productionReference": 38450,
       "profile": "ASKED/ASKED/NOT_ASKED",
-      "routeEvidence": true,
+      "routeEvidence": false,
       "tracedRoutes": [
         {
           "warranty": "ASKED",
@@ -1503,7 +1503,7 @@
       "scope": "CANDIDATE",
       "productionReference": 5550,
       "profile": "NOT_ASKED/NOT_ASKED/NOT_ASKED",
-      "routeEvidence": true,
+      "routeEvidence": false,
       "tracedRoutes": [
         {
           "warranty": "NOT_ASKED",
@@ -2211,7 +2211,7 @@
       "scope": "CANDIDATE",
       "productionReference": 32920,
       "profile": "ASKED/ASKED/NOT_ASKED",
-      "routeEvidence": true,
+      "routeEvidence": false,
       "tracedRoutes": [
         {
           "warranty": "ASKED",
@@ -2372,7 +2372,7 @@
       "scope": "CANDIDATE",
       "productionReference": 43300,
       "profile": "ASKED/ASKED/NOT_ASKED",
-      "routeEvidence": true,
+      "routeEvidence": false,
       "tracedRoutes": [
         {
           "warranty": "ASKED",
@@ -2533,7 +2533,7 @@
       "scope": "CANDIDATE",
       "productionReference": 56000,
       "profile": "ASKED/ASKED/NOT_ASKED",
-      "routeEvidence": true,
+      "routeEvidence": false,
       "tracedRoutes": [
         {
           "warranty": "ASKED",
@@ -2693,7 +2693,7 @@
       "scope": "CANDIDATE",
       "productionReference": 23880,
       "profile": "ASKED/ASKED/NOT_ASKED",
-      "routeEvidence": true,
+      "routeEvidence": false,
       "tracedRoutes": [
         {
           "warranty": "ASKED",
@@ -2854,7 +2854,7 @@
       "scope": "CANDIDATE",
       "productionReference": 19050,
       "profile": "ASKED/ASKED/NOT_ASKED",
-      "routeEvidence": true,
+      "routeEvidence": false,
       "tracedRoutes": [
         {
           "warranty": "ASKED",
@@ -3981,7 +3981,7 @@
       "scope": "CANDIDATE",
       "productionReference": 11840,
       "profile": "ASKED/ASKED/NOT_ASKED",
-      "routeEvidence": true,
+      "routeEvidence": false,
       "tracedRoutes": [
         {
           "warranty": "ASKED",
@@ -4142,7 +4142,7 @@
       "scope": "CANDIDATE",
       "productionReference": 21150,
       "profile": "ASKED/ASKED/NOT_ASKED",
-      "routeEvidence": true,
+      "routeEvidence": false,
       "tracedRoutes": [
         {
           "warranty": "ASKED",
@@ -4558,7 +4558,7 @@
       "scope": "CANDIDATE",
       "productionReference": null,
       "profile": "ASKED/ASKED/NOT_ASKED",
-      "routeEvidence": true,
+      "routeEvidence": false,
       "tracedRoutes": [
         {
           "warranty": "ASKED",
@@ -4822,7 +4822,7 @@
       "scope": "CANDIDATE",
       "productionReference": 37100,
       "profile": "ASKED/ASKED/NOT_ASKED",
-      "routeEvidence": true,
+      "routeEvidence": false,
       "tracedRoutes": [
         {
           "warranty": "ASKED",
@@ -4916,7 +4916,7 @@
       "scope": "CANDIDATE",
       "productionReference": 59580,
       "profile": "ASKED/ASKED/NOT_ASKED",
-      "routeEvidence": true,
+      "routeEvidence": false,
       "tracedRoutes": [
         {
           "warranty": "ASKED",
@@ -5077,7 +5077,7 @@
       "scope": "CANDIDATE",
       "productionReference": 57070,
       "profile": "ASKED/ASKED/NOT_ASKED",
-      "routeEvidence": true,
+      "routeEvidence": false,
       "tracedRoutes": [
         {
           "warranty": "ASKED",
@@ -5171,7 +5171,7 @@
       "scope": "CANDIDATE",
       "productionReference": 75370,
       "profile": "ASKED/ASKED/NOT_ASKED",
-      "routeEvidence": true,
+      "routeEvidence": false,
       "tracedRoutes": [
         {
           "warranty": "ASKED",
@@ -5399,7 +5399,7 @@
       "scope": "CANDIDATE",
       "productionReference": 39360,
       "profile": "ASKED/ASKED/NOT_ASKED",
-      "routeEvidence": true,
+      "routeEvidence": false,
       "tracedRoutes": [
         {
           "warranty": "ASKED",
@@ -5493,7 +5493,7 @@
       "scope": "CANDIDATE",
       "productionReference": 26080,
       "profile": "ASKED/ASKED/NOT_ASKED",
-      "routeEvidence": true,
+      "routeEvidence": false,
       "tracedRoutes": [
         {
           "warranty": "ASKED",
@@ -5587,7 +5587,7 @@
       "scope": "CANDIDATE",
       "productionReference": 28100,
       "profile": "ASKED/ASKED/NOT_ASKED",
-      "routeEvidence": true,
+      "routeEvidence": false,
       "tracedRoutes": [
         {
           "warranty": "ASKED",
@@ -5681,7 +5681,7 @@
       "deviceId": "FM001",
       "variant": "Apple Apple iPhone 8 128 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": {
         "price": 5830,
         "getUpto": 5850,
@@ -5991,7 +5991,7 @@
       "deviceId": "FM002",
       "variant": "Apple Apple iPhone XS Max 256 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": {
         "price": 12620,
         "getUpto": 12640,
@@ -6301,7 +6301,7 @@
       "deviceId": "FM003",
       "variant": "Apple Apple iPhone 11 Pro Max 256 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": {
         "price": 19460,
         "getUpto": 18740,
@@ -6607,7 +6607,7 @@
       "deviceId": "FM004",
       "variant": "Apple Apple iPhone 12 Pro 256 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": {
         "price": 25080,
         "getUpto": 24460,
@@ -7249,7 +7249,7 @@
       "deviceId": "FM005",
       "variant": "Apple Apple iPhone 14 256 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": {
         "price": 28410,
         "getUpto": 28430,
@@ -7497,7 +7497,7 @@
       "caseId": "FM005_C",
       "deviceId": "FM005",
       "variant": "Apple Apple iPhone 14 256 GB",
-      "condition": "combined:screen_heavy+body_heavy",
+      "condition": "clean",
       "conditionText": "TWO DEFECTS",
       "tester": {
         "price": 22240,
@@ -7512,25 +7512,22 @@
       "decisionAtObservedGetUpto": null,
       "reasonAtObserved": null,
       "productionReference": 28030,
-      "predictedInProduction": null,
-      "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Unvalidated combined condition",
-      "replayEligibility": "NOT_REPLAY_ELIGIBLE",
+      "predictedInProduction": 28010,
+      "decisionInProduction": "ACCESSORY",
+      "guardReason": null,
+      "replayEligibility": "REPLAY_ELIGIBLE_NOT_LIVE_PRODUCTION_PRICE",
       "syntheticProductionInput": {
         "diagnostics": {
           "calls": true,
           "touch": true,
           "originalScreen": true,
-          "defects": [
-            "screen_scratch",
-            "body_scratch"
-          ],
-          "screenCondition": "More than 2 scratches on screen",
+          "defects": [],
+          "screenCondition": null,
           "screenSpots": null,
           "screenLines": null,
           "screenDiscoloration": null,
-          "bodyScratches": "More than 2 scratches",
-          "bodyDents": "No dents",
+          "bodyScratches": null,
+          "bodyDents": null,
           "bodyPanel": null,
           "bodyBent": null,
           "hardware": [],
@@ -7550,14 +7547,14 @@
         "reference": 28030,
         "referenceVerifiedAt": "2026-09-27T08:36:24.103Z"
       },
-      "nextAction": "KEEP_INSPECTION (severe/interaction)"
+      "nextAction": "PRICED_IN_PRODUCTION"
     },
     {
       "caseId": "FM006_A",
       "deviceId": "FM006",
       "variant": "Apple Apple iPhone 14 Pro Max 256 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": {
         "price": 44070,
         "getUpto": 45480,
@@ -7652,7 +7649,7 @@
       "productionReference": 45080,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -7708,7 +7705,7 @@
       "productionReference": 45080,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -7728,7 +7725,8 @@
           "bodyBent": null,
           "hardware": [],
           "accessories": [
-            "box"
+            "box",
+            "charger"
           ],
           "warranty": null,
           "validBill": null,
@@ -7766,7 +7764,7 @@
       "productionReference": 45080,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -7786,7 +7784,8 @@
           "bodyBent": null,
           "hardware": [],
           "accessories": [
-            "box"
+            "box",
+            "charger"
           ],
           "warranty": null,
           "validBill": null,
@@ -7808,7 +7807,7 @@
       "deviceId": "FM007",
       "variant": "Apple Apple iPhone 15 256 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": {
         "price": 35900,
         "getUpto": 44220,
@@ -7953,13 +7952,13 @@
         "id": "owner-correction-2026-10-02:FM007_WNO_A"
       },
       "measuredDeduction": null,
-      "predictedAtObservedGetUpto": 35900,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 43270,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -7992,7 +7991,7 @@
         "reference": 43270,
         "referenceVerifiedAt": "2026-09-27T08:36:56.069Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM007_B",
@@ -8015,7 +8014,7 @@
       "productionReference": 43270,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -8033,7 +8032,8 @@
           "bodyBent": null,
           "hardware": [],
           "accessories": [
-            "box"
+            "box",
+            "charger"
           ],
           "warranty": false,
           "validBill": true,
@@ -8071,7 +8071,7 @@
       "productionReference": 43270,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -8089,7 +8089,8 @@
           "bodyBent": null,
           "hardware": [],
           "accessories": [
-            "box"
+            "box",
+            "charger"
           ],
           "warranty": false,
           "validBill": true,
@@ -8111,7 +8112,7 @@
       "deviceId": "FM008",
       "variant": "Apple Apple iPhone 15 Pro Max 512 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": {
         "price": 57110,
         "getUpto": 72480,
@@ -8286,7 +8287,7 @@
       "deviceId": "FM009",
       "variant": "Apple Apple iPhone 16 256 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": {
         "price": 44400,
         "getUpto": 54720,
@@ -8431,13 +8432,13 @@
         "id": "owner-correction-2026-10-02:FM009_WNO_A"
       },
       "measuredDeduction": null,
-      "predictedAtObservedGetUpto": 44400,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 53280,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -8470,7 +8471,7 @@
         "reference": 53280,
         "referenceVerifiedAt": "2026-09-27T08:37:30.670Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM009_B",
@@ -8493,7 +8494,7 @@
       "productionReference": 53280,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -8513,7 +8514,8 @@
             "charging"
           ],
           "accessories": [
-            "box"
+            "box",
+            "charger"
           ],
           "warranty": false,
           "validBill": true,
@@ -8551,7 +8553,7 @@
       "productionReference": 53280,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -8571,7 +8573,8 @@
             "back_camera"
           ],
           "accessories": [
-            "box"
+            "box",
+            "charger"
           ],
           "warranty": false,
           "validBill": true,
@@ -8593,7 +8596,7 @@
       "deviceId": "FM010",
       "variant": "Apple Apple iPhone 16 Pro Max 512 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": {
         "price": 69520,
         "getUpto": 88270,
@@ -8768,7 +8771,7 @@
       "deviceId": "FM011",
       "variant": "Apple Apple iPhone 17 256 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": {
         "price": 46750,
         "getUpto": 65000,
@@ -8784,7 +8787,7 @@
       "productionReference": 63500,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -8802,7 +8805,8 @@
           "bodyBent": null,
           "hardware": [],
           "accessories": [
-            "box"
+            "box",
+            "charger"
           ],
           "warranty": false,
           "validBill": true,
@@ -8840,7 +8844,7 @@
       "productionReference": 63500,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -8860,7 +8864,8 @@
           "bodyBent": null,
           "hardware": [],
           "accessories": [
-            "box"
+            "box",
+            "charger"
           ],
           "warranty": false,
           "validBill": true,
@@ -8881,7 +8886,7 @@
       "caseId": "FM011_C",
       "deviceId": "FM011",
       "variant": "Apple Apple iPhone 17 256 GB",
-      "condition": "combined:screen_heavy+body_heavy",
+      "condition": "clean",
       "conditionText": "TWO DEFECTS",
       "tester": {
         "price": 35180,
@@ -8898,28 +8903,26 @@
       "productionReference": 63500,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
           "calls": true,
           "touch": true,
           "originalScreen": true,
-          "defects": [
-            "screen_scratch",
-            "body_scratch"
-          ],
-          "screenCondition": "More than 2 scratches on screen",
+          "defects": [],
+          "screenCondition": null,
           "screenSpots": null,
           "screenLines": null,
           "screenDiscoloration": null,
-          "bodyScratches": "More than 2 scratches",
-          "bodyDents": "No dents",
+          "bodyScratches": null,
+          "bodyDents": null,
           "bodyPanel": null,
           "bodyBent": null,
           "hardware": [],
           "accessories": [
-            "box"
+            "box",
+            "charger"
           ],
           "warranty": false,
           "validBill": true,
@@ -8934,14 +8937,14 @@
         "reference": 63500,
         "referenceVerifiedAt": "2026-09-27T08:38:09.812Z"
       },
-      "nextAction": "KEEP_INSPECTION (severe/interaction)"
+      "nextAction": "TESTER_ONLY: needs traced observation + same-block control"
     },
     {
       "caseId": "FM012_A",
       "deviceId": "FM012",
       "variant": "Apple Apple iPhone 17 Pro Max 512 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": {
         "price": 86060,
         "getUpto": 117000,
@@ -9116,7 +9119,7 @@
       "deviceId": "FM013",
       "variant": "Samsung Samsung Galaxy M32 4 GB/64 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": {
         "price": 3550,
         "getUpto": 3570,
@@ -9426,7 +9429,7 @@
       "deviceId": "FM014",
       "variant": "Samsung Samsung Galaxy A50s 4 GB/128 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": {
         "price": 2900,
         "getUpto": 2920,
@@ -9736,7 +9739,7 @@
       "deviceId": "FM015",
       "variant": "Samsung Samsung Galaxy A72 8 GB/128 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": {
         "price": 6380,
         "getUpto": 6400,
@@ -9911,7 +9914,7 @@
       "deviceId": "FM016",
       "variant": "Samsung Samsung Galaxy S21 Ultra 5G 12 GB/256 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": {
         "price": 17110,
         "getUpto": 17130,
@@ -10214,7 +10217,7 @@
       "deviceId": "FM017",
       "variant": "Samsung Samsung Galaxy S23 FE 5G 8 GB/128 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": {
         "price": 18040,
         "getUpto": 18060,
@@ -10856,7 +10859,7 @@
       "deviceId": "FM018",
       "variant": "Samsung Samsung Galaxy S25 Edge 12 GB/256 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": {
         "price": 33910,
         "getUpto": 42720,
@@ -10971,7 +10974,7 @@
       "caseId": "FM018_C",
       "deviceId": "FM018",
       "variant": "Samsung Samsung Galaxy S25 Edge 12 GB/256 GB",
-      "condition": "combined:screen_heavy+body_heavy",
+      "condition": "clean",
       "conditionText": "TWO DEFECTS",
       "tester": {
         "price": 27220,
@@ -10988,23 +10991,20 @@
       "productionReference": 42480,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Unvalidated combined condition",
+      "guardReason": "Instant pricing is limited to the verified release scope",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
           "calls": true,
           "touch": true,
           "originalScreen": true,
-          "defects": [
-            "screen_scratch",
-            "body_scratch"
-          ],
-          "screenCondition": "More than 2 scratches on screen",
+          "defects": [],
+          "screenCondition": null,
           "screenSpots": null,
           "screenLines": null,
           "screenDiscoloration": null,
-          "bodyScratches": "More than 2 scratches",
-          "bodyDents": "No dents",
+          "bodyScratches": null,
+          "bodyDents": null,
           "bodyPanel": null,
           "bodyBent": null,
           "hardware": [],
@@ -11025,14 +11025,14 @@
         "reference": 42480,
         "referenceVerifiedAt": "2026-09-27T09:56:10.546Z"
       },
-      "nextAction": "KEEP_INSPECTION (severe/interaction)"
+      "nextAction": "TESTER_ONLY: needs traced observation + same-block control"
     },
     {
       "caseId": "FM019_A",
       "deviceId": "FM019",
       "variant": "Samsung Samsung Galaxy S26 Ultra 12 GB/512 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": {
         "price": 67040,
         "getUpto": 86250,
@@ -11121,13 +11121,13 @@
         "id": "release-followup-2026-10-03:FM019_RC_WNO_SPEN_RETRY"
       },
       "measuredDeduction": null,
-      "predictedAtObservedGetUpto": 67040,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 86000,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -11160,7 +11160,7 @@
         "reference": 86000,
         "referenceVerifiedAt": "2026-09-27T09:57:17.652Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM019_B",
@@ -11183,7 +11183,7 @@
       "productionReference": 86000,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -11203,7 +11203,8 @@
           "bodyBent": null,
           "hardware": [],
           "accessories": [
-            "box"
+            "box",
+            "charger"
           ],
           "warranty": false,
           "validBill": true,
@@ -11241,7 +11242,7 @@
       "productionReference": 86000,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -11261,7 +11262,8 @@
           "bodyBent": null,
           "hardware": [],
           "accessories": [
-            "box"
+            "box",
+            "charger"
           ],
           "warranty": false,
           "validBill": true,
@@ -11283,7 +11285,7 @@
       "deviceId": "FM020",
       "variant": "Samsung Samsung Galaxy Z Fold5 12 GB/256 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": {
         "price": 37820,
         "getUpto": 49740,
@@ -11372,13 +11374,13 @@
         "id": "release-followup-2026-10-03:FM020_RC_WNO_OPEN"
       },
       "measuredDeduction": null,
-      "predictedAtObservedGetUpto": 37820,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 49490,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -11411,7 +11413,7 @@
         "reference": 49490,
         "referenceVerifiedAt": "2026-09-27T09:58:12.343Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM020_B",
@@ -11434,7 +11436,7 @@
       "productionReference": 49490,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -11454,7 +11456,8 @@
           "bodyBent": null,
           "hardware": [],
           "accessories": [
-            "box"
+            "box",
+            "charger"
           ],
           "warranty": false,
           "validBill": true,
@@ -11492,7 +11495,7 @@
       "productionReference": 49490,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -11512,7 +11515,8 @@
           "bodyBent": null,
           "hardware": [],
           "accessories": [
-            "box"
+            "box",
+            "charger"
           ],
           "warranty": false,
           "validBill": true,
@@ -11534,7 +11538,7 @@
       "deviceId": "FM021",
       "variant": "Samsung Samsung Galaxy Z Flip6 5G 12 GB/256 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": {
         "price": 29230,
         "getUpto": 38700,
@@ -11623,13 +11627,13 @@
         "id": "release-followup-2026-10-03:FM021_RC_WNO_OPEN"
       },
       "measuredDeduction": null,
-      "predictedAtObservedGetUpto": 29230,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 38450,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -11662,7 +11666,7 @@
         "reference": 38450,
         "referenceVerifiedAt": "2026-09-27T09:58:28.132Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM021_B",
@@ -11685,7 +11689,7 @@
       "productionReference": 38450,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -11705,7 +11709,8 @@
           "bodyBent": null,
           "hardware": [],
           "accessories": [
-            "box"
+            "box",
+            "charger"
           ],
           "warranty": false,
           "validBill": true,
@@ -11743,7 +11748,7 @@
       "productionReference": 38450,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -11763,7 +11768,8 @@
           "bodyBent": null,
           "hardware": [],
           "accessories": [
-            "box"
+            "box",
+            "charger"
           ],
           "warranty": false,
           "validBill": true,
@@ -11785,7 +11791,7 @@
       "deviceId": "FM022",
       "variant": "Samsung Samsung Galaxy Note 10 Lite 6 GB/128 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": {
         "price": 5580,
         "getUpto": 5600,
@@ -11876,11 +11882,11 @@
       "measuredDeduction": null,
       "predictedAtObservedGetUpto": null,
       "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
-      "reasonAtObserved": "Answers differ from verified Yes-if-asked and NOT_ASKED regime",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 5550,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -11937,7 +11943,7 @@
       "productionReference": 5550,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -11996,7 +12002,7 @@
       "productionReference": 5550,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -12039,7 +12045,7 @@
       "deviceId": "FM023",
       "variant": "OnePlus OnePlus 7 Pro 8 GB/256 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": null,
       "traced": {
         "id": "team-workbook-2026-10-02:FM023_CLOSE_A",
@@ -12672,7 +12678,7 @@
       "deviceId": "FM024",
       "variant": "OnePlus OnePlus 9 5G 8 GB/128 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": null,
       "traced": {
         "id": "owner-correction-2026-10-02:FM024_CORR_A",
@@ -13305,7 +13311,7 @@
       "deviceId": "FM025",
       "variant": "OnePlus OnePlus Nord 8 GB/128 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": null,
       "traced": {
         "id": "team-workbook-2026-10-02:FM025_CLOSE_A",
@@ -13938,7 +13944,7 @@
       "deviceId": "FM026",
       "variant": "OnePlus OnePlus 8 Pro 8 GB/128 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": null,
       "traced": {
         "id": "team-workbook-2026-10-02:FM026_CLOSE_A",
@@ -14567,7 +14573,7 @@
       "deviceId": "FM027",
       "variant": "OnePlus OnePlus 12 12 GB/256 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": null,
       "traced": {
         "id": "team-workbook-2026-10-02:FM027_CLOSE_A",
@@ -14773,13 +14779,13 @@
         "id": "team-workbook-2026-10-02:FM027_CLOSE_A"
       },
       "measuredDeduction": null,
-      "predictedAtObservedGetUpto": 26470,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 32920,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -14813,7 +14819,7 @@
         "reference": 32920,
         "referenceVerifiedAt": "2026-09-27T08:41:43.849Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM027_B",
@@ -14961,13 +14967,13 @@
         "id": "team-workbook-2026-10-02:FM027_A"
       },
       "measuredDeduction": 4710,
-      "predictedAtObservedGetUpto": 21760,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 32920,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -15003,7 +15009,7 @@
         "reference": 32920,
         "referenceVerifiedAt": "2026-09-27T08:41:43.849Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM027_C",
@@ -15153,11 +15159,11 @@
       "measuredDeduction": 5710,
       "predictedAtObservedGetUpto": null,
       "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
-      "reasonAtObserved": "Unmeasured fault, interaction or combination",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 32920,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -15201,7 +15207,7 @@
       "deviceId": "FM028",
       "variant": "OnePlus OnePlus 13 16 GB/512 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": null,
       "traced": {
         "id": "team-workbook-2026-10-02:FM028_CLOSE_A",
@@ -15407,13 +15413,13 @@
         "id": "team-workbook-2026-10-02:FM028_CLOSE_A"
       },
       "measuredDeduction": null,
-      "predictedAtObservedGetUpto": 33480,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 43300,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -15447,7 +15453,7 @@
         "reference": 43300,
         "referenceVerifiedAt": "2026-09-27T08:42:14.707Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM028_B",
@@ -15595,13 +15601,13 @@
         "id": "team-workbook-2026-10-02:FM028_A"
       },
       "measuredDeduction": 5590,
-      "predictedAtObservedGetUpto": 27890,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 43300,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -15637,7 +15643,7 @@
         "reference": 43300,
         "referenceVerifiedAt": "2026-09-27T08:42:14.707Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM028_C",
@@ -15785,13 +15791,13 @@
         "id": "team-workbook-2026-10-02:FM028_CLOSE_A"
       },
       "measuredDeduction": 11310,
-      "predictedAtObservedGetUpto": 22170,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 43300,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -15827,14 +15833,14 @@
         "reference": 43300,
         "referenceVerifiedAt": "2026-09-27T08:42:14.707Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM029_A",
       "deviceId": "FM029",
       "variant": "OnePlus OnePlus 15 12 GB/256 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": null,
       "traced": {
         "id": "team-workbook-2026-10-02:FM029_CLOSE_A",
@@ -16040,13 +16046,13 @@
         "id": "team-workbook-2026-10-02:FM029_CLOSE_A"
       },
       "measuredDeduction": null,
-      "predictedAtObservedGetUpto": 44250,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 56000,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -16080,7 +16086,7 @@
         "reference": 56000,
         "referenceVerifiedAt": "2026-09-27T08:42:41.998Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM029_B",
@@ -16099,7 +16105,7 @@
       "productionReference": 56000,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -16283,13 +16289,13 @@
         "id": "team-workbook-2026-10-02:FM029_CLOSE_A"
       },
       "measuredDeduction": 6000,
-      "predictedAtObservedGetUpto": 38250,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 56000,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -16325,14 +16331,14 @@
         "reference": 56000,
         "referenceVerifiedAt": "2026-09-27T08:42:41.998Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM030_A",
       "deviceId": "FM030",
       "variant": "OnePlus OnePlus Nord 5 12 GB/256 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": null,
       "traced": {
         "id": "team-workbook-2026-10-02:FM030_CLOSE_A",
@@ -16538,13 +16544,13 @@
         "id": "team-workbook-2026-10-02:FM030_CLOSE_A"
       },
       "measuredDeduction": null,
-      "predictedAtObservedGetUpto": 18560,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 23880,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -16578,7 +16584,7 @@
         "reference": 23880,
         "referenceVerifiedAt": "2026-09-27T08:42:30.694Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM030_B",
@@ -16726,13 +16732,13 @@
         "id": "team-workbook-2026-10-02:FM030_A"
       },
       "measuredDeduction": 2350,
-      "predictedAtObservedGetUpto": 16210,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 23880,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -16768,7 +16774,7 @@
         "reference": 23880,
         "referenceVerifiedAt": "2026-09-27T08:42:30.694Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM030_C",
@@ -16916,13 +16922,13 @@
         "id": "team-workbook-2026-10-02:FM030_CLOSE_A"
       },
       "measuredDeduction": 4760,
-      "predictedAtObservedGetUpto": 13800,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 23880,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -16958,14 +16964,14 @@
         "reference": 23880,
         "referenceVerifiedAt": "2026-09-27T08:42:30.694Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM031_A",
       "deviceId": "FM031",
       "variant": "OnePlus OnePlus Nord CE 5 8 GB/256 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": null,
       "traced": {
         "id": "team-workbook-2026-10-02:FM031_FINAL_A",
@@ -17106,13 +17112,13 @@
         "id": "team-workbook-2026-10-02:FM031_FINAL_A"
       },
       "measuredDeduction": null,
-      "predictedAtObservedGetUpto": 14780,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 19050,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -17146,7 +17152,7 @@
         "reference": 19050,
         "referenceVerifiedAt": "2026-09-27T08:42:40.075Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM031_B",
@@ -17294,13 +17300,13 @@
         "id": "team-workbook-2026-10-02:FM031_FINAL_A"
       },
       "measuredDeduction": 870,
-      "predictedAtObservedGetUpto": 13910,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 19050,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -17336,7 +17342,7 @@
         "reference": 19050,
         "referenceVerifiedAt": "2026-09-27T08:42:40.075Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM031_C",
@@ -17484,13 +17490,13 @@
         "id": "team-workbook-2026-10-02:FM031_FINAL_A"
       },
       "measuredDeduction": 1510,
-      "predictedAtObservedGetUpto": 13270,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 19050,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -17526,14 +17532,14 @@
         "reference": 19050,
         "referenceVerifiedAt": "2026-09-27T08:42:40.075Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM032_A",
       "deviceId": "FM032",
       "variant": "OnePlus Oneplus Open 16 GB/512 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": null,
       "traced": {
         "id": "owner-correction-2026-10-02:FM032_CORR_A",
@@ -18166,7 +18172,7 @@
       "deviceId": "FM033",
       "variant": "Xiaomi Xiaomi Mi A2 4 GB/64 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": null,
       "traced": {
         "id": "team-workbook-2026-10-02:FM033_CLOSE_A",
@@ -18799,7 +18805,7 @@
       "deviceId": "FM034",
       "variant": "Xiaomi Xiaomi 14 CIVI 8 GB/256 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": null,
       "traced": {
         "id": "team-workbook-2026-10-02:FM034_CLOSE_A",
@@ -19432,7 +19438,7 @@
       "deviceId": "FM035",
       "variant": "Xiaomi Xiaomi Redmi 11 Prime 4 GB/64 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": null,
       "traced": {
         "id": "team-workbook-2026-10-02:FM035_CLOSE_A",
@@ -20065,7 +20071,7 @@
       "deviceId": "FM036",
       "variant": "Xiaomi Xiaomi Redmi Note 9 Pro 4 GB/128 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": null,
       "traced": {
         "id": "team-workbook-2026-10-02:FM036_CLOSE_A",
@@ -20698,7 +20704,7 @@
       "deviceId": "FM037",
       "variant": "Xiaomi Xiaomi Redmi Note 10 Pro Max 6 GB/128 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": null,
       "traced": {
         "id": "owner-correction-2026-10-02:FM037_BOXREF_A",
@@ -21396,7 +21402,7 @@
       "deviceId": "FM038",
       "variant": "Xiaomi Xiaomi Redmi Note 12 Pro Plus 5G 8 GB/256 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": null,
       "traced": {
         "id": "team-workbook-2026-10-02:FM038_CLOSE_A",
@@ -21602,13 +21608,13 @@
         "id": "team-workbook-2026-10-02:FM038_CLOSE_A"
       },
       "measuredDeduction": null,
-      "predictedAtObservedGetUpto": 9990,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 11840,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -21642,7 +21648,7 @@
         "reference": 11840,
         "referenceVerifiedAt": "2026-09-27T09:43:31.921Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM038_B",
@@ -21790,13 +21796,13 @@
         "id": "team-workbook-2026-10-02:FM038_A"
       },
       "measuredDeduction": 1470,
-      "predictedAtObservedGetUpto": 8520,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 11840,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -21832,7 +21838,7 @@
         "reference": 11840,
         "referenceVerifiedAt": "2026-09-27T09:43:31.921Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM038_C",
@@ -21980,13 +21986,13 @@
         "id": "team-workbook-2026-10-02:FM038_CLOSE_A"
       },
       "measuredDeduction": 2980,
-      "predictedAtObservedGetUpto": 7010,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 11840,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -22022,14 +22028,14 @@
         "reference": 11840,
         "referenceVerifiedAt": "2026-09-27T09:43:31.921Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM039_A",
       "deviceId": "FM039",
       "variant": "Xiaomi Xiaomi Redmi Note 15 Pro 5G 8 GB/128 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": null,
       "traced": {
         "id": "owner-correction-2026-10-02:FM039_CORR_A",
@@ -22235,13 +22241,13 @@
         "id": "owner-correction-2026-10-02:FM039_CORR_A"
       },
       "measuredDeduction": null,
-      "predictedAtObservedGetUpto": 16500,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 21150,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -22275,7 +22281,7 @@
         "reference": 21150,
         "referenceVerifiedAt": "2026-09-27T09:46:19.241Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM039_B",
@@ -22423,13 +22429,13 @@
         "id": "team-workbook-2026-10-02:FM039_FINAL_A"
       },
       "measuredDeduction": 1000,
-      "predictedAtObservedGetUpto": 15500,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 21150,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -22465,7 +22471,7 @@
         "reference": 21150,
         "referenceVerifiedAt": "2026-09-27T09:46:19.241Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM039_C",
@@ -22613,13 +22619,13 @@
         "id": "owner-correction-2026-10-02:FM039_CORR_A"
       },
       "measuredDeduction": 3200,
-      "predictedAtObservedGetUpto": 13300,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 21150,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -22655,14 +22661,14 @@
         "reference": 21150,
         "referenceVerifiedAt": "2026-09-27T09:46:19.241Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM040_A",
       "deviceId": "FM040",
       "variant": "Xiaomi Xiaomi Redmi 5 3 GB/32 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": null,
       "traced": {
         "id": "owner-correction-2026-10-02:FM040_CORR_A",
@@ -23295,7 +23301,7 @@
       "deviceId": "FM041",
       "variant": "Xiaomi Xiaomi Redmi K50i 5G 6 GB/128 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": null,
       "traced": {
         "id": "team-workbook-2026-10-02:FM041_FINAL_A",
@@ -23864,7 +23870,7 @@
       "deviceId": "FM042",
       "variant": "Xiaomi Xiaomi 14 12 GB/512 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": null,
       "traced": {
         "id": "release-followup-2026-10-03:FM042_RC_WNO_OPEN",
@@ -24079,9 +24085,9 @@
         "id": "release-followup-2026-10-03:FM042_RC_WNO_OPEN"
       },
       "measuredDeduction": null,
-      "predictedAtObservedGetUpto": 21380,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": null,
       "predictedInProduction": null,
       "decisionInProduction": "NO_REFERENCE",
@@ -24119,7 +24125,7 @@
         "reference": null,
         "referenceVerifiedAt": null
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM042_B",
@@ -24269,7 +24275,7 @@
       "measuredDeduction": 7000,
       "predictedAtObservedGetUpto": null,
       "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
-      "reasonAtObserved": "Unmeasured fault, interaction or combination",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": null,
       "predictedInProduction": null,
       "decisionInProduction": "NO_REFERENCE",
@@ -24455,9 +24461,9 @@
         "id": "owner-correction-2026-10-02:FM042_CORR_A"
       },
       "measuredDeduction": 1500,
-      "predictedAtObservedGetUpto": 19880,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": null,
       "predictedInProduction": null,
       "decisionInProduction": "NO_REFERENCE",
@@ -24497,14 +24503,14 @@
         "reference": null,
         "referenceVerifiedAt": null
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM043_A",
       "deviceId": "FM043",
       "variant": "Xiaomi Xiaomi 14 Ultra 16 GB/512 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": null,
       "traced": {
         "id": "release-followup-2026-10-03:FM043_RC_WNO_OPEN",
@@ -24744,7 +24750,7 @@
       "deviceId": "FM044",
       "variant": "Xiaomi Xiaomi 15 12 GB/512 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": null,
       "traced": {
         "id": "team-workbook-2026-10-02:FM044_FINAL_A",
@@ -24885,13 +24891,13 @@
         "id": "team-workbook-2026-10-02:FM044_FINAL_A"
       },
       "measuredDeduction": null,
-      "predictedAtObservedGetUpto": 28270,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 37100,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -24925,7 +24931,7 @@
         "reference": 37100,
         "referenceVerifiedAt": "2026-09-27T09:58:57.535Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM044_B",
@@ -25075,11 +25081,11 @@
       "measuredDeduction": 8750,
       "predictedAtObservedGetUpto": null,
       "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
-      "reasonAtObserved": "Unmeasured fault, interaction or combination",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 37100,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -25261,13 +25267,13 @@
         "id": "team-workbook-2026-10-02:FM044_FINAL_A"
       },
       "measuredDeduction": 10420,
-      "predictedAtObservedGetUpto": 17850,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 37100,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -25303,14 +25309,14 @@
         "reference": 37100,
         "referenceVerifiedAt": "2026-09-27T09:58:57.535Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM045_A",
       "deviceId": "FM045",
       "variant": "Xiaomi Xiaomi 15 Ultra 16 GB/512 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": null,
       "traced": {
         "id": "owner-correction-2026-10-02:FM045_CORR_A",
@@ -25516,13 +25522,13 @@
         "id": "owner-correction-2026-10-02:FM045_CORR_A"
       },
       "measuredDeduction": null,
-      "predictedAtObservedGetUpto": 45290,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 59580,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -25556,7 +25562,7 @@
         "reference": 59580,
         "referenceVerifiedAt": "2026-09-27T09:59:05.815Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM045_B",
@@ -25704,13 +25710,13 @@
         "id": "team-workbook-2026-10-02:FM045_FINAL_A"
       },
       "measuredDeduction": 10710,
-      "predictedAtObservedGetUpto": 34580,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 59580,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -25746,7 +25752,7 @@
         "reference": 59580,
         "referenceVerifiedAt": "2026-09-27T09:59:05.815Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM045_C",
@@ -25894,13 +25900,13 @@
         "id": "owner-correction-2026-10-02:FM045_CORR_A"
       },
       "measuredDeduction": 1500,
-      "predictedAtObservedGetUpto": 43790,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 59580,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -25936,14 +25942,14 @@
         "reference": 59580,
         "referenceVerifiedAt": "2026-09-27T09:59:05.815Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM046_A",
       "deviceId": "FM046",
       "variant": "Xiaomi Xiaomi 17 12 GB/512 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": null,
       "traced": {
         "id": "team-workbook-2026-10-02:FM046_FINAL_A",
@@ -26084,13 +26090,13 @@
         "id": "team-workbook-2026-10-02:FM046_FINAL_A"
       },
       "measuredDeduction": null,
-      "predictedAtObservedGetUpto": 43720,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 57070,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -26124,7 +26130,7 @@
         "reference": 57070,
         "referenceVerifiedAt": "2026-09-27T09:46:30.819Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM046_B",
@@ -26274,11 +26280,11 @@
       "measuredDeduction": 9000,
       "predictedAtObservedGetUpto": null,
       "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
-      "reasonAtObserved": "Unmeasured fault, interaction or combination",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 57070,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -26460,13 +26466,13 @@
         "id": "team-workbook-2026-10-02:FM046_FINAL_A"
       },
       "measuredDeduction": 1500,
-      "predictedAtObservedGetUpto": 42220,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 57070,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -26502,14 +26508,14 @@
         "reference": 57070,
         "referenceVerifiedAt": "2026-09-27T09:46:30.819Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM047_A",
       "deviceId": "FM047",
       "variant": "Xiaomi Xiaomi 17 Ultra 16 GB/512 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": null,
       "traced": {
         "id": "team-workbook-2026-10-02:FM047_FINAL_A",
@@ -26650,13 +26656,13 @@
         "id": "team-workbook-2026-10-02:FM047_FINAL_A"
       },
       "measuredDeduction": null,
-      "predictedAtObservedGetUpto": 57250,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 75370,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -26689,7 +26695,7 @@
         "reference": 75370,
         "referenceVerifiedAt": "2026-09-27T09:57:46.394Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM047_B",
@@ -26839,11 +26845,11 @@
       "measuredDeduction": 18000,
       "predictedAtObservedGetUpto": null,
       "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
-      "reasonAtObserved": "Unmeasured fault, interaction or combination",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 75370,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -27026,11 +27032,11 @@
       "measuredDeduction": 15300,
       "predictedAtObservedGetUpto": null,
       "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
-      "reasonAtObserved": "Unmeasured fault, interaction or combination",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 75370,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -27072,7 +27078,7 @@
       "deviceId": "FM048",
       "variant": "Xiaomi Xiaomi 17T 12 GB/512 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": null,
       "traced": {
         "id": "team-workbook-2026-10-02:FM048_FINAL_A",
@@ -27213,13 +27219,13 @@
         "id": "team-workbook-2026-10-02:FM048_FINAL_A"
       },
       "measuredDeduction": null,
-      "predictedAtObservedGetUpto": 30840,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 39360,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -27253,7 +27259,7 @@
         "reference": 39360,
         "referenceVerifiedAt": "2026-09-27T09:46:45.193Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM048_B",
@@ -27403,11 +27409,11 @@
       "measuredDeduction": 8000,
       "predictedAtObservedGetUpto": null,
       "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
-      "reasonAtObserved": "Unmeasured fault, interaction or combination",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 39360,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -27589,13 +27595,13 @@
         "id": "team-workbook-2026-10-02:FM048_FINAL_A"
       },
       "measuredDeduction": 1500,
-      "predictedAtObservedGetUpto": 29340,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 39360,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -27631,14 +27637,14 @@
         "reference": 39360,
         "referenceVerifiedAt": "2026-09-27T09:46:45.193Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM049_A",
       "deviceId": "FM049",
       "variant": "Xiaomi Xiaomi Redmi Turbo 5 12 GB/256 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": null,
       "traced": {
         "id": "team-workbook-2026-10-02:FM049_FINAL_A",
@@ -27779,13 +27785,13 @@
         "id": "team-workbook-2026-10-02:FM049_FINAL_A"
       },
       "measuredDeduction": null,
-      "predictedAtObservedGetUpto": 20240,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 26080,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -27819,7 +27825,7 @@
         "reference": 26080,
         "referenceVerifiedAt": "2026-09-27T09:58:50.216Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM049_B",
@@ -27969,11 +27975,11 @@
       "measuredDeduction": 4000,
       "predictedAtObservedGetUpto": null,
       "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
-      "reasonAtObserved": "Unmeasured fault, interaction or combination",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 26080,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -28155,13 +28161,13 @@
         "id": "team-workbook-2026-10-02:FM049_FINAL_A"
       },
       "measuredDeduction": 1000,
-      "predictedAtObservedGetUpto": 19240,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 26080,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -28197,14 +28203,14 @@
         "reference": 26080,
         "referenceVerifiedAt": "2026-09-27T09:58:50.216Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM050_A",
       "deviceId": "FM050",
       "variant": "Xiaomi Xiaomi Redmi Note 15 Pro Plus 5G 12 GB/512 GB",
       "condition": "clean",
-      "conditionText": "CLEAN",
+      "conditionText": "PERSON A clean final price; instruction is clean baseline per workbook guide",
       "tester": null,
       "traced": {
         "id": "team-workbook-2026-10-02:FM050_FINAL_A",
@@ -28345,13 +28351,13 @@
         "id": "team-workbook-2026-10-02:FM050_FINAL_A"
       },
       "measuredDeduction": null,
-      "predictedAtObservedGetUpto": 22130,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 28100,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -28385,7 +28391,7 @@
         "reference": 28100,
         "referenceVerifiedAt": "2026-09-27T09:46:26.524Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM050_B",
@@ -28533,13 +28539,13 @@
         "id": "team-workbook-2026-10-02:FM050_FINAL_A"
       },
       "measuredDeduction": 2680,
-      "predictedAtObservedGetUpto": 19450,
-      "decisionAtObservedGetUpto": "CANDIDATE",
-      "reasonAtObserved": null,
+      "predictedAtObservedGetUpto": null,
+      "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 28100,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
@@ -28575,7 +28581,7 @@
         "reference": 28100,
         "referenceVerifiedAt": "2026-09-27T09:46:26.524Z"
       },
-      "nextAction": "PRICED_AT_CALIBRATION_GET_UPTO: needs production reference = observed Get Upto"
+      "nextAction": "EVIDENCE_PRESENT_NOT_ACTIVATED (common condition)"
     },
     {
       "caseId": "FM050_C",
@@ -28725,11 +28731,11 @@
       "measuredDeduction": 4500,
       "predictedAtObservedGetUpto": null,
       "decisionAtObservedGetUpto": "MANUAL_INSPECTION_REQUIRED",
-      "reasonAtObserved": "Unmeasured fault, interaction or combination",
+      "reasonAtObserved": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "productionReference": 28100,
       "predictedInProduction": null,
       "decisionInProduction": "MANUAL_INSPECTION_REQUIRED",
-      "guardReason": "Changed reference domain requires baseline revalidation",
+      "guardReason": "Fresh exact-variant route evidence and compatible stored questionnaire required",
       "replayEligibility": "NOT_REPLAY_ELIGIBLE",
       "syntheticProductionInput": {
         "diagnostics": {
