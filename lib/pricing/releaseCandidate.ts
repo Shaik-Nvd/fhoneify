@@ -58,7 +58,8 @@ export function conditionClass(d: DiagnosticsType): ConditionClass {
   }
   if (d.hardware.includes('battery_service') && d.hardware.includes('battery_health')) return 'unknown';
   if ((d.accessories ?? []).some(a => !['box', 'charger', 'bill', 'spen'].includes(a)) ||
-    (d.box === false && d.accessories.includes('box')) || (d.charger === false && d.accessories.includes('charger'))) return 'unknown';
+    (d.box === false && d.accessories.includes('box')) || (d.charger === false && d.accessories.includes('charger')) ||
+    (d.validBill === false && d.accessories.includes('bill'))) return 'unknown';
   return faults.length === 0 ? 'clean' : faults.length === 1 ? faults[0] : 'combined';
 }
 

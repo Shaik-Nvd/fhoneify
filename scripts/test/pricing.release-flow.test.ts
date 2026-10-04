@@ -426,6 +426,15 @@ async function run() {
       const response = await post('/api/quote/leads', { ...input, diagnostics: undefined, answers: diagnostics, phone: '0000000000', quoteToken: old.quoteToken });
       assert.equal(response.status, 422); assert.equal(leads.length, count);
     });
+    await check('hybrid contradictory bill answers reject both quote and old-token lead without persistence', async () => {
+      const answers = { ...clean, validBill: false, accessories: ['box', 'charger', 'bill'] };
+      const old = await legacy.quote(requestFor(answers)); assert(old.ok);
+      active = make('hybrid'); const count = leads.length;
+      const quote = await post('/api/quote/price', requestFor(answers)); assert.equal(quote.status, 422);
+      assert.equal(quote.body.code, 'MANUAL_INSPECTION_REQUIRED'); assert.equal(quote.body.data, undefined);
+      const lead = await post('/api/quote/leads', leadFor(answers, old.quoteToken, old.fhoneifyPrice));
+      assert.equal(lead.status, 422); assert.equal(lead.body.code, 'MANUAL_INSPECTION_REQUIRED'); assert.equal(leads.length, count);
+    });
     console.log(`Release flow: ${passed} passed, ${failures.length} failed; ${leads.length} in-memory leads, zero database writes.`);
     if (failures.length) throw new Error(`Release flow regressions: ${failures.join('; ')}`);
   } finally { await new Promise<void>((resolve, reject) => server.close(error => error ? reject(error) : resolve())); }

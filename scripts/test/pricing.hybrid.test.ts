@@ -104,6 +104,24 @@ async function main() {
       const result = await hybrid.quote(input(nord, { ...clean, ...patch })); assert(!result.ok); assert.equal(result.code, 'MANUAL_INSPECTION_REQUIRED'); assert(!('quoteToken' in result));
     }
   });
+  await check('contradictory bill answers cannot sign quotes or reuse an old legacy token', async () => {
+    const contradictory = { ...asked, warranty: true, mobileAge: 'below3', accessories: ['box', 'bill'], validBill: false };
+    const old = await legacy.quote(input(iphone17Pro, contradictory)); assert(old.ok, 'legacy fixture reproduces the unchecked conflict');
+    const quote = await hybrid.quote(input(iphone17Pro, contradictory)); assert(!quote.ok);
+    assert.equal(quote.code, 'MANUAL_INSPECTION_REQUIRED'); assert(!('quoteToken' in quote));
+    const lead = await hybrid.verifyLeadPrice({ ...input(iphone17Pro, contradictory), quoteToken: old.quoteToken });
+    assert(!lead.ok); assert.equal(lead.code, 'MANUAL_INSPECTION_REQUIRED');
+    const noBill = await hybrid.quote(input(iphone17Pro, { ...contradictory, accessories: ['box'] })); assert(noBill.ok, 'explicit consistent bill-No remains priceable');
+    const yesBill = await hybrid.quote(input(iphone17Pro, { ...contradictory, validBill: true })); assert(yesBill.ok, 'explicit consistent bill-Yes remains priceable');
+  });
+  await check('production-style catalog fallback remains explicit and never labelled as a verified correction', async () => {
+    const missing = findCatalogDevice('Huawei', 'Huawei Mate 20 Pro', '6 GB/128 GB'); assert(missing && missing.basePrice);
+    const permissive = make('hybrid', { strictReferenceMode: false });
+    const q = await permissive.quote(input(missing, asked)); assert(q.ok);
+    assert.equal(q.referenceStatus, 'missing'); assert.equal(q.internal.baseSource, 'catalog_base_price');
+    assert.equal(q.internal.releaseCandidate?.kind, 'LEGACY'); assert.equal(q.pricingVersion, `${HYBRID_PRICING_VERSION}+legacy-fallback`);
+    const strict = await make('hybrid', { strictReferenceMode: true }).quote(input(missing, asked)); assert(!strict.ok); assert.equal(strict.code, 'REFERENCE_PRICE_UNAVAILABLE');
+  });
   await check('known unsafe exact variants remain quarantined without blocking clean Note', async () => {
     for (const [device, d] of [[ultra, clean], [ultra, display], [note, { ...asked, hardware: ['wifi'] }],
       [note, { ...asked, hardware: ['charging', 'speaker', 'front_camera', 'back_camera', 'wifi', 'fingerprint'] }]] as const) {
