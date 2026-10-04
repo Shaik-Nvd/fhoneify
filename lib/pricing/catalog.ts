@@ -39,3 +39,8 @@ export function findCatalogDevice(
     : (defaultIndex ??= buildIndex(SEED_DEVICES as CatalogDevice[]));
   return index.get(lookupKey(brand, model, storage)) ?? null;
 }
+
+/** Device-ID endpoints use the same exact variant identity as the quote page. */
+export function findCatalogDeviceById(id: string): CatalogDevice | null {
+  return (SEED_DEVICES as CatalogDevice[]).find(device => device.id === id) ?? null;
+}

@@ -1,6 +1,7 @@
 {
   "releaseCandidate": false,
-  "routeEvidenceFile": "scripts/pricing/fixtures/release-route-evidence-2026-10-02.json",
+  "routeEvidenceFile": "scripts/pricing/fixtures/release-route-evidence-2026-10-03-expansion.json",
   "approvedBy": "owner, 2026-10-03 (merge, deploy, refresh and activate after verification)",
-  "note": "Activated 2026-10-03 after verification (PR #10 deployed with the switch off; 7 references refreshed through normal ingestion; 20 references and profiles verified read-only). Host PRICING_RELEASE_CANDIDATE=off overrides this file for an immediate rollback. Evidence expires 2026-10-16; see docs/RELEASE_REVALIDATION_PROCEDURE.md."
+  "note": "Hybrid mode applies exact eligible measured corrections, otherwise preserves legacy quotes except explicit unsafe profiles and invalid diagnostics. Unavailable or expired correction evidence does not disable ordinary quotes. PRICING_RELEASE_CANDIDATE=off overrides this file for rollback. The historical releaseCandidate boolean remains false so older code defaults to legacy.",
+  "mode": "hybrid"
 }

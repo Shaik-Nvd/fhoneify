@@ -1,7 +1,7 @@
 import crypto from 'crypto';
 import config from '../../config';
 import logger from '../../lib/logger';
-import { createPricingService, RELEASE_CANDIDATE_PRICING_VERSION } from '../../../lib/pricing/pricingService';
+import { createPricingService, HYBRID_PRICING_VERSION, RELEASE_CANDIDATE_PRICING_VERSION } from '../../../lib/pricing/pricingService';
 import { PRICING_ENGINE_VERSION } from '../../../lib/pricing/engine';
 import { loadReleaseRouteEvidence } from '../../../lib/pricing/releaseRouteEvidence';
 import { resolvePricingReleaseConfig } from '../../../lib/pricing/releaseConfig';
@@ -28,17 +28,16 @@ const positiveInt = (value: string | undefined, fallback: number) => {
 export const pricingRelease = resolvePricingReleaseConfig();
 logger.info({ pricingMode: pricingRelease.mode, source: pricingRelease.source, routeEvidence: pricingRelease.routeEvidenceFile ? 'configured' : 'none', configError: pricingRelease.error ?? null }, 'Pricing release configuration');
 
-/** A missing or invalid evidence file must not crash the API or fall back to
- * legacy prices: release mode then has no verified routes and every quote
- * returns inspection, while the rest of the API keeps serving. */
+/** A missing or invalid evidence file must not crash the API. Strict release mode inspects without evidence; hybrid
+ * mode keeps ordinary legacy quotes and the explicit unsafe-profile guards. */
 function releaseRouteEvidence() {
-  if (pricingRelease.mode !== 'release-candidate') return [];
+  if (pricingRelease.mode === 'legacy') return [];
   try {
     const rows = loadReleaseRouteEvidence(pricingRelease.routeEvidenceFile ?? undefined);
     logger.info({ routes: rows.length }, 'Release route evidence loaded');
     return rows;
   } catch (err: any) {
-    logger.error({ err: err?.message }, 'Release route evidence unreadable; every release quote will require inspection');
+    logger.error({ err: err?.message }, 'Release route evidence unreadable; corrections disabled, configured fallback policy applies');
     return [];
   }
 }
@@ -52,7 +51,7 @@ export function pricingStatus(now = new Date()) {
   return {
     mode: pricingRelease.mode,
     source: pricingRelease.source,
-    version: pricingRelease.mode === 'release-candidate' ? RELEASE_CANDIDATE_PRICING_VERSION : PRICING_ENGINE_VERSION,
+    version: pricingRelease.mode === 'hybrid' ? HYBRID_PRICING_VERSION : pricingRelease.mode === 'release-candidate' ? RELEASE_CANDIDATE_PRICING_VERSION : PRICING_ENGINE_VERSION,
     releaseRoutes: routes.length,
     freshReleaseRoutes: fresh.length,
     firstRouteExpiry: expiries.length ? new Date(Math.min(...expiries)).toISOString() : null,

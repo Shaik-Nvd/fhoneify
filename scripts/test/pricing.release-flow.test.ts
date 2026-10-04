@@ -63,7 +63,7 @@ const repository: PricingServiceDeps['repository'] = {
 const routeEvidence: WorkbookRouteEvidence[] = [{ brand: 'OnePlus', model: 'OnePlus Nord', storage: '8 GB/128 GB',
   observedAt, evidenceSha256: 'a'.repeat(64), semantics: { warrantyMode: 'NOT_ASKED', billMode: 'NOT_ASKED', ageMode: 'NOT_ASKED' },
   boxMode: 'ASKED', chargerMode: 'ASKED', sPenMode: 'NOT_ASKED', eSimMode: 'NOT_ASKED' }];
-const make = (mode?: 'legacy' | 'release-candidate', overrides: Partial<PricingServiceDeps> = {}) => createPricingService({ repository, questionnaireStore: profiles,
+const make = (mode?: 'legacy' | 'release-candidate' | 'hybrid', overrides: Partial<PricingServiceDeps> = {}) => createPricingService({ repository, questionnaireStore: profiles,
   signingSecret: secret, now: () => at, tokenTtlSeconds: 900, strictReferenceMode: true, referenceLookupTimeoutMs: 100,
   snapshot: {}, pricingMode: mode, releaseRouteEvidence: routeEvidence, logger: { info() {}, warn() {}, error() {} }, ...overrides });
 const legacy = make('legacy');
@@ -82,7 +82,7 @@ const serveLegacy = process.argv.includes('--serve') && process.argv.includes('-
 if (process.argv.includes('--serve')) process.env.PRICING_RELEASE_CANDIDATE = serveLegacy ? 'off' : 'on';
 let active = serveLegacy ? legacy : release;
 // The server resolves its release mode once at startup; tests switch that object.
-let releaseConfig: { mode: 'legacy' | 'release-candidate' } = { mode: 'legacy' };
+let releaseConfig: { mode: 'legacy' | 'release-candidate' | 'hybrid' } = { mode: 'legacy' };
 
 async function startFixture(port: number): Promise<Server> {
   // Load real server modules only after the sentinel and local secrets exist.
@@ -387,6 +387,44 @@ async function run() {
         assert.equal(lead.status, 422); assert.equal(lead.body.code, 'MANUAL_INSPECTION_REQUIRED');
       }
       assert.equal(leads.length, count);
+    });
+    await check('hybrid HTTP price/token/reload/lead uses the corrected amount and unchanged payout', async () => {
+      active = make('hybrid'); const response = await post('/api/quote/price', requestFor(clean));
+      assert.equal(response.status, 200); assert.equal(response.body.data.fhoneifyPrice, 8986);
+      const token = response.body.data.quoteToken; assert(token);
+      const lead = await post('/api/quote/leads', leadFor(clean, token, 1)); assert.equal(lead.status, 200);
+      const saved = leads.at(-1)!; assert.equal(saved.quotedPrice, 8986);
+      assert.deepEqual((saved.answers.pricing as any).customerPayout, customerPayout(8986, false));
+    });
+    await check('hybrid fallback endpoint issues a token and persists the unchanged legacy price', async () => {
+      active = make('hybrid', { releaseRouteEvidence: [] }); const expected = await legacy.quote(requestFor(display)); assert(expected.ok);
+      const quote = await post('/api/quote/price', requestFor(display)); assert.equal(quote.status, 200);
+      assert.equal(quote.body.data.fhoneifyPrice, expected.fhoneifyPrice); assert(quote.body.data.quoteToken);
+      const lead = await post('/api/quote/leads', leadFor(display, quote.body.data.quoteToken)); assert.equal(lead.status, 200);
+      assert.equal(leads.at(-1)?.quotedPrice, expected.fhoneifyPrice);
+    });
+    await check('hybrid bucket endpoint delegates corrections and never bypasses exact unsafe guards', async () => {
+      const priorMode = releaseConfig.mode; active = make('hybrid'); const count = leads.length;
+      try {
+        releaseConfig.mode = 'hybrid';
+        const exact = await post('/api/quote/price', requestFor(display)); assert.equal(exact.status, 200);
+        const bucket = await post('/api/quote', { deviceId: nord.id, condition: 'poor', answers: display });
+        assert.equal(bucket.status, 200); assert.deepEqual(bucket.body.data, exact.body.data);
+        const missing = await post('/api/quote', { deviceId: nord.id, condition: 'like_new' }); assert.equal(missing.status, 422);
+        const ultra = findCatalogDevice('Xiaomi', 'Xiaomi 14 Ultra', '16 GB/512 GB'); assert(ultra);
+        const unsafe = await post('/api/quote', { deviceId: ultra.id, condition: 'like_new', answers: clean });
+        assert.equal(unsafe.status, 422); assert.equal(unsafe.body.data, undefined);
+        assert.equal(leads.length, count);
+      } finally { releaseConfig.mode = priorMode; }
+    });
+    await check('hybrid unsafe profile cannot create a lead using an old legacy token', async () => {
+      active = make('hybrid'); const count = leads.length;
+      const note = findCatalogDevice('Xiaomi', 'Xiaomi Redmi Note 15 Pro Plus 5G', '12 GB/512 GB'); assert(note);
+      const diagnostics = { ...clean, hardware: ['wifi'] };
+      const input = { brand: note.brand, model: note.model, storage: note.storage, diagnostics };
+      const old = await legacy.quote(input); assert(old.ok);
+      const response = await post('/api/quote/leads', { ...input, diagnostics: undefined, answers: diagnostics, phone: '0000000000', quoteToken: old.quoteToken });
+      assert.equal(response.status, 422); assert.equal(leads.length, count);
     });
     console.log(`Release flow: ${passed} passed, ${failures.length} failed; ${leads.length} in-memory leads, zero database writes.`);
     if (failures.length) throw new Error(`Release flow regressions: ${failures.join('; ')}`);

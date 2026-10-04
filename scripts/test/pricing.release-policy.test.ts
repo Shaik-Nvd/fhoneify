@@ -130,7 +130,7 @@ async function main() {
   });
   await check('the committed config parses and names an existing route evidence file', () => {
     const c = JSON.parse(fs.readFileSync(PRICING_RELEASE_CONFIG_FILE, 'utf8'));
-    assert.equal(typeof c.releaseCandidate, 'boolean'); assert(fs.existsSync(c.routeEvidenceFile)); assert.equal(loadReleaseRouteEvidence(c.routeEvidenceFile).length, 21);
+    assert.equal(typeof c.releaseCandidate, 'boolean'); assert(fs.existsSync(c.routeEvidenceFile)); assert.equal(loadReleaseRouteEvidence(c.routeEvidenceFile).length, 44);
   });
   console.log(`PASS release launch policy ${checks} checks`);
 }
