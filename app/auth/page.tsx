@@ -65,9 +65,7 @@ export default function AuthPage() {
         const { accessToken, refreshToken, user } = result.data;
         setAuth({ id: user.id, phone: user.phone, role: user.role, email: user.email }, accessToken, refreshToken);
         setMsg({ text: 'Access granted! Redirecting...', isError: false });
-        // Full page load into /admin so the Facebook pixel isn't running there.
-        if (user.role === 'admin') window.location.assign('/admin');
-        else router.push('/');
+        router.push(user.role === 'admin' ? '/admin' : '/');
       } else {
         setMsg({ text: 'Invalid code. Please try again.', isError: true });
       }

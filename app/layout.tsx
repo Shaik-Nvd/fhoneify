@@ -7,7 +7,6 @@ import MobileBottomNav from '@/components/MobileBottomNav';
 import WhatsAppFloatingBtn from '@/components/WhatsAppFloatingBtn';
 import { Analytics } from "@vercel/analytics/next";
 import KeepAlivePing from '@/components/KeepAlivePing';
-import FacebookPixel from '@/components/FacebookPixel';
 import { ThemeProvider } from '@/components/ThemeProvider';
 
 const inter = Inter({
@@ -66,15 +65,12 @@ export default function RootLayout({
             `,
           }}
         />
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: 'none' }}
-            src="https://www.facebook.com/tr?id=5476402322498970&ev=PageView&noscript=1"
-            alt=""
-          />
-        </noscript>
+        {/* Raw HTML so React doesn't preload the image (and count every visit twice) when JS is on. */}
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `<img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=5476402322498970&ev=PageView&noscript=1" />`,
+          }}
+        />
         {/* End Meta Pixel Code */}
       </head>
       <body className={`${inter.variable} ${fraunces.variable} ${inter.className}`}>
@@ -96,7 +92,6 @@ export default function RootLayout({
           <WhatsAppFloatingBtn />
           <Analytics />
           <KeepAlivePing />
-          <FacebookPixel />
         </ThemeProvider>
       </body>
     </html>
