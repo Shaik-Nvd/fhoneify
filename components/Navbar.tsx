@@ -214,9 +214,9 @@ export default function Navbar() {
                 <span className="text-[0.7rem] text-muted">{user.role === 'admin' ? 'Administrator' : 'Customer'}</span>
               </div>
               {user.role === 'admin' && (
-                <Link href="/admin" className="text-sm font-semibold text-gold no-underline hover:text-gold-hover">
+                <a href="/admin" className="text-sm font-semibold text-gold no-underline hover:text-gold-hover">
                   Admin
-                </Link>
+                </a>
               )}
               <button
                 type="button"
@@ -325,9 +325,9 @@ export default function Navbar() {
               <>
                 <span className="font-medium text-foreground">{user.name || user.phone}</span>
                 {user.role === 'admin' && (
-                  <Link href="/admin" onClick={() => setIsMobileMenuOpen(false)} className="font-semibold text-gold no-underline">
+                  <a href="/admin" onClick={() => setIsMobileMenuOpen(false)} className="font-semibold text-gold no-underline">
                     Admin Panel
-                  </Link>
+                  </a>
                 )}
                 <button
                   type="button"

@@ -7,6 +7,7 @@ import MobileBottomNav from '@/components/MobileBottomNav';
 import WhatsAppFloatingBtn from '@/components/WhatsAppFloatingBtn';
 import { Analytics } from "@vercel/analytics/next";
 import KeepAlivePing from '@/components/KeepAlivePing';
+import FacebookPixel from '@/components/FacebookPixel';
 import { ThemeProvider } from '@/components/ThemeProvider';
 
 const inter = Inter({
@@ -66,6 +67,7 @@ export default function RootLayout({
           <WhatsAppFloatingBtn />
           <Analytics />
           <KeepAlivePing />
+          <FacebookPixel />
         </ThemeProvider>
       </body>
     </html>
