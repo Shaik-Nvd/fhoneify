@@ -1,63 +1,63 @@
 # Agent Z release candidate — review only
 
-Verified base: `5fc2ceb3d0fb691084c65f12b91f694c2efa0c2a` (fetched origin/main on 2026-10-09). Public Render `/health` returned commit prefix `5fc2ceb3d0fb`, hybrid pricing and database connected. This read-only health check verifies the reported API revision; it is not a customer transaction test or current Cashify comparison. The initial health request timed out; the retry succeeded.
+Verified integration base: 5fc2ceb3d0fb691084c65f12b91f694c2efa0c2a. The earlier read-only Render /health check reported 5fc2ceb3d0fb, hybrid pricing and a connected database. This identifies the API revision at the check time, not production pickup or current Cashify accuracy. This blocker update starts at eb5d1f75bad399b411bd16028e3d02bccf6b7b6c on the isolated release branch. The portable package records its final commit and hashes.
 
-A's supplied ZIP reports commit `b4eff8a0d835261a564fd4e8a96f0770f2337b03` on base `6b22374bf865219b43ca0291e216ecab299707f3`. Neither object exists in this repository. Their identities cannot be independently verified. The supplied glass patch is frozen by SHA-256 `eca25d2f6bdc918034fc7d4bc3da25e842fcf0fdc8588d7ac7ca8b852c3f8f57`; it applied cleanly after the exact prerequisites. The ZIP contains README.txt, not APPLY.txt. Its narrow equivalent-base instructions were followed.
+## Patch selection and preservation
 
-## Patch selection and ports
+The original exact-fixes APPLY.txt selects exact-engine.patch, rather than the combined offline audit patch. Only the engine patch was integrated. The 84ba2d1 prediction tooling stays separate. The latest final-fixes APPLY.txt selects after-a8a7140.patch for main without the earlier independent-review fixes. Its unavailable prerequisite required ports of the durable duplicate ledger/refresh guard and regression harness from verified98bee31; incompatible old documentation was replaced with this integration record. No redundant patch stack was applied.
 
-The original exact-fixes APPLY.txt distinguishes exact-engine.patch from the combined offline-audit patch. Only exact-engine.patch was applied; the 84ba2d1 offline prediction tooling remains on its separate review branch and is absent here. Current main does not contain the prior independent-review fixes. The latest final-fixes APPLY.txt therefore selects after-a8a7140.patch; after-1e28f66.patch was not applied.
+A reports glass commit b4eff8a0d835261a564fd4e8a96f0770f2337b03 on 6b22374bf865219b43ca0291e216ecab299707f3. Neither object is available locally, so those identities remain unverified. The supplied glass patch is frozen at SHA-256 eca25d2f6bdc918034fc7d4bc3da25e842fcf0fdc8588d7ac7ca8b852c3f8f57. Both Glass ZIPs were inspected; neither contains A's reported six backend type fixes. The second adds source/exposure manifests. The patch applied after the exact prerequisites, following its README equivalent-base instructions.
 
-The selected patch expected an unavailable a8a7140 prerequisite. Check failed on the prior explanatory document, ledger duplicate guard context and a missing review-followup test. The remaining hunks applied cleanly, including the two localized pickup-UI changes on Claude's current page. The ledger/refresh and review-followup test were ported from independently reviewed 98bee31 code to retain durable restart/authentication-stop safety. Historical document context was retained without fabricating a8a7140 history; this report documents the port instead. No patches were stacked redundantly.
+The six pre-existing backend errors were corrected with types for the already-used rejected listing status and optional inventory fields, plus two diagnostic-script fixes: use installed Playwright instead of missing Puppeteer; read the existing scraper price result with a finite-number guard. Neither collector was executed. These corrections change no pricing formula, authentication behavior or dependency.
 
-A reproduced integration defect showed environment mode `hybrid` omitted the reviewed exact-cache/net-policy fields. The already-reviewed 98bee31 releaseConfig implementation supplies those fields while explicit `off` retains legacy. Its regression failed before the port and passed afterward.
+Claude's Meta components, layout, auth/profile and Navbar remain at verified main. Quote-page edits concern fresh acceptance/recovery only. Existing uplift tiers, cap, fee, coupon, rounding, condition constants and inspection safeguards remain unchanged. This blocker update does not expand release configuration.
 
-A new real-router failure showed that omitted quoteToken persisted a recomputed hybrid lead without fresh acceptance. The controller now rejects recomputation in hybrid mode even when the token is omitted. The quote service still supports tokenless recomputation for internal/legacy compatibility; explicit legacy-mode HTTP rollback retains that compatibility. This deliberate hybrid pickup API change is tested and must be reviewed for any external tokenless client migration.
+## Customer-facing behavior
 
-## Customer-facing changes
+- Exact Selling applies only to matching variant/storage, reference, complete canonical answers, compatible route/profile, valid provenance and current evidence. Conflicts, changed references, unknown answers and inspection cases fail closed.
+- Exact matches use the existing preferred uplift bounded to gross Selling+100 through Selling+1800. Real fee/coupon helpers establish 0 < payout - exact Selling <= 2000 in both coupon states, including the gross1200 fee exception. Unsupported hybrid fallback remains available; its Cashify corridor is not claimed.
+- Every HTTP pickup requires a currently acceptable signed token in every mode. Stale, invalid, empty or omitted tokens409 before persistence; supplying the new amount or omitting price cannot bypass rejection. Inspection-required requests remain422 before persistence.
+- On409, the client requotes and returns to payout review, with no automatic resubmission. Reload compares device, price, Get Upto, pricing version and token expiry. Changed offers, and expired/missing saved offers on a direct pickup URL, require another review and Schedule Pickup click.
+- Valid same-version fallback tokens retain the existing price lock for their lifetime. Reference movement alone does not invalidate every fallback offer. Exact eligibility/version changes and expired/rejected tokens use fresh acceptance.
+- Glass remains internal shadow-only. Production pricing does not inject it. Controllers strip shadow output from public responses and lead audit; customer amounts and persistence decisions remain unchanged.
 
-- Eligible exact captured final Selling replaces fitted condition equivalence only when variant, reference, full canonical condition answers, route/profile and evidence freshness match. Contradictory observations, changed references, unknown answers and inspection-only profiles never acquire exact support.
-- For those exact matches, bounded-net preserves the existing preferred uplift and clamps the gross offer to Selling+100 through Selling+1800. Existing fee, coupon299, rounding, uplift tiers and calculator remain unchanged. Both actual payout deltas are strictly positive and at most 2000; the exact gross1200 fee exception is checked with the real helper.
-- Hybrid cache misses retain ordinary fallback availability and the existing inspection safeguards. No final-payout corridor claim is made for those unsupported fallback quotes.
-- Stale, invalid, empty or omitted tokens cannot persist hybrid leads. Updated client amounts or omitted amounts do not bypass fresh acceptance. The UI fetches a replacement quote on 409 QUOTE_CHANGED and requires another pickup attempt.
-- Glass remains an optional internal shadow injection. Production pricing wiring does not inject it; real controllers strip it from public quote responses and lead audit. It never changes the customer quote, gross, coupon or persistence decision.
+Evidence example: owner-correction-2026-10-02:FM037_BOXREF_BOXNO, Xiaomi Redmi Note10ProMax6/128. Captured Get Upto5970/Selling5650 gives gross6102, standard6003 and coupon6302. Moving the fixture reference to5980 refuses exact reuse and gives fallback6458. Fourteen stale/invalid/empty/omitted-token combinations409 with zero writes before fresh acceptance; fresh tokens store6458 with payouts6359/6658. Those fallback figures establish consistency, not Cashify accuracy.
 
-Evidence example: `owner-correction-2026-10-02:FM037_BOXREF_BOXNO`, Xiaomi Redmi Note 10 Pro Max 6/128. At captured Get Upto5970, its exact Selling5650 produces bounded gross6102, standard6003 (delta353), coupon6302 (delta652). When the reference moves to5980, exact reuse is refused and the fixture emits fallback gross6458; old/invalid/empty/omitted-token pickups return409 with zero writes. Fresh signed quote acceptance persists6458 with real payouts6359/6658. Those fallback payouts are consistency checks, not exact Cashify corridor validation.
+## Separate result classes
 
-## Evidence and accuracy are separate
+Implementation: actual command exits are recorded in the updated verification manifest. Memory-only real-router tests cover fresh acceptance, pricing rollback and shadow isolation. The browser test traverses questionnaire and Get Upto routes, fixture OTP, coupon off/on, pickup details, unchanged/changed direct pickup reload, mounted-token expiry409, and expired-saved-token reload. It compares the fresh review payout with the real helper and stored audit, with zero persistence before fresh acceptance. All non-loopback browser traffic is blocked; no configured database is used.
 
-Implementation: three focused reviewers checked exact eligibility, arithmetic and HTTP acceptance. Exact tests exercise 52944 payout cases and safety/reference/conflict guards. Final real-router acceptance proves zero persistence before a fresh quote, both coupon states, omitted prices, and explicit legacy rollback compatibility. Glass tests prove equality to the control's public quote and absence from public responses and lead audit.
+Historical coverage:168 imported rows,12 unsafe/incomplete rejects,156 admitted source rows,116 canonical combinations across38 variants. The source fixture's Git blob is unchanged from verified main (5aa5e2c41511976ddc81bacafa7dc8a180dadccd). The frozen October7 result is116/38 at captured references,113/37 against saved public inputs. The three misses are team-workbook-2026-10-02:FM004_LIVE_CLOSE_A, FM004_LIVE_B and FM004_LIVE_C, all iPhone12Pro256 at captured24460 versus saved24780. These are intentional reference refusals. No eligible row was identified as lost in integration.118/42 lacks an exact source/ID list and remains unsubstantiated. Follow-up records cannot be promoted without complete canonical route/profile/reference evidence. Repeated screenshots add no independent validation. The coverage document and runnable admission inventory include exact IDs.
 
-Stored evidence: 168 imported captures, 12 admission rejections and 116 index buckets. The supplied frozen October7 evaluation contains 116 captured-reference exact combinations across38 variants, and113 exact combinations across37 variants against its saved public input snapshot. These counts are not recomputed live coverage. Three iPhone12Pro256 combinations (A/B/C) miss that saved public snapshot because the captured24460 reference differs from saved24780. The stored summary is in scratch/agent-z-release-validation/stored-coverage-summary.json. No broad replay evaluator was rerun.
+Independent accuracy: zero untouched eligible glass targets are established. Known glass outcomes and A/B anchors are retrospective; the frozen50980/25190 ratio proves no arbitrary-device/reference transfer. No saved comparison establishes current Cashify accuracy. No new quotation was collected. Glass activation remains unjustified.
 
-Independent accuracy: zero untouched eligible glass cases have been established. Previously known glass outcomes and their matched A/B anchors are retrospective conditional checks, not fresh Cashify or independent transfer accuracy. The glass candidate accepts only four manifest-bound A/B anchor IDs: team-workbook-2026-10-02:FM004_LIVE_A/B and FM017_LIVE_A/B. It uses the frozen50980/25190 workbook ratio, whose original source devices cannot independently validate it. No new quotation collection occurred. No glass activation is justified.
-
-## Verification and remaining gaps
-
-- Frontend TypeScript and Next production build passed with installed dependencies and an unreachable database URL.
-- Required offline pricing regressions passed: hybrid, production, quote consistency, regression, release observations, Cashify fixture comparison, reference data, Get Upto, INR deductions, scraper blocking, and the four patched Xiaomi suites.
-- Real-router release-flow, acceptance and glass-shadow checks passed after the controller change. All persistence is in-memory and no database connects or production writes occur.
-- Backend TypeScript reports six errors. All six locations/codes are independently reproduced at unchanged verified main: admin service rejected-status errors at41/54; inventory missing locationId/isSelectTier at16/20; missing puppeteer in server/test-iphone14; invalid `.data` in server/test-random-10 at98. Scraper type wording changed but introduced no new diagnostic. This existing backend compile gate remains unresolved and is not represented as passing.
-- Production fresh-quote/pickup behavior after deployment, external tokenless-client migration, current Cashify Selling accuracy, all fallback phone/condition corridors, evidence expiry/reference movement and glass transfer remain unverified. No deployment is authorized by this report.
-
-Reproduce from this candidate with existing dependencies:
+## Reproduction with installed dependencies
 
 ```sh
-node --import tsx scripts/test/pricing.exact-final-quotes.test.ts
-node --import tsx scripts/test/pricing.agent-z-acceptance.test.ts
-node --import tsx scripts/test/pricing.release-flow.test.ts
-node --import tsx scripts/test/pricing.glass-shadow-http.test.ts
-node --import tsx scripts/test/pricing.review-followup.test.ts
-node --import tsx scripts/test/pricing.hybrid.test.ts
-npx tsc --noEmit
 npx tsc --noEmit -p tsconfig.server.json
+npx tsc --noEmit
 npm run build
+node --import tsx scripts/test/pricing.agent-z-acceptance.test.ts
+node --import tsx scripts/test/pricing.agent-z-rollback.test.ts
+node --import tsx scripts/test/pricing.release-flow.test.ts
+node --import tsx scripts/test/pricing.exact-final-quotes.test.ts
+node --import tsx scripts/test/pricing.glass-shadow-http.test.ts
+node --import tsx scripts/pricing/audit-agent-z-coverage.ts
 ```
 
-The server command is expected to reproduce the six documented baseline errors. Full suite commands/actual exit codes and separate reviewers' notes accompany this candidate. Tests that would write configured production database rows were replaced by the real-router in-memory harnesses; no production-writing integration test was run.
+For browser checks, use three local terminals:
+1. node --import tsx scripts/test/pricing.release-flow.test.ts --serve
+2. NEXT_PUBLIC_API_URL=http://127.0.0.1:5007 npm run dev:web (POSIX), or set $env:NEXT_PUBLIC_API_URL='http://127.0.0.1:5007' then npm run dev:web (PowerShell).
+3. node --import tsx scripts/test/pricing.agent-z-browser.test.ts
 
-## Preservation and rollback
+Use installed Playwright Chromium. Do not run standalone Cashify collectors or production-writing integration scripts. The fixture's clock endpoint advances only its in-memory test clock.
 
-Claude's Meta/public-page/admin exclusion, profile/auth, Navbar and quote UX changes come directly from verified main. Only the two pickup recovery hunks alter app/quote/page.tsx; Meta components, layout, auth/profile and Navbar have no diff. Existing pricing tiers, fee/coupon helpers, condition penalties and inspection guards are unchanged.
+## Remaining gates and rollback
 
-Immediate quote-pricing rollback: set ENABLE_EXACT_FINAL_QUOTE_CACHE=false (retain ordinary hybrid pricing), or PRICING_RELEASE_CANDIDATE=off for explicit legacy pricing. The latter also restores legacy tokenless compatibility; the default hybrid gate requires a fresh signed token. Glass needs no deactivation because production never injects it. Full code rollback is a normal revert of this release-candidate commit on the release branch, preserving main's Claude/Meta changes; never force-push. No push, merge, deployment, installation, collection or production data write was performed.
+The only first-party lead caller is the quote page; it submits the signed token and bound answers. No external pickup caller was identified in the repository. Outside consumers remain unknown and require owner confirmation before release; tokenless consumers must migrate to quote/accept/submit, never a server bypass.118/42 needs exact IDs/source before that count can be adopted. Current Cashify accuracy, unsupported fallback corridors, future freshness/reference movement and glass transfer remain unverified.
+
+Safe pricing rollback keeps the patched acceptance controller: ENABLE_EXACT_FINAL_QUOTE_CACHE=false retains hybrid; PRICING_RELEASE_CANDIDATE=off selects legacy pricing. Each mode accepts its own fresh tokens. Changed-version tokens409 pending new quote and fresh acceptance. Already accepted exact/fallback records stay unchanged.
+
+A full code rollback to eb5d1f7 or verified main would restore unsafe tokenless acceptance. Retain/backport the all-mode signed-token guard and client recovery fixes before any full rollback. Glass needs no runtime deactivation because production never injects it.
+
+Stop at review. No collection, glass activation, push, merge, deployment, installation or production write occurred.

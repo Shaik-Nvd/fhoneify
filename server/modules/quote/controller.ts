@@ -197,9 +197,9 @@ export async function createLead(req: Request, res: Response) {
       return res.status(PRICING_ERROR_STATUS[verified.code]).json({ success: false, error: verified.message, code: verified.code });
     }
 
-    // Hybrid pickups require a fresh signed quote; token omission cannot bypass review.
-    // Tokenless legacy-mode compatibility remains available for explicit rollback.
-    if ((pricingRelease.mode === 'hybrid' || quoteToken !== undefined) && verified.audit.priceSource === 'recomputed') {
+    // Every pickup requires a fresh signed quote, including explicit pricing rollback modes.
+    // A missing token cannot bypass fresh acceptance or reach persistence.
+    if (verified.audit.priceSource === 'recomputed') {
       return res.status(409).json({ success: false, code: 'QUOTE_CHANGED',
         error: 'Your quote has changed. Please review the updated price before scheduling pickup.' });
     }

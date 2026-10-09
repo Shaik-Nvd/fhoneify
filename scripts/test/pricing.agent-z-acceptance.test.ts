@@ -221,10 +221,14 @@ async function main() {
     try {
       pricingRelease.mode = 'legacy';
       const legacy = await post('/api/quote/leads', {...identity, phone: '0000000000', answers: source.diagnostics});
-      assert.equal(legacy.status, 200, 'explicit legacy rollback keeps tokenless compatibility');
+      assert.equal(legacy.status, 409, 'explicit legacy rollback must not permit tokenless persistence');
+      assert.equal(leads.length, 2);
+      const currentQuote = await post('/api/quote/price', quoteRequest);
+      const signed = await post('/api/quote/leads', {...identity, phone: '0000000000', answers: source.diagnostics, quoteToken: currentQuote.body.data.quoteToken});
+      assert.equal(signed.status, 200);
       assert.equal(leads.length, 3);
     } finally { pricingRelease.mode = hybridMode; }
-    console.log('PASS hybrid requires fresh acceptance; explicit legacy-mode tokenless compatibility retained');
+    console.log('PASS fresh acceptance required in hybrid and legacy rollback modes');
   } finally {
     await new Promise<void>((resolve) => server.close(() => resolve()));
   }

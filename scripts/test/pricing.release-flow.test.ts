@@ -18,7 +18,7 @@ import { questionnaireModelKey } from '../../lib/referencePricing/questionnaire/
 import { customerPayout } from '../../lib/pricing/payout';
 import { canonicalDiagnosticsHash, signQuoteToken, verifyQuoteToken } from '../../lib/pricing/quoteToken';
 import { parseDiagnostics } from '../../lib/pricing/diagnostics';
-import { loadQuoteSession, saveQuoteSession, type SignedQuote } from '../../lib/pricing/quoteSession';
+import { loadQuoteSession, sameAcceptedQuote, saveQuoteSession, type SignedQuote } from '../../lib/pricing/quoteSession';
 import type { WorkbookRouteEvidence } from '../../lib/pricing/teamWorkbookResearchQuoteService';
 import { loadReleaseRouteEvidence } from '../../lib/pricing/releaseRouteEvidence';
 
@@ -69,6 +69,9 @@ const make = (mode?: 'legacy' | 'release-candidate' | 'hybrid', overrides: Parti
   snapshot: {}, pricingMode: mode, releaseRouteEvidence: routeEvidence, logger: { info() {}, warn() {}, error() {} }, ...overrides });
 const legacy = make('legacy');
 const release = make('release-candidate');
+const serving = process.argv.includes('--serve');
+let fixtureClockOffsetMs = 0;
+const hybrid = make('hybrid', serving ? { now: () => new Date(Date.now() + fixtureClockOffsetMs) } : {});
 const nord = findCatalogDevice('OnePlus', 'OnePlus Nord', '8 GB/128 GB')!;
 assert(nord, 'fixture exact Nord variant must exist');
 const clean = { calls: true, touch: true, originalScreen: true, defects: [], screenCondition: 'No scratches on screen',
@@ -79,9 +82,9 @@ const display = { ...clean, defects: ['screen_spot'], screenLines: 'Visible line
 const manualTouch = { ...clean, touch: false };
 const requestFor = (diagnostics: unknown) => ({ brand: nord.brand, model: nord.model, storage: nord.storage, diagnostics });
 const leads: Array<{ quotedPrice: number; answers: Record<string, unknown>; [key: string]: unknown }> = [];
-const serveLegacy = process.argv.includes('--serve') && process.argv.includes('--legacy');
-if (process.argv.includes('--serve')) process.env.PRICING_RELEASE_CANDIDATE = serveLegacy ? 'off' : 'on';
-let active = serveLegacy ? legacy : release;
+const serveLegacy = serving && process.argv.includes('--legacy');
+if (serving) process.env.PRICING_RELEASE_CANDIDATE = serveLegacy ? 'off' : 'on';
+let active = serveLegacy ? legacy : hybrid;
 // The server resolves its release mode once at startup; tests switch that object.
 let releaseConfig: { mode: 'legacy' | 'release-candidate' | 'hybrid' } = { mode: 'legacy' };
 
@@ -111,7 +114,44 @@ async function startFixture(port: number): Promise<Server> {
     if (_req.method === 'OPTIONS') { res.status(204).end(); return; }
     next();
   });
-  app.get('/health', (_req, res) => res.json({ fixture: true, database: 'disabled', mode: serveLegacy ? 'legacy' : 'release-candidate', leadCount: leads.length }));
+  app.get('/health', (_req, res) => res.json({ fixture: true, database: 'disabled', mode: serveLegacy ? 'legacy' : 'hybrid', leadCount: leads.length }));
+  app.get('/fixture/state', (_req, res) => {
+    const last = leads.at(-1);
+    const pricing = last?.answers?.pricing as { priceSource?: string; clientPriceMismatch?: boolean; customerPayout?: unknown } | undefined;
+    const nordRecord = records.get(deviceKey(nord));
+    return res.json({ fixture: true, database: 'disabled', leadCount: leads.length,
+      mode: releaseConfig.mode, fixtureClockOffsetMs, nordReferencePrice: nordRecord?.currentPrice ?? null,
+      latestLead: last ? { brand: last.brand, model: last.model, storage: last.storage, quotedPrice: last.quotedPrice,
+        priceSource: pricing?.priceSource ?? null, clientPriceMismatch: pricing?.clientPriceMismatch ?? null,
+        customerPayout: pricing?.customerPayout ?? null } : null });
+  });
+  if (serving) app.post('/fixture/clock', (req, res) => {
+    const seconds = req.body?.advanceSeconds;
+    if (!Number.isSafeInteger(seconds) || seconds < 0 || seconds > 3600)
+      return res.status(400).json({ fixture: true, error: 'advanceSeconds must be 0..3600' });
+    fixtureClockOffsetMs += seconds * 1000;
+    return res.json({ fixture: true, database: 'disabled', fixtureClockOffsetMs });
+  });
+  app.post('/fixture/reference', (req, res) => {
+    const delta = req.body?.delta;
+    const current = records.get(deviceKey(nord));
+    if (!current || !Number.isSafeInteger(delta) || current.currentPrice + delta <= 0) {
+      return res.status(400).json({ fixture: true, error: 'delta must be an integer that keeps the Nord reference positive' });
+    }
+    const updated = { ...current, currentPrice: current.currentPrice + delta, updatedAt: new Date().toISOString() };
+    records.set(updated.deviceKey, updated);
+    return res.json({ fixture: true, database: 'disabled', deviceKey: updated.deviceKey, currentPrice: updated.currentPrice });
+  });
+  // Deterministic OTP exists only in this isolated in-memory UI fixture so a
+  // browser can traverse the real quote and pickup screens without WhatsApp.
+  app.post('/api/auth/otp/send', (_req, res) => res.json({ success: true, message: 'Fixture OTP sent' }));
+  app.post('/api/auth/otp/verify', (req, res) => {
+    if (req.body?.code !== '000000' || req.body?.phone !== '+919999999999') {
+      return res.status(400).json({ success: false, error: 'Use fixture phone +919999999999 and code 000000' });
+    }
+    return res.json({ success: true, data: { accessToken: 'fixture-access-token', refreshToken: 'fixture-refresh-token',
+      user: { id: 'fixture-customer', phone: '+919999999999', name: req.body?.name || 'Fixture Customer', role: 'buyer' }, isNewUser: true } });
+  });
   app.use('/api/quote', router);
   return await new Promise((resolve, reject) => {
     const server = app.listen(port, '127.0.0.1', () => resolve(server));
@@ -124,7 +164,7 @@ async function run() {
   const addr = server.address(); assert(addr && typeof addr !== 'string');
   const url = `http://127.0.0.1:${addr.port}`;
   if (process.argv.includes('--serve')) {
-    console.log(`LOCAL FIXTURE API ${url}: ${serveLegacy ? 'legacy' : 'release-candidate'} mode, sentinel database, in-memory leads only; Nord 8/128 available`);
+    console.log(`LOCAL FIXTURE API ${url}: ${serveLegacy ? 'legacy' : 'hybrid'} mode, sentinel database, in-memory leads only; Nord 8/128 available`);
     return;
   }
   let passed = 0; const failures: string[] = [];
@@ -169,6 +209,16 @@ async function run() {
       const pricing = last.answers.pricing as { customerPayout: unknown; clientPriceMismatch: boolean; priceSource: string };
       assert.deepEqual(pricing.customerPayout, customerPayout(quote.fhoneifyPrice, false)); assert(pricing.clientPriceMismatch);
       assert.equal(pricing.priceSource, 'quote_token');
+    });
+    await check('reload only treats an identical signed offer as previously accepted', () => {
+      const quote: SignedQuote = { device: { brand: nord.brand, model: nord.model, storage: nord.storage }, price: 8000, getUpto: 9000,
+        token: 'old-token', expiresAt: '2026-10-03T12:15:00.000Z', diagnostics: clean, pricingVersion: 'release-v1' };
+      const restoredAt = new Date('2026-10-03T12:05:00.000Z');
+      assert(sameAcceptedQuote(quote, { ...quote, token: 'fresh-token', expiresAt: '2026-10-03T12:30:00.000Z' }, restoredAt));
+      assert(!sameAcceptedQuote(quote, { ...quote, price: 7999, token: 'fresh-token' }, restoredAt));
+      assert(!sameAcceptedQuote(quote, { ...quote, getUpto: 8999, token: 'fresh-token' }, restoredAt));
+      assert(!sameAcceptedQuote(quote, { ...quote, pricingVersion: 'release-v2', token: 'fresh-token' }, restoredAt));
+      assert(!sameAcceptedQuote({ ...quote, expiresAt: '2026-10-03T12:01:00.000Z' }, quote, restoredAt));
     });
     await check('manual quote returns 422 without any token or binding price', async () => {
       active = release; const response = await post('/api/quote/price', requestFor(manualTouch));

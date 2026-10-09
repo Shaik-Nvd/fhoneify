@@ -95,7 +95,8 @@ async function runTests() {
     try {
       const res = await scrapeCashifyPrice({ brand, model, storage, answers });
       if (!res.success) throw new Error(res.error);
-      const cashifyPrice = res.data;
+      const cashifyPrice = res.price;
+      if (typeof cashifyPrice !== 'number' || !Number.isFinite(cashifyPrice)) throw new Error('Missing Cashify price');
       
       console.log(`Fhone Calculated Price: ₹${fhonePrice}`);
       console.log(`Cashify Actual Price:   ₹${cashifyPrice}`);

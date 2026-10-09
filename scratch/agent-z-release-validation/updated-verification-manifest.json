@@ -1,0 +1,220 @@
+{
+  "base": "5fc2ceb3d0fb691084c65f12b91f694c2efa0c2a",
+  "blockerBase": "eb5d1f75bad399b411bd16028e3d02bccf6b7b6c",
+  "date": "2026-10-10",
+  "scope": "Offline implementation and historical admission inventory only",
+  "backendTypecheck": {
+    "command": "npx tsc --noEmit -p tsconfig.server.json",
+    "exitCode": 0
+  },
+  "frontendTypecheck": {
+    "command": "npx tsc --noEmit",
+    "exitCode": 0
+  },
+  "productionBuild": {
+    "exitCode": 0,
+    "command": "npm run build",
+    "log": "build.updated.log",
+    "database": "unreachable sentinel"
+  },
+  "regressions": [
+    {
+      "command": "node --import tsx scripts/test/pricing.regression.test.ts",
+      "exitCode": 0,
+      "log": "scratch/agent-z-release-validation/pricing.regression.updated.log"
+    },
+    {
+      "command": "node --import tsx scripts/test/pricing.production.test.ts",
+      "exitCode": 0,
+      "log": "scratch/agent-z-release-validation/pricing.production.updated.log"
+    },
+    {
+      "command": "node --import tsx scripts/test/pricing.cashify-comparison.test.ts",
+      "exitCode": 0,
+      "log": "scratch/agent-z-release-validation/pricing.cashify-comparison.updated.log"
+    },
+    {
+      "command": "node --import tsx scripts/test/pricing.reference-data.test.ts",
+      "exitCode": 0,
+      "log": "scratch/agent-z-release-validation/pricing.reference-data.updated.log"
+    },
+    {
+      "command": "node --import tsx scripts/test/pricing.quote-consistency.test.ts",
+      "exitCode": 0,
+      "log": "scratch/agent-z-release-validation/pricing.quote-consistency.updated.log"
+    },
+    {
+      "command": "node --import tsx scripts/test/pricing.get-upto.test.ts",
+      "exitCode": 0,
+      "log": "scratch/agent-z-release-validation/pricing.get-upto.updated.log"
+    },
+    {
+      "command": "node --import tsx scripts/test/pricing.inr-deductions.test.ts",
+      "exitCode": 0,
+      "log": "scratch/agent-z-release-validation/pricing.inr-deductions.updated.log"
+    },
+    {
+      "command": "node --import tsx scripts/test/pricing.hybrid.test.ts",
+      "exitCode": 0,
+      "log": "scratch/agent-z-release-validation/pricing.hybrid.updated.log"
+    },
+    {
+      "command": "node --import tsx scripts/test/pricing.exact-final-quotes.test.ts",
+      "exitCode": 0,
+      "log": "scratch/agent-z-release-validation/pricing.exact-final-quotes.updated.log"
+    },
+    {
+      "command": "node --import tsx scripts/test/pricing.agent-z-acceptance.test.ts",
+      "exitCode": 0,
+      "log": "scratch/agent-z-release-validation/pricing.agent-z-acceptance.updated.log"
+    },
+    {
+      "command": "node --import tsx scripts/test/pricing.agent-z-rollback.test.ts",
+      "exitCode": 0,
+      "log": "scratch/agent-z-release-validation/pricing.agent-z-rollback.updated.log"
+    },
+    {
+      "command": "node --import tsx scripts/test/pricing.release-flow.test.ts",
+      "exitCode": 0,
+      "log": "scratch/agent-z-release-validation/pricing.release-flow.updated.log"
+    },
+    {
+      "command": "node --import tsx scripts/test/pricing.glass-shadow-http.test.ts",
+      "exitCode": 0,
+      "log": "scratch/agent-z-release-validation/pricing.glass-shadow-http.updated.log"
+    },
+    {
+      "command": "node --import tsx scripts/test/pricing.review-followup.test.ts",
+      "exitCode": 0,
+      "log": "scratch/agent-z-release-validation/pricing.review-followup.updated.log"
+    },
+    {
+      "command": "node --import tsx scripts/test/pricing.release-observations.test.ts",
+      "exitCode": 0,
+      "log": "scratch/agent-z-release-validation/pricing.release-observations.updated.log"
+    },
+    {
+      "command": "node --import tsx scripts/test/pricing.xiaomi-research-service.test.ts",
+      "exitCode": 0,
+      "log": "scratch/agent-z-release-validation/pricing.xiaomi-research-service.updated.log"
+    },
+    {
+      "command": "node --import tsx scripts/test/pricing.xiaomi-note-candidate.test.ts",
+      "exitCode": 0,
+      "log": "scratch/agent-z-release-validation/pricing.xiaomi-note-candidate.updated.log"
+    },
+    {
+      "command": "node --import tsx scripts/test/pricing.xiaomi-evidence-candidate.test.ts",
+      "exitCode": 0,
+      "log": "scratch/agent-z-release-validation/pricing.xiaomi-evidence-candidate.updated.log"
+    },
+    {
+      "command": "node --import tsx scripts/test/pricing.xiaomi-application-candidate.test.ts",
+      "exitCode": 0,
+      "log": "scratch/agent-z-release-validation/pricing.xiaomi-application-candidate.updated.log"
+    },
+    {
+      "command": "node --import tsx scripts/test/pricing.scraper-blocks.test.ts",
+      "exitCode": 0,
+      "log": "scratch/agent-z-release-validation/pricing.scraper-blocks.updated.log"
+    }
+  ],
+  "browser": {
+    "nonLoopbackRequests": "blocked",
+    "exitCode": 0,
+    "command": "node --import tsx scripts/test/pricing.agent-z-browser.test.ts",
+    "persistence": "fixture memory only",
+    "scenarios": [
+      {
+        "couponApplied": false,
+        "route": "questionnaire + changed reload",
+        "submissions": [
+          {
+            "token": true,
+            "price": 9547,
+            "coupon": false,
+            "status": 200
+          }
+        ],
+        "displayedPayout": 9448,
+        "storedGross": 9547,
+        "actualPayout": {
+          "quotePrice": 9547,
+          "deduction": 99,
+          "couponBonus": 0,
+          "payout": 9448
+        }
+      },
+      {
+        "couponApplied": true,
+        "route": "Get Upto shortcut + HTTP 409",
+        "submissions": [
+          {
+            "token": true,
+            "price": 9958,
+            "coupon": true,
+            "status": 409
+          },
+          {
+            "token": true,
+            "price": 9958,
+            "coupon": true,
+            "status": 200
+          }
+        ],
+        "displayedPayout": 10158,
+        "storedGross": 9958,
+        "actualPayout": {
+          "quotePrice": 9958,
+          "deduction": 99,
+          "couponBonus": 299,
+          "payout": 10158
+        }
+      },
+      {
+        "couponApplied": false,
+        "route": "expired saved token + direct pickup reload",
+        "submissions": [
+          {
+            "token": true,
+            "price": 10066,
+            "coupon": false,
+            "status": 200
+          }
+        ],
+        "displayedPayout": 9967,
+        "storedGross": 10066,
+        "actualPayout": {
+          "quotePrice": 10066,
+          "deduction": 99,
+          "couponBonus": 0,
+          "payout": 9967
+        }
+      }
+    ]
+  },
+  "coverage": {
+    "rejectedRows": 12,
+    "savedPublicOctober7": {
+      "combinations": 113,
+      "variants": 37
+    },
+    "canonicalBuckets": 116,
+    "sourceGitBlobUnchangedFromMain": "5aa5e2c41511976ddc81bacafa7dc8a180dadccd",
+    "variants": 38,
+    "claim11842": "unsubstantiated source/ID list",
+    "admissionRows": 168
+  },
+  "remainingGaps": [
+    "118/42 evidence IDs/source unavailable",
+    "Outside-repository consumer adoption unknown",
+    "Current Cashify Selling accuracy not tested",
+    "Zero untouched eligible glass targets",
+    "Unsupported fallback payout corridors not established"
+  ],
+  "fullCodeRollback": "Unsafe unless signed-token gate/client recovery retained",
+  "zeroProductionWrites": true,
+  "noNewCollection": true,
+  "noGlassActivation": true,
+  "noPushMergeDeployment": true
+}

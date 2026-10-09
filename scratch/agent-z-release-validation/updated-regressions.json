@@ -1,0 +1,102 @@
+[
+  {
+    "command": "node --import tsx scripts/test/pricing.regression.test.ts",
+    "exitCode": 0,
+    "log": "scratch/agent-z-release-validation/pricing.regression.updated.log"
+  },
+  {
+    "command": "node --import tsx scripts/test/pricing.production.test.ts",
+    "exitCode": 0,
+    "log": "scratch/agent-z-release-validation/pricing.production.updated.log"
+  },
+  {
+    "command": "node --import tsx scripts/test/pricing.cashify-comparison.test.ts",
+    "exitCode": 0,
+    "log": "scratch/agent-z-release-validation/pricing.cashify-comparison.updated.log"
+  },
+  {
+    "command": "node --import tsx scripts/test/pricing.reference-data.test.ts",
+    "exitCode": 0,
+    "log": "scratch/agent-z-release-validation/pricing.reference-data.updated.log"
+  },
+  {
+    "command": "node --import tsx scripts/test/pricing.quote-consistency.test.ts",
+    "exitCode": 0,
+    "log": "scratch/agent-z-release-validation/pricing.quote-consistency.updated.log"
+  },
+  {
+    "command": "node --import tsx scripts/test/pricing.get-upto.test.ts",
+    "exitCode": 0,
+    "log": "scratch/agent-z-release-validation/pricing.get-upto.updated.log"
+  },
+  {
+    "command": "node --import tsx scripts/test/pricing.inr-deductions.test.ts",
+    "exitCode": 0,
+    "log": "scratch/agent-z-release-validation/pricing.inr-deductions.updated.log"
+  },
+  {
+    "command": "node --import tsx scripts/test/pricing.hybrid.test.ts",
+    "exitCode": 0,
+    "log": "scratch/agent-z-release-validation/pricing.hybrid.updated.log"
+  },
+  {
+    "command": "node --import tsx scripts/test/pricing.exact-final-quotes.test.ts",
+    "exitCode": 0,
+    "log": "scratch/agent-z-release-validation/pricing.exact-final-quotes.updated.log"
+  },
+  {
+    "command": "node --import tsx scripts/test/pricing.agent-z-acceptance.test.ts",
+    "exitCode": 0,
+    "log": "scratch/agent-z-release-validation/pricing.agent-z-acceptance.updated.log"
+  },
+  {
+    "command": "node --import tsx scripts/test/pricing.agent-z-rollback.test.ts",
+    "exitCode": 0,
+    "log": "scratch/agent-z-release-validation/pricing.agent-z-rollback.updated.log"
+  },
+  {
+    "command": "node --import tsx scripts/test/pricing.release-flow.test.ts",
+    "exitCode": 0,
+    "log": "scratch/agent-z-release-validation/pricing.release-flow.updated.log"
+  },
+  {
+    "command": "node --import tsx scripts/test/pricing.glass-shadow-http.test.ts",
+    "exitCode": 0,
+    "log": "scratch/agent-z-release-validation/pricing.glass-shadow-http.updated.log"
+  },
+  {
+    "command": "node --import tsx scripts/test/pricing.review-followup.test.ts",
+    "exitCode": 0,
+    "log": "scratch/agent-z-release-validation/pricing.review-followup.updated.log"
+  },
+  {
+    "command": "node --import tsx scripts/test/pricing.release-observations.test.ts",
+    "exitCode": 0,
+    "log": "scratch/agent-z-release-validation/pricing.release-observations.updated.log"
+  },
+  {
+    "command": "node --import tsx scripts/test/pricing.xiaomi-research-service.test.ts",
+    "exitCode": 0,
+    "log": "scratch/agent-z-release-validation/pricing.xiaomi-research-service.updated.log"
+  },
+  {
+    "command": "node --import tsx scripts/test/pricing.xiaomi-note-candidate.test.ts",
+    "exitCode": 0,
+    "log": "scratch/agent-z-release-validation/pricing.xiaomi-note-candidate.updated.log"
+  },
+  {
+    "command": "node --import tsx scripts/test/pricing.xiaomi-evidence-candidate.test.ts",
+    "exitCode": 0,
+    "log": "scratch/agent-z-release-validation/pricing.xiaomi-evidence-candidate.updated.log"
+  },
+  {
+    "command": "node --import tsx scripts/test/pricing.xiaomi-application-candidate.test.ts",
+    "exitCode": 0,
+    "log": "scratch/agent-z-release-validation/pricing.xiaomi-application-candidate.updated.log"
+  },
+  {
+    "command": "node --import tsx scripts/test/pricing.scraper-blocks.test.ts",
+    "exitCode": 0,
+    "log": "scratch/agent-z-release-validation/pricing.scraper-blocks.updated.log"
+  }
+]

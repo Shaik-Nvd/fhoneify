@@ -1,9 +1,17 @@
 # Agent Z HTTP acceptance review
 
-The focused independent reviewer initially reproduced the missing-token bypass through the actual quote router, using synthetic signing keys and an in-memory Prisma lead spy. Before integration repair, an omitted-token request returned200 and persisted recomputed6458; stale token (including updated6458), invalid signature and empty token returned409.
+The original real-router harness reproduced a missing-token bypass: omitted token200 persisted recomputed6458, while stale (including updated6458), invalid and empty tokens409. Commit eb5d1f7 closed omission only in hybrid mode and retained legacy tokenless compatibility.
 
-Agent Z preserved the failing harness before changing the controller. After the hybrid-only omission gate, all14 stale/invalid/empty/omitted-token combinations return409 QUOTE_CHANGED with zero lead writes before fresh acceptance. This includes both coupon states and omitted client prices. A fresh signed quote returns6458 and two accepted hybrid requests store exactly that authoritative gross and the helper-calculated payout. Explicit legacy-mode rollback retains tokenless compatibility, verified by a separate final in-memory write.
+This update closes recomputed/tokenless HTTP persistence in every mode. All14 stale/invalid/empty/omitted-token combinations409 QUOTE_CHANGED with zero writes before fresh acceptance, including both coupon states and omitted client prices. Fresh signed quotes succeed, storing6458 with the real payout. Fresh legacy tokens succeed; tokenless legacy requests now409.
 
-Reproduce: `node --import tsx scripts/test/pricing.agent-z-acceptance.test.ts`. Final test log: scratch/agent-z-release-validation/pricing.agent-z-acceptance.log. Database connection sentinel is unreachable; `$connect` throws if used; lead persistence is a spy. No production database or customer row was used. The6458 quote is a changed-reference fallback and establishes persistence consistency, not exact Cashify accuracy.
+The rollback harness verifies old cache-version tokens409 with zero writes in cache-off hybrid and legacy, fresh mode-appropriate tokens succeed, and previously accepted exact/fallback records stay unchanged. Full code rollback to eb5d1f7/main reopens unsafe acceptance; retain the signed-token controller guard.
 
-Controller fix also passed the release-flow and glass-shadow real-router suites. Client pickup handling fetches a replacement signed quote on409 and makes the customer review it before trying again. This is an intentional hybrid API contract change for callers that previously omitted the token; review any external client migration before deployment.
+The client requotes on409 and requires another Schedule Pickup click. Reloaded changed offers and expired/missing saved offers on direct step12 return to payout review. Browser regressions traverse real UI and fixture OTP, coupon off/on, changed reload, mounted expiry and already-expired saved-token reload. They check displayed/stored payout equality. Browser requests outside loopback are blocked. Valid same-version fallback tokens retain the existing price lock.
+
+```sh
+node --import tsx scripts/test/pricing.agent-z-acceptance.test.ts
+node --import tsx scripts/test/pricing.agent-z-rollback.test.ts
+node --import tsx scripts/test/pricing.release-flow.test.ts
+```
+
+Persistence is an in-memory Prisma spy, with an unreachable database sentinel. Updated command exits and browser outputs are in scratch/agent-z-release-validation. The6458 example establishes fallback consistency, not independent Cashify accuracy.

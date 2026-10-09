@@ -30,7 +30,7 @@ export interface Listing {
   storage?: string;
   condition: string;
   price: number;
-  status: 'active' | 'pending' | 'sold';
+  status: 'active' | 'pending' | 'sold' | 'rejected';
   city: string;
   description?: string;
   images: string[];
@@ -182,6 +182,8 @@ export interface QAReport {
 }
 
 export interface InventoryItem {
+  locationId?: string;
+  isSelectTier?: boolean;
   id: string;
   deviceId: string;
   imei: string;

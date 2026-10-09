@@ -16,7 +16,7 @@ import { SEED_DEVICES } from '@/lib/seed_devices';
 import { PERFECT_CONDITION_DIAGNOSTICS } from '@/lib/pricing/perfectCondition';
 import { customerPayout } from '@/lib/pricing/payout';
 import { inspectionRequestLinks } from '@/lib/inspectionRequest';
-import { SignedQuote, clearQuoteSession, loadQuoteSession, sameDevice, saveQuoteSession } from '@/lib/pricing/quoteSession';
+import { SignedQuote, clearQuoteSession, loadQuoteSession, sameAcceptedQuote, sameDevice, saveQuoteSession } from '@/lib/pricing/quoteSession';
 import { warrantyVoidedByDiagnostics } from '@/lib/pricing/diagnostics';
 import { questionnaireFor } from '@/lib/pricing/questionnaire';
 import { UNKNOWN_QUESTIONNAIRE, isQuestionMode, showsQuestion, type QuestionnaireSemantics } from '@/lib/pricing/questionnaireSemantics';
@@ -229,7 +229,7 @@ export default function QuotePage() {
     if (saved) {
       if (saved.answers) setDiagnostics(saved.answers as any);
       // Never display a saved price before the current server confirms its
-      // eligibility. Same-version quotes retain the existing token price lock.
+      // eligibility. Changed offers must return to the price review step.
       if (saved.starting) fetchStartingQuote(saved.brand, saved.model, saved.storage);
       if (saved.final) {
         setIsFinalPriceLoading(true);
@@ -239,7 +239,14 @@ export default function QuotePage() {
           .then(current => {
             if (requestId !== priceRequestIdRef.current) return;
             setStartingContext({ device: current.device, getUpto: current.getUpto, questionnaire: current.questionnaire ?? UNKNOWN_QUESTIONNAIRE, pricingVersion: current.pricingVersion ?? '' });
-            setFinalQuote(old.pricingVersion === current.pricingVersion ? { ...old, questionnaire: current.questionnaire } : current);
+            if (sameAcceptedQuote(old, current)) {
+              setFinalQuote({ ...old, questionnaire: current.questionnaire });
+            } else {
+              setFinalQuote(current);
+              // A reload can land directly on pickup details. If the server's
+              // current offer differs, show it before enabling pickup submission.
+              navigateToState(saved.brand, saved.model, saved.storage, 'storage', 11);
+            }
           })
           .catch(err => {
             if (requestId !== priceRequestIdRef.current) return;
@@ -251,6 +258,11 @@ export default function QuotePage() {
           .finally(() => { if (requestId === priceRequestIdRef.current) setIsFinalPriceLoading(false); });
       }
       setAppliedCoupon(saved.couponApplied);
+    }
+    // An expired or missing saved offer has never been accepted at the newly
+    // fetched price. A direct pickup URL must first return to price review.
+    if (params.get('step') === '12' && !saved?.final) {
+      navigateToState(params.get('brand') || '', params.get('model') || '', params.get('storage') || '', 'storage', 11);
     }
     setSessionRestored(true);
 
@@ -1263,10 +1275,12 @@ export default function QuotePage() {
       storage: selectedStorage,
       starting: activeStartingQuote,
       final: activeFinalQuote,
-      answers: diagnostics,
+      // The Get Upto shortcut is signed for server-supplied perfect answers,
+      // not the untouched questionnaire state. Keep those answers for expiry recovery.
+      answers: (step === 11 || step === 12) && activeFinalQuote ? activeFinalQuote.diagnostics : diagnostics,
       couponApplied: appliedCoupon,
     });
-  }, [sessionRestored, selectedBrand, selectedModel, selectedStorage, activeStartingQuote, activeFinalQuote, diagnostics, appliedCoupon]);
+  }, [sessionRestored, step, selectedBrand, selectedModel, selectedStorage, activeStartingQuote, activeFinalQuote, diagnostics, appliedCoupon]);
 
   // A price screen reached without a usable signed price (reload after the
   // token expired, storage blocked, back/forward to another device) asks the

@@ -1,10 +1,10 @@
-import puppeteer from 'puppeteer';
+import { chromium } from 'playwright';
 
 async function checkQuestions(brand: string, model: string, storage: string) {
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage();
   try {
-    await page.goto('https://www.cashify.in/sell-old-mobile-phone', { waitUntil: 'networkidle2' });
+    await page.goto('https://www.cashify.in/sell-old-mobile-phone', { waitUntil: 'networkidle' });
     
     // Select Brand
     await page.waitForSelector(`img[alt="${brand}"]`, { timeout: 10000 });

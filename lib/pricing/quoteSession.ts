@@ -62,6 +62,12 @@ export const QUOTE_SESSION_KEY = 'fhoneify-quote-session';
 export const sameDevice = (a: QuoteSessionDevice, b: QuoteSessionDevice) =>
   a.brand === b.brand && a.model === b.model && a.storage === b.storage;
 
+/** Whether a freshly revalidated quote still represents the displayed offer. */
+export function sameAcceptedQuote(a: SignedQuote, b: SignedQuote, now = new Date()): boolean {
+  return sameDevice(a.device, b.device) && a.price === b.price && a.getUpto === b.getUpto &&
+    Date.parse(a.expiresAt) > now.getTime() && typeof a.pricingVersion === 'string' && a.pricingVersion === b.pricingVersion;
+}
+
 /** A price the page may show for this device: signed, positive, unexpired. */
 export function isUsableSignedQuote(q: unknown, device: QuoteSessionDevice, now: Date): q is SignedQuote {
   if (!q || typeof q !== 'object') return false;

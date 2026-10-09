@@ -111,5 +111,7 @@
   ],
   "zeroProductionWrites": true,
   "noNewCollection": true,
-  "noGlassActivation": true
+  "noGlassActivation": true,
+  "revision": "eb5d1f75bad399b411bd16028e3d02bccf6b7b6c",
+  "historicalStatus": "Superseded by updated-verification-manifest.json; six backend errors closed in blocker update"
 }
