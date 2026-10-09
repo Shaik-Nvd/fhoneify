@@ -7,7 +7,6 @@ import MobileBottomNav from '@/components/MobileBottomNav';
 import WhatsAppFloatingBtn from '@/components/WhatsAppFloatingBtn';
 import { Analytics } from "@vercel/analytics/next";
 import KeepAlivePing from '@/components/KeepAlivePing';
-import FacebookPixel from '@/components/FacebookPixel';
 import { ThemeProvider } from '@/components/ThemeProvider';
 
 const inter = Inter({
@@ -48,6 +47,32 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Meta Pixel Code */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              !function(f,b,e,v,n,t,s)
+              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+              n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s)}(window, document,'script',
+              'https://connect.facebook.net/en_US/fbevents.js');
+              fbq('init', '5476402322498970');
+              fbq('track', 'PageView');
+            `,
+          }}
+        />
+        {/* Raw HTML so React doesn't preload the image (and count every visit twice) when JS is on. */}
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `<img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=5476402322498970&ev=PageView&noscript=1" />`,
+          }}
+        />
+        {/* End Meta Pixel Code */}
+      </head>
       <body className={`${inter.variable} ${fraunces.variable} ${inter.className}`}>
         <ThemeProvider
           attribute="class"
@@ -67,7 +92,6 @@ export default function RootLayout({
           <WhatsAppFloatingBtn />
           <Analytics />
           <KeepAlivePing />
-          <FacebookPixel />
         </ThemeProvider>
       </body>
     </html>
