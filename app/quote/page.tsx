@@ -1228,8 +1228,8 @@ export default function QuotePage() {
    * signed price arrives; on failure the screen offers a retry instead of a
    * number. Only the latest request may update state, so rapid re-answers
    * cannot show a stale price. */
-  const calculateFinalPrice = (overrideDiagnostics?: typeof diagnostics) => {
-    const diag = overrideDiagnostics || diagnostics;
+  const calculateFinalPrice = (overrideDiagnostics?: unknown) => {
+    const diag = overrideDiagnostics ?? diagnostics;
     setFinalQuote(null);
     setFinalPriceError(null);
     setManualInspectionRequired(false);
@@ -3173,6 +3173,12 @@ export default function QuotePage() {
                 setManualInspectionRequired(true);
                 setFinalPriceError(describePricingError(err));
                 navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11);
+                return;
+              }
+              if (err?.response?.data?.code === 'QUOTE_CHANGED') {
+                navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11);
+                calculateFinalPrice(activeFinalQuote.diagnostics);
+                alert('Your quote has changed. Please review the updated price before scheduling pickup. No pickup was booked.');
                 return;
               }
               const message = err?.response?.data?.error || err?.message;

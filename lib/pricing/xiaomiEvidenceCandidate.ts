@@ -24,7 +24,7 @@ export const XIAOMI_CANDIDATE_DEVELOPMENT = [
 export function xiaomiEvidenceCandidateConfig(): InrDeductionConfig {
   const active = xiaomiInrDeductions();
   const config: InrDeductionConfig = {
-    ...active, version: XIAOMI_EVIDENCE_CANDIDATE_VERSION,
+    ...active, enabled: true, version: XIAOMI_EVIDENCE_CANDIDATE_VERSION,
     groups: {}, modelGroups: {}, tierGroups: [], warrantyRetention: {},
   };
   for (const evidence of XIAOMI_CANDIDATE_DEVELOPMENT) {

@@ -1,0 +1,115 @@
+{
+  "base": "5fc2ceb3d0fb691084c65f12b91f694c2efa0c2a",
+  "date": "2026-10-09",
+  "scope": "Offline/in-memory integration checks; no production DB or new Cashify prices",
+  "commands": [
+    {
+      "Command": "node --import tsx scripts/test/pricing.hybrid.test.ts",
+      "ExitCode": 0
+    },
+    {
+      "Command": "node --import tsx scripts/test/pricing.production.test.ts",
+      "ExitCode": 0
+    },
+    {
+      "Command": "node --import tsx scripts/test/pricing.quote-consistency.test.ts",
+      "ExitCode": 0
+    },
+    {
+      "Command": "node --import tsx scripts/test/pricing.regression.test.ts",
+      "ExitCode": 0
+    },
+    {
+      "Command": "node --import tsx scripts/test/pricing.release-observations.test.ts",
+      "ExitCode": 0
+    },
+    {
+      "Command": "node --import tsx scripts/test/pricing.xiaomi-research-service.test.ts",
+      "ExitCode": 0
+    },
+    {
+      "Command": "node --import tsx scripts/test/pricing.xiaomi-note-candidate.test.ts",
+      "ExitCode": 0
+    },
+    {
+      "Command": "node --import tsx scripts/test/pricing.xiaomi-evidence-candidate.test.ts",
+      "ExitCode": 0
+    },
+    {
+      "Command": "node --import tsx scripts/test/pricing.xiaomi-application-candidate.test.ts",
+      "ExitCode": 0
+    },
+    {
+      "Command": "node --import tsx scripts/test/pricing.scraper-blocks.test.ts",
+      "ExitCode": 0
+    },
+    {
+      "Command": "node --import tsx scripts/test/pricing.cashify-comparison.test.ts",
+      "ExitCode": 0
+    },
+    {
+      "Command": "node --import tsx scripts/test/pricing.reference-data.test.ts",
+      "ExitCode": 0
+    },
+    {
+      "Command": "node --import tsx scripts/test/pricing.get-upto.test.ts",
+      "ExitCode": 0
+    },
+    {
+      "Command": "node --import tsx scripts/test/pricing.inr-deductions.test.ts",
+      "ExitCode": 0
+    },
+    {
+      "Command": "node --import tsx scripts/test/pricing.agent-z-acceptance.test.ts",
+      "ExitCode": 0
+    },
+    {
+      "Command": "node --import tsx scripts/test/pricing.release-flow.test.ts",
+      "ExitCode": 0
+    },
+    {
+      "Command": "node --import tsx scripts/test/pricing.glass-shadow-http.test.ts",
+      "ExitCode": 0
+    }
+  ],
+  "frontendTypecheck": {
+    "command": "npx tsc --noEmit",
+    "exitCode": 0
+  },
+  "nextBuild": {
+    "command": "npm run build",
+    "exitCode": 0,
+    "log": "build.log"
+  },
+  "serverTypecheck": {
+    "Command": "npx tsc --noEmit -p tsconfig.server.json",
+    "ExitCode": 2,
+    "Output": "server/modules/admin/service.ts(41,33): error TS2367: This comparison appears to be unintentional because the types '\"active\" | \"pending\" | \"sold\"' and '\"rejected\"' have no overlap.\nserver/modules/admin/service.ts(54,3): error TS2322: Type '\"rejected\"' is not assignable to type '\"active\" | \"pending\" | \"sold\"'.\nserver/modules/inventory/service.ts(16,35): error TS2339: Property 'locationId' does not exist on type 'InventoryItem'.\nserver/modules/inventory/service.ts(20,37): error TS2339: Property 'isSelectTier' does not exist on type 'InventoryItem'.\nserver/test-iphone14.ts(1,23): error TS2307: Cannot find module 'puppeteer' or its corresponding type declarations.\nserver/test-random-10.ts(98,32): error TS2339: Property 'data' does not exist on type '{ price: number; rawText: string; success: boolean; verifiedEvidence: boolean; error?: undefined; } | { success: boolean; error: string; price?: undefined; rawText?: undefined; verifiedEvidence?: undefined; }'.\n  Property 'data' does not exist on type '{ price: number; rawText: string; success: boolean; verifiedEvidence: boolean; error?: undefined; }'."
+  },
+  "serverBaseline": {
+    "command": "npx tsc --noEmit -p tsconfig.server.json",
+    "exitCode": 2,
+    "base": "5fc2ceb",
+    "diagnosticCodesAndLocationsUnchanged": true,
+    "log": "server-types-base.log"
+  },
+  "independentReviewerChecks": [
+    {
+      "command": "node --import tsx scripts/test/pricing.exact-final-quotes.test.ts",
+      "outcome": "PASS 8 groups including 52944 payout cases",
+      "source": "docs/AGENT_Z_PAYOUT_REVIEW.md"
+    },
+    {
+      "command": "node --import tsx scripts/test/pricing.review-followup.test.ts",
+      "outcome": "PASS after reproduced env-hybrid omission fix",
+      "source": "prerequisite-before.log and root tool output"
+    }
+  ],
+  "newDefectsFixed": [
+    "env hybrid omitted exact cache/policy",
+    "hybrid omitted token persisted recomputation before acceptance"
+  ],
+  "zeroProductionWrites": true,
+  "noNewCollection": true,
+  "noGlassActivation": true
+}

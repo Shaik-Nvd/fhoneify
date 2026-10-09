@@ -16,6 +16,7 @@ import type { WorkbookRouteEvidence } from './teamWorkbookResearchQuoteService';
 import { workbookStorageIdentity } from './teamWorkbookCandidate';
 
 export type AccessoryBasis =
+  | 'OBSERVED_FINAL_SELLING_PRICE'
   | 'CALIBRATED_ROUTE_ACCESSORIES'
   | 'LEGACY_BOX_BONUS'
   | 'GET_UPTO_INCLUDES_BOX_AND_CHARGER'

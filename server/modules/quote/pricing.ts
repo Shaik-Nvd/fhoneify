@@ -1,4 +1,6 @@
 import crypto from 'crypto';
+import { loadExactFinalQuoteFile } from '../../../lib/pricing/exactFinalQuoteFile';
+import { existingExactFinalQuoteIndex } from '../../../scripts/pricing/exact-final-quote-evidence';
 import config from '../../config';
 import logger from '../../lib/logger';
 import { createPricingService, HYBRID_PRICING_VERSION, RELEASE_CANDIDATE_PRICING_VERSION } from '../../../lib/pricing/pricingService';
@@ -43,6 +45,15 @@ function releaseRouteEvidence() {
 }
 
 const routes = releaseRouteEvidence();
+// Explicit activation only; existing deployed business rules remain unchanged by default.
+function exactFinalQuoteIndex() {
+  const enabled = process.env.ENABLE_EXACT_FINAL_QUOTE_CACHE === undefined ? pricingRelease.exactFinalQuoteCache === true : process.env.ENABLE_EXACT_FINAL_QUOTE_CACHE === 'true';
+  if(pricingRelease.mode !== 'hybrid' || !enabled) return undefined;
+  try { return process.env.EXACT_FINAL_QUOTE_EVIDENCE_FILE ? loadExactFinalQuoteFile(process.env.EXACT_FINAL_QUOTE_EVIDENCE_FILE) : existingExactFinalQuoteIndex(); }
+  catch(err:any) { logger.error({err:err?.message},'Exact final-quote manifest unreadable; hybrid fallback retained');return undefined; }
+}
+const exactIndex = exactFinalQuoteIndex();
+const exactPolicy = (process.env.EXACT_FINAL_QUOTE_OFFER_POLICY ?? pricingRelease.exactFinalQuoteOfferPolicy) === 'bounded-net' ? 'bounded-net' as const : 'existing-uplift' as const;
 /** Public, secret-free status for /health. Fresh routes are counted at
  * request time, so evidence expiry is visible rather than silently inspecting. */
 export function pricingStatus(now = new Date()) {
@@ -52,6 +63,7 @@ export function pricingStatus(now = new Date()) {
     mode: pricingRelease.mode,
     source: pricingRelease.source,
     version: pricingRelease.mode === 'hybrid' ? HYBRID_PRICING_VERSION : pricingRelease.mode === 'release-candidate' ? RELEASE_CANDIDATE_PRICING_VERSION : PRICING_ENGINE_VERSION,
+    exactFinalQuoteCache: { enabled: !!exactIndex, uniqueKeys: exactIndex?.size ?? 0, rejectedCaptures: exactIndex?.rejected.length ?? 0, offerPolicy: exactPolicy },
     releaseRoutes: routes.length,
     freshReleaseRoutes: fresh.length,
     firstRouteExpiry: expiries.length ? new Date(Math.min(...expiries)).toISOString() : null,
@@ -68,5 +80,7 @@ export const pricingService = createPricingService({
   // Legacy unless the env switch or the reviewed config file selects release.
   pricingMode: pricingRelease.mode,
   releaseRouteEvidence: routes,
+  exactFinalQuoteIndex: exactIndex,
+  exactFinalQuoteOfferPolicy: exactPolicy,
   logger,
 });

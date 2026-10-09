@@ -1,3 +1,5 @@
+import type { GlassShadowCandidate, GlassShadowResult } from './glassShadowCandidate';
+import { boundedCompetitiveOffer, EXACT_FINAL_QUOTE_VERSION, type ExactFinalQuoteIndex } from './exactFinalQuote';
 import type { ReferencePriceRepository } from '../referencePricing/store';
 import type { ReferencePriceRecord } from '../referencePricing/types';
 import { deviceKey } from '../referencePricing/types';
@@ -56,6 +58,11 @@ export interface PricingServiceDeps {
   pricingMode?: 'legacy' | 'release-candidate' | 'hybrid';
   /** Explicit, audited exact-variant conditional traces; absent never inferred. */
   releaseRouteEvidence?: readonly WorkbookRouteEvidence[];
+  /** Optional cache of exact observed final Selling prices; cache misses preserve hybrid behavior. */
+  exactFinalQuoteIndex?: ExactFinalQuoteIndex;
+  exactFinalQuoteOfferPolicy?: 'existing-uplift' | 'bounded-net';
+  /** Offline injection only; no server configuration enables this shadow. */
+  glassShadowCandidate?: GlassShadowCandidate;
 }
 
 export type PricingErrorCode =
@@ -103,6 +110,8 @@ export interface AuthoritativeQuote {
     accessoryBasis: AccessoryBasis;
     releaseCandidate?: ReleaseCandidateOutcome;
     routeEvidenceSha256?: string | null;
+    glassShadow?: GlassShadowResult;
+    exactFinalQuote?: { evidenceIds: string[]; fingerprint: string; observedAt: string; policy: string };
   };
 }
 
@@ -130,6 +139,7 @@ export interface LeadPricingAudit {
   accessoryBasis?: AccessoryBasis | null;
   releaseCandidate?: ReleaseCandidateOutcome | null;
   routeEvidenceSha256?: string | null;
+  exactFinalQuote?: { evidenceIds: string[]; fingerprint: string; observedAt: string; policy: string } | null;
 }
 
 export interface VerifiedLeadPrice {
@@ -224,12 +234,26 @@ export function createPricingService(deps: PricingServiceDeps) {
     let startingPrice;
     let accessoryBasis: AccessoryBasis = 'LEGACY_BOX_BONUS';
     let rc: ReleaseCandidateOutcome | null = null;
+    let exactFinalQuote: AuthoritativeQuote['internal']['exactFinalQuote'];
     try {
       // The quote page passes the brand/model exactly as selected; pricing
       // with the catalog's own strings keeps the engine's model matching
       // identical for both.
       result = priceDevice(device.brand, device.model, base.cashifyGetUptoReference, diagnostics, hybrid ? legacyQuestionnaire : questionnaire);
-      if (releaseCandidate) {
+      const exact = hybrid && deps.exactFinalQuoteIndex ? deps.exactFinalQuoteIndex.find({ device, diagnostics,
+        reference: base.cashifyGetUptoReference, referenceVerifiedAt: base.referenceLastVerifiedAt, questionnaire, route, now: at,
+        referenceExact: base.source === 'reference_repository' && base.referenceStatus === 'fresh' && base.referenceSource === 'cashify' && !reference.degraded &&
+          reference.record?.matchConfidence === 'exact' && reference.record?.deviceKey === key && reference.record?.brand === device.brand &&
+          reference.record?.model === device.model && workbookStorageIdentity(reference.record?.storage ?? '') === workbookStorageIdentity(device.storage) }) : null;
+      if (exact?.matched && !releaseSafetyInspectionReason(device, diagnostics, true)) {
+        const policy = deps.exactFinalQuoteOfferPolicy ?? 'existing-uplift';
+        result = { cashifyConditionEquivalent: exact.sellingPrice, fhoneifyPrice: policy === 'bounded-net'
+          ? boundedCompetitiveOffer(base.cashifyGetUptoReference, exact.sellingPrice) : applyCompetitorUplift(base.cashifyGetUptoReference, exact.sellingPrice) };
+        accessoryBasis = 'OBSERVED_FINAL_SELLING_PRICE';
+        exactFinalQuote = { evidenceIds: exact.evidenceIds, fingerprint: exact.fingerprint, observedAt: exact.observedAt, policy };
+        rc = { kind: 'VERIFIED', cashifyConditionEquivalent: exact.sellingPrice, rule: EXACT_FINAL_QUOTE_VERSION, evidence: exact.fingerprint, conditionClass: conditionClass(diagnostics) };
+        quotePricingVersion = `${HYBRID_PRICING_VERSION}+${EXACT_FINAL_QUOTE_VERSION}+${policy}+${exact.fingerprint}`;
+      } else if (releaseCandidate) {
         const legacyResult = result;
         let correctionRejectionReason: string | null = null;
         const correctionFailure = (() : PricingFailure | undefined => {
@@ -333,6 +357,18 @@ export function createPricingService(deps: PricingServiceDeps) {
       throw err;
     }
 
+    let glassShadow: GlassShadowResult | undefined;
+    if (deps.glassShadowCandidate) {
+      try {
+        glassShadow = deps.glassShadowCandidate({ device, diagnostics, reference: base.cashifyGetUptoReference,
+          referenceVerifiedAt: base.referenceLastVerifiedAt, questionnaire: legacyQuestionnaire, route, now: at,
+          referenceExact: base.source === 'reference_repository' && base.referenceStatus === 'fresh' && base.referenceSource === 'cashify' && !reference.degraded &&
+            reference.record?.matchConfidence === 'exact' && reference.record?.deviceKey === key && reference.record?.brand === device.brand &&
+            reference.record?.model === device.model && workbookStorageIdentity(reference.record?.storage ?? '') === workbookStorageIdentity(device.storage) });
+      } catch {
+        glassShadow = { supported: false, researchOnly: true, version: 'conditional-glass-shadow/v1', reason: 'SHADOW_EVALUATION_FAILED' };
+      }
+    }
     const diagnosticsHash = canonicalDiagnosticsHash(diagnostics);
     const iat = Math.floor(at.getTime() / 1000);
     const exp = iat + deps.tokenTtlSeconds;
@@ -362,6 +398,7 @@ export function createPricingService(deps: PricingServiceDeps) {
       referenceLookupDegraded: reference.degraded,
       questionnaire,
       internal: {
+        ...(glassShadow ? { glassShadow } : {}),
         deviceKey: key,
         diagnosticsHash,
         cashifyGetUptoReference: base.cashifyGetUptoReference,
@@ -369,6 +406,7 @@ export function createPricingService(deps: PricingServiceDeps) {
         referenceSource: base.referenceSource,
         cashifyConditionEquivalent: result.cashifyConditionEquivalent,
         accessoryBasis,
+        ...(exactFinalQuote ? { exactFinalQuote } : {}),
         ...(rc ? { releaseCandidate: rc, routeEvidenceSha256: route?.evidenceSha256 ?? null } : {}),
       },
     };
@@ -469,6 +507,7 @@ export function createPricingService(deps: PricingServiceDeps) {
       accessoryBasis: current.ok ? current.internal.accessoryBasis : null,
       releaseCandidate: current.ok ? current.internal.releaseCandidate ?? null : null,
       routeEvidenceSha256: current.ok ? current.internal.routeEvidenceSha256 ?? null : null,
+      exactFinalQuote: current.ok ? current.internal.exactFinalQuote ?? null : null,
     };
 
     if (tokenRejectedReason) {

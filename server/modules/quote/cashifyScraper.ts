@@ -2,9 +2,17 @@ if (process.env.NODE_ENV === 'production') {
   process.env.PLAYWRIGHT_BROWSERS_PATH = '/ms-playwright';
 }
 import { chromium, Browser, BrowserContext, Page } from 'playwright';
+import crypto from 'node:crypto';
+import { createFileFinalQuoteLedger } from '../../../lib/pricing/finalQuoteLedger';
+import { refreshFinalQuotes, CashifyCollectionBlocked } from '../../../lib/pricing/finalQuoteRefresh';
+import { parseDiagnostics } from '../../../lib/pricing/diagnostics';
+import { canonicalDiagnosticsHash } from '../../../lib/pricing/quoteToken';
+import { findCatalogDevice } from '../../../lib/pricing/catalog';
 import path from 'path';
 import fs from 'fs';
 import logger from '../../lib/logger';
+import { verifyPageIdentity, splitHeading, parseVariant } from '../../../lib/referencePricing/sources/cashifyIdentity';
+import { parseFinalSellingPrice, requireBooleanAnswer, requireEsimAnswer, cashifyBlockingTextReason, installCashifyCollectionGuards } from './cashifyFinalPriceGuard';
 
 const SESSIONS_DIR = path.join(__dirname, '../../../cashify-sessions');
 
@@ -73,15 +81,15 @@ export async function closeCashifyBrowser(): Promise<void> {
   }
 }
 
-export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: string, storage: string, answers: any }) {
+async function scrapeCashifyPriceAttempt(deviceDetails: { brand: string, model: string, storage: string, answers: any }) {
   let sessionFiles: string[] = getCashifySessionFiles();
 
   if (sessionFiles.length === 0) {
     throw new Error('Cashify sessions not found. Please run setup-cashify script first.');
   }
 
-  // Randomly rotate sessions by shuffling the array
-  sessionFiles.sort(() => Math.random() - 0.5);
+  // One session attempt only: a failure is charged, never hidden by session rotation.
+  sessionFiles.sort();
 
   let lastError: Error | null = null;
 
@@ -89,25 +97,20 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
   // launched - see resolveHeadless().
   globalBrowser = await getCashifyBrowser({ headless: false });
 
-  for (let i = 0; i < sessionFiles.length; i++) {
+  for (let i = 0; i < Math.min(sessionFiles.length, 1); i++) {
     const sessionFile = sessionFiles[i];
     logger.info(`[Attempt ${i+1}/${sessionFiles.length}] Using session: ${path.basename(sessionFile)}`);
     
     let context: BrowserContext | null = null;
+    let page: Page | null = null;
+    let blockedReason: string | null = null;
+    let collectionGuard: Awaited<ReturnType<typeof installCashifyCollectionGuards>> | null = null;
 
     try {
       context = await globalBrowser.newContext({ storageState: sessionFile });
-      const page = await context.newPage();
-
-      // Allow images and fonts so the user can see and solve CAPTCHAs if necessary
-      await page.route('**/*', route => {
-        const type = route.request().resourceType();
-        if (['media'].includes(type)) {
-          route.abort();
-        } else {
-          route.continue();
-        }
-      });
+      page = await context.newPage();
+      // Observe all questionnaire/API responses; abort subsequent requests after a block.
+      collectionGuard = await installCashifyCollectionGuards(page);
 
       // Set a default timeout for all page actions
       page.setDefaultTimeout(45000);
@@ -154,6 +157,7 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
 
     // 1. Try going to cashify device page directly
     const response = await page.goto(deviceUrl, { waitUntil: 'domcontentloaded' });
+    if ([401,403,429].includes(response?.status() ?? 0)) throw new Error('Authentication or blocked request; stop collection');
     
     // If it's 404, it might be a model naming mismatch (e.g. SE 2020 vs SE 2). Try fallback search.
     if (response?.status() === 404 || response?.status() === 500) {
@@ -171,6 +175,9 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
       }
     }
 
+    const availableVariants = await page.evaluate(() => Array.from(document.querySelectorAll('body *'))
+      .filter(e=>e.children.length===0 && /^\s*\d+(?:\.\d+)?\s*(?:GB|TB)(?:\s*\/\s*\d+(?:\.\d+)?\s*(?:GB|TB))?\s*$/i.test(e.textContent??''))
+      .map(e=>(e.textContent??'').trim()));
     // 3. Click the storage variant to reveal the price
     try {
       const spacedStorage = deviceDetails.storage.replace(/(\d+)([a-zA-Z]+)/, '$1 $2');
@@ -181,13 +188,14 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
         const variantBtn = await page.waitForSelector(`text=${deviceDetails.storage}`, { timeout: 5000 });
         await variantBtn?.click();
       } catch (err) {
-        logger.warn('Could not find storage variant to click. Price might not appear.');
+        throw new Error('Exact storage variant not found; refusing to use a default variant');
       }
     }
       await page.waitForTimeout(1000);
 
       // --- FULL CASHIFY SIMULATION ---
       const answers = deviceDetails.answers || {};
+      for (const field of ['calls','touch','originalScreen']) requireBooleanAnswer(answers,field);
 
       // PAGE 0: Select the right variant and click Get Exact Value
       let formattedStorage = deviceDetails.storage;
@@ -199,41 +207,61 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
         await storageOptions[0].click();
       }  
       
+      const heading=await page.locator('h1').first().innerText();
+      const embedded=splitHeading(heading).embeddedVariant;
+      // A model-only heading is not proof that the requested chip became the selected variant.
+      if(!embedded)throw new Error('Selected variant is not explicitly confirmed by the page heading');
+      const wanted=parseVariant(deviceDetails.storage);
+      const sameStorage=[...new Set(availableVariants.filter(v=>parseVariant(v).storage===wanted.storage).map(v=>v.replace(/\s+/g,'').toLowerCase()))];
+      const identityCheck=verifyPageIdentity(deviceDetails,{url:page.url(),deviceName:heading,selectedVariant:embedded,priceText:'',availableVariants,
+        variantResolvedBy:wanted.ram===null && sameStorage.length===1 ? 'unique-storage-chip' : 'url'});
+      if(!identityCheck.ok)throw new Error(`Exact device identity rejected: ${identityCheck.evidence}`);
+      const blockedText=await page.locator('body').innerText();
+      blockedReason ??= collectionGuard.reason ?? cashifyBlockingTextReason(blockedText);
+      if (blockedReason) throw new Error(blockedReason);
+
       // 1. Click Get Exact Value
       const getExactValueBtn = await page.$('text="Get Exact Value"');
+      if (!getExactValueBtn) throw new Error('Get Exact Value button not found');
       if (getExactValueBtn) {
         await getExactValueBtn.click();
         
         // PAGE 1: Yes/No Questions
         await page.waitForSelector('text=Are you able to make and receive calls?', { timeout: 10000 });
-        const yesBtns = await page.$$('text="Yes"');
-        const noBtns = await page.$$('text="No"');
-        
-        if (yesBtns.length >= 5 && noBtns.length >= 5) {
-          // Calls
-          if (answers.calls === false) await noBtns[0].click(); else await yesBtns[0].click();
-          // Touch screen
-          if (answers.touch === false) await noBtns[1].click(); else await yesBtns[1].click();
-          // Original screen
-          if (answers.originalScreen === false) await noBtns[2].click(); else await yesBtns[2].click();
-          // Warranty
-          if (answers.warranty === false) await noBtns[3].click(); else await yesBtns[3].click();
-          // GST Bill
-          if (answers.validBill === false) await noBtns[4].click(); else await yesBtns[4].click();
-        } else if (yesBtns.length >= 3 && noBtns.length >= 3) {
-          // Calls
-          if (answers.calls === false) await noBtns[0].click(); else await yesBtns[0].click();
-          // Touch screen
-          if (answers.touch === false) await noBtns[1].click(); else await yesBtns[1].click();
-          // Original screen
-          if (answers.originalScreen === false) await noBtns[2].click(); else await yesBtns[2].click();
+        const questionModes: Record<string, 'ASKED' | 'NOT_ASKED'> = {};
+        for (const [field, pattern, required] of [
+          ['calls','make and receive calls',true], ['touch','touch screen working',true], ['originalScreen','screen original',true],
+          ['warranty','manufacturer warranty',false], ['validBill','valid bill|GST bill',false],
+        ] as const) {
+          const shown = await page.locator('body').innerText();
+          if (!new RegExp(pattern,'i').test(shown)) {
+            if(required) throw new Error(`Required question ${field} not found`);
+            questionModes[field]='NOT_ASKED'; continue;
+          }
+          const answer=requireBooleanAnswer(answers,field);
+          const clicked=await page.evaluate(({pattern,answer})=>{
+            const leaves=Array.from(document.querySelectorAll('body *')).filter(e=>e.children.length===0 && new RegExp(pattern,'i').test(e.textContent??''));
+            if(leaves.length!==1)return false;
+            let container:Element|null=leaves[0].parentElement;
+            while(container && container!==document.body) {
+              const yes=Array.from(container.querySelectorAll('button,label,[role="radio"]')).filter(e=>e.textContent?.trim()==='Yes');
+              const no=Array.from(container.querySelectorAll('button,label,[role="radio"]')).filter(e=>e.textContent?.trim()==='No');
+              if(yes.length===1 && no.length===1) { (answer?yes[0]:no[0] as HTMLElement).dispatchEvent(new MouseEvent('click',{bubbles:true}));return true; }
+              if(yes.length>1||no.length>1)return false;
+              container=container.parentElement;
+            }
+            return false;
+          },{pattern,answer});
+          if(!clicked)throw new Error(`Ambiguous or unsupported question container: ${field}`);
+          questionModes[field]='ASKED';
         }
         
         // eSIM Question (if present)
         const singleEsimBtn = await page.$('text="Single eSIM"');
         const dualEsimBtn = await page.$('text="Dual eSIM"');
         if (singleEsimBtn && dualEsimBtn) {
-          if (answers.eSim === 'Dual eSIM') {
+          const eSim=requireEsimAnswer(answers.eSim);
+          if (eSim === 'Dual eSIM') {
             await dualEsimBtn.click();
           } else {
             await singleEsimBtn.click();
@@ -246,7 +274,7 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
         // PAGE 2: Screen/Body Defects
         await page.waitForTimeout(2000);
         
-        if (answers.defects && answers.defects.includes('broken_screen')) {
+        if (answers.defects && (answers.defects.includes('broken_screen') || answers.defects.includes('screen_scratch'))) {
           const screenScratch = await page.$('text=Broken/scratch on device screen');
           if (screenScratch) await screenScratch.click();
         }
@@ -275,10 +303,11 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
         await page.waitForTimeout(2000);
         
         // Stage 3: Screen Physical Condition
-        if (answers.defects && answers.defects.includes('broken_screen')) {
+        if (answers.defects && (answers.defects.includes('broken_screen') || answers.defects.includes('screen_scratch'))) {
           if (answers.screenCondition) {
             const opt = await page.$(`text="${answers.screenCondition}"`);
-            if (opt) await opt.click();
+            if (!opt) throw new Error("Requested diagnostic option not found");
+            await opt.click();
           }
           const contSub1 = await page.$('text="Continue"');
           if (contSub1) await contSub1.click();
@@ -289,15 +318,18 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
         if (answers.defects && answers.defects.includes('screen_spot')) {
           if (answers.screenSpots) {
             const spotBtn = await page.$(`text="${answers.screenSpots}"`);
-            if (spotBtn) await spotBtn.click();
+            if (!spotBtn) throw new Error("Requested diagnostic option not found");
+            await spotBtn.click();
           }
           if (answers.screenLines) {
             const lineBtn = await page.$(`text="${answers.screenLines}"`);
-            if (lineBtn) await lineBtn.click();
+            if (!lineBtn) throw new Error("Requested diagnostic option not found");
+            await lineBtn.click();
           }
           if (answers.screenDiscoloration) {
             const discBtn = await page.$(`text="${answers.screenDiscoloration}"`);
-            if (discBtn) await discBtn.click();
+            if (!discBtn) throw new Error("Requested diagnostic option not found");
+            await discBtn.click();
           }
           const contSub2 = await page.$('text="Continue"');
           if (contSub2) await contSub2.click();
@@ -308,11 +340,13 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
         if (answers.defects && answers.defects.includes('body_scratch')) {
           if (answers.bodyScratches) {
             const bScratch = await page.$(`text="${answers.bodyScratches}"`);
-            if (bScratch) await bScratch.click();
+            if (!bScratch) throw new Error("Requested diagnostic option not found");
+            await bScratch.click();
           }
           if (answers.bodyDents) {
             const bDent = await page.$(`text="${answers.bodyDents}"`);
-            if (bDent) await bDent.click();
+            if (!bDent) throw new Error("Requested diagnostic option not found");
+            await bDent.click();
           }
           const contSub3 = await page.$('text="Continue"');
           if (contSub3) await contSub3.click();
@@ -323,11 +357,13 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
         if (answers.defects && answers.defects.includes('panel_missing')) {
           if (answers.bodyPanel) {
             const bPanel = await page.$(`text="${answers.bodyPanel}"`);
-            if (bPanel) await bPanel.click();
+            if (!bPanel) throw new Error("Requested diagnostic option not found");
+            await bPanel.click();
           }
           if (answers.bodyBent) {
             const bBent = await page.$(`text="${answers.bodyBent}"`);
-            if (bBent) await bBent.click();
+            if (!bBent) throw new Error("Requested diagnostic option not found");
+            await bBent.click();
           }
           const contSub4 = await page.$('text="Continue"');
           if (contSub4) await contSub4.click();
@@ -359,9 +395,11 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
           };
 
           for (const hwId of answers.hardware) {
+            if (!hardwareMap[hwId]) throw new Error(`Unknown hardware fault: ${hwId}`);
             if (hardwareMap[hwId]) {
               const el = await page.$(`text="${hardwareMap[hwId]}"`);
-              if (el) await el.click();
+              if (!el) throw new Error("Requested diagnostic option not found");
+            await el.click();
             }
           }
         }
@@ -373,12 +411,19 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
         if (answers.accessories && answers.accessories.length > 0) {
           if (answers.accessories.includes('charger')) {
             const charger = await page.$('text=Original Charger of device');
-            if (charger) await charger.click();
+            if (!charger) throw new Error('Requested charger option not found');
+            await charger.click();
           }
           if (answers.accessories.includes('box')) {
             const box = await page.$('text=Box with same IMEI');
-            if (box) await box.click();
+            if (!box) throw new Error('Requested box option not found');
+            await box.click();
           }
+        }
+        if (answers.accessories?.includes('spen')) {
+          const pen=await page.getByText(/original s.?pen/i).first();
+          if(!await pen.isVisible())throw new Error('Requested S Pen option not found');
+          await pen.click();
         }
         const continueBtn4 = await page.$('text="Continue"');
         if (continueBtn4) await continueBtn4.click();
@@ -387,6 +432,7 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
         await page.waitForTimeout(2000);
         const agePageTitle = await page.$('text=What is your mobile age?');
         if (agePageTitle || (answers.warranty === true && answers.validBill === true)) {
+          if (!['below3','3to6','6to11','above11'].includes(answers.mobileAge)) throw new Error('Explicit mobile age answer required');
           let ageText = 'Above 11 months';
           if (answers.mobileAge === 'below3') ageText = 'Below 3 months';
           else if (answers.mobileAge === '3to6') ageText = '3 months - 6 months';
@@ -396,9 +442,7 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
           if (ageBtn) {
             await ageBtn.click();
           } else {
-            // fallback: check if any age button is visible
-            const firstAgeBtn = await page.$('text="Above 11 months"');
-            if (firstAgeBtn) await firstAgeBtn.click();
+            throw new Error('Requested mobile age option not found');
           }
         }
 
@@ -406,54 +450,32 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
         await page.waitForTimeout(4000);
       }
 
-      // Extract final price from the page
-      const priceText = await page.evaluate(() => {
-        // Try to find the Selling price explicitly
-        const sellingPriceLabel = Array.from(document.querySelectorAll('*'))
-          .find(el => el.textContent?.trim().includes('Selling price'));
-        
-        if (sellingPriceLabel) {
-          // Look for the next element containing ₹
-          let curr = sellingPriceLabel.nextElementSibling;
-          while (curr) {
-            if (curr.textContent?.includes('₹')) return curr.textContent.trim();
-            curr = curr.nextElementSibling;
-          }
-          // If not next sibling, search in parent's next sibling
-          let parent = sellingPriceLabel.parentElement;
-          if (parent && parent.nextElementSibling) {
-            if (parent.nextElementSibling.textContent?.includes('₹')) {
-              return parent.nextElementSibling.textContent.trim();
-            }
-          }
-        }
-        
-        // Fallback: get the FIRST element with ₹ that isn't a voucher (which are usually later)
-        const priceElements = Array.from(document.querySelectorAll('span, div, h1, h2, h3, h4, h5, h6'))
-          .filter(el => {
-            const text = el.textContent?.trim() || '';
-            return text.includes('₹') && text.length < 15;
-          });
-        return priceElements.length > 0 ? priceElements[0].textContent?.trim() : null;
-      });
-
-    if (!priceText) {
-      await page.screenshot({ path: path.join(__dirname, '../../../cashify_error_screenshot.png') });
-      throw new Error('Could not extract price from the page.');
-    }
-
-    // Parse the price text (e.g., "₹1,200" -> 1200)
-    const numericPrice = parseInt(priceText.replace(/[^0-9]/g, ''), 10);
+      // No Get Upto, voucher or first-currency fallback is acceptable.
+      const finalText = await page.locator('body').innerText();
+      blockedReason ??= collectionGuard.reason ?? cashifyBlockingTextReason(finalText);
+      if (blockedReason) throw new Error(blockedReason);
+      const numericPrice = parseFinalSellingPrice(finalText);
+      if (numericPrice === null) throw new Error('One unambiguous final Selling price was not found');
+      const priceText = `Selling price ₹${numericPrice}`;
 
     return {
       price: numericPrice,
       rawText: priceText,
-      success: true
+      success: true,
+      // This legacy cross-check helper has no persisted selected-state trace. Never import it as verified pricing evidence.
+      verifiedEvidence: false
     };
 
     } catch (error: any) {
+      // A late challenge may otherwise look like a selector timeout. Preserve the durable campaign stop.
+      blockedReason ??= collectionGuard?.reason ?? null;
+      if (!blockedReason && page) {
+        try { blockedReason = cashifyBlockingTextReason(await page.locator('body').innerText({ timeout: 2000 })); } catch { /* Original failure still applies. */ }
+      }
+      if (blockedReason) error = new Error(blockedReason);
       logger.warn({ err: error.message }, `Scraping failed with session ${path.basename(sessionFile)}`);
       lastError = error;
+      if (/captcha|sign.?in|log.?in|authentication|access denied|blocked/i.test(error.message ?? '')) break;
       // Loop will continue and try the next session!
     } finally {
       if (context) await context.close();
@@ -466,4 +488,30 @@ export async function scrapeCashifyPrice(deviceDetails: { brand: string, model: 
     success: false,
     error: lastError?.message || 'Failed to scrape price across all sessions'
   };
+}
+
+/** Reuses the existing browser walker, with a durable campaign budget and serial pacing.
+ * Disabled until a NEW explicit campaign ceiling is configured. Result remains an unverified cross-check. */
+export async function scrapeCashifyPrice(deviceDetails: { brand: string; model: string; storage: string; answers: unknown }) {
+  const ceiling=Number(process.env.CASHIFY_FINAL_QUOTE_MAX_ATTEMPTS ?? 0);
+  const campaign=process.env.CASHIFY_FINAL_QUOTE_CAMPAIGN;
+  if(!campaign || !Number.isSafeInteger(ceiling) || ceiling<=0) return {success:false as const,error:'No authorized final-quote collection campaign configured'};
+  const parsed=parseDiagnostics(deviceDetails.answers);
+  const device=findCatalogDevice(deviceDetails.brand,deviceDetails.model,deviceDetails.storage);
+  if(!parsed.ok || !device) return {success:false as const,error:'Exact catalog variant and valid diagnostics required'};
+  const key=crypto.createHash('sha256').update(`${device.brand}|${device.model}|${device.storage}|${canonicalDiagnosticsHash(parsed.value)}`).digest('hex');
+  let ledger;
+  try { ledger=createFileFinalQuoteLedger(process.env.CASHIFY_FINAL_QUOTE_LEDGER_DIR ?? path.join(__dirname,'../../../scratch/final-quote-campaigns'),campaign); }
+  catch { return {success:false as const,error:'Collection worker already active or campaign ledger unavailable'}; }
+  let captured: Awaited<ReturnType<typeof scrapeCashifyPriceAttempt>> | undefined;
+  try {
+    const interval=Number(process.env.CASHIFY_FINAL_QUOTE_MIN_INTERVAL_MS ?? 30000);
+    const result=await refreshFinalQuotes({jobs:[{key,priority:1,device,diagnostics:parsed.value}],authorizedAttempts:ceiling,minStartIntervalMs:interval,ledger,
+      fetch:async()=>{
+        const r=await scrapeCashifyPriceAttempt({...device,answers:parsed.value});
+        if(!r.success){if(/captcha|auth|blocked|access denied/i.test(r.error??''))throw new CashifyCollectionBlocked(r.error);throw new Error(r.error);}
+        captured=r;return {id:key};
+      },accept:async()=>{}});
+    return captured ?? {success:false as const,error:`Collection stopped: ${result.stopped}`};
+  } finally {ledger.release();}
 }

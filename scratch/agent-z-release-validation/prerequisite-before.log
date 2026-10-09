@@ -1,0 +1,16 @@
+PASS authentication stop persists across campaign restart; zero second fetches
+PASS accepted, failed and interrupted jobs stay consumed after restart; original ceiling retained
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ undefined
+- true
+
+    at main (C:\Users\shoae\OneDrive\projects\fhoneify\scratch\agent-z-release\scripts\test\pricing.review-followup.test.ts:25:93) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: undefined,
+  expected: true,
+  operator: 'strictEqual',
+  diff: 'simple'
+}

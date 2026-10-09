@@ -8,6 +8,7 @@ import { deviceKey, type ReferencePriceRecord } from '../../lib/referencePricing
 import { findCatalogDevice } from '../../lib/pricing/catalog';
 import { customerPayout } from '../../lib/pricing/payout';
 import { applyCompetitorUplift } from '../../lib/pricingCalculator';
+import { xiaomiInrDeductions } from '../../lib/pricing/inrDeductionTables';
 
 const at = new Date('2026-10-01T18:00:00Z');
 const sem = { warrantyMode: 'ASKED', billMode: 'ASKED', ageMode: 'NOT_ASKED' } as const;
@@ -39,9 +40,9 @@ let checks = 0;
 async function main() {
   const severe = fixture.cases.find(r => r.id === 'N-SIX')!;
   const request = (r: typeof severe) => ({ brand: 'Xiaomi', model: r.model, storage: r.storage, diagnostics: r.diagnostics });
-  assert.deepEqual(await disabled.quote(request(severe)), await service.quote(request(severe))); checks++;
   const original = await disabled.quote(request(severe)); assert(original.ok && 'quoteToken' in original);
-  assert.equal(original.internal.cashifyConditionEquivalent, 16630); checks++;
+  assert.deepEqual(original, await service.quote(request(severe))); checks++;
+  assert.equal(xiaomiInrDeductions().enabled, false); checks++;
   assert(!('verifyLeadPrice' in preview)); checks++;
   for (const r of fixture.cases.filter(r => r.model === severe.model)) {
     const p = await preview.quote(request(r)); assert(p.ok && 'researchOnly' in p);
@@ -73,6 +74,7 @@ async function main() {
     assert(!p.ok && p.code === 'RESEARCH_CANDIDATE_UNSUPPORTED'); checks++;
   }
   records.set(key, saved);
+  assert.deepEqual(await disabled.quote(request(severe)), original); checks++;
   profiles.profiles.delete(questionnaireModelKey(saved));
   const fallback = await preview.quote(request(severe)); assert(!fallback.ok && fallback.code === 'RESEARCH_CANDIDATE_UNSUPPORTED'); checks++;
   const samsung = { brand: 'Samsung', model: 'Samsung Galaxy S24 5G', storage: '8 GB/256 GB', diagnostics: severe.diagnostics };

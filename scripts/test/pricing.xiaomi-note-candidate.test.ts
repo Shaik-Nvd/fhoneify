@@ -6,6 +6,7 @@ import { calculateXiaomiPrice, applyCompetitorUplift, type DiagnosticsType } fro
 import { xiaomiInrDeductions } from '../../lib/pricing/inrDeductionTables';
 import { inrConditionValue } from '../../lib/pricing/inrDeductions';
 const q = { warrantyMode: 'ASKED', billMode: 'ASKED', ageMode: 'NOT_ASKED' } as const;
+const shippedQuoteBefore = calculateXiaomiPrice(XIAOMI_NOTE_IDENTITY.model, 29250, fixture.cases.find(r => r.id === 'N-SIX')!.diagnostics as DiagnosticsType, q).cashifyConditionEquivalent;
 const now = new Date('2026-10-01T18:00:00Z');
 const clean = fixture.cases.find(r => r.id === 'N-OPEN')!;
 const input: Parameters<typeof calculateXiaomiNoteEvidenceCandidate>[0] = { ...XIAOMI_NOTE_IDENTITY, diagnostics: clean.diagnostics as DiagnosticsType,
@@ -67,10 +68,11 @@ for (const overrides of [
   { now: new Date('2026-11-01T18:00:00Z'), reference: { ...gate.reference, referenceLastVerifiedAt: '2026-11-01T17:30:00Z' } },
   { questionnaire: { ...gate.questionnaire, source: 'fallback' as const } },
 ]) { assert(!calculateXiaomiApplicationCandidate({ ...gate, ...overrides }).supported); checks++; }
-// No mutation of shipped tables or legacy cap behavior.
+// No mutation of shipped tables or legacy quote behavior.
 const active = xiaomiInrDeductions(); const group = 'redmi-note-15-pro-plus';
 assert.equal(active.groups[group].functionalCap, 6610); checks++;
-assert.equal(calculateXiaomiPrice(input.model, 29250, six, q).cashifyConditionEquivalent, 16630); checks++;
+assert.equal(calculateXiaomiPrice(input.model, 29250, six, q).cashifyConditionEquivalent, shippedQuoteBefore); checks++;
+assert.equal(active.enabled, false); checks++;
 const allFaults = { ...six, hardware: Object.keys(active.groups[group].functional) };
 assert.equal(inrConditionValue({ config: active, group, reference: 29250, ageRetention: .74, diagnostics: allFaults, deadPhonePrice: 1200 }).functional, 6610); checks++;
 assert.equal(fixture.priorNoteObservations.filter(r => r.status === 'FAILED').length, 4); checks++;

@@ -8,6 +8,7 @@ import { mkdtempSync, writeFileSync, unlinkSync, rmdirSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { createPricingService, RELEASE_CANDIDATE_PRICING_VERSION, type PricingServiceDeps } from '../../lib/pricing/pricingService';
+import { createExactFinalQuoteIndex } from '../../lib/pricing/exactFinalQuote';
 import { conditionClass } from '../../lib/pricing/releaseCandidate';
 import { PRICING_ENGINE_VERSION } from '../../lib/pricing/engine';
 import { findCatalogDevice } from '../../lib/pricing/catalog';
@@ -434,6 +435,28 @@ async function run() {
       assert.equal(quote.body.code, 'MANUAL_INSPECTION_REQUIRED'); assert.equal(quote.body.data, undefined);
       const lead = await post('/api/quote/leads', leadFor(answers, old.quoteToken, old.fhoneifyPrice));
       assert.equal(lead.status, 422); assert.equal(lead.body.code, 'MANUAL_INSPECTION_REQUIRED'); assert.equal(leads.length, count);
+    });
+    await check('changed exact price blocks lead persistence until a fresh displayed quote is accepted', async () => {
+      const original=records.get(deviceKey(nord))!;
+      const exactIndex=createExactFinalQuoteIndex([{...nord,id:'http-exact-fixture',getUpto:8340,sellingPrice:5000,observedAt,screenshotSha256:'c'.repeat(64),
+        diagnostics:clean,route:{warranty:'NOT_ASKED',validBill:'NOT_ASKED',mobileAge:'NOT_ASKED',eSim:'NOT_ASKED',box:'ASKED',charger:'ASKED',sPen:'NOT_ASKED'},
+        provenance:{screenshotVerified:true,planMatched:true,routeComplete:true,source:'synthetic-http-fixture',role:'FLOW_TEST_ONLY'}}]);
+      active=make('hybrid',{exactFinalQuoteIndex:exactIndex,exactFinalQuoteOfferPolicy:'bounded-net'});
+      try {
+        const displayed=await post('/api/quote/price',requestFor(clean));assert.equal(displayed.status,200);assert(displayed.body.data.pricingVersion.includes('exact-final-selling-cache'));
+        records.set(deviceKey(nord),{...original,currentPrice:8350});
+        const count=leads.length;
+        const rejected=await post('/api/quote/leads',leadFor(clean,displayed.body.data.quoteToken,displayed.body.data.fhoneifyPrice));
+        assert.equal(rejected.status,409);assert.equal(rejected.body.code,'QUOTE_CHANGED');assert.equal(leads.length,count,'A changed price must not persist a lead');
+        const omitted=await post('/api/quote/leads',leadFor(clean,displayed.body.data.quoteToken));assert.equal(omitted.status,409);assert.equal(leads.length,count,'Omitting displayed price must not bypass reconfirmation');
+        const coupon=await post('/api/quote/leads',{...leadFor(clean,displayed.body.data.quoteToken,displayed.body.data.fhoneifyPrice),couponApplied:true});assert.equal(coupon.status,409);assert.equal(leads.length,count);
+        const fresh=await post('/api/quote/price',requestFor(clean));assert.equal(fresh.status,200);
+        for (const couponApplied of [false,true]) for (const rejectedToken of [displayed.body.data.quoteToken,'bad-signature','']) {
+          const bypass=await post('/api/quote/leads',{...leadFor(clean,rejectedToken,fresh.body.data.fhoneifyPrice),couponApplied});
+          assert.equal(bypass.status,409,'A stale token cannot be accepted by submitting the recalculated client amount');assert.equal(leads.length,count);
+        }
+        const accepted=await post('/api/quote/leads',leadFor(clean,fresh.body.data.quoteToken,fresh.body.data.fhoneifyPrice));assert.equal(accepted.status,200);assert.equal(leads.length,count+1);assert.equal(leads.at(-1)!.quotedPrice,fresh.body.data.fhoneifyPrice);
+      }finally{records.set(deviceKey(nord),original);}
     });
     console.log(`Release flow: ${passed} passed, ${failures.length} failed; ${leads.length} in-memory leads, zero database writes.`);
     if (failures.length) throw new Error(`Release flow regressions: ${failures.join('; ')}`);

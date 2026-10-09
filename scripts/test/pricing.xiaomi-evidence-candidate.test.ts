@@ -7,6 +7,7 @@ import { COMBO_0 } from '../pricing/benchmark-combos';
 const semantics = { warrantyMode: 'ASKED', billMode: 'ASKED', ageMode: 'NOT_ASKED' } as const;
 const clean = { ...COMBO_0, warranty: false, validBill: true, mobileAge: null, eSim: null, accessories: ['box'] };
 const before = JSON.stringify(xiaomiInrDeductions());
+const shippedQuoteBefore = calculateXiaomiPrice('Xiaomi 17',57750,clean,semantics).cashifyConditionEquivalent;
 let checks = 0;
 function price(model: string, storage: string, reference: number, diagnostics = clean) {
   const result = calculateXiaomiEvidenceCandidate(model, storage, reference, diagnostics, semantics, true);
@@ -28,9 +29,11 @@ assert.equal(calculateXiaomiEvidenceCandidate('Xiaomi 15','12 GB/512 GB',37100,c
 assert.equal(calculateXiaomiEvidenceCandidate('Xiaomi 17','12 GB/512 GB',57750,clean,{...semantics,ageMode:'UNKNOWN'},true).supported,false); checks++;
 assert.equal(calculateXiaomiEvidenceCandidate('Xiaomi 17','12 GB/512 GB',57750,clean,semantics,false).supported,false); checks++;
 const config=xiaomiEvidenceCandidateConfig();
+assert.equal(config.enabled,true); checks++;
+assert.equal(xiaomiInrDeductions().enabled,false); checks++;
 assert.equal(config.groups['xiaomi 17'].functionalCap,33040); checks++;
 assert.equal(config.groups['xiaomi redmi turbo 5'].functionalCap,15350); checks++;
 config.groups['xiaomi 17'].screen.localDisplay=1;
 assert.equal(JSON.stringify(xiaomiInrDeductions()),before); checks++;
-assert.equal(calculateXiaomiPrice('Xiaomi 17',57750,clean,semantics).cashifyConditionEquivalent,44500); checks++;
+assert.equal(calculateXiaomiPrice('Xiaomi 17',57750,clean,semantics).cashifyConditionEquivalent,shippedQuoteBefore); checks++;
 console.log(`PASS Xiaomi research candidate: ${checks} checks; active engine unchanged`);

@@ -15,6 +15,8 @@ const fileSchema = z.object({
   routeEvidenceFile: z.string().min(1).optional(),
   approvedBy: z.string().optional(),
   note: z.string().optional(),
+  exactFinalQuoteCache: z.boolean().optional(),
+  exactFinalQuoteOfferPolicy: z.enum(['existing-uplift','bounded-net']).optional(),
 });
 
 export interface PricingReleaseConfig {
@@ -23,6 +25,8 @@ export interface PricingReleaseConfig {
   routeEvidenceFile: string | null;
   source: 'env' | 'file' | 'default';
   error?: string;
+  exactFinalQuoteCache?: boolean;
+  exactFinalQuoteOfferPolicy?: 'existing-uplift' | 'bounded-net';
 }
 
 export function resolvePricingReleaseConfig(env: Record<string, string | undefined> = process.env, root = process.cwd()): PricingReleaseConfig {
@@ -36,12 +40,16 @@ export function resolvePricingReleaseConfig(env: Record<string, string | undefin
     error = `${PRICING_RELEASE_CONFIG_FILE}: ${err?.code === 'ENOENT' ? 'missing' : 'invalid'}`;
   }
   const evidence = resolve(env.PRICING_RELEASE_ROUTE_EVIDENCE_FILE || file?.routeEvidenceFile);
-  if (envSwitch === 'hybrid') return { mode: 'hybrid', routeEvidenceFile: evidence, source: 'env', error };
+  if (envSwitch === 'hybrid') return { mode: 'hybrid', routeEvidenceFile: evidence, source: 'env', error,
+    ...(file?.exactFinalQuoteCache !== undefined ? { exactFinalQuoteCache: file.exactFinalQuoteCache } : {}),
+    ...(file?.exactFinalQuoteOfferPolicy ? { exactFinalQuoteOfferPolicy: file.exactFinalQuoteOfferPolicy } : {}) };
   if (envSwitch === 'on') return { mode: 'release-candidate', routeEvidenceFile: evidence, source: 'env', error };
   if (envSwitch === 'off') return { mode: 'legacy', routeEvidenceFile: null, source: 'env', error };
   if (file) {
     const mode = file.mode ?? (file.releaseCandidate ? 'release-candidate' : 'legacy');
-    return { mode, routeEvidenceFile: mode === 'legacy' ? null : evidence, source: 'file' };
+    return { mode, routeEvidenceFile: mode === 'legacy' ? null : evidence, source: 'file',
+      ...(file.exactFinalQuoteCache !== undefined ? { exactFinalQuoteCache: mode === 'hybrid' && file.exactFinalQuoteCache } : {}),
+      ...(file.exactFinalQuoteOfferPolicy ? { exactFinalQuoteOfferPolicy: file.exactFinalQuoteOfferPolicy } : {}) };
   }
   return { mode: 'legacy', routeEvidenceFile: null, source: 'default', error };
 }

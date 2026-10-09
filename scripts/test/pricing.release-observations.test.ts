@@ -25,10 +25,16 @@ for (const row of fixture.manualInterpretation.observations) {
   assert.equal(row.provenance.type, 'TESTER_REPORTED');
   assert.equal(row.observedAt, null); checks += 4;
 }
-assert.equal(routes.rows.length, 8); checks++;
+// The reviewed fixture expanded from eight routes to 21; validate provenance for every row below.
+assert.equal(routes.rows.length, 21); checks++;
 for (const r of routes.rows) {
-  const o = fixture.observations.find(row => row.id === r.observationId);
-  assert(o);
+  // Expanded routes may identify their source by the verified screenshot rather than observationId.
+  const id = 'observationId' in r ? r.observationId : null;
+  const matched = fixture.observations.filter(row => id ? row.id === id :
+    row.screenshotSha256 === r.evidenceSha256 && row.collectedAt === r.observedAt && row.brand === r.brand && row.model === r.model && row.storage === r.storage);
+  assert.equal(matched.length, 1, `Exactly one preserved observation must support ${r.brand} ${r.model} ${r.storage}`);
+  const o = matched[0];
+  assert(!('excluded' in o), 'Excluded observations cannot supply reviewed route provenance');
   assert.equal(o.provenance.screenshotVerified, true);
   assert.equal(o.provenance.planMatched, true);
   assert.equal(o.provenance.routeComplete, true);
@@ -38,6 +44,6 @@ for (const r of routes.rows) {
   assert.equal(r.chargerMode, o.route.charger);
   assert.equal(r.boxMode, o.route.box);
   assert.equal(r.eSimMode, o.route.eSim);
-  assert.equal(r.sPenMode, o.route.sPen); checks += 11;
+  assert.equal(r.sPenMode, o.route.sPen); checks += 12;
 }
 console.log(`PASS release observation semantics and provenance ${checks} assertions`);

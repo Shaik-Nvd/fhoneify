@@ -1,0 +1,18 @@
+[
+  {
+    "Command": "node --import tsx scripts/test/pricing.cashify-comparison.test.ts",
+    "ExitCode": 0
+  },
+  {
+    "Command": "node --import tsx scripts/test/pricing.reference-data.test.ts",
+    "ExitCode": 0
+  },
+  {
+    "Command": "node --import tsx scripts/test/pricing.get-upto.test.ts",
+    "ExitCode": 0
+  },
+  {
+    "Command": "node --import tsx scripts/test/pricing.inr-deductions.test.ts",
+    "ExitCode": 0
+  }
+]

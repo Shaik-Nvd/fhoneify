@@ -1,0 +1,14 @@
+[
+  {
+    "Command": "node --import tsx scripts/test/pricing.agent-z-acceptance.test.ts",
+    "ExitCode": 0
+  },
+  {
+    "Command": "node --import tsx scripts/test/pricing.release-flow.test.ts",
+    "ExitCode": 0
+  },
+  {
+    "Command": "node --import tsx scripts/test/pricing.glass-shadow-http.test.ts",
+    "ExitCode": 0
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "classification": "EXACT_CAPTURE_REPLAY_IS_CACHE_REPRODUCTION_NOT_INDEPENDENT_VALIDATION; SAVED_REFERENCE_REPLAY_IS_NOT_LIVE",
+  "source": "Provided frozen 2026-10-07 evaluation; only counts/existing metadata inspected, evaluation not rerun",
+  "publicInputsQueriedAt": "2026-10-07T17:45:29.102Z",
+  "capturedExact": {
+    "combinations": 116,
+    "variants": 38,
+    "bothPayoutPass": 116
+  },
+  "savedPublicExact": {
+    "combinations": 113,
+    "variants": 37,
+    "bothPayoutPass": 113
+  },
+  "gaps": [
+    {
+      "id": "team-workbook-2026-10-02:FM004_LIVE_CLOSE_A",
+      "variant": "Apple|Apple iPhone 12 Pro|256 GB",
+      "capturedGetUpto": 24460,
+      "capturedSelling": 24760,
+      "publicDecision": "LEGACY"
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM004_LIVE_B",
+      "variant": "Apple|Apple iPhone 12 Pro|256 GB",
+      "capturedGetUpto": 24460,
+      "capturedSelling": 20790,
+      "publicDecision": "LEGACY"
+    },
+    {
+      "id": "team-workbook-2026-10-02:FM004_LIVE_C",
+      "variant": "Apple|Apple iPhone 12 Pro|256 GB",
+      "capturedGetUpto": 24460,
+      "capturedSelling": 16730,
+      "publicDecision": "LEGACY"
+    }
+  ]
+}

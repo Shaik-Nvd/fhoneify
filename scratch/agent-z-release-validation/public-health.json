@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "referenceStore": "postgres",
+  "database": "connected",
+  "databaseCheckedAt": "2026-10-09T15:02:09.709Z",
+  "commit": "5fc2ceb3d0fb",
+  "pricing": {
+    "mode": "hybrid",
+    "source": "file",
+    "version": "fhoneify-pricing/2026-09-25-internal-consistency+rc-hybrid-v1-2026-10-04",
+    "releaseRoutes": 44,
+    "freshReleaseRoutes": 44,
+    "firstRouteExpiry": "2026-10-15T14:04:30.047Z"
+  }
+}

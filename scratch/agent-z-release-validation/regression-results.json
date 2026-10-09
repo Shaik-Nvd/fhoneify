@@ -1,0 +1,42 @@
+[
+  {
+    "Command": "node --import tsx scripts/test/pricing.hybrid.test.ts",
+    "ExitCode": 0
+  },
+  {
+    "Command": "node --import tsx scripts/test/pricing.production.test.ts",
+    "ExitCode": 0
+  },
+  {
+    "Command": "node --import tsx scripts/test/pricing.quote-consistency.test.ts",
+    "ExitCode": 0
+  },
+  {
+    "Command": "node --import tsx scripts/test/pricing.regression.test.ts",
+    "ExitCode": 0
+  },
+  {
+    "Command": "node --import tsx scripts/test/pricing.release-observations.test.ts",
+    "ExitCode": 0
+  },
+  {
+    "Command": "node --import tsx scripts/test/pricing.xiaomi-research-service.test.ts",
+    "ExitCode": 0
+  },
+  {
+    "Command": "node --import tsx scripts/test/pricing.xiaomi-note-candidate.test.ts",
+    "ExitCode": 0
+  },
+  {
+    "Command": "node --import tsx scripts/test/pricing.xiaomi-evidence-candidate.test.ts",
+    "ExitCode": 0
+  },
+  {
+    "Command": "node --import tsx scripts/test/pricing.xiaomi-application-candidate.test.ts",
+    "ExitCode": 0
+  },
+  {
+    "Command": "node --import tsx scripts/test/pricing.scraper-blocks.test.ts",
+    "ExitCode": 0
+  }
+]

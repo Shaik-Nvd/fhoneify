@@ -1,0 +1,18 @@
+[
+  {
+    "path": "C:/Users/shoae/Downloads/Fhoneify_Glass_Shadow_2026-10-09.zip",
+    "sha256": "487d0daad882968dbc145dd7144a12ba0492b2a78cb8b6101325500e6b1c27b9"
+  },
+  {
+    "path": "C:/Users/shoae/OneDrive/projects/fhoneify/scratch/agent-z-packages/glass-shadow/glass-shadow.patch",
+    "sha256": "eca25d2f6bdc918034fc7d4bc3da25e842fcf0fdc8588d7ac7ca8b852c3f8f57"
+  },
+  {
+    "path": "C:/Users/shoae/OneDrive/projects/fhoneify/scratch/agent-z-packages/exact-fixes/exact-engine.patch",
+    "sha256": "a92645b20d5057a89a48dd8a9cd7819e9ab9391efd1f9def0563a2f314ccb387"
+  },
+  {
+    "path": "C:/Users/shoae/OneDrive/projects/fhoneify/scratch/agent-z-packages/final-fixes/after-a8a7140.patch",
+    "sha256": "b8ad01e6a3fece69d31da9a491203d055b144794d44eb92539cf0534220e5f56"
+  }
+]

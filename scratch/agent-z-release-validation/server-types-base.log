@@ -1,0 +1,7 @@
+server/modules/admin/service.ts(41,33): error TS2367: This comparison appears to be unintentional because the types '"active" | "pending" | "sold"' and '"rejected"' have no overlap.
+server/modules/admin/service.ts(54,3): error TS2322: Type '"rejected"' is not assignable to type '"active" | "pending" | "sold"'.
+server/modules/inventory/service.ts(16,35): error TS2339: Property 'locationId' does not exist on type 'InventoryItem'.
+server/modules/inventory/service.ts(20,37): error TS2339: Property 'isSelectTier' does not exist on type 'InventoryItem'.
+server/test-iphone14.ts(1,23): error TS2307: Cannot find module 'puppeteer' or its corresponding type declarations.
+server/test-random-10.ts(98,32): error TS2339: Property 'data' does not exist on type '{ price: number; rawText: string; success: boolean; error?: undefined; } | { success: boolean; error: string; price?: undefined; rawText?: undefined; }'.
+  Property 'data' does not exist on type '{ price: number; rawText: string; success: boolean; error?: undefined; }'.

@@ -8,6 +8,7 @@ const d={...COMBO_0,warranty:false,validBill:true,mobileAge:null,eSim:null,acces
 const q={warrantyMode:'ASKED',billMode:'ASKED',ageMode:'NOT_ASKED',source:'profile'} as const;
 const base={model:'Xiaomi 17',storage:'12 GB/512 GB',diagnostics:d,questionnaire:q,eSimMode:'NOT_ASKED',now:new Date('2026-10-01T18:00:00Z'),
   reference:{cashifyGetUptoReference:57750,source:'reference_repository',referenceStatus:'fresh',referenceSource:'cashify',referenceLastVerifiedAt:'2026-10-01T15:00:00Z'}} as const;
+const shippedQuoteBefore=calculateXiaomiPrice(base.model,57750,d,q).cashifyConditionEquivalent;
 let checks=0;
 const ok=calculateXiaomiApplicationCandidate(base);assert(ok.supported);assert.equal(ok.quote.cashifyConditionEquivalent,32220);checks++;
 for(const input of [{...base,reference:null},{...base,reference:{...base.reference,referenceStatus:'stale' as const}},
@@ -24,12 +25,14 @@ assert(turbo.supported);assert.equal(turbo.quote.cashifyConditionEquivalent,1464
 const config=xiaomiInrDeductions(), group='redmi-note-15-pro-plus';
 const severe={...d,originalScreen:true,hardware:['front_camera','back_camera','wifi','speaker','charging','fingerprint']};
 const raw={config,group,reference:29250,ageRetention:.74,diagnostics:severe,deadPhonePrice:1200};
+const legacyBefore=JSON.stringify(config);
 assert.equal(inrConditionValue(raw).functional,5400);checks++;
 assert.equal(inrConditionValue(raw).value,16630);checks++;
 assert.equal(inrConditionValue({...raw,config:{...config,groups:{...config.groups,[group]:{...config.groups[group],functionalCap:Infinity}}}}).value,16630);checks++;
+assert.equal(JSON.stringify(xiaomiInrDeductions()),legacyBefore);checks++;
 // Counterfactual diagnostics using six separately measured single-fault
 // losses, frozen before four unseen combinations (all four matched). These
-// test-local costs never replace the shipped tables or activate Note support.
+// test-local costs never replace the shipped tables.
 const measuredFunctional={charging:1000,speaker:400,front_camera:2000,back_camera:3200,wifi:8770,fingerprint:5850};
 const measuredConfig={...config,groups:{...config.groups,[group]:{...config.groups[group],functional:measuredFunctional}}};
 const capped=inrConditionValue({...raw,config:measuredConfig});
@@ -38,5 +41,6 @@ assert.equal(capped.value,15420);checks++;
 const uncappedConfig={...measuredConfig,groups:{...measuredConfig.groups,[group]:{...measuredConfig.groups[group],functionalCap:Infinity}}};
 assert.equal(inrConditionValue({...raw,config:uncappedConfig}).value,1200);checks++;
 assert.equal(inrConditionValue({...raw,config:uncappedConfig,ageRetention:(21780-380)/29250,deadPhonePrice:0}).value,560);checks++;
-assert.equal(calculateXiaomiPrice(base.model,57750,d,q).cashifyConditionEquivalent,34920);checks++;
+assert.equal(shippedQuoteBefore,calculateXiaomiPrice(base.model,57750,d,q).cashifyConditionEquivalent);checks++;
+assert.equal(xiaomiInrDeductions().enabled,false);checks++;
 console.log(`PASS application readiness and severe fault mechanism: ${checks} checks; no active engine changes`);
