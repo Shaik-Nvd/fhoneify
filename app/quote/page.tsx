@@ -341,6 +341,21 @@ export default function QuotePage() {
   const [sessionRestored, setSessionRestored] = useState(false);
 
   useEffect(() => {
+    if (step === 1 && selectionStage === 'storage') {
+      setTimeout(() => {
+        const el = document.getElementById('variant-selection-area');
+        if (el) {
+          const yOffset = - (window.innerHeight * 0.10);
+          const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }, 50);
+    }
+  }, [selectionStage, step]);
+
+  useEffect(() => {
     if (step === 11) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else if ((step >= 3 && step <= 9) || step === 13 || step === 14) {
@@ -2240,7 +2255,7 @@ export default function QuotePage() {
           )}
 
           {selectionStage === 'storage' && (
-            <>
+            <div id="variant-selection-area">
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
                 <h2 style={{ fontWeight: 600, fontSize: '1.25rem' }}>Choose a variant</h2>
                 <button onClick={() => navigateToState(selectedBrand, '', '', 'model', 1)} style={{ color: 'var(--gold)', background: 'none', border: 'none', cursor: 'pointer' }}>Change Model</button>
@@ -2267,7 +2282,7 @@ export default function QuotePage() {
                 )}
                 {loading && <p style={{ color: 'var(--gold)', textAlign: 'center', marginTop: '1rem', fontWeight: 600 }}>Loading...</p>}
               </div>
-            </>
+            </div>
           )}
         </div>
       )}
