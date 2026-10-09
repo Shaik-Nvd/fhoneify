@@ -80,6 +80,42 @@ const FaceIdIcon = () => (
   </svg>
 );
 
+// Follow-up answers owned by each defect tile on the defects step.
+const DEFECT_DETAIL_RESET: Record<string, Record<string, null>> = {
+  screen_scratch: { screenCondition: null },
+  screen_spot: { screenSpots: null, screenLines: null, screenDiscoloration: null },
+  body_scratch: { bodyScratches: null, bodyDents: null },
+  panel_missing: { bodyPanel: null, bodyBent: null },
+};
+
+const EMPTY_DIAGNOSTICS = {
+  calls: null as boolean | null,
+  touch: null as boolean | null,
+  originalScreen: null as boolean | null,
+  defects: [] as string[],
+  screenCondition: null as string | null,
+  screenSpots: null as string | null,
+  screenLines: null as string | null,
+  screenDiscoloration: null as string | null,
+  bodyScratches: null as string | null,
+  bodyDents: null as string | null,
+  bodyPanel: null as string | null,
+  bodyBent: null as string | null,
+  hardware: [] as string[],
+  accessories: [] as string[],
+  warranty: null as boolean | null,
+  validBill: null as boolean | null,
+  eSim: null as 'Single eSIM' | 'Dual eSIM' | null,
+  mobileAge: null as 'below3' | '3to6' | '6to11' | 'above11' | null
+};
+
+const MOBILE_AGE_LABELS: Record<string, string> = {
+  below3: 'Below 3 months',
+  '3to6': '3 - 6 months',
+  '6to11': '6 - 11 months',
+  above11: 'Above 11 months',
+};
+
 export default function QuotePage() {
   // Whether to ask warranty/GST-bill for this device. Previously a
   // hand-maintained allowlist of "recent" models unrelated to the pricing
@@ -228,6 +264,7 @@ export default function QuotePage() {
       : null;
     if (saved) {
       if (saved.answers) setDiagnostics(saved.answers as any);
+      answersDeviceRef.current = `${saved.brand}|${saved.model}|${saved.storage}`;
       // Never display a saved price before the current server confirms its
       // eligibility. Same-version quotes retain the existing token price lock.
       if (saved.starting) fetchStartingQuote(saved.brand, saved.model, saved.storage);
@@ -336,6 +373,8 @@ export default function QuotePage() {
   const finalPrice = activeFinalQuote?.price ?? null;
   const priceRequestIdRef = useRef(0);
   const startingRequestIdRef = useRef(0);
+  // The device the current condition answers were given for.
+  const answersDeviceRef = useRef('');
   // Set once the saved quote session has been read after a reload, so the
   // save effect cannot overwrite it with the empty initial state first.
   const [sessionRestored, setSessionRestored] = useState(false);
@@ -361,26 +400,22 @@ export default function QuotePage() {
     }
   }, [step]);
 
-  const [diagnostics, setDiagnostics] = useState({
-    calls: null as boolean | null,
-    touch: null as boolean | null,
-    originalScreen: null as boolean | null,
-    defects: [] as string[],
-    screenCondition: null as string | null,
-    screenSpots: null as string | null,
-    screenLines: null as string | null,
-    screenDiscoloration: null as string | null,
-    bodyScratches: null as string | null,
-    bodyDents: null as string | null,
-    bodyPanel: null as string | null,
-    bodyBent: null as string | null,
-    hardware: [] as string[],
-    accessories: [] as string[],
-    warranty: null as boolean | null,
-    validBill: null as boolean | null,
-    eSim: null as 'Single eSIM' | 'Dual eSIM' | null,
-    mobileAge: null as 'below3' | '3to6' | '6to11' | 'above11' | null
-  });
+  // Brand -> model -> variant all stay on step 1, so the effect above never
+  // fires. Without this, picking a model far down the long model grid kept
+  // that scroll offset and dropped the user at the bottom of the much shorter
+  // variant card (footer in view, "Choose a variant" scrolled off-screen).
+  useEffect(() => {
+    if (step === 1) window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
+  }, [selectionStage, selectedBrand, selectedModel]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // The API on Render sleeps when idle and a cold start takes 30-60 s. Wake
+  // it while the customer is still choosing a device, so the "Get Upto"
+  // price after picking a variant doesn't wait on the cold start.
+  useEffect(() => {
+    api.get('/health').catch(() => {});
+  }, []);
+
+  const [diagnostics, setDiagnostics] = useState(EMPTY_DIAGNOSTICS);
 
   const [userPhone, setUserPhone] = useState('');
   const [userName, setUserName] = useState('');
@@ -1054,7 +1089,13 @@ export default function QuotePage() {
     );
     if (!device) return;
 
-    // A different device invalidates any price from the previous one.
+    // A different device invalidates any price from the previous one, and
+    // its condition answers (warranty, age, defects) describe another phone.
+    const deviceKey = `${selectedBrand}|${selectedModel}|${s}`;
+    if (answersDeviceRef.current !== deviceKey) {
+      setDiagnostics(EMPTY_DIAGNOSTICS);
+      answersDeviceRef.current = deviceKey;
+    }
     setFinalQuote(null);
     setFinalPriceError(null);
     fetchStartingQuote(selectedBrand, selectedModel, s);
@@ -1069,6 +1110,12 @@ export default function QuotePage() {
       if (key === 'hardware' && !arr.includes(val)) {
         if (val === 'battery_service') arr = arr.filter(i => i !== 'battery_health');
         if (val === 'battery_health') arr = arr.filter(i => i !== 'battery_service');
+      }
+
+      if (key === 'defects' && arr.includes(val)) {
+        // Unticking a defect must also drop its follow-up answers; otherwise
+        // a stale "Screen cracked" etc. is still priced (and voids warranty).
+        return { ...prev, defects: arr.filter(i => i !== val), ...DEFECT_DETAIL_RESET[val] };
       }
 
       return { ...prev, [key]: arr.includes(val) ? arr.filter(i => i !== val) : [...arr, val] };
@@ -1446,7 +1493,7 @@ export default function QuotePage() {
       {diagnostics.mobileAge !== null && (
         <div style={{ marginBottom: '0.75rem' }}>
           <p style={{ color: 'var(--muted)', fontSize: '0.75rem' }}>Mobile Age</p>
-          <p style={{ color: 'var(--gold)', fontSize: '0.85rem', fontWeight: 600 }}>• {diagnostics.mobileAge}</p>
+          <p style={{ color: 'var(--gold)', fontSize: '0.85rem', fontWeight: 600 }}>• {MOBILE_AGE_LABELS[diagnostics.mobileAge] ?? diagnostics.mobileAge}</p>
         </div>
       )}
       {diagnostics.defects.length > 0 && (
@@ -2230,7 +2277,7 @@ export default function QuotePage() {
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '1rem' }}>
                   {models.map((m) => (
                     <button key={m} onClick={() => handleModelSelect(m)} className="card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem', padding: '1rem', border: '1px solid var(--border)', backgroundColor: 'var(--surface)', borderRadius: '12px', cursor: 'pointer' }}>
-                      <img src={`/images/models/${m.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={m} style={{ width: '70px', height: '100px', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
+                      <img src={`/images/models/${m.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={m} loading="lazy" decoding="async" style={{ width: '70px', height: '100px', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
                       <span style={{ fontSize: '0.8rem', textAlign: 'center' }}>{m}</span>
                     </button>
                   ))}
@@ -2360,11 +2407,11 @@ export default function QuotePage() {
                       <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem' }}>Is your device under manufacturer warranty?</h3>
                       <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>You can get a better price for your device if it&apos;s under manufacturer warranty with a GST valid bill.</p>
                       <div style={{ display: 'flex', gap: '1rem' }}>
-                        <button onClick={() => setDiagnostics({ ...diagnostics, warranty: true })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.warranty === true ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.warranty === true ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.warranty === true ? '#4CD964' : 'var(--foreground)' }}>
-                          <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.warranty === true ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.warranty === true ? '#4CD964' : '#transparent' }} /> Yes
+                        <button onClick={() => setDiagnostics({ ...diagnostics, warranty: true, mobileAge: diagnostics.warranty === false ? null : diagnostics.mobileAge })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.warranty === true ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.warranty === true ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.warranty === true ? '#4CD964' : 'var(--foreground)' }}>
+                          <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.warranty === true ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.warranty === true ? '#4CD964' : 'transparent' }} /> Yes
                         </button>
                         <button onClick={() => setDiagnostics({ ...diagnostics, warranty: false, mobileAge: 'above11' })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.warranty === false ? '1px solid #FF3B30' : '1px solid var(--border)', backgroundColor: diagnostics.warranty === false ? 'rgba(255,59,48,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.warranty === false ? '#FF3B30' : 'var(--foreground)' }}>
-                          <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.warranty === false ? '1px solid #FF3B30' : '1px solid var(--border)', backgroundColor: diagnostics.warranty === false ? '#FF3B30' : '#transparent' }} /> No
+                          <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.warranty === false ? '1px solid #FF3B30' : '1px solid var(--border)', backgroundColor: diagnostics.warranty === false ? '#FF3B30' : 'transparent' }} /> No
                         </button>
                       </div>
                     </div>
@@ -2376,10 +2423,10 @@ export default function QuotePage() {
                       <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Make sure your bill has device IMEI mentioned on it.</p>
                       <div style={{ display: 'flex', gap: '1rem' }}>
                         <button onClick={() => setDiagnostics({ ...diagnostics, validBill: true })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.validBill === true ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.validBill === true ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.validBill === true ? '#4CD964' : 'var(--foreground)' }}>
-                          <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.validBill === true ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.validBill === true ? '#4CD964' : '#transparent' }} /> Yes
+                          <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.validBill === true ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.validBill === true ? '#4CD964' : 'transparent' }} /> Yes
                         </button>
                         <button onClick={() => setDiagnostics({ ...diagnostics, validBill: false })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.validBill === false ? '1px solid #FF3B30' : '1px solid var(--border)', backgroundColor: diagnostics.validBill === false ? 'rgba(255,59,48,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.validBill === false ? '#FF3B30' : 'var(--foreground)' }}>
-                          <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.validBill === false ? '1px solid #FF3B30' : '1px solid var(--border)', backgroundColor: diagnostics.validBill === false ? '#FF3B30' : '#transparent' }} /> No
+                          <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.validBill === false ? '1px solid #FF3B30' : '1px solid var(--border)', backgroundColor: diagnostics.validBill === false ? '#FF3B30' : 'transparent' }} /> No
                         </button>
                       </div>
                     </div>
@@ -2394,10 +2441,10 @@ export default function QuotePage() {
                     <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Please select &quot;Dual eSIM&quot; if your device supports dual eSIMs. Otherwise, select &quot;Single eSIM&quot;.</p>
                     <div style={{ display: 'flex', gap: '1rem' }}>
                       <button onClick={() => setDiagnostics({ ...diagnostics, eSim: 'Single eSIM' })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.eSim === 'Single eSIM' ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.eSim === 'Single eSIM' ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.eSim === 'Single eSIM' ? '#4CD964' : 'var(--foreground)' }}>
-                        <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.eSim === 'Single eSIM' ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.eSim === 'Single eSIM' ? '#4CD964' : '#transparent' }} /> Single eSIM
+                        <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.eSim === 'Single eSIM' ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.eSim === 'Single eSIM' ? '#4CD964' : 'transparent' }} /> Single eSIM
                       </button>
                       <button onClick={() => setDiagnostics({ ...diagnostics, eSim: 'Dual eSIM' })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.eSim === 'Dual eSIM' ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.eSim === 'Dual eSIM' ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.eSim === 'Dual eSIM' ? '#4CD964' : 'var(--foreground)' }}>
-                        <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.eSim === 'Dual eSIM' ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.eSim === 'Dual eSIM' ? '#4CD964' : '#transparent' }} /> Dual eSIM
+                        <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.eSim === 'Dual eSIM' ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.eSim === 'Dual eSIM' ? '#4CD964' : 'transparent' }} /> Dual eSIM
                       </button>
                     </div>
                   </div>
@@ -2701,8 +2748,6 @@ export default function QuotePage() {
                     // and non-foldable Vivo/iQOO, never for Samsung, Nothing/
                     // CMF, foldable Vivo/iQOO or the generic fallback - see
                     // lib/pricing/questionnaire.ts.)
-                    const asksAge = asksAgeQuestion;
-
                     // Check the concrete fields this UI sends. The previous
                     // legacy-id check could never see lines, discoloration or
                     // bent-panel answers.
@@ -2711,6 +2756,14 @@ export default function QuotePage() {
                     // Even if validBill is false, Cashify still asks for the mobile age and applies an age deduction
                     // in addition to the missing bill deduction.
                     const isWarrantyValid = diagnostics.warranty === true && !hasWarrantyVoidingDefects;
+
+                    // Cashify asks "What is your mobile age?" as the follow-up
+                    // to "under warranty: Yes". The stored profile ageMode
+                    // cannot be relied on here: it is parsed from Cashify's
+                    // FIRST questionnaire page, while the age question is on
+                    // the last one, so nearly every profiled model reads
+                    // NOT_ASKED and a "Yes" skipped the age step entirely.
+                    const asksAge = asksAgeQuestion || (asksWarrantyQuestion && isWarrantyValid);
 
                     // Void a warranty=true answer that the reported defects
                     // contradict. This must happen regardless of whether the
@@ -2926,7 +2979,7 @@ export default function QuotePage() {
                 onClick={() => {
                   setFinalQuote(null);
                   setMarketPriceFetched(false);
-                  setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], screenCondition: null, screenSpots: null, screenLines: null, screenDiscoloration: null, bodyScratches: null, bodyDents: null, bodyPanel: null, bodyBent: null, hardware: [], accessories: [], warranty: null, validBill: null, eSim: null, mobileAge: null });
+                  setDiagnostics(EMPTY_DIAGNOSTICS);
                   navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 3);
                 }}
                 style={{
@@ -3126,7 +3179,7 @@ export default function QuotePage() {
           
           <div style={{ display: 'flex', gap: '0.75rem', marginTop: '1rem', width: '100%' }}>
             <button type="button" onClick={handleBack} className="btn-outline" style={{ flex: 1, padding: '12px', fontSize: '1rem' }}>Back</button>
-            <button type="button" onClick={() => { navigateToState('', '', '', 'brand', 1); setFinalQuote(null); setStartingQuote(null); setAppliedCoupon(false); { const store = getSessionStore(); if (store) clearQuoteSession(store); } setMarketPriceFetched(false); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], screenCondition: null, screenSpots: null, screenLines: null, screenDiscoloration: null, bodyScratches: null, bodyDents: null, bodyPanel: null, bodyBent: null, hardware: [], accessories: [], warranty: null, validBill: null, eSim: null, mobileAge: null }); }} className="btn-outline" style={{ flex: 1, padding: '12px', fontSize: '1rem' }}>Start Over</button>
+            <button type="button" onClick={() => { navigateToState('', '', '', 'brand', 1); setFinalQuote(null); setStartingQuote(null); setAppliedCoupon(false); { const store = getSessionStore(); if (store) clearQuoteSession(store); } setMarketPriceFetched(false); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics(EMPTY_DIAGNOSTICS); }} className="btn-outline" style={{ flex: 1, padding: '12px', fontSize: '1rem' }}>Start Over</button>
             <button type="button" onClick={() => setStep(12)} className="btn-primary" style={{ flex: 2, padding: '12px', fontSize: '1rem', fontWeight: 600, cursor: 'pointer' }}>Schedule Pickup</button>
           </div>
         </div>
