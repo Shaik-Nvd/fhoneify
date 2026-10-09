@@ -52,7 +52,7 @@ export default function ProfilePage() {
 
 
         {user?.role === 'admin' && (
-          <Link href="/admin" className="card" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', textDecoration: 'none', border: '1px solid rgba(212, 175, 55, 0.3)' }}>
+          <a href="/admin" className="card" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', textDecoration: 'none', border: '1px solid rgba(212, 175, 55, 0.3)' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
               <div style={{ width: '40px', height: '40px', borderRadius: '8px', background: 'rgba(212, 175, 55, 0.2)', color: 'var(--gold)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
@@ -63,7 +63,7 @@ export default function ProfilePage() {
               </div>
             </div>
             <svg viewBox="0 0 24 24" width="20" height="20" stroke="var(--gold)" strokeWidth="2" fill="none"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </Link>
+          </a>
         )}
 
       </div>

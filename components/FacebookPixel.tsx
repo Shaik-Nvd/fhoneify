@@ -1,30 +1,20 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import Script from 'next/script';
 
 export const FB_PIXEL_ID = '1068307909151936';
 
-declare global {
-  interface Window {
-    fbq?: (...args: unknown[]) => void;
-  }
-}
+// Admin pages are not tracked. The pixel counts client-side page changes on
+// its own (it hooks history.pushState once loaded), so links from public pages
+// into /admin must be full page loads (plain <a> / window.location) to keep
+// the pixel off the page there.
+export const isUntrackedPath = (path: string) => path === '/admin' || path.startsWith('/admin/');
 
 export default function FacebookPixel() {
   const pathname = usePathname();
-  const isFirstRender = useRef(true);
 
-  // The base code fires the initial PageView. Client-side navigations in the
-  // App Router don't reload the page, so fire PageView on each route change.
-  useEffect(() => {
-    if (isFirstRender.current) {
-      isFirstRender.current = false;
-      return;
-    }
-    window.fbq?.('track', 'PageView');
-  }, [pathname]);
+  if (isUntrackedPath(pathname)) return null;
 
   return (
     <>
@@ -43,15 +33,12 @@ export default function FacebookPixel() {
           fbq('track', 'PageView');
         `}
       </Script>
-      <noscript>
-        <img
-          height="1"
-          width="1"
-          style={{ display: 'none' }}
-          alt=""
-          src={`https://www.facebook.com/tr?id=${FB_PIXEL_ID}&ev=PageView&noscript=1`}
-        />
-      </noscript>
+      {/* Raw HTML so React doesn't preload the image (and count a visit) when JS is on. */}
+      <noscript
+        dangerouslySetInnerHTML={{
+          __html: `<img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=${FB_PIXEL_ID}&ev=PageView&noscript=1" />`,
+        }}
+      />
       {/* End Facebook Pixel Code */}
     </>
   );
