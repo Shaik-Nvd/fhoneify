@@ -358,6 +358,17 @@ export default function QuotePage() {
   useEffect(() => {
     if (step === 11) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (step === 2) {
+      setTimeout(() => {
+        const el = document.getElementById('base-price-screen');
+        if (el) {
+          const yOffset = - (window.innerHeight * 0.15);
+          const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }, 50);
     } else if ((step >= 3 && step <= 9) || step === 13 || step === 14) {
       // Small delay to ensure the DOM is rendered before calculating position
       setTimeout(() => {
@@ -2289,7 +2300,7 @@ export default function QuotePage() {
 
       {/* STAGE 2: BASE PRICE SCREEN */}
       {step === 2 && (
-        <div className="card flex flex-col md:flex-row items-center gap-6 md:gap-12 p-6 md:p-12 bg-surface border border-border rounded-xl max-w-[700px] mx-auto text-center md:text-left">
+        <div id="base-price-screen" className="card flex flex-col md:flex-row items-center gap-6 md:gap-12 p-6 md:p-12 bg-surface border border-border rounded-xl max-w-[700px] mx-auto text-center md:text-left">
           <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} style={{ width: '120px', height: '180px', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
           <div className="flex flex-col gap-2 flex-1 w-full text-foreground items-center md:items-start">
             <h2 style={{ fontSize: '1.4rem', fontWeight: 500 }}>Sell Old {getDisplayModelName(selectedBrand, selectedModel)} ({selectedStorage})</h2>
