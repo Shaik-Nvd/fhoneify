@@ -1,6 +1,6 @@
 # Agent Z release candidate — review only
 
-Verified integration base: 5fc2ceb3d0fb691084c65f12b91f694c2efa0c2a. The earlier read-only Render /health check reported 5fc2ceb3d0fb, hybrid pricing and a connected database. This identifies the API revision at the check time, not production pickup or current Cashify accuracy. This blocker update starts at eb5d1f75bad399b411bd16028e3d02bccf6b7b6c on the isolated release branch. The portable package records its final commit and hashes.
+Original verified integration base: 5fc2ceb3d0fb691084c65f12b91f694c2efa0c2a. The earlier read-only Render /health check reported 5fc2ceb3d0fb, hybrid pricing and a connected database. This identifies the API revision at the check time, not production pickup or current Cashify accuracy. This blocker update starts at eb5d1f75bad399b411bd16028e3d02bccf6b7b6c on the isolated release branch. The portable package records its final commit and hashes.
 
 ## Patch selection and preservation
 
@@ -61,3 +61,11 @@ Safe pricing rollback keeps the patched acceptance controller: ENABLE_EXACT_FINA
 A full code rollback to eb5d1f7 or verified main would restore unsafe tokenless acceptance. Retain/backport the all-mode signed-token guard and client recovery fixes before any full rollback. Glass needs no runtime deactivation because production never injects it.
 
 Stop at review. No collection, glass activation, push, merge, deployment, installation or production write occurred.
+
+## Types-source correction and current-main preservation
+
+On 2026-10-10 the supplied Fhoneify_Backend_Types_Only_2026-10-09.zip was reviewed. Its patch SHA-256 is123efeb5663560b3b995bf93cccc315e744f2fef84351cdc6c54a975ca48ec38. The three server/data.ts declarations are semantically identical to those already committed at164be7e; only optional-property placement differs. No duplicate patch was applied. The ZIP reports source99afb5ef06dd3be26ac45c926e7a45deece10dfb, basebff8f5ca2726d1eac8ee6a6c302c96f4f1fe742c and ancestry tocdb172e. Those Git objects remain unavailable after fetch, so that ancestry is reported, not independently verified. The type-only patch does not include the two script retirements and does not itself promise all six errors are cleared.
+
+Both scripts remain: repository CI, scheduled jobs, imports and production entry points contain no caller, but absence of a caller does not establish obsolescence or outside use. Their existing compile corrections are retained; neither script was executed. Backend TypeScript after integration exits0. No pricing behavior changes were needed.
+
+Fetch identified current mainf6433ba924c0b29687eb8f6d619b8288399ea4d1, two Meta-only commits after the original base. Merge935fd382ce8d7b6a27f8184e2d584046709720ec preserves all five changed Meta/auth/profile/Navbar files exactly as current main. Pricing modules, quote controller and quote page are byte-for-byte unchanged from164be7e. The updated portable full patch targetsf6433ba. Prior20 regression suites and three browser results remain attributed to164be7e; they were not replayed. Backend/frontend TypeScript and the production build are separately checked on the merged tree. The earlier API health observation remains at5fc2ceb; no newer production revision is asserted.

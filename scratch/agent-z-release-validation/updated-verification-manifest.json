@@ -216,5 +216,17 @@
   "zeroProductionWrites": true,
   "noNewCollection": true,
   "noGlassActivation": true,
-  "noPushMergeDeployment": true
+  "noPushMergeDeployment": true,
+  "currentMainBase": "f6433ba924c0b29687eb8f6d619b8288399ea4d1",
+  "historicalRegressionAndBrowserRevision": "164be7ecf5c3702be1bc519d9e6c52626de5c1a9; not replayed; pricing/quote sources unchanged",
+  "currentMainMergeChecks": {
+    "pricingQuoteSourcesIdenticalTo164be7e": true,
+    "revision": "935fd382ce8d7b6a27f8184e2d584046709720ec",
+    "frontendTypecheckExit": 0,
+    "backendTypecheckExit": 0,
+    "productionBuildExit": 0,
+    "buildLog": "build.current-main.log",
+    "metaFilesIdenticalToCurrentMain": true
+  },
+  "typeSourceReview": "type-source-review.json; declarations already equivalent; no scripts retired or executed"
 }
