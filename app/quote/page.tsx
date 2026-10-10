@@ -3034,7 +3034,7 @@ export default function QuotePage() {
                     value={couponInput}
                     onChange={(e) => setCouponInput(e.target.value.toUpperCase())}
                     placeholder="Enter promo code" 
-                    style={{ flex: 1, padding: '0.6rem 0.8rem', borderRadius: '8px', border: '1px solid var(--border)', backgroundColor: 'var(--surface)', outline: 'none', fontSize: '0.9rem', transition: 'all 0.3s ease' }} 
+                    style={{ flex: 1, padding: '0.6rem 0.8rem', borderRadius: '8px', border: '1px solid var(--border)', backgroundColor: 'var(--surface)', outline: 'none', fontSize: '0.9rem', transition: 'all 0.3s ease', boxSizing: 'border-box', minWidth: '100%' }} 
                     onFocus={(e) => { e.currentTarget.style.border = '1px solid var(--gold)'; e.currentTarget.style.backgroundColor = 'rgba(255,215,0,0.05)'; }}
                     onBlur={(e) => { e.currentTarget.style.border = '1px solid rgba(255,255,255,0.1)'; e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)'; }}
                   />
