@@ -353,8 +353,34 @@ export default function QuotePage() {
   const [sessionRestored, setSessionRestored] = useState(false);
 
   useEffect(() => {
+    if (step === 1 && selectionStage === 'storage') {
+      setTimeout(() => {
+        const el = document.getElementById('variant-selection-area');
+        if (el) {
+          const yOffset = - (window.innerHeight * 0.10);
+          const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }, 50);
+    }
+  }, [selectionStage, step]);
+
+  useEffect(() => {
     if (step === 11) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (step === 2) {
+      setTimeout(() => {
+        const el = document.getElementById('base-price-screen');
+        if (el) {
+          const yOffset = - (window.innerHeight * 0.15);
+          const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }, 50);
     } else if ((step >= 3 && step <= 9) || step === 13 || step === 14) {
       // Small delay to ensure the DOM is rendered before calculating position
       setTimeout(() => {
@@ -1489,6 +1515,29 @@ export default function QuotePage() {
   const isGoogleTierA = selectedBrand === 'Google';
   const isTierA = isAppleTierA || isSamsungTierA || isGoogleTierA;
 
+  const scrollToNextQuestion = (currentId: string) => {
+    const questionOrder = [
+      'calls', 'touch', 'originalScreen',
+      asksWarrantyQuestion ? 'warranty' : null,
+      asksBillQuestion ? 'validBill' : null,
+      asksESimQuestion ? 'eSim' : null,
+      'continue-btn'
+    ].filter(Boolean);
+    
+    const currentIndex = questionOrder.indexOf(currentId);
+    if (currentIndex >= 0 && currentIndex < questionOrder.length - 1) {
+      const nextId = questionOrder[currentIndex + 1];
+      const nextEl = document.getElementById(nextId === 'continue-btn' ? 'stage3-continue-btn' : `question-${nextId}`);
+      if (nextEl) {
+        setTimeout(() => {
+          const yOffset = - (window.innerHeight * 0.2);
+          const y = nextEl.getBoundingClientRect().top + window.scrollY + yOffset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }, 50);
+      }
+    }
+  };
+
   return (
     <div className="page-animate" style={{ maxWidth: step > 2 ? '1000px' : '40rem', margin: '0 auto', padding: '3rem 1rem' }}>
       
@@ -2254,7 +2303,7 @@ export default function QuotePage() {
           )}
 
           {selectionStage === 'storage' && (
-            <>
+            <div id="variant-selection-area">
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
                 <h2 style={{ fontWeight: 600, fontSize: '1.25rem' }}>Choose a variant</h2>
                 <button onClick={() => navigateToState(selectedBrand, '', '', 'model', 1)} style={{ color: 'var(--gold)', background: 'none', border: 'none', cursor: 'pointer' }}>Change Model</button>
@@ -2281,14 +2330,14 @@ export default function QuotePage() {
                 )}
                 {loading && <p style={{ color: 'var(--gold)', textAlign: 'center', marginTop: '1rem', fontWeight: 600 }}>Loading...</p>}
               </div>
-            </>
+            </div>
           )}
         </div>
       )}
 
       {/* STAGE 2: BASE PRICE SCREEN */}
       {step === 2 && (
-        <div className="card flex flex-col md:flex-row items-center gap-6 md:gap-12 p-6 md:p-12 bg-surface border border-border rounded-xl max-w-[700px] mx-auto text-center md:text-left">
+        <div id="base-price-screen" className="card flex flex-col md:flex-row items-center gap-6 md:gap-12 p-6 md:p-12 bg-surface border border-border rounded-xl max-w-[700px] mx-auto text-center md:text-left">
           <img src={`/images/models/${selectedModel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={selectedModel} style={{ width: '120px', height: '180px', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
           <div className="flex flex-col gap-2 flex-1 w-full text-foreground items-center md:items-start">
             <h2 style={{ fontSize: '1.4rem', fontWeight: 500 }}>Sell Old {getDisplayModelName(selectedBrand, selectedModel)} ({selectedStorage})</h2>
@@ -2352,14 +2401,14 @@ export default function QuotePage() {
                   { id: 'touch', title: 'Is your device\'s touch screen working properly?', desc: 'Check the touch screen functionality of your phone.' },
                   { id: 'originalScreen', title: 'Is your phone\'s screen original?', desc: 'Pick "Yes" if screen was never changed or was changed by Authorized Service Center. Pick "No" if screen was changed at local shop.' }
                 ].map((q) => (
-                  <div key={q.id} style={{ marginBottom: '2.5rem' }}>
+                  <div key={q.id} id={`question-${q.id}`} style={{ marginBottom: '2.5rem' }}>
                     <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem' }}>{q.title}</h3>
                     <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>{q.desc}</p>
                     <div style={{ display: 'flex', gap: '1rem' }}>
-                      <button onClick={() => setDiagnostics({ ...diagnostics, [q.id]: true })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics[q.id as keyof typeof diagnostics] === true ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics[q.id as keyof typeof diagnostics] === true ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics[q.id as keyof typeof diagnostics] === true ? '#4CD964' : 'var(--foreground)' }}>
+                      <button onClick={() => { setDiagnostics({ ...diagnostics, [q.id]: true }); scrollToNextQuestion(q.id); }} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics[q.id as keyof typeof diagnostics] === true ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics[q.id as keyof typeof diagnostics] === true ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics[q.id as keyof typeof diagnostics] === true ? '#4CD964' : 'var(--foreground)' }}>
                         <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics[q.id as keyof typeof diagnostics] === true ? '1px solid #4CD964' : '1px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: diagnostics[q.id as keyof typeof diagnostics] === true ? '#4CD964' : 'transparent' }} /> Yes
                       </button>
-                      <button onClick={() => setDiagnostics({ ...diagnostics, [q.id]: false })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics[q.id as keyof typeof diagnostics] === false ? '1px solid #FF3B30' : '1px solid var(--border)', backgroundColor: diagnostics[q.id as keyof typeof diagnostics] === false ? 'rgba(255,59,48,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics[q.id as keyof typeof diagnostics] === false ? '#FF3B30' : 'var(--foreground)' }}>
+                      <button onClick={() => { setDiagnostics({ ...diagnostics, [q.id]: false }); scrollToNextQuestion(q.id); }} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics[q.id as keyof typeof diagnostics] === false ? '1px solid #FF3B30' : '1px solid var(--border)', backgroundColor: diagnostics[q.id as keyof typeof diagnostics] === false ? 'rgba(255,59,48,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics[q.id as keyof typeof diagnostics] === false ? '#FF3B30' : 'var(--foreground)' }}>
                         <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics[q.id as keyof typeof diagnostics] === false ? '1px solid #FF3B30' : '1px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: diagnostics[q.id as keyof typeof diagnostics] === false ? '#FF3B30' : 'transparent' }} /> No
                       </button>
                     </div>
@@ -2370,14 +2419,14 @@ export default function QuotePage() {
                 {(asksWarrantyQuestion || asksBillQuestion) && (
                   <>
                     {asksWarrantyQuestion && (
-                    <div style={{ marginBottom: '2.5rem' }}>
+                    <div id="question-warranty" style={{ marginBottom: '2.5rem' }}>
                       <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem' }}>Is your device under manufacturer warranty?</h3>
                       <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>You can get a better price for your device if it&apos;s under manufacturer warranty with a GST valid bill.</p>
                       <div style={{ display: 'flex', gap: '1rem' }}>
-                        <button onClick={() => setDiagnostics({ ...diagnostics, warranty: true })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.warranty === true ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.warranty === true ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.warranty === true ? '#4CD964' : 'var(--foreground)' }}>
+                        <button onClick={() => { setDiagnostics({ ...diagnostics, warranty: true }); scrollToNextQuestion('warranty'); }} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.warranty === true ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.warranty === true ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.warranty === true ? '#4CD964' : 'var(--foreground)' }}>
                           <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.warranty === true ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.warranty === true ? '#4CD964' : '#transparent' }} /> Yes
                         </button>
-                        <button onClick={() => setDiagnostics({ ...diagnostics, warranty: false, mobileAge: 'above11' })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.warranty === false ? '1px solid #FF3B30' : '1px solid var(--border)', backgroundColor: diagnostics.warranty === false ? 'rgba(255,59,48,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.warranty === false ? '#FF3B30' : 'var(--foreground)' }}>
+                        <button onClick={() => { setDiagnostics({ ...diagnostics, warranty: false, mobileAge: 'above11' }); scrollToNextQuestion('warranty'); }} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.warranty === false ? '1px solid #FF3B30' : '1px solid var(--border)', backgroundColor: diagnostics.warranty === false ? 'rgba(255,59,48,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.warranty === false ? '#FF3B30' : 'var(--foreground)' }}>
                           <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.warranty === false ? '1px solid #FF3B30' : '1px solid var(--border)', backgroundColor: diagnostics.warranty === false ? '#FF3B30' : '#transparent' }} /> No
                         </button>
                       </div>
@@ -2385,14 +2434,14 @@ export default function QuotePage() {
 
                     )}
                     {asksBillQuestion && (
-                    <div style={{ marginBottom: '2.5rem' }}>
+                    <div id="question-validBill" style={{ marginBottom: '2.5rem' }}>
                       <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem' }}>Do you have GST valid bill with the same IMEI?</h3>
                       <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Make sure your bill has device IMEI mentioned on it.</p>
                       <div style={{ display: 'flex', gap: '1rem' }}>
-                        <button onClick={() => setDiagnostics({ ...diagnostics, validBill: true })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.validBill === true ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.validBill === true ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.validBill === true ? '#4CD964' : 'var(--foreground)' }}>
+                        <button onClick={() => { setDiagnostics({ ...diagnostics, validBill: true }); scrollToNextQuestion('validBill'); }} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.validBill === true ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.validBill === true ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.validBill === true ? '#4CD964' : 'var(--foreground)' }}>
                           <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.validBill === true ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.validBill === true ? '#4CD964' : '#transparent' }} /> Yes
                         </button>
-                        <button onClick={() => setDiagnostics({ ...diagnostics, validBill: false })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.validBill === false ? '1px solid #FF3B30' : '1px solid var(--border)', backgroundColor: diagnostics.validBill === false ? 'rgba(255,59,48,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.validBill === false ? '#FF3B30' : 'var(--foreground)' }}>
+                        <button onClick={() => { setDiagnostics({ ...diagnostics, validBill: false }); scrollToNextQuestion('validBill'); }} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.validBill === false ? '1px solid #FF3B30' : '1px solid var(--border)', backgroundColor: diagnostics.validBill === false ? 'rgba(255,59,48,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.validBill === false ? '#FF3B30' : 'var(--foreground)' }}>
                           <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.validBill === false ? '1px solid #FF3B30' : '1px solid var(--border)', backgroundColor: diagnostics.validBill === false ? '#FF3B30' : '#transparent' }} /> No
                         </button>
                       </div>
@@ -2403,14 +2452,14 @@ export default function QuotePage() {
 
                 {/* eSIM Question (if eligible) */}
                 {asksESimQuestion && (
-                  <div style={{ marginBottom: '2.5rem' }}>
+                  <div id="question-eSim" style={{ marginBottom: '2.5rem' }}>
                     <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem' }}>How many eSIMs does your device support?</h3>
                     <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>Please select &quot;Dual eSIM&quot; if your device supports dual eSIMs. Otherwise, select &quot;Single eSIM&quot;.</p>
                     <div style={{ display: 'flex', gap: '1rem' }}>
-                      <button onClick={() => setDiagnostics({ ...diagnostics, eSim: 'Single eSIM' })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.eSim === 'Single eSIM' ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.eSim === 'Single eSIM' ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.eSim === 'Single eSIM' ? '#4CD964' : 'var(--foreground)' }}>
+                      <button onClick={() => { setDiagnostics({ ...diagnostics, eSim: 'Single eSIM' }); scrollToNextQuestion('eSim'); }} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.eSim === 'Single eSIM' ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.eSim === 'Single eSIM' ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.eSim === 'Single eSIM' ? '#4CD964' : 'var(--foreground)' }}>
                         <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.eSim === 'Single eSIM' ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.eSim === 'Single eSIM' ? '#4CD964' : '#transparent' }} /> Single eSIM
                       </button>
-                      <button onClick={() => setDiagnostics({ ...diagnostics, eSim: 'Dual eSIM' })} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.eSim === 'Dual eSIM' ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.eSim === 'Dual eSIM' ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.eSim === 'Dual eSIM' ? '#4CD964' : 'var(--foreground)' }}>
+                      <button onClick={() => { setDiagnostics({ ...diagnostics, eSim: 'Dual eSIM' }); scrollToNextQuestion('eSim'); }} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.eSim === 'Dual eSIM' ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.eSim === 'Dual eSIM' ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.eSim === 'Dual eSIM' ? '#4CD964' : 'var(--foreground)' }}>
                         <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.eSim === 'Dual eSIM' ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.eSim === 'Dual eSIM' ? '#4CD964' : '#transparent' }} /> Dual eSIM
                       </button>
                     </div>
@@ -2418,7 +2467,7 @@ export default function QuotePage() {
                 )}
 
                 <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
-                  <button onClick={() => {
+                  <button id="stage3-continue-btn" onClick={() => {
                     const finalDiag = { ...diagnostics };
                     // A question Cashify does not ask for this model has no
                     // answer: null (neutral), never a synthetic "No".
@@ -2999,7 +3048,7 @@ export default function QuotePage() {
                     value={couponInput}
                     onChange={(e) => setCouponInput(e.target.value.toUpperCase())}
                     placeholder="Enter promo code" 
-                    style={{ flex: 1, padding: '0.6rem 0.8rem', borderRadius: '8px', border: '1px solid var(--border)', backgroundColor: 'var(--surface)', outline: 'none', fontSize: '0.9rem', transition: 'all 0.3s ease' }} 
+                    style={{ flex: 1, padding: '0.6rem 0.8rem', borderRadius: '8px', border: '1px solid var(--border)', backgroundColor: 'var(--surface)', outline: 'none', fontSize: '0.9rem', transition: 'all 0.3s ease', boxSizing: 'border-box', minWidth: '100%' }} 
                     onFocus={(e) => { e.currentTarget.style.border = '1px solid var(--gold)'; e.currentTarget.style.backgroundColor = 'rgba(255,215,0,0.05)'; }}
                     onBlur={(e) => { e.currentTarget.style.border = '1px solid rgba(255,255,255,0.1)'; e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)'; }}
                   />
@@ -3204,32 +3253,32 @@ export default function QuotePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
               <div>
                 <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem' }}>Preferred Date</label>
-                <input type="date" required value={pickupDate} onChange={(e) => setPickupDate(e.target.value)} style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000' }} />
+                <input type="date" required value={pickupDate} onChange={(e) => setPickupDate(e.target.value)} style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #666', background: 'transparent', color: 'inherit', boxSizing: 'border-box' }} />
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem' }}>Preferred Time</label>
-                <select required value={pickupTime} onChange={(e) => setPickupTime(e.target.value)} style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000' }}>
-                  <option value="">Select Time Slot</option>
-                  <option value="10:00 AM - 1:00 PM">10:00 AM - 1:00 PM</option>
-                  <option value="1:00 PM - 4:00 PM">1:00 PM - 4:00 PM</option>
-                  <option value="4:00 PM - 7:00 PM">4:00 PM - 7:00 PM</option>
+                <select required value={pickupTime} onChange={(e) => setPickupTime(e.target.value)} style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #666', background: 'transparent', color: 'inherit', boxSizing: 'border-box' }}>
+                  <option value="" style={{ color: '#000' }}>Select Time Slot</option>
+                  <option value="10:00 AM - 1:00 PM" style={{ color: '#000' }}>10:00 AM - 1:00 PM</option>
+                  <option value="1:00 PM - 4:00 PM" style={{ color: '#000' }}>1:00 PM - 4:00 PM</option>
+                  <option value="4:00 PM - 7:00 PM" style={{ color: '#000' }}>4:00 PM - 7:00 PM</option>
                 </select>
               </div>
             </div>
 
             <div style={{ marginBottom: '1rem' }}>
               <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem' }}>Flat / House No / Building Name</label>
-              <input type="text" required value={address} onChange={(e) => setAddress(e.target.value)} placeholder="e.g. 101, Fhoneify Apartments" style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000' }} />
+              <input type="text" required value={address} onChange={(e) => setAddress(e.target.value)} placeholder="e.g. 101, Fhoneify Apartments" style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #666', background: 'transparent', color: 'inherit', boxSizing: 'border-box' }} />
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               <div>
                 <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem' }}>Pincode</label>
-                <input type="text" required value={pincode} onChange={(e) => setPincode(e.target.value.replace(/\D/g, '').slice(0, 6))} placeholder="6 Digit Pincode" style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000' }} />
+                <input type="text" required value={pincode} onChange={(e) => setPincode(e.target.value.replace(/\D/g, '').slice(0, 6))} placeholder="6 Digit Pincode" style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #666', background: 'transparent', color: 'inherit', boxSizing: 'border-box' }} />
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem' }}>City</label>
-                <input type="text" required value={city} onChange={(e) => setCity(e.target.value)} placeholder="e.g. Bengaluru" style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000' }} />
+                <input type="text" required value={city} onChange={(e) => setCity(e.target.value)} placeholder="e.g. Bengaluru" style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #666', background: 'transparent', color: 'inherit', boxSizing: 'border-box' }} />
               </div>
             </div>
 

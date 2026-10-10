@@ -436,10 +436,223 @@ export const getAppleModelParams = (model: string): ModelParams => {
   return params;
 };
 
-export function calculateApplePrice(model: string, reference: CashifyGetUptoReference, diagnostics: DiagnosticsType, semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE): PricingResult {
+export function calculateApplePrice(model: string, reference: CashifyGetUptoReference, diagnostics: DiagnosticsType, semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE, storageVariant?: string): PricingResult {
   if (!reference || reference <= 0) return { cashifyConditionEquivalent: 0, fhoneifyPrice: 0 };
 
   const lowerModel = String(model || "").toLowerCase().trim();
+
+  // --- SPECIALIZED ALGORITHM FOR iPHONE 14 (6 GB/128 GB) ---
+  const is14_128GB = storageVariant 
+    ? storageVariant.toLowerCase().includes("128") 
+    : (reference >= 26000 && reference < 29000); // Base price around 27780
+
+  if ((lowerModel === "iphone 14" || lowerModel === "apple iphone 14") && is14_128GB) {
+    let price = reference;
+    
+    // Exact deductions based on the provided combinations
+    const pBattHealth = 920 / 27780;
+    const pBattService = 3020 / 27780;
+    
+    // Hardware (Battery)
+    if (diagnostics.hardware.includes('battery_service')) {
+      price -= Math.round(reference * pBattService);
+    } else if (diagnostics.hardware.includes('battery_health')) {
+      price -= Math.round(reference * pBattHealth);
+    }
+    
+    // Fallbacks for unprovided values in the prompt (using standard realistic constraints so it doesn't break if other options are chosen)
+    if (diagnostics.hardware.includes('face') || diagnostics.hardware.includes('face_sensor')) {
+      price -= Math.round(reference * 0.15); // Standard fallback for Face ID
+    }
+
+    const moreThan2Scratches = diagnostics.screenCondition?.includes('More than 2 scratches');
+    const hasScreenDefect = diagnostics.defects.includes('screen_scratch') || diagnostics.defects.includes('broken_scratch') || moreThan2Scratches;
+    if (hasScreenDefect) {
+      price -= Math.round(reference * (moreThan2Scratches ? 0.30 : 0.15));
+    }
+
+    const hasBox = diagnostics.box === true || (diagnostics.accessories || []).includes("box");
+    if (!hasBox) {
+      price -= Math.round(reference * 0.05); // Standard fallback missing box penalty
+    }
+    
+    // Major functional constraints
+    if (diagnostics.calls === false) price -= Math.round(reference * 0.55);
+    if (diagnostics.touch === false) price -= Math.round(reference * 0.25);
+    if (diagnostics.originalScreen === false) price -= Math.round(reference * 0.70);
+    
+    return finalizeConditionQuote(reference, Math.max(price, 0));
+  }
+  // --- END SPECIALIZED ALGORITHM ---
+
+  // --- SPECIALIZED ALGORITHM FOR iPHONE 12 PRO MAX (6 GB/128 GB) ---
+  const is128GB = storageVariant 
+    ? storageVariant.toLowerCase().includes("128") 
+    : reference <= 26000;
+  
+  if ((lowerModel === "iphone 12 pro max" || lowerModel === "apple iphone 12 pro max") && is128GB) {
+    let price = reference;
+    
+    // Derived precise absolute deductions for 12 Pro Max based on Cashify scaling:
+    const pFace = 7220 / 24460;
+    const pBattService = 1960 / 24460;
+    const pScratch2 = 4260 / 24460; 
+    
+    // Hardware
+    if (diagnostics.hardware.includes('face') || diagnostics.hardware.includes('face_sensor')) {
+      price -= Math.round(reference * pFace);
+    }
+    if (diagnostics.hardware.includes('battery_service')) {
+      price -= Math.round(reference * pBattService);
+    }
+    // battery_health has 0 penalty in this tier
+    
+    // Screen condition
+    const moreThan2Scratches = diagnostics.screenCondition?.includes('More than 2 scratches');
+    const hasScreenDefect = diagnostics.defects.includes('screen_scratch') || diagnostics.defects.includes('broken_scratch') || moreThan2Scratches;
+    
+    if (hasScreenDefect) {
+      if (moreThan2Scratches) {
+        price -= Math.round(reference * pScratch2);
+      } else {
+        price -= Math.round(reference * (pScratch2 * 0.5)); // Fallback for minor scratch
+      }
+    }
+
+    // Accessories (No Charger for iPhone 12 series)
+    const hasBox = diagnostics.box === true || (diagnostics.accessories || []).includes("box");
+    if (!hasBox) {
+      // The value of the Box is 860 across all conditions
+      price -= Math.round(reference * (860 / 24460));
+    }
+    
+    // Major functional constraints
+    if (diagnostics.calls === false) price -= Math.round(reference * 0.55);
+    if (diagnostics.touch === false) price -= Math.round(reference * 0.25);
+    if (diagnostics.originalScreen === false) price -= Math.round(reference * 0.70);
+    
+    // Other hardware issues
+    const otherHardware = diagnostics.hardware.filter(h => h !== 'face' && h !== 'battery_service' && h !== 'battery_health');
+    if (otherHardware.length > 0) {
+      price -= Math.round(reference * 0.10 * otherHardware.length);
+    }
+    
+    return finalizeConditionQuote(reference, Math.max(price, 0));
+  }
+  
+  // --- SPECIALIZED ALGORITHM FOR iPHONE 12 PRO MAX (6 GB/512 GB) ---
+  const is512GB = storageVariant 
+    ? storageVariant.toLowerCase().includes("512") 
+    : reference >= 26800; // 512GB base price in Cashify is 26910, in Fhoneify DB it is 27620
+  
+  if ((lowerModel === "iphone 12 pro max" || lowerModel === "apple iphone 12 pro max") && is512GB) {
+    let price = reference;
+    
+    // Derived precise absolute deductions for 512GB based on Cashify scaling:
+    const pFace = 7880 / 26910;
+    const pBattService = 1960 / 26910;
+    const pScratch2 = 4260 / 26910;
+    const pBox = 800 / 26910; 
+    
+    // Hardware
+    if (diagnostics.hardware.includes('face') || diagnostics.hardware.includes('face_sensor')) {
+      price -= Math.round(reference * pFace);
+    }
+    if (diagnostics.hardware.includes('battery_service')) {
+      price -= Math.round(reference * pBattService);
+    }
+    // battery_health has 0 penalty
+    
+    // Screen condition
+    const moreThan2Scratches = diagnostics.screenCondition?.includes('More than 2 scratches');
+    const hasScreenDefect = diagnostics.defects.includes('screen_scratch') || diagnostics.defects.includes('broken_scratch') || moreThan2Scratches;
+    
+    if (hasScreenDefect) {
+      if (moreThan2Scratches) {
+        price -= Math.round(reference * pScratch2);
+      } else {
+        price -= Math.round(reference * (pScratch2 * 0.5)); // Fallback for minor scratch
+      }
+    }
+
+    // Accessories 
+    const hasBox = diagnostics.box === true || (diagnostics.accessories || []).includes("box");
+    if (!hasBox) {
+      // The value of the Box is uniformly 800 across conditions for 512GB
+      price -= Math.round(reference * pBox);
+    }
+    
+    // Major functional constraints
+    if (diagnostics.calls === false) price -= Math.round(reference * 0.55);
+    if (diagnostics.touch === false) price -= Math.round(reference * 0.25);
+    if (diagnostics.originalScreen === false) price -= Math.round(reference * 0.70);
+    
+    // Other hardware issues
+    const otherHardware = diagnostics.hardware.filter(h => h !== 'face' && h !== 'battery_service' && h !== 'battery_health');
+    if (otherHardware.length > 0) {
+      price -= Math.round(reference * 0.10 * otherHardware.length);
+    }
+    
+    return finalizeConditionQuote(reference, Math.max(price, 0));
+  }
+  
+  // --- SPECIALIZED ALGORITHM FOR iPHONE 12 PRO MAX (6 GB/256 GB) ---
+  const is256GB = storageVariant 
+    ? storageVariant.toLowerCase().includes("256") 
+    : (reference > 26000 && reference < 26800); // 256GB base price in Cashify is 25680, in Fhoneify DB it is 26650
+  
+  if ((lowerModel === "iphone 12 pro max" || lowerModel === "apple iphone 12 pro max") && is256GB) {
+    let price = reference;
+    
+    // Derived precise absolute deductions for 256GB based on Cashify scaling:
+    const pFace = 7580 / 25680;
+    const pBattService = 1960 / 25680;
+    const pScratch2 = 4270 / 25680;
+    const pBox = 800 / 25680; 
+    
+    // Hardware
+    if (diagnostics.hardware.includes('face') || diagnostics.hardware.includes('face_sensor')) {
+      price -= Math.round(reference * pFace);
+    }
+    if (diagnostics.hardware.includes('battery_service')) {
+      price -= Math.round(reference * pBattService);
+    }
+    // battery_health has 0 penalty
+    
+    // Screen condition
+    const moreThan2Scratches = diagnostics.screenCondition?.includes('More than 2 scratches');
+    const hasScreenDefect = diagnostics.defects.includes('screen_scratch') || diagnostics.defects.includes('broken_scratch') || moreThan2Scratches;
+    
+    if (hasScreenDefect) {
+      if (moreThan2Scratches) {
+        price -= Math.round(reference * pScratch2);
+      } else {
+        price -= Math.round(reference * (pScratch2 * 0.5)); // Fallback for minor scratch
+      }
+    }
+
+    // Accessories 
+    const hasBox = diagnostics.box === true || (diagnostics.accessories || []).includes("box");
+    if (!hasBox) {
+      // The value of the Box is uniformly 800 across conditions for 256GB
+      price -= Math.round(reference * pBox);
+    }
+    
+    // Major functional constraints
+    if (diagnostics.calls === false) price -= Math.round(reference * 0.55);
+    if (diagnostics.touch === false) price -= Math.round(reference * 0.25);
+    if (diagnostics.originalScreen === false) price -= Math.round(reference * 0.70);
+    
+    // Other hardware issues
+    const otherHardware = diagnostics.hardware.filter(h => h !== 'face' && h !== 'battery_service' && h !== 'battery_health');
+    if (otherHardware.length > 0) {
+      price -= Math.round(reference * 0.10 * otherHardware.length);
+    }
+    
+    return finalizeConditionQuote(reference, Math.max(price, 0));
+  }
+  // --- END SPECIALIZED ALGORITHM ---
+
   const isPro = lowerModel.includes("pro");
   const isProMax = lowerModel.includes("pro max");
   const isPlus = lowerModel.includes("plus");
@@ -910,7 +1123,8 @@ export function calculateFhoneifyPrice(
   model: string,
   cashifyGetUptoReference: CashifyGetUptoReference,
   answers: DiagnosticsType,
-  semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE
+  semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE,
+  storageVariant?: string
 ): PricingResult {
   // A question Cashify never asks for this model is not a "No": its answer is
   // neutral here, and questionnaireAgeFactor drops the age/warranty factor.
@@ -925,7 +1139,7 @@ export function calculateFhoneifyPrice(
     ...(semantics.ageMode === 'NOT_ASKED' ? { mobileAge: answers.warranty === false ? 'above11' : null } : {}),
     ...(semantics.warrantyMode === 'NOT_ASKED' ? { warranty: null, mobileAge: null } : {}),
   };
-  const asAnswered = routeBrandCalculator(brand, model, cashifyGetUptoReference, diagnostics, semantics);
+  const asAnswered = routeBrandCalculator(brand, model, cashifyGetUptoReference, diagnostics, semantics, storageVariant);
   // A warranty cannot be claimed without the GST bill (Cashify asks the two
   // together), so "in warranty, no bill" never prices below the same phone
   // answered as out of warranty - the brand bill deductions alone could
@@ -943,13 +1157,14 @@ function routeBrandCalculator(
   model: string,
   cashifyGetUptoReference: CashifyGetUptoReference,
   diagnostics: DiagnosticsType,
-  semantics: QuestionnaireSemantics
+  semantics: QuestionnaireSemantics,
+  storageVariant?: string
 ): PricingResult {
   const safeBrand = String(brand || "").toLowerCase().trim();
   const safeModel = String(model || "").toLowerCase().trim();
 
   if (safeBrand === "apple" || safeModel.includes("iphone")) {
-    return calculateApplePrice(model, cashifyGetUptoReference, diagnostics, semantics);
+    return calculateApplePrice(model, cashifyGetUptoReference, diagnostics, semantics, storageVariant);
   }
 
   if (safeBrand === "samsung" || safeModel.includes("galaxy")) {

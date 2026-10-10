@@ -103,7 +103,7 @@ export async function generateQuote(deviceId: string, condition: string, aiPrice
     // The canonical engine applies age/defect/hardware penalties AND the
     // competitor uplift internally - do not re-apply applyCompetitorUplift
     // on top of its own result (that would double-apply the uplift).
-    const result = calculateFhoneifyPrice(device.brand, device.model, baseMarketPrice, answers);
+    const result = calculateFhoneifyPrice(device.brand, device.model, baseMarketPrice, answers, undefined, device.storage);
     estimatedPrice = result.fhoneifyPrice;
     upliftedBasePrice = result.fhoneifyPrice;
   } else {
