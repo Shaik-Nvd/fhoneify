@@ -444,9 +444,9 @@ export function calculateApplePrice(model: string, reference: CashifyGetUptoRefe
   // --- SPECIALIZED ALGORITHM FOR iPHONE 14 (6 GB/128 GB) ---
   const is14_128GB = storageVariant 
     ? storageVariant.toLowerCase().includes("128") 
-    : (reference >= 27000 && reference < 28500); // Base price around 27780
+    : (reference >= 26000 && reference < 29000); // Base price around 27780
 
-  if (lowerModel === "iphone 14" && is14_128GB) {
+  if ((lowerModel === "iphone 14" || lowerModel === "apple iphone 14") && is14_128GB) {
     let price = reference;
     
     // Exact deductions based on the provided combinations
