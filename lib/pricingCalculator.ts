@@ -448,9 +448,7 @@ export function calculateApplePrice(model: string, reference: CashifyGetUptoRefe
     // Derived precise absolute deductions for 12 Pro Max based on Cashify scaling:
     const pFace = 860 / 24460;
     const pBattService = 1960 / 24460;
-    const pBox = 800 / 24460;
-    const pCharger = 6420 / 24460;
-    const pScratch2 = 4260 / 24460;
+    const pScratch2 = 10680 / 24460; // Huge penalty for >2 scratches
     
     // Hardware
     if (diagnostics.hardware.includes('face') || diagnostics.hardware.includes('face_sensor')) {
@@ -461,13 +459,6 @@ export function calculateApplePrice(model: string, reference: CashifyGetUptoRefe
     }
     // battery_health has 0 penalty in this tier
     
-    // Accessories
-    const hasBox = diagnostics.box === true || (diagnostics.accessories || []).includes("box");
-    const hasCharger = diagnostics.charger === true || (diagnostics.accessories || []).includes("charger");
-    
-    if (!hasBox) price -= Math.round(reference * pBox);
-    if (!hasCharger) price -= Math.round(reference * pCharger);
-    
     // Screen condition
     const moreThan2Scratches = diagnostics.screenCondition?.includes('More than 2 scratches');
     const hasScreenDefect = diagnostics.defects.includes('screen_scratch') || diagnostics.defects.includes('broken_scratch') || moreThan2Scratches;
@@ -477,6 +468,17 @@ export function calculateApplePrice(model: string, reference: CashifyGetUptoRefe
         price -= Math.round(reference * pScratch2);
       } else {
         price -= Math.round(reference * (pScratch2 * 0.5)); // Fallback for minor scratch
+      }
+    }
+
+    // Accessories (No Charger for iPhone 12 series)
+    const hasBox = diagnostics.box === true || (diagnostics.accessories || []).includes("box");
+    if (!hasBox) {
+      // The value of the Box scales down drastically if the screen is heavily damaged
+      if (hasScreenDefect && moreThan2Scratches) {
+        price -= Math.round(reference * (800 / 24460));
+      } else {
+        price -= Math.round(reference * (7220 / 24460));
       }
     }
     
