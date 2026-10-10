@@ -440,6 +440,61 @@ export function calculateApplePrice(model: string, reference: CashifyGetUptoRefe
   if (!reference || reference <= 0) return { cashifyConditionEquivalent: 0, fhoneifyPrice: 0 };
 
   const lowerModel = String(model || "").toLowerCase().trim();
+
+  // --- SPECIALIZED ALGORITHM FOR iPHONE 12 PRO MAX ---
+  if (lowerModel === "iphone 12 pro max" || lowerModel === "apple iphone 12 pro max") {
+    let price = reference;
+    
+    // Derived precise absolute deductions for 12 Pro Max based on Cashify scaling:
+    const pFace = 860 / 24460;
+    const pBattService = 1960 / 24460;
+    const pBox = 800 / 24460;
+    const pCharger = 6420 / 24460;
+    const pScratch2 = 4260 / 24460;
+    
+    // Hardware
+    if (diagnostics.hardware.includes('face') || diagnostics.hardware.includes('face_sensor')) {
+      price -= Math.round(reference * pFace);
+    }
+    if (diagnostics.hardware.includes('battery_service')) {
+      price -= Math.round(reference * pBattService);
+    }
+    // battery_health has 0 penalty in this tier
+    
+    // Accessories
+    const hasBox = diagnostics.box === true || (diagnostics.accessories || []).includes("box");
+    const hasCharger = diagnostics.charger === true || (diagnostics.accessories || []).includes("charger");
+    
+    if (!hasBox) price -= Math.round(reference * pBox);
+    if (!hasCharger) price -= Math.round(reference * pCharger);
+    
+    // Screen condition
+    const moreThan2Scratches = diagnostics.screenCondition?.includes('More than 2 scratches');
+    const hasScreenDefect = diagnostics.defects.includes('screen_scratch') || diagnostics.defects.includes('broken_scratch') || moreThan2Scratches;
+    
+    if (hasScreenDefect) {
+      if (moreThan2Scratches) {
+        price -= Math.round(reference * pScratch2);
+      } else {
+        price -= Math.round(reference * (pScratch2 * 0.5)); // Fallback for minor scratch
+      }
+    }
+    
+    // Major functional constraints
+    if (diagnostics.calls === false) price -= Math.round(reference * 0.55);
+    if (diagnostics.touch === false) price -= Math.round(reference * 0.25);
+    if (diagnostics.originalScreen === false) price -= Math.round(reference * 0.70);
+    
+    // Other hardware issues
+    const otherHardware = diagnostics.hardware.filter(h => h !== 'face' && h !== 'battery_service' && h !== 'battery_health');
+    if (otherHardware.length > 0) {
+      price -= Math.round(reference * 0.10 * otherHardware.length);
+    }
+    
+    return finalizeConditionQuote(reference, Math.max(price, 0));
+  }
+  // --- END SPECIALIZED ALGORITHM ---
+
   const isPro = lowerModel.includes("pro");
   const isProMax = lowerModel.includes("pro max");
   const isPlus = lowerModel.includes("plus");
