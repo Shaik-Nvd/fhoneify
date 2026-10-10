@@ -450,9 +450,9 @@ export function calculateApplePrice(model: string, reference: CashifyGetUptoRefe
     let price = reference;
     
     // Derived precise absolute deductions for 12 Pro Max based on Cashify scaling:
-    const pFace = 860 / 24460;
+    const pFace = 7220 / 24460;
     const pBattService = 1960 / 24460;
-    const pScratch2 = 10680 / 24460; // Huge penalty for >2 scratches
+    const pScratch2 = 4260 / 24460; 
     
     // Hardware
     if (diagnostics.hardware.includes('face') || diagnostics.hardware.includes('face_sensor')) {
@@ -478,12 +478,8 @@ export function calculateApplePrice(model: string, reference: CashifyGetUptoRefe
     // Accessories (No Charger for iPhone 12 series)
     const hasBox = diagnostics.box === true || (diagnostics.accessories || []).includes("box");
     if (!hasBox) {
-      // The value of the Box scales down drastically if the screen is heavily damaged
-      if (hasScreenDefect && moreThan2Scratches) {
-        price -= Math.round(reference * (800 / 24460));
-      } else {
-        price -= Math.round(reference * (7220 / 24460));
-      }
+      // The value of the Box is 860 across all conditions
+      price -= Math.round(reference * (860 / 24460));
     }
     
     // Major functional constraints
