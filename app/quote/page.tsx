@@ -3233,32 +3233,32 @@ export default function QuotePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
               <div>
                 <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem' }}>Preferred Date</label>
-                <input type="date" required value={pickupDate} onChange={(e) => setPickupDate(e.target.value)} style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000' }} />
+                <input type="date" required value={pickupDate} onChange={(e) => setPickupDate(e.target.value)} style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #666', background: 'transparent', color: 'inherit', boxSizing: 'border-box' }} />
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem' }}>Preferred Time</label>
-                <select required value={pickupTime} onChange={(e) => setPickupTime(e.target.value)} style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000' }}>
-                  <option value="">Select Time Slot</option>
-                  <option value="10:00 AM - 1:00 PM">10:00 AM - 1:00 PM</option>
-                  <option value="1:00 PM - 4:00 PM">1:00 PM - 4:00 PM</option>
-                  <option value="4:00 PM - 7:00 PM">4:00 PM - 7:00 PM</option>
+                <select required value={pickupTime} onChange={(e) => setPickupTime(e.target.value)} style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #666', background: 'transparent', color: 'inherit', boxSizing: 'border-box' }}>
+                  <option value="" style={{ color: '#000' }}>Select Time Slot</option>
+                  <option value="10:00 AM - 1:00 PM" style={{ color: '#000' }}>10:00 AM - 1:00 PM</option>
+                  <option value="1:00 PM - 4:00 PM" style={{ color: '#000' }}>1:00 PM - 4:00 PM</option>
+                  <option value="4:00 PM - 7:00 PM" style={{ color: '#000' }}>4:00 PM - 7:00 PM</option>
                 </select>
               </div>
             </div>
 
             <div style={{ marginBottom: '1rem' }}>
               <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem' }}>Flat / House No / Building Name</label>
-              <input type="text" required value={address} onChange={(e) => setAddress(e.target.value)} placeholder="e.g. 101, Fhoneify Apartments" style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000' }} />
+              <input type="text" required value={address} onChange={(e) => setAddress(e.target.value)} placeholder="e.g. 101, Fhoneify Apartments" style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #666', background: 'transparent', color: 'inherit', boxSizing: 'border-box' }} />
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               <div>
                 <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem' }}>Pincode</label>
-                <input type="text" required value={pincode} onChange={(e) => setPincode(e.target.value.replace(/\D/g, '').slice(0, 6))} placeholder="6 Digit Pincode" style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000' }} />
+                <input type="text" required value={pincode} onChange={(e) => setPincode(e.target.value.replace(/\D/g, '').slice(0, 6))} placeholder="6 Digit Pincode" style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #666', background: 'transparent', color: 'inherit', boxSizing: 'border-box' }} />
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '0.5rem' }}>City</label>
-                <input type="text" required value={city} onChange={(e) => setCity(e.target.value)} placeholder="e.g. Bengaluru" style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #333', background: '#000' }} />
+                <input type="text" required value={city} onChange={(e) => setCity(e.target.value)} placeholder="e.g. Bengaluru" style={{ width: '100%', padding: '0.75rem', borderRadius: '8px', border: '1px solid #666', background: 'transparent', color: 'inherit', boxSizing: 'border-box' }} />
               </div>
             </div>
 
