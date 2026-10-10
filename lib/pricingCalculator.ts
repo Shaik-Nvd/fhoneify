@@ -436,14 +436,17 @@ export const getAppleModelParams = (model: string): ModelParams => {
   return params;
 };
 
-export function calculateApplePrice(model: string, reference: CashifyGetUptoReference, diagnostics: DiagnosticsType, semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE): PricingResult {
+export function calculateApplePrice(model: string, reference: CashifyGetUptoReference, diagnostics: DiagnosticsType, semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE, storageVariant?: string): PricingResult {
   if (!reference || reference <= 0) return { cashifyConditionEquivalent: 0, fhoneifyPrice: 0 };
 
   const lowerModel = String(model || "").toLowerCase().trim();
 
   // --- SPECIALIZED ALGORITHM FOR iPHONE 12 PRO MAX (6 GB/128 GB) ---
-  // The 128GB variant in Fhoneify's DB has a base price of 25,600, while 256GB is 26,650.
-  if ((lowerModel === "iphone 12 pro max" || lowerModel === "apple iphone 12 pro max") && reference <= 26000) {
+  const is128GB = storageVariant 
+    ? storageVariant.toLowerCase().includes("128") 
+    : reference <= 26000;
+  
+  if ((lowerModel === "iphone 12 pro max" || lowerModel === "apple iphone 12 pro max") && is128GB) {
     let price = reference;
     
     // Derived precise absolute deductions for 12 Pro Max based on Cashify scaling:
@@ -968,7 +971,8 @@ export function calculateFhoneifyPrice(
   model: string,
   cashifyGetUptoReference: CashifyGetUptoReference,
   answers: DiagnosticsType,
-  semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE
+  semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE,
+  storageVariant?: string
 ): PricingResult {
   // A question Cashify never asks for this model is not a "No": its answer is
   // neutral here, and questionnaireAgeFactor drops the age/warranty factor.
@@ -983,7 +987,7 @@ export function calculateFhoneifyPrice(
     ...(semantics.ageMode === 'NOT_ASKED' ? { mobileAge: answers.warranty === false ? 'above11' : null } : {}),
     ...(semantics.warrantyMode === 'NOT_ASKED' ? { warranty: null, mobileAge: null } : {}),
   };
-  const asAnswered = routeBrandCalculator(brand, model, cashifyGetUptoReference, diagnostics, semantics);
+  const asAnswered = routeBrandCalculator(brand, model, cashifyGetUptoReference, diagnostics, semantics, storageVariant);
   // A warranty cannot be claimed without the GST bill (Cashify asks the two
   // together), so "in warranty, no bill" never prices below the same phone
   // answered as out of warranty - the brand bill deductions alone could
@@ -1001,13 +1005,14 @@ function routeBrandCalculator(
   model: string,
   cashifyGetUptoReference: CashifyGetUptoReference,
   diagnostics: DiagnosticsType,
-  semantics: QuestionnaireSemantics
+  semantics: QuestionnaireSemantics,
+  storageVariant?: string
 ): PricingResult {
   const safeBrand = String(brand || "").toLowerCase().trim();
   const safeModel = String(model || "").toLowerCase().trim();
 
   if (safeBrand === "apple" || safeModel.includes("iphone")) {
-    return calculateApplePrice(model, cashifyGetUptoReference, diagnostics, semantics);
+    return calculateApplePrice(model, cashifyGetUptoReference, diagnostics, semantics, storageVariant);
   }
 
   if (safeBrand === "samsung" || safeModel.includes("galaxy")) {
