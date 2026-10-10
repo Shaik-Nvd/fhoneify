@@ -442,7 +442,8 @@ export function calculateApplePrice(model: string, reference: CashifyGetUptoRefe
   const lowerModel = String(model || "").toLowerCase().trim();
 
   // --- SPECIALIZED ALGORITHM FOR iPHONE 12 PRO MAX (6 GB/128 GB) ---
-  if ((lowerModel === "iphone 12 pro max" || lowerModel === "apple iphone 12 pro max") && reference === 24460) {
+  // The 128GB variant in Fhoneify's DB has a base price of 25,600, while 256GB is 26,650.
+  if ((lowerModel === "iphone 12 pro max" || lowerModel === "apple iphone 12 pro max") && reference <= 26000) {
     let price = reference;
     
     // Derived precise absolute deductions for 12 Pro Max based on Cashify scaling:
