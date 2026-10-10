@@ -441,6 +441,50 @@ export function calculateApplePrice(model: string, reference: CashifyGetUptoRefe
 
   const lowerModel = String(model || "").toLowerCase().trim();
 
+  // --- SPECIALIZED ALGORITHM FOR iPHONE 14 (6 GB/128 GB) ---
+  const is14_128GB = storageVariant 
+    ? storageVariant.toLowerCase().includes("128") 
+    : (reference >= 27000 && reference < 28500); // Base price around 27780
+
+  if (lowerModel === "iphone 14" && is14_128GB) {
+    let price = reference;
+    
+    // Exact deductions based on the provided combinations
+    const pBattHealth = 920 / 27780;
+    const pBattService = 3020 / 27780;
+    
+    // Hardware (Battery)
+    if (diagnostics.hardware.includes('battery_service')) {
+      price -= Math.round(reference * pBattService);
+    } else if (diagnostics.hardware.includes('battery_health')) {
+      price -= Math.round(reference * pBattHealth);
+    }
+    
+    // Fallbacks for unprovided values in the prompt (using standard realistic constraints so it doesn't break if other options are chosen)
+    if (diagnostics.hardware.includes('face') || diagnostics.hardware.includes('face_sensor')) {
+      price -= Math.round(reference * 0.15); // Standard fallback for Face ID
+    }
+
+    const moreThan2Scratches = diagnostics.screenCondition?.includes('More than 2 scratches');
+    const hasScreenDefect = diagnostics.defects.includes('screen_scratch') || diagnostics.defects.includes('broken_scratch') || moreThan2Scratches;
+    if (hasScreenDefect) {
+      price -= Math.round(reference * (moreThan2Scratches ? 0.30 : 0.15));
+    }
+
+    const hasBox = diagnostics.box === true || (diagnostics.accessories || []).includes("box");
+    if (!hasBox) {
+      price -= Math.round(reference * 0.05); // Standard fallback missing box penalty
+    }
+    
+    // Major functional constraints
+    if (diagnostics.calls === false) price -= Math.round(reference * 0.55);
+    if (diagnostics.touch === false) price -= Math.round(reference * 0.25);
+    if (diagnostics.originalScreen === false) price -= Math.round(reference * 0.70);
+    
+    return finalizeConditionQuote(reference, Math.max(price, 0));
+  }
+  // --- END SPECIALIZED ALGORITHM ---
+
   // --- SPECIALIZED ALGORITHM FOR iPHONE 12 PRO MAX (6 GB/128 GB) ---
   const is128GB = storageVariant 
     ? storageVariant.toLowerCase().includes("128") 
