@@ -4,7 +4,7 @@ import type { ReferencePriceRepository } from '../referencePricing/store';
 import type { ReferencePriceRecord } from '../referencePricing/types';
 import { deviceKey } from '../referencePricing/types';
 import { CatalogDevice, findCatalogDevice } from './catalog';
-import { reviewedAppleDispatchStorage } from './appleVariantDispatch';
+import { reviewedAppleDispatchStorage, supportedApple512Fallback } from './appleVariantDispatch';
 import { parseDiagnostics } from './diagnostics';
 import {
   BaseSource,
@@ -224,7 +224,10 @@ export function createPricingService(deps: PricingServiceDeps) {
     }
 
     const legacyQuestionnaire = { ...questionnaire };
-    const dispatchStorage = reviewedAppleDispatchStorage(device);
+    const teamFallbackSupported = hybrid && legacyQuestionnaire.warrantyMode !== 'NOT_ASKED' &&
+      supportedApple512Fallback(device, diagnostics, base.cashifyGetUptoReference, at);
+    const dispatchStorage = reviewedAppleDispatchStorage(device,
+      teamFallbackSupported ? diagnostics : undefined);
     let quotePricingVersion = pricingVersion;
     const route = releaseCandidate ? deps.releaseRouteEvidence?.find(r => r.brand === device.brand && r.model === device.model && workbookStorageIdentity(r.storage) === workbookStorageIdentity(device.storage)) : undefined;
     if (route && questionnaire.source === 'profile' && questionnaire.status === 'OK' &&
@@ -348,6 +351,13 @@ export function createPricingService(deps: PricingServiceDeps) {
         } else if (hybrid) {
           quotePricingVersion = `${HYBRID_PRICING_VERSION}+verified`;
         }
+      }
+      if (teamFallbackSupported && rc?.kind === 'LEGACY' && result.cashifyConditionEquivalent > 0) {
+        // Same preferred uplift and existing net-bound policy; the coupon must
+        // not push this corrected fallback beyond its estimated Selling+2000.
+        // This remains an estimate, never promoted to screenshot-verified evidence.
+        result = { ...result, fhoneifyPrice: boundedCompetitiveOffer(base.cashifyGetUptoReference, result.cashifyConditionEquivalent) };
+        quotePricingVersion += '+apple512-oow-router-v1';
       }
       // Get Upto: the reference plus the uplift, nothing else.
       startingPrice = computeFhoneifyGetUpto(base.cashifyGetUptoReference);

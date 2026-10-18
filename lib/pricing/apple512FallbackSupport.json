@@ -1,0 +1,852 @@
+{
+  "version": "apple512-fallback-answer-scope/1",
+  "kind": "team-text-reported-answer-eligibility-not-exact-capture",
+  "rows": [
+    {
+      "model": "Apple iPhone 15 Plus",
+      "storage": "512GB",
+      "reference": 48600,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[\"battery_service\",\"face\"],[]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_plus_24_test_cases:01",
+      "sourceSha256": "3416232dea253404d6af1f5dfa82b27e11bb04f63dc903a20ab893817889c086"
+    },
+    {
+      "model": "Apple iPhone 15 Plus",
+      "storage": "512GB",
+      "reference": 48600,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[\"battery_health\",\"face\"],[]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_plus_24_test_cases:07",
+      "sourceSha256": "3416232dea253404d6af1f5dfa82b27e11bb04f63dc903a20ab893817889c086"
+    },
+    {
+      "model": "Apple iPhone 15 Plus",
+      "storage": "512GB",
+      "reference": 48600,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[\"battery_health\",\"face\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_plus_24_test_cases:08",
+      "sourceSha256": "3416232dea253404d6af1f5dfa82b27e11bb04f63dc903a20ab893817889c086"
+    },
+    {
+      "model": "Apple iPhone 15 Plus",
+      "storage": "512GB",
+      "reference": 48600,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[\"battery_service\",\"face\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_plus_24_test_cases:09",
+      "sourceSha256": "3416232dea253404d6af1f5dfa82b27e11bb04f63dc903a20ab893817889c086"
+    },
+    {
+      "model": "Apple iPhone 15 Plus",
+      "storage": "512GB",
+      "reference": 48600,
+      "signature": "[true,true,false,false,false,null,[],null,null,null,null,null,null,null,null,[\"battery_service\",\"face\"],[]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_plus_24_test_cases:10",
+      "sourceSha256": "3416232dea253404d6af1f5dfa82b27e11bb04f63dc903a20ab893817889c086"
+    },
+    {
+      "model": "Apple iPhone 15 Plus",
+      "storage": "512GB",
+      "reference": 48600,
+      "signature": "[true,true,true,false,true,null,[\"broken_screen\"],\"More than 2 scratches on screen\",null,null,null,null,null,null,null,[\"battery_service\",\"face\"],[]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_plus_24_test_cases:11",
+      "sourceSha256": "3416232dea253404d6af1f5dfa82b27e11bb04f63dc903a20ab893817889c086"
+    },
+    {
+      "model": "Apple iPhone 15 Plus",
+      "storage": "512GB",
+      "reference": 48600,
+      "signature": "[true,true,true,false,true,null,[\"broken_screen\"],\"More than 2 scratches on screen\",null,null,null,null,null,null,null,[\"battery_service\",\"face\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_plus_24_test_cases:12",
+      "sourceSha256": "3416232dea253404d6af1f5dfa82b27e11bb04f63dc903a20ab893817889c086"
+    },
+    {
+      "model": "Apple iPhone 15 Plus",
+      "storage": "512GB",
+      "reference": 48600,
+      "signature": "[true,true,true,false,false,null,[],null,null,null,null,null,null,null,null,[\"battery_health\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_plus_24_test_cases:13",
+      "sourceSha256": "3416232dea253404d6af1f5dfa82b27e11bb04f63dc903a20ab893817889c086"
+    },
+    {
+      "model": "Apple iPhone 15 Plus",
+      "storage": "512GB",
+      "reference": 48600,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[\"battery_health\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_plus_24_test_cases:14",
+      "sourceSha256": "3416232dea253404d6af1f5dfa82b27e11bb04f63dc903a20ab893817889c086"
+    },
+    {
+      "model": "Apple iPhone 15 Plus",
+      "storage": "512GB",
+      "reference": 48600,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_plus_24_test_cases:15",
+      "sourceSha256": "3416232dea253404d6af1f5dfa82b27e11bb04f63dc903a20ab893817889c086"
+    },
+    {
+      "model": "Apple iPhone 15 Plus",
+      "storage": "512GB",
+      "reference": 48600,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[],[]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_plus_24_test_cases:16",
+      "sourceSha256": "3416232dea253404d6af1f5dfa82b27e11bb04f63dc903a20ab893817889c086"
+    },
+    {
+      "model": "Apple iPhone 15 Plus",
+      "storage": "512GB",
+      "reference": 48600,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[\"face\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_plus_24_test_cases:17",
+      "sourceSha256": "3416232dea253404d6af1f5dfa82b27e11bb04f63dc903a20ab893817889c086"
+    },
+    {
+      "model": "Apple iPhone 15 Plus",
+      "storage": "512GB",
+      "reference": 48600,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[\"battery_service\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_plus_24_test_cases:18",
+      "sourceSha256": "3416232dea253404d6af1f5dfa82b27e11bb04f63dc903a20ab893817889c086"
+    },
+    {
+      "model": "Apple iPhone 15 Plus",
+      "storage": "512GB",
+      "reference": 48600,
+      "signature": "[true,true,true,false,true,null,[\"broken_screen\"],\"More than 2 scratches on screen\",null,null,null,null,null,null,null,[],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_plus_24_test_cases:19",
+      "sourceSha256": "3416232dea253404d6af1f5dfa82b27e11bb04f63dc903a20ab893817889c086"
+    },
+    {
+      "model": "Apple iPhone 15 Plus",
+      "storage": "512GB",
+      "reference": 48600,
+      "signature": "[true,true,true,false,true,null,[\"broken_screen\"],\"1-2 scratches on screen\",null,null,null,null,null,null,null,[\"battery_health\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_plus_24_test_cases:20",
+      "sourceSha256": "3416232dea253404d6af1f5dfa82b27e11bb04f63dc903a20ab893817889c086"
+    },
+    {
+      "model": "Apple iPhone 15 Plus",
+      "storage": "512GB",
+      "reference": 48600,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[\"battery_service\",\"speaker\"],[]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_plus_24_test_cases:21",
+      "sourceSha256": "3416232dea253404d6af1f5dfa82b27e11bb04f63dc903a20ab893817889c086"
+    },
+    {
+      "model": "Apple iPhone 15 Plus",
+      "storage": "512GB",
+      "reference": 48600,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[\"battery_service\",\"speaker\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_plus_24_test_cases:22",
+      "sourceSha256": "3416232dea253404d6af1f5dfa82b27e11bb04f63dc903a20ab893817889c086"
+    },
+    {
+      "model": "Apple iPhone 15 Plus",
+      "storage": "512GB",
+      "reference": 48600,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[\"battery_health\",\"speaker\"],[]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_plus_24_test_cases:23",
+      "sourceSha256": "3416232dea253404d6af1f5dfa82b27e11bb04f63dc903a20ab893817889c086"
+    },
+    {
+      "model": "Apple iPhone 15 Plus",
+      "storage": "512GB",
+      "reference": 48600,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[\"battery_health\",\"speaker\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_plus_24_test_cases:24",
+      "sourceSha256": "3416232dea253404d6af1f5dfa82b27e11bb04f63dc903a20ab893817889c086"
+    },
+    {
+      "model": "Apple iPhone 15 Pro Max",
+      "storage": "512GB",
+      "reference": 72480,
+      "signature": "[true,true,true,false,true,\"Single eSIM\",[],null,null,null,null,null,null,null,null,[\"battery_service\",\"face\"],[]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_pro_max_20_test_cases:01",
+      "sourceSha256": "f674cc127f739f35ffc8d3913633b3ff46c49074c1e04b771d95d03ba3ca0a38"
+    },
+    {
+      "model": "Apple iPhone 15 Pro Max",
+      "storage": "512GB",
+      "reference": 72480,
+      "signature": "[true,true,true,false,true,\"Single eSIM\",[],null,null,null,null,null,null,null,null,[\"battery_health\",\"face\"],[]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_pro_max_20_test_cases:07",
+      "sourceSha256": "f674cc127f739f35ffc8d3913633b3ff46c49074c1e04b771d95d03ba3ca0a38"
+    },
+    {
+      "model": "Apple iPhone 15 Pro Max",
+      "storage": "512GB",
+      "reference": 72480,
+      "signature": "[true,true,true,false,true,\"Single eSIM\",[],null,null,null,null,null,null,null,null,[\"battery_health\",\"face\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_pro_max_20_test_cases:08",
+      "sourceSha256": "f674cc127f739f35ffc8d3913633b3ff46c49074c1e04b771d95d03ba3ca0a38"
+    },
+    {
+      "model": "Apple iPhone 15 Pro Max",
+      "storage": "512GB",
+      "reference": 72480,
+      "signature": "[true,true,true,false,true,\"Single eSIM\",[],null,null,null,null,null,null,null,null,[\"battery_service\",\"face\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_pro_max_20_test_cases:09",
+      "sourceSha256": "f674cc127f739f35ffc8d3913633b3ff46c49074c1e04b771d95d03ba3ca0a38"
+    },
+    {
+      "model": "Apple iPhone 15 Pro Max",
+      "storage": "512GB",
+      "reference": 72480,
+      "signature": "[true,true,false,false,false,\"Single eSIM\",[],null,null,null,null,null,null,null,null,[\"battery_service\",\"face\"],[]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_pro_max_20_test_cases:10",
+      "sourceSha256": "f674cc127f739f35ffc8d3913633b3ff46c49074c1e04b771d95d03ba3ca0a38"
+    },
+    {
+      "model": "Apple iPhone 15 Pro Max",
+      "storage": "512GB",
+      "reference": 72480,
+      "signature": "[true,true,true,false,true,\"Single eSIM\",[\"broken_screen\"],\"More than 2 scratches on screen\",null,null,null,null,null,null,null,[\"battery_service\",\"face\"],[]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_pro_max_20_test_cases:11",
+      "sourceSha256": "f674cc127f739f35ffc8d3913633b3ff46c49074c1e04b771d95d03ba3ca0a38"
+    },
+    {
+      "model": "Apple iPhone 15 Pro Max",
+      "storage": "512GB",
+      "reference": 72480,
+      "signature": "[true,true,true,false,true,\"Single eSIM\",[\"broken_screen\"],\"More than 2 scratches on screen\",null,null,null,null,null,null,null,[\"battery_service\",\"face\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_pro_max_20_test_cases:12",
+      "sourceSha256": "f674cc127f739f35ffc8d3913633b3ff46c49074c1e04b771d95d03ba3ca0a38"
+    },
+    {
+      "model": "Apple iPhone 15 Pro Max",
+      "storage": "512GB",
+      "reference": 72480,
+      "signature": "[true,true,true,false,false,\"Single eSIM\",[],null,null,null,null,null,null,null,null,[\"battery_health\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_pro_max_20_test_cases:13",
+      "sourceSha256": "f674cc127f739f35ffc8d3913633b3ff46c49074c1e04b771d95d03ba3ca0a38"
+    },
+    {
+      "model": "Apple iPhone 15 Pro Max",
+      "storage": "512GB",
+      "reference": 72480,
+      "signature": "[true,true,true,false,true,\"Single eSIM\",[],null,null,null,null,null,null,null,null,[\"battery_health\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_pro_max_20_test_cases:14",
+      "sourceSha256": "f674cc127f739f35ffc8d3913633b3ff46c49074c1e04b771d95d03ba3ca0a38"
+    },
+    {
+      "model": "Apple iPhone 15 Pro Max",
+      "storage": "512GB",
+      "reference": 72480,
+      "signature": "[true,true,true,false,true,\"Single eSIM\",[],null,null,null,null,null,null,null,null,[],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_pro_max_20_test_cases:15",
+      "sourceSha256": "f674cc127f739f35ffc8d3913633b3ff46c49074c1e04b771d95d03ba3ca0a38"
+    },
+    {
+      "model": "Apple iPhone 15 Pro Max",
+      "storage": "512GB",
+      "reference": 72480,
+      "signature": "[true,true,true,false,true,\"Single eSIM\",[],null,null,null,null,null,null,null,null,[],[]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_pro_max_20_test_cases:16",
+      "sourceSha256": "f674cc127f739f35ffc8d3913633b3ff46c49074c1e04b771d95d03ba3ca0a38"
+    },
+    {
+      "model": "Apple iPhone 15 Pro Max",
+      "storage": "512GB",
+      "reference": 72480,
+      "signature": "[true,true,true,false,true,\"Single eSIM\",[],null,null,null,null,null,null,null,null,[\"face\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_pro_max_20_test_cases:17",
+      "sourceSha256": "f674cc127f739f35ffc8d3913633b3ff46c49074c1e04b771d95d03ba3ca0a38"
+    },
+    {
+      "model": "Apple iPhone 15 Pro Max",
+      "storage": "512GB",
+      "reference": 72480,
+      "signature": "[true,true,true,false,true,\"Single eSIM\",[],null,null,null,null,null,null,null,null,[\"battery_service\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_pro_max_20_test_cases:18",
+      "sourceSha256": "f674cc127f739f35ffc8d3913633b3ff46c49074c1e04b771d95d03ba3ca0a38"
+    },
+    {
+      "model": "Apple iPhone 15 Pro Max",
+      "storage": "512GB",
+      "reference": 72480,
+      "signature": "[true,true,true,false,true,\"Single eSIM\",[\"broken_screen\"],\"More than 2 scratches on screen\",null,null,null,null,null,null,null,[],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_pro_max_20_test_cases:19",
+      "sourceSha256": "f674cc127f739f35ffc8d3913633b3ff46c49074c1e04b771d95d03ba3ca0a38"
+    },
+    {
+      "model": "Apple iPhone 15 Pro Max",
+      "storage": "512GB",
+      "reference": 72480,
+      "signature": "[true,true,true,false,true,\"Single eSIM\",[\"broken_screen\"],\"1-2 scratches on screen\",null,null,null,null,null,null,null,[\"battery_health\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_pro_max_20_test_cases:20",
+      "sourceSha256": "f674cc127f739f35ffc8d3913633b3ff46c49074c1e04b771d95d03ba3ca0a38"
+    },
+    {
+      "model": "Apple iPhone 15 Pro Max",
+      "storage": "512GB",
+      "reference": 72480,
+      "signature": "[true,true,true,false,true,\"Single eSIM\",[],null,null,null,null,null,null,null,null,[\"battery_service\",\"speaker\"],[]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_pro_max_24_test_cases:21",
+      "sourceSha256": "c5e0e2dc68706363847ea2fead9d89f47953716d680b5e92321672a7f40ca9c9"
+    },
+    {
+      "model": "Apple iPhone 15 Pro Max",
+      "storage": "512GB",
+      "reference": 72480,
+      "signature": "[true,true,true,false,true,\"Single eSIM\",[],null,null,null,null,null,null,null,null,[\"battery_service\",\"speaker\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_pro_max_24_test_cases:22",
+      "sourceSha256": "c5e0e2dc68706363847ea2fead9d89f47953716d680b5e92321672a7f40ca9c9"
+    },
+    {
+      "model": "Apple iPhone 15 Pro Max",
+      "storage": "512GB",
+      "reference": 72480,
+      "signature": "[true,true,true,false,true,\"Single eSIM\",[],null,null,null,null,null,null,null,null,[\"battery_health\",\"speaker\"],[]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_pro_max_24_test_cases:23",
+      "sourceSha256": "c5e0e2dc68706363847ea2fead9d89f47953716d680b5e92321672a7f40ca9c9"
+    },
+    {
+      "model": "Apple iPhone 15 Pro Max",
+      "storage": "512GB",
+      "reference": 72480,
+      "signature": "[true,true,true,false,true,\"Single eSIM\",[],null,null,null,null,null,null,null,null,[\"battery_health\",\"speaker\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_pro_max_24_test_cases:24",
+      "sourceSha256": "c5e0e2dc68706363847ea2fead9d89f47953716d680b5e92321672a7f40ca9c9"
+    },
+    {
+      "model": "Apple iPhone 15 Pro",
+      "storage": "512GB",
+      "reference": 68160,
+      "signature": "[true,true,true,false,true,\"Single eSIM\",[],null,null,null,null,null,null,null,null,[\"battery_service\",\"face\"],[]]",
+      "sourceDate": "2026-10-16",
+      "sourceId": "iphone15_pro_test_cases:01",
+      "sourceSha256": "b0ccaaffd19b2ae22f909d2682943b076a8a59fd03ba77406c7eb866c52cda37"
+    },
+    {
+      "model": "Apple iPhone 15 Pro",
+      "storage": "512GB",
+      "reference": 68160,
+      "signature": "[true,true,true,false,true,\"Single eSIM\",[],null,null,null,null,null,null,null,null,[\"battery_health\",\"face\"],[]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_pro_test_cases:07",
+      "sourceSha256": "b0ccaaffd19b2ae22f909d2682943b076a8a59fd03ba77406c7eb866c52cda37"
+    },
+    {
+      "model": "Apple iPhone 15 Pro",
+      "storage": "512GB",
+      "reference": 68160,
+      "signature": "[true,true,true,false,true,\"Single eSIM\",[],null,null,null,null,null,null,null,null,[\"battery_health\",\"face\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_pro_test_cases:08",
+      "sourceSha256": "b0ccaaffd19b2ae22f909d2682943b076a8a59fd03ba77406c7eb866c52cda37"
+    },
+    {
+      "model": "Apple iPhone 15 Pro",
+      "storage": "512GB",
+      "reference": 68160,
+      "signature": "[true,true,true,false,true,\"Single eSIM\",[],null,null,null,null,null,null,null,null,[\"battery_service\",\"face\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_pro_test_cases:09",
+      "sourceSha256": "b0ccaaffd19b2ae22f909d2682943b076a8a59fd03ba77406c7eb866c52cda37"
+    },
+    {
+      "model": "Apple iPhone 15 Pro",
+      "storage": "512GB",
+      "reference": 68160,
+      "signature": "[true,true,false,false,false,\"Single eSIM\",[],null,null,null,null,null,null,null,null,[\"battery_service\",\"face\"],[]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_pro_test_cases:11",
+      "sourceSha256": "b0ccaaffd19b2ae22f909d2682943b076a8a59fd03ba77406c7eb866c52cda37"
+    },
+    {
+      "model": "Apple iPhone 15 Pro",
+      "storage": "512GB",
+      "reference": 68160,
+      "signature": "[true,true,true,false,true,\"Single eSIM\",[\"broken_screen\"],\"More than 2 scratches on screen\",null,null,null,null,null,null,null,[\"battery_service\",\"face\"],[]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_pro_test_cases:14",
+      "sourceSha256": "b0ccaaffd19b2ae22f909d2682943b076a8a59fd03ba77406c7eb866c52cda37"
+    },
+    {
+      "model": "Apple iPhone 15 Pro",
+      "storage": "512GB",
+      "reference": 68160,
+      "signature": "[true,true,true,false,true,\"Single eSIM\",[\"broken_screen\"],\"More than 2 scratches on screen\",null,null,null,null,null,null,null,[\"battery_service\",\"face\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_pro_test_cases:15",
+      "sourceSha256": "b0ccaaffd19b2ae22f909d2682943b076a8a59fd03ba77406c7eb866c52cda37"
+    },
+    {
+      "model": "Apple iPhone 15 Pro",
+      "storage": "512GB",
+      "reference": 68160,
+      "signature": "[true,true,true,false,false,\"Single eSIM\",[],null,null,null,null,null,null,null,null,[\"battery_health\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_pro_test_cases:16",
+      "sourceSha256": "b0ccaaffd19b2ae22f909d2682943b076a8a59fd03ba77406c7eb866c52cda37"
+    },
+    {
+      "model": "Apple iPhone 15 Pro",
+      "storage": "512GB",
+      "reference": 68160,
+      "signature": "[true,true,true,false,true,\"Single eSIM\",[],null,null,null,null,null,null,null,null,[\"battery_health\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone15_pro_test_cases:17",
+      "sourceSha256": "b0ccaaffd19b2ae22f909d2682943b076a8a59fd03ba77406c7eb866c52cda37"
+    },
+    {
+      "model": "Apple iPhone 16",
+      "storage": "512GB",
+      "reference": 55150,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[\"battery_service\",\"face\"],[]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone16_24_test_cases:01",
+      "sourceSha256": "a11b0d37834a7aa772658c6417d4bb9181847a8008aefea8c1254239cfc86517"
+    },
+    {
+      "model": "Apple iPhone 16",
+      "storage": "512GB",
+      "reference": 55150,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[\"battery_health\",\"face\"],[]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone16_24_test_cases:07",
+      "sourceSha256": "a11b0d37834a7aa772658c6417d4bb9181847a8008aefea8c1254239cfc86517"
+    },
+    {
+      "model": "Apple iPhone 16",
+      "storage": "512GB",
+      "reference": 55150,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[\"battery_health\",\"face\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone16_24_test_cases:08",
+      "sourceSha256": "a11b0d37834a7aa772658c6417d4bb9181847a8008aefea8c1254239cfc86517"
+    },
+    {
+      "model": "Apple iPhone 16",
+      "storage": "512GB",
+      "reference": 55150,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[\"battery_service\",\"face\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone16_24_test_cases:09",
+      "sourceSha256": "a11b0d37834a7aa772658c6417d4bb9181847a8008aefea8c1254239cfc86517"
+    },
+    {
+      "model": "Apple iPhone 16",
+      "storage": "512GB",
+      "reference": 55150,
+      "signature": "[true,true,false,false,false,null,[],null,null,null,null,null,null,null,null,[\"battery_service\",\"face\"],[]]",
+      "sourceDate": "2026-10-16",
+      "sourceId": "iphone16_24_test_cases:10",
+      "sourceSha256": "a11b0d37834a7aa772658c6417d4bb9181847a8008aefea8c1254239cfc86517"
+    },
+    {
+      "model": "Apple iPhone 16",
+      "storage": "512GB",
+      "reference": 55150,
+      "signature": "[true,true,true,false,true,null,[\"broken_screen\"],\"More than 2 scratches on screen\",null,null,null,null,null,null,null,[\"battery_service\",\"face\"],[]]",
+      "sourceDate": "2026-10-16",
+      "sourceId": "iphone16_24_test_cases:11",
+      "sourceSha256": "a11b0d37834a7aa772658c6417d4bb9181847a8008aefea8c1254239cfc86517"
+    },
+    {
+      "model": "Apple iPhone 16",
+      "storage": "512GB",
+      "reference": 55150,
+      "signature": "[true,true,true,false,true,null,[\"broken_screen\"],\"More than 2 scratches on screen\",null,null,null,null,null,null,null,[\"battery_service\",\"face\"],[\"box\"]]",
+      "sourceDate": "2026-10-16",
+      "sourceId": "iphone16_24_test_cases:12",
+      "sourceSha256": "a11b0d37834a7aa772658c6417d4bb9181847a8008aefea8c1254239cfc86517"
+    },
+    {
+      "model": "Apple iPhone 16",
+      "storage": "512GB",
+      "reference": 55150,
+      "signature": "[true,true,true,false,false,null,[],null,null,null,null,null,null,null,null,[\"battery_health\"],[\"box\"]]",
+      "sourceDate": "2026-10-16",
+      "sourceId": "iphone16_24_test_cases:13",
+      "sourceSha256": "a11b0d37834a7aa772658c6417d4bb9181847a8008aefea8c1254239cfc86517"
+    },
+    {
+      "model": "Apple iPhone 16",
+      "storage": "512GB",
+      "reference": 55150,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[\"battery_health\"],[\"box\"]]",
+      "sourceDate": "2026-10-16",
+      "sourceId": "iphone16_24_test_cases:14",
+      "sourceSha256": "a11b0d37834a7aa772658c6417d4bb9181847a8008aefea8c1254239cfc86517"
+    },
+    {
+      "model": "Apple iPhone 16",
+      "storage": "512GB",
+      "reference": 55150,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone16_24_test_cases:15",
+      "sourceSha256": "a11b0d37834a7aa772658c6417d4bb9181847a8008aefea8c1254239cfc86517"
+    },
+    {
+      "model": "Apple iPhone 16",
+      "storage": "512GB",
+      "reference": 55150,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[],[]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone16_24_test_cases:16",
+      "sourceSha256": "a11b0d37834a7aa772658c6417d4bb9181847a8008aefea8c1254239cfc86517"
+    },
+    {
+      "model": "Apple iPhone 16",
+      "storage": "512GB",
+      "reference": 55150,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[\"face\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone16_24_test_cases:17",
+      "sourceSha256": "a11b0d37834a7aa772658c6417d4bb9181847a8008aefea8c1254239cfc86517"
+    },
+    {
+      "model": "Apple iPhone 16",
+      "storage": "512GB",
+      "reference": 55150,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[\"battery_service\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone16_24_test_cases:18",
+      "sourceSha256": "a11b0d37834a7aa772658c6417d4bb9181847a8008aefea8c1254239cfc86517"
+    },
+    {
+      "model": "Apple iPhone 16",
+      "storage": "512GB",
+      "reference": 55150,
+      "signature": "[true,true,true,false,true,null,[\"broken_screen\"],\"More than 2 scratches on screen\",null,null,null,null,null,null,null,[],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone16_24_test_cases:19",
+      "sourceSha256": "a11b0d37834a7aa772658c6417d4bb9181847a8008aefea8c1254239cfc86517"
+    },
+    {
+      "model": "Apple iPhone 16",
+      "storage": "512GB",
+      "reference": 55150,
+      "signature": "[true,true,true,false,true,null,[\"broken_screen\"],\"1-2 scratches on screen\",null,null,null,null,null,null,null,[\"battery_health\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone16_24_test_cases:20",
+      "sourceSha256": "a11b0d37834a7aa772658c6417d4bb9181847a8008aefea8c1254239cfc86517"
+    },
+    {
+      "model": "Apple iPhone 16",
+      "storage": "512GB",
+      "reference": 55150,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[\"battery_service\",\"speaker\"],[]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone16_24_test_cases:21",
+      "sourceSha256": "a11b0d37834a7aa772658c6417d4bb9181847a8008aefea8c1254239cfc86517"
+    },
+    {
+      "model": "Apple iPhone 16",
+      "storage": "512GB",
+      "reference": 55150,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[\"battery_service\",\"speaker\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone16_24_test_cases:22",
+      "sourceSha256": "a11b0d37834a7aa772658c6417d4bb9181847a8008aefea8c1254239cfc86517"
+    },
+    {
+      "model": "Apple iPhone 16",
+      "storage": "512GB",
+      "reference": 55150,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[\"battery_health\",\"speaker\"],[]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone16_24_test_cases:23",
+      "sourceSha256": "a11b0d37834a7aa772658c6417d4bb9181847a8008aefea8c1254239cfc86517"
+    },
+    {
+      "model": "Apple iPhone 16",
+      "storage": "512GB",
+      "reference": 55150,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[\"battery_health\",\"speaker\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone16_24_test_cases:24",
+      "sourceSha256": "a11b0d37834a7aa772658c6417d4bb9181847a8008aefea8c1254239cfc86517"
+    },
+    {
+      "model": "Apple iPhone 16 Plus",
+      "storage": "512GB",
+      "reference": 56160,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[\"battery_service\",\"face\"],[]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone16_plus_24_test_cases:01",
+      "sourceSha256": "b8a7dec6692d1a01e5ea2c0acab55fdf1085af1b540e3388bec08bf5bc7e5c74"
+    },
+    {
+      "model": "Apple iPhone 16 Plus",
+      "storage": "512GB",
+      "reference": 56160,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[\"battery_health\",\"face\"],[]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone16_plus_24_test_cases:07",
+      "sourceSha256": "b8a7dec6692d1a01e5ea2c0acab55fdf1085af1b540e3388bec08bf5bc7e5c74"
+    },
+    {
+      "model": "Apple iPhone 16 Plus",
+      "storage": "512GB",
+      "reference": 56160,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[\"battery_health\",\"face\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone16_plus_24_test_cases:08",
+      "sourceSha256": "b8a7dec6692d1a01e5ea2c0acab55fdf1085af1b540e3388bec08bf5bc7e5c74"
+    },
+    {
+      "model": "Apple iPhone 16 Plus",
+      "storage": "512GB",
+      "reference": 56160,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[\"battery_service\",\"face\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone16_plus_24_test_cases:09",
+      "sourceSha256": "b8a7dec6692d1a01e5ea2c0acab55fdf1085af1b540e3388bec08bf5bc7e5c74"
+    },
+    {
+      "model": "Apple iPhone 16 Plus",
+      "storage": "512GB",
+      "reference": 56160,
+      "signature": "[true,true,false,false,false,null,[],null,null,null,null,null,null,null,null,[\"battery_service\",\"face\"],[]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone16_plus_24_test_cases:10",
+      "sourceSha256": "b8a7dec6692d1a01e5ea2c0acab55fdf1085af1b540e3388bec08bf5bc7e5c74"
+    },
+    {
+      "model": "Apple iPhone 16 Plus",
+      "storage": "512GB",
+      "reference": 56160,
+      "signature": "[true,true,true,false,true,null,[\"broken_screen\"],\"More than 2 scratches on screen\",null,null,null,null,null,null,null,[\"battery_service\",\"face\"],[]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone16_plus_24_test_cases:11",
+      "sourceSha256": "b8a7dec6692d1a01e5ea2c0acab55fdf1085af1b540e3388bec08bf5bc7e5c74"
+    },
+    {
+      "model": "Apple iPhone 16 Plus",
+      "storage": "512GB",
+      "reference": 56160,
+      "signature": "[true,true,true,false,true,null,[\"broken_screen\"],\"More than 2 scratches on screen\",null,null,null,null,null,null,null,[\"battery_service\",\"face\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone16_plus_24_test_cases:12",
+      "sourceSha256": "b8a7dec6692d1a01e5ea2c0acab55fdf1085af1b540e3388bec08bf5bc7e5c74"
+    },
+    {
+      "model": "Apple iPhone 16 Plus",
+      "storage": "512GB",
+      "reference": 56160,
+      "signature": "[true,true,true,false,false,null,[],null,null,null,null,null,null,null,null,[\"battery_health\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone16_plus_24_test_cases:13",
+      "sourceSha256": "b8a7dec6692d1a01e5ea2c0acab55fdf1085af1b540e3388bec08bf5bc7e5c74"
+    },
+    {
+      "model": "Apple iPhone 16 Plus",
+      "storage": "512GB",
+      "reference": 56160,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[\"battery_health\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone16_plus_24_test_cases:14",
+      "sourceSha256": "b8a7dec6692d1a01e5ea2c0acab55fdf1085af1b540e3388bec08bf5bc7e5c74"
+    },
+    {
+      "model": "Apple iPhone 16 Plus",
+      "storage": "512GB",
+      "reference": 56160,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone16_plus_24_test_cases:15",
+      "sourceSha256": "b8a7dec6692d1a01e5ea2c0acab55fdf1085af1b540e3388bec08bf5bc7e5c74"
+    },
+    {
+      "model": "Apple iPhone 16 Plus",
+      "storage": "512GB",
+      "reference": 56160,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[],[]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone16_plus_24_test_cases:16",
+      "sourceSha256": "b8a7dec6692d1a01e5ea2c0acab55fdf1085af1b540e3388bec08bf5bc7e5c74"
+    },
+    {
+      "model": "Apple iPhone 16 Plus",
+      "storage": "512GB",
+      "reference": 56160,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[\"face\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone16_plus_24_test_cases:17",
+      "sourceSha256": "b8a7dec6692d1a01e5ea2c0acab55fdf1085af1b540e3388bec08bf5bc7e5c74"
+    },
+    {
+      "model": "Apple iPhone 16 Plus",
+      "storage": "512GB",
+      "reference": 56160,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[\"battery_service\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone16_plus_24_test_cases:18",
+      "sourceSha256": "b8a7dec6692d1a01e5ea2c0acab55fdf1085af1b540e3388bec08bf5bc7e5c74"
+    },
+    {
+      "model": "Apple iPhone 16 Plus",
+      "storage": "512GB",
+      "reference": 56160,
+      "signature": "[true,true,true,false,true,null,[\"broken_screen\"],\"More than 2 scratches on screen\",null,null,null,null,null,null,null,[],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone16_plus_24_test_cases:19",
+      "sourceSha256": "b8a7dec6692d1a01e5ea2c0acab55fdf1085af1b540e3388bec08bf5bc7e5c74"
+    },
+    {
+      "model": "Apple iPhone 16 Plus",
+      "storage": "512GB",
+      "reference": 56160,
+      "signature": "[true,true,true,false,true,null,[\"broken_screen\"],\"1-2 scratches on screen\",null,null,null,null,null,null,null,[\"battery_health\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone16_plus_24_test_cases:20",
+      "sourceSha256": "b8a7dec6692d1a01e5ea2c0acab55fdf1085af1b540e3388bec08bf5bc7e5c74"
+    },
+    {
+      "model": "Apple iPhone 16 Plus",
+      "storage": "512GB",
+      "reference": 56160,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[\"battery_service\",\"speaker\"],[]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone16_plus_24_test_cases:21",
+      "sourceSha256": "b8a7dec6692d1a01e5ea2c0acab55fdf1085af1b540e3388bec08bf5bc7e5c74"
+    },
+    {
+      "model": "Apple iPhone 16 Plus",
+      "storage": "512GB",
+      "reference": 56160,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[\"battery_service\",\"speaker\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone16_plus_24_test_cases:22",
+      "sourceSha256": "b8a7dec6692d1a01e5ea2c0acab55fdf1085af1b540e3388bec08bf5bc7e5c74"
+    },
+    {
+      "model": "Apple iPhone 16 Plus",
+      "storage": "512GB",
+      "reference": 56160,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[\"battery_health\",\"speaker\"],[]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone16_plus_24_test_cases:23",
+      "sourceSha256": "b8a7dec6692d1a01e5ea2c0acab55fdf1085af1b540e3388bec08bf5bc7e5c74"
+    },
+    {
+      "model": "Apple iPhone 16 Plus",
+      "storage": "512GB",
+      "reference": 56160,
+      "signature": "[true,true,true,false,true,null,[],null,null,null,null,null,null,null,null,[\"battery_health\",\"speaker\"],[\"box\"]]",
+      "sourceDate": "2026-10-17",
+      "sourceId": "iphone16_plus_24_test_cases:24",
+      "sourceSha256": "b8a7dec6692d1a01e5ea2c0acab55fdf1085af1b540e3388bec08bf5bc7e5c74"
+    },
+    {
+      "model": "Apple iPhone 17",
+      "storage": "512GB",
+      "reference": 67700,
+      "signature": "[true,true,true,false,true,\"Single eSIM\",[],null,null,null,null,null,null,null,null,[\"battery_service\",\"face\"],[]]",
+      "sourceDate": "2026-10-16",
+      "sourceId": "iphone17_test_cases:01",
+      "sourceSha256": "89a80ebc0f22fb73e24f7cefcf271bae03f63954742a2c7af808178b327f042d"
+    },
+    {
+      "model": "Apple iPhone 17",
+      "storage": "512GB",
+      "reference": 67700,
+      "signature": "[true,true,true,false,true,\"Single eSIM\",[],null,null,null,null,null,null,null,null,[\"battery_health\",\"face\"],[]]",
+      "sourceDate": "2026-10-16",
+      "sourceId": "iphone17_test_cases:07",
+      "sourceSha256": "89a80ebc0f22fb73e24f7cefcf271bae03f63954742a2c7af808178b327f042d"
+    },
+    {
+      "model": "Apple iPhone 17",
+      "storage": "512GB",
+      "reference": 67700,
+      "signature": "[true,true,true,false,true,\"Single eSIM\",[],null,null,null,null,null,null,null,null,[\"battery_health\",\"face\"],[\"box\"]]",
+      "sourceDate": "2026-10-16",
+      "sourceId": "iphone17_test_cases:08",
+      "sourceSha256": "89a80ebc0f22fb73e24f7cefcf271bae03f63954742a2c7af808178b327f042d"
+    },
+    {
+      "model": "Apple iPhone 17",
+      "storage": "512GB",
+      "reference": 67700,
+      "signature": "[true,true,true,false,true,\"Single eSIM\",[],null,null,null,null,null,null,null,null,[\"battery_service\",\"face\"],[\"box\"]]",
+      "sourceDate": "2026-10-16",
+      "sourceId": "iphone17_test_cases:09",
+      "sourceSha256": "89a80ebc0f22fb73e24f7cefcf271bae03f63954742a2c7af808178b327f042d"
+    },
+    {
+      "model": "Apple iPhone 17",
+      "storage": "512GB",
+      "reference": 67700,
+      "signature": "[true,true,false,false,false,\"Single eSIM\",[],null,null,null,null,null,null,null,null,[\"battery_service\",\"face\"],[]]",
+      "sourceDate": "2026-10-16",
+      "sourceId": "iphone17_test_cases:11",
+      "sourceSha256": "89a80ebc0f22fb73e24f7cefcf271bae03f63954742a2c7af808178b327f042d"
+    },
+    {
+      "model": "Apple iPhone 17",
+      "storage": "512GB",
+      "reference": 67700,
+      "signature": "[true,true,true,false,true,\"Single eSIM\",[\"broken_screen\"],\"More than 2 scratches on screen\",null,null,null,null,null,null,null,[\"battery_service\",\"face\"],[]]",
+      "sourceDate": "2026-10-16",
+      "sourceId": "iphone17_test_cases:14",
+      "sourceSha256": "89a80ebc0f22fb73e24f7cefcf271bae03f63954742a2c7af808178b327f042d"
+    },
+    {
+      "model": "Apple iPhone 17",
+      "storage": "512GB",
+      "reference": 67700,
+      "signature": "[true,true,true,false,true,\"Single eSIM\",[\"broken_screen\"],\"More than 2 scratches on screen\",null,null,null,null,null,null,null,[\"battery_service\",\"face\"],[\"box\"]]",
+      "sourceDate": "2026-10-16",
+      "sourceId": "iphone17_test_cases:15",
+      "sourceSha256": "89a80ebc0f22fb73e24f7cefcf271bae03f63954742a2c7af808178b327f042d"
+    },
+    {
+      "model": "Apple iPhone 17",
+      "storage": "512GB",
+      "reference": 67700,
+      "signature": "[true,true,true,false,false,\"Single eSIM\",[],null,null,null,null,null,null,null,null,[\"battery_health\"],[\"box\"]]",
+      "sourceDate": "2026-10-16",
+      "sourceId": "iphone17_test_cases:16",
+      "sourceSha256": "89a80ebc0f22fb73e24f7cefcf271bae03f63954742a2c7af808178b327f042d"
+    },
+    {
+      "model": "Apple iPhone 17",
+      "storage": "512GB",
+      "reference": 67700,
+      "signature": "[true,true,true,false,true,\"Single eSIM\",[],null,null,null,null,null,null,null,null,[\"battery_health\"],[\"box\"]]",
+      "sourceDate": "2026-10-16",
+      "sourceId": "iphone17_test_cases:17",
+      "sourceSha256": "89a80ebc0f22fb73e24f7cefcf271bae03f63954742a2c7af808178b327f042d"
+    }
+  ]
+}

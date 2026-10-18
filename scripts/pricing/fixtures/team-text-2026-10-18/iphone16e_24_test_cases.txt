@@ -1,0 +1,1065 @@
+APPLE IPHONE 16E (8 GB/512 GB) — CASHIFY LIVE TEST RESULTS
+Tested: 17 October 2026
+Scope: 24 unique test cases for this 512 GB variant.
+Cashify's Get Upto: ₹41,230
+All 24 selling prices were observed in the live quotation flow.
+Calls working: Yes. Touch screen working: Yes. Other unlisted defects: Not selected.
+eSIM choice: No eSIM question was shown for this model.
+No charger-only case or repeated condition combination is included.
+No sale or pickup order was submitted.
+
+PRICE DEFINITIONS
+Selling price = headline amount shown by Cashify.
+Every observed price summary showed Base Price = Selling price + ₹20,
+IMEI Validation Fee = ₹20, Processing Fee = ₹99,
+and Total Amount = Selling price - ₹99.
+Voucher bonuses and coupons are excluded. Cashify confirms the final value after inspection.
+These observations do not establish Cashify's general pricing algorithm.
+
+SUMMARY (INR)
+Case | Selling price | Total after fees
+01   |       ₹19,650 |          ₹19,551
+02   |       ₹27,450 |          ₹27,351
+03   |       ₹24,850 |          ₹24,751
+04   |       ₹27,100 |          ₹27,001
+05   |       ₹25,830 |          ₹25,731
+06   |       ₹21,150 |          ₹21,051
+07   |       ₹21,750 |          ₹21,651
+08   |       ₹23,250 |          ₹23,151
+09   |       ₹21,150 |          ₹21,051
+10   |        ₹8,150 |           ₹8,051
+11   |       ₹12,890 |          ₹12,791
+12   |       ₹14,390 |          ₹14,291
+13   |       ₹31,750 |          ₹31,651
+14   |       ₹31,750 |          ₹31,651
+15   |       ₹32,650 |          ₹32,551
+16   |       ₹31,150 |          ₹31,051
+17   |       ₹24,150 |          ₹24,051
+18   |       ₹29,650 |          ₹29,551
+19   |       ₹25,890 |          ₹25,791
+20   |       ₹28,860 |          ₹28,761
+21   |       ₹26,150 |          ₹26,051
+22   |       ₹27,650 |          ₹27,551
+23   |       ₹28,250 |          ₹28,151
+24   |       ₹29,750 |          ₹29,651
+
+============================================================================
+TEST CASE 01
+
+Apple iPhone 16e (8 GB/512 GB)
+Cashify's Get Upto: ₹41,230
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹19,650
+Base Price: ₹19,670
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹19,551
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 02
+
+Apple iPhone 16e (8 GB/512 GB)
+Cashify's Get Upto: ₹41,230
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+Yes
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+What is your mobile age?
+Below 3 months
+
+Cashify's Selling price: ₹27,450
+Base Price: ₹27,470
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹27,351
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 03
+
+Apple iPhone 16e (8 GB/512 GB)
+Cashify's Get Upto: ₹41,230
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+Yes
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+What is your mobile age?
+3 months - 6 months
+
+Cashify's Selling price: ₹24,850
+Base Price: ₹24,870
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹24,751
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 04
+
+Apple iPhone 16e (8 GB/512 GB)
+Cashify's Get Upto: ₹41,230
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+Yes
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+What is your mobile age?
+3 months - 6 months
+
+Cashify's Selling price: ₹27,100
+Base Price: ₹27,120
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹27,001
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 05
+
+Apple iPhone 16e (8 GB/512 GB)
+Cashify's Get Upto: ₹41,230
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+Yes
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+What is your mobile age?
+6 months - 11 months
+
+Cashify's Selling price: ₹25,830
+Base Price: ₹25,850
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹25,731
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 06
+
+Apple iPhone 16e (8 GB/512 GB)
+Cashify's Get Upto: ₹41,230
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+Yes
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+What is your mobile age?
+Above 11 months
+
+Cashify's Selling price: ₹21,150
+Base Price: ₹21,170
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹21,051
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 07
+
+Apple iPhone 16e (8 GB/512 GB)
+Cashify's Get Upto: ₹41,230
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery Health 80-85%
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹21,750
+Base Price: ₹21,770
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹21,651
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 08
+
+Apple iPhone 16e (8 GB/512 GB)
+Cashify's Get Upto: ₹41,230
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery Health 80-85%
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹23,250
+Base Price: ₹23,270
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹23,151
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 09
+
+Apple iPhone 16e (8 GB/512 GB)
+Cashify's Get Upto: ₹41,230
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹21,150
+Base Price: ₹21,170
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹21,051
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 10
+
+Apple iPhone 16e (8 GB/512 GB)
+Cashify's Get Upto: ₹41,230
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+No
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+No
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹8,150
+Base Price: ₹8,170
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹8,051
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 11
+
+Apple iPhone 16e (8 GB/512 GB)
+Cashify's Get Upto: ₹41,230
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: Selected
+Other screen/body defects: NONE
+
+Tell us more about your device screen defects?
+Screen Physical Condition
+Check physical condition of Display Screen: More than 2 scratches on screen
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹12,890
+Base Price: ₹12,910
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹12,791
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 12
+
+Apple iPhone 16e (8 GB/512 GB)
+Cashify's Get Upto: ₹41,230
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: Selected
+Other screen/body defects: NONE
+
+Tell us more about your device screen defects?
+Screen Physical Condition
+Check physical condition of Display Screen: More than 2 scratches on screen
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹14,390
+Base Price: ₹14,410
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹14,291
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 13
+
+Apple iPhone 16e (8 GB/512 GB)
+Cashify's Get Upto: ₹41,230
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+No
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Battery Health 80-85%
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹31,750
+Base Price: ₹31,770
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹31,651
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 14
+
+Apple iPhone 16e (8 GB/512 GB)
+Cashify's Get Upto: ₹41,230
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Battery Health 80-85%
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹31,750
+Base Price: ₹31,770
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹31,651
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 15
+
+Apple iPhone 16e (8 GB/512 GB)
+Cashify's Get Upto: ₹41,230
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+NONE
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹32,650
+Base Price: ₹32,670
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹32,551
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 16
+
+Apple iPhone 16e (8 GB/512 GB)
+Cashify's Get Upto: ₹41,230
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+NONE
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹31,150
+Base Price: ₹31,170
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹31,051
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 17
+
+Apple iPhone 16e (8 GB/512 GB)
+Cashify's Get Upto: ₹41,230
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹24,150
+Base Price: ₹24,170
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹24,051
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 18
+
+Apple iPhone 16e (8 GB/512 GB)
+Cashify's Get Upto: ₹41,230
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹29,650
+Base Price: ₹29,670
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹29,551
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 19
+
+Apple iPhone 16e (8 GB/512 GB)
+Cashify's Get Upto: ₹41,230
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: Selected
+Other screen/body defects: NONE
+
+Tell us more about your device screen defects?
+Screen Physical Condition
+Check physical condition of Display Screen: More than 2 scratches on screen
+
+Functional or Physical Problems:
+NONE
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹25,890
+Base Price: ₹25,910
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹25,791
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 20
+
+Apple iPhone 16e (8 GB/512 GB)
+Cashify's Get Upto: ₹41,230
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: Selected
+Other screen/body defects: NONE
+
+Tell us more about your device screen defects?
+Screen Physical Condition
+Check physical condition of Display Screen: 1-2 scratches on screen
+
+Functional or Physical Problems:
+- Battery Health 80-85%
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹28,860
+Base Price: ₹28,880
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹28,761
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 21
+
+Apple iPhone 16e (8 GB/512 GB)
+Cashify's Get Upto: ₹41,230
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Speaker Faulty (speaker not working)
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹26,150
+Base Price: ₹26,170
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹26,051
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 22
+
+Apple iPhone 16e (8 GB/512 GB)
+Cashify's Get Upto: ₹41,230
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Speaker Faulty (speaker not working)
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹27,650
+Base Price: ₹27,670
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹27,551
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 23
+
+Apple iPhone 16e (8 GB/512 GB)
+Cashify's Get Upto: ₹41,230
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Speaker Faulty (speaker not working)
+- Battery Health 80-85%
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹28,250
+Base Price: ₹28,270
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹28,151
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 24
+
+Apple iPhone 16e (8 GB/512 GB)
+Cashify's Get Upto: ₹41,230
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Speaker Faulty (speaker not working)
+- Battery Health 80-85%
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹29,750
+Base Price: ₹29,770
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹29,651
+Status: OBSERVED LIVE

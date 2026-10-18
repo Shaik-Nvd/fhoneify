@@ -2,6 +2,7 @@ import { CASHIFY_CALIBRATION } from './pricing/calibration';
 import { UNKNOWN_QUESTIONNAIRE, type QuestionnaireSemantics } from './pricing/questionnaireSemantics';
 import { inrConditionValue, resolveInrGroup, type InrDeductionConfig } from './pricing/inrDeductions';
 import { xiaomiInrDeductions } from './pricing/inrDeductionTables';
+import { teamTextOutOfWarrantyRule } from './pricing/appleVariantDispatch';
 
 export interface ModelParams {
   warrantyPenalty: number;
@@ -440,6 +441,7 @@ export function calculateApplePrice(model: string, reference: CashifyGetUptoRefe
   if (!reference || reference <= 0) return { cashifyConditionEquivalent: 0, fhoneifyPrice: 0 };
 
   const lowerModel = String(model || "").toLowerCase().trim();
+  const exactTeamModel = teamTextOutOfWarrantyRule(model, storageVariant, diagnostics.warranty);
 
   // --- SPECIALIZED ALGORITHM FOR iPHONE 14 (128 GB / 256 GB / 512 GB) ---
   const isIPhone14 = Boolean(
@@ -1332,7 +1334,7 @@ export function calculateApplePrice(model: string, reference: CashifyGetUptoRefe
     (!storageVariant && reference >= 35000 && reference <= 52000)
   );
 
-  if (isIPhone15 && is15Storage) {
+  if (isIPhone15 && is15Storage && (!exactTeamModel || lowerModel === 'apple iphone 15')) {
     let price = reference;
 
     // Derived precise absolute deductions for iPhone 15 (512GB) based on Cashify scaling:
@@ -1568,7 +1570,7 @@ export function calculateApplePrice(model: string, reference: CashifyGetUptoRefe
     (model && model.includes("512"))
   );
 
-  if (isIPhone15Pro && is15Pro_512) {
+  if (isIPhone15Pro && is15Pro_512 && (!exactTeamModel || lowerModel === 'apple iphone 15 pro')) {
     let price = reference;
 
     // Derived precise absolute deductions for iPhone 15 Pro (512GB) based on Cashify scaling:
@@ -1804,7 +1806,7 @@ export function calculateApplePrice(model: string, reference: CashifyGetUptoRefe
     (model && model.includes("512"))
   );
 
-  if (isIPhone16 && is16_512) {
+  if (isIPhone16 && is16_512 && (!exactTeamModel || lowerModel === 'apple iphone 16')) {
     let price = reference;
 
     // Derived precise absolute deductions for iPhone 16 (512GB) based on Cashify scaling:

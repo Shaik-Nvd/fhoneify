@@ -1,0 +1,823 @@
+APPLE IPHONE 17 (8 GB/512 GB) — CASHIFY LIVE TEST RESULTS
+Tested: 16 October 2026
+Reference: iphone15(1).txt; same 17 entries and order retained.
+Model scope: Apple iPhone 17 (8 GB/512 GB) only.
+Product: https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-17-8-gb-512-gb
+
+Cashify's Get Upto: ₹67,700
+Execution: 16 entries completed through the live quotation flow; 1 unavailable.
+No sale or pickup order was submitted.
+Additional input in every executed case: Single eSIM. Dual eSIM was not tested.
+
+PRICE DEFINITIONS
+Selling price is the headline amount shown by Cashify, matching the price field in your reference.
+The price summary showed Base Price = Selling price + ₹20, IMEI Validation Fee = ₹20,
+and Processing Fee = ₹99. Total Amount = Selling price - ₹99 in all completed entries.
+Voucher bonuses and coupons are excluded. Quotes are observed values, not guaranteed future prices;
+Cashify states the final value depends on device inspection.
+
+SUMMARY (INR)
+Case | Selling price | Total after fees | Status
+01   |       ₹32,010 |          ₹31,911 | Observed
+02   |       ₹47,690 |          ₹47,591 | Observed
+03   |       ₹40,120 |          ₹40,021 | Observed
+04   |       ₹42,370 |          ₹42,271 | Observed
+05   |       ₹40,480 |          ₹40,381 | Observed
+06   |       ₹33,510 |          ₹33,411 | Observed
+07   |       ₹34,950 |          ₹34,851 | Observed
+08   |       ₹36,450 |          ₹36,351 | Observed
+09   |       ₹33,510 |          ₹33,411 | Observed
+10   |           N/A |              N/A | Charger option unavailable
+11   |       ₹17,010 |          ₹16,911 | Observed
+12   |       ₹33,510 |          ₹33,411 | Observed
+13   |       ₹32,010 |          ₹31,911 | Observed
+14   |       ₹23,190 |          ₹23,091 | Observed
+15   |       ₹24,690 |          ₹24,591 | Observed
+16   |       ₹49,990 |          ₹49,891 | Observed
+17   |       ₹49,990 |          ₹49,891 | Observed
+
+NOTES
+- Cases 9 and 12 repeat the same inputs and independently returned ₹33,510.
+- Cases 1 and 13 repeat the same inputs and independently returned ₹32,010.
+- Case 10 in the reference specifies Original Charger of Device: Yes, without a box answer.
+  The current iPhone 17 flow offers only Original Box with same IMEI. No price is invented for case 10.
+- Cases 16 and 17 select only Battery Health 80-85%; Face Sensor not working is not selected.
+- These are observed test vectors. They do not establish Cashify's general pricing algorithm.
+
+============================================================================
+TEST CASE 01
+
+Apple iPhone 17 (8 GB/512 GB)
+Cashify's Get Upto: ₹67,700
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹32,010
+Base Price: ₹32,030
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹31,911
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 02
+
+Apple iPhone 17 (8 GB/512 GB)
+Cashify's Get Upto: ₹67,700
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+Yes
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+What is your mobile age?
+(Because you chose your device is under brand's warranty)
+Below 3 months
+
+Cashify's Selling price: ₹47,690
+Base Price: ₹47,710
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹47,591
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 03
+
+Apple iPhone 17 (8 GB/512 GB)
+Cashify's Get Upto: ₹67,700
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+Yes
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+What is your mobile age?
+(Because you chose your device is under brand's warranty)
+3 months - 6 months
+
+Cashify's Selling price: ₹40,120
+Base Price: ₹40,140
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹40,021
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 04
+
+Apple iPhone 17 (8 GB/512 GB)
+Cashify's Get Upto: ₹67,700
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+Yes
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+What is your mobile age?
+(Because you chose your device is under brand's warranty)
+3 months - 6 months
+
+Cashify's Selling price: ₹42,370
+Base Price: ₹42,390
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹42,271
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 05
+
+Apple iPhone 17 (8 GB/512 GB)
+Cashify's Get Upto: ₹67,700
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+Yes
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+What is your mobile age?
+(Because you chose your device is under brand's warranty)
+6 months - 11 months
+
+Cashify's Selling price: ₹40,480
+Base Price: ₹40,500
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹40,381
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 06
+
+Apple iPhone 17 (8 GB/512 GB)
+Cashify's Get Upto: ₹67,700
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+Yes
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+What is your mobile age?
+(Because you chose your device is under brand's warranty)
+Above 11 months
+
+Cashify's Selling price: ₹33,510
+Base Price: ₹33,530
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹33,411
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 07
+
+Apple iPhone 17 (8 GB/512 GB)
+Cashify's Get Upto: ₹67,700
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery Health 80-85%
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹34,950
+Base Price: ₹34,970
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹34,851
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 08
+
+Apple iPhone 17 (8 GB/512 GB)
+Cashify's Get Upto: ₹67,700
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery Health 80-85%
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹36,450
+Base Price: ₹36,470
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹36,351
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 09
+
+Apple iPhone 17 (8 GB/512 GB)
+Cashify's Get Upto: ₹67,700
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹33,510
+Base Price: ₹33,530
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹33,411
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 10
+
+Apple iPhone 17 (8 GB/512 GB)
+Cashify's Get Upto: ₹67,700
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Charger of Device: Yes (requested by reference; option unavailable)
+Original Box with same IMEI: Not specified in reference
+
+Status: NOT EXECUTABLE AS WRITTEN
+Cashify's Selling price: N/A
+Reason: Current accessory screen contains only Original Box with same IMEI.
+
+============================================================================
+TEST CASE 11
+
+Apple iPhone 17 (8 GB/512 GB)
+Cashify's Get Upto: ₹67,700
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+No
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+No
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹17,010
+Base Price: ₹17,030
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹16,911
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 12
+
+Apple iPhone 17 (8 GB/512 GB)
+Cashify's Get Upto: ₹67,700
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹33,510
+Base Price: ₹33,530
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹33,411
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 13
+
+Apple iPhone 17 (8 GB/512 GB)
+Cashify's Get Upto: ₹67,700
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹32,010
+Base Price: ₹32,030
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹31,911
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 14
+
+Apple iPhone 17 (8 GB/512 GB)
+Cashify's Get Upto: ₹67,700
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: Selected
+Other screen/body defects: NONE
+
+Tell us more about your device screen defects?
+Screen Physical Condition
+Check physical condition of Display Screen: More than 2 scratches on screen
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹23,190
+Base Price: ₹23,210
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹23,091
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 15
+
+Apple iPhone 17 (8 GB/512 GB)
+Cashify's Get Upto: ₹67,700
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: Selected
+Other screen/body defects: NONE
+
+Tell us more about your device screen defects?
+Screen Physical Condition
+Check physical condition of Display Screen: More than 2 scratches on screen
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹24,690
+Base Price: ₹24,710
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹24,591
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 16
+
+Apple iPhone 17 (8 GB/512 GB)
+Cashify's Get Upto: ₹67,700
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+No
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Battery Health 80-85%
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹49,990
+Base Price: ₹50,010
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹49,891
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 17
+
+Apple iPhone 17 (8 GB/512 GB)
+Cashify's Get Upto: ₹67,700
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Battery Health 80-85%
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹49,990
+Base Price: ₹50,010
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹49,891
+Status: OBSERVED LIVE
+

@@ -1,0 +1,823 @@
+APPLE IPHONE 15 PRO (8 GB/512 GB) — CASHIFY LIVE TEST RESULTS
+Tested: 16–17 October 2026 (cases 1–6 on 16 October; remaining cases on 17 October)
+Reference: iphone15(1).txt; same 17 entries and order retained.
+Model scope: Apple iPhone 15 Pro (8 GB/512 GB) only.
+Product: https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-15-pro-8-gb-512-gb
+
+Cashify's Get Upto: ₹68,160
+Execution: 16 entries completed through the live quotation flow; 1 unavailable.
+No sale or pickup order was submitted.
+Additional input in every executed case: Single eSIM. Dual eSIM was not tested.
+
+PRICE DEFINITIONS
+Selling price is the headline amount shown by Cashify, matching the price field in your reference.
+The price summary showed Base Price = Selling price + ₹20, IMEI Validation Fee = ₹20,
+and Processing Fee = ₹99. Total Amount = Selling price - ₹99 in all completed entries.
+Voucher bonuses and coupons are excluded. Quotes are observed values, not guaranteed future prices;
+Cashify states the final value depends on device inspection.
+
+SUMMARY (INR)
+Case | Selling price | Total after fees | Status
+01   |       ₹35,890 |          ₹35,791 | Observed
+02   |       ₹47,990 |          ₹47,891 | Observed
+03   |       ₹45,180 |          ₹45,081 | Observed
+04   |       ₹47,130 |          ₹47,031 | Observed
+05   |       ₹45,000 |          ₹44,901 | Observed
+06   |       ₹37,190 |          ₹37,091 | Observed
+07   |       ₹38,690 |          ₹38,591 | Observed
+08   |       ₹39,990 |          ₹39,891 | Observed
+09   |       ₹37,190 |          ₹37,091 | Observed
+10   |           N/A |              N/A | Charger option unavailable
+11   |       ₹24,390 |          ₹24,291 | Observed
+12   |       ₹37,190 |          ₹37,091 | Observed
+13   |       ₹35,890 |          ₹35,791 | Observed
+14   |       ₹29,130 |          ₹29,031 | Observed
+15   |       ₹30,430 |          ₹30,331 | Observed
+16   |       ₹54,190 |          ₹54,091 | Observed
+17   |       ₹54,190 |          ₹54,091 | Observed
+
+NOTES
+- Cases 9 and 12 repeat the same inputs and independently returned ₹37,190.
+- Cases 1 and 13 repeat the same inputs and independently returned ₹35,890.
+- Case 10 in the reference specifies Original Charger of Device: Yes, without a box answer.
+  The current iPhone 15 Pro flow offers only Original Box with same IMEI. No price is invented for case 10.
+- Cases 16 and 17 select only Battery Health 80-85%; Face Sensor not working is not selected.
+- These are observed test vectors. They do not establish Cashify's general pricing algorithm.
+
+============================================================================
+TEST CASE 01
+
+Apple iPhone 15 Pro (8 GB/512 GB)
+Cashify's Get Upto: ₹68,160
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹35,890
+Base Price: ₹35,910
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹35,791
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 02
+
+Apple iPhone 15 Pro (8 GB/512 GB)
+Cashify's Get Upto: ₹68,160
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+Yes
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+What is your mobile age?
+(Because you chose your device is under brand's warranty)
+Below 3 months
+
+Cashify's Selling price: ₹47,990
+Base Price: ₹48,010
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹47,891
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 03
+
+Apple iPhone 15 Pro (8 GB/512 GB)
+Cashify's Get Upto: ₹68,160
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+Yes
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+What is your mobile age?
+(Because you chose your device is under brand's warranty)
+3 months - 6 months
+
+Cashify's Selling price: ₹45,180
+Base Price: ₹45,200
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹45,081
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 04
+
+Apple iPhone 15 Pro (8 GB/512 GB)
+Cashify's Get Upto: ₹68,160
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+Yes
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+What is your mobile age?
+(Because you chose your device is under brand's warranty)
+3 months - 6 months
+
+Cashify's Selling price: ₹47,130
+Base Price: ₹47,150
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹47,031
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 05
+
+Apple iPhone 15 Pro (8 GB/512 GB)
+Cashify's Get Upto: ₹68,160
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+Yes
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+What is your mobile age?
+(Because you chose your device is under brand's warranty)
+6 months - 11 months
+
+Cashify's Selling price: ₹45,000
+Base Price: ₹45,020
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹44,901
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 06
+
+Apple iPhone 15 Pro (8 GB/512 GB)
+Cashify's Get Upto: ₹68,160
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+Yes
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+What is your mobile age?
+(Because you chose your device is under brand's warranty)
+Above 11 months
+
+Cashify's Selling price: ₹37,190
+Base Price: ₹37,210
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹37,091
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 07
+
+Apple iPhone 15 Pro (8 GB/512 GB)
+Cashify's Get Upto: ₹68,160
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery Health 80-85%
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹38,690
+Base Price: ₹38,710
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹38,591
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 08
+
+Apple iPhone 15 Pro (8 GB/512 GB)
+Cashify's Get Upto: ₹68,160
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery Health 80-85%
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹39,990
+Base Price: ₹40,010
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹39,891
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 09
+
+Apple iPhone 15 Pro (8 GB/512 GB)
+Cashify's Get Upto: ₹68,160
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹37,190
+Base Price: ₹37,210
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹37,091
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 10
+
+Apple iPhone 15 Pro (8 GB/512 GB)
+Cashify's Get Upto: ₹68,160
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Charger of Device: Yes (requested by reference; option unavailable)
+Original Box with same IMEI: Not specified in reference
+
+Status: NOT EXECUTABLE AS WRITTEN
+Cashify's Selling price: N/A
+Reason: Current accessory screen contains only Original Box with same IMEI.
+
+============================================================================
+TEST CASE 11
+
+Apple iPhone 15 Pro (8 GB/512 GB)
+Cashify's Get Upto: ₹68,160
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+No
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+No
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹24,390
+Base Price: ₹24,410
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹24,291
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 12
+
+Apple iPhone 15 Pro (8 GB/512 GB)
+Cashify's Get Upto: ₹68,160
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹37,190
+Base Price: ₹37,210
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹37,091
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 13
+
+Apple iPhone 15 Pro (8 GB/512 GB)
+Cashify's Get Upto: ₹68,160
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹35,890
+Base Price: ₹35,910
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹35,791
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 14
+
+Apple iPhone 15 Pro (8 GB/512 GB)
+Cashify's Get Upto: ₹68,160
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: Selected
+Other screen/body defects: NONE
+
+Tell us more about your device screen defects?
+Screen Physical Condition
+Check physical condition of Display Screen: More than 2 scratches on screen
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹29,130
+Base Price: ₹29,150
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹29,031
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 15
+
+Apple iPhone 15 Pro (8 GB/512 GB)
+Cashify's Get Upto: ₹68,160
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: Selected
+Other screen/body defects: NONE
+
+Tell us more about your device screen defects?
+Screen Physical Condition
+Check physical condition of Display Screen: More than 2 scratches on screen
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹30,430
+Base Price: ₹30,450
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹30,331
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 16
+
+Apple iPhone 15 Pro (8 GB/512 GB)
+Cashify's Get Upto: ₹68,160
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+No
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Battery Health 80-85%
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹54,190
+Base Price: ₹54,210
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹54,091
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 17
+
+Apple iPhone 15 Pro (8 GB/512 GB)
+Cashify's Get Upto: ₹68,160
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Battery Health 80-85%
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹54,190
+Base Price: ₹54,210
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹54,091
+Status: OBSERVED LIVE
+

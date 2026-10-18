@@ -1,0 +1,1065 @@
+APPLE IPHONE 15 PLUS (6 GB/512 GB) — CASHIFY LIVE TEST RESULTS
+Tested: 17 October 2026
+Scope: 24 unique test cases for this 512 GB variant.
+Cashify's Get Upto: ₹48,600
+All 24 selling prices were observed in the live quotation flow.
+Calls working: Yes. Touch screen working: Yes. Other unlisted defects: Not selected.
+eSIM choice: No eSIM question was shown for this model.
+No charger-only case or repeated condition combination is included.
+No sale or pickup order was submitted.
+
+PRICE DEFINITIONS
+Selling price = headline amount shown by Cashify.
+Every observed price summary showed Base Price = Selling price + ₹20,
+IMEI Validation Fee = ₹20, Processing Fee = ₹99,
+and Total Amount = Selling price - ₹99.
+Voucher bonuses and coupons are excluded. Cashify confirms the final value after inspection.
+These observations do not establish Cashify's general pricing algorithm.
+
+SUMMARY (INR)
+Case | Selling price | Total after fees
+01   |       ₹24,910 |          ₹24,811
+02   |       ₹33,010 |          ₹32,911
+03   |       ₹31,420 |          ₹31,321
+04   |       ₹33,370 |          ₹33,271
+05   |       ₹31,830 |          ₹31,731
+06   |       ₹26,210 |          ₹26,111
+07   |       ₹27,290 |          ₹27,191
+08   |       ₹28,590 |          ₹28,491
+09   |       ₹26,210 |          ₹26,111
+10   |       ₹13,910 |          ₹13,811
+11   |       ₹18,440 |          ₹18,341
+12   |       ₹19,740 |          ₹19,641
+13   |       ₹38,810 |          ₹38,711
+14   |       ₹38,810 |          ₹38,711
+15   |       ₹39,830 |          ₹39,731
+16   |       ₹38,530 |          ₹38,431
+17   |       ₹29,610 |          ₹29,511
+18   |       ₹36,430 |          ₹36,331
+19   |       ₹33,360 |          ₹33,261
+20   |       ₹36,040 |          ₹35,941
+21   |       ₹32,930 |          ₹32,831
+22   |       ₹34,230 |          ₹34,131
+23   |       ₹35,310 |          ₹35,211
+24   |       ₹36,610 |          ₹36,511
+
+============================================================================
+TEST CASE 01
+
+Apple iPhone 15 Plus (6 GB/512 GB)
+Cashify's Get Upto: ₹48,600
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹24,910
+Base Price: ₹24,930
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹24,811
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 02
+
+Apple iPhone 15 Plus (6 GB/512 GB)
+Cashify's Get Upto: ₹48,600
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+Yes
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+What is your mobile age?
+Below 3 months
+
+Cashify's Selling price: ₹33,010
+Base Price: ₹33,030
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹32,911
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 03
+
+Apple iPhone 15 Plus (6 GB/512 GB)
+Cashify's Get Upto: ₹48,600
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+Yes
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+What is your mobile age?
+3 months - 6 months
+
+Cashify's Selling price: ₹31,420
+Base Price: ₹31,440
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹31,321
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 04
+
+Apple iPhone 15 Plus (6 GB/512 GB)
+Cashify's Get Upto: ₹48,600
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+Yes
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+What is your mobile age?
+3 months - 6 months
+
+Cashify's Selling price: ₹33,370
+Base Price: ₹33,390
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹33,271
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 05
+
+Apple iPhone 15 Plus (6 GB/512 GB)
+Cashify's Get Upto: ₹48,600
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+Yes
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+What is your mobile age?
+6 months - 11 months
+
+Cashify's Selling price: ₹31,830
+Base Price: ₹31,850
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹31,731
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 06
+
+Apple iPhone 15 Plus (6 GB/512 GB)
+Cashify's Get Upto: ₹48,600
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+Yes
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+What is your mobile age?
+Above 11 months
+
+Cashify's Selling price: ₹26,210
+Base Price: ₹26,230
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹26,111
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 07
+
+Apple iPhone 15 Plus (6 GB/512 GB)
+Cashify's Get Upto: ₹48,600
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery Health 80-85%
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹27,290
+Base Price: ₹27,310
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹27,191
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 08
+
+Apple iPhone 15 Plus (6 GB/512 GB)
+Cashify's Get Upto: ₹48,600
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery Health 80-85%
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹28,590
+Base Price: ₹28,610
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹28,491
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 09
+
+Apple iPhone 15 Plus (6 GB/512 GB)
+Cashify's Get Upto: ₹48,600
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹26,210
+Base Price: ₹26,230
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹26,111
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 10
+
+Apple iPhone 15 Plus (6 GB/512 GB)
+Cashify's Get Upto: ₹48,600
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+No
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+No
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹13,910
+Base Price: ₹13,930
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹13,811
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 11
+
+Apple iPhone 15 Plus (6 GB/512 GB)
+Cashify's Get Upto: ₹48,600
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: Selected
+Other screen/body defects: NONE
+
+Tell us more about your device screen defects?
+Screen Physical Condition
+Check physical condition of Display Screen: More than 2 scratches on screen
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹18,440
+Base Price: ₹18,460
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹18,341
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 12
+
+Apple iPhone 15 Plus (6 GB/512 GB)
+Cashify's Get Upto: ₹48,600
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: Selected
+Other screen/body defects: NONE
+
+Tell us more about your device screen defects?
+Screen Physical Condition
+Check physical condition of Display Screen: More than 2 scratches on screen
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹19,740
+Base Price: ₹19,760
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹19,641
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 13
+
+Apple iPhone 15 Plus (6 GB/512 GB)
+Cashify's Get Upto: ₹48,600
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+No
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Battery Health 80-85%
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹38,810
+Base Price: ₹38,830
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹38,711
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 14
+
+Apple iPhone 15 Plus (6 GB/512 GB)
+Cashify's Get Upto: ₹48,600
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Battery Health 80-85%
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹38,810
+Base Price: ₹38,830
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹38,711
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 15
+
+Apple iPhone 15 Plus (6 GB/512 GB)
+Cashify's Get Upto: ₹48,600
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+NONE
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹39,830
+Base Price: ₹39,850
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹39,731
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 16
+
+Apple iPhone 15 Plus (6 GB/512 GB)
+Cashify's Get Upto: ₹48,600
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+NONE
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹38,530
+Base Price: ₹38,550
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹38,431
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 17
+
+Apple iPhone 15 Plus (6 GB/512 GB)
+Cashify's Get Upto: ₹48,600
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹29,610
+Base Price: ₹29,630
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹29,511
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 18
+
+Apple iPhone 15 Plus (6 GB/512 GB)
+Cashify's Get Upto: ₹48,600
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹36,430
+Base Price: ₹36,450
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹36,331
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 19
+
+Apple iPhone 15 Plus (6 GB/512 GB)
+Cashify's Get Upto: ₹48,600
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: Selected
+Other screen/body defects: NONE
+
+Tell us more about your device screen defects?
+Screen Physical Condition
+Check physical condition of Display Screen: More than 2 scratches on screen
+
+Functional or Physical Problems:
+NONE
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹33,360
+Base Price: ₹33,380
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹33,261
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 20
+
+Apple iPhone 15 Plus (6 GB/512 GB)
+Cashify's Get Upto: ₹48,600
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: Selected
+Other screen/body defects: NONE
+
+Tell us more about your device screen defects?
+Screen Physical Condition
+Check physical condition of Display Screen: 1-2 scratches on screen
+
+Functional or Physical Problems:
+- Battery Health 80-85%
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹36,040
+Base Price: ₹36,060
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹35,941
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 21
+
+Apple iPhone 15 Plus (6 GB/512 GB)
+Cashify's Get Upto: ₹48,600
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Speaker Faulty (speaker not working)
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹32,930
+Base Price: ₹32,950
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹32,831
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 22
+
+Apple iPhone 15 Plus (6 GB/512 GB)
+Cashify's Get Upto: ₹48,600
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Speaker Faulty (speaker not working)
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹34,230
+Base Price: ₹34,250
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹34,131
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 23
+
+Apple iPhone 15 Plus (6 GB/512 GB)
+Cashify's Get Upto: ₹48,600
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Speaker Faulty (speaker not working)
+- Battery Health 80-85%
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹35,310
+Base Price: ₹35,330
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹35,211
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 24
+
+Apple iPhone 15 Plus (6 GB/512 GB)
+Cashify's Get Upto: ₹48,600
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Speaker Faulty (speaker not working)
+- Battery Health 80-85%
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹36,610
+Base Price: ₹36,630
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹36,511
+Status: OBSERVED LIVE

@@ -1,0 +1,1137 @@
+APPLE IPHONE AIR (12 GB/512 GB) — CASHIFY LIVE TEST RESULTS
+Tested: 17 October 2026
+Scope: 24 unique test cases for this 512 GB variant.
+Cashify's Get Upto: ₹75,200
+All 24 selling prices were observed in the live quotation flow.
+Calls working: Yes. Touch screen working: Yes. Other unlisted defects: Not selected.
+eSIM choice: Single eSIM in every case. Dual eSIM was not tested.
+No charger-only case or repeated condition combination is included.
+No sale or pickup order was submitted.
+
+PRICE DEFINITIONS
+Selling price = headline amount shown by Cashify.
+Every observed price summary showed Base Price = Selling price + ₹20,
+IMEI Validation Fee = ₹20, Processing Fee = ₹99,
+and Total Amount = Selling price - ₹99.
+Voucher bonuses and coupons are excluded. Cashify confirms the final value after inspection.
+These observations do not establish Cashify's general pricing algorithm.
+
+SUMMARY (INR)
+Case | Selling price | Total after fees
+01   |       ₹36,190 |          ₹36,091
+02   |       ₹53,690 |          ₹53,591
+03   |       ₹45,290 |          ₹45,191
+04   |       ₹47,540 |          ₹47,441
+05   |       ₹45,430 |          ₹45,331
+06   |       ₹37,690 |          ₹37,591
+07   |       ₹39,130 |          ₹39,031
+08   |       ₹40,630 |          ₹40,531
+09   |       ₹37,690 |          ₹37,591
+10   |       ₹21,190 |          ₹21,091
+11   |       ₹27,370 |          ₹27,271
+12   |       ₹28,870 |          ₹28,771
+13   |       ₹55,670 |          ₹55,571
+14   |       ₹55,670 |          ₹55,571
+15   |       ₹56,930 |          ₹56,831
+16   |       ₹55,430 |          ₹55,331
+17   |       ₹41,890 |          ₹41,791
+18   |       ₹52,730 |          ₹52,631
+19   |       ₹48,110 |          ₹48,011
+20   |       ₹51,890 |          ₹51,791
+21   |       ₹48,730 |          ₹48,631
+22   |       ₹50,230 |          ₹50,131
+23   |       ₹51,670 |          ₹51,571
+24   |       ₹53,170 |          ₹53,071
+
+============================================================================
+TEST CASE 01
+
+Apple iPhone Air (12 GB/512 GB)
+Cashify's Get Upto: ₹75,200
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹36,190
+Base Price: ₹36,210
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹36,091
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 02
+
+Apple iPhone Air (12 GB/512 GB)
+Cashify's Get Upto: ₹75,200
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+Yes
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+What is your mobile age?
+Below 3 months
+
+Cashify's Selling price: ₹53,690
+Base Price: ₹53,710
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹53,591
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 03
+
+Apple iPhone Air (12 GB/512 GB)
+Cashify's Get Upto: ₹75,200
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+Yes
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+What is your mobile age?
+3 months - 6 months
+
+Cashify's Selling price: ₹45,290
+Base Price: ₹45,310
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹45,191
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 04
+
+Apple iPhone Air (12 GB/512 GB)
+Cashify's Get Upto: ₹75,200
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+Yes
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+What is your mobile age?
+3 months - 6 months
+
+Cashify's Selling price: ₹47,540
+Base Price: ₹47,560
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹47,441
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 05
+
+Apple iPhone Air (12 GB/512 GB)
+Cashify's Get Upto: ₹75,200
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+Yes
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+What is your mobile age?
+6 months - 11 months
+
+Cashify's Selling price: ₹45,430
+Base Price: ₹45,450
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹45,331
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 06
+
+Apple iPhone Air (12 GB/512 GB)
+Cashify's Get Upto: ₹75,200
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+Yes
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+What is your mobile age?
+Above 11 months
+
+Cashify's Selling price: ₹37,690
+Base Price: ₹37,710
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹37,591
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 07
+
+Apple iPhone Air (12 GB/512 GB)
+Cashify's Get Upto: ₹75,200
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery Health 80-85%
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹39,130
+Base Price: ₹39,150
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹39,031
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 08
+
+Apple iPhone Air (12 GB/512 GB)
+Cashify's Get Upto: ₹75,200
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery Health 80-85%
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹40,630
+Base Price: ₹40,650
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹40,531
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 09
+
+Apple iPhone Air (12 GB/512 GB)
+Cashify's Get Upto: ₹75,200
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹37,690
+Base Price: ₹37,710
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹37,591
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 10
+
+Apple iPhone Air (12 GB/512 GB)
+Cashify's Get Upto: ₹75,200
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+No
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+No
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹21,190
+Base Price: ₹21,210
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹21,091
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 11
+
+Apple iPhone Air (12 GB/512 GB)
+Cashify's Get Upto: ₹75,200
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: Selected
+Other screen/body defects: NONE
+
+Tell us more about your device screen defects?
+Screen Physical Condition
+Check physical condition of Display Screen: More than 2 scratches on screen
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹27,370
+Base Price: ₹27,390
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹27,271
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 12
+
+Apple iPhone Air (12 GB/512 GB)
+Cashify's Get Upto: ₹75,200
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: Selected
+Other screen/body defects: NONE
+
+Tell us more about your device screen defects?
+Screen Physical Condition
+Check physical condition of Display Screen: More than 2 scratches on screen
+
+Functional or Physical Problems:
+- Face Sensor not working
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹28,870
+Base Price: ₹28,890
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹28,771
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 13
+
+Apple iPhone Air (12 GB/512 GB)
+Cashify's Get Upto: ₹75,200
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+No
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Battery Health 80-85%
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹55,670
+Base Price: ₹55,690
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹55,571
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 14
+
+Apple iPhone Air (12 GB/512 GB)
+Cashify's Get Upto: ₹75,200
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Battery Health 80-85%
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹55,670
+Base Price: ₹55,690
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹55,571
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 15
+
+Apple iPhone Air (12 GB/512 GB)
+Cashify's Get Upto: ₹75,200
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+NONE
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹56,930
+Base Price: ₹56,950
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹56,831
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 16
+
+Apple iPhone Air (12 GB/512 GB)
+Cashify's Get Upto: ₹75,200
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+NONE
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹55,430
+Base Price: ₹55,450
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹55,331
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 17
+
+Apple iPhone Air (12 GB/512 GB)
+Cashify's Get Upto: ₹75,200
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Face Sensor not working
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹41,890
+Base Price: ₹41,910
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹41,791
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 18
+
+Apple iPhone Air (12 GB/512 GB)
+Cashify's Get Upto: ₹75,200
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹52,730
+Base Price: ₹52,750
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹52,631
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 19
+
+Apple iPhone Air (12 GB/512 GB)
+Cashify's Get Upto: ₹75,200
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: Selected
+Other screen/body defects: NONE
+
+Tell us more about your device screen defects?
+Screen Physical Condition
+Check physical condition of Display Screen: More than 2 scratches on screen
+
+Functional or Physical Problems:
+NONE
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹48,110
+Base Price: ₹48,130
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹48,011
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 20
+
+Apple iPhone Air (12 GB/512 GB)
+Cashify's Get Upto: ₹75,200
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: Selected
+Other screen/body defects: NONE
+
+Tell us more about your device screen defects?
+Screen Physical Condition
+Check physical condition of Display Screen: 1-2 scratches on screen
+
+Functional or Physical Problems:
+- Battery Health 80-85%
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹51,890
+Base Price: ₹51,910
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹51,791
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 21
+
+Apple iPhone Air (12 GB/512 GB)
+Cashify's Get Upto: ₹75,200
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Speaker Faulty (speaker not working)
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹48,730
+Base Price: ₹48,750
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹48,631
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 22
+
+Apple iPhone Air (12 GB/512 GB)
+Cashify's Get Upto: ₹75,200
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Speaker Faulty (speaker not working)
+- Battery in Service (Health is less than 80%)
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹50,230
+Base Price: ₹50,250
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹50,131
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 23
+
+Apple iPhone Air (12 GB/512 GB)
+Cashify's Get Upto: ₹75,200
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Speaker Faulty (speaker not working)
+- Battery Health 80-85%
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: No
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹51,670
+Base Price: ₹51,690
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹51,571
+Status: OBSERVED LIVE
+
+============================================================================
+TEST CASE 24
+
+Apple iPhone Air (12 GB/512 GB)
+Cashify's Get Upto: ₹75,200
+
+Are you able to make and receive calls?
+Yes
+
+Is your device's touch screen working properly?
+Yes
+
+Is your phone's screen original?
+Yes
+
+Is your device under manufacturer warranty?
+No
+
+Do you have GST valid bill with the same IMEI?
+Yes
+
+How many eSIMs does your device support?
+Single eSIM
+
+Select screen/body defects that are applicable!
+Broken/scratch on device screen: NONE
+Other screen/body defects: NONE
+
+Functional or Physical Problems:
+- Speaker Faulty (speaker not working)
+- Battery Health 80-85%
+Other functional problems: Not selected
+
+Do you have the following?
+Original Box with same IMEI: Yes
+
+Mobile age question: Not shown (warranty = No)
+
+Cashify's Selling price: ₹53,170
+Base Price: ₹53,190
+IMEI Validation Fee: ₹20
+Processing Fee: ₹99
+Total Amount: ₹53,071
+Status: OBSERVED LIVE
