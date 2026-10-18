@@ -1,0 +1,2667 @@
+{
+  "scope": "Separate Air/16e analysis only; no runtime coefficients or activation. Same-device/storage/reference and one changed answer field. Array fields are compared as sets, not silently converted to individual deductions.",
+  "pairs": [
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:01",
+      "sourceB": "iphoneair_24_test_cases:07",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_service"
+      ],
+      "to": [
+        "face",
+        "battery_health"
+      ],
+      "sellingA": 36190,
+      "sellingB": 39130,
+      "observedDelta": 2940,
+      "routerConditionA": 49889,
+      "routerConditionB": 53130,
+      "routerDelta": 3241,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:01",
+      "sourceB": "iphoneair_24_test_cases:09",
+      "field": "accessories",
+      "from": [],
+      "to": [
+        "box"
+      ],
+      "sellingA": 36190,
+      "sellingB": 37690,
+      "observedDelta": 1500,
+      "routerConditionA": 49889,
+      "routerConditionB": 50269,
+      "routerDelta": 380,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:01",
+      "sourceB": "iphoneair_24_test_cases:16",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_service"
+      ],
+      "to": [],
+      "sellingA": 36190,
+      "sellingB": 55430,
+      "observedDelta": 19240,
+      "routerConditionA": 49889,
+      "routerConditionB": 56371,
+      "routerDelta": 6482,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:01",
+      "sourceB": "iphoneair_24_test_cases:21",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_service"
+      ],
+      "to": [
+        "speaker",
+        "battery_service"
+      ],
+      "sellingA": 36190,
+      "sellingB": 48730,
+      "observedDelta": 12540,
+      "routerConditionA": 49889,
+      "routerConditionB": 46647,
+      "routerDelta": -3242,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:01",
+      "sourceB": "iphoneair_24_test_cases:23",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_service"
+      ],
+      "to": [
+        "speaker",
+        "battery_health"
+      ],
+      "sellingA": 36190,
+      "sellingB": 51670,
+      "observedDelta": 15480,
+      "routerConditionA": 49889,
+      "routerConditionB": 49889,
+      "routerDelta": 0,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:02",
+      "sourceB": "iphoneair_24_test_cases:03",
+      "field": "mobileAge",
+      "from": "below3",
+      "to": "3to6",
+      "sellingA": 53690,
+      "sellingB": 45290,
+      "observedDelta": -8400,
+      "routerConditionA": 65221,
+      "routerConditionB": 58130,
+      "routerDelta": -7091,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:03",
+      "sourceB": "iphoneair_24_test_cases:04",
+      "field": "accessories",
+      "from": [],
+      "to": [
+        "box"
+      ],
+      "sellingA": 45290,
+      "sellingB": 47540,
+      "observedDelta": 2250,
+      "routerConditionA": 58130,
+      "routerConditionB": 58510,
+      "routerDelta": 380,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:04",
+      "sourceB": "iphoneair_24_test_cases:05",
+      "field": "mobileAge",
+      "from": "3to6",
+      "to": "6to11",
+      "sellingA": 47540,
+      "sellingB": 45430,
+      "observedDelta": -2110,
+      "routerConditionA": 58510,
+      "routerConditionB": 56666,
+      "routerDelta": -1844,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:04",
+      "sourceB": "iphoneair_24_test_cases:06",
+      "field": "mobileAge",
+      "from": "3to6",
+      "to": "above11",
+      "sellingA": 47540,
+      "sellingB": 37690,
+      "observedDelta": -9850,
+      "routerConditionA": 58510,
+      "routerConditionB": 50269,
+      "routerDelta": -8241,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:05",
+      "sourceB": "iphoneair_24_test_cases:06",
+      "field": "mobileAge",
+      "from": "6to11",
+      "to": "above11",
+      "sellingA": 45430,
+      "sellingB": 37690,
+      "observedDelta": -7740,
+      "routerConditionA": 56666,
+      "routerConditionB": 50269,
+      "routerDelta": -6397,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:07",
+      "sourceB": "iphoneair_24_test_cases:08",
+      "field": "accessories",
+      "from": [],
+      "to": [
+        "box"
+      ],
+      "sellingA": 39130,
+      "sellingB": 40630,
+      "observedDelta": 1500,
+      "routerConditionA": 53130,
+      "routerConditionB": 53510,
+      "routerDelta": 380,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:07",
+      "sourceB": "iphoneair_24_test_cases:16",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_health"
+      ],
+      "to": [],
+      "sellingA": 39130,
+      "sellingB": 55430,
+      "observedDelta": 16300,
+      "routerConditionA": 53130,
+      "routerConditionB": 56371,
+      "routerDelta": 3241,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:07",
+      "sourceB": "iphoneair_24_test_cases:21",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_health"
+      ],
+      "to": [
+        "speaker",
+        "battery_service"
+      ],
+      "sellingA": 39130,
+      "sellingB": 48730,
+      "observedDelta": 9600,
+      "routerConditionA": 53130,
+      "routerConditionB": 46647,
+      "routerDelta": -6483,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:07",
+      "sourceB": "iphoneair_24_test_cases:23",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_health"
+      ],
+      "to": [
+        "speaker",
+        "battery_health"
+      ],
+      "sellingA": 39130,
+      "sellingB": 51670,
+      "observedDelta": 12540,
+      "routerConditionA": 53130,
+      "routerConditionB": 49889,
+      "routerDelta": -3241,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:08",
+      "sourceB": "iphoneair_24_test_cases:09",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_health"
+      ],
+      "to": [
+        "face",
+        "battery_service"
+      ],
+      "sellingA": 40630,
+      "sellingB": 37690,
+      "observedDelta": -2940,
+      "routerConditionA": 53510,
+      "routerConditionB": 50269,
+      "routerDelta": -3241,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:08",
+      "sourceB": "iphoneair_24_test_cases:14",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_health"
+      ],
+      "to": [
+        "battery_health"
+      ],
+      "sellingA": 40630,
+      "sellingB": 55670,
+      "observedDelta": 15040,
+      "routerConditionA": 53510,
+      "routerConditionB": 56751,
+      "routerDelta": 3241,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:08",
+      "sourceB": "iphoneair_24_test_cases:15",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_health"
+      ],
+      "to": [],
+      "sellingA": 40630,
+      "sellingB": 56930,
+      "observedDelta": 16300,
+      "routerConditionA": 53510,
+      "routerConditionB": 56751,
+      "routerDelta": 3241,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:08",
+      "sourceB": "iphoneair_24_test_cases:17",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_health"
+      ],
+      "to": [
+        "face"
+      ],
+      "sellingA": 40630,
+      "sellingB": 41890,
+      "observedDelta": 1260,
+      "routerConditionA": 53510,
+      "routerConditionB": 53510,
+      "routerDelta": 0,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:08",
+      "sourceB": "iphoneair_24_test_cases:18",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_health"
+      ],
+      "to": [
+        "battery_service"
+      ],
+      "sellingA": 40630,
+      "sellingB": 52730,
+      "observedDelta": 12100,
+      "routerConditionA": 53510,
+      "routerConditionB": 53510,
+      "routerDelta": 0,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:08",
+      "sourceB": "iphoneair_24_test_cases:22",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_health"
+      ],
+      "to": [
+        "speaker",
+        "battery_service"
+      ],
+      "sellingA": 40630,
+      "sellingB": 50230,
+      "observedDelta": 9600,
+      "routerConditionA": 53510,
+      "routerConditionB": 47027,
+      "routerDelta": -6483,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:08",
+      "sourceB": "iphoneair_24_test_cases:24",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_health"
+      ],
+      "to": [
+        "speaker",
+        "battery_health"
+      ],
+      "sellingA": 40630,
+      "sellingB": 53170,
+      "observedDelta": 12540,
+      "routerConditionA": 53510,
+      "routerConditionB": 50269,
+      "routerDelta": -3241,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:09",
+      "sourceB": "iphoneair_24_test_cases:14",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_service"
+      ],
+      "to": [
+        "battery_health"
+      ],
+      "sellingA": 37690,
+      "sellingB": 55670,
+      "observedDelta": 17980,
+      "routerConditionA": 50269,
+      "routerConditionB": 56751,
+      "routerDelta": 6482,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:09",
+      "sourceB": "iphoneair_24_test_cases:15",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_service"
+      ],
+      "to": [],
+      "sellingA": 37690,
+      "sellingB": 56930,
+      "observedDelta": 19240,
+      "routerConditionA": 50269,
+      "routerConditionB": 56751,
+      "routerDelta": 6482,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:09",
+      "sourceB": "iphoneair_24_test_cases:17",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_service"
+      ],
+      "to": [
+        "face"
+      ],
+      "sellingA": 37690,
+      "sellingB": 41890,
+      "observedDelta": 4200,
+      "routerConditionA": 50269,
+      "routerConditionB": 53510,
+      "routerDelta": 3241,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:09",
+      "sourceB": "iphoneair_24_test_cases:18",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_service"
+      ],
+      "to": [
+        "battery_service"
+      ],
+      "sellingA": 37690,
+      "sellingB": 52730,
+      "observedDelta": 15040,
+      "routerConditionA": 50269,
+      "routerConditionB": 53510,
+      "routerDelta": 3241,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:09",
+      "sourceB": "iphoneair_24_test_cases:22",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_service"
+      ],
+      "to": [
+        "speaker",
+        "battery_service"
+      ],
+      "sellingA": 37690,
+      "sellingB": 50230,
+      "observedDelta": 12540,
+      "routerConditionA": 50269,
+      "routerConditionB": 47027,
+      "routerDelta": -3242,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:09",
+      "sourceB": "iphoneair_24_test_cases:24",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_service"
+      ],
+      "to": [
+        "speaker",
+        "battery_health"
+      ],
+      "sellingA": 37690,
+      "sellingB": 53170,
+      "observedDelta": 15480,
+      "routerConditionA": 50269,
+      "routerConditionB": 50269,
+      "routerDelta": 0,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:11",
+      "sourceB": "iphoneair_24_test_cases:12",
+      "field": "accessories",
+      "from": [],
+      "to": [
+        "box"
+      ],
+      "sellingA": 27370,
+      "sellingB": 28870,
+      "observedDelta": 1500,
+      "routerConditionA": null,
+      "routerConditionB": null,
+      "routerDelta": null,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:12",
+      "sourceB": "iphoneair_24_test_cases:19",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_service"
+      ],
+      "to": [],
+      "sellingA": 28870,
+      "sellingB": 48110,
+      "observedDelta": 19240,
+      "routerConditionA": null,
+      "routerConditionB": null,
+      "routerDelta": null,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:13",
+      "sourceB": "iphoneair_24_test_cases:14",
+      "field": "validBill",
+      "from": false,
+      "to": true,
+      "sellingA": 55670,
+      "sellingB": 55670,
+      "observedDelta": 0,
+      "routerConditionA": 56751,
+      "routerConditionB": 56751,
+      "routerDelta": 0,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:14",
+      "sourceB": "iphoneair_24_test_cases:15",
+      "field": "hardware",
+      "from": [
+        "battery_health"
+      ],
+      "to": [],
+      "sellingA": 55670,
+      "sellingB": 56930,
+      "observedDelta": 1260,
+      "routerConditionA": 56751,
+      "routerConditionB": 56751,
+      "routerDelta": 0,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:14",
+      "sourceB": "iphoneair_24_test_cases:17",
+      "field": "hardware",
+      "from": [
+        "battery_health"
+      ],
+      "to": [
+        "face"
+      ],
+      "sellingA": 55670,
+      "sellingB": 41890,
+      "observedDelta": -13780,
+      "routerConditionA": 56751,
+      "routerConditionB": 53510,
+      "routerDelta": -3241,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:14",
+      "sourceB": "iphoneair_24_test_cases:18",
+      "field": "hardware",
+      "from": [
+        "battery_health"
+      ],
+      "to": [
+        "battery_service"
+      ],
+      "sellingA": 55670,
+      "sellingB": 52730,
+      "observedDelta": -2940,
+      "routerConditionA": 56751,
+      "routerConditionB": 53510,
+      "routerDelta": -3241,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:14",
+      "sourceB": "iphoneair_24_test_cases:22",
+      "field": "hardware",
+      "from": [
+        "battery_health"
+      ],
+      "to": [
+        "speaker",
+        "battery_service"
+      ],
+      "sellingA": 55670,
+      "sellingB": 50230,
+      "observedDelta": -5440,
+      "routerConditionA": 56751,
+      "routerConditionB": 47027,
+      "routerDelta": -9724,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:14",
+      "sourceB": "iphoneair_24_test_cases:24",
+      "field": "hardware",
+      "from": [
+        "battery_health"
+      ],
+      "to": [
+        "speaker",
+        "battery_health"
+      ],
+      "sellingA": 55670,
+      "sellingB": 53170,
+      "observedDelta": -2500,
+      "routerConditionA": 56751,
+      "routerConditionB": 50269,
+      "routerDelta": -6482,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:15",
+      "sourceB": "iphoneair_24_test_cases:16",
+      "field": "accessories",
+      "from": [
+        "box"
+      ],
+      "to": [],
+      "sellingA": 56930,
+      "sellingB": 55430,
+      "observedDelta": -1500,
+      "routerConditionA": 56751,
+      "routerConditionB": 56371,
+      "routerDelta": -380,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:15",
+      "sourceB": "iphoneair_24_test_cases:17",
+      "field": "hardware",
+      "from": [],
+      "to": [
+        "face"
+      ],
+      "sellingA": 56930,
+      "sellingB": 41890,
+      "observedDelta": -15040,
+      "routerConditionA": 56751,
+      "routerConditionB": 53510,
+      "routerDelta": -3241,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:15",
+      "sourceB": "iphoneair_24_test_cases:18",
+      "field": "hardware",
+      "from": [],
+      "to": [
+        "battery_service"
+      ],
+      "sellingA": 56930,
+      "sellingB": 52730,
+      "observedDelta": -4200,
+      "routerConditionA": 56751,
+      "routerConditionB": 53510,
+      "routerDelta": -3241,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:15",
+      "sourceB": "iphoneair_24_test_cases:22",
+      "field": "hardware",
+      "from": [],
+      "to": [
+        "speaker",
+        "battery_service"
+      ],
+      "sellingA": 56930,
+      "sellingB": 50230,
+      "observedDelta": -6700,
+      "routerConditionA": 56751,
+      "routerConditionB": 47027,
+      "routerDelta": -9724,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:15",
+      "sourceB": "iphoneair_24_test_cases:24",
+      "field": "hardware",
+      "from": [],
+      "to": [
+        "speaker",
+        "battery_health"
+      ],
+      "sellingA": 56930,
+      "sellingB": 53170,
+      "observedDelta": -3760,
+      "routerConditionA": 56751,
+      "routerConditionB": 50269,
+      "routerDelta": -6482,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:16",
+      "sourceB": "iphoneair_24_test_cases:21",
+      "field": "hardware",
+      "from": [],
+      "to": [
+        "speaker",
+        "battery_service"
+      ],
+      "sellingA": 55430,
+      "sellingB": 48730,
+      "observedDelta": -6700,
+      "routerConditionA": 56371,
+      "routerConditionB": 46647,
+      "routerDelta": -9724,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:16",
+      "sourceB": "iphoneair_24_test_cases:23",
+      "field": "hardware",
+      "from": [],
+      "to": [
+        "speaker",
+        "battery_health"
+      ],
+      "sellingA": 55430,
+      "sellingB": 51670,
+      "observedDelta": -3760,
+      "routerConditionA": 56371,
+      "routerConditionB": 49889,
+      "routerDelta": -6482,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:17",
+      "sourceB": "iphoneair_24_test_cases:18",
+      "field": "hardware",
+      "from": [
+        "face"
+      ],
+      "to": [
+        "battery_service"
+      ],
+      "sellingA": 41890,
+      "sellingB": 52730,
+      "observedDelta": 10840,
+      "routerConditionA": 53510,
+      "routerConditionB": 53510,
+      "routerDelta": 0,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:17",
+      "sourceB": "iphoneair_24_test_cases:22",
+      "field": "hardware",
+      "from": [
+        "face"
+      ],
+      "to": [
+        "speaker",
+        "battery_service"
+      ],
+      "sellingA": 41890,
+      "sellingB": 50230,
+      "observedDelta": 8340,
+      "routerConditionA": 53510,
+      "routerConditionB": 47027,
+      "routerDelta": -6483,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:17",
+      "sourceB": "iphoneair_24_test_cases:24",
+      "field": "hardware",
+      "from": [
+        "face"
+      ],
+      "to": [
+        "speaker",
+        "battery_health"
+      ],
+      "sellingA": 41890,
+      "sellingB": 53170,
+      "observedDelta": 11280,
+      "routerConditionA": 53510,
+      "routerConditionB": 50269,
+      "routerDelta": -3241,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:18",
+      "sourceB": "iphoneair_24_test_cases:22",
+      "field": "hardware",
+      "from": [
+        "battery_service"
+      ],
+      "to": [
+        "speaker",
+        "battery_service"
+      ],
+      "sellingA": 52730,
+      "sellingB": 50230,
+      "observedDelta": -2500,
+      "routerConditionA": 53510,
+      "routerConditionB": 47027,
+      "routerDelta": -6483,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:18",
+      "sourceB": "iphoneair_24_test_cases:24",
+      "field": "hardware",
+      "from": [
+        "battery_service"
+      ],
+      "to": [
+        "speaker",
+        "battery_health"
+      ],
+      "sellingA": 52730,
+      "sellingB": 53170,
+      "observedDelta": 440,
+      "routerConditionA": 53510,
+      "routerConditionB": 50269,
+      "routerDelta": -3241,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:21",
+      "sourceB": "iphoneair_24_test_cases:22",
+      "field": "accessories",
+      "from": [],
+      "to": [
+        "box"
+      ],
+      "sellingA": 48730,
+      "sellingB": 50230,
+      "observedDelta": 1500,
+      "routerConditionA": 46647,
+      "routerConditionB": 47027,
+      "routerDelta": 380,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:21",
+      "sourceB": "iphoneair_24_test_cases:23",
+      "field": "hardware",
+      "from": [
+        "speaker",
+        "battery_service"
+      ],
+      "to": [
+        "speaker",
+        "battery_health"
+      ],
+      "sellingA": 48730,
+      "sellingB": 51670,
+      "observedDelta": 2940,
+      "routerConditionA": 46647,
+      "routerConditionB": 49889,
+      "routerDelta": 3242,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:22",
+      "sourceB": "iphoneair_24_test_cases:24",
+      "field": "hardware",
+      "from": [
+        "speaker",
+        "battery_service"
+      ],
+      "to": [
+        "speaker",
+        "battery_health"
+      ],
+      "sellingA": 50230,
+      "sellingB": 53170,
+      "observedDelta": 2940,
+      "routerConditionA": 47027,
+      "routerConditionB": 50269,
+      "routerDelta": 3242,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone Air",
+      "storage": "512GB",
+      "reference": 75200,
+      "sourceA": "iphoneair_24_test_cases:23",
+      "sourceB": "iphoneair_24_test_cases:24",
+      "field": "accessories",
+      "from": [],
+      "to": [
+        "box"
+      ],
+      "sellingA": 51670,
+      "sellingB": 53170,
+      "observedDelta": 1500,
+      "routerConditionA": 49889,
+      "routerConditionB": 50269,
+      "routerDelta": 380,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:01",
+      "sourceB": "iphone16e_24_test_cases:07",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_service"
+      ],
+      "to": [
+        "face",
+        "battery_health"
+      ],
+      "sellingA": 19650,
+      "sellingB": 21750,
+      "observedDelta": 2100,
+      "routerConditionA": 26532,
+      "routerConditionB": 28697,
+      "routerDelta": 2165,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:01",
+      "sourceB": "iphone16e_24_test_cases:09",
+      "field": "accessories",
+      "from": [],
+      "to": [
+        "box"
+      ],
+      "sellingA": 19650,
+      "sellingB": 21150,
+      "observedDelta": 1500,
+      "routerConditionA": 26532,
+      "routerConditionB": 26912,
+      "routerDelta": 380,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:01",
+      "sourceB": "iphone16e_24_test_cases:16",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_service"
+      ],
+      "to": [],
+      "sellingA": 19650,
+      "sellingB": 31150,
+      "observedDelta": 11500,
+      "routerConditionA": 26532,
+      "routerConditionB": 31023,
+      "routerDelta": 4491,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:01",
+      "sourceB": "iphone16e_24_test_cases:21",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_service"
+      ],
+      "to": [
+        "speaker",
+        "battery_service"
+      ],
+      "sellingA": 19650,
+      "sellingB": 26150,
+      "observedDelta": 6500,
+      "routerConditionA": 26532,
+      "routerConditionB": 24206,
+      "routerDelta": -2326,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:01",
+      "sourceB": "iphone16e_24_test_cases:23",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_service"
+      ],
+      "to": [
+        "speaker",
+        "battery_health"
+      ],
+      "sellingA": 19650,
+      "sellingB": 28250,
+      "observedDelta": 8600,
+      "routerConditionA": 26532,
+      "routerConditionB": 26370,
+      "routerDelta": -162,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:02",
+      "sourceB": "iphone16e_24_test_cases:03",
+      "field": "mobileAge",
+      "from": "below3",
+      "to": "3to6",
+      "sellingA": 27450,
+      "sellingB": 24850,
+      "observedDelta": -2600,
+      "routerConditionA": 32137,
+      "routerConditionB": 32137,
+      "routerDelta": 0,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:03",
+      "sourceB": "iphone16e_24_test_cases:04",
+      "field": "accessories",
+      "from": [],
+      "to": [
+        "box"
+      ],
+      "sellingA": 24850,
+      "sellingB": 27100,
+      "observedDelta": 2250,
+      "routerConditionA": 32137,
+      "routerConditionB": 32517,
+      "routerDelta": 380,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:04",
+      "sourceB": "iphone16e_24_test_cases:05",
+      "field": "mobileAge",
+      "from": "3to6",
+      "to": "6to11",
+      "sellingA": 27100,
+      "sellingB": 25830,
+      "observedDelta": -1270,
+      "routerConditionA": 32517,
+      "routerConditionB": 32517,
+      "routerDelta": 0,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:04",
+      "sourceB": "iphone16e_24_test_cases:06",
+      "field": "mobileAge",
+      "from": "3to6",
+      "to": "above11",
+      "sellingA": 27100,
+      "sellingB": 21150,
+      "observedDelta": -5950,
+      "routerConditionA": 32517,
+      "routerConditionB": 26912,
+      "routerDelta": -5605,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:05",
+      "sourceB": "iphone16e_24_test_cases:06",
+      "field": "mobileAge",
+      "from": "6to11",
+      "to": "above11",
+      "sellingA": 25830,
+      "sellingB": 21150,
+      "observedDelta": -4680,
+      "routerConditionA": 32517,
+      "routerConditionB": 26912,
+      "routerDelta": -5605,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:07",
+      "sourceB": "iphone16e_24_test_cases:08",
+      "field": "accessories",
+      "from": [],
+      "to": [
+        "box"
+      ],
+      "sellingA": 21750,
+      "sellingB": 23250,
+      "observedDelta": 1500,
+      "routerConditionA": 28697,
+      "routerConditionB": 29077,
+      "routerDelta": 380,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:07",
+      "sourceB": "iphone16e_24_test_cases:16",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_health"
+      ],
+      "to": [],
+      "sellingA": 21750,
+      "sellingB": 31150,
+      "observedDelta": 9400,
+      "routerConditionA": 28697,
+      "routerConditionB": 31023,
+      "routerDelta": 2326,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:07",
+      "sourceB": "iphone16e_24_test_cases:21",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_health"
+      ],
+      "to": [
+        "speaker",
+        "battery_service"
+      ],
+      "sellingA": 21750,
+      "sellingB": 26150,
+      "observedDelta": 4400,
+      "routerConditionA": 28697,
+      "routerConditionB": 24206,
+      "routerDelta": -4491,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:07",
+      "sourceB": "iphone16e_24_test_cases:23",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_health"
+      ],
+      "to": [
+        "speaker",
+        "battery_health"
+      ],
+      "sellingA": 21750,
+      "sellingB": 28250,
+      "observedDelta": 6500,
+      "routerConditionA": 28697,
+      "routerConditionB": 26370,
+      "routerDelta": -2327,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:08",
+      "sourceB": "iphone16e_24_test_cases:09",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_health"
+      ],
+      "to": [
+        "face",
+        "battery_service"
+      ],
+      "sellingA": 23250,
+      "sellingB": 21150,
+      "observedDelta": -2100,
+      "routerConditionA": 29077,
+      "routerConditionB": 26912,
+      "routerDelta": -2165,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:08",
+      "sourceB": "iphone16e_24_test_cases:14",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_health"
+      ],
+      "to": [
+        "battery_health"
+      ],
+      "sellingA": 23250,
+      "sellingB": 31750,
+      "observedDelta": 8500,
+      "routerConditionA": 29077,
+      "routerConditionB": 31403,
+      "routerDelta": 2326,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:08",
+      "sourceB": "iphone16e_24_test_cases:15",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_health"
+      ],
+      "to": [],
+      "sellingA": 23250,
+      "sellingB": 32650,
+      "observedDelta": 9400,
+      "routerConditionA": 29077,
+      "routerConditionB": 31403,
+      "routerDelta": 2326,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:08",
+      "sourceB": "iphone16e_24_test_cases:17",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_health"
+      ],
+      "to": [
+        "face"
+      ],
+      "sellingA": 23250,
+      "sellingB": 24150,
+      "observedDelta": 900,
+      "routerConditionA": 29077,
+      "routerConditionB": 29077,
+      "routerDelta": 0,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:08",
+      "sourceB": "iphone16e_24_test_cases:18",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_health"
+      ],
+      "to": [
+        "battery_service"
+      ],
+      "sellingA": 23250,
+      "sellingB": 29650,
+      "observedDelta": 6400,
+      "routerConditionA": 29077,
+      "routerConditionB": 29239,
+      "routerDelta": 162,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:08",
+      "sourceB": "iphone16e_24_test_cases:22",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_health"
+      ],
+      "to": [
+        "speaker",
+        "battery_service"
+      ],
+      "sellingA": 23250,
+      "sellingB": 27650,
+      "observedDelta": 4400,
+      "routerConditionA": 29077,
+      "routerConditionB": 24586,
+      "routerDelta": -4491,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:08",
+      "sourceB": "iphone16e_24_test_cases:24",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_health"
+      ],
+      "to": [
+        "speaker",
+        "battery_health"
+      ],
+      "sellingA": 23250,
+      "sellingB": 29750,
+      "observedDelta": 6500,
+      "routerConditionA": 29077,
+      "routerConditionB": 26750,
+      "routerDelta": -2327,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:09",
+      "sourceB": "iphone16e_24_test_cases:14",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_service"
+      ],
+      "to": [
+        "battery_health"
+      ],
+      "sellingA": 21150,
+      "sellingB": 31750,
+      "observedDelta": 10600,
+      "routerConditionA": 26912,
+      "routerConditionB": 31403,
+      "routerDelta": 4491,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:09",
+      "sourceB": "iphone16e_24_test_cases:15",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_service"
+      ],
+      "to": [],
+      "sellingA": 21150,
+      "sellingB": 32650,
+      "observedDelta": 11500,
+      "routerConditionA": 26912,
+      "routerConditionB": 31403,
+      "routerDelta": 4491,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:09",
+      "sourceB": "iphone16e_24_test_cases:17",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_service"
+      ],
+      "to": [
+        "face"
+      ],
+      "sellingA": 21150,
+      "sellingB": 24150,
+      "observedDelta": 3000,
+      "routerConditionA": 26912,
+      "routerConditionB": 29077,
+      "routerDelta": 2165,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:09",
+      "sourceB": "iphone16e_24_test_cases:18",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_service"
+      ],
+      "to": [
+        "battery_service"
+      ],
+      "sellingA": 21150,
+      "sellingB": 29650,
+      "observedDelta": 8500,
+      "routerConditionA": 26912,
+      "routerConditionB": 29239,
+      "routerDelta": 2327,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:09",
+      "sourceB": "iphone16e_24_test_cases:22",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_service"
+      ],
+      "to": [
+        "speaker",
+        "battery_service"
+      ],
+      "sellingA": 21150,
+      "sellingB": 27650,
+      "observedDelta": 6500,
+      "routerConditionA": 26912,
+      "routerConditionB": 24586,
+      "routerDelta": -2326,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:09",
+      "sourceB": "iphone16e_24_test_cases:24",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_service"
+      ],
+      "to": [
+        "speaker",
+        "battery_health"
+      ],
+      "sellingA": 21150,
+      "sellingB": 29750,
+      "observedDelta": 8600,
+      "routerConditionA": 26912,
+      "routerConditionB": 26750,
+      "routerDelta": -162,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:11",
+      "sourceB": "iphone16e_24_test_cases:12",
+      "field": "accessories",
+      "from": [],
+      "to": [
+        "box"
+      ],
+      "sellingA": 12890,
+      "sellingB": 14390,
+      "observedDelta": 1500,
+      "routerConditionA": null,
+      "routerConditionB": null,
+      "routerDelta": null,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:12",
+      "sourceB": "iphone16e_24_test_cases:19",
+      "field": "hardware",
+      "from": [
+        "face",
+        "battery_service"
+      ],
+      "to": [],
+      "sellingA": 14390,
+      "sellingB": 25890,
+      "observedDelta": 11500,
+      "routerConditionA": null,
+      "routerConditionB": null,
+      "routerDelta": null,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:13",
+      "sourceB": "iphone16e_24_test_cases:14",
+      "field": "validBill",
+      "from": false,
+      "to": true,
+      "sellingA": 31750,
+      "sellingB": 31750,
+      "observedDelta": 0,
+      "routerConditionA": 31403,
+      "routerConditionB": 31403,
+      "routerDelta": 0,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:14",
+      "sourceB": "iphone16e_24_test_cases:15",
+      "field": "hardware",
+      "from": [
+        "battery_health"
+      ],
+      "to": [],
+      "sellingA": 31750,
+      "sellingB": 32650,
+      "observedDelta": 900,
+      "routerConditionA": 31403,
+      "routerConditionB": 31403,
+      "routerDelta": 0,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:14",
+      "sourceB": "iphone16e_24_test_cases:17",
+      "field": "hardware",
+      "from": [
+        "battery_health"
+      ],
+      "to": [
+        "face"
+      ],
+      "sellingA": 31750,
+      "sellingB": 24150,
+      "observedDelta": -7600,
+      "routerConditionA": 31403,
+      "routerConditionB": 29077,
+      "routerDelta": -2326,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:14",
+      "sourceB": "iphone16e_24_test_cases:18",
+      "field": "hardware",
+      "from": [
+        "battery_health"
+      ],
+      "to": [
+        "battery_service"
+      ],
+      "sellingA": 31750,
+      "sellingB": 29650,
+      "observedDelta": -2100,
+      "routerConditionA": 31403,
+      "routerConditionB": 29239,
+      "routerDelta": -2164,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:14",
+      "sourceB": "iphone16e_24_test_cases:22",
+      "field": "hardware",
+      "from": [
+        "battery_health"
+      ],
+      "to": [
+        "speaker",
+        "battery_service"
+      ],
+      "sellingA": 31750,
+      "sellingB": 27650,
+      "observedDelta": -4100,
+      "routerConditionA": 31403,
+      "routerConditionB": 24586,
+      "routerDelta": -6817,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:14",
+      "sourceB": "iphone16e_24_test_cases:24",
+      "field": "hardware",
+      "from": [
+        "battery_health"
+      ],
+      "to": [
+        "speaker",
+        "battery_health"
+      ],
+      "sellingA": 31750,
+      "sellingB": 29750,
+      "observedDelta": -2000,
+      "routerConditionA": 31403,
+      "routerConditionB": 26750,
+      "routerDelta": -4653,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:15",
+      "sourceB": "iphone16e_24_test_cases:16",
+      "field": "accessories",
+      "from": [
+        "box"
+      ],
+      "to": [],
+      "sellingA": 32650,
+      "sellingB": 31150,
+      "observedDelta": -1500,
+      "routerConditionA": 31403,
+      "routerConditionB": 31023,
+      "routerDelta": -380,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:15",
+      "sourceB": "iphone16e_24_test_cases:17",
+      "field": "hardware",
+      "from": [],
+      "to": [
+        "face"
+      ],
+      "sellingA": 32650,
+      "sellingB": 24150,
+      "observedDelta": -8500,
+      "routerConditionA": 31403,
+      "routerConditionB": 29077,
+      "routerDelta": -2326,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:15",
+      "sourceB": "iphone16e_24_test_cases:18",
+      "field": "hardware",
+      "from": [],
+      "to": [
+        "battery_service"
+      ],
+      "sellingA": 32650,
+      "sellingB": 29650,
+      "observedDelta": -3000,
+      "routerConditionA": 31403,
+      "routerConditionB": 29239,
+      "routerDelta": -2164,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:15",
+      "sourceB": "iphone16e_24_test_cases:22",
+      "field": "hardware",
+      "from": [],
+      "to": [
+        "speaker",
+        "battery_service"
+      ],
+      "sellingA": 32650,
+      "sellingB": 27650,
+      "observedDelta": -5000,
+      "routerConditionA": 31403,
+      "routerConditionB": 24586,
+      "routerDelta": -6817,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:15",
+      "sourceB": "iphone16e_24_test_cases:24",
+      "field": "hardware",
+      "from": [],
+      "to": [
+        "speaker",
+        "battery_health"
+      ],
+      "sellingA": 32650,
+      "sellingB": 29750,
+      "observedDelta": -2900,
+      "routerConditionA": 31403,
+      "routerConditionB": 26750,
+      "routerDelta": -4653,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:16",
+      "sourceB": "iphone16e_24_test_cases:21",
+      "field": "hardware",
+      "from": [],
+      "to": [
+        "speaker",
+        "battery_service"
+      ],
+      "sellingA": 31150,
+      "sellingB": 26150,
+      "observedDelta": -5000,
+      "routerConditionA": 31023,
+      "routerConditionB": 24206,
+      "routerDelta": -6817,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:16",
+      "sourceB": "iphone16e_24_test_cases:23",
+      "field": "hardware",
+      "from": [],
+      "to": [
+        "speaker",
+        "battery_health"
+      ],
+      "sellingA": 31150,
+      "sellingB": 28250,
+      "observedDelta": -2900,
+      "routerConditionA": 31023,
+      "routerConditionB": 26370,
+      "routerDelta": -4653,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:17",
+      "sourceB": "iphone16e_24_test_cases:18",
+      "field": "hardware",
+      "from": [
+        "face"
+      ],
+      "to": [
+        "battery_service"
+      ],
+      "sellingA": 24150,
+      "sellingB": 29650,
+      "observedDelta": 5500,
+      "routerConditionA": 29077,
+      "routerConditionB": 29239,
+      "routerDelta": 162,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:17",
+      "sourceB": "iphone16e_24_test_cases:22",
+      "field": "hardware",
+      "from": [
+        "face"
+      ],
+      "to": [
+        "speaker",
+        "battery_service"
+      ],
+      "sellingA": 24150,
+      "sellingB": 27650,
+      "observedDelta": 3500,
+      "routerConditionA": 29077,
+      "routerConditionB": 24586,
+      "routerDelta": -4491,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:17",
+      "sourceB": "iphone16e_24_test_cases:24",
+      "field": "hardware",
+      "from": [
+        "face"
+      ],
+      "to": [
+        "speaker",
+        "battery_health"
+      ],
+      "sellingA": 24150,
+      "sellingB": 29750,
+      "observedDelta": 5600,
+      "routerConditionA": 29077,
+      "routerConditionB": 26750,
+      "routerDelta": -2327,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:18",
+      "sourceB": "iphone16e_24_test_cases:22",
+      "field": "hardware",
+      "from": [
+        "battery_service"
+      ],
+      "to": [
+        "speaker",
+        "battery_service"
+      ],
+      "sellingA": 29650,
+      "sellingB": 27650,
+      "observedDelta": -2000,
+      "routerConditionA": 29239,
+      "routerConditionB": 24586,
+      "routerDelta": -4653,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:18",
+      "sourceB": "iphone16e_24_test_cases:24",
+      "field": "hardware",
+      "from": [
+        "battery_service"
+      ],
+      "to": [
+        "speaker",
+        "battery_health"
+      ],
+      "sellingA": 29650,
+      "sellingB": 29750,
+      "observedDelta": 100,
+      "routerConditionA": 29239,
+      "routerConditionB": 26750,
+      "routerDelta": -2489,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:21",
+      "sourceB": "iphone16e_24_test_cases:22",
+      "field": "accessories",
+      "from": [],
+      "to": [
+        "box"
+      ],
+      "sellingA": 26150,
+      "sellingB": 27650,
+      "observedDelta": 1500,
+      "routerConditionA": 24206,
+      "routerConditionB": 24586,
+      "routerDelta": 380,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:21",
+      "sourceB": "iphone16e_24_test_cases:23",
+      "field": "hardware",
+      "from": [
+        "speaker",
+        "battery_service"
+      ],
+      "to": [
+        "speaker",
+        "battery_health"
+      ],
+      "sellingA": 26150,
+      "sellingB": 28250,
+      "observedDelta": 2100,
+      "routerConditionA": 24206,
+      "routerConditionB": 26370,
+      "routerDelta": 2164,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:22",
+      "sourceB": "iphone16e_24_test_cases:24",
+      "field": "hardware",
+      "from": [
+        "speaker",
+        "battery_service"
+      ],
+      "to": [
+        "speaker",
+        "battery_health"
+      ],
+      "sellingA": 27650,
+      "sellingB": 29750,
+      "observedDelta": 2100,
+      "routerConditionA": 24586,
+      "routerConditionB": 26750,
+      "routerDelta": 2164,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    },
+    {
+      "model": "Apple iPhone 16e",
+      "storage": "512GB",
+      "reference": 41230,
+      "sourceA": "iphone16e_24_test_cases:23",
+      "sourceB": "iphone16e_24_test_cases:24",
+      "field": "accessories",
+      "from": [],
+      "to": [
+        "box"
+      ],
+      "sellingA": 28250,
+      "sellingB": 29750,
+      "observedDelta": 1500,
+      "routerConditionA": 26370,
+      "routerConditionB": 26750,
+      "routerDelta": 380,
+      "sourceKind": "historical-team-TXT-not-current-exact-evidence"
+    }
+  ],
+  "ageGroups": [
+    {
+      "ids": [
+        "iphone15_plus_24_test_cases:02",
+        "iphone15_plus_24_test_cases:03"
+      ],
+      "minimumSelling": 31420,
+      "maximumSelling": 33010,
+      "range": 1590,
+      "minimumPayoutOff": 33011,
+      "maximumPayoutOff": 33121,
+      "feasibleForBothCouponStates": true,
+      "model": "Apple iPhone 15 Plus",
+      "rows": [
+        {
+          "id": "iphone15_plus_24_test_cases:02",
+          "age": "below3",
+          "selling": 33010,
+          "reference": 48600
+        },
+        {
+          "id": "iphone15_plus_24_test_cases:03",
+          "age": "3to6",
+          "selling": 31420,
+          "reference": 48600
+        }
+      ]
+    },
+    {
+      "ids": [
+        "iphone15_plus_24_test_cases:04",
+        "iphone15_plus_24_test_cases:05",
+        "iphone15_plus_24_test_cases:06"
+      ],
+      "minimumSelling": 26210,
+      "maximumSelling": 33370,
+      "range": 7160,
+      "minimumPayoutOff": 33371,
+      "maximumPayoutOff": 27911,
+      "feasibleForBothCouponStates": false,
+      "model": "Apple iPhone 15 Plus",
+      "rows": [
+        {
+          "id": "iphone15_plus_24_test_cases:04",
+          "age": "3to6",
+          "selling": 33370,
+          "reference": 48600
+        },
+        {
+          "id": "iphone15_plus_24_test_cases:05",
+          "age": "6to11",
+          "selling": 31830,
+          "reference": 48600
+        },
+        {
+          "id": "iphone15_plus_24_test_cases:06",
+          "age": "above11",
+          "selling": 26210,
+          "reference": 48600
+        }
+      ]
+    },
+    {
+      "ids": [
+        "iphone15_pro_max_20_test_cases:02",
+        "iphone15_pro_max_20_test_cases:03",
+        "iphone15_pro_max_24_test_cases:02",
+        "iphone15_pro_max_24_test_cases:03"
+      ],
+      "minimumSelling": 48350,
+      "maximumSelling": 51410,
+      "range": 3060,
+      "minimumPayoutOff": 51411,
+      "maximumPayoutOff": 50051,
+      "feasibleForBothCouponStates": false,
+      "model": "Apple iPhone 15 Pro Max",
+      "rows": [
+        {
+          "id": "iphone15_pro_max_20_test_cases:02",
+          "age": "below3",
+          "selling": 51410,
+          "reference": 72480
+        },
+        {
+          "id": "iphone15_pro_max_20_test_cases:03",
+          "age": "3to6",
+          "selling": 48350,
+          "reference": 72480
+        },
+        {
+          "id": "iphone15_pro_max_24_test_cases:02",
+          "age": "below3",
+          "selling": 51410,
+          "reference": 72480
+        },
+        {
+          "id": "iphone15_pro_max_24_test_cases:03",
+          "age": "3to6",
+          "selling": 48350,
+          "reference": 72480
+        }
+      ]
+    },
+    {
+      "ids": [
+        "iphone15_pro_max_20_test_cases:04",
+        "iphone15_pro_max_20_test_cases:05",
+        "iphone15_pro_max_20_test_cases:06",
+        "iphone15_pro_max_24_test_cases:04",
+        "iphone15_pro_max_24_test_cases:05",
+        "iphone15_pro_max_24_test_cases:06"
+      ],
+      "minimumSelling": 39730,
+      "maximumSelling": 50300,
+      "range": 10570,
+      "minimumPayoutOff": 50301,
+      "maximumPayoutOff": 41431,
+      "feasibleForBothCouponStates": false,
+      "model": "Apple iPhone 15 Pro Max",
+      "rows": [
+        {
+          "id": "iphone15_pro_max_20_test_cases:04",
+          "age": "3to6",
+          "selling": 50300,
+          "reference": 72480
+        },
+        {
+          "id": "iphone15_pro_max_20_test_cases:05",
+          "age": "6to11",
+          "selling": 48030,
+          "reference": 72480
+        },
+        {
+          "id": "iphone15_pro_max_20_test_cases:06",
+          "age": "above11",
+          "selling": 39730,
+          "reference": 72480
+        },
+        {
+          "id": "iphone15_pro_max_24_test_cases:04",
+          "age": "3to6",
+          "selling": 50300,
+          "reference": 72480
+        },
+        {
+          "id": "iphone15_pro_max_24_test_cases:05",
+          "age": "6to11",
+          "selling": 48030,
+          "reference": 72480
+        },
+        {
+          "id": "iphone15_pro_max_24_test_cases:06",
+          "age": "above11",
+          "selling": 39730,
+          "reference": 72480
+        }
+      ]
+    },
+    {
+      "ids": [
+        "iphone15_pro_test_cases:02",
+        "iphone15_pro_test_cases:03"
+      ],
+      "minimumSelling": 45180,
+      "maximumSelling": 47990,
+      "range": 2810,
+      "minimumPayoutOff": 47991,
+      "maximumPayoutOff": 46881,
+      "feasibleForBothCouponStates": false,
+      "model": "Apple iPhone 15 Pro",
+      "rows": [
+        {
+          "id": "iphone15_pro_test_cases:02",
+          "age": "below3",
+          "selling": 47990,
+          "reference": 68160
+        },
+        {
+          "id": "iphone15_pro_test_cases:03",
+          "age": "3to6",
+          "selling": 45180,
+          "reference": 68160
+        }
+      ]
+    },
+    {
+      "ids": [
+        "iphone15_pro_test_cases:04",
+        "iphone15_pro_test_cases:05",
+        "iphone15_pro_test_cases:06"
+      ],
+      "minimumSelling": 37190,
+      "maximumSelling": 47130,
+      "range": 9940,
+      "minimumPayoutOff": 47131,
+      "maximumPayoutOff": 38891,
+      "feasibleForBothCouponStates": false,
+      "model": "Apple iPhone 15 Pro",
+      "rows": [
+        {
+          "id": "iphone15_pro_test_cases:04",
+          "age": "3to6",
+          "selling": 47130,
+          "reference": 68160
+        },
+        {
+          "id": "iphone15_pro_test_cases:05",
+          "age": "6to11",
+          "selling": 45000,
+          "reference": 68160
+        },
+        {
+          "id": "iphone15_pro_test_cases:06",
+          "age": "above11",
+          "selling": 37190,
+          "reference": 68160
+        }
+      ]
+    },
+    {
+      "ids": [
+        "iphone16_24_test_cases:02",
+        "iphone16_24_test_cases:03"
+      ],
+      "minimumSelling": 35070,
+      "maximumSelling": 37390,
+      "range": 2320,
+      "minimumPayoutOff": 37391,
+      "maximumPayoutOff": 36771,
+      "feasibleForBothCouponStates": false,
+      "model": "Apple iPhone 16",
+      "rows": [
+        {
+          "id": "iphone16_24_test_cases:02",
+          "age": "below3",
+          "selling": 37390,
+          "reference": 55150
+        },
+        {
+          "id": "iphone16_24_test_cases:03",
+          "age": "3to6",
+          "selling": 35070,
+          "reference": 55150
+        }
+      ]
+    },
+    {
+      "ids": [
+        "iphone16_24_test_cases:04",
+        "iphone16_24_test_cases:05",
+        "iphone16_24_test_cases:06"
+      ],
+      "minimumSelling": 29270,
+      "maximumSelling": 37320,
+      "range": 8050,
+      "minimumPayoutOff": 37321,
+      "maximumPayoutOff": 30971,
+      "feasibleForBothCouponStates": false,
+      "model": "Apple iPhone 16",
+      "rows": [
+        {
+          "id": "iphone16_24_test_cases:04",
+          "age": "3to6",
+          "selling": 37320,
+          "reference": 55150
+        },
+        {
+          "id": "iphone16_24_test_cases:05",
+          "age": "6to11",
+          "selling": 35590,
+          "reference": 55150
+        },
+        {
+          "id": "iphone16_24_test_cases:06",
+          "age": "above11",
+          "selling": 29270,
+          "reference": 55150
+        }
+      ]
+    },
+    {
+      "ids": [
+        "iphone16_plus_24_test_cases:02",
+        "iphone16_plus_24_test_cases:03"
+      ],
+      "minimumSelling": 35710,
+      "maximumSelling": 38190,
+      "range": 2480,
+      "minimumPayoutOff": 38191,
+      "maximumPayoutOff": 37411,
+      "feasibleForBothCouponStates": false,
+      "model": "Apple iPhone 16 Plus",
+      "rows": [
+        {
+          "id": "iphone16_plus_24_test_cases:02",
+          "age": "below3",
+          "selling": 38190,
+          "reference": 56160
+        },
+        {
+          "id": "iphone16_plus_24_test_cases:03",
+          "age": "3to6",
+          "selling": 35710,
+          "reference": 56160
+        }
+      ]
+    },
+    {
+      "ids": [
+        "iphone16_plus_24_test_cases:04",
+        "iphone16_plus_24_test_cases:05",
+        "iphone16_plus_24_test_cases:06"
+      ],
+      "minimumSelling": 29770,
+      "maximumSelling": 37960,
+      "range": 8190,
+      "minimumPayoutOff": 37961,
+      "maximumPayoutOff": 31471,
+      "feasibleForBothCouponStates": false,
+      "model": "Apple iPhone 16 Plus",
+      "rows": [
+        {
+          "id": "iphone16_plus_24_test_cases:04",
+          "age": "3to6",
+          "selling": 37960,
+          "reference": 56160
+        },
+        {
+          "id": "iphone16_plus_24_test_cases:05",
+          "age": "6to11",
+          "selling": 36210,
+          "reference": 56160
+        },
+        {
+          "id": "iphone16_plus_24_test_cases:06",
+          "age": "above11",
+          "selling": 29770,
+          "reference": 56160
+        }
+      ]
+    },
+    {
+      "ids": [
+        "iphone16e_24_test_cases:02",
+        "iphone16e_24_test_cases:03"
+      ],
+      "minimumSelling": 24850,
+      "maximumSelling": 27450,
+      "range": 2600,
+      "minimumPayoutOff": 27451,
+      "maximumPayoutOff": 26551,
+      "feasibleForBothCouponStates": false,
+      "model": "Apple iPhone 16e",
+      "rows": [
+        {
+          "id": "iphone16e_24_test_cases:02",
+          "age": "below3",
+          "selling": 27450,
+          "reference": 41230
+        },
+        {
+          "id": "iphone16e_24_test_cases:03",
+          "age": "3to6",
+          "selling": 24850,
+          "reference": 41230
+        }
+      ]
+    },
+    {
+      "ids": [
+        "iphone16e_24_test_cases:04",
+        "iphone16e_24_test_cases:05",
+        "iphone16e_24_test_cases:06"
+      ],
+      "minimumSelling": 21150,
+      "maximumSelling": 27100,
+      "range": 5950,
+      "minimumPayoutOff": 27101,
+      "maximumPayoutOff": 22851,
+      "feasibleForBothCouponStates": false,
+      "model": "Apple iPhone 16e",
+      "rows": [
+        {
+          "id": "iphone16e_24_test_cases:04",
+          "age": "3to6",
+          "selling": 27100,
+          "reference": 41230
+        },
+        {
+          "id": "iphone16e_24_test_cases:05",
+          "age": "6to11",
+          "selling": 25830,
+          "reference": 41230
+        },
+        {
+          "id": "iphone16e_24_test_cases:06",
+          "age": "above11",
+          "selling": 21150,
+          "reference": 41230
+        }
+      ]
+    },
+    {
+      "ids": [
+        "iphone17_test_cases:02",
+        "iphone17_test_cases:03"
+      ],
+      "minimumSelling": 40120,
+      "maximumSelling": 47690,
+      "range": 7570,
+      "minimumPayoutOff": 47691,
+      "maximumPayoutOff": 41821,
+      "feasibleForBothCouponStates": false,
+      "model": "Apple iPhone 17",
+      "rows": [
+        {
+          "id": "iphone17_test_cases:02",
+          "age": "below3",
+          "selling": 47690,
+          "reference": 67700
+        },
+        {
+          "id": "iphone17_test_cases:03",
+          "age": "3to6",
+          "selling": 40120,
+          "reference": 67700
+        }
+      ]
+    },
+    {
+      "ids": [
+        "iphone17_test_cases:04",
+        "iphone17_test_cases:05",
+        "iphone17_test_cases:06"
+      ],
+      "minimumSelling": 33510,
+      "maximumSelling": 42370,
+      "range": 8860,
+      "minimumPayoutOff": 42371,
+      "maximumPayoutOff": 35211,
+      "feasibleForBothCouponStates": false,
+      "model": "Apple iPhone 17",
+      "rows": [
+        {
+          "id": "iphone17_test_cases:04",
+          "age": "3to6",
+          "selling": 42370,
+          "reference": 67700
+        },
+        {
+          "id": "iphone17_test_cases:05",
+          "age": "6to11",
+          "selling": 40480,
+          "reference": 67700
+        },
+        {
+          "id": "iphone17_test_cases:06",
+          "age": "above11",
+          "selling": 33510,
+          "reference": 67700
+        }
+      ]
+    },
+    {
+      "ids": [
+        "iphoneair_24_test_cases:02",
+        "iphoneair_24_test_cases:03"
+      ],
+      "minimumSelling": 45290,
+      "maximumSelling": 53690,
+      "range": 8400,
+      "minimumPayoutOff": 53691,
+      "maximumPayoutOff": 46991,
+      "feasibleForBothCouponStates": false,
+      "model": "Apple iPhone Air",
+      "rows": [
+        {
+          "id": "iphoneair_24_test_cases:02",
+          "age": "below3",
+          "selling": 53690,
+          "reference": 75200
+        },
+        {
+          "id": "iphoneair_24_test_cases:03",
+          "age": "3to6",
+          "selling": 45290,
+          "reference": 75200
+        }
+      ]
+    },
+    {
+      "ids": [
+        "iphoneair_24_test_cases:04",
+        "iphoneair_24_test_cases:05",
+        "iphoneair_24_test_cases:06"
+      ],
+      "minimumSelling": 37690,
+      "maximumSelling": 47540,
+      "range": 9850,
+      "minimumPayoutOff": 47541,
+      "maximumPayoutOff": 39391,
+      "feasibleForBothCouponStates": false,
+      "model": "Apple iPhone Air",
+      "rows": [
+        {
+          "id": "iphoneair_24_test_cases:04",
+          "age": "3to6",
+          "selling": 47540,
+          "reference": 75200
+        },
+        {
+          "id": "iphoneair_24_test_cases:05",
+          "age": "6to11",
+          "selling": 45430,
+          "reference": 75200
+        },
+        {
+          "id": "iphoneair_24_test_cases:06",
+          "age": "above11",
+          "selling": 37690,
+          "reference": 75200
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "pairs": 102,
+    "ageGroups": 16,
+    "infeasibleAgeGroups": 15,
+    "byModel": {
+      "Apple iPhone Air": {
+        "pairs": 51,
+        "sourceRows": 24,
+        "priced": 20,
+        "historicalBothCouponPasses": 1,
+        "inspectionRequired": 4
+      },
+      "Apple iPhone 16e": {
+        "pairs": 51,
+        "sourceRows": 24,
+        "priced": 20,
+        "historicalBothCouponPasses": 5,
+        "inspectionRequired": 4
+      }
+    }
+  }
+}
