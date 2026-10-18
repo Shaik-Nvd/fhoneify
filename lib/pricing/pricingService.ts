@@ -244,7 +244,9 @@ export function createPricingService(deps: PricingServiceDeps) {
       // The quote page passes the brand/model exactly as selected; pricing
       // with the catalog's own strings keeps the engine's model matching
       // identical for both.
-      result = priceDevice(device.brand, device.model, base.cashifyGetUptoReference, diagnostics, hybrid ? legacyQuestionnaire : questionnaire, dispatchStorage);
+      // Eligibility is checked here, never inferred by the shared calculator's ordinary callers.
+      result = priceDevice(device.brand, device.model, base.cashifyGetUptoReference, diagnostics, hybrid ? legacyQuestionnaire : questionnaire, dispatchStorage,
+        teamFallbackSupported ? { apple512OutOfWarrantyDispatch: true } : undefined);
       const exact = hybrid && deps.exactFinalQuoteIndex ? deps.exactFinalQuoteIndex.find({ device, diagnostics,
         reference: base.cashifyGetUptoReference, referenceVerifiedAt: base.referenceLastVerifiedAt, questionnaire, route, now: at,
         referenceExact: base.source === 'reference_repository' && base.referenceStatus === 'fresh' && base.referenceSource === 'cashify' && !reference.degraded &&

@@ -4,6 +4,11 @@ import { inrConditionValue, resolveInrGroup, type InrDeductionConfig } from './p
 import { xiaomiInrDeductions } from './pricing/inrDeductionTables';
 import { teamTextOutOfWarrantyRule } from './pricing/appleVariantDispatch';
 
+/** Internal invocation context; never read from public diagnostic answers. */
+export interface PricingCalculationContext {
+  apple512OutOfWarrantyDispatch?: boolean;
+}
+
 export interface ModelParams {
   warrantyPenalty: number;
   gstBillPenalty: number;
@@ -437,11 +442,13 @@ export const getAppleModelParams = (model: string): ModelParams => {
   return params;
 };
 
-export function calculateApplePrice(model: string, reference: CashifyGetUptoReference, diagnostics: DiagnosticsType, semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE, storageVariant?: string): PricingResult {
+export function calculateApplePrice(model: string, reference: CashifyGetUptoReference, diagnostics: DiagnosticsType, semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE, storageVariant?: string, calculationContext?: PricingCalculationContext): PricingResult {
   if (!reference || reference <= 0) return { cashifyConditionEquivalent: 0, fhoneifyPrice: 0 };
 
   const lowerModel = String(model || "").toLowerCase().trim();
-  const exactTeamModel = teamTextOutOfWarrantyRule(model, storageVariant, diagnostics.warranty);
+  // Only the supported hybrid service may opt in; direct/legacy callers retain prior dispatch.
+  const exactTeamModel = calculationContext?.apple512OutOfWarrantyDispatch === true &&
+    teamTextOutOfWarrantyRule(model, storageVariant, diagnostics.warranty);
 
   // --- SPECIALIZED ALGORITHM FOR iPHONE 14 (128 GB / 256 GB / 512 GB) ---
   const isIPhone14 = Boolean(
@@ -2757,7 +2764,8 @@ export function calculateFhoneifyPrice(
   cashifyGetUptoReference: CashifyGetUptoReference,
   answers: DiagnosticsType,
   semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE,
-  storageVariant?: string
+  storageVariant?: string,
+  calculationContext?: PricingCalculationContext
 ): PricingResult {
   // A question Cashify never asks for this model is not a "No": its answer is
   // neutral here, and questionnaireAgeFactor drops the age/warranty factor.
@@ -2772,14 +2780,14 @@ export function calculateFhoneifyPrice(
     ...(semantics.ageMode === 'NOT_ASKED' ? { mobileAge: answers.warranty === false ? 'above11' : null } : {}),
     ...(semantics.warrantyMode === 'NOT_ASKED' ? { warranty: null, mobileAge: null } : {}),
   };
-  const asAnswered = routeBrandCalculator(brand, model, cashifyGetUptoReference, diagnostics, semantics, storageVariant);
+  const asAnswered = routeBrandCalculator(brand, model, cashifyGetUptoReference, diagnostics, semantics, storageVariant, calculationContext);
   // A warranty cannot be claimed without the GST bill (Cashify asks the two
   // together), so "in warranty, no bill" never prices below the same phone
   // answered as out of warranty - the brand bill deductions alone could
   // otherwise reward answering "no warranty".
   const hasValidBill = diagnostics.validBill === true || (diagnostics.accessories || []).includes("bill");
   if (!hasValidBill && diagnostics.warranty !== false) {
-    const asOutOfWarranty = routeBrandCalculator(brand, model, cashifyGetUptoReference, { ...diagnostics, warranty: false, mobileAge: "above11" }, semantics, storageVariant);
+    const asOutOfWarranty = routeBrandCalculator(brand, model, cashifyGetUptoReference, { ...diagnostics, warranty: false, mobileAge: "above11" }, semantics, storageVariant, calculationContext);
     if (asOutOfWarranty.cashifyConditionEquivalent > asAnswered.cashifyConditionEquivalent) return asOutOfWarranty;
   }
   return asAnswered;
@@ -2791,13 +2799,14 @@ function routeBrandCalculator(
   cashifyGetUptoReference: CashifyGetUptoReference,
   diagnostics: DiagnosticsType,
   semantics: QuestionnaireSemantics,
-  storageVariant?: string
+  storageVariant?: string,
+  calculationContext?: PricingCalculationContext
 ): PricingResult {
   const safeBrand = String(brand || "").toLowerCase().trim();
   const safeModel = String(model || "").toLowerCase().trim();
 
   if (safeBrand === "apple" || safeModel.includes("iphone")) {
-    return calculateApplePrice(model, cashifyGetUptoReference, diagnostics, semantics, storageVariant);
+    return calculateApplePrice(model, cashifyGetUptoReference, diagnostics, semantics, storageVariant, calculationContext);
   }
 
   if (safeBrand === "samsung" || safeModel.includes("galaxy")) {

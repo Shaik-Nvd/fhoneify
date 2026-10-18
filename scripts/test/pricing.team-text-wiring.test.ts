@@ -11,7 +11,7 @@ for(const [model,reference,selling] of [['Apple iPhone 15 Plus',48600,24910],['A
   const device={brand:'Apple',model,storage:'512GB'};
   const storage=(reviewedAppleDispatchStorage as any)(device,d);
   assert.equal(storage,'512GB');
-  const q=calculateApplePrice(model,reference,d,UNKNOWN_QUESTIONNAIRE,storage);
+  const q=calculateApplePrice(model,reference,d,UNKNOWN_QUESTIONNAIRE,storage,{apple512OutOfWarrantyDispatch:true});
   assert.equal(selling,fixture.rows.find(r=>r.identity.model===model&&r.caseId==='01')!.sellingPrice);
   assert.equal(q.cashifyConditionEquivalent,selling);
  });

@@ -6,6 +6,7 @@ import {
   CashifyGetUptoReference,
   DiagnosticsType,
   PricingResult,
+  PricingCalculationContext,
 } from '../pricingCalculator';
 import { UNKNOWN_QUESTIONNAIRE, type QuestionnaireSemantics } from './questionnaireSemantics';
 import materializedSnapshot from '../cashify_prices.json';
@@ -154,13 +155,14 @@ export function priceDevice(
   reference: CashifyGetUptoReference,
   diagnostics: DiagnosticsType,
   semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE,
-  storageVariant?: string
+  storageVariant?: string,
+  calculationContext?: PricingCalculationContext
 ): PricingResult {
   if (!isPositivePrice(reference)) {
     throw new PricingInvariantError('Cashify Get Upto reference must be a positive finite number', { brand, model, reference });
   }
 
-  const result = calculateFhoneifyPrice(brand, model, reference, diagnostics, semantics, storageVariant);
+  const result = calculateFhoneifyPrice(brand, model, reference, diagnostics, semantics, storageVariant, calculationContext);
   const { cashifyConditionEquivalent, fhoneifyPrice } = result;
   const ceiling = maxPlausiblePrice(reference);
   const details = { brand, model, reference, cashifyConditionEquivalent, fhoneifyPrice, ceiling };
