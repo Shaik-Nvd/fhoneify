@@ -133,6 +133,28 @@ async function run() {
     }
   });
 
+  await test('the mobile-age answer reaches the rules on the served path even though the crawled profile says the age question is NOT_ASKED', async () => {
+    const at = new Date('2026-10-29T12:00:00Z');
+    // production profile for iPhone 15-18: warranty and bill ASKED, age NOT_ASKED (the age page only appears after "warranty: Yes")
+    const svc = createPricingService({ repository: { async get(key: string) { return { deviceKey: key, currentPrice: 52800, source: 'cashify', status: 'fresh', matchConfidence: 'exact', lastVerifiedAt: at }; } } as any,
+      questionnaireStore: { async get() { return { warrantyMode: 'ASKED', billMode: 'ASKED', ageMode: 'NOT_ASKED', status: 'OK', observedAt: at.toISOString() }; } } as any,
+      signingSecret: 'offline-reference-rules-test-secret-only', tokenTtlSeconds: 900, strictReferenceMode: true, referenceLookupTimeoutMs: 100, now: () => at,
+      snapshot: {}, pricingMode: 'hybrid', logger: { info() {}, warn() {}, error() {} } });
+    const seen: number[] = [];
+    for (const mobileAge of ['below3', '3to6', '6to11', 'above11']) {
+      const d = { ...clean, mobileAge };
+      const q = await svc.quote({ brand: 'Apple', model: 'Apple iPhone 16', storage: '128GB', diagnostics: d });
+      assert.ok(q.ok, mobileAge);
+      if (!q.ok) continue;
+      assert.equal(q.internal.cashifyConditionEquivalent, price('iPhone 16', 128, 52800, d), `${mobileAge}: served value = rules`);
+      seen.push(q.internal.cashifyConditionEquivalent);
+    }
+    assert.ok(seen[0] > seen[1] && seen[1] > seen[2] && seen[2] > seen[3], `older phones quote lower: ${seen.join(' > ')}`);
+    // older iPhones whose form has no age question still ignore it
+    const old = await Promise.all(['below3', 'above11'].map(mobileAge => svc.quote({ brand: 'Apple', model: 'Apple iPhone 12', storage: '64GB', diagnostics: { ...clean, mobileAge } })));
+    assert.ok(old[0].ok && old[1].ok && old[0].fhoneifyPrice === old[1].fhoneifyPrice);
+  });
+
   await test('one repair group is charged once: screen answers share the largest screen deduction', () => {
     const cracked = price('iPhone 13 Pro Max', 256, 35890, { ...clean, screenCondition: 'Screen cracked/ glass broken' });
     const crackedSpots = price('iPhone 13 Pro Max', 256, 35890, { ...clean, screenCondition: 'Screen cracked/ glass broken', screenSpots: '1-2 minor spots on screen' });

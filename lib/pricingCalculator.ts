@@ -4,7 +4,7 @@ import { UNKNOWN_QUESTIONNAIRE, type QuestionnaireSemantics } from './pricing/qu
 import { inrConditionValue, resolveInrGroup, type InrDeductionConfig } from './pricing/inrDeductions';
 import { xiaomiInrDeductions } from './pricing/inrDeductionTables';
 import { teamTextOutOfWarrantyRule } from './pricing/appleVariantDispatch';
-import { appleEvidenceQuote } from './pricing/appleCashifyModel';
+import { appleEvidenceAsksAge, appleEvidenceQuote } from './pricing/appleCashifyModel';
 
 /** Internal invocation context; never read from public diagnostic answers. */
 export interface PricingCalculationContext {
@@ -2865,8 +2865,11 @@ export function calculateFhoneifyPrice(
     // without it where the bill is asked (lib/pricing/pricingService.ts).
     ...(semantics.billMode === 'NOT_ASKED' || answers.validBill == null ? { validBill: true } : {}),
     // Cashify never asks an age bracket when it does not ask age: the warranty
-    // answer is its only age signal.
-    ...(semantics.ageMode === 'NOT_ASKED' ? { mobileAge: answers.warranty === false ? 'above11' : null } : {}),
+    // answer is its only age signal. Exception: iPhones whose calibrated rules
+    // measured the age bracket Cashify asks after "warranty: Yes" (the crawled
+    // profile cannot see that conditional page and says NOT_ASKED).
+    ...(semantics.ageMode === 'NOT_ASKED' && !(brand === 'Apple' && appleEvidenceAsksAge(model, calculationContext?.catalogStorage ?? storageVariant))
+      ? { mobileAge: answers.warranty === false ? 'above11' : null } : {}),
     ...(semantics.warrantyMode === 'NOT_ASKED' ? { warranty: null, mobileAge: null } : {}),
   };
   const asAnswered = routeBrandCalculator(brand, model, cashifyGetUptoReference, diagnostics, semantics, storageVariant, calculationContext);
