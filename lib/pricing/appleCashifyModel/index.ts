@@ -38,6 +38,17 @@ const profileFor = (modelKey: string): ModelProfile | null => {
   return from && CALIBRATION.models[from] ? inferredFrom(CALIBRATION.models[from], modelKey) : null;
 };
 
+/**
+ * True when this iPhone's calibrated rules carry a measured age effect (Cashify asks the age bracket after "warranty: Yes"). The crawled
+ * questionnaire profile cannot see that conditional page and records the age question as NOT_ASKED, so for these models the customer's age
+ * answer must reach the rules rather than be discarded.
+ */
+export function appleEvidenceAsksAge(model: string, storage: string | undefined | null): boolean {
+  if (!isAppleEvidenceModel(model, storage)) return false;
+  const profile = profileFor(evidenceModelKey(model));
+  return Boolean(profile?.asks.age && profile.age);
+}
+
 export function appleEvidenceScope(model: string, storage: string | undefined | null): { profile: ModelProfile; storageGb: number } | null {
   if (!isAppleEvidenceModel(model, storage)) return null;
   const profile = profileFor(evidenceModelKey(model));
