@@ -128,3 +128,18 @@ The iPhone 14 Pro gap is not a deduction error: Cashify's flawless quote for tha
 stored reference) still shows INR 46,100; at 46,500 the rules give Cashify's 33,300 exactly. It closes when the reference refresh picks up the
 new price. These live quotes are added to the fit (11 rows; the 6S INR 20 row is documented only) and asserted in pricing.apple-reference-rules
 (all within INR 20). The charger amounts of the iPhone 11/7/8 families are now fixed deductions, not fitted ones.
+
+### Second random check (seed 43871, 29 Oct)
+
+| Device and answers | Fhoneify C at release | Cashify base | Cause | After refit (at Cashify's price) |
+|---|---:|---:|---|---:|
+| iPhone XS Max 256 GB, volume button, no box/charger | 12,000 | 11,940 | volume button inferred 238, Cashify 300 | 11,940 |
+| iPhone 17 512 GB, back camera, >2 screen + 1-2 body scratches | 48,280 | 49,030 | reference lag only (Get Upto 67,700 stored, 68,500 now) | 49,030 |
+| iPhone 14 Plus 512 GB, Face ID + microphone, 1-2 dents | 22,160 | 21,890 | dents inferred 595, Cashify 880 | 21,890 |
+| iPhone 7 256 GB, speaker + mic, >2 screen + 1-2 body scratches, no box/charger | 2,790 | 3,050 | 1-2 body scratches inferred 260, Cashify 0 | 3,050 |
+| iPhone 17 Pro 256 GB, mic + battery 80-85%, >2 screen scratches | 89,920 | 90,820 | screen 10,023 / mic 1,000 / battery 1,560 inferred; Cashify 8,820 / 600 / 1,260 (Get Upto 102,500 stored, 101,500 now) | 90,820 |
+
+Fit change: a quote that changes exactly one ordinary condition from the flawless one (a missing box or charger alongside allowed) now carries
+5x weight in the joint refinement, so a clean single is not outvoted by several large mixed combinations; touch failure, non-original or cracked
+screen and panel damage are excluded because Cashify's age flow and minimum make their combinations non-additive. In-sample against the
+release before it: MAE INR 25.5 -> 24.5, within INR 100 97.8% -> 98.1%. All 23 live quotes are asserted in pricing.apple-reference-rules.

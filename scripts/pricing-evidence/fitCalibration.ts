@@ -304,12 +304,20 @@ export function fitCodeOverrides(profile: ModelProfile, rows: Row[], opts: { dec
     coords.push({ name: 'CHARGER', kind: 'fixed', get: () => profile.chargerNo!.base, set: v => { profile.chargerNo!.base = v; }, touches: r => r.ans.chargerMissing && (!profile.age || stateOf(r) !== 3) });
     if (profile.age) coords.push({ name: 'CHARGER_AGED', kind: 'fixed', get: () => profile.chargerNo!.aged, set: v => { profile.chargerNo!.aged = v; }, touches: r => r.ans.chargerMissing && stateOf(r) === 3 });
   }
+  // A quote that changes one condition from the flawless one identifies that deduction directly; a large mixed combination only
+  // constrains a sum, so the isolating quote carries more weight (otherwise three 9-fault combinations outvote one clean single).
+  // (a missing box or charger alongside does not spoil that: those amounts are fitted from their own pairs). Touch failure, a replaced or
+  // cracked screen and panel damage are excluded: they change Cashify's flow and minimum, so their combinations are not additive.
+  const weight = (r: Row) => {
+    const devs = r.m.deviations.filter(d => d !== 'BOX_NO' && d !== 'CHARGER_NO');
+    return devs.length === 1 && !/^(Q0[123]|S01|P0[123])$/.test(devs[0]) ? 5 : 1;
+  };
   const loss = (c: Coord) => {
     let t = 0;
-    for (const r of usable) if (c.touches(r)) { const f = predict(r); t += f == null ? 0 : Math.abs(r.target - f); }
+    for (const r of usable) if (c.touches(r)) { const f = predict(r); t += f == null ? 0 : weight(r) * Math.abs(r.target - f); }
     return t;
   };
-  for (let sweep = 0; sweep < 12; sweep++) {
+  for (let sweep = 0; sweep < 40; sweep++) {
     let moved = false;
     for (const c of coords) {
       let step = c.kind === 'fixed' ? Math.max(50, 0.1 * c.get()) : Math.max(0.002, 0.1 * c.get());
