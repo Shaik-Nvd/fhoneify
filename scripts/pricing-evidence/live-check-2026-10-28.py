@@ -40,6 +40,15 @@ ROWS = [
     ('iPhone 14 Plus', 512, 31270, 30390, dict(codes=['C04'], box='yes', charger='not_asked', date='2026-10-29')),
     ('iPhone XS Max', 256, 12640, 12340, dict(codes=['F03'], box='yes', charger='yes', date='2026-10-29')),
     ('iPhone 17 Pro', 256, 101500, 100900, dict(codes=['F13'], box='yes', charger='not_asked', warranty='yes', bill='yes', age='Below 3 months', esim='Single eSIM', date='2026-10-29')),
+    # third random draw, seed 61507 (30 Oct); iPhone Air / 12 Mini references are Cashify's Get Upto that day
+    ('iPhone 16 Plus', 128, 55200, 44480, dict(codes=['F02'], box='no', charger='not_asked', warranty='yes', bill='yes', age='3 months - 6 months', esim='not_asked', date='2026-10-30')),
+    ('iPhone 8', 128, 5850, 5460, dict(codes=['F18'], box='yes', charger='no', date='2026-10-30')),
+    ('iPhone 13 Mini', 256, 22040, 14340, dict(codes=['F06', 'F08'], box='yes', charger='not_asked', date='2026-10-30')),
+    ('iPhone Air', 512, 74500, 63480, dict(codes=['F13'], box='yes', charger='not_asked', warranty='yes', bill='yes', age='6 months - 11 months', esim='Single eSIM', date='2026-10-30')),
+    # iPhone 12 Mini 256 GB, 1-2 minor dents, no box or charger: 15,380 vs reference 16,660 (rules, borrowed from the iPhone 12: 15,450, +70).
+    # Documented but not fitted: one row would give the 12 Mini a calibration of its own and replace the iPhone 12 fallback (scope.json).
+    # isolating follow-up, 30 Oct: the Air microphone alone
+    ('iPhone Air', 512, 74500, 73900, dict(codes=['F13'], box='yes', charger='not_asked', warranty='yes', bill='yes', age='Below 3 months', esim='Single eSIM', date='2026-10-30')),
 ]
 
 def inp(v, basis='explicit'):

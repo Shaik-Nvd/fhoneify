@@ -126,6 +126,14 @@ async function run() {
       ['iPhone 17 Pro', 256, 101500, { ...clean, hardware: ['microphone', 'battery_health'], screenCondition: 'More than 2 scratches on screen' }, 90820],
       ['iPhone 17 Pro', 256, 101500, { ...clean, screenCondition: 'More than 2 scratches on screen' }, 92680],
       ['iPhone 17 Pro', 256, 101500, { ...clean, hardware: ['battery_health'] }, 100240],
+      // third random draw (seed 61507, 30 Oct), at Cashify's flawless quote that day
+      ['iPhone 16 Plus', 128, 55200, { ...clean, accessories: [], box: false, hardware: ['back_camera'], mobileAge: '3to6' }, 44480],
+      ['iPhone 8', 128, 5850, { ...clean, charger: false, hardware: ['battery_health'] }, 5460],
+      ['iPhone 13 Mini', 256, 22040, { ...clean, hardware: ['face', 'speaker'] }, 14340],
+      ['iPhone Air', 512, 74500, { ...clean, hardware: ['microphone'], mobileAge: '6to11' }, 63480],
+      ['iPhone Air', 512, 74500, { ...clean, hardware: ['microphone'] }, 73900],
+      // iPhone 12 Mini is priced from the iPhone 12 (no quotes of its own): INR 15,450 here, Cashify 15,380
+      ['iPhone 12 Mini', 256, 16660, { ...clean, accessories: [], box: false, charger: false, bodyDents: '1-2 minor dents' }, 15450],
     ];
     for (const [model, gb, R, d, cashify] of live) {
       const got = price(model, gb, R, d);

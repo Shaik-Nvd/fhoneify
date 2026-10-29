@@ -566,14 +566,14 @@
  },
  {
   "modelKey": "iPhone 13 Mini",
-  "rows": 90,
-  "used": 90,
-  "rmse": 3.6642186969456767,
+  "rows": 91,
+  "used": 91,
+  "rmse": 3.644089981985493,
   "maxAbs": 12.180833989979874,
   "floor": null,
   "params": {
    "box.base": {
-    "value": 999.794305748362,
+    "value": 999.7936945677486,
     "support": "measured",
     "shapes": 7
    },
@@ -1751,10 +1751,10 @@
  },
  {
   "modelKey": "iPhone 16 Plus",
-  "rows": 253,
-  "used": 250,
-  "rmse": 5.096715289385819,
-  "maxAbs": 21.08707188401968,
+  "rows": 254,
+  "used": 251,
+  "rmse": 5.076323852908777,
+  "maxAbs": 20.94079999999849,
   "floor": {
    "basis": "reference",
    "value": 0.17711
@@ -1791,9 +1791,9 @@
     "shapes": 0
    },
    "box.base": {
-    "value": 2249.666528115981,
+    "value": 2250.295936615627,
     "support": "measured",
-    "shapes": 4
+    "shapes": 5
    },
    "box.aged": {
     "value": 1520.7016406445114,
@@ -2263,12 +2263,12 @@
     "shapes": 0
    },
    "age3.a": {
-    "value": -184.47539998078918,
+    "value": -184.47539998075766,
     "support": "inferred",
     "shapes": 0
    },
    "age3.b": {
-    "value": 0.2454125547421178,
+    "value": 0.2454125547421173,
     "support": "inferred",
     "shapes": 0
    },
@@ -2386,12 +2386,12 @@
     "shapes": 0
    },
    "age3.a": {
-    "value": -28.129940273194507,
+    "value": -28.129940272548524,
     "support": "inferred",
     "shapes": 0
    },
    "age3.b": {
-    "value": 0.2429023233745721,
+    "value": 0.24290232337456602,
     "support": "inferred",
     "shapes": 0
    },
@@ -2401,7 +2401,7 @@
     "shapes": 1
    },
    "box.aged": {
-    "value": 1499.950776429237,
+    "value": 1499.964808097227,
     "support": "inferred",
     "shapes": 0
    },
@@ -2509,12 +2509,12 @@
     "shapes": 0
    },
    "age3.a": {
-    "value": 35.66065707451816,
+    "value": 35.66065707449599,
     "support": "inferred",
     "shapes": 0
    },
    "age3.b": {
-    "value": 0.24233416932780238,
+    "value": 0.24233416932780255,
     "support": "inferred",
     "shapes": 0
    },
@@ -2524,7 +2524,7 @@
     "shapes": 1
    },
    "box.aged": {
-    "value": 1499.950776429237,
+    "value": 1499.964808097227,
     "support": "inferred",
     "shapes": 0
    },
@@ -2632,12 +2632,12 @@
     "shapes": 0
    },
    "age3.a": {
-    "value": -41.70595084810544,
+    "value": -41.705950848096045,
     "support": "inferred",
     "shapes": 0
    },
    "age3.b": {
-    "value": 0.24347759963602933,
+    "value": 0.24347759963602914,
     "support": "inferred",
     "shapes": 0
    },
@@ -2647,7 +2647,7 @@
     "shapes": 1
    },
    "box.aged": {
-    "value": 1499.950776429237,
+    "value": 1499.964808097227,
     "support": "inferred",
     "shapes": 0
    },
@@ -2750,12 +2750,12 @@
     "shapes": 0
    },
    "age3.a": {
-    "value": 17.184470428766645,
+    "value": 17.18447042392949,
     "support": "inferred",
     "shapes": 0
    },
    "age3.b": {
-    "value": 0.24252055051796195,
+    "value": 0.24252055051799729,
     "support": "inferred",
     "shapes": 0
    },
@@ -2883,12 +2883,12 @@
     "shapes": 0
    },
    "age3.a": {
-    "value": -31.6887145205965,
+    "value": -31.688714520594544,
     "support": "inferred",
     "shapes": 0
    },
    "age3.b": {
-    "value": 0.2428539949333471,
+    "value": 0.24285399493334706,
     "support": "inferred",
     "shapes": 0
    },
@@ -3483,9 +3483,9 @@
  },
  {
   "modelKey": "iPhone 8",
-  "rows": 94,
-  "used": 94,
-  "rmse": 6.94788071310106,
+  "rows": 95,
+  "used": 95,
+  "rmse": 6.911216179003428,
   "maxAbs": 40.00195724976902,
   "floor": null,
   "params": {
@@ -3643,9 +3643,9 @@
  },
  {
   "modelKey": "iPhone Air",
-  "rows": 111,
-  "used": 108,
-  "rmse": 4.264101460545511,
+  "rows": 113,
+  "used": 110,
+  "rmse": 4.2593970940610415,
   "maxAbs": 41.225605504027044,
   "floor": {
    "basis": "aged",
@@ -3673,12 +3673,12 @@
     "shapes": 0
    },
    "age3.a": {
-    "value": 24.86898024475729,
+    "value": 24.868980098275614,
     "support": "inferred",
     "shapes": 0
    },
    "age3.b": {
-    "value": 0.24235722833117335,
+    "value": 0.24235722833263226,
     "support": "inferred",
     "shapes": 0
    },
@@ -3688,7 +3688,7 @@
     "shapes": 3
    },
    "box.aged": {
-    "value": 1499.950297550733,
+    "value": 1500.0025931946618,
     "support": "measured",
     "shapes": 7
    },
