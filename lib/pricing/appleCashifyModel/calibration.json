@@ -1,6 +1,6 @@
 {
  "version": "apple-cashify-calibration/1",
- "generatedFrom": "data/pricing-evidence/measurements.jsonl (6905 usable measurements)",
+ "generatedFrom": "data/pricing-evidence/measurements.jsonl (6916 usable measurements)",
  "models": {
   "iPhone 11": {
    "modelKey": "iPhone 11",
@@ -21,6 +21,11 @@
    "boxNo": {
     "base": 200.1564497885831,
     "aged": 2250,
+    "support": "measured"
+   },
+   "chargerNo": {
+    "base": 400,
+    "aged": 400,
     "support": "measured"
    },
    "eSimDualPct": null,
@@ -403,12 +408,7 @@
     "FMIN",
     "SCREEN",
     "WIFI"
-   ],
-   "chargerNo": {
-    "base": 400,
-    "aged": 400,
-    "support": "measured"
-   }
+   ]
   },
   "iPhone 11 Pro": {
    "modelKey": "iPhone 11 Pro",
@@ -829,6 +829,11 @@
     "aged": 2250,
     "support": "measured"
    },
+   "chargerNo": {
+    "base": 400,
+    "aged": 400,
+    "support": "measured"
+   },
    "eSimDualPct": null,
    "floor": null,
    "classes": {
@@ -920,10 +925,11 @@
    "scrap": 1200,
    "extremeFaultCount": 10,
    "evidence": {
-    "shapes": 30,
-    "measurements": 90,
+    "shapes": 33,
+    "measurements": 93,
     "dates": [
-     "2026-10-26"
+     "2026-10-26",
+     "2026-10-28"
     ],
     "medianReference": 18740
    },
@@ -931,27 +937,27 @@
    "codes": {
     "C01": {
      "kind": "fixed",
-     "value": 919.8205635874884,
+     "value": 920.0002440065153,
      "support": "inferred",
      "n": 1
     },
     "C02": {
      "kind": "fixed",
-     "value": 679.997971391036,
+     "value": 149.42919963226993,
      "support": "inferred",
      "n": 1
     },
     "C03": {
      "kind": "fixed",
-     "value": 858.4970464336778,
+     "value": 858.6647477388462,
      "support": "inferred",
      "n": 1
     },
     "C04": {
      "kind": "fixed",
-     "value": 459.9102817937442,
-     "support": "inferred",
-     "n": 1
+     "value": 680,
+     "support": "measured",
+     "n": 4
     },
     "F01": {
      "kind": "fixed",
@@ -977,11 +983,11 @@
      "kind": "fixed",
      "value": 399.61257812500025,
      "support": "measured",
-     "n": 4
+     "n": 6
     },
     "F08": {
      "kind": "pct",
-     "value": 0.2625363880984851,
+     "value": 0.26253472335310607,
      "support": "measured",
      "n": 8,
      "decided": true
@@ -1204,17 +1210,13 @@
     "BATT+FMIN",
     "BATT+SCREEN",
     "BODY",
+    "BODY+FMIN",
     "CAM",
     "FACE",
     "FMIN",
     "SCREEN",
     "WIFI"
-   ],
-   "chargerNo": {
-    "base": 400,
-    "aged": 400,
-    "support": "measured"
-   }
+   ]
   },
   "iPhone 12": {
    "modelKey": "iPhone 12",
@@ -4877,7 +4879,7 @@
    },
    "age": null,
    "boxNo": {
-    "base": 1200.1280972545014,
+    "base": 1200.2951219980948,
     "aged": 2250,
     "support": "measured"
    },
@@ -4972,13 +4974,14 @@
    "scrap": 1200,
    "extremeFaultCount": 10,
    "evidence": {
-    "shapes": 56,
-    "measurements": 272,
+    "shapes": 57,
+    "measurements": 275,
     "dates": [
      "2026-10-22",
-     "2026-10-27"
+     "2026-10-27",
+     "2026-10-28"
     ],
-    "medianReference": 45085
+    "medianReference": 46100
    },
    "notes": [],
    "codes": {
@@ -5106,9 +5109,9 @@
     },
     "F08": {
      "kind": "pct",
-     "value": 0.25814196393562816,
+     "value": 0.25813449023861174,
      "support": "measured",
-     "n": 8,
+     "n": 9,
      "decided": true
     },
     "F09": {
@@ -5262,6 +5265,7 @@
     "BATT+FMIN",
     "BATT+SCREEN",
     "BODY",
+    "BODY+FACE",
     "CAM",
     "FACE",
     "FMIN",
@@ -6058,14 +6062,14 @@
     },
     "P02": {
      "kind": "fixed",
-     "value": 3825.1746700676504,
+     "value": 3740.9544468546637,
      "support": "inferred",
      "n": 0,
      "basis": "siblings iPhone 14 Pro, iPhone 16e, iPhone 13 Pro Max"
     },
     "F10": {
      "kind": "fixed",
-     "value": 1961.6280359321281,
+     "value": 1918.4381778741865,
      "support": "inferred",
      "n": 0,
      "basis": "siblings iPhone 14 Pro, iPhone 14 Pro Max, iPhone 16e"
@@ -8011,7 +8015,7 @@
     }
    },
    "boxNo": {
-    "base": 2249.961242732111,
+    "base": 2249.867893104514,
     "aged": 1519.8869787601225,
     "support": "measured"
    },
@@ -8109,12 +8113,13 @@
    "scrap": 1200,
    "extremeFaultCount": 10,
    "evidence": {
-    "shapes": 93,
-    "measurements": 258,
+    "shapes": 94,
+    "measurements": 259,
     "dates": [
      "2026-10-17",
      "2026-10-24",
-     "2026-10-27"
+     "2026-10-27",
+     "2026-10-28"
     ],
     "medianReference": 55680
    },
@@ -8147,7 +8152,7 @@
      "kind": "fixed",
      "value": 1890,
      "support": "measured",
-     "n": 3
+     "n": 4
     },
     "C03": {
      "kind": "fixed",
@@ -8395,6 +8400,7 @@
     "BATT+BOX+FACE",
     "BATT+FACE",
     "BODY",
+    "BODY+BOX",
     "CAM",
     "FACE",
     "FACE+WIFI",
@@ -14142,6 +14148,11 @@
     "aged": 2250,
     "support": "measured"
    },
+   "chargerNo": {
+    "base": 150,
+    "aged": 150,
+    "support": "measured"
+   },
    "eSimDualPct": null,
    "floor": null,
    "classes": {
@@ -14519,12 +14530,7 @@
     "FMIN",
     "SCREEN",
     "WIFI"
-   ],
-   "chargerNo": {
-    "base": 150,
-    "aged": 150,
-    "support": "measured"
-   }
+   ]
   },
   "iPhone 7 Plus": {
    "modelKey": "iPhone 7 Plus",
@@ -14938,8 +14944,13 @@
    },
    "age": null,
    "boxNo": {
-    "base": 50.05750903340134,
+    "base": 50.144110086881994,
     "aged": 2250,
+    "support": "measured"
+   },
+   "chargerNo": {
+    "base": 150,
+    "aged": 150,
     "support": "measured"
    },
    "eSimDualPct": null,
@@ -15033,10 +15044,11 @@
    "scrap": 1200,
    "extremeFaultCount": 10,
    "evidence": {
-    "shapes": 30,
-    "measurements": 90,
+    "shapes": 34,
+    "measurements": 94,
     "dates": [
-     "2026-10-26"
+     "2026-10-26",
+     "2026-10-28"
     ],
     "medianReference": 5850
    },
@@ -15044,25 +15056,25 @@
    "codes": {
     "C01": {
      "kind": "fixed",
-     "value": 589.9990473398337,
+     "value": 589.998042750231,
      "support": "inferred",
      "n": 1
     },
     "C02": {
      "kind": "fixed",
-     "value": 340.23931320866245,
-     "support": "inferred",
-     "n": 1
+     "value": 0,
+     "support": "measured",
+     "n": 3
     },
     "C03": {
      "kind": "fixed",
-     "value": 551.5261604784819,
+     "value": 550.663463238116,
      "support": "inferred",
      "n": 1
     },
     "C04": {
      "kind": "fixed",
-     "value": 295.4611817664273,
+     "value": 340.0699838314975,
      "support": "inferred",
      "n": 1
     },
@@ -15095,9 +15107,9 @@
     },
     "F06": {
      "kind": "fixed",
-     "value": 200.1969140625003,
+     "value": 200,
      "support": "measured",
-     "n": 4
+     "n": 6
     },
     "F10": {
      "kind": "fixed",
@@ -15162,65 +15174,65 @@
     },
     "S04": {
      "kind": "fixed",
-     "value": 400.16114062499906,
-     "support": "inferred",
-     "n": 1
+     "value": 410,
+     "support": "measured",
+     "n": 3
     },
     "D01": {
      "kind": "fixed",
-     "value": 2717.705562622875,
+     "value": 2741.745387895355,
      "support": "inferred",
      "n": 0,
-     "basis": "own S03 x template ratio"
+     "basis": "own S03/S04 x template ratio"
     },
     "D02": {
      "kind": "fixed",
-     "value": 1918.3740025442348,
+     "value": 1935.3432344075732,
      "support": "inferred",
      "n": 0,
-     "basis": "own S03 x template ratio"
+     "basis": "own S03/S04 x template ratio"
     },
     "D03": {
      "kind": "fixed",
-     "value": 639.4489418295362,
+     "value": 645.1052723178981,
      "support": "inferred",
      "n": 0,
-     "basis": "own S03 x template ratio"
+     "basis": "own S03/S04 x template ratio"
     },
     "D04": {
      "kind": "fixed",
-     "value": 2717.705562622875,
+     "value": 2741.745387895355,
      "support": "inferred",
      "n": 0,
-     "basis": "own S03 x template ratio"
+     "basis": "own S03/S04 x template ratio"
     },
     "D05": {
      "kind": "fixed",
-     "value": 1598.6631201572798,
+     "value": 1612.8043069755636,
      "support": "inferred",
      "n": 0,
-     "basis": "own S03 x template ratio"
+     "basis": "own S03/S04 x template ratio"
     },
     "D06": {
      "kind": "fixed",
-     "value": 1758.5185613507574,
+     "value": 1774.0737706915684,
      "support": "inferred",
      "n": 0,
-     "basis": "own S03 x template ratio"
+     "basis": "own S03/S04 x template ratio"
     },
     "D07": {
      "kind": "fixed",
-     "value": 639.4489418295362,
+     "value": 645.1052723178981,
      "support": "inferred",
      "n": 0,
-     "basis": "own S03 x template ratio"
+     "basis": "own S03/S04 x template ratio"
     },
     "S02": {
      "kind": "fixed",
-     "value": 1342.8726726032148,
+     "value": 1354.7512310668528,
      "support": "inferred",
      "n": 0,
-     "basis": "own S03 x template ratio"
+     "basis": "own S03/S04 x template ratio"
     },
     "P01": {
      "kind": "fixed",
@@ -15315,16 +15327,13 @@
     "BATT+FMIN+SCREEN",
     "BATT+SCREEN",
     "BODY",
+    "BODY+BOX+CAM+FMIN+SCREEN",
+    "BODY+CAM+FMIN+SCREEN",
     "CAM",
     "FMIN",
     "SCREEN",
     "WIFI"
-   ],
-   "chargerNo": {
-    "base": 150,
-    "aged": 150,
-    "support": "measured"
-   }
+   ]
   },
   "iPhone 8 Plus": {
    "modelKey": "iPhone 8 Plus",
@@ -15345,6 +15354,11 @@
    "boxNo": {
     "base": 49.484064253935266,
     "aged": 2250,
+    "support": "measured"
+   },
+   "chargerNo": {
+    "base": 150,
+    "aged": 150,
     "support": "measured"
    },
    "eSimDualPct": null,
@@ -15724,12 +15738,7 @@
     "FMIN",
     "SCREEN",
     "WIFI"
-   ],
-   "chargerNo": {
-    "base": 150,
-    "aged": 150,
-    "support": "measured"
-   }
+   ]
   },
   "iPhone Air": {
    "modelKey": "iPhone Air",

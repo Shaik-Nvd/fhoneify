@@ -110,3 +110,21 @@ session, no order placed). C = Fhoneify final - min(R x tier, 2000); Cashify = b
 Finding fixed afterwards: the INR 400 / 150 "clean offset" of the iPhone 11 / 11 Pro Max / 7 / 8 / 8 Plus is Cashify's original-charger answer
 (iPhone 11 Pro Max, same faults: charger yes 17,660, no 17,260). It is now a missing-charger deduction, so a customer who has the charger is no
 longer under-paid by it. The INR 20 gap on the iPhone 6S is the same question at a smaller amount and is not modelled.
+
+### Closing the remaining gaps (follow-up live quotes, 28-29 Oct)
+
+Single-condition Cashify quotes on the same three phones (`data/pricing-evidence/live-check-2026-10-28.jsonl`, written by
+`scripts/pricing-evidence/live-check-2026-10-28.py`) located each gap:
+
+| Variant | Single condition (box, charger where asked) | Cashify deduction | Rules before | Now |
+|---|---|---:|---:|---:|
+| iPhone 8 256 GB | speaker | 200 | 200 | 200 |
+| iPhone 8 256 GB | 1-2 screen scratches | 410 | 400 (inferred) | 410 |
+| iPhone 8 256 GB | 1-2 body scratches | 0 | 340 (inferred) | 0 |
+| iPhone 11 Pro Max 256 GB | 1-2 minor dents | 680 | 460 (inferred) | 680 |
+| iPhone 14 Pro 512 GB | Face ID | 12,000 from the 46,500 flawless quote | 12,000 | 12,000 |
+
+The iPhone 14 Pro gap is not a deduction error: Cashify's flawless quote for that variant is INR 46,500 today while its public Get Upto (the
+stored reference) still shows INR 46,100; at 46,500 the rules give Cashify's 33,300 exactly. It closes when the reference refresh picks up the
+new price. These live quotes are added to the fit (11 rows; the 6S INR 20 row is documented only) and asserted in pricing.apple-reference-rules
+(all within INR 20). The charger amounts of the iPhone 11/7/8 families are now fixed deductions, not fitted ones.
