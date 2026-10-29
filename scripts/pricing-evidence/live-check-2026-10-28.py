@@ -26,6 +26,20 @@ ROWS = [
     ('iPhone 8', 256, 6150, 6150, dict(codes=['C02'], box='yes', charger='yes')),
     ('iPhone 14 Pro', 512, 46500, 34500, dict(codes=['F08'], box='yes', charger='not_asked', esim='Single eSIM')),
     ('iPhone 14 Pro', 512, 46500, 46500, dict(codes=[], box='yes', charger='not_asked', esim='Single eSIM')),
+    # second random draw, seed 43871 (29 Oct); iPhone 17 / 17 Pro references are Cashify's Get Upto that day (17 Pro flawless confirmed)
+    ('iPhone XS Max', 256, 12640, 11940, dict(codes=['F03'], box='no', charger='no', date='2026-10-29')),
+    ('iPhone 17', 512, 68500, 49030, dict(codes=['C02', 'F02', 'S03'], box='yes', charger='not_asked', warranty='yes', bill='yes', age='Below 3 months', esim='Single eSIM', date='2026-10-29')),
+    ('iPhone 14 Plus', 512, 31270, 21890, dict(codes=['C04', 'F08', 'F13'], box='yes', charger='not_asked', date='2026-10-29')),
+    ('iPhone 7', 256, 4730, 3050, dict(codes=['C02', 'F06', 'F13', 'S03'], box='no', charger='no', date='2026-10-29')),
+    ('iPhone 17 Pro', 256, 101500, 90820, dict(codes=['F13', 'F18', 'S03'], box='yes', charger='not_asked', warranty='yes', bill='yes', age='Below 3 months', esim='Single eSIM', date='2026-10-29')),
+    # isolating follow-ups, 29 Oct
+    ('iPhone 17 Pro', 256, 101500, 101500, dict(codes=[], box='yes', charger='not_asked', warranty='yes', bill='yes', age='Below 3 months', esim='Single eSIM', date='2026-10-29')),
+    ('iPhone 17 Pro', 256, 101500, 92680, dict(codes=['S03'], box='yes', charger='not_asked', warranty='yes', bill='yes', age='Below 3 months', esim='Single eSIM', date='2026-10-29')),
+    ('iPhone 17 Pro', 256, 101500, 100240, dict(codes=['F18'], box='yes', charger='not_asked', warranty='yes', bill='yes', age='Below 3 months', esim='Single eSIM', date='2026-10-29')),
+    ('iPhone 7', 256, 4730, 4730, dict(codes=['C02'], box='yes', charger='yes', date='2026-10-29')),
+    ('iPhone 14 Plus', 512, 31270, 30390, dict(codes=['C04'], box='yes', charger='not_asked', date='2026-10-29')),
+    ('iPhone XS Max', 256, 12640, 12340, dict(codes=['F03'], box='yes', charger='yes', date='2026-10-29')),
+    ('iPhone 17 Pro', 256, 101500, 100900, dict(codes=['F13'], box='yes', charger='not_asked', warranty='yes', bill='yes', age='Below 3 months', esim='Single eSIM', date='2026-10-29')),
 ]
 
 def inp(v, basis='explicit'):
@@ -44,7 +58,7 @@ for i, (model, gb, ref, base, a) in enumerate(ROWS):
         'measurement_id': hashlib.sha1(f'live-2026-10-28:{i}:{key}'.encode()).hexdigest()[:12], 'obs_id': f'live-2026-10-28-{i:02d}',
         'archive': 'live-check-2026-10-28', 'member': 'cashify.in quote page', 'case_id': str(i), 'family': 'new_live_check',
         'model_key': model, 'model_label': None, 'storage': f'{gb}GB', 'storage_gb': gb, 'ram_gb': None,
-        'observed_date': '2026-10-28', 'date_basis': 'recorded_live', 'variant_get_upto': ref, 'get_upto_basis': 'live_flawless_quote_same_day',
+        'observed_date': a.get('date', '2026-10-28'), 'date_basis': 'recorded_live', 'variant_get_upto': ref, 'get_upto_basis': 'live_flawless_quote_same_day',
         'outcome': 'NUMERIC_QUOTE', 'selling': base - 20, 'base': base, 'payout': None, 'processing_fee': None, 'imei_fee': 20,
         'inputs': {'calls': inp('yes'), 'touch': inp('yes'), 'original_screen': inp('yes'), 'warranty': inp(a.get('warranty', 'not_asked')),
                    'bill': inp(a.get('bill', 'not_asked')), 'box': inp(a['box']), 'charger': inp(a['charger']), 'esim': inp(a.get('esim', 'not_asked')),

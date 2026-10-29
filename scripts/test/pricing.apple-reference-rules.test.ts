@@ -115,6 +115,17 @@ async function run() {
       ['iPhone 8', 256, 6150, { ...withCharger, hardware: ['speaker'] }, 5950],
       ['iPhone 8', 256, 6150, { ...withCharger, screenCondition: '1-2 scratches on screen' }, 5740],
       ['iPhone 8', 256, 6150, { ...withCharger, bodyScratches: '1-2 scratches' }, 6150],
+      // second random draw (seed 43871, 29 Oct), at Cashify's flawless quote that day
+      ['iPhone XS Max', 256, 12640, { ...clean, accessories: [], box: false, charger: false, hardware: ['volume'] }, 11940],
+      ['iPhone XS Max', 256, 12640, { ...withCharger, hardware: ['volume'] }, 12340],
+      ['iPhone 17', 512, 68500, { ...clean, hardware: ['back_camera'], screenCondition: 'More than 2 scratches on screen', bodyScratches: '1-2 scratches' }, 49030],
+      ['iPhone 14 Plus', 512, 31270, { ...clean, hardware: ['face', 'microphone'], bodyDents: '1-2 minor dents' }, 21890],
+      ['iPhone 14 Plus', 512, 31270, { ...clean, bodyDents: '1-2 minor dents' }, 30390],
+      ['iPhone 7', 256, 4730, { ...clean, accessories: [], box: false, charger: false, hardware: ['speaker', 'microphone'], screenCondition: 'More than 2 scratches on screen', bodyScratches: '1-2 scratches' }, 3050],
+      ['iPhone 7', 256, 4730, { ...withCharger, bodyScratches: '1-2 scratches' }, 4730],
+      ['iPhone 17 Pro', 256, 101500, { ...clean, hardware: ['microphone', 'battery_health'], screenCondition: 'More than 2 scratches on screen' }, 90820],
+      ['iPhone 17 Pro', 256, 101500, { ...clean, screenCondition: 'More than 2 scratches on screen' }, 92680],
+      ['iPhone 17 Pro', 256, 101500, { ...clean, hardware: ['battery_health'] }, 100240],
     ];
     for (const [model, gb, R, d, cashify] of live) {
       const got = price(model, gb, R, d);

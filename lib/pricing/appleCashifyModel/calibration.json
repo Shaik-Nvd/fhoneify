@@ -1,6 +1,6 @@
 {
  "version": "apple-cashify-calibration/1",
- "generatedFrom": "data/pricing-evidence/measurements.jsonl (6916 usable measurements)",
+ "generatedFrom": "data/pricing-evidence/measurements.jsonl (6928 usable measurements)",
  "models": {
   "iPhone 11": {
    "modelKey": "iPhone 11",
@@ -136,13 +136,13 @@
     },
     "C02": {
      "kind": "fixed",
-     "value": 500.00340931531423,
+     "value": 500.0034093153141,
      "support": "inferred",
      "n": 1
     },
     "C03": {
      "kind": "fixed",
-     "value": 634.4294638589666,
+     "value": 634.4294638589665,
      "support": "inferred",
      "n": 1
     },
@@ -168,7 +168,7 @@
     },
     "F05": {
      "kind": "pct",
-     "value": 0.39395988714695035,
+     "value": 0.3939598871469502,
      "support": "inferred",
      "n": 1
     },
@@ -180,7 +180,7 @@
     },
     "F08": {
      "kind": "pct",
-     "value": 0.2623882238338698,
+     "value": 0.26240115025161753,
      "support": "measured",
      "n": 8,
      "decided": true
@@ -352,10 +352,10 @@
     },
     "F03": {
      "kind": "fixed",
-     "value": 262.4174639536451,
+     "value": 321.7424826522745,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone SE 2022, iPhone 14, iPhone 13 Pro Max"
+     "basis": "siblings iPhone SE 2022, iPhone XS Max, iPhone 14"
     },
     "F07": {
      "kind": "fixed",
@@ -427,12 +427,12 @@
    },
    "age": null,
    "boxNo": {
-    "base": 202.07344540839372,
+    "base": 199.5316149735632,
     "aged": 2250,
     "support": "measured"
    },
    "chargerNo": {
-    "base": 386.2125103217764,
+    "base": 387.6745235030625,
     "aged": 300,
     "support": "measured"
    },
@@ -538,170 +538,170 @@
    "codes": {
     "C01": {
      "kind": "fixed",
-     "value": 823.787151544802,
+     "value": 822.3205044149154,
      "support": "inferred",
      "n": 1
     },
     "C02": {
      "kind": "fixed",
-     "value": 614.2462829701751,
+     "value": 612.671746279383,
      "support": "inferred",
      "n": 1
     },
     "C03": {
      "kind": "fixed",
-     "value": 755.8744930885047,
+     "value": 756.2713163539531,
      "support": "inferred",
      "n": 1
     },
     "C04": {
      "kind": "fixed",
-     "value": 404.9337764889967,
+     "value": 405.14636091266067,
      "support": "inferred",
      "n": 1
     },
     "F01": {
      "kind": "fixed",
-     "value": 1508.1557083599566,
+     "value": 1512.273764345212,
      "support": "inferred",
      "n": 2
     },
     "F02": {
      "kind": "fixed",
-     "value": 2507.137338103937,
+     "value": 2512.333333505768,
      "support": "inferred",
      "n": 2
     },
     "F05": {
      "kind": "pct",
-     "value": 0.39375017875525914,
+     "value": 0.3936638207642099,
      "support": "inferred",
      "n": 1
     },
     "F06": {
      "kind": "fixed",
-     "value": 112.51281738281236,
+     "value": 400.64941406249915,
      "support": "measured",
      "n": 4
     },
     "F08": {
      "kind": "pct",
-     "value": 0.24532355695000654,
+     "value": 0.2623603554612117,
      "support": "measured",
      "n": 8
     },
     "F10": {
      "kind": "fixed",
-     "value": 1263.789963506883,
+     "value": 1262.3200714670636,
      "support": "inferred",
      "n": 1
     },
     "F13": {
      "kind": "fixed",
-     "value": 414.1060531852611,
+     "value": 412.3822665672553,
      "support": "inferred",
      "n": 1
     },
     "F14": {
      "kind": "pct",
-     "value": 0.2999999999552971,
+     "value": 0.29999267582595374,
      "support": "inferred",
      "n": 1
     },
     "F17": {
      "kind": "fixed",
-     "value": 2292.3313819332484,
+     "value": 2012.3108947520823,
      "support": "measured",
      "n": 8
     },
     "F18": {
      "kind": "fixed",
-     "value": 901.3214407371919,
+     "value": 612.0890194860373,
      "support": "measured",
      "n": 8
     },
     "Q02": {
      "kind": "fixed",
-     "value": 7822.417646073248,
+     "value": 8109.9609375,
      "support": "inferred",
      "n": 1
     },
     "Q03": {
      "kind": "fixed",
-     "value": 5712.405749639929,
+     "value": 6000,
      "support": "measured",
      "n": 3
     },
     "S01": {
      "kind": "fixed",
-     "value": 5963.655437707901,
+     "value": 5962.493271589279,
      "support": "inferred",
      "n": 1
     },
     "S03": {
      "kind": "fixed",
-     "value": 2950.9328695133663,
+     "value": 2952.3242754941857,
      "support": "measured",
      "n": 5
     },
     "S04": {
      "kind": "fixed",
-     "value": 972.6236688770432,
+     "value": 1260.1625473298764,
      "support": "inferred",
      "n": 1
     },
     "D01": {
      "kind": "fixed",
-     "value": 8531.666674896976,
+     "value": 8535.689474656487,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D02": {
      "kind": "fixed",
-     "value": 6022.332872476278,
+     "value": 6025.17248637052,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D03": {
      "kind": "fixed",
-     "value": 2007.4158519365096,
+     "value": 2008.3623764919248,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D04": {
      "kind": "fixed",
-     "value": 8531.666674896976,
+     "value": 8535.689474656487,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D05": {
      "kind": "fixed",
-     "value": 5018.667604841397,
+     "value": 5021.033976571932,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D06": {
      "kind": "fixed",
-     "value": 5520.500238658838,
+     "value": 5523.103231471226,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D07": {
      "kind": "fixed",
-     "value": 2007.4158519365096,
+     "value": 2008.3623764919248,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "S02": {
      "kind": "fixed",
-     "value": 4215.667137400094,
+     "value": 4217.654883217263,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
@@ -743,17 +743,17 @@
     },
     "F11": {
      "kind": "fixed",
-     "value": 112.51281738281234,
+     "value": 400.64941406249915,
      "support": "inferred",
      "n": 0,
      "basis": "own F06 x template ratio"
     },
     "F03": {
      "kind": "fixed",
-     "value": 320.7114944077618,
+     "value": 393.21511179645336,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone SE 2022, iPhone 14, iPhone 13 Pro Max"
+     "basis": "siblings iPhone SE 2022, iPhone XS Max, iPhone 14"
     },
     "F07": {
      "kind": "fixed",
@@ -937,7 +937,7 @@
    "codes": {
     "C01": {
      "kind": "fixed",
-     "value": 920.0002440065153,
+     "value": 920.0002440065152,
      "support": "inferred",
      "n": 1
     },
@@ -949,7 +949,7 @@
     },
     "C03": {
      "kind": "fixed",
-     "value": 858.6647477388462,
+     "value": 858.6647477388458,
      "support": "inferred",
      "n": 1
     },
@@ -987,7 +987,7 @@
     },
     "F08": {
      "kind": "pct",
-     "value": 0.26253472335310607,
+     "value": 0.26254002134471716,
      "support": "measured",
      "n": 8,
      "decided": true
@@ -1021,7 +1021,7 @@
     },
     "F18": {
      "kind": "fixed",
-     "value": 719.999560546875,
+     "value": 720,
      "support": "measured",
      "n": 8,
      "decided": true
@@ -1055,7 +1055,7 @@
     },
     "S04": {
      "kind": "fixed",
-     "value": 1509.9813236755365,
+     "value": 1510.4228644866937,
      "support": "inferred",
      "n": 1
     },
@@ -1159,10 +1159,10 @@
     },
     "F03": {
      "kind": "fixed",
-     "value": 353.5372591294974,
+     "value": 433.461835003855,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone SE 2022, iPhone 14, iPhone 13 Pro Max"
+     "basis": "siblings iPhone SE 2022, iPhone XS Max, iPhone 14"
     },
     "F07": {
      "kind": "fixed",
@@ -1341,25 +1341,25 @@
    "codes": {
     "C01": {
      "kind": "fixed",
-     "value": 809.996092396955,
+     "value": 809.9960923969546,
      "support": "inferred",
      "n": 1
     },
     "C02": {
      "kind": "fixed",
-     "value": 600.2547859801823,
+     "value": 600.2547859801821,
      "support": "inferred",
      "n": 1
     },
     "C03": {
      "kind": "fixed",
-     "value": 755.9944629129444,
+     "value": 755.994462912944,
      "support": "inferred",
      "n": 1
     },
     "C04": {
      "kind": "fixed",
-     "value": 404.9980461984775,
+     "value": 404.9980461984773,
      "support": "inferred",
      "n": 1
     },
@@ -1391,7 +1391,7 @@
     },
     "F08": {
      "kind": "pct",
-     "value": 0.2617553010189438,
+     "value": 0.2617680826636051,
      "support": "measured",
      "n": 8,
      "decided": true
@@ -1563,10 +1563,10 @@
     },
     "F03": {
      "kind": "fixed",
-     "value": 328.6349548578359,
+     "value": 402.9298380878951,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone SE 2022, iPhone 14, iPhone 13 Pro Max"
+     "basis": "siblings iPhone SE 2022, iPhone XS Max, iPhone 14"
     },
     "F07": {
      "kind": "fixed",
@@ -2041,7 +2041,7 @@
    },
    "age": null,
    "boxNo": {
-    "base": 799.7147154786902,
+    "base": 799.9204586658427,
     "aged": 2250,
     "support": "measured"
    },
@@ -2259,7 +2259,7 @@
     },
     "S03": {
      "kind": "fixed",
-     "value": 4269.984375,
+     "value": 4260,
      "support": "measured",
      "n": 5,
      "decided": true
@@ -2272,56 +2272,56 @@
     },
     "D01": {
      "kind": "fixed",
-     "value": 12345.276902393893,
+     "value": 12316.410315716432,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D02": {
      "kind": "fixed",
-     "value": 8714.2840598618,
+     "value": 8693.907713657914,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D03": {
      "kind": "fixed",
-     "value": 2904.720202364259,
+     "value": 2897.9281831849194,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D04": {
      "kind": "fixed",
-     "value": 12345.276902393893,
+     "value": 12316.410315716432,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D05": {
      "kind": "fixed",
-     "value": 7261.985685064184,
+     "value": 7245.005204117034,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D06": {
      "kind": "fixed",
-     "value": 7988.134872462992,
+     "value": 7969.456458887474,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D07": {
      "kind": "fixed",
-     "value": 2904.720202364259,
+     "value": 2897.9281831849194,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "S02": {
      "kind": "fixed",
-     "value": 6100.04822301087,
+     "value": 6085.784665201803,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
@@ -2848,7 +2848,7 @@
    },
    "age": null,
    "boxNo": {
-    "base": 1000.2366664875482,
+    "base": 999.794305748362,
     "aged": 2250,
     "support": "measured"
    },
@@ -2954,25 +2954,25 @@
    "codes": {
     "C01": {
      "kind": "fixed",
-     "value": 809.9960923969545,
+     "value": 809.996092396955,
      "support": "inferred",
      "n": 1
     },
     "C02": {
      "kind": "fixed",
-     "value": 600.254785980182,
+     "value": 600.2547859801823,
      "support": "inferred",
      "n": 1
     },
     "C03": {
      "kind": "fixed",
-     "value": 755.9944629129436,
+     "value": 755.9944629129444,
      "support": "inferred",
      "n": 1
     },
     "C04": {
      "kind": "fixed",
-     "value": 404.99804619847725,
+     "value": 404.9980461984775,
      "support": "inferred",
      "n": 1
     },
@@ -2992,13 +2992,13 @@
     },
     "F05": {
      "kind": "pct",
-     "value": 0.3879298347830771,
+     "value": 0.38792983478307713,
      "support": "inferred",
      "n": 1
     },
     "F06": {
      "kind": "fixed",
-     "value": 2000.016,
+     "value": 2000.0156948217773,
      "support": "measured",
      "n": 4
     },
@@ -3025,7 +3025,7 @@
     },
     "F14": {
      "kind": "pct",
-     "value": 0.29999633789062535,
+     "value": 0.29999633789062574,
      "support": "inferred",
      "n": 1
     },
@@ -3065,7 +3065,7 @@
     },
     "S03": {
      "kind": "fixed",
-     "value": 3357.8515625,
+     "value": 3350,
      "support": "measured",
      "n": 5,
      "decided": true
@@ -3078,56 +3078,56 @@
     },
     "D01": {
      "kind": "fixed",
-     "value": 9708.140287093789,
+     "value": 9685.440037007054,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D02": {
      "kind": "fixed",
-     "value": 6852.782065853763,
+     "value": 6836.758413322539,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D03": {
      "kind": "fixed",
-     "value": 2284.228328150298,
+     "value": 2278.8871863073896,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D04": {
      "kind": "fixed",
-     "value": 9708.140287093789,
+     "value": 9685.440037007054,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D05": {
      "kind": "fixed",
-     "value": 5710.71644248005,
+     "value": 5697.3632473690295,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D06": {
      "kind": "fixed",
-     "value": 6281.749254166907,
+     "value": 6267.060830345784,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D07": {
      "kind": "fixed",
-     "value": 2284.228328150298,
+     "value": 2278.8871863073896,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "S02": {
      "kind": "fixed",
-     "value": 4796.986278658783,
+     "value": 4785.7696310859255,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
@@ -4065,7 +4065,7 @@
    },
    "age": null,
    "boxNo": {
-    "base": 1199.7768478896742,
+    "base": 1200.5767548350761,
     "aged": 2250,
     "support": "measured"
    },
@@ -4241,7 +4241,7 @@
     },
     "D07": {
      "kind": "fixed",
-     "value": 5999.895000000005,
+     "value": 5999.895000000006,
      "support": "inferred",
      "n": 1
     },
@@ -4295,7 +4295,7 @@
     },
     "F08": {
      "kind": "pct",
-     "value": 0.2602882472826087,
+     "value": 0.26017391304347826,
      "support": "measured",
      "n": 12,
      "decided": true
@@ -4570,10 +4570,11 @@
    "scrap": 1200,
    "extremeFaultCount": 10,
    "evidence": {
-    "shapes": 30,
-    "measurements": 90,
+    "shapes": 32,
+    "measurements": 92,
     "dates": [
-     "2026-10-25"
+     "2026-10-25",
+     "2026-10-29"
     ],
     "medianReference": 30290
    },
@@ -4581,27 +4582,27 @@
    "codes": {
     "C01": {
      "kind": "fixed",
-     "value": 1190.0085449218757,
+     "value": 1189.9940184503791,
      "support": "inferred",
      "n": 1
     },
     "C02": {
      "kind": "fixed",
-     "value": 879.8483249868409,
+     "value": 257.7098646116875,
      "support": "inferred",
      "n": 1
     },
     "C03": {
      "kind": "fixed",
-     "value": 1110.671865240477,
+     "value": 1110.6583072343085,
      "support": "inferred",
      "n": 1
     },
     "C04": {
      "kind": "fixed",
-     "value": 595.0042724609378,
-     "support": "inferred",
-     "n": 1
+     "value": 880,
+     "support": "measured",
+     "n": 3
     },
     "F01": {
      "kind": "fixed",
@@ -4633,7 +4634,7 @@
      "kind": "pct",
      "value": 0.2594915813799934,
      "support": "measured",
-     "n": 8,
+     "n": 9,
      "decided": true
     },
     "F10": {
@@ -4854,6 +4855,7 @@
     "BATT+FMIN",
     "BATT+SCREEN",
     "BODY",
+    "BODY+FACE+FMIN",
     "CAM",
     "FACE",
     "FMIN",
@@ -5151,7 +5153,7 @@
     },
     "F14": {
      "kind": "pct",
-     "value": 0.3872172903136597,
+     "value": 0.3871983665872247,
      "support": "measured",
      "n": 4,
      "decided": true
@@ -6159,7 +6161,7 @@
    },
    "boxNo": {
     "base": 1950.0423529184293,
-    "aged": 1300.6650606815958,
+    "aged": 1300.1397754675643,
     "support": "measured"
    },
    "eSimDualPct": null,
@@ -6285,49 +6287,49 @@
    "codes": {
     "C02": {
      "kind": "fixed",
-     "value": 1895.0043945922914,
+     "value": 1895.0043945922885,
      "support": "inferred",
      "n": 2
     },
     "C04": {
      "kind": "fixed",
-     "value": 2420.010495185844,
+     "value": 2420.0104951858457,
      "support": "inferred",
      "n": 2
     },
     "D01": {
      "kind": "fixed",
-     "value": 18700.103756979097,
+     "value": 18700.10375976561,
      "support": "inferred",
      "n": 1
     },
     "D03": {
      "kind": "fixed",
-     "value": 4399.251366433794,
+     "value": 4396.674854976831,
      "support": "inferred",
      "n": 2
     },
     "D04": {
      "kind": "fixed",
-     "value": 18700.103756979097,
+     "value": 18700.10375976561,
      "support": "inferred",
      "n": 1
     },
     "D05": {
      "kind": "fixed",
-     "value": 3300.0447102016155,
+     "value": 3300.044710693368,
      "support": "inferred",
      "n": 1
     },
     "D06": {
      "kind": "fixed",
-     "value": 12100.089136990886,
+     "value": 12100.08913879395,
      "support": "inferred",
      "n": 1
     },
     "D07": {
      "kind": "fixed",
-     "value": 4337.64347012002,
+     "value": 4337.643470766381,
      "support": "inferred",
      "n": 1
     },
@@ -6351,25 +6353,25 @@
     },
     "F05": {
      "kind": "pct",
-     "value": 0.33071454180179843,
+     "value": 0.33164873203236483,
      "support": "measured",
      "n": 7
     },
     "F06": {
      "kind": "fixed",
-     "value": 1456.5035798657725,
+     "value": 1456.5035798657723,
      "support": "measured",
      "n": 5
     },
     "F07": {
      "kind": "fixed",
-     "value": 850.1349192620482,
+     "value": 850.1349192620503,
      "support": "inferred",
      "n": 1
     },
     "F08": {
      "kind": "pct",
-     "value": 0.19500455872593114,
+     "value": 0.19407419586181643,
      "support": "measured",
      "n": 19
     },
@@ -6381,7 +6383,7 @@
     },
     "F11": {
      "kind": "fixed",
-     "value": 2744.2295644678184,
+     "value": 2744.2295644678147,
      "support": "inferred",
      "n": 1
     },
@@ -6393,13 +6395,13 @@
     },
     "F13": {
      "kind": "fixed",
-     "value": 999.2631262783577,
+     "value": 999.2631262783575,
      "support": "inferred",
      "n": 1
     },
     "F14": {
      "kind": "pct",
-     "value": 0.3307120161599541,
+     "value": 0.33164619925618083,
      "support": "inferred",
      "n": 2
     },
@@ -6411,19 +6413,19 @@
     },
     "F17": {
      "kind": "fixed",
-     "value": 4142.645584772842,
+     "value": 4187.753981256287,
      "support": "measured",
      "n": 16
     },
     "F18": {
      "kind": "fixed",
-     "value": 1719.5731861825777,
+     "value": 1720.3711578742245,
      "support": "measured",
      "n": 8
     },
     "P01": {
      "kind": "fixed",
-     "value": 50.00122070312446,
+     "value": 50.00122070312473,
      "support": "inferred",
      "n": 2
     },
@@ -6435,7 +6437,7 @@
     },
     "P04": {
      "kind": "fixed",
-     "value": 12301.177756443225,
+     "value": 12302.979950771965,
      "support": "inferred",
      "n": 1
     },
@@ -6447,7 +6449,7 @@
     },
     "Q03": {
      "kind": "fixed",
-     "value": 10999.269630553374,
+     "value": 11000.351908701123,
      "support": "inferred",
      "n": 2
     },
@@ -6459,26 +6461,26 @@
     },
     "S03": {
      "kind": "fixed",
-     "value": 6470.242262432293,
+     "value": 6470.242263396446,
      "support": "measured",
      "n": 3
     },
     "S04": {
      "kind": "fixed",
-     "value": 2070.4837899899962,
+     "value": 2069.6753233753407,
      "support": "measured",
      "n": 3
     },
     "D02": {
      "kind": "fixed",
-     "value": 11531.861312369132,
+     "value": 11529.936460364726,
      "support": "inferred",
      "n": 0,
      "basis": "own S03/S04 x template ratio"
     },
     "S02": {
      "kind": "fixed",
-     "value": 8072.368266090321,
+     "value": 8071.020858779706,
      "support": "inferred",
      "n": 0,
      "basis": "own S03/S04 x template ratio"
@@ -6506,7 +6508,7 @@
     },
     "F10": {
      "kind": "fixed",
-     "value": 1456.5035798657725,
+     "value": 1456.5035798657723,
      "support": "inferred",
      "n": 0,
      "basis": "own F06 x template ratio"
@@ -6835,7 +6837,7 @@
     },
     "F05": {
      "kind": "pct",
-     "value": 0.31250000000000006,
+     "value": 0.3125,
      "support": "measured",
      "n": 8,
      "decided": true
@@ -7533,15 +7535,15 @@
      "n": 0
     },
     "3": {
-     "a": 1746.8686506350095,
-     "b": 0.1563102465675053,
+     "a": 1746.8688951673696,
+     "b": 0.15631024190866555,
      "support": "inferred",
      "n": 0
     }
    },
    "boxNo": {
-    "base": 2250.332489832982,
-    "aged": 1512.3592854904566,
+    "base": 2249.84166109865,
+    "aged": 1519.6783225867177,
     "support": "measured"
    },
    "eSimDualPct": null,
@@ -7773,7 +7775,7 @@
     },
     "F05": {
      "kind": "pct",
-     "value": 0.3124923706054688,
+     "value": 0.3125,
      "support": "measured",
      "n": 8,
      "decided": true
@@ -7794,7 +7796,7 @@
     },
     "F08": {
      "kind": "pct",
-     "value": 0.2083433608953621,
+     "value": 0.20833333333333334,
      "support": "measured",
      "n": 20,
      "decided": true
@@ -7857,14 +7859,14 @@
     },
     "F17": {
      "kind": "fixed",
-     "value": 4007.0298723878927,
+     "value": 4000,
      "support": "measured",
      "n": 17,
      "decided": true
     },
     "F18": {
      "kind": "fixed",
-     "value": 1206.5536960820866,
+     "value": 1200,
      "support": "measured",
      "n": 9,
      "decided": true
@@ -7885,7 +7887,7 @@
     },
     "P03": {
      "kind": "fixed",
-     "value": 3250.142348897424,
+     "value": 3250.3717881249986,
      "support": "measured",
      "n": 3,
      "decided": true
@@ -7899,7 +7901,7 @@
     },
     "Q02": {
      "kind": "fixed",
-     "value": 25999.973209386222,
+     "value": 25999.872121462337,
      "support": "measured",
      "n": 7,
      "decided": true
@@ -8008,15 +8010,15 @@
      "n": 0
     },
     "3": {
-     "a": 2045.216093696461,
-     "b": 0.15350415626916222,
+     "a": 2045.216526810976,
+     "b": 0.15350414835236303,
      "support": "inferred",
      "n": 0
     }
    },
    "boxNo": {
-    "base": 2249.867893104514,
-    "aged": 1519.8869787601225,
+    "base": 2249.666528115981,
+    "aged": 1520.7016406445114,
     "support": "measured"
    },
    "eSimDualPct": null,
@@ -8234,7 +8236,7 @@
     },
     "F05": {
      "kind": "pct",
-     "value": 0.3124923706054688,
+     "value": 0.3125,
      "support": "measured",
      "n": 8
     },
@@ -8252,7 +8254,7 @@
     },
     "F08": {
      "kind": "pct",
-     "value": 0.20833321019749593,
+     "value": 0.20833333333333334,
      "support": "measured",
      "n": 20
     },
@@ -8306,13 +8308,13 @@
     },
     "F17": {
      "kind": "fixed",
-     "value": 4000.7607962214065,
+     "value": 4000,
      "support": "measured",
      "n": 17
     },
     "F18": {
      "kind": "fixed",
-     "value": 1200.8358061131357,
+     "value": 1200,
      "support": "measured",
      "n": 9
     },
@@ -8330,7 +8332,7 @@
     },
     "P03": {
      "kind": "fixed",
-     "value": 3510.078982786375,
+     "value": 3509.6411611773688,
      "support": "measured",
      "n": 3
     },
@@ -8342,7 +8344,7 @@
     },
     "Q02": {
      "kind": "fixed",
-     "value": 27000.12373297469,
+     "value": 26999.994428422473,
      "support": "measured",
      "n": 7
     },
@@ -8447,15 +8449,15 @@
      "n": 0
     },
     "3": {
-     "a": 2083.3583576961937,
-     "b": 0.1651520472541741,
+     "a": 2083.358358131022,
+     "b": 0.16515204724854393,
      "support": "inferred",
      "n": 0
     }
    },
    "boxNo": {
     "base": 2250,
-    "aged": 1506.8102642305523,
+    "aged": 1513.8568692340825,
     "support": "measured"
    },
    "eSimDualPct": 0.049980736183470716,
@@ -8690,7 +8692,7 @@
     },
     "F05": {
      "kind": "pct",
-     "value": 0.3092670431960202,
+     "value": 0.3092821492876386,
      "support": "measured",
      "n": 8,
      "decided": true
@@ -8711,7 +8713,7 @@
     },
     "F08": {
      "kind": "pct",
-     "value": 0.20620035602697273,
+     "value": 0.20619028912485746,
      "support": "measured",
      "n": 7,
      "decided": true
@@ -8753,7 +8755,7 @@
     },
     "F14": {
      "kind": "pct",
-     "value": 0.30925194890200364,
+     "value": 0.30925194742730344,
      "support": "measured",
      "n": 4,
      "decided": true
@@ -8916,8 +8918,8 @@
      "n": 0
     },
     "3": {
-     "a": 2414.898068173514,
-     "b": 0.16376903719335095,
+     "a": 2414.8980294004023,
+     "b": 0.16376903752520022,
      "support": "inferred",
      "n": 0
     }
@@ -9155,7 +9157,7 @@
     },
     "F05": {
      "kind": "pct",
-     "value": 0.3092783497780869,
+     "value": 0.30927835051546393,
      "support": "measured",
      "n": 8,
      "decided": true
@@ -9391,15 +9393,15 @@
      "n": 0
     },
     "3": {
-     "a": 1730.3005983049702,
-     "b": 0.16547438639616782,
+     "a": 1730.3009329793654,
+     "b": 0.1654743777090198,
      "support": "inferred",
      "n": 0
     }
    },
    "boxNo": {
-    "base": 2250.554324176703,
-    "aged": 1501.261242970648,
+    "base": 2250.1139095643266,
+    "aged": 1508.0354158814473,
     "support": "measured"
    },
    "eSimDualPct": null,
@@ -9630,7 +9632,7 @@
     },
     "F05": {
      "kind": "pct",
-     "value": 0.3093176540564598,
+     "value": 0.30931771894093685,
      "support": "measured",
      "n": 8,
      "decided": true
@@ -9651,7 +9653,7 @@
     },
     "F08": {
      "kind": "pct",
-     "value": 0.20621179788046548,
+     "value": 0.20621181262729124,
      "support": "measured",
      "n": 20,
      "decided": true
@@ -9714,14 +9716,14 @@
     },
     "F17": {
      "kind": "fixed",
-     "value": 3005.276069752544,
+     "value": 3000,
      "support": "measured",
      "n": 17,
      "decided": true
     },
     "F18": {
      "kind": "fixed",
-     "value": 904.9301203264296,
+     "value": 900,
      "support": "measured",
      "n": 9,
      "decided": true
@@ -9749,14 +9751,14 @@
     },
     "P04": {
      "kind": "fixed",
-     "value": 4995.118522532284,
+     "value": 5000,
      "support": "measured",
      "n": 3,
      "decided": true
     },
     "Q02": {
      "kind": "pct",
-     "value": 0.511705128817159,
+     "value": 0.5117113846848017,
      "support": "measured",
      "n": 7,
      "decided": true
@@ -9969,11 +9971,12 @@
    "scrap": 1200,
    "extremeFaultCount": 10,
    "evidence": {
-    "shapes": 58,
-    "measurements": 106,
+    "shapes": 59,
+    "measurements": 107,
     "dates": [
      "2026-10-16",
-     "2026-10-24"
+     "2026-10-24",
+     "2026-10-29"
     ],
     "medianReference": 67700
    },
@@ -9994,8 +9997,8 @@
     "C02": {
      "kind": "pct",
      "value": 0.06496919999999999,
-     "support": "inferred",
-     "n": 2
+     "support": "measured",
+     "n": 3
     },
     "C04": {
      "kind": "pct",
@@ -10023,7 +10026,7 @@
     },
     "D05": {
      "kind": "fixed",
-     "value": 15164.9009452167,
+     "value": 15209.01958277023,
      "support": "inferred",
      "n": 1
     },
@@ -10050,7 +10053,7 @@
      "kind": "fixed",
      "value": 6200,
      "support": "measured",
-     "n": 3,
+     "n": 4,
      "decided": true
     },
     "F03": {
@@ -10062,7 +10065,7 @@
     },
     "F05": {
      "kind": "pct",
-     "value": 0.29999267578125005,
+     "value": 0.3,
      "support": "measured",
      "n": 8,
      "decided": true
@@ -10152,25 +10155,25 @@
     },
     "P01": {
      "kind": "pct",
-     "value": 0.13463401303630376,
+     "value": 0.13192366432712838,
      "support": "inferred",
      "n": 2
     },
     "P03": {
      "kind": "pct",
-     "value": 0.13100519143914038,
+     "value": 0.13097640269807062,
      "support": "inferred",
      "n": 1
     },
     "P04": {
      "kind": "pct",
-     "value": 0.22746173756022792,
+     "value": 0.22689055496444036,
      "support": "inferred",
      "n": 1
     },
     "Q02": {
      "kind": "fixed",
-     "value": 29301.564375823975,
+     "value": 29897.98564577343,
      "support": "measured",
      "n": 6
     },
@@ -10182,49 +10185,49 @@
     },
     "S01": {
      "kind": "fixed",
-     "value": 17785.11867799366,
+     "value": 17968.62291780267,
      "support": "inferred",
      "n": 2
     },
     "S03": {
      "kind": "fixed",
      "value": 8819.940000000031,
-     "support": "inferred",
-     "n": 2
+     "support": "measured",
+     "n": 3
     },
     "S04": {
      "kind": "fixed",
-     "value": 3780.1200000000454,
+     "value": 3780.1200000000476,
      "support": "inferred",
      "n": 2
     },
     "D02": {
      "kind": "fixed",
-     "value": 13706.866197183099,
+     "value": 17999.940000000064,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 15 Pro, iPhone 15 Pro Max, iPhone 16 Pro"
+     "basis": "own S03 x template ratio"
     },
     "S02": {
      "kind": "fixed",
-     "value": 9594.80633802817,
+     "value": 12600.060000000045,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 15 Pro, iPhone 15 Pro Max, iPhone 16 Pro"
+     "basis": "own S03 x template ratio"
     },
     "C01": {
-     "kind": "fixed",
-     "value": 3277.7288732394363,
+     "kind": "pct",
+     "value": 0.12,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 15 Pro, iPhone 15 Pro Max, iPhone 16 Pro"
+     "basis": "own C02 x template ratio"
     },
     "C03": {
-     "kind": "fixed",
-     "value": 3694.894366197183,
+     "kind": "pct",
+     "value": 0.1599996,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 15 Pro, iPhone 15 Pro Max, iPhone 16 Pro"
+     "basis": "own C02 x template ratio"
     },
     "P02": {
      "kind": "fixed",
@@ -10267,6 +10270,7 @@
     "BATT+CAM+FACE+FMIN+WIFI",
     "BATT+FACE",
     "BODY",
+    "BODY+CAM+SCREEN",
     "CAM",
     "FACE",
     "FACE+WIFI",
@@ -10417,10 +10421,11 @@
    "scrap": 1200,
    "extremeFaultCount": 10,
    "evidence": {
-    "shapes": 29,
-    "measurements": 90,
+    "shapes": 33,
+    "measurements": 95,
     "dates": [
-     "2026-10-23"
+     "2026-10-23",
+     "2026-10-29"
     ],
     "medianReference": 107500
    },
@@ -10457,25 +10462,25 @@
     },
     "D01": {
      "kind": "fixed",
-     "value": 25500.000000000055,
+     "value": 25500.00000000004,
      "support": "inferred",
      "n": 1
     },
     "D03": {
      "kind": "fixed",
-     "value": 5999.89500000001,
+     "value": 5999.895000000006,
      "support": "inferred",
      "n": 2
     },
     "D04": {
      "kind": "fixed",
-     "value": 25500.000000000055,
+     "value": 25500.00000000004,
      "support": "inferred",
      "n": 1
     },
     "D05": {
      "kind": "fixed",
-     "value": 14994.993005859393,
+     "value": 14994.260828466517,
      "support": "inferred",
      "n": 1
     },
@@ -10487,19 +10492,19 @@
     },
     "D07": {
      "kind": "fixed",
-     "value": 5999.89500000001,
+     "value": 5999.895000000006,
      "support": "inferred",
      "n": 1
     },
     "F01": {
      "kind": "fixed",
-     "value": 3199.8632819652757,
+     "value": 3199.8632824420915,
      "support": "measured",
      "n": 3
     },
     "F02": {
      "kind": "fixed",
-     "value": 6499.920653328302,
+     "value": 6499.9206542968695,
      "support": "inferred",
      "n": 2
     },
@@ -10517,7 +10522,7 @@
     },
     "F06": {
      "kind": "fixed",
-     "value": 2099.754322886472,
+     "value": 2499.989482177734,
      "support": "inferred",
      "n": 1
     },
@@ -10541,21 +10546,21 @@
     },
     "F11": {
      "kind": "fixed",
-     "value": 2500.1725891113265,
+     "value": 2499.989482177734,
      "support": "inferred",
      "n": 1
     },
     "F12": {
      "kind": "fixed",
-     "value": 2800.2392540573705,
+     "value": 2800.239254474638,
      "support": "inferred",
      "n": 1
     },
     "F13": {
      "kind": "fixed",
-     "value": 1000.0810363769529,
-     "support": "inferred",
-     "n": 1
+     "value": 600,
+     "support": "measured",
+     "n": 3
     },
     "F14": {
      "kind": "pct",
@@ -10571,31 +10576,31 @@
     },
     "F17": {
      "kind": "fixed",
-     "value": 4200.461438924216,
+     "value": 4200,
      "support": "measured",
      "n": 3
     },
     "F18": {
      "kind": "fixed",
-     "value": 1560.4057923503644,
-     "support": "inferred",
-     "n": 1
+     "value": 1260,
+     "support": "measured",
+     "n": 3
     },
     "P01": {
      "kind": "pct",
-     "value": 0.13366083286675534,
+     "value": 0.13366246448863653,
      "support": "inferred",
      "n": 2
     },
     "P03": {
      "kind": "pct",
-     "value": 0.13363473233309617,
+     "value": 0.133636363636364,
      "support": "inferred",
      "n": 1
     },
     "P04": {
      "kind": "pct",
-     "value": 0.22999740147116915,
+     "value": 0.23279659835182884,
      "support": "inferred",
      "n": 1
     },
@@ -10617,32 +10622,31 @@
      "support": "inferred",
      "n": 2
     },
+    "S03": {
+     "kind": "fixed",
+     "value": 8820,
+     "support": "measured",
+     "n": 2
+    },
     "S04": {
      "kind": "fixed",
-     "value": 3780.120000000007,
+     "value": 3780.1200000000053,
      "support": "inferred",
      "n": 2
     },
     "D02": {
      "kind": "fixed",
-     "value": 20459.952418715304,
+     "value": 18000.062449404413,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 16 Pro Max, iPhone 18 Pro, iPhone 16 Pro"
+     "basis": "own S03 x template ratio"
     },
     "S02": {
      "kind": "fixed",
-     "value": 14321.966693100714,
+     "value": 12600.145715276974,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 16 Pro Max, iPhone 18 Pro, iPhone 16 Pro"
-    },
-    "S03": {
-     "kind": "fixed",
-     "value": 10022.940976549224,
-     "support": "inferred",
-     "n": 0,
-     "basis": "siblings iPhone 16 Pro Max, iPhone 18 Pro, iPhone 16 Pro"
+     "basis": "own S03 x template ratio"
     },
     "C01": {
      "kind": "fixed",
@@ -10667,10 +10671,10 @@
     },
     "F10": {
      "kind": "fixed",
-     "value": 3044.6357765945395,
+     "value": 1499.9820003599928,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 16 Pro Max, iPhone 18 Pro, iPhone 16 Pro"
+     "basis": "own F13 x template ratio"
     },
     "F16": {
      "kind": "pct",
@@ -10695,8 +10699,10 @@
     "AGED+FACE+SCREEN",
     "AGED+FACE+SCREEN+WIFI",
     "AGED+SCREEN+WIFI",
+    "BATT",
     "BATT+BODY+CAM+SCREEN",
     "BATT+CAM+FACE+FMIN+WIFI",
+    "BATT+FMIN+SCREEN",
     "BODY",
     "CAM",
     "FACE+WIFI",
@@ -11075,10 +11081,10 @@
     },
     "S03": {
      "kind": "fixed",
-     "value": 7809.168539325842,
+     "value": 9697.897674418606,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 18 Pro, iPhone 16 Pro Max, iPhone 18 Pro Max"
+     "basis": "siblings iPhone 17 Pro, iPhone 18 Pro, iPhone 16 Pro Max"
     },
     "C01": {
      "kind": "fixed",
@@ -12525,7 +12531,7 @@
    },
    "age": null,
    "boxNo": {
-    "base": 23.782648460732823,
+    "base": 23.764205813450445,
     "aged": 2250,
     "support": "measured"
    },
@@ -12640,7 +12646,7 @@
     },
     "C02": {
      "kind": "fixed",
-     "value": 109.99941966133501,
+     "value": 109.99941966133476,
      "support": "inferred",
      "n": 1
     },
@@ -12652,7 +12658,7 @@
     },
     "C04": {
      "kind": "fixed",
-     "value": 100.14099195583886,
+     "value": 100.14099195583883,
      "support": "inferred",
      "n": 1
     },
@@ -12672,7 +12678,7 @@
     },
     "F04": {
      "kind": "pct",
-     "value": 0.2672812146859399,
+     "value": 0.26728770242136346,
      "support": "measured",
      "n": 8,
      "decided": true
@@ -12705,7 +12711,7 @@
     },
     "F14": {
      "kind": "pct",
-     "value": 0.299996337890626,
+     "value": 0.29999633789062574,
      "support": "inferred",
      "n": 1
     },
@@ -12745,7 +12751,7 @@
     },
     "S03": {
      "kind": "fixed",
-     "value": 529.5010546875,
+     "value": 530,
      "support": "measured",
      "n": 5,
      "decided": true
@@ -12758,56 +12764,56 @@
     },
     "D01": {
      "kind": "fixed",
-     "value": 1530.8808103605295,
+     "value": 1532.3233491384294,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D02": {
      "kind": "fixed",
-     "value": 1080.6181464172905,
+     "value": 1081.6364056898344,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D03": {
      "kind": "fixed",
-     "value": 360.20094586972897,
+     "value": 360.54036081878104,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D04": {
      "kind": "fixed",
-     "value": 1530.8808103605295,
+     "value": 1532.3233491384294,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D05": {
      "kind": "fixed",
-     "value": 900.5253278864778,
+     "value": 901.3738868971897,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D06": {
      "kind": "fixed",
-     "value": 990.5717371518841,
+     "value": 991.5051462935121,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D07": {
      "kind": "fixed",
-     "value": 360.20094586972897,
+     "value": 360.54036081878104,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "S02": {
      "kind": "fixed",
-     "value": 756.4388260153448,
+     "value": 757.1516132762807,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
@@ -12856,10 +12862,10 @@
     },
     "F03": {
      "kind": "fixed",
-     "value": 35.089610564613935,
+     "value": 43.02235929067078,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone SE 2022, iPhone 14, iPhone 13 Pro Max"
+     "basis": "siblings iPhone XS Max, iPhone SE 2022, iPhone 14"
     },
     "F07": {
      "kind": "fixed",
@@ -12891,7 +12897,7 @@
     },
     "F08": {
      "kind": "pct",
-     "value": 0.2619245754559747,
+     "value": 0.2621428209959054,
      "support": "inferred",
      "n": 0,
      "basis": "siblings iPhone X, iPhone XR, iPhone XS"
@@ -12928,7 +12934,7 @@
    },
    "age": null,
    "boxNo": {
-    "base": 22.709002727354143,
+    "base": 22.73357221446344,
     "aged": 2250,
     "support": "measured"
    },
@@ -13042,13 +13048,13 @@
    "codes": {
     "C01": {
      "kind": "fixed",
-     "value": 240.0004813249403,
+     "value": 240.00048132494015,
      "support": "inferred",
      "n": 1
     },
     "C02": {
      "kind": "fixed",
-     "value": 140.09379462568532,
+     "value": 140.09379462568498,
      "support": "inferred",
      "n": 1
     },
@@ -13060,7 +13066,7 @@
     },
     "C04": {
      "kind": "fixed",
-     "value": 120.00024066247015,
+     "value": 120.00024066247008,
      "support": "inferred",
      "n": 1
     },
@@ -13080,14 +13086,14 @@
     },
     "F04": {
      "kind": "pct",
-     "value": 0.2669897807001332,
+     "value": 0.2669944148687969,
      "support": "measured",
      "n": 16,
      "decided": true
     },
     "F05": {
      "kind": "pct",
-     "value": 0.39999999994039565,
+     "value": 0.3999999999403956,
      "support": "inferred",
      "n": 1
     },
@@ -13113,7 +13119,7 @@
     },
     "F14": {
      "kind": "pct",
-     "value": 0.2999963378906244,
+     "value": 0.2999963378906246,
      "support": "inferred",
      "n": 1
     },
@@ -13153,7 +13159,7 @@
     },
     "S03": {
      "kind": "fixed",
-     "value": 650.0012009284649,
+     "value": 650.0477246133827,
      "support": "measured",
      "n": 8,
      "decided": true
@@ -13166,56 +13172,56 @@
     },
     "D01": {
      "kind": "fixed",
-     "value": 1879.2679568881254,
+     "value": 1879.4024650554604,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D02": {
      "kind": "fixed",
-     "value": 1326.53766540819,
+     "value": 1326.6326120333483,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D03": {
      "kind": "fixed",
-     "value": 442.172957576207,
+     "value": 442.20460600289925,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D04": {
      "kind": "fixed",
-     "value": 1879.2679568881254,
+     "value": 1879.4024650554604,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D05": {
      "kind": "fixed",
-     "value": 1105.4605829598709,
+     "value": 1105.539706044224,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D06": {
      "kind": "fixed",
-     "value": 1215.9991241840303,
+     "value": 1216.0861590387863,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D07": {
      "kind": "fixed",
-     "value": 442.172957576207,
+     "value": 442.20460600289925,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "S02": {
      "kind": "fixed",
-     "value": 928.5838828575605,
+     "value": 928.6503460332041,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
@@ -13264,10 +13270,10 @@
     },
     "F03": {
      "kind": "fixed",
-     "value": 44.33364775636707,
+     "value": 54.356206630686195,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone SE 2022, iPhone 14, iPhone 13 Pro Max"
+     "basis": "siblings iPhone XS Max, iPhone SE 2022, iPhone 14"
     },
     "F07": {
      "kind": "fixed",
@@ -13299,7 +13305,7 @@
     },
     "F08": {
      "kind": "pct",
-     "value": 0.2619245754559747,
+     "value": 0.2621428209959054,
      "support": "inferred",
      "n": 0,
      "basis": "siblings iPhone X, iPhone XR, iPhone XS"
@@ -13337,7 +13343,7 @@
    },
    "age": null,
    "boxNo": {
-    "base": 29.89158685982648,
+    "base": 29.86543879098732,
     "aged": 2250,
     "support": "measured"
    },
@@ -13452,13 +13458,13 @@
     },
     "C02": {
      "kind": "fixed",
-     "value": 142.1201250000005,
+     "value": 142.12012500000043,
      "support": "inferred",
      "n": 1
     },
     "C03": {
      "kind": "fixed",
-     "value": 244.9993875000009,
+     "value": 244.99938750000078,
      "support": "inferred",
      "n": 1
     },
@@ -13484,14 +13490,14 @@
     },
     "F04": {
      "kind": "pct",
-     "value": 0.26667086054809197,
+     "value": 0.2666721258823154,
      "support": "measured",
      "n": 8,
      "decided": true
     },
     "F05": {
      "kind": "pct",
-     "value": 0.39999999994039565,
+     "value": 0.39999999994039553,
      "support": "inferred",
      "n": 1
     },
@@ -13517,7 +13523,7 @@
     },
     "F14": {
      "kind": "pct",
-     "value": 0.299996337890626,
+     "value": 0.29999633789062563,
      "support": "inferred",
      "n": 1
     },
@@ -13557,7 +13563,7 @@
     },
     "S03": {
      "kind": "fixed",
-     "value": 708.7798608398438,
+     "value": 710,
      "support": "measured",
      "n": 5,
      "decided": true
@@ -13570,56 +13576,56 @@
     },
     "D01": {
      "kind": "fixed",
-     "value": 2049.2074154037346,
+     "value": 2052.7350526194055,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D02": {
      "kind": "fixed",
-     "value": 1446.494530385188,
+     "value": 1448.984618942986,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D03": {
      "kind": "fixed",
-     "value": 482.1580127703447,
+     "value": 482.9880305308199,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D04": {
      "kind": "fixed",
-     "value": 2049.2074154037346,
+     "value": 2052.7350526194055,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D05": {
      "kind": "fixed",
-     "value": 1205.425770037093,
+     "value": 1207.5008673528391,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D06": {
      "kind": "fixed",
-     "value": 1325.9601502111404,
+     "value": 1328.2427431479125,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D07": {
      "kind": "fixed",
-     "value": 482.1580127703447,
+     "value": 482.9880305308199,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "S02": {
      "kind": "fixed",
-     "value": 1012.5543680992934,
+     "value": 1014.2974442003007,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
@@ -13668,10 +13674,10 @@
     },
     "F03": {
      "kind": "fixed",
-     "value": 46.691820509365314,
+     "value": 57.24749421742482,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone SE 2022, iPhone 14, iPhone 13 Pro Max"
+     "basis": "siblings iPhone XS Max, iPhone SE 2022, iPhone 14"
     },
     "F07": {
      "kind": "fixed",
@@ -13703,7 +13709,7 @@
     },
     "F08": {
      "kind": "pct",
-     "value": 0.2619245754559747,
+     "value": 0.2621428209959054,
      "support": "inferred",
      "n": 0,
      "basis": "siblings iPhone X, iPhone XR, iPhone XS"
@@ -13741,7 +13747,7 @@
    },
    "age": null,
    "boxNo": {
-    "base": 29.968429783080044,
+    "base": 29.946914771756337,
     "aged": 2250,
     "support": "measured"
    },
@@ -13862,7 +13868,7 @@
     },
     "C03": {
      "kind": "fixed",
-     "value": 306.24923437500075,
+     "value": 306.2492343750006,
      "support": "inferred",
      "n": 1
     },
@@ -13888,7 +13894,7 @@
     },
     "F04": {
      "kind": "pct",
-     "value": 0.2666792353228931,
+     "value": 0.2669010728221497,
      "support": "measured",
      "n": 8,
      "decided": true
@@ -13921,7 +13927,7 @@
     },
     "F14": {
      "kind": "pct",
-     "value": 0.3000036621093739,
+     "value": 0.3000036621093741,
      "support": "inferred",
      "n": 1
     },
@@ -13961,7 +13967,7 @@
     },
     "S03": {
      "kind": "fixed",
-     "value": 736.4806640625,
+     "value": 740,
      "support": "measured",
      "n": 5,
      "decided": true
@@ -13974,56 +13980,56 @@
     },
     "D01": {
      "kind": "fixed",
-     "value": 2129.295316475367,
+     "value": 2139.4703365329015,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D02": {
      "kind": "fixed",
-     "value": 1503.026977993632,
+     "value": 1510.2093211518443,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D03": {
      "kind": "fixed",
-     "value": 501.00189501348916,
+     "value": 503.3959754828264,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D04": {
      "kind": "fixed",
-     "value": 2129.295316475367,
+     "value": 2139.4703365329015,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D05": {
      "kind": "fixed",
-     "value": 1252.53667696347,
+     "value": 1258.522030762114,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D06": {
      "kind": "fixed",
-     "value": 1377.781827478551,
+     "value": 1384.3656759569792,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D07": {
      "kind": "fixed",
-     "value": 501.00189501348916,
+     "value": 503.3959754828264,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "S02": {
      "kind": "fixed",
-     "value": 1052.1274017768085,
+     "value": 1057.1550826876373,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
@@ -14072,10 +14078,10 @@
     },
     "F03": {
      "kind": "fixed",
-     "value": 56.87912680231775,
+     "value": 69.7378565921357,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone SE 2022, iPhone 14, iPhone 13 Pro Max"
+     "basis": "siblings iPhone XS Max, iPhone SE 2022, iPhone 14"
     },
     "F07": {
      "kind": "fixed",
@@ -14107,7 +14113,7 @@
     },
     "F08": {
      "kind": "pct",
-     "value": 0.2619245754559747,
+     "value": 0.2621428209959054,
      "support": "inferred",
      "n": 0,
      "basis": "siblings iPhone X, iPhone XR, iPhone XS"
@@ -14144,7 +14150,7 @@
    },
    "age": null,
    "boxNo": {
-    "base": 49.841234283612444,
+    "base": 49.44887482595897,
     "aged": 2250,
     "support": "measured"
    },
@@ -14244,10 +14250,11 @@
    "scrap": 1200,
    "extremeFaultCount": 10,
    "evidence": {
-    "shapes": 30,
-    "measurements": 90,
+    "shapes": 32,
+    "measurements": 92,
     "dates": [
-     "2026-10-26"
+     "2026-10-26",
+     "2026-10-29"
     ],
     "medianReference": 4430
    },
@@ -14255,25 +14262,25 @@
    "codes": {
     "C01": {
      "kind": "fixed",
-     "value": 449.9963348507014,
+     "value": 450.00183038413616,
      "support": "inferred",
      "n": 1
     },
     "C02": {
      "kind": "fixed",
-     "value": 260.03796448686126,
-     "support": "inferred",
-     "n": 1
+     "value": 0,
+     "support": "measured",
+     "n": 3
     },
     "C03": {
      "kind": "fixed",
-     "value": 419.9955292025397,
+     "value": 420.0006583542557,
      "support": "inferred",
      "n": 1
     },
     "C04": {
      "kind": "fixed",
-     "value": 224.9981674253507,
+     "value": 259.95277638227026,
      "support": "inferred",
      "n": 1
     },
@@ -14293,7 +14300,7 @@
     },
     "F04": {
      "kind": "pct",
-     "value": 0.26427061247775213,
+     "value": 0.2642706131078224,
      "support": "measured",
      "n": 8,
      "decided": true
@@ -14308,7 +14315,7 @@
      "kind": "fixed",
      "value": 200.1969140625003,
      "support": "measured",
-     "n": 4
+     "n": 5
     },
     "F10": {
      "kind": "fixed",
@@ -14368,7 +14375,7 @@
      "kind": "fixed",
      "value": 880,
      "support": "measured",
-     "n": 5,
+     "n": 6,
      "decided": true
     },
     "S04": {
@@ -14477,10 +14484,10 @@
     },
     "F03": {
      "kind": "fixed",
-     "value": 83.57364236625793,
+     "value": 102.46723207401696,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone SE 2022, iPhone 14, iPhone 13 Pro Max"
+     "basis": "siblings iPhone XS Max, iPhone SE 2022, iPhone 14"
     },
     "F07": {
      "kind": "fixed",
@@ -14512,7 +14519,7 @@
     },
     "F08": {
      "kind": "pct",
-     "value": 0.2619245754559747,
+     "value": 0.2621428209959054,
      "support": "inferred",
      "n": 0,
      "basis": "siblings iPhone X, iPhone XR, iPhone XS"
@@ -14526,6 +14533,8 @@
     "BATT+FMIN+SCREEN",
     "BATT+SCREEN",
     "BODY",
+    "BODY+BOX+FMIN+SCREEN",
+    "BODY+FMIN+SCREEN",
     "CAM",
     "FMIN",
     "SCREEN",
@@ -14549,12 +14558,12 @@
    },
    "age": null,
    "boxNo": {
-    "base": 49.26644630329789,
+    "base": 46.726123798812324,
     "aged": 2250,
     "support": "measured"
    },
    "chargerNo": {
-    "base": 141.34986077483936,
+    "base": 141.33629925697298,
     "aged": 300,
     "support": "measured"
    },
@@ -14660,97 +14669,97 @@
    "codes": {
     "C01": {
      "kind": "fixed",
-     "value": 558.6489200440614,
+     "value": 558.6625576019183,
      "support": "inferred",
      "n": 1
     },
     "C02": {
      "kind": "fixed",
-     "value": 328.2769788937379,
+     "value": 328.28501175744475,
      "support": "inferred",
      "n": 1
     },
     "C03": {
      "kind": "fixed",
-     "value": 513.3827497291285,
+     "value": 513.3952822637866,
      "support": "inferred",
      "n": 1
     },
     "C04": {
      "kind": "fixed",
-     "value": 275.0271606370764,
+     "value": 275.0338745117135,
      "support": "inferred",
      "n": 1
     },
     "F01": {
      "kind": "fixed",
-     "value": 758.6186310681676,
+     "value": 758.486521624204,
      "support": "inferred",
      "n": 2
     },
     "F02": {
      "kind": "fixed",
-     "value": 1400.1515906843863,
+     "value": 1408.6664120657472,
      "support": "inferred",
      "n": 2
     },
     "F04": {
      "kind": "fixed",
-     "value": 1442.0597141956835,
+     "value": 1443.4900825339173,
      "support": "measured",
      "n": 8
     },
     "F05": {
      "kind": "pct",
-     "value": 0.39791984301740174,
+     "value": 0.39791984301740224,
      "support": "inferred",
      "n": 1
     },
     "F06": {
      "kind": "fixed",
-     "value": 202.30554574892085,
+     "value": 203.09177398681692,
      "support": "measured",
      "n": 4
     },
     "F10": {
      "kind": "fixed",
-     "value": 758.6469321080639,
+     "value": 758.6654573798204,
      "support": "inferred",
      "n": 1
     },
     "F13": {
      "kind": "fixed",
-     "value": 408.52205064849494,
+     "value": 408.53202627841637,
      "support": "inferred",
      "n": 1
     },
     "F14": {
      "kind": "pct",
-     "value": 0.3000036621093719,
+     "value": 0.3000036621093728,
      "support": "inferred",
      "n": 1
     },
     "F17": {
      "kind": "fixed",
-     "value": 606.5874371552334,
+     "value": 608.6655158530542,
      "support": "measured",
      "n": 8
     },
     "F18": {
      "kind": "fixed",
-     "value": 187.11553715599499,
+     "value": 188.5079291402901,
      "support": "measured",
      "n": 8
     },
     "Q02": {
      "kind": "fixed",
-     "value": 3201.5537737060627,
+     "value": 3199.8046875,
      "support": "inferred",
      "n": 1
     },
     "Q03": {
      "kind": "fixed",
-     "value": 1601.575237029561,
+     "value": 1600.2342224121094,
      "support": "measured",
      "n": 3
     },
@@ -14762,68 +14771,68 @@
     },
     "S03": {
      "kind": "fixed",
-     "value": 948.6501426328298,
+     "value": 948.6632646829842,
      "support": "measured",
      "n": 5
     },
     "S04": {
      "kind": "fixed",
-     "value": 401.191168128989,
+     "value": 399.85832227643874,
      "support": "inferred",
      "n": 1
     },
     "D01": {
      "kind": "fixed",
-     "value": 2742.714648527899,
+     "value": 2742.752586686088,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D02": {
      "kind": "fixed",
-     "value": 1936.0274161028733,
+     "value": 1936.0541958899755,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D03": {
      "kind": "fixed",
-     "value": 645.3333296521294,
+     "value": 645.3422561213696,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D04": {
      "kind": "fixed",
-     "value": 2742.714648527899,
+     "value": 2742.752586686088,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D05": {
      "kind": "fixed",
-     "value": 1613.3744648500513,
+     "value": 1613.3967815922242,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D06": {
      "kind": "fixed",
-     "value": 1774.7009404764622,
+     "value": 1774.7254887411,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D07": {
      "kind": "fixed",
-     "value": 645.3333296521294,
+     "value": 645.3422561213696,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "S02": {
      "kind": "fixed",
-     "value": 1355.2301621306055,
+     "value": 1355.2489081333297,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
@@ -14865,17 +14874,17 @@
     },
     "F11": {
      "kind": "fixed",
-     "value": 202.30554574892085,
+     "value": 203.09177398681692,
      "support": "inferred",
      "n": 0,
      "basis": "own F06 x template ratio"
     },
     "F03": {
      "kind": "fixed",
-     "value": 102.81633203072363,
+     "value": 126.06013878180416,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone SE 2022, iPhone 14, iPhone 13 Pro Max"
+     "basis": "siblings iPhone XS Max, iPhone SE 2022, iPhone 14"
     },
     "F07": {
      "kind": "fixed",
@@ -14907,7 +14916,7 @@
     },
     "F08": {
      "kind": "pct",
-     "value": 0.2619245754559747,
+     "value": 0.2621428209959054,
      "support": "inferred",
      "n": 0,
      "basis": "siblings iPhone X, iPhone XR, iPhone XS"
@@ -15074,7 +15083,7 @@
     },
     "C04": {
      "kind": "fixed",
-     "value": 340.0699838314975,
+     "value": 340.0699838314974,
      "support": "inferred",
      "n": 1
     },
@@ -15094,14 +15103,14 @@
     },
     "F04": {
      "kind": "pct",
-     "value": 0.2649572422158005,
+     "value": 0.26495726495726496,
      "support": "measured",
      "n": 8,
      "decided": true
     },
     "F05": {
      "kind": "pct",
-     "value": 0.3965819894671444,
+     "value": 0.3965819894671443,
      "support": "inferred",
      "n": 1
     },
@@ -15278,10 +15287,10 @@
     },
     "F03": {
      "kind": "fixed",
-     "value": 110.36248484031802,
+     "value": 135.31225905936776,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone SE 2022, iPhone 14, iPhone 13 Pro Max"
+     "basis": "siblings iPhone XS Max, iPhone SE 2022, iPhone 14"
     },
     "F07": {
      "kind": "fixed",
@@ -15313,7 +15322,7 @@
     },
     "F08": {
      "kind": "pct",
-     "value": 0.2619245754559747,
+     "value": 0.2621428209959054,
      "support": "inferred",
      "n": 0,
      "basis": "siblings iPhone X, iPhone XR, iPhone XS"
@@ -15685,10 +15694,10 @@
     },
     "F03": {
      "kind": "fixed",
-     "value": 130.54844360598304,
+     "value": 160.06168080185043,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone SE 2022, iPhone 14, iPhone 13 Pro Max"
+     "basis": "siblings iPhone XS Max, iPhone SE 2022, iPhone 14"
     },
     "F07": {
      "kind": "fixed",
@@ -15720,7 +15729,7 @@
     },
     "F08": {
      "kind": "pct",
-     "value": 0.2619245754559747,
+     "value": 0.2621428209959054,
      "support": "inferred",
      "n": 0,
      "basis": "siblings iPhone X, iPhone XR, iPhone XS"
@@ -16530,10 +16539,10 @@
     },
     "F03": {
      "kind": "fixed",
-     "value": 37.070475677132464,
+     "value": 45.451040863531226,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone SE 2022, iPhone 14, iPhone 13 Pro Max"
+     "basis": "siblings iPhone XS Max, iPhone SE 2022, iPhone 14"
     },
     "F07": {
      "kind": "fixed",
@@ -16565,7 +16574,7 @@
     },
     "F08": {
      "kind": "pct",
-     "value": 0.2619245754559747,
+     "value": 0.2621428209959054,
      "support": "inferred",
      "n": 0,
      "basis": "siblings iPhone X, iPhone XR, iPhone XS"
@@ -16930,10 +16939,10 @@
     },
     "F03": {
      "kind": "fixed",
-     "value": 149.60247945020888,
+     "value": 183.42328450269852,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone SE 2022, iPhone 14, iPhone 13 Pro Max"
+     "basis": "siblings iPhone XS Max, iPhone SE 2022, iPhone 14"
     },
     "F07": {
      "kind": "fixed",
@@ -16965,7 +16974,7 @@
     },
     "F08": {
      "kind": "pct",
-     "value": 0.2619245754559747,
+     "value": 0.2621428209959054,
      "support": "inferred",
      "n": 0,
      "basis": "siblings iPhone X, iPhone XR, iPhone XS"
@@ -17407,12 +17416,12 @@
    },
    "age": null,
    "boxNo": {
-    "base": 99.8204191526278,
+    "base": 100.19028924053387,
     "aged": 2250,
     "support": "measured"
    },
    "chargerNo": {
-    "base": 304.02889806209583,
+    "base": 299.71344182049296,
     "aged": 300,
     "support": "measured"
    },
@@ -17519,170 +17528,170 @@
    "codes": {
     "C01": {
      "kind": "fixed",
-     "value": 483.82342113434555,
+     "value": 484.3787794304738,
      "support": "inferred",
      "n": 1
     },
     "C02": {
      "kind": "fixed",
-     "value": 355.9701173386701,
+     "value": 360.2881159271795,
      "support": "inferred",
      "n": 1
     },
     "C03": {
      "kind": "fixed",
-     "value": 457.4014985193294,
+     "value": 457.92652832517933,
      "support": "inferred",
      "n": 1
     },
     "C04": {
      "kind": "fixed",
-     "value": 245.03712965675032,
+     "value": 245.3183963273365,
      "support": "inferred",
      "n": 1
     },
     "F01": {
      "kind": "fixed",
-     "value": 995.9721465809923,
+     "value": 1000.1220476602901,
      "support": "measured",
      "n": 3
     },
     "F02": {
      "kind": "fixed",
-     "value": 1596.1427946945557,
+     "value": 1600.2831690250323,
      "support": "measured",
      "n": 3
     },
     "F05": {
      "kind": "pct",
-     "value": 0.39281465414837957,
+     "value": 0.39324185493438296,
      "support": "inferred",
      "n": 2
     },
     "F06": {
      "kind": "fixed",
-     "value": 196.06981277465786,
+     "value": 200.05859374999994,
      "support": "measured",
      "n": 9
     },
     "F08": {
      "kind": "pct",
-     "value": 0.2624441822656114,
+     "value": 0.2625036989283841,
      "support": "measured",
      "n": 17
     },
     "F10": {
      "kind": "fixed",
-     "value": 995.96796634141,
+     "value": 1000.2887603885371,
      "support": "inferred",
      "n": 2
     },
     "F13": {
      "kind": "fixed",
-     "value": 396.0485154214976,
+     "value": 400.12030550305315,
      "support": "inferred",
      "n": 2
     },
     "F14": {
      "kind": "pct",
-     "value": 0.29999633780121804,
+     "value": 0.2999853517413138,
      "support": "inferred",
      "n": 2
     },
     "F17": {
      "kind": "fixed",
-     "value": 999.9064387218515,
+     "value": 1000.2223317551365,
      "support": "measured",
      "n": 17
     },
     "F18": {
      "kind": "fixed",
-     "value": 299.99943116257657,
+     "value": 300.44454320708917,
      "support": "measured",
      "n": 14
     },
     "Q02": {
      "kind": "fixed",
-     "value": 5400,
+     "value": 5535,
      "support": "inferred",
      "n": 1
     },
     "Q03": {
      "kind": "fixed",
-     "value": 3196.1930189866835,
+     "value": 3200.2745516225696,
      "support": "measured",
      "n": 5
     },
     "S01": {
      "kind": "fixed",
-     "value": 3805.964663028717,
+     "value": 3810.4291377067566,
      "support": "inferred",
      "n": 1
     },
     "S03": {
      "kind": "fixed",
-     "value": 1876.5492974638037,
+     "value": 1880.289417705536,
      "support": "measured",
      "n": 8
     },
     "S04": {
      "kind": "fixed",
-     "value": 795.9725480162433,
+     "value": 800.2169364197533,
      "support": "inferred",
      "n": 2
     },
     "D01": {
      "kind": "fixed",
-     "value": 5425.434536439816,
+     "value": 5436.247882807725,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D02": {
      "kind": "fixed",
-     "value": 3829.705730582137,
+     "value": 3837.3386555163165,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D03": {
      "kind": "fixed",
-     "value": 1276.5504920789242,
+     "value": 1279.0947643458296,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D04": {
      "kind": "fixed",
-     "value": 5425.434536439816,
+     "value": 5436.247882807725,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D05": {
      "kind": "fixed",
-     "value": 3191.4576117153574,
+     "value": 3197.818454582816,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D06": {
      "kind": "fixed",
-     "value": 3510.5816711487473,
+     "value": 3517.578555049566,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D07": {
      "kind": "fixed",
-     "value": 1276.5504920789242,
+     "value": 1279.0947643458296,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "S02": {
      "kind": "fixed",
-     "value": 2680.815713145642,
+     "value": 2686.158803852953,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
@@ -17717,24 +17726,24 @@
     },
     "F12": {
      "kind": "fixed",
-     "value": 1007.2354107689694,
+     "value": 1010.6984774778484,
      "support": "inferred",
      "n": 0,
      "basis": "own F01/F02 x template ratio"
     },
     "F11": {
      "kind": "fixed",
-     "value": 196.06981277465786,
+     "value": 200.05859374999994,
      "support": "inferred",
      "n": 0,
      "basis": "own F06 x template ratio"
     },
     "F03": {
      "kind": "fixed",
-     "value": 189.0311278803396,
+     "value": 231.76561295296838,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone SE 2022, iPhone 14, iPhone 13 Pro Max"
+     "basis": "siblings iPhone XS Max, iPhone SE 2022, iPhone 14"
     },
     "F07": {
      "kind": "fixed",
@@ -17806,12 +17815,12 @@
    },
    "age": null,
    "boxNo": {
-    "base": 100.08225487253385,
+    "base": 100.02226433726784,
     "aged": 2250,
     "support": "measured"
    },
    "chargerNo": {
-    "base": 294.5063828897407,
+    "base": 294.57671329835796,
     "aged": 300,
     "support": "measured"
    },
@@ -17917,97 +17926,97 @@
    "codes": {
     "C01": {
      "kind": "fixed",
-     "value": 485.5850500747473,
+     "value": 485.4902161904959,
      "support": "inferred",
      "n": 1
     },
     "C02": {
      "kind": "fixed",
-     "value": 365.49359600280457,
+     "value": 365.4222157628807,
      "support": "inferred",
      "n": 1
     },
     "C03": {
      "kind": "fixed",
-     "value": 457.5914029171885,
+     "value": 457.5020361417251,
      "support": "inferred",
      "n": 1
     },
     "C04": {
      "kind": "fixed",
-     "value": 245.13886440994008,
+     "value": 245.09098923196797,
      "support": "inferred",
      "n": 1
     },
     "F01": {
      "kind": "fixed",
-     "value": 1005.0221878582098,
+     "value": 1005.2846353841699,
      "support": "inferred",
      "n": 2
     },
     "F02": {
      "kind": "fixed",
-     "value": 1605.4570405147551,
+     "value": 1605.4191636976116,
      "support": "inferred",
      "n": 2
     },
     "F05": {
      "kind": "pct",
-     "value": 0.39296847122672174,
+     "value": 0.3929636742483126,
      "support": "inferred",
      "n": 1
     },
     "F06": {
      "kind": "fixed",
-     "value": 200.78608497977064,
+     "value": 199.99023437500023,
      "support": "measured",
      "n": 4
     },
     "F08": {
      "kind": "pct",
-     "value": 0.2613603344813516,
+     "value": 0.26160374056756786,
      "support": "measured",
      "n": 8
     },
     "F10": {
      "kind": "fixed",
-     "value": 1005.4890665878504,
+     "value": 1005.4154249160989,
      "support": "inferred",
      "n": 1
     },
     "F13": {
      "kind": "fixed",
-     "value": 405.4817660040594,
+     "value": 405.4520686588329,
      "support": "inferred",
      "n": 1
     },
     "F14": {
      "kind": "pct",
-     "value": 0.3000036621093719,
+     "value": 0.2999999999552945,
      "support": "inferred",
      "n": 1
     },
     "F17": {
      "kind": "fixed",
-     "value": 1204.682720218165,
+     "value": 1205.423837173289,
      "support": "measured",
      "n": 8
     },
     "F18": {
      "kind": "fixed",
-     "value": 365.18652147795837,
+     "value": 365.5855141268476,
      "support": "measured",
      "n": 8
     },
     "Q02": {
      "kind": "fixed",
-     "value": 6000.13717116812,
+     "value": 5999.4140625,
      "support": "inferred",
      "n": 1
     },
     "Q03": {
      "kind": "fixed",
-     "value": 3000.3113922411376,
+     "value": 3000,
      "support": "measured",
      "n": 3
     },
@@ -18019,68 +18028,68 @@
     },
     "S03": {
      "kind": "fixed",
-     "value": 1765.493215464419,
+     "value": 1765.4272092365245,
      "support": "measured",
      "n": 5
     },
     "S04": {
      "kind": "fixed",
-     "value": 750.3230220511671,
+     "value": 749.9204078045157,
      "support": "inferred",
      "n": 1
     },
     "D01": {
      "kind": "fixed",
-     "value": 5104.351843021912,
+     "value": 5104.161007391363,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D02": {
      "kind": "fixed",
-     "value": 3603.059878952307,
+     "value": 3602.9251718974147,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D03": {
      "kind": "fixed",
-     "value": 1201.0029451446258,
+     "value": 1200.9580434291138,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D04": {
      "kind": "fixed",
-     "value": 5104.351843021912,
+     "value": 5104.161007391363,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D05": {
      "kind": "fixed",
-     "value": 3002.5839281392095,
+     "value": 3002.471670987895,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D06": {
      "kind": "fixed",
-     "value": 3302.8219035457582,
+     "value": 3302.6984214426548,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D07": {
      "kind": "fixed",
-     "value": 1201.0029451446258,
+     "value": 1200.9580434291138,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "S02": {
      "kind": "fixed",
-     "value": 2522.1623326739873,
+     "value": 2522.06803697222,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
@@ -18122,17 +18131,17 @@
     },
     "F11": {
      "kind": "fixed",
-     "value": 200.78608497977064,
+     "value": 199.99023437500023,
      "support": "inferred",
      "n": 0,
      "basis": "own F06 x template ratio"
     },
     "F03": {
      "kind": "fixed",
-     "value": 199.97304945425145,
+     "value": 245.1811873554356,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone SE 2022, iPhone 14, iPhone 13 Pro Max"
+     "basis": "siblings iPhone XS Max, iPhone SE 2022, iPhone 14"
     },
     "F07": {
      "kind": "fixed",
@@ -18204,12 +18213,12 @@
    },
    "age": null,
    "boxNo": {
-    "base": 100.07939584723046,
+    "base": 99.80500079777175,
     "aged": 2250,
     "support": "measured"
    },
    "chargerNo": {
-    "base": 291.7302668183169,
+    "base": 290.95218304270264,
     "aged": 300,
     "support": "measured"
    },
@@ -18315,170 +18324,170 @@
    "codes": {
     "C01": {
      "kind": "fixed",
-     "value": 548.2664139240416,
+     "value": 549.0428510540606,
      "support": "inferred",
      "n": 1
     },
     "C02": {
      "kind": "fixed",
-     "value": 408.64115225640194,
+     "value": 409.3722662969785,
      "support": "inferred",
      "n": 1
     },
     "C03": {
      "kind": "fixed",
-     "value": 503.8415166760762,
+     "value": 503.7799945606268,
      "support": "inferred",
      "n": 1
     },
     "C04": {
      "kind": "fixed",
-     "value": 269.91577300875923,
+     "value": 269.8828146502295,
      "support": "inferred",
      "n": 1
     },
     "F01": {
      "kind": "fixed",
-     "value": 1008.1457999416855,
+     "value": 1008.7218347433668,
      "support": "inferred",
      "n": 2
     },
     "F02": {
      "kind": "fixed",
-     "value": 1600.455616712528,
+     "value": 1609.0543591427183,
      "support": "inferred",
      "n": 2
     },
     "F05": {
      "kind": "pct",
-     "value": 0.3934781462559879,
+     "value": 0.39354525070867885,
      "support": "inferred",
      "n": 1
     },
     "F06": {
      "kind": "fixed",
-     "value": 201.3421271237776,
+     "value": 199.93652343749966,
      "support": "measured",
      "n": 4
     },
     "F08": {
      "kind": "pct",
-     "value": 0.2619245754559747,
+     "value": 0.2621428209959054,
      "support": "measured",
      "n": 8
     },
     "F10": {
      "kind": "fixed",
-     "value": 1008.2689289451762,
+     "value": 1009.0503965006798,
      "support": "inferred",
      "n": 1
     },
     "F13": {
      "kind": "fixed",
-     "value": 408.14812982303494,
+     "value": 409.24818751166475,
      "support": "inferred",
      "n": 1
     },
     "F14": {
      "kind": "pct",
-     "value": 0.2999999999552971,
+     "value": 0.299992675825953,
      "support": "inferred",
      "n": 1
     },
     "F17": {
      "kind": "fixed",
-     "value": 1206.928806542905,
+     "value": 1209.0471975452,
      "support": "measured",
      "n": 8
     },
     "F18": {
      "kind": "fixed",
-     "value": 367.3093997780301,
+     "value": 368.9575018116253,
      "support": "measured",
      "n": 8
     },
     "Q02": {
      "kind": "fixed",
-     "value": 6690.714758747882,
+     "value": 6690.301723480225,
      "support": "inferred",
      "n": 1
     },
     "Q03": {
      "kind": "fixed",
-     "value": 3601.268000847476,
+     "value": 3600.5566120147705,
      "support": "measured",
      "n": 3
     },
     "S01": {
      "kind": "fixed",
-     "value": 4298.3055210113525,
+     "value": 4299.143397331238,
      "support": "inferred",
      "n": 1
     },
     "S03": {
      "kind": "fixed",
-     "value": 2118.2667780874613,
+     "value": 2129.0327269429636,
      "support": "measured",
      "n": 5
     },
     "S04": {
      "kind": "fixed",
-     "value": 910.9256075936939,
+     "value": 910.0352713506526,
      "support": "inferred",
      "n": 1
     },
     "D01": {
      "kind": "fixed",
-     "value": 6124.282346731413,
+     "value": 6155.408601084086,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D02": {
      "kind": "fixed",
-     "value": 4323.00842291077,
+     "value": 4344.979823333234,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D03": {
      "kind": "fixed",
-     "value": 1440.982393362434,
+     "value": 1448.3060897490745,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D04": {
      "kind": "fixed",
-     "value": 6124.282346731413,
+     "value": 6155.408601084086,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D05": {
      "kind": "fixed",
-     "value": 3602.5478476412864,
+     "value": 3620.8575555017023,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D06": {
      "kind": "fixed",
-     "value": 3962.778135276028,
+     "value": 3982.918689417468,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D07": {
      "kind": "fixed",
-     "value": 1440.982393362434,
+     "value": 1448.3060897490745,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "S02": {
      "kind": "fixed",
-     "value": 3026.130393166926,
+     "value": 3041.5104979676685,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
@@ -18520,17 +18529,17 @@
     },
     "F11": {
      "kind": "fixed",
-     "value": 201.3421271237776,
+     "value": 199.93652343749966,
      "support": "inferred",
      "n": 0,
      "basis": "own F06 x template ratio"
     },
     "F03": {
      "kind": "fixed",
-     "value": 219.02708529847732,
+     "value": 268.5427910562837,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone SE 2022, iPhone 14, iPhone 13 Pro Max"
+     "basis": "siblings iPhone XS Max, iPhone SE 2022, iPhone 14"
     },
     "F07": {
      "kind": "fixed",
@@ -18602,12 +18611,12 @@
    },
    "age": null,
    "boxNo": {
-    "base": 101.86044760857317,
+    "base": 99.8912956891736,
     "aged": 2250,
     "support": "measured"
    },
    "chargerNo": {
-    "base": 297.65894335078457,
+    "base": 297.63689923760853,
     "aged": 300,
     "support": "measured"
    },
@@ -18702,10 +18711,11 @@
    "scrap": 1200,
    "extremeFaultCount": 10,
    "evidence": {
-    "shapes": 30,
-    "measurements": 90,
+    "shapes": 32,
+    "measurements": 92,
     "dates": [
-     "2026-10-26"
+     "2026-10-26",
+     "2026-10-29"
     ],
     "medianReference": 12640
    },
@@ -18713,97 +18723,103 @@
    "codes": {
     "C01": {
      "kind": "fixed",
-     "value": 622.3366951296439,
+     "value": 622.3594713225575,
      "support": "inferred",
      "n": 1
     },
     "C02": {
      "kind": "fixed",
-     "value": 462.5294578535038,
+     "value": 462.5463854430894,
      "support": "inferred",
      "n": 1
     },
     "C03": {
      "kind": "fixed",
-     "value": 579.0366405004825,
+     "value": 579.0578320039417,
      "support": "inferred",
      "n": 1
     },
     "C04": {
      "kind": "fixed",
-     "value": 310.1989757655555,
+     "value": 310.2103283850754,
      "support": "inferred",
      "n": 1
     },
     "F01": {
      "kind": "fixed",
-     "value": 1001.8985757747336,
+     "value": 1002.2091477884135,
      "support": "inferred",
      "n": 2
     },
     "F02": {
      "kind": "fixed",
-     "value": 1600.455616712528,
+     "value": 1602.3728118593715,
      "support": "inferred",
+     "n": 2
+    },
+    "F03": {
+     "kind": "fixed",
+     "value": 300,
+     "support": "measured",
      "n": 2
     },
     "F05": {
      "kind": "pct",
-     "value": 0.3941719472614876,
+     "value": 0.3941719383377253,
      "support": "inferred",
      "n": 1
     },
     "F06": {
      "kind": "fixed",
-     "value": 198.43749999999991,
+     "value": 200.0048828125001,
      "support": "measured",
      "n": 4
     },
     "F08": {
      "kind": "pct",
-     "value": 0.2625180536174098,
+     "value": 0.26266461575762445,
      "support": "measured",
      "n": 8
     },
     "F10": {
      "kind": "fixed",
-     "value": 1002.3395330106368,
+     "value": 1002.3640041906414,
      "support": "inferred",
      "n": 1
     },
     "F13": {
      "kind": "fixed",
-     "value": 402.3468670898426,
+     "value": 402.35669001140315,
      "support": "inferred",
      "n": 1
     },
     "F14": {
      "kind": "pct",
-     "value": 0.30001098641752943,
+     "value": 0.2999963378012159,
      "support": "inferred",
      "n": 1
     },
     "F17": {
      "kind": "fixed",
-     "value": 1202.2639872081725,
+     "value": 1202.3634027088158,
      "support": "measured",
      "n": 8
     },
     "F18": {
      "kind": "fixed",
-     "value": 362.47658475972105,
+     "value": 362.55391610143596,
      "support": "measured",
      "n": 8
     },
     "Q02": {
      "kind": "fixed",
-     "value": 7329.743682784974,
+     "value": 7330.078125,
      "support": "inferred",
      "n": 1
     },
     "Q03": {
      "kind": "fixed",
-     "value": 4099.899333229164,
+     "value": 4100.09765625,
      "support": "measured",
      "n": 3
     },
@@ -18815,68 +18831,68 @@
     },
     "S03": {
      "kind": "fixed",
-     "value": 2412.2390818390786,
+     "value": 2412.3630101836816,
      "support": "measured",
      "n": 5
     },
     "S04": {
      "kind": "fixed",
-     "value": 1029.864847834144,
+     "value": 1030.148773154578,
      "support": "inferred",
      "n": 1
     },
     "D01": {
      "kind": "fixed",
-     "value": 6974.208054351447,
+     "value": 6974.56635302325,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D02": {
      "kind": "fixed",
-     "value": 4922.953981405599,
+     "value": 4923.206897272051,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D03": {
      "kind": "fixed",
-     "value": 1640.961413108352,
+     "value": 1641.0457172028405,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D04": {
      "kind": "fixed",
-     "value": 6974.208054351447,
+     "value": 6974.56635302325,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D05": {
      "kind": "fixed",
-     "value": 4102.508145891695,
+     "value": 4102.718911502397,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D06": {
      "kind": "fixed",
-     "value": 4512.731063648647,
+     "value": 4512.962904387224,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "D07": {
      "kind": "fixed",
-     "value": 1640.961413108352,
+     "value": 1641.0457172028405,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "S02": {
      "kind": "fixed",
-     "value": 3446.095683816137,
+     "value": 3446.272726355848,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
@@ -18918,38 +18934,31 @@
     },
     "F11": {
      "kind": "fixed",
-     "value": 198.43749999999991,
+     "value": 200.0048828125001,
      "support": "inferred",
      "n": 0,
      "basis": "own F06 x template ratio"
     },
-    "F03": {
-     "kind": "fixed",
-     "value": 238.45842878318288,
-     "support": "inferred",
-     "n": 0,
-     "basis": "siblings iPhone SE 2022, iPhone 14, iPhone 13 Pro Max"
-    },
     "F07": {
      "kind": "fixed",
-     "value": 527.5826086956522,
+     "value": 450,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone SE 2022, iPhone 14, iPhone 13 Pro Max"
+     "basis": "own F03 x template ratio"
     },
     "F09": {
      "kind": "fixed",
-     "value": 238.45842878318288,
+     "value": 300,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone SE 2022, iPhone 14, iPhone 13 Pro Max"
+     "basis": "own F03 x template ratio"
     },
     "F15": {
      "kind": "fixed",
-     "value": 175.8608695652174,
+     "value": 300,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone SE 2022, iPhone 14, iPhone 13 Pro Max"
+     "basis": "own F03 x template ratio"
     },
     "F16": {
      "kind": "pct",
@@ -18976,6 +18985,7 @@
     "BATT+FMIN",
     "BATT+SCREEN",
     "BODY",
+    "BOX+FMIN",
     "CAM",
     "FACE",
     "FMIN",
