@@ -66,7 +66,11 @@ function emptyProfile(modelKey: string, rows: Measurement[], sem: ReturnType<typ
     classes[cls] = { kind, value: TEMPLATE_ANCHOR[cls][kind], support: 'inferred', n: 0 };
   }
   const hasEsim = rows.some(r => r.inputs.esim.value === 'Single eSIM' || r.inputs.esim.value === 'Dual eSIM');
-  const asksCharger = rows.some(r => r.inputs.charger.value === 'yes' || r.inputs.charger.value === 'no');
+  // The fixed gap between the flawless quote and the reference on the iPhone 11 / 11 Pro Max / 7 / 8 / 8 Plus is Cashify's original-charger
+  // answer (live 2026-10-28, iPhone 11 Pro Max 256 GB: charger yes 17,660 vs no 17,260). Its amount is known from the database gap, so it is a
+  // fixed missing-charger deduction rather than a fitted one (the combination reports never selected a charger).
+  const fixedCharger = CLEAN_OFFSET[modelKey];
+  const asksCharger = Boolean(fixedCharger) || rows.some(r => r.inputs.charger.value === 'yes' || r.inputs.charger.value === 'no');
   const shapes = new Set(rows.map(r => r.deviations.join('|')));
   return {
     modelKey, family,
@@ -77,11 +81,10 @@ function emptyProfile(modelKey: string, rows: Measurement[], sem: ReturnType<typ
       '1': { a: 0, b: 0.11, support: 'inferred', n: 0 }, '2': { a: 0, b: 0.14, support: 'inferred', n: 0 }, '3': { a: 0, b: 0.2, support: 'inferred', n: 0 },
     } : null,
     boxNo: { base: 2250, aged: 2250, support: 'inferred' },
-    ...(asksCharger ? { chargerNo: { base: 300, aged: 300, support: 'inferred' as Support } } : {}),
+    ...(asksCharger ? { chargerNo: fixedCharger ? { base: fixedCharger, aged: fixedCharger, support: 'measured' as Support } : { base: 300, aged: 300, support: 'inferred' as Support } } : {}),
     eSimDualPct: hasEsim ? 0.05 : null,
     floor: null,
     classes,
-    ...(CLEAN_OFFSET[modelKey] ? { cleanOffset: { value: CLEAN_OFFSET[modelKey], support: 'measured' as Support, n: 1 } } : {}),
     scrap: 1200,
     extremeFaultCount: 10,
     evidence: { shapes: shapes.size, measurements: rows.length, dates: [...new Set(rows.map(r => r.observed_date ?? 'unknown'))].sort() },
@@ -98,7 +101,7 @@ function paramList(profile: ModelProfile): Param[] {
     }
   }
   ps.push({ name: 'box.base', get: p => p.boxNo.base, set: (p, v) => { p.boxNo.base = v; }, scale: 2000, lo: 0, hi: 6000, prior: 2250 });
-  if (profile.chargerNo) {
+  if (profile.chargerNo && !CLEAN_OFFSET[profile.modelKey]) {
     ps.push({ name: 'charger.base', get: p => p.chargerNo!.base, set: (p, v) => { p.chargerNo!.base = v; }, scale: 500, lo: 0, hi: 3000, prior: 300 });
     if (profile.age) ps.push({ name: 'charger.aged', get: p => p.chargerNo!.aged, set: (p, v) => { p.chargerNo!.aged = v; }, scale: 500, lo: 0, hi: 3000, prior: 300 });
   }
@@ -204,7 +207,7 @@ export function seedAccessoryDeductions(profile: ModelProfile, rows: Row[]) {
   if (box.length) profile.boxNo.base = Math.max(0, medianOf(box));
   const boxAged = profile.age ? diffs('BOX_NO', true) : [];
   if (boxAged.length) profile.boxNo.aged = Math.max(0, medianOf(boxAged));
-  if (profile.chargerNo && profile.asks.charger) {
+  if (profile.chargerNo && profile.asks.charger && !CLEAN_OFFSET[profile.modelKey]) {
     let charger = diffs('CHARGER_NO', false);
     if (!charger.length) {
       charger = rows.filter(r => r.m.deviations.length > 0 && r.m.deviations.every(d => d === 'BOX_NO' || d === 'CHARGER_NO') && r.m.deviations.includes('CHARGER_NO') && ageStateOf(r.ans, profile).state !== 3)
@@ -297,7 +300,7 @@ export function fitCodeOverrides(profile: ModelProfile, rows: Row[], opts: { dec
   }
   coords.push({ name: 'BOX', kind: 'fixed', get: () => profile.boxNo.base, set: v => { profile.boxNo.base = v; }, touches: r => r.ans.boxMissing && (!profile.age || stateOf(r) !== 3) });
   if (profile.age) coords.push({ name: 'BOX_AGED', kind: 'fixed', get: () => profile.boxNo.aged, set: v => { profile.boxNo.aged = v; }, touches: r => r.ans.boxMissing && stateOf(r) === 3 });
-  if (profile.chargerNo && profile.asks.charger) {
+  if (profile.chargerNo && profile.asks.charger && !CLEAN_OFFSET[profile.modelKey]) {
     coords.push({ name: 'CHARGER', kind: 'fixed', get: () => profile.chargerNo!.base, set: v => { profile.chargerNo!.base = v; }, touches: r => r.ans.chargerMissing && (!profile.age || stateOf(r) !== 3) });
     if (profile.age) coords.push({ name: 'CHARGER_AGED', kind: 'fixed', get: () => profile.chargerNo!.aged, set: v => { profile.chargerNo!.aged = v; }, touches: r => r.ans.chargerMissing && stateOf(r) === 3 });
   }
@@ -350,7 +353,7 @@ export function fitModel(modelKey: string, all: Measurement[], sem: ReturnType<t
     for (const cls of CLASS_ORDER) if (prior.classes[cls]) profile.classes[cls] = { ...prior.classes[cls]!, support: 'inferred', n: 0 };
     if (profile.age && prior.age) for (const st of ['1', '2', '3'] as const) profile.age[st] = { ...prior.age[st], support: 'inferred', n: 0 };
     profile.boxNo = { ...prior.boxNo, support: 'inferred' };
-    if (profile.chargerNo && prior.chargerNo) profile.chargerNo = { ...prior.chargerNo, support: 'inferred' };
+    if (profile.chargerNo && prior.chargerNo && !CLEAN_OFFSET[modelKey]) profile.chargerNo = { ...prior.chargerNo, support: 'inferred' };
     if (profile.eSimDualPct != null && prior.eSimDualPct != null) profile.eSimDualPct = prior.eSimDualPct;
   }
   const params = paramList(profile);
@@ -531,14 +534,6 @@ export function fitModel(modelKey: string, all: Measurement[], sem: ReturnType<t
     if (p.name === 'box.base') profile.boxNo.support = support;
     if (p.name === 'charger.base' && profile.chargerNo) profile.chargerNo.support = support;
   });
-  // The fixed gap between the flawless quote and the reference on the iPhone 11 / 11 Pro Max / 7 / 8 / 8 Plus is Cashify's original-charger
-  // answer (live check 2026-10-28: iPhone 11 Pro Max 256 GB, same faults, charger yes 17,660 vs no 17,260). The reports never selected a charger,
-  // so the measured offset becomes a missing-charger deduction: identical for those quotes, and no deduction when the customer has the charger.
-  if (profile.cleanOffset) {
-    profile.asks = { ...profile.asks, charger: true };
-    profile.chargerNo = { base: profile.cleanOffset.value, aged: profile.cleanOffset.value, support: 'measured' };
-    delete profile.cleanOffset;
-  }
   const errs = fitRows.map(r => -residual(r, deductionFor(profile, r) ?? 0));
   report.rmse = Math.sqrt(errs.reduce((s, e) => s + e * e, 0) / Math.max(1, errs.length));
   report.maxAbs = Math.max(0, ...errs.map(Math.abs));

@@ -51,8 +51,9 @@ export const CLEAN_OFFSET: Record<string, number> = JSON.parse(fs.readFileSync(p
 
 export function loadMeasurements(file?: string): Measurement[] {
   if (file) return readJsonl(file);
-  const extra = path.join(EVIDENCE_DIR, 'measurements-2026-10-28.jsonl');
-  return [...readJsonl(path.join(EVIDENCE_DIR, 'measurements.jsonl')), ...(fs.existsSync(extra) ? readJsonl(extra) : [])];
+  // plus the quotes recorded live on cashify.in while checking the release (live-check-2026-10-28.py)
+  const extras = ['measurements-2026-10-28.jsonl', 'live-check-2026-10-28.jsonl'].map(f => path.join(EVIDENCE_DIR, f));
+  return [...readJsonl(path.join(EVIDENCE_DIR, 'measurements.jsonl')), ...extras.flatMap(f => (fs.existsSync(f) ? readJsonl(f) : []))];
 }
 
 // ---------------------------------------------------------------------------

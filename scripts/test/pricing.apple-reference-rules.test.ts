@@ -101,6 +101,27 @@ async function run() {
     assert.equal(aged.outcome.price, both.outcome.price, 'warranty No and bill No are one aged state');
   });
 
+  await test('live Cashify quotes of 2026-10-28 (random check and isolating follow-ups) are reproduced', () => {
+    const withCharger = { ...clean, accessories: ['box', 'charger'], charger: true };
+    // [model, GB, flawless reference that day, answers, Cashify base price]
+    const live: [string, number, number, any, number][] = [
+      ['iPhone 16 Plus', 256, 55680, { ...clean, accessories: [], box: false, bodyScratches: '1-2 scratches' }, 51540],
+      ['iPhone 11 Pro Max', 256, 18740, { ...clean, hardware: ['speaker'], bodyDents: '1-2 minor dents' }, 17260],
+      ['iPhone 11 Pro Max', 256, 18740, { ...withCharger, hardware: ['speaker'], bodyDents: '1-2 minor dents' }, 17660],
+      ['iPhone 11 Pro Max', 256, 18740, { ...withCharger, bodyDents: '1-2 minor dents' }, 18060],
+      ['iPhone 14 Pro', 512, 46500, { ...clean, hardware: ['face'], bodyDents: '1-2 minor dents' }, 33300],
+      ['iPhone 14 Pro', 512, 46500, { ...clean, hardware: ['face'] }, 34500],
+      ['iPhone 8', 256, 6150, { ...clean, accessories: [], box: false, hardware: ['speaker', 'front_camera'], screenCondition: '1-2 scratches on screen', bodyScratches: '1-2 scratches' }, 4590],
+      ['iPhone 8', 256, 6150, { ...withCharger, hardware: ['speaker'] }, 5950],
+      ['iPhone 8', 256, 6150, { ...withCharger, screenCondition: '1-2 scratches on screen' }, 5740],
+      ['iPhone 8', 256, 6150, { ...withCharger, bodyScratches: '1-2 scratches' }, 6150],
+    ];
+    for (const [model, gb, R, d, cashify] of live) {
+      const got = price(model, gb, R, d);
+      assert.ok(Math.abs(got - cashify) <= 20, `${model} ${gb}GB ${JSON.stringify(d.hardware)} ${d.bodyScratches ?? ''} ${d.bodyDents ?? ''}: rules ${got} vs Cashify ${cashify}`);
+    }
+  });
+
   await test('one repair group is charged once: screen answers share the largest screen deduction', () => {
     const cracked = price('iPhone 13 Pro Max', 256, 35890, { ...clean, screenCondition: 'Screen cracked/ glass broken' });
     const crackedSpots = price('iPhone 13 Pro Max', 256, 35890, { ...clean, screenCondition: 'Screen cracked/ glass broken', screenSpots: '1-2 minor spots on screen' });
