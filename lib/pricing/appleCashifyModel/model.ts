@@ -55,7 +55,7 @@ export interface ModelProfile {
   ageByStorage?: Record<string, { '1': number | null; '2': number | null; '3': number | null }>;
   boxNo: { base: number; aged: number; support: Support };
   /** Missing-charger deduction on the models whose form asks for it (rupees; aged = once treated as over 11 months). */
-  chargerNo?: { base: number; aged: number; support: Support };
+  chargerNo?: { base: number; aged: number; support: Support; fixedByControlledPairs?: boolean };
   eSimDualPct: number | null;
   /** Lowest quote once the over-11-months state is forced, as a fraction of either the reference price or the aged
    * price (reference minus the over-11-months deduction), whichever explains the model's plateau; null when no
@@ -66,6 +66,10 @@ export interface ModelProfile {
    * its own value; the class anchor x template weight is only the fallback for codes without one. Several models' controlled labels disagree
    * with the shared template ratios (camera front/back, battery, Wi-Fi), so the template is a prior, not the rule. */
   codes?: Record<string, ClassCal>;
+  /** Capacity-specific fractions for functional codes whose controlled quotes
+   * cannot be explained by one model-wide fraction. Values still multiply the
+   * current reference; unseen capacities use the shared code calibration. */
+  functionalByStorage?: Record<string, Record<string, ClassCal>>;
   /** Condition codes that make Cashify price the phone as over 11 months old (it skips its age question). Absent = the template list; some models
    * (iPhone 14: a cracked panel) price those codes without the age effect. */
   ageTriggers?: string[];
@@ -333,7 +337,7 @@ export function deduct(profile: ModelProfile, reference: number, a: ParsedAnswer
     const cal = profile.classes[cls];
     for (const code of present) {
       // P04 (loose screen) is priced like a cracked panel once an age-trigger answer has forced the aged state (measured exception, template.json)
-      const own = profile.codes?.[code === 'P04' && triggered ? 'P01' : code];
+      const own = (storageGb != null ? profile.functionalByStorage?.[String(storageGb)]?.[code] : undefined) ?? profile.codes?.[code === 'P04' && triggered ? 'P01' : code];
       if (!own && !cal) return { kind: 'UNSUPPORTED', reason: `no calibration for ${cls} (${present.join(',')}) on ${profile.modelKey}` };
       let amount = own ? classValue(own, reference) : info.weights[code === 'P04' && triggered ? 'P01' : code] * classValue(cal!, reference);
       if (cls === 'body' && triggered) amount *= BODY_UNDER_TRIGGER_REMAINING[code] ?? 1;

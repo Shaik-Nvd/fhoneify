@@ -1,5 +1,5 @@
 {
- "version": "scope/2026-10-28",
+ "version": "scope/2026-10-30",
  "models": {
   "iPhone 11": {
    "enabled": true,
@@ -464,9 +464,12 @@
   "iPhone 12 Mini": {
    "enabled": true,
    "inferredPolicy": "price",
-   "storagesGb": [],
-   "fallbackFrom": "iPhone 12",
-   "reason": "no Cashify quotes of this model: iPhone 12 deductions (same generation) applied to its own reference, labelled inferred; zero-shot transfer error is reported in docs/PRICING_NEW_DATA_2026_10_28.md"
+   "storagesGb": [
+    64,
+    128,
+    256
+   ],
+   "reason": "Own-model rules calibrated from the final Cashify intake at 64/128/256 GB; no sibling profile is used. Measured and inferred parameters remain individually labelled."
   }
  }
 }

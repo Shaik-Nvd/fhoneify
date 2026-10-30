@@ -1,3 +1,5 @@
+import fs from 'node:fs';
+import { FINAL_MEASUREMENTS_FILE } from '../pricing-evidence/import-final-data';
 /**
  * Offline production-route reconciliation of every complete supplied iPhone quote (earlier collection + 2026-10-28 import), through the
  * quote service configured as in production. Served iPhone quotes come from the calibrated rules, so this is IN-SAMPLE reconciliation of the
@@ -11,7 +13,13 @@ import { replayService } from '../pricing-evidence/replay-service';
 import { hasUnknownInput, loadMeasurements } from '../pricing-evidence/evidenceLib';
 
 (async () => {
-  const ms = loadMeasurements().filter(m => !hasUnknownInput(m) && m.outcome === 'NUMERIC_QUOTE' && m.base != null);
+  const all = loadMeasurements().filter(m => !hasUnknownInput(m) && m.outcome === 'NUMERIC_QUOTE' && m.base != null);
+  // Preserve the original fixed-cohort gate, including its absolute 80-row
+  // limit. The final intake receives the same rate/MAE gates independently;
+  // its absolute residual budget scales by cohort size, never by fit results.
+  const ms = all.filter(m => !m.family.startsWith('final_'));
+  const finalMs = all.filter(m => m.family.startsWith('final_'));
+  assert.equal(ms.length + finalMs.length, all.length, 'every complete observation belongs to a tested cohort');
   const rows = await replayService(ms);
   const priced = rows.filter(r => r.ok);
   const abs = priced.map(r => Math.abs(r.error!));
@@ -28,5 +36,22 @@ import { hasUnknownInput, loadMeasurements } from '../pricing-evidence/evidenceL
     'nothing else is sent to inspection');
   assert.ok(summary.within20 >= 0.95 && summary.within100 >= 0.975 && summary.mae <= 30, JSON.stringify(summary));
   assert.ok(large.length <= 80, `${large.length} residuals above INR 300`);
-  console.log('service reconciliation passed');
+  if (!fs.existsSync(FINAL_MEASUREMENTS_FILE)) {
+    console.log('SKIP private final-intake cohort: owner-supplied quote corpus is not published; original cohort passed');
+    return;
+  }
+  const finalRows = await replayService(finalMs);
+  const finalPriced = finalRows.filter(r => r.ok);
+  const finalAbs = finalPriced.map(r => Math.abs(r.error!));
+  const finalShare = (limit: number) => finalAbs.filter(x => x <= limit).length / finalAbs.length;
+  const finalSummary = { cases: finalRows.length, priced: finalPriced.length, inspection: finalRows.length - finalPriced.length,
+    within20: finalShare(20), within100: finalShare(100), mae: finalAbs.reduce((a, b) => a + b, 0) / finalAbs.length,
+    above300: finalAbs.filter(x => x > 300).length, allowedAbove300: Math.floor(80 * finalMs.length / ms.length) };
+  console.log('final cohort', JSON.stringify(finalSummary));
+  assert.ok(finalMs.length > 3500, 'the final intake must be included');
+  assert.equal(finalSummary.inspection, 0, 'all payable final intake conditions remain priced');
+  assert.ok(finalPriced.every(r => r.price === r.expectedPrice), 'final intake uses the same approved reference bonus');
+  assert.ok(finalSummary.within20 >= .95 && finalSummary.within100 >= .975 && finalSummary.mae <= 30, JSON.stringify(finalSummary));
+  assert.ok(finalSummary.above300 <= finalSummary.allowedAbove300, JSON.stringify(finalSummary));
+  console.log('service reconciliation passed: original and final cohorts');
 })().catch(e => { console.error(e); process.exitCode = 1; });

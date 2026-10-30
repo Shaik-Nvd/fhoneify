@@ -35,7 +35,7 @@ const all = loadMeasurements();
 const usable = all.filter(m => !hasUnknownInput(m));
 const excludedUnknown = all.length - usable.length;
 const semantics = modelSemantics(all);
-const OUT = path.join(EVIDENCE_DIR, 'validation-2026-10-28');
+const OUT = argv.find(a => a.startsWith('--out-dir=')) ? path.resolve(process.cwd(), argv.find(a => a.startsWith('--out-dir='))!.slice(10)) : path.join(EVIDENCE_DIR, 'validation-2026-10-28');
 fs.mkdirSync(OUT, { recursive: true });
 
 // ------------------------------------------------------------------ predictions

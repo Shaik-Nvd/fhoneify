@@ -132,8 +132,8 @@ async function run() {
       ['iPhone 13 Mini', 256, 22040, { ...clean, hardware: ['face', 'speaker'] }, 14340],
       ['iPhone Air', 512, 74500, { ...clean, hardware: ['microphone'], mobileAge: '6to11' }, 63480],
       ['iPhone Air', 512, 74500, { ...clean, hardware: ['microphone'] }, 73900],
-      // iPhone 12 Mini is priced from the iPhone 12 (no quotes of its own): INR 15,450 here, Cashify 15,380
-      ['iPhone 12 Mini', 256, 16660, { ...clean, accessories: [], box: false, charger: false, bodyDents: '1-2 minor dents' }, 15450],
+      // Final Mini data measures box INR 800 and minor dents INR 480: Cashify base INR 15,380.
+      ['iPhone 12 Mini', 256, 16660, { ...clean, accessories: [], box: false, charger: false, bodyDents: '1-2 minor dents' }, 15380],
     ];
     for (const [model, gb, R, d, cashify] of live) {
       const got = price(model, gb, R, d);
@@ -191,11 +191,13 @@ async function run() {
     assert.ok(n >= 4 * 140, `checked ${n}`);
   });
 
-  await test('iPhone 12 Mini (no quotes of its own) is priced from the iPhone 12 and labelled inferred, never measured', () => {
-    assert.equal(SCOPE.models['iPhone 12 Mini']?.fallbackFrom, 'iPhone 12');
-    const q = appleEvidenceQuote('Apple iPhone 12 Mini', '64GB', 14150, { ...clean, hardware: ['back_camera'] })!;
-    assert.equal(q.outcome.confidence, 'inferred');
-    assert.equal(q.outcome.price, 12150);
+  await test('iPhone 12 Mini uses its own measured deductions from all three supplied capacities', () => {
+    assert.equal(SCOPE.models['iPhone 12 Mini']?.fallbackFrom, undefined);
+    assert.deepEqual(SCOPE.models['iPhone 12 Mini']?.storagesGb, [64, 128, 256]);
+    const q = appleEvidenceQuote('Apple iPhone 12 Mini', '64GB', 14430, { ...clean, hardware: ['back_camera'] })!;
+    assert.equal(q.source, 'model');
+    assert.equal(q.outcome.confidence, 'measured');
+    assert.equal(q.outcome.price, 11930);
   });
 
   await test('unrecorded combinations and capacities are priced by the same rules (no lookup)', () => {

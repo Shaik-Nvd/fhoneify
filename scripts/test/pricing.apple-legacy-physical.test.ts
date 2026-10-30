@@ -15,6 +15,9 @@ const changes: Partial<DiagnosticsType>[] = [
  {bodyPanel:'Cracked/ broken side or back panel'}, {bodyPanel:'Missing side or back panel'},
  {bodyBent:'Bent/ curved panel'}, {bodyBent:'Loose screen (Gap in screen and body)'},
 ];
+// Direct Cashify controls, independent of runtime coefficients: these models
+// explicitly quote the same price for 1-2 body scratches as for flawless body.
+const neutralLightBody = new Set(['Apple iPhone X', 'Apple iPhone XS', 'Apple iPhone 11', 'Apple iPhone 12 Pro Max', 'Apple iPhone 13']);
 let checks=0;
 const devices=[...new Map((SEED_DEVICES as any[]).filter(d=>names.has(d.model)).map(d=>[d.model+'|'+d.storage,d])).values()];
 for(const d of devices) for(const factor of [.8,1,1.2]) {
@@ -22,7 +25,9 @@ for(const d of devices) for(const factor of [.8,1,1.2]) {
  const quote=(answers:DiagnosticsType)=>calculateApplePrice(d.model,reference,answers,undefined,d.storage,{catalogStorage:d.storage});
  const base=quote(clean);
  assert.equal(quote({...clean,screenCondition:'No scratches on screen',screenSpots:'No spots on screen',bodyBent:'Phone not bent',bodyPanel:'No defect on side or back panel'}).cashifyConditionEquivalent,base.cashifyConditionEquivalent,'no-damage answers preserve clean quote');checks++;
- for(const change of changes){const damaged=quote({...clean,...change});assert(damaged.cashifyConditionEquivalent<base.cashifyConditionEquivalent,`${d.model} ${d.storage} ${JSON.stringify(change)} is ignored at ${reference}`);checks++;}
+ for(const change of changes){const damaged=quote({...clean,...change});
+  if(change.bodyScratches==='1-2 scratches' && neutralLightBody.has(d.model)) assert.equal(damaged.cashifyConditionEquivalent,base.cashifyConditionEquivalent,'measured zero-change body control must remain neutral');
+  else assert(damaged.cashifyConditionEquivalent<base.cashifyConditionEquivalent,`${d.model} ${d.storage} ${JSON.stringify(change)} is ignored at ${reference}`);checks++;}
  assert.equal(quote({...clean,screenSpots:'1-2 minor spots on screen',screenCondition:'No scratches on screen',bodyBent:'Phone not bent'}).cashifyConditionEquivalent,quote({...clean,screenSpots:'1-2 minor spots on screen'}).cashifyConditionEquivalent,'clean labels alongside damage must not add another screen repair');checks++;
  const cracked={...clean,screenCondition:'Screen cracked/ glass broken'};
  const two=quote({...cracked,bodyPanel:'Cracked/ broken side or back panel'});

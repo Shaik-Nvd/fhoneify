@@ -101,7 +101,7 @@ function paramList(profile: ModelProfile): Param[] {
     }
   }
   ps.push({ name: 'box.base', get: p => p.boxNo.base, set: (p, v) => { p.boxNo.base = v; }, scale: 2000, lo: 0, hi: 6000, prior: 2250 });
-  if (profile.chargerNo && !CLEAN_OFFSET[profile.modelKey]) {
+  if (profile.chargerNo && !CLEAN_OFFSET[profile.modelKey] && !profile.chargerNo.fixedByControlledPairs) {
     ps.push({ name: 'charger.base', get: p => p.chargerNo!.base, set: (p, v) => { p.chargerNo!.base = v; }, scale: 500, lo: 0, hi: 3000, prior: 300 });
     if (profile.age) ps.push({ name: 'charger.aged', get: p => p.chargerNo!.aged, set: (p, v) => { p.chargerNo!.aged = v; }, scale: 500, lo: 0, hi: 3000, prior: 300 });
   }
@@ -207,7 +207,7 @@ export function seedAccessoryDeductions(profile: ModelProfile, rows: Row[]) {
   if (box.length) profile.boxNo.base = Math.max(0, medianOf(box));
   const boxAged = profile.age ? diffs('BOX_NO', true) : [];
   if (boxAged.length) profile.boxNo.aged = Math.max(0, medianOf(boxAged));
-  if (profile.chargerNo && profile.asks.charger && !CLEAN_OFFSET[profile.modelKey]) {
+  if (profile.chargerNo && profile.asks.charger && !CLEAN_OFFSET[profile.modelKey] && !profile.chargerNo.fixedByControlledPairs) {
     let charger = diffs('CHARGER_NO', false);
     if (!charger.length) {
       charger = rows.filter(r => r.m.deviations.length > 0 && r.m.deviations.every(d => d === 'BOX_NO' || d === 'CHARGER_NO') && r.m.deviations.includes('CHARGER_NO') && ageStateOf(r.ans, profile).state !== 3)
@@ -300,7 +300,7 @@ export function fitCodeOverrides(profile: ModelProfile, rows: Row[], opts: { dec
   }
   coords.push({ name: 'BOX', kind: 'fixed', get: () => profile.boxNo.base, set: v => { profile.boxNo.base = v; }, touches: r => r.ans.boxMissing && (!profile.age || stateOf(r) !== 3) });
   if (profile.age) coords.push({ name: 'BOX_AGED', kind: 'fixed', get: () => profile.boxNo.aged, set: v => { profile.boxNo.aged = v; }, touches: r => r.ans.boxMissing && stateOf(r) === 3 });
-  if (profile.chargerNo && profile.asks.charger && !CLEAN_OFFSET[profile.modelKey]) {
+  if (profile.chargerNo && profile.asks.charger && !CLEAN_OFFSET[profile.modelKey] && !profile.chargerNo.fixedByControlledPairs) {
     coords.push({ name: 'CHARGER', kind: 'fixed', get: () => profile.chargerNo!.base, set: v => { profile.chargerNo!.base = v; }, touches: r => r.ans.chargerMissing && (!profile.age || stateOf(r) !== 3) });
     if (profile.age) coords.push({ name: 'CHARGER_AGED', kind: 'fixed', get: () => profile.chargerNo!.aged, set: v => { profile.chargerNo!.aged = v; }, touches: r => r.ans.chargerMissing && stateOf(r) === 3 });
   }
@@ -309,6 +309,7 @@ export function fitCodeOverrides(profile: ModelProfile, rows: Row[], opts: { dec
   // (a missing box or charger alongside does not spoil that: those amounts are fitted from their own pairs). Touch failure, a replaced or
   // cracked screen and panel damage are excluded: they change Cashify's flow and minimum, so their combinations are not additive.
   const weight = (r: Row) => {
+    if (r.m.deviations.length === 1 && /^(BOX_NO|CHARGER_NO)$/.test(r.m.deviations[0])) return 5;
     const devs = r.m.deviations.filter(d => d !== 'BOX_NO' && d !== 'CHARGER_NO');
     return devs.length === 1 && !/^(Q0[123]|S01|P0[123])$/.test(devs[0]) ? 5 : 1;
   };
@@ -347,11 +348,49 @@ export function fitCodeOverrides(profile: ModelProfile, rows: Row[], opts: { dec
   }
 }
 
+/** Preserve observed capacity differences only for proportional functional
+ * deductions. Fixed component costs remain shared; no final price is stored.
+ * Uses training rows only, so a held-out capacity cannot acquire its own value. */
+export function seedStorageFunctional(profile: ModelProfile, rows: Row[]) {
+  for (const [code, cal] of Object.entries(profile.codes ?? {})) {
+    if (!code.startsWith('F') || cal.kind !== 'pct' || cal.support !== 'measured') continue;
+    const singles = rows.filter(r => !r.atFloor && r.m.deviations.length === 1 && r.m.deviations[0] === code);
+    if (new Set(singles.map(r => r.storageGb)).size < 2) continue;
+    const errors = singles.map(r => Math.abs((deductionFor(profile, r) ?? 0) - r.target));
+    if (Math.max(...errors) <= 60) continue;
+    const samples: { gb: number; fraction: number }[] = [];
+    const original = cal.value;
+    try {
+      cal.value = 0;
+      for (const r of singles) {
+        const other = deductionFor(profile, r);
+        if (other != null && r.ref > 0 && r.target >= other) samples.push({ gb: r.storageGb, fraction: (r.target - other) / r.ref });
+      }
+    } finally { cal.value = original; }
+    for (const gb of new Set(samples.map(r => r.gb))) {
+      const values = samples.filter(r => r.gb === gb).map(r => r.fraction);
+      profile.functionalByStorage ??= {};
+      profile.functionalByStorage[String(gb)] ??= {};
+      profile.functionalByStorage[String(gb)][code] = { kind: 'pct', value: medianOf(values), support: 'measured', n: new Set(singles.filter(r => r.storageGb === gb).map(r => r.shape)).size,
+        basis: 'controlled functional quotes at this capacity; fraction of current reference' };
+    }
+  }
+}
+
 export interface FitReport { modelKey: string; rows: number; used: number; rmse: number; maxAbs: number; floor: ModelProfile['floor']; params: Record<string, { value: number; support: Support; shapes: number }> }
 
 export function fitModel(modelKey: string, all: Measurement[], sem: ReturnType<typeof modelSemantics>, prior?: ModelProfile): { profile: ModelProfile; report: FitReport } {
   const rows = all.filter(m => m.model_key === modelKey && m.outcome === 'NUMERIC_QUOTE' && m.base != null);
   const profile = emptyProfile(modelKey, all.filter(m => m.model_key === modelKey), sem);
+  // Direct pure accessory quotes identify this component independently of all
+  // repair costs. Hold it fixed throughout optimization, not only afterwards.
+  if (profile.chargerNo && !CLEAN_OFFSET[modelKey]) {
+    const isolated = rows.filter(m => m.deviations.length === 1 && m.deviations[0] === 'CHARGER_NO');
+    const costs = isolated.map(m => m.variant_get_upto - m.base!);
+    if (new Set(isolated.map(m => m.storage_gb)).size >= 2 && Math.max(...costs) - Math.min(...costs) <= 20) {
+      profile.chargerNo = { base: medianOf(costs), aged: medianOf(costs), support: 'measured', fixedByControlledPairs: true };
+    }
+  }
   // the quote for a phone that cannot make or receive calls (nothing else wrong) is a flat amount: INR 1,200 on every model measured but the SE 2022 (INR 800)
   const scrapQuotes = rows.filter(m => m.deviations.length === 1 && m.deviations[0] === 'Q01').map(m => m.base!);
   if (scrapQuotes.length) profile.scrap = median(scrapQuotes);
@@ -361,7 +400,7 @@ export function fitModel(modelKey: string, all: Measurement[], sem: ReturnType<t
     for (const cls of CLASS_ORDER) if (prior.classes[cls]) profile.classes[cls] = { ...prior.classes[cls]!, support: 'inferred', n: 0 };
     if (profile.age && prior.age) for (const st of ['1', '2', '3'] as const) profile.age[st] = { ...prior.age[st], support: 'inferred', n: 0 };
     profile.boxNo = { ...prior.boxNo, support: 'inferred' };
-    if (profile.chargerNo && prior.chargerNo && !CLEAN_OFFSET[modelKey]) profile.chargerNo = { ...prior.chargerNo, support: 'inferred' };
+    if (profile.chargerNo && prior.chargerNo && !CLEAN_OFFSET[modelKey] && !profile.chargerNo.fixedByControlledPairs) profile.chargerNo = { ...prior.chargerNo, support: 'inferred' };
     if (profile.eSimDualPct != null && prior.eSimDualPct != null) profile.eSimDualPct = prior.eSimDualPct;
   }
   const params = paramList(profile);
@@ -510,6 +549,7 @@ export function fitModel(modelKey: string, all: Measurement[], sem: ReturnType<t
   const J = gaussNewton(fitRows, params.map(() => true), afterStage2, lambda);
   // the per-code values and accessories are least-absolute-error estimates: settle them once more against the polished age law
   fitCodeOverrides(profile, fitRows, { decide: false });
+  seedStorageFunctional(profile, fitRows);
   // which group combinations the model's own quotes cover (used to label quotes outside them 'inferred')
   {
     const seen = new Set<string>();

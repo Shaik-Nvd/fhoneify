@@ -52,8 +52,21 @@ export const CLEAN_OFFSET: Record<string, number> = JSON.parse(fs.readFileSync(p
 export function loadMeasurements(file?: string): Measurement[] {
   if (file) return readJsonl(file);
   // plus the quotes recorded live on cashify.in while checking the release (live-check-2026-10-28.py)
-  const extras = ['measurements-2026-10-28.jsonl', 'live-check-2026-10-28.jsonl'].map(f => path.join(EVIDENCE_DIR, f));
-  return [...readJsonl(path.join(EVIDENCE_DIR, 'measurements.jsonl')), ...extras.flatMap(f => (fs.existsSync(f) ? readJsonl(f) : []))];
+  const extras = ['measurements-2026-10-28.jsonl', 'live-check-2026-10-28.jsonl', 'measurements-2026-10-30.jsonl'].map(f => path.join(EVIDENCE_DIR, f));
+  const all = [...readJsonl(path.join(EVIDENCE_DIR, 'measurements.jsonl')), ...extras.flatMap(f => (fs.existsSync(f) ? readJsonl(f) : []))];
+  const unique = new Map<string, Measurement>();
+  for (const m of all) {
+    const prior = unique.get(m.measurement_id);
+    if (!prior) unique.set(m.measurement_id, m);
+    else if (prior.config_key !== m.config_key || prior.base !== m.base || prior.model_key !== m.model_key || prior.storage_gb !== m.storage_gb) {
+      throw new Error(`conflicting duplicate measurement ${m.measurement_id}`);
+    } else {
+      prior.flags = [...new Set([...prior.flags, ...m.flags])];
+      prior.also_in = [...new Set([...prior.also_in, ...m.also_in, `${m.archive}::${m.member}::${m.case_id}`])];
+      prior.export_duplicate_count += m.export_duplicate_count;
+    }
+  }
+  return [...unique.values()];
 }
 
 // ---------------------------------------------------------------------------
