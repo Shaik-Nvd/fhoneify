@@ -1,6 +1,6 @@
 {
  "version": "apple-cashify-calibration/1",
- "generatedFrom": "data/pricing-evidence/measurements.jsonl + measurements-2026-10-28.jsonl + live-check-2026-10-28.jsonl + measurements-2026-10-30.jsonl; duplicate measurement IDs counted once",
+ "generatedFrom": "data/pricing-evidence/measurements.jsonl + measurements-2026-10-28.jsonl + live-check-2026-10-28.jsonl + measurements-2026-10-30.jsonl; duplicate measurement IDs counted once (10441 usable measurements)",
  "models": {
   "iPhone 11": {
    "modelKey": "iPhone 11",
@@ -610,13 +610,14 @@
     },
     "D06": {
      "kind": "fixed",
-     "value": 5500.00998688696,
+     "value": 5500.0000000000055,
      "support": "inferred",
-     "n": 1
+     "n": 1,
+     "basis": "solved from combinations with isolated codes"
     },
     "D07": {
      "kind": "fixed",
-     "value": 4799.681629101562,
+     "value": 4799.915999999999,
      "support": "inferred",
      "n": 1
     },
@@ -1024,9 +1025,10 @@
     },
     "D06": {
      "kind": "fixed",
-     "value": 6600.011999999988,
+     "value": 6600.000000000009,
      "support": "inferred",
-     "n": 1
+     "n": 1,
+     "basis": "solved from combinations with isolated codes"
     },
     "D07": {
      "kind": "fixed",
@@ -1265,7 +1267,7 @@
    },
    "age": null,
    "boxNo": {
-    "base": 800.1929718841184,
+    "base": 800.1975754500644,
     "aged": 2250,
     "support": "measured"
    },
@@ -1415,7 +1417,7 @@
     },
     "F06": {
      "kind": "fixed",
-     "value": 2000.016,
+     "value": 2000.0000000000077,
      "support": "measured",
      "n": 4
     },
@@ -1462,9 +1464,10 @@
     },
     "Q02": {
      "kind": "fixed",
-     "value": 8200.1953125,
+     "value": 8200,
      "support": "inferred",
-     "n": 1
+     "n": 1,
+     "basis": "solved from combinations with isolated codes"
     },
     "Q03": {
      "kind": "fixed",
@@ -1489,9 +1492,10 @@
     },
     "S04": {
      "kind": "fixed",
-     "value": 1039.532999999999,
+     "value": 1040.0000000000027,
      "support": "inferred",
-     "n": 1
+     "n": 1,
+     "basis": "solved from combinations with isolated codes"
     },
     "D01": {
      "kind": "fixed",
@@ -1551,87 +1555,87 @@
     },
     "P01": {
      "kind": "fixed",
-     "value": 1998.1764705882351,
+     "value": 1593.2678877621106,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 11 Pro, iPhone 11 Pro Max, iPhone 12 Mini"
+     "basis": "nearest sibling iPhone 12 Mini"
     },
     "P02": {
      "kind": "fixed",
-     "value": 1998.1764705882351,
+     "value": 1593.2678877621106,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 11 Pro, iPhone 11 Pro Max, iPhone 12 Mini"
+     "basis": "nearest sibling iPhone 12 Mini"
     },
     "P03": {
      "kind": "fixed",
-     "value": 1998.1764705882351,
+     "value": 1593.2678877621106,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 11 Pro, iPhone 11 Pro Max, iPhone 12 Mini"
+     "basis": "nearest sibling iPhone 12 Mini"
     },
     "P04": {
      "kind": "fixed",
-     "value": 1998.1764705882351,
+     "value": 1593.2678877621106,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 11 Pro, iPhone 11 Pro Max, iPhone 12 Mini"
+     "basis": "nearest sibling iPhone 12 Mini"
     },
     "F12": {
      "kind": "fixed",
-     "value": 1127.4725274725274,
+     "value": 1021.3255690782761,
      "support": "inferred",
      "n": 0,
-     "basis": "own F01/F02 x template ratio"
+     "basis": "nearest sibling iPhone 12 Mini"
     },
     "F11": {
      "kind": "fixed",
-     "value": 1250,
+     "value": 2553.31392269569,
      "support": "inferred",
      "n": 0,
-     "basis": "own F06/F10/F13 x template ratio"
+     "basis": "nearest sibling iPhone 12 Mini"
     },
     "F03": {
      "kind": "fixed",
-     "value": 307.4117647058824,
+     "value": 510.66278453913804,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 11 Pro, iPhone 11 Pro Max, iPhone 12 Mini"
+     "basis": "nearest sibling iPhone 12 Mini"
     },
     "F07": {
      "kind": "fixed",
-     "value": 1229.6470588235295,
+     "value": 1225.5906828939312,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 11 Pro, iPhone 11 Pro Max, iPhone 12 Mini"
+     "basis": "nearest sibling iPhone 12 Mini"
     },
     "F09": {
      "kind": "fixed",
-     "value": 307.4117647058824,
+     "value": 510.66278453913804,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 11 Pro, iPhone 11 Pro Max, iPhone 12 Mini"
+     "basis": "nearest sibling iPhone 12 Mini"
     },
     "F15": {
      "kind": "fixed",
-     "value": 409.88235294117646,
+     "value": 408.5302276313104,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 11 Pro, iPhone 11 Pro Max, iPhone 12 Mini"
+     "basis": "nearest sibling iPhone 12 Mini"
     },
     "F16": {
      "kind": "pct",
-     "value": 0.03185840707964602,
+     "value": 0.03185509056839475,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 11 Pro, iPhone 11 Pro Max, iPhone 12 Mini"
+     "basis": "nearest sibling iPhone 12 Mini"
     },
     "F04": {
      "kind": "pct",
      "value": 0,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 11 Pro, iPhone 11 Pro Max, iPhone 12 Mini"
+     "basis": "nearest sibling iPhone 12 Mini"
     }
    },
    "observedInteractions": [
@@ -1836,13 +1840,14 @@
     },
     "D06": {
      "kind": "fixed",
-     "value": 3959.99108078858,
+     "value": 3960.000000000012,
      "support": "inferred",
-     "n": 1
+     "n": 1,
+     "basis": "solved from combinations with isolated codes"
     },
     "D07": {
      "kind": "fixed",
-     "value": 3240.0619502673358,
+     "value": 3599.937000000008,
      "support": "inferred",
      "n": 1
     },
@@ -2650,13 +2655,14 @@
     },
     "D06": {
      "kind": "fixed",
-     "value": 7980.019634801658,
+     "value": 7980.000000000013,
      "support": "inferred",
-     "n": 1
+     "n": 1,
+     "basis": "solved from combinations with isolated codes"
     },
     "D07": {
      "kind": "fixed",
-     "value": 5999.821759094236,
+     "value": 5999.895000000006,
      "support": "inferred",
      "n": 1
     },
@@ -3059,13 +3065,14 @@
     },
     "D06": {
      "kind": "fixed",
-     "value": 6879.997834102672,
+     "value": 6880.000000000013,
      "support": "inferred",
-     "n": 1
+     "n": 1,
+     "basis": "solved from combinations with isolated codes"
     },
     "D07": {
      "kind": "fixed",
-     "value": 6000.261204528808,
+     "value": 5999.895000000006,
      "support": "inferred",
      "n": 1
     },
@@ -3469,13 +3476,14 @@
     },
     "D06": {
      "kind": "fixed",
-     "value": 6269.995270953804,
+     "value": 6270.000000000023,
      "support": "inferred",
-     "n": 1
+     "n": 1,
+     "basis": "solved from combinations with isolated codes"
     },
     "D07": {
      "kind": "fixed",
-     "value": 5400.169167260739,
+     "value": 5399.905499999999,
      "support": "inferred",
      "n": 1
     },
@@ -3880,9 +3888,10 @@
     },
     "D06": {
      "kind": "fixed",
-     "value": 9075.016500000016,
+     "value": 9075.000000000005,
      "support": "inferred",
-     "n": 1
+     "n": 1,
+     "basis": "solved from combinations with isolated codes"
     },
     "D07": {
      "kind": "fixed",
@@ -4356,13 +4365,14 @@
     },
     "D06": {
      "kind": "fixed",
-     "value": 11000.019993443491,
+     "value": 11000.000000000025,
      "support": "inferred",
-     "n": 1
+     "n": 1,
+     "basis": "solved from combinations with isolated codes"
     },
     "D07": {
      "kind": "fixed",
-     "value": 6000.041481811527,
+     "value": 5999.895000000006,
      "support": "inferred",
      "n": 1
     },
@@ -4832,9 +4842,10 @@
     },
     "D06": {
      "kind": "fixed",
-     "value": 9900.017999999996,
+     "value": 9900.000000000005,
      "support": "inferred",
-     "n": 1
+     "n": 1,
+     "basis": "solved from combinations with isolated codes"
     },
     "D07": {
      "kind": "fixed",
@@ -5072,7 +5083,7 @@
    },
    "age": null,
    "boxNo": {
-    "base": 1200.3009009078692,
+    "base": 1200.3054794738455,
     "aged": 2250,
     "support": "measured"
    },
@@ -5223,7 +5234,7 @@
     },
     "F06": {
      "kind": "fixed",
-     "value": 2000.016,
+     "value": 2000.000000000006,
      "support": "measured",
      "n": 4
     },
@@ -5270,9 +5281,10 @@
     },
     "Q02": {
      "kind": "fixed",
-     "value": 18389.6484375,
+     "value": 18390.000000000007,
      "support": "inferred",
-     "n": 1
+     "n": 1,
+     "basis": "solved from combinations with isolated codes"
     },
     "Q03": {
      "kind": "fixed",
@@ -5297,9 +5309,10 @@
     },
     "S04": {
      "kind": "fixed",
-     "value": 2519.8338984375,
+     "value": 2520.000000000012,
      "support": "inferred",
-     "n": 1
+     "n": 1,
+     "basis": "solved from combinations with isolated codes"
     },
     "D01": {
      "kind": "fixed",
@@ -5359,87 +5372,87 @@
     },
     "P01": {
      "kind": "fixed",
-     "value": 3013.1965217391307,
+     "value": 2897.5530045941046,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 14, iPhone 13 Pro, iPhone 12 Pro Max"
+     "basis": "nearest sibling iPhone 14"
     },
     "P02": {
      "kind": "fixed",
-     "value": 3013.1965217391307,
+     "value": 2897.5530045941046,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 14, iPhone 13 Pro, iPhone 12 Pro Max"
+     "basis": "nearest sibling iPhone 14"
     },
     "P03": {
      "kind": "fixed",
-     "value": 3013.1965217391307,
+     "value": 2897.5530045941046,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 14, iPhone 13 Pro, iPhone 12 Pro Max"
+     "basis": "nearest sibling iPhone 14"
     },
     "P04": {
      "kind": "fixed",
-     "value": 3013.1965217391307,
+     "value": 2897.5530045941046,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 14, iPhone 13 Pro, iPhone 12 Pro Max"
+     "basis": "nearest sibling iPhone 14"
     },
     "F12": {
      "kind": "fixed",
-     "value": 2108.791208791209,
+     "value": 1519.6956317801246,
      "support": "inferred",
      "n": 0,
-     "basis": "own F01/F02 x template ratio"
+     "basis": "nearest sibling iPhone 14"
     },
     "F11": {
      "kind": "fixed",
-     "value": 2000,
+     "value": 2532.8260529668746,
      "support": "inferred",
      "n": 0,
-     "basis": "own F06/F10/F13 x template ratio"
+     "basis": "nearest sibling iPhone 14"
     },
     "F03": {
      "kind": "fixed",
-     "value": 589.7585669781931,
+     "value": 506.5652105933749,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 14, iPhone 13 Pro, iPhone 12 Pro Max"
+     "basis": "nearest sibling iPhone 14"
     },
     "F07": {
      "kind": "fixed",
-     "value": 1264.2782608695654,
+     "value": 1215.7565054240997,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 14, iPhone 13 Pro, iPhone 12 Pro Max"
+     "basis": "nearest sibling iPhone 14"
     },
     "F09": {
      "kind": "fixed",
-     "value": 589.7585669781931,
+     "value": 506.5652105933749,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 14, iPhone 13 Pro, iPhone 12 Pro Max"
+     "basis": "nearest sibling iPhone 14"
     },
     "F15": {
      "kind": "fixed",
-     "value": 421.4260869565218,
+     "value": 405.25216847469994,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 14, iPhone 13 Pro, iPhone 12 Pro Max"
+     "basis": "nearest sibling iPhone 14"
     },
     "F16": {
      "kind": "pct",
-     "value": 0.03160321596836202,
+     "value": 0.03146374829001368,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 14, iPhone 13 Pro, iPhone 12 Pro Max"
+     "basis": "nearest sibling iPhone 14"
     },
     "F04": {
      "kind": "pct",
      "value": 0,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 14, iPhone 13 Pro, iPhone 12 Pro Max"
+     "basis": "nearest sibling iPhone 14"
     }
    },
    "observedInteractions": [
@@ -5648,13 +5661,14 @@
     },
     "D06": {
      "kind": "fixed",
-     "value": 11000.019993443491,
+     "value": 11000.000000000024,
      "support": "inferred",
-     "n": 1
+     "n": 1,
+     "basis": "solved from combinations with isolated codes"
     },
     "D07": {
      "kind": "fixed",
-     "value": 6000.041481811527,
+     "value": 5999.895000000006,
      "support": "inferred",
      "n": 1
     },
@@ -5890,7 +5904,7 @@
    },
    "age": null,
    "boxNo": {
-    "base": 1199.9235080556027,
+    "base": 1199.9280544801109,
     "aged": 2250,
     "support": "measured"
    },
@@ -5996,25 +6010,25 @@
    "codes": {
     "C01": {
      "kind": "fixed",
-     "value": 1789.749876040243,
+     "value": 1789.7498760402416,
      "support": "inferred",
      "n": 1
     },
     "C02": {
      "kind": "fixed",
-     "value": 1320.0052079731133,
+     "value": 1320.0052079731136,
      "support": "inferred",
      "n": 1
     },
     "C03": {
      "kind": "fixed",
-     "value": 1670.4290415545165,
+     "value": 1670.429041554516,
      "support": "inferred",
      "n": 1
     },
     "C04": {
      "kind": "fixed",
-     "value": 894.8749380201215,
+     "value": 894.8749380201208,
      "support": "inferred",
      "n": 1
     },
@@ -6034,13 +6048,13 @@
     },
     "F05": {
      "kind": "pct",
-     "value": 0.38833998602628783,
+     "value": 0.3883399860262876,
      "support": "inferred",
      "n": 1
     },
     "F06": {
      "kind": "fixed",
-     "value": 1999.99646859375,
+     "value": 2000.0000000000146,
      "support": "measured",
      "n": 4
     },
@@ -6067,7 +6081,7 @@
     },
     "F14": {
      "kind": "pct",
-     "value": 0.2999963378906256,
+     "value": 0.29999633789062535,
      "support": "inferred",
      "n": 1
     },
@@ -6087,9 +6101,10 @@
     },
     "Q02": {
      "kind": "fixed",
-     "value": 21500.244140625,
+     "value": 21500.000000000015,
      "support": "inferred",
-     "n": 1
+     "n": 1,
+     "basis": "solved from combinations with isolated codes"
     },
     "Q03": {
      "kind": "fixed",
@@ -6114,9 +6129,10 @@
     },
     "S04": {
      "kind": "fixed",
-     "value": 2709.7871491195683,
+     "value": 2710.0000000000114,
      "support": "inferred",
-     "n": 1
+     "n": 1,
+     "basis": "solved from combinations with isolated codes"
     },
     "D01": {
      "kind": "fixed",
@@ -6176,87 +6192,87 @@
     },
     "P01": {
      "kind": "fixed",
-     "value": 3392.639322681573,
+     "value": 3908.327412030131,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 14 Pro, iPhone 15 Plus, iPhone 15"
+     "basis": "nearest sibling iPhone 14 Pro"
     },
     "P02": {
      "kind": "fixed",
-     "value": 3375.489152796422,
+     "value": 3908.327412030131,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 14 Pro, iPhone 15 Plus, iPhone 15"
+     "basis": "nearest sibling iPhone 14 Pro"
     },
     "P03": {
      "kind": "fixed",
-     "value": 3375.489152796422,
+     "value": 3908.327412030131,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 14 Pro, iPhone 15 Plus, iPhone 15"
+     "basis": "nearest sibling iPhone 14 Pro"
     },
     "P04": {
      "kind": "fixed",
-     "value": 4346.250265561929,
+     "value": 3908.327412030131,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 14 Pro, iPhone 15 Plus, iPhone 15"
+     "basis": "nearest sibling iPhone 14 Pro"
     },
     "F12": {
      "kind": "fixed",
-     "value": 2430.3296703296705,
+     "value": 2004.2704677077597,
      "support": "inferred",
      "n": 0,
-     "basis": "own F01/F02 x template ratio"
+     "basis": "nearest sibling iPhone 14 Pro"
     },
     "F11": {
      "kind": "fixed",
-     "value": 1999.99646859375,
+     "value": 2505.3380846346995,
      "support": "inferred",
      "n": 0,
-     "basis": "own F06/F10/F13 x template ratio"
+     "basis": "nearest sibling iPhone 14 Pro"
     },
     "F03": {
      "kind": "fixed",
-     "value": 520.0782997762864,
+     "value": 701.4946636977159,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 14 Pro, iPhone 15 Plus, iPhone 15"
+     "basis": "nearest sibling iPhone 14 Pro"
     },
     "F07": {
      "kind": "fixed",
-     "value": 1333.5086042065009,
+     "value": 1202.5622806246558,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 14 Pro, iPhone 15 Plus, iPhone 15"
+     "basis": "nearest sibling iPhone 14 Pro"
     },
     "F09": {
      "kind": "fixed",
-     "value": 520.0782997762864,
+     "value": 701.4946636977159,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 14 Pro, iPhone 15 Plus, iPhone 15"
+     "basis": "nearest sibling iPhone 14 Pro"
     },
     "F15": {
      "kind": "fixed",
-     "value": 493.8920756320374,
+     "value": 400.85409354155195,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 14 Pro, iPhone 15 Plus, iPhone 15"
+     "basis": "nearest sibling iPhone 14 Pro"
     },
     "F16": {
      "kind": "pct",
-     "value": 0.029982363315696647,
+     "value": 0.03140782660192362,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 14 Pro, iPhone 15 Plus, iPhone 15"
+     "basis": "nearest sibling iPhone 14 Pro"
     },
     "F04": {
      "kind": "pct",
      "value": 0,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 14 Pro, iPhone 15 Plus, iPhone 15"
+     "basis": "nearest sibling iPhone 14 Pro"
     }
    },
    "observedInteractions": [
@@ -6511,9 +6527,10 @@
     },
     "D06": {
      "kind": "fixed",
-     "value": 11550.02100000001,
+     "value": 11550.000000000033,
      "support": "inferred",
-     "n": 2
+     "n": 2,
+     "basis": "solved from combinations with isolated codes"
     },
     "D07": {
      "kind": "fixed",
@@ -7053,13 +7070,14 @@
     },
     "D06": {
      "kind": "fixed",
-     "value": 12099.995137925922,
+     "value": 12100.000000000013,
      "support": "inferred",
-     "n": 2
+     "n": 2,
+     "basis": "solved from combinations with isolated codes"
     },
     "D07": {
      "kind": "fixed",
-     "value": 5999.748518188491,
+     "value": 5999.895000000006,
      "support": "inferred",
      "n": 2
     },
@@ -7532,13 +7550,14 @@
     },
     "D06": {
      "kind": "fixed",
-     "value": 12650.063276719875,
+     "value": 12650.000000000053,
      "support": "inferred",
-     "n": 2
+     "n": 2,
+     "basis": "solved from combinations with isolated codes"
     },
     "D07": {
      "kind": "fixed",
-     "value": 6000.04148181153,
+     "value": 5999.895000000011,
      "support": "inferred",
      "n": 2
     },
@@ -10602,15 +10621,15 @@
      "n": 0
     },
     "3": {
-     "a": -184.47671918561366,
-     "b": 0.24541257454459237,
+     "a": -184.4767191852753,
+     "b": 0.2454125745445873,
      "support": "inferred",
      "n": 0
     }
    },
    "boxNo": {
     "base": 2249.946500334373,
-    "aged": 1499.8990005049936,
+    "aged": 1499.9322003389793,
     "support": "measured"
    },
    "eSimDualPct": 0.04992494539946973,
@@ -10762,7 +10781,7 @@
     },
     "D05": {
      "kind": "fixed",
-     "value": 15209.01958277023,
+     "value": 14954.742707078924,
      "support": "inferred",
      "n": 1
     },
@@ -10871,9 +10890,10 @@
     },
     "F15": {
      "kind": "fixed",
-     "value": 599.9939999999999,
+     "value": 600.0000000000194,
      "support": "inferred",
-     "n": 1
+     "n": 1,
+     "basis": "solved from combinations with isolated codes"
     },
     "F17": {
      "kind": "fixed",
@@ -10891,62 +10911,63 @@
     },
     "P01": {
      "kind": "pct",
-     "value": 0.13192366432712838,
+     "value": 0.12423009984129735,
      "support": "inferred",
      "n": 2
     },
     "P03": {
      "kind": "pct",
-     "value": 0.13097640269807062,
+     "value": 0.12049448249200637,
      "support": "inferred",
      "n": 1
     },
     "P04": {
      "kind": "pct",
-     "value": 0.22689055496444036,
+     "value": 0.23064910263323962,
      "support": "inferred",
      "n": 1
     },
     "Q02": {
      "kind": "fixed",
-     "value": 29897.98564577343,
+     "value": 29999.416095106662,
      "support": "measured",
      "n": 6
     },
     "Q03": {
      "kind": "fixed",
-     "value": 15000,
+     "value": 14999.887000000046,
      "support": "inferred",
-     "n": 2
+     "n": 2,
+     "basis": "solved from combinations with isolated codes"
     },
     "S01": {
      "kind": "fixed",
-     "value": 17968.62291780267,
+     "value": 18473.929097519904,
      "support": "inferred",
      "n": 2
     },
     "S03": {
      "kind": "fixed",
-     "value": 8819.940000000031,
+     "value": 8819.88700000006,
      "support": "measured",
      "n": 3
     },
     "S04": {
      "kind": "fixed",
-     "value": 3780.1200000000476,
+     "value": 3780.1200000000727,
      "support": "inferred",
      "n": 2
     },
     "D02": {
      "kind": "fixed",
-     "value": 17999.940000000064,
+     "value": 17999.831836359554,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
     },
     "S02": {
      "kind": "fixed",
-     "value": 12600.060000000045,
+     "value": 12599.98428483876,
      "support": "inferred",
      "n": 0,
      "basis": "own S03 x template ratio"
@@ -10967,24 +10988,24 @@
     },
     "P02": {
      "kind": "fixed",
-     "value": 3873.6462042253524,
+     "value": 3893.369632338661,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 15 Pro, iPhone 15 Pro Max, iPhone 16 Pro"
+     "basis": "nearest sibling iPhone 15 Pro"
     },
     "F16": {
      "kind": "pct",
-     "value": 0.029983108108108107,
+     "value": 0.029966851071303126,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 15 Pro, iPhone 15 Pro Max, iPhone 16 Pro"
+     "basis": "nearest sibling iPhone 15 Pro"
     },
     "F04": {
      "kind": "pct",
      "value": 0,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 15 Pro, iPhone 15 Pro Max, iPhone 16 Pro"
+     "basis": "nearest sibling iPhone 15 Pro"
     }
    },
    "observedInteractions": [
@@ -11052,15 +11073,15 @@
      "n": 0
     },
     "3": {
-     "a": -28.13033789074636,
-     "b": 0.24290232711750417,
+     "a": -28.13033789025778,
+     "b": 0.24290232711749957,
      "support": "inferred",
      "n": 0
     }
    },
    "boxNo": {
     "base": 2250,
-    "aged": 1500.1035776264716,
+    "aged": 1500.0507829847097,
     "support": "measured"
    },
    "eSimDualPct": 0.04995293304202625,
@@ -11386,45 +11407,45 @@
     },
     "C01": {
      "kind": "fixed",
-     "value": 4569.753961097514,
+     "value": 3813.339389396193,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 16 Pro Max, iPhone 18 Pro, iPhone 16 Pro"
+     "basis": "nearest sibling iPhone 16 Pro Max"
     },
     "C03": {
      "kind": "fixed",
-     "value": 5151.359010691743,
+     "value": 4296.572480063479,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 16 Pro Max, iPhone 18 Pro, iPhone 16 Pro"
+     "basis": "nearest sibling iPhone 16 Pro Max"
     },
     "P02": {
      "kind": "fixed",
-     "value": 5400.272608849672,
+     "value": 4506.362873843089,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 16 Pro Max, iPhone 18 Pro, iPhone 16 Pro"
+     "basis": "nearest sibling iPhone 16 Pro Max"
     },
     "F10": {
      "kind": "fixed",
-     "value": 1499.9820003599928,
+     "value": 2626.266797104816,
      "support": "inferred",
      "n": 0,
-     "basis": "own F13 x template ratio"
+     "basis": "nearest sibling iPhone 16 Pro Max"
     },
     "F16": {
      "kind": "pct",
-     "value": 0.030006077329542052,
+     "value": 0.030021524866885693,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 16 Pro Max, iPhone 18 Pro, iPhone 16 Pro"
+     "basis": "nearest sibling iPhone 16 Pro Max"
     },
     "F04": {
      "kind": "pct",
      "value": 0,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 16 Pro Max, iPhone 18 Pro, iPhone 16 Pro"
+     "basis": "nearest sibling iPhone 16 Pro Max"
     }
    },
    "observedInteractions": [
@@ -11493,7 +11514,7 @@
    },
    "boxNo": {
     "base": 2250,
-    "aged": 1500.1035776264716,
+    "aged": 1500.0507829847097,
     "support": "measured"
    },
    "eSimDualPct": 0.04996805097207795,
@@ -11803,66 +11824,66 @@
     },
     "D02": {
      "kind": "fixed",
-     "value": 15937.078651685393,
+     "value": 17460.49524713648,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 18 Pro, iPhone 16 Pro Max, iPhone 18 Pro Max"
+     "basis": "nearest sibling iPhone 18 Pro"
     },
     "S02": {
      "kind": "fixed",
-     "value": 11155.955056179775,
+     "value": 12222.346672995538,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 18 Pro, iPhone 16 Pro Max, iPhone 18 Pro Max"
+     "basis": "nearest sibling iPhone 18 Pro"
     },
     "S03": {
      "kind": "fixed",
-     "value": 9697.897674418606,
+     "value": 9031.727757245455,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 17 Pro, iPhone 18 Pro, iPhone 16 Pro Max"
+     "basis": "nearest sibling iPhone 17 Pro"
     },
     "C01": {
-     "kind": "fixed",
-     "value": 14184,
+     "kind": "pct",
+     "value": 0.12,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 18 Pro, iPhone 16 Pro Max, iPhone 18 Pro Max"
+     "basis": "nearest sibling iPhone 18 Pro"
     },
     "C03": {
-     "kind": "fixed",
-     "value": 18912,
+     "kind": "pct",
+     "value": 0.16,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 18 Pro, iPhone 16 Pro Max, iPhone 18 Pro Max"
+     "basis": "nearest sibling iPhone 18 Pro"
     },
     "P02": {
-     "kind": "fixed",
-     "value": 15795.42418181818,
+     "kind": "pct",
+     "value": 0.13367664793320955,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 18 Pro, iPhone 16 Pro Max, iPhone 18 Pro Max"
+     "basis": "nearest sibling iPhone 18 Pro"
     },
     "F10": {
      "kind": "fixed",
-     "value": 2213.483146067416,
+     "value": 2425.0687843245114,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 18 Pro, iPhone 16 Pro Max, iPhone 18 Pro Max"
+     "basis": "nearest sibling iPhone 18 Pro"
     },
     "F16": {
      "kind": "pct",
      "value": 0.03,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 18 Pro, iPhone 16 Pro Max, iPhone 18 Pro Max"
+     "basis": "nearest sibling iPhone 18 Pro"
     },
     "F04": {
      "kind": "pct",
      "value": 0,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 18 Pro, iPhone 16 Pro Max, iPhone 18 Pro Max"
+     "basis": "nearest sibling iPhone 18 Pro"
     }
    },
    "observedInteractions": [
@@ -11919,15 +11940,15 @@
      "n": 0
     },
     "3": {
-     "a": -41.706027729337094,
-     "b": 0.24347760116788192,
+     "a": -41.70602772932712,
+     "b": 0.24347760116788175,
      "support": "inferred",
      "n": 0
     }
    },
    "boxNo": {
     "base": 2250,
-    "aged": 1500.1035776264716,
+    "aged": 1500.0507829847097,
     "support": "measured"
    },
    "eSimDualPct": null,
@@ -12227,66 +12248,66 @@
     },
     "D02": {
      "kind": "fixed",
-     "value": 15223.684210526315,
+     "value": 15505.057831680844,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 16, iPhone 16 Plus, iPhone 15 Plus"
+     "basis": "nearest sibling iPhone 16"
     },
     "S02": {
      "kind": "fixed",
-     "value": 10656.578947368422,
+     "value": 10853.540482176591,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 16, iPhone 16 Plus, iPhone 15 Plus"
+     "basis": "nearest sibling iPhone 16"
     },
     "S03": {
      "kind": "fixed",
-     "value": 7455.701754385965,
+     "value": 7593.502681669336,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 16, iPhone 16 Plus, iPhone 15 Plus"
+     "basis": "nearest sibling iPhone 16"
     },
     "C01": {
      "kind": "fixed",
-     "value": 2745.442957297642,
+     "value": 2733.2633998155334,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 16, iPhone 16 Plus, iPhone 15 Plus"
+     "basis": "nearest sibling iPhone 16"
     },
     "C03": {
      "kind": "fixed",
-     "value": 3097.131931166348,
+     "value": 3081.133287064783,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 16, iPhone 16 Plus, iPhone 15 Plus"
+     "basis": "nearest sibling iPhone 16"
     },
     "P02": {
      "kind": "fixed",
-     "value": 3244.550873167622,
+     "value": 3230.274450519793,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 16, iPhone 16 Plus, iPhone 15 Plus"
+     "basis": "nearest sibling iPhone 16"
     },
     "F10": {
      "kind": "fixed",
-     "value": 2439.6929824561403,
+     "value": 2484.7849089232122,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 16, iPhone 16 Plus, iPhone 15 Plus"
+     "basis": "nearest sibling iPhone 16"
     },
     "F16": {
      "kind": "pct",
-     "value": 0.029982363315696647,
+     "value": 0.029970760233918127,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 16, iPhone 16 Plus, iPhone 15 Plus"
+     "basis": "nearest sibling iPhone 16"
     },
     "F04": {
      "kind": "pct",
      "value": 0,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 16, iPhone 16 Plus, iPhone 15 Plus"
+     "basis": "nearest sibling iPhone 16"
     }
    },
    "observedInteractions": [
@@ -12345,8 +12366,8 @@
      "n": 0
     },
     "3": {
-     "a": 17.009703659153935,
-     "b": 0.24252051254356988,
+     "a": 17.009703714453686,
+     "b": 0.24252051254351034,
      "support": "inferred",
      "n": 0
     }
@@ -12832,8 +12853,8 @@
      "n": 0
     },
     "3": {
-     "a": -31.688741913424906,
-     "b": 0.24285399502543578,
+     "a": -31.68874185841269,
+     "b": 0.24285399502543564,
      "support": "inferred",
      "n": 0
     }
@@ -13447,9 +13468,10 @@
     },
     "D06": {
      "kind": "fixed",
-     "value": 0,
+     "value": 990.0000000000003,
      "support": "inferred",
-     "n": 1
+     "n": 1,
+     "basis": "solved from combinations with isolated codes"
     },
     "D07": {
      "kind": "fixed",
@@ -14281,9 +14303,10 @@
     },
     "D06": {
      "kind": "fixed",
-     "value": 0,
+     "value": 1320.0000000000005,
      "support": "inferred",
-     "n": 1
+     "n": 1,
+     "basis": "solved from combinations with isolated codes"
     },
     "D07": {
      "kind": "fixed",
@@ -16621,15 +16644,15 @@
      "n": 0
     },
     "3": {
-     "a": 24.86897734840408,
-     "b": 0.24235722836048015,
+     "a": 24.868977728805497,
+     "b": 0.2423572283566914,
      "support": "inferred",
      "n": 0
     }
    },
    "boxNo": {
-    "base": 2250.0319998400014,
-    "aged": 1500.0025931946618,
+    "base": 2250.0368293470897,
+    "aged": 1499.8057241643835,
     "support": "measured"
    },
    "eSimDualPct": 0.04999999999999981,
@@ -16786,7 +16809,7 @@
     },
     "D05": {
      "kind": "fixed",
-     "value": 15066.839204557764,
+     "value": 15065.368192633368,
      "support": "inferred",
      "n": 1
     },
@@ -16822,13 +16845,13 @@
     },
     "F05": {
      "kind": "pct",
-     "value": 0.29999647305496285,
+     "value": 0.30000013512128226,
      "support": "measured",
      "n": 7
     },
     "F06": {
      "kind": "fixed",
-     "value": 2499.0129237862616,
+     "value": 2499.9894818052103,
      "support": "measured",
      "n": 5
     },
@@ -16840,7 +16863,7 @@
     },
     "F08": {
      "kind": "pct",
-     "value": 0.2,
+     "value": 0.19999617021276617,
      "support": "measured",
      "n": 19
     },
@@ -16852,7 +16875,7 @@
     },
     "F11": {
      "kind": "fixed",
-     "value": 2497.0598070033097,
+     "value": 2496.083248239889,
      "support": "inferred",
      "n": 1
     },
@@ -16870,7 +16893,7 @@
     },
     "F14": {
      "kind": "pct",
-     "value": 0.3,
+     "value": 0.3000036621093728,
      "support": "inferred",
      "n": 2
     },
@@ -16882,37 +16905,37 @@
     },
     "F17": {
      "kind": "fixed",
-     "value": 4199.999999999998,
+     "value": 4200.275926171892,
      "support": "measured",
      "n": 16
     },
     "F18": {
      "kind": "fixed",
-     "value": 1259.9999999999934,
+     "value": 1259.8811507812813,
      "support": "measured",
      "n": 8
     },
     "P01": {
      "kind": "pct",
-     "value": 0.13368136128473188,
+     "value": 0.1336927873014124,
      "support": "inferred",
      "n": 2
     },
     "P03": {
      "kind": "pct",
-     "value": 0.13312947086816126,
+     "value": 0.13314084971365045,
      "support": "inferred",
      "n": 1
     },
     "P04": {
      "kind": "pct",
-     "value": 0.23315543814372622,
+     "value": 0.23317536641121164,
      "support": "inferred",
      "n": 1
     },
     "Q02": {
      "kind": "fixed",
-     "value": 29999.81689453125,
+     "value": 29999.102783203125,
      "support": "measured",
      "n": 6
     },
@@ -16924,77 +16947,77 @@
     },
     "S01": {
      "kind": "fixed",
-     "value": 17846.67967031548,
+     "value": 17845.808420575668,
      "support": "inferred",
      "n": 2
     },
     "S03": {
      "kind": "fixed",
-     "value": 8819.940000000031,
+     "value": 8819.712000000021,
      "support": "measured",
      "n": 3
     },
     "S04": {
      "kind": "fixed",
-     "value": 3779.3816953125033,
+     "value": 3780.1200000000144,
      "support": "measured",
      "n": 3
     },
     "D02": {
      "kind": "fixed",
-     "value": 17998.182193359415,
+     "value": 17999.70734613166,
      "support": "inferred",
      "n": 0,
      "basis": "own S03/S04 x template ratio"
     },
     "S02": {
      "kind": "fixed",
-     "value": 12598.829525390654,
+     "value": 12599.897140973786,
      "support": "inferred",
      "n": 0,
      "basis": "own S03/S04 x template ratio"
     },
     "C01": {
      "kind": "fixed",
-     "value": 3640.845070422535,
+     "value": 3273.8667825307825,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 16 Pro, iPhone 15 Pro Max, iPhone 15 Pro"
+     "basis": "nearest sibling iPhone 16 Pro"
     },
     "C03": {
      "kind": "fixed",
-     "value": 4104.225352112676,
+     "value": 3690.5407366710638,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 16 Pro, iPhone 15 Pro Max, iPhone 15 Pro"
+     "basis": "nearest sibling iPhone 16 Pro"
     },
     "P02": {
      "kind": "fixed",
-     "value": 4302.779830985915,
+     "value": 3868.867615462968,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 16 Pro, iPhone 15 Pro Max, iPhone 15 Pro"
+     "basis": "nearest sibling iPhone 16 Pro"
     },
     "F10": {
      "kind": "fixed",
-     "value": 2004.4224029743098,
+     "value": 2566.5356530783715,
      "support": "inferred",
      "n": 0,
-     "basis": "own F06/F13 x template ratio"
+     "basis": "nearest sibling iPhone 17"
     },
     "F16": {
      "kind": "pct",
-     "value": 0.029983108108108107,
+     "value": 0.030006077329542052,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 16 Pro, iPhone 15 Pro Max, iPhone 15 Pro"
+     "basis": "nearest sibling iPhone 16 Pro"
     },
     "F04": {
      "kind": "pct",
      "value": 0,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone 16 Pro, iPhone 15 Pro Max, iPhone 15 Pro"
+     "basis": "nearest sibling iPhone 16 Pro"
     }
    },
    "observedInteractions": [
@@ -18037,13 +18060,14 @@
     },
     "D06": {
      "kind": "fixed",
-     "value": 4620.024493149001,
+     "value": 4620.000000000003,
      "support": "inferred",
-     "n": 1
+     "n": 1,
+     "basis": "solved from combinations with isolated codes"
     },
     "D07": {
      "kind": "fixed",
-     "value": 3780.210703440045,
+     "value": 4199.926500000005,
      "support": "inferred",
      "n": 1
     },
@@ -18449,13 +18473,14 @@
     },
     "D06": {
      "kind": "fixed",
-     "value": 3519.9956571373136,
+     "value": 3520.0000000000064,
      "support": "inferred",
-     "n": 1
+     "n": 1,
+     "basis": "solved from combinations with isolated codes"
     },
     "D07": {
      "kind": "fixed",
-     "value": 2999.98412045288,
+     "value": 2999.947500000004,
      "support": "inferred",
      "n": 1
     },
@@ -18970,87 +18995,87 @@
     },
     "P01": {
      "kind": "fixed",
-     "value": 1237.7245508982037,
+     "value": 1270.754814213308,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone X, iPhone XS, iPhone XS Max"
+     "basis": "nearest sibling iPhone XS"
     },
     "P02": {
      "kind": "fixed",
-     "value": 1237.7245508982037,
+     "value": 1270.754814213308,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone X, iPhone XS, iPhone XS Max"
+     "basis": "nearest sibling iPhone XS"
     },
     "P03": {
      "kind": "fixed",
-     "value": 1237.7245508982037,
+     "value": 1270.754814213308,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone X, iPhone XS, iPhone XS Max"
+     "basis": "nearest sibling iPhone XS"
     },
     "P04": {
      "kind": "fixed",
-     "value": 1237.7245508982037,
+     "value": 1270.754814213308,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone X, iPhone XS, iPhone XS Max"
+     "basis": "nearest sibling iPhone XS"
     },
     "F12": {
      "kind": "fixed",
-     "value": 846.307385229541,
+     "value": 977.5037032410062,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone X, iPhone XS, iPhone XS Max"
+     "basis": "nearest sibling iPhone XS"
     },
     "F11": {
      "kind": "fixed",
-     "value": 199.99023437500023,
+     "value": 2443.7592581025156,
      "support": "inferred",
      "n": 0,
-     "basis": "own F06 x template ratio"
+     "basis": "nearest sibling iPhone XS"
     },
     "F03": {
      "kind": "fixed",
-     "value": 273.9018087855297,
+     "value": 293.2511109723019,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone X, iPhone XS, iPhone XS Max"
+     "basis": "nearest sibling iPhone XS"
     },
     "F07": {
      "kind": "fixed",
-     "value": 1095.6072351421187,
+     "value": 1173.0044438892076,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone X, iPhone XS, iPhone XS Max"
+     "basis": "nearest sibling iPhone XS"
     },
     "F09": {
      "kind": "fixed",
-     "value": 273.9018087855297,
+     "value": 293.2511109723019,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone X, iPhone XS, iPhone XS Max"
+     "basis": "nearest sibling iPhone XS"
     },
     "F15": {
      "kind": "fixed",
-     "value": 365.20241171403967,
+     "value": 391.00148129640246,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone X, iPhone XS, iPhone XS Max"
+     "basis": "nearest sibling iPhone XS"
     },
     "F16": {
      "kind": "pct",
-     "value": 0.031947445315554455,
+     "value": 0.03204047217537943,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone X, iPhone XS, iPhone XS Max"
+     "basis": "nearest sibling iPhone XS"
     },
     "F04": {
      "kind": "pct",
      "value": 0,
      "support": "inferred",
      "n": 0,
-     "basis": "siblings iPhone X, iPhone XS, iPhone XS Max"
+     "basis": "nearest sibling iPhone XS"
     }
    },
    "observedInteractions": [
@@ -19262,13 +19287,14 @@
     },
     "D06": {
      "kind": "fixed",
-     "value": 3959.99108078858,
+     "value": 3960.0000000000073,
      "support": "inferred",
-     "n": 1
+     "n": 1,
+     "basis": "solved from combinations with isolated codes"
     },
     "D07": {
      "kind": "fixed",
-     "value": 3240.061950267336,
+     "value": 3599.9370000000104,
      "support": "inferred",
      "n": 1
     },

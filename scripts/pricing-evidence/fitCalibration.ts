@@ -231,6 +231,44 @@ export function collectKindVotes(profiles: ModelProfile[]): Map<string, ValueKin
   return new Map([...votes].map(([k, v]) => [k, v.pct > v.fixed ? 'pct' : 'fixed'] as [string, ValueKind]));
 }
 
+/** Launch year, used only to pick the nearest sibling for a code a model never measured. */
+const RELEASE_YEAR: Record<string, number> = {
+  'iPhone 6': 2014, 'iPhone 6 Plus': 2014, 'iPhone 6S': 2015, 'iPhone 6S Plus': 2015, 'iPhone SE 1st Generation': 2016, 'iPhone 7': 2016, 'iPhone 7 Plus': 2016,
+  'iPhone 8': 2017, 'iPhone 8 Plus': 2017, 'iPhone X': 2017, 'iPhone XR': 2018, 'iPhone XS': 2018, 'iPhone XS Max': 2018, 'iPhone SE 2020': 2020,
+  'iPhone SE 2022': 2022, 'iPhone 16e': 2025, 'iPhone Air': 2025, 'iPhone 17e': 2026,
+};
+export function releaseYear(modelKey: string): number | null {
+  if (RELEASE_YEAR[modelKey]) return RELEASE_YEAR[modelKey];
+  const n = modelKey.match(/^iPhone (\d+)\b/);
+  return n && Number(n[1]) >= 11 ? 2008 + Number(n[1]) : null;
+}
+
+/**
+ * The single nearest model that measured `code`, by |ln(reference ratio)| + 0.1 x |launch-year gap|. A proportional deduction is
+ * carried as the same fraction of this model's reference; a fixed repair cost as rupees scaled by (reference ratio)^0.25 (repair
+ * costs grow far slower than phone value). Chosen by a leave-one-model-out benchmark over every measured (model, code) of the
+ * 2026-10-30 calibration: MAE INR 297 vs INR 653 for the previous three-nearest-by-reference proportional rule (2022+ models INR 412 vs
+ * 1,254). The result is always 'inferred' and records its source.
+ */
+export function nearestCodeSource(profiles: ModelProfile[], typical: Map<string, number>, modelKey: string, code: string): ClassCal | null {
+  const ref = typical.get(modelKey);
+  if (!ref) return null;
+  const year = releaseYear(modelKey);
+  const distance = (o: ModelProfile) => Math.abs(Math.log(typical.get(o.modelKey)! / ref)) +
+    (year != null && releaseYear(o.modelKey) != null ? 0.1 * Math.abs(year - releaseYear(o.modelKey)!) : 0);
+  const sources = profiles.filter(o => o.modelKey !== modelKey && o.codes?.[code]?.support === 'measured' && typical.get(o.modelKey))
+    .sort((a, b) => distance(a) - distance(b) || a.modelKey.localeCompare(b.modelKey));
+  if (!sources.length) return null;
+  const src = sources[0], c = src.codes![code];
+  const value = c.kind === 'pct' ? c.value : c.value * (ref / typical.get(src.modelKey)!) ** 0.25;
+  return { kind: c.kind, value, support: 'inferred', n: 0, basis: `nearest sibling ${src.modelKey}` };
+}
+
+/** Classes whose unmeasured codes are better predicted by the nearest sibling's same code than by this model's other codes of the
+ * class x template ratio (same benchmark: camera INR 160 vs 331, fault group A 57 vs 373, fault group B 32 vs 163). Display, battery,
+ * body, panel and Wi-Fi keep the model's own codes first (INR 0-253 vs 116-588). */
+const SIBLING_FIRST: ClassKey[] = ['cam', 'fminA', 'fminB'];
+
 /**
  * Per-code deductions. A code's value is read off the quotes that isolate it (the flawless quote vs the same quote with only that code
  * changed) as fixed rupees or as a fraction of the reference, whichever the model's own capacities support; then every code is refined
@@ -259,7 +297,9 @@ export function fitCodeOverrides(profile: ModelProfile, rows: Row[], opts: { dec
         amounts = singles.map(r => ({ ref: r.ref, gb: r.storageGb, amt: r.target - (predict(r) ?? 0) }));
       }
       if (!amounts.length) {
-        // no isolating quote: start from the class anchor x template weight, refined jointly below
+        // no isolating quote: start from the class anchor x template weight, refined jointly below. (Starting from the nearest
+        // sibling's value instead was tested on 2026-10-30 and rejected: better on unseen shapes, worse on unseen storage, and it
+        // carried a sibling's fixed/proportional form into a generation whose own quotes decide it differently.)
         const w = classInfo(cls).weights[code] ?? 1;
         const cal = profile.classes[cls]!;
         profile.codes[code] = { kind: cal.kind, value: Math.max(0, w * cal.value), support: 'inferred', n: 0 };
@@ -275,6 +315,26 @@ export function fitCodeOverrides(profile: ModelProfile, rows: Row[], opts: { dec
       if (spread >= 0.03 && new Set(amounts.map(a => a.gb)).size >= 2 && Math.abs(lFixed - lPct) > 0.15 * Math.max(lFixed, lPct, 1)) { kind = lPct < lFixed ? 'pct' : 'fixed'; decided = true; }
       else kind = KIND_VOTES.get(code) ?? classKind;
       profile.codes[code] = { kind, value: Math.max(0, kind === 'fixed' ? vFixed : pPct), support: 'measured', n: amounts.length, ...(decided ? { decided: true } : {}) };
+    }
+    // A code quoted only alongside codes that have isolating quotes is identified by those combinations: when the combination costs more
+    // than the isolated partners explain, the hidden code must supply the rest (in a largest-wins group it is the winner). Solve for that
+    // value by bisection (a deduction never falls as one code's value rises) and start the joint refinement there: a prior inside a
+    // flat largest-wins region would otherwise never move (iPhone 11 Pro: D05 alone INR 5,000, D05+D06 INR 5,500, prior D06 INR 3,123).
+    const isolated = new Set(usable.filter(r => r.m.deviations.length === 1).map(r => r.m.deviations[0]));
+    for (const code of codes) {
+      const c = profile.codes[code];
+      if (!c || isolated.has(code)) continue;
+      const solved: number[] = [];
+      for (const r of usable) {
+        if (!r.ans.codes.includes(code) || !r.m.deviations.every(d => d === code || isolated.has(d))) continue;
+        const at = (v: number) => { const old = c.value; c.value = v; const f = predict(r); c.value = old; return f; };
+        const zero = at(0), top = c.kind === 'fixed' ? r.ref : 1;
+        if (zero == null || r.target <= zero + 20 || (at(top) ?? 0) < r.target) continue;
+        let lo = 0, hi = top;
+        for (let i = 0; i < 50; i++) { const mid = (lo + hi) / 2; if (at(mid)! < r.target) lo = mid; else hi = mid; }
+        solved.push(hi);
+      }
+      if (solved.length) { c.value = medianOf(solved); c.basis = 'solved from combinations with isolated codes'; }
     }
   }
   // accessories are refined with the codes: a charger-asking model's combinations only separate box from charger jointly
@@ -344,7 +404,7 @@ export function fitCodeOverrides(profile: ModelProfile, rows: Row[], opts: { dec
     if (!c) continue;
     const shapes = new Set(usable.filter(r => r.ans.codes.includes(code)).map(r => r.shape)).size;
     c.n = Math.max(c.n, shapes);
-    if (c.support !== 'measured' && shapes >= 3) c.support = 'measured';
+    if (c.support !== 'measured' && shapes >= 3) { c.support = 'measured'; delete c.basis; }
   }
 }
 
@@ -628,6 +688,7 @@ export function fitCalibration(train: Measurement[], generatedFrom: string, only
   const sem = semOverride ?? modelSemantics(train);
   const modelKeys = [...new Set(train.filter(m => m.outcome === 'NUMERIC_QUOTE').map(m => m.model_key))]
     .filter(k => !onlyModels || onlyModels.includes(k)).sort();
+  const typical = new Map(modelKeys.map(k => [k, median(train.filter(m => m.model_key === k && m.outcome === 'NUMERIC_QUOTE').map(m => m.variant_get_upto))]));
   // pass 1: template priors; pass 2: sibling priors
   KIND_VOTES = new Map();
   let fits = modelKeys.map(k => fitModel(k, train, sem));
@@ -641,17 +702,16 @@ export function fitCalibration(train: Measurement[], generatedFrom: string, only
   }
   const models: Record<string, ModelProfile> = {};
   for (const f of fits) models[f.profile.modelKey] = f.profile;
-  const typical = new Map(modelKeys.map(k => [k, median(train.filter(m => m.model_key === k && m.outcome === 'NUMERIC_QUOTE').map(m => m.variant_get_upto))]));
   for (const m of Object.values(models)) m.evidence.medianReference = typical.get(m.modelKey);
   fillUnobservedCodes(Object.values(models), typical);
   return { calibration: { version: 'apple-cashify-calibration/1', generatedFrom, models }, reports: fits.map(f => f.report) };
 }
 
 /**
- * Codes a model's own quotes never contain still need a value an answer can reach. In order:
- *  1. the model's own measured codes of the same template class, through the template's within-class ratio (D02 from this model's D01);
- *  2. otherwise the three models with the closest typical reference that measured the code, as a share of their reference applied to this
- *     model's (fixed rupees stay fixed rupees at this model's scale; a fraction stays a fraction).
+ * Codes a model's own quotes never contain still need a value an answer can reach. Two sources, tried in the order that predicted
+ * held-out measured codes best for the code's class (SIBLING_FIRST):
+ *  - the model's own measured codes of the same template class, through the template's within-class ratio (D02 from this model's D01);
+ *  - the nearest sibling that measured the code (nearestCodeSource).
  * Every value set here is labelled inferred, with its basis recorded; measured values are never touched.
  */
 export function fillUnobservedCodes(profiles: ModelProfile[], typical: Map<string, number>) {
@@ -659,26 +719,22 @@ export function fillUnobservedCodes(profiles: ModelProfile[], typical: Map<strin
   const measured = (p: ModelProfile, code: string) => { const c = p.codes?.[code]; return c && c.support === 'measured' ? c : null; };
   const filled: [ModelProfile, string, ClassCal][] = [];
   for (const p of profiles) {
-    const ref = typical.get(p.modelKey);
-    if (!ref) continue;
+    if (!typical.get(p.modelKey)) continue;
     for (const code of allCodes) {
       if (p.codes?.[code]) continue;
       const cls = classOf(code)!;
       const w = classInfo(cls).weights;
-      const own = Object.keys(w).filter(c => c !== code && w[c] > 0 && measured(p, c));
-      if (own.length && w[code] != null) {
+      const ownClass = (): ClassCal | null => {
+        const own = Object.keys(w).filter(c => c !== code && w[c] > 0 && measured(p, c));
+        if (!own.length || w[code] == null) return null;
         const kinds = own.map(c => p.codes![c].kind);
         const kind = kinds.filter(k => k === 'pct').length > kinds.length / 2 ? 'pct' : 'fixed';
         const anchors = own.filter(c => p.codes![c].kind === kind).map(c => p.codes![c].value / w[c]);
-        filled.push([p, code, { kind, value: median(anchors) * w[code], support: 'inferred', n: 0, basis: `own ${own.join('/')} x template ratio` } as ClassCal]);
-        continue;
-      }
-      const sources = profiles.filter(o => o !== p && measured(o, code) && typical.get(o.modelKey))
-        .sort((a, b) => Math.abs(Math.log(typical.get(a.modelKey)! / ref)) - Math.abs(Math.log(typical.get(b.modelKey)! / ref))).slice(0, 3);
-      if (!sources.length) continue;
-      const kind: ValueKind = sources.filter(o => o.codes![code].kind === 'pct').length > sources.length / 2 ? 'pct' : 'fixed';
-      const shares = sources.map(o => { const c = o.codes![code]; return c.kind === 'pct' ? c.value : c.value / typical.get(o.modelKey)!; });
-      filled.push([p, code, { kind, value: kind === 'pct' ? median(shares) : median(shares) * ref, support: 'inferred', n: 0, basis: `siblings ${sources.map(o => o.modelKey).join(', ')}` } as ClassCal]);
+        return { kind, value: median(anchors) * w[code], support: 'inferred', n: 0, basis: `own ${own.join('/')} x template ratio` };
+      };
+      const sibling = () => nearestCodeSource(profiles, typical, p.modelKey, code);
+      const cal = SIBLING_FIRST.includes(cls) ? sibling() ?? ownClass() : ownClass() ?? sibling();
+      if (cal) filled.push([p, code, cal]);
     }
   }
   for (const [p, code, cal] of filled) { p.codes ??= {}; p.codes[code] = cal; }

@@ -1,14 +1,14 @@
 [
  {
   "modelKey": "iPhone 11",
-  "rows": 90,
-  "used": 90,
-  "rmse": 8.472331813128166,
-  "maxAbs": 29.441009534592013,
+  "rows": 225,
+  "used": 222,
+  "rmse": 46.93558721114912,
+  "maxAbs": 399.4717323105813,
   "floor": null,
   "params": {
    "box.base": {
-    "value": 200.1564497885831,
+    "value": 200.52826768941873,
     "support": "measured",
     "shapes": 7
    },
@@ -81,21 +81,16 @@
  },
  {
   "modelKey": "iPhone 11 Pro",
-  "rows": 90,
-  "used": 90,
-  "rmse": 204.70229330108427,
-  "maxAbs": 1494.9223651468837,
+  "rows": 219,
+  "used": 216,
+  "rmse": 163.99244046410845,
+  "maxAbs": 1497.2510304370408,
   "floor": null,
   "params": {
    "box.base": {
-    "value": 199.5316149735632,
+    "value": 201.95691278998044,
     "support": "measured",
-    "shapes": 7
-   },
-   "charger.base": {
-    "value": 387.6745235030625,
-    "support": "measured",
-    "shapes": 29
+    "shapes": 8
    },
    "class.display": {
     "value": 25500,
@@ -166,14 +161,14 @@
  },
  {
   "modelKey": "iPhone 11 Pro Max",
-  "rows": 93,
-  "used": 93,
-  "rmse": 300.40499310660545,
-  "maxAbs": 2180.053361792956,
+  "rows": 222,
+  "used": 219,
+  "rmse": 221.1992241032679,
+  "maxAbs": 2179.9268256670584,
   "floor": null,
   "params": {
    "box.base": {
-    "value": 200,
+    "value": 199.87346387410307,
     "support": "measured",
     "shapes": 7
    },
@@ -248,12 +243,12 @@
   "modelKey": "iPhone 12",
   "rows": 90,
   "used": 90,
-  "rmse": 11.73724033856021,
-  "maxAbs": 86.74865500696615,
+  "rmse": 11.741788601199431,
+  "maxAbs": 86.75325857291136,
   "floor": null,
   "params": {
    "box.base": {
-    "value": 800.1929718841185,
+    "value": 800.1975754500644,
     "support": "measured",
     "shapes": 7
    },
@@ -325,15 +320,95 @@
   }
  },
  {
-  "modelKey": "iPhone 12 Pro",
-  "rows": 90,
-  "used": 90,
-  "rmse": 89.63126017411017,
-  "maxAbs": 610.107421875,
+  "modelKey": "iPhone 12 Mini",
+  "rows": 126,
+  "used": 123,
+  "rmse": 5.275495900659283,
+  "maxAbs": 35.81511555277939,
   "floor": null,
   "params": {
    "box.base": {
-    "value": 799.7730088809815,
+    "value": 800,
+    "support": "measured",
+    "shapes": 1
+   },
+   "class.display": {
+    "value": 25500,
+    "support": "inferred",
+    "shapes": 0
+   },
+   "class.cracked": {
+    "value": 17850,
+    "support": "inferred",
+    "shapes": 0
+   },
+   "class.touch": {
+    "value": 30000,
+    "support": "inferred",
+    "shapes": 0
+   },
+   "class.orig": {
+    "value": 15000,
+    "support": "inferred",
+    "shapes": 0
+   },
+   "class.body": {
+    "value": 3500,
+    "support": "inferred",
+    "shapes": 0
+   },
+   "class.panel": {
+    "value": 4500,
+    "support": "inferred",
+    "shapes": 0
+   },
+   "class.cam": {
+    "value": 10000,
+    "support": "inferred",
+    "shapes": 0
+   },
+   "class.fminA": {
+    "value": 6000,
+    "support": "inferred",
+    "shapes": 0
+   },
+   "class.fminB": {
+    "value": 4500,
+    "support": "inferred",
+    "shapes": 0
+   },
+   "class.prox": {
+    "value": 4950,
+    "support": "inferred",
+    "shapes": 0
+   },
+   "class.wifi": {
+    "value": 0.3,
+    "support": "inferred",
+    "shapes": 0
+   },
+   "class.face": {
+    "value": 0.2,
+    "support": "inferred",
+    "shapes": 0
+   },
+   "class.batt": {
+    "value": 4200,
+    "support": "inferred",
+    "shapes": 0
+   }
+  }
+ },
+ {
+  "modelKey": "iPhone 12 Pro",
+  "rows": 222,
+  "used": 219,
+  "rmse": 92.98072412430616,
+  "maxAbs": 1160,
+  "floor": null,
+  "params": {
+   "box.base": {
+    "value": 799.8192347815528,
     "support": "measured",
     "shapes": 7
    },
@@ -406,14 +481,14 @@
  },
  {
   "modelKey": "iPhone 12 Pro Max",
-  "rows": 90,
-  "used": 90,
-  "rmse": 105.28871354410285,
-  "maxAbs": 699.6835780143738,
+  "rows": 216,
+  "used": 213,
+  "rmse": 91.7144362429717,
+  "maxAbs": 799.8030014622855,
   "floor": null,
   "params": {
    "box.base": {
-    "value": 799.9204586658427,
+    "value": 799.6876185078323,
     "support": "measured",
     "shapes": 7
    },
@@ -486,14 +561,14 @@
  },
  {
   "modelKey": "iPhone 13",
-  "rows": 90,
-  "used": 90,
-  "rmse": 5.539470656143163,
-  "maxAbs": 25.69616861201939,
+  "rows": 216,
+  "used": 213,
+  "rmse": 5.0586778945498025,
+  "maxAbs": 25.747058396129432,
   "floor": null,
   "params": {
    "box.base": {
-    "value": 999.9669600945432,
+    "value": 1000.1305574133258,
     "support": "measured",
     "shapes": 7
    },
@@ -566,14 +641,14 @@
  },
  {
   "modelKey": "iPhone 13 Mini",
-  "rows": 91,
-  "used": 91,
-  "rmse": 3.644089981985493,
-  "maxAbs": 12.180833989979874,
+  "rows": 217,
+  "used": 214,
+  "rmse": 3.063142658596275,
+  "maxAbs": 12.704174228675129,
   "floor": null,
   "params": {
    "box.base": {
-    "value": 999.7936945677486,
+    "value": 999.6281641692076,
     "support": "measured",
     "shapes": 7
    },
@@ -646,21 +721,21 @@
  },
  {
   "modelKey": "iPhone 13 Pro",
-  "rows": 120,
-  "used": 120,
-  "rmse": 13.14773223956306,
-  "maxAbs": 60.4687462091606,
+  "rows": 292,
+  "used": 288,
+  "rmse": 8.106002134688444,
+  "maxAbs": 40.246920040437544,
   "floor": null,
   "params": {
    "box.base": {
-    "value": 1000.285644332501,
+    "value": 1000.254647443684,
     "support": "measured",
     "shapes": 7
    },
    "esim": {
-    "value": 0.052799041099425605,
-    "support": "inferred",
-    "shapes": 0
+    "value": 0.05268919194732859,
+    "support": "measured",
+    "shapes": 1
    },
    "class.display": {
     "value": 25500,
@@ -733,17 +808,17 @@
   "modelKey": "iPhone 13 Pro Max",
   "rows": 292,
   "used": 288,
-  "rmse": 13.981083002370584,
-  "maxAbs": 69.52743019987247,
+  "rmse": 10.684138827396138,
+  "maxAbs": 46.35162013324771,
   "floor": null,
   "params": {
    "box.base": {
-    "value": 1000.195911479915,
+    "value": 1000.1959114799149,
     "support": "measured",
     "shapes": 7
    },
    "esim": {
-    "value": 0.05279904109956936,
+    "value": 0.052799041099563716,
     "support": "measured",
     "shapes": 1
    },
@@ -818,12 +893,12 @@
   "modelKey": "iPhone 14",
   "rows": 291,
   "used": 288,
-  "rmse": 60.488012293419644,
+  "rmse": 60.48877672738669,
   "maxAbs": 865,
   "floor": null,
   "params": {
    "box.base": {
-    "value": 1200.5767548350761,
+    "value": 1199.6380708985357,
     "support": "measured",
     "shapes": 13
    },
@@ -903,12 +978,12 @@
   "modelKey": "iPhone 14 Plus",
   "rows": 92,
   "used": 92,
-  "rmse": 80.01065342562264,
-  "maxAbs": 640.3515625,
+  "rmse": 80.00013496016844,
+  "maxAbs": 639.9999999999927,
   "floor": null,
   "params": {
    "box.base": {
-    "value": 1200.3009009078692,
+    "value": 1200.3054794738455,
     "support": "measured",
     "shapes": 7
    },
@@ -983,7 +1058,7 @@
   "modelKey": "iPhone 14 Pro",
   "rows": 275,
   "used": 271,
-  "rmse": 11.375990559866128,
+  "rmse": 11.375990300539756,
   "maxAbs": 60.50173039137735,
   "floor": null,
   "params": {
@@ -1068,12 +1143,12 @@
   "modelKey": "iPhone 14 Pro Max",
   "rows": 120,
   "used": 120,
-  "rmse": 15.62261376765456,
-  "maxAbs": 67.40821288701409,
+  "rmse": 15.622488091282765,
+  "maxAbs": 67.408212887025,
   "floor": null,
   "params": {
    "box.base": {
-    "value": 1199.9279264699344,
+    "value": 1199.9280544801109,
     "support": "measured",
     "shapes": 7
    },
@@ -1151,13 +1226,13 @@
  },
  {
   "modelKey": "iPhone 15",
-  "rows": 98,
-  "used": 97,
-  "rmse": 1127.3103476354013,
-  "maxAbs": 6261.407901466264,
+  "rows": 239,
+  "used": 235,
+  "rmse": 363.80612353805753,
+  "maxAbs": 3927.0950380510476,
   "floor": {
    "basis": "aged",
-   "value": 0.31053
+   "value": 0.31084
   },
   "params": {
    "age1.a": {
@@ -1166,37 +1241,37 @@
     "shapes": 0
    },
    "age1.b": {
-    "value": 0.08858574048391613,
+    "value": 0.07964442833176086,
     "support": "inferred",
     "shapes": 0
    },
    "age2.a": {
-    "value": -1000,
+    "value": -982.1487264737461,
     "support": "inferred",
     "shapes": 0
    },
    "age2.b": {
-    "value": 0.1180796069601093,
+    "value": 0.10943971366913857,
     "support": "inferred",
     "shapes": 0
    },
    "age3.a": {
-    "value": -945.7101880013865,
+    "value": -608.2961720205737,
     "support": "inferred",
     "shapes": 0
    },
    "age3.b": {
-    "value": 0.22283246091413095,
+    "value": 0.21524135695311794,
     "support": "inferred",
     "shapes": 0
    },
    "box.base": {
-    "value": 1950.1121200163473,
+    "value": 1950.1764054880907,
     "support": "measured",
     "shapes": 3
    },
    "box.aged": {
-    "value": 1264.8410112906404,
+    "value": 1290.7384117722818,
     "support": "measured",
     "shapes": 4
    },
@@ -1269,52 +1344,52 @@
  },
  {
   "modelKey": "iPhone 15 Plus",
-  "rows": 107,
-  "used": 105,
-  "rmse": 883.9076739329972,
-  "maxAbs": 4381.6148378906255,
+  "rows": 249,
+  "used": 244,
+  "rmse": 372.67819635143195,
+  "maxAbs": 4027.4119246474293,
   "floor": {
    "basis": "reference",
    "value": 0.26295
   },
   "params": {
    "age1.a": {
-    "value": 1462.1384616166606,
+    "value": 1455.6528560825602,
     "support": "inferred",
     "shapes": 0
    },
    "age1.b": {
-    "value": 0.002657943474198542,
+    "value": 0.0027561310608908126,
     "support": "inferred",
     "shapes": 0
    },
    "age2.a": {
-    "value": 1480.8206598570969,
+    "value": 1483.2565460247029,
     "support": "inferred",
     "shapes": 0
    },
    "age2.b": {
-    "value": 0.03391828026245014,
+    "value": 0.033845222191084275,
     "support": "inferred",
     "shapes": 0
    },
    "age3.a": {
-    "value": 1410.6766769029516,
+    "value": 1406.1288624181382,
     "support": "inferred",
     "shapes": 0
    },
    "age3.b": {
-    "value": 0.15102332747385708,
+    "value": 0.15108361483104255,
     "support": "inferred",
     "shapes": 0
    },
    "box.base": {
-    "value": 1950.0423529184293,
+    "value": 1949.9931770581518,
     "support": "measured",
     "shapes": 3
    },
    "box.aged": {
-    "value": 1300.1397754675643,
+    "value": 1300.1032614296782,
     "support": "measured",
     "shapes": 7
    },
@@ -1389,7 +1464,7 @@
   "modelKey": "iPhone 15 Pro",
   "rows": 324,
   "used": 316,
-  "rmse": 0.4970115491724171,
+  "rmse": 0.49696055898276326,
   "maxAbs": 3.7639620653319525,
   "floor": {
    "basis": "reference",
@@ -1397,32 +1472,32 @@
   },
   "params": {
    "age1.a": {
-    "value": 2098.9603321100585,
+    "value": 2098.949773171299,
     "support": "inferred",
     "shapes": 0
    },
    "age1.b": {
-    "value": 0.0104322755375543,
+    "value": 0.010432434062614617,
     "support": "inferred",
     "shapes": 0
    },
    "age2.a": {
-    "value": 2098.98960343743,
+    "value": 2098.993602830552,
     "support": "inferred",
     "shapes": 0
    },
    "age2.b": {
-    "value": 0.041681836111531465,
+    "value": 0.04168177606716498,
     "support": "inferred",
     "shapes": 0
    },
    "age3.a": {
-    "value": 2099.6250558098945,
+    "value": 2099.622580314035,
     "support": "inferred",
     "shapes": 0
    },
    "age3.b": {
-    "value": 0.15625562915964225,
+    "value": 0.15625566632513987,
     "support": "inferred",
     "shapes": 0
    },
@@ -1520,32 +1595,32 @@
   },
   "params": {
    "age1.a": {
-    "value": 2339.1959486074265,
+    "value": 2339.1655857263004,
     "support": "inferred",
     "shapes": 0
    },
    "age1.b": {
-    "value": 0.009976507156658813,
+    "value": 0.009976917183699223,
     "support": "inferred",
     "shapes": 0
    },
    "age2.a": {
-    "value": 2306.10977720261,
+    "value": 2306.1212730644243,
     "support": "inferred",
     "shapes": 0
    },
    "age2.b": {
-    "value": 0.04171920109778211,
+    "value": 0.04171904585507039,
     "support": "inferred",
     "shapes": 0
    },
    "age3.a": {
-    "value": 2339.112648048589,
+    "value": 2339.10569270537,
     "support": "inferred",
     "shapes": 0
    },
    "age3.b": {
-    "value": 0.15580791891246773,
+    "value": 0.15580801303513875,
     "support": "inferred",
     "shapes": 0
    },
@@ -2235,8 +2310,8 @@
   "modelKey": "iPhone 17",
   "rows": 105,
   "used": 103,
-  "rmse": 142.7578582303847,
-  "maxAbs": 1379.2856592003372,
+  "rmse": 96.25914478439454,
+  "maxAbs": 976.7876347116398,
   "floor": {
    "basis": "aged",
    "value": 0.22453
@@ -2253,22 +2328,22 @@
     "shapes": 0
    },
    "age2.a": {
-    "value": 217.39685992282344,
+    "value": 217.39685573183158,
     "support": "inferred",
     "shapes": 0
    },
    "age2.b": {
-    "value": 0.13652552946946173,
+    "value": 0.1365255295323726,
     "support": "inferred",
     "shapes": 0
    },
    "age3.a": {
-    "value": -184.47539998075766,
+    "value": -184.4767191852753,
     "support": "inferred",
     "shapes": 0
    },
    "age3.b": {
-    "value": 0.2454125547421173,
+    "value": 0.2454125745445873,
     "support": "inferred",
     "shapes": 0
    },
@@ -2278,7 +2353,7 @@
     "shapes": 3
    },
    "box.aged": {
-    "value": 1499.8990005049936,
+    "value": 1499.9322003389793,
     "support": "measured",
     "shapes": 4
    },
@@ -2376,22 +2451,22 @@
     "shapes": 0
    },
    "age2.a": {
-    "value": -19.78865766201697,
+    "value": -19.78882993942967,
     "support": "inferred",
     "shapes": 0
    },
    "age2.b": {
-    "value": 0.13999801053870675,
+    "value": 0.13999801216042207,
     "support": "inferred",
     "shapes": 0
    },
    "age3.a": {
-    "value": -28.129940272548524,
+    "value": -28.13033789025778,
     "support": "inferred",
     "shapes": 0
    },
    "age3.b": {
-    "value": 0.24290232337456602,
+    "value": 0.24290232711749957,
     "support": "inferred",
     "shapes": 0
    },
@@ -2401,7 +2476,7 @@
     "shapes": 1
    },
    "box.aged": {
-    "value": 1499.964808097227,
+    "value": 1500.0507829847097,
     "support": "inferred",
     "shapes": 0
    },
@@ -2499,22 +2574,22 @@
     "shapes": 0
    },
    "age2.a": {
-    "value": -5.8037951314119915,
+    "value": -5.803844862274459,
     "support": "inferred",
     "shapes": 0
    },
    "age2.b": {
-    "value": 0.1398611850004021,
+    "value": 0.1398611854259499,
     "support": "inferred",
     "shapes": 0
    },
    "age3.a": {
-    "value": 35.66065707449599,
+    "value": 35.66065644707005,
     "support": "inferred",
     "shapes": 0
    },
    "age3.b": {
-    "value": 0.24233416932780255,
+    "value": 0.2423341693331715,
     "support": "inferred",
     "shapes": 0
    },
@@ -2524,7 +2599,7 @@
     "shapes": 1
    },
    "box.aged": {
-    "value": 1499.964808097227,
+    "value": 1500.0507829847097,
     "support": "inferred",
     "shapes": 0
    },
@@ -2622,22 +2697,22 @@
     "shapes": 0
    },
    "age2.a": {
-    "value": -36.86729962206243,
+    "value": -36.86733321131189,
     "support": "inferred",
     "shapes": 0
    },
    "age2.b": {
-    "value": 0.14057793203005234,
+    "value": 0.14057793269931282,
     "support": "inferred",
     "shapes": 0
    },
    "age3.a": {
-    "value": -41.705950848096045,
+    "value": -41.70602772932712,
     "support": "inferred",
     "shapes": 0
    },
    "age3.b": {
-    "value": 0.24347759963602914,
+    "value": 0.24347760116788175,
     "support": "inferred",
     "shapes": 0
    },
@@ -2647,7 +2722,7 @@
     "shapes": 1
    },
    "box.aged": {
-    "value": 1499.964808097227,
+    "value": 1500.0507829847097,
     "support": "inferred",
     "shapes": 0
    },
@@ -2722,7 +2797,7 @@
   "modelKey": "iPhone 18 Pro",
   "rows": 424,
   "used": 412,
-  "rmse": 1.364919152590317,
+  "rmse": 1.3463890340060982,
   "maxAbs": 7.294287517608609,
   "floor": {
    "basis": "reference",
@@ -2730,57 +2805,47 @@
   },
   "params": {
    "age1.a": {
-    "value": -10.087232959604878,
+    "value": -10.11280793917942,
     "support": "inferred",
     "shapes": 0
    },
    "age1.b": {
-    "value": 0.11180576123024265,
+    "value": 0.11180574538662844,
     "support": "inferred",
     "shapes": 0
    },
    "age2.a": {
-    "value": -3.086281215333498,
+    "value": -3.11185622060464,
     "support": "inferred",
     "shapes": 0
    },
    "age2.b": {
-    "value": 0.13982216224968083,
+    "value": 0.13982214640625187,
     "support": "inferred",
     "shapes": 0
    },
    "age3.a": {
-    "value": 17.18447042392949,
+    "value": 17.009703714453686,
     "support": "inferred",
     "shapes": 0
    },
    "age3.b": {
-    "value": 0.24252055051799729,
+    "value": 0.24252051254351034,
     "support": "inferred",
     "shapes": 0
    },
    "box.base": {
-    "value": 2250.1737890940985,
+    "value": 2250.1644997943754,
     "support": "measured",
     "shapes": 4
    },
-   "charger.base": {
-    "value": 0,
-    "support": "measured",
-    "shapes": 46
-   },
-   "charger.aged": {
-    "value": 0,
-    "support": "measured",
-    "shapes": 29
-   },
    "box.aged": {
-    "value": 1499.9522130647488,
+    "value": 1500.406530921901,
     "support": "measured",
     "shapes": 7
    },
    "esim": {
-    "value": 0.0500000836443462,
+    "value": 0.04999999999999999,
     "support": "measured",
     "shapes": 1
    },
@@ -2855,7 +2920,7 @@
   "modelKey": "iPhone 18 Pro Max",
   "rows": 429,
   "used": 420,
-  "rmse": 768.3354810280526,
+  "rmse": 768.3354808539964,
   "maxAbs": 8050,
   "floor": {
    "basis": "reference",
@@ -2873,42 +2938,32 @@
     "shapes": 0
    },
    "age2.a": {
-    "value": -29.980414668607686,
+    "value": -29.980424439378307,
     "support": "inferred",
     "shapes": 0
    },
    "age2.b": {
-    "value": 0.13999986533286032,
+    "value": 0.13999986540004078,
     "support": "inferred",
     "shapes": 0
    },
    "age3.a": {
-    "value": -31.688714520594544,
+    "value": -31.68874185841269,
     "support": "inferred",
     "shapes": 0
    },
    "age3.b": {
-    "value": 0.24285399493334706,
+    "value": 0.24285399502543564,
     "support": "inferred",
     "shapes": 0
    },
    "box.base": {
-    "value": 2249.9952504301964,
+    "value": 2250.02187496582,
     "support": "measured",
     "shapes": 4
    },
-   "charger.base": {
-    "value": 0,
-    "support": "measured",
-    "shapes": 6
-   },
-   "charger.aged": {
-    "value": 0,
-    "support": "measured",
-    "shapes": 20
-   },
    "box.aged": {
-    "value": 1499.694001342107,
+    "value": 1499.6339433723153,
     "support": "measured",
     "shapes": 7
    },
@@ -2981,17 +3036,17 @@
  },
  {
   "modelKey": "iPhone 6",
-  "rows": 120,
-  "used": 120,
-  "rmse": 31.79782295567877,
-  "maxAbs": 255,
+  "rows": 292,
+  "used": 288,
+  "rmse": 21.75210036561706,
+  "maxAbs": 163.38282714843763,
   "floor": {
    "basis": "reference",
    "value": 0.22819
   },
   "params": {
    "box.base": {
-    "value": 23.764205813450445,
+    "value": 25.44519761740102,
     "support": "measured",
     "shapes": 7
    },
@@ -3064,24 +3119,19 @@
  },
  {
   "modelKey": "iPhone 6 Plus",
-  "rows": 91,
-  "used": 91,
-  "rmse": 29.589539360591555,
-  "maxAbs": 210.25390625,
+  "rows": 226,
+  "used": 223,
+  "rmse": 21.76810275690364,
+  "maxAbs": 156.16611735026072,
   "floor": {
    "basis": "reference",
    "value": 0.22737
   },
   "params": {
    "box.base": {
-    "value": 22.73357221446344,
+    "value": 29.707659613802747,
     "support": "measured",
     "shapes": 14
-   },
-   "charger.base": {
-    "value": 0,
-    "support": "measured",
-    "shapes": 47
    },
    "class.display": {
     "value": 25500,
@@ -3152,17 +3202,17 @@
  },
  {
   "modelKey": "iPhone 6S",
-  "rows": 120,
-  "used": 120,
-  "rmse": 36.22936260842067,
-  "maxAbs": 260,
+  "rows": 292,
+  "used": 288,
+  "rmse": 19.6724186327584,
+  "maxAbs": 156.4783405807782,
   "floor": {
    "basis": "reference",
    "value": 0.228
   },
   "params": {
    "box.base": {
-    "value": 29.86543879098732,
+    "value": 29.81374888234579,
     "support": "measured",
     "shapes": 7
    },
@@ -3235,17 +3285,17 @@
  },
  {
   "modelKey": "iPhone 6S Plus",
-  "rows": 120,
-  "used": 120,
-  "rmse": 68.89779899723177,
-  "maxAbs": 545,
+  "rows": 463,
+  "used": 455,
+  "rmse": 45.87385733278649,
+  "maxAbs": 455,
   "floor": {
    "basis": "reference",
    "value": 0.22686
   },
   "params": {
    "box.base": {
-    "value": 29.946914771756337,
+    "value": 26.708081330048035,
     "support": "measured",
     "shapes": 7
    },
@@ -3318,14 +3368,14 @@
  },
  {
   "modelKey": "iPhone 7",
-  "rows": 92,
-  "used": 92,
-  "rmse": 24.003180937458694,
-  "maxAbs": 149.81829643249512,
+  "rows": 227,
+  "used": 224,
+  "rmse": 37.34496544464522,
+  "maxAbs": 291,
   "floor": null,
   "params": {
    "box.base": {
-    "value": 49.44887482595897,
+    "value": 49.7576267255921,
     "support": "measured",
     "shapes": 8
    },
@@ -3398,21 +3448,16 @@
  },
  {
   "modelKey": "iPhone 7 Plus",
-  "rows": 90,
-  "used": 90,
-  "rmse": 69.64944276402122,
-  "maxAbs": 349.64891589726267,
+  "rows": 225,
+  "used": 222,
+  "rmse": 29.233199237052766,
+  "maxAbs": 350,
   "floor": null,
   "params": {
    "box.base": {
-    "value": 46.726123798812324,
+    "value": 51.59612039126171,
     "support": "measured",
-    "shapes": 7
-   },
-   "charger.base": {
-    "value": 141.33629925697298,
-    "support": "measured",
-    "shapes": 29
+    "shapes": 8
    },
    "class.display": {
     "value": 25500,
@@ -3483,14 +3528,14 @@
  },
  {
   "modelKey": "iPhone 8",
-  "rows": 95,
-  "used": 95,
-  "rmse": 6.911216179003428,
-  "maxAbs": 40.00195724976902,
+  "rows": 230,
+  "used": 227,
+  "rmse": 17.36758205594274,
+  "maxAbs": 149.54820139998236,
   "floor": null,
   "params": {
    "box.base": {
-    "value": 50.144110086881994,
+    "value": 50.45179860001764,
     "support": "measured",
     "shapes": 8
    },
@@ -3563,14 +3608,14 @@
  },
  {
   "modelKey": "iPhone 8 Plus",
-  "rows": 90,
-  "used": 90,
-  "rmse": 7.738841143353924,
-  "maxAbs": 60.0054982267925,
+  "rows": 225,
+  "used": 222,
+  "rmse": 17.50657933448181,
+  "maxAbs": 149.62098491186993,
   "floor": null,
   "params": {
    "box.base": {
-    "value": 49.484064253935266,
+    "value": 50.379015088130075,
     "support": "measured",
     "shapes": 7
    },
@@ -3645,8 +3690,8 @@
   "modelKey": "iPhone Air",
   "rows": 113,
   "used": 110,
-  "rmse": 4.2593970940610415,
-  "maxAbs": 41.225605504027044,
+  "rmse": 4.279576467784186,
+  "maxAbs": 41.36950363215146,
   "floor": {
    "basis": "aged",
    "value": 0.22445
@@ -3663,32 +3708,32 @@
     "shapes": 0
    },
    "age2.a": {
-    "value": 23.948103268706973,
+    "value": 23.94810317371097,
     "support": "inferred",
     "shapes": 0
    },
    "age2.b": {
-    "value": 0.13948387067868528,
+    "value": 0.1394838706799025,
     "support": "inferred",
     "shapes": 0
    },
    "age3.a": {
-    "value": 24.868980098275614,
+    "value": 24.868977728805497,
     "support": "inferred",
     "shapes": 0
    },
    "age3.b": {
-    "value": 0.24235722833263226,
+    "value": 0.2423572283566914,
     "support": "inferred",
     "shapes": 0
    },
    "box.base": {
-    "value": 2250.0319998400014,
+    "value": 2250.0368293470897,
     "support": "measured",
     "shapes": 3
    },
    "box.aged": {
-    "value": 1500.0025931946618,
+    "value": 1499.8057241643835,
     "support": "measured",
     "shapes": 7
    },
@@ -3766,17 +3811,17 @@
  },
  {
   "modelKey": "iPhone SE 1st Generation",
-  "rows": 120,
-  "used": 120,
-  "rmse": 23.778033947850897,
-  "maxAbs": 208.75,
+  "rows": 300,
+  "used": 296,
+  "rmse": 25.01348604027762,
+  "maxAbs": 170,
   "floor": {
    "basis": "reference",
    "value": 0.22576
   },
   "params": {
    "box.base": {
-    "value": 25.091672475930892,
+    "value": 27.13314471974569,
     "support": "measured",
     "shapes": 7
    },
@@ -3849,14 +3894,14 @@
  },
  {
   "modelKey": "iPhone SE 2020",
-  "rows": 90,
-  "used": 90,
-  "rmse": 25.55892404555308,
-  "maxAbs": 209.66796875,
+  "rows": 222,
+  "used": 219,
+  "rmse": 32.009751824462676,
+  "maxAbs": 331.25,
   "floor": null,
   "params": {
    "box.base": {
-    "value": 199.7816370884832,
+    "value": 200.15855831563096,
     "support": "measured",
     "shapes": 7
    },
@@ -3931,7 +3976,7 @@
   "modelKey": "iPhone SE 2022",
   "rows": 207,
   "used": 204,
-  "rmse": 31.133377472043243,
+  "rmse": 31.13337733035817,
   "maxAbs": 207.5990747879723,
   "floor": null,
   "params": {
@@ -4009,21 +4054,16 @@
  },
  {
   "modelKey": "iPhone X",
-  "rows": 87,
-  "used": 87,
-  "rmse": 16.73718836179668,
-  "maxAbs": 135.15798502758207,
+  "rows": 173,
+  "used": 171,
+  "rmse": 56.27378213793283,
+  "maxAbs": 316.22938144329873,
   "floor": null,
   "params": {
    "box.base": {
-    "value": 100.19028924053387,
+    "value": 100.21582244305341,
     "support": "measured",
-    "shapes": 13
-   },
-   "charger.base": {
-    "value": 299.71344182049296,
-    "support": "measured",
-    "shapes": 53
+    "shapes": 14
    },
    "class.display": {
     "value": 25500,
@@ -4179,21 +4219,16 @@
  },
  {
   "modelKey": "iPhone XS",
-  "rows": 90,
-  "used": 90,
-  "rmse": 85.54882890079922,
-  "maxAbs": 790.2114083345532,
+  "rows": 219,
+  "used": 216,
+  "rmse": 56.83527477749186,
+  "maxAbs": 432.8682170542643,
   "floor": null,
   "params": {
    "box.base": {
-    "value": 99.80500079777175,
+    "value": 121.79072799484408,
     "support": "measured",
-    "shapes": 7
-   },
-   "charger.base": {
-    "value": 290.95218304270264,
-    "support": "measured",
-    "shapes": 29
+    "shapes": 8
    },
    "class.display": {
     "value": 25500,
@@ -4264,21 +4299,16 @@
  },
  {
   "modelKey": "iPhone XS Max",
-  "rows": 92,
-  "used": 92,
-  "rmse": 78.06798743306145,
-  "maxAbs": 610.2689403390441,
+  "rows": 227,
+  "used": 224,
+  "rmse": 60.819825755755545,
+  "maxAbs": 422.19128949615697,
   "floor": null,
   "params": {
    "box.base": {
-    "value": 99.8912956891736,
+    "value": 100.62955204054302,
     "support": "measured",
-    "shapes": 8
-   },
-   "charger.base": {
-    "value": 297.63689923760853,
-    "support": "measured",
-    "shapes": 30
+    "shapes": 9
    },
    "class.display": {
     "value": 25500,
