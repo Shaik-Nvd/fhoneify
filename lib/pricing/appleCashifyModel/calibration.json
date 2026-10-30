@@ -1,6 +1,6 @@
 {
  "version": "apple-cashify-calibration/1",
- "generatedFrom": "data/pricing-evidence/measurements.jsonl (6928 usable measurements)",
+ "generatedFrom": "data/pricing-evidence/measurements.jsonl (6933 usable measurements)",
  "models": {
   "iPhone 11": {
    "modelKey": "iPhone 11",
@@ -2848,7 +2848,7 @@
    },
    "age": null,
    "boxNo": {
-    "base": 999.794305748362,
+    "base": 999.7936945677486,
     "aged": 2250,
     "support": "measured"
    },
@@ -2943,10 +2943,11 @@
    "scrap": 1200,
    "extremeFaultCount": 10,
    "evidence": {
-    "shapes": 30,
-    "measurements": 90,
+    "shapes": 31,
+    "measurements": 91,
     "dates": [
-     "2026-10-25"
+     "2026-10-25",
+     "2026-10-30"
     ],
     "medianReference": 22040
    },
@@ -2954,25 +2955,25 @@
    "codes": {
     "C01": {
      "kind": "fixed",
-     "value": 809.996092396955,
+     "value": 809.9960923969546,
      "support": "inferred",
      "n": 1
     },
     "C02": {
      "kind": "fixed",
-     "value": 600.2547859801823,
+     "value": 600.2547859801821,
      "support": "inferred",
      "n": 1
     },
     "C03": {
      "kind": "fixed",
-     "value": 755.9944629129444,
+     "value": 755.994462912944,
      "support": "inferred",
      "n": 1
     },
     "C04": {
      "kind": "fixed",
-     "value": 404.9980461984775,
+     "value": 404.9980461984773,
      "support": "inferred",
      "n": 1
     },
@@ -2998,15 +2999,15 @@
     },
     "F06": {
      "kind": "fixed",
-     "value": 2000.0156948217773,
+     "value": 2000.016,
      "support": "measured",
-     "n": 4
+     "n": 5
     },
     "F08": {
      "kind": "pct",
      "value": 0.25862068965517243,
      "support": "measured",
-     "n": 8,
+     "n": 9,
      "decided": true
     },
     "F10": {
@@ -3025,7 +3026,7 @@
     },
     "F14": {
      "kind": "pct",
-     "value": 0.29999633789062574,
+     "value": 0.2999963378906256,
      "support": "inferred",
      "n": 1
     },
@@ -3229,6 +3230,7 @@
     "BODY",
     "CAM",
     "FACE",
+    "FACE+FMIN",
     "FMIN",
     "SCREEN",
     "WIFI"
@@ -8017,7 +8019,7 @@
     }
    },
    "boxNo": {
-    "base": 2249.666528115981,
+    "base": 2250.295936615627,
     "aged": 1520.7016406445114,
     "support": "measured"
    },
@@ -8115,13 +8117,14 @@
    "scrap": 1200,
    "extremeFaultCount": 10,
    "evidence": {
-    "shapes": 94,
-    "measurements": 259,
+    "shapes": 95,
+    "measurements": 260,
     "dates": [
      "2026-10-17",
      "2026-10-24",
      "2026-10-27",
-     "2026-10-28"
+     "2026-10-28",
+     "2026-10-30"
     ],
     "medianReference": 55680
    },
@@ -8220,7 +8223,7 @@
      "kind": "fixed",
      "value": 6000,
      "support": "measured",
-     "n": 3
+     "n": 4
     },
     "F03": {
      "kind": "fixed",
@@ -8403,6 +8406,7 @@
     "BATT+FACE",
     "BODY",
     "BODY+BOX",
+    "BOX+CAM",
     "CAM",
     "FACE",
     "FACE+WIFI",
@@ -9866,8 +9870,8 @@
      "n": 0
     },
     "3": {
-     "a": -184.47539998078918,
-     "b": 0.2454125547421178,
+     "a": -184.47539998075766,
+     "b": 0.2454125547421173,
      "support": "inferred",
      "n": 0
     }
@@ -10316,15 +10320,15 @@
      "n": 0
     },
     "3": {
-     "a": -28.129940273194507,
-     "b": 0.2429023233745721,
+     "a": -28.129940272548524,
+     "b": 0.24290232337456602,
      "support": "inferred",
      "n": 0
     }
    },
    "boxNo": {
     "base": 2250,
-    "aged": 1499.950776429237,
+    "aged": 1499.964808097227,
     "support": "measured"
    },
    "eSimDualPct": 0.04995293304202625,
@@ -10749,15 +10753,15 @@
      "n": 0
     },
     "3": {
-     "a": 35.66065707451816,
-     "b": 0.24233416932780238,
+     "a": 35.66065707449599,
+     "b": 0.24233416932780255,
      "support": "inferred",
      "n": 0
     }
    },
    "boxNo": {
     "base": 2250,
-    "aged": 1499.950776429237,
+    "aged": 1499.964808097227,
     "support": "measured"
    },
    "eSimDualPct": 0.04996805097207795,
@@ -11183,15 +11187,15 @@
      "n": 0
     },
     "3": {
-     "a": -41.70595084810544,
-     "b": 0.24347759963602933,
+     "a": -41.705950848096045,
+     "b": 0.24347759963602914,
      "support": "inferred",
      "n": 0
     }
    },
    "boxNo": {
     "base": 2250,
-    "aged": 1499.950776429237,
+    "aged": 1499.964808097227,
     "support": "measured"
    },
    "eSimDualPct": null,
@@ -11609,8 +11613,8 @@
      "n": 0
     },
     "3": {
-     "a": 17.184470428766645,
-     "b": 0.24252055051796195,
+     "a": 17.18447042392949,
+     "b": 0.24252055051799729,
      "support": "inferred",
      "n": 0
     }
@@ -12095,8 +12099,8 @@
      "n": 0
     },
     "3": {
-     "a": -31.6887145205965,
-     "b": 0.2428539949333471,
+     "a": -31.688714520594544,
+     "b": 0.24285399493334706,
      "support": "inferred",
      "n": 0
     }
@@ -15053,11 +15057,12 @@
    "scrap": 1200,
    "extremeFaultCount": 10,
    "evidence": {
-    "shapes": 34,
-    "measurements": 94,
+    "shapes": 35,
+    "measurements": 95,
     "dates": [
      "2026-10-26",
-     "2026-10-28"
+     "2026-10-28",
+     "2026-10-30"
     ],
     "medianReference": 5850
    },
@@ -15151,7 +15156,7 @@
      "kind": "fixed",
      "value": 240,
      "support": "measured",
-     "n": 8,
+     "n": 9,
      "decided": true
     },
     "Q02": {
@@ -15786,15 +15791,15 @@
      "n": 0
     },
     "3": {
-     "a": 24.86898024475729,
-     "b": 0.24235722833117335,
+     "a": 24.868980098275614,
+     "b": 0.24235722833263226,
      "support": "inferred",
      "n": 0
     }
    },
    "boxNo": {
     "base": 2250.0319998400014,
-    "aged": 1499.950297550733,
+    "aged": 1500.0025931946618,
     "support": "measured"
    },
    "eSimDualPct": 0.04999999999999981,
@@ -15891,11 +15896,12 @@
    "scrap": 1200,
    "extremeFaultCount": 10,
    "evidence": {
-    "shapes": 52,
-    "measurements": 114,
+    "shapes": 53,
+    "measurements": 116,
     "dates": [
      "2026-10-17",
-     "2026-10-23"
+     "2026-10-23",
+     "2026-10-30"
     ],
     "medianReference": 75200
    },
@@ -15992,7 +15998,7 @@
     },
     "F06": {
      "kind": "fixed",
-     "value": 2499.1959591937048,
+     "value": 2499.0129237862616,
      "support": "measured",
      "n": 5
     },
@@ -16016,7 +16022,7 @@
     },
     "F11": {
      "kind": "fixed",
-     "value": 2100.730952804072,
+     "value": 2497.0598070033097,
      "support": "inferred",
      "n": 1
     },
@@ -16028,9 +16034,9 @@
     },
     "F13": {
      "kind": "fixed",
-     "value": 1000.081036376952,
-     "support": "inferred",
-     "n": 1
+     "value": 603.9400000000005,
+     "support": "measured",
+     "n": 2
     },
     "F14": {
      "kind": "pct",
@@ -16141,10 +16147,10 @@
     },
     "F10": {
      "kind": "fixed",
-     "value": 2499.1959591937048,
+     "value": 2004.4224029743098,
      "support": "inferred",
      "n": 0,
-     "basis": "own F06 x template ratio"
+     "basis": "own F06/F13 x template ratio"
     },
     "F16": {
      "kind": "pct",

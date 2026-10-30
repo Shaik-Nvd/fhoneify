@@ -143,3 +143,18 @@ Fit change: a quote that changes exactly one ordinary condition from the flawles
 5x weight in the joint refinement, so a clean single is not outvoted by several large mixed combinations; touch failure, non-original or cracked
 screen and panel damage are excluded because Cashify's age flow and minimum make their combinations non-additive. In-sample against the
 release before it: MAE INR 25.5 -> 24.5, within INR 100 97.8% -> 98.1%. All 23 live quotes are asserted in pricing.apple-reference-rules.
+
+### Third random check (seed 61507, 30 Oct)
+
+Five iPhones drawn from the 151 reference rows, quoted on cashify.in (quote pages only) and on the live API with the same answers.
+
+| Device and answers | Fhoneify C at release | Cashify base | Note |
+|---|---:|---:|---|
+| iPhone 16 Plus 128 GB, back camera, 3-6 months, no box | 44,480 | 44,480 | exact |
+| iPhone 8 128 GB, battery 80-85%, box, no charger | 5,460 | 5,460 | exact |
+| iPhone 13 Mini 256 GB, Face ID + speaker, box | 14,340 | 14,340 | exact |
+| iPhone 12 Mini 256 GB, 1-2 minor dents, no box/charger | 15,280 | 15,380 | Cashify's price moved 16,490 -> 16,660; rules at 16,660: 15,450 (+70); not fitted (iPhone 12 fallback) |
+| iPhone Air 512 GB, microphone, 6-11 months, box | 63,690 | 63,480 | Air microphone was inferred at 1,000; Cashify takes 600 (single quote 74,500 -> 73,900); 63,090 at Cashify's price before the fix, 63,480 after |
+
+The microphone deduction on the 17-generation models matches the iPhone 17 Pro measurement (600); the Air rows are now in the evidence, so the Air
+microphone is measured (604).
