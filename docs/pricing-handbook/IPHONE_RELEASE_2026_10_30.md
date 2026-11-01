@@ -62,6 +62,7 @@ Held-out validation: every fold refits on training rows only.
 - **Display-spot cases on the 6S Plus 16 GB** (D01/D04) stop at ₹660, against ₹210 predicted. A minimum quote may apply; it is not modelled, because that would be an invented rule.
 - **No numeric quotes** for 17, 17 Pro, 17 Pro Max, 17e or Air in this intake: those reports are pending templates. Most of their codes remain inferred.
 - **Reference measurement.** 9 final variants have no verified database reference; their error is measured only against the report proxy.
+- **Unseen-model validation (p4, leave one whole model out) was not completed.** Both the baseline and final-code runs were stopped by the host for low system memory, at 41/46 and 25/46 folds, and wrote no summary. No p4 figure is claimed. The inference rule's model-level evidence is the leave-one-model-out code benchmark above (1,493 values). Re-run with `npx tsx scripts/pricing-evidence/validate-new-data.ts --protocols=p4 --out-dir=<dir>` when memory allows.
 
 ### Verification run for this pass
 
