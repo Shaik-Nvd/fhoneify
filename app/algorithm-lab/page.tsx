@@ -133,7 +133,7 @@ function CalculatorTab({ onSave }: { onSave: (log: any) => void }) {
     const lower = model.toLowerCase();
     if (lower.includes('17e')) return false;
     if (lower.includes('17')) return true;
-    if ((lower.includes('13') || lower.includes('14') || lower.includes('15') || lower.includes('16')) && (lower.includes('pro') || lower.includes('max'))) return true;
+    if ((lower.includes('13') || lower.includes('14') || lower.includes('15') || lower.includes('16') || lower.includes('18')) && (lower.includes('pro') || lower.includes('max'))) return true;
     return false;
   };
 

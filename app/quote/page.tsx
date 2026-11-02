@@ -106,8 +106,8 @@ export default function QuotePage() {
       return true;
     }
     
-    // For older generations (13, 14, 15, 16), it ONLY applies to Pro and Pro Max models
-    if ((lower.includes('13') || lower.includes('14') || lower.includes('15') || lower.includes('16')) && (lower.includes('pro') || lower.includes('max'))) {
+    // For Pro / Pro Max generations (13, 14, 15, 16, 18), it applies to Pro and Pro Max models
+    if ((lower.includes('13') || lower.includes('14') || lower.includes('15') || lower.includes('16') || lower.includes('18')) && (lower.includes('pro') || lower.includes('max'))) {
       return true;
     }
     

@@ -12828,7 +12828,7 @@
     "warranty": true,
     "bill": true,
     "age": true,
-    "eSim": false,
+    "eSim": true,
     "charger": true
    },
    "ageTriggers": [
@@ -12870,7 +12870,7 @@
     "support": "measured",
     "fixedByControlledPairs": true
    },
-   "eSimDualPct": null,
+   "eSimDualPct": 0.05,
    "floor": {
     "basis": "reference",
     "value": 0.17
