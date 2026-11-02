@@ -175,74 +175,89 @@ export async function generateLeadPdf(req: AuthenticatedRequest, res: Response) 
       }
     }
 
-    // 2. Map Functional/Hardware Problems
-    const hardwareMap: Record<string, string> = {
-      face: 'Face Sensor Not Working',
-      face_sensor: 'Face Sensor Not Working',
-      battery_service: 'Battery in Service (Health is less than 80%)',
-      battery_health: 'Battery Health 80-85%',
-      back_camera: 'Back Camera not working',
-      front_camera: 'Front Camera not working',
-      charging: 'Charging Jack / Port not working',
-      speaker: 'Speaker not working',
-      audio_receiver: 'Receiver / Earpiece not working',
-      receiver: 'Receiver / Earpiece not working',
-      microphone: 'Microphone (Mic) not working',
-      mic: 'Microphone (Mic) not working',
-      proximity: 'Proximity Sensor not working',
-      proximity_sensor: 'Proximity Sensor not working',
-      wifi: 'Wi-Fi not working',
-      bluetooth: 'Bluetooth not working',
-      volume: 'Volume buttons not working',
-      power: 'Power button not working',
-      silent: 'Vibration / Silent switch not working',
-      vibrator: 'Vibration / Silent switch not working',
-      fingerprint: 'Fingerprint Scanner not working',
-      camera_glass: 'Camera Glass broken',
-      s_pen: 'S-Pen missing / not working',
-      hinge: 'Hinge defect',
+    const lowerModel = lead.model.toLowerCase();
+    const isApple = lead.brand.toLowerCase() === 'apple';
+    const isSamsung = lead.brand.toLowerCase() === 'samsung';
+    const hasSPen = isSamsung && (
+      lowerModel.includes('note') || 
+      lowerModel.includes('s22 ultra') || 
+      lowerModel.includes('s23 ultra') || 
+      lowerModel.includes('s24 ultra')
+    );
+    const isFoldable = lowerModel.includes('fold') || lowerModel.includes('flip') || lowerModel.includes('razr') || lowerModel.includes('open');
+    const hasFingerprint = !isApple || lowerModel.includes('iphone 6') || lowerModel.includes('iphone 7') || lowerModel.includes('iphone 8') || lowerModel.includes('se');
+    const hasFaceId = !isApple || ((
+      lowerModel.includes('iphone x') ||
+      lowerModel.includes('iphone 11') ||
+      lowerModel.includes('iphone 12') ||
+      lowerModel.includes('iphone 13') ||
+      lowerModel.includes('iphone 14') ||
+      lowerModel.includes('iphone 15') ||
+      lowerModel.includes('iphone 16') ||
+      lowerModel.includes('iphone 17') ||
+      lowerModel.includes('air')
+    ) && !lowerModel.includes('se'));
+    const hasActionButton = isApple && (
+      (lowerModel.includes('15') && (lowerModel.includes('pro') || lowerModel.includes('max'))) ||
+      lowerModel.includes('16') ||
+      lowerModel.includes('17') ||
+      lowerModel.includes('air')
+    );
+
+    // Full catalog of hardware components
+    const fullHardwareCatalog: Array<{ id: string; label: string }> = [
+      { id: 'front_camera', label: 'Front Camera' },
+      { id: 'back_camera', label: 'Back Camera' },
+      { id: 'volume', label: 'Volume Buttons' },
+      ...(hasFingerprint ? [{ id: 'fingerprint', label: isApple ? 'Finger Touch (Touch ID)' : 'Finger Touch' }] : []),
+      { id: 'wifi', label: 'Wi-Fi' },
+      { id: 'speaker', label: 'Speaker' },
+      ...(isFoldable ? [{ id: 'hinge', label: 'Hinge' }] : []),
+      { id: 'silent', label: hasActionButton ? 'Action Button' : 'Silent Button / Switch' },
+      ...(hasFaceId ? [{ id: 'face', label: isApple ? 'Face ID / Face Sensor' : 'Face Sensor' }] : []),
+      { id: 'power', label: 'Power Button' },
+      { id: 'charging', label: 'Charging Port' },
+      { id: 'audio_receiver', label: 'Audio Receiver / Earpiece' },
+      { id: 'camera_glass', label: 'Camera Glass' },
+      { id: 'microphone', label: 'Microphone' },
+      { id: 'bluetooth', label: 'Bluetooth' },
+      { id: 'vibrator', label: 'Vibrator / Vibration' },
+      { id: 'proximity', label: 'Proximity Sensor' },
+      ...(hasSPen ? [{ id: 's_pen', label: 'S-Pen' }] : []),
+      ...(isApple
+        ? [
+            { id: 'battery_service', label: 'Battery Health < 80% (In Service)' },
+            { id: 'battery_health', label: 'Battery Health 80-85%' },
+          ]
+        : [{ id: 'battery_service', label: 'Battery Functional Condition' }]),
+    ];
+
+    const reportedHardware = (answers.hardware || []).map((h: string) => String(h).toLowerCase().trim());
+    const isHardwareReported = (id: string) => {
+      if (id === 'face') return reportedHardware.includes('face') || reportedHardware.includes('face_sensor');
+      if (id === 'microphone') return reportedHardware.includes('microphone') || reportedHardware.includes('mic');
+      if (id === 'audio_receiver') return reportedHardware.includes('audio_receiver') || reportedHardware.includes('receiver');
+      if (id === 'vibrator') return reportedHardware.includes('vibrator') || reportedHardware.includes('silent_vibrator');
+      if (id === 'proximity') return reportedHardware.includes('proximity') || reportedHardware.includes('proximity_sensor');
+      return reportedHardware.includes(id);
     };
 
-    const hardwareItems: string[] = (answers.hardware || []).map((h: string) => {
-      const key = String(h || '').toLowerCase().trim();
-      return hardwareMap[key] || h;
-    });
+    // Age label mapping
+    const ageMap: Record<string, string> = {
+      below3: 'Below 3 months (Valid bill mandatory)',
+      '3to6': '3 months - 6 months (Valid bill mandatory)',
+      '6to11': '6 months - 11 months (Valid bill mandatory)',
+      above11: 'Above 11 months / Out of warranty',
+    };
 
-    // 3. Screen / Body Defects (Only selected items)
-    const defectLines: string[] = [];
-    const screenCondition = answers.screenCondition ? String(answers.screenCondition).trim() : '';
-    const defectsList = answers.defects || [];
-    const hasScreenScratch = defectsList.includes('broken_scratch') || defectsList.includes('screen_scratch') || (screenCondition && screenCondition.toLowerCase() !== 'none');
+    // Primary defects categories
+    const rawDefects: string[] = answers.defects || [];
+    const hasScreenScratchCategory = rawDefects.includes('screen_scratch') || rawDefects.includes('broken_scratch') || (answers.screenCondition && answers.screenCondition !== 'none' && answers.screenCondition !== 'n/a');
+    const hasScreenSpotCategory = rawDefects.includes('screen_spot') || (answers.screenSpots && answers.screenSpots !== 'No spots on screen' && answers.screenSpots !== 'none') || (answers.screenLines && answers.screenLines !== 'No line(s) on Display' && answers.screenLines !== 'none') || (answers.screenDiscoloration && answers.screenDiscoloration !== 'No Discoloration' && answers.screenDiscoloration !== 'none');
+    const hasBodyScratchCategory = rawDefects.includes('body_scratch') || (answers.bodyScratches && answers.bodyScratches !== 'No scratches' && answers.bodyScratches !== 'none') || (answers.bodyDents && answers.bodyDents !== 'No dents' && answers.bodyDents !== 'none');
+    const hasBodyPanelCategory = rawDefects.includes('panel_missing') || (answers.bodyPanel && answers.bodyPanel !== 'No defect on side or back panel' && answers.bodyPanel !== 'none') || (answers.bodyBent && answers.bodyBent !== 'Phone not bent' && answers.bodyBent !== 'none');
 
-    if (screenCondition && screenCondition.toLowerCase() !== 'none' && screenCondition.toLowerCase() !== 'n/a') {
-      defectLines.push(`Broken/scratch on device screen : ${screenCondition}`);
-    } else if (hasScreenScratch) {
-      defectLines.push(`Broken/scratch on device screen : Broken/scratch on device screen`);
-    }
-
-    if (answers.screenSpots && String(answers.screenSpots).toLowerCase() !== 'none' && String(answers.screenSpots).toLowerCase() !== 'n/a') {
-      defectLines.push(`Screen Spots : ${answers.screenSpots}`);
-    }
-    if (answers.screenLines && String(answers.screenLines).toLowerCase() !== 'none' && String(answers.screenLines).toLowerCase() !== 'n/a') {
-      defectLines.push(`Screen Lines : ${answers.screenLines}`);
-    }
-    if (answers.screenDiscoloration && String(answers.screenDiscoloration).toLowerCase() !== 'none' && String(answers.screenDiscoloration).toLowerCase() !== 'n/a') {
-      defectLines.push(`Screen Discoloration : ${answers.screenDiscoloration}`);
-    }
-    if (answers.bodyScratches && String(answers.bodyScratches).toLowerCase() !== 'none' && String(answers.bodyScratches).toLowerCase() !== 'n/a') {
-      defectLines.push(`Body Scratches : ${answers.bodyScratches}`);
-    }
-    if (answers.bodyDents && String(answers.bodyDents).toLowerCase() !== 'none' && String(answers.bodyDents).toLowerCase() !== 'n/a') {
-      defectLines.push(`Body Dents : ${answers.bodyDents}`);
-    }
-    if (answers.bodyPanel && String(answers.bodyPanel).toLowerCase() !== 'none' && String(answers.bodyPanel).toLowerCase() !== 'n/a') {
-      defectLines.push(`Body Panel : ${answers.bodyPanel}`);
-    }
-    if (answers.bodyBent && String(answers.bodyBent).toLowerCase() !== 'none' && String(answers.bodyBent).toLowerCase() !== 'n/a') {
-      defectLines.push(`Body Bent / Loose : ${answers.bodyBent}`);
-    }
-
-    // 4. Accessories
+    // Accessories
     const hasBox = answers.box === true || (answers.accessories || []).includes('box');
     const hasCharger = answers.charger === true || (answers.accessories || []).includes('charger');
     const hasBill = answers.validBill === true || (answers.accessories || []).includes('bill');
@@ -404,6 +419,11 @@ export async function generateLeadPdf(req: AuthenticatedRequest, res: Response) 
             font-weight: 600;
             color: #1e293b;
           }
+          .qa-desc {
+            font-size: 11px;
+            color: #64748b;
+            margin-top: 1px;
+          }
           .pill {
             display: inline-flex;
             align-items: center;
@@ -417,6 +437,23 @@ export async function generateLeadPdf(req: AuthenticatedRequest, res: Response) 
           .pill-yes { background: #ecfdf5; color: #047857; border: 1px solid #a7f3d0; }
           .pill-no { background: #fef2f2; color: #b91c1c; border: 1px solid #fecaca; }
           .pill-none { background: #f8fafc; color: #64748b; border: 1px solid #cbd5e1; }
+          .pill-info { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; }
+          .pill-warn { background: #fffbeb; color: #b45309; border: 1px solid #fde68a; }
+
+          .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px 16px;
+          }
+          .sub-section-title {
+            font-size: 11.5px;
+            font-weight: 700;
+            color: #334155;
+            background: #f1f5f9;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin: 6px 0 4px 0;
+          }
 
           /* Defects tags */
           .defect-tag {
@@ -516,70 +553,169 @@ export async function generateLeadPdf(req: AuthenticatedRequest, res: Response) 
             </div>
           </div>
 
-          <!-- Card 1: Core Condition Checks -->
+          <!-- Card 1: Core Condition & Warranty Checks -->
           <div class="section-card">
-            <div class="section-header">Basic Device Functionality Checks</div>
+            <div class="section-header">1. Device Verification & Basic Functionality</div>
             <div class="section-body">
               <div class="qa-row">
-                <span class="qa-title">Are you able to make and receive calls?</span>
+                <div>
+                  <div class="qa-title">Are you able to make and receive calls?</div>
+                  <div class="qa-desc">Check your device for cellular network connectivity issues</div>
+                </div>
                 <span class="pill ${answers.calls === false ? 'pill-no' : 'pill-yes'}">${answers.calls === false ? '✕ NO' : '✓ YES'}</span>
               </div>
               <div class="qa-row">
-                <span class="qa-title">Is your device's touch screen working properly?</span>
+                <div>
+                  <div class="qa-title">Is your device's touch screen working properly?</div>
+                  <div class="qa-desc">Check the touch screen functionality of your phone</div>
+                </div>
                 <span class="pill ${answers.touch === false ? 'pill-no' : 'pill-yes'}">${answers.touch === false ? '✕ NO' : '✓ YES'}</span>
               </div>
               <div class="qa-row">
-                <span class="qa-title">Is your phone's screen original?</span>
+                <div>
+                  <div class="qa-title">Is your phone's screen original?</div>
+                  <div class="qa-desc">Original or replaced by Authorized Service Center</div>
+                </div>
                 <span class="pill ${answers.originalScreen === false ? 'pill-no' : 'pill-yes'}">${answers.originalScreen === false ? '✕ NO' : '✓ YES'}</span>
               </div>
+              <div class="qa-row">
+                <div>
+                  <div class="qa-title">Is your device under manufacturer warranty?</div>
+                  <div class="qa-desc">Valid manufacturer brand warranty</div>
+                </div>
+                <span class="pill ${answers.warranty === true ? 'pill-yes' : 'pill-no'}">${answers.warranty === true ? '✓ YES' : '✕ NO'}</span>
+              </div>
+              <div class="qa-row">
+                <div>
+                  <div class="qa-title">Do you have GST valid bill with the same IMEI?</div>
+                  <div class="qa-desc">Make sure your bill has device IMEI mentioned on it</div>
+                </div>
+                <span class="pill ${hasBill ? 'pill-yes' : 'pill-no'}">${hasBill ? '✓ YES' : '✕ NO'}</span>
+              </div>
+              ${answers.eSim ? `
+              <div class="qa-row">
+                <div>
+                  <div class="qa-title">How many eSIMs does your device support?</div>
+                  <div class="qa-desc">Carrier eSIM profile support configuration</div>
+                </div>
+                <span class="pill pill-info">${answers.eSim}</span>
+              </div>
+              ` : ''}
+              ${answers.mobileAge ? `
+              <div class="qa-row">
+                <div>
+                  <div class="qa-title">What is your mobile age?</div>
+                  <div class="qa-desc">Device age based on original purchase date</div>
+                </div>
+                <span class="pill ${answers.mobileAge === 'above11' ? 'pill-warn' : 'pill-yes'}">${ageMap[answers.mobileAge] || answers.mobileAge}</span>
+              </div>
+              ` : ''}
             </div>
           </div>
 
-          <!-- Card 2: Defects & Hardware -->
+          <!-- Card 2: Screen & Body Defects Breakdown -->
           <div class="section-card">
-            <div class="section-header">Physical Defects & Functional Conditions</div>
+            <div class="section-header">2. Screen & Body Physical Defects Evaluation</div>
             <div class="section-body">
+              <div class="sub-section-title">Primary Defect Categories</div>
               <div class="qa-row">
-                <span class="qa-title">Screen / Body Physical Defects</span>
-                ${defectLines.length > 0 ? `
-                  <div style="display: flex; flex-wrap: wrap; justify-content: flex-end;">
-                    ${defectLines.map(d => `<span class="defect-tag">⚠ ${d}</span>`).join('')}
-                  </div>
-                ` : `
-                  <span class="pill pill-none">NONE REPORTED</span>
-                `}
+                <span class="qa-title">Broken/scratch on device screen</span>
+                <span class="pill ${hasScreenScratchCategory ? 'pill-no' : 'pill-yes'}">${hasScreenScratchCategory ? '⚠ Selected' : '✓ Not selected'}</span>
               </div>
-              <div class="qa-row" style="align-items: flex-start; padding-top: 6px;">
-                <span class="qa-title" style="margin-top: 3px;">Reported Hardware Issues</span>
-                <div style="display: flex; flex-wrap: wrap; justify-content: flex-end; max-width: 60%;">
-                  ${hardwareItems.length > 0 ? `
-                    ${hardwareItems.map((item, idx) => `<span class="defect-tag">⚠ ${idx + 1}) ${item}</span>`).join('')}
-                  ` : `
-                    <span class="pill pill-yes">✓ ALL FUNCTIONAL</span>
-                  `}
+              <div class="qa-row">
+                <span class="qa-title">Dead Spot / Visible line and Discoloration on screen</span>
+                <span class="pill ${hasScreenSpotCategory ? 'pill-no' : 'pill-yes'}">${hasScreenSpotCategory ? '⚠ Selected' : '✓ Not selected'}</span>
+              </div>
+              <div class="qa-row">
+                <span class="qa-title">Scratch / Dent on device body</span>
+                <span class="pill ${hasBodyScratchCategory ? 'pill-no' : 'pill-yes'}">${hasBodyScratchCategory ? '⚠ Selected' : '✓ Not selected'}</span>
+              </div>
+              <div class="qa-row">
+                <span class="qa-title">Device panel missing / broken / bent</span>
+                <span class="pill ${hasBodyPanelCategory ? 'pill-no' : 'pill-yes'}">${hasBodyPanelCategory ? '⚠ Selected' : '✓ Not selected'}</span>
+              </div>
+
+              <div class="sub-section-title" style="margin-top: 8px;">Detailed Inspection Breakdown</div>
+              <div class="grid-2col">
+                <div class="qa-row">
+                  <span class="qa-title">Screen Physical Condition</span>
+                  <span class="pill ${answers.screenCondition && answers.screenCondition !== 'none' ? 'pill-no' : 'pill-none'}">${answers.screenCondition || 'Flawless / None'}</span>
+                </div>
+                <div class="qa-row">
+                  <span class="qa-title">Dead Pixels / Spots</span>
+                  <span class="pill ${answers.screenSpots && answers.screenSpots !== 'No spots on screen' ? 'pill-no' : 'pill-yes'}">${answers.screenSpots || 'No spots on screen'}</span>
+                </div>
+                <div class="qa-row">
+                  <span class="qa-title">Visible Lines</span>
+                  <span class="pill ${answers.screenLines && answers.screenLines !== 'No line(s) on Display' ? 'pill-no' : 'pill-yes'}">${answers.screenLines || 'No line(s) on Display'}</span>
+                </div>
+                <div class="qa-row">
+                  <span class="qa-title">Screen Discoloration</span>
+                  <span class="pill ${answers.screenDiscoloration && answers.screenDiscoloration !== 'No Discoloration' ? 'pill-no' : 'pill-yes'}">${answers.screenDiscoloration || 'No Discoloration'}</span>
+                </div>
+                <div class="qa-row">
+                  <span class="qa-title">Body Scratches</span>
+                  <span class="pill ${answers.bodyScratches && answers.bodyScratches !== 'No scratches' ? 'pill-no' : 'pill-yes'}">${answers.bodyScratches || 'No scratches'}</span>
+                </div>
+                <div class="qa-row">
+                  <span class="qa-title">Body Dents</span>
+                  <span class="pill ${answers.bodyDents && answers.bodyDents !== 'No dents' ? 'pill-no' : 'pill-yes'}">${answers.bodyDents || 'No dents'}</span>
+                </div>
+                <div class="qa-row">
+                  <span class="qa-title">Side / Back Panel</span>
+                  <span class="pill ${answers.bodyPanel && answers.bodyPanel !== 'No defect on side or back panel' ? 'pill-no' : 'pill-yes'}">${answers.bodyPanel || 'No defect'}</span>
+                </div>
+                <div class="qa-row">
+                  <span class="qa-title">Device Bent / Loose</span>
+                  <span class="pill ${answers.bodyBent && answers.bodyBent !== 'Phone not bent' ? 'pill-no' : 'pill-yes'}">${answers.bodyBent || 'Phone not bent'}</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Card 3: Accessories -->
+          <!-- Card 3: Functional / Hardware Problems Checklist -->
           <div class="section-card">
-            <div class="section-header">Original Accessories & Purchase Invoice</div>
+            <div class="section-header">3. Functional & Hardware Components Checklist (${fullHardwareCatalog.length} Inspected)</div>
+            <div class="section-body">
+              <div class="grid-2col">
+                ${fullHardwareCatalog.map((hw) => {
+                  const faulty = isHardwareReported(hw.id);
+                  return `
+                    <div class="qa-row">
+                      <span class="qa-title">${hw.label}</span>
+                      <span class="pill ${faulty ? 'pill-no' : 'pill-yes'}">${faulty ? '⚠ Faulty / Selected' : '✓ Working / Not Selected'}</span>
+                    </div>
+                  `;
+                }).join('')}
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Accessories & Invoice -->
+          <div class="section-card">
+            <div class="section-header">4. Original Accessories & Purchase Invoice</div>
             <div class="section-body">
               <div class="qa-row">
-                <span class="qa-title">Original Box with same IMEI</span>
+                <div>
+                  <div class="qa-title">Original Box with same IMEI</div>
+                  <div class="qa-desc">Valid matching serial/IMEI packaging box</div>
+                </div>
                 <span class="pill ${hasBox ? 'pill-yes' : 'pill-no'}">${hasBox ? '✓ YES' : '✕ NO'}</span>
               </div>
               <div class="qa-row">
-                <span class="qa-title">Original Charger of Device</span>
+                <div>
+                  <div class="qa-title">Original Charger of Device</div>
+                  <div class="qa-desc">Original authentic power adapter / cable</div>
+                </div>
                 <span class="pill ${hasCharger ? 'pill-yes' : 'pill-no'}">${hasCharger ? '✓ YES' : '✕ NO'}</span>
               </div>
-              ${answers.validBill !== undefined && answers.validBill !== null ? `
               <div class="qa-row">
-                <span class="qa-title">Valid Bill / Invoice Available</span>
+                <div>
+                  <div class="qa-title">Valid Bill / Invoice Available</div>
+                  <div class="qa-desc">Original purchase tax invoice with IMEI</div>
+                </div>
                 <span class="pill ${hasBill ? 'pill-yes' : 'pill-no'}">${hasBill ? '✓ YES' : '✕ NO'}</span>
               </div>
-              ` : ''}
             </div>
           </div>
 
