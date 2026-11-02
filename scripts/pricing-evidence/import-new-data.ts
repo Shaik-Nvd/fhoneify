@@ -56,14 +56,15 @@ const AGE_LABEL: Record<string, string> = { 'Below 3 months': 'Below 3 months', 
 const storageLabel = (gb: number) => (gb >= 1024 ? `${gb / 1024}TB` : `${gb}GB`);
 const sha = (s: string) => crypto.createHash('sha1').update(s).digest('hex').slice(0, 12);
 
-export function toMeasurements(records: CaseRecord[]): { measurements: Measurement[]; skipped: { reason: string; count: number }[] } {
+export function toMeasurements(records: CaseRecord[], options: { referenceOffsets?: Record<string, number>; baselineCaseId?: string } = {}): { measurements: Measurement[]; skipped: { reason: string; count: number }[] } {
+  const referenceOffsets = options.referenceOffsets ?? CLEAN_OFFSET;
   const priced = records.filter(r => r.status === 'priced' && r.model.startsWith('iPhone'));
   // one flawless quote per (report member, capacity): the reference proxy
   const groups = new Map<string, CaseRecord[]>();
   for (const r of priced) { const k = `${r.archive}::${r.member}::${r.storage_gb}`; (groups.get(k) ?? groups.set(k, []).get(k)!).push(r); }
   const baselineOf = new Map<string, number>();
   for (const [k, rs] of groups) {
-    const prices = new Set(rs.filter(r => isIdeal(r.inputs)).map(r => r.selling));
+    const prices = new Set(rs.filter(r => options.baselineCaseId != null ? r.case_id === options.baselineCaseId : isIdeal(r.inputs)).map(r => r.selling));
     if (prices.size !== 1) throw new Error(`report ${k} has ${prices.size} distinct flawless quotes; expected exactly one`);
     baselineOf.set(k, [...prices][0]!);
   }
@@ -88,7 +89,7 @@ export function toMeasurements(records: CaseRecord[]): { measurements: Measureme
     const fee = r.imei ?? 20;
     if (r.imei == null) flaws.push('imei_fee_assumed_20');
     const base = r.base ?? selling + fee;
-    const reference = baselineOf.get(`${r.archive}::${r.member}::${r.storage_gb}`)! + fee + (CLEAN_OFFSET[r.model] ?? 0);
+    const reference = baselineOf.get(`${r.archive}::${r.member}::${r.storage_gb}`)! + fee + (referenceOffsets[r.model] ?? 0);
     const configKey = [r.model, r.storage_gb, yn(i.calls), yn(i.touch), yn(i.originalScreen), yn(i.warranty), yn(i.validBill), yn(i.box), yn(i.charger), i.age ?? 'not_shown', i.esim ?? 'not_asked', codes.join(',')].join('|');
     // exact repeats inside one report (template cases that repeat the same selection) are one observation, not two
     const dedupKey = `${r.archive}::${r.member}::${configKey}::${selling}::${r.date}`;
@@ -100,7 +101,7 @@ export function toMeasurements(records: CaseRecord[]): { measurements: Measureme
       archive: r.archive, member: r.member, case_id: String(r.case_id), family: `new_${r.family}`,
       model_key: r.model, model_label: null, storage: storageLabel(r.storage_gb), storage_gb: r.storage_gb, ram_gb: null,
       observed_date: r.date, date_basis: r.date ? 'report_header' : 'unknown',
-      variant_get_upto: reference, get_upto_basis: CLEAN_OFFSET[r.model] ? 'report_flawless_base_plus_clean_offset' : 'report_flawless_base',
+      variant_get_upto: reference, get_upto_basis: referenceOffsets[r.model] ? 'report_flawless_base_plus_clean_offset' : 'report_flawless_base',
       outcome: 'NUMERIC_QUOTE', selling, base, payout: null, processing_fee: null, imei_fee: fee,
       inputs: {
         calls: input(yn(i.calls), 'explicit'), touch: input(yn(i.touch), 'explicit'), original_screen: input(yn(i.originalScreen), 'explicit'),

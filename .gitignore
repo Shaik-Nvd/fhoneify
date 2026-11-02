@@ -36,3 +36,13 @@ tsconfig.next.tsbuildinfo
 # the rotation/removal steps. CI does NOT use the committed files - it reads
 # the CASHIFY_SESSION_STATE secret instead.
 
+
+# Local offline verification outputs
+release-test-logs/
+
+# Private pricing observations and derived quote-level audits (not a public release)
+/pricing-inputs/
+/data/pricing-evidence/measurements-2026-10-30.jsonl
+/data/pricing-evidence/final-data-2026-10-30/*.json
+/data/pricing-evidence/final-data-2026-10-30/*.jsonl
+/data/pricing-evidence/validation-2026-10-30/

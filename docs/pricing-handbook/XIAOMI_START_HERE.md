@@ -1,0 +1,25 @@
+# Mi / Xiaomi teammate handoff
+
+Use this from your own computer. Open the Fhoneify repository in Codex and replace the data-folder placeholder with the folder containing your Cashify quotes. If you need access or an account login, use your own authorized account; do not ask the owner to send passwords or OTPs in chat.
+
+## Paste this into Codex
+
+> Work on Xiaomi/Mi/Redmi/POCO pricing in this Fhoneify checkout. Read AGENTS.md, docs/HANDOFF_CODEX.md and docs/pricing-handbook/README.md, STRICT_RULES.md and CODEX_PRICING_HANDBOOK.md before editing. My team’s Cashify evidence is in **[MY DATA FOLDER ON THIS COMPUTER]**. Read the existing Xiaomi implementation and current serving route before changing it. Inventory every supplied file, normalize the actual answers and price/fee basis, remove duplicate exports and learn deductions from flawless versus one-change cases and supported combinations. Treat these as the owner-supplied Cashify observations. Do not copy Apple repair values, use stored final-price lookups, invent missing answers or silently default a damaged condition to flawless. Keep Xiaomi, Redmi and POCO model identities/storage variants explicit; merge aliases only when the catalog supports it. Add regression tests for any importer format or ignored condition you repair. Keep the completed iPhone rules and other brands unchanged except an independently justified shared mapping fix, covered by their regressions. Protect the bonus: calculate 8%/6%/4% on the original current database reference, cap that bonus at ₹2,000 and apply it once after condition deductions. Preserve fees, minimums, coupons, signed quote tokens and server-side pricing. Test new and existing source cases, grouped holdouts, all relevant model/storage routes, and changing references. Show what is measured versus inferred and list material remaining errors. Finish the authorized implementation and verification, commit the intended changes on a brand-specific codex/ branch and push a reviewable PR. Do not merge or deploy without the repository owner's authorization. If login is needed, open the legitimate page and let me enter the OTP there. Do not stop after a plan or give me another list of tasks that you can complete yourself.
+
+## Instructions for Codex handling this prompt
+
+- Begin on the current repository revision and create an isolated brand branch when needed. Preserve unrelated work. A teammate's branch must not reset or roll back the iPhone release.
+- Inspect existing Xiaomi INR-deduction tables, variant dispatch and the service path. Existing source files and regression suites may already cover part of the evidence; compare before adding a parallel engine.
+- Use a new dated brand evidence folder. Keep model aliases, storage, dates, source IDs, selected answers and raw-source pointers. Record unknown, unasked, pending and unavailable distinctly.
+- The final-iPhone intake parser and `import-final-data.ts` are Apple-specific tools. Do not pass Mi ZIPs through them and call an empty import successful. Adapt or implement a brand-aware importer with format fixtures and a hard failure for an unsupported priced report. Reuse the method and safe components where appropriate.
+- Choose fixed rupees, reference fractions or supported interactions from Mi's own controlled data. Use family fallback only where justified, with explicit inferred labels. Don't assume all Mi models share one camera, display or motherboard cost.
+- Keep truly new observations outside fitting until the current frozen rules have been scored. After refitting, call matching those rows an in-sample regression, not independent accuracy.
+- Run the portable offline suite runner, targeted Xiaomi suites, types/build and applicable browser/API checks. Do not loosen existing pricing gates to make the result pass. If the test cohort grows, report old and new cohorts separately and preserve the original cohort's limits.
+- Keep raw quote files, normalized quote-level datasets and bulk audit exports local/private unless the owner explicitly approves publishing them to this public repository. The branch/PR instruction authorizes publishing code, fitted parameters and the handbook.
+- Produce a concise owner report, reproducible intake files and a PR description stating the actual brand scope, behavior, tests, risks and release status. No silent production writes or credential changes.
+
+## What the nontechnical teammate supplies
+
+Provide the files and, if not visible inside them, the device model/storage and collection date. For future collection: flawless first, one fault at a time, complete selected answers, final Selling and fee summary, ending flawless control, then selected combinations. Codex should do the technical organization and checks.
+
+This prompt authorizes work on a branch and a PR. The owner decides release authorization. If the owner has already explicitly authorized merging/deployment for that specific work, continue within that authorization rather than asking again.

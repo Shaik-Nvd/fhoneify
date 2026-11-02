@@ -27,6 +27,7 @@ function inferredFrom(source: ModelProfile, modelKey: string): ModelProfile {
   if (p.age) Object.values(p.age).forEach(infer);
   infer(p.boxNo); infer(p.chargerNo); infer(p.cleanOffset);
   delete p.ageByStorage;
+  delete p.functionalByStorage;
   p.observedInteractions = [];
   p.notes = [...p.notes, `no Cashify quotes of ${modelKey}: deductions borrowed from ${source.modelKey} (same generation), all inferred`];
   return { ...p, modelKey };
