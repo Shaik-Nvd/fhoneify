@@ -49,7 +49,7 @@ const LIVE: [string, string, string, number][] = [
 
 const expectedGetUpto = (reference: number) => {
   const tier = reference <= 20000 ? 0.08 : reference <= 50000 ? 0.06 : 0.04;
-  return Math.round(reference + Math.min(reference * tier, 2000));
+  return Math.round(reference + Math.min(reference * tier, 1000));
 };
 
 class Repo {
@@ -79,8 +79,8 @@ async function run() {
   });
 
   await test('the cap limits only the extra uplift, never the price back to Cashify', () => {
-    assert.equal(computeFhoneifyGetUpto(120000), 122000);
-    assert.equal(computeFhoneifyGetUpto(76920), 78920);
+    assert.equal(computeFhoneifyGetUpto(120000), 121000);
+    assert.equal(computeFhoneifyGetUpto(76920), 77920);
   });
 
   await test('API startingPrice = uplift(ReferencePrice) for every device, whatever the answers', async () => {

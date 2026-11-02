@@ -83,7 +83,7 @@ Held-out validation: every fold refits on training rows only.
 
 ## Price rule remains unchanged
 
-Calculate the Cashify condition-equivalent C using the current exact-variant reference R and the calibrated deductions. Add `min(R × tier(R), ₹2,000)` once, with the approved 8%/6%/4% thresholds and existing ₹100 final-engine-price floor. Preserve existing fees, coupon headroom, signed tokens and server authority. There is no production lookup of recorded final phone prices.
+Calculate the Cashify condition-equivalent C using the current exact-variant reference R and the calibrated deductions. Add `min(R × tier(R), ₹1,000)` once, with the approved 8%/6%/4% thresholds and existing ₹100 final-engine-price floor. Preserve existing fees, coupon headroom, signed tokens and server authority. There is no production lookup of recorded final phone prices.
 
 Imported reference values are labelled **flawless-base proxies**, not verified historical database Get Upto values. Runtime still reads current references through the existing repository. Accuracy against these controlled proxies does not prove that every live database reference equals the source session's flawless value.
 

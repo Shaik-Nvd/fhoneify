@@ -45,7 +45,7 @@ export interface QuoteExplanation {
   ignoredAnswers: string[];
 }
 
-const UPLIFT_CAP = 2000;
+const UPLIFT_CAP = 1000;
 
 const SCREEN_DEFECTS = new Set(['screen_scratch', 'screen_spot', 'broken_screen', 'screen_lines', 'screen_discoloration']);
 const BODY_DEFECTS = new Set(['body_scratch', 'panel_missing', 'body_bent']);

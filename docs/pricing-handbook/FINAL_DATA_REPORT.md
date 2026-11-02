@@ -58,7 +58,7 @@ Done: read-only intake, normalization, deduction analysis, extraction tests, str
 
 Not done in this task: fitting these final observations into the current production engine, benchmarking that engine against this complete intake, running a Next build/browser/OTP test, committing/pushing or deploying a change. See `IMPLEMENTATION_HANDOFF.md` for the concrete next implementation instruction.
 
-The handbook requires the approved bonus on original R, capped at ₹2,000. It supports future reference changes without storing final-price lookups. It does not promise that changing reference alone predicts future changes to Cashify's repair or age rules.
+The handbook requires the approved bonus on original R, capped at ₹1,000. It supports future reference changes without storing final-price lookups. It does not promise that changing reference alone predicts future changes to Cashify's repair or age rules.
 
 ## Coverage of this final folder
 

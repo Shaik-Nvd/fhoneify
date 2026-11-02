@@ -2,8 +2,8 @@ import { referenceBonus } from './referenceBonus';
 import { customerPayout, DISPLAY_DEDUCTION, DISPLAY_DEDUCTION_EXEMPT_PRICE, FIRST_TIME_COUPON_BONUS } from './payout';
 
 /**
- * Production policy (owner approved 26 October 2026): applyReferenceBonusCeiling preserves
- * condition value + min(original reference * reference tier, INR 2,000), then the existing
+ * Production policy: applyReferenceBonusCeiling preserves
+ * condition value + min(original reference * reference tier, INR 1,000), then the existing
  * customer fee. Coupon cannot stack above that budget. This replaces the former percentage
  * ceiling on the damaged condition value.
  *
@@ -14,7 +14,7 @@ import { customerPayout, DISPLAY_DEDUCTION, DISPLAY_DEDUCTION_EXEMPT_PRICE, FIRS
  */
 export const PAYOUT_CEILING_POLICY = {
   maxRate: 0.08,
-  maxExtraRupees: 2000,
+  maxExtraRupees: 1000,
   /** Cashify's IMEI validation fee (selling price = base price - this). Set to 0 to compare base-to-quote instead. */
   cashifyImeiFee: 20,
 } as const;

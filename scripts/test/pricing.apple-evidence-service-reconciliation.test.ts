@@ -5,7 +5,7 @@ import { FINAL_MEASUREMENTS_FILE } from '../pricing-evidence/import-final-data';
  * quote service configured as in production. Served iPhone quotes come from the calibrated rules, so this is IN-SAMPLE reconciliation of the
  * fitted rules (held-out figures: scripts/pricing-evidence/validate-new-data.ts). No database connections.
  *
- * Asserted: the approved arithmetic round(C + min(R x tier(R), 2000)) on every priced quote; how many quotes are priced; how close the
+ * Asserted: the approved arithmetic round(C + min(R x tier(R), 1000)) on every priced quote; how many quotes are priced; how close the
  * Cashify-equivalent is to the recorded base price. The residuals above INR 300 are listed, never hidden.
  */
 import assert from 'node:assert/strict';

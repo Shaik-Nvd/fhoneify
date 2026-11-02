@@ -34,5 +34,5 @@ for(const d of devices) for(const factor of [.8,1,1.2]) {
  assert(two.cashifyConditionEquivalent<=quote(cracked).cashifyConditionEquivalent,'adding body damage must not increase value');
  assert(quote({...cracked,touch:false}).cashifyConditionEquivalent<=quote(cracked).cashifyConditionEquivalent,'failed touch must not increase cracked phone value');checks+=2;
 }
-for(const [reference,condition,expected]of [[10000,10000,10800],[30000,10000,11800],[50000,50000,52000],[100000,100000,102000]]){assert.equal(applyCompetitorUplift(reference,condition),expected);checks++;}
+for(const [reference,condition,expected]of [[10000,10000,10800],[30000,10000,11000],[50000,50000,51000],[100000,100000,101000]]){assert.equal(applyCompetitorUplift(reference,condition),expected);checks++;}
 console.log(`${checks} legacy physical-input and uplift checks passed across ${devices.length} variants and three reference prices`);

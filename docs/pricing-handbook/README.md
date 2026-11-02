@@ -43,7 +43,7 @@ Review the current API startup script and its database configuration before loca
 
 ## The protected quote rule
 
-The Cashify condition-equivalent is learned first. Then add the tier bonus calculated from the **original current database reference**, capped at ₹2,000, once. Preserve the existing ₹100 final-engine-price floor, fees, coupon headroom, signed quotes and server authority. See the full handbook for exact tier boundaries and worked examples.
+The Cashify condition-equivalent is learned first. Then add the tier bonus calculated from the **original current database reference**, capped at ₹1,000, once. Preserve the existing ₹100 final-engine-price floor, fees, coupon headroom, signed quotes and server authority. See the full handbook for exact tier boundaries and worked examples.
 
 Fixed measured repair deductions are allowed; fixed final phone-price lookups are not the pricing design. Stored historical references must not replace the current reference silently.
 

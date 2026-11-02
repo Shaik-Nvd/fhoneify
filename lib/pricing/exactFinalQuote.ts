@@ -94,8 +94,8 @@ export function competitiveOfferAudit(getUpto: number, sellingPrice: number) {
   const gross = applyCompetitorUplift(getUpto, sellingPrice);
   const standard = customerPayout(gross, false).payout, coupon = customerPayout(gross, true).payout;
   return { gross, standard, coupon, standardDelta: standard - sellingPrice, couponDelta: coupon - sellingPrice,
-    standardPass: standard > sellingPrice && standard - sellingPrice <= 2000,
-    couponPass: coupon > sellingPrice && coupon - sellingPrice <= 2000 };
+    standardPass: standard > sellingPrice && standard - sellingPrice <= 1000,
+    couponPass: coupon > sellingPrice && coupon - sellingPrice <= 1000 };
 }
 /** Separate reviewed policy: unchanged percentage preference, constrained so both coupon states meet the net corridor.
  * Does not alter applyCompetitorUplift, legacy pricing, fee, coupon, or deduction floors. */
@@ -104,9 +104,9 @@ export function boundedCompetitiveOffer(getUpto: number, sellingPrice: number): 
   const preferred = applyCompetitorUplift(getUpto, sellingPrice);
   // Choose in whole rupees. The existing exact-₹1200 fee exemption is checked by the payout helper below.
   const lower = sellingPrice + 100;
-  const upper = sellingPrice + 2000 + 99 - FIRST_TIME_COUPON_BONUS;
+  const upper = sellingPrice + 1000 + 99 - FIRST_TIME_COUPON_BONUS;
   const gross = Math.max(lower, Math.min(preferred, upper));
   const standard = customerPayout(gross, false).payout, coupon = customerPayout(gross, true).payout;
-  if (standard <= sellingPrice || coupon - sellingPrice > 2000) throw new Error('Competitive payout invariant violated');
+  if (standard <= sellingPrice || coupon - sellingPrice > 1000) throw new Error('Competitive payout invariant violated');
   return gross;
 }

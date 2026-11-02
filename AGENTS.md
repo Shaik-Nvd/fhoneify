@@ -58,8 +58,8 @@ Do not modify these unless explicitly approved:
 - calculateFhoneifyPrice
 - applyCompetitorUplift
 - 4% / 6% / 8% uplift tiers
-- ?2,000 uplift cap
-- ?100 minimum bonus
+- ₹1,000 uplift cap
+- ₹100 minimum bonus
 - age depreciation values
 - condition penalty values
 - accessory values
@@ -138,7 +138,7 @@ Before any Fhoneify pricing task, read docs/HANDOFF_CODEX.md.
 
 ## Current evidence-pricing handbook (30 October 2026)
 
-For pricing tasks also read `docs/pricing-handbook/README.md` and `STRICT_RULES.md`. That handbook records the owner's subsequent approved policy: calculate the 4/6/8% bonus on the original current database reference, cap the bonus at ₹2,000, and add it once after Cashify condition deductions. Do not restore a damaged-condition-value percentage ceiling. The existing ₹100 rule is a final-engine-price floor, not an extra minimum bonus.
+For pricing tasks also read `docs/pricing-handbook/README.md` and `STRICT_RULES.md`. That handbook records the owner's subsequent approved policy: calculate the 4/6/8% bonus on the original current database reference, cap the bonus at ₹1,000, and add it once after Cashify condition deductions. Do not restore a damaged-condition-value percentage ceiling. The existing ₹100 rule is a final-engine-price floor, not an extra minimum bonus.
 
 Historical bug lists above are investigation leads; confirm whether current code already fixes them before changing anything. Evidence-backed calibration explicitly requested by the owner is authorized work, while unrelated policy, authentication, schema and refresh changes remain out of scope. New brand work must preserve iPhone calibrations and use that brand's own source evidence. Use the portable safe suite runner documented in the handbook; production-writing integration tests remain excluded unless explicitly authorized.
 

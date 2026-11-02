@@ -50,43 +50,43 @@ interface GoldenCase {
 // scrap-value floor, tier boundaries (₹20,000 / ₹50,000), an unknown brand,
 // and a zero base price.
 const GOLDEN_CASES: GoldenCase[] = [
-  { name: 'apple_17_pro_max_perfect_high_tier', brand: 'Apple', model: 'iPhone 17 Pro Max', basePrice: 120000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 117980, fhoneifyPrice: 119980 } },
-  { name: 'apple_17_pro_max_worst_case', brand: 'Apple', model: 'iPhone 17 Pro Max', basePrice: 120000, diagnostics: diag({ calls: false, touch: false, originalScreen: false, warranty: false, validBill: false, accessories: [], defects: ['broken_screen', 'body_scratch', 'panel_missing'], bodyScratches: 'More than 2 scratches', bodyDents: 'Major dent(s) or more than 2', hardware: ['battery_service', 'fingerprint'], mobileAge: 'above11' }), expected: { cashifyConditionEquivalent: 1200, fhoneifyPrice: 3200 } },
+  { name: 'apple_17_pro_max_perfect_high_tier', brand: 'Apple', model: 'iPhone 17 Pro Max', basePrice: 120000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 117980, fhoneifyPrice: 118980 } },
+  { name: 'apple_17_pro_max_worst_case', brand: 'Apple', model: 'iPhone 17 Pro Max', basePrice: 120000, diagnostics: diag({ calls: false, touch: false, originalScreen: false, warranty: false, validBill: false, accessories: [], defects: ['broken_screen', 'body_scratch', 'panel_missing'], bodyScratches: 'More than 2 scratches', bodyDents: 'Major dent(s) or more than 2', hardware: ['battery_service', 'fingerprint'], mobileAge: 'above11' }), expected: { cashifyConditionEquivalent: 1200, fhoneifyPrice: 2200 } },
   // The old 0.629265 young multiplier priced an in-warranty iPhone 14 below
   // the identical out-of-warranty phone. The monotonic age guard reuses the
   // existing 0.74961686 old-device value instead of introducing a new rate.
-  { name: 'apple_14_perfect_mid_tier', brand: 'Apple', model: 'iPhone 14', basePrice: 22000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 16872, fhoneifyPrice: 18192 } },
-  { name: 'apple_14_no_bill_no_warranty', brand: 'Apple', model: 'iPhone 14', basePrice: 22000, diagnostics: diag({ warranty: false, validBill: false, mobileAge: 'above11' }), expected: { cashifyConditionEquivalent: 16872, fhoneifyPrice: 18192 } },
+  { name: 'apple_14_perfect_mid_tier', brand: 'Apple', model: 'iPhone 14', basePrice: 22000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 16872, fhoneifyPrice: 17872 } },
+  { name: 'apple_14_no_bill_no_warranty', brand: 'Apple', model: 'iPhone 14', basePrice: 22000, diagnostics: diag({ warranty: false, validBill: false, mobileAge: 'above11' }), expected: { cashifyConditionEquivalent: 16872, fhoneifyPrice: 17872 } },
   { name: 'apple_11_budget_tier', brand: 'Apple', model: 'iPhone 11', basePrice: 9000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 8119, fhoneifyPrice: 8839 } },
   { name: 'apple_se2020_old_device', brand: 'Apple', model: 'iPhone SE (2020)', basePrice: 5000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 4679, fhoneifyPrice: 5079 } },
-  { name: 'apple_scrap_value', brand: 'Apple', model: 'iPhone 14', basePrice: 22000, diagnostics: diag({ calls: false, touch: false, originalScreen: false, warranty: false, validBill: false, defects: ['broken_screen', 'body_scratch', 'panel_missing'], bodyScratches: 'More than 2 scratches', bodyDents: 'Major dent(s) or more than 2', hardware: ['battery_service', 'fingerprint', 'back_camera', 'wifi'], mobileAge: 'above11' }), expected: { cashifyConditionEquivalent: 1200, fhoneifyPrice: 2520 } },
+  { name: 'apple_scrap_value', brand: 'Apple', model: 'iPhone 14', basePrice: 22000, diagnostics: diag({ calls: false, touch: false, originalScreen: false, warranty: false, validBill: false, defects: ['broken_screen', 'body_scratch', 'panel_missing'], bodyScratches: 'More than 2 scratches', bodyDents: 'Major dent(s) or more than 2', hardware: ['battery_service', 'fingerprint', 'back_camera', 'wifi'], mobileAge: 'above11' }), expected: { cashifyConditionEquivalent: 1200, fhoneifyPrice: 2200 } },
 
-  { name: 'samsung_s24_ultra_perfect', brand: 'Samsung', model: 'Galaxy S24 Ultra', basePrice: 55000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 54280, fhoneifyPrice: 56280 } },
+  { name: 'samsung_s24_ultra_perfect', brand: 'Samsung', model: 'Galaxy S24 Ultra', basePrice: 55000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 54280, fhoneifyPrice: 55280 } },
   // These two values intentionally changed when the already-defined shared
   // functional map was reconnected; both faults previously had a ₹0 effect.
-  { name: 'samsung_s24_ultra_spen_missing', brand: 'Samsung', model: 'Galaxy S24 Ultra', basePrice: 55000, diagnostics: diag({ hardware: ['s_pen'] }), expected: { cashifyConditionEquivalent: 49106, fhoneifyPrice: 51106 } },
-  { name: 'samsung_fold_hinge_defect', brand: 'Samsung', model: 'Galaxy Z Fold 6', basePrice: 60000, diagnostics: diag({ hardware: ['hinge'] }), expected: { cashifyConditionEquivalent: 46244, fhoneifyPrice: 48244 } },
+  { name: 'samsung_s24_ultra_spen_missing', brand: 'Samsung', model: 'Galaxy S24 Ultra', basePrice: 55000, diagnostics: diag({ hardware: ['s_pen'] }), expected: { cashifyConditionEquivalent: 49106, fhoneifyPrice: 50106 } },
+  { name: 'samsung_fold_hinge_defect', brand: 'Samsung', model: 'Galaxy Z Fold 6', basePrice: 60000, diagnostics: diag({ hardware: ['hinge'] }), expected: { cashifyConditionEquivalent: 46244, fhoneifyPrice: 47244 } },
   { name: 'samsung_budget_perfect', brand: 'Samsung', model: 'Galaxy M14', basePrice: 6000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 6260, fhoneifyPrice: 6740 } },
 
-  { name: 'xiaomi_redmi_note13_perfect', brand: 'Xiaomi', model: 'Redmi Note 13', basePrice: 15000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 15380, fhoneifyPrice: 16580 } },
-  { name: 'xiaomi_redmi_note13_worst', brand: 'Xiaomi', model: 'Redmi Note 13', basePrice: 15000, diagnostics: diag({ calls: false, touch: false, warranty: false, validBill: false, mobileAge: 'above11' }), expected: { cashifyConditionEquivalent: 1200, fhoneifyPrice: 2400 } },
+  { name: 'xiaomi_redmi_note13_perfect', brand: 'Xiaomi', model: 'Redmi Note 13', basePrice: 15000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 15380, fhoneifyPrice: 16380 } },
+  { name: 'xiaomi_redmi_note13_worst', brand: 'Xiaomi', model: 'Redmi Note 13', basePrice: 15000, diagnostics: diag({ calls: false, touch: false, warranty: false, validBill: false, mobileAge: 'above11' }), expected: { cashifyConditionEquivalent: 1200, fhoneifyPrice: 2200 } },
 
-  { name: 'vivo_x100_perfect', brand: 'Vivo', model: 'Vivo X100', basePrice: 40000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 40380, fhoneifyPrice: 42380 } },
-  { name: 'vivo_x_fold_perfect', brand: 'Vivo', model: 'Vivo X Fold 5', basePrice: 70000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 68980, fhoneifyPrice: 70980 } },
+  { name: 'vivo_x100_perfect', brand: 'Vivo', model: 'Vivo X100', basePrice: 40000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 40380, fhoneifyPrice: 41380 } },
+  { name: 'vivo_x_fold_perfect', brand: 'Vivo', model: 'Vivo X Fold 5', basePrice: 70000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 68980, fhoneifyPrice: 69980 } },
 
-  { name: 'oppo_reno11_perfect', brand: 'Oppo', model: 'Reno 11', basePrice: 16000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 16060, fhoneifyPrice: 17340 } },
+  { name: 'oppo_reno11_perfect', brand: 'Oppo', model: 'Reno 11', basePrice: 16000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 16060, fhoneifyPrice: 17060 } },
 
-  { name: 'oneplus_12_perfect', brand: 'OnePlus', model: 'OnePlus 12', basePrice: 45000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 44480, fhoneifyPrice: 46480 } },
+  { name: 'oneplus_12_perfect', brand: 'OnePlus', model: 'OnePlus 12', basePrice: 45000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 44480, fhoneifyPrice: 45480 } },
   { name: 'oneplus_nord_perfect', brand: 'OnePlus', model: 'OnePlus Nord CE4', basePrice: 12000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 12140, fhoneifyPrice: 13100 } },
 
-  { name: 'nothing_phone2_perfect', brand: 'Nothing', model: 'Phone 2', basePrice: 17000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 17040, fhoneifyPrice: 18400 } },
+  { name: 'nothing_phone2_perfect', brand: 'Nothing', model: 'Phone 2', basePrice: 17000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 17040, fhoneifyPrice: 18040 } },
 
-  { name: 'realme_gt5_perfect', brand: 'Realme', model: 'Realme GT 5', basePrice: 28000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 26980, fhoneifyPrice: 28660 } },
-  { name: 'motorola_edge_perfect', brand: 'Motorola', model: 'Edge 50', basePrice: 18000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 17480, fhoneifyPrice: 18920 } },
-  { name: 'google_pixel_perfect', brand: 'Google', model: 'Pixel 8', basePrice: 35000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 33630, fhoneifyPrice: 35630 } },
+  { name: 'realme_gt5_perfect', brand: 'Realme', model: 'Realme GT 5', basePrice: 28000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 26980, fhoneifyPrice: 27980 } },
+  { name: 'motorola_edge_perfect', brand: 'Motorola', model: 'Edge 50', basePrice: 18000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 17480, fhoneifyPrice: 18480 } },
+  { name: 'google_pixel_perfect', brand: 'Google', model: 'Pixel 8', basePrice: 35000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 33630, fhoneifyPrice: 34630 } },
 
-  { name: 'boundary_base_exactly_20000', brand: 'Xiaomi', model: 'Redmi Note 13', basePrice: 20000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 20380, fhoneifyPrice: 21980 } },
-  { name: 'boundary_base_exactly_50000', brand: 'Vivo', model: 'Vivo X100', basePrice: 50000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 50380, fhoneifyPrice: 52380 } },
+  { name: 'boundary_base_exactly_20000', brand: 'Xiaomi', model: 'Redmi Note 13', basePrice: 20000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 20380, fhoneifyPrice: 21380 } },
+  { name: 'boundary_base_exactly_50000', brand: 'Vivo', model: 'Vivo X100', basePrice: 50000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 50380, fhoneifyPrice: 51380 } },
   { name: 'boundary_low_value_device', brand: 'Realme', model: 'Realme GT 5', basePrice: 1300, diagnostics: diag({ calls: false, touch: false, warranty: false, validBill: false, mobileAge: 'above11' }), expected: { cashifyConditionEquivalent: 200, fhoneifyPrice: 304 } },
 
   { name: 'unknown_brand_falls_to_generic', brand: 'UnknownBrandXYZ', model: 'Some Model 9000', basePrice: 10000, diagnostics: diag(), expected: { cashifyConditionEquivalent: 9880, fhoneifyPrice: 10680 } },
@@ -115,7 +115,7 @@ for (const c of GOLDEN_CASES) {
 // must hold for every case with a non-trivial depreciated price, regardless
 // of golden-value drift. This is the specific rule from
 // PRODUCTION_READINESS_AUDIT.md / the business pricing spec.
-console.log(`\nChecking uplift invariants (4%/6%/8% tiers, capped at ₹2,000)...\n`);
+console.log(`\nChecking uplift invariants (4%/6%/8% tiers, capped at ₹1,000)...\n`);
 let invariantFailed = 0;
 for (const c of GOLDEN_CASES) {
   const result = calculateFhoneifyPrice(c.brand, c.model, c.basePrice, c.diagnostics);

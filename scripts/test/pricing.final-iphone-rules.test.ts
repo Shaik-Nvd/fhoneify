@@ -78,11 +78,11 @@ const profile = (modelKey: string, codes: ModelProfile['codes']): ModelProfile =
     for (const reference of [2720, 3000, 2400]) assert.equal(price('iPhone 6S', 128, reference, complete), reference);
   });
 
-  await test('served offer on a final-intake model = max(round(C + min(R x tier, 2000)), 100) with the bonus from R before deductions', () => {
+  await test('served offer on a final-intake model = max(round(C + min(R x tier, 1000)), 100) with the bonus from R before deductions', () => {
     for (const [model, gb, reference] of [['iPhone 6', 16, 1550], ['iPhone XS Max', 512, 13290], ['iPhone 13 Pro', 1024, 36870], ['iPhone 15 Pro', 1024, 70080]] as const) {
       const c = price(model, gb, reference, { ...clean, hardware: ['back_camera'] });
       const tier = reference <= 20000 ? 0.08 : reference <= 50000 ? 0.06 : 0.04;
-      assert.equal(applyCompetitorUplift(reference, c), Math.max(Math.round(c + Math.min(reference * tier, 2000)), 100));
+      assert.equal(applyCompetitorUplift(reference, c), Math.max(Math.round(c + Math.min(reference * tier, 1000)), 100));
     }
   });
 

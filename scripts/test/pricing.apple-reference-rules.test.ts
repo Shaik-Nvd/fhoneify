@@ -223,7 +223,7 @@ async function run() {
     assert.deepEqual(bad, []);
   });
 
-  await test('final offer = round(C + min(R x tier(R), 2000)) on the served path, across all three tiers', async () => {
+  await test('final offer = round(C + min(R x tier(R), 1000)) on the served path, across all three tiers', async () => {
     let reference = 0; const at = new Date('2026-10-28T12:00:00Z');
     const svc = createPricingService({ repository: { async get(key: string) { return { deviceKey: key, currentPrice: reference, source: 'cashify', status: 'fresh', matchConfidence: 'exact', lastVerifiedAt: at }; } } as any,
       signingSecret: 'offline-reference-rules-test-secret-only', tokenTtlSeconds: 900, strictReferenceMode: true, referenceLookupTimeoutMs: 100, now: () => at,
@@ -234,7 +234,7 @@ async function run() {
       assert.ok(q.ok, `${model} priced`);
       if (!q.ok) continue;
       const C = q.internal.cashifyConditionEquivalent;
-      assert.equal(q.fhoneifyPrice, Math.max(100, Math.round(C + Math.min(R * (R <= 20000 ? 0.08 : R <= 50000 ? 0.06 : 0.04), 2000))), `${model} at ${R}`);
+      assert.equal(q.fhoneifyPrice, Math.max(100, Math.round(C + Math.min(R * (R <= 20000 ? 0.08 : R <= 50000 ? 0.06 : 0.04), 1000))), `${model} at ${R}`);
       assert.equal(C, price(model.replace('Apple ', ''), Number(storage.replace('GB', '')), R, { ...clean, hardware: ['back_camera'] }));
     }
   });

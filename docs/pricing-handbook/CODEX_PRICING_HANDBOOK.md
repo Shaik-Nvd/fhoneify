@@ -41,7 +41,7 @@ For ordinary payable quotes:
 rate(R) = 8% if R <= 20,000
           6% if 20,000 < R <= 50,000
           4% if R > 50,000
-U = min(R * rate(R), 2,000)
+U = min(R * rate(R), 1,000)
 Q = max(round(C + U), existing engine floor of 100)
 P = existing server payout function(Q, signed fee/coupon terms)
 ```
@@ -55,10 +55,10 @@ Examples, before payout fees and any established floor:
 | ₹10,000 | ₹10,000 | ₹800 | ₹10,800 |
 | ₹10,000 | ₹7,000 | ₹800 | ₹7,800 |
 | ₹30,000 | ₹20,000 | ₹1,800 | ₹21,800 |
-| ₹50,000 | ₹40,000 | ₹2,000 | ₹42,000 |
-| ₹80,000 | ₹50,000 | ₹2,000 | ₹52,000 |
+| ₹50,000 | ₹40,000 | ₹1,000 | ₹41,000 |
+| ₹80,000 | ₹50,000 | ₹1,000 | ₹51,000 |
 
-The ₹2,000 limit caps the **bonus**, not the full price or total condition deductions. Do not calculate the bonus from C. Do not apply an additional ceiling of `C × 1.08`; that was the earlier misunderstanding. Existing coupon treatment must respect signed bonus headroom and must not silently add another full bonus. The inspected payout helper deducts ₹99 except when the signed engine quote is exactly ₹1,200. Preserve this exact equality rule unless the owner changes it; do not broaden it into a general scrap exemption.
+The ₹1,000 limit caps the **bonus**, not the full price or total condition deductions. Do not calculate the bonus from C. Do not apply an additional ceiling of `C × 1.08`; that was the earlier misunderstanding. Existing coupon treatment must respect signed bonus headroom and must not silently add another full bonus. The inspected payout helper deducts ₹99 except when the signed engine quote is exactly ₹1,200. Preserve this exact equality rule unless the owner changes it; do not broaden it into a general scrap exemption.
 
 Cashify Base, Selling and net payout may also differ because of Cashify’s own fees. Record those separately. Where the evidence shows an IMEI fee of ₹20, verify its arithmetic; do not assume every future observation uses the same fee. A Cashify fee is not automatically a Fhoneify deduction.
 
@@ -154,7 +154,7 @@ The runtime reads the exact variant’s current reference through the existing r
 
 Stress each catalog variant at multiple positive references, including its current R and ±10%, ±25% and ±50%. These are synthetic engineering scenarios, not Cashify observations. Check deterministic finite results, intended response to R, fee/coupon consistency and expected tier discontinuities. Preserve the approved tier rule even if its boundaries create a small downward step; smoothing it is a business-policy change.
 
-Test ₹20,000 and ₹50,000 on both sides, plus where each tier reaches the ₹2,000 cap. Check the existing minimum and fee-waiver boundaries from the real implementation. A defect that is not applicable must not be silently treated as measured.
+Test ₹20,000 and ₹50,000 on both sides, plus where each tier reaches the ₹1,000 cap. Check the existing minimum and fee-waiver boundaries from the real implementation. A defect that is not applicable must not be silently treated as measured.
 
 Changing R does not reveal future changes in Cashify repair costs, age policy, questionnaire choices or fees. Keep a small sentinel set spanning old/new models and high-impact faults. When the owner supplies new observations, compare them against frozen rules before refitting; investigate systematic residuals by model/fault/date. Recalibrate affected parameters only. The weekly reference refresh remains unchanged unless the owner explicitly requests work on it.
 
@@ -179,7 +179,7 @@ Protect at least:
 - A flawless, one-functional-fault, physical repair, age branch and mixed-fault quote for representative older and newer models.
 - Conditional age questions: a crawler’s `NOT_ASKED` result from one branch must not erase a customer’s age answer when the live warranty-Yes branch asks it. Keep older models that genuinely omit age distinct. PR #28 fixed this loss of age answers; preserve its regression.
 - Model/storage routing, reference lookup and complete answer normalization.
-- Exactly one bonus from R, ₹2,000 cap, protected tiers, fees, coupon headroom and signed terms.
+- Exactly one bonus from R, ₹1,000 cap, protected tiers, fees, coupon headroom and signed terms.
 - No price increase from adding a repair fault unless an observed supported floor/branch explains it. Check such exceptions explicitly rather than imposing blind global monotonicity. Use bounded repair-group logic; avoid exponential enumeration over every fault subset.
 - Calls-failure, severe combinations, no-offer, missing reference and invalid/nonfinite inputs under current policy.
 - Signature expiry/tampering, changed answers/device, stale sessions and reload behavior.
@@ -220,7 +220,7 @@ The owner’s report should answer these directly:
 2. How many actual quotes/models/storage variants did you use, and what was deduplicated?
 3. What is now measured versus inferred? What material errors remain?
 4. Which tests actually ran and passed? Which were blocked, mocked or not run?
-5. Does current R drive unseen quotes, and is the bonus still calculated from R with a ₹2,000 cap?
+5. Does current R drive unseen quotes, and is the bonus still calculated from R with a ₹1,000 cap?
 6. Is the result analysis-only, locally fixed, pushed, merged or confirmed live? Give the exact commit when applicable.
 
 Finish authorized work rather than repeatedly proposing the same next step. If there is a real blocker, identify the smallest missing fact/action and continue independent work that does not depend on it.
