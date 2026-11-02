@@ -411,7 +411,11 @@ export function createPricingService(deps: PricingServiceDeps) {
         context: { questionnaire, startingPrice: computeFhoneifyGetUpto(base.cashifyGetUptoReference), pricingVersion } };
     }
     if (ceiling.reduced) deps.logger.info({ deviceKey: key, before: ceiling.quoteBeforeCeiling, after: ceiling.quote, maxCustomerPayout: ceiling.maxCustomerPayout }, 'Payout ceiling lowered the quote');
-    result = { ...result, fhoneifyPrice: ceiling.quote };
+    
+    // Rule: Fhoneify's Estimated Value must not be more than Fhoneify's "Get Upto" price.
+    const fhoneifyGetUptoLimit = computeFhoneifyGetUpto(base.cashifyGetUptoReference);
+    const finalBoundedPrice = Math.min(ceiling.quote, fhoneifyGetUptoLimit);
+    result = { ...result, fhoneifyPrice: finalBoundedPrice };
 
     let glassShadow: GlassShadowResult | undefined;
     if (deps.glassShadowCandidate) {

@@ -157,6 +157,7 @@ export async function generateLeadPdf(req: AuthenticatedRequest, res: Response) 
 
     // 1. Resolve Fhoneify Get Upto
     let getUptoFormatted = 'N/A';
+    let getUptoAmount: number | null = null;
     try {
       const ref = resolveReference({
         device: {
@@ -166,14 +167,20 @@ export async function generateLeadPdf(req: AuthenticatedRequest, res: Response) 
         },
       });
       if (ref && ref.cashifyGetUptoReference) {
-        const upto = computeFhoneifyGetUpto(ref.cashifyGetUptoReference);
-        getUptoFormatted = `₹${upto.toLocaleString('en-IN')}`;
+        getUptoAmount = computeFhoneifyGetUpto(ref.cashifyGetUptoReference);
+        getUptoFormatted = `₹${getUptoAmount.toLocaleString('en-IN')}`;
       }
     } catch {
       if (lead.quotedPrice) {
-        getUptoFormatted = `₹${Math.round(lead.quotedPrice * 1.15).toLocaleString('en-IN')}`;
+        getUptoAmount = Math.round(lead.quotedPrice * 1.15);
+        getUptoFormatted = `₹${getUptoAmount.toLocaleString('en-IN')}`;
       }
     }
+
+    // Rule: Fhoneify's Estimated Value must not be more than Fhoneify's Get Upto Price
+    const estimatedValueAmount = getUptoAmount != null
+      ? Math.min(Math.round(lead.quotedPrice), getUptoAmount)
+      : Math.round(lead.quotedPrice);
 
     const lowerModel = lead.model.toLowerCase();
     const isApple = lead.brand.toLowerCase() === 'apple';
@@ -727,7 +734,7 @@ export async function generateLeadPdf(req: AuthenticatedRequest, res: Response) 
             </div>
             <div class="final-price-wrap">
               <div class="final-title">Fhoneify's Estimated Value</div>
-              <div class="final-num">₹${Math.round(lead.quotedPrice).toLocaleString('en-IN')}</div>
+              <div class="final-num">₹${estimatedValueAmount.toLocaleString('en-IN')}</div>
             </div>
           </div>
         </div>
