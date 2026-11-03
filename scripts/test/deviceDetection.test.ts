@@ -25,6 +25,13 @@ assert.equal(samsungTest.brand, 'Samsung');
 assert.equal(samsungTest.model, 'Samsung Galaxy S23 Ultra 5G');
 console.log('PASS: SM-S918B/DS -> Samsung Galaxy S23 Ultra 5G');
 
+// Test 3b: Samsung Galaxy A14 5G hardware code (SM-A146B)
+const samsungA14Test = detectDeviceFromInput({ clientHintsModel: 'SM-A146B' });
+assert.ok(samsungA14Test, 'SM-A146B should be normalized and detected as Galaxy A14 5G');
+assert.equal(samsungA14Test.brand, 'Samsung');
+assert.equal(samsungA14Test.model, 'Samsung Galaxy A14 5G');
+console.log('PASS: SM-A146B -> Samsung Galaxy A14 5G');
+
 // Test 4: Frozen Android 10 User-Agent with Adreno 620 GPU Renderer (OnePlus Nord)
 const frozenUATest = detectDeviceFromInput({
   userAgent: 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36',
@@ -44,6 +51,16 @@ assert.ok(s23GpuTest, 'Frozen Android Chrome with Adreno 740 should resolve to S
 assert.equal(s23GpuTest.brand, 'Samsung');
 assert.equal(s23GpuTest.model, 'Samsung Galaxy S23 Ultra 5G');
 console.log('PASS: Frozen Android UA + Adreno 740 -> Samsung Galaxy S23 Ultra 5G');
+
+// Test 5b: Frozen Android 10 User-Agent with Mali-G57 GPU Renderer (Samsung Galaxy A14 5G)
+const a14GpuTest = detectDeviceFromInput({
+  userAgent: 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36',
+  webglRenderer: 'Mali-G57 MC2',
+});
+assert.ok(a14GpuTest, 'Frozen Android Chrome with Mali-G57 should resolve to Samsung Galaxy A14 5G');
+assert.equal(a14GpuTest.brand, 'Samsung');
+assert.equal(a14GpuTest.model, 'Samsung Galaxy A14 5G');
+console.log('PASS: Frozen Android UA + Mali-G57 -> Samsung Galaxy A14 5G');
 
 // Test 6: iPhone 15 Pro resolution with A17 GPU renderer
 const iphoneTest = detectDeviceFromInput({
@@ -74,4 +91,4 @@ const desktopTest = detectDeviceFromInput({
 assert.equal(desktopTest, null, 'Desktop Windows should not detect a smartphone');
 console.log('PASS: Desktop returns null');
 
-console.log('\nAll 8 device detection tests passed successfully.');
+console.log('\nAll 10 device detection tests passed successfully.');

@@ -76,6 +76,18 @@ export const ANDROID_MODEL_MAP: Record<string, { brand: string; model: string }>
   'sm-s921': { brand: 'Samsung', model: 'Samsung Galaxy S24 5G' },
   'sm-s926': { brand: 'Samsung', model: 'Samsung Galaxy S24 Plus 5G' },
   'sm-s928': { brand: 'Samsung', model: 'Samsung Galaxy S24 Ultra 5G' },
+  'sm-g780': { brand: 'Samsung', model: 'Samsung Galaxy S20 FE' },
+  'sm-g781': { brand: 'Samsung', model: 'Samsung Galaxy S20 FE 5G' },
+  'sm-g985': { brand: 'Samsung', model: 'Samsung Galaxy S20 Plus' },
+  'sm-g988': { brand: 'Samsung', model: 'Samsung Galaxy S20 Ultra 5G' },
+  'sm-g973': { brand: 'Samsung', model: 'Samsung Galaxy S10' },
+  'sm-g975': { brand: 'Samsung', model: 'Samsung Galaxy S10 Plus' },
+  'sm-g970': { brand: 'Samsung', model: 'Samsung Galaxy S10e' },
+
+  // Samsung Galaxy Note Series
+  'sm-n981': { brand: 'Samsung', model: 'Samsung Galaxy Note 20' },
+  'sm-n770': { brand: 'Samsung', model: 'Samsung Galaxy Note 10 Lite' },
+  'sm-n975': { brand: 'Samsung', model: 'Samsung Galaxy Note 10 Plus' },
 
   // Samsung Galaxy Z Series
   'sm-f711': { brand: 'Samsung', model: 'Samsung Galaxy Z Flip3 5G' },
@@ -87,17 +99,47 @@ export const ANDROID_MODEL_MAP: Record<string, { brand: string; model: string }>
   'sm-f741': { brand: 'Samsung', model: 'Samsung Galaxy Z Flip6 5G' },
   'sm-f956': { brand: 'Samsung', model: 'Samsung Galaxy Z Fold6 5G' },
 
-  // Samsung Galaxy A Series & M Series
+  // Samsung Galaxy A Series
+  'sm-a146': { brand: 'Samsung', model: 'Samsung Galaxy A14 5G' },
+  'sm-a145': { brand: 'Samsung', model: 'Samsung Galaxy A14' },
+  'sm-a156': { brand: 'Samsung', model: 'Samsung Galaxy A15 5G' },
+  'sm-a166': { brand: 'Samsung', model: 'Samsung Galaxy A16 5G' },
+  'sm-a135': { brand: 'Samsung', model: 'Samsung Galaxy A13' },
+  'sm-a127': { brand: 'Samsung', model: 'Samsung Galaxy A12' },
+  'sm-a125': { brand: 'Samsung', model: 'Samsung Galaxy A12' },
+  'sm-a226': { brand: 'Samsung', model: 'Samsung Galaxy A22 5G' },
+  'sm-a225': { brand: 'Samsung', model: 'Samsung Galaxy A22' },
+  'sm-a236': { brand: 'Samsung', model: 'Samsung Galaxy A23 5G' },
+  'sm-a235': { brand: 'Samsung', model: 'Samsung Galaxy A23' },
+  'sm-a256': { brand: 'Samsung', model: 'Samsung Galaxy A25 5G' },
+  'sm-a336': { brand: 'Samsung', model: 'Samsung Galaxy A33 5G' },
+  'sm-a505': { brand: 'Samsung', model: 'Samsung Galaxy A50' },
+  'sm-a515': { brand: 'Samsung', model: 'Samsung Galaxy A51' },
   'sm-a525': { brand: 'Samsung', model: 'Samsung Galaxy A52' },
   'sm-a526': { brand: 'Samsung', model: 'Samsung Galaxy A52s 5G' },
   'sm-a536': { brand: 'Samsung', model: 'Samsung Galaxy A53 5G' },
   'sm-a546': { brand: 'Samsung', model: 'Samsung Galaxy A54 5G' },
+  'sm-a715': { brand: 'Samsung', model: 'Samsung Galaxy A71' },
   'sm-a725': { brand: 'Samsung', model: 'Samsung Galaxy A72' },
   'sm-a736': { brand: 'Samsung', model: 'Samsung Galaxy A73 5G' },
+  'sm-a035': { brand: 'Samsung', model: 'Samsung Galaxy A03' },
+  'sm-a037': { brand: 'Samsung', model: 'Samsung Galaxy A03s' },
+  'sm-a047': { brand: 'Samsung', model: 'Samsung Galaxy A04s' },
+  'sm-a055': { brand: 'Samsung', model: 'Samsung Galaxy A05' },
+  'sm-a057': { brand: 'Samsung', model: 'Samsung Galaxy A05s' },
+
+  // Samsung Galaxy M & F Series
+  'sm-m127': { brand: 'Samsung', model: 'Samsung Galaxy M12' },
+  'sm-m136': { brand: 'Samsung', model: 'Samsung Galaxy M13 5G' },
+  'sm-m145': { brand: 'Samsung', model: 'Samsung Galaxy M14 4G' },
+  'sm-m215': { brand: 'Samsung', model: 'Samsung Galaxy M21' },
+  'sm-m315': { brand: 'Samsung', model: 'Samsung Galaxy M31' },
+  'sm-m325': { brand: 'Samsung', model: 'Samsung Galaxy M32' },
+  'sm-m336': { brand: 'Samsung', model: 'Samsung Galaxy M33 5G' },
+  'sm-m515': { brand: 'Samsung', model: 'Samsung Galaxy M51' },
   'sm-m526': { brand: 'Samsung', model: 'Samsung Galaxy M52 5G' },
   'sm-m536': { brand: 'Samsung', model: 'Samsung Galaxy M53 5G' },
-  'sm-g780': { brand: 'Samsung', model: 'Samsung Galaxy S20 FE' },
-  'sm-g781': { brand: 'Samsung', model: 'Samsung Galaxy S20 FE 5G' },
+  'sm-e146': { brand: 'Samsung', model: 'Samsung Galaxy F14 5G' },
 
   // Xiaomi / Redmi / POCO
   '2201116sg': { brand: 'Xiaomi', model: 'Xiaomi Redmi Note 11 Pro Plus 5G' },
@@ -155,8 +197,10 @@ export const ANDROID_GPU_HEURISTICS: Array<{ match: RegExp; brand: string; model
   { match: /mali-g78/i, brand: 'Samsung', model: 'Samsung Galaxy S21 5G' },
   // Exynos 1280 -> Samsung Galaxy A53 5G
   { match: /mali-g68/i, brand: 'Samsung', model: 'Samsung Galaxy A53 5G' },
-  // MediaTek Dimensity 700 -> Realme 8 5G
-  { match: /mali-g57/i, brand: 'Realme', model: 'Realme 8 5G' },
+  // Mali-G57 (Dimensity 700 / Exynos 1330) -> Samsung Galaxy A14 5G (top selling Indian 5G budget smartphone)
+  { match: /mali-g57/i, brand: 'Samsung', model: 'Samsung Galaxy A14 5G' },
+  // Mali-G52 -> Samsung Galaxy A13 / A12
+  { match: /mali-g52/i, brand: 'Samsung', model: 'Samsung Galaxy A13' },
 ];
 
 // Clean string helper for fuzzy matching
@@ -178,7 +222,7 @@ function parseStorageCapacity(storageStr: string): number {
 }
 
 /**
- * Normalizes an Android model string (e.g., 'SM-S918B/DS', 'sm-s9180' -> 'sm-s918')
+ * Normalizes an Android model string (e.g., 'SM-A146B/DS', 'sm-s9180' -> 'sm-a146', 'sm-s918')
  */
 export function normalizeAndroidModelKey(raw: string): string {
   const s = raw.toLowerCase().trim();
@@ -186,13 +230,13 @@ export function normalizeAndroidModelKey(raw: string): string {
   // Strip dual-SIM or carrier postfixes like '/ds', '/duos', '_ds'
   const withoutDs = s.replace(/[\/_](ds|duos)$/i, '').trim();
 
-  // Check Samsung model pattern: sm-s918b, sm-g991b, sm-a525f -> sm-s918, sm-g991
+  // Check Samsung model pattern: sm-s918b, sm-a146b, sm-g991b -> sm-s918, sm-a146, sm-g991
   const smMatch = withoutDs.match(/^(sm-[a-z]\d{3})[a-z0-9]*/i);
   if (smMatch) {
     return smMatch[1].toLowerCase();
   }
 
-  // Also check without hyphen: sms918b -> sm-s918
+  // Also check without hyphen: sma146b -> sm-a146
   const smNoHyphen = withoutDs.match(/^sm([a-z]\d{3})[a-z0-9]*/i);
   if (smNoHyphen) {
     return `sm-${smNoHyphen[1].toLowerCase()}`;
@@ -378,8 +422,8 @@ export function detectDeviceFromInput(input: DetectionInput): DetectedDevice | n
     }
 
     // 2c. Android Fallback for active mobile visitors when UA is completely frozen and GPU is generic
-    // Display the most popular Android resale hero device (OnePlus Nord 8 GB/128 GB)
-    const fallbackCatalog = findMatchingCatalogDevice('OnePlus', 'OnePlus Nord', input.preferredStorage || '8 GB/128 GB');
+    // Display the most popular Android resale hero device (Samsung Galaxy A14 5G)
+    const fallbackCatalog = findMatchingCatalogDevice('Samsung', 'Samsung Galaxy A14 5G', input.preferredStorage || '4 GB/64 GB');
     if (fallbackCatalog) {
       return {
         brand: fallbackCatalog.brand,
