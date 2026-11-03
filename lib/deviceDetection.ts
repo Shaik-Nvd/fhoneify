@@ -185,6 +185,7 @@ export interface DetectionInput {
   clientHintsModel?: string;
   clientHintsPlatform?: string;
   screen?: { width: number; height: number; devicePixelRatio: number };
+  webglRenderer?: string;
 }
 
 /**
@@ -264,11 +265,12 @@ export function detectDeviceFromInput(input: DetectionInput): DetectedDevice | n
     }
   }
 
-  // 3. Apple iOS (iPhone) detection via User-Agent & Screen Dimension heuristic
+  // 3. Apple iOS (iPhone) detection via User-Agent, Screen Dimension & WebGL Renderer heuristic
   if (ua.includes('iPhone')) {
     // iOS Safari conceals the exact model in the UA string ("iPhone; CPU iPhone OS..."),
     // but screen resolution + devicePixelRatio uniquely identifies iPhone screen classes:
     const screen = input.screen;
+    const renderer = (input.webglRenderer || '').toLowerCase();
     let modelName = 'Apple iPhone 13'; // Popular baseline fallback
     let storage = '128 GB';
 
@@ -282,13 +284,31 @@ export function detectDeviceFromInput(input: DetectionInput): DetectedDevice | n
         modelName = 'Apple iPhone 15 Pro Max';
         storage = '256 GB';
       } else if (w === 393 && h === 852 && dpr === 3) {
-        modelName = 'Apple iPhone 15 Pro';
+        // Dynamic Island standard screen (iPhone 15 / 16 / 15 Pro)
+        modelName = renderer.includes('a17') ? 'Apple iPhone 15 Pro' : 'Apple iPhone 15';
         storage = '128 GB';
       } else if (w === 390 && h === 844 && dpr === 3) {
-        modelName = 'Apple iPhone 14';
+        // iPhone 12, iPhone 13, and iPhone 14 all share 390x844 @3x.
+        // Check WebGL renderer heuristic:
+        // A14 GPU -> iPhone 12
+        // A15 4-core GPU -> iPhone 13
+        // A15 5-core GPU -> iPhone 13 Pro / iPhone 14
+        if (renderer.includes('a14')) {
+          modelName = 'Apple iPhone 12';
+        } else if (renderer.includes('a15')) {
+          // If 5-core or specifically indicates 14/pro
+          if (renderer.includes('5-core') || renderer.includes('iphone14')) {
+            modelName = 'Apple iPhone 14';
+          } else {
+            modelName = 'Apple iPhone 13';
+          }
+        } else {
+          // When renderer is generic Apple GPU, iPhone 13 is the most common device in this form factor
+          modelName = 'Apple iPhone 13';
+        }
         storage = '128 GB';
       } else if (w === 428 && h === 926 && dpr === 3) {
-        modelName = 'Apple iPhone 14 Plus';
+        modelName = renderer.includes('a14') ? 'Apple iPhone 12 Pro Max' : 'Apple iPhone 14 Plus';
         storage = '128 GB';
       } else if (w === 375 && h === 812 && dpr === 3) {
         modelName = 'Apple iPhone 12 mini';

@@ -16,12 +16,14 @@ export async function POST(req: NextRequest) {
     const chPlatform = body?.clientHintsPlatform || (chPlatformHeader ? chPlatformHeader.replace(/^"|"$/g, '') : '');
     
     const screen = body?.screen;
+    const webglRenderer = body?.webglRenderer || '';
 
     const detected = detectDeviceFromInput({
       userAgent: ua,
       clientHintsModel: chModel,
       clientHintsPlatform: chPlatform,
       screen,
+      webglRenderer,
     });
 
     if (!detected) {

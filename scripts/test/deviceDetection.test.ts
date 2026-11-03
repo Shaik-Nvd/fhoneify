@@ -24,15 +24,27 @@ assert.equal(samsungTest.brand, 'Samsung');
 assert.equal(samsungTest.model, 'Samsung Galaxy S23 Ultra 5G');
 console.log('PASS: SM-S918B -> Samsung Galaxy S23 Ultra 5G');
 
-// Test 4: iPhone 15 Pro resolution
+// Test 4: iPhone 15 Pro resolution with A17 GPU renderer
 const iphoneTest = detectDeviceFromInput({
   userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Mobile/15E148 Safari/604.1',
-  screen: { width: 393, height: 852, devicePixelRatio: 3 }
+  screen: { width: 393, height: 852, devicePixelRatio: 3 },
+  webglRenderer: 'Apple A17 Pro GPU',
 });
 assert.ok(iphoneTest, 'iPhone 15 Pro should be detected');
 assert.equal(iphoneTest.brand, 'Apple');
 assert.equal(iphoneTest.model, 'Apple iPhone 15 Pro');
 console.log('PASS: iPhone 15 Pro detected');
+
+// Test 4b: iPhone 13 (390 x 844) with Apple GPU
+const iphone13Test = detectDeviceFromInput({
+  userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Mobile/15E148 Safari/604.1',
+  screen: { width: 390, height: 844, devicePixelRatio: 3 },
+  webglRenderer: 'Apple A15 GPU',
+});
+assert.ok(iphone13Test, 'iPhone 13 should be detected');
+assert.equal(iphone13Test.brand, 'Apple');
+assert.equal(iphone13Test.model, 'Apple iPhone 13');
+console.log('PASS: iPhone 13 detected');
 
 // Test 5: Unknown device returns null
 const unknownTest = detectDeviceFromInput({

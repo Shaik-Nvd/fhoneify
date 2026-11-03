@@ -48,11 +48,29 @@ export default function AutoDetectDeviceBanner() {
               }
             : undefined;
 
+        // Extract WebGL Renderer info (unmasks Apple GPU / Adreno / Mali details)
+        let webglRenderer = '';
+        if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+          try {
+            const canvas = document.createElement('canvas');
+            const gl = canvas.getContext('webgl') || (canvas.getContext('experimental-webgl') as any);
+            if (gl) {
+              const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+              if (debugInfo) {
+                webglRenderer = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL) || '';
+              }
+            }
+          } catch {
+            // ignore WebGL query error
+          }
+        }
+
         const payload = {
           userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : '',
           clientHintsModel,
           clientHintsPlatform,
           screen: screenInfo,
+          webglRenderer,
         };
 
         // Call detection endpoint
@@ -157,6 +175,12 @@ export default function AutoDetectDeviceBanner() {
                   <span className="text-xs font-normal text-muted">Calculating best value...</span>
                 )}
               </p>
+              <Link
+                href={`/quote?brand=${encodeURIComponent(device.brand)}&model=${encodeURIComponent(device.model)}&stage=storage`}
+                className="mt-1 inline-block text-[0.75rem] text-muted underline hover:text-gold"
+              >
+                Not your exact model or variant? Change
+              </Link>
             </div>
           </div>
 

@@ -313,12 +313,14 @@ export async function detectDevice(req: Request, res: Response) {
       req.body?.clientHintsPlatform ||
       (req.headers['sec-ch-ua-platform'] ? String(req.headers['sec-ch-ua-platform']).replace(/^"|"$/g, '') : '');
     const screen = req.body?.screen;
+    const webglRenderer = req.body?.webglRenderer || '';
 
     const detected = detectDeviceFromInput({
       userAgent,
       clientHintsModel,
       clientHintsPlatform,
       screen,
+      webglRenderer,
     });
 
     if (!detected) {
