@@ -428,17 +428,9 @@ export function detectDeviceFromInput(input: DetectionInput): DetectedDevice | n
       }
     }
 
-    // 2c. Android Fallback for active mobile visitors when UA is completely frozen and GPU is generic
-    // Display the most popular Android resale hero device (Samsung Galaxy A14 5G)
-    const fallbackCatalog = findMatchingCatalogDevice('Samsung', 'Samsung Galaxy A14 5G', input.preferredStorage || '4 GB/64 GB');
-    if (fallbackCatalog) {
-      return {
-        brand: fallbackCatalog.brand,
-        model: fallbackCatalog.model,
-        storage: fallbackCatalog.storage,
-        confidence: 'approximate',
-      };
-    }
+    // 2c. Only return approximate match if we genuinely matched an Android hardware hint.
+    // Never show a static fake fallback (like Galaxy A14) to all visitors.
+    return null;
   }
 
   // 3. Apple iOS (iPhone) detection via User-Agent, Screen Dimension & WebGL Renderer heuristic
