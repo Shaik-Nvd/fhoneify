@@ -31,9 +31,19 @@ export default function AutoDetectDeviceBanner() {
         // Query Chromium High-Entropy Client Hints if available
         if (typeof navigator !== 'undefined' && (navigator as any).userAgentData?.getHighEntropyValues) {
           try {
-            const hints = await (navigator as any).userAgentData.getHighEntropyValues(['model', 'platform']);
-            clientHintsModel = hints?.model || '';
-            clientHintsPlatform = hints?.platform || '';
+            // Set 1-second timeout so page load is never blocked if client hints hang
+            const hintsPromise = (navigator as any).userAgentData.getHighEntropyValues([
+              'model',
+              'platform',
+              'platformVersion',
+            ]);
+            const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject('timeout'), 1000));
+            const hints: any = await Promise.race([hintsPromise, timeoutPromise]).catch(() => null);
+
+            if (hints) {
+              clientHintsModel = hints.model || '';
+              clientHintsPlatform = hints.platform || '';
+            }
           } catch {
             // ignore
           }
@@ -73,36 +83,56 @@ export default function AutoDetectDeviceBanner() {
           webglRenderer,
         };
 
-        // Call detection endpoint
-        const res = await api.post('/api/quote/detect-device', payload).catch(async () => {
-          // Fallback to Next.js route if Express proxy differs
-          return api.post('/api/detect-device', payload);
-        });
+        // Query detection: try local Next.js App Router route first (guaranteed 0 latency without Render cold start),
+        // fallback to Express API route.
+        let detected: DetectedDeviceData | null = null;
+        try {
+          const localRes = await fetch('/api/detect-device', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+          });
+          const json = await localRes.json();
+          if (json?.success && json.data) {
+            detected = json.data;
+          }
+        } catch {
+          // fallback to Express
+          const expressRes = await api.post('/api/quote/detect-device', payload).catch(() => null);
+          if (expressRes?.data?.success && expressRes.data.data) {
+            detected = expressRes.data.data;
+          }
+        }
 
-        if (cancelled || !res.data?.success || !res.data.data) {
+        if (cancelled || !detected) {
           if (!cancelled) setLoading(false);
           return;
         }
 
-        const detected: DetectedDeviceData = res.data.data;
         setDevice(detected);
 
-        // If startingPrice was returned directly from the endpoint
+        // Fetch starting price if not returned directly
         if (typeof detected.startingPrice === 'number' && detected.startingPrice > 0) {
           setPrice(detected.startingPrice);
         } else {
-          // Otherwise query get-upto batch for the exact price
-          const priceRes = await api.post('/api/quote/get-upto', {
-            devices: [
-              {
-                brand: detected.brand,
-                model: detected.model,
-                storage: detected.storage,
-              },
-            ],
-          });
+          const priceRes = await api
+            .post('/api/quote/get-upto', {
+              devices: [
+                {
+                  brand: detected.brand,
+                  model: detected.model,
+                  storage: detected.storage,
+                },
+              ],
+            })
+            .catch(() => null);
 
-          if (!cancelled && priceRes.data?.success && Array.isArray(priceRes.data.data) && priceRes.data.data[0]) {
+          if (
+            !cancelled &&
+            priceRes?.data?.success &&
+            Array.isArray(priceRes.data.data) &&
+            priceRes.data.data[0]
+          ) {
             const p = priceRes.data.data[0].startingPrice;
             if (typeof p === 'number' && p > 0) {
               setPrice(p);
@@ -128,9 +158,10 @@ export default function AutoDetectDeviceBanner() {
   }
 
   const modelSlug = device.model.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-  const quoteUrl = device.brand === 'Apple'
-    ? `/quote?brand=${encodeURIComponent(device.brand)}&model=${encodeURIComponent(device.model)}&stage=model&step=1`
-    : `/quote?brand=${encodeURIComponent(device.brand)}&model=${encodeURIComponent(device.model)}&storage=${encodeURIComponent(device.storage)}&stage=storage&step=2`;
+  const quoteUrl =
+    device.brand === 'Apple'
+      ? `/quote?brand=${encodeURIComponent(device.brand)}&model=${encodeURIComponent(device.model)}&stage=model&step=1`
+      : `/quote?brand=${encodeURIComponent(device.brand)}&model=${encodeURIComponent(device.model)}&storage=${encodeURIComponent(device.storage)}&stage=storage&step=2`;
 
   return (
     <section className="mx-auto max-w-7xl px-4 py-3 sm:px-6">
@@ -160,40 +191,28 @@ export default function AutoDetectDeviceBanner() {
                   Auto-detected
                 </span>
               </div>
-              <h3 className="font-display text-base font-semibold text-foreground sm:text-lg">
-                {device.model}
-                {device.brand !== 'Apple' && device.storage ? (
-                  <span className="text-sm font-normal text-muted"> ({device.storage})</span>
-                ) : null}
+              <h3 className="mt-0.5 text-base font-bold text-foreground sm:text-lg">
+                {device.brand === 'Apple'
+                  ? device.model
+                  : `${device.model} (${device.storage})`}
               </h3>
-              <p className="mt-0.5 text-sm font-bold text-emerald-600 dark:text-emerald-400">
-                {price ? (
-                  <>
-                    Get <span className="text-base sm:text-lg">{formatCurrency(price)}</span>
-                  </>
-                ) : (
-                  <span className="text-xs font-normal text-muted">Calculating best value...</span>
-                )}
-              </p>
-              <Link
-                href={`/quote?brand=${encodeURIComponent(device.brand)}&model=${encodeURIComponent(device.model)}&stage=storage`}
-                className="mt-1 inline-block text-[0.75rem] text-muted underline hover:text-gold"
-              >
-                Not your exact model or variant? Change
-              </Link>
+              <div className="mt-1 flex items-baseline gap-1.5">
+                <span className="text-xs font-medium text-muted">Get Upto</span>
+                <span className="text-lg font-extrabold text-gold sm:text-xl">
+                  {price ? formatCurrency(price) : 'Best Price'}
+                </span>
+              </div>
             </div>
           </div>
 
-          {/* Sell Now Action */}
-          <div className="shrink-0">
-            <Link
-              href={quoteUrl}
-              className="inline-flex items-center gap-1.5 rounded-xl bg-gold px-4 py-2.5 text-sm font-semibold text-on-gold no-underline shadow-token-sm transition-transform hover:-translate-y-0.5 hover:bg-gold/90 active:scale-95 sm:px-5 sm:py-3"
-            >
-              <span>Sell Now</span>
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
+          {/* Sell Now Action Button */}
+          <Link
+            href={quoteUrl}
+            className="flex shrink-0 items-center gap-2 rounded-xl bg-gold px-4 py-2.5 text-sm font-semibold text-background shadow transition-all hover:brightness-110 active:scale-95 sm:px-6 sm:py-3"
+          >
+            <span>Sell Now</span>
+            <ArrowRight className="h-4 w-4" />
+          </Link>
         </div>
       </div>
     </section>

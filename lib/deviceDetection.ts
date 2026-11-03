@@ -10,8 +10,7 @@ export interface DetectedDevice {
   image?: string;
 }
 
-// Common Android hardware build model numbers mapped to human readable catalog names
-// e.g. AC2001 -> OnePlus Nord
+// Android hardware build / model numbers mapped to verified catalog entries
 export const ANDROID_MODEL_MAP: Record<string, { brand: string; model: string }> = {
   // OnePlus Nord series
   'ac2001': { brand: 'OnePlus', model: 'OnePlus Nord' },
@@ -25,7 +24,7 @@ export const ANDROID_MODEL_MAP: Record<string, { brand: string; model: string }>
   'cph2401': { brand: 'OnePlus', model: 'OnePlus Nord 2T 5G' },
   'cph2467': { brand: 'OnePlus', model: 'OnePlus Nord CE 3 5G' },
   'cph2493': { brand: 'OnePlus', model: 'OnePlus Nord 3 5G' },
-  'cph2613': { brand: 'OnePlus', model: 'OnePlus Nord CE4 5G' },
+  'cph2613': { brand: 'OnePlus', model: 'Oneplus Nord CE4 5G' },
   'cph2629': { brand: 'OnePlus', model: 'OnePlus Nord 4' },
 
   // OnePlus Flagship & R series
@@ -36,23 +35,21 @@ export const ANDROID_MODEL_MAP: Record<string, { brand: string; model: string }>
   'in2011': { brand: 'OnePlus', model: 'OnePlus 8' },
   'in2021': { brand: 'OnePlus', model: 'OnePlus 8 Pro' },
   'kb2001': { brand: 'OnePlus', model: 'OnePlus 8T' },
-  'le2111': { brand: 'OnePlus', model: 'OnePlus 9' },
-  'le2121': { brand: 'OnePlus', model: 'OnePlus 9 Pro' },
-  'le2101': { brand: 'OnePlus', model: 'OnePlus 9R' },
-  'le2101r': { brand: 'OnePlus', model: 'OnePlus 9RT' },
-  'ne2211': { brand: 'OnePlus', model: 'OnePlus 10 Pro' },
-  'cph2411': { brand: 'OnePlus', model: 'OnePlus 10R' },
-  'cph2413': { brand: 'OnePlus', model: 'OnePlus 10T' },
-  'cph2447': { brand: 'OnePlus', model: 'OnePlus 11' },
-  'cph2487': { brand: 'OnePlus', model: 'OnePlus 11R' },
+  'le2111': { brand: 'OnePlus', model: 'OnePlus 9 5G' },
+  'le2121': { brand: 'OnePlus', model: 'OnePlus 9 Pro 5G' },
+  'le2101': { brand: 'OnePlus', model: 'OnePlus 9R 5G' },
+  'le2101r': { brand: 'OnePlus', model: 'OnePlus 9RT 5G' },
+  'ne2211': { brand: 'OnePlus', model: 'OnePlus 10 Pro 5G' },
+  'cph2411': { brand: 'OnePlus', model: 'OnePlus 10R 5G' },
+  'cph2413': { brand: 'OnePlus', model: 'OnePlus 10T 5G' },
+  'cph2447': { brand: 'OnePlus', model: 'OnePlus 11 5G' },
+  'cph2487': { brand: 'OnePlus', model: 'OnePlus 11R 5G' },
   'cph2573': { brand: 'OnePlus', model: 'OnePlus 12' },
   'cph2585': { brand: 'OnePlus', model: 'OnePlus 12R' },
 
   // Google Pixel series
-  'pixel 4a': { brand: 'Google', model: 'Google Pixel 4a' },
-  'pixel 6': { brand: 'Google', model: 'Google Pixel 6' },
+  'pixel 4a': { brand: 'Google', model: 'Google Pixel 4A' },
   'pixel 6a': { brand: 'Google', model: 'Google Pixel 6a' },
-  'pixel 6 pro': { brand: 'Google', model: 'Google Pixel 6 Pro' },
   'pixel 7': { brand: 'Google', model: 'Google Pixel 7' },
   'pixel 7a': { brand: 'Google', model: 'Google Pixel 7a' },
   'pixel 7 pro': { brand: 'Google', model: 'Google Pixel 7 Pro' },
@@ -65,49 +62,50 @@ export const ANDROID_MODEL_MAP: Record<string, { brand: string; model: string }>
   'pixel 9 pro fold': { brand: 'Google', model: 'Google Pixel 9 Pro Fold' },
 
   // Samsung Galaxy S Series
-  'sm-g991b': { brand: 'Samsung', model: 'Samsung Galaxy S21 5G' },
-  'sm-g996b': { brand: 'Samsung', model: 'Samsung Galaxy S21 Plus 5G' },
-  'sm-g998b': { brand: 'Samsung', model: 'Samsung Galaxy S21 Ultra 5G' },
-  'sm-g990b': { brand: 'Samsung', model: 'Samsung Galaxy S21 FE 5G' },
-  'sm-s901b': { brand: 'Samsung', model: 'Samsung Galaxy S22' },
-  'sm-s906b': { brand: 'Samsung', model: 'Samsung Galaxy S22 Plus' },
-  'sm-s908b': { brand: 'Samsung', model: 'Samsung Galaxy S22 Ultra 5G' },
-  'sm-s711b': { brand: 'Samsung', model: 'Samsung Galaxy S23 FE' },
-  'sm-s911b': { brand: 'Samsung', model: 'Samsung Galaxy S23 5G' },
-  'sm-s916b': { brand: 'Samsung', model: 'Samsung Galaxy S23 Plus 5G' },
-  'sm-s918b': { brand: 'Samsung', model: 'Samsung Galaxy S23 Ultra 5G' },
-  'sm-s921b': { brand: 'Samsung', model: 'Samsung Galaxy S24' },
-  'sm-s926b': { brand: 'Samsung', model: 'Samsung Galaxy S24 Plus' },
-  'sm-s928b': { brand: 'Samsung', model: 'Samsung Galaxy S24 Ultra' },
+  'sm-g991': { brand: 'Samsung', model: 'Samsung Galaxy S21 5G' },
+  'sm-g996': { brand: 'Samsung', model: 'Samsung Galaxy S21 Plus 5G' },
+  'sm-g998': { brand: 'Samsung', model: 'Samsung Galaxy S21 Ultra 5G' },
+  'sm-g990': { brand: 'Samsung', model: 'Samsung Galaxy S21 FE 5G' },
+  'sm-s901': { brand: 'Samsung', model: 'Samsung Galaxy S22 5G' },
+  'sm-s906': { brand: 'Samsung', model: 'Samsung Galaxy S22 Plus 5G' },
+  'sm-s908': { brand: 'Samsung', model: 'Samsung Galaxy S22 Ultra 5G' },
+  'sm-s711': { brand: 'Samsung', model: 'Samsung Galaxy S23 FE 5G' },
+  'sm-s911': { brand: 'Samsung', model: 'Samsung Galaxy S23 5G' },
+  'sm-s916': { brand: 'Samsung', model: 'Samsung Galaxy S23 Plus 5G' },
+  'sm-s918': { brand: 'Samsung', model: 'Samsung Galaxy S23 Ultra 5G' },
+  'sm-s921': { brand: 'Samsung', model: 'Samsung Galaxy S24 5G' },
+  'sm-s926': { brand: 'Samsung', model: 'Samsung Galaxy S24 Plus 5G' },
+  'sm-s928': { brand: 'Samsung', model: 'Samsung Galaxy S24 Ultra 5G' },
 
   // Samsung Galaxy Z Series
-  'sm-f711b': { brand: 'Samsung', model: 'Samsung Galaxy Z Flip 3 5G' },
-  'sm-f926b': { brand: 'Samsung', model: 'Samsung Galaxy Z Fold 3 5G' },
-  'sm-f721b': { brand: 'Samsung', model: 'Samsung Galaxy Z Flip 4 5G' },
-  'sm-f936b': { brand: 'Samsung', model: 'Samsung Galaxy Z Fold 4 5G' },
-  'sm-f731b': { brand: 'Samsung', model: 'Samsung Galaxy Z Flip 5' },
-  'sm-f946b': { brand: 'Samsung', model: 'Samsung Galaxy Z Fold 5' },
-  'sm-f741b': { brand: 'Samsung', model: 'Samsung Galaxy Z Flip 6' },
-  'sm-f956b': { brand: 'Samsung', model: 'Samsung Galaxy Z Fold 6' },
+  'sm-f711': { brand: 'Samsung', model: 'Samsung Galaxy Z Flip3 5G' },
+  'sm-f926': { brand: 'Samsung', model: 'Samsung Galaxy Z Fold3 5G' },
+  'sm-f721': { brand: 'Samsung', model: 'Samsung Galaxy Z Flip4' },
+  'sm-f936': { brand: 'Samsung', model: 'Samsung Galaxy Z Fold4' },
+  'sm-f731': { brand: 'Samsung', model: 'Samsung Galaxy Z Flip5' },
+  'sm-f946': { brand: 'Samsung', model: 'Samsung Galaxy Z Fold5' },
+  'sm-f741': { brand: 'Samsung', model: 'Samsung Galaxy Z Flip6 5G' },
+  'sm-f956': { brand: 'Samsung', model: 'Samsung Galaxy Z Fold6 5G' },
 
-  // Samsung Galaxy A Series & M Series common
-  'sm-a525f': { brand: 'Samsung', model: 'Samsung Galaxy A52' },
-  'sm-a526b': { brand: 'Samsung', model: 'Samsung Galaxy A52s 5G' },
-  'sm-a536b': { brand: 'Samsung', model: 'Samsung Galaxy A53 5G' },
-  'sm-a546e': { brand: 'Samsung', model: 'Samsung Galaxy A54 5G' },
-  'sm-a556e': { brand: 'Samsung', model: 'Samsung Galaxy A55 5G' },
-  'sm-a346e': { brand: 'Samsung', model: 'Samsung Galaxy A34 5G' },
-  'sm-a356e': { brand: 'Samsung', model: 'Samsung Galaxy A35 5G' },
-  'sm-m346b': { brand: 'Samsung', model: 'Samsung Galaxy M34 5G' },
-  'sm-m546b': { brand: 'Samsung', model: 'Samsung Galaxy M54 5G' },
+  // Samsung Galaxy A Series & M Series
+  'sm-a525': { brand: 'Samsung', model: 'Samsung Galaxy A52' },
+  'sm-a526': { brand: 'Samsung', model: 'Samsung Galaxy A52s 5G' },
+  'sm-a536': { brand: 'Samsung', model: 'Samsung Galaxy A53 5G' },
+  'sm-a546': { brand: 'Samsung', model: 'Samsung Galaxy A54 5G' },
+  'sm-a725': { brand: 'Samsung', model: 'Samsung Galaxy A72' },
+  'sm-a736': { brand: 'Samsung', model: 'Samsung Galaxy A73 5G' },
+  'sm-m526': { brand: 'Samsung', model: 'Samsung Galaxy M52 5G' },
+  'sm-m536': { brand: 'Samsung', model: 'Samsung Galaxy M53 5G' },
+  'sm-g780': { brand: 'Samsung', model: 'Samsung Galaxy S20 FE' },
+  'sm-g781': { brand: 'Samsung', model: 'Samsung Galaxy S20 FE 5G' },
 
   // Xiaomi / Redmi / POCO
-  '2201116sg': { brand: 'Xiaomi', model: 'Xiaomi Redmi Note 11 Pro 5G' },
+  '2201116sg': { brand: 'Xiaomi', model: 'Xiaomi Redmi Note 11 Pro Plus 5G' },
   '22101316g': { brand: 'Xiaomi', model: 'Xiaomi Redmi Note 12 Pro 5G' },
   '2312draf3g': { brand: 'Xiaomi', model: 'Xiaomi Redmi Note 13 Pro 5G' },
   '23116pn5bc': { brand: 'Xiaomi', model: 'Xiaomi 14' },
   '24030pn60g': { brand: 'Xiaomi', model: 'Xiaomi 14 Ultra' },
-  'm2012k11ag': { brand: 'POCO', model: 'POCO F3' },
+  'm2012k11ag': { brand: 'POCO', model: 'POCO F3 GT' },
   '22041216g': { brand: 'POCO', model: 'POCO F4 5G' },
   '23049pcd8g': { brand: 'POCO', model: 'POCO F5 5G' },
   '2311drk48g': { brand: 'POCO', model: 'POCO X6 Pro 5G' },
@@ -115,20 +113,92 @@ export const ANDROID_MODEL_MAP: Record<string, { brand: string; model: string }>
   // Vivo & iQOO
   'v2307': { brand: 'Vivo', model: 'Vivo X100 Pro' },
   'v2308': { brand: 'Vivo', model: 'Vivo X100' },
-  'v2324': { brand: 'iQOO', model: 'iQOO 12' },
-  'v2243': { brand: 'iQOO', model: 'iQOO Neo 7' },
-  'i2214': { brand: 'iQOO', model: 'iQOO Neo 9 Pro' },
+  'v2324': { brand: 'iQOO', model: 'iQOO 12 5G' },
+  'v2243': { brand: 'iQOO', model: 'iQOO Neo 7 5G' },
+  'i2214': { brand: 'iQOO', model: 'iQOO Neo 9 Pro 5G' },
 
   // Nothing
   'a063': { brand: 'Nothing', model: 'Nothing Phone 1' },
   'a065': { brand: 'Nothing', model: 'Nothing Phone 2' },
-  'a142': { brand: 'Nothing', model: 'Nothing Phone 2a' },
+  'a142': { brand: 'Nothing', model: 'Nothing Phone 2a 5G' },
 };
+
+// WebGL GPU Renderer to Android device family heuristics (used when User-Agent is frozen to 'Android 10; K')
+export const ANDROID_GPU_HEURISTICS: Array<{ match: RegExp; brand: string; model: string }> = [
+  // Snapdragon 765G -> OnePlus Nord
+  { match: /adreno\s*(?:\(tm\))?\s*620/i, brand: 'OnePlus', model: 'OnePlus Nord' },
+  // Snapdragon 855 / 855+ -> OnePlus 7T
+  { match: /adreno\s*(?:\(tm\))?\s*640/i, brand: 'OnePlus', model: 'OnePlus 7T' },
+  // Snapdragon 865 -> OnePlus 8T
+  { match: /adreno\s*(?:\(tm\))?\s*650/i, brand: 'OnePlus', model: 'OnePlus 8T' },
+  // Snapdragon 888 -> OnePlus 9 Pro 5G
+  { match: /adreno\s*(?:\(tm\))?\s*660/i, brand: 'OnePlus', model: 'OnePlus 9 Pro 5G' },
+  // Snapdragon 8 Gen 1 -> OnePlus 10 Pro 5G
+  { match: /adreno\s*(?:\(tm\))?\s*730/i, brand: 'OnePlus', model: 'OnePlus 10 Pro 5G' },
+  // Snapdragon 8 Gen 2 -> Samsung Galaxy S23 Ultra 5G
+  { match: /adreno\s*(?:\(tm\))?\s*740/i, brand: 'Samsung', model: 'Samsung Galaxy S23 Ultra 5G' },
+  // Snapdragon 8 Gen 3 -> Samsung Galaxy S24 Ultra 5G
+  { match: /adreno\s*(?:\(tm\))?\s*750/i, brand: 'Samsung', model: 'Samsung Galaxy S24 Ultra 5G' },
+  // Snapdragon 7s Gen 2 -> Xiaomi Redmi Note 13 Pro 5G
+  { match: /adreno\s*(?:\(tm\))?\s*710/i, brand: 'Xiaomi', model: 'Xiaomi Redmi Note 13 Pro 5G' },
+  // Snapdragon 7 Gen 3 -> OnePlus Nord CE4 5G
+  { match: /adreno\s*(?:\(tm\))?\s*720/i, brand: 'OnePlus', model: 'Oneplus Nord CE4 5G' },
+  // Snapdragon 695 -> OnePlus Nord CE 2 Lite 5G
+  { match: /adreno\s*(?:\(tm\))?\s*619/i, brand: 'OnePlus', model: 'OnePlus Nord CE 2 Lite 5G' },
+  // MediaTek Dimensity 1200 -> OnePlus Nord 2 5G
+  { match: /mali-g77/i, brand: 'OnePlus', model: 'OnePlus Nord 2 5G' },
+  // MediaTek Dimensity 7200 Pro -> Nothing Phone 2a 5G
+  { match: /mali-g610/i, brand: 'Nothing', model: 'Nothing Phone 2a 5G' },
+  // MediaTek Dimensity 9300 -> Vivo X100
+  { match: /immortalis-g720|mali-g715/i, brand: 'Vivo', model: 'Vivo X100' },
+  // Exynos 2100 -> Samsung Galaxy S21 5G
+  { match: /mali-g78/i, brand: 'Samsung', model: 'Samsung Galaxy S21 5G' },
+  // Exynos 1280 -> Samsung Galaxy A53 5G
+  { match: /mali-g68/i, brand: 'Samsung', model: 'Samsung Galaxy A53 5G' },
+  // MediaTek Dimensity 700 -> Realme 8 5G
+  { match: /mali-g57/i, brand: 'Realme', model: 'Realme 8 5G' },
+];
 
 // Clean string helper for fuzzy matching
 function clean(str: unknown): string {
   if (typeof str !== 'string') return '';
   return str.toLowerCase().replace(/[^a-z0-9]/g, '');
+}
+
+// Parses storage string to MB/GB order for variant sorting
+function parseStorageCapacity(storageStr: string): number {
+  const part = storageStr.includes('/') ? storageStr.split('/').pop()?.trim() || '' : storageStr.trim();
+  const tb = part.match(/(\d+)\s*tb/i);
+  if (tb) return parseInt(tb[1], 10) * 1024;
+  const gb = part.match(/(\d+)\s*gb/i);
+  if (gb) return parseInt(gb[1], 10);
+  const mb = part.match(/(\d+)\s*mb/i);
+  if (mb) return parseInt(mb[1], 10) / 1024;
+  return 0;
+}
+
+/**
+ * Normalizes an Android model string (e.g., 'SM-S918B/DS', 'sm-s9180' -> 'sm-s918')
+ */
+export function normalizeAndroidModelKey(raw: string): string {
+  const s = raw.toLowerCase().trim();
+
+  // Strip dual-SIM or carrier postfixes like '/ds', '/duos', '_ds'
+  const withoutDs = s.replace(/[\/_](ds|duos)$/i, '').trim();
+
+  // Check Samsung model pattern: sm-s918b, sm-g991b, sm-a525f -> sm-s918, sm-g991
+  const smMatch = withoutDs.match(/^(sm-[a-z]\d{3})[a-z0-9]*/i);
+  if (smMatch) {
+    return smMatch[1].toLowerCase();
+  }
+
+  // Also check without hyphen: sms918b -> sm-s918
+  const smNoHyphen = withoutDs.match(/^sm([a-z]\d{3})[a-z0-9]*/i);
+  if (smNoHyphen) {
+    return `sm-${smNoHyphen[1].toLowerCase()}`;
+  }
+
+  return clean(withoutDs);
 }
 
 /**
@@ -143,35 +213,47 @@ export function findMatchingCatalogDevice(
   const targetClean = clean(modelName);
 
   // Filter devices by brand
-  const brandMatches = SEED_DEVICES.filter((d) => clean(d.brand) === brandClean);
+  const brandMatches = SEED_DEVICES.filter((d) => d && d.brand && clean(d.brand) === brandClean);
   if (brandMatches.length === 0) return null;
 
   // 1. Exact model match
   let matched = brandMatches.filter(
-    (d) => clean(d.model) === targetClean || clean(`${d.brand} ${d.model}`) === targetClean
+    (d) => d && d.model && (clean(d.model) === targetClean || clean(`${d.brand} ${d.model}`) === targetClean)
   );
 
   // 2. Contains match if exact not found
   if (matched.length === 0) {
     matched = brandMatches.filter(
       (d) =>
-        clean(d.model).includes(targetClean) ||
-        targetClean.includes(clean(d.model))
+        d &&
+        d.model &&
+        (clean(d.model).includes(targetClean) ||
+          targetClean.includes(clean(d.model)))
     );
   }
 
   if (matched.length === 0) return null;
 
-  // Pick preferred storage if available, else pick the middle/popular variant
-  let selected = matched[0];
+  // Pick preferred storage if available
   if (preferredStorage) {
-    const withStorage = matched.find((d) => clean(d.storage) === clean(preferredStorage));
-    if (withStorage) selected = withStorage;
-  } else {
-    // If multiple storage options, e.g. 8 GB/128 GB is typically the mid variant
-    const midIndex = Math.floor(matched.length / 2);
-    selected = matched[midIndex] || matched[0];
+    const withStorage = matched.find((d) => d && d.storage && clean(d.storage) === clean(preferredStorage));
+    if (withStorage) {
+      return {
+        brand: withStorage.brand,
+        model: withStorage.model,
+        storage: withStorage.storage,
+      };
+    }
   }
+
+  // Sort matched variants in ascending storage capacity (e.g. 64GB, 128GB, 256GB)
+  const sortedVariants = [...matched].sort((a, b) => {
+    return parseStorageCapacity(a.storage || '') - parseStorageCapacity(b.storage || '');
+  });
+
+  // Pick the mid/most popular variant (e.g., for 3 variants: [64, 128, 256] -> index 1 (128GB))
+  const midIndex = Math.floor(sortedVariants.length / 2);
+  const selected = sortedVariants[midIndex] || sortedVariants[0];
 
   return {
     brand: selected.brand,
@@ -186,6 +268,7 @@ export interface DetectionInput {
   clientHintsPlatform?: string;
   screen?: { width: number; height: number; devicePixelRatio: number };
   webglRenderer?: string;
+  preferredStorage?: string;
 }
 
 /**
@@ -194,13 +277,21 @@ export interface DetectionInput {
 export function detectDeviceFromInput(input: DetectionInput): DetectedDevice | null {
   const chModel = (input.clientHintsModel || '').trim();
   const ua = (input.userAgent || '').trim();
+  const renderer = (input.webglRenderer || '').trim();
+  const isAndroid =
+    (input.clientHintsPlatform || '').toLowerCase() === 'android' ||
+    ua.includes('Android') ||
+    /linux\s+arm/i.test(ua);
 
   // 1. High-Entropy Client Hints Model (Direct hardware identifier from Chrome on Android)
-  if (chModel) {
-    const key = chModel.toLowerCase();
-    if (ANDROID_MODEL_MAP[key]) {
-      const { brand, model } = ANDROID_MODEL_MAP[key];
-      const catalog = findMatchingCatalogDevice(brand, model);
+  if (chModel && chModel !== 'K' && chModel !== 'unknown') {
+    const rawKey = chModel.toLowerCase();
+    const normalizedKey = normalizeAndroidModelKey(chModel);
+
+    // Direct lookup or normalized lookup
+    const mapEntry = ANDROID_MODEL_MAP[rawKey] || ANDROID_MODEL_MAP[normalizedKey];
+    if (mapEntry) {
+      const catalog = findMatchingCatalogDevice(mapEntry.brand, mapEntry.model, input.preferredStorage);
       if (catalog) {
         return {
           brand: catalog.brand,
@@ -214,7 +305,7 @@ export function detectDeviceFromInput(input: DetectionInput): DetectedDevice | n
     // Try finding by model name directly if the model string contains text like "OnePlus Nord"
     for (const b of ['OnePlus', 'Samsung', 'Google', 'Xiaomi', 'Vivo', 'Oppo', 'Realme', 'POCO', 'iQOO', 'Nothing', 'Apple']) {
       if (clean(chModel).includes(clean(b))) {
-        const catalog = findMatchingCatalogDevice(b, chModel);
+        const catalog = findMatchingCatalogDevice(b, chModel, input.preferredStorage);
         if (catalog) {
           return {
             brand: catalog.brand,
@@ -228,51 +319,83 @@ export function detectDeviceFromInput(input: DetectionInput): DetectedDevice | n
   }
 
   // 2. Parse User-Agent for Android build model (e.g., "... Android 12; AC2001 Build/..." or "SM-S918B")
-  if (ua.includes('Android')) {
+  if (isAndroid) {
     // Look for model in UA: "Android [version]; <Model> Build/" or "Android [version]; <Model>)"
     const androidMatch = ua.match(/Android\s+[^;]+;\s*([^;)]+?)(?:\s+Build|\s*\))/i);
     if (androidMatch && androidMatch[1]) {
-      const rawModel = androidMatch[1].trim().toLowerCase();
-      
-      // Check in direct map
-      if (ANDROID_MODEL_MAP[rawModel]) {
-        const { brand, model } = ANDROID_MODEL_MAP[rawModel];
-        const catalog = findMatchingCatalogDevice(brand, model);
-        if (catalog) {
-          return {
-            brand: catalog.brand,
-            model: catalog.model,
-            storage: catalog.storage,
-            confidence: 'exact',
-          };
-        }
-      }
+      const rawModel = androidMatch[1].trim();
 
-      // Check known brand prefixes in model name
-      for (const b of ['OnePlus', 'Samsung', 'Google', 'Xiaomi', 'Vivo', 'Oppo', 'Realme', 'POCO', 'iQOO', 'Nothing']) {
-        if (rawModel.includes(b.toLowerCase())) {
-          const catalog = findMatchingCatalogDevice(b, rawModel);
+      // Modern Chrome freezes model to 'K'. Only use if not 'K'
+      if (rawModel !== 'K' && rawModel.length > 1) {
+        const rawKey = rawModel.toLowerCase();
+        const normalizedKey = normalizeAndroidModelKey(rawModel);
+
+        const mapEntry = ANDROID_MODEL_MAP[rawKey] || ANDROID_MODEL_MAP[normalizedKey];
+        if (mapEntry) {
+          const catalog = findMatchingCatalogDevice(mapEntry.brand, mapEntry.model, input.preferredStorage);
           if (catalog) {
             return {
               brand: catalog.brand,
               model: catalog.model,
               storage: catalog.storage,
-              confidence: 'high',
+              confidence: 'exact',
+            };
+          }
+        }
+
+        // Check known brand prefixes in model name
+        for (const b of ['OnePlus', 'Samsung', 'Google', 'Xiaomi', 'Vivo', 'Oppo', 'Realme', 'POCO', 'iQOO', 'Nothing']) {
+          if (clean(rawModel).includes(clean(b))) {
+            const catalog = findMatchingCatalogDevice(b, rawModel, input.preferredStorage);
+            if (catalog) {
+              return {
+                brand: catalog.brand,
+                model: catalog.model,
+                storage: catalog.storage,
+                confidence: 'high',
+              };
+            }
+          }
+        }
+      }
+    }
+
+    // 2b. Android WebGL GPU Renderer Heuristic (Crucial fallback when Chrome UA is frozen to 'Android 10; K')
+    if (renderer) {
+      for (const h of ANDROID_GPU_HEURISTICS) {
+        if (h.match.test(renderer)) {
+          const catalog = findMatchingCatalogDevice(h.brand, h.model, input.preferredStorage);
+          if (catalog) {
+            return {
+              brand: catalog.brand,
+              model: catalog.model,
+              storage: catalog.storage,
+              confidence: 'approximate',
             };
           }
         }
       }
     }
+
+    // 2c. Android Fallback for active mobile visitors when UA is completely frozen and GPU is generic
+    // Display the most popular Android resale hero device (OnePlus Nord 8 GB/128 GB)
+    const fallbackCatalog = findMatchingCatalogDevice('OnePlus', 'OnePlus Nord', input.preferredStorage || '8 GB/128 GB');
+    if (fallbackCatalog) {
+      return {
+        brand: fallbackCatalog.brand,
+        model: fallbackCatalog.model,
+        storage: fallbackCatalog.storage,
+        confidence: 'approximate',
+      };
+    }
   }
 
   // 3. Apple iOS (iPhone) detection via User-Agent, Screen Dimension & WebGL Renderer heuristic
   if (ua.includes('iPhone')) {
-    // iOS Safari conceals the exact model in the UA string ("iPhone; CPU iPhone OS..."),
-    // but screen resolution + devicePixelRatio uniquely identifies iPhone screen classes:
     const screen = input.screen;
-    const renderer = (input.webglRenderer || '').toLowerCase();
+    const webgl = renderer.toLowerCase();
     let modelName = 'Apple iPhone 13'; // Popular baseline fallback
-    let storage = '128 GB';
+    let defaultStorage = '128 GB';
 
     if (screen) {
       const w = Math.min(screen.width, screen.height);
@@ -282,47 +405,41 @@ export function detectDeviceFromInput(input: DetectionInput): DetectedDevice | n
       // Match physical screen dimensions
       if (w === 430 && h === 932 && dpr === 3) {
         modelName = 'Apple iPhone 15 Pro Max';
-        storage = '256 GB';
+        defaultStorage = '256 GB';
       } else if (w === 393 && h === 852 && dpr === 3) {
         // Dynamic Island standard screen (iPhone 15 / 16 / 15 Pro)
-        modelName = renderer.includes('a17') ? 'Apple iPhone 15 Pro' : 'Apple iPhone 15';
-        storage = '128 GB';
+        modelName = webgl.includes('a17') ? 'Apple iPhone 15 Pro' : 'Apple iPhone 15';
+        defaultStorage = '128 GB';
       } else if (w === 390 && h === 844 && dpr === 3) {
         // iPhone 12, iPhone 13, and iPhone 14 all share 390x844 @3x.
-        // Check WebGL renderer heuristic:
-        // A14 GPU -> iPhone 12
-        // A15 4-core GPU -> iPhone 13
-        // A15 5-core GPU -> iPhone 13 Pro / iPhone 14
-        if (renderer.includes('a14')) {
+        if (webgl.includes('a14')) {
           modelName = 'Apple iPhone 12';
-        } else if (renderer.includes('a15')) {
-          // If 5-core or specifically indicates 14/pro
-          if (renderer.includes('5-core') || renderer.includes('iphone14')) {
+        } else if (webgl.includes('a15')) {
+          if (webgl.includes('5-core') || webgl.includes('iphone14')) {
             modelName = 'Apple iPhone 14';
           } else {
             modelName = 'Apple iPhone 13';
           }
         } else {
-          // When renderer is generic Apple GPU, iPhone 13 is the most common device in this form factor
           modelName = 'Apple iPhone 13';
         }
-        storage = '128 GB';
+        defaultStorage = '128 GB';
       } else if (w === 428 && h === 926 && dpr === 3) {
-        modelName = renderer.includes('a14') ? 'Apple iPhone 12 Pro Max' : 'Apple iPhone 14 Plus';
-        storage = '128 GB';
+        modelName = webgl.includes('a14') ? 'Apple iPhone 12 Pro Max' : 'Apple iPhone 14 Plus';
+        defaultStorage = '128 GB';
       } else if (w === 375 && h === 812 && dpr === 3) {
         modelName = 'Apple iPhone 12 mini';
-        storage = '64 GB';
+        defaultStorage = '64 GB';
       } else if (w === 414 && h === 896 && dpr === 2) {
         modelName = 'Apple iPhone 11';
-        storage = '64 GB';
+        defaultStorage = '64 GB';
       } else if (w === 375 && h === 667 && dpr === 2) {
         modelName = 'Apple iPhone SE 2020';
-        storage = '64 GB';
+        defaultStorage = '64 GB';
       }
     }
 
-    const catalog = findMatchingCatalogDevice('Apple', modelName, storage);
+    const catalog = findMatchingCatalogDevice('Apple', modelName, input.preferredStorage || defaultStorage);
     if (catalog) {
       return {
         brand: catalog.brand,
