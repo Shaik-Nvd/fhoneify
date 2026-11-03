@@ -32,6 +32,13 @@ assert.equal(samsungA14Test.brand, 'Samsung');
 assert.equal(samsungA14Test.model, 'Samsung Galaxy A14 5G');
 console.log('PASS: SM-A146B -> Samsung Galaxy A14 5G');
 
+// Test 3c: Samsung Galaxy A07 5G hardware code (SM-A076B/DS)
+const samsungA07Test = detectDeviceFromInput({ clientHintsModel: 'SM-A076B/DS' });
+assert.ok(samsungA07Test, 'SM-A076B/DS should be normalized and detected as Galaxy A07 5G');
+assert.equal(samsungA07Test.brand, 'Samsung');
+assert.equal(samsungA07Test.model, 'Samsung Galaxy A07 5G');
+console.log('PASS: SM-A076B/DS -> Samsung Galaxy A07 5G');
+
 // Test 4: Frozen Android 10 User-Agent with Adreno 620 GPU Renderer (OnePlus Nord)
 const frozenUATest = detectDeviceFromInput({
   userAgent: 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36',

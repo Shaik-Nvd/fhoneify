@@ -124,9 +124,16 @@ export const ANDROID_MODEL_MAP: Record<string, { brand: string; model: string }>
   'sm-a736': { brand: 'Samsung', model: 'Samsung Galaxy A73 5G' },
   'sm-a035': { brand: 'Samsung', model: 'Samsung Galaxy A03' },
   'sm-a037': { brand: 'Samsung', model: 'Samsung Galaxy A03s' },
+  'sm-a042': { brand: 'Samsung', model: 'Samsung Galaxy A04' },
+  'sm-a045': { brand: 'Samsung', model: 'Samsung Galaxy A04' },
   'sm-a047': { brand: 'Samsung', model: 'Samsung Galaxy A04s' },
   'sm-a055': { brand: 'Samsung', model: 'Samsung Galaxy A05' },
   'sm-a057': { brand: 'Samsung', model: 'Samsung Galaxy A05s' },
+  'sm-a065': { brand: 'Samsung', model: 'Samsung Galaxy A06' },
+  'sm-a066': { brand: 'Samsung', model: 'Samsung Galaxy A06 5G' },
+  'sm-a075': { brand: 'Samsung', model: 'Samsung Galaxy A07 5G' },
+  'sm-a076': { brand: 'Samsung', model: 'Samsung Galaxy A07 5G' },
+  'sm-a077': { brand: 'Samsung', model: 'Samsung Galaxy A07 5G' },
 
   // Samsung Galaxy M & F Series
   'sm-m127': { brand: 'Samsung', model: 'Samsung Galaxy M12' },
