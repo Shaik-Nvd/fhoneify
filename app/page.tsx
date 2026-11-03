@@ -1,4 +1,5 @@
 import Hero from '@/components/home/Hero';
+import AutoDetectDeviceBanner from '@/components/home/AutoDetectDeviceBanner';
 import BrandPicker from '@/components/home/BrandPicker';
 import ProcessSteps from '@/components/home/ProcessSteps';
 import WhyFhoneify from '@/components/home/WhyFhoneify';
@@ -13,6 +14,7 @@ export default function LandingPage() {
   return (
     <div className="w-full overflow-x-clip">
       <Hero />
+      <AutoDetectDeviceBanner />
       <BrandPicker />
       <ProcessSteps />
       <TopSellingModels />

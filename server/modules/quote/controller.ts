@@ -301,3 +301,50 @@ export async function getCustomerPickups(req: Request, res: Response) {
   }
 }
 
+import { detectDeviceFromInput } from '../../../lib/deviceDetection';
+
+export async function detectDevice(req: Request, res: Response) {
+  try {
+    const userAgent = req.body?.userAgent || req.headers['user-agent'] || '';
+    const clientHintsModel =
+      req.body?.clientHintsModel ||
+      (req.headers['sec-ch-ua-model'] ? String(req.headers['sec-ch-ua-model']).replace(/^"|"$/g, '') : '');
+    const clientHintsPlatform =
+      req.body?.clientHintsPlatform ||
+      (req.headers['sec-ch-ua-platform'] ? String(req.headers['sec-ch-ua-platform']).replace(/^"|"$/g, '') : '');
+    const screen = req.body?.screen;
+
+    const detected = detectDeviceFromInput({
+      userAgent,
+      clientHintsModel,
+      clientHintsPlatform,
+      screen,
+    });
+
+    if (!detected) {
+      return res.json({ success: true, data: null });
+    }
+
+    // Get the authoritative Get Upto starting price for this device variant
+    const outcome = await pricingService.getUpto({
+      brand: detected.brand,
+      model: detected.model,
+      storage: detected.storage,
+    });
+
+    const startingPrice = outcome.ok ? outcome.startingPrice : null;
+
+    return res.json({
+      success: true,
+      data: {
+        ...detected,
+        startingPrice,
+      },
+    });
+  } catch (err: any) {
+    logger.error({ err: err.message }, 'Error in detectDevice controller');
+    return res.status(500).json({ success: false, error: 'Internal server error' });
+  }
+}
+
+

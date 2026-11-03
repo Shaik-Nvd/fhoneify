@@ -27,6 +27,7 @@ const leadLimiter = limiter(envLimit('QUOTE_LEAD_RATE_LIMIT', 20));
 const marketPriceLimiter = limiter(envLimit('QUOTE_MARKET_PRICE_RATE_LIMIT', 10));
 
 router.get('/devices', ctrl.listDevices);
+router.post('/detect-device', ctrl.detectDevice);
 router.post('/', pricingLimiter, ctrl.createQuote);
 router.post('/price', pricingLimiter, optionalAuth, ctrl.priceQuote);
 router.post('/get-upto', pricingLimiter, ctrl.getUptoBatch);
