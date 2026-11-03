@@ -110,9 +110,9 @@ export default function AutoDetectDeviceBanner() {
   }
 
   const modelSlug = device.model.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-  const quoteUrl = `/quote?brand=${encodeURIComponent(device.brand)}&model=${encodeURIComponent(
-    device.model
-  )}&storage=${encodeURIComponent(device.storage)}&stage=storage&step=2`;
+  const quoteUrl = device.brand === 'Apple'
+    ? `/quote?brand=${encodeURIComponent(device.brand)}&model=${encodeURIComponent(device.model)}&stage=model&step=1`
+    : `/quote?brand=${encodeURIComponent(device.brand)}&model=${encodeURIComponent(device.model)}&storage=${encodeURIComponent(device.storage)}&stage=storage&step=2`;
 
   return (
     <section className="mx-auto max-w-7xl px-4 py-3 sm:px-6">
@@ -143,8 +143,10 @@ export default function AutoDetectDeviceBanner() {
                 </span>
               </div>
               <h3 className="font-display text-base font-semibold text-foreground sm:text-lg">
-                {device.model}{' '}
-                <span className="text-sm font-normal text-muted">({device.storage})</span>
+                {device.model}
+                {device.brand !== 'Apple' && device.storage ? (
+                  <span className="text-sm font-normal text-muted"> ({device.storage})</span>
+                ) : null}
               </h3>
               <p className="mt-0.5 text-sm font-bold text-emerald-600 dark:text-emerald-400">
                 {price ? (
