@@ -1,73 +1,28 @@
 import assert from 'node:assert/strict';
 import { detectDeviceFromInput } from '../../lib/deviceDetection';
 
-// Test 1: High-entropy hint for OnePlus Nord AC2001
-const oneplusTest = detectDeviceFromInput({ clientHintsModel: 'AC2001' });
-assert.ok(oneplusTest, 'OnePlus Nord AC2001 should be detected');
-assert.equal(oneplusTest.brand, 'OnePlus');
-assert.equal(oneplusTest.model, 'OnePlus Nord');
-assert.equal(oneplusTest.storage, '8 GB/128 GB');
-console.log('PASS: AC2001 -> OnePlus Nord (8 GB/128 GB)');
-
-// Test 2: Android User-Agent with AC2001
-const uaTest = detectDeviceFromInput({
+// Test 1: Android user-agent is ignored (returns null)
+const androidUaTest = detectDeviceFromInput({
   userAgent: 'Mozilla/5.0 (Linux; Android 12; AC2001 Build/RKQ1.211119.001) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Mobile Safari/537.36'
 });
-assert.ok(uaTest, 'Android UA AC2001 should be detected');
-assert.equal(uaTest.brand, 'OnePlus');
-assert.equal(uaTest.model, 'OnePlus Nord');
-console.log('PASS: Android UA AC2001 -> OnePlus Nord');
+assert.equal(androidUaTest, null, 'Android UA should return null');
+console.log('PASS: Android UA returns null (Android detection disabled)');
 
-// Test 3: Samsung Galaxy S23 Ultra dual-SIM suffix (SM-S918B/DS)
-const samsungTest = detectDeviceFromInput({ clientHintsModel: 'SM-S918B/DS' });
-assert.ok(samsungTest, 'SM-S918B/DS should be normalized and detected');
-assert.equal(samsungTest.brand, 'Samsung');
-assert.equal(samsungTest.model, 'Samsung Galaxy S23 Ultra 5G');
-console.log('PASS: SM-S918B/DS -> Samsung Galaxy S23 Ultra 5G');
+// Test 2: Android client hints platform is ignored
+const androidPlatformTest = detectDeviceFromInput({
+  clientHintsPlatform: 'Android',
+  clientHintsModel: 'SM-S918B'
+});
+assert.equal(androidPlatformTest, null, 'Android platform hint should return null');
+console.log('PASS: Android platform hint returns null');
 
-// Test 3b: Samsung Galaxy A14 5G hardware code (SM-A146B)
-const samsungA14Test = detectDeviceFromInput({ clientHintsModel: 'SM-A146B' });
-assert.ok(samsungA14Test, 'SM-A146B should be normalized and detected as Galaxy A14 5G');
-assert.equal(samsungA14Test.brand, 'Samsung');
-assert.equal(samsungA14Test.model, 'Samsung Galaxy A14 5G');
-console.log('PASS: SM-A146B -> Samsung Galaxy A14 5G');
-
-// Test 3c: Samsung Galaxy A07 5G hardware code (SM-A076B/DS)
-const samsungA07Test = detectDeviceFromInput({ clientHintsModel: 'SM-A076B/DS' });
-assert.ok(samsungA07Test, 'SM-A076B/DS should be normalized and detected as Galaxy A07 5G');
-assert.equal(samsungA07Test.brand, 'Samsung');
-assert.equal(samsungA07Test.model, 'Samsung Galaxy A07 5G');
-console.log('PASS: SM-A076B/DS -> Samsung Galaxy A07 5G');
-
-// Test 4: Frozen Android 10 User-Agent with Adreno 620 GPU Renderer (OnePlus Nord)
+// Test 3: Frozen Android 10 User-Agent with GPU Renderer returns null
 const frozenUATest = detectDeviceFromInput({
   userAgent: 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36',
   webglRenderer: 'ANGLE (Qualcomm, Adreno (TM) 620, OpenGL ES 3.2)',
 });
-assert.ok(frozenUATest, 'Frozen Android Chrome with Adreno 620 should resolve to OnePlus Nord');
-assert.equal(frozenUATest.brand, 'OnePlus');
-assert.equal(frozenUATest.model, 'OnePlus Nord');
-console.log('PASS: Frozen Android UA + Adreno 620 -> OnePlus Nord');
-
-// Test 5: Frozen Android 10 User-Agent with Adreno 740 GPU Renderer (Samsung Galaxy S23 Ultra)
-const s23GpuTest = detectDeviceFromInput({
-  userAgent: 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36',
-  webglRenderer: 'ANGLE (Qualcomm, Adreno (TM) 740, OpenGL ES 3.2)',
-});
-assert.ok(s23GpuTest, 'Frozen Android Chrome with Adreno 740 should resolve to S23 Ultra');
-assert.equal(s23GpuTest.brand, 'Samsung');
-assert.equal(s23GpuTest.model, 'Samsung Galaxy S23 Ultra 5G');
-console.log('PASS: Frozen Android UA + Adreno 740 -> Samsung Galaxy S23 Ultra 5G');
-
-// Test 5b: Frozen Android 10 User-Agent with Mali-G57 GPU Renderer (Samsung Galaxy A14 5G)
-const a14GpuTest = detectDeviceFromInput({
-  userAgent: 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36',
-  webglRenderer: 'Mali-G57 MC2',
-});
-assert.ok(a14GpuTest, 'Frozen Android Chrome with Mali-G57 should resolve to Samsung Galaxy A14 5G');
-assert.equal(a14GpuTest.brand, 'Samsung');
-assert.equal(a14GpuTest.model, 'Samsung Galaxy A14 5G');
-console.log('PASS: Frozen Android UA + Mali-G57 -> Samsung Galaxy A14 5G');
+assert.equal(frozenUATest, null, 'Frozen Android Chrome should return null');
+console.log('PASS: Frozen Android UA returns null');
 
 // Test 6: iPhone 15 Pro resolution with A17 GPU renderer
 const iphoneTest = detectDeviceFromInput({

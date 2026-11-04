@@ -25,28 +25,15 @@ export default function AutoDetectDeviceBanner() {
 
     async function detect() {
       try {
-        let clientHintsModel = '';
-        let clientHintsPlatform = '';
+        const ua = typeof navigator !== 'undefined' ? navigator.userAgent : '';
 
-        // Query Chromium High-Entropy Client Hints if available
-        if (typeof navigator !== 'undefined' && (navigator as any).userAgentData?.getHighEntropyValues) {
-          try {
-            // Set 1-second timeout so page load is never blocked if client hints hang
-            const hintsPromise = (navigator as any).userAgentData.getHighEntropyValues([
-              'model',
-              'platform',
-              'platformVersion',
-            ]);
-            const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject('timeout'), 1000));
-            const hints: any = await Promise.race([hintsPromise, timeoutPromise]).catch(() => null);
-
-            if (hints) {
-              clientHintsModel = hints.model || '';
-              clientHintsPlatform = hints.platform || '';
-            }
-          } catch {
-            // ignore
-          }
+        // Auto-detect is strictly for Apple iPhone users.
+        // Android browsers freeze User-Agent strings and share ambiguous GPU IDs across hundreds of models,
+        // so Android devices are excluded to ensure 100% accuracy and avoid false matches.
+        const isIPhone = /iPhone/i.test(ua);
+        if (!isIPhone) {
+          if (!cancelled) setLoading(false);
+          return;
         }
 
         const screenInfo =
@@ -76,9 +63,7 @@ export default function AutoDetectDeviceBanner() {
         }
 
         const payload = {
-          userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : '',
-          clientHintsModel,
-          clientHintsPlatform,
+          userAgent: ua,
           screen: screenInfo,
           webglRenderer,
         };

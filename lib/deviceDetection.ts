@@ -329,111 +329,19 @@ export function detectDeviceFromInput(input: DetectionInput): DetectedDevice | n
   const chModel = (input.clientHintsModel || '').trim();
   const ua = (input.userAgent || '').trim();
   const renderer = (input.webglRenderer || '').trim();
+  // Auto-detection is scoped to Apple iPhone devices only.
+  // Android phones have fragmented, frozen User-Agent strings and ambiguous GPU IDs across hundreds of models,
+  // causing unreliable/incorrect detections.
   const isAndroid =
     (input.clientHintsPlatform || '').toLowerCase() === 'android' ||
     ua.includes('Android') ||
     /linux\s+arm/i.test(ua);
 
-  // 1. High-Entropy Client Hints Model (Direct hardware identifier from Chrome on Android)
-  if (chModel && chModel !== 'K' && chModel !== 'unknown') {
-    const rawKey = chModel.toLowerCase();
-    const normalizedKey = normalizeAndroidModelKey(chModel);
-
-    // Direct lookup or normalized lookup
-    const mapEntry = ANDROID_MODEL_MAP[rawKey] || ANDROID_MODEL_MAP[normalizedKey];
-    if (mapEntry) {
-      const catalog = findMatchingCatalogDevice(mapEntry.brand, mapEntry.model, input.preferredStorage);
-      if (catalog) {
-        return {
-          brand: catalog.brand,
-          model: catalog.model,
-          storage: catalog.storage,
-          confidence: 'exact',
-        };
-      }
-    }
-
-    // Try finding by model name directly if the model string contains text like "OnePlus Nord"
-    for (const b of ['OnePlus', 'Samsung', 'Google', 'Xiaomi', 'Vivo', 'Oppo', 'Realme', 'POCO', 'iQOO', 'Nothing', 'Apple']) {
-      if (clean(chModel).includes(clean(b))) {
-        const catalog = findMatchingCatalogDevice(b, chModel, input.preferredStorage);
-        if (catalog) {
-          return {
-            brand: catalog.brand,
-            model: catalog.model,
-            storage: catalog.storage,
-            confidence: 'high',
-          };
-        }
-      }
-    }
-  }
-
-  // 2. Parse User-Agent for Android build model (e.g., "... Android 12; AC2001 Build/..." or "SM-S918B")
   if (isAndroid) {
-    // Look for model in UA: "Android [version]; <Model> Build/" or "Android [version]; <Model>)"
-    const androidMatch = ua.match(/Android\s+[^;]+;\s*([^;)]+?)(?:\s+Build|\s*\))/i);
-    if (androidMatch && androidMatch[1]) {
-      const rawModel = androidMatch[1].trim();
-
-      // Modern Chrome freezes model to 'K'. Only use if not 'K'
-      if (rawModel !== 'K' && rawModel.length > 1) {
-        const rawKey = rawModel.toLowerCase();
-        const normalizedKey = normalizeAndroidModelKey(rawModel);
-
-        const mapEntry = ANDROID_MODEL_MAP[rawKey] || ANDROID_MODEL_MAP[normalizedKey];
-        if (mapEntry) {
-          const catalog = findMatchingCatalogDevice(mapEntry.brand, mapEntry.model, input.preferredStorage);
-          if (catalog) {
-            return {
-              brand: catalog.brand,
-              model: catalog.model,
-              storage: catalog.storage,
-              confidence: 'exact',
-            };
-          }
-        }
-
-        // Check known brand prefixes in model name
-        for (const b of ['OnePlus', 'Samsung', 'Google', 'Xiaomi', 'Vivo', 'Oppo', 'Realme', 'POCO', 'iQOO', 'Nothing']) {
-          if (clean(rawModel).includes(clean(b))) {
-            const catalog = findMatchingCatalogDevice(b, rawModel, input.preferredStorage);
-            if (catalog) {
-              return {
-                brand: catalog.brand,
-                model: catalog.model,
-                storage: catalog.storage,
-                confidence: 'high',
-              };
-            }
-          }
-        }
-      }
-    }
-
-    // 2b. Android WebGL GPU Renderer Heuristic (Crucial fallback when Chrome UA is frozen to 'Android 10; K')
-    if (renderer) {
-      for (const h of ANDROID_GPU_HEURISTICS) {
-        if (h.match.test(renderer)) {
-          const catalog = findMatchingCatalogDevice(h.brand, h.model, input.preferredStorage);
-          if (catalog) {
-            return {
-              brand: catalog.brand,
-              model: catalog.model,
-              storage: catalog.storage,
-              confidence: 'approximate',
-            };
-          }
-        }
-      }
-    }
-
-    // 2c. Only return approximate match if we genuinely matched an Android hardware hint.
-    // Never show a static fake fallback (like Galaxy A14) to all visitors.
     return null;
   }
 
-  // 3. Apple iOS (iPhone) detection via User-Agent, Screen Dimension & WebGL Renderer heuristic
+  // 1. Apple iOS (iPhone) detection via User-Agent, Screen Dimension & WebGL Renderer heuristic
   if (ua.includes('iPhone')) {
     const screen = input.screen;
     const webgl = renderer.toLowerCase();
