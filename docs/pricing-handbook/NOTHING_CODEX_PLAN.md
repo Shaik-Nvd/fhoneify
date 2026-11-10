@@ -1,5 +1,7 @@
 # Nothing / CMF pricing: verified state and Codex work order (10 November 2026)
 
+**Update, same day:** OnePlus data arrived in the same format. [ONEPLUS_CODEX_PLAN.md](ONEPLUS_CODEX_PLAN.md) tells Codex to build one importer and one rule model for both brands. Where that file names a different script, folder or branch than this one (importer, `cashifyRunnerModel`, branch name, version suffix), the OnePlus file wins. Everything else here stands.
+
 Written after a read-only investigation of `main` at `e55e14c` and the owner's `Nothing.zip`. Nothing in the repository was changed by that investigation except this file. Codex executes the phases below in order. Read `AGENTS.md`, `docs/HANDOFF_CODEX.md`, `README.md`, `STRICT_RULES.md` and `CODEX_PRICING_HANDBOOK.md` in this folder first; they still apply in full.
 
 ## 1. What was verified
