@@ -1,8 +1,9 @@
+import { referenceBonus } from '../../lib/pricing/referenceBonus';
 /**
  * Every supplied iPhone quote (earlier collection + 2026-10-28 import) through the PRODUCTION quote service as configured in
  * config/pricing-release.json, at the reference recorded with the quote. In-sample reconciliation of the served path, not a held-out
  * validation. Checks, per quote: the Cashify-equivalent against the recorded base price, and the final offer against the approved
- * arithmetic round(C + min(R x tier(R), 2000)) (INR 100 floor). No database or network.
+ * arithmetic round(C + min(R x tier(R), 1000)) (INR 100 floor). No database or network.
  *
  *   npx tsx scripts/pricing-evidence/replay-service.ts [--out=<jsonl>]
  */
@@ -42,8 +43,7 @@ export async function replayService(ms: Measurement[], at = new Date('2026-10-28
     const q = await svc.quote({ brand: d.brand, model: d.model, storage: d.storage, diagnostics: toDiagnostics(m, 'none') });
     if (!q.ok) { out.push({ m, ok: false, code: q.code }); continue; }
     const equivalent = q.internal.cashifyConditionEquivalent + (q.internal.payoutCeiling.equivalentBasis === 'selling' ? 20 : 0);
-    const tier = reference <= 20000 ? 0.08 : reference <= 50000 ? 0.06 : 0.04;
-    const expectedPrice = Math.max(100, Math.round(q.internal.cashifyConditionEquivalent + Math.min(reference * tier, 2000)));
+    const expectedPrice = Math.max(100, Math.round(q.internal.cashifyConditionEquivalent + referenceBonus(reference)));
     out.push({ m, ok: true, equivalent, price: q.fhoneifyPrice, expectedPrice, error: m.base == null ? undefined : equivalent - m.base });
   }
   return out;

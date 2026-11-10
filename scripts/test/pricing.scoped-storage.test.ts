@@ -1,3 +1,4 @@
+import { referenceBonus } from '../../lib/pricing/referenceBonus';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { createPricingService } from '../../lib/pricing/pricingService';
@@ -40,8 +41,8 @@ async function main() {
     assert.equal(result.ok, Boolean(expected) && !safetyReason, `${row.storage} ${row.condition}: current rules and safety availability`);
     if (result.ok) {
       assert.equal(result.internal.cashifyConditionEquivalent, expected!.cashifyConditionEquivalent, `${row.storage} ${row.condition}: current condition rule`);
-      const bonus = Math.max(100, Math.min(2000, Math.round(row.reference * (row.reference <= 20000 ? 0.08 : row.reference <= 50000 ? 0.06 : 0.04))));
-      assert.equal(result.fhoneifyPrice, expected!.cashifyConditionEquivalent + bonus, 'approved reference bonus applied once');
+      const bonus = referenceBonus(row.reference);
+      assert.equal(result.fhoneifyPrice, Math.max(100, Math.round(expected!.cashifyConditionEquivalent + bonus)), 'approved reference bonus applied once');
       for (const coupon of [false, true]) {
         const payout = customerPayout(result.fhoneifyPrice, coupon, result.couponHeadroom);
         assert.equal(payout.payout, result.fhoneifyPrice - payout.deduction, 'coupon cannot stack above the reference bonus');

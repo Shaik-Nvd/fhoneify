@@ -6,6 +6,7 @@
  */
 import assert from 'node:assert/strict';
 import { createPricingService, RELEASE_CANDIDATE_PRICING_VERSION, type PricingServiceDeps } from '../../lib/pricing/pricingService';
+import { referenceBonus } from '../../lib/pricing/referenceBonus';
 import { PRICING_ENGINE_VERSION } from '../../lib/pricing/engine';
 import { findCatalogDevice } from '../../lib/pricing/catalog';
 import { deviceKey, type ReferencePriceRecord } from '../../lib/referencePricing/types';
@@ -77,9 +78,15 @@ async function main() {
   // correction; the disabled legacy engine keeps its historical quote.
   const ru = await q(rc, clean, ablationMeasured), lu = await q(legacy, clean, ablationMeasured); assert(ru.ok && lu.ok);
   assert.equal(ru.internal.cashifyConditionEquivalent, 9690); assert.equal(ru.internal.accessoryBasis, 'GET_UPTO_INCLUDES_BOX_AND_CHARGER');
-  assert.equal(lu.internal.accessoryBasis, 'LEGACY_BOX_BONUS'); // the bonus is on the reference (same for both), so the offers differ by exactly the condition difference
-  assert.equal(lu.fhoneifyPrice - ru.fhoneifyPrice, lu.internal.cashifyConditionEquivalent - ru.internal.cashifyConditionEquivalent);
-  assert.equal(lu.fhoneifyPrice - ru.fhoneifyPrice, 400); checks++;
+  assert.equal(lu.internal.accessoryBasis, 'LEGACY_BOX_BONUS'); // The reference bonus is shared; the final Get Upto ceiling can clip the legacy box bonus.
+  assert.equal(lu.internal.cashifyConditionEquivalent - ru.internal.cashifyConditionEquivalent, 400, 'measured accessory correction is preserved before the final ceiling');
+  const getUpto = Math.round(9710 + referenceBonus(9710));
+  for (const quote of [lu, ru]) {
+    const conditionQuote = Math.round(quote.internal.cashifyConditionEquivalent + referenceBonus(9710));
+    assert.equal(quote.fhoneifyPrice, Math.min(conditionQuote, getUpto), 'existing Get Upto ceiling applies after the condition correction');
+    assert(quote.fhoneifyPrice <= quote.startingPrice);
+  }
+  assert.equal(lu.fhoneifyPrice - ru.fhoneifyPrice, 20, 'legacy box bonus is capped at Get Upto; corrected Selling basis remains INR20 below it'); checks++;
   const scratched = await q(rc, { ...clean, defects: ['screen_scratch'], screenCondition: 'More than 2 scratches on screen' }, ablationMeasured);
   assert(!scratched.ok); assert.equal(scratched.code, 'MANUAL_INSPECTION_REQUIRED', 'measured +7.9% screen-scratch overpayment on this route'); checks++;
   const glass = await q(rc, { ...clean, defects: ['screen_scratch'], screenCondition: 'Screen cracked/ glass broken' }, ablationMeasured);

@@ -1,3 +1,4 @@
+import { referenceBonus } from '../../lib/pricing/referenceBonus';
 /**
  * Cashify questionnaire metadata: parser, refresh policy, model-level reuse,
  * storage history, and how the engine and pricing service consume the
@@ -191,7 +192,7 @@ async function run() {
   });
 
   await test('Get Upto never depends on questionnaire semantics', () => {
-    assert.equal(computeFhoneifyGetUpto(23710), 25133);
+    assert.equal(computeFhoneifyGetUpto(23710), Math.round(23710 + referenceBonus(23710)));
   });
 
   await test('pricing service: uses the stored profile, exposes it, and records the fallback', async () => {
@@ -216,8 +217,8 @@ async function run() {
     if (known.ok) {
       assert.equal(known.questionnaire.warrantyMode, 'NOT_ASKED');
       assert.equal(known.questionnaire.source, 'profile');
-      assert.equal(known.fhoneifyPrice, 25133);
-      assert.equal(known.startingPrice, 25133, 'Get Upto unchanged');
+      assert.equal(known.fhoneifyPrice, Math.round(23710 + referenceBonus(23710)));
+      assert.equal(known.startingPrice, Math.round(23710 + referenceBonus(23710)), 'Get Upto unchanged');
     }
   });
 

@@ -1,3 +1,4 @@
+import { referenceBonus } from '../../lib/pricing/referenceBonus';
 /**
  * Suite F - one quote must stay the same number end to end:
  *   answers -> POST /api/quote/price -> page state -> reload -> lead -> stored lead.
@@ -154,7 +155,7 @@ async function run() {
     const { svc } = setup();
     const starting = await pageRequestsQuote(svc, PERFECT_CONDITION_DIAGNOSTICS);
     assert.equal(starting.getUpto, computeFhoneifyGetUpto(REFERENCE));
-    assert.equal(starting.getUpto, 37940, 'OnePlus 15R 12/512: ₹35,940 + capped ₹2,000');
+    assert.equal(starting.getUpto, Math.round(35940 + referenceBonus(35940)), 'OnePlus 15R 12/512: ₹35,940 + capped ₹1,000');
     assert.ok(starting.getUpto > REFERENCE, 'Fhoneify Get Upto starts above Cashify');
     const damaged = await pageRequestsQuote(svc, ANSWERS);
     assert.equal(damaged.getUpto, starting.getUpto, 'Get Upto does not depend on answers');

@@ -1,3 +1,4 @@
+import { referenceBonus } from '../../lib/pricing/referenceBonus';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import type { Server } from 'node:http';
@@ -79,7 +80,7 @@ async function main() {
   try {
     const response = await post('/api/quote/price', input); assert.equal(response.status, 200);
     const quote = response.body.data;
-    const expectedGross = Math.round(row.sellingPrice + Math.min(row.getUpto * 0.08, 2000));
+    const expectedGross = Math.round(row.sellingPrice + referenceBonus(row.getUpto));
     assert.equal(quote.fhoneifyPrice, expectedGross, 'actual router preserves captured Selling plus original-reference bonus');
     assert.equal(quote.fhoneifyPrice, applyCompetitorUplift(row.getUpto, row.sellingPrice), 'preferred uplift is preserved');
     const internal = await after.quote(input); assert(internal.ok);
@@ -92,7 +93,7 @@ async function main() {
       afterOff: customerPayout(quote.fhoneifyPrice, false, quote.couponHeadroom).payout, afterOn: customerPayout(quote.fhoneifyPrice, true, quote.couponHeadroom).payout };
     assert.equal(quote.couponHeadroom, 0, 'reference bonus exhausts the permitted coupon budget');
     assert.equal(table.afterOff, expectedGross - 99); assert.equal(table.afterOn, table.afterOff);
-    for (const payout of [table.afterOff, table.afterOn]) assert(payout > row.sellingPrice && payout - row.sellingPrice <= 2000);
+    for (const payout of [table.afterOff, table.afterOn]) assert(payout > row.sellingPrice && payout - row.sellingPrice <= 1000);
     const submit = (token: string | undefined, couponApplied: boolean, answers = row.diagnostics) => post('/api/quote/leads', {
       ...identity, phone: '0000000000', answers, quoteToken: token, quotedPrice: quote.fhoneifyPrice, couponApplied });
     for (const coupon of [false, true]) {

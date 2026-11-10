@@ -1,3 +1,4 @@
+import { referenceBonus } from '../../lib/pricing/referenceBonus';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { calculateFhoneifyPrice } from '../../lib/pricingCalculator';
@@ -34,7 +35,7 @@ function service(mode: 'hybrid' | 'legacy', reference = 72480, clock = time) {
 const ruleExpected = (diagnostics: any, reference = 72480) => {
   const q = appleEvidenceQuote(device.model, device.storage, reference, diagnostics);
   assert(q && q.source === 'model');
-  return { equivalent: q.outcome.price, quote: Math.round(q.outcome.price + Math.min(reference * .04, 2000)) };
+  return { equivalent: q.outcome.price, quote: Math.round(q.outcome.price + referenceBonus(reference)) };
 };
 const controls = [
   { name: 'reported Single eSIM', edit: {}, oldExplicit: 39988, oldHybrid: 39988 },
@@ -104,7 +105,7 @@ test('all 74 historical combinations use current rules and the original-referenc
     const expected = appleEvidenceQuote(row.identity.model, row.identity.storage, row.referenceUsed, row.fullInput.diagnostics);
     assert(expected && expected.source === 'model');
     assert.equal(row.conditionEquivalent, expected.outcome.price, row.id);
-    const bonus = Math.min(row.referenceUsed * (row.referenceUsed <= 20000 ? .08 : row.referenceUsed <= 50000 ? .06 : .04), 2000);
+    const bonus = referenceBonus(row.referenceUsed);
     assert.equal(row.quoteAmount, Math.round(row.conditionEquivalent + bonus), row.id);
     assert.equal(row.couponOn.payout, row.couponOff.payout, row.id);
     assert.equal(row.method.exactEvidenceApplied, false, row.id);

@@ -1,6 +1,7 @@
+import { referenceBonus } from '../../lib/pricing/referenceBonus';
 /**
  * Payout ceiling (owner requirement, 2026-10-25):
- *   customer payout <= Cashify-equivalent payout + min(8% of that payout, INR 2,000)
+ *   customer payout <= Cashify-equivalent payout + min(8% of that payout, INR 1,000)
  * after the uplift, the INR 99 fee, rounding and the first-time coupon.
  *
  * Run: npx tsx scripts/test/pricing.payout-ceiling.test.ts   (no database needed)
@@ -25,23 +26,23 @@ async function test(name: string, fn: () => void | Promise<void>) {
 const tierFor = (reference: number) => (reference <= 20000 ? 0.08 : reference <= 50000 ? 0.06 : 0.04);
 
 async function run() {
-  console.log('\nSuite H - payout ceiling (max extra = min(8%, INR 2,000) of the Cashify-equivalent payout)\n');
+  console.log('\nSuite H - payout ceiling (max extra = min(8%, INR 1,000) of the Cashify-equivalent payout)\n');
 
-  await test("the owner's worked examples: INR 10,000 -> 10,800 and INR 50,000 -> 52,000", () => {
+  await test("the owner's worked examples: INR 10,000 -> 10,800 and INR 50,000 -> 51,000", () => {
     assert.equal(maxPayoutForCashifyPayout(10000), 10800);
-    assert.equal(maxPayoutForCashifyPayout(50000), 52000);
-    assert.equal(maxPayoutForCashifyPayout(25000), 27000); // 8% = 2,000 exactly
-    assert.equal(maxPayoutForCashifyPayout(60000), 62000); // the INR 2,000 cap binds, not 8%
+    assert.equal(maxPayoutForCashifyPayout(50000), 51000);
+    assert.equal(maxPayoutForCashifyPayout(25000), 26000); // 8% exceeds the approved 1,000 cap
+    assert.equal(maxPayoutForCashifyPayout(60000), 61000); // the INR 1,000 cap binds, not 8%
     assert.equal(maxPayoutForCashifyPayout(1131), 1131 + 90);
   });
 
   await test('existing lower tiers are untouched and never exceed 8% (documented selection: by Get Upto price band)', () => {
     for (const reference of [1200, 5000, 20000, 20001, 33000, 50000, 50001, 90000, 165000]) {
       const q = applyCompetitorUplift(reference, reference);
-      // the extra is exactly tier x reference, capped at 2,000 (rounded to whole rupees) - and never above 8%
-      assert.equal(q, Math.round(reference + Math.min(reference * tierFor(reference), 2000)), `tier for ${reference}`);
+      // the extra is exactly tier x reference, capped at 1,000 (rounded to whole rupees) - and never above 8%
+      assert.equal(q, Math.round(reference + referenceBonus(reference)), `tier for ${reference}`);
       assert.ok(tierFor(reference) <= PAYOUT_CEILING_POLICY.maxRate);
-      assert.ok(q - reference <= Math.min(reference * PAYOUT_CEILING_POLICY.maxRate, 2000) + 1, `uplift for ${reference} within 8% / 2,000`);
+      assert.ok(q - reference <= Math.min(reference * PAYOUT_CEILING_POLICY.maxRate, 1000) + 1, `uplift for ${reference} within 8% / 1,000`);
     }
     assert.deepEqual([20000, 20001, 50000, 50001].map(tierFor), [0.08, 0.06, 0.06, 0.04]);
   });
@@ -86,13 +87,13 @@ async function run() {
     assert.ok(customerPayout(c.quote, true, c.couponHeadroom).payout <= ceilingPayout);
   });
 
-  await test('big-ticket devices: the INR 2,000 cap binds and a coupon still fits when there is room', () => {
+  await test('big-ticket devices: the INR 1,000 cap binds and a coupon still fits when there is room', () => {
     const base = 165000; // iPhone 18 Pro Max 2 TB
     const c = applyPayoutCeiling({ quote: applyCompetitorUplift(base, base), cashifyHeadlineEquivalent: headlineFromBase(base) });
-    assert.equal(maxPayoutForCashifyPayout(cashifyPayout(headlineFromBase(base))), 164881 + 2000);
-    assert.ok(customerPayout(c.quote, false).payout <= 164881 + 2000);
-    // measured Cashify payout for the flawless 18 Pro Max 2 TB is 164,881; Fhoneify may pay at most 166,881
-    assert.ok(customerPayout(c.quote, true, c.couponHeadroom).payout <= 166881);
+    assert.equal(maxPayoutForCashifyPayout(cashifyPayout(headlineFromBase(base))), 164881 + 1000);
+    assert.ok(customerPayout(c.quote, false).payout <= 164881 + 1000);
+    // measured Cashify payout for the flawless 18 Pro Max 2 TB is 164,881; Fhoneify may pay at most 165,881
+    assert.ok(customerPayout(c.quote, true, c.couponHeadroom).payout <= 165881);
   });
 
   await test('a payout that is already inside the ceiling is left unchanged', () => {
@@ -111,7 +112,7 @@ async function run() {
 
   await test('the policy constants are the owner-stated ones', () => {
     assert.equal(PAYOUT_CEILING_POLICY.maxRate, 0.08);
-    assert.equal(PAYOUT_CEILING_POLICY.maxExtraRupees, 2000);
+    assert.equal(PAYOUT_CEILING_POLICY.maxExtraRupees, 1000);
   });
 
   // ---------- through the real quote service (in-memory reference prices, no database) ----------
@@ -179,7 +180,7 @@ async function run() {
   });
 
   await test('property: every result either satisfies its calculated limit (with and without the coupon) or is inspection-required', () => {
-    // Deterministic pseudo-random grid plus the awkward values around the fee exemption, fee tiers and the 2,000 cap.
+    // Deterministic pseudo-random grid plus the awkward values around the fee exemption, fee tiers and the 1,000 cap.
     let seed = 12345; const rnd = () => (seed = (seed * 1103515245 + 12345) & 0x7fffffff) / 0x7fffffff;
     const quotes = [0, 1, 98, 99, 100, 1100, 1199, 1200, 1201, 1248, 1296, 2880, 2929, 4090, 5760, 25000, 25001, 99999, 200000];
     const headlines = [-5, 0, 1, 50, 99, 100, 1100, 1180, 1199, 1200, 1299, 2880, 4190, 25000, 25001, 100000, 164980, 500000];

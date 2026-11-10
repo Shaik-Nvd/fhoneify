@@ -373,7 +373,7 @@ export function createPricingService(deps: PricingServiceDeps) {
       }
       if (teamFallbackSupported && rc?.kind === 'LEGACY' && result.cashifyConditionEquivalent > 0) {
         // Same preferred uplift and existing net-bound policy; the coupon must
-        // not push this corrected fallback beyond its estimated Selling+2000.
+        // not push this corrected fallback beyond its estimated Selling+1000.
         // This remains an estimate, never promoted to screenshot-verified evidence.
         result = { ...result, fhoneifyPrice: boundedCompetitiveOffer(base.cashifyGetUptoReference, result.cashifyConditionEquivalent) };
         // The reviewed 512GB transcript formulas return headline Selling prices, not base prices.

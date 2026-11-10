@@ -89,7 +89,7 @@ const check = (invariant: string, ok: boolean, device: string, regime: string, d
 
 const upliftIndependent = (reference: number, eq: number) => {
   const tier = reference <= 20000 ? 0.08 : reference <= 50000 ? 0.06 : 0.04;
-  return Math.max(Math.round(eq + Math.min(reference * tier, 2000)), 100);
+  return Math.max(Math.round(eq + Math.min(reference * tier, 1000)), 100);
 };
 
 let devices = 0;

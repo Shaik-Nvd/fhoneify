@@ -35,7 +35,7 @@ export function cashifyPayout(headlineSelling: number): number {
   return headlineSelling - cashifyProcessingFee(headlineSelling);
 }
 
-/** The most Fhoneify may pay for a given Cashify payout: payout + min(8%, INR 2,000). Whole rupees, rounded down. */
+/** The most Fhoneify may pay for a given Cashify payout: payout + min(8%, INR 1,000). Whole rupees, rounded down. */
 export function maxPayoutForCashifyPayout(cashifyPayoutAmount: number): number {
   const extra = Math.min(Math.floor(cashifyPayoutAmount * PAYOUT_CEILING_POLICY.maxRate), PAYOUT_CEILING_POLICY.maxExtraRupees);
   return cashifyPayoutAmount + Math.max(0, extra);

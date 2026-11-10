@@ -1,3 +1,4 @@
+import { referenceBonus } from '../../lib/pricing/referenceBonus';
 /**
  * Traced Selling captures (2026-10-10) for six exact iPhone variants, through the real, offline pricing
  * service. No network, no database, no Cashify request. An exact capture applies only at its own Get Upto
@@ -22,7 +23,7 @@ const at = new Date('2026-10-11T12:00:00Z');
 const rows = JSON.parse(fs.readFileSync(MANIFEST, 'utf8')).rows as ExactFinalQuoteEvidence[];
 const routes = loadReleaseRouteEvidence(ROUTES);
 const payouts = (gross: number, headroom: number) => ({ standard: customerPayout(gross, false, headroom).payout, coupon: customerPayout(gross, true, headroom).payout });
-const inCorridor = (payout: number, selling: number) => payout > selling && payout - selling <= 2000;
+const inCorridor = (payout: number, selling: number) => payout > selling && payout - selling <= 1000;
 
 async function main() {
   // 1. Existing validation: nothing rejected; 6 variants x (clean key + Face ID key) = 12 exact keys; repeats share a key.
@@ -38,7 +39,7 @@ async function main() {
     const gross = boundedCompetitiveOffer(row.getUpto, row.sellingPrice);
     for (const coupon of [false, true]) assert.ok(inCorridor(customerPayout(gross, coupon).payout, row.sellingPrice), `${row.id} coupon=${coupon}`);
   }
-  console.log('PASS 0 < payout - Cashify Selling <= 2000, coupon off and on, for all captured profiles');
+  console.log('PASS 0 < payout - Cashify Selling <= 1000, coupon off and on, for all captured profiles');
 
   const table: string[] = [];
   const variants = [...new Set(rows.map((r) => `${r.brand}|${r.model}|${r.storage}`))];
@@ -79,8 +80,7 @@ async function main() {
       assert.equal(after.internal.cashifyConditionEquivalent, row.sellingPrice);
       // Service payouts consume the signed allowance; research helpers above deliberately use the full coupon.
       const b = payouts(before.fhoneifyPrice, before.couponHeadroom), a = payouts(after.fhoneifyPrice, after.couponHeadroom);
-      const rate = row.getUpto <= 20000 ? 0.08 : row.getUpto <= 50000 ? 0.06 : 0.04;
-      const expectedGross = Math.round(row.sellingPrice + Math.min(row.getUpto * rate, 2000));
+      const expectedGross = Math.round(row.sellingPrice + referenceBonus(row.getUpto));
       assert.equal(after.fhoneifyPrice, expectedGross, 'captured Selling plus the approved original-reference bonus');
       assert.equal(after.couponHeadroom, 0, 'full reference bonus leaves no extra coupon budget');
       assert.equal(a.standard, expectedGross - 99);

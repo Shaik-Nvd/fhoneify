@@ -1,10 +1,11 @@
+import { referenceBonus } from '../../lib/pricing/referenceBonus';
 import { isAppleEvidenceModel } from '../../lib/pricing/appleCashifyModel/scope';
 /**
  * Get Upto semantics (2026-09-23).
  *
  * ReferencePrice.currentPrice is Cashify's live public "Get Upto". Fhoneify's
  * Get Upto is that figure plus the existing uplift (4/6/8%, extra capped at
- * ₹2,000) and nothing else - no age, warranty, bill, box, charger or
+ * ₹1,000) and nothing else - no age, warranty, bill, box, charger or
  * condition rule. Final offers are a separate path and are not tested here.
  *
  * Run: npm run test:pricing:get-upto   (no database needed)
@@ -62,7 +63,7 @@ class Repo {
 async function run() {
   console.log('\nSuite G - Get Upto semantics\n');
 
-  await test('Get Upto = Cashify Get Upto + 4/6/8% uplift (extra capped at ₹2,000), all 7 brands', () => {
+  await test('Get Upto = Cashify Get Upto + 4/6/8% uplift (extra capped at ₹1,000), all 7 brands', () => {
     const brands = new Set<string>();
     for (const [brand, model, , reference] of LIVE) {
       const getUpto = computeFhoneifyGetUpto(reference);
@@ -74,8 +75,8 @@ async function run() {
     for (const brand of ['Apple', 'Samsung', 'OnePlus', 'Oppo', 'Vivo', 'Xiaomi', 'Realme']) assert.ok(brands.has(brand), brand);
   });
 
-  await test('THE BUG: iPhone 15 512GB Get Upto is ₹47,570, not the depreciated ₹36,540', () => {
-    assert.equal(computeFhoneifyGetUpto(45570), 47570);
+  await test('THE BUG: iPhone 15 512GB Get Upto is ₹46,570, not the depreciated ₹36,540', () => {
+    assert.equal(computeFhoneifyGetUpto(45570), Math.round(45570 + referenceBonus(45570)));
   });
 
   await test('the cap limits only the extra uplift, never the price back to Cashify', () => {

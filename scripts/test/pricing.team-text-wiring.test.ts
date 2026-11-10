@@ -1,3 +1,4 @@
+import { referenceBonus } from '../../lib/pricing/referenceBonus';
 import {createHash} from 'node:crypto';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -41,7 +42,7 @@ test('corrected high-value Selling respects actual OFF/ON payout bounds through 
  const row=fixture.rows.find(r=>r.file==='iphone15_pro_max_24_test_cases.txt'&&r.caseId==='13')!;
  const {service,input}=serviceFor(row);const q=await service.quote(input);assert(q.ok);
  assert.equal(q.internal.cashifyConditionEquivalent - (q.internal.payoutCeiling.equivalentBasis === 'base' ? 20 : 0),row.sellingPrice);
- for(const coupon of [false,true]){const payout=customerPayout(q.fhoneifyPrice,coupon,q.couponHeadroom).payout;assert(payout>row.sellingPrice!&&payout-row.sellingPrice!<=2000,`${payout} vs ${row.sellingPrice},coupon=${coupon}`);}
+ for(const coupon of [false,true]){const payout=customerPayout(q.fhoneifyPrice,coupon,q.couponHeadroom).payout;assert(payout>row.sellingPrice!&&payout-row.sellingPrice!<=1000,`${payout} vs ${row.sellingPrice},coupon=${coupon}`);}
 });
 
 import {supportedApple512Fallback} from '../../lib/pricing/appleVariantDispatch';
@@ -107,7 +108,7 @@ test('prior captured iPhone12 C1 retains observed equivalent and approved refere
   questionnaireStore:{async get(){return c1Inputs.profile as any},async list(){return[]},async upsert(){throw Error('no writes')}} as any,
   releaseRouteEvidence:loadReleaseRouteEvidence(config.routeEvidenceFile!),exactFinalQuoteIndex:createExactFinalQuoteIndex(existingExactFinalQuoteEvidence()),exactFinalQuoteOfferPolicy:'bounded-net',
   catalog:[device],snapshot:{},pricingMode:'hybrid',strictReferenceMode:true,referenceLookupTimeoutMs:100,signingSecret:'team-text-C1-test-only-signed-quote-secret',tokenTtlSeconds:900,now:()=>new Date(Date.parse(row.observedAt)+60000),logger:{info(){},warn(){},error(){}}});
- const q=await service.quote({...device,diagnostics:row.diagnostics});assert(q.ok);assert(q.internal.exactFinalQuote);assert.equal(q.fhoneifyPrice,Math.round(row.sellingPrice + reference.currentPrice * 0.08));
+ const q=await service.quote({...device,diagnostics:row.diagnostics});assert(q.ok);assert(q.internal.exactFinalQuote);assert.equal(q.fhoneifyPrice,Math.round(row.sellingPrice + referenceBonus(reference.currentPrice)));
  assert.equal(q.internal.cashifyConditionEquivalent - (q.internal.payoutCeiling.equivalentBasis === 'base' ? 20 : 0),row.sellingPrice);
- for(const coupon of [false,true]){const delta=customerPayout(q.fhoneifyPrice,coupon,q.couponHeadroom).payout-row.sellingPrice;assert(delta>0&&delta<=2000);}
+ for(const coupon of [false,true]){const delta=customerPayout(q.fhoneifyPrice,coupon,q.couponHeadroom).payout-row.sellingPrice;assert(delta>0&&delta<=1000);}
 });

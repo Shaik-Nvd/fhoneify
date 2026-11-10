@@ -1,3 +1,4 @@
+import { referenceBonus } from '../../lib/pricing/referenceBonus';
 /**
  * Suite E - production pricing system (lib/pricing/*).
  *
@@ -225,10 +226,10 @@ async function run() {
   });
 
   await test('"Get upto" is the Cashify Get Upto plus the capped uplift, with no deductions', () => {
-    assert.equal(computeFhoneifyGetUpto(120000), 122000, '4% tier capped at ₹2,000');
-    assert.equal(computeFhoneifyGetUpto(45570), 47570, '6% tier capped at ₹2,000');
-    assert.equal(computeFhoneifyGetUpto(27220), 28853, '6% tier');
-    assert.equal(computeFhoneifyGetUpto(13550), 14634, '8% tier');
+    assert.equal(computeFhoneifyGetUpto(120000), Math.round(120000 + referenceBonus(120000)), '4% tier capped at ₹1,000');
+    assert.equal(computeFhoneifyGetUpto(45570), Math.round(45570 + referenceBonus(45570)), '6% tier capped at ₹1,000');
+    assert.equal(computeFhoneifyGetUpto(27220), Math.round(27220 + referenceBonus(27220)), '6% tier');
+    assert.equal(computeFhoneifyGetUpto(13550), Math.round(13550 + referenceBonus(13550)), '8% tier');
   });
 
   await test('the repository ReferencePrice is used as-is, whatever its source', () => {
