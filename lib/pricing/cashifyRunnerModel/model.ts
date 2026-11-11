@@ -91,8 +91,15 @@ export function evaluateRunner(profile: RunnerProfile, reference: number, d: Dia
   };
   const availableVariants = Object.values(profile.variants);
   const scrap = variant?.scrap ?? Math.min(...availableVariants.map(v => v.scrap));
-  if (d.calls === false) return { price: Math.round(scrap), support: faults.length === 1 && variant && !variant.scrapInferredFrom ? 'measured' as const : 'inferred' as const,
-    breakdown: [{ rule: 'calls:scrap', amount: scrap, support: variant && !variant.scrapInferredFrom ? 'measured' as const : 'inferred' as const }], forcedAge: false, faults };
+  // Count all condition changes before the calls-only branch as well.
+  const offered = variant?.accessories ?? availableVariants[0].accessories;
+  const present = new Set(d.accessories);
+  if (d.box === true) present.add('box');
+  if (d.charger === true) present.add('charger');
+  const missing = offered.filter(a => !present.has(a));
+  const changes = faults.length + (profile.hasAge ? Number(d.warranty === false) + Number(d.validBill === false) + Number(selectedAge !== 'below3') : 0) + (missing.length ? 1 : 0);
+  if (d.calls === false) return { price: Math.round(scrap), support: changes === 1 && variant && !variant.scrapInferredFrom ? 'measured' as const : 'inferred' as const,
+    breakdown: [{ rule: 'calls:flat-scrap-deduction', amount: reference - Math.round(scrap), support: variant && !variant.scrapInferredFrom ? 'measured' as const : 'inferred' as const }], forcedAge: false, faults };
   let loss = age === 'below3' ? 0 : amount(`age:${age}`);
   const screen: number[] = [];
   const panel: number[] = [];
@@ -113,14 +120,8 @@ export function evaluateRunner(profile: RunnerProfile, reference: number, d: Dia
   if (panelOverlap) breakdown.push({ rule: 'panel:overlap-credit', amount: -panelOverlap, support: 'inferred' });
   loss += panelMaximum;
   // The variant's questionnaire decides whether charger loss is applicable.
-  const offered = variant?.accessories ?? availableVariants[0].accessories;
-  const present = new Set(d.accessories);
-  if (d.box === true) present.add('box');
-  if (d.charger === true) present.add('charger');
-  const missing = offered.filter(a => !present.has(a));
   if (missing.length > 1) loss += profile.rules.both ? amount('both') : Math.max(...missing.map(amount));
   else if (missing.length) loss += amount(missing[0]);
-  const changes = faults.length + (profile.hasAge ? Number(d.warranty === false) + Number(d.validBill === false) + Number(selectedAge !== 'below3') : 0) + (missing.length ? 1 : 0);
   const price = Math.max(Math.round(scrap), round10(reference - loss));
   const roundingAndFloor = reference - loss - price;
   if (roundingAndFloor) breakdown.push({ rule: price === scrap ? 'scrap-floor-credit' : 'rounding', amount: roundingAndFloor, support: 'inferred' });

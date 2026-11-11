@@ -28,6 +28,8 @@ assert.equal(quote({ hardware: ['back_camera'] }, 10000, inherited).support, 'in
 assert.equal(quote({ mobileAge: 'above 11 months' }).price, quote({ mobileAge: 'above11' }).price, 'legacy age label');
 assert.equal(quote({ mobileAge: '3 months - 6 months' }).price, quote({ mobileAge: '3to6' }).price, 'recorded age label');
 assert.equal(quote({ calls: false, hardware: ['wifi'] }).price, 800);
+assert.equal(quote({ calls: false, accessories: [] }).support, 'inferred', 'calls plus missing accessories is a combination');
+assert.equal(quote({ calls: false }).breakdown.reduce((sum, row) => sum + row.amount, 0), 10000 - 800, 'calls breakdown reconciles on deduction basis');
 assert.equal(quote({ mobileAge: 'above11', warranty: false }, 10000, { ...profile, hasAge: false }).price, 10000);
 assert.equal(quote({ hardware: ['wifi', 'back_camera'] }).support, 'inferred');
 assert.equal(evaluateDeduction(fixed(1000), 20000, '8gb/128gb'), 1000);
