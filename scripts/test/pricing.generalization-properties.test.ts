@@ -1,3 +1,4 @@
+import { runnerScope } from '../../lib/pricing/cashifyRunnerModel';
 /**
  * Catalog-wide internal safety properties under every Cashify questionnaire
  * regime. These prove internal consistency only - they are not Cashify parity
@@ -155,7 +156,12 @@ for (const device of SEED_DEVICES as any[]) {
     for (const [ladder, steps] of Object.entries(LADDERS)) {
       const values = steps.map(price);
       for (let i = 1; i < values.length; i++) {
-        check(`severity ladder: ${ladder}`, doesNotRise(values[i - 1], values[i], steps[i - 1], steps[i]), name, regimeName, () => `${JSON.stringify(steps[i])}: ${values[i]} > ${values[i - 1]}`);
+        // Runner panel alternatives are distinct questionnaire branches: bent
+        // forces age, loose does not. Their order at an already-old age is not
+        // established by the single-fault young-phone observations. Both must
+        // still stay below clean; all true added-damage checks below remain.
+        const prior = runnerScope(device.model) && ladder === 'bent' && i === 2 ? 0 : i - 1;
+        check(`severity ladder: ${ladder}`, doesNotRise(values[prior], values[i], steps[prior], steps[i]), name, regimeName, () => `${JSON.stringify(steps[i])}: ${values[i]} > ${values[i - 1]}`);
       }
     }
 
@@ -182,7 +188,9 @@ for (const device of SEED_DEVICES as any[]) {
     const light = price({ screenCondition: '1-2 scratches on screen', bodyScratches: '1-2 scratches' });
     check('severe damage never beats light damage', compare([severe, light], () => severe! <= light!), name, regimeName, () => `${severe} > ${light}`);
 
-    if (semantics.warrantyMode === 'NOT_ASKED') {
+    const runner = runnerScope(device.model);
+    const warrantyNotAsked = runner ? !runner.hasAge : semantics.warrantyMode === 'NOT_ASKED';
+    if (warrantyNotAsked) {
       const variants = [{ warranty: true, mobileAge: 'below3', validBill: true }, { warranty: false, mobileAge: 'above11', validBill: false }, { warranty: null, mobileAge: null, validBill: null }].map((v) => price(v as any));
       check('NOT_ASKED: warranty/age/bill answers cannot move the price', compare(variants, () => variants.every((v) => v === variants[0])), name, regimeName, () => variants.join(' / '));
     } else {

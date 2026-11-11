@@ -1,3 +1,4 @@
+// Retrospective October candidate coverage; active runner pricing is verified separately.
 /** Real HTTP/controllers, injected pricing repositories and a local lead spy.
  * No production database, browser, scraper, or external request is used.
  * --serve keeps the fixture API available on 127.0.0.1:5007 for UI checks.
@@ -7,7 +8,7 @@ import type { Server } from 'node:http';
 import { mkdtempSync, writeFileSync, unlinkSync, rmdirSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
-import { createPricingService, RELEASE_CANDIDATE_PRICING_VERSION, type PricingServiceDeps } from '../../lib/pricing/pricingService';
+import { createPricingService, RELEASE_CANDIDATE_PRICING_VERSION, type PricingServiceDeps } from './helpers/historicalRunner';
 import { createExactFinalQuoteIndex } from '../../lib/pricing/exactFinalQuote';
 import { conditionClass } from '../../lib/pricing/releaseCandidate';
 import { PRICING_ENGINE_VERSION } from '../../lib/pricing/engine';

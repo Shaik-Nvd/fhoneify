@@ -1,10 +1,12 @@
+// Historical formula fixtures remain protected; new runner service suites cover current Android rules.
+import { calculateFhoneifyPrice } from './helpers/historicalRunner';
 /**
  * Cross-brand condition matrix. These assertions protect ordering and field
  * wiring, not one day's market price: every scenario uses the same reference
  * price for a device and checks that additional damage cannot improve it.
  */
 import assert from 'node:assert/strict';
-import { calculateFhoneifyPrice, COMMON_FUNCTIONAL_PENALTIES, DiagnosticsType, nothingModelFamily } from '../../lib/pricingCalculator';
+import { COMMON_FUNCTIONAL_PENALTIES, DiagnosticsType, nothingModelFamily } from '../../lib/pricingCalculator';
 import { pricingFamilyKey } from '../../lib/pricing/families';
 import { warrantyVoidedByDiagnostics } from '../../lib/pricing/diagnostics';
 
