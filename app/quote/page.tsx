@@ -1171,7 +1171,7 @@ export default function QuotePage() {
         ...(hasFingerprint ? [{ id: 'fingerprint', label: isApple ? 'Finger Touch (Touch ID) not working' : 'Finger Touch not working', icon: '👆' }] : []),
         { id: 'wifi', label: 'WiFi not working', icon: '📶' },
         { id: 'speaker', label: 'Speaker Faulty', icon: '🔊' },
-        ...(brand.toLowerCase() === 'oneplus' && lowerModel === 'oneplus open' ? [{ id: 'outer_screen', label: 'Outer screen damaged / line / broken or spot', icon: '??' }] : []),
+        ...(brand.toLowerCase() === 'oneplus' && lowerModel === 'oneplus open' ? [{ id: 'outer_screen', label: 'Outer screen damaged / line / broken or spot', icon: '\uD83D\uDCF1' }] : []),
         { id: 'hinge', label: 'Hinge damaged / not folding properly', icon: '📱' },
         { id: 'silent', label: hasActionButton ? 'Action Button not working' : 'Silent Button not working', icon: '🔕' },
         ...(hasFaceId ? [{ id: 'face', label: isApple ? 'Face ID / Face Sensor not working' : 'Face Sensor not working', icon: <FaceIdIcon /> }] : []),
