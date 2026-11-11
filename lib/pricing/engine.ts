@@ -33,7 +33,7 @@ import { PERFECT_CONDITION_DIAGNOSTICS } from './perfectCondition';
 /** Recorded on every signed quote and lead so a price can be traced to the
  * code that produced it. Bump when base resolution, guardrails, or the
  * methodology change. */
-export const PRICING_ENGINE_VERSION = 'fhoneify-pricing/2026-11-02-reference-bonus-v3-cap1000+repair-safety-v1+apple-age-answer-v1+apple-reference-rules-v5-final-intake-sibling-inference+legacy-physical-v1+payout-ceiling-v3+cashify-runner-rules-v1';
+export const PRICING_ENGINE_VERSION = 'fhoneify-pricing/2026-11-02-reference-bonus-v3-cap1000+repair-safety-v1+apple-age-answer-v1+apple-reference-rules-v5-final-intake-sibling-inference+legacy-physical-v1+payout-ceiling-v3+cashify-runner-rules-v2';
 
 export type BaseSource = 'reference_repository' | 'materialized_snapshot' | 'catalog_base_price';
 

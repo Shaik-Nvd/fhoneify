@@ -21,9 +21,9 @@ Raw archives, full normalized records, validation row exports and execution logs
 
 ## Measured and inferred support
 
-Calibration covers 66 models. Each model's own storages determine fixed repairs and reference fractions; affine/capped forms are selected only where supported. The one byStorage rule stores repair costs, never final quotes or historical references. Browser code imports only questionnaire metadata, not repair parameters or pricing execution.
+Calibration covers 66 models. Each model's own storages determine fixed repairs and reference fractions; affine/capped forms are selected only where supported. By-storage rules store repair costs, never final quotes or historical references. Browser code imports only questionnaire metadata, not repair parameters or pricing execution.
 
-Nothing has 360 fixed, 174 proportional and one affine rule. OnePlus has 1,633 fixed, 465 proportional, 42 affine, three capped and one byStorage rule. Supported single conditions use measured parameters; combinations, unseen capacities and inherited repairs remain inferred. This describes parameter support, not a claim that a generated quote was observed on Cashify.
+Nothing has 360 fixed, 174 proportional and one byStorage rule. OnePlus has 1,633 fixed, 465 proportional, 18 affine, three capped and 25 byStorage rules. Affine/capped forms require at least three distinct storages. Supported single conditions use measured parameters; combinations, unseen capacities and inherited repairs remain inferred. This describes parameter support, not a claim that a generated quote was observed on Cashify.
 
 Phone 3a Lite's storage-dependent touch loss is preserved by the fit. Phone 1 never asks warranty, bill or age. Other measured models preserve conditional age despite first-page crawler metadata saying NOT_ASKED. Supported human-readable age labels are normalized.
 
@@ -39,14 +39,14 @@ Replay traverses createPricingService in hybrid mode with injected read-only exa
 | In-sample within INR20 | 100% | 100% | at least 99% |
 | In-sample MAE | INR0.156 | INR0.421 | at most INR10 |
 | In-sample errors above INR300 | 0 | 0 | zero |
-| Storage holdout within INR20 | 99.88% | 97.19% | 97% / 95% |
-| Storage holdout rows / MAE | 1,671 / INR1.31 | 5,228 / INR9.60 | reported |
+| Storage holdout within INR20 | 99.88% | 95.01% | 97% / 95% |
+| Storage holdout rows / MAE | 1,671 / INR1.31 | 5,228 / INR6.69 | reported |
 | Catalog variants priced or explained through service | 34 | 116 | all |
 | Synthetic reference stress quotes | 10,026 | 33,234 | ±10%, ±25%, ±50% |
 
 Reference checks preserve fixed deductions, scale fractions and recalculate bonus. They are engineering scenarios, not proof that Cashify repair policy remains unchanged at future references. Pending catalog variants used controlled fixture references in validation and remain unpriced in production until actual references exist.
 
-Storage holdouts exclude all representations and controls of the withheld storage from coefficient fitting. Rule forms and questionnaire structure were discovered using the full corpus, then frozen before training-only refits. These holdouts validate coefficients conditional on structural discovery, not independent rule discovery. Single-storage models cannot support storage holdout. No gate was widened and no difficult row was dropped.
+Storage holdouts exclude all representations and controls of the withheld storage from coefficient fitting. Rule forms and questionnaire structure were discovered using the full corpus, then frozen before training-only refits, including the fixed/percentage fallback form for byStorage rules. Every fallback coefficient is refitted from training observations only. These holdouts validate coefficients conditional on structural discovery, not independent rule discovery. Single-storage models cannot support storage holdout. No gate was widened and no difficult row was dropped.
 
 | Error detail | Nothing/CMF | OnePlus |
 |---|---:|---:|
@@ -54,13 +54,13 @@ Storage holdouts exclude all representations and controls of the withheld storag
 | Replay signed bias | INR−0.024 | INR−0.099 |
 | Replay median / p90 / p95 | 0 / 0 / 0 | 0 / 0 / 0 |
 | Worst replay over / under | +10 / −10 | +10 / −10 |
-| Holdout overquotes / underquotes | 82 / 91 | 390 / 413 |
+| Holdout overquotes / underquotes | 82 / 91 | 435 / 451 |
 | Holdout signed bias | INR−0.054 | INR−0.388 |
-| Holdout median / p90 / p95 | 0 / 10 / 10 | 0 / 10 / 10 |
-| Holdout errors above INR20 / 100 / 300 / 1,000 | 2 / 2 / 0 / 0 | 147 / 118 / 53 / 0 |
+| Holdout median / p90 / p95 | 0 / 10 / 10 | 0 / 10 / 20 |
+| Holdout errors above INR20 / 100 / 300 / 1,000 | 2 / 2 / 0 / 0 | 261 / 67 / 10 / 0 |
 | Worst holdout over / under | +210 / −210 | +930 / −930 |
 
-Worst replay examples: Nothing Phone 1 screen scratches +INR10 and CMF Phone 1 proximity −INR10; OnePlus 10 Pro fingerprint +INR10 and cracked glass −INR10. The two Nothing holdout misses are Phone 3a Lite touch failure, opposite withheld capacities. The largest OnePlus holdout misses are 10 Pro touch failure. Every miss and source pointer is retained in each private validation/summary.json storageMisses array and heldout.jsonl, rather than publishing a bulk quote corpus.
+Worst replay examples: Nothing Phone 1 screen scratches +INR10 and CMF Phone 1 proximity −INR10; OnePlus 10 Pro fingerprint +INR10 and cracked glass −INR10. The two Nothing holdout misses are Phone 3a Lite touch failure, opposite withheld capacities. The largest OnePlus holdout overquote is Nord 4 non-original screen (+INR400); the largest underquote is Nord touch failure (-INR910). Every miss and source pointer is retained in each private validation/summary.json storageMisses array and heldout.jsonl, rather than publishing a bulk quote corpus.
 
 Leave-one-model-out is report-only and weak: Nothing scores 1,533 rows, 27.27% within INR20, MAE INR406.66, worst over/under +6,550/−3,040. OnePlus scores 4,998 rows, 37.19% within INR20, MAE INR768.36, worst +7,710/−10,540. This borrows a measured model within an empirical profile; it is a diagnostic transfer experiment, not an approved unknown-model production fallback. Nothing Phone 1 has no eligible donor. Nine OnePlus models have unidentifiable cohorts, listed in the private summary, including Open and 9RT.
 
@@ -71,6 +71,8 @@ Covered models enter the runner before older OnePlus display candidates, bill ov
 Three Nothing and ten OnePlus variants were added as pending, with exact-storage links and no invented fallback prices. Nothing's placeholder was removed and its CMF link typo corrected. Existing OnePlus 9RT 12/256 remains: it has a fresh exact database reference but no supplied condition data.
 
 Read-only production audits found 27 matching fresh Nothing references, four older refresh-failed CMF references and three missing keys. OnePlus has 105 fresh references, one older refresh-failed reference and ten missing source keys; most fresh references match the session bases, with three small differences. Four OnePlus models lack stored questionnaire profiles. See the companion reference-audit documents for timestamps and coverage. The existing refresh identity verifier rejects four CMF headings; that incompatibility was reported and left untouched. No production references or questionnaire rows were changed.
+
+See [review response](RUNNER_REVIEW_RESPONSE_2026_11_12.md) for the seven review findings, regression coverage and before/after holdout results. Explicit owner approval is required for the seed_devices.ts catalog changes and for bypassing the October OnePlus display and accessory release routes. Both approvals remain pending.
 
 ## Verification and review
 
@@ -98,9 +100,9 @@ These are local Fhoneify QA screenshots, not Cashify captures or live-production
 
 ## Combination evidence and remaining work
 
-Prepared 75 Nothing and 76 OnePlus planned combinations, including the cheap-phone display cap probe. The collection documents record frozen calibration and implementation hashes. Frozen private predictions and snapshots are under release-test-logs/android/frozen-combinations-v2; the earlier snapshot is preserved. The team must collect actual combinations and score them at the newly observed reference against frozen rules before refitting. No combination has been promoted to measured.
+Prepared 75 Nothing and 77 OnePlus planned combinations, including the cheap-phone display cap probe and the exact OnePlus 12 five-functional-fault floor probe. Its INR1,200 scrap outcome is inferred, with no combination evidence. The collection documents record frozen calibration and implementation hashes. Frozen private predictions and snapshots are under release-test-logs/android/frozen-combinations-v3-final; the earlier snapshot is preserved. The team must collect actual combinations and score them at the newly observed reference against frozen rules before refitting. No combination has been promoted to measured.
 
-Material limits remain: missing/stale production references, inherited 9RT repairs, unseen-storage errors up to INR930 in OnePlus holdout, weak transfer to unseen models and unobserved multi-fault interactions. Passing these gates does not establish universal Cashify parity or years of unchanged repair costs.
+Material limits remain: missing/stale production references, inherited 9RT repairs, unseen-storage errors up to INR910 in OnePlus holdout, weak transfer to unseen models and unobserved multi-fault interactions. Passing these gates does not establish universal Cashify parity or years of unchanged repair costs.
 
 ## Delivery and rollback
 

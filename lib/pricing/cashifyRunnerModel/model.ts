@@ -1,4 +1,5 @@
 import type { DiagnosticsType } from '../../pricingCalculator';
+import { InspectionRequiredError } from '../inspectionRequired';
 
 export interface DeductionRule {
   form: 'fixed' | 'pct' | 'affine' | 'capped' | 'byStorage';
@@ -44,7 +45,8 @@ export function evaluateDeduction(rule: DeductionRule, reference: number, storag
 
 const hardwareAliases: Record<string, string> = { battery: 'battery_service', battery_health: 'battery_service', charging_port: 'charging',
   'Front Camera not working': 'front_camera', 'Back Camera not working': 'back_camera', 'Battery Faulty': 'battery_service' };
-const select = (value: string | null, choices: string[]) => choices.indexOf(String(value));
+const normalize = (value: string | null) => String(value ?? '').toLowerCase().trim().replace(/\s+/g, ' ').replace(/\s*\/\s*/g, '/');
+const select = (value: string | null, choices: string[]) => choices.map(normalize).indexOf(normalize(value));
 export const SCREENS = ['Screen cracked/ glass broken', 'Chipped/cracked outside display area', 'More than 2 scratches on screen', '1-2 scratches on screen'];
 export const SPOTS = ['Large/ heavy visible spots on screen', '3 or more minor spots on screen', '1-2 minor spots on screen'];
 export const LINES = ['Visible line(s) on display', 'Display faded along edges'];
@@ -62,10 +64,11 @@ export function runnerFaults(d: DiagnosticsType): string[] {
     [d.screenCondition, SCREENS, 'screen'], [d.screenSpots, SPOTS, 'spots'], [d.screenLines, LINES, 'lines'],
     [d.screenDiscoloration, COLORS, 'color'], [d.bodyScratches, SCRATCHES, 'scratch'], [d.bodyDents, DENTS, 'dent'],
   ] as const) { const index = select(field, [...values]); if (index >= 0) faults.push(`${prefix}:${index}`); }
-  if (d.bodyPanel === 'Cracked/ broken side or back panel' || d.bodyPanel === 'Missing side or back panel') faults.push('panel');
-  if (d.bodyBent === 'Bent/ curved panel') faults.push('bent');
-  if (d.bodyBent === 'Loose screen (Gap in screen and body)') faults.push('loose');
-  for (const code of new Set(d.hardware.map(v => hardwareAliases[v] ?? v))) faults.push(`hardware:${code}`);
+  if (select(d.bodyPanel, ['Cracked/ broken side or back panel', 'Missing side or back panel']) >= 0) faults.push('panel');
+  if (normalize(d.bodyBent) === normalize('Bent/ curved panel')) faults.push('bent');
+  if (normalize(d.bodyBent) === normalize('Loose screen (Gap in screen and body)')) faults.push('loose');
+  const aliases = Object.fromEntries(Object.entries(hardwareAliases).map(([key, value]) => [normalize(key), value]));
+  for (const code of new Set(d.hardware.map(v => aliases[normalize(v)] ?? normalize(v)))) faults.push(`hardware:${code}`);
   return faults;
 }
 
@@ -74,16 +77,35 @@ export function evaluateRunner(profile: RunnerProfile, reference: number, d: Dia
   const sk = storageKey(storage);
   const variant = profile.variants[sk];
   const faults = runnerFaults(d);
+  // Unknown and incomplete answers must never silently become a flawless quote.
+  for (const [value, choices] of [
+    [d.screenCondition, SCREENS], [d.screenSpots, [...SPOTS, 'No spots on screen']],
+    [d.screenLines, [...LINES, 'No line(s) on Display']], [d.screenDiscoloration, [...COLORS, 'No Discoloration']],
+    [d.bodyScratches, [...SCRATCHES, 'No scratches']], [d.bodyDents, [...DENTS, 'No dents']],
+    [d.bodyPanel, ['Cracked/ broken side or back panel', 'Missing side or back panel', 'No defect on side or back panel']],
+    [d.bodyBent, ['Bent/ curved panel', 'Loose screen (Gap in screen and body)', 'Phone not bent']],
+  ] as const) if (value != null && select(value, [...choices]) < 0) throw new InspectionRequiredError('Unsupported runner condition answer');
+  const groups: Record<string, boolean> = {
+    screen_scratch: !!d.screenCondition, broken_screen: !!d.screenCondition,
+    screen_spot: !!(d.screenSpots && d.screenLines && d.screenDiscoloration),
+    body_scratch: !!(d.bodyScratches && d.bodyDents), panel_missing: !!(d.bodyPanel && d.bodyBent),
+    screen_lines: !!d.screenLines, screen_discoloration: !!d.screenDiscoloration,
+  };
+  for (const group of d.defects) if (groups[normalize(group)] !== true) throw new InspectionRequiredError('Unsupported or incomplete runner defect group');
+  for (const fault of faults) {
+    const keys = fault === 'screen:0' ? ['original', 'crackedExtra'] : [fault];
+    if (keys.some(key => key !== 'calls' && !profile.rules[key])) throw new InspectionRequiredError('Unsupported runner fault for this model');
+  }
   const forcing = faults.some(k => ['original', 'touch', 'screen:0', 'panel', 'bent'].includes(k));
   const forcedAge = profile.hasAge && (forcing || d.warranty === false || d.validBill === false);
   const selectedAge = runnerAge(d.mobileAge);
+  if (profile.hasAge && !forcedAge && d.calls !== false && !String(d.mobileAge ?? '').trim()) throw new InspectionRequiredError('Missing runner age answer');
   const age = profile.hasAge ? (forcedAge ? 'above11' : selectedAge) : 'below3';
   const breakdown: { rule: string; amount: number; support: 'measured' | 'inferred' }[] = [];
-  let unknown = false;
   let inherited = false;
   const amount = (key: string) => {
     const rule = profile.rules[key];
-    if (!rule) { if (key !== 'age:below3') unknown = true; return 0; }
+    if (!rule) throw new InspectionRequiredError('Unsupported runner deduction');
     const value = evaluateDeduction(rule, reference, sk);
     if (!rule.support || rule.inferredFrom || (rule.form === 'byStorage' && rule.values?.[sk] === undefined)) inherited = true;
     breakdown.push({ rule: key, amount: value, support: variant && rule.support > 0 && !rule.inferredFrom ? 'measured' : 'inferred' });
@@ -96,6 +118,8 @@ export function evaluateRunner(profile: RunnerProfile, reference: number, d: Dia
   const present = new Set(d.accessories);
   if (d.box === true) present.add('box');
   if (d.charger === true) present.add('charger');
+  if (d.box === false) present.delete('box');
+  if (d.charger === false) present.delete('charger');
   const missing = offered.filter(a => !present.has(a));
   const changes = faults.length + (profile.hasAge ? Number(d.warranty === false) + Number(d.validBill === false) + Number(selectedAge !== 'below3') : 0) + (missing.length ? 1 : 0);
   if (d.calls === false) return { price: Math.round(scrap), support: changes === 1 && variant && !variant.scrapInferredFrom ? 'measured' as const : 'inferred' as const,
@@ -126,6 +150,6 @@ export function evaluateRunner(profile: RunnerProfile, reference: number, d: Dia
   const roundingAndFloor = reference - loss - price;
   if (roundingAndFloor) breakdown.push({ rule: price === scrap ? 'scrap-floor-credit' : 'rounding', amount: roundingAndFloor, support: 'inferred' });
   return { price,
-    support: changes <= 1 && variant && !unknown && !inherited ? 'measured' as const : 'inferred' as const,
+    support: changes <= 1 && variant && !inherited ? 'measured' as const : 'inferred' as const,
     breakdown, forcedAge, faults };
 }

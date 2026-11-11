@@ -9,7 +9,7 @@ const mean = (xs: number[]) => xs.reduce((a, b) => a + b, 0) / xs.length;
 const residual = (rule: DeductionRule, points: FitPoint[]) => Math.max(...points.map(p => Math.abs(round10(evaluateDeduction(rule, p.reference, p.storage)) - p.value)));
 
 /** Model/storage observations select the simplest supported form. No final quote table. */
-export function fitRule(points: FitPoint[], shape?: DeductionRule['form']): DeductionRule {
+export function fitRule(points: FitPoint[], shape?: DeductionRule['form'], fallbackShape?: 'fixed' | 'pct'): DeductionRule {
   if (!points.length) throw new Error('Cannot fit empty observations');
   if (points.some(p => !Number.isFinite(p.reference) || p.reference <= 0 || !Number.isFinite(p.value) || p.value < -10)) throw new Error('Invalid deduction observations');
   const support = points.length;
@@ -18,7 +18,7 @@ export function fitRule(points: FitPoint[], shape?: DeductionRule['form']): Dedu
   const candidates = [fixed, pct];
   const mx = mean(points.map(p => p.reference)), my = mean(points.map(p => p.value));
   const variance = points.reduce((s, p) => s + (p.reference - mx) ** 2, 0);
-  if (variance > 0) {
+  if (variance > 0 && new Set(points.map(p => p.storage)).size >= 3) {
     const slope = points.reduce((s, p) => s + (p.reference - mx) * (p.value - my), 0) / variance;
     if (slope >= 0) candidates.push({ form: 'affine', value: my - slope * mx, slope, support, residual: 0 });
     const cap = Math.max(...points.map(p => p.value));
@@ -40,7 +40,9 @@ export function fitRule(points: FitPoint[], shape?: DeductionRule['form']): Dedu
     if (values[p.storage] !== undefined && Math.abs(values[p.storage] - p.value) > 10) throw new Error('Conflicting repair measurements at one storage');
     values[p.storage] = round10(p.value);
   }
-  const fallback = fixed.residual <= pct.residual ? fixed : pct;
+  // Freeze the discovered fallback FORM during conditional holdout, just like
+  // the primary form. Refit its coefficient from training observations only.
+  const fallback = fallbackShape ? (fallbackShape === 'fixed' ? fixed : pct) : fixed.residual <= pct.residual ? fixed : pct;
   return { form: 'byStorage', value: 0, values, fallback: { form: fallback.form as 'fixed' | 'pct', value: fallback.value }, support, residual: 0 };
 }
 
@@ -53,6 +55,10 @@ export function fitCalibration(all: RunnerMeasurement[], brand: 'Nothing' | 'One
   for (const [key, ms] of [...grouped].sort()) {
     const hasAge = ms.some(m => m.hasAge);
     const profile: RunnerProfile = { model: ms[0].model, brand, hasAge, variants: {}, rules: {} };
+    const fit = (id: string, points: FitPoint[]) => {
+      const rule = structure?.profiles[key]?.rules[id];
+      return fitRule(points, rule?.form, rule?.fallback?.form);
+    };
     const buckets = new Map<string, FitPoint[]>();
     const add = (id: string, row: RunnerMeasurement, value: number) => {
       const point = { reference: row.reference, value, storage: storageKey(row.storage) };
@@ -68,7 +74,7 @@ export function fitCalibration(all: RunnerMeasurement[], brand: 'Nothing' | 'One
         if (age && age !== 'below3') add(`age:${age}`, m, m.reference - m.base!);
       }
     }
-    for (const [id, points] of buckets) profile.rules[id] = fitRule(points, structure?.profiles[key]?.rules[id]?.form);
+    for (const [id, points] of buckets) profile.rules[id] = fit(id, points);
     for (const m of ms) {
       const faults = runnerFaults(m.diagnostics);
       if (m.caseId === 'baseline' || m.caseId.startsWith('physical-control') || m.caseId.startsWith('age-') || m.diagnostics.calls === false ||
@@ -86,10 +92,10 @@ export function fitCalibration(all: RunnerMeasurement[], brand: 'Nothing' | 'One
       } else if (faults.length > 1) throw new Error('Combination source requires separate validation, not single-fault fitting');
     }
     // Fit original display repair before decomposing cracked glass's incremental repair.
-    for (const [id, points] of buckets) if (id !== 'crackedTotal') profile.rules[id] = fitRule(points, structure?.profiles[key]?.rules[id]?.form);
+    for (const [id, points] of buckets) if (id !== 'crackedTotal') profile.rules[id] = fit(id, points);
     const cracked = buckets.get('crackedTotal');
-    if (cracked) profile.rules.crackedExtra = fitRule(cracked.map(p => ({ ...p,
-      value: p.value - round10(evaluateDeduction(profile.rules.original, p.reference, p.storage)) })), structure?.profiles[key]?.rules.crackedExtra?.form);
+    if (cracked) profile.rules.crackedExtra = fit('crackedExtra', cracked.map(p => ({ ...p,
+      value: p.value - round10(evaluateDeduction(profile.rules.original, p.reference, p.storage)) })));
     profiles[key] = profile;
   }
   // The supplied 9RT run stopped after the functional tests. Its uncollected
@@ -106,7 +112,7 @@ export function fitCalibration(all: RunnerMeasurement[], brand: 'Nothing' | 'One
     }
   }
   for (const profile of Object.values(profiles)) if (Object.values(profile.variants).some(v => !Number.isFinite(v.scrap))) throw new Error(`${profile.model}: missing measured calls scrap and no approved sibling fallback`);
-  return { version: 'cashify-runner-rules-v1', sourceHash: createHash('sha256').update(JSON.stringify(rows)).digest('hex'), profiles };
+  return { version: 'cashify-runner-rules-v2', sourceHash: createHash('sha256').update(JSON.stringify(rows)).digest('hex'), profiles };
 }
 
 if (require.main === module) {

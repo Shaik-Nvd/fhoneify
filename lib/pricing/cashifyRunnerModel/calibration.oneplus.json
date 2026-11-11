@@ -1,5 +1,5 @@
 {
-  "version": "cashify-runner-rules-v1",
+  "version": "cashify-runner-rules-v2",
   "sourceHash": "6d4cac4bc79d35c5924e9d3001ee56258d6c090f52a500126a16b239269fbb29",
   "profiles": {
     "oneplus10pro5g": {
@@ -48,9 +48,16 @@
           "residual": 10
         },
         "hardware:wifi": {
-          "form": "affine",
-          "value": 288.40764331210175,
-          "slope": 0.37579617834394907,
+          "form": "byStorage",
+          "value": 0,
+          "values": {
+            "8gb/128gb": 5170,
+            "12gb/256gb": 5760
+          },
+          "fallback": {
+            "form": "pct",
+            "value": 0.3966654383365591
+          },
           "support": 2,
           "residual": 0
         },
@@ -103,9 +110,16 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "affine",
-          "value": 288.40764331210175,
-          "slope": 0.37579617834394907,
+          "form": "byStorage",
+          "value": 0,
+          "values": {
+            "8gb/128gb": 5170,
+            "12gb/256gb": 5760
+          },
+          "fallback": {
+            "form": "pct",
+            "value": 0.3966654383365591
+          },
           "support": 2,
           "residual": 0
         },
@@ -146,9 +160,16 @@
           "residual": 10
         },
         "spots:0": {
-          "form": "affine",
-          "value": 4404.140127388535,
-          "slope": 0.2229299363057325,
+          "form": "byStorage",
+          "value": 0,
+          "values": {
+            "8gb/128gb": 7300,
+            "12gb/256gb": 7650
+          },
+          "fallback": {
+            "form": "fixed",
+            "value": 7480
+          },
           "support": 2,
           "residual": 0
         },
@@ -165,9 +186,16 @@
           "residual": 0
         },
         "lines:0": {
-          "form": "affine",
-          "value": 4404.140127388535,
-          "slope": 0.2229299363057325,
+          "form": "byStorage",
+          "value": 0,
+          "values": {
+            "8gb/128gb": 7300,
+            "12gb/256gb": 7650
+          },
+          "fallback": {
+            "form": "fixed",
+            "value": 7480
+          },
           "support": 2,
           "residual": 0
         },
@@ -232,9 +260,16 @@
           "residual": 0
         },
         "touch": {
-          "form": "affine",
-          "value": -394.7133757961783,
-          "slope": 0.5923566878980892,
+          "form": "byStorage",
+          "value": 0,
+          "values": {
+            "8gb/128gb": 7300,
+            "12gb/256gb": 8230
+          },
+          "fallback": {
+            "form": "pct",
+            "value": 0.5637951145380616
+          },
           "support": 2,
           "residual": 0
         },
@@ -811,9 +846,16 @@
       },
       "rules": {
         "age:above11": {
-          "form": "affine",
-          "value": 1228.5185185185187,
-          "slope": 0.14814814814814814,
+          "form": "byStorage",
+          "value": 0,
+          "values": {
+            "8gb/128gb": 4630,
+            "16gb/256gb": 4910
+          },
+          "fallback": {
+            "form": "pct",
+            "value": 0.19945965878271568
+          },
           "support": 2,
           "residual": 0
         },
@@ -824,9 +866,16 @@
           "residual": 0
         },
         "age:6to11": {
-          "form": "affine",
-          "value": 1251.1111111111113,
-          "slope": 0.031746031746031744,
+          "form": "byStorage",
+          "value": 0,
+          "values": {
+            "8gb/128gb": 1980,
+            "16gb/256gb": 2040
+          },
+          "fallback": {
+            "form": "fixed",
+            "value": 2010
+          },
           "support": 2,
           "residual": 0
         },
@@ -1035,9 +1084,16 @@
           "residual": 0
         },
         "touch": {
-          "form": "affine",
-          "value": 2348.1481481481487,
-          "slope": 0.328042328042328,
+          "form": "byStorage",
+          "value": 0,
+          "values": {
+            "8gb/128gb": 9880,
+            "16gb/256gb": 10500
+          },
+          "fallback": {
+            "form": "pct",
+            "value": 0.42611738906830277
+          },
           "support": 2,
           "residual": 0
         },
@@ -1641,9 +1697,16 @@
       },
       "rules": {
         "age:above11": {
-          "form": "affine",
-          "value": 1740.6550218340608,
-          "slope": 0.14847161572052403,
+          "form": "byStorage",
+          "value": 0,
+          "values": {
+            "12gb/256gb": 6710,
+            "16gb/512gb": 7390
+          },
+          "fallback": {
+            "form": "pct",
+            "value": 0.1969488521884015
+          },
           "support": 2,
           "residual": 0
         },
@@ -1654,9 +1717,16 @@
           "residual": 10
         },
         "age:6to11": {
-          "form": "affine",
-          "value": 1743.82096069869,
-          "slope": 0.03275109170305677,
+          "form": "byStorage",
+          "value": 0,
+          "values": {
+            "12gb/256gb": 2840,
+            "16gb/512gb": 2990
+          },
+          "fallback": {
+            "form": "fixed",
+            "value": 2920
+          },
           "support": 2,
           "residual": 0
         },
@@ -2487,9 +2557,16 @@
       },
       "rules": {
         "age:above11": {
-          "form": "affine",
-          "value": 1501.4285714285716,
-          "slope": 0.18571428571428572,
+          "form": "byStorage",
+          "value": 0,
+          "values": {
+            "12gb/256gb": 7370,
+            "16gb/512gb": 7500
+          },
+          "fallback": {
+            "form": "pct",
+            "value": 0.23270171658055194
+          },
           "support": 2,
           "residual": 0
         },
@@ -3048,23 +3125,44 @@
       },
       "rules": {
         "age:above11": {
-          "form": "affine",
-          "value": 2102.5,
-          "slope": 0.19,
+          "form": "byStorage",
+          "value": 0,
+          "values": {
+            "12gb/256gb": 12980,
+            "16gb/512gb": 13360
+          },
+          "fallback": {
+            "form": "pct",
+            "value": 0.22608378602338644
+          },
           "support": 2,
           "residual": 0
         },
         "age:3to6": {
-          "form": "affine",
-          "value": 2097.5,
-          "slope": 0.05,
+          "form": "byStorage",
+          "value": 0,
+          "values": {
+            "12gb/256gb": 4960,
+            "16gb/512gb": 5060
+          },
+          "fallback": {
+            "form": "pct",
+            "value": 0.08599797440383022
+          },
           "support": 2,
           "residual": 0
         },
         "age:6to11": {
-          "form": "affine",
-          "value": 2100,
-          "slope": 0.08,
+          "form": "byStorage",
+          "value": 0,
+          "values": {
+            "12gb/256gb": 6680,
+            "16gb/512gb": 6840
+          },
+          "fallback": {
+            "form": "pct",
+            "value": 0.11604088021360832
+          },
           "support": 2,
           "residual": 0
         },
@@ -3326,23 +3424,44 @@
       },
       "rules": {
         "age:above11": {
-          "form": "affine",
-          "value": 1612.5,
-          "slope": 0.19,
+          "form": "byStorage",
+          "value": 0,
+          "values": {
+            "12gb/256gb": 8500,
+            "12gb/512gb": 8690
+          },
+          "fallback": {
+            "form": "pct",
+            "value": 0.2338694304353861
+          },
           "support": 2,
           "residual": 0
         },
         "age:3to6": {
-          "form": "affine",
-          "value": 1607.5,
-          "slope": 0.05,
+          "form": "byStorage",
+          "value": 0,
+          "values": {
+            "12gb/256gb": 3420,
+            "12gb/512gb": 3470
+          },
+          "fallback": {
+            "form": "pct",
+            "value": 0.093733401193726
+          },
           "support": 2,
           "residual": 0
         },
         "age:6to11": {
-          "form": "affine",
-          "value": 1610,
-          "slope": 0.08,
+          "form": "byStorage",
+          "value": 0,
+          "values": {
+            "12gb/256gb": 4510,
+            "12gb/512gb": 4590
+          },
+          "fallback": {
+            "form": "pct",
+            "value": 0.12380141581455606
+          },
           "support": 2,
           "residual": 0
         },
@@ -7168,9 +7287,16 @@
           "residual": 0
         },
         "touch": {
-          "form": "affine",
-          "value": 6272.23880597015,
-          "slope": 0.05970149253731343,
+          "form": "byStorage",
+          "value": 0,
+          "values": {
+            "12gb/256gb": 7000,
+            "8gb/128gb": 6960
+          },
+          "fallback": {
+            "form": "fixed",
+            "value": 6980
+          },
           "support": 2,
           "residual": 0
         },
@@ -7342,9 +7468,16 @@
           "residual": 0
         },
         "spots:0": {
-          "form": "affine",
-          "value": 5180.882352941177,
-          "slope": 0.07352941176470588,
+          "form": "byStorage",
+          "value": 0,
+          "values": {
+            "8gb/128gb": 5900,
+            "12gb/256gb": 5950
+          },
+          "fallback": {
+            "form": "fixed",
+            "value": 5930
+          },
           "support": 2,
           "residual": 0
         },
@@ -7361,9 +7494,16 @@
           "residual": 0
         },
         "lines:0": {
-          "form": "affine",
-          "value": 5180.882352941177,
-          "slope": 0.07352941176470588,
+          "form": "byStorage",
+          "value": 0,
+          "values": {
+            "8gb/128gb": 5900,
+            "12gb/256gb": 5950
+          },
+          "fallback": {
+            "form": "fixed",
+            "value": 5930
+          },
           "support": 2,
           "residual": 0
         },
@@ -7601,9 +7741,16 @@
           "residual": 10
         },
         "spots:0": {
-          "form": "affine",
-          "value": 1951.967213114754,
-          "slope": 0.3114754098360656,
+          "form": "byStorage",
+          "value": 0,
+          "values": {
+            "8gb/128gb": 5020,
+            "12gb/256gb": 5210
+          },
+          "fallback": {
+            "form": "pct",
+            "value": 0.5035195251172165
+          },
           "support": 2,
           "residual": 0
         },
@@ -7620,9 +7767,16 @@
           "residual": 0
         },
         "lines:0": {
-          "form": "affine",
-          "value": 1951.967213114754,
-          "slope": 0.3114754098360656,
+          "form": "byStorage",
+          "value": 0,
+          "values": {
+            "8gb/128gb": 5020,
+            "12gb/256gb": 5210
+          },
+          "fallback": {
+            "form": "pct",
+            "value": 0.5035195251172165
+          },
           "support": 2,
           "residual": 0
         },
@@ -7687,9 +7841,16 @@
           "residual": 0
         },
         "touch": {
-          "form": "affine",
-          "value": 1951.967213114754,
-          "slope": 0.3114754098360656,
+          "form": "byStorage",
+          "value": 0,
+          "values": {
+            "8gb/128gb": 5020,
+            "12gb/256gb": 5210
+          },
+          "fallback": {
+            "form": "pct",
+            "value": 0.5035195251172165
+          },
           "support": 2,
           "residual": 0
         },
@@ -9293,9 +9454,16 @@
           "residual": 0
         },
         "touch": {
-          "form": "affine",
-          "value": 5744.144144144144,
-          "slope": 0.09009009009009009,
+          "form": "byStorage",
+          "value": 0,
+          "values": {
+            "4gb/64gb": 6900,
+            "4gb/128gb": 7000
+          },
+          "fallback": {
+            "form": "fixed",
+            "value": 6950
+          },
           "support": 2,
           "residual": 0
         },

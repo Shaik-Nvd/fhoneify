@@ -109,7 +109,7 @@ async function run() {
 
   await test('same quote through API, page state, reload, lead and stored lead', async () => {
     const { svc } = setup();
-    const expected = priceDevice(DEVICE.brand, DEVICE.model, REFERENCE, ANSWERS).fhoneifyPrice;
+    const expected = priceDevice(DEVICE.brand, DEVICE.model, REFERENCE, ANSWERS, undefined, DEVICE.storage).fhoneifyPrice;
 
     const shown = await pageRequestsQuote(svc, ANSWERS);
     assert.equal(shown.price, expected, 'API price');
