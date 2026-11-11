@@ -1,0 +1,3548 @@
+{
+  "version": "cashify-runner-rules-v1",
+  "sourceHash": "9ee678210638e31ddc647d043d36a8e32ad07c2e4680a0b538c74025ef5ec1b7",
+  "profiles": {
+    "cmfphone1": {
+      "model": "CMF by Nothing Phone 1",
+      "brand": "Nothing",
+      "hasAge": true,
+      "variants": {
+        "6gb/128gb": {
+          "accessories": [
+            "box"
+          ],
+          "scrap": 800
+        },
+        "8gb/128gb": {
+          "accessories": [
+            "box"
+          ],
+          "scrap": 800
+        }
+      },
+      "rules": {
+        "age:above11": {
+          "form": "pct",
+          "value": 0.20391158711669,
+          "support": 2,
+          "residual": 0
+        },
+        "age:3to6": {
+          "form": "pct",
+          "value": 0.06598466307126255,
+          "support": 2,
+          "residual": 0
+        },
+        "age:6to11": {
+          "form": "pct",
+          "value": 0.09535562435575298,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 1800,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 3800,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 450,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:fingerprint": {
+          "form": "pct",
+          "value": 0.21030324220427138,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:wifi": {
+          "form": "pct",
+          "value": 0.31545486330640704,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 1600,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 450,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 450,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 1800,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 1200,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:bluetooth": {
+          "form": "pct",
+          "value": 0.31545486330640704,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 450,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 450,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:proximity": {
+          "form": "fixed",
+          "value": 360,
+          "support": 2,
+          "residual": 10
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 2100,
+          "support": 2,
+          "residual": 0
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 1470,
+          "support": 2,
+          "residual": 0
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 630,
+          "support": 2,
+          "residual": 0
+        },
+        "spots:0": {
+          "form": "fixed",
+          "value": 4250,
+          "support": 2,
+          "residual": 0
+        },
+        "spots:1": {
+          "form": "fixed",
+          "value": 3000,
+          "support": 2,
+          "residual": 0
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 1000,
+          "support": 2,
+          "residual": 0
+        },
+        "lines:0": {
+          "form": "fixed",
+          "value": 4250,
+          "support": 2,
+          "residual": 0
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 2500,
+          "support": 2,
+          "residual": 0
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 2750,
+          "support": 2,
+          "residual": 0
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 1000,
+          "support": 2,
+          "residual": 0
+        },
+        "scratch:0": {
+          "form": "pct",
+          "value": 0.12005413033672041,
+          "support": 2,
+          "residual": 0
+        },
+        "scratch:1": {
+          "form": "pct",
+          "value": 0.06513357765656222,
+          "support": 2,
+          "residual": 0
+        },
+        "dent:0": {
+          "form": "pct",
+          "value": 0.15963811659761487,
+          "support": 2,
+          "residual": 0
+        },
+        "dent:1": {
+          "form": "pct",
+          "value": 0.12005413033672041,
+          "support": 2,
+          "residual": 0
+        },
+        "panel": {
+          "form": "pct",
+          "value": 0.14006315205950715,
+          "support": 2,
+          "residual": 0
+        },
+        "bent": {
+          "form": "pct",
+          "value": 0.14006315205950715,
+          "support": 2,
+          "residual": 0
+        },
+        "loose": {
+          "form": "pct",
+          "value": 0.22987820674237908,
+          "support": 2,
+          "residual": 0
+        },
+        "touch": {
+          "form": "fixed",
+          "value": 5000,
+          "support": 2,
+          "residual": 0
+        },
+        "original": {
+          "form": "fixed",
+          "value": 2250,
+          "support": 2,
+          "residual": 0
+        },
+        "box": {
+          "form": "fixed",
+          "value": 150,
+          "support": 2,
+          "residual": 0
+        },
+        "crackedExtra": {
+          "form": "fixed",
+          "value": 720,
+          "support": 2,
+          "residual": 0
+        }
+      }
+    },
+    "cmfphone2pro5g": {
+      "model": "CMF by Nothing Phone 2 Pro 5G",
+      "brand": "Nothing",
+      "hasAge": true,
+      "variants": {
+        "8gb/128gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 800
+        },
+        "8gb/256gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 800
+        }
+      },
+      "rules": {
+        "age:above11": {
+          "form": "pct",
+          "value": 0.2427134755355544,
+          "support": 2,
+          "residual": 0
+        },
+        "age:3to6": {
+          "form": "pct",
+          "value": 0.1118637062888894,
+          "support": 2,
+          "residual": 0
+        },
+        "age:6to11": {
+          "form": "pct",
+          "value": 0.14000413289555255,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 2000,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 4000,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 450,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:fingerprint": {
+          "form": "pct",
+          "value": 0.2,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:wifi": {
+          "form": "pct",
+          "value": 0.3,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 1600,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 450,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 450,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 1900,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 1500,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:bluetooth": {
+          "form": "pct",
+          "value": 0.3,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 450,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 450,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:proximity": {
+          "form": "pct",
+          "value": 0.030172433586664524,
+          "support": 2,
+          "residual": 0
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 2520,
+          "support": 2,
+          "residual": 0
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 1760,
+          "support": 2,
+          "residual": 0
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 760,
+          "support": 2,
+          "residual": 0
+        },
+        "spots:0": {
+          "form": "fixed",
+          "value": 5100,
+          "support": 2,
+          "residual": 0
+        },
+        "spots:1": {
+          "form": "fixed",
+          "value": 3600,
+          "support": 2,
+          "residual": 0
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 1200,
+          "support": 2,
+          "residual": 0
+        },
+        "lines:0": {
+          "form": "fixed",
+          "value": 5100,
+          "support": 2,
+          "residual": 0
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 3000,
+          "support": 2,
+          "residual": 0
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 3300,
+          "support": 2,
+          "residual": 0
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 1200,
+          "support": 2,
+          "residual": 0
+        },
+        "scratch:0": {
+          "form": "pct",
+          "value": 0.1199917342088949,
+          "support": 2,
+          "residual": 0
+        },
+        "scratch:1": {
+          "form": "pct",
+          "value": 0.06508621679333226,
+          "support": 2,
+          "residual": 0
+        },
+        "dent:0": {
+          "form": "pct",
+          "value": 0.15999586710444746,
+          "support": 2,
+          "residual": 0
+        },
+        "dent:1": {
+          "form": "pct",
+          "value": 0.1199917342088949,
+          "support": 2,
+          "residual": 0
+        },
+        "panel": {
+          "form": "pct",
+          "value": 0.13355911188666683,
+          "support": 2,
+          "residual": 0
+        },
+        "bent": {
+          "form": "pct",
+          "value": 0.13355911188666683,
+          "support": 2,
+          "residual": 0
+        },
+        "loose": {
+          "form": "pct",
+          "value": 0.23017243358666453,
+          "support": 2,
+          "residual": 0
+        },
+        "touch": {
+          "form": "fixed",
+          "value": 6000,
+          "support": 2,
+          "residual": 0
+        },
+        "original": {
+          "form": "fixed",
+          "value": 2700,
+          "support": 2,
+          "residual": 0
+        },
+        "charger": {
+          "form": "fixed",
+          "value": 300,
+          "support": 2,
+          "residual": 0
+        },
+        "box": {
+          "form": "fixed",
+          "value": 450,
+          "support": 2,
+          "residual": 0
+        },
+        "crackedExtra": {
+          "form": "fixed",
+          "value": 870,
+          "support": 2,
+          "residual": 0
+        }
+      }
+    },
+    "phone1": {
+      "model": "Nothing Phone 1",
+      "brand": "Nothing",
+      "hasAge": false,
+      "variants": {
+        "8gb/128gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 800
+        },
+        "8gb/256gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 800
+        },
+        "12gb/256gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 800
+        }
+      },
+      "rules": {
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 1600,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 4000,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 500,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:fingerprint": {
+          "form": "pct",
+          "value": 0.26408764174703436,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:wifi": {
+          "form": "pct",
+          "value": 0.39612418556115686,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 1500,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 500,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 1250,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 0,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 1250,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:bluetooth": {
+          "form": "pct",
+          "value": 0.39612418556115686,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:proximity": {
+          "form": "pct",
+          "value": 0.02999165505405803,
+          "support": 3,
+          "residual": 0
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 2520,
+          "support": 3,
+          "residual": 0
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 1760,
+          "support": 3,
+          "residual": 10
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 760,
+          "support": 3,
+          "residual": 10
+        },
+        "spots:0": {
+          "form": "fixed",
+          "value": 5100,
+          "support": 3,
+          "residual": 0
+        },
+        "spots:1": {
+          "form": "fixed",
+          "value": 3600,
+          "support": 3,
+          "residual": 0
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 1200,
+          "support": 3,
+          "residual": 0
+        },
+        "lines:0": {
+          "form": "fixed",
+          "value": 5100,
+          "support": 3,
+          "residual": 0
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 3000,
+          "support": 3,
+          "residual": 0
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 3300,
+          "support": 3,
+          "residual": 0
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 1200,
+          "support": 3,
+          "residual": 0
+        },
+        "scratch:0": {
+          "form": "pct",
+          "value": 0.05876023807732726,
+          "support": 3,
+          "residual": 0
+        },
+        "scratch:1": {
+          "form": "fixed",
+          "value": 0,
+          "support": 3,
+          "residual": 0
+        },
+        "dent:0": {
+          "form": "pct",
+          "value": 0.10156881125990798,
+          "support": 3,
+          "residual": 0
+        },
+        "dent:1": {
+          "form": "pct",
+          "value": 0.05876023807732726,
+          "support": 3,
+          "residual": 0
+        },
+        "panel": {
+          "form": "pct",
+          "value": 0.17654426652764854,
+          "support": 3,
+          "residual": 0
+        },
+        "bent": {
+          "form": "pct",
+          "value": 0.17654426652764854,
+          "support": 3,
+          "residual": 0
+        },
+        "loose": {
+          "form": "pct",
+          "value": 0.17654426652764854,
+          "support": 3,
+          "residual": 0
+        },
+        "touch": {
+          "form": "fixed",
+          "value": 6000,
+          "support": 3,
+          "residual": 0
+        },
+        "original": {
+          "form": "fixed",
+          "value": 2700,
+          "support": 3,
+          "residual": 0
+        },
+        "charger": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0
+        },
+        "box": {
+          "form": "fixed",
+          "value": 500,
+          "support": 3,
+          "residual": 0
+        },
+        "crackedExtra": {
+          "form": "fixed",
+          "value": 870,
+          "support": 3,
+          "residual": 0
+        }
+      }
+    },
+    "phone2": {
+      "model": "Nothing Phone 2",
+      "brand": "Nothing",
+      "hasAge": true,
+      "variants": {
+        "8gb/128gb": {
+          "accessories": [
+            "box"
+          ],
+          "scrap": 1200
+        },
+        "12gb/256gb": {
+          "accessories": [
+            "box"
+          ],
+          "scrap": 1200
+        },
+        "12gb/512gb": {
+          "accessories": [
+            "box"
+          ],
+          "scrap": 1200
+        }
+      },
+      "rules": {
+        "age:above11": {
+          "form": "pct",
+          "value": 0.20351535481139324,
+          "support": 3,
+          "residual": 0
+        },
+        "age:3to6": {
+          "form": "pct",
+          "value": 0.06588554724077902,
+          "support": 3,
+          "residual": 0
+        },
+        "age:6to11": {
+          "form": "pct",
+          "value": 0.09549587279510723,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 2000,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 4000,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:fingerprint": {
+          "form": "pct",
+          "value": 0.21034394736259518,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:wifi": {
+          "form": "pct",
+          "value": 0.31544252347353485,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 1500,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 1300,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 0,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 1900,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:bluetooth": {
+          "form": "pct",
+          "value": 0.31544252347353485,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:proximity": {
+          "form": "pct",
+          "value": 0.030092448405673846,
+          "support": 3,
+          "residual": 10
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 3110,
+          "support": 3,
+          "residual": 0
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 2180,
+          "support": 3,
+          "residual": 10
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 930,
+          "support": 3,
+          "residual": 10
+        },
+        "spots:0": {
+          "form": "fixed",
+          "value": 6290,
+          "support": 3,
+          "residual": 0
+        },
+        "spots:1": {
+          "form": "fixed",
+          "value": 4440,
+          "support": 3,
+          "residual": 0
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 1480,
+          "support": 3,
+          "residual": 0
+        },
+        "lines:0": {
+          "form": "fixed",
+          "value": 6290,
+          "support": 3,
+          "residual": 0
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 3700,
+          "support": 3,
+          "residual": 0
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 4070,
+          "support": 3,
+          "residual": 0
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 1480,
+          "support": 3,
+          "residual": 0
+        },
+        "scratch:0": {
+          "form": "pct",
+          "value": 0.12006096838611914,
+          "support": 3,
+          "residual": 0
+        },
+        "scratch:1": {
+          "form": "pct",
+          "value": 0.06491003401917875,
+          "support": 3,
+          "residual": 0
+        },
+        "dent:0": {
+          "form": "pct",
+          "value": 0.16007621286311066,
+          "support": 3,
+          "residual": 0
+        },
+        "dent:1": {
+          "form": "pct",
+          "value": 0.12006096838611914,
+          "support": 3,
+          "residual": 0
+        },
+        "panel": {
+          "form": "pct",
+          "value": 0.14055634723541505,
+          "support": 3,
+          "residual": 0
+        },
+        "bent": {
+          "form": "pct",
+          "value": 0.14055634723541505,
+          "support": 3,
+          "residual": 0
+        },
+        "loose": {
+          "form": "pct",
+          "value": 0.2300314768456057,
+          "support": 3,
+          "residual": 0
+        },
+        "touch": {
+          "form": "fixed",
+          "value": 7400,
+          "support": 3,
+          "residual": 0
+        },
+        "original": {
+          "form": "fixed",
+          "value": 3330,
+          "support": 3,
+          "residual": 0
+        },
+        "box": {
+          "form": "fixed",
+          "value": 150,
+          "support": 3,
+          "residual": 0
+        },
+        "crackedExtra": {
+          "form": "fixed",
+          "value": 1080,
+          "support": 3,
+          "residual": 10
+        }
+      }
+    },
+    "phone2a5g": {
+      "model": "Nothing Phone 2a 5G",
+      "brand": "Nothing",
+      "hasAge": true,
+      "variants": {
+        "8gb/128gb": {
+          "accessories": [
+            "box"
+          ],
+          "scrap": 800
+        },
+        "8gb/256gb": {
+          "accessories": [
+            "box"
+          ],
+          "scrap": 800
+        },
+        "12gb/256gb": {
+          "accessories": [
+            "box"
+          ],
+          "scrap": 800
+        }
+      },
+      "rules": {
+        "age:above11": {
+          "form": "pct",
+          "value": 0.20352193849741007,
+          "support": 3,
+          "residual": 0
+        },
+        "age:3to6": {
+          "form": "pct",
+          "value": 0.06599085982765938,
+          "support": 3,
+          "residual": 0
+        },
+        "age:6to11": {
+          "form": "pct",
+          "value": 0.09545075175559525,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 2000,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 4000,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:fingerprint": {
+          "form": "pct",
+          "value": 0.2102180414762464,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:wifi": {
+          "form": "pct",
+          "value": 0.3152247370308588,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 1500,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 1300,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 0,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 1900,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:bluetooth": {
+          "form": "pct",
+          "value": 0.3152247370308588,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:proximity": {
+          "form": "pct",
+          "value": 0.029841884011717494,
+          "support": 3,
+          "residual": 0
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 3110,
+          "support": 3,
+          "residual": 10
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 2170,
+          "support": 3,
+          "residual": 0
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 930,
+          "support": 3,
+          "residual": 0
+        },
+        "spots:0": {
+          "form": "fixed",
+          "value": 6290,
+          "support": 3,
+          "residual": 0
+        },
+        "spots:1": {
+          "form": "fixed",
+          "value": 4440,
+          "support": 3,
+          "residual": 0
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 1480,
+          "support": 3,
+          "residual": 0
+        },
+        "lines:0": {
+          "form": "fixed",
+          "value": 6290,
+          "support": 3,
+          "residual": 0
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 3700,
+          "support": 3,
+          "residual": 0
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 4070,
+          "support": 3,
+          "residual": 0
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 1480,
+          "support": 3,
+          "residual": 0
+        },
+        "scratch:0": {
+          "form": "pct",
+          "value": 0.11974327675288084,
+          "support": 3,
+          "residual": 0
+        },
+        "scratch:1": {
+          "form": "pct",
+          "value": 0.06484411586325495,
+          "support": 3,
+          "residual": 0
+        },
+        "dent:0": {
+          "form": "pct",
+          "value": 0.15990585644423827,
+          "support": 3,
+          "residual": 0
+        },
+        "dent:1": {
+          "form": "pct",
+          "value": 0.11974327675288084,
+          "support": 3,
+          "residual": 0
+        },
+        "panel": {
+          "form": "pct",
+          "value": 0.14058931847918235,
+          "support": 3,
+          "residual": 10
+        },
+        "bent": {
+          "form": "pct",
+          "value": 0.14058931847918235,
+          "support": 3,
+          "residual": 10
+        },
+        "loose": {
+          "form": "pct",
+          "value": 0.2297259593397229,
+          "support": 3,
+          "residual": 0
+        },
+        "touch": {
+          "form": "fixed",
+          "value": 7400,
+          "support": 3,
+          "residual": 0
+        },
+        "original": {
+          "form": "fixed",
+          "value": 3330,
+          "support": 3,
+          "residual": 0
+        },
+        "box": {
+          "form": "fixed",
+          "value": 150,
+          "support": 3,
+          "residual": 0
+        },
+        "crackedExtra": {
+          "form": "fixed",
+          "value": 1070,
+          "support": 3,
+          "residual": 10
+        }
+      }
+    },
+    "phone2aplus": {
+      "model": "Nothing Phone 2a Plus",
+      "brand": "Nothing",
+      "hasAge": true,
+      "variants": {
+        "8gb/256gb": {
+          "accessories": [
+            "box"
+          ],
+          "scrap": 800
+        },
+        "12gb/256gb": {
+          "accessories": [
+            "box"
+          ],
+          "scrap": 800
+        }
+      },
+      "rules": {
+        "age:above11": {
+          "form": "pct",
+          "value": 0.2036208642685495,
+          "support": 2,
+          "residual": 0
+        },
+        "age:3to6": {
+          "form": "pct",
+          "value": 0.0657106543092499,
+          "support": 2,
+          "residual": 0
+        },
+        "age:6to11": {
+          "form": "pct",
+          "value": 0.0951845906432663,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 2000,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 4000,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 400,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:fingerprint": {
+          "form": "pct",
+          "value": 0.2103836459097666,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:wifi": {
+          "form": "pct",
+          "value": 0.31557546886464993,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 1500,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 400,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 400,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 1400,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 1900,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:bluetooth": {
+          "form": "pct",
+          "value": 0.31557546886464993,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 400,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 400,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:proximity": {
+          "form": "fixed",
+          "value": 560,
+          "support": 2,
+          "residual": 10
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 3110,
+          "support": 2,
+          "residual": 10
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 2180,
+          "support": 2,
+          "residual": 10
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 930,
+          "support": 2,
+          "residual": 0
+        },
+        "spots:0": {
+          "form": "fixed",
+          "value": 6290,
+          "support": 2,
+          "residual": 0
+        },
+        "spots:1": {
+          "form": "fixed",
+          "value": 4440,
+          "support": 2,
+          "residual": 0
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 1480,
+          "support": 2,
+          "residual": 0
+        },
+        "lines:0": {
+          "form": "fixed",
+          "value": 6290,
+          "support": 2,
+          "residual": 0
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 3700,
+          "support": 2,
+          "residual": 0
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 4070,
+          "support": 2,
+          "residual": 0
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 1480,
+          "support": 2,
+          "residual": 0
+        },
+        "scratch:0": {
+          "form": "pct",
+          "value": 0.11979185097168285,
+          "support": 2,
+          "residual": 0
+        },
+        "scratch:1": {
+          "form": "fixed",
+          "value": 1200,
+          "support": 2,
+          "residual": 10
+        },
+        "dent:0": {
+          "form": "pct",
+          "value": 0.15981376139571624,
+          "support": 2,
+          "residual": 0
+        },
+        "dent:1": {
+          "form": "pct",
+          "value": 0.11979185097168285,
+          "support": 2,
+          "residual": 0
+        },
+        "panel": {
+          "form": "pct",
+          "value": 0.14034705737331685,
+          "support": 2,
+          "residual": 0
+        },
+        "bent": {
+          "form": "pct",
+          "value": 0.14034705737331685,
+          "support": 2,
+          "residual": 0
+        },
+        "loose": {
+          "form": "pct",
+          "value": 0.229850349932166,
+          "support": 2,
+          "residual": 10
+        },
+        "touch": {
+          "form": "fixed",
+          "value": 7400,
+          "support": 2,
+          "residual": 0
+        },
+        "original": {
+          "form": "fixed",
+          "value": 3330,
+          "support": 2,
+          "residual": 0
+        },
+        "box": {
+          "form": "fixed",
+          "value": 150,
+          "support": 2,
+          "residual": 0
+        },
+        "crackedExtra": {
+          "form": "fixed",
+          "value": 1070,
+          "support": 2,
+          "residual": 0
+        }
+      }
+    },
+    "phone3": {
+      "model": "Nothing Phone 3",
+      "brand": "Nothing",
+      "hasAge": true,
+      "variants": {
+        "12gb/256gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 1200
+        },
+        "16gb/512gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 1200
+        }
+      },
+      "rules": {
+        "age:above11": {
+          "form": "pct",
+          "value": 0.24262691906394396,
+          "support": 2,
+          "residual": 0
+        },
+        "age:3to6": {
+          "form": "pct",
+          "value": 0.11181398121925772,
+          "support": 2,
+          "residual": 0
+        },
+        "age:6to11": {
+          "form": "pct",
+          "value": 0.13976926516619467,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 3000,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 5000,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 600,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:fingerprint": {
+          "form": "pct",
+          "value": 0.2,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:wifi": {
+          "form": "pct",
+          "value": 0.2999218959606499,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 1800,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 600,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 600,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 1500,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:face": {
+          "form": "pct",
+          "value": 0.2,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 2500,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:bluetooth": {
+          "form": "pct",
+          "value": 0.2999218959606499,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 600,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 600,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:proximity": {
+          "form": "fixed",
+          "value": 970,
+          "support": 2,
+          "residual": 10
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 3780,
+          "support": 2,
+          "residual": 0
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 2650,
+          "support": 2,
+          "residual": 0
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 1130,
+          "support": 2,
+          "residual": 0
+        },
+        "spots:0": {
+          "form": "fixed",
+          "value": 7650,
+          "support": 2,
+          "residual": 0
+        },
+        "spots:1": {
+          "form": "fixed",
+          "value": 5400,
+          "support": 2,
+          "residual": 0
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 1800,
+          "support": 2,
+          "residual": 0
+        },
+        "lines:0": {
+          "form": "fixed",
+          "value": 7650,
+          "support": 2,
+          "residual": 0
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 4500,
+          "support": 2,
+          "residual": 0
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 4950,
+          "support": 2,
+          "residual": 0
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 1800,
+          "support": 2,
+          "residual": 0
+        },
+        "scratch:0": {
+          "form": "pct",
+          "value": 0.12,
+          "support": 2,
+          "residual": 0
+        },
+        "scratch:1": {
+          "form": "pct",
+          "value": 0.06501952600983753,
+          "support": 2,
+          "residual": 0
+        },
+        "dent:0": {
+          "form": "pct",
+          "value": 0.16,
+          "support": 2,
+          "residual": 0
+        },
+        "dent:1": {
+          "form": "pct",
+          "value": 0.12,
+          "support": 2,
+          "residual": 0
+        },
+        "panel": {
+          "form": "pct",
+          "value": 0.13358891041884036,
+          "support": 2,
+          "residual": 10
+        },
+        "bent": {
+          "form": "pct",
+          "value": 0.13358891041884036,
+          "support": 2,
+          "residual": 10
+        },
+        "loose": {
+          "form": "pct",
+          "value": 0.22996094798032493,
+          "support": 2,
+          "residual": 0
+        },
+        "touch": {
+          "form": "fixed",
+          "value": 9000,
+          "support": 2,
+          "residual": 0
+        },
+        "original": {
+          "form": "fixed",
+          "value": 4050,
+          "support": 2,
+          "residual": 0
+        },
+        "charger": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0
+        },
+        "box": {
+          "form": "fixed",
+          "value": 300,
+          "support": 2,
+          "residual": 0
+        },
+        "crackedExtra": {
+          "form": "fixed",
+          "value": 1310,
+          "support": 2,
+          "residual": 10
+        }
+      }
+    },
+    "phone3a": {
+      "model": "Nothing Phone 3a",
+      "brand": "Nothing",
+      "hasAge": true,
+      "variants": {
+        "8gb/128gb": {
+          "accessories": [
+            "box"
+          ],
+          "scrap": 1200
+        },
+        "8gb/256gb": {
+          "accessories": [
+            "box"
+          ],
+          "scrap": 1200
+        }
+      },
+      "rules": {
+        "age:above11": {
+          "form": "pct",
+          "value": 0.24265257099091364,
+          "support": 2,
+          "residual": 0
+        },
+        "age:3to6": {
+          "form": "pct",
+          "value": 0.11180532185255242,
+          "support": 2,
+          "residual": 0
+        },
+        "age:6to11": {
+          "form": "pct",
+          "value": 0.13976303482529331,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 2200,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 4400,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 400,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:fingerprint": {
+          "form": "pct",
+          "value": 0.2,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:wifi": {
+          "form": "pct",
+          "value": 0.3,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 1600,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 400,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 400,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 1350,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 2000,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:bluetooth": {
+          "form": "pct",
+          "value": 0.3,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 400,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 400,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:proximity": {
+          "form": "pct",
+          "value": 0.03011848258735335,
+          "support": 2,
+          "residual": 0
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 3360,
+          "support": 2,
+          "residual": 0
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 2350,
+          "support": 2,
+          "residual": 0
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 1010,
+          "support": 2,
+          "residual": 0
+        },
+        "spots:0": {
+          "form": "fixed",
+          "value": 6800,
+          "support": 2,
+          "residual": 0
+        },
+        "spots:1": {
+          "form": "fixed",
+          "value": 4800,
+          "support": 2,
+          "residual": 0
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 1600,
+          "support": 2,
+          "residual": 0
+        },
+        "lines:0": {
+          "form": "fixed",
+          "value": 6800,
+          "support": 2,
+          "residual": 0
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 4000,
+          "support": 2,
+          "residual": 0
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 4400,
+          "support": 2,
+          "residual": 0
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 1600,
+          "support": 2,
+          "residual": 0
+        },
+        "scratch:0": {
+          "form": "pct",
+          "value": 0.12000510600768222,
+          "support": 2,
+          "residual": 0
+        },
+        "scratch:1": {
+          "form": "pct",
+          "value": 0.06481844661320832,
+          "support": 2,
+          "residual": 0
+        },
+        "dent:0": {
+          "form": "pct",
+          "value": 0.1600025530038411,
+          "support": 2,
+          "residual": 0
+        },
+        "dent:1": {
+          "form": "pct",
+          "value": 0.12000510600768222,
+          "support": 2,
+          "residual": 0
+        },
+        "panel": {
+          "form": "pct",
+          "value": 0.13373678530398153,
+          "support": 2,
+          "residual": 0
+        },
+        "bent": {
+          "form": "pct",
+          "value": 0.13373678530398153,
+          "support": 2,
+          "residual": 0
+        },
+        "loose": {
+          "form": "pct",
+          "value": 0.23011848258735335,
+          "support": 2,
+          "residual": 0
+        },
+        "touch": {
+          "form": "fixed",
+          "value": 8000,
+          "support": 2,
+          "residual": 0
+        },
+        "original": {
+          "form": "fixed",
+          "value": 3600,
+          "support": 2,
+          "residual": 0
+        },
+        "box": {
+          "form": "fixed",
+          "value": 300,
+          "support": 2,
+          "residual": 0
+        },
+        "crackedExtra": {
+          "form": "fixed",
+          "value": 1160,
+          "support": 2,
+          "residual": 0
+        }
+      }
+    },
+    "phone3alite": {
+      "model": "Nothing Phone 3a Lite",
+      "brand": "Nothing",
+      "hasAge": true,
+      "variants": {
+        "8gb/128gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 800
+        },
+        "8gb/256gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 800
+        }
+      },
+      "rules": {
+        "age:above11": {
+          "form": "pct",
+          "value": 0.2425465064375692,
+          "support": 2,
+          "residual": 0
+        },
+        "age:3to6": {
+          "form": "pct",
+          "value": 0.11176617218251277,
+          "support": 2,
+          "residual": 0
+        },
+        "age:6to11": {
+          "form": "pct",
+          "value": 0.13995118925467964,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 2000,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 4000,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 400,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:fingerprint": {
+          "form": "pct",
+          "value": 0.19993275479267028,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:wifi": {
+          "form": "pct",
+          "value": 0.3002266627247062,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 1500,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 400,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 400,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 1300,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 1500,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:bluetooth": {
+          "form": "pct",
+          "value": 0.3002266627247062,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 400,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 400,
+          "support": 2,
+          "residual": 0
+        },
+        "hardware:proximity": {
+          "form": "fixed",
+          "value": 460,
+          "support": 2,
+          "residual": 10
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 2940,
+          "support": 2,
+          "residual": 0
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 2060,
+          "support": 2,
+          "residual": 0
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 880,
+          "support": 2,
+          "residual": 0
+        },
+        "spots:0": {
+          "form": "fixed",
+          "value": 5950,
+          "support": 2,
+          "residual": 0
+        },
+        "spots:1": {
+          "form": "fixed",
+          "value": 4200,
+          "support": 2,
+          "residual": 0
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 1400,
+          "support": 2,
+          "residual": 0
+        },
+        "lines:0": {
+          "form": "fixed",
+          "value": 5950,
+          "support": 2,
+          "residual": 0
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 3500,
+          "support": 2,
+          "residual": 0
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 3850,
+          "support": 2,
+          "residual": 0
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 1400,
+          "support": 2,
+          "residual": 0
+        },
+        "scratch:0": {
+          "form": "pct",
+          "value": 0.11996313107598129,
+          "support": 2,
+          "residual": 0
+        },
+        "scratch:1": {
+          "form": "pct",
+          "value": 0.0652220541092039,
+          "support": 2,
+          "residual": 0
+        },
+        "dent:0": {
+          "form": "pct",
+          "value": 0.1602754734700266,
+          "support": 2,
+          "residual": 0
+        },
+        "dent:1": {
+          "form": "pct",
+          "value": 0.11996313107598129,
+          "support": 2,
+          "residual": 0
+        },
+        "panel": {
+          "form": "pct",
+          "value": 0.13371941357541609,
+          "support": 2,
+          "residual": 0
+        },
+        "bent": {
+          "form": "pct",
+          "value": 0.13371941357541609,
+          "support": 2,
+          "residual": 0
+        },
+        "loose": {
+          "form": "pct",
+          "value": 0.2300829550790421,
+          "support": 2,
+          "residual": 0
+        },
+        "touch": {
+          "form": "affine",
+          "value": 2940,
+          "slope": 0.25925925925925924,
+          "support": 2,
+          "residual": 0
+        },
+        "original": {
+          "form": "fixed",
+          "value": 3150,
+          "support": 2,
+          "residual": 0
+        },
+        "charger": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0
+        },
+        "box": {
+          "form": "fixed",
+          "value": 300,
+          "support": 2,
+          "residual": 0
+        },
+        "crackedExtra": {
+          "form": "fixed",
+          "value": 1020,
+          "support": 2,
+          "residual": 0
+        }
+      }
+    },
+    "phone3apro": {
+      "model": "Nothing Phone 3a Pro",
+      "brand": "Nothing",
+      "hasAge": true,
+      "variants": {
+        "8gb/128gb": {
+          "accessories": [
+            "box"
+          ],
+          "scrap": 1200
+        },
+        "8gb/256gb": {
+          "accessories": [
+            "box"
+          ],
+          "scrap": 1200
+        },
+        "12gb/256gb": {
+          "accessories": [
+            "box"
+          ],
+          "scrap": 1200
+        }
+      },
+      "rules": {
+        "age:above11": {
+          "form": "pct",
+          "value": 0.24283059386524602,
+          "support": 3,
+          "residual": 0
+        },
+        "age:3to6": {
+          "form": "pct",
+          "value": 0.11185720187822525,
+          "support": 3,
+          "residual": 0
+        },
+        "age:6to11": {
+          "form": "pct",
+          "value": 0.13993246980636562,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 2200,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 4400,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:fingerprint": {
+          "form": "pct",
+          "value": 0.20012278217024432,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:wifi": {
+          "form": "pct",
+          "value": 0.30003069554256107,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 1600,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 1350,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 0,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 2000,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:bluetooth": {
+          "form": "pct",
+          "value": 0.30003069554256107,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:proximity": {
+          "form": "pct",
+          "value": 0.03001925216949229,
+          "support": 3,
+          "residual": 0
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 3360,
+          "support": 3,
+          "residual": 0
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 2350,
+          "support": 3,
+          "residual": 0
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 1010,
+          "support": 3,
+          "residual": 0
+        },
+        "spots:0": {
+          "form": "fixed",
+          "value": 6800,
+          "support": 3,
+          "residual": 0
+        },
+        "spots:1": {
+          "form": "fixed",
+          "value": 4800,
+          "support": 3,
+          "residual": 0
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 1600,
+          "support": 3,
+          "residual": 0
+        },
+        "lines:0": {
+          "form": "fixed",
+          "value": 6800,
+          "support": 3,
+          "residual": 0
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 4000,
+          "support": 3,
+          "residual": 0
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 4400,
+          "support": 3,
+          "residual": 0
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 1600,
+          "support": 3,
+          "residual": 0
+        },
+        "scratch:0": {
+          "form": "pct",
+          "value": 0.1200736693021466,
+          "support": 3,
+          "residual": 0
+        },
+        "scratch:1": {
+          "form": "pct",
+          "value": 0.06496935989107758,
+          "support": 3,
+          "residual": 0
+        },
+        "dent:0": {
+          "form": "pct",
+          "value": 0.16009822573619545,
+          "support": 3,
+          "residual": 0
+        },
+        "dent:1": {
+          "form": "pct",
+          "value": 0.1200736693021466,
+          "support": 3,
+          "residual": 0
+        },
+        "panel": {
+          "form": "pct",
+          "value": 0.1333645854385315,
+          "support": 3,
+          "residual": 0
+        },
+        "bent": {
+          "form": "pct",
+          "value": 0.1333645854385315,
+          "support": 3,
+          "residual": 0
+        },
+        "loose": {
+          "form": "pct",
+          "value": 0.22998688693901992,
+          "support": 3,
+          "residual": 0
+        },
+        "touch": {
+          "form": "fixed",
+          "value": 8000,
+          "support": 3,
+          "residual": 0
+        },
+        "original": {
+          "form": "fixed",
+          "value": 3600,
+          "support": 3,
+          "residual": 0
+        },
+        "box": {
+          "form": "fixed",
+          "value": 300,
+          "support": 3,
+          "residual": 0
+        },
+        "crackedExtra": {
+          "form": "fixed",
+          "value": 1160,
+          "support": 3,
+          "residual": 0
+        }
+      }
+    },
+    "phone4a": {
+      "model": "Nothing Phone 4a",
+      "brand": "Nothing",
+      "hasAge": true,
+      "variants": {
+        "6gb/128gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 1200
+        },
+        "8gb/128gb": {
+          "accessories": [
+            "box"
+          ],
+          "scrap": 1200
+        },
+        "8gb/256gb": {
+          "accessories": [
+            "box"
+          ],
+          "scrap": 1200
+        },
+        "12gb/256gb": {
+          "accessories": [
+            "box"
+          ],
+          "scrap": 1200
+        }
+      },
+      "rules": {
+        "age:above11": {
+          "form": "pct",
+          "value": 0.24265621127109668,
+          "support": 4,
+          "residual": 0
+        },
+        "age:3to6": {
+          "form": "pct",
+          "value": 0.11173482953649248,
+          "support": 4,
+          "residual": 0
+        },
+        "age:6to11": {
+          "form": "pct",
+          "value": 0.13976520426327768,
+          "support": 4,
+          "residual": 0
+        },
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 2200,
+          "support": 4,
+          "residual": 0
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 4400,
+          "support": 4,
+          "residual": 0
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 400,
+          "support": 4,
+          "residual": 0
+        },
+        "hardware:fingerprint": {
+          "form": "pct",
+          "value": 0.2,
+          "support": 4,
+          "residual": 0
+        },
+        "hardware:wifi": {
+          "form": "pct",
+          "value": 0.29985533698370853,
+          "support": 4,
+          "residual": 0
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 1600,
+          "support": 4,
+          "residual": 0
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 400,
+          "support": 4,
+          "residual": 0
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 400,
+          "support": 4,
+          "residual": 0
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 1350,
+          "support": 4,
+          "residual": 0
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 0,
+          "support": 4,
+          "residual": 0
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 4,
+          "residual": 0
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 4,
+          "residual": 0
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 2000,
+          "support": 4,
+          "residual": 0
+        },
+        "hardware:bluetooth": {
+          "form": "pct",
+          "value": 0.29985533698370853,
+          "support": 4,
+          "residual": 0
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 400,
+          "support": 4,
+          "residual": 0
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 400,
+          "support": 4,
+          "residual": 0
+        },
+        "hardware:proximity": {
+          "form": "pct",
+          "value": 0.029927668491854256,
+          "support": 4,
+          "residual": 0
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 3360,
+          "support": 4,
+          "residual": 0
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 2350,
+          "support": 4,
+          "residual": 0
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 1010,
+          "support": 4,
+          "residual": 0
+        },
+        "spots:0": {
+          "form": "fixed",
+          "value": 6800,
+          "support": 4,
+          "residual": 0
+        },
+        "spots:1": {
+          "form": "fixed",
+          "value": 4800,
+          "support": 4,
+          "residual": 0
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 1600,
+          "support": 4,
+          "residual": 0
+        },
+        "lines:0": {
+          "form": "fixed",
+          "value": 6800,
+          "support": 4,
+          "residual": 0
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 4000,
+          "support": 4,
+          "residual": 0
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 4400,
+          "support": 4,
+          "residual": 0
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 1600,
+          "support": 4,
+          "residual": 0
+        },
+        "scratch:0": {
+          "form": "pct",
+          "value": 0.12,
+          "support": 4,
+          "residual": 0
+        },
+        "scratch:1": {
+          "form": "pct",
+          "value": 0.06489465738299646,
+          "support": 4,
+          "residual": 0
+        },
+        "dent:0": {
+          "form": "pct",
+          "value": 0.16,
+          "support": 4,
+          "residual": 0
+        },
+        "dent:1": {
+          "form": "pct",
+          "value": 0.12,
+          "support": 4,
+          "residual": 0
+        },
+        "panel": {
+          "form": "pct",
+          "value": 0.1336839496158093,
+          "support": 4,
+          "residual": 0
+        },
+        "bent": {
+          "form": "pct",
+          "value": 0.1336839496158093,
+          "support": 4,
+          "residual": 0
+        },
+        "loose": {
+          "form": "pct",
+          "value": 0.22992766849185425,
+          "support": 4,
+          "residual": 0
+        },
+        "touch": {
+          "form": "fixed",
+          "value": 8000,
+          "support": 4,
+          "residual": 0
+        },
+        "original": {
+          "form": "fixed",
+          "value": 3600,
+          "support": 4,
+          "residual": 0
+        },
+        "charger": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0
+        },
+        "box": {
+          "form": "fixed",
+          "value": 300,
+          "support": 4,
+          "residual": 0
+        },
+        "crackedExtra": {
+          "form": "fixed",
+          "value": 1160,
+          "support": 4,
+          "residual": 0
+        }
+      }
+    },
+    "phone4apro": {
+      "model": "Nothing Phone 4a Pro",
+      "brand": "Nothing",
+      "hasAge": true,
+      "variants": {
+        "8gb/128gb": {
+          "accessories": [
+            "box"
+          ],
+          "scrap": 1200
+        },
+        "8gb/256gb": {
+          "accessories": [
+            "box"
+          ],
+          "scrap": 1200
+        },
+        "12gb/256gb": {
+          "accessories": [
+            "box"
+          ],
+          "scrap": 1200
+        }
+      },
+      "rules": {
+        "age:above11": {
+          "form": "pct",
+          "value": 0.24268967471550656,
+          "support": 3,
+          "residual": 0
+        },
+        "age:3to6": {
+          "form": "pct",
+          "value": 0.11177646199048458,
+          "support": 3,
+          "residual": 0
+        },
+        "age:6to11": {
+          "form": "pct",
+          "value": 0.13974605636673676,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 2200,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 4400,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:fingerprint": {
+          "form": "pct",
+          "value": 0.2,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:wifi": {
+          "form": "pct",
+          "value": 0.2998931129969624,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 1600,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 1350,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 0,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 2000,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:bluetooth": {
+          "form": "pct",
+          "value": 0.2998931129969624,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:proximity": {
+          "form": "pct",
+          "value": 0.030074522612815503,
+          "support": 3,
+          "residual": 0
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 3360,
+          "support": 3,
+          "residual": 0
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 2350,
+          "support": 3,
+          "residual": 0
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 1010,
+          "support": 3,
+          "residual": 0
+        },
+        "spots:0": {
+          "form": "fixed",
+          "value": 6800,
+          "support": 3,
+          "residual": 0
+        },
+        "spots:1": {
+          "form": "fixed",
+          "value": 4800,
+          "support": 3,
+          "residual": 0
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 1600,
+          "support": 3,
+          "residual": 0
+        },
+        "lines:0": {
+          "form": "fixed",
+          "value": 6800,
+          "support": 3,
+          "residual": 0
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 4000,
+          "support": 3,
+          "residual": 0
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 4400,
+          "support": 3,
+          "residual": 0
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 1600,
+          "support": 3,
+          "residual": 0
+        },
+        "scratch:0": {
+          "form": "pct",
+          "value": 0.11997892088870328,
+          "support": 3,
+          "residual": 0
+        },
+        "scratch:1": {
+          "form": "pct",
+          "value": 0.06509070480792654,
+          "support": 3,
+          "residual": 0
+        },
+        "dent:0": {
+          "form": "pct",
+          "value": 0.16004215822259343,
+          "support": 3,
+          "residual": 10
+        },
+        "dent:1": {
+          "form": "pct",
+          "value": 0.11997892088870328,
+          "support": 3,
+          "residual": 0
+        },
+        "panel": {
+          "form": "pct",
+          "value": 0.1335471073394085,
+          "support": 3,
+          "residual": 10
+        },
+        "bent": {
+          "form": "pct",
+          "value": 0.1335471073394085,
+          "support": 3,
+          "residual": 10
+        },
+        "loose": {
+          "form": "pct",
+          "value": 0.2300745226128155,
+          "support": 3,
+          "residual": 0
+        },
+        "touch": {
+          "form": "fixed",
+          "value": 8000,
+          "support": 3,
+          "residual": 0
+        },
+        "original": {
+          "form": "fixed",
+          "value": 3600,
+          "support": 3,
+          "residual": 0
+        },
+        "box": {
+          "form": "fixed",
+          "value": 300,
+          "support": 3,
+          "residual": 0
+        },
+        "crackedExtra": {
+          "form": "fixed",
+          "value": 1160,
+          "support": 3,
+          "residual": 0
+        }
+      }
+    },
+    "phone4b": {
+      "model": "Nothing Phone 4b",
+      "brand": "Nothing",
+      "hasAge": true,
+      "variants": {
+        "6gb/128gb": {
+          "accessories": [
+            "box"
+          ],
+          "scrap": 1200
+        },
+        "8gb/128gb": {
+          "accessories": [
+            "box"
+          ],
+          "scrap": 1200
+        },
+        "8gb/256gb": {
+          "accessories": [
+            "box"
+          ],
+          "scrap": 1200
+        }
+      },
+      "rules": {
+        "age:above11": {
+          "form": "pct",
+          "value": 0.24258641412529544,
+          "support": 3,
+          "residual": 0
+        },
+        "age:3to6": {
+          "form": "pct",
+          "value": 0.11172944195187767,
+          "support": 3,
+          "residual": 0
+        },
+        "age:6to11": {
+          "form": "pct",
+          "value": 0.13982984948866375,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 2200,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 4400,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:fingerprint": {
+          "form": "pct",
+          "value": 0.2000569556652309,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:wifi": {
+          "form": "pct",
+          "value": 0.299935419585705,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 1600,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 1350,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 0,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 2000,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:bluetooth": {
+          "form": "pct",
+          "value": 0.299935419585705,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0
+        },
+        "hardware:proximity": {
+          "form": "pct",
+          "value": 0.029972707029183546,
+          "support": 3,
+          "residual": 0
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 3360,
+          "support": 3,
+          "residual": 0
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 2350,
+          "support": 3,
+          "residual": 0
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 1010,
+          "support": 3,
+          "residual": 0
+        },
+        "spots:0": {
+          "form": "fixed",
+          "value": 6800,
+          "support": 3,
+          "residual": 0
+        },
+        "spots:1": {
+          "form": "fixed",
+          "value": 4800,
+          "support": 3,
+          "residual": 0
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 1600,
+          "support": 3,
+          "residual": 0
+        },
+        "lines:0": {
+          "form": "fixed",
+          "value": 6800,
+          "support": 3,
+          "residual": 0
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 4000,
+          "support": 3,
+          "residual": 0
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 4400,
+          "support": 3,
+          "residual": 0
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 1600,
+          "support": 3,
+          "residual": 0
+        },
+        "scratch:0": {
+          "form": "pct",
+          "value": 0.12001179536577435,
+          "support": 3,
+          "residual": 0
+        },
+        "scratch:1": {
+          "form": "pct",
+          "value": 0.06492558547482882,
+          "support": 3,
+          "residual": 0
+        },
+        "dent:0": {
+          "form": "pct",
+          "value": 0.15996318093396397,
+          "support": 3,
+          "residual": 0
+        },
+        "dent:1": {
+          "form": "pct",
+          "value": 0.12001179536577435,
+          "support": 3,
+          "residual": 0
+        },
+        "panel": {
+          "form": "pct",
+          "value": 0.1335590985222873,
+          "support": 3,
+          "residual": 0
+        },
+        "bent": {
+          "form": "pct",
+          "value": 0.1335590985222873,
+          "support": 3,
+          "residual": 0
+        },
+        "loose": {
+          "form": "pct",
+          "value": 0.22988727353133717,
+          "support": 3,
+          "residual": 0
+        },
+        "touch": {
+          "form": "fixed",
+          "value": 8000,
+          "support": 3,
+          "residual": 0
+        },
+        "original": {
+          "form": "fixed",
+          "value": 3600,
+          "support": 3,
+          "residual": 0
+        },
+        "box": {
+          "form": "fixed",
+          "value": 300,
+          "support": 3,
+          "residual": 0
+        },
+        "crackedExtra": {
+          "form": "fixed",
+          "value": 1160,
+          "support": 3,
+          "residual": 0
+        }
+      }
+    }
+  }
+}

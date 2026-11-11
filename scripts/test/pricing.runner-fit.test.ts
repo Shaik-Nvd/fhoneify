@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import { fitRule } from '../pricing-evidence/fit-cashify-runner-calibration';
+import { evaluateDeduction } from '../../lib/pricing/cashifyRunnerModel/model';
+const points = (pairs: number[][]) => pairs.map(([reference, value], i) => ({ reference, value, storage: `${i}gb` }));
+assert.equal(fitRule(points([[10000, 700], [20000, 700]])).form, 'fixed');
+const pct = fitRule(points([[10000, 2000], [20000, 4000]]));
+assert.equal(pct.form, 'pct'); assert.equal(evaluateDeduction(pct, 30000, ''), 6000);
+const affine = fitRule(points([[10000, 1500], [20000, 2500], [30000, 3500]]));
+assert.equal(affine.form, 'affine'); assert.equal(evaluateDeduction(affine, 40000, ''), 4500);
+const capped = fitRule(points([[10000, 3000], [20000, 5000], [30000, 5000]]));
+assert.equal(capped.form, 'capped'); assert.equal(evaluateDeduction(capped, 5000, ''), 1500);
+const irregular = fitRule(points([[10000, 100], [20000, 700], [30000, 200]]));
+assert.equal(irregular.form, 'byStorage'); assert.equal(evaluateDeduction(irregular, 99999, '1gb'), 700);
+assert.throws(() => fitRule([]), /empty/);
+console.log('PASS runner fit forms selected from controlled per-model observations');
