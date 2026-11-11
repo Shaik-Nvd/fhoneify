@@ -10,7 +10,7 @@ export interface RunnerMeasurement {
   status: 'quoted' | 'pending'; diagnostics: DiagnosticsType; answerPath: any[];
   ageAsked: boolean; ageSelected: string | null; offeredAccessories: string[]; reference: number;
   base: number | null; selling: number | null; processingFee: number | null; imeiFee: number | null;
-  total: number | null; deduction: number | null; observedAt: string;
+  total: number | null; deduction: number | null; observedAt: string | null;
   source: { folder: string; file: string; caseId: string; sha256: string };
   variantUrl: string; hasAge: boolean; complete: boolean;
 }
@@ -24,6 +24,13 @@ const functional: Record<string,string> = {
   'Bluetooth not working':'bluetooth', 'Vibrator is not working':'vibrator',
   'Microphone not working':'microphone', 'Proximity Sensor not working':'proximity',
   'Outer screen damaged/line/broken or spot':'outer_screen', 'Hinges stuck/loose or broken':'hinge'
+};
+const foldBranches: Record<string,string|null> = {
+  'Outer screen damaged/line/ broken or Spot':'outer_screen',
+  'Outer screen damaged/line/broken or spot':'outer_screen',
+  'No issue with outer screen':null,
+  'Hinges stuck/loose or broken':'hinge',
+  'No hinges issues':null
 };
 const physical: Record<string,keyof DiagnosticsType> = {};
 for (const [key, values] of Object.entries({
@@ -54,9 +61,9 @@ function known(value: string, map: Record<string,unknown>) { check(Object.hasOwn
 function labelKnown(label: string) {
   if (label === 'Flawless baseline' || label === 'All offered accessories missing') return;
   if (label.endsWith(': no defects')) { known(label.slice(0,-12),groups); return; }
-  if (label.endsWith(' \u2014 No')) { known(label.slice(0,-5),initial); return; }
+  for (const suffix of [' \u2014 No',' \u00e2\u20ac\u201d No']) if (label.endsWith(suffix)) { known(label.slice(0,-suffix.length),initial); return; }
   if (label.endsWith(' missing')) { known(label.slice(0,-8),accessories); return; }
-  check(Object.hasOwn(functional,label) || Object.hasOwn(physical,label) || Object.hasOwn(ages,label), 'Unknown case label');
+  check(Object.hasOwn(functional,label) || Object.hasOwn(physical,label) || Object.hasOwn(foldBranches,label) || Object.hasOwn(ages,label), 'Unknown case label');
 }
 /** Read central-directory entries without extracting or executing archive members. */
 function zipMembers(bytes: Buffer): Map<string,Buffer> {
@@ -95,12 +102,12 @@ function csvRows(text: string): Record<string,string>[] {
   return rows.filter(r=>r.some(Boolean)).map(r=>{check(r.length===keys.length,'CSV column mismatch');return Object.fromEntries(keys.map((k,i)=>[k,r[i]]));});
 }
 function normalizeModel(raw: string, brand: Brand) {
-  const match=raw.match(/^(.*?)\s*\((\d+\s*GB\s*\/\s*\d+\s*GB)\)$/i);
+  const match=raw.match(/^(.*?)\s*\((\d+\s*GB\s*\/\s*\d+\s*(?:GB|TB))\)$/i);
   check(match,'Unrecognized model/storage format');
   let model=match[1].trim().replace(/^Oneplus\b/i,'OnePlus');
   if(brand==='Nothing') {model=model.replace(/^CMF Phone /i,'CMF by Nothing Phone ');check(/^(Nothing |CMF by Nothing )/.test(model),'Wrong brand model');}
   else check(model.startsWith('OnePlus '),'Wrong brand model');
-  return { model, storage:match[2].replace(/\s*\/\s*/,'/').replace(/gb/gi,'GB') };
+  return { model, storage:match[2].replace(/\s*\/\s*/,'/').replace(/gb/gi,'GB').replace(/tb/gi,'TB') };
 }
 function normalizeAnswers(answers:any[], schema:any) {
   const d:DiagnosticsType={ calls:null,touch:null,originalScreen:null,defects:[],screenCondition:null,screenSpots:null,screenLines:null,screenDiscoloration:null,bodyScratches:null,bodyDents:null,bodyPanel:null,bodyBent:null,hardware:[],accessories:[],warranty:null,validBill:null,eSim:null,mobileAge:null };
@@ -114,8 +121,8 @@ function normalizeAnswers(answers:any[], schema:any) {
       for(const option of a.options) check(['Yes','No'].includes(option),'Unknown initial option');
       a.questions.forEach((q:string,i:number)=>{known(q,initial);check(a.responses[i].question===q&&a.responses[i].answer===a.selected[i],'Initial response mismatch');(d as any)[initial[q]]=a.selected[i]==='Yes';});
     } else if(a.stage==='groups') {for(const o of a.options)known(o,groups);d.defects=a.selected.map((s:string)=>groups[s]);}
-    else if(a.stage==='branch') {known(a.group,groups);for(const o of a.options)known(o,physical);for(const s of a.selected)(d as any)[physical[s]]=s;}
-    else if(a.stage==='functional') {for(const o of a.options)known(o,functional);d.hardware=a.selected.map((s:string)=>functional[s]);}
+    else if(a.stage==='branch') {known(a.group,groups);for(const o of a.options)known(o,{...physical,...foldBranches});for(const s of a.selected) { if(Object.hasOwn(foldBranches,s)) {if(foldBranches[s])d.hardware.push(foldBranches[s]!);}else (d as any)[physical[s]]=s;}}
+    else if(a.stage==='functional') {for(const o of a.options)known(o,functional);d.hardware.push(...a.selected.map((s:string)=>functional[s]));}
     else if(a.stage==='accessories') {for(const o of a.options)known(o,accessories);d.accessories=a.selected.map((s:string)=>accessories[s]);d.box=d.accessories.includes('box');d.charger=d.accessories.includes('charger');}
     else if(a.stage==='age') {for(const o of a.options)known(o,ages);check(a.selected.length<=1,'Multiple age answers');ageAsked=a.selected.length===1;check(a.asked!==true||ageAsked,'Age marked asked without selection');check(a.asked!==false||!ageAsked,'Age marked skipped with selection');ageSelected=a.selected[0]??null;d.mobileAge=ageSelected?ages[ageSelected]:null;}
     else throw new Error('Unknown answer stage');
@@ -145,21 +152,29 @@ export function importRunnerData(input: string, options: {brand:Brand;out?:strin
     // Text reports embed a clean JSON result object after each answer path. Extract only those objects.
     const text=files.get('full_test_results.txt')!.toString('utf8');
     const textRows=[...text.matchAll(/\{\s*"model"\s*:[\s\S]*?\n\}/g)].map(m=>JSON.parse(m[0]));
-    check(rows.length===csv.length && rows.length===textRows.length,'Cross-file row count mismatch');
+    check(rows.length===csv.length && textRows.length<=rows.length,'Cross-file row count mismatch');
     const keys=['base','selling','imei_fee','processing_fee','total','deduction','total_reduction'];
     const index=(list:any[])=>new Map(list.map(r=>[`${r.model}|${r.case_id}`,r]));
-    const ci=index(csv),ti=index(textRows),ri=index(rows);check(ri.size===rows.length,'Duplicate result row');let seen=0;
+    const ci=index(csv),ti=index(textRows),ri=index(rows);check(ri.size===rows.length&&ci.size===csv.length&&ti.size===textRows.length,'Duplicate result row');for(const key of ti.keys())check(ri.has(key),'Unexpected text result');let seen=0;
     for(const [url,v] of Object.entries(checkpoint.variants) as [string,any][]) {
       const baseline=v.results.baseline;check(baseline?.quote?.status==='quoted','Variant missing priced baseline');
-      const hasPending=Object.values(v.results).some((r:any)=>r.quote.status==='pending');
+      const variantRows=rows.filter(row=>row.model===v.model);
+      const hasPending=variantRows.some(row=>row.status==='pending');
+      const records: Record<string,any>={...v.results};
+      for(const row of variantRows) if(!Object.hasOwn(records,row.case_id)) {
+        check(row.status==='pending','Priced row missing checkpoint observation');
+        const plan=(v.plan??[]).filter((item:any)=>item.id===row.case_id);
+        check(plan.length===1&&plan[0].label===row.test,'Pending row missing matching planned case');
+        records[row.case_id]={case:plan[0],quote:{status:'pending'},answers:[],observed_at:null,unobserved:true};
+      }
       const complete=v.complete===true;
-      check(v.final_control_matches!==false&&v.healthy_controls_match!==false,'Control mismatch');
+      check((v.final_control_matches!==false||(hasPending&&!complete&&!v.final_control))&&v.healthy_controls_match!==false,'Control mismatch');
       if(!hasPending)check(complete&&v.final_control_matches===true&&v.healthy_controls_match===true&&v.final_control,'Variant missing final control');
       const reference=baseline.quote.base;check(Number.isFinite(reference)&&reference>0,'Invalid baseline reference');
       const model=normalizeModel(v.model,options.brand);
       for(const q of v.schema.initial)known(q,initial);
       for(const g of v.schema.groups)known(g,groups);
-      for(const branch of v.schema.branches) {known(branch.label,groups);for(const option of branch.options)known(option,physical);}
+      for(const branch of v.schema.branches) {known(branch.label,groups);for(const option of branch.options)known(option,{...physical,...foldBranches});}
       if(v.final_control) {
         for(const key of ['status','base','selling','processing_fee','imei_fee','total']) check(v.final_control.quote[key]===baseline.quote[key],'Final control price mismatch');
         const control=normalizeAnswers(v.final_control.answers,v.schema);
@@ -170,16 +185,21 @@ export function importRunnerData(input: string, options: {brand:Brand;out?:strin
       for(const o of v.schema.accessories)known(o,accessories);
       for(const o of v.schema.ages)known(o,ages);
       variants.push({folder,...model,variantUrl:url,complete:complete&&!hasPending,pending:hasPending,hasAge:v.schema.ages.length>0,finalControlMatches:v.final_control_matches??null,healthyControlsMatch:v.healthy_controls_match??null});
-      for(const [id,r] of Object.entries(v.results) as [string,any][]) {
+      for(const [id,r] of Object.entries(records) as [string,any][]) {
         labelKnown(r.case.label);check(id===r.case.id,'Checkpoint case ID mismatch');
         const key=`${v.model}|${id}`,row=ri.get(key);check(row,'Checkpoint row absent from results');seen++;
         check(row.test===r.case.label && row.status===r.quote.status && row.observed_at===r.observed_at,'Checkpoint label/status/time mismatch');
         check(['quoted','pending'].includes(row.status),'Unknown quote status');
         const quoted=row.status==='quoted';
+        check(!quoted||ti.has(key),'Quoted row missing text result');
+        for(const field of ['test','status','observed_at']) {
+          check(String(ci.get(key)?.[field]??'')===String(row[field]??''),'CSV metadata mismatch');
+          if(ti.has(key))check((ti.get(key)[field]??null)===(row[field]??null),'Text metadata mismatch');
+        }
         for(const field of keys) {
           const value=row[field]??null;
           check(String(ci.get(key)?.[field]??'')===String(value??''),'CSV price mismatch');
-          check((ti.get(key)?.[field]??null)===value,'Text price mismatch');
+          if(ti.has(key))check((ti.get(key)?.[field]??null)===value,'Text price mismatch');
           if(!quoted)check(value===null,'Pending row has monetary value');
           if(['deduction','total_reduction'].includes(field))continue;
           check((r.quote[field]??null)===value,'Checkpoint price mismatch');
@@ -197,8 +217,8 @@ export function importRunnerData(input: string, options: {brand:Brand;out?:strin
           for(const stage of ['initial','functional','accessories','age']) check(answerPath.filter((a:any)=>a.stage===stage).length===1,'Missing or duplicate quoted stage');
           check(JSON.stringify(answerPath.find((a:any)=>a.stage==='initial').questions)===JSON.stringify(v.schema.initial),'Initial schema mismatch');
         }
-        check(typeof row.observed_at==='string'&&Number.isFinite(Date.parse(row.observed_at)),'Invalid observed time');
-        measurements.push({brand:options.brand,...model,rawModel:v.model,caseId:id,label:r.case.label,status:row.status,...normalized,answerPath,offeredAccessories:v.schema.accessories.map((s:string)=>accessories[s]),reference,base:quoted?row.base:null,selling:quoted?row.selling:null,processingFee:quoted?row.processing_fee:null,imeiFee:quoted?row.imei_fee:null,total:quoted?row.total:null,deduction:quoted?row.deduction:null,observedAt:row.observed_at,source:{folder,file:'checkpoint.json',caseId:id,sha256:sha(files.get('checkpoint.json')!)},variantUrl:url,hasAge:v.schema.ages.length>0,complete:complete&&!hasPending});
+        check((!quoted&&row.observed_at===null)||(typeof row.observed_at==='string'&&Number.isFinite(Date.parse(row.observed_at))),'Invalid observed time');
+        measurements.push({brand:options.brand,...model,rawModel:v.model,caseId:id,label:r.case.label,status:row.status,...normalized,answerPath,offeredAccessories:v.schema.accessories.map((s:string)=>accessories[s]),reference,base:quoted?row.base:null,selling:quoted?row.selling:null,processingFee:quoted?row.processing_fee:null,imeiFee:quoted?row.imei_fee:null,total:quoted?row.total:null,deduction:quoted?row.deduction:null,observedAt:row.observed_at,source:{folder,file:r.unobserved?'results.json':'checkpoint.json',caseId:id,sha256:sha(files.get(r.unobserved?'results.json':'checkpoint.json')!)},variantUrl:url,hasAge:v.schema.ages.length>0,complete:complete&&!hasPending});
       }
     }
     check(seen===rows.length,'Unmatched results row');

@@ -47,6 +47,33 @@ try {
  assert.equal(aged.measurements[1].hasAge,true);
  assert.equal(aged.measurements[1].ageAsked,false);
  assert.equal(aged.measurements[1].ageSelected,null);
+ // Real incomplete runs retain pending cases in plan/results exports, without checkpoint result or timestamp.
+ delete variant.results[pending.case.id];
+ (variant as any).plan=[baseline.case,fault.case,pending.case];
+ variant.final_control_matches=false as any;
+ rows[2].observed_at=null;
+ write();
+ const unobserved=importRunnerData(path.dirname(folder),{brand:'OnePlus',requireMirror:false});
+ assert.equal(unobserved.measurements[2].observedAt,null);
+ assert.deepEqual(unobserved.measurements[2].answerPath,[]);
+ assert.equal(unobserved.measurements[2].source.file,'results.json');
+ fs.writeFileSync(path.join(folder,'full_test_results.txt'),rows.filter(row=>row.status==='quoted').map(row=>JSON.stringify(row,null,2)).join('\n'));
+ assert.equal(importRunnerData(path.dirname(folder),{brand:'OnePlus',requireMirror:false}).summary.pending,1);
+ fs.writeFileSync(path.join(folder,'full_test_results.txt'),JSON.stringify(rows[0],null,2));
+ assert.throws(()=>importRunnerData(path.dirname(folder),{brand:'OnePlus',requireMirror:false}),/quoted row missing text/i);
+ const terabyteModel='Oneplus Open (24 GB/1 TB)';
+ variant.model=terabyteModel; for(const row of rows)row.model=terabyteModel;write();
+ assert.equal(importRunnerData(path.dirname(folder),{brand:'OnePlus',requireMirror:false}).measurements[0].storage,'24 GB/1 TB');
+ variant.model=model;for(const row of rows)row.model=model;write();
+ // Open's fold condition is a physical branch, with an explicit healthy counterpart.
+ fault.case.label='Outer screen damaged/line/ broken or Spot'; rows[1].test=fault.case.label;
+ fault.answers=fault.answers.map(a=>a.stage==='functional'?{...a,selected:[]}:a);
+ fault.answers.push({stage:'branch',group:'Dead Spot/Visible line and Discoloration on screen',options:['Outer screen damaged/line/ broken or Spot','No issue with outer screen'],selected:[fault.case.label]});
+ write();
+ assert(importRunnerData(path.dirname(folder),{brand:'OnePlus',requireMirror:false}).measurements[1].diagnostics.hardware.includes('outer_screen'));
+ // Recognize only the observed mojibake dash alias, while preserving the recorded raw label.
+ pending.case.label=questions[0]+' \u00e2\u20ac\u201d No'; rows[2].test=pending.case.label;write();
+ assert.equal(importRunnerData(path.dirname(folder),{brand:'OnePlus',requireMirror:false}).measurements[2].label,pending.case.label);
  const emptyZip=Buffer.alloc(22);emptyZip.writeUInt32LE(0x06054b50);
  fs.writeFileSync(path.join(folder,'Cashify_Test_Results.zip'),emptyZip);
  assert.throws(()=>importRunnerData(path.dirname(folder),{brand:'OnePlus'}),/mirror mismatch/i);
@@ -57,9 +84,9 @@ try {
  answers[1].options.push('Unrecognized functional option'); write();
  assert.throws(()=>importRunnerData(path.dirname(folder), { brand:'OnePlus', requireMirror:false }), /unknown/i);
  answers[1].options.pop();
- checkpoint.variants['https://example.test/open'].final_control_matches = false as any; write();
+ checkpoint.variants['https://example.test/open'].healthy_controls_match = false; write();
  assert.throws(()=>importRunnerData(path.dirname(folder), { brand:'OnePlus', requireMirror:false }), /control/i);
- checkpoint.variants['https://example.test/open'].final_control_matches = null;
+ checkpoint.variants['https://example.test/open'].healthy_controls_match = true;
  fault.case.label = 'Unknown answer'; rows[1].test = 'Unknown answer'; write();
  assert.throws(()=>importRunnerData(path.dirname(folder), { brand:'OnePlus', requireMirror:false }), /unknown/i);
  console.log('Runner importer synthetic fixture: passed');
