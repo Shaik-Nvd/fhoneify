@@ -1,3 +1,4 @@
+import { runnerScope, runnerQuote, runnerOffersCharger } from './cashifyRunnerModel';
 import { isAppleEvidenceModel } from './appleCashifyModel/scope';
 import type { GlassShadowCandidate, GlassShadowResult } from './glassShadowCandidate';
 import { boundedCompetitiveOffer, EXACT_FINAL_QUOTE_VERSION, type ExactFinalQuoteIndex } from './exactFinalQuote';
@@ -68,6 +69,8 @@ export interface PricingServiceDeps {
   exactFinalQuoteOfferPolicy?: 'existing-uplift' | 'bounded-net';
   /** Offline injection only; no server configuration enables this shadow. */
   glassShadowCandidate?: GlassShadowCandidate;
+  /** Injected retrospective test/evaluation only. Serving configuration never sets this. */
+  disableRunnerEvidence?: boolean;
 }
 
 export type PricingErrorCode =
@@ -118,6 +121,7 @@ export interface AuthoritativeQuote {
     releaseCandidate?: ReleaseCandidateOutcome;
     routeEvidenceSha256?: string | null;
     glassShadow?: GlassShadowResult;
+    runnerModel?: NonNullable<ReturnType<typeof runnerQuote>>;
     exactFinalQuote?: { evidenceIds: string[]; fingerprint: string; observedAt: string; policy: string };
     payoutCeiling: CeilingResult & { equivalentBasis: 'base' | 'selling' };
   };
@@ -219,6 +223,13 @@ export function createPricingService(deps: PricingServiceDeps) {
 
     const key = deviceKey({ brand: device.brand, model: device.model, storage: device.storage });
     const [reference, questionnaire] = await Promise.all([lookupReference(key), lookupQuestionnaire(device)]);
+    const runnerProfile = deps.disableRunnerEvidence ? null : runnerScope(device.model, device.storage);
+    if (runnerProfile) {
+      // Full recorded questionnaire overrides the crawler's first-page metadata.
+      const mode = runnerProfile.hasAge ? 'ASKED' : 'NOT_ASKED';
+      Object.assign(questionnaire, { warrantyMode: mode, billMode: mode, ageMode: mode,
+        boxMode: 'ASKED', chargerMode: runnerOffersCharger(device.model, device.storage) ? 'ASKED' : 'NOT_ASKED' });
+    }
     // Missing is not "No": where the bill question is shown, an exact value
     // needs the answer rather than silently depreciating (or crediting) it.
     if (questionnaire.billMode !== 'NOT_ASKED' && diagnostics.validBill === null && !(diagnostics.accessories || []).includes('bill')) {
@@ -259,8 +270,8 @@ export function createPricingService(deps: PricingServiceDeps) {
       // identical for both.
       // Eligibility is checked here, never inferred by the shared calculator's ordinary callers.
       result = priceDevice(device.brand, device.model, base.cashifyGetUptoReference, diagnostics, hybrid ? legacyQuestionnaire : questionnaire, dispatchStorage,
-        { catalogStorage: device.storage, ...(teamFallbackSupported ? { apple512OutOfWarrantyDispatch: true } : {}) });
-      const exact = hybrid && deps.exactFinalQuoteIndex ? deps.exactFinalQuoteIndex.find({ device, diagnostics,
+        { catalogStorage: device.storage, disableRunnerEvidence: deps.disableRunnerEvidence, ...(teamFallbackSupported ? { apple512OutOfWarrantyDispatch: true } : {}) });
+      const exact = !runnerProfile && hybrid && deps.exactFinalQuoteIndex ? deps.exactFinalQuoteIndex.find({ device, diagnostics,
         reference: base.cashifyGetUptoReference, referenceVerifiedAt: base.referenceLastVerifiedAt, questionnaire, route, now: at,
         referenceExact: base.source === 'reference_repository' && base.referenceStatus === 'fresh' && base.referenceSource === 'cashify' && !reference.degraded &&
           reference.record?.matchConfidence === 'exact' && reference.record?.deviceKey === key && reference.record?.brand === device.brand &&
@@ -274,7 +285,7 @@ export function createPricingService(deps: PricingServiceDeps) {
         exactFinalQuote = { evidenceIds: exact.evidenceIds, fingerprint: exact.fingerprint, observedAt: exact.observedAt, policy };
         rc = { kind: 'VERIFIED', cashifyConditionEquivalent: exact.sellingPrice, rule: EXACT_FINAL_QUOTE_VERSION, evidence: exact.fingerprint, conditionClass: conditionClass(diagnostics) };
         quotePricingVersion = `${HYBRID_PRICING_VERSION}+${EXACT_FINAL_QUOTE_VERSION}+${policy}+${exact.fingerprint}`;
-      } else if (releaseCandidate) {
+      } else if (releaseCandidate && !runnerProfile) {
         const legacyResult = result;
         let correctionRejectionReason: string | null = null;
         const correctionFailure = (() : PricingFailure | undefined => {
@@ -380,6 +391,7 @@ export function createPricingService(deps: PricingServiceDeps) {
         equivalentBasis = 'selling';
         quotePricingVersion += '+apple512-oow-router-v1';
       }
+      if (runnerProfile) accessoryBasis = 'CALIBRATED_ROUTE_ACCESSORIES';
       // Get Upto: the reference plus the uplift, nothing else.
       startingPrice = computeFhoneifyGetUpto(base.cashifyGetUptoReference);
     } catch (err) {
@@ -466,6 +478,7 @@ export function createPricingService(deps: PricingServiceDeps) {
         baseSource: base.source,
         referenceSource: base.referenceSource,
         cashifyConditionEquivalent: result.cashifyConditionEquivalent,
+        ...(runnerProfile ? { runnerModel: runnerQuote(device.model, device.storage, base.cashifyGetUptoReference, diagnostics)! } : {}),
         accessoryBasis,
         payoutCeiling: { ...ceiling, equivalentBasis },
         ...(exactFinalQuote ? { exactFinalQuote } : {}),
