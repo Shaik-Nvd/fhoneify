@@ -46,3 +46,8 @@ release-test-logs/
 /data/pricing-evidence/final-data-2026-10-30/*.json
 /data/pricing-evidence/final-data-2026-10-30/*.jsonl
 /data/pricing-evidence/validation-2026-10-30/
+
+# Private Android runner evidence
+/data/pricing-evidence/nothing-2026-11-08/
+/data/pricing-evidence/oneplus-2026-11-09/
+/pricing-inputs/
