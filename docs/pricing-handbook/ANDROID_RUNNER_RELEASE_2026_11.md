@@ -40,7 +40,7 @@ Replay traverses createPricingService in hybrid mode with injected read-only exa
 | In-sample MAE | INR0.156 | INR0.421 | at most INR10 |
 | In-sample errors above INR300 | 0 | 0 | zero |
 | Storage holdout within INR20 | 99.88% | 95.01% | 97% / 95% |
-| Storage holdout rows / MAE | 1,671 / INR1.31 | 5,228 / INR6.69 | reported |
+| Storage holdout rows / MAE | 1,671 / INR1.24 | 5,228 / INR6.69 | reported |
 | Catalog variants priced or explained through service | 34 | 116 | all |
 | Synthetic reference stress quotes | 10,026 | 33,234 | ±10%, ±25%, ±50% |
 
@@ -62,7 +62,7 @@ Storage holdouts exclude all representations and controls of the withheld storag
 
 Worst replay examples: Nothing Phone 1 screen scratches +INR10 and CMF Phone 1 proximity −INR10; OnePlus 10 Pro fingerprint +INR10 and cracked glass −INR10. The two Nothing holdout misses are Phone 3a Lite touch failure, opposite withheld capacities. The largest OnePlus holdout overquote is Nord 4 non-original screen (+INR400); the largest underquote is Nord touch failure (-INR910). Every miss and source pointer is retained in each private validation/summary.json storageMisses array and heldout.jsonl, rather than publishing a bulk quote corpus.
 
-Leave-one-model-out is report-only and weak: Nothing scores 1,533 rows, 27.27% within INR20, MAE INR406.66, worst over/under +6,550/−3,040. OnePlus scores 4,998 rows, 37.19% within INR20, MAE INR768.36, worst +7,710/−10,540. This borrows a measured model within an empirical profile; it is a diagnostic transfer experiment, not an approved unknown-model production fallback. Nothing Phone 1 has no eligible donor. Nine OnePlus models have unidentifiable cohorts, listed in the private summary, including Open and 9RT.
+Leave-one-model-out is report-only and weak: Nothing scores 1,533 rows, 27.27% within INR20, MAE INR406.66, worst over/under +6,550/−3,040. OnePlus scores 4,998 rows, 37.23% within INR20, MAE INR784.77, worst +7,710/−10,540. This borrows a measured model within an empirical profile; it is a diagnostic transfer experiment, not an approved unknown-model production fallback. Nothing Phone 1 has no eligible donor. Nine OnePlus models have unidentifiable cohorts, listed in the private summary, including Open and 9RT.
 
 ## Routing, catalog and references
 
@@ -76,7 +76,7 @@ See [review response](RUNNER_REVIEW_RESPONSE_2026_11_12.md) for the seven review
 
 ## Verification and review
 
-Offline runner: **72 passed, 0 failed, 2 excluded**. Both Next/server TypeScript projects pass. Strict typechecking of the new importer, fitter, validator, collection generator and QA API also passes. Production build exits 0; the initial external Google Font loader failure cleared on retry without font/code changes. Existing lint/Browserslist/configuration warnings remain. Both UI guards pass after the final icon correction. The built frontend browser check passes separately.
+Final post-review offline runner: **73 passed, 0 failed, 2 excluded**. All 23 focused review regressions pass. Both Next/server TypeScript projects pass with zero errors; strict typechecking of the changed tooling and regression suite also passes. Production build exits 0 with existing lint/configuration warnings. These checks ran after fix commit 3a257d0. Earlier UI guards and built-frontend browser evidence below predate this follow-up; browser verification was not rerun for these fixes.
 
 The runner excludes the production-writing integration suite and browser-only suite. Browser verification runs separately. Corpus-dependent suites skip explicitly when private data is absent. Catalog properties still report 2,082 pre-existing known-policy no-calls exceptions on other brands; the invariant and classification remain unchanged.
 
