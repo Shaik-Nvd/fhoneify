@@ -1,3 +1,5 @@
+import { calculateOnePlusPrice } from './helpers/historicalRunner';
+// Retrospective October candidate coverage; active runner pricing is verified separately.
 import assert from 'node:assert/strict';
 import fixture from '../pricing/fixtures/oneplus-display-verified-development-2026-10-02.json';
 import { verifiedNotAskedCleanBaseline } from '../../lib/pricing/xiaomiWorkbookEvidenceCandidate';
@@ -5,13 +7,13 @@ import { calculateOnePlusDisplayEvidenceCandidate as calculateCandidate } from '
 import { createOnePlusDisplayResearchQuoteService as createService } from '../../lib/pricing/onePlusDisplayResearchQuoteService';
 import type { WorkbookRouteEvidence } from '../../lib/pricing/teamWorkbookResearchQuoteService';
 import type { WorkbookRoute } from '../../lib/pricing/teamWorkbookCandidate';
-import { createPricingService, type PricingServiceDeps } from '../../lib/pricing/pricingService';
+import { createPricingService, type PricingServiceDeps } from './helpers/historicalRunner';
 import { findCatalogDevice } from '../../lib/pricing/catalog';
 import { deviceKey, type ReferencePriceRecord } from '../../lib/referencePricing/types';
 import { InMemoryQuestionnaireProfileStore } from '../../lib/referencePricing/questionnaire/store';
 import { questionnaireModelKey } from '../../lib/referencePricing/questionnaire/types';
 import { customerPayout } from '../../lib/pricing/payout';
-import { applyCompetitorUplift, calculateOnePlusPrice, type DiagnosticsType } from '../../lib/pricingCalculator';
+import { applyCompetitorUplift, type DiagnosticsType } from '../../lib/pricingCalculator';
 
 const at = new Date('2026-10-02T18:00:00Z');
 const routes: WorkbookRouteEvidence[] = [];

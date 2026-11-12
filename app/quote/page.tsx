@@ -19,6 +19,7 @@ import { inspectionRequestLinks } from '@/lib/inspectionRequest';
 import { SignedQuote, clearQuoteSession, loadQuoteSession, sameAcceptedQuote, sameDevice, saveQuoteSession } from '@/lib/pricing/quoteSession';
 import { warrantyVoidedByDiagnostics } from '@/lib/pricing/diagnostics';
 import { questionnaireFor } from '@/lib/pricing/questionnaire';
+import { runnerScope, runnerAsksAge, runnerOffersCharger } from '@/lib/pricing/cashifyRunnerModel/scope';
 import { UNKNOWN_QUESTIONNAIRE, isQuestionMode, showsQuestion, type QuestionnaireSemantics } from '@/lib/pricing/questionnaireSemantics';
 
 /** sessionStorage, or null where the browser blocks it (the page then simply
@@ -121,16 +122,14 @@ export default function QuotePage() {
     return lower.includes('note') || (lower.includes('s') && lower.includes('ultra'));
   };
 
-  const hasChargerInBox = (brand: string, model: string) => {
+  const hasChargerInBox = (brand: string, model: string, storage: string) => {
     const lowerBrand = brand.toLowerCase();
     const lowerModel = model.toLowerCase();
     
-    // Nothing and CMF phones do not give chargers in the box (except Nothing Phone 3)
+    // Follow the recorded questionnaire, including storage-specific offers.
+    if (runnerScope(model, storage)) return runnerOffersCharger(model, storage);
     if (lowerBrand === 'nothing' || lowerBrand === 'cmf') {
-      if (lowerModel === 'nothing phone 3') {
-        return true;
-      }
-      return false;
+      return lowerModel === 'nothing phone 3';
     }
 
     // Modern Samsung flagships do not have a charger in the box
@@ -340,10 +339,13 @@ export default function QuotePage() {
   // question Cashify does not ask is not shown and never sent as "No";
   // UNKNOWN (no stored profile yet) shows it - the safe, explicit fallback.
   const modelQuestionnaire: QuestionnaireSemantics = activeStartingQuote?.questionnaire ?? activeStartingContext?.questionnaire ?? UNKNOWN_QUESTIONNAIRE;
-  const asksWarrantyQuestion = showsQuestion(modelQuestionnaire.warrantyMode) && isWarrantyEligible(selectedBrand, selectedModel);
-  const asksBillQuestion = showsQuestion(modelQuestionnaire.billMode) && isWarrantyEligible(selectedBrand, selectedModel);
+  const runnerProfile = runnerScope(selectedModel, selectedStorage);
+  // Recorded runner questions override older crawler metadata. Phone 1
+  // never asks warranty, bill or age; each profile records its own flow.
+  const asksWarrantyQuestion = runnerProfile ? runnerAsksAge(selectedModel) : showsQuestion(modelQuestionnaire.warrantyMode) && isWarrantyEligible(selectedBrand, selectedModel);
+  const asksBillQuestion = runnerProfile ? runnerAsksAge(selectedModel) : showsQuestion(modelQuestionnaire.billMode) && isWarrantyEligible(selectedBrand, selectedModel);
   const asksESimQuestion = modelQuestionnaire.eSimMode !== 'NOT_ASKED' && isESimEligible(selectedBrand, selectedModel);
-  const asksAgeQuestion = modelQuestionnaire.ageMode === 'ASKED' ||
+  const asksAgeQuestion = runnerProfile ? runnerAsksAge(selectedModel) : modelQuestionnaire.ageMode === 'ASKED' ||
     questionnaireFor({ brand: selectedBrand, model: selectedModel }).asksAge;
   const finalPrice = activeFinalQuote?.price ?? null;
   const priceRequestIdRef = useRef(0);
@@ -1169,6 +1171,7 @@ export default function QuotePage() {
         ...(hasFingerprint ? [{ id: 'fingerprint', label: isApple ? 'Finger Touch (Touch ID) not working' : 'Finger Touch not working', icon: '👆' }] : []),
         { id: 'wifi', label: 'WiFi not working', icon: '📶' },
         { id: 'speaker', label: 'Speaker Faulty', icon: '🔊' },
+        ...(brand.toLowerCase() === 'oneplus' && lowerModel === 'oneplus open' ? [{ id: 'outer_screen', label: 'Outer screen damaged / line / broken or spot', icon: '\uD83D\uDCF1' }] : []),
         { id: 'hinge', label: 'Hinge damaged / not folding properly', icon: '📱' },
         { id: 'silent', label: hasActionButton ? 'Action Button not working' : 'Silent Button not working', icon: '🔕' },
         ...(hasFaceId ? [{ id: 'face', label: isApple ? 'Face ID / Face Sensor not working' : 'Face Sensor not working', icon: <FaceIdIcon /> }] : []),
@@ -2750,9 +2753,9 @@ export default function QuotePage() {
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem', marginBottom: '3rem' }}>
                   {[
                     {id: 'box', label: 'Original Box with same IMEI', icon: '📦'},
-                    ...(hasChargerInBox(selectedBrand, selectedModel) ? [{ id: 'charger', label: 'Original Charger', icon: '🔌' }] : []),
+                    ...(hasChargerInBox(selectedBrand, selectedModel, selectedStorage) ? [{ id: 'charger', label: 'Original Charger', icon: '🔌' }] : []),
                     ...(hasSPen(selectedBrand, selectedModel) ? [{ id: 'spen', label: 'Original S Pen', icon: '🖊️' }] : [])
-                  ].filter(a => (a.id === 'box' ? modelQuestionnaire.boxMode : a.id === 'charger' ? modelQuestionnaire.chargerMode : a.id === 'spen' ? modelQuestionnaire.sPenMode : undefined) !== 'NOT_ASKED').map((a) => (
+                  ].filter(a => runnerProfile && a.id === 'charger' ? true : (a.id === 'box' ? modelQuestionnaire.boxMode : a.id === 'charger' ? modelQuestionnaire.chargerMode : a.id === 'spen' ? modelQuestionnaire.sPenMode : undefined) !== 'NOT_ASKED').map((a) => (
                     <button key={a.id} onClick={() => toggleArrayItem('accessories', a.id)} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem', padding: '3rem 1rem', borderRadius: '8px', border: diagnostics.accessories.includes(a.id) ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.accessories.includes(a.id) ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', color: diagnostics.accessories.includes(a.id) ? '#4CD964' : 'var(--foreground)', cursor: 'pointer' }}>
                       <span style={{ fontSize: '4rem' }}>{a.icon}</span>
                       <span style={{ fontSize: '0.9rem', textAlign: 'center', fontWeight: 500 }}>{a.label}</span>
@@ -2761,11 +2764,8 @@ export default function QuotePage() {
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
                   <button onClick={() => {
-                    // Does the ACTIVE pricing path for this device ever read
-                    // mobileAge? (Always true for Apple/Xiaomi/Oppo/OnePlus
-                    // and non-foldable Vivo/iQOO, never for Samsung, Nothing/
-                    // CMF, foldable Vivo/iQOO or the generic fallback - see
-                    // lib/pricing/questionnaire.ts.)
+                    // Keep age for measured runner flows even when older
+                    // crawler metadata omitted the age page.
                     const asksAge = asksAgeQuestion;
 
                     // Check the concrete fields this UI sends. The previous

@@ -1,3 +1,4 @@
+import { runnerScope } from './cashifyRunnerModel/scope';
 /**
  * Which quote-flow questions actually change a device's price.
  *
@@ -91,6 +92,8 @@ const AGE_SENSITIVE_BRANDS: ReadonlySet<EngineBrand> = new Set([
  * test can never drift apart.
  */
 export function questionnaireFor(device: QuestionnaireDevice): QuestionnaireEligibility {
+  const runner = runnerScope(device.model);
+  if (runner) return { asksWarranty: runner.hasAge, asksBill: runner.hasAge, asksAge: runner.hasAge };
   const engineBrand = resolveEngineBrand(device.brand, device.model);
   const lowerModel = String(device.model || '').toLowerCase();
 

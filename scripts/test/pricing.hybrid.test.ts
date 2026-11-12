@@ -1,3 +1,4 @@
+// Retrospective October candidate coverage; active runner pricing is verified separately.
 /** Same deployed calculators, one in-memory reference/profile lookup per quote.
  * Regression for the inspection-only outage and price-lock transitions. */
 import { isAppleEvidenceModel } from '../../lib/pricing/appleCashifyModel/scope';
@@ -5,7 +6,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import { createPricingService, HYBRID_PRICING_VERSION, type PricingServiceDeps } from '../../lib/pricing/pricingService';
+import { createPricingService, HYBRID_PRICING_VERSION, type PricingServiceDeps } from './helpers/historicalRunner';
 import { SEED_DEVICES } from '../../lib/seed_devices';
 import { findCatalogDevice } from '../../lib/pricing/catalog';
 import { deviceKey, type ReferencePriceRecord } from '../../lib/referencePricing/types';

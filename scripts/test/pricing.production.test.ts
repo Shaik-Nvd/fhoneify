@@ -37,6 +37,7 @@ import {
 } from '../../lib/referencePricing/getStore';
 import { deviceKey, ReferencePriceHistoryEntry, ReferencePriceRecord } from '../../lib/referencePricing/types';
 import { SEED_DEVICES } from '../../lib/seed_devices';
+import { InspectionRequiredError } from '../../lib/pricing/inspectionRequired';
 import snapshot from '../../lib/cashify_prices.json';
 
 let passed = 0;
@@ -173,7 +174,16 @@ async function run() {
       const base = resolveReference({ device });
       if (!base) continue;
       for (const profile of [PERFECT_CONDITION_DIAGNOSTICS, DAMAGED, NOT_WORKING]) {
-        const expected = calculateFhoneifyPrice(device.brand, device.model, base.cashifyGetUptoReference, profile);
+        let expected;
+        try {
+          expected = calculateFhoneifyPrice(device.brand, device.model, base.cashifyGetUptoReference, profile);
+        } catch (error) {
+          if (!(error instanceof InspectionRequiredError)) throw error;
+          assert.throws(() => priceDevice(device.brand, device.model, base.cashifyGetUptoReference, profile),
+            (actual: unknown) => actual instanceof InspectionRequiredError && actual.reason === error.reason);
+          checked++;
+          continue;
+        }
         let actual;
         try {
           actual = priceDevice(device.brand, device.model, base.cashifyGetUptoReference, profile);

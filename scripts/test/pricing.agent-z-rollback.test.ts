@@ -1,6 +1,7 @@
+// Retrospective October candidate coverage; active runner pricing is verified separately.
 /** Offline rollback checks for cache-off hybrid and explicit legacy mode. */
 import assert from 'node:assert/strict';
-import { createPricingService } from '../../lib/pricing/pricingService';
+import { createPricingService } from './helpers/historicalRunner';
 import { PRICING_ENGINE_VERSION } from '../../lib/pricing/engine';
 import { createExactFinalQuoteIndex } from '../../lib/pricing/exactFinalQuote';
 import { findCatalogDevice } from '../../lib/pricing/catalog';

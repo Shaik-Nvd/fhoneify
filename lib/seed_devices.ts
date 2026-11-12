@@ -2201,6 +2201,106 @@ export const SEED_DEVICES: any[] = [
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-n6x-4-gb-128-gb"
   },
   {
+    "id": "oneplus-13s-16-gb-512-gb",
+    "brand": "OnePlus",
+    "model": "OnePlus 13s",
+    "storage": "16 GB/512 GB",
+    "ram": "16 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-13s-16-gb-512-gb"
+  },
+  {
+    "id": "oneplus-n6-4-gb-128-gb",
+    "brand": "OnePlus",
+    "model": "OnePlus N6",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-n6-4-gb-128-gb"
+  },
+  {
+    "id": "oneplus-n6-6-gb-128-gb",
+    "brand": "OnePlus",
+    "model": "OnePlus N6",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-n6-6-gb-128-gb"
+  },
+  {
+    "id": "oneplus-n6-lite-4-gb-64-gb",
+    "brand": "OnePlus",
+    "model": "OnePlus N6 Lite",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-n6-lite-4-gb-64-gb"
+  },
+  {
+    "id": "oneplus-n6x-4-gb-64-gb",
+    "brand": "OnePlus",
+    "model": "OnePlus N6x",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-n6x-4-gb-64-gb"
+  },
+  {
+    "id": "oneplus-nord-ce-6-5g-8-gb-128-gb",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 6 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-nord-ce-6-5g-8-gb-128-gb"
+  },
+  {
+    "id": "oneplus-nord-ce-6-5g-8-gb-256-gb",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 6 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-nord-ce-6-5g-8-gb-256-gb"
+  },
+  {
+    "id": "oneplus-nord-ce-6-lite-5g-6-gb-128-gb",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 6 Lite 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-nord-ce-6-lite-5g-6-gb-128-gb"
+  },
+  {
+    "id": "oneplus-nord-ce-6-lite-5g-8-gb-128-gb",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 6 Lite 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-nord-ce-6-lite-5g-8-gb-128-gb"
+  },
+  {
+    "id": "oneplus-nord-ce-6-lite-5g-8-gb-256-gb",
+    "brand": "OnePlus",
+    "model": "OnePlus Nord CE 6 Lite 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-nord-ce-6-lite-5g-8-gb-256-gb"
+  },
+  {
     "id": "asus_8000",
     "brand": "Asus",
     "model": "Asus ROG Phone II ZS660KL",
@@ -10101,16 +10201,6 @@ export const SEED_DEVICES: any[] = [
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-1-8-gb-256-gb"
   },
   {
-    "id": "11111111-2222-3333-4444-555555555555",
-    "brand": "Nothing",
-    "model": "Nothing Phone 4b",
-    "storage": "128 GB",
-    "ram": "8 GB",
-    "color": "Default",
-    "basePrice": 29999,
-    "cashifyLink": ""
-  },
-  {
     "id": "46b51000-0faa-4aba-9046-cbd14daab26f",
     "brand": "Nothing",
     "model": "Nothing Phone 2",
@@ -10278,7 +10368,7 @@ export const SEED_DEVICES: any[] = [
     "ram": "8 GB",
     "color": "Default",
     "basePrice": 12940,
-    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-cmf-by-nothing-phoe-2-pro-5g-8-gb-128-gb"
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-cmf-by-nothing-phone-2-pro-5g-8-gb-128-gb"
   },
   {
     "id": "6c1adc19-901c-470d-8bfe-1ee863c6b0f9",
@@ -10379,6 +10469,36 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "basePrice": 28000,
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-4a-pro-8-gb-128-gb"
+  },
+  {
+    "id": "nothing_phone4a_6_128",
+    "brand": "Nothing",
+    "model": "Nothing Phone 4a",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-4a-6-gb-128-gb"
+  },
+  {
+    "id": "nothing_phone4b_6_128",
+    "brand": "Nothing",
+    "model": "Nothing Phone 4b",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-4b-6-gb-128-gb"
+  },
+  {
+    "id": "nothing_phone4b_8_128",
+    "brand": "Nothing",
+    "model": "Nothing Phone 4b",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nothing-phone-4b-8-gb-128-gb"
   },
   {
     "id": "nothing_phone4b_8_256",

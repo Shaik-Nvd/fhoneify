@@ -1,3 +1,4 @@
+import { runnerScope, runnerQuote } from './pricing/cashifyRunnerModel';
 import { referenceBonus } from './pricing/referenceBonus';
 import { CASHIFY_CALIBRATION } from './pricing/calibration';
 import { UNKNOWN_QUESTIONNAIRE, type QuestionnaireSemantics } from './pricing/questionnaireSemantics';
@@ -14,6 +15,8 @@ export interface PricingCalculationContext {
   catalogStorage?: string;
   /** Evaluation tools set this to price with the pre-existing Apple engine only (the baseline in held-out comparisons). */
   disableAppleEvidence?: boolean;
+  /** Internal retrospective comparison only; never accepted from public diagnostics. */
+  disableRunnerEvidence?: boolean;
   /** Fixtures and tests opt in to answering from the recorded Cashify quotes. Never set by the serving path: served iPhone quotes come from the calibrated rules. */
   useRecordedAppleQuotes?: boolean;
 }
@@ -2722,8 +2725,11 @@ export function calculateOppoPrice(model: string, reference: CashifyGetUptoRefer
 // BRAND 6: ONEPLUS ENGINE
 // ============================================================================
 
-export function calculateOnePlusPrice(model: string, reference: CashifyGetUptoReference, diagnostics: DiagnosticsType, semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE): PricingResult {
+export function calculateOnePlusPrice(model: string, reference: CashifyGetUptoReference, diagnostics: DiagnosticsType, semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE, storageVariant?: string, useRunnerEvidence = true): PricingResult {
   if (!reference || reference <= 0) return { cashifyConditionEquivalent: 0, fhoneifyPrice: 0 };
+
+  const measured = useRunnerEvidence ? runnerQuote(model, storageVariant, reference, diagnostics) : null;
+  if (measured) return finalizeConditionQuote(reference, measured.price);
 
   const lowerModel = String(model || "").toLowerCase();
   const isPro = lowerModel.includes("pro");
@@ -2784,8 +2790,11 @@ export function nothingModelFamily(model: string): 'Phone 1' | 'Phone 2' | 'othe
   return 'other/CMF';
 }
 
-export function calculateNothingPrice(model: string, reference: CashifyGetUptoReference, diagnostics: DiagnosticsType, semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE): PricingResult {
+export function calculateNothingPrice(model: string, reference: CashifyGetUptoReference, diagnostics: DiagnosticsType, semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE, storageVariant?: string, useRunnerEvidence = true): PricingResult {
   if (!reference || reference <= 0) return { cashifyConditionEquivalent: 0, fhoneifyPrice: 0 };
+
+  const measured = useRunnerEvidence ? runnerQuote(model, storageVariant, reference, diagnostics) : null;
+  if (measured) return finalizeConditionQuote(reference, measured.price);
 
   const lowerModel = String(model || "").toLowerCase();
   const nothingFamily = nothingModelFamily(model);
@@ -2856,6 +2865,14 @@ export function calculateFhoneifyPrice(
   storageVariant?: string,
   calculationContext?: PricingCalculationContext
 ): PricingResult {
+  const runner = runnerScope(model, calculationContext?.catalogStorage ?? storageVariant);
+  if (!calculationContext?.disableRunnerEvidence && runner && (brand === runner.brand || (brand === 'CMF' && runner.brand === 'Nothing'))) {
+    // Raw conditional age/bill/warranty answers belong to the calibrated branch,
+    // even when the first-page crawler recorded age NOT_ASKED.
+    return routeBrandCalculator(brand, model, cashifyGetUptoReference, answers, semantics,
+      calculationContext?.catalogStorage ?? storageVariant, calculationContext);
+  }
+
   // A question Cashify never asks for this model is not a "No": its answer is
   // neutral here, and questionnaireAgeFactor drops the age/warranty factor.
   const diagnostics: DiagnosticsType = {
@@ -2929,14 +2946,14 @@ function routeBrandCalculator(
   if (
     safeBrand === "oneplus" || safeModel.includes("oneplus") || safeModel.includes("nord")
   ) {
-    return calculateOnePlusPrice(model, cashifyGetUptoReference, diagnostics, semantics);
+    return calculateOnePlusPrice(model, cashifyGetUptoReference, diagnostics, semantics, calculationContext?.catalogStorage ?? storageVariant, !calculationContext?.disableRunnerEvidence);
   }
 
   if (
     safeBrand === "nothing" || safeBrand === "cmf" ||
     safeModel.includes("nothing") || safeModel.includes("cmf")
   ) {
-    return calculateNothingPrice(model, cashifyGetUptoReference, diagnostics, semantics);
+    return calculateNothingPrice(model, cashifyGetUptoReference, diagnostics, semantics, calculationContext?.catalogStorage ?? storageVariant, !calculationContext?.disableRunnerEvidence);
   }
 
   return calculateGenericAndroidPrice(brand, model, cashifyGetUptoReference, diagnostics, semantics);

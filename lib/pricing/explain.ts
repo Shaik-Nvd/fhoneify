@@ -1,6 +1,7 @@
 import { applyCompetitorUplift, COMMON_BONUSES, DiagnosticsType } from '../pricingCalculator';
 import { computeFhoneifyGetUpto, priceDevice } from './engine';
 import { PERFECT_CONDITION_DIAGNOSTICS } from './perfectCondition';
+import { InspectionRequiredError } from './inspectionRequired';
 
 /**
  * Transparent breakdown of one quote, for comparing identical scenarios
@@ -104,8 +105,15 @@ export function explainQuote(brand: string, model: string, referencePrice: numbe
 
     // Is each changed answer, applied on its own to a perfect device, ignored?
     for (const [key, value] of Object.entries(fields)) {
-      const alone = price({ ...PERFECT_CONDITION_DIAGNOSTICS, [key]: value } as DiagnosticsType).cashifyConditionEquivalent;
-      if (alone === perfect) ignoredAnswers.push(`${key}=${JSON.stringify(value)}`);
+      try {
+        const alone = price({ ...PERFECT_CONDITION_DIAGNOSTICS, [key]: value } as DiagnosticsType).cashifyConditionEquivalent;
+        if (alone === perfect) ignoredAnswers.push(`${key}=${JSON.stringify(value)}`);
+      } catch (error) {
+        // A selected defect group without its detail answers is incomplete,
+        // not evidence that the answer is ignored. The complete group below
+        // must still price successfully or propagate its refusal.
+        if (!(error instanceof InspectionRequiredError)) throw error;
+      }
     }
 
     current = { ...current, ...fields } as DiagnosticsType;

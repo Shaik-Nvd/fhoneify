@@ -1,0 +1,1202 @@
+{
+  "cmfphone1": {
+    "hasAge": true,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "cmfphone2pro5g": {
+    "hasAge": true,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "phone1": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "phone2": {
+    "hasAge": true,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "phone2a5g": {
+    "hasAge": true,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "phone2aplus": {
+    "hasAge": true,
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "phone3": {
+    "hasAge": true,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "16gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "phone3a": {
+    "hasAge": true,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "phone3alite": {
+    "hasAge": true,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "phone3apro": {
+    "hasAge": true,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "phone4a": {
+    "hasAge": true,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "phone4apro": {
+    "hasAge": true,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "phone4b": {
+    "hasAge": true,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplus10pro5g": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplus10r5g": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplus10t5g": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "16gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplus115g": {
+    "hasAge": true,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "16gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplus115gmarbleedition": {
+    "hasAge": true,
+    "variants": {
+      "16gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplus11r5g": {
+    "hasAge": true,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "16gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "18gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplus12": {
+    "hasAge": true,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "16gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplus12r": {
+    "hasAge": true,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "16gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplus13": {
+    "hasAge": true,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "16gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "24gb/1tb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplus13r": {
+    "hasAge": true,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "16gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplus13s": {
+    "hasAge": true,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "16gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplus15": {
+    "hasAge": true,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "16gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplus15r": {
+    "hasAge": true,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplus3": {
+    "hasAge": false,
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplus3t": {
+    "hasAge": false,
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplus5": {
+    "hasAge": false,
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplus5t": {
+    "hasAge": false,
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplus6": {
+    "hasAge": false,
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplus6t": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplus6tmclaren": {
+    "hasAge": false,
+    "variants": {
+      "10gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplus7": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplus7pro": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplus7t": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplus7tpro": {
+    "hasAge": false,
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplus7tpromclarenedition": {
+    "hasAge": false,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplus8": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplus8pro": {
+    "hasAge": false,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplus8t": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplus95g": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplus9pro5g": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplus9r5g": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplus9rt5g": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplusn6": {
+    "hasAge": true,
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplusn6lite": {
+    "hasAge": true,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplusn6x": {
+    "hasAge": true,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplusnord": {
+    "hasAge": false,
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplusnord25g": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplusnord2t5g": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplusnord35g": {
+    "hasAge": true,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "16gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplusnord4": {
+    "hasAge": true,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplusnord5": {
+    "hasAge": true,
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplusnord65g": {
+    "hasAge": true,
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplusnordce25g": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplusnordce2lite5g": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplusnordce35g": {
+    "hasAge": true,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplusnordce3lite5g": {
+    "hasAge": true,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplusnordce45g": {
+    "hasAge": true,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplusnordce4lite5g": {
+    "hasAge": true,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplusnordce5": {
+    "hasAge": true,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplusnordce5g": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplusnordce65g": {
+    "hasAge": true,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplusnordce6lite5g": {
+    "hasAge": true,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oneplusopen": {
+    "hasAge": true,
+    "variants": {
+      "16gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  }
+}

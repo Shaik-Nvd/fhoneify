@@ -1,3 +1,4 @@
+// Retrospective October candidate coverage; active runner pricing is verified separately.
 /**
  * Release-candidate accessory basis (lib/pricing/accessoryBasis.ts): default
  * legacy pricing is unchanged; RC accessory accounting requires a measured
@@ -5,7 +6,7 @@
  * no correction. Missing accessories remain unsupported.
  */
 import assert from 'node:assert/strict';
-import { createPricingService, RELEASE_CANDIDATE_PRICING_VERSION, type PricingServiceDeps } from '../../lib/pricing/pricingService';
+import { createPricingService, RELEASE_CANDIDATE_PRICING_VERSION, type PricingServiceDeps } from './helpers/historicalRunner';
 import { referenceBonus } from '../../lib/pricing/referenceBonus';
 import { PRICING_ENGINE_VERSION } from '../../lib/pricing/engine';
 import { findCatalogDevice } from '../../lib/pricing/catalog';

@@ -1,3 +1,4 @@
+// Retrospective October candidate coverage; active runner pricing is verified separately.
 /**
  * Measured-point candidates (one-point calibrations from traced 2026-10-02
  * blocks). Binding only at the calibrated Get Upto, with the exact route
@@ -6,7 +7,7 @@
  * until the expansion route file is configured. In-memory only.
  */
 import assert from 'node:assert/strict';
-import { createPricingService, type PricingServiceDeps } from '../../lib/pricing/pricingService';
+import { createPricingService, type PricingServiceDeps } from './helpers/historicalRunner';
 import { findCatalogDevice } from '../../lib/pricing/catalog';
 import { loadReleaseRouteEvidence } from '../../lib/pricing/releaseRouteEvidence';
 import { deviceKey, type ReferencePriceRecord } from '../../lib/referencePricing/types';

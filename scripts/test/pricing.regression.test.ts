@@ -1,3 +1,5 @@
+// Historical formula fixtures remain protected; new runner service suites cover current Android rules.
+import { calculateFhoneifyPrice } from './helpers/historicalRunner';
 /**
  * Pricing engine regression / golden tests.
  *
@@ -19,7 +21,6 @@
  * exits non-zero on failure so it works in CI without adding Jest/Vitest.
  */
 import assert from 'node:assert/strict';
-import { calculateFhoneifyPrice } from '../../lib/pricingCalculator';
 
 type DiagOverrides = Record<string, unknown>;
 

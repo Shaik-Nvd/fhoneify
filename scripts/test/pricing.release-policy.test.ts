@@ -1,3 +1,4 @@
+// Retrospective October candidate coverage; active runner pricing is verified separately.
 /**
  * Launch policy (owner, 2026-10-03): in release mode only the verified
  * candidate / accessory-route scope issues binding prices; every other variant
@@ -9,7 +10,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import { createPricingService, RELEASE_CANDIDATE_PRICING_VERSION, type PricingServiceDeps } from '../../lib/pricing/pricingService';
+import { createPricingService, RELEASE_CANDIDATE_PRICING_VERSION, type PricingServiceDeps } from './helpers/historicalRunner';
 import { PRICING_ENGINE_VERSION } from '../../lib/pricing/engine';
 import { findCatalogDevice } from '../../lib/pricing/catalog';
 import { resolvePricingReleaseConfig, PRICING_RELEASE_CONFIG_FILE } from '../../lib/pricing/releaseConfig';
