@@ -18,31 +18,56 @@ let browser;
     }
   });
   fs.mkdirSync('docs/pricing-handbook/assets/runner-local-qa', { recursive: true });
-  const screenshot = name => page.screenshot({ path: `docs/pricing-handbook/assets/runner-local-qa/${name}.png` });
+  const screenshot = name => page.screenshot({ fullPage: true, path: `docs/pricing-handbook/assets/runner-local-qa/${name}.png` });
   const go = async (brand, model, storage, step) => {
     await page.goto(`http://localhost:3310/quote?${new URLSearchParams({ brand, model, storage, step: String(step) })}`, { waitUntil: 'networkidle', timeout: 90000 });
   };
-  await go('Nothing', 'Nothing Phone 3a', '8 GB/128 GB', 2);
-  await page.getByRole('button', { name: 'Get Exact Value' }).waitFor();
-  assert(quotes.length > 0);
-  const starting = quotes.at(-1).getUpto;
-  const expectedText = `₹${starting.toLocaleString('en-IN')}`;
-  assert((await page.locator('body').innerText()).includes(expectedText));
-  await page.reload({ waitUntil: 'networkidle' });
-  await page.getByText(expectedText, { exact: true }).waitFor({ timeout: 30000 });
-  assert((await page.locator('body').innerText()).includes(expectedText), 'reload keeps exact server Get Upto');
-  await screenshot('nothing-server-get-upto-reload');
-  await page.getByRole('button', { name: 'Get Exact Value' }).click();
-  assert.equal(await page.getByRole('button', { name: 'Yes', exact: true }).count(), 5);
-  for (const button of await page.getByRole('button', { name: 'Yes', exact: true }).all()) await button.click();
-  await page.getByRole('button', { name: 'Continue' }).click();
-  await page.getByRole('button', { name: 'Continue' }).click();
-  await page.getByRole('button', { name: 'WiFi not working' }).click();
-  await page.getByRole('button', { name: 'Continue' }).click();
-  await page.getByRole('button', { name: 'Original Box with same IMEI' }).click();
-  await page.getByRole('button', { name: 'Continue' }).click();
-  assert((await page.locator('body').innerText()).includes('3 months - 6 months'), 'conditional age is reachable after real selections');
-  await screenshot('nothing-conditional-age');
+  const flows = [];
+  for (const [brand, model, storage, prefix] of [
+    ['Nothing', 'Nothing Phone 3a', '8 GB/128 GB', 'nothing'],
+    ['OnePlus', 'OnePlus 15', '12 GB/256 GB', 'oneplus'],
+  ]) {
+    await page.goto('http://localhost:3310');
+    await page.evaluate(() => sessionStorage.clear());
+    await go(brand, model, storage, 2);
+    await page.getByRole('button', { name: 'Get Exact Value' }).waitFor();
+    const starting = quotes.at(-1).getUpto;
+    assert(quotes.at(-1).version.includes('cashify-runner-rules-v3'), 'current API revision');
+    const expectedText = '\u20b9' + starting.toLocaleString('en-IN');
+    assert((await page.locator('body').innerText()).includes(expectedText));
+    await page.reload({ waitUntil: 'networkidle' });
+    await page.getByText(expectedText, { exact: true }).waitFor({ timeout: 30000 });
+    await screenshot(prefix + '-server-get-upto-reload');
+    await page.getByRole('button', { name: 'Get Exact Value' }).click();
+    assert.equal(await page.getByRole('button', { name: 'Yes', exact: true }).count(), 5);
+    for (const button of await page.getByRole('button', { name: 'Yes', exact: true }).all()) await button.click();
+    await page.getByRole('button', { name: 'Continue' }).click();
+    await page.getByRole('button', { name: 'Continue' }).click();
+    await page.getByRole('button', { name: 'WiFi not working' }).click();
+    await page.getByRole('button', { name: 'Continue' }).click();
+    await page.getByRole('button', { name: 'Original Box with same IMEI' }).click();
+    const charger = page.getByRole('button', { name: 'Original Charger', exact: false });
+    if (await charger.count()) await charger.click();
+    await page.getByRole('button', { name: 'Continue' }).click();
+    await page.getByRole('button', { name: 'Above 11 months', exact: true }).click();
+    await page.waitForFunction(() => JSON.parse(sessionStorage.getItem('fhoneify-quote-session') || '{}').answers?.mobileAge === 'above11');
+    await screenshot(prefix + '-conditional-age');
+    const answers = await page.evaluate(() => JSON.parse(sessionStorage.getItem('fhoneify-quote-session')).answers);
+    assert.equal(answers.mobileAge, 'above11'); assert(answers.hardware.includes('wifi'));
+    // Exercise the public price endpoint with the exact persisted UI answers.
+    // This does not authenticate the browser or bypass the login screen.
+    const response = await page.request.post('http://127.0.0.1:5310/api/quote/price', { data: { brand, model, storage, diagnostics: answers } });
+    const payload = await response.json(); assert(payload.success, JSON.stringify(payload));
+    assert(payload.data.fhoneifyPrice > 0 && payload.data.quoteToken);
+    assert(payload.data.pricingVersion.includes('cashify-runner-rules-v3'));
+    await page.reload({ waitUntil: 'networkidle' });
+    await page.waitForFunction(() => JSON.parse(sessionStorage.getItem('fhoneify-quote-session') || '{}').answers?.mobileAge === 'above11');
+    await page.getByRole('button', { name: 'Continue' }).click();
+    await page.getByRole('heading', { name: 'Login/Signup', exact: true }).waitFor();
+    await screenshot(prefix + '-login-boundary');
+    flows.push({ brand, model, storage, getUpto: starting, reloadStable: true, persistedAge: answers.mobileAge,
+      uiAnswersPriceApi: payload.data.fhoneifyPrice, apiVersion: payload.data.pricingVersion, loginBoundary: true });
+  }
   for (const [model, storage, charger] of [
     ['CMF by Nothing Phone 2 Pro 5G', '8 GB/128 GB', true], ['Nothing Phone 1', '8 GB/128 GB', true],
     ['Nothing Phone 4a', '6 GB/128 GB', true], ['Nothing Phone 4a', '8 GB/128 GB', false],
@@ -60,9 +85,9 @@ let browser;
   assert.deepEqual(errors, []);
   fs.writeFileSync('release-test-logs/android/browser-summary.json', JSON.stringify({
     basis: 'Real Next frontend + production price controller/service; injected read-only session reference fixtures, unreachable DB. Browser routes to steps 8/3/7 also checked visibility.',
-    getUpto: starting, reloadStable: true, realQuestionnaireFlowReachedAge: true, chargerVisibility: '4 variants passed', phone1QuestionCount: 3,
+    flows, reloadStable: true, realQuestionnaireFlowReachedAge: true, chargerVisibility: '4 variants passed', phone1QuestionCount: 3,
     openFoldAnswers: true, pageErrors: errors, quotes, otpAndLead: 'not tested; no auth or lead endpoints exposed',
   }, null, 2) + '\n');
   await browser.close();
-  console.log('PASS browser: server Get Upto/reload, real conditional-age flow, Phone1, charger variants, Open fold choices; no OTP or leads');
+  console.log('PASS browser: Nothing and OnePlus Get Upto/reload, persisted age, exact UI answers through quote API, login boundary; Phone1, charger variants, Open fold choices; no OTP or leads');
 })().catch(async error => { console.error(error); await browser?.close(); process.exitCode = 1; });

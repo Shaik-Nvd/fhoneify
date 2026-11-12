@@ -6,6 +6,7 @@ export interface DeductionRule {
   value: number;
   slope?: number;
   values?: Record<string, number>;
+  references?: Record<string, number>;
   fallback?: { form: 'fixed' | 'pct'; value: number };
   support: number;
   residual: number;
@@ -36,7 +37,15 @@ export function evaluateDeduction(rule: DeductionRule, reference: number, storag
   const value = rule.form === 'byStorage' ? rule.fallback!.value : rule.value;
   if (rule.form === 'byStorage' && rule.values?.[storage] !== undefined) {
     // A measured repair amount is allowed; a historic final-price lookup is not.
-    // By-storage values contain repair costs only, never a reference or final quote.
+    // Percentage-backed measurements are anchored at their observation reference,
+    // not frozen rupee amounts. The caller's current reference still drives price.
+    if (form === 'pct') {
+      const measuredReference = rule.references?.[storage];
+      if (!measuredReference || !Number.isFinite(measuredReference) || measuredReference <= 0) {
+        throw new InspectionRequiredError('Missing runner deduction measurement reference');
+      }
+      return rule.values[storage] * reference / measuredReference;
+    }
     return rule.values[storage];
   }
   return Math.max(0, form === 'fixed' ? value : form === 'pct' ? value * reference :

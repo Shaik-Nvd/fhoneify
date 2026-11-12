@@ -35,7 +35,7 @@ const variants = [
   ['Nothing', 'Nothing Phone 1', '8 GB/128 GB', 'P1'], ['Nothing', 'Nothing Phone 2a 5G', '8 GB/128 GB', 'A'], ['Nothing', 'Nothing Phone 3a', '8 GB/128 GB', 'B'],
   ['OnePlus', 'OnePlus 8', '8 GB/128 GB', 'old/no age'], ['OnePlus', 'OnePlus 12R', '8 GB/128 GB', 'middle'], ['OnePlus', 'OnePlus 13', '12 GB/256 GB', 'new'],
 ];
-const out = process.argv.find(a => a.startsWith('--out='))?.slice(6) ?? 'release-test-logs/android/frozen-combinations-v3-final';
+const out = process.argv.find(a => a.startsWith('--out='))?.slice(6) ?? 'release-test-logs/android/frozen-combinations-v4';
 fs.mkdirSync(out, { recursive: true }); fs.mkdirSync('docs/next-quotes', { recursive: true });
 const modelBytes = fs.readFileSync('lib/pricing/cashifyRunnerModel/model.ts');
 const modelHash = createHash('sha256').update(modelBytes).digest('hex');

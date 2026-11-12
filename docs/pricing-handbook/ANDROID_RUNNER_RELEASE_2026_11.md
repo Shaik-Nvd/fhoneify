@@ -21,7 +21,7 @@ Raw archives, full normalized records, validation row exports and execution logs
 
 ## Measured and inferred support
 
-Calibration covers 66 models. Each model's own storages determine fixed repairs and reference fractions; affine/capped forms are selected only where supported. By-storage rules store repair costs, never final quotes or historical references. Browser code imports only questionnaire metadata, not repair parameters or pricing execution.
+Calibration covers 66 models. Each model's own storages determine fixed repairs and reference fractions; affine/capped forms are selected only where supported. By-storage rules store repair costs, never final quotes. Percentage-backed values retain their measured reference solely as a normalization anchor and scale with the current server reference. Fixed-backed values remain fixed. Browser code imports only questionnaire metadata, not repair parameters or pricing execution.
 
 Nothing has 360 fixed, 174 proportional and one byStorage rule. OnePlus has 1,633 fixed, 465 proportional, 18 affine, three capped and 25 byStorage rules. Affine/capped forms require at least three distinct storages. Supported single conditions use measured parameters; combinations, unseen capacities and inherited repairs remain inferred. This describes parameter support, not a claim that a generated quote was observed on Cashify.
 
@@ -76,7 +76,7 @@ See [review response](RUNNER_REVIEW_RESPONSE_2026_11_12.md) for the seven review
 
 ## Verification and review
 
-Final post-review offline runner: **73 passed, 0 failed, 2 excluded**. All 23 focused review regressions pass. Both Next/server TypeScript projects pass with zero errors; strict typechecking of the changed tooling and regression suite also passes. Production build exits 0 with existing lint/configuration warnings. These checks ran after fix commit 3a257d0. Earlier UI guards and built-frontend browser evidence below predate this follow-up; browser verification was not rerun for these fixes.
+Final post-review offline runner: **74 passed, 0 failed, 2 excluded**. All 23 original review regressions and 3 new reference-move tests pass. Both Next/server TypeScript projects pass with zero errors; strict typechecking of the changed tooling and regression suite also passes. Production build exits 0 with existing lint/configuration warnings. The finding 8 follow-up reruns replay, storage holdout, full offline checks and both brands in the browser; see the review response for exact evidence and limitations.
 
 The runner excludes the production-writing integration suite and browser-only suite. Browser verification runs separately. Corpus-dependent suites skip explicitly when private data is absent. Catalog properties still report 2,082 pre-existing known-policy no-calls exceptions on other brands; the invariant and classification remain unchanged.
 
@@ -86,7 +86,7 @@ The separate review found inherited deductions could receive an overall measured
 
 ## Local browser evidence
 
-The real Next frontend and production price controller/service were exercised with injected read-only reference fixtures and an unreachable database. Get Upto matches the API and survives reload. Real initial selections reach conditional age. Phone 1 shows three initial questions. Charger visibility was checked on CMF 2 Pro, Phone 1 and two Phone 4a capacities. Open shows hinge and outer-screen choices. No page errors were observed. Direct step URLs were also used for option-visibility checks.
+After the finding 8 correction, both Nothing Phone 3a and OnePlus 15 were exercised through actual selections, persisted age and the normal login boundary; the exact UI answers also pass the public quote API. The gated authenticated final screen and leads remain untested. The real Next frontend and production price controller/service were exercised with injected read-only reference fixtures and an unreachable database. Get Upto matches the API and survives reload. Real initial selections reach conditional age. Phone 1 shows three initial questions. Charger visibility was checked on CMF 2 Pro, Phone 1 and two Phone 4a capacities. Open shows hinge and outer-screen choices. No page errors were observed. Direct step URLs were also used for option-visibility checks.
 
 ![Local server Get Upto and reload](assets/runner-local-qa/nothing-server-get-upto-reload.png)
 
@@ -100,7 +100,7 @@ These are local Fhoneify QA screenshots, not Cashify captures or live-production
 
 ## Combination evidence and remaining work
 
-Prepared 75 Nothing and 77 OnePlus planned combinations, including the cheap-phone display cap probe and the exact OnePlus 12 five-functional-fault floor probe. Its INR1,200 scrap outcome is inferred, with no combination evidence. The collection documents record frozen calibration and implementation hashes. Frozen private predictions and snapshots are under release-test-logs/android/frozen-combinations-v3-final; the earlier snapshot is preserved. The team must collect actual combinations and score them at the newly observed reference against frozen rules before refitting. No combination has been promoted to measured.
+Prepared 75 Nothing and 77 OnePlus planned combinations, including the cheap-phone display cap probe and the exact OnePlus 12 five-functional-fault floor probe. Its INR1,200 scrap outcome is inferred, with no combination evidence. The collection documents record frozen calibration and implementation hashes. Frozen private predictions and snapshots are under release-test-logs/android/frozen-combinations-v4; the earlier snapshot is preserved. The team must collect actual combinations and score them at the newly observed reference against frozen rules before refitting. No combination has been promoted to measured.
 
 Material limits remain: missing/stale production references, inherited 9RT repairs, unseen-storage errors up to INR910 in OnePlus holdout, weak transfer to unseen models and unobserved multi-fault interactions. Passing these gates does not establish universal Cashify parity or years of unchanged repair costs.
 

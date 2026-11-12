@@ -36,14 +36,18 @@ export function fitRule(points: FitPoint[], shape?: DeductionRule['form'], fallb
     if (candidate) return candidate;
   }
   const values: Record<string, number> = {};
+  const references: Record<string, number> = {};
   for (const p of points) {
     if (values[p.storage] !== undefined && Math.abs(values[p.storage] - p.value) > 10) throw new Error('Conflicting repair measurements at one storage');
     values[p.storage] = round10(p.value);
+    if (references[p.storage] !== undefined && references[p.storage] !== p.reference) throw new Error('Conflicting reference measurements at one storage');
+    references[p.storage] = p.reference;
   }
   // Freeze the discovered fallback FORM during conditional holdout, just like
   // the primary form. Refit its coefficient from training observations only.
   const fallback = fallbackShape ? (fallbackShape === 'fixed' ? fixed : pct) : fixed.residual <= pct.residual ? fixed : pct;
-  return { form: 'byStorage', value: 0, values, fallback: { form: fallback.form as 'fixed' | 'pct', value: fallback.value }, support, residual: 0 };
+  return { form: 'byStorage', value: 0, values, ...(fallback.form === 'pct' ? { references } : {}),
+    fallback: { form: fallback.form as 'fixed' | 'pct', value: fallback.value }, support, residual: 0 };
 }
 
 export function fitCalibration(all: RunnerMeasurement[], brand: 'Nothing' | 'OnePlus', structure?: RunnerCalibration): RunnerCalibration {
@@ -112,7 +116,7 @@ export function fitCalibration(all: RunnerMeasurement[], brand: 'Nothing' | 'One
     }
   }
   for (const profile of Object.values(profiles)) if (Object.values(profile.variants).some(v => !Number.isFinite(v.scrap))) throw new Error(`${profile.model}: missing measured calls scrap and no approved sibling fallback`);
-  return { version: 'cashify-runner-rules-v2', sourceHash: createHash('sha256').update(JSON.stringify(rows)).digest('hex'), profiles };
+  return { version: 'cashify-runner-rules-v3', sourceHash: createHash('sha256').update(JSON.stringify(rows)).digest('hex'), profiles };
 }
 
 if (require.main === module) {

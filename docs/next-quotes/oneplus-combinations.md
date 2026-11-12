@@ -1,13 +1,13 @@
 # OnePlus combination collection
 
-Frozen calibration SHA-256: `9fd8d632089e410801abbf3c5c5a9d6718bcada6575d492626b07439f5401f8c`.
-Frozen model implementation SHA-256: `9b47898b097211c6115d3113dbb7f712292e18930b4a5da3c4883497ab5ca884`.
+Frozen calibration SHA-256: `be04479570528fed7f59f3a2a2b05d9aea493e2c7ba79e6b11fb5e52f6167235`.
+Frozen model implementation SHA-256: `0b03e9d5986353d50d3b68081fb3434d5f08edae41da3d046288938c78fcfe56`.
 
 Collect the following planned combinations on each listed variant. These are synthetic plans, not Cashify observations. Keep a flawless control before and after each session; record the full offered/selected answer path, base, Selling, fees, timestamp and the session reference. An unavailable question stays unavailable. Do not invent a selection to follow this list.
 
 The age/warranty rows deliberately test branch interactions. Phone 1 and older OnePlus models do not ask age/warranty: record those rows as not applicable, not as measured zero deductions. A variant without a charger question likewise marks charger-only rows unavailable.
 
-Private frozen predictions are under release-test-logs/android/frozen-combinations-v3-final. They use the earlier session reference only for planning. Re-score the same frozen parameters at the new explicitly observed reference before comparing; do not refit first. Only independently collected combinations can change support from inferred to measured.
+Private frozen predictions are under release-test-logs/android/frozen-combinations-v4. They use the earlier session reference only for planning. Re-score the same frozen parameters at the new explicitly observed reference before comparing; do not refit first. Only independently collected combinations can change support from inferred to measured.
 
 | Variant | Profile |
 |---|---|

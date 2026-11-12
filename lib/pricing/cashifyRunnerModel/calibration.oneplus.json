@@ -1,5 +1,5 @@
 {
-  "version": "cashify-runner-rules-v2",
+  "version": "cashify-runner-rules-v3",
   "sourceHash": "6d4cac4bc79d35c5924e9d3001ee56258d6c090f52a500126a16b239269fbb29",
   "profiles": {
     "oneplus10pro5g": {
@@ -53,6 +53,10 @@
           "values": {
             "8gb/128gb": 5170,
             "12gb/256gb": 5760
+          },
+          "references": {
+            "8gb/128gb": 12990,
+            "12gb/256gb": 14560
           },
           "fallback": {
             "form": "pct",
@@ -115,6 +119,10 @@
           "values": {
             "8gb/128gb": 5170,
             "12gb/256gb": 5760
+          },
+          "references": {
+            "8gb/128gb": 12990,
+            "12gb/256gb": 14560
           },
           "fallback": {
             "form": "pct",
@@ -265,6 +273,10 @@
           "values": {
             "8gb/128gb": 7300,
             "12gb/256gb": 8230
+          },
+          "references": {
+            "8gb/128gb": 12990,
+            "12gb/256gb": 14560
           },
           "fallback": {
             "form": "pct",
@@ -852,6 +864,10 @@
             "8gb/128gb": 4630,
             "16gb/256gb": 4910
           },
+          "references": {
+            "8gb/128gb": 22960,
+            "16gb/256gb": 24850
+          },
           "fallback": {
             "form": "pct",
             "value": 0.19945965878271568
@@ -1089,6 +1105,10 @@
           "values": {
             "8gb/128gb": 9880,
             "16gb/256gb": 10500
+          },
+          "references": {
+            "8gb/128gb": 22960,
+            "16gb/256gb": 24850
           },
           "fallback": {
             "form": "pct",
@@ -1702,6 +1722,10 @@
           "values": {
             "12gb/256gb": 6710,
             "16gb/512gb": 7390
+          },
+          "references": {
+            "12gb/256gb": 33470,
+            "16gb/512gb": 38050
           },
           "fallback": {
             "form": "pct",
@@ -2563,6 +2587,10 @@
             "12gb/256gb": 7370,
             "16gb/512gb": 7500
           },
+          "references": {
+            "12gb/256gb": 31600,
+            "16gb/512gb": 32300
+          },
           "fallback": {
             "form": "pct",
             "value": 0.23270171658055194
@@ -3131,6 +3159,10 @@
             "12gb/256gb": 12980,
             "16gb/512gb": 13360
           },
+          "references": {
+            "12gb/256gb": 57250,
+            "16gb/512gb": 59250
+          },
           "fallback": {
             "form": "pct",
             "value": 0.22608378602338644
@@ -3145,6 +3177,10 @@
             "12gb/256gb": 4960,
             "16gb/512gb": 5060
           },
+          "references": {
+            "12gb/256gb": 57250,
+            "16gb/512gb": 59250
+          },
           "fallback": {
             "form": "pct",
             "value": 0.08599797440383022
@@ -3158,6 +3194,10 @@
           "values": {
             "12gb/256gb": 6680,
             "16gb/512gb": 6840
+          },
+          "references": {
+            "12gb/256gb": 57250,
+            "16gb/512gb": 59250
           },
           "fallback": {
             "form": "pct",
@@ -3430,6 +3470,10 @@
             "12gb/256gb": 8500,
             "12gb/512gb": 8690
           },
+          "references": {
+            "12gb/256gb": 36250,
+            "12gb/512gb": 37250
+          },
           "fallback": {
             "form": "pct",
             "value": 0.2338694304353861
@@ -3444,6 +3488,10 @@
             "12gb/256gb": 3420,
             "12gb/512gb": 3470
           },
+          "references": {
+            "12gb/256gb": 36250,
+            "12gb/512gb": 37250
+          },
           "fallback": {
             "form": "pct",
             "value": 0.093733401193726
@@ -3457,6 +3505,10 @@
           "values": {
             "12gb/256gb": 4510,
             "12gb/512gb": 4590
+          },
+          "references": {
+            "12gb/256gb": 36250,
+            "12gb/512gb": 37250
           },
           "fallback": {
             "form": "pct",
@@ -7028,6 +7080,11 @@
             "8gb/128gb": 6350,
             "12gb/256gb": 6370
           },
+          "references": {
+            "6gb/128gb": 9600,
+            "8gb/128gb": 10380,
+            "12gb/256gb": 10600
+          },
           "fallback": {
             "form": "pct",
             "value": 0.6093137738403738
@@ -7747,6 +7804,10 @@
             "8gb/128gb": 5020,
             "12gb/256gb": 5210
           },
+          "references": {
+            "8gb/128gb": 9850,
+            "12gb/256gb": 10460
+          },
           "fallback": {
             "form": "pct",
             "value": 0.5035195251172165
@@ -7772,6 +7833,10 @@
           "values": {
             "8gb/128gb": 5020,
             "12gb/256gb": 5210
+          },
+          "references": {
+            "8gb/128gb": 9850,
+            "12gb/256gb": 10460
           },
           "fallback": {
             "form": "pct",
@@ -7846,6 +7911,10 @@
           "values": {
             "8gb/128gb": 5020,
             "12gb/256gb": 5210
+          },
+          "references": {
+            "8gb/128gb": 9850,
+            "12gb/256gb": 10460
           },
           "fallback": {
             "form": "pct",

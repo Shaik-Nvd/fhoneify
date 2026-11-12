@@ -1,5 +1,5 @@
 {
-  "version": "cashify-runner-rules-v2",
+  "version": "cashify-runner-rules-v3",
   "sourceHash": "9ee678210638e31ddc647d043d36a8e32ad07c2e4680a0b538c74025ef5ec1b7",
   "profiles": {
     "cmfphone1": {
@@ -2412,6 +2412,10 @@
           "values": {
             "8gb/128gb": 6790,
             "8gb/256gb": 7000
+          },
+          "references": {
+            "8gb/128gb": 14850,
+            "8gb/256gb": 15660
           },
           "fallback": {
             "form": "pct",
