@@ -29,3 +29,18 @@ Reviewed read-only: commits `769595d`, `7ae75b9`, `136b161`, `b998d5c`, plus the
 5. **Multi-fault floor.** Five functional faults on OnePlus 12 give ₹1,200 (the scrap floor), because Wi-Fi, Bluetooth, fingerprint and face are each a percentage and add past 100% of R. This is inferred; there is no combination evidence. Say so in the report and put this case in the combination collection list.
 6. Conflicting accessory input (`box: false` but `accessories` still lists `box`) is priced as present. Prefer the explicit `false`.
 7. Run the full offline suite, both `tsc` projects and `npm run build` after committing the wiring, and report the counts.
+
+## Re-verification of PR 32 at `082b373` (12 November 2026, 21:10 IST)
+
+Run by the reviewer in a separate checkout, not taken from the PR text.
+
+- Findings 1, 2, 3, 5, 6 and 7 are fixed. Unknown hardware, defects without a detail answer, and warranty Yes without an age answer now return manual inspection. Label case and spacing variants price the same as the exact label. Explicit `box: false` / `charger: false` now win.
+- Replay: Nothing 1,671/1,671 and OnePlus 5,537/5,537 within ₹10, no bias.
+- Offline runner: 73 passed, 0 failed, 2 skipped.
+- Finding 4 (owner sign-off for catalog changes and bypassing the October OnePlus routes) is disclosed in the PR and still needs the owner.
+
+### New finding from the fix for finding 3
+
+8. **Eleven OnePlus age rules are now stored per storage as fixed rupees, so they no longer follow the reference.** OnePlus 11 5G, 12, 13R, 15 and 15R (`age:above11`, and for 15/15R also `3to6` and `6to11`). The age deduction is charged on every out-of-warranty, bill-No and forced-age answer (cracked glass, panel, bent, touch No, screen not original). Example: OnePlus 15 12/256 above-11 stays ₹12,980 whatever R is. Its own fallback is 22.6% of R, so a 10% reference move leaves it about ₹1,300 wrong on those quotes. Fix: when a `byStorage` rule's fallback is a percentage, store the reference each value was measured at and scale the value by `R / R_measured`, so it matches exactly at the measured reference and moves with it afterwards. Add a reference-move test for one of these models.
+
+Not re-checked by the reviewer: browser flow after the fixes, live OTP and lead persistence, deployed revision.
