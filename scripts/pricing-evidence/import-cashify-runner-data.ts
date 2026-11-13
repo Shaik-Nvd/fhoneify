@@ -4,17 +4,18 @@ import { createHash } from 'node:crypto';
 import { inflateRawSync } from 'node:zlib';
 import type { DiagnosticsType } from '../../lib/pricingCalculator';
 
-type Brand = 'Nothing' | 'OnePlus';
+export type Brand = 'Nothing' | 'OnePlus' | 'Samsung' | 'Google';
 export interface RunnerMeasurement {
   brand: Brand; model: string; rawModel: string; storage: string; caseId: string; label: string;
-  status: 'quoted' | 'pending'; diagnostics: DiagnosticsType; answerPath: any[];
-  ageAsked: boolean; ageSelected: string | null; offeredAccessories: string[]; reference: number;
+  status: 'quoted' | 'pending' | 'no_offer' | 'not_applicable'; diagnostics: DiagnosticsType; answerPath: any[];
+  ageAsked: boolean; ageSelected: string | null; offeredAccessories: string[]; reference: number | null;
   base: number | null; selling: number | null; processingFee: number | null; imeiFee: number | null;
   total: number | null; deduction: number | null; observedAt: string | null;
-  source: { folder: string; file: string; caseId: string; sha256: string };
+  source: { folder: string; file: string; caseId: string; sha256: string; format?: 'A' | 'B' | 'C'; line?: number };
+  primary?: boolean; supersededBy?: string;
   variantUrl: string; hasAge: boolean; complete: boolean;
 }
-const functional: Record<string,string> = {
+export const functional: Record<string,string> = {
   'Front Camera not working':'front_camera', 'Back Camera not working':'back_camera',
   'Volume Button not working':'volume', 'Finger Touch not working':'fingerprint',
   'WiFi not working':'wifi', 'Battery Faulty':'battery_service', 'Speaker Faulty':'speaker',
@@ -25,14 +26,14 @@ const functional: Record<string,string> = {
   'Microphone not working':'microphone', 'Proximity Sensor not working':'proximity',
   'Outer screen damaged/line/broken or spot':'outer_screen', 'Hinges stuck/loose or broken':'hinge'
 };
-const foldBranches: Record<string,string|null> = {
+export const foldBranches: Record<string,string|null> = {
   'Outer screen damaged/line/ broken or Spot':'outer_screen',
   'Outer screen damaged/line/broken or spot':'outer_screen',
   'No issue with outer screen':null,
   'Hinges stuck/loose or broken':'hinge',
   'No hinges issues':null
 };
-const physical: Record<string,keyof DiagnosticsType> = {};
+export const physical: Record<string,keyof DiagnosticsType> = {};
 for (const [key, values] of Object.entries({
   screenCondition:['Screen cracked/ glass broken','Chipped/cracked outside display area','More than 2 scratches on screen','1-2 scratches on screen'],
   screenSpots:['Large/ heavy visible spots on screen','3 or more minor spots on screen','1-2 minor spots on screen','No spots on screen'],
@@ -48,13 +49,13 @@ const groups: Record<string,string> = {
   'Dead Spot/Visible line and Discoloration on screen':'screen_spot',
   'Scratch/Dent on device body':'body_scratch', 'Device panel missing/broken':'panel_missing'
 };
-const initial: Record<string,keyof DiagnosticsType> = {
+export const initial: Record<string,keyof DiagnosticsType> = {
   'Are you able to make and receive calls?':'calls', "Is your device's touch screen working properly?":'touch',
   "Is your phone's screen original?":'originalScreen', 'Is your device under manufacturer warranty?':'warranty',
   'Do you have GST valid bill with the same IMEI?':'validBill'
 };
-const accessories: Record<string,string> = { 'Original Box with same IMEI':'box', 'Original Charger of Device':'charger' };
-const ages: Record<string,string> = { 'Below 3 months':'below3', '3 months - 6 months':'3to6', '6 months - 11 months':'6to11', 'Above 11 months':'above11' };
+export const accessories: Record<string,string> = { 'Original Box with same IMEI':'box', 'Original Charger of Device':'charger', 'Original S Pen':'spen' };
+export const ages: Record<string,string> = { 'Below 3 months':'below3', '3 months - 6 months':'3to6', '6 months - 11 months':'6to11', 'Above 11 months':'above11' };
 function check(ok: unknown, message: string): asserts ok { if (!ok) throw new Error(message); }
 function sha(bytes: Buffer) { return createHash('sha256').update(bytes).digest('hex'); }
 function known(value: string, map: Record<string,unknown>) { check(Object.hasOwn(map,value), 'Unknown questionnaire label/option'); }
@@ -66,7 +67,7 @@ function labelKnown(label: string) {
   check(Object.hasOwn(functional,label) || Object.hasOwn(physical,label) || Object.hasOwn(foldBranches,label) || Object.hasOwn(ages,label), 'Unknown case label');
 }
 /** Read central-directory entries without extracting or executing archive members. */
-function zipMembers(bytes: Buffer): Map<string,Buffer> {
+export function zipMembers(bytes: Buffer): Map<string,Buffer> {
   let end = bytes.length - 22;
   while (end >= Math.max(0,bytes.length-65557) && bytes.readUInt32LE(end) !== 0x06054b50) end--;
   check(end >= 0 && bytes.readUInt32LE(end) === 0x06054b50, 'Invalid ZIP directory');
@@ -101,13 +102,44 @@ function csvRows(text: string): Record<string,string>[] {
   check(!quoted,'Unclosed CSV quote');const keys=rows.shift()!;
   return rows.filter(r=>r.some(Boolean)).map(r=>{check(r.length===keys.length,'CSV column mismatch');return Object.fromEntries(keys.map((k,i)=>[k,r[i]]));});
 }
-function normalizeModel(raw: string, brand: Brand) {
+export function normalizeModel(raw: string, brand: Brand) {
   const match=raw.match(/^(.*?)\s*\((\d+\s*GB\s*\/\s*\d+\s*(?:GB|TB))\)$/i);
   check(match,'Unrecognized model/storage format');
   let model=match[1].trim().replace(/^Oneplus\b/i,'OnePlus');
   if(brand==='Nothing') {model=model.replace(/^CMF Phone /i,'CMF by Nothing Phone ');check(/^(Nothing |CMF by Nothing )/.test(model),'Wrong brand model');}
-  else check(model.startsWith('OnePlus '),'Wrong brand model');
+  else check(model.startsWith(brand === 'Google' ? 'Google Pixel ' : brand+' '),'Wrong brand model');
   return { model, storage:match[2].replace(/\s*\/\s*/,'/').replace(/gb/gi,'GB').replace(/tb/gi,'TB') };
+}
+/** Explicit report-label aliases; never infer a case from its numeric position. */
+export function diagnosticsForLabel(label: string, offered: string[], hasAge: boolean): DiagnosticsType {
+  const d: DiagnosticsType = { calls:true,touch:true,originalScreen:true,defects:[],screenCondition:null,screenSpots:null,screenLines:null,screenDiscoloration:null,
+    bodyScratches:null,bodyDents:null,bodyPanel:null,bodyBent:null,hardware:[],accessories:[...offered],warranty:hasAge?true:null,validBill:hasAge?true:null,eSim:null,mobileAge:hasAge?'below3':null };
+  const key = (s: string) => s.toLowerCase().replace(/[—–]/g,'-').replace(/[^a-z0-9+]/g,'');
+  const aliases: Record<string,string> = {
+    'Cannot make/receive calls':'calls', 'Cannot make or receive calls':'calls', 'Touch screen not working':'touch', 'Screen not original':'originalScreen',
+    'Warranty No':'warranty', 'Warranty expired':'warranty', 'GST bill No':'validBill', 'Valid bill No':'validBill', 'Bill No':'validBill',
+    'Original box missing':'box', 'Original box unavailable':'box', 'Original charger missing':'charger', 'Original charger unavailable':'charger',
+    'Original S Pen missing':'spen', 'All offered accessories missing':'all', 'All accessories missing':'all', 'Both accessories unavailable':'all', 'Both accessories missing':'all',
+    'Heavy visible spots':'Large/ heavy visible spots on screen', '3+ minor spots':'3 or more minor spots on screen', '1-2 minor spots':'1-2 minor spots on screen',
+    'Visible lines':'Visible line(s) on display', 'Faded edges':'Display faded along edges',
+    'Body 3+ scratches':'More than 2 scratches', 'More than 2 scratches on body':'More than 2 scratches',
+    'Body 1-2 scratches':'1-2 scratches', '1-2 scratches on body':'1-2 scratches', 'Major dents':'Major dent(s) or more than 2',
+    'Cracked panel':'Cracked/ broken side or back panel', 'Missing panel':'Missing side or back panel', 'Bent panel':'Bent/ curved panel', 'Loose screen':'Loose screen (Gap in screen and body)',
+    'Age 3-6 months':'3 months - 6 months', 'Age 6-11 months':'6 months - 11 months', 'Age above 11 months':'Above 11 months',
+  };
+  const lookup = Object.fromEntries(Object.entries(aliases).map(([a,b])=>[key(a),b]));
+  let value = lookup[key(label)] ?? label;
+  const normalized = key(value);
+  if (['flawless','flawlessbaseline','baseline','displaybranch:nodefects','bod ybranch:nodefects','panelbranch:nodefects',
+    'Display no-defect control','Body no-defect control','Panel no-defect control','Display branch: no defects','Body branch: no defects','Panel branch: no defects',
+    'Flawless control','Flawless baseline recheck'].map(key).includes(normalized)) return d;
+  const f = Object.keys(functional).find(s=>key(s)===normalized); if(f) {d.hardware=[functional[f]];return d;}
+  const p = Object.keys(physical).find(s=>key(s)===normalized); if(p) {(d as any)[physical[p]]=p;return d;}
+  const age = Object.keys(ages).find(s=>key(s)===normalized); if(age) {d.mobileAge=ages[age];return d;}
+  const first = Object.keys(initial).find(s=>key(s+' - No')===normalized); if(first) value=initial[first];
+  if (['calls','touch','originalScreen','warranty','validBill'].includes(value)) {(d as any)[value]=false;return d;}
+  if (['box','charger','spen','all'].includes(value)) {d.accessories=value==='all'?[]:offered.filter(a=>a!==value);return d;}
+  throw new Error(`Unknown report case label: ${label}`);
 }
 function normalizeAnswers(answers:any[], schema:any) {
   const d:DiagnosticsType={ calls:null,touch:null,originalScreen:null,defects:[],screenCondition:null,screenSpots:null,screenLines:null,screenDiscoloration:null,bodyScratches:null,bodyDents:null,bodyPanel:null,bodyBent:null,hardware:[],accessories:[],warranty:null,validBill:null,eSim:null,mobileAge:null };
@@ -130,7 +162,7 @@ function normalizeAnswers(answers:any[], schema:any) {
   return {diagnostics:d, ageAsked,ageSelected};
 }
 export function importRunnerData(input: string, options: {brand:Brand;out?:string;requireMirror?:boolean}) {
-  check(['Nothing','OnePlus'].includes(options.brand),'Unknown brand');
+  check(['Nothing','OnePlus','Samsung','Google'].includes(options.brand),'Unknown brand');
   const measurements:RunnerMeasurement[]=[]; const inventory:any[]=[];const variants:any[]=[];
   const folders=fs.existsSync(path.join(input,'checkpoint.json')) ? ['.'] : fs.readdirSync(input,{withFileTypes:true}).filter(e=>e.isDirectory()).map(e=>e.name).sort();
   check(folders.length>0,'No model folders');
@@ -157,7 +189,23 @@ export function importRunnerData(input: string, options: {brand:Brand;out?:strin
     const index=(list:any[])=>new Map(list.map(r=>[`${r.model}|${r.case_id}`,r]));
     const ci=index(csv),ti=index(textRows),ri=index(rows);check(ri.size===rows.length&&ci.size===csv.length&&ti.size===textRows.length,'Duplicate result row');for(const key of ti.keys())check(ri.has(key),'Unexpected text result');let seen=0;
     for(const [url,v] of Object.entries(checkpoint.variants) as [string,any][]) {
-      const baseline=v.results.baseline;check(baseline?.quote?.status==='quoted','Variant missing priced baseline');
+      const baseline=v.results.baseline;
+      if (!baseline && options.brand === 'Samsung') {
+        const model=normalizeModel(v.model,options.brand);
+        const plannedRows=rows.filter(row=>row.model===v.model);
+        check(plannedRows.every(row=>row.status==='pending'),'Unobserved variant has non-pending results');
+        variants.push({folder,...model,variantUrl:url,complete:false,pending:true,hasAge:v.schema.ages.length>0,finalControlMatches:null,healthyControlsMatch:null});
+        for(const row of plannedRows) {
+          labelKnown(row.test); for(const key of ['base','selling','total','imei_fee','processing_fee','deduction','total_reduction'])check(row[key]===null && String(ci.get(`${v.model}|${row.case_id}`)?.[key]??'')==='','Unobserved variant has monetary values');
+          check(row.observed_at===null,'Unobserved variant has timestamp');
+          measurements.push({brand:options.brand,...model,rawModel:v.model,caseId:row.case_id,label:row.test,status:'pending',
+            diagnostics:normalizeAnswers([],v.schema).diagnostics,answerPath:[],ageAsked:false,ageSelected:null,offeredAccessories:v.schema.accessories.map((s:string)=>accessories[s]),
+            reference:null,base:null,selling:null,processingFee:null,imeiFee:null,total:null,deduction:null,observedAt:null,
+            source:{folder,file:'results.json',caseId:row.case_id,sha256:sha(files.get('results.json')!)},variantUrl:url,hasAge:v.schema.ages.length>0,complete:false});seen++;
+        }
+        continue;
+      }
+      check(baseline?.quote?.status==='quoted','Variant missing priced baseline');
       const variantRows=rows.filter(row=>row.model===v.model);
       const hasPending=variantRows.some(row=>row.status==='pending');
       const records: Record<string,any>={...v.results};
@@ -189,7 +237,7 @@ export function importRunnerData(input: string, options: {brand:Brand;out?:strin
         labelKnown(r.case.label);check(id===r.case.id,'Checkpoint case ID mismatch');
         const key=`${v.model}|${id}`,row=ri.get(key);check(row,'Checkpoint row absent from results');seen++;
         check(row.test===r.case.label && row.status===r.quote.status && row.observed_at===r.observed_at,'Checkpoint label/status/time mismatch');
-        check(['quoted','pending'].includes(row.status),'Unknown quote status');
+        check(['quoted','pending','no_offer'].includes(row.status),'Unknown quote status');
         const quoted=row.status==='quoted';
         check(!quoted||ti.has(key),'Quoted row missing text result');
         for(const field of ['test','status','observed_at']) {
@@ -223,12 +271,13 @@ export function importRunnerData(input: string, options: {brand:Brand;out?:strin
     }
     check(seen===rows.length,'Unmatched results row');
   }
-  const summary={brand:options.brand,folders:folders.length,variants:variants.length,measurements:measurements.length,quoted:measurements.filter(m=>m.status==='quoted').length,pending:measurements.filter(m=>m.status==='pending').length,excluded:0,incompleteVariants:variants.filter(v=>!v.complete).length,mirrors:inventory.filter(i=>i.mirror).length,variantInventory:variants};
+  const summary={brand:options.brand,folders:folders.length,variants:variants.length,measurements:measurements.length,quoted:measurements.filter(m=>m.status==='quoted').length,pending:measurements.filter(m=>m.status==='pending').length,noOffer:measurements.filter(m=>m.status==='no_offer').length,excluded:0,incompleteVariants:variants.filter(v=>!v.complete).length,mirrors:inventory.filter(i=>i.mirror).length,variantInventory:variants};
   if(options.out) {fs.mkdirSync(options.out,{recursive:true});fs.writeFileSync(path.join(options.out,'inventory.json'),JSON.stringify(inventory,null,2)+'\n');fs.writeFileSync(path.join(options.out,'measurements.jsonl'),measurements.map(m=>JSON.stringify(m)).join('\n')+'\n');fs.writeFileSync(path.join(options.out,'summary.json'),JSON.stringify(summary,null,2)+'\n');}
   return {measurements,inventory,summary};
 }
 if(process.argv[1] && /import-cashify-runner-data\.(?:ts|js)$/.test(process.argv[1])) {
   const args=process.argv.slice(2),input=args[0],brand=args[args.indexOf('--brand')+1] as Brand,out=args[args.indexOf('--out')+1];
   check(input&&args.includes('--brand')&&args.includes('--out'),'Usage: import-cashify-runner-data.ts <folder> --brand <Nothing|OnePlus> --out <dir>');
-  const {variantInventory,...counts}=importRunnerData(input,{brand,out}).summary;console.log(JSON.stringify(counts));
+  if(input.toLowerCase().endsWith('.zip')) { const {disagreements,...counts}=require('./import-samsung-pixel-archives').importArchives(input,brand,out); console.log(JSON.stringify({...counts,disagreementCount:disagreements.length})); }
+  else { const {variantInventory,...counts}=importRunnerData(input,{brand,out}).summary;console.log(JSON.stringify(counts)); }
 }
