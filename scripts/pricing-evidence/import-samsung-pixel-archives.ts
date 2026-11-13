@@ -138,9 +138,10 @@ export function importArchives(input:string,brand:'Samsung'|'Google',out:string)
   }
   reconcile(measurements);
   const counts=(xs:RunnerMeasurement[])=>Object.fromEntries(['quoted','pending','no_offer','not_applicable'].map(status=>[status,xs.filter(r=>r.status===status).length]));
+  const primaryIndex=new Map(measurements.filter(r=>r.primary).map(r=>[modelKey(r.model)+'|'+storageKey(r.storage)+'|'+signature(r),r]));
   const summary={brand,observations:measurements.length,counts:counts(measurements),primary:counts(measurements.filter(r=>r.primary)),byFormat:Object.fromEntries(['A','B','C'].map(f=>[f,counts(measurements.filter(r=>r.source.format===f))])),variants:new Set(measurements.map(r=>modelKey(r.model)+'|'+storageKey(r.storage))).size,
     sellingOnly:measurements.filter(r=>r.status==='quoted'&&r.total===null).length,
-    disagreements:measurements.filter(r=>!r.primary&&r.status==='quoted').map(r=>{const p=measurements.find(m=>m.primary&&m.source.sha256===r.supersededBy&&m.model===r.model&&m.storage===r.storage&&signature(m)===signature(r));return p&&p.base!==r.base?{model:r.model,storage:r.storage,caseId:r.source.caseId,oldBase:r.base,newBase:p.base,oldDate:r.observedAt,newDate:p.observedAt}:null;}).filter(Boolean)};
+    disagreements:measurements.filter(r=>!r.primary&&r.status==='quoted').map(r=>{const p=primaryIndex.get(modelKey(r.model)+'|'+storageKey(r.storage)+'|'+signature(r));return p&&p.base!==r.base?{model:r.model,storage:r.storage,caseId:r.source.caseId,oldBase:r.base,newBase:p.base,oldDate:r.observedAt,newDate:p.observedAt}:null;}).filter(Boolean)};
   fs.mkdirSync(out,{recursive:true});for(const[name,value]of [['summary',summary],['inventory',inventory]] as const)fs.writeFileSync(path.join(out,name+'.json'),JSON.stringify(value,null,2)+'\n');
   fs.writeFileSync(path.join(out,'measurements.jsonl'),measurements.map(r=>JSON.stringify(r)).join('\n')+'\n');return summary;
 }
@@ -149,8 +150,19 @@ function signature(row:RunnerMeasurement) {
   return JSON.stringify({faults:runnerFaults(d).sort(),warranty:d.warranty,bill:d.validBill,age:row.hasAge?runnerAge(d.mobileAge):null,accessories:[...d.accessories].sort()});
 }
 function reconcile(rows:RunnerMeasurement[]) {
+  const sources=new Map<string,Map<string,{date:string;format:string}>>();
+  for(const row of rows)if(row.status==='quoted') {
+    const variant=modelKey(row.model)+'|'+storageKey(row.storage),bySource=sources.get(variant)??new Map();
+    const previous=bySource.get(row.source.folder);const at=row.observedAt??'';
+    bySource.set(row.source.folder,{date:at>(previous?.date??'')?at:previous!.date,format:row.source.format??'A'});sources.set(variant,bySource);
+  }
+  const selected=new Map([...sources].map(([variant,bySource])=>[variant,[...bySource].sort((a,b)=>b[1].date.localeCompare(a[1].date)||a[1].format.localeCompare(b[1].format)||a[0].localeCompare(b[0]))[0][0]]));
   const groups=new Map<string,RunnerMeasurement[]>();
   for(const row of rows){const key=modelKey(row.model)+'|'+storageKey(row.storage)+'|'+signature(row)+(row.status==='pending'||row.status==='not_applicable'?'|'+row.caseId:'');groups.set(key,[...groups.get(key)??[],row]);}
-  for(const group of groups.values()){group.sort((a,b)=>(b.observedAt??'').localeCompare(a.observedAt??'') || Number(b.source.format==='A')-Number(a.source.format==='A'));group.forEach((row,i)=>{row.primary=i===0&&!row.observedAt?.startsWith('2026-10');if(i)row.supersededBy=group[0].source.sha256;});}
+  for(const group of groups.values()) {
+    group.sort((a,b)=>(b.observedAt??'').localeCompare(a.observedAt??'')||a.source.format!.localeCompare(b.source.format!));
+    const eligible=group.filter(row=>row.source.folder===selected.get(modelKey(row.model)+'|'+storageKey(row.storage))&&!row.observedAt?.startsWith('2026-10'));
+    group.forEach(row=>{row.primary=row===eligible[0];if(!row.primary&&eligible[0])row.supersededBy=eligible[0].source.sha256;});
+  }
 }
 if(require.main===module){const args=process.argv.slice(2);const {disagreements,...summary}=importArchives(args[0],args[1] as 'Samsung'|'Google',args[2]);console.log(JSON.stringify({...summary,disagreementCount:disagreements.length}));}

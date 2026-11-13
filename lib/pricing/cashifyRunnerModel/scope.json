@@ -1198,5 +1198,3623 @@
         ]
       }
     }
+  },
+  "samsunggalaxya03": {
+    "hasAge": false,
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya03core": {
+    "hasAge": false,
+    "variants": {
+      "2gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya03s": {
+    "hasAge": false,
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya04": {
+    "hasAge": false,
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya04s": {
+    "hasAge": false,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya06": {
+    "hasAge": true,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya065g": {
+    "hasAge": true,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya07": {
+    "hasAge": true,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya075g": {
+    "hasAge": true,
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya10": {
+    "hasAge": false,
+    "variants": {
+      "2gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya10s": {
+    "hasAge": false,
+    "variants": {
+      "2gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya12": {
+    "hasAge": false,
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya13": {
+    "hasAge": false,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya14": {
+    "hasAge": true,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya145g": {
+    "hasAge": true,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya155g": {
+    "hasAge": true,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya165g": {
+    "hasAge": true,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya175g": {
+    "hasAge": true,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya20": {
+    "hasAge": false,
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya20s": {
+    "hasAge": false,
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya21s": {
+    "hasAge": false,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya22": {
+    "hasAge": false,
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya225g": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya23": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya235g": {
+    "hasAge": true,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya255g": {
+    "hasAge": true,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya275g": {
+    "hasAge": true,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya30": {
+    "hasAge": false,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya30s": {
+    "hasAge": false,
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya31": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya32": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya335g": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya345g": {
+    "hasAge": true,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya355g": {
+    "hasAge": true,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya365g": {
+    "hasAge": true,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya375g": {
+    "hasAge": true,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya50": {
+    "hasAge": false,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya50s": {
+    "hasAge": false,
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya51": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya52": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya52s5g": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya535g": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya545g": {
+    "hasAge": true,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya555g": {
+    "hasAge": true,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya565g": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya575g": {
+    "hasAge": true,
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya6": {
+    "hasAge": false,
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya6plus": {
+    "hasAge": false,
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya70": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya70s": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya71": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya72": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya72017": {
+    "hasAge": false,
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya72018": {
+    "hasAge": false,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya735g": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya80": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya8plus": {
+    "hasAge": false,
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya8star": {
+    "hasAge": false,
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya92018": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya9pro": {
+    "hasAge": false,
+    "variants": {
+      "4gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyc5pro": {
+    "hasAge": false,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyc7pro": {
+    "hasAge": false,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyc9pro": {
+    "hasAge": false,
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyf02s": {
+    "hasAge": false,
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyf04": {
+    "hasAge": false,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyf05": {
+    "hasAge": true,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyf065g": {
+    "hasAge": true,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyf07": {
+    "hasAge": true,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyf12": {
+    "hasAge": false,
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyf13": {
+    "hasAge": false,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyf14": {
+    "hasAge": true,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyf145g": {
+    "hasAge": true,
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyf155g": {
+    "hasAge": true,
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyf165g": {
+    "hasAge": true,
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyf175g": {
+    "hasAge": true,
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyf22": {
+    "hasAge": false,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyf235g": {
+    "hasAge": false,
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyf345g": {
+    "hasAge": true,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyf365g": {
+    "hasAge": true,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyf41": {
+    "hasAge": false,
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyf425g": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyf545g": {
+    "hasAge": true,
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyf555g": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyf565g": {
+    "hasAge": true,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyf62": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyf70e5g": {
+    "hasAge": true,
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyf70pro5g": {
+    "hasAge": true,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyfold": {
+    "hasAge": false,
+    "variants": {
+      "12gb/512gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyj6": {
+    "hasAge": false,
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyj6plus": {
+    "hasAge": false,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyj7duo": {
+    "hasAge": false,
+    "variants": {
+      "4gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyj7max": {
+    "hasAge": false,
+    "variants": {
+      "4gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyj7nxt": {
+    "hasAge": false,
+    "variants": {
+      "2gb/16gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyj7pro": {
+    "hasAge": false,
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "3gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyj8": {
+    "hasAge": false,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym01": {
+    "hasAge": false,
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym01core": {
+    "hasAge": false,
+    "variants": {
+      "1gb/16gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "2gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym01s": {
+    "hasAge": false,
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym02": {
+    "hasAge": false,
+    "variants": {
+      "2gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym02s": {
+    "hasAge": false,
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym04": {
+    "hasAge": false,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym05": {
+    "hasAge": true,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym065g": {
+    "hasAge": true,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym07": {
+    "hasAge": true,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym10s": {
+    "hasAge": false,
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym11": {
+    "hasAge": false,
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym12": {
+    "hasAge": false,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym13": {
+    "hasAge": false,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym135g": {
+    "hasAge": false,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym144g": {
+    "hasAge": true,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym145g": {
+    "hasAge": true,
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym155g": {
+    "hasAge": true,
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym155gprimeedition": {
+    "hasAge": true,
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym165g": {
+    "hasAge": true,
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym175g": {
+    "hasAge": true,
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym17e5g": {
+    "hasAge": true,
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym20": {
+    "hasAge": false,
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym21": {
+    "hasAge": false,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym212021edition": {
+    "hasAge": false,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym30": {
+    "hasAge": false,
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym30s": {
+    "hasAge": false,
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym31": {
+    "hasAge": false,
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym31s": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym32": {
+    "hasAge": false,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym325g": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym32primeedition": {
+    "hasAge": false,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym335g": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym345g": {
+    "hasAge": true,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym355g": {
+    "hasAge": true,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym365g": {
+    "hasAge": true,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym40": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym425g": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym475g": {
+    "hasAge": true,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym51": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym525g": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym535g": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym555g": {
+    "hasAge": true,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym55s5g": {
+    "hasAge": true,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxym565g": {
+    "hasAge": true,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxynote10": {
+    "hasAge": false,
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box",
+          "spen"
+        ]
+      }
+    }
+  },
+  "samsunggalaxynote10lite": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box",
+          "spen"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box",
+          "spen"
+        ]
+      }
+    }
+  },
+  "samsunggalaxynote10plus": {
+    "hasAge": false,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box",
+          "spen"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "charger",
+          "box",
+          "spen"
+        ]
+      }
+    }
+  },
+  "samsunggalaxynote10plus5g": {
+    "hasAge": false,
+    "variants": {
+      "12gb/512gb": {
+        "accessories": [
+          "charger",
+          "box",
+          "spen"
+        ]
+      }
+    }
+  },
+  "samsunggalaxynote20": {
+    "hasAge": false,
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box",
+          "spen"
+        ]
+      }
+    }
+  },
+  "samsunggalaxynote20ultra5g": {
+    "hasAge": false,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box",
+          "spen"
+        ]
+      }
+    }
+  },
+  "samsunggalaxynote8": {
+    "hasAge": false,
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box",
+          "spen"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box",
+          "spen"
+        ]
+      },
+      "6gb/256gb": {
+        "accessories": [
+          "charger",
+          "box",
+          "spen"
+        ]
+      }
+    }
+  },
+  "samsunggalaxynote9": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box",
+          "spen"
+        ]
+      },
+      "8gb/512gb": {
+        "accessories": [
+          "charger",
+          "box",
+          "spen"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyon6": {
+    "hasAge": false,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyon7prime": {
+    "hasAge": false,
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyon82018": {
+    "hasAge": false,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyonmax": {
+    "hasAge": false,
+    "variants": {
+      "4gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys10": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys10e": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys10lite": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys10plus": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/1tb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys20": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys20fe": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys20fe5g": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys20plus": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys20ultra": {
+    "hasAge": false,
+    "variants": {
+      "12gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys20ultra5g": {
+    "hasAge": false,
+    "variants": {
+      "12gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys215g": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys21fe5g": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys21plus5g": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys21ultra5g": {
+    "hasAge": false,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "16gb/512gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys225g": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys22plus5g": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys22ultra5g": {
+    "hasAge": false,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "box",
+          "spen"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "box",
+          "spen"
+        ]
+      },
+      "12gb/1tb": {
+        "accessories": [
+          "box",
+          "spen"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys235g": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys23fe5g": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys23plus5g": {
+    "hasAge": false,
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys23ultra5g": {
+    "hasAge": false,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "box",
+          "spen"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "box",
+          "spen"
+        ]
+      },
+      "12gb/1tb": {
+        "accessories": [
+          "box",
+          "spen"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys245g": {
+    "hasAge": true,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "8gb/512gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys24fe5g": {
+    "hasAge": true,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys24plus5g": {
+    "hasAge": true,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys24ultra5g": {
+    "hasAge": true,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "box",
+          "spen"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "box",
+          "spen"
+        ]
+      },
+      "12gb/1tb": {
+        "accessories": [
+          "box",
+          "spen"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys255g": {
+    "hasAge": true,
+    "variants": {
+      "12gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys25edge": {
+    "hasAge": true,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys25fe": {
+    "hasAge": true,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/512gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys25plus5g": {
+    "hasAge": true,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys25ultra5g": {
+    "hasAge": true,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "box",
+          "spen"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "box",
+          "spen"
+        ]
+      },
+      "12gb/1tb": {
+        "accessories": [
+          "box",
+          "spen"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys26": {
+    "hasAge": true,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys26plus": {
+    "hasAge": true,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys26ultra": {
+    "hasAge": true,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "box",
+          "spen"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "box",
+          "spen"
+        ]
+      },
+      "16gb/1tb": {
+        "accessories": [
+          "box",
+          "spen"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys8": {
+    "hasAge": false,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys8plus": {
+    "hasAge": false,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys9": {
+    "hasAge": false,
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxys9plus": {
+    "hasAge": false,
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyzflip": {
+    "hasAge": false,
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyzflip35g": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyzflip4": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyzflip5": {
+    "hasAge": true,
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/512gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyzflip65g": {
+    "hasAge": true,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyzflip7fe5g": {
+    "hasAge": true,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyzflip8": {
+    "hasAge": true,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyzfold25g": {
+    "hasAge": false,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyzfold35g": {
+    "hasAge": false,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "box",
+          "spen"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "box",
+          "spen"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyzfold4": {
+    "hasAge": false,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/1tb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyzfold5": {
+    "hasAge": true,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/1tb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyzfold65g": {
+    "hasAge": true,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/1tb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyzfold7": {
+    "hasAge": true,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "16gb/1tb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyzfold8": {
+    "hasAge": true,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "16gb/1tb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxya05s": {
+    "hasAge": true,
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyzflip7": {
+    "hasAge": true,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "samsunggalaxyzfold8ultra": {
+    "hasAge": true,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "16gb/1tb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "googlepixel10": {
+    "hasAge": true,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "googlepixel10a": {
+    "hasAge": true,
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "googlepixel10pro": {
+    "hasAge": true,
+    "variants": {
+      "16gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "googlepixel10profold": {
+    "hasAge": true,
+    "variants": {
+      "16gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "googlepixel10proxl": {
+    "hasAge": true,
+    "variants": {
+      "16gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "googlepixel11": {
+    "hasAge": true,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "googlepixel11pro": {
+    "hasAge": true,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "16gb/512gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "googlepixel11profold": {
+    "hasAge": true,
+    "variants": {
+      "16gb/512gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "googlepixel11proxl": {
+    "hasAge": true,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "16gb/512gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "googlepixel4a": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "googlepixel6a": {
+    "hasAge": false,
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "googlepixel7": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "googlepixel7a": {
+    "hasAge": true,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "googlepixel7pro": {
+    "hasAge": false,
+    "variants": {
+      "12gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "googlepixel8": {
+    "hasAge": true,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "googlepixel8a": {
+    "hasAge": false,
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "googlepixel8pro": {
+    "hasAge": true,
+    "variants": {
+      "12gb/128gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "googlepixel9": {
+    "hasAge": true,
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "googlepixel9a": {
+    "hasAge": true,
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "googlepixel9pro": {
+    "hasAge": true,
+    "variants": {
+      "16gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "googlepixel9profold": {
+    "hasAge": true,
+    "variants": {
+      "16gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "googlepixel9proxl": {
+    "hasAge": true,
+    "variants": {
+      "16gb/256gb": {
+        "accessories": [
+          "box"
+        ]
+      },
+      "16gb/512gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
   }
 }
