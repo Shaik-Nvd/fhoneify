@@ -13,11 +13,12 @@ export interface DeductionRule {
   inferredFrom?: string;
 }
 export interface RunnerProfile {
-  brand: 'Nothing' | 'OnePlus';
+  brand: 'Nothing' | 'OnePlus' | 'Samsung' | 'Google';
   model: string;
   hasAge: boolean;
-  variants: Record<string, { accessories: string[]; scrap: number; scrapInferredFrom?: string }>;
+  variants: Record<string, { accessories: string[]; scrap: number; scrapInferredFrom?: string; conditionFloor?: number }>;
   rules: Record<string, DeductionRule>;
+  noOffer?: Record<string, string[]>;
 }
 export interface RunnerCalibration { version: string; sourceHash: string; profiles: Record<string, RunnerProfile> }
 export const modelKey = (model: string) => String(model ?? '').toLowerCase().replace(/cmf by nothing/g, 'cmf').replace(/nothing\s+/g, '').replace(/[^a-z0-9]/g, '');
@@ -86,6 +87,11 @@ export function evaluateRunner(profile: RunnerProfile, reference: number, d: Dia
   const sk = storageKey(storage);
   const variant = profile.variants[sk];
   const faults = runnerFaults(d);
+  const isScreen=(key:string)=>['original','touch'].includes(key)||/^(?:screen|spots|lines|color):/.test(key);
+  const screenFaults=faults.filter(isScreen).sort();
+  const combinationKey=`screen-combination:${screenFaults.join('+')}`;
+  const screenCombination=screenFaults.length>1&&profile.rules[combinationKey];
+  for(const fault of faults)if(!(screenCombination&&isScreen(fault))&&profile.noOffer?.[fault]?.includes(sk))throw new InspectionRequiredError('Measured runner no-offer condition');
   // Unknown and incomplete answers must never silently become a flawless quote.
   for (const [value, choices] of [
     [d.screenCondition, SCREENS], [d.screenSpots, [...SPOTS, 'No spots on screen']],
@@ -102,7 +108,8 @@ export function evaluateRunner(profile: RunnerProfile, reference: number, d: Dia
   };
   for (const group of d.defects) if (groups[normalize(group)] !== true) throw new InspectionRequiredError('Unsupported or incomplete runner defect group');
   for (const fault of faults) {
-    const keys = fault === 'screen:0' ? ['original', 'crackedExtra'] : [fault];
+    if(screenCombination&&isScreen(fault))continue;
+    const keys = fault === 'screen:0' ? (profile.rules.cracked ? ['cracked'] : ['original', 'crackedExtra']) : [fault];
     if (keys.some(key => key !== 'calls' && !profile.rules[key])) throw new InspectionRequiredError('Unsupported runner fault for this model');
   }
   const forcing = faults.some(k => ['original', 'touch', 'screen:0', 'panel', 'bent'].includes(k));
@@ -122,6 +129,7 @@ export function evaluateRunner(profile: RunnerProfile, reference: number, d: Dia
   };
   const availableVariants = Object.values(profile.variants);
   const scrap = variant?.scrap ?? Math.min(...availableVariants.map(v => v.scrap));
+  const conditionFloor=variant?.conditionFloor??scrap;
   // Count all condition changes before the calls-only branch as well.
   const offered = variant?.accessories ?? availableVariants[0].accessories;
   const present = new Set(d.accessories);
@@ -130,15 +138,18 @@ export function evaluateRunner(profile: RunnerProfile, reference: number, d: Dia
   if (d.box === false) present.delete('box');
   if (d.charger === false) present.delete('charger');
   const missing = offered.filter(a => !present.has(a));
+  if(missing.length>1&&(!profile.rules.both||missing.length!==offered.length))inherited=true;
   const changes = faults.length + (profile.hasAge ? Number(d.warranty === false) + Number(d.validBill === false) + Number(selectedAge !== 'below3') : 0) + (missing.length ? 1 : 0);
   if (d.calls === false) return { price: Math.round(scrap), support: changes === 1 && variant && !variant.scrapInferredFrom ? 'measured' as const : 'inferred' as const,
     breakdown: [{ rule: 'calls:flat-scrap-deduction', amount: reference - Math.round(scrap), support: variant && !variant.scrapInferredFrom ? 'measured' as const : 'inferred' as const }], forcedAge: false, faults };
   let loss = age === 'below3' ? 0 : amount(`age:${age}`);
   const screen: number[] = [];
+  if(screenCombination)screen.push(amount(combinationKey));
   const panel: number[] = [];
   for (const key of faults) {
+    if(screenCombination&&isScreen(key))continue;
     if (key === 'original') screen.push(amount('original'));
-    else if (key === 'screen:0') screen.push(amount('original') + amount('crackedExtra'));
+    else if (key === 'screen:0') screen.push(profile.rules.cracked ? amount('cracked') : amount('original') + amount('crackedExtra'));
     else if (key === 'touch') screen.push(amount('touch'));
     else if (key.startsWith('screen:') || key.startsWith('spots:') || key.startsWith('lines:') || key.startsWith('color:')) screen.push(amount(key));
     else if (['panel', 'bent', 'loose'].includes(key)) panel.push(amount(key));
@@ -153,11 +164,18 @@ export function evaluateRunner(profile: RunnerProfile, reference: number, d: Dia
   if (panelOverlap) breakdown.push({ rule: 'panel:overlap-credit', amount: -panelOverlap, support: 'inferred' });
   loss += panelMaximum;
   // The variant's questionnaire decides whether charger loss is applicable.
-  if (missing.length > 1) loss += profile.rules.both ? amount('both') : Math.max(...missing.map(amount));
+  if (missing.length > 1) {
+    if(profile.rules.both&&missing.length===offered.length)loss+=amount('both');
+    else {
+      const amounts=missing.map(amount),maximum=Math.max(...amounts),overlap=amounts.reduce((sum,value)=>sum+value,0)-maximum;
+      if(overlap)breakdown.push({rule:'accessories:overlap-credit',amount:-overlap,support:'inferred'});
+      loss+=maximum;
+    }
+  }
   else if (missing.length) loss += amount(missing[0]);
-  const price = Math.max(Math.round(scrap), round10(reference - loss));
+  const price = Math.max(Math.round(conditionFloor), round10(reference - loss));
   const roundingAndFloor = reference - loss - price;
-  if (roundingAndFloor) breakdown.push({ rule: price === scrap ? 'scrap-floor-credit' : 'rounding', amount: roundingAndFloor, support: 'inferred' });
+  if (roundingAndFloor) breakdown.push({ rule: price === conditionFloor ? 'scrap-floor-credit' : 'rounding', amount: roundingAndFloor, support: 'inferred' });
   return { price,
     support: changes <= 1 && variant && !inherited ? 'measured' as const : 'inferred' as const,
     breakdown, forcedAge, faults };

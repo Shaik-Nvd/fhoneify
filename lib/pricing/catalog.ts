@@ -5,6 +5,7 @@ export interface CatalogDevice {
   brand: string;
   model: string;
   storage: string;
+  ram?: string;
   basePrice?: number;
 }
 

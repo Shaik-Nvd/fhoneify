@@ -16,6 +16,7 @@ import type { DiagnosticsType } from '../../lib/pricingCalculator';
 import { createPricingService } from '../../lib/pricing/pricingService';
 import { PERFECT_CONDITION_DIAGNOSTICS, computeFhoneifyGetUpto, priceDevice } from '../../lib/pricing/engine';
 import { explainQuote } from '../../lib/pricing/explain';
+import { InspectionRequiredError } from '../../lib/pricing/inspectionRequired';
 import { buildLeadAnswers, customerPayout } from '../../lib/pricing/payout';
 import {
   KeyValueStorage,
@@ -240,7 +241,13 @@ async function run() {
     let checked = 0;
     for (const d of (SEED_DEVICES as any[]).filter((_, i) => i % 25 === 0)) {
       for (const p of profiles) {
-        const x = explainQuote(d.brand, d.model, 40000, p);
+        let x;
+        try { x=explainQuote(d.brand,d.model,40000,p); }
+        catch(error) {
+          if(!(error instanceof InspectionRequiredError))throw error;
+          assert.throws(()=>priceDevice(d.brand,d.model,40000,p),(actual:unknown)=>actual instanceof InspectionRequiredError&&actual.reason===error.reason);
+          checked++;continue;
+        }
         const sum = x.perfectConditionCashifyEquivalent + x.steps.reduce((a, s) => a + s.delta, 0);
         assert.equal(sum, x.cashifyEquivalent, `${d.model}: steps sum`);
         assert.equal(x.finalPrice, priceDevice(d.brand, d.model, 40000, p).fhoneifyPrice, `${d.model}: final`);

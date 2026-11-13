@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import type { Server } from 'node:http';
 import { existingExactFinalQuoteEvidence } from '../pricing/exact-final-quote-evidence';
 import { createGlassShadowCandidate } from '../../lib/pricing/glassShadowCandidate';
-import { createPricingService, type AuthoritativeQuote } from '../../lib/pricing/pricingService';
+import { createPricingService, type AuthoritativeQuote } from './helpers/historicalRunner';
 import { loadReleaseRouteEvidence } from '../../lib/pricing/releaseRouteEvidence';
 import { findCatalogDevice } from '../../lib/pricing/catalog';
 import { deviceKey, type ReferencePriceRecord } from '../../lib/referencePricing/types';

@@ -50,4 +50,6 @@ release-test-logs/
 # Private Android runner evidence
 /data/pricing-evidence/nothing-2026-11-08/
 /data/pricing-evidence/oneplus-2026-11-09/
+/data/pricing-evidence/samsung-2026-11-12/
+/data/pricing-evidence/google-2026-11-11/
 /pricing-inputs/

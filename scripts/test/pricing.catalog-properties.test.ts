@@ -11,6 +11,7 @@ import { classifyPricingFamily, pricingFamilyKey } from '../../lib/pricing/famil
 import { priceDevice, resolveReference } from '../../lib/pricing/engine';
 import { deviceKey, type ReferencePriceRecord } from '../../lib/referencePricing/types';
 import { VALIDATION_PROFILES } from '../pricing/validation-profiles';
+import { InspectionRequiredError } from '../../lib/pricing/inspectionRequired';
 
 const records = (referenceStore as { records: Record<string, ReferencePriceRecord> }).records;
 const validDevices = SEED_DEVICES.filter((device) =>
@@ -21,6 +22,7 @@ const failures: Array<{ device: string; family: string; message: string }> = [];
 const families = new Set<string>();
 const sources = new Map<string, number>();
 let quotesGenerated = 0;
+let inspectionOutcomes=0;
 
 for (const device of validDevices) {
   const family = pricingFamilyKey(device.brand, device.model);
@@ -36,8 +38,15 @@ for (const device of validDevices) {
     assert.ok(base && Number.isFinite(base.cashifyGetUptoReference) && base.cashifyGetUptoReference > 0, 'no valid catalog/reference price');
     sources.set(base.source, (sources.get(base.source) ?? 0) + 1);
     const calculated = Object.fromEntries(Object.entries(VALIDATION_PROFILES).map(([name, diagnostics]) => {
-      const first = priceDevice(device.brand, device.model, base.cashifyGetUptoReference, diagnostics);
-      const second = priceDevice(device.brand, device.model, base.cashifyGetUptoReference, diagnostics);
+      let first;
+      try {first=priceDevice(device.brand,device.model,base.cashifyGetUptoReference,diagnostics,undefined,device.storage);}
+      catch(error) {
+        if(!(error instanceof InspectionRequiredError))throw error;
+        assert.throws(()=>priceDevice(device.brand,device.model,base.cashifyGetUptoReference,diagnostics,undefined,device.storage),
+          (actual:unknown)=>actual instanceof InspectionRequiredError&&actual.reason===error.reason);
+        inspectionOutcomes++;quotesGenerated+=2;return [name,null];
+      }
+      const second = priceDevice(device.brand, device.model, base.cashifyGetUptoReference, diagnostics,undefined,device.storage);
       quotesGenerated += 2;
       assert.deepEqual(second, first, `${name}: non-deterministic result`);
       assert.ok(Number.isFinite(first.cashifyConditionEquivalent) && first.cashifyConditionEquivalent >= 0, `${name}: invalid Cashify-equivalent`);
@@ -48,10 +57,10 @@ for (const device of validDevices) {
 
     assert.ok(calculated.P0_PERFECT >= calculated.P2_MINOR_SCREEN, 'minor damage increases quote');
     assert.ok(calculated.P2_MINOR_SCREEN >= calculated.P2_HEAVY_SCREEN, 'heavier screen damage increases quote');
-    assert.ok(calculated.P2_HEAVY_SCREEN >= calculated.P3_SCREEN_FUNCTIONAL, 'adding a functional fault increases quote');
+    assert.ok(calculated.P3_SCREEN_FUNCTIONAL===null||calculated.P2_HEAVY_SCREEN >= calculated.P3_SCREEN_FUNCTIONAL, 'adding a functional fault increases quote');
     assert.ok(calculated.P0_PERFECT >= calculated.P3_FUNCTIONAL, 'functional fault increases quote');
     assert.ok(calculated.P0_PERFECT >= calculated.P4_BODY, 'body damage increases quote');
-    assert.ok(calculated.P3_SCREEN_FUNCTIONAL >= calculated.P5_SEVERE_MULTI, 'severe multi-damage increases quote');
+    assert.ok(calculated.P5_SEVERE_MULTI===null||calculated.P3_SCREEN_FUNCTIONAL >= calculated.P5_SEVERE_MULTI, 'severe multi-damage increases quote');
     assert.ok(calculated.P0_PERFECT >= calculated.P1_OLD_NO_DAMAGE, 'old/out-of-warranty exceeds young/in-warranty');
   } catch (error: any) {
     failures.push({
@@ -69,6 +78,7 @@ console.log(JSON.stringify({
   familiesTested: families.size,
   profilesPerDevice: Object.keys(VALIDATION_PROFILES).length,
   quotesGenerated,
+  inspectionOutcomes,
   referenceSources: Object.fromEntries([...sources.entries()].sort()),
   failures: failures.length,
   affectedFamilies,

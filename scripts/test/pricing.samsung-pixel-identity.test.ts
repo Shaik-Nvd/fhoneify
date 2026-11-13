@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import { runnerStorageIdentity } from '../../lib/pricing/cashifyRunnerModel/identity';
+import { SEED_DEVICES } from '../../lib/seed_devices';
+import { runnerOffersAccessory, runnerSupportsHardware, runnerSkipsAge } from '../../lib/pricing/cashifyRunnerModel/scope';
+import { PERFECT_CONDITION_DIAGNOSTICS as clean } from '../../lib/pricing/perfectCondition';
+const s25=SEED_DEVICES.find(d=>d.model==='Samsung Galaxy S25 Ultra 5G'&&d.storage==='256 GB')!;
+assert(s25);assert.equal(runnerStorageIdentity(s25.storage,s25.ram),'12gb/256gb');
+assert.equal(runnerStorageIdentity('12 GB/256 GB'),'12gb/256gb');
+assert.notEqual(runnerStorageIdentity('256 GB','8 GB'),runnerStorageIdentity('256 GB','12 GB'));
+assert(runnerOffersAccessory('Samsung Galaxy S25 Ultra 5G','12 GB/256 GB','spen'));
+assert(runnerSupportsHardware('Google Pixel 9 Pro Fold','hinge'));
+assert(runnerSupportsHardware('Google Pixel 9 Pro Fold','outer_screen'));
+assert(!runnerSupportsHardware('Google Pixel 11 Pro Fold','hinge'),'unavailable questions are not invented');
+assert(runnerSkipsAge({...clean,touch:false}));assert(runnerSkipsAge({...clean,validBill:false}));
+assert(runnerSkipsAge({...clean,screenCondition:'Screen cracked/ glass broken'}));
+assert(!runnerSkipsAge({...clean,bodyBent:'Loose screen (Gap in screen and body)'}));
+console.log('PASS S25 Ultra storage-only catalog identity preserves RAM');

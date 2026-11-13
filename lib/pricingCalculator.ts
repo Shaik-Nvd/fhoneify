@@ -2484,8 +2484,10 @@ function calculateLegacyApplePrice(model: string, reference: CashifyGetUptoRefer
 // BRAND 2: SAMSUNG ENGINE
 // ============================================================================
 
-export function calculateSamsungPrice(model: string, reference: CashifyGetUptoReference, diagnostics: DiagnosticsType, semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE): PricingResult {
+export function calculateSamsungPrice(model: string, reference: CashifyGetUptoReference, diagnostics: DiagnosticsType, semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE, storageVariant?:string, useRunnerEvidence=true): PricingResult {
   if (!reference || reference <= 0) return { cashifyConditionEquivalent: 0, fhoneifyPrice: 0 };
+  const measured=useRunnerEvidence?runnerQuote(model,storageVariant,reference,diagnostics):null;
+  if(measured)return finalizeConditionQuote(reference,measured.price);
 
   const lowerModel = String(model || "").toLowerCase();
   const isA = lowerModel.includes("galaxy a") || !!lowerModel.match(/\ba\d\d\b/);
@@ -2919,7 +2921,7 @@ function routeBrandCalculator(
   }
 
   if (safeBrand === "samsung" || safeModel.includes("galaxy")) {
-    return calculateSamsungPrice(model, cashifyGetUptoReference, diagnostics, semantics);
+    return calculateSamsungPrice(model, cashifyGetUptoReference, diagnostics, semantics, calculationContext?.catalogStorage??storageVariant,!calculationContext?.disableRunnerEvidence);
   }
 
   if (
@@ -2956,5 +2958,9 @@ function routeBrandCalculator(
     return calculateNothingPrice(model, cashifyGetUptoReference, diagnostics, semantics, calculationContext?.catalogStorage ?? storageVariant, !calculationContext?.disableRunnerEvidence);
   }
 
+  if(safeBrand==='google') {
+    const measured=calculationContext?.disableRunnerEvidence?null:runnerQuote(model,calculationContext?.catalogStorage??storageVariant,cashifyGetUptoReference,diagnostics);
+    if(measured)return finalizeConditionQuote(cashifyGetUptoReference,measured.price);
+  }
   return calculateGenericAndroidPrice(brand, model, cashifyGetUptoReference, diagnostics, semantics);
 }

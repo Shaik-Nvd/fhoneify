@@ -22243,5 +22243,1050 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "referencePriceStatus": "pending",
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-17-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-c5-pro-4-gb-64-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy C5 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-c5-pro-4-gb-64-gb"
+  },
+  {
+    "id": "samsung-galaxy-c7-pro-4-gb-64-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy C7 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-c7-pro-4-gb-64-gb"
+  },
+  {
+    "id": "samsung-galaxy-c9-pro-6-gb-64-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy C9 Pro",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-c9-pro-6-gb-64-gb"
+  },
+  {
+    "id": "samsung-galaxy-f04-4-gb-64-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F04",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f04-4-gb-64-gb"
+  },
+  {
+    "id": "samsung-galaxy-f05-4-gb-64-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F05",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f05-4-gb-64-gb"
+  },
+  {
+    "id": "samsung-galaxy-f06-5g-4-gb-64-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F06 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f06-5g-4-gb-64-gb"
+  },
+  {
+    "id": "samsung-galaxy-f06-5g-4-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F06 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f06-5g-4-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-f06-5g-6-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F06 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f06-5g-6-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-f07-4-gb-64-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F07",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f07-4-gb-64-gb"
+  },
+  {
+    "id": "samsung-galaxy-f14-4-gb-64-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F14",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f14-4-gb-64-gb"
+  },
+  {
+    "id": "samsung-galaxy-f15-5g-4-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F15 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f15-5g-4-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-f15-5g-6-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F15 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f15-5g-6-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-f15-5g-8-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F15 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f15-5g-8-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-f34-5g-6-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F34 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f34-5g-6-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-f34-5g-8-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F34 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f34-5g-8-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-f36-5g-6-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F36 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f36-5g-6-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-f36-5g-8-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F36 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f36-5g-8-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-f36-5g-8-gb-256-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F36 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f36-5g-8-gb-256-gb"
+  },
+  {
+    "id": "samsung-galaxy-f54-5g-8-gb-256-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F54 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f54-5g-8-gb-256gb"
+  },
+  {
+    "id": "samsung-galaxy-f70-pro-5g-6-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F70 Pro 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f70-pro-5g-6-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-f70-pro-5g-8-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F70 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f70-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-f70-pro-5g-8-gb-256-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F70 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-f70-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "samsung-galaxy-j6-plus-4-gb-64-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy J6 Plus",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-j6-plus-4-gb-64-gb"
+  },
+  {
+    "id": "samsung-galaxy-j7-duo-4-gb-32-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy J7 Duo",
+    "storage": "4 GB/32 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-j7-duo-4-gb-32-gb"
+  },
+  {
+    "id": "samsung-galaxy-j7-max-4-gb-32-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy J7 Max",
+    "storage": "4 GB/32 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-j7-max-4-gb-32-gb"
+  },
+  {
+    "id": "samsung-galaxy-j8-4-gb-64-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy J8",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-j8-4-gb-64-gb"
+  },
+  {
+    "id": "samsung-galaxy-m01-3-gb-32-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M01",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m01-3-gb-32-gb"
+  },
+  {
+    "id": "samsung-galaxy-m01s-3-gb-32-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M01s",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m01s-3-gb-32-gb"
+  },
+  {
+    "id": "samsung-galaxy-m05-4-gb-64-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M05",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m05-4-gb-64-gb"
+  },
+  {
+    "id": "samsung-galaxy-m06-5g-4-gb-64-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M06 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m06-5g-4-gb-64-gb"
+  },
+  {
+    "id": "samsung-galaxy-m06-5g-4-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M06 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m06-5g-4-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-m06-5g-6-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M06 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m06-5g-6-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-m07-4-gb-64-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M07",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m07-4-gb-64-gb"
+  },
+  {
+    "id": "samsung-galaxy-m10s-3-gb-32-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M10s",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m10s-3-gb-32-gb"
+  },
+  {
+    "id": "samsung-galaxy-m14-5g-4-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M14 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m14-5g-4-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-m14-5g-6-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M14 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m14-5g-6-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-m15-5g-4-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M15 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m15-5g-4-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-m15-5g-6-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M15 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m15-6-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-m15-5g-8-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M15 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m15-5g-8-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-m16-5g-4-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M16 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m16-5g-4-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-m16-5g-6-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M16 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m16-5g-6-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-m17-5g-4-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M17 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m17-5g-4-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-m17-5g-6-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M17 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m17-5g-6-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-m17-5g-8-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M17 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m17-5g-8-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-m34-5g-6-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M34 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m34-5g-6-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-m34-5g-8-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M34 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m34-5g-8-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-m34-5g-8-gb-256-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M34 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m34-5g-8-gb-256-gb"
+  },
+  {
+    "id": "samsung-galaxy-m35-5g-6-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M35 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m35-5g-6-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-m35-5g-8-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M35 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m35-5g-8-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-m35-5g-8-gb-256-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M35 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m35-5g-8-gb-256-gb"
+  },
+  {
+    "id": "samsung-galaxy-m40-6-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M40",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m40-6-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-m47-5g-6-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M47 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m47-5g-6-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-m47-5g-8-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M47 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m47-5g-8-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-m47-5g-8-gb-256-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M47 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m47-5g-8-gb-256-gb"
+  },
+  {
+    "id": "samsung-galaxy-m56-5g-8-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M56 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m56-5g-8-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-m56-5g-8-gb-256-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy M56 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-m56-5g-8-gb-256-gb"
+  },
+  {
+    "id": "samsung-galaxy-note-8-6-gb-64-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Note 8",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-note-8-6-gb-64-gb"
+  },
+  {
+    "id": "samsung-galaxy-note-8-6-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Note 8",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-note-8-6-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-note-8-6-gb-256-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Note 8",
+    "storage": "6 GB/256 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-note-8-6-gb-256-gb"
+  },
+  {
+    "id": "samsung-galaxy-note-9-6-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Note 9",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-note-9-6-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-note-9-8-gb-512-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Note 9",
+    "storage": "8 GB/512 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-note-9-8-gb-512-gb"
+  },
+  {
+    "id": "samsung-galaxy-note-10-8-gb-256-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Note 10",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-note-10-8-gb-256-gb"
+  },
+  {
+    "id": "samsung-galaxy-note-10-plus-5g-12-gb-512-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Note 10 Plus 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-note-10-plus-5g-12-gb-512-gb"
+  },
+  {
+    "id": "samsung-galaxy-note-20-ultra-5g-12-gb-256-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Note 20 Ultra 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-note-20-ultra-5g-12-gb-256-gb"
+  },
+  {
+    "id": "samsung-galaxy-on-max-4-gb-32-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy On Max",
+    "storage": "4 GB/32 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-on-max-4-gb-32-gb"
+  },
+  {
+    "id": "samsung-galaxy-on6-4-gb-64-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy On6",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-on6-4-gb-64-gb"
+  },
+  {
+    "id": "samsung-galaxy-on8-2018-4-gb-64-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy On8 2018",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-on8-2018-4-gb-64-gb"
+  },
+  {
+    "id": "samsung-galaxy-s20-8-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S20",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s20-8-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-a03-core-2-gb-32-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A03 Core",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a03-core-2-gb-32-gb"
+  },
+  {
+    "id": "samsung-galaxy-a07-4-gb-64-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A07",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a07-4-gb-64-gb"
+  },
+  {
+    "id": "samsung-galaxy-a10-2-gb-32-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A10",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a10-3-gb-32-gb"
+  },
+  {
+    "id": "samsung-galaxy-a20-3-gb-32-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A20",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a20-3-gb-32-gb"
+  },
+  {
+    "id": "samsung-galaxy-a27-5g-6-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A27 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a27-5g-6-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-a27-5g-8-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A27 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a27-5g-8-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-a27-5g-8-gb-256-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A27 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a27-5g-8-gb-256-gb"
+  },
+  {
+    "id": "samsung-galaxy-a30-4-gb-64-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A30",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a30-4-gb-64-gb"
+  },
+  {
+    "id": "samsung-galaxy-a31-6-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A31",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a31-6-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-a34-5g-6-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A34 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a34-5g-6-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-a34-5g-8-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A34 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a34-5g-8-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-a34-5g-8-gb-256-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A34 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a34-5g-8-gb-256-gb"
+  },
+  {
+    "id": "samsung-galaxy-a35-5g-8-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A35 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a35-5g-8-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-a35-5g-8-gb-256-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A35 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a35-5g-8-gb-256-gb"
+  },
+  {
+    "id": "samsung-galaxy-a55-5g-8-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A55 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a55-5g-8-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-a55-5g-8-gb-256-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A55 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a55-5g-8-gb-256-gb"
+  },
+  {
+    "id": "samsung-galaxy-a55-5g-12-gb-256-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A55 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a55-5g-12-gb-256-gb"
+  },
+  {
+    "id": "samsung-galaxy-a56-5g-8-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A56 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a56-5g-8-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-a56-5g-8-gb-256-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A56 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a56-5g-8-gb-256-gb"
+  },
+  {
+    "id": "samsung-galaxy-a56-5g-12-gb-256-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A56 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a56-5g-12-gb-256-gb"
+  },
+  {
+    "id": "samsung-galaxy-a7-2017-3-gb-32-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A7 2017",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a7-2017-3-gb-32-gb"
+  },
+  {
+    "id": "samsung-galaxy-a70-6-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A70",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a70-6-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-a8-plus-6-gb-64-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A8 Plus",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a8-plus-6-gb-64-gb"
+  },
+  {
+    "id": "samsung-galaxy-a8-star-6-gb-64-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A8 Star",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a8-star-6-gb-64-gb"
+  },
+  {
+    "id": "samsung-galaxy-a80-8-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A80",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a80-8-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-a9-pro-4-gb-32-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A9 Pro",
+    "storage": "4 GB/32 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a9-pro-4-gb-32-gb"
+  },
+  {
+    "id": "samsung-galaxy-z-flip-8-12-gb-256-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Flip 8",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending"
+  },
+  {
+    "id": "samsung-galaxy-z-flip-8-12-gb-512-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Flip 8",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending"
+  },
+  {
+    "id": "samsung-galaxy-z-fold-8-12-gb-256-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Fold 8",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending"
+  },
+  {
+    "id": "samsung-galaxy-z-fold-8-12-gb-512-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Fold 8",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending"
+  },
+  {
+    "id": "samsung-galaxy-z-fold-8-16-gb-1-tb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Fold 8",
+    "storage": "16 GB/1 TB",
+    "ram": "16 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending"
+  },
+  {
+    "id": "google-pixel-11-12-gb-256-gb",
+    "brand": "Google",
+    "model": "Google Pixel 11",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-11-12-gb-256-gb"
+  },
+  {
+    "id": "google-pixel-11-12-gb-512-gb",
+    "brand": "Google",
+    "model": "Google Pixel 11",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-11-12-gb-512-gb"
+  },
+  {
+    "id": "google-pixel-11-pro-12-gb-256-gb",
+    "brand": "Google",
+    "model": "Google Pixel 11 Pro",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-11-pro-12-gb-256-gb"
+  },
+  {
+    "id": "google-pixel-11-pro-16-gb-512-gb",
+    "brand": "Google",
+    "model": "Google Pixel 11 Pro",
+    "storage": "16 GB/512 GB",
+    "ram": "16 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-11-pro-16-gb-512-gb"
+  },
+  {
+    "id": "google-pixel-11-pro-fold-16-gb-512-gb",
+    "brand": "Google",
+    "model": "Google Pixel 11 Pro Fold",
+    "storage": "16 GB/512 GB",
+    "ram": "16 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-11-pro-fold-16-gb-512-gb"
+  },
+  {
+    "id": "google-pixel-11-pro-xl-16-gb-512-gb",
+    "brand": "Google",
+    "model": "Google Pixel 11 Pro XL",
+    "storage": "16 GB/512 GB",
+    "ram": "16 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-11-pro-xl-16-gb-512-gb"
   }
 ];
