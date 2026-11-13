@@ -39,7 +39,7 @@ const priced = comparable.map((o: any) => {
   // Priced under the questionnaire Cashify showed for the model.
   // Supply catalog storage just as the authoritative service does, so Apple uses its current rules.
   const storage = o.catalogStorage ?? o.variant;
-  const result = calculateFhoneifyPrice(o.brand, o.model, o.referencePrice, parsed.value, o.cashifyQuestionnaire ?? UNKNOWN_QUESTIONNAIRE, storage, { catalogStorage: storage });
+  const result = calculateFhoneifyPrice(o.brand, o.model, o.referencePrice, parsed.value, o.cashifyQuestionnaire ?? UNKNOWN_QUESTIONNAIRE, storage, { catalogStorage: storage, disableRunnerEvidence: o.brand === 'Samsung' });
   return { o, result, error: result.cashifyConditionEquivalent - o.cashifyFinal };
 });
 

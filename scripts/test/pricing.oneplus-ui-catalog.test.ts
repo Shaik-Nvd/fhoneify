@@ -1,3 +1,4 @@
+import { runnerScope, runnerSupportsHardware } from '../../lib/pricing/cashifyRunnerModel/scope';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import vm from 'node:vm';
@@ -34,7 +35,7 @@ function visit(node: ts.Node) {
 visit(parsed);
 assert.ok(expression, 'real UI functional-option builder must exist');
 const js = ts.transpileModule(`var options = ${expression.getText(parsed)};`, { compilerOptions: { jsx: ts.JsxEmit.React, target: ts.ScriptTarget.ES2020 } }).outputText;
-const context = { React: { createElement: () => null }, FaceIdIcon: () => null, options: undefined as unknown };
+const context = { React: { createElement: () => null }, FaceIdIcon: () => null, runnerScope, runnerSupportsHardware, options: undefined as unknown };
 vm.runInNewContext(js, context);
 const options = context.options as (brand: string, model: string) => Array<{ id: string }>;
 for (const model of ['Oneplus Open', 'OnePlus Open']) {

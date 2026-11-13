@@ -1201,6 +1201,25 @@
   },
   "samsunggalaxya03": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "3gb/32gb": {
         "accessories": [
@@ -1218,6 +1237,25 @@
   },
   "samsunggalaxya03core": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "2gb/32gb": {
         "accessories": [
@@ -1229,6 +1267,25 @@
   },
   "samsunggalaxya03s": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "3gb/32gb": {
         "accessories": [
@@ -1246,6 +1303,25 @@
   },
   "samsunggalaxya04": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "3gb/32gb": {
         "accessories": [
@@ -1269,6 +1345,25 @@
   },
   "samsunggalaxya04s": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -1286,6 +1381,25 @@
   },
   "samsunggalaxya06": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -1303,6 +1417,25 @@
   },
   "samsunggalaxya065g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -1323,6 +1456,25 @@
   },
   "samsunggalaxya07": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -1334,6 +1486,25 @@
   },
   "samsunggalaxya075g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/128gb": {
         "accessories": [
@@ -1349,6 +1520,25 @@
   },
   "samsunggalaxya10": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "2gb/32gb": {
         "accessories": [
@@ -1360,6 +1550,25 @@
   },
   "samsunggalaxya10s": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "2gb/32gb": {
         "accessories": [
@@ -1377,6 +1586,25 @@
   },
   "samsunggalaxya12": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/128gb": {
         "accessories": [
@@ -1400,6 +1628,25 @@
   },
   "samsunggalaxya13": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -1423,6 +1670,25 @@
   },
   "samsunggalaxya14": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -1438,6 +1704,25 @@
   },
   "samsunggalaxya145g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -1463,6 +1748,25 @@
   },
   "samsunggalaxya155g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -1483,6 +1787,25 @@
   },
   "samsunggalaxya165g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -1503,6 +1826,25 @@
   },
   "samsunggalaxya175g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -1526,6 +1868,25 @@
   },
   "samsunggalaxya20": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "3gb/32gb": {
         "accessories": [
@@ -1537,6 +1898,25 @@
   },
   "samsunggalaxya20s": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "3gb/32gb": {
         "accessories": [
@@ -1554,6 +1934,25 @@
   },
   "samsunggalaxya21s": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -1571,6 +1970,25 @@
   },
   "samsunggalaxya22": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/128gb": {
         "accessories": [
@@ -1588,6 +2006,25 @@
   },
   "samsunggalaxya225g": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -1605,6 +2042,25 @@
   },
   "samsunggalaxya23": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -1622,6 +2078,25 @@
   },
   "samsunggalaxya235g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -1639,6 +2114,25 @@
   },
   "samsunggalaxya255g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -1659,6 +2153,25 @@
   },
   "samsunggalaxya275g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -1679,6 +2192,25 @@
   },
   "samsunggalaxya30": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -1690,6 +2222,25 @@
   },
   "samsunggalaxya30s": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/128gb": {
         "accessories": [
@@ -1707,6 +2258,25 @@
   },
   "samsunggalaxya31": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -1718,6 +2288,25 @@
   },
   "samsunggalaxya32": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -1735,6 +2324,25 @@
   },
   "samsunggalaxya335g": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -1750,6 +2358,25 @@
   },
   "samsunggalaxya345g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -1770,6 +2397,25 @@
   },
   "samsunggalaxya355g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -1785,6 +2431,25 @@
   },
   "samsunggalaxya365g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -1805,6 +2470,25 @@
   },
   "samsunggalaxya375g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -1825,6 +2509,25 @@
   },
   "samsunggalaxya50": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -1848,6 +2551,25 @@
   },
   "samsunggalaxya50s": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/128gb": {
         "accessories": [
@@ -1865,6 +2587,25 @@
   },
   "samsunggalaxya51": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -1876,6 +2617,25 @@
   },
   "samsunggalaxya52": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -1893,6 +2653,25 @@
   },
   "samsunggalaxya52s5g": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -1910,6 +2689,25 @@
   },
   "samsunggalaxya535g": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -1930,6 +2728,25 @@
   },
   "samsunggalaxya545g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -1945,6 +2762,25 @@
   },
   "samsunggalaxya555g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -1965,6 +2801,25 @@
   },
   "samsunggalaxya565g": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -1988,6 +2843,25 @@
   },
   "samsunggalaxya575g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/256gb": {
         "accessories": [
@@ -2003,6 +2877,25 @@
   },
   "samsunggalaxya6": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "3gb/32gb": {
         "accessories": [
@@ -2020,6 +2913,25 @@
   },
   "samsunggalaxya6plus": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "3gb/32gb": {
         "accessories": [
@@ -2043,6 +2955,25 @@
   },
   "samsunggalaxya70": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -2054,6 +2985,25 @@
   },
   "samsunggalaxya70s": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -2071,6 +3021,25 @@
   },
   "samsunggalaxya71": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -2088,6 +3057,25 @@
   },
   "samsunggalaxya72": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -2105,6 +3093,25 @@
   },
   "samsunggalaxya72017": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "3gb/32gb": {
         "accessories": [
@@ -2116,6 +3123,25 @@
   },
   "samsunggalaxya72018": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -2139,6 +3165,25 @@
   },
   "samsunggalaxya735g": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -2154,6 +3199,25 @@
   },
   "samsunggalaxya80": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -2165,6 +3229,25 @@
   },
   "samsunggalaxya8plus": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/64gb": {
         "accessories": [
@@ -2176,6 +3259,25 @@
   },
   "samsunggalaxya8star": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/64gb": {
         "accessories": [
@@ -2187,6 +3289,25 @@
   },
   "samsunggalaxya92018": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -2204,6 +3325,25 @@
   },
   "samsunggalaxya9pro": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/32gb": {
         "accessories": [
@@ -2215,6 +3355,25 @@
   },
   "samsunggalaxyc5pro": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -2226,6 +3385,25 @@
   },
   "samsunggalaxyc7pro": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -2237,6 +3415,25 @@
   },
   "samsunggalaxyc9pro": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/64gb": {
         "accessories": [
@@ -2248,6 +3445,25 @@
   },
   "samsunggalaxyf02s": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "3gb/32gb": {
         "accessories": [
@@ -2265,6 +3481,25 @@
   },
   "samsunggalaxyf04": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -2276,6 +3511,25 @@
   },
   "samsunggalaxyf05": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -2286,6 +3540,25 @@
   },
   "samsunggalaxyf065g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -2306,6 +3579,25 @@
   },
   "samsunggalaxyf07": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -2316,6 +3608,25 @@
   },
   "samsunggalaxyf12": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/128gb": {
         "accessories": [
@@ -2333,6 +3644,25 @@
   },
   "samsunggalaxyf13": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -2350,6 +3680,25 @@
   },
   "samsunggalaxyf14": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -2361,6 +3710,25 @@
   },
   "samsunggalaxyf145g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/128gb": {
         "accessories": [
@@ -2376,6 +3744,25 @@
   },
   "samsunggalaxyf155g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/128gb": {
         "accessories": [
@@ -2396,6 +3783,25 @@
   },
   "samsunggalaxyf165g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/128gb": {
         "accessories": [
@@ -2416,6 +3822,25 @@
   },
   "samsunggalaxyf175g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/128gb": {
         "accessories": [
@@ -2431,6 +3856,25 @@
   },
   "samsunggalaxyf22": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -2448,6 +3892,25 @@
   },
   "samsunggalaxyf235g": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/128gb": {
         "accessories": [
@@ -2465,6 +3928,25 @@
   },
   "samsunggalaxyf345g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -2480,6 +3962,25 @@
   },
   "samsunggalaxyf365g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -2500,6 +4001,25 @@
   },
   "samsunggalaxyf41": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/64gb": {
         "accessories": [
@@ -2517,6 +4037,25 @@
   },
   "samsunggalaxyf425g": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -2534,6 +4073,25 @@
   },
   "samsunggalaxyf545g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/256gb": {
         "accessories": [
@@ -2544,6 +4102,25 @@
   },
   "samsunggalaxyf555g": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -2564,6 +4141,25 @@
   },
   "samsunggalaxyf565g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -2579,6 +4175,25 @@
   },
   "samsunggalaxyf62": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -2596,6 +4211,25 @@
   },
   "samsunggalaxyf70e5g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/128gb": {
         "accessories": [
@@ -2611,6 +4245,25 @@
   },
   "samsunggalaxyf70pro5g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -2631,6 +4284,27 @@
   },
   "samsunggalaxyfold": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "speaker",
+      "silent",
+      "face",
+      "power",
+      "charging",
+      "audio_receiver",
+      "camera_glass",
+      "microphone",
+      "bluetooth",
+      "vibrator",
+      "proximity",
+      "battery_service",
+      "outer_screen",
+      "hinge"
+    ],
     "variants": {
       "12gb/512gb": {
         "accessories": [
@@ -2642,6 +4316,25 @@
   },
   "samsunggalaxyj6": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "3gb/32gb": {
         "accessories": [
@@ -2659,6 +4352,25 @@
   },
   "samsunggalaxyj6plus": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -2670,6 +4382,25 @@
   },
   "samsunggalaxyj7duo": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/32gb": {
         "accessories": [
@@ -2681,6 +4412,25 @@
   },
   "samsunggalaxyj7max": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/32gb": {
         "accessories": [
@@ -2692,6 +4442,25 @@
   },
   "samsunggalaxyj7nxt": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity",
+      "back_camera"
+    ],
     "variants": {
       "2gb/16gb": {
         "accessories": [
@@ -2709,6 +4478,24 @@
   },
   "samsunggalaxyj7pro": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "3gb/32gb": {
         "accessories": [
@@ -2726,6 +4513,25 @@
   },
   "samsunggalaxyj8": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -2737,6 +4543,25 @@
   },
   "samsunggalaxym01": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "3gb/32gb": {
         "accessories": [
@@ -2748,6 +4573,25 @@
   },
   "samsunggalaxym01core": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "1gb/16gb": {
         "accessories": [
@@ -2765,6 +4609,25 @@
   },
   "samsunggalaxym01s": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "3gb/32gb": {
         "accessories": [
@@ -2776,6 +4639,25 @@
   },
   "samsunggalaxym02": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "2gb/32gb": {
         "accessories": [
@@ -2793,6 +4675,25 @@
   },
   "samsunggalaxym02s": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "3gb/32gb": {
         "accessories": [
@@ -2810,6 +4711,25 @@
   },
   "samsunggalaxym04": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -2827,6 +4747,25 @@
   },
   "samsunggalaxym05": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -2838,6 +4777,25 @@
   },
   "samsunggalaxym065g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -2859,6 +4817,25 @@
   },
   "samsunggalaxym07": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -2870,6 +4847,25 @@
   },
   "samsunggalaxym10s": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "3gb/32gb": {
         "accessories": [
@@ -2881,6 +4877,25 @@
   },
   "samsunggalaxym11": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "3gb/32gb": {
         "accessories": [
@@ -2898,6 +4913,25 @@
   },
   "samsunggalaxym12": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -2915,6 +4949,25 @@
   },
   "samsunggalaxym13": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -2932,6 +4985,25 @@
   },
   "samsunggalaxym135g": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -2949,6 +5021,25 @@
   },
   "samsunggalaxym144g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -2964,6 +5055,25 @@
   },
   "samsunggalaxym145g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/128gb": {
         "accessories": [
@@ -2979,6 +5089,25 @@
   },
   "samsunggalaxym155g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/128gb": {
         "accessories": [
@@ -2999,6 +5128,25 @@
   },
   "samsunggalaxym155gprimeedition": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/128gb": {
         "accessories": [
@@ -3019,6 +5167,25 @@
   },
   "samsunggalaxym165g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/128gb": {
         "accessories": [
@@ -3034,6 +5201,25 @@
   },
   "samsunggalaxym175g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/128gb": {
         "accessories": [
@@ -3054,6 +5240,25 @@
   },
   "samsunggalaxym17e5g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/128gb": {
         "accessories": [
@@ -3069,6 +5274,25 @@
   },
   "samsunggalaxym20": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "3gb/32gb": {
         "accessories": [
@@ -3086,6 +5310,25 @@
   },
   "samsunggalaxym21": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -3103,6 +5346,25 @@
   },
   "samsunggalaxym212021edition": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -3120,6 +5382,25 @@
   },
   "samsunggalaxym30": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "3gb/32gb": {
         "accessories": [
@@ -3143,6 +5424,25 @@
   },
   "samsunggalaxym30s": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/128gb": {
         "accessories": [
@@ -3166,6 +5466,25 @@
   },
   "samsunggalaxym31": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/64gb": {
         "accessories": [
@@ -3183,6 +5502,25 @@
   },
   "samsunggalaxym31s": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -3200,6 +5538,25 @@
   },
   "samsunggalaxym32": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -3217,6 +5574,25 @@
   },
   "samsunggalaxym325g": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -3234,6 +5610,25 @@
   },
   "samsunggalaxym32primeedition": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -3251,6 +5646,25 @@
   },
   "samsunggalaxym335g": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -3268,6 +5682,25 @@
   },
   "samsunggalaxym345g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -3288,6 +5721,25 @@
   },
   "samsunggalaxym355g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -3308,6 +5760,25 @@
   },
   "samsunggalaxym365g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -3328,6 +5799,25 @@
   },
   "samsunggalaxym40": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -3339,6 +5829,25 @@
   },
   "samsunggalaxym425g": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -3350,6 +5859,25 @@
   },
   "samsunggalaxym475g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -3370,6 +5898,25 @@
   },
   "samsunggalaxym51": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -3387,6 +5934,25 @@
   },
   "samsunggalaxym525g": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -3404,6 +5970,25 @@
   },
   "samsunggalaxym535g": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -3421,6 +6006,25 @@
   },
   "samsunggalaxym555g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -3441,6 +6045,25 @@
   },
   "samsunggalaxym55s5g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -3456,6 +6079,25 @@
   },
   "samsunggalaxym565g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -3471,6 +6113,25 @@
   },
   "samsunggalaxynote10": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/256gb": {
         "accessories": [
@@ -3483,6 +6144,25 @@
   },
   "samsunggalaxynote10lite": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -3502,6 +6182,25 @@
   },
   "samsunggalaxynote10plus": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "12gb/256gb": {
         "accessories": [
@@ -3521,6 +6220,25 @@
   },
   "samsunggalaxynote10plus5g": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "12gb/512gb": {
         "accessories": [
@@ -3533,6 +6251,25 @@
   },
   "samsunggalaxynote20": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/256gb": {
         "accessories": [
@@ -3545,6 +6282,25 @@
   },
   "samsunggalaxynote20ultra5g": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "12gb/256gb": {
         "accessories": [
@@ -3557,6 +6313,25 @@
   },
   "samsunggalaxynote8": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/64gb": {
         "accessories": [
@@ -3583,6 +6358,25 @@
   },
   "samsunggalaxynote9": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -3602,6 +6396,24 @@
   },
   "samsunggalaxyon6": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -3613,6 +6425,25 @@
   },
   "samsunggalaxyon7prime": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "3gb/32gb": {
         "accessories": [
@@ -3630,6 +6461,25 @@
   },
   "samsunggalaxyon82018": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -3641,6 +6491,25 @@
   },
   "samsunggalaxyonmax": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/32gb": {
         "accessories": [
@@ -3652,6 +6521,25 @@
   },
   "samsunggalaxys10": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -3669,6 +6557,25 @@
   },
   "samsunggalaxys10e": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -3680,6 +6587,25 @@
   },
   "samsunggalaxys10lite": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -3697,6 +6623,25 @@
   },
   "samsunggalaxys10plus": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -3720,6 +6665,25 @@
   },
   "samsunggalaxys20": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -3731,6 +6695,25 @@
   },
   "samsunggalaxys20fe": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -3748,6 +6731,25 @@
   },
   "samsunggalaxys20fe5g": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -3759,6 +6761,25 @@
   },
   "samsunggalaxys20plus": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -3770,6 +6791,25 @@
   },
   "samsunggalaxys20ultra": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "12gb/128gb": {
         "accessories": [
@@ -3781,6 +6821,25 @@
   },
   "samsunggalaxys20ultra5g": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "12gb/128gb": {
         "accessories": [
@@ -3792,6 +6851,25 @@
   },
   "samsunggalaxys215g": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -3807,6 +6885,25 @@
   },
   "samsunggalaxys21fe5g": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -3824,6 +6921,25 @@
   },
   "samsunggalaxys21plus5g": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -3839,6 +6955,25 @@
   },
   "samsunggalaxys21ultra5g": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "12gb/256gb": {
         "accessories": [
@@ -3854,6 +6989,25 @@
   },
   "samsunggalaxys225g": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -3869,6 +7023,25 @@
   },
   "samsunggalaxys22plus5g": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -3884,6 +7057,25 @@
   },
   "samsunggalaxys22ultra5g": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "12gb/256gb": {
         "accessories": [
@@ -3907,6 +7099,25 @@
   },
   "samsunggalaxys235g": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -3922,6 +7133,25 @@
   },
   "samsunggalaxys23fe5g": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -3937,6 +7167,25 @@
   },
   "samsunggalaxys23plus5g": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/256gb": {
         "accessories": [
@@ -3947,6 +7196,25 @@
   },
   "samsunggalaxys23ultra5g": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "12gb/256gb": {
         "accessories": [
@@ -3970,6 +7238,25 @@
   },
   "samsunggalaxys245g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -3993,6 +7280,25 @@
   },
   "samsunggalaxys24fe5g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -4008,6 +7314,25 @@
   },
   "samsunggalaxys24plus5g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "12gb/256gb": {
         "accessories": [
@@ -4025,6 +7350,25 @@
   },
   "samsunggalaxys24ultra5g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "12gb/256gb": {
         "accessories": [
@@ -4048,6 +7392,25 @@
   },
   "samsunggalaxys255g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "12gb/128gb": {
         "accessories": [
@@ -4069,6 +7432,25 @@
   },
   "samsunggalaxys25edge": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "speaker",
+      "silent",
+      "face",
+      "power",
+      "charging",
+      "audio_receiver",
+      "camera_glass",
+      "microphone",
+      "bluetooth",
+      "vibrator",
+      "proximity",
+      "battery_service"
+    ],
     "variants": {
       "12gb/256gb": {
         "accessories": [
@@ -4084,6 +7466,25 @@
   },
   "samsunggalaxys25fe": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "speaker",
+      "silent",
+      "face",
+      "power",
+      "charging",
+      "audio_receiver",
+      "camera_glass",
+      "microphone",
+      "bluetooth",
+      "vibrator",
+      "proximity",
+      "battery_service"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -4104,6 +7505,25 @@
   },
   "samsunggalaxys25plus5g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "12gb/256gb": {
         "accessories": [
@@ -4119,6 +7539,25 @@
   },
   "samsunggalaxys25ultra5g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "12gb/256gb": {
         "accessories": [
@@ -4142,6 +7581,25 @@
   },
   "samsunggalaxys26": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "speaker",
+      "silent",
+      "face",
+      "power",
+      "charging",
+      "audio_receiver",
+      "camera_glass",
+      "microphone",
+      "bluetooth",
+      "vibrator",
+      "proximity",
+      "battery_service"
+    ],
     "variants": {
       "12gb/256gb": {
         "accessories": [
@@ -4157,6 +7615,25 @@
   },
   "samsunggalaxys26plus": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "speaker",
+      "silent",
+      "face",
+      "power",
+      "charging",
+      "audio_receiver",
+      "camera_glass",
+      "microphone",
+      "bluetooth",
+      "vibrator",
+      "proximity",
+      "battery_service"
+    ],
     "variants": {
       "12gb/256gb": {
         "accessories": [
@@ -4172,6 +7649,25 @@
   },
   "samsunggalaxys26ultra": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "12gb/256gb": {
         "accessories": [
@@ -4195,6 +7691,25 @@
   },
   "samsunggalaxys8": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -4206,6 +7721,25 @@
   },
   "samsunggalaxys8plus": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -4223,6 +7757,25 @@
   },
   "samsunggalaxys9": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/64gb": {
         "accessories": [
@@ -4246,6 +7799,25 @@
   },
   "samsunggalaxys9plus": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/64gb": {
         "accessories": [
@@ -4269,6 +7841,27 @@
   },
   "samsunggalaxyzflip": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "speaker",
+      "silent",
+      "face",
+      "power",
+      "charging",
+      "audio_receiver",
+      "camera_glass",
+      "microphone",
+      "bluetooth",
+      "vibrator",
+      "proximity",
+      "battery_service",
+      "outer_screen",
+      "hinge"
+    ],
     "variants": {
       "8gb/256gb": {
         "accessories": [
@@ -4280,6 +7873,27 @@
   },
   "samsunggalaxyzflip35g": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "speaker",
+      "silent",
+      "face",
+      "power",
+      "charging",
+      "audio_receiver",
+      "camera_glass",
+      "microphone",
+      "bluetooth",
+      "vibrator",
+      "proximity",
+      "battery_service",
+      "outer_screen",
+      "hinge"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -4295,6 +7909,27 @@
   },
   "samsunggalaxyzflip4": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity",
+      "hinge",
+      "outer_screen"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -4310,6 +7945,27 @@
   },
   "samsunggalaxyzflip5": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity",
+      "hinge",
+      "outer_screen"
+    ],
     "variants": {
       "8gb/256gb": {
         "accessories": [
@@ -4325,6 +7981,27 @@
   },
   "samsunggalaxyzflip65g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "speaker",
+      "silent",
+      "face",
+      "power",
+      "charging",
+      "audio_receiver",
+      "camera_glass",
+      "microphone",
+      "bluetooth",
+      "vibrator",
+      "proximity",
+      "battery_service",
+      "outer_screen",
+      "hinge"
+    ],
     "variants": {
       "12gb/256gb": {
         "accessories": [
@@ -4340,6 +8017,27 @@
   },
   "samsunggalaxyzflip7fe5g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity",
+      "hinge",
+      "outer_screen"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -4357,6 +8055,25 @@
   },
   "samsunggalaxyzflip8": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "12gb/256gb": {
         "accessories": [
@@ -4372,6 +8089,27 @@
   },
   "samsunggalaxyzfold25g": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "speaker",
+      "silent",
+      "face",
+      "power",
+      "charging",
+      "audio_receiver",
+      "camera_glass",
+      "microphone",
+      "bluetooth",
+      "vibrator",
+      "proximity",
+      "battery_service",
+      "outer_screen",
+      "hinge"
+    ],
     "variants": {
       "12gb/256gb": {
         "accessories": [
@@ -4383,6 +8121,27 @@
   },
   "samsunggalaxyzfold35g": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "speaker",
+      "silent",
+      "face",
+      "power",
+      "charging",
+      "audio_receiver",
+      "camera_glass",
+      "microphone",
+      "bluetooth",
+      "vibrator",
+      "proximity",
+      "battery_service",
+      "outer_screen",
+      "hinge"
+    ],
     "variants": {
       "12gb/256gb": {
         "accessories": [
@@ -4400,6 +8159,27 @@
   },
   "samsunggalaxyzfold4": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "speaker",
+      "silent",
+      "face",
+      "power",
+      "charging",
+      "audio_receiver",
+      "camera_glass",
+      "microphone",
+      "bluetooth",
+      "vibrator",
+      "proximity",
+      "battery_service",
+      "outer_screen",
+      "hinge"
+    ],
     "variants": {
       "12gb/256gb": {
         "accessories": [
@@ -4420,6 +8200,27 @@
   },
   "samsunggalaxyzfold5": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "speaker",
+      "silent",
+      "face",
+      "power",
+      "charging",
+      "audio_receiver",
+      "camera_glass",
+      "microphone",
+      "bluetooth",
+      "vibrator",
+      "proximity",
+      "battery_service",
+      "outer_screen",
+      "hinge"
+    ],
     "variants": {
       "12gb/256gb": {
         "accessories": [
@@ -4440,6 +8241,27 @@
   },
   "samsunggalaxyzfold65g": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity",
+      "hinge",
+      "outer_screen"
+    ],
     "variants": {
       "12gb/256gb": {
         "accessories": [
@@ -4460,6 +8282,27 @@
   },
   "samsunggalaxyzfold7": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "speaker",
+      "silent",
+      "face",
+      "power",
+      "charging",
+      "audio_receiver",
+      "camera_glass",
+      "microphone",
+      "bluetooth",
+      "vibrator",
+      "proximity",
+      "battery_service",
+      "outer_screen",
+      "hinge"
+    ],
     "variants": {
       "12gb/256gb": {
         "accessories": [
@@ -4480,6 +8323,25 @@
   },
   "samsunggalaxyzfold8": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "speaker",
+      "silent",
+      "face",
+      "power",
+      "charging",
+      "audio_receiver",
+      "camera_glass",
+      "microphone",
+      "bluetooth",
+      "vibrator",
+      "proximity",
+      "battery_service"
+    ],
     "variants": {
       "12gb/256gb": {
         "accessories": [
@@ -4500,6 +8362,25 @@
   },
   "samsunggalaxya05s": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "4gb/128gb": {
         "accessories": [
@@ -4511,6 +8392,27 @@
   },
   "samsunggalaxyzflip7": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity",
+      "hinge",
+      "outer_screen"
+    ],
     "variants": {
       "12gb/256gb": {
         "accessories": [
@@ -4526,6 +8428,25 @@
   },
   "samsunggalaxyzfold8ultra": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "12gb/256gb": {
         "accessories": [
@@ -4546,6 +8467,25 @@
   },
   "googlepixel10": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "12gb/256gb": {
         "accessories": [
@@ -4556,6 +8496,25 @@
   },
   "googlepixel10a": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/256gb": {
         "accessories": [
@@ -4566,6 +8525,25 @@
   },
   "googlepixel10pro": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "16gb/256gb": {
         "accessories": [
@@ -4576,6 +8554,25 @@
   },
   "googlepixel10profold": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "16gb/256gb": {
         "accessories": [
@@ -4586,6 +8583,25 @@
   },
   "googlepixel10proxl": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "16gb/256gb": {
         "accessories": [
@@ -4596,6 +8612,25 @@
   },
   "googlepixel11": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "12gb/256gb": {
         "accessories": [
@@ -4611,6 +8646,25 @@
   },
   "googlepixel11pro": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "12gb/256gb": {
         "accessories": [
@@ -4626,6 +8680,25 @@
   },
   "googlepixel11profold": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "16gb/512gb": {
         "accessories": [
@@ -4636,6 +8709,25 @@
   },
   "googlepixel11proxl": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "12gb/256gb": {
         "accessories": [
@@ -4651,6 +8743,25 @@
   },
   "googlepixel4a": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -4662,6 +8773,25 @@
   },
   "googlepixel6a": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "6gb/128gb": {
         "accessories": [
@@ -4672,6 +8802,25 @@
   },
   "googlepixel7": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -4688,6 +8837,25 @@
   },
   "googlepixel7a": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -4698,6 +8866,25 @@
   },
   "googlepixel7pro": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "12gb/128gb": {
         "accessories": [
@@ -4714,6 +8901,25 @@
   },
   "googlepixel8": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -4729,6 +8935,25 @@
   },
   "googlepixel8a": {
     "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/128gb": {
         "accessories": [
@@ -4744,6 +8969,25 @@
   },
   "googlepixel8pro": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "12gb/128gb": {
         "accessories": [
@@ -4764,6 +9008,25 @@
   },
   "googlepixel9": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "12gb/256gb": {
         "accessories": [
@@ -4774,6 +9037,25 @@
   },
   "googlepixel9a": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "8gb/256gb": {
         "accessories": [
@@ -4784,6 +9066,25 @@
   },
   "googlepixel9pro": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "16gb/256gb": {
         "accessories": [
@@ -4794,6 +9095,27 @@
   },
   "googlepixel9profold": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity",
+      "outer_screen",
+      "hinge"
+    ],
     "variants": {
       "16gb/256gb": {
         "accessories": [
@@ -4804,6 +9126,25 @@
   },
   "googlepixel9proxl": {
     "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
     "variants": {
       "16gb/256gb": {
         "accessories": [

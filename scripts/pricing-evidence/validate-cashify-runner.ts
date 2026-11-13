@@ -24,11 +24,12 @@ export function statistics(rows: { error: number; model: string; storage: string
 export async function validateRunner(brand: 'Nothing' | 'OnePlus', input: string, out: string) {
   const bytes = fs.readFileSync(input);
   const all: RunnerMeasurement[] = bytes.toString('utf8').trim().split('\n').map(line => JSON.parse(line));
-  const rows = all.filter(m => m.status === 'quoted');
+  for(const row of all)if(row.status==='quoted'&&(row.reference===null||!Number.isFinite(row.reference)||row.reference<=0))throw new Error('Quoted measurement missing reference');
+  const rows = all.filter((m):m is RunnerMeasurement & {reference:number} => m.status === 'quoted');
   const calibrationPath = `lib/pricing/cashifyRunnerModel/calibration.${brand.toLowerCase()}.json`;
   const calibration: RunnerCalibration = JSON.parse(fs.readFileSync(calibrationPath, 'utf8'));
   const now = new Date('2026-11-11T08:00:00Z');
-  let active: RunnerMeasurement;
+  let active: RunnerMeasurement & {reference:number};
   const service = createPricingService({ repository: { async get(key) { return { deviceKey: key, brand: active.brand, model: active.model,
     storage: active.storage, currentPrice: active.reference, source: 'cashify', status: 'fresh', matchConfidence: 'exact', lastVerifiedAt: now.toISOString() } as any; },
     async listAll() { return []; }, async upsert() { throw new Error('read-only'); }, async appendHistory() { throw new Error('read-only'); }, async getHistory() { return []; } },

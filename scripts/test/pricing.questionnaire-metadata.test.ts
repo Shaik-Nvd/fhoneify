@@ -171,8 +171,8 @@ async function run() {
   });
 
   await test('engine ASKED: the calibrated warranty path still applies (S24 out of warranty)', () => {
-    const young = calculateFhoneifyPrice('Samsung', 'Samsung Galaxy S24 5G', 34710, { ...base, warranty: true, validBill: true }, ASKED).cashifyConditionEquivalent;
-    const old = calculateFhoneifyPrice('Samsung', 'Samsung Galaxy S24 5G', 34710, { ...base, warranty: false, validBill: true, mobileAge: 'above11' }, ASKED).cashifyConditionEquivalent;
+    const young = calculateFhoneifyPrice('Samsung', 'Samsung Galaxy S24 5G', 34710, { ...base, warranty: true, validBill: true }, ASKED, undefined, { disableRunnerEvidence: true }).cashifyConditionEquivalent;
+    const old = calculateFhoneifyPrice('Samsung', 'Samsung Galaxy S24 5G', 34710, { ...base, warranty: false, validBill: true, mobileAge: 'above11' }, ASKED, undefined, { disableRunnerEvidence: true }).cashifyConditionEquivalent;
     assert.ok(old < young, `${old} < ${young}`);
     assert.equal(old, 27318);
   });

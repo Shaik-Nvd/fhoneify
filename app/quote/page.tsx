@@ -134,7 +134,8 @@ export default function QuotePage() {
     // Follow the recorded questionnaire, including storage-specific offers.
     if (runnerScope(model, storage)) {
       const device=SEED_DEVICES.find(d=>d.brand===brand&&d.model===model&&d.storage===storage);
-      return runnerOffersCharger(model,brand==='Samsung'?runnerStorageIdentity(storage,device?.ram):storage);
+      if(brand==='Samsung')return runnerOffersCharger(model,runnerStorageIdentity(storage,device?.ram));
+      return runnerOffersCharger(model, storage);
     }
     if (lowerBrand === 'nothing' || lowerBrand === 'cmf') {
       return lowerModel === 'nothing phone 3';

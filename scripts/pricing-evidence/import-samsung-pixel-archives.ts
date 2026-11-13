@@ -17,9 +17,13 @@ function date(text: string) {
 const modelPattern = /Samsung Galaxy[^\n:]*?\(\d+\s*GB\s*\/\s*\d+\s*(?:GB|TB)\)/gi;
 export function diagnosticsFromReport(block: string): {diagnostics: DiagnosticsType; offered: string[]; hasAge: boolean} {
   const d=diagnosticsForLabel('Flawless',[],false);
+  d.calls=null;d.touch=null;d.originalScreen=null;
   let initialCount=0;
-  for(const [label,field] of Object.entries(initial)) {
-    const m=block.match(new RegExp(escape(label)+'[^\\n]*\\n[\\s\\S]{0,400}?(?:^|\\n)(?:Answer:\\s*)?(Yes|No)\\s*(?:\\n|$)','im'));
+  const questions=Object.entries(initial).map(([label,field])=>({label,field,match:block.match(new RegExp('^'+escape(label)+'[ \\t]*$','im'))})).filter(q=>q.match).sort((a,b)=>a.match!.index!-b.match!.index!);
+  for(const [index,question]of questions.entries()) {
+    const section=block.slice(question.match!.index!+question.match![0].length,questions[index+1]?.match?.index??block.length);
+    const m=section.match(/^(?:Answer:\s*)?(Yes|No)\s*$/im);
+    const field=question.field;
     if(m){(d as any)[field]=m[1].toLowerCase()==='yes';initialCount++;}
   }
   if(!initialCount) {
@@ -48,6 +52,8 @@ export function diagnosticsFromReport(block: string): {diagnostics: DiagnosticsT
   for(const[label,value]of Object.entries(ages))if(new RegExp('^'+escape(label)+'\\s*:\\s*Selected\\b','im').test(block))d.mobileAge=value;
   const hasAge=d.warranty!==null;
   check(d.calls!==null && d.touch!==null && d.originalScreen!==null,'Report has incomplete initial diagnostics');
+  check(!questions.some(q=>(d as any)[q.field]===null),'Report has incomplete initial diagnostics');
+  check(!(hasAge||d.validBill!==null)||(d.warranty!==null&&d.validBill!==null),'Report has incomplete ownership diagnostics');
   check(offered.length>0,'Report accessory path missing');
   if(hasAge&&!d.mobileAge&&!/Not asked|Skipped/i.test(block))throw new Error('Report age answer missing');
   return {diagnostics:d,offered,hasAge};
@@ -68,7 +74,7 @@ export function parseDetailedReport(text: string, source: RunnerMeasurement['sou
     const total=amount('^(?:Total Amount(?: shown)?|Total payout)');
     const fee=amount('^Processing [Ff]ee'),imei=amount('^IMEI (?:Validation )?[Ff]ee');
     let status:RunnerMeasurement['status']='quoted';
-    if(selling===null)status=/very little value|no.?offer|no monetary offer/i.test(block)?'no_offer':/pending|not yet (?:verified|tested)|not completed/i.test(block)?'pending':'not_applicable';
+    if(selling===null)status=/very little value|no.?offer|no monetary offer/i.test(block)?'no_offer':/pending|not (?:yet )?(?:verified|tested|completed)|live test unfinished/i.test(block)?'pending':'not_applicable';
     if(status==='quoted') {
       if(base===null && /IMEI Validation Fee\s*\u20b920/.test(text.slice(0,3500)))base=selling!+20;
       check(base!==null,`Report base and normalization fee missing ${source.folder} ${h[1]}`);
@@ -76,7 +82,7 @@ export function parseDetailedReport(text: string, source: RunnerMeasurement['sou
     }
     const parsed=status==='quoted'||status==='no_offer'?diagnosticsFromReport(block):null;
     const baseline=amount('^(?:Flawless (?:Selling price(?: for this variant)?|selling-price baseline))');
-    rows.push({brand:'Samsung',...identity,rawModel:raw,caseId:h[1],label:h[2].trim(),status,diagnostics:parsed?.diagnostics??diagnosticsForLabel('Flawless',[],false),answerPath:[],
+    rows.push({brand:'Samsung',...identity,rawModel:raw,caseId:h[1],label:h[2].trim(),status,diagnostics:parsed?.diagnostics??{...diagnosticsForLabel('Flawless',[],false),calls:null,touch:null,originalScreen:null},answerPath:[],
       ageAsked:!!parsed?.diagnostics.mobileAge,ageSelected:parsed?.diagnostics.mobileAge??null,offeredAccessories:parsed?.offered??[],hasAge:parsed?.hasAge??false,
       reference:baseline!==null?baseline+20:null,base,selling,processingFee:fee,imeiFee:imei,total,deduction:null,observedAt:status==='pending'?null:date(block+'\n'+text.slice(0,Math.min(start,1500))),
       source:{...source,caseId:h[2].match(/raw (?:case )?index (\d+)/i)?.[1]??h[1],line:text.slice(0,start).split('\n').length},variantUrl:'',complete:!/INCOMPLETE|partial verified|66.of.153|120.of.153/i.test(source.folder)});
@@ -138,7 +144,7 @@ export function importArchives(input:string,brand:'Samsung'|'Google',out:string)
   }
   reconcile(measurements);
   const counts=(xs:RunnerMeasurement[])=>Object.fromEntries(['quoted','pending','no_offer','not_applicable'].map(status=>[status,xs.filter(r=>r.status===status).length]));
-  const primaryIndex=new Map(measurements.filter(r=>r.primary).map(r=>[modelKey(r.model)+'|'+storageKey(r.storage)+'|'+signature(r),r]));
+  const primaryIndex=new Map(measurements.filter(r=>r.primary&&r.status==='quoted').map(r=>[modelKey(r.model)+'|'+storageKey(r.storage)+'|'+signature(r),r]));
   const summary={brand,observations:measurements.length,counts:counts(measurements),primary:counts(measurements.filter(r=>r.primary)),byFormat:Object.fromEntries(['A','B','C'].map(f=>[f,counts(measurements.filter(r=>r.source.format===f))])),variants:new Set(measurements.map(r=>modelKey(r.model)+'|'+storageKey(r.storage))).size,
     sellingOnly:measurements.filter(r=>r.status==='quoted'&&r.total===null).length,
     disagreements:measurements.filter(r=>!r.primary&&r.status==='quoted').map(r=>{const p=primaryIndex.get(modelKey(r.model)+'|'+storageKey(r.storage)+'|'+signature(r));return p&&p.base!==r.base?{model:r.model,storage:r.storage,caseId:r.source.caseId,oldBase:r.base,newBase:p.base,oldDate:r.observedAt,newDate:p.observedAt}:null;}).filter(Boolean)};

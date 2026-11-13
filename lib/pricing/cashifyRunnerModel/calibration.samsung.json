@@ -982,7 +982,11 @@
           "value": 1870,
           "slope": 0.6568265682656826,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "fixed",
+            "value": 1840
+          }
         },
         "spots:1": {
           "form": "fixed",
@@ -1001,7 +1005,11 @@
           "value": 1870,
           "slope": 0.6568265682656826,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "fixed",
+            "value": 1840
+          }
         },
         "lines:1": {
           "form": "fixed",
@@ -1068,7 +1076,11 @@
           "value": 2200,
           "slope": 0.6559760088459003,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.6106544382025832
+          }
         },
         "original": {
           "form": "fixed",
@@ -1901,7 +1913,11 @@
           "value": 2956.0331866911547,
           "slope": 0.01877162260282749,
           "support": 3,
-          "residual": 10
+          "residual": 10,
+          "fallback": {
+            "form": "fixed",
+            "value": 3090
+          }
         },
         "original": {
           "form": "fixed",
@@ -3828,21 +3844,33 @@
           "value": 349.8724174829206,
           "slope": 0.16486953658737344,
           "support": 4,
-          "residual": 10
+          "residual": 10,
+          "fallback": {
+            "form": "pct",
+            "value": 0.20569490149202962
+          }
         },
         "age:3to6": {
           "form": "affine",
           "value": 355.1361076161471,
           "slope": 0.019966369954023257,
           "support": 4,
-          "residual": 10
+          "residual": 10,
+          "fallback": {
+            "form": "fixed",
+            "value": 530
+          }
         },
         "age:6to11": {
           "form": "affine",
           "value": 340.6319156191574,
           "slope": 0.05252636901332267,
           "support": 4,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.09227349270306885
+          }
         },
         "hardware:front_camera": {
           "form": "fixed",
@@ -4105,7 +4133,11 @@
           "value": 636.9002502681442,
           "slope": 0.1308544869503039,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.19151594806433322
+          }
         },
         "age:3to6": {
           "form": "fixed",
@@ -4566,7 +4598,11 @@
           "value": -137.78728368656436,
           "slope": 0.07758117830060277,
           "support": 3,
-          "residual": 10
+          "residual": 10,
+          "fallback": {
+            "form": "pct",
+            "value": 0.06555084341639274
+          }
         },
         "scratch:1": {
           "form": "pct",
@@ -4579,14 +4615,22 @@
           "value": -37.787283686564365,
           "slope": 0.07758117830060277,
           "support": 3,
-          "residual": 10
+          "residual": 10,
+          "fallback": {
+            "form": "pct",
+            "value": 0.07428193569307655
+          }
         },
         "dent:1": {
           "form": "affine",
           "value": -137.78728368656436,
           "slope": 0.07758117830060277,
           "support": 3,
-          "residual": 10
+          "residual": 10,
+          "fallback": {
+            "form": "pct",
+            "value": 0.06555084341639274
+          }
         },
         "panel": {
           "form": "byStorage",
@@ -6860,21 +6904,33 @@
           "value": 474.77221266189713,
           "slope": 0.1690970020831446,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.21022195818216943
+          }
         },
         "age:3to6": {
           "form": "affine",
           "value": 369.3419980074269,
           "slope": 0.034190743592065934,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "fixed",
+            "value": 760
+          }
         },
         "age:6to11": {
           "form": "affine",
           "value": 435.86405216918763,
           "slope": 0.05936962231681912,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.09712433822595319
+          }
         },
         "hardware:front_camera": {
           "form": "fixed",
@@ -8703,21 +8759,33 @@
           "value": 466.37856335551896,
           "slope": 0.1700050232324501,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.21252579984753528
+          }
         },
         "age:3to6": {
           "form": "affine",
           "value": 483.08614843651884,
           "slope": 0.024174306166017834,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "fixed",
+            "value": 750
+          }
         },
         "age:6to11": {
           "form": "affine",
           "value": 500.71769433630527,
           "slope": 0.053434635187743315,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.09908618716927069
+          }
         },
         "hardware:front_camera": {
           "form": "fixed",
@@ -11734,21 +11802,33 @@
           "value": 892.2869022869022,
           "slope": 0.17255717255717257,
           "support": 3,
-          "residual": 10
+          "residual": 10,
+          "fallback": {
+            "form": "pct",
+            "value": 0.22280420425344755
+          }
         },
         "age:3to6": {
           "form": "affine",
           "value": 878.1021681021682,
           "slope": 0.030393030393030394,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "fixed",
+            "value": 1420
+          }
         },
         "age:6to11": {
           "form": "affine",
           "value": 886.2043362043362,
           "slope": 0.06078606078606079,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.11069056712422276
+          }
         },
         "hardware:front_camera": {
           "form": "fixed",
@@ -19539,7 +19619,11 @@
           "value": 223.90179745725527,
           "slope": 0.28298991670320034,
           "support": 3,
-          "residual": 10
+          "residual": 10,
+          "fallback": {
+            "form": "pct",
+            "value": 0.30844358904365193
+          }
         },
         "hardware:battery_service": {
           "form": "byStorage",
@@ -19622,7 +19706,11 @@
           "value": 223.90179745725527,
           "slope": 0.28298991670320034,
           "support": 3,
-          "residual": 10
+          "residual": 10,
+          "fallback": {
+            "form": "pct",
+            "value": 0.30844358904365193
+          }
         },
         "hardware:vibrator": {
           "form": "byStorage",
@@ -22267,7 +22355,11 @@
           "value": 221.11721611721578,
           "slope": 0.36813186813186816,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.3903080488065175
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -22322,7 +22414,11 @@
           "value": 221.11721611721578,
           "slope": 0.36813186813186816,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.3903080488065175
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -30023,7 +30119,11 @@
           "value": 321.90072924017863,
           "slope": 0.17678193366266762,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.21514330435738915
+          }
         },
         "age:3to6": {
           "form": "fixed",
@@ -30036,7 +30136,11 @@
           "value": 402.0489296636086,
           "slope": 0.05504587155963303,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "fixed",
+            "value": 860
+          }
         },
         "hardware:front_camera": {
           "form": "fixed",
@@ -30527,7 +30631,11 @@
           "value": 3400,
           "slope": 0.46695402298850575,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "fixed",
+            "value": 3350
+          }
         },
         "original": {
           "form": "fixed",
@@ -34350,7 +34458,11 @@
           "value": 499.5545314900155,
           "slope": 0.15668202764976957,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.20937379917689666
+          }
         },
         "age:3to6": {
           "form": "fixed",
@@ -34363,7 +34475,11 @@
           "value": 429.95391705069125,
           "slope": 0.05069124423963134,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "fixed",
+            "value": 910
+          }
         },
         "hardware:front_camera": {
           "form": "fixed",
@@ -34626,7 +34742,11 @@
           "value": 468.95943723734695,
           "slope": 0.17202631098118035,
           "support": 3,
-          "residual": 10
+          "residual": 10,
+          "fallback": {
+            "form": "pct",
+            "value": 0.21595801161339784
+          }
         },
         "age:3to6": {
           "form": "fixed",
@@ -34639,7 +34759,11 @@
           "value": 452.4310250319751,
           "slope": 0.06166636214142152,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.1040496959016343
+          }
         },
         "hardware:front_camera": {
           "form": "fixed",
@@ -35130,7 +35254,11 @@
           "value": 5200,
           "slope": 0.47699530516431926,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "fixed",
+            "value": 5160
+          }
         },
         "original": {
           "form": "fixed",
@@ -36769,21 +36897,33 @@
           "value": 673.0128205128203,
           "slope": 0.17307692307692307,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.21988457542461093
+          }
         },
         "age:3to6": {
           "form": "affine",
           "value": 646.7307692307693,
           "slope": 0.03205128205128205,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "fixed",
+            "value": 1110
+          }
         },
         "age:6to11": {
           "form": "affine",
           "value": 623.4615384615385,
           "slope": 0.0641025641025641,
           "support": 3,
-          "residual": 10
+          "residual": 10,
+          "fallback": {
+            "form": "pct",
+            "value": 0.10746395344760763
+          }
         },
         "hardware:front_camera": {
           "form": "fixed",
@@ -41722,7 +41862,11 @@
           "value": 4760,
           "slope": 0.6036269430051814,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "fixed",
+            "value": 4720
+          }
         },
         "screen:1": {
           "form": "fixed",
@@ -45153,14 +45297,22 @@
           "value": 425.83230749444374,
           "slope": 0.24716592867510606,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.26322959393980433
+          }
         },
         "hardware:wifi": {
           "form": "affine",
           "value": 689.5067705366819,
           "slope": 0.3687048707442997,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.39471512352388455
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -45215,7 +45367,11 @@
           "value": 689.5067705366819,
           "slope": 0.3687048707442997,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.39471512352388455
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -45348,7 +45504,11 @@
           "value": -587.9901519466439,
           "slope": 0.6272070847189813,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.6050263417044717
+          }
         },
         "original": {
           "form": "fixed",
@@ -46205,14 +46365,22 @@
           "value": 517.0794272468775,
           "slope": 0.24695410895554773,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.26109099331060226
+          }
         },
         "hardware:wifi": {
           "form": "affine",
           "value": 833.9023373716846,
           "slope": 0.3687897507336401,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.39158853228563684
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -46267,7 +46435,11 @@
           "value": 833.9023373716846,
           "slope": 0.3687897507336401,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.39158853228563684
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -47475,7 +47647,11 @@
           "value": 2360.4915286685173,
           "slope": 0.1441083564659711,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.1819324707832157
+          }
         },
         "age:3to6": {
           "form": "fixed",
@@ -47488,7 +47664,11 @@
           "value": 2556.722025461856,
           "slope": 0.025318273188475154,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "fixed",
+            "value": 4140
+          }
         },
         "hardware:front_camera": {
           "form": "fixed",
@@ -48433,21 +48613,33 @@
           "value": 1773.2544378698194,
           "slope": 0.18934911242603555,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.2382742278567718
+          }
         },
         "age:3to6": {
           "form": "affine",
           "value": 1774.2544378698224,
           "slope": 0.049349112426035506,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "fixed",
+            "value": 3550
+          }
         },
         "age:6to11": {
           "form": "affine",
           "value": 1748,
           "slope": 0.08,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.12822833088502628
+          }
         },
         "hardware:front_camera": {
           "form": "fixed",
@@ -50069,21 +50261,33 @@
           "value": 2774.9431112323364,
           "slope": 0.19027975156374055,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.22091822967982222
+          }
         },
         "age:3to6": {
           "form": "affine",
           "value": 2822.036955752029,
           "slope": 0.049750906141874815,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.08090935301655126
+          }
         },
         "age:6to11": {
           "form": "affine",
           "value": 2786.410301429647,
           "slope": 0.08013795967526932,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.11090304840707531
+          }
         },
         "hardware:front_camera": {
           "form": "fixed",
@@ -51303,7 +51507,11 @@
           "value": 1916.8770764119602,
           "slope": 0.16943521594684385,
           "support": 3,
-          "residual": 10
+          "residual": 10,
+          "fallback": {
+            "form": "fixed",
+            "value": 2720
+          }
         },
         "color:0": {
           "form": "fixed",
@@ -54172,14 +54380,22 @@
           "value": 488.31288571641016,
           "slope": 0.24678414752026173,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.2641567747466687
+          }
         },
         "hardware:wifi": {
           "form": "affine",
           "value": 780.8398393932639,
           "slope": 0.36844746821325003,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.3962272787611632
+          }
         },
         "hardware:speaker": {
           "form": "fixed",
@@ -54198,7 +54414,11 @@
           "value": 488.31288571641016,
           "slope": 0.24678414752026173,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.2641567747466687
+          }
         },
         "hardware:power": {
           "form": "fixed",
@@ -54235,7 +54455,11 @@
           "value": 780.8398393932639,
           "slope": 0.36844746821325003,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.3962272787611632
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -54260,7 +54484,11 @@
           "value": -619.1267008699542,
           "slope": 0.6918915904528218,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.6698650216385486
+          }
         },
         "original": {
           "form": "fixed",
@@ -54273,7 +54501,11 @@
           "value": 19040,
           "slope": 0.6686715132886965,
           "support": 3,
-          "residual": 10
+          "residual": 10,
+          "fallback": {
+            "form": "fixed",
+            "value": 18230
+          }
         },
         "screen:1": {
           "form": "fixed",
@@ -54298,7 +54530,11 @@
           "value": -619.1267008699542,
           "slope": 0.6918915904528218,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.6698650216385486
+          }
         },
         "spots:1": {
           "form": "fixed",
@@ -54317,7 +54553,11 @@
           "value": -619.1267008699542,
           "slope": 0.6918915904528218,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.6698650216385486
+          }
         },
         "lines:1": {
           "form": "fixed",
@@ -54408,7 +54648,11 @@
           "value": 413.3482043274589,
           "slope": 0.199308498773143,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.2140141198585878
+          }
         }
       },
       "noOffer": {}
@@ -55221,21 +55465,33 @@
           "value": 2997.1438145020766,
           "slope": 0.19166331590939553,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.22400330091059256
+          }
         },
         "age:3to6": {
           "form": "affine",
           "value": 3104.1535987133093,
           "slope": 0.050462404503417775,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.08395705375516814
+          }
         },
         "age:6to11": {
           "form": "affine",
           "value": 3099.3660367243,
           "slope": 0.08055220479828441,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.1139951949730937
+          }
         },
         "hardware:front_camera": {
           "form": "fixed",
@@ -55522,21 +55778,33 @@
           "value": 3474.5713525026586,
           "slope": 0.1902555910543131,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.22390510282425524
+          }
         },
         "age:3to6": {
           "form": "affine",
           "value": 3525.428647497337,
           "slope": 0.0497444089456869,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.08388644856234549
+          }
         },
         "age:6to11": {
           "form": "affine",
           "value": 3500,
           "slope": 0.08,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.11389577569330037
+          }
         },
         "hardware:front_camera": {
           "form": "fixed",
@@ -56486,6 +56754,10 @@
           "slope": 0.1902555910543131,
           "support": 0,
           "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.22390510282425524
+          },
           "inferredFrom": "Samsung Galaxy Z Fold 8"
         },
         "age:3to6": {
@@ -56494,6 +56766,10 @@
           "slope": 0.0497444089456869,
           "support": 0,
           "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.08388644856234549
+          },
           "inferredFrom": "Samsung Galaxy Z Fold 8"
         },
         "age:6to11": {
@@ -56502,6 +56778,10 @@
           "slope": 0.08,
           "support": 0,
           "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.11389577569330037
+          },
           "inferredFrom": "Samsung Galaxy Z Fold 8"
         },
         "hardware:front_camera": {
@@ -56611,7 +56891,11 @@
           "value": 25119.107142857145,
           "slope": 0.052142857142857144,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "fixed",
+            "value": 31650
+          }
         },
         "screen:1": {
           "form": "fixed",

@@ -4,7 +4,7 @@ import { PERFECT_CONDITION_DIAGNOSTICS as clean } from '../../lib/pricing/perfec
 import { evaluateRunner, modelKey } from '../../lib/pricing/cashifyRunnerModel/model';
 
 /** Future observations are scored against these frozen rules BEFORE any refit. */
-const cases: [string, object][] = [
+export const cases: [string, object][] = [
   ['Age above 11 + cracked glass', { mobileAge: 'above11', screenCondition: 'Screen cracked/ glass broken' }],
   ['Non-original screen + cracked glass', { originalScreen: false, screenCondition: 'Screen cracked/ glass broken' }],
   ['Touch No + cracked glass', { touch: false, screenCondition: 'Screen cracked/ glass broken' }],
@@ -35,6 +35,7 @@ const variants = [
   ['Nothing', 'Nothing Phone 1', '8 GB/128 GB', 'P1'], ['Nothing', 'Nothing Phone 2a 5G', '8 GB/128 GB', 'A'], ['Nothing', 'Nothing Phone 3a', '8 GB/128 GB', 'B'],
   ['OnePlus', 'OnePlus 8', '8 GB/128 GB', 'old/no age'], ['OnePlus', 'OnePlus 12R', '8 GB/128 GB', 'middle'], ['OnePlus', 'OnePlus 13', '12 GB/256 GB', 'new'],
 ];
+if(require.main===module) {
 const out = process.argv.find(a => a.startsWith('--out='))?.slice(6) ?? 'release-test-logs/android/frozen-combinations-v4';
 fs.mkdirSync(out, { recursive: true }); fs.mkdirSync('docs/next-quotes', { recursive: true });
 const modelBytes = fs.readFileSync('lib/pricing/cashifyRunnerModel/model.ts');
@@ -88,4 +89,6 @@ for (const brand of ['Nothing', 'OnePlus']) {
   fs.writeFileSync(`${out}/${brand.toLowerCase()}-predictions.jsonl`, predictions.map(p => JSON.stringify(p)).join('\n') + '\n');
   fs.writeFileSync(`docs/next-quotes/${brand.toLowerCase()}-combinations.md`, doc.join('\n'));
   console.log(`${brand}: ${predictions.length} planned combinations; no observations or support promoted`);
+}
+
 }

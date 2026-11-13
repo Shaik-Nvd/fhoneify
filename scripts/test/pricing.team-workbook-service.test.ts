@@ -4,7 +4,7 @@ import fixture from '../pricing/fixtures/team-workbook-development-2026-10-02.js
 import cases from '../pricing/fixtures/team-workbook-development-cases-2026-10-02.json';
 import ownerCorrection from '../pricing/fixtures/owner-correction-2026-10-02.json';
 import { createTeamWorkbookResearchQuoteService, type WorkbookRouteEvidence } from '../../lib/pricing/teamWorkbookResearchQuoteService';
-import { createPricingService, type PricingServiceDeps } from '../../lib/pricing/pricingService';
+import { createPricingService, type PricingServiceDeps } from './helpers/historicalRunner';
 import { findCatalogDevice } from '../../lib/pricing/catalog';
 import { deviceKey, type ReferencePriceRecord } from '../../lib/referencePricing/types';
 import { InMemoryQuestionnaireProfileStore } from '../../lib/referencePricing/questionnaire/store';

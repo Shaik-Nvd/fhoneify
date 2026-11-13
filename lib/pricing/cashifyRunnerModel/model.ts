@@ -138,6 +138,7 @@ export function evaluateRunner(profile: RunnerProfile, reference: number, d: Dia
   if (d.box === false) present.delete('box');
   if (d.charger === false) present.delete('charger');
   const missing = offered.filter(a => !present.has(a));
+  if(missing.length>1&&(!profile.rules.both||missing.length!==offered.length))inherited=true;
   const changes = faults.length + (profile.hasAge ? Number(d.warranty === false) + Number(d.validBill === false) + Number(selectedAge !== 'below3') : 0) + (missing.length ? 1 : 0);
   if (d.calls === false) return { price: Math.round(scrap), support: changes === 1 && variant && !variant.scrapInferredFrom ? 'measured' as const : 'inferred' as const,
     breakdown: [{ rule: 'calls:flat-scrap-deduction', amount: reference - Math.round(scrap), support: variant && !variant.scrapInferredFrom ? 'measured' as const : 'inferred' as const }], forcedAge: false, faults };
@@ -163,7 +164,14 @@ export function evaluateRunner(profile: RunnerProfile, reference: number, d: Dia
   if (panelOverlap) breakdown.push({ rule: 'panel:overlap-credit', amount: -panelOverlap, support: 'inferred' });
   loss += panelMaximum;
   // The variant's questionnaire decides whether charger loss is applicable.
-  if (missing.length > 1) loss += profile.rules.both && missing.length === offered.length ? amount('both') : Math.max(...missing.map(amount));
+  if (missing.length > 1) {
+    if(profile.rules.both&&missing.length===offered.length)loss+=amount('both');
+    else {
+      const amounts=missing.map(amount),maximum=Math.max(...amounts),overlap=amounts.reduce((sum,value)=>sum+value,0)-maximum;
+      if(overlap)breakdown.push({rule:'accessories:overlap-credit',amount:-overlap,support:'inferred'});
+      loss+=maximum;
+    }
+  }
   else if (missing.length) loss += amount(missing[0]);
   const price = Math.max(Math.round(conditionFloor), round10(reference - loss));
   const roundingAndFloor = reference - loss - price;

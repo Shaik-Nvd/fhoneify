@@ -4215,7 +4215,11 @@
           "value": 1608.333333333333,
           "slope": 0.15625,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.20480399019950998
+          }
         },
         "age:3to6": {
           "form": "fixed",
@@ -4228,7 +4232,11 @@
           "value": 1610,
           "slope": 0.041666666666666664,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "fixed",
+            "value": 2990
+          }
         },
         "hardware:front_camera": {
           "form": "fixed",
@@ -4445,7 +4453,11 @@
           "value": -1610,
           "slope": 0.5,
           "support": 3,
-          "residual": 0
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.45139569478473923
+          }
         },
         "original": {
           "form": "fixed",

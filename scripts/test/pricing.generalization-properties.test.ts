@@ -160,7 +160,14 @@ for (const device of SEED_DEVICES as any[]) {
         // forces age, loose does not. Their order at an already-old age is not
         // established by the single-fault young-phone observations. Both must
         // still stay below clean; all true added-damage checks below remain.
-        const prior = runnerScope(device.model) && ladder === 'bent' && i === 2 ? 0 : i - 1;
+        const runner=runnerScope(device.model);
+        // These replace mutually-exclusive display branch selections; they
+        // are not added faults. Their ordering at an already-old age is not
+        // measured by the young-phone single-fault corpus. Compare to clean;
+        // preserve all separate true added-fault checks below.
+        const alternativeDisplay=runner&&['Samsung','Google'].includes(runner.brand)&&
+          ((ladder==='screenChip'&&i===2)||(ladder==='screenScratch'&&i===3));
+        const prior = runner && ladder === 'bent' && i === 2 || alternativeDisplay ? 0 : i - 1;
         check(`severity ladder: ${ladder}`, doesNotRise(values[prior], values[i], steps[prior], steps[i]), name, regimeName, () => `${JSON.stringify(steps[i])}: ${values[i]} > ${values[i - 1]}`);
       }
     }
