@@ -1,4 +1,5 @@
-import { runnerScope, runnerQuote, runnerOffersCharger } from './cashifyRunnerModel';
+import { runnerScope, runnerQuote, runnerOffersCharger, runnerOffersAccessory } from './cashifyRunnerModel';
+import { runnerStorageIdentity } from './cashifyRunnerModel/identity';
 import { isAppleEvidenceModel } from './appleCashifyModel/scope';
 import type { GlassShadowCandidate, GlassShadowResult } from './glassShadowCandidate';
 import { boundedCompetitiveOffer, EXACT_FINAL_QUOTE_VERSION, type ExactFinalQuoteIndex } from './exactFinalQuote';
@@ -224,11 +225,13 @@ export function createPricingService(deps: PricingServiceDeps) {
     const key = deviceKey({ brand: device.brand, model: device.model, storage: device.storage });
     const [reference, questionnaire] = await Promise.all([lookupReference(key), lookupQuestionnaire(device)]);
     const runnerProfile = deps.disableRunnerEvidence ? null : runnerScope(device.model, device.storage);
+    const runnerStorage=device.brand==='Samsung'?runnerStorageIdentity(device.storage,device.ram):device.storage;
     if (runnerProfile) {
       // Full recorded questionnaire overrides the crawler's first-page metadata.
       const mode = runnerProfile.hasAge ? 'ASKED' : 'NOT_ASKED';
       Object.assign(questionnaire, { warrantyMode: mode, billMode: mode, ageMode: mode,
-        boxMode: 'ASKED', chargerMode: runnerOffersCharger(device.model, device.storage) ? 'ASKED' : 'NOT_ASKED' });
+        boxMode: 'ASKED', chargerMode: runnerOffersCharger(device.model, runnerStorage) ? 'ASKED' : 'NOT_ASKED',
+        sPenMode: runnerOffersAccessory(device.model, runnerStorage,'spen') ? 'ASKED' : 'NOT_ASKED' });
     }
     // Missing is not "No": where the bill question is shown, an exact value
     // needs the answer rather than silently depreciating (or crediting) it.
@@ -270,7 +273,7 @@ export function createPricingService(deps: PricingServiceDeps) {
       // identical for both.
       // Eligibility is checked here, never inferred by the shared calculator's ordinary callers.
       result = priceDevice(device.brand, device.model, base.cashifyGetUptoReference, diagnostics, hybrid ? legacyQuestionnaire : questionnaire, dispatchStorage,
-        { catalogStorage: device.storage, disableRunnerEvidence: deps.disableRunnerEvidence, ...(teamFallbackSupported ? { apple512OutOfWarrantyDispatch: true } : {}) });
+        { catalogStorage: runnerProfile?runnerStorage:device.storage, disableRunnerEvidence: deps.disableRunnerEvidence, ...(teamFallbackSupported ? { apple512OutOfWarrantyDispatch: true } : {}) });
       const exact = !runnerProfile && hybrid && deps.exactFinalQuoteIndex ? deps.exactFinalQuoteIndex.find({ device, diagnostics,
         reference: base.cashifyGetUptoReference, referenceVerifiedAt: base.referenceLastVerifiedAt, questionnaire, route, now: at,
         referenceExact: base.source === 'reference_repository' && base.referenceStatus === 'fresh' && base.referenceSource === 'cashify' && !reference.degraded &&
@@ -478,7 +481,7 @@ export function createPricingService(deps: PricingServiceDeps) {
         baseSource: base.source,
         referenceSource: base.referenceSource,
         cashifyConditionEquivalent: result.cashifyConditionEquivalent,
-        ...(runnerProfile ? { runnerModel: runnerQuote(device.model, device.storage, base.cashifyGetUptoReference, diagnostics)! } : {}),
+        ...(runnerProfile ? { runnerModel: runnerQuote(device.model, runnerStorage, base.cashifyGetUptoReference, diagnostics)! } : {}),
         accessoryBasis,
         payoutCeiling: { ...ceiling, equivalentBasis },
         ...(exactFinalQuote ? { exactFinalQuote } : {}),

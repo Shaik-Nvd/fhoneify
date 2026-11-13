@@ -19,7 +19,8 @@ import { inspectionRequestLinks } from '@/lib/inspectionRequest';
 import { SignedQuote, clearQuoteSession, loadQuoteSession, sameAcceptedQuote, sameDevice, saveQuoteSession } from '@/lib/pricing/quoteSession';
 import { warrantyVoidedByDiagnostics } from '@/lib/pricing/diagnostics';
 import { questionnaireFor } from '@/lib/pricing/questionnaire';
-import { runnerScope, runnerAsksAge, runnerOffersCharger } from '@/lib/pricing/cashifyRunnerModel/scope';
+import { runnerScope, runnerAsksAge, runnerOffersCharger, runnerOffersAccessory, runnerSupportsHardware, runnerSkipsAge } from '@/lib/pricing/cashifyRunnerModel/scope';
+import { runnerStorageIdentity } from '@/lib/pricing/cashifyRunnerModel/identity';
 import { UNKNOWN_QUESTIONNAIRE, isQuestionMode, showsQuestion, type QuestionnaireSemantics } from '@/lib/pricing/questionnaireSemantics';
 
 /** sessionStorage, or null where the browser blocks it (the page then simply
@@ -115,7 +116,11 @@ export default function QuotePage() {
     return false;
   };
 
-  const hasSPen = (brand: string, model: string) => {
+  const hasSPen = (brand: string, model: string, storage: string) => {
+    if(runnerScope(model,storage)) {
+      const device=SEED_DEVICES.find(d=>d.brand===brand&&d.model===model&&d.storage===storage);
+      return runnerOffersAccessory(model,runnerStorageIdentity(storage,device?.ram),'spen');
+    }
     if (brand.toLowerCase() !== 'samsung') return false;
     const lower = model.toLowerCase();
     if (lower.includes('fold 8') || lower.includes('fold8')) return false;
@@ -127,7 +132,10 @@ export default function QuotePage() {
     const lowerModel = model.toLowerCase();
     
     // Follow the recorded questionnaire, including storage-specific offers.
-    if (runnerScope(model, storage)) return runnerOffersCharger(model, storage);
+    if (runnerScope(model, storage)) {
+      const device=SEED_DEVICES.find(d=>d.brand===brand&&d.model===model&&d.storage===storage);
+      return runnerOffersCharger(model,brand==='Samsung'?runnerStorageIdentity(storage,device?.ram):storage);
+    }
     if (lowerBrand === 'nothing' || lowerBrand === 'cmf') {
       return lowerModel === 'nothing phone 3';
     }
@@ -1149,7 +1157,7 @@ export default function QuotePage() {
     );
 
     const isSamsung = brand.toLowerCase() === 'samsung';
-    const hasSPen = isSamsung && (
+    const hasSPen = isSamsung && !runnerScope(model) && (
       lowerModel.includes('note') || 
       lowerModel.includes('s22 ultra') || 
       lowerModel.includes('s23 ultra') || 
@@ -1171,7 +1179,7 @@ export default function QuotePage() {
         ...(hasFingerprint ? [{ id: 'fingerprint', label: isApple ? 'Finger Touch (Touch ID) not working' : 'Finger Touch not working', icon: '👆' }] : []),
         { id: 'wifi', label: 'WiFi not working', icon: '📶' },
         { id: 'speaker', label: 'Speaker Faulty', icon: '🔊' },
-        ...(brand.toLowerCase() === 'oneplus' && lowerModel === 'oneplus open' ? [{ id: 'outer_screen', label: 'Outer screen damaged / line / broken or spot', icon: '\uD83D\uDCF1' }] : []),
+        ...((brand.toLowerCase() === 'oneplus' && lowerModel === 'oneplus open') || runnerSupportsHardware(model,'outer_screen') ? [{ id: 'outer_screen', label: 'Outer screen damaged / line / broken or spot', icon: '\uD83D\uDCF1' }] : []),
         { id: 'hinge', label: 'Hinge damaged / not folding properly', icon: '📱' },
         { id: 'silent', label: hasActionButton ? 'Action Button not working' : 'Silent Button not working', icon: '🔕' },
         ...(hasFaceId ? [{ id: 'face', label: isApple ? 'Face ID / Face Sensor not working' : 'Face Sensor not working', icon: <FaceIdIcon /> }] : []),
@@ -2754,7 +2762,7 @@ export default function QuotePage() {
                   {[
                     {id: 'box', label: 'Original Box with same IMEI', icon: '📦'},
                     ...(hasChargerInBox(selectedBrand, selectedModel, selectedStorage) ? [{ id: 'charger', label: 'Original Charger', icon: '🔌' }] : []),
-                    ...(hasSPen(selectedBrand, selectedModel) ? [{ id: 'spen', label: 'Original S Pen', icon: '🖊️' }] : [])
+                    ...(hasSPen(selectedBrand, selectedModel, selectedStorage) ? [{ id: 'spen', label: 'Original S Pen', icon: '🖊️' }] : [])
                   ].filter(a => runnerProfile && a.id === 'charger' ? true : (a.id === 'box' ? modelQuestionnaire.boxMode : a.id === 'charger' ? modelQuestionnaire.chargerMode : a.id === 'spen' ? modelQuestionnaire.sPenMode : undefined) !== 'NOT_ASKED').map((a) => (
                     <button key={a.id} onClick={() => toggleArrayItem('accessories', a.id)} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem', padding: '3rem 1rem', borderRadius: '8px', border: diagnostics.accessories.includes(a.id) ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.accessories.includes(a.id) ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', color: diagnostics.accessories.includes(a.id) ? '#4CD964' : 'var(--foreground)', cursor: 'pointer' }}>
                       <span style={{ fontSize: '4rem' }}>{a.icon}</span>
@@ -2793,16 +2801,17 @@ export default function QuotePage() {
                     // 2. If screen IS original (originalScreen !== false) and user selected Yes on warranty (warranty === true),
                     //    the age question must ALWAYS be asked for all Apple devices (including iPhone 15, 16, 17, 18 series).
                     const screenIsNotOriginal = diagnostics.originalScreen === false;
+                    const measuredAgeSkipped=!!runnerProfile&&['Samsung','Google'].includes(selectedBrand)&&runnerSkipsAge(diagnostics);
                     const forceAgeForWarranty = diagnostics.warranty === true && !screenIsNotOriginal;
 
-                    if ((asksAge || forceAgeForWarranty) && !screenIsNotOriginal) {
+                    if ((asksAge || forceAgeForWarranty) && !screenIsNotOriginal && !measuredAgeSkipped) {
                       // Ask the age question.
                       setDiagnostics(baseDiag);
                       navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 9);
                     } else {
                       const updatedDiag = {
                         ...baseDiag,
-                        mobileAge: screenIsNotOriginal || !asksWarrantyQuestion ? null : (isWarrantyValid ? baseDiag.mobileAge : 'above11' as const)
+                        mobileAge: measuredAgeSkipped || screenIsNotOriginal || !asksWarrantyQuestion ? null : (isWarrantyValid ? baseDiag.mobileAge : 'above11' as const)
                       };
                       setDiagnostics(updatedDiag);
                       if (isAuthenticated) {
