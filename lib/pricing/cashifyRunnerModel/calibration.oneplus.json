@@ -1,6 +1,6 @@
 {
   "version": "cashify-runner-rules-v3",
-  "sourceHash": "bc7371b8127af32d145b135654d641e86afc7ad88dd9ec4db27aeaf4bb7f321f",
+  "sourceHash": "ca6dad9e495c32dd26a30ef80a1da26c758922c11c92c02f14ca6bd106699b0a",
   "profiles": {
     "oneplus10pro5g": {
       "model": "OnePlus 10 Pro 5G",

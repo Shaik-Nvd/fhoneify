@@ -170,6 +170,15 @@ export function fitCalibration(all: RunnerMeasurement[], brand: RunnerProfile['b
   return { version: newBrand?'cashify-runner-rules-v5':extended?'cashify-runner-rules-v4':'cashify-runner-rules-v3', sourceHash: createHash('sha256').update(JSON.stringify(rows)).digest('hex'), profiles };
 }
 
+/** Restricted release correction; repeat fits hash the same protected profiles. */
+export function mergeOnePlus9RT(previous:RunnerCalibration,incoming:RunnerCalibration):RunnerCalibration {
+  const key=modelKey('OnePlus 9RT 5G');
+  if(!incoming.profiles[key])throw new Error('Approved profile absent from supplied measurements');
+  const protectedProfiles=Object.fromEntries(Object.entries(previous.profiles).filter(([id])=>id!==key));
+  return {...previous,sourceHash:createHash('sha256').update(JSON.stringify(protectedProfiles)+incoming.sourceHash).digest('hex'),
+    profiles:{...previous.profiles,[key]:incoming.profiles[key]}};
+}
+
 if (require.main === module) {
   const brand = process.argv.find(a => a.startsWith('--brand='))?.slice(8) ?? process.argv[process.argv.indexOf('--brand') + 1];
   if (brand !== 'Nothing' && brand !== 'OnePlus' && brand!=='Samsung' && brand!=='Google' && !['Xiaomi','Honor','Asus','Lenovo','Nokia'].includes(brand)) throw new Error('--brand Nothing|OnePlus|Samsung|Google required');
@@ -181,8 +190,7 @@ if (require.main === module) {
   if(onlyModel) {
     if(brand!=='OnePlus'||onlyModel!=='OnePlus 9RT 5G')throw new Error('Only the approved OnePlus 9RT profile may be replaced');
     const previous:RunnerCalibration=JSON.parse(fs.readFileSync('lib/pricing/cashifyRunnerModel/calibration.oneplus.json','utf8'));
-    const key=modelKey(onlyModel);if(!calibration.profiles[key])throw new Error('Approved profile absent from supplied measurements');
-    calibration={...previous,sourceHash:createHash('sha256').update(previous.sourceHash+calibration.sourceHash).digest('hex'),profiles:{...previous.profiles,[key]:calibration.profiles[key]}};
+    calibration=mergeOnePlus9RT(previous,calibration);
   }
   if (process.argv.includes('--write')) {
     fs.writeFileSync(path.resolve(`lib/pricing/cashifyRunnerModel/calibration.${brand.toLowerCase()}.json`), JSON.stringify(calibration, null, 2) + '\n');

@@ -12,7 +12,7 @@ Object.assign(process.env, { DATABASE_URL: 'postgresql://offline:offline@127.0.0
   NODE_ENV: 'test', JWT_SECRET: 'runner-browser-local-only-jwt-secret-32', QUOTE_SIGNING_SECRET: 'runner-browser-local-only-quote-secret-32', LOG_LEVEL: 'silent' });
 (async () => {
   const refs = new Map<string, any>();
-  for (const dir of ['nothing-2026-11-08', 'oneplus-2026-11-09','samsung-2026-11-12','google-2026-11-11']) {
+  for (const dir of ['nothing-2026-11-08', 'oneplus-2026-11-09','samsung-2026-11-12','google-2026-11-11',...['xiaomi','honor','asus','lenovo','nokia'].map(b=>b+'-2026-11-16')]) {
     if(!fs.existsSync(`data/pricing-evidence/${dir}/measurements.jsonl`))continue;
     const rows = fs.readFileSync(`data/pricing-evidence/${dir}/measurements.jsonl`, 'utf8').trim().split('\n').map(line => JSON.parse(line));
     for (const row of rows.filter(r => r.status==='quoted'&&r.primary!==false)) {

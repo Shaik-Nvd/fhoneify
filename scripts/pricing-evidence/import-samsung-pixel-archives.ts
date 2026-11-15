@@ -174,7 +174,12 @@ export function reconcile(rows:RunnerMeasurement[]) {
     const previous=bySource.get(row.source.folder);const at=row.observedAt??'';
     bySource.set(row.source.folder,{date:at>(previous?.date??'')?at:previous!.date,format:row.source.format??'A',complete:row.complete,count:(previous?.count??0)+1});sources.set(variant,bySource);
   }
-  const selected=new Map([...sources].map(([variant,bySource])=>[variant,[...bySource].sort((a,b)=>b[1].date.localeCompare(a[1].date)||(rows[0]?.brand==='Xiaomi'?(Number(b[1].complete)-Number(a[1].complete)||b[1].count-a[1].count):0)||a[1].format.localeCompare(b[1].format)||a[0].localeCompare(b[0]))[0][0]]));
+  const xiaomi=rows[0]?.brand==='Xiaomi';
+  const selected=new Map([...sources].map(([variant,bySource])=>[variant,[...bySource].sort((a,b)=>
+    (xiaomi?Number(b[1].complete)-Number(a[1].complete):0)||
+    b[1].date.localeCompare(a[1].date)||
+    (xiaomi?b[1].count-a[1].count:0)||
+    a[1].format.localeCompare(b[1].format)||a[0].localeCompare(b[0]))[0][0]]));
   const groups=new Map<string,RunnerMeasurement[]>();
   for(const row of rows){const key=modelKey(row.model)+'|'+storageKey(row.storage)+'|'+signature(row)+(row.status==='pending'||row.status==='not_applicable'?'|'+row.caseId:'');groups.set(key,[...groups.get(key)??[],row]);}
   for(const group of groups.values()) {
