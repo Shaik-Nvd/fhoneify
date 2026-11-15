@@ -23288,5 +23288,217 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "referencePriceStatus": "pending",
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-google-pixel-11-pro-xl-16-gb-512-gb"
+  },
+  {
+    "id": "xiaomi-redmi-note-11-6-gb-64-gb",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 11",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-11-6-gb-64-gb"
+  },
+  {
+    "id": "xiaomi-black-shark-2-6-gb-128-gb",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Black Shark 2",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-black-shark-2-6-gb-128-gb"
+  },
+  {
+    "id": "xiaomi-redmi-note-10s-6-gb-128-gb",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 10s",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-10s-6-gb-128-gb"
+  },
+  {
+    "id": "xiaomi-redmi-a7-pro-4-gb-64-gb",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A7 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending"
+  },
+  {
+    "id": "xiaomi-redmi-17-5g-6-gb-128-gb",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 17 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending"
+  },
+  {
+    "id": "xiaomi-redmi-17-5g-8-gb-128-gb",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi 17 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending"
+  },
+  {
+    "id": "xiaomi-redmi-a1-2-gb-32-gb",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A1",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending"
+  },
+  {
+    "id": "xiaomi-redmi-a7-3-gb-64-gb",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi A7",
+    "storage": "3 GB/64 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending"
+  },
+  {
+    "id": "xiaomi-redmi-note-14-pro-plus-5g-8-gb-256-gb",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 14 Pro Plus 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending"
+  },
+  {
+    "id": "xiaomi-redmi-note-17-pro-max-5g-12-gb-256-gb",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 17 Pro Max 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending"
+  },
+  {
+    "id": "xiaomi-redmi-note-17-pro-max-5g-8-gb-256-gb",
+    "brand": "Xiaomi",
+    "model": "Xiaomi Redmi Note 17 Pro Max 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending"
+  },
+  {
+    "id": "nokia-5-3-6-gb-64-gb",
+    "brand": "Nokia",
+    "model": "Nokia 5.3",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-5-3-6-gb-64-gb"
+  },
+  {
+    "id": "nokia-5-4-4-gb-64-gb",
+    "brand": "Nokia",
+    "model": "Nokia 5.4",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-5-4-4-gb-64-gb"
+  },
+  {
+    "id": "nokia-6-1-plus-6-gb-64-gb",
+    "brand": "Nokia",
+    "model": "Nokia 6.1 Plus",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-6-1-plus-6-gb-64-gb"
+  },
+  {
+    "id": "nokia-7-2-6-gb-64-gb",
+    "brand": "Nokia",
+    "model": "Nokia 7.2",
+    "storage": "6 GB/64 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-7-2-6-gb-64-gb"
+  },
+  {
+    "id": "nokia-c12-pro-3-gb-64-gb",
+    "brand": "Nokia",
+    "model": "Nokia C12 Pro",
+    "storage": "3 GB/64 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-c12-pro-3-gb-64-gb"
+  },
+  {
+    "id": "nokia-c12-pro-4-gb-64-gb",
+    "brand": "Nokia",
+    "model": "Nokia C12 Pro",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-c12-pro-4-gb-64-gb"
+  },
+  {
+    "id": "nokia-c20-plus-2-gb-32-gb",
+    "brand": "Nokia",
+    "model": "Nokia C20 Plus",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-c20-plus-2-gb-32-gb"
+  },
+  {
+    "id": "nokia-c22-2-gb-64-gb",
+    "brand": "Nokia",
+    "model": "Nokia C22",
+    "storage": "2 GB/64 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-c22-2-gb-64-gb"
+  },
+  {
+    "id": "nokia-c22-4-gb-64-gb",
+    "brand": "Nokia",
+    "model": "Nokia C22",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-c22-4-gb-64-gb"
+  },
+  {
+    "id": "nokia-c32-4-gb-128-gb",
+    "brand": "Nokia",
+    "model": "Nokia C32",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-c32-4-gb-128-gb"
+  },
+  {
+    "id": "nokia-g42-5g-4-gb-128-gb",
+    "brand": "Nokia",
+    "model": "Nokia G42 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-g42-5g-4-gb-128-gb"
   }
 ];
