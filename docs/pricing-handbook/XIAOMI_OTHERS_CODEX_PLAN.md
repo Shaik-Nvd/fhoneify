@@ -1,8 +1,8 @@
-# Xiaomi/Redmi, Honor, Asus, Lenovo and gap-fill: verified state and Codex work order (16 November 2026)
+# Xiaomi/Redmi, Honor, Asus, Lenovo, Nokia and gap-fill: verified state and Codex work order (16 November 2026)
 
 Written from a read-only investigation of `main` at `b027422` (Samsung/Pixel release, PR 33) and the owner's archive `WhatsApp Unknown 2026-11-15 at 4.54.39 PM.zip`. Read `AGENTS.md`, `docs/HANDOFF_CODEX.md`, `STRICT_RULES.md`, `SAMSUNG_PIXEL_CODEX_PLAN.md` and `RUNNER_REVIEW_2026_11_12.md` first; every rule and gate there applies.
 
-**Extend the shared engine again.** Add calibration files for Xiaomi, Honor, Asus and Lenovo to `lib/pricing/cashifyRunnerModel/`, refit OnePlus and Google with the gap-fill data, and reuse the existing importers. Prices of every already-released variant must not change, except the OnePlus 9RT (section 1.3).
+**Extend the shared engine again.** Add calibration files for Xiaomi, Honor, Asus, Lenovo and Nokia to `lib/pricing/cashifyRunnerModel/`, refit OnePlus and Google with the gap-fill data, and reuse the existing importers. Prices of every already-released variant must not change, except the OnePlus 9RT (section 1.3).
 
 ## 1. What was verified
 
@@ -61,6 +61,18 @@ Xiaomi follows the same Cashify skeleton as the released brands: warranty No = b
 - One catalog row has no brand (`undefined`). Report it; do not guess.
 - Existing Xiaomi special cases to reconcile, not silently layer under: `calculateXiaomiPrice`, the disabled `inrDeductionTables.ts`/`inrDeductions.ts`, `xiaomiEvidenceCandidate.ts`, `xiaomiNoteEvidenceCandidate.ts`, `xiaomiWorkbookEvidenceCandidate.ts`, `xiaomiApplicationCandidate.ts`, the `xiaomi-workbook` entries in `releaseCandidate.ts`, and the Xiaomi rows in the release-route fixtures.
 
+### 1.7 Nokia (added 16 November, second archive `Nokia.rar`)
+
+- RAR archive; it opens with Windows' built-in `tar.exe -xf` (or 7-Zip). 32 runner folders, same layout as the others.
+- **54 variants, 2,499 rows: 2,447 priced, 43 pending, 9 no-offer.** Dates 11–15 November. Arithmetic checks on every priced row.
+- Nokia 8.1 4/64 is incomplete (43 pending). No-offers are on Nokia 2.2 (7), 3.2 (1) and 7.1 (1).
+- 6 `diagnostic.json` files and one `.running.lock` file: ignore both, never commit them.
+- 51 variants have no age questions; 3 do. Every variant is offered box and charger.
+- Current engine (generic Android fallback): mean error ₹675, 3.6% within ₹100, overpays on 2,386 of 2,447 quotes. Worst models X30 5G, XR20, G60 5G.
+- Catalog has 45 Nokia variants. 11 data variants are missing: 5.3 6/64, 5.4 4/64, 6.1 Plus 6/64, 7.2 6/64, C12 Pro 3/64 and 4/64, C20 Plus 2/32, C22 2/64 and 4/64, C32 4/128, G42 5G 4/128. Nokia 5.1 has no data.
+
+Treat Nokia exactly like Honor, Asus and Lenovo in every step below: importer, read-only audit, `--brand Nokia` fit, a brand branch in `routeBrandCalculator`, the same gates (9 no-offers must return manual inspection), and one browser QA phone.
+
 ## 2. Owner decisions (already given on 16 November unless noted)
 
 The owner asked for this work to be planned, decided and released. These are decided:
@@ -90,7 +102,7 @@ Same audit as before for all four brands: production references, questionnaire p
 
 ### Step 3: Fit
 
-`fit-cashify-runner-calibration.ts --brand Xiaomi|Honor|Asus|Lenovo|OnePlus|Google`.
+`fit-cashify-runner-calibration.ts --brand Xiaomi|Honor|Asus|Lenovo|Nokia|OnePlus|Google`.
 - Same rules as now (simplest form within ₹10; `affine`/`capped` need three storages; percentage `byStorage` values scale with R; measured no-offers; same-series sibling inference only).
 - Text-report-only Xiaomi models: fit deductions against each report's own baseline; mark every rule with the observation date.
 - OnePlus: only the 9RT profile may change. Google: no price may change.
@@ -98,7 +110,7 @@ Same audit as before for all four brands: production references, questionnaire p
 ### Step 4: Wiring
 
 - Xiaomi: `calculateXiaomiPrice` tries the runner model first; existing code unchanged on null. POCO must keep returning null from the runner model.
-- Honor, Asus, Lenovo: brand branches in `routeBrandCalculator` that use the runner model and otherwise fall through to the generic calculator unchanged.
+- Honor, Asus, Lenovo, Nokia: brand branches in `routeBrandCalculator` that use the runner model and otherwise fall through to the generic calculator unchanged.
 - Quote page follows each measured profile (age, charger, face sensor).
 - One engine version bump.
 
@@ -107,7 +119,7 @@ Same audit as before for all four brands: production references, questionnaire p
 | Check | Gate |
 |---|---|
 | Replay of every primary priced quote through the service, per brand | 100% within ₹20 |
-| Measured no-offers (Honor 1, Asus 1, Lenovo 12) | all return manual inspection |
+| Measured no-offers (Honor 1, Asus 1, Lenovo 12, Nokia 9) | all return manual inspection |
 | Leave-one-storage-out, per brand | ≥ 95% within ₹20; if a brand fails, report which catalog variants are actually inferred and their expected error, as PR 33 did |
 | OnePlus 9RT | 92/92 within ₹20 after refit |
 | Pixel gap-fill | 98/98 within ₹20, calibration unchanged |
