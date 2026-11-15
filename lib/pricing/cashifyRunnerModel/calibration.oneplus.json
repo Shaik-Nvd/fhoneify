@@ -1,6 +1,6 @@
 {
   "version": "cashify-runner-rules-v3",
-  "sourceHash": "6d4cac4bc79d35c5924e9d3001ee56258d6c090f52a500126a16b239269fbb29",
+  "sourceHash": "bc7371b8127af32d145b135654d641e86afc7ad88dd9ec4db27aeaf4bb7f321f",
   "profiles": {
     "oneplus10pro5g": {
       "model": "OnePlus 10 Pro 5G",
@@ -8473,266 +8473,262 @@
             "charger",
             "box"
           ],
-          "scrap": 800,
-          "scrapInferredFrom": "OnePlus 9R 5G"
+          "scrap": 800
+        },
+        "12gb/256gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 800
         }
       },
       "rules": {
         "hardware:front_camera": {
           "form": "fixed",
           "value": 750,
-          "support": 1,
+          "support": 2,
           "residual": 0
         },
         "hardware:back_camera": {
           "form": "fixed",
           "value": 3000,
-          "support": 1,
+          "support": 2,
           "residual": 0
         },
         "hardware:volume": {
           "form": "fixed",
           "value": 500,
-          "support": 1,
+          "support": 2,
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 2700,
-          "support": 1,
+          "form": "pct",
+          "value": 0.26411200449074607,
+          "support": 2,
           "residual": 0
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 4050,
-          "support": 1,
+          "form": "pct",
+          "value": 0.3961680067361191,
+          "support": 2,
           "residual": 0
         },
         "hardware:battery_service": {
           "form": "fixed",
           "value": 1200,
-          "support": 1,
+          "support": 2,
           "residual": 0
         },
         "hardware:speaker": {
           "form": "fixed",
           "value": 400,
-          "support": 1,
+          "support": 2,
           "residual": 0
         },
         "hardware:power": {
           "form": "fixed",
           "value": 500,
-          "support": 1,
+          "support": 2,
           "residual": 0
         },
         "hardware:charging": {
           "form": "fixed",
           "value": 1500,
-          "support": 1,
+          "support": 2,
           "residual": 0
         },
         "hardware:face": {
-          "form": "fixed",
-          "value": 2700,
-          "support": 1,
+          "form": "pct",
+          "value": 0.26411200449074607,
+          "support": 2,
           "residual": 0
         },
         "hardware:silent": {
           "form": "fixed",
           "value": 0,
-          "support": 1,
+          "support": 2,
           "residual": 0
         },
         "hardware:audio_receiver": {
           "form": "fixed",
           "value": 0,
-          "support": 1,
+          "support": 2,
           "residual": 0
         },
         "hardware:camera_glass": {
           "form": "fixed",
           "value": 2000,
-          "support": 1,
+          "support": 2,
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 4050,
-          "support": 1,
+          "form": "pct",
+          "value": 0.3961680067361191,
+          "support": 2,
           "residual": 0
         },
         "hardware:vibrator": {
           "form": "fixed",
           "value": 400,
-          "support": 1,
+          "support": 2,
           "residual": 0
         },
         "hardware:microphone": {
           "form": "fixed",
           "value": 400,
-          "support": 1,
+          "support": 2,
           "residual": 0
         },
         "hardware:proximity": {
-          "form": "fixed",
-          "value": 300,
-          "support": 1,
+          "form": "pct",
+          "value": 0.02961498456306031,
+          "support": 2,
           "residual": 0
         },
         "screen:1": {
           "form": "fixed",
           "value": 2940,
-          "support": 0,
-          "residual": 0,
-          "inferredFrom": "OnePlus 9R 5G"
+          "support": 2,
+          "residual": 0
         },
         "screen:2": {
           "form": "fixed",
           "value": 2060,
-          "support": 0,
-          "residual": 0,
-          "inferredFrom": "OnePlus 9R 5G"
+          "support": 2,
+          "residual": 10
         },
         "screen:3": {
           "form": "fixed",
-          "value": 890,
-          "support": 0,
-          "residual": 0,
-          "inferredFrom": "OnePlus 9R 5G"
+          "value": 880,
+          "support": 2,
+          "residual": 0
         },
         "spots:0": {
           "form": "fixed",
           "value": 5950,
-          "support": 0,
-          "residual": 0,
-          "inferredFrom": "OnePlus 9R 5G"
+          "support": 2,
+          "residual": 0
         },
         "spots:1": {
           "form": "fixed",
           "value": 4200,
-          "support": 0,
-          "residual": 0,
-          "inferredFrom": "OnePlus 9R 5G"
+          "support": 2,
+          "residual": 0
         },
         "spots:2": {
           "form": "fixed",
           "value": 1400,
-          "support": 0,
-          "residual": 0,
-          "inferredFrom": "OnePlus 9R 5G"
+          "support": 2,
+          "residual": 0
         },
         "lines:0": {
           "form": "fixed",
           "value": 5950,
-          "support": 0,
-          "residual": 0,
-          "inferredFrom": "OnePlus 9R 5G"
+          "support": 2,
+          "residual": 0
         },
         "lines:1": {
           "form": "fixed",
           "value": 3500,
-          "support": 0,
-          "residual": 0,
-          "inferredFrom": "OnePlus 9R 5G"
+          "support": 2,
+          "residual": 0
         },
         "color:0": {
           "form": "fixed",
           "value": 3850,
-          "support": 0,
-          "residual": 0,
-          "inferredFrom": "OnePlus 9R 5G"
+          "support": 2,
+          "residual": 0
         },
         "color:1": {
           "form": "fixed",
           "value": 1400,
-          "support": 0,
-          "residual": 0,
-          "inferredFrom": "OnePlus 9R 5G"
+          "support": 2,
+          "residual": 0
         },
         "scratch:0": {
           "form": "pct",
-          "value": 0.058822006877088044,
-          "support": 0,
-          "residual": 0,
-          "inferredFrom": "OnePlus 9R 5G"
+          "value": 0.05874539781076128,
+          "support": 2,
+          "residual": 0
         },
         "scratch:1": {
           "form": "fixed",
           "value": 0,
-          "support": 0,
-          "residual": 0,
-          "inferredFrom": "OnePlus 9R 5G"
+          "support": 2,
+          "residual": 0
         },
         "dent:0": {
           "form": "pct",
-          "value": 0.10183677147038901,
-          "support": 0,
-          "residual": 0,
-          "inferredFrom": "OnePlus 9R 5G"
+          "value": 0.1011127804652545,
+          "support": 2,
+          "residual": 0
         },
         "dent:1": {
           "form": "pct",
-          "value": 0.058822006877088044,
-          "support": 0,
-          "residual": 0,
-          "inferredFrom": "OnePlus 9R 5G"
+          "value": 0.05874539781076128,
+          "support": 2,
+          "residual": 0
         },
         "panel": {
           "form": "pct",
-          "value": 0.1769729384973841,
-          "support": 0,
-          "residual": 0,
-          "inferredFrom": "OnePlus 9R 5G"
+          "value": 0.17623619343228383,
+          "support": 2,
+          "residual": 0
         },
         "bent": {
           "form": "pct",
-          "value": 0.1769729384973841,
-          "support": 0,
-          "residual": 0,
-          "inferredFrom": "OnePlus 9R 5G"
+          "value": 0.17623619343228383,
+          "support": 2,
+          "residual": 0
         },
         "loose": {
           "form": "pct",
-          "value": 0.1769729384973841,
-          "support": 0,
-          "residual": 0,
-          "inferredFrom": "OnePlus 9R 5G"
+          "value": 0.17623619343228383,
+          "support": 2,
+          "residual": 0
         },
         "touch": {
-          "form": "pct",
-          "value": 0.6040531941441708,
-          "support": 0,
-          "residual": 0,
-          "inferredFrom": "OnePlus 9R 5G"
+          "form": "byStorage",
+          "value": 0,
+          "values": {
+            "8gb/128gb": 6170,
+            "12gb/256gb": 7000
+          },
+          "references": {
+            "8gb/128gb": 10220,
+            "12gb/256gb": 11740
+          },
+          "fallback": {
+            "form": "pct",
+            "value": 0.5994708514256468
+          },
+          "support": 2,
+          "residual": 0
         },
         "original": {
           "form": "fixed",
           "value": 3500,
-          "support": 0,
-          "residual": 0,
-          "inferredFrom": "OnePlus 9R 5G"
+          "support": 2,
+          "residual": 0
         },
         "charger": {
           "form": "fixed",
           "value": 400,
-          "support": 0,
-          "residual": 0,
-          "inferredFrom": "OnePlus 9R 5G"
+          "support": 2,
+          "residual": 0
         },
         "box": {
           "form": "fixed",
           "value": 500,
-          "support": 0,
-          "residual": 0,
-          "inferredFrom": "OnePlus 9R 5G"
+          "support": 2,
+          "residual": 0
         },
         "crackedExtra": {
           "form": "fixed",
           "value": 670,
-          "support": 0,
-          "residual": 0,
-          "inferredFrom": "OnePlus 9R 5G"
+          "support": 2,
+          "residual": 10
         }
       }
     },

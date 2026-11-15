@@ -1,0 +1,6229 @@
+{
+  "version": "cashify-runner-rules-v5",
+  "sourceHash": "ae12681c23ba6607b197902d05800c980899550d0f1e5f82c57d21d4886d2962",
+  "profiles": {
+    "honor10": {
+      "model": "Honor 10",
+      "brand": "Honor",
+      "hasAge": false,
+      "variants": {
+        "6gb/128gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 300
+        }
+      },
+      "rules": {
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 750,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 1200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 300,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:fingerprint": {
+          "form": "fixed",
+          "value": 670,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:wifi": {
+          "form": "fixed",
+          "value": 1000,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 800,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 300,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 1250,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 600,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:bluetooth": {
+          "form": "fixed",
+          "value": 1000,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:proximity": {
+          "form": "fixed",
+          "value": 80,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "cracked": {
+          "form": "fixed",
+          "value": 1780,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 1430,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 1000,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 430,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:0": {
+          "form": "fixed",
+          "value": 1780,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:1": {
+          "form": "fixed",
+          "value": 2040,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 680,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "lines:0": {
+          "form": "fixed",
+          "value": 1780,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 1700,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 1870,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 680,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "scratch:0": {
+          "form": "fixed",
+          "value": 150,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "scratch:1": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "dent:0": {
+          "form": "fixed",
+          "value": 260,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "dent:1": {
+          "form": "fixed",
+          "value": 150,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "panel": {
+          "form": "fixed",
+          "value": 450,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "bent": {
+          "form": "fixed",
+          "value": 450,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "loose": {
+          "form": "fixed",
+          "value": 450,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "touch": {
+          "form": "fixed",
+          "value": 1780,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "original": {
+          "form": "fixed",
+          "value": 1700,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "charger": {
+          "form": "fixed",
+          "value": 30,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "box": {
+          "form": "fixed",
+          "value": 50,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "both": {
+          "form": "fixed",
+          "value": 50,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        }
+      },
+      "noOffer": {}
+    },
+    "honor20": {
+      "model": "Honor 20",
+      "brand": "Honor",
+      "hasAge": false,
+      "variants": {
+        "6gb/128gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 300
+        }
+      },
+      "rules": {
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 1000,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 300,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:fingerprint": {
+          "form": "fixed",
+          "value": 720,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:wifi": {
+          "form": "fixed",
+          "value": 1080,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 1200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 300,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 750,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:bluetooth": {
+          "form": "fixed",
+          "value": 1080,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 300,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 300,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:proximity": {
+          "form": "fixed",
+          "value": 80,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "cracked": {
+          "form": "fixed",
+          "value": 1540,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 1090,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 760,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 320,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:0": {
+          "form": "fixed",
+          "value": 1940,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:1": {
+          "form": "fixed",
+          "value": 1560,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 520,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "lines:0": {
+          "form": "fixed",
+          "value": 1940,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 1300,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 1430,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 520,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "scratch:0": {
+          "form": "fixed",
+          "value": 160,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "scratch:1": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "dent:0": {
+          "form": "fixed",
+          "value": 270,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "dent:1": {
+          "form": "fixed",
+          "value": 160,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "panel": {
+          "form": "fixed",
+          "value": 480,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "bent": {
+          "form": "fixed",
+          "value": 480,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "loose": {
+          "form": "fixed",
+          "value": 480,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "touch": {
+          "form": "fixed",
+          "value": 1940,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "original": {
+          "form": "fixed",
+          "value": 1300,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "charger": {
+          "form": "fixed",
+          "value": 20,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "box": {
+          "form": "fixed",
+          "value": 50,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "both": {
+          "form": "fixed",
+          "value": 50,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        }
+      },
+      "noOffer": {}
+    },
+    "honor2005g": {
+      "model": "Honor 200 5G",
+      "brand": "Honor",
+      "hasAge": false,
+      "variants": {
+        "8gb/256gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 800
+        },
+        "12gb/512gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 800
+        }
+      },
+      "rules": {
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 1000,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 2400,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 400,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:fingerprint": {
+          "form": "pct",
+          "value": 0.2637010970088176,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:wifi": {
+          "form": "pct",
+          "value": 0.3957786560077689,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 1500,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 400,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 400,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 1250,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 1000,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:bluetooth": {
+          "form": "pct",
+          "value": 0.3957786560077689,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 400,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 400,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:proximity": {
+          "form": "pct",
+          "value": 0.02962249180935123,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "cracked": {
+          "form": "fixed",
+          "value": 4940,
+          "support": 2,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 3480,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 2440,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 1040,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:0": {
+          "form": "byStorage",
+          "value": 0,
+          "values": {
+            "8gb/256gb": 6430,
+            "12gb/512gb": 7050
+          },
+          "fallback": {
+            "form": "fixed",
+            "value": 6740
+          },
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:1": {
+          "form": "fixed",
+          "value": 4980,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 1660,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "lines:0": {
+          "form": "byStorage",
+          "value": 0,
+          "values": {
+            "8gb/256gb": 6430,
+            "12gb/512gb": 7050
+          },
+          "fallback": {
+            "form": "fixed",
+            "value": 6740
+          },
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 4150,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 4560,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 1660,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "scratch:0": {
+          "form": "pct",
+          "value": 0.058248339970115706,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "scratch:1": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "dent:0": {
+          "form": "pct",
+          "value": 0.10145842354101331,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "dent:1": {
+          "form": "pct",
+          "value": 0.058248339970115706,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "panel": {
+          "form": "pct",
+          "value": 0.17628428621843564,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "bent": {
+          "form": "pct",
+          "value": 0.17628428621843564,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "loose": {
+          "form": "pct",
+          "value": 0.17628428621843564,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "touch": {
+          "form": "pct",
+          "value": 0.7092123211385064,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "original": {
+          "form": "fixed",
+          "value": 4150,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "charger": {
+          "form": "fixed",
+          "value": 400,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "box": {
+          "form": "fixed",
+          "value": 600,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "both": {
+          "form": "fixed",
+          "value": 600,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        }
+      },
+      "noOffer": {}
+    },
+    "honor200lite5g": {
+      "model": "Honor 200 Lite 5G",
+      "brand": "Honor",
+      "hasAge": false,
+      "variants": {
+        "8gb/256gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 800
+        }
+      },
+      "rules": {
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 1500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 3200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 400,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:fingerprint": {
+          "form": "fixed",
+          "value": 1610,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:wifi": {
+          "form": "fixed",
+          "value": 2420,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 1500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 400,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 400,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 1200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 1200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:bluetooth": {
+          "form": "fixed",
+          "value": 2420,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 400,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 400,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:proximity": {
+          "form": "fixed",
+          "value": 180,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "cracked": {
+          "form": "fixed",
+          "value": 3150,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 2230,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 1560,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 670,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:0": {
+          "form": "fixed",
+          "value": 4330,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:1": {
+          "form": "fixed",
+          "value": 3180,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 1060,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "lines:0": {
+          "form": "fixed",
+          "value": 4330,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 2650,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 2910,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 1060,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "scratch:0": {
+          "form": "fixed",
+          "value": 360,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "scratch:1": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "dent:0": {
+          "form": "fixed",
+          "value": 620,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "dent:1": {
+          "form": "fixed",
+          "value": 360,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "panel": {
+          "form": "fixed",
+          "value": 1080,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "bent": {
+          "form": "fixed",
+          "value": 1080,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "loose": {
+          "form": "fixed",
+          "value": 1080,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "touch": {
+          "form": "fixed",
+          "value": 4330,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "original": {
+          "form": "fixed",
+          "value": 2650,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "charger": {
+          "form": "fixed",
+          "value": 300,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "box": {
+          "form": "fixed",
+          "value": 400,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "both": {
+          "form": "fixed",
+          "value": 400,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        }
+      },
+      "noOffer": {}
+    },
+    "honor200pro5g": {
+      "model": "Honor 200 Pro 5G",
+      "brand": "Honor",
+      "hasAge": false,
+      "variants": {
+        "12gb/512gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 1200
+        }
+      },
+      "rules": {
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 1400,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 2800,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 400,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:fingerprint": {
+          "form": "fixed",
+          "value": 4180,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:wifi": {
+          "form": "fixed",
+          "value": 6270,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 1500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 400,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 400,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 1250,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 1200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:bluetooth": {
+          "form": "fixed",
+          "value": 6270,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 400,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 400,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:proximity": {
+          "form": "fixed",
+          "value": 470,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "cracked": {
+          "form": "fixed",
+          "value": 5530,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 3910,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 2730,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 1170,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:0": {
+          "form": "fixed",
+          "value": 7900,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:1": {
+          "form": "fixed",
+          "value": 5580,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 1860,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "lines:0": {
+          "form": "fixed",
+          "value": 7900,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 4650,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 5110,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 1860,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "scratch:0": {
+          "form": "fixed",
+          "value": 930,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "scratch:1": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "dent:0": {
+          "form": "fixed",
+          "value": 1610,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "dent:1": {
+          "form": "fixed",
+          "value": 930,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "panel": {
+          "form": "fixed",
+          "value": 2790,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "bent": {
+          "form": "fixed",
+          "value": 2790,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "loose": {
+          "form": "fixed",
+          "value": 2790,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "touch": {
+          "form": "fixed",
+          "value": 9300,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "original": {
+          "form": "fixed",
+          "value": 4650,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "charger": {
+          "form": "fixed",
+          "value": 400,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "box": {
+          "form": "fixed",
+          "value": 600,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "both": {
+          "form": "fixed",
+          "value": 600,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        }
+      },
+      "noOffer": {}
+    },
+    "honor20i": {
+      "model": "Honor 20i",
+      "brand": "Honor",
+      "hasAge": false,
+      "variants": {
+        "4gb/128gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 300,
+          "scrapInferredFrom": "Honor 20"
+        }
+      },
+      "rules": {
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 430,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 850,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 300,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:fingerprint": {
+          "form": "fixed",
+          "value": 650,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:wifi": {
+          "form": "fixed",
+          "value": 980,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 800,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 300,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 430,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:bluetooth": {
+          "form": "fixed",
+          "value": 980,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:proximity": {
+          "form": "fixed",
+          "value": 80,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "cracked": {
+          "form": "fixed",
+          "value": 1130,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 800,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 560,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 240,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:0": {
+          "form": "fixed",
+          "value": 1620,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:1": {
+          "form": "fixed",
+          "value": 1140,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 380,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "lines:0": {
+          "form": "fixed",
+          "value": 1620,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 950,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 1050,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 380,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "scratch:0": {
+          "form": "fixed",
+          "value": 150,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "scratch:1": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "dent:0": {
+          "form": "fixed",
+          "value": 270,
+          "support": 0,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "inferredFrom": "Honor 20"
+        },
+        "dent:1": {
+          "form": "fixed",
+          "value": 160,
+          "support": 0,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "inferredFrom": "Honor 20"
+        },
+        "panel": {
+          "form": "fixed",
+          "value": 480,
+          "support": 0,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "inferredFrom": "Honor 20"
+        },
+        "bent": {
+          "form": "fixed",
+          "value": 480,
+          "support": 0,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "inferredFrom": "Honor 20"
+        },
+        "loose": {
+          "form": "fixed",
+          "value": 480,
+          "support": 0,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "inferredFrom": "Honor 20"
+        },
+        "touch": {
+          "form": "fixed",
+          "value": 1940,
+          "support": 0,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ],
+          "inferredFrom": "Honor 20"
+        },
+        "original": {
+          "form": "fixed",
+          "value": 1300,
+          "support": 0,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ],
+          "inferredFrom": "Honor 20"
+        },
+        "charger": {
+          "form": "fixed",
+          "value": 20,
+          "support": 0,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ],
+          "inferredFrom": "Honor 20"
+        },
+        "box": {
+          "form": "fixed",
+          "value": 50,
+          "support": 0,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ],
+          "inferredFrom": "Honor 20"
+        },
+        "both": {
+          "form": "fixed",
+          "value": 50,
+          "support": 0,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ],
+          "inferredFrom": "Honor 20"
+        }
+      },
+      "noOffer": {}
+    },
+    "honor7a": {
+      "model": "Honor 7A",
+      "brand": "Honor",
+      "hasAge": false,
+      "variants": {
+        "3gb/32gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 300
+        }
+      },
+      "rules": {
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 1000,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:fingerprint": {
+          "form": "fixed",
+          "value": 430,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:wifi": {
+          "form": "fixed",
+          "value": 650,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:bluetooth": {
+          "form": "fixed",
+          "value": 650,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:proximity": {
+          "form": "fixed",
+          "value": 50,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "cracked": {
+          "form": "fixed",
+          "value": 1160,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 840,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 590,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 250,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:0": {
+          "form": "fixed",
+          "value": 1160,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:1": {
+          "form": "fixed",
+          "value": 1200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 400,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "lines:0": {
+          "form": "fixed",
+          "value": 1160,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 1000,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 1100,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 400,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "scratch:0": {
+          "form": "fixed",
+          "value": 100,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "scratch:1": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "dent:0": {
+          "form": "fixed",
+          "value": 170,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "dent:1": {
+          "form": "fixed",
+          "value": 100,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "panel": {
+          "form": "fixed",
+          "value": 290,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "bent": {
+          "form": "fixed",
+          "value": 290,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "loose": {
+          "form": "fixed",
+          "value": 290,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "touch": {
+          "form": "fixed",
+          "value": 1160,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "original": {
+          "form": "fixed",
+          "value": 1000,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "charger": {
+          "form": "fixed",
+          "value": 30,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "box": {
+          "form": "fixed",
+          "value": 50,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "both": {
+          "form": "fixed",
+          "value": 50,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        }
+      },
+      "noOffer": {}
+    },
+    "honor7x": {
+      "model": "Honor 7X",
+      "brand": "Honor",
+      "hasAge": false,
+      "variants": {
+        "4gb/32gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 200
+        },
+        "4gb/64gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 300
+        }
+      },
+      "rules": {
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 500,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 1000,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 300,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:fingerprint": {
+          "form": "pct",
+          "value": 0.26275005364678955,
+          "support": 2,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:wifi": {
+          "form": "pct",
+          "value": 0.3977969051763191,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 600,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 200,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 300,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 750,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 500,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:bluetooth": {
+          "form": "pct",
+          "value": 0.3977969051763191,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 200,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 200,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:proximity": {
+          "form": "fixed",
+          "value": 40,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "cracked": {
+          "form": "pct",
+          "value": 0.7018907512934837,
+          "support": 2,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 760,
+          "support": 2,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 530,
+          "support": 2,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 230,
+          "support": 2,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:0": {
+          "form": "pct",
+          "value": 0.7092344007057533,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:1": {
+          "form": "fixed",
+          "value": 1080,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 360,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "lines:0": {
+          "form": "pct",
+          "value": 0.7092344007057533,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 900,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 990,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 360,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "scratch:0": {
+          "form": "fixed",
+          "value": 90,
+          "support": 2,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "scratch:1": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "dent:0": {
+          "form": "fixed",
+          "value": 150,
+          "support": 2,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "dent:1": {
+          "form": "fixed",
+          "value": 90,
+          "support": 2,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "panel": {
+          "form": "pct",
+          "value": 0.17639064399990462,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "bent": {
+          "form": "pct",
+          "value": 0.17639064399990462,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "loose": {
+          "form": "pct",
+          "value": 0.17639064399990462,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "touch": {
+          "form": "pct",
+          "value": 0.7092344007057533,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "original": {
+          "form": "fixed",
+          "value": 900,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "charger": {
+          "form": "fixed",
+          "value": 30,
+          "support": 2,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "box": {
+          "form": "fixed",
+          "value": 50,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "both": {
+          "form": "fixed",
+          "value": 50,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        }
+      },
+      "noOffer": {}
+    },
+    "honor8c": {
+      "model": "Honor 8C",
+      "brand": "Honor",
+      "hasAge": false,
+      "variants": {
+        "4gb/32gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 300,
+          "scrapInferredFrom": "Honor 8X"
+        }
+      },
+      "rules": {
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 1000,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:fingerprint": {
+          "form": "fixed",
+          "value": 370,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:wifi": {
+          "form": "fixed",
+          "value": 550,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:bluetooth": {
+          "form": "pct",
+          "value": 0.39512048228340646,
+          "support": 0,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "inferredFrom": "Honor 8X"
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 200,
+          "support": 0,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "inferredFrom": "Honor 8X"
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 200,
+          "support": 0,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "inferredFrom": "Honor 8X"
+        },
+        "hardware:proximity": {
+          "form": "fixed",
+          "value": 70,
+          "support": 0,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "inferredFrom": "Honor 8X"
+        },
+        "cracked": {
+          "form": "affine",
+          "value": 1392.3575331772054,
+          "slope": 0.06088992974238876,
+          "support": 0,
+          "residual": 10,
+          "fallback": {
+            "form": "fixed",
+            "value": 1540
+          },
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "inferredFrom": "Honor 8X"
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 1090,
+          "support": 0,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "inferredFrom": "Honor 8X"
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 760,
+          "support": 0,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "inferredFrom": "Honor 8X"
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 330,
+          "support": 0,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "inferredFrom": "Honor 8X"
+        },
+        "spots:0": {
+          "form": "pct",
+          "value": 0.7088054510778751,
+          "support": 0,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "inferredFrom": "Honor 8X"
+        },
+        "spots:1": {
+          "form": "fixed",
+          "value": 1560,
+          "support": 0,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "inferredFrom": "Honor 8X"
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 520,
+          "support": 0,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "inferredFrom": "Honor 8X"
+        },
+        "lines:0": {
+          "form": "pct",
+          "value": 0.7088054510778751,
+          "support": 0,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "inferredFrom": "Honor 8X"
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 1300,
+          "support": 0,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "inferredFrom": "Honor 8X"
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 1430,
+          "support": 0,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "inferredFrom": "Honor 8X"
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 520,
+          "support": 0,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "inferredFrom": "Honor 8X"
+        },
+        "scratch:0": {
+          "form": "fixed",
+          "value": 140,
+          "support": 0,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "inferredFrom": "Honor 8X"
+        },
+        "scratch:1": {
+          "form": "fixed",
+          "value": 0,
+          "support": 0,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "inferredFrom": "Honor 8X"
+        },
+        "dent:0": {
+          "form": "pct",
+          "value": 0.10116260532235875,
+          "support": 0,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "inferredFrom": "Honor 8X"
+        },
+        "dent:1": {
+          "form": "fixed",
+          "value": 140,
+          "support": 0,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "inferredFrom": "Honor 8X"
+        },
+        "panel": {
+          "form": "pct",
+          "value": 0.17570160780817307,
+          "support": 0,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "inferredFrom": "Honor 8X"
+        },
+        "bent": {
+          "form": "pct",
+          "value": 0.17570160780817307,
+          "support": 0,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "inferredFrom": "Honor 8X"
+        },
+        "loose": {
+          "form": "pct",
+          "value": 0.17570160780817307,
+          "support": 0,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "inferredFrom": "Honor 8X"
+        },
+        "touch": {
+          "form": "pct",
+          "value": 0.7088054510778751,
+          "support": 0,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "inferredFrom": "Honor 8X"
+        },
+        "original": {
+          "form": "fixed",
+          "value": 1300,
+          "support": 0,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "inferredFrom": "Honor 8X"
+        },
+        "charger": {
+          "form": "fixed",
+          "value": 20,
+          "support": 0,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "inferredFrom": "Honor 8X"
+        },
+        "box": {
+          "form": "fixed",
+          "value": 50,
+          "support": 0,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "inferredFrom": "Honor 8X"
+        },
+        "both": {
+          "form": "fixed",
+          "value": 50,
+          "support": 0,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "inferredFrom": "Honor 8X"
+        }
+      },
+      "noOffer": {}
+    },
+    "honor8x": {
+      "model": "Honor 8X",
+      "brand": "Honor",
+      "hasAge": false,
+      "variants": {
+        "4gb/64gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 300
+        },
+        "6gb/64gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 300
+        },
+        "6gb/128gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 300
+        }
+      },
+      "rules": {
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 500,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 1000,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 300,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:fingerprint": {
+          "form": "pct",
+          "value": 0.2643347642019119,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:wifi": {
+          "form": "pct",
+          "value": 0.39512048228340646,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 600,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 200,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 300,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 750,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 0,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 500,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:bluetooth": {
+          "form": "pct",
+          "value": 0.39512048228340646,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 200,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 200,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:proximity": {
+          "form": "fixed",
+          "value": 70,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "cracked": {
+          "form": "affine",
+          "value": 1392.3575331772054,
+          "slope": 0.06088992974238876,
+          "support": 3,
+          "residual": 10,
+          "fallback": {
+            "form": "fixed",
+            "value": 1540
+          },
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 1090,
+          "support": 3,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 760,
+          "support": 3,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 330,
+          "support": 3,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:0": {
+          "form": "pct",
+          "value": 0.7088054510778751,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:1": {
+          "form": "fixed",
+          "value": 1560,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 520,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "lines:0": {
+          "form": "pct",
+          "value": 0.7088054510778751,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 1300,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 1430,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 520,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "scratch:0": {
+          "form": "fixed",
+          "value": 140,
+          "support": 3,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "scratch:1": {
+          "form": "fixed",
+          "value": 0,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "dent:0": {
+          "form": "pct",
+          "value": 0.10116260532235875,
+          "support": 3,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "dent:1": {
+          "form": "fixed",
+          "value": 140,
+          "support": 3,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "panel": {
+          "form": "pct",
+          "value": 0.17570160780817307,
+          "support": 3,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "bent": {
+          "form": "pct",
+          "value": 0.17570160780817307,
+          "support": 3,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "loose": {
+          "form": "pct",
+          "value": 0.17570160780817307,
+          "support": 3,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "touch": {
+          "form": "pct",
+          "value": 0.7088054510778751,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "original": {
+          "form": "fixed",
+          "value": 1300,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "charger": {
+          "form": "fixed",
+          "value": 20,
+          "support": 3,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "box": {
+          "form": "fixed",
+          "value": 50,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "both": {
+          "form": "fixed",
+          "value": 50,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        }
+      },
+      "noOffer": {}
+    },
+    "honor90": {
+      "model": "Honor 90",
+      "brand": "Honor",
+      "hasAge": true,
+      "variants": {
+        "8gb/256gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 800
+        },
+        "12gb/256gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 800
+        },
+        "12gb/512gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 800
+        }
+      },
+      "rules": {
+        "age:above11": {
+          "form": "pct",
+          "value": 0.24293802673299902,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "age:3to6": {
+          "form": "pct",
+          "value": 0.11174654939365501,
+          "support": 3,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "age:6to11": {
+          "form": "pct",
+          "value": 0.13999444246165893,
+          "support": 3,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 1600,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 4000,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:fingerprint": {
+          "form": "pct",
+          "value": 0.199979959805982,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:wifi": {
+          "form": "pct",
+          "value": 0.2999949899514955,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 1500,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 1250,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 0,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 1400,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:bluetooth": {
+          "form": "pct",
+          "value": 0.2999949899514955,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:proximity": {
+          "form": "pct",
+          "value": 0.030003992543808224,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "cracked": {
+          "form": "fixed",
+          "value": 3750,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 2650,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 1850,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 790,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:0": {
+          "form": "fixed",
+          "value": 5360,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:1": {
+          "form": "fixed",
+          "value": 3780,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 1260,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "lines:0": {
+          "form": "fixed",
+          "value": 5360,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 3150,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 3470,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 1260,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "scratch:0": {
+          "form": "pct",
+          "value": 0.11999350243193953,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "scratch:1": {
+          "form": "pct",
+          "value": 0.06500951134466086,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "dent:0": {
+          "form": "pct",
+          "value": 0.15970614257771645,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "dent:1": {
+          "form": "pct",
+          "value": 0.11999350243193953,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "panel": {
+          "form": "pct",
+          "value": 0.13353122164093034,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "bent": {
+          "form": "pct",
+          "value": 0.13353122164093034,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "loose": {
+          "form": "pct",
+          "value": 0.22998395234979022,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "touch": {
+          "form": "capped",
+          "value": 6300,
+          "slope": 0.5370350730493106,
+          "support": 3,
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.5278641336825561
+          },
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "original": {
+          "form": "fixed",
+          "value": 3150,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "charger": {
+          "form": "fixed",
+          "value": 300,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "box": {
+          "form": "fixed",
+          "value": 450,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "both": {
+          "form": "fixed",
+          "value": 450,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        }
+      },
+      "noOffer": {}
+    },
+    "honor9a": {
+      "model": "Honor 9A",
+      "brand": "Honor",
+      "hasAge": false,
+      "variants": {
+        "3gb/64gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 300
+        }
+      },
+      "rules": {
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 650,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 1300,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 300,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:fingerprint": {
+          "form": "fixed",
+          "value": 540,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:wifi": {
+          "form": "fixed",
+          "value": 820,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 700,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 300,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 750,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 650,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:bluetooth": {
+          "form": "fixed",
+          "value": 820,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:proximity": {
+          "form": "fixed",
+          "value": 60,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "cracked": {
+          "form": "fixed",
+          "value": 1460,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 1300,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 910,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 390,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:0": {
+          "form": "fixed",
+          "value": 1460,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 620,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "lines:0": {
+          "form": "fixed",
+          "value": 1460,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 1460,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 1710,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 620,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "scratch:0": {
+          "form": "fixed",
+          "value": 120,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "scratch:1": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "dent:0": {
+          "form": "fixed",
+          "value": 210,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "dent:1": {
+          "form": "fixed",
+          "value": 120,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "panel": {
+          "form": "fixed",
+          "value": 360,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "bent": {
+          "form": "fixed",
+          "value": 360,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "loose": {
+          "form": "fixed",
+          "value": 360,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "touch": {
+          "form": "fixed",
+          "value": 1460,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "original": {
+          "form": "fixed",
+          "value": 1550,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "charger": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "box": {
+          "form": "fixed",
+          "value": 300,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "both": {
+          "form": "fixed",
+          "value": 300,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        }
+      },
+      "noOffer": {
+        "spots:1": [
+          "3gb/64gb"
+        ]
+      }
+    },
+    "honor9lite": {
+      "model": "Honor 9 Lite",
+      "brand": "Honor",
+      "hasAge": false,
+      "variants": {
+        "3gb/32gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 300
+        },
+        "4gb/64gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 300,
+          "scrapInferredFrom": "Honor 9A"
+        }
+      },
+      "rules": {
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 500,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 1000,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 300,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:fingerprint": {
+          "form": "pct",
+          "value": 0.2660999659979599,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:wifi": {
+          "form": "pct",
+          "value": 0.3948996939816389,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 600,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 200,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 300,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 750,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 500,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:bluetooth": {
+          "form": "pct",
+          "value": 0.3948996939816389,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 200,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 200,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:proximity": {
+          "form": "fixed",
+          "value": 50,
+          "support": 2,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "cracked": {
+          "form": "fixed",
+          "value": 1070,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 750,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 530,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 220,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:0": {
+          "form": "fixed",
+          "value": 1120,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:1": {
+          "form": "fixed",
+          "value": 1080,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 360,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "lines:0": {
+          "form": "fixed",
+          "value": 1120,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 900,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 990,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 360,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "scratch:0": {
+          "form": "fixed",
+          "value": 90,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "scratch:1": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "dent:0": {
+          "form": "fixed",
+          "value": 160,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "dent:1": {
+          "form": "fixed",
+          "value": 90,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "panel": {
+          "form": "fixed",
+          "value": 280,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "bent": {
+          "form": "fixed",
+          "value": 280,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "loose": {
+          "form": "fixed",
+          "value": 280,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "touch": {
+          "form": "fixed",
+          "value": 1120,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "original": {
+          "form": "fixed",
+          "value": 900,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "charger": {
+          "form": "fixed",
+          "value": 20,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "box": {
+          "form": "fixed",
+          "value": 50,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "both": {
+          "form": "fixed",
+          "value": 50,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        }
+      },
+      "noOffer": {}
+    },
+    "honor9n": {
+      "model": "Honor 9N",
+      "brand": "Honor",
+      "hasAge": false,
+      "variants": {
+        "3gb/32gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 300
+        },
+        "4gb/64gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 300
+        },
+        "4gb/128gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 300
+        }
+      },
+      "rules": {
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 500,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 1000,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:volume": {
+          "form": "byStorage",
+          "value": 0,
+          "values": {
+            "3gb/32gb": 200,
+            "4gb/64gb": 200,
+            "4gb/128gb": 300
+          },
+          "references": {
+            "3gb/32gb": 1840,
+            "4gb/64gb": 1990,
+            "4gb/128gb": 2290
+          },
+          "fallback": {
+            "form": "pct",
+            "value": 0.11541088817931977
+          },
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:fingerprint": {
+          "form": "pct",
+          "value": 0.26476195015012155,
+          "support": 3,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:wifi": {
+          "form": "pct",
+          "value": 0.39708335319067817,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 500,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 200,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:power": {
+          "form": "byStorage",
+          "value": 0,
+          "values": {
+            "3gb/32gb": 200,
+            "4gb/64gb": 200,
+            "4gb/128gb": 300
+          },
+          "references": {
+            "3gb/32gb": 1840,
+            "4gb/64gb": 1990,
+            "4gb/128gb": 2290
+          },
+          "fallback": {
+            "form": "pct",
+            "value": 0.11541088817931977
+          },
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 500,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:face": {
+          "form": "pct",
+          "value": 0.26476195015012155,
+          "support": 3,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 500,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:bluetooth": {
+          "form": "pct",
+          "value": 0.39708335319067817,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 200,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 200,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:proximity": {
+          "form": "fixed",
+          "value": 60,
+          "support": 3,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "cracked": {
+          "form": "fixed",
+          "value": 1190,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 840,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 590,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 250,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:0": {
+          "form": "pct",
+          "value": 0.7108135157031883,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:1": {
+          "form": "fixed",
+          "value": 1200,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "lines:0": {
+          "form": "pct",
+          "value": 0.7108135157031883,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 1000,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 1100,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "scratch:0": {
+          "form": "pct",
+          "value": 0.06050930118032058,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "scratch:1": {
+          "form": "fixed",
+          "value": 0,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "dent:0": {
+          "form": "pct",
+          "value": 0.10303579087833008,
+          "support": 3,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "dent:1": {
+          "form": "pct",
+          "value": 0.06050930118032058,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "panel": {
+          "form": "pct",
+          "value": 0.17666682552542534,
+          "support": 3,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "bent": {
+          "form": "pct",
+          "value": 0.17666682552542534,
+          "support": 3,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "loose": {
+          "form": "pct",
+          "value": 0.17666682552542534,
+          "support": 3,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "touch": {
+          "form": "pct",
+          "value": 0.7108135157031883,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "original": {
+          "form": "fixed",
+          "value": 1000,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "charger": {
+          "form": "fixed",
+          "value": 20,
+          "support": 3,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "box": {
+          "form": "fixed",
+          "value": 50,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "both": {
+          "form": "fixed",
+          "value": 50,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        }
+      },
+      "noOffer": {}
+    },
+    "honor9xpro": {
+      "model": "Honor 9x Pro",
+      "brand": "Honor",
+      "hasAge": false,
+      "variants": {
+        "6gb/256gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 500
+        }
+      },
+      "rules": {
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 1500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 1000,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 300,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:fingerprint": {
+          "form": "fixed",
+          "value": 830,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:wifi": {
+          "form": "fixed",
+          "value": 1250,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 800,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 300,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 750,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:bluetooth": {
+          "form": "fixed",
+          "value": 1250,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:proximity": {
+          "form": "fixed",
+          "value": 100,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "cracked": {
+          "form": "fixed",
+          "value": 2230,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 1640,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 1150,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:0": {
+          "form": "fixed",
+          "value": 2230,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:1": {
+          "form": "fixed",
+          "value": 2340,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 780,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "lines:0": {
+          "form": "fixed",
+          "value": 2230,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 1950,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 2150,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 780,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "scratch:0": {
+          "form": "fixed",
+          "value": 190,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "scratch:1": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "dent:0": {
+          "form": "fixed",
+          "value": 320,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "dent:1": {
+          "form": "fixed",
+          "value": 190,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "panel": {
+          "form": "fixed",
+          "value": 560,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "bent": {
+          "form": "fixed",
+          "value": 560,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "loose": {
+          "form": "fixed",
+          "value": 560,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "touch": {
+          "form": "fixed",
+          "value": 2230,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "original": {
+          "form": "fixed",
+          "value": 1950,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "charger": {
+          "form": "fixed",
+          "value": 30,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "box": {
+          "form": "fixed",
+          "value": 50,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "both": {
+          "form": "fixed",
+          "value": 50,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        }
+      },
+      "noOffer": {}
+    },
+    "honorplay": {
+      "model": "Honor Play",
+      "brand": "Honor",
+      "hasAge": false,
+      "variants": {
+        "4gb/64gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 300
+        },
+        "6gb/64gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 300
+        }
+      },
+      "rules": {
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 500,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 1000,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 300,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:fingerprint": {
+          "form": "fixed",
+          "value": 550,
+          "support": 2,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:wifi": {
+          "form": "pct",
+          "value": 0.3946828587839501,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 500,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 200,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 300,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 500,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 500,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:bluetooth": {
+          "form": "pct",
+          "value": 0.3946828587839501,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 200,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 200,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:proximity": {
+          "form": "fixed",
+          "value": 70,
+          "support": 2,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "cracked": {
+          "form": "fixed",
+          "value": 1310,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 930,
+          "support": 2,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 650,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 280,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:0": {
+          "form": "pct",
+          "value": 0.7094444900303603,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:1": {
+          "form": "fixed",
+          "value": 1320,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 440,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "lines:0": {
+          "form": "pct",
+          "value": 0.7094444900303603,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 1100,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 1210,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 440,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "scratch:0": {
+          "form": "fixed",
+          "value": 130,
+          "support": 2,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "scratch:1": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "dent:0": {
+          "form": "fixed",
+          "value": 220,
+          "support": 2,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "dent:1": {
+          "form": "fixed",
+          "value": 130,
+          "support": 2,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "panel": {
+          "form": "fixed",
+          "value": 370,
+          "support": 2,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "bent": {
+          "form": "fixed",
+          "value": 370,
+          "support": 2,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "loose": {
+          "form": "fixed",
+          "value": 370,
+          "support": 2,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "touch": {
+          "form": "pct",
+          "value": 0.7094444900303603,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "original": {
+          "form": "fixed",
+          "value": 1100,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "charger": {
+          "form": "fixed",
+          "value": 30,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "box": {
+          "form": "fixed",
+          "value": 50,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "both": {
+          "form": "fixed",
+          "value": 50,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        }
+      },
+      "noOffer": {}
+    }
+  }
+}

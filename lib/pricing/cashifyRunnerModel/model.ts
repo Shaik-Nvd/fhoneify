@@ -11,9 +11,10 @@ export interface DeductionRule {
   support: number;
   residual: number;
   inferredFrom?: string;
+  observedDates?: string[];
 }
 export interface RunnerProfile {
-  brand: 'Nothing' | 'OnePlus' | 'Samsung' | 'Google';
+  brand: 'Nothing' | 'OnePlus' | 'Samsung' | 'Google' | 'Xiaomi' | 'Honor' | 'Asus' | 'Lenovo' | 'Nokia';
   model: string;
   hasAge: boolean;
   variants: Record<string, { accessories: string[]; scrap: number; scrapInferredFrom?: string; conditionFloor?: number }>;

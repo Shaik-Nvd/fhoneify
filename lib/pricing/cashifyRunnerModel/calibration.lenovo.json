@@ -1,0 +1,1858 @@
+{
+  "version": "cashify-runner-rules-v5",
+  "sourceHash": "02a0ae3fd3bf37021b41a5057daa99371aace2750c2b6e02566fd699cd269a16",
+  "profiles": {
+    "lenovoa6note": {
+      "model": "Lenovo A6 Note",
+      "brand": "Lenovo",
+      "hasAge": false,
+      "variants": {
+        "3gb/32gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 200
+        }
+      },
+      "rules": {
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 300,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:fingerprint": {
+          "form": "fixed",
+          "value": 310,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:wifi": {
+          "form": "fixed",
+          "value": 470,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 300,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:bluetooth": {
+          "form": "fixed",
+          "value": 470,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:proximity": {
+          "form": "fixed",
+          "value": 40,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "cracked": {
+          "form": "fixed",
+          "value": 840,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 710,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 300,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "spots:0": {
+          "form": "fixed",
+          "value": 840,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 480,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "lines:0": {
+          "form": "fixed",
+          "value": 840,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 840,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 480,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "scratch:0": {
+          "form": "fixed",
+          "value": 70,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "scratch:1": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "dent:0": {
+          "form": "fixed",
+          "value": 120,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "dent:1": {
+          "form": "fixed",
+          "value": 70,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "panel": {
+          "form": "fixed",
+          "value": 210,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "bent": {
+          "form": "fixed",
+          "value": 210,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "loose": {
+          "form": "fixed",
+          "value": 210,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "touch": {
+          "form": "fixed",
+          "value": 840,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "charger": {
+          "form": "fixed",
+          "value": 30,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "box": {
+          "form": "fixed",
+          "value": 50,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "both": {
+          "form": "fixed",
+          "value": 50,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        }
+      },
+      "noOffer": {
+        "hardware:back_camera": [
+          "3gb/32gb"
+        ],
+        "screen:1": [
+          "3gb/32gb"
+        ],
+        "spots:1": [
+          "3gb/32gb"
+        ],
+        "color:0": [
+          "3gb/32gb"
+        ],
+        "original": [
+          "3gb/32gb"
+        ]
+      }
+    },
+    "lenovok10note": {
+      "model": "Lenovo K10 Note",
+      "brand": "Lenovo",
+      "hasAge": false,
+      "variants": {
+        "4gb/64gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 200
+        },
+        "6gb/128gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 200
+        }
+      },
+      "rules": {
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 330,
+          "support": 2,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 650,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 200,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:fingerprint": {
+          "form": "fixed",
+          "value": 370,
+          "support": 2,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:wifi": {
+          "form": "pct",
+          "value": 0.3964110929853181,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 500,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 200,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 200,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 500,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 400,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:bluetooth": {
+          "form": "pct",
+          "value": 0.3964110929853181,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 200,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 200,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:proximity": {
+          "form": "fixed",
+          "value": 40,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "cracked": {
+          "form": "pct",
+          "value": 0.7071778140293637,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 820,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 350,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "spots:0": {
+          "form": "pct",
+          "value": 0.7071778140293637,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 560,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "lines:0": {
+          "form": "pct",
+          "value": 0.7071778140293637,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "lines:1": {
+          "form": "pct",
+          "value": 0.7071778140293637,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 560,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "scratch:0": {
+          "form": "fixed",
+          "value": 90,
+          "support": 2,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "scratch:1": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "dent:0": {
+          "form": "fixed",
+          "value": 150,
+          "support": 2,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "dent:1": {
+          "form": "fixed",
+          "value": 90,
+          "support": 2,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "panel": {
+          "form": "fixed",
+          "value": 250,
+          "support": 2,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "bent": {
+          "form": "fixed",
+          "value": 250,
+          "support": 2,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "loose": {
+          "form": "fixed",
+          "value": 250,
+          "support": 2,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "touch": {
+          "form": "pct",
+          "value": 0.7071778140293637,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "charger": {
+          "form": "fixed",
+          "value": 30,
+          "support": 2,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "box": {
+          "form": "fixed",
+          "value": 50,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "both": {
+          "form": "fixed",
+          "value": 50,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 1180,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        }
+      },
+      "noOffer": {
+        "screen:1": [
+          "4gb/64gb"
+        ],
+        "spots:1": [
+          "4gb/64gb",
+          "6gb/128gb"
+        ],
+        "color:0": [
+          "4gb/64gb",
+          "6gb/128gb"
+        ],
+        "original": [
+          "4gb/64gb",
+          "6gb/128gb"
+        ]
+      }
+    },
+    "lenovok10plus": {
+      "model": "Lenovo K10 Plus",
+      "brand": "Lenovo",
+      "hasAge": false,
+      "variants": {
+        "4gb/64gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 300
+        }
+      },
+      "rules": {
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 320,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 650,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:fingerprint": {
+          "form": "fixed",
+          "value": 500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:wifi": {
+          "form": "fixed",
+          "value": 760,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 400,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:bluetooth": {
+          "form": "fixed",
+          "value": 760,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:proximity": {
+          "form": "fixed",
+          "value": 60,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "cracked": {
+          "form": "fixed",
+          "value": 1250,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 880,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 620,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 260,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "spots:0": {
+          "form": "fixed",
+          "value": 1350,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "spots:1": {
+          "form": "fixed",
+          "value": 1260,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 420,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "lines:0": {
+          "form": "fixed",
+          "value": 1350,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 1050,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 1150,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 420,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "scratch:0": {
+          "form": "fixed",
+          "value": 110,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "scratch:1": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "dent:0": {
+          "form": "fixed",
+          "value": 190,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "dent:1": {
+          "form": "fixed",
+          "value": 110,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "panel": {
+          "form": "fixed",
+          "value": 340,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "bent": {
+          "form": "fixed",
+          "value": 340,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "loose": {
+          "form": "fixed",
+          "value": 340,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "touch": {
+          "form": "fixed",
+          "value": 1350,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "original": {
+          "form": "fixed",
+          "value": 1050,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "charger": {
+          "form": "fixed",
+          "value": 20,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "box": {
+          "form": "fixed",
+          "value": 50,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "both": {
+          "form": "fixed",
+          "value": 50,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        }
+      },
+      "noOffer": {}
+    },
+    "lenovok9note": {
+      "model": "Lenovo K9 Note",
+      "brand": "Lenovo",
+      "hasAge": false,
+      "variants": {
+        "4gb/64gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 200
+        }
+      },
+      "rules": {
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 250,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 300,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:fingerprint": {
+          "form": "fixed",
+          "value": 360,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:wifi": {
+          "form": "fixed",
+          "value": 540,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 300,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 400,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:bluetooth": {
+          "form": "fixed",
+          "value": 540,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "hardware:proximity": {
+          "form": "fixed",
+          "value": 40,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "cracked": {
+          "form": "fixed",
+          "value": 950,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 670,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 470,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:0": {
+          "form": "fixed",
+          "value": 960,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:1": {
+          "form": "fixed",
+          "value": 960,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 320,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "lines:0": {
+          "form": "fixed",
+          "value": 960,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 800,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 880,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 320,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "scratch:0": {
+          "form": "fixed",
+          "value": 80,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "scratch:1": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "dent:0": {
+          "form": "fixed",
+          "value": 140,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "dent:1": {
+          "form": "fixed",
+          "value": 80,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "panel": {
+          "form": "fixed",
+          "value": 240,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "bent": {
+          "form": "fixed",
+          "value": 240,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "loose": {
+          "form": "fixed",
+          "value": 240,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "touch": {
+          "form": "fixed",
+          "value": 960,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "original": {
+          "form": "fixed",
+          "value": 800,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "charger": {
+          "form": "fixed",
+          "value": 20,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "box": {
+          "form": "fixed",
+          "value": 50,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ]
+        },
+        "both": {
+          "form": "fixed",
+          "value": 50,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        }
+      },
+      "noOffer": {}
+    },
+    "lenovoz6pro": {
+      "model": "Lenovo Z6 Pro",
+      "brand": "Lenovo",
+      "hasAge": false,
+      "variants": {
+        "8gb/128gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 500
+        }
+      },
+      "rules": {
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 1000,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:fingerprint": {
+          "form": "fixed",
+          "value": 1370,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:wifi": {
+          "form": "fixed",
+          "value": 2050,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 800,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:bluetooth": {
+          "form": "fixed",
+          "value": 2050,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "hardware:proximity": {
+          "form": "fixed",
+          "value": 160,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "cracked": {
+          "form": "fixed",
+          "value": 3680,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 2900,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 2030,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 870,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "spots:0": {
+          "form": "fixed",
+          "value": 3680,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "spots:1": {
+          "form": "fixed",
+          "value": 4140,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 1380,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "lines:0": {
+          "form": "fixed",
+          "value": 3680,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 3450,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 3800,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 1380,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "scratch:0": {
+          "form": "fixed",
+          "value": 310,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "scratch:1": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "dent:0": {
+          "form": "fixed",
+          "value": 530,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "dent:1": {
+          "form": "fixed",
+          "value": 310,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "panel": {
+          "form": "fixed",
+          "value": 910,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "bent": {
+          "form": "fixed",
+          "value": 910,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "loose": {
+          "form": "fixed",
+          "value": 910,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "touch": {
+          "form": "fixed",
+          "value": 3680,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "original": {
+          "form": "fixed",
+          "value": 3450,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "charger": {
+          "form": "fixed",
+          "value": 30,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "box": {
+          "form": "fixed",
+          "value": 50,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        },
+        "both": {
+          "form": "fixed",
+          "value": 50,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-12"
+          ]
+        }
+      },
+      "noOffer": {}
+    }
+  }
+}

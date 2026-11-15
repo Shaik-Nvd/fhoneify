@@ -7,8 +7,13 @@ import type { RunnerMeasurement } from './import-cashify-runner-data';
 export interface FitPoint { reference: number; value: number; storage: string }
 const mean = (xs: number[]) => xs.reduce((a, b) => a + b, 0) / xs.length;
 const residual = (rule: DeductionRule, points: FitPoint[]) => Math.max(...points.map(p => Math.abs(round10(evaluateDeduction(rule, p.reference, p.storage)) - p.value)));
-const series = (model:string) => /fold/i.test(model)?'Fold':/flip/i.test(model)?'Flip':/s\d+ ultra/i.test(model)?'S Ultra':/note/i.test(model)?'Note':model.match(/Galaxy\s+([A-Z])/i)?.[1]?.toUpperCase()??'Pixel';
-const generation = (model:string) => Number(model.match(/(?:Fold|Flip|Pixel|Galaxy [A-Z]|Note)\s*(\d+)/i)?.[1]??0);
+export const series = (model:string):string => {
+  if(/^Honor /i.test(model))return 'Honor '+(model.match(/^Honor (\d+)/i)?.[1]??model.replace(/^Honor /i,''));
+  if(/^Nokia /i.test(model))return 'Nokia '+(model.match(/^Nokia ([A-Z]+|\d+)/i)?.[1]?.toUpperCase()??'numeric');
+  if(/^Xiaomi /i.test(model))return /Redmi Note/i.test(model)?'Redmi Note':/Redmi A\d/i.test(model)?'Redmi A':/Redmi K\d/i.test(model)?'Redmi K':/Redmi/i.test(model)?'Redmi':/Black Shark/i.test(model)?'Black Shark':/Mi A\d/i.test(model)?'Mi A':/Mix/i.test(model)?'Mix':/Max/i.test(model)?'Max':'Xiaomi flagship';
+  return /fold/i.test(model)?'Fold':/flip/i.test(model)?'Flip':/s\d+ ultra/i.test(model)?'S Ultra':/note/i.test(model)?'Note':model.match(/Galaxy\s+([A-Z])/i)?.[1]?.toUpperCase()??'Pixel';
+};
+export const generation = (model:string) => Number(model.match(/(?:Fold|Flip|Pixel|Galaxy [A-Z]|Note|Honor|Nokia(?: [A-Z]+)?|Xiaomi(?: Mi)?(?: Redmi)?(?: [A-Z]+)?)\s*(\d+(?:\.\d+)?)/i)?.[1]??0);
 
 /** Model/storage observations select the simplest supported form. No final quote table. */
 export function fitRule(points: FitPoint[], shape?: DeductionRule['form'], fallbackShape?: 'fixed' | 'pct'): DeductionRule {
@@ -53,7 +58,8 @@ export function fitRule(points: FitPoint[], shape?: DeductionRule['form'], fallb
 }
 
 export function fitCalibration(all: RunnerMeasurement[], brand: RunnerProfile['brand'], structure?: RunnerCalibration): RunnerCalibration {
-  const extended=brand==='Samsung'||brand==='Google';
+  const newBrand=['Xiaomi','Honor','Asus','Lenovo','Nokia'].includes(brand);
+  const extended=brand==='Samsung'||brand==='Google'||newBrand;
   const rows = all.filter(r => r.brand === brand && r.status === 'quoted' && (!extended||r.primary!==false));
   for(const row of rows)if(!row.reference||row.base===null)throw new Error('Priced measurement missing reference/base');
   if (!rows.length) throw new Error(`No private ${brand} measurements supplied; refusing to overwrite calibration`);
@@ -65,16 +71,19 @@ export function fitCalibration(all: RunnerMeasurement[], brand: RunnerProfile['b
   for (const [key, ms] of ordered) {
     const hasAge = ms.some(m => m.hasAge);
     const profile: RunnerProfile = { model: ms[0].model, brand, hasAge, variants: {}, rules: {} };
+    const dates=new Map<string,Set<string>>();
     const fit = (id: string, points: FitPoint[]) => {
       const rule = structure?.profiles[key]?.rules[id];
       try {
         const fitted=fitRule(points, rule?.form, rule?.fallback?.form);
         if(extended&&(fitted.form==='affine'||fitted.form==='capped'))fitted.fallback=fitRule(points,'byStorage').fallback;
+        if(newBrand)fitted.observedDates=[...(dates.get(id)??[])].sort();
         return fitted;
       } catch(error:any) { throw new Error(`${profile.model} ${id}: ${error.message}`); }
     };
     const buckets = new Map<string, FitPoint[]>();
     const add = (id: string, row: RunnerMeasurement, value: number) => {
+      if(newBrand&&row.observedAt)dates.set(id,new Set([...(dates.get(id)??[]),row.observedAt!.slice(0,10)]));
       const point = { reference: row.reference!, value, storage: storageKey(row.storage) };
       const prior = buckets.get(id) ?? [];
       if (!prior.some(p => p.storage === point.storage && p.value === point.value)) buckets.set(id, [...prior, point]);
@@ -158,27 +167,35 @@ export function fitCalibration(all: RunnerMeasurement[], brand: RunnerProfile['b
     else delete variant.conditionFloor;
   }
   for (const profile of Object.values(profiles)) if (Object.values(profile.variants).some(v => !Number.isFinite(v.scrap))) throw new Error(`${profile.model}: missing measured calls scrap and no approved sibling fallback`);
-  return { version: extended?'cashify-runner-rules-v4':'cashify-runner-rules-v3', sourceHash: createHash('sha256').update(JSON.stringify(rows)).digest('hex'), profiles };
+  return { version: newBrand?'cashify-runner-rules-v5':extended?'cashify-runner-rules-v4':'cashify-runner-rules-v3', sourceHash: createHash('sha256').update(JSON.stringify(rows)).digest('hex'), profiles };
 }
 
 if (require.main === module) {
   const brand = process.argv.find(a => a.startsWith('--brand='))?.slice(8) ?? process.argv[process.argv.indexOf('--brand') + 1];
-  if (brand !== 'Nothing' && brand !== 'OnePlus' && brand!=='Samsung' && brand!=='Google') throw new Error('--brand Nothing|OnePlus|Samsung|Google required');
-  const input = process.argv.find(a => a.startsWith('--input='))?.slice(8) ?? `data/pricing-evidence/${({Nothing:'nothing-2026-11-08',OnePlus:'oneplus-2026-11-09',Samsung:'samsung-2026-11-12',Google:'google-2026-11-11'})[brand]}/measurements.jsonl`;
+  if (brand !== 'Nothing' && brand !== 'OnePlus' && brand!=='Samsung' && brand!=='Google' && !['Xiaomi','Honor','Asus','Lenovo','Nokia'].includes(brand)) throw new Error('--brand Nothing|OnePlus|Samsung|Google required');
+  const input = process.argv.find(a => a.startsWith('--input='))?.slice(8) ?? `data/pricing-evidence/${({Nothing:'nothing-2026-11-08',OnePlus:'oneplus-2026-11-09',Samsung:'samsung-2026-11-12',Google:'google-2026-11-11'} as Record<string,string>)[brand]??(brand.toLowerCase()+'-2026-11-16')}/measurements.jsonl`;
   if (!fs.existsSync(input)) throw new Error('Private source corpus absent; calibration unchanged');
   const measurements = fs.readFileSync(input, 'utf8').trim().split('\n').map(line => JSON.parse(line));
-  const calibration = fitCalibration(measurements, brand);
+  let calibration = fitCalibration(measurements, brand as RunnerProfile['brand']);
+  const onlyModel=process.argv.find(a=>a.startsWith('--only-model='))?.slice(13);
+  if(onlyModel) {
+    if(brand!=='OnePlus'||onlyModel!=='OnePlus 9RT 5G')throw new Error('Only the approved OnePlus 9RT profile may be replaced');
+    const previous:RunnerCalibration=JSON.parse(fs.readFileSync('lib/pricing/cashifyRunnerModel/calibration.oneplus.json','utf8'));
+    const key=modelKey(onlyModel);if(!calibration.profiles[key])throw new Error('Approved profile absent from supplied measurements');
+    calibration={...previous,sourceHash:createHash('sha256').update(previous.sourceHash+calibration.sourceHash).digest('hex'),profiles:{...previous.profiles,[key]:calibration.profiles[key]}};
+  }
   if (process.argv.includes('--write')) {
     fs.writeFileSync(path.resolve(`lib/pricing/cashifyRunnerModel/calibration.${brand.toLowerCase()}.json`), JSON.stringify(calibration, null, 2) + '\n');
     const scopes: Record<string, object> = {};
-    for (const name of ['nothing', 'oneplus','samsung','google']) {
+    for (const name of ['nothing', 'oneplus','samsung','google','xiaomi','honor','asus','lenovo','nokia']) {
       if(!fs.existsSync(`lib/pricing/cashifyRunnerModel/calibration.${name}.json`))continue;
       const data: RunnerCalibration = JSON.parse(fs.readFileSync(`lib/pricing/cashifyRunnerModel/calibration.${name}.json`, 'utf8'));
       for (const [key, profile] of Object.entries(data.profiles)) scopes[key] = { hasAge: profile.hasAge,
-        ...(['Samsung','Google'].includes(profile.brand)?{hardware:Object.keys(profile.rules).filter(k=>k.startsWith('hardware:')).map(k=>k.slice(9))}:{}),
+        ...(!['Nothing','OnePlus'].includes(profile.brand)?{hardware:Object.keys(profile.rules).filter(k=>k.startsWith('hardware:')).map(k=>k.slice(9))}:{}),
         variants: Object.fromEntries(Object.entries(profile.variants).map(([storage, v]) => [storage, { accessories: v.accessories }])) };
     }
     fs.writeFileSync('lib/pricing/cashifyRunnerModel/scope.json', JSON.stringify(scopes, null, 2) + '\n');
   }
   console.log(JSON.stringify({ brand, models: Object.keys(calibration.profiles).length, rules: Object.values(calibration.profiles).reduce((n, p) => n + Object.keys(p.rules).length, 0), written: process.argv.includes('--write') }));
 }
+

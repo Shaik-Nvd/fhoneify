@@ -86,7 +86,7 @@ export function parseDetailedReport(text: string, source: RunnerMeasurement['sou
     rows.push({brand,...identity,rawModel:raw,caseId:h[1],label:h[2].trim(),status,diagnostics:parsed?.diagnostics??{...diagnosticsForLabel('Flawless',[],false),calls:null,touch:null,originalScreen:null},answerPath:[],
       ageAsked:!!parsed?.diagnostics.mobileAge,ageSelected:parsed?.diagnostics.mobileAge??null,offeredAccessories:parsed?.offered??[],hasAge:parsed?.hasAge??false,
       reference:baseline!==null?baseline+20:null,base,selling,processingFee:fee,imeiFee:imei,total,deduction:null,observedAt:status==='pending'?null:date(block+'\n'+text.slice(0,Math.min(start,1500))),
-      source:{...source,caseId:h[2].match(/raw (?:case )?index (\d+)/i)?.[1]??h[1],line:text.slice(0,start).split('\n').length},variantUrl:'',complete:!/INCOMPLETE|partial verified|66.of.153|120.of.153/i.test(source.folder)});
+      source:{...source,caseId:h[2].match(/raw (?:case )?index (\d+)/i)?.[1]??h[1],line:text.slice(0,start).split('\n').length},variantUrl:'',complete:!/INCOMPLETE|partial|66.of.153|120.of.153/i.test(source.folder)});
   }
   check(headers.length>0,'No detailed cases in report');
   for(const row of rows)if(row.reference===null)row.reference=rows.find(r=>r.model===row.model&&r.storage===row.storage&&r.status==='quoted'&&(/^(?:Flawless|baseline)/i.test(r.label)||(!r.label&&r.diagnostics.calls&&r.diagnostics.touch&&r.diagnostics.originalScreen&&!r.diagnostics.hardware.length&&r.diagnostics.accessories.includes('box')&&!r.diagnostics.screenCondition&&!r.diagnostics.bodyScratches&&!r.diagnostics.bodyDents&&(!r.hasAge||r.diagnostics.mobileAge==='below3'))))?.base??null;
