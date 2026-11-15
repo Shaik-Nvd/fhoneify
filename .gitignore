@@ -53,3 +53,7 @@ release-test-logs/
 /data/pricing-evidence/samsung-2026-11-12/
 /data/pricing-evidence/google-2026-11-11/
 /pricing-inputs/
+
+# Private Xiaomi and other-brand evidence
+/data/pricing-evidence/*-2026-11-16/
+/.superpowers/
