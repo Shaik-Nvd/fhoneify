@@ -2,10 +2,15 @@ import nothing from './calibration.nothing.json';
 import oneplus from './calibration.oneplus.json';
 import samsung from './calibration.samsung.json';
 import google from './calibration.google.json';
+import xiaomi from './calibration.xiaomi.json';
+import honor from './calibration.honor.json';
+import asus from './calibration.asus.json';
+import lenovo from './calibration.lenovo.json';
+import nokia from './calibration.nokia.json';
 import { evaluateRunner, modelKey, storageKey, type RunnerCalibration } from './model';
 import type { DiagnosticsType } from '../../pricingCalculator';
 
-const calibrations = [nothing, oneplus, samsung, google] as RunnerCalibration[];
+const calibrations = [nothing, oneplus, samsung, google, xiaomi, honor, asus, lenovo, nokia] as RunnerCalibration[];
 export function runnerScope(model: string, _storage?: string | null) {
   return calibrations.map(c => c.profiles[modelKey(model)]).find(Boolean) ?? null;
 }

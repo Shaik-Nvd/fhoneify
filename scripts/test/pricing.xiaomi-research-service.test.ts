@@ -31,7 +31,8 @@ for (const [model, storage, reference] of [
     questionLabels: [], status: 'OK', statusDetail: null, sourceUrl: null, variantsChecked: 1, parserVersion: 'local-fixture', observedAt: t });
   routes.push({ model, storage, semantics: sem, eSimMode: 'NOT_ASKED', observedAt: '2026-10-01T17:39:32.261Z', evidenceSha256: fixture.observationsSha256 });
 }
-const service = createPricingService({ repository, questionnaireStore: profiles, now: () => at,
+// Retrospective October research route; current runner service has separate replay.
+const service = createPricingService({ disableRunnerEvidence:true, repository, questionnaireStore: profiles, now: () => at,
   signingSecret: 'local-fixture-signing-secret-at-least-thirty-two-characters', tokenTtlSeconds: 900,
   strictReferenceMode: true, referenceLookupTimeoutMs: 100, logger: { info() {}, warn() {}, error() {} } });
 const disabled = createXiaomiResearchQuoteService(service);
@@ -85,3 +86,4 @@ async function main() {
   console.log(`PASS local research quote-service integration: ${checks} assertions; defaults and cross-brand path unchanged; previews have no token`);
 }
 main().catch(err => { console.error(err); process.exitCode = 1; });
+

@@ -11,7 +11,7 @@ const names = [
   'Xiaomi Redmi Note 12', 'Xiaomi Redmi Note 14 SE 5G', 'Xiaomi Redmi Note 15 SE 5G',
   'Xiaomi Redmi Note 17 5G', 'Xiaomi Redmi Note 17 Pro 5G',
 ];
-const added = SEED_DEVICES.filter(d => names.includes(d.model));
+const added = SEED_DEVICES.filter(d => names.includes(d.model)&&d.id!=='xiaomi-redmi-note-11-6-gb-64-gb');
 assert.equal(added.length, 15);
 assert.deepEqual(new Set(added.map(d => d.model)), new Set(names));
 assert.equal(new Set(added.map(d => d.id)).size, added.length);

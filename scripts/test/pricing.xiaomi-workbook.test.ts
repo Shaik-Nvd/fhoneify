@@ -65,7 +65,8 @@ assert.equal(verifiedNotAskedCleanBaseline(2520, r), 2500); checks++;
 assert.equal(verifiedNotAskedCleanBaseline(2520, routeFor(fixture.specs[1])), null); checks++;
 const repository: PricingServiceDeps['repository'] = { async get(k) { return records.get(k) ?? null; }, async listAll() { return [...records.values()]; },
   async upsert(v) { records.set(v.deviceKey, v); }, async appendHistory() {}, async getHistory() { return []; } };
-const service = createPricingService({ repository, questionnaireStore: profiles, now: () => at,
+// Retrospective October research route; current runner service has separate replay.
+const service = createPricingService({ disableRunnerEvidence:true, repository, questionnaireStore: profiles, now: () => at,
   signingSecret: 'local-fixture-signing-secret-at-least-thirty-two-characters', tokenTtlSeconds: 900,
   strictReferenceMode: true, referenceLookupTimeoutMs: 100, logger: { info() {}, warn() {}, error() {} } });
 const disabled = createXiaomiWorkbookResearchQuoteService(service);
@@ -96,3 +97,4 @@ async function main() {
   console.log(`PASS fresh Xiaomi workbook ${checks} assertions; fresh verified calibration, strict regime, exact profiles and disabled service preview`);
 }
 main().catch(e => { console.error(e); process.exitCode = 1; });
+

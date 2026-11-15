@@ -77,7 +77,7 @@ export function fitCalibration(all: RunnerMeasurement[], brand: RunnerProfile['b
       try {
         const fitted=fitRule(points, rule?.form, rule?.fallback?.form);
         if(extended&&(fitted.form==='affine'||fitted.form==='capped'))fitted.fallback=fitRule(points,'byStorage').fallback;
-        if(newBrand)fitted.observedDates=[...(dates.get(id)??[])].sort();
+        if(newBrand){fitted.observedDates=[...(dates.get(id)??[])].sort();fitted.measuredStorages=[...new Set(points.map(p=>p.storage))].sort();}
         return fitted;
       } catch(error:any) { throw new Error(`${profile.model} ${id}: ${error.message}`); }
     };
@@ -198,4 +198,5 @@ if (require.main === module) {
   }
   console.log(JSON.stringify({ brand, models: Object.keys(calibration.profiles).length, rules: Object.values(calibration.profiles).reduce((n, p) => n + Object.keys(p.rules).length, 0), written: process.argv.includes('--write') }));
 }
+
 

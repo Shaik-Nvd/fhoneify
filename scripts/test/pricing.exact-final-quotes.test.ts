@@ -27,7 +27,7 @@ profiles.profiles.set(questionnaireModelKey(device),{brand:device.brand,model:de
  questionLabels:[],status:'OK',statusDetail:null,sourceUrl:null,variantsChecked:1,parserVersion:'offline',observedAt:source.observedAt});
 let record:ReferencePriceRecord={...device,deviceKey:key,source:'cashify',currentPrice:source.getUpto,matchConfidence:'exact',status:'fresh',lastVerifiedAt:source.observedAt,lastAttemptedAt:source.observedAt,lastFailureAt:null,lastFailureError:null,consecutiveFailures:0,createdAt:source.observedAt,updatedAt:source.observedAt};
 const routes=loadReleaseRouteEvidence('scripts/pricing/fixtures/release-route-evidence-2026-10-03-expansion.json');
-const base={repository:{async get(){return record;},async listAll(){return[record];},async upsert(){throw new Error('offline');},async appendHistory(){throw new Error('offline');},async getHistory(){return[];}},questionnaireStore:profiles,releaseRouteEvidence:routes,
+const base={disableRunnerEvidence:true,repository:{async get(){return record;},async listAll(){return[record];},async upsert(){throw new Error('offline');},async appendHistory(){throw new Error('offline');},async getHistory(){return[];}},questionnaireStore:profiles,releaseRouteEvidence:routes,
  pricingMode:'hybrid' as const,signingSecret:'exact-final-quote-offline-signing-secret-not-production',tokenTtlSeconds:900,strictReferenceMode:true,referenceLookupTimeoutMs:100,logger:{info(){},warn(){},error(){}},snapshot:{},catalog:[device],now:()=>at};
 const input={...device,diagnostics:source.diagnostics};
 async function main(){
