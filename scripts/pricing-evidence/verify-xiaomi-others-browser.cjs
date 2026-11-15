@@ -57,4 +57,3 @@ let browser;
   assert.deepEqual(errors,[]);fs.writeFileSync('release-test-logs/xiaomi-others/browser-summary.json',JSON.stringify({flows,pageErrors:errors,basis:'built local frontend + production price controller with injected read-only references, unreachable database',otpLeadAndAuthenticatedFinalScreen:'not tested'},null,2));
   console.log(`PASS ${flows.length} browser flows: Get Upto/reload, measured accessories, age persistence, API quotes, login boundary; no OTP or leads`);await browser.close();
 })().catch(async e=>{console.error(e);await browser?.close();process.exitCode=1;});
-

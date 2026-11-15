@@ -15,4 +15,3 @@ for(const [brand,model,storage]of [['Xiaomi','Xiaomi Redmi Note 11','6 GB/64 GB'
 assert.equal(runnerScope('POCO F4'),null);assert(runnerSkipsAge({...clean,validBill:false}));
 console.log('PASS new brands use authoritative runner service with bonus once and token');
 })().catch(error=>{console.error(error);process.exitCode=1;});
-

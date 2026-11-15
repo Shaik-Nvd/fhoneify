@@ -20,4 +20,3 @@ async function main() {
   } finally {await prisma.$disconnect();}
 }
 main().catch(()=>{console.error('Read-only reference audit failed; credentials and connection details withheld');process.exitCode=1;});
-

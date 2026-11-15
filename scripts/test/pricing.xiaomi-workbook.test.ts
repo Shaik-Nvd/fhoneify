@@ -97,4 +97,3 @@ async function main() {
   console.log(`PASS fresh Xiaomi workbook ${checks} assertions; fresh verified calibration, strict regime, exact profiles and disabled service preview`);
 }
 main().catch(e => { console.error(e); process.exitCode = 1; });
-

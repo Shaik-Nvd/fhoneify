@@ -206,5 +206,3 @@ if (require.main === module) {
   }
   console.log(JSON.stringify({ brand, models: Object.keys(calibration.profiles).length, rules: Object.values(calibration.profiles).reduce((n, p) => n + Object.keys(p.rules).length, 0), written: process.argv.includes('--write') }));
 }
-
-

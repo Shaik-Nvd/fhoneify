@@ -19,4 +19,3 @@ if(process.argv.includes('--capture')){fs.writeFileSync(file,JSON.stringify(resu
 else {const baseline=JSON.parse(fs.readFileSync(file,'utf8'));if(JSON.stringify(result)!==JSON.stringify(baseline))throw new Error('Protected brand quote fingerprint changed');console.log('PASS protected brands unchanged',result);}
 
 }
-

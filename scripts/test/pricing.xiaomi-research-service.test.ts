@@ -86,4 +86,3 @@ async function main() {
   console.log(`PASS local research quote-service integration: ${checks} assertions; defaults and cross-brand path unchanged; previews have no token`);
 }
 main().catch(err => { console.error(err); process.exitCode = 1; });
-
