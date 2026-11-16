@@ -11,9 +11,11 @@ export interface DeductionRule {
   support: number;
   residual: number;
   inferredFrom?: string;
+  observedDates?: string[];
+  measuredStorages?: string[];
 }
 export interface RunnerProfile {
-  brand: 'Nothing' | 'OnePlus' | 'Samsung' | 'Google';
+  brand: 'Nothing' | 'OnePlus' | 'Samsung' | 'Google' | 'Xiaomi' | 'Honor' | 'Asus' | 'Lenovo' | 'Nokia';
   model: string;
   hasAge: boolean;
   variants: Record<string, { accessories: string[]; scrap: number; scrapInferredFrom?: string; conditionFloor?: number }>;
@@ -84,6 +86,10 @@ export function runnerFaults(d: DiagnosticsType): string[] {
 
 export function evaluateRunner(profile: RunnerProfile, reference: number, d: DiagnosticsType, storage?: string | null) {
   if (!Number.isFinite(reference) || reference <= 0) throw new Error('Invalid runner reference');
+  if(['Xiaomi','Honor','Asus','Lenovo','Nokia'].includes(profile.brand)) {
+    const required=[d.calls,d.touch,d.originalScreen,...(profile.hasAge?[d.warranty,d.validBill]:[])];
+    if(required.some(value=>typeof value!=='boolean'))throw new InspectionRequiredError('Missing runner initial answer');
+  }
   const sk = storageKey(storage);
   const variant = profile.variants[sk];
   const faults = runnerFaults(d);
@@ -123,8 +129,10 @@ export function evaluateRunner(profile: RunnerProfile, reference: number, d: Dia
     const rule = profile.rules[key];
     if (!rule) throw new InspectionRequiredError('Unsupported runner deduction');
     const value = evaluateDeduction(rule, reference, sk);
-    if (!rule.support || rule.inferredFrom || (rule.form === 'byStorage' && rule.values?.[sk] === undefined)) inherited = true;
-    breakdown.push({ rule: key, amount: value, support: variant && rule.support > 0 && !rule.inferredFrom ? 'measured' : 'inferred' });
+    const measured=!!variant && rule.support>0 && !rule.inferredFrom &&
+      (!rule.measuredStorages || rule.measuredStorages.includes(sk));
+    if (!measured || (rule.form === 'byStorage' && rule.values?.[sk] === undefined)) inherited = true;
+    breakdown.push({ rule: key, amount: value, support: measured ? 'measured' : 'inferred' });
     return value;
   };
   const availableVariants = Object.values(profile.variants);

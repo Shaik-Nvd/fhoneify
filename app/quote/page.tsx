@@ -2802,7 +2802,7 @@ export default function QuotePage() {
                     // 2. If screen IS original (originalScreen !== false) and user selected Yes on warranty (warranty === true),
                     //    the age question must ALWAYS be asked for all Apple devices (including iPhone 15, 16, 17, 18 series).
                     const screenIsNotOriginal = diagnostics.originalScreen === false;
-                    const measuredAgeSkipped=!!runnerProfile&&['Samsung','Google'].includes(selectedBrand)&&runnerSkipsAge(diagnostics);
+                    const measuredAgeSkipped=!!runnerProfile&&['Samsung','Google','Xiaomi','Honor','Asus','Lenovo','Nokia'].includes(selectedBrand)&&runnerSkipsAge(diagnostics);
                     const forceAgeForWarranty = diagnostics.warranty === true && !screenIsNotOriginal;
 
                     if ((asksAge || forceAgeForWarranty) && !screenIsNotOriginal && !measuredAgeSkipped) {

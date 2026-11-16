@@ -64,7 +64,8 @@ async function main() {
     observedAt: '2026-09-24T18:53:45.536Z',
   });
 
-  const service = createPricingService({
+  // Retrospective October evidence path; current runner replay is tested separately.
+  const service = createPricingService({ disableRunnerEvidence:true,
     repository: {
       async get() { return reference; },
       async listAll() { return [reference]; },

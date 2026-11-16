@@ -809,6 +809,12 @@
           "charger",
           "box"
         ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
       }
     }
   },
@@ -9153,6 +9159,6459 @@
       },
       "16gb/512gb": {
         "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomi11i5g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomi11ihypercharge5g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomi11litene5g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomi11tpro5g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomi12pro5g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomi13pro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomi14": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "12gb/512gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomi14civi": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomi14ultra": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "16gb/512gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomi15": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "speaker",
+      "silent",
+      "face",
+      "power",
+      "charging",
+      "audio_receiver",
+      "camera_glass",
+      "microphone",
+      "bluetooth",
+      "vibrator",
+      "proximity",
+      "battery_service"
+    ],
+    "variants": {
+      "12gb/512gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomi15ultra": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "speaker",
+      "silent",
+      "face",
+      "power",
+      "charging",
+      "audio_receiver",
+      "camera_glass",
+      "microphone",
+      "bluetooth",
+      "vibrator",
+      "proximity",
+      "battery_service"
+    ],
+    "variants": {
+      "16gb/512gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomi17": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomi17t": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "speaker",
+      "silent",
+      "face",
+      "power",
+      "charging",
+      "audio_receiver",
+      "camera_glass",
+      "microphone",
+      "bluetooth",
+      "vibrator",
+      "proximity",
+      "battery_service"
+    ],
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomi17ultra": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "16gb/512gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiblackshark2": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomimi10": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomimi10i": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomimi10t": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomimi10tpro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomimi11lite": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomimi11ultra": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomimi11x": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomimi11xpro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomimia2": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomimia3": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomimimax2": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomimimix2": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi10": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi10a": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi10power": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi10prime": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi10prime2022": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi11prime": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi11prime5g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi12": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "speaker",
+      "silent",
+      "face",
+      "power",
+      "charging",
+      "audio_receiver",
+      "camera_glass",
+      "microphone",
+      "bluetooth",
+      "vibrator",
+      "proximity",
+      "battery_service"
+    ],
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi125g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "speaker",
+      "silent",
+      "face",
+      "power",
+      "charging",
+      "audio_receiver",
+      "camera_glass",
+      "microphone",
+      "bluetooth",
+      "vibrator",
+      "proximity",
+      "battery_service"
+    ],
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi12c": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "speaker",
+      "silent",
+      "face",
+      "power",
+      "charging",
+      "audio_receiver",
+      "camera_glass",
+      "microphone",
+      "bluetooth",
+      "vibrator",
+      "proximity",
+      "battery_service"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi135g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi13c": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi13c5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi14c5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "speaker",
+      "silent",
+      "face",
+      "power",
+      "charging",
+      "audio_receiver",
+      "camera_glass",
+      "microphone",
+      "bluetooth",
+      "vibrator",
+      "proximity",
+      "battery_service"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi155g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi15a5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi15c5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi175g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi5": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "2gb/16gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi5a": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "2gb/16gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi6": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "3gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi6a": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "2gb/16gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "2gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi6pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi7": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "2gb/16gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "2gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "3gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi7a": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "2gb/16gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "2gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi8": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi8a": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "2gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi8adual": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "2gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "3gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi9": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi9a": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "2gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi9activ": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi9i": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi9power": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmi9prime": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmia1": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "2gb/32gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomiredmia1plus": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "2gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmia2": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "2gb/32gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "2gb/64gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomiredmia2plus": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "2gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmia3": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmia3x": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "speaker",
+      "silent",
+      "face",
+      "power",
+      "charging",
+      "audio_receiver",
+      "camera_glass",
+      "microphone",
+      "bluetooth",
+      "vibrator",
+      "proximity",
+      "battery_service"
+    ],
+    "variants": {
+      "3gb/64gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomiredmia45g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "speaker",
+      "silent",
+      "face",
+      "power",
+      "charging",
+      "audio_receiver",
+      "camera_glass",
+      "microphone",
+      "bluetooth",
+      "vibrator",
+      "proximity",
+      "battery_service"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomiredmia5": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "speaker",
+      "silent",
+      "face",
+      "power",
+      "charging",
+      "audio_receiver",
+      "camera_glass",
+      "microphone",
+      "bluetooth",
+      "vibrator",
+      "proximity",
+      "battery_service"
+    ],
+    "variants": {
+      "3gb/64gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomiredmia7": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/64gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomiredmia7pro": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "speaker",
+      "silent",
+      "face",
+      "power",
+      "charging",
+      "audio_receiver",
+      "camera_glass",
+      "microphone",
+      "bluetooth",
+      "vibrator",
+      "proximity",
+      "battery_service"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomiredmia7pro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomiredmigo": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "1gb/8gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "1gb/16gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmik20": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmik20pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmik50i5g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote10": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote10lite": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote10pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote10promax": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote10s": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote10t5g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote11": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote11pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote11proplus5g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote11s": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote11se": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote11t5g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote12": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote125g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote12pro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote12proplus5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote135g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote13pro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote13proplus5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote145g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote14pro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote14proplus5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote14se5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote155g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote15pro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "speaker",
+      "silent",
+      "face",
+      "power",
+      "charging",
+      "audio_receiver",
+      "camera_glass",
+      "microphone",
+      "bluetooth",
+      "vibrator",
+      "proximity",
+      "battery_service"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote15proplus5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "speaker",
+      "silent",
+      "face",
+      "power",
+      "charging",
+      "audio_receiver",
+      "camera_glass",
+      "microphone",
+      "bluetooth",
+      "vibrator",
+      "proximity",
+      "battery_service"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote15se5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote175g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote17pro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "speaker",
+      "silent",
+      "face",
+      "power",
+      "charging",
+      "audio_receiver",
+      "camera_glass",
+      "microphone",
+      "bluetooth",
+      "vibrator",
+      "proximity",
+      "battery_service"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote17promax5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote5": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote5pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote6pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote7": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote7pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote7s": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote8": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote8pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote9": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote9pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredminote9promax": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmiturbo5": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "xiaomiredmiy1": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmiy1lite": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "2gb/16gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmiy2": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "xiaomiredmiy3": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "honor10": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "honor20": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "honor2005g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "honor200lite5g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "honor200pro5g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "12gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "honor20i": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "honor7a": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "honor7x": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "honor8c": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "honor8x": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "honor90": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "honor9a": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "honor9lite": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "honor9n": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "honor9xpro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "honorplay": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "asus8z": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "asusrogphone3": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "asusrogphoneiizs660kl": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "lenovoa6note": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "lenovok10note": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "lenovok10plus": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "lenovok9note": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "lenovoz6pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "nokia22": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity",
+      "back_camera"
+    ],
+    "variants": {
+      "2gb/16gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "nokia24": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "nokia32": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "2gb/16gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "nokia34": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "nokia42": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "nokia51plus": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "nokia53": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "nokia54": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "nokia61plus": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "nokia62": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "nokia71": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "nokia72": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "nokia7plus": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "nokia81": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "nokia8sirocco": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "nokiac01plus": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "2gb/16gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "2gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "nokiac12": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "2gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "nokiac12pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "2gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "3gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "nokiac20plus": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "2gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "nokiac21plus": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "nokiac22": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "2gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "nokiac30": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "nokiac31": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "nokiac32": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "nokiag10": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "nokiag11plus": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "nokiag20": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "nokiag21": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "nokiag425g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "nokiag605g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "nokiax305g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "nokiaxr20": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
           "box"
         ]
       }

@@ -2562,8 +2562,14 @@ export function calculateXiaomiPrice(
   reference: CashifyGetUptoReference,
   diagnostics: DiagnosticsType,
   semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE,
-  inrConfig: InrDeductionConfig = xiaomiInrDeductions()
+  inrConfig: InrDeductionConfig = xiaomiInrDeductions(),
+  storageVariant?: string,
+  useRunnerEvidence = false
 ): PricingResult {
+  // The authoritative router opts in. Existing October research/config callers
+  // retain their historical calculator, including explicitly supplied INR rules.
+  const measured=useRunnerEvidence&&!/poco/i.test(model)?runnerQuote(model,storageVariant,reference,diagnostics):null;
+  if(measured)return finalizeConditionQuote(reference,measured.price);
   if (!reference || reference <= 0) return { cashifyConditionEquivalent: 0, fhoneifyPrice: 0 };
 
   const lowerModel = String(model || "").toLowerCase();
@@ -2928,7 +2934,7 @@ function routeBrandCalculator(
     safeBrand === "xiaomi" || safeBrand === "redmi" || safeBrand === "poco" ||
     safeModel.includes("xiaomi") || safeModel.includes("redmi") || safeModel.includes("poco")
   ) {
-    return calculateXiaomiPrice(model, cashifyGetUptoReference, diagnostics, semantics);
+    return calculateXiaomiPrice(model, cashifyGetUptoReference, diagnostics, semantics, undefined, calculationContext?.catalogStorage??storageVariant, !calculationContext?.disableRunnerEvidence);
   }
 
   if (
@@ -2958,7 +2964,7 @@ function routeBrandCalculator(
     return calculateNothingPrice(model, cashifyGetUptoReference, diagnostics, semantics, calculationContext?.catalogStorage ?? storageVariant, !calculationContext?.disableRunnerEvidence);
   }
 
-  if(safeBrand==='google') {
+  if(['google','honor','asus','lenovo','nokia'].includes(safeBrand)) {
     const measured=calculationContext?.disableRunnerEvidence?null:runnerQuote(model,calculationContext?.catalogStorage??storageVariant,cashifyGetUptoReference,diagnostics);
     if(measured)return finalizeConditionQuote(cashifyGetUptoReference,measured.price);
   }

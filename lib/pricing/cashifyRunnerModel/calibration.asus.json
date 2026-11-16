@@ -1,0 +1,1688 @@
+{
+  "version": "cashify-runner-rules-v5",
+  "sourceHash": "6646916834049bab7314a023aee14644fd7ff374b36ae8609a81f384fd4727d3",
+  "profiles": {
+    "asus8z": {
+      "model": "Asus 8z",
+      "brand": "Asus",
+      "hasAge": false,
+      "variants": {
+        "8gb/128gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 800,
+          "conditionFloor": 0
+        }
+      },
+      "rules": {
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 1200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 2200,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "hardware:fingerprint": {
+          "form": "fixed",
+          "value": 1960,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "hardware:wifi": {
+          "form": "fixed",
+          "value": 2940,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 1500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 400,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 1500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 1960,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 800,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "hardware:bluetooth": {
+          "form": "fixed",
+          "value": 2940,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 400,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 400,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "hardware:proximity": {
+          "form": "fixed",
+          "value": 220,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "cracked": {
+          "form": "fixed",
+          "value": 5260,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 5250,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 3670,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 1570,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "spots:0": {
+          "form": "fixed",
+          "value": 5260,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 2500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "lines:0": {
+          "form": "fixed",
+          "value": 5260,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 5260,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 6870,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 2500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "scratch:0": {
+          "form": "fixed",
+          "value": 430,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "scratch:1": {
+          "form": "fixed",
+          "value": 0,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "dent:0": {
+          "form": "fixed",
+          "value": 750,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "dent:1": {
+          "form": "fixed",
+          "value": 430,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "panel": {
+          "form": "fixed",
+          "value": 1310,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "bent": {
+          "form": "fixed",
+          "value": 1310,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "loose": {
+          "form": "fixed",
+          "value": 1310,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "touch": {
+          "form": "fixed",
+          "value": 5260,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "original": {
+          "form": "fixed",
+          "value": 6250,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "charger": {
+          "form": "fixed",
+          "value": 500,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "box": {
+          "form": "fixed",
+          "value": 800,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        },
+        "both": {
+          "form": "fixed",
+          "value": 800,
+          "support": 1,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "8gb/128gb"
+          ]
+        }
+      },
+      "noOffer": {
+        "spots:1": [
+          "8gb/128gb"
+        ]
+      }
+    },
+    "asusrogphone3": {
+      "model": "Asus ROG Phone 3",
+      "brand": "Asus",
+      "hasAge": false,
+      "variants": {
+        "8gb/128gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 800
+        },
+        "12gb/128gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 800
+        },
+        "12gb/256gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 800
+        }
+      },
+      "rules": {
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 1200,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 1200,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 500,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "hardware:fingerprint": {
+          "form": "pct",
+          "value": 0.2642702489081347,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "hardware:wifi": {
+          "form": "pct",
+          "value": 0.3960160849577609,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 1500,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 500,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 1500,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "hardware:face": {
+          "form": "pct",
+          "value": 0.2642702489081347,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 600,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "hardware:bluetooth": {
+          "form": "pct",
+          "value": 0.3960160849577609,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 400,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "hardware:proximity": {
+          "form": "pct",
+          "value": 0.03004276261345097,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "cracked": {
+          "form": "pct",
+          "value": 0.7094506726836073,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "screen:1": {
+          "form": "capped",
+          "value": 5250,
+          "slope": 0.5943396226415094,
+          "support": 3,
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.583000341155131
+          },
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "screen:2": {
+          "form": "capped",
+          "value": 3680,
+          "slope": 0.41627358490566035,
+          "support": 3,
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.40855522490905344
+          },
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "screen:3": {
+          "form": "capped",
+          "value": 1580,
+          "slope": 0.17806603773584906,
+          "support": 3,
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.1752118708474496
+          },
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "spots:0": {
+          "form": "pct",
+          "value": 0.7094506726836073,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "spots:1": {
+          "form": "capped",
+          "value": 7500,
+          "slope": 0.8490566037735849,
+          "support": 3,
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.8328576302216157
+          },
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "spots:2": {
+          "form": "capped",
+          "value": 2500,
+          "slope": 0.2830188679245283,
+          "support": 3,
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.2776192100738719
+          },
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "lines:0": {
+          "form": "pct",
+          "value": 0.7094506726836073,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "lines:1": {
+          "form": "capped",
+          "value": 6250,
+          "slope": 0.7075471698113207,
+          "support": 3,
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.6940480251846798
+          },
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "color:0": {
+          "form": "capped",
+          "value": 6880,
+          "slope": 0.7783018867924528,
+          "support": 3,
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.7638362050038338
+          },
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "color:1": {
+          "form": "capped",
+          "value": 2500,
+          "slope": 0.2830188679245283,
+          "support": 3,
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.2776192100738719
+          },
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "scratch:0": {
+          "form": "pct",
+          "value": 0.05931877062552989,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "scratch:1": {
+          "form": "fixed",
+          "value": 0,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "dent:0": {
+          "form": "pct",
+          "value": 0.1017343178417378,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "dent:1": {
+          "form": "pct",
+          "value": 0.05931877062552989,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "panel": {
+          "form": "pct",
+          "value": 0.17644222487189792,
+          "support": 3,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "bent": {
+          "form": "pct",
+          "value": 0.17644222487189792,
+          "support": 3,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "loose": {
+          "form": "pct",
+          "value": 0.17644222487189792,
+          "support": 3,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "touch": {
+          "form": "pct",
+          "value": 0.7094506726836073,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "original": {
+          "form": "capped",
+          "value": 6250,
+          "slope": 0.7075471698113207,
+          "support": 3,
+          "residual": 0,
+          "fallback": {
+            "form": "pct",
+            "value": 0.6940480251846798
+          },
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "charger": {
+          "form": "fixed",
+          "value": 500,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "box": {
+          "form": "fixed",
+          "value": 800,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        },
+        "both": {
+          "form": "fixed",
+          "value": 800,
+          "support": 3,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/128gb",
+            "12gb/256gb",
+            "8gb/128gb"
+          ]
+        }
+      },
+      "noOffer": {}
+    },
+    "asusrogphoneiizs660kl": {
+      "model": "Asus ROG Phone II ZS660KL",
+      "brand": "Asus",
+      "hasAge": false,
+      "variants": {
+        "8gb/128gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 800
+        },
+        "12gb/512gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 800
+        }
+      },
+      "rules": {
+        "hardware:front_camera": {
+          "form": "fixed",
+          "value": 1000,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "hardware:back_camera": {
+          "form": "fixed",
+          "value": 2000,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "hardware:volume": {
+          "form": "fixed",
+          "value": 300,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "hardware:fingerprint": {
+          "form": "pct",
+          "value": 0.2641783598766755,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "hardware:wifi": {
+          "form": "pct",
+          "value": 0.3962675398150133,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "hardware:battery_service": {
+          "form": "fixed",
+          "value": 1000,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "hardware:speaker": {
+          "form": "fixed",
+          "value": 200,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "hardware:power": {
+          "form": "fixed",
+          "value": 300,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "hardware:charging": {
+          "form": "fixed",
+          "value": 1500,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "hardware:face": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "hardware:silent": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "hardware:audio_receiver": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "hardware:camera_glass": {
+          "form": "fixed",
+          "value": 1000,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "hardware:bluetooth": {
+          "form": "pct",
+          "value": 0.3962675398150133,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "hardware:vibrator": {
+          "form": "fixed",
+          "value": 400,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "hardware:microphone": {
+          "form": "fixed",
+          "value": 400,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "hardware:proximity": {
+          "form": "fixed",
+          "value": 230,
+          "support": 2,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "cracked": {
+          "form": "byStorage",
+          "value": 0,
+          "values": {
+            "8gb/128gb": 5160,
+            "12gb/512gb": 5350
+          },
+          "references": {
+            "8gb/128gb": 7270,
+            "12gb/512gb": 7720
+          },
+          "fallback": {
+            "form": "pct",
+            "value": 0.7008829600013518
+          },
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "screen:1": {
+          "form": "fixed",
+          "value": 3780,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "screen:2": {
+          "form": "fixed",
+          "value": 2650,
+          "support": 2,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "screen:3": {
+          "form": "fixed",
+          "value": 1130,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "spots:0": {
+          "form": "pct",
+          "value": 0.7098077123163539,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "spots:1": {
+          "form": "fixed",
+          "value": 5400,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "spots:2": {
+          "form": "fixed",
+          "value": 1800,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "lines:0": {
+          "form": "pct",
+          "value": 0.7098077123163539,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "lines:1": {
+          "form": "fixed",
+          "value": 4500,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "color:0": {
+          "form": "fixed",
+          "value": 4950,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "color:1": {
+          "form": "fixed",
+          "value": 1800,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "scratch:0": {
+          "form": "fixed",
+          "value": 440,
+          "support": 2,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "scratch:1": {
+          "form": "fixed",
+          "value": 0,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "dent:0": {
+          "form": "pct",
+          "value": 0.1013896682386064,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "dent:1": {
+          "form": "fixed",
+          "value": 440,
+          "support": 2,
+          "residual": 10,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "panel": {
+          "form": "pct",
+          "value": 0.17611890658445034,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "bent": {
+          "form": "pct",
+          "value": 0.17611890658445034,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "loose": {
+          "form": "pct",
+          "value": 0.17611890658445034,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "touch": {
+          "form": "pct",
+          "value": 0.7098077123163539,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "original": {
+          "form": "fixed",
+          "value": 4500,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "charger": {
+          "form": "fixed",
+          "value": 400,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "box": {
+          "form": "fixed",
+          "value": 500,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        },
+        "both": {
+          "form": "fixed",
+          "value": 500,
+          "support": 2,
+          "residual": 0,
+          "observedDates": [
+            "2026-11-11"
+          ],
+          "measuredStorages": [
+            "12gb/512gb",
+            "8gb/128gb"
+          ]
+        }
+      },
+      "noOffer": {}
+    }
+  }
+}

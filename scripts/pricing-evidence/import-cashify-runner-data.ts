@@ -4,7 +4,7 @@ import { createHash } from 'node:crypto';
 import { inflateRawSync } from 'node:zlib';
 import type { DiagnosticsType } from '../../lib/pricingCalculator';
 
-export type Brand = 'Nothing' | 'OnePlus' | 'Samsung' | 'Google';
+export type Brand = 'Nothing' | 'OnePlus' | 'Samsung' | 'Google' | 'Xiaomi' | 'Honor' | 'Asus' | 'Lenovo' | 'Nokia';
 export interface RunnerMeasurement {
   brand: Brand; model: string; rawModel: string; storage: string; caseId: string; label: string;
   status: 'quoted' | 'pending' | 'no_offer' | 'not_applicable'; diagnostics: DiagnosticsType; answerPath: any[];
@@ -162,7 +162,7 @@ function normalizeAnswers(answers:any[], schema:any) {
   return {diagnostics:d, ageAsked,ageSelected};
 }
 export function importRunnerData(input: string, options: {brand:Brand;out?:string;requireMirror?:boolean}) {
-  check(['Nothing','OnePlus','Samsung','Google'].includes(options.brand),'Unknown brand');
+  check(['Nothing','OnePlus','Samsung','Google','Xiaomi','Honor','Asus','Lenovo','Nokia'].includes(options.brand),'Unknown brand');
   const measurements:RunnerMeasurement[]=[]; const inventory:any[]=[];const variants:any[]=[];
   const folders=fs.existsSync(path.join(input,'checkpoint.json')) ? ['.'] : fs.readdirSync(input,{withFileTypes:true}).filter(e=>e.isDirectory()).map(e=>e.name).sort();
   check(folders.length>0,'No model folders');
@@ -170,7 +170,7 @@ export function importRunnerData(input: string, options: {brand:Brand;out?:strin
     const dir=path.join(input,folder), files=new Map<string,Buffer>();
     for(const f of fs.readdirSync(dir,{withFileTypes:true})) {
       check(f.isFile(),'Unexpected nested source directory');
-      if(f.name==='diagnostic.json') {inventory.push({folder,file:f.name,ignored:true});continue;}
+      if(f.name==='diagnostic.json'||f.name==='.running.lock') {inventory.push({folder,file:f.name,ignored:true});continue;}
       const bytes=fs.readFileSync(path.join(dir,f.name)); files.set(f.name,bytes);inventory.push({folder,file:f.name,bytes:bytes.length,sha256:sha(bytes)});
     }
     const required=['results.json','results.csv','full_test_results.txt','checkpoint.json'];
@@ -190,7 +190,7 @@ export function importRunnerData(input: string, options: {brand:Brand;out?:strin
     const ci=index(csv),ti=index(textRows),ri=index(rows);check(ri.size===rows.length&&ci.size===csv.length&&ti.size===textRows.length,'Duplicate result row');for(const key of ti.keys())check(ri.has(key),'Unexpected text result');let seen=0;
     for(const [url,v] of Object.entries(checkpoint.variants) as [string,any][]) {
       const baseline=v.results.baseline;
-      if (!baseline && options.brand === 'Samsung') {
+      if (!baseline) {
         const model=normalizeModel(v.model,options.brand);
         const plannedRows=rows.filter(row=>row.model===v.model);
         check(plannedRows.every(row=>row.status==='pending'),'Unobserved variant has non-pending results');
@@ -270,6 +270,10 @@ export function importRunnerData(input: string, options: {brand:Brand;out?:strin
       }
     }
     check(seen===rows.length,'Unmatched results row');
+  }
+  if(['Xiaomi','Honor','Asus','Lenovo','Nokia'].includes(options.brand)) {
+    for(const row of measurements)row.source.format='A';
+    require('./import-samsung-pixel-archives').reconcile(measurements);
   }
   const summary={brand:options.brand,folders:folders.length,variants:variants.length,measurements:measurements.length,quoted:measurements.filter(m=>m.status==='quoted').length,pending:measurements.filter(m=>m.status==='pending').length,noOffer:measurements.filter(m=>m.status==='no_offer').length,excluded:0,incompleteVariants:variants.filter(v=>!v.complete).length,mirrors:inventory.filter(i=>i.mirror).length,variantInventory:variants};
   if(options.out) {fs.mkdirSync(options.out,{recursive:true});fs.writeFileSync(path.join(options.out,'inventory.json'),JSON.stringify(inventory,null,2)+'\n');fs.writeFileSync(path.join(options.out,'measurements.jsonl'),measurements.map(m=>JSON.stringify(m)).join('\n')+'\n');fs.writeFileSync(path.join(options.out,'summary.json'),JSON.stringify(summary,null,2)+'\n');}
