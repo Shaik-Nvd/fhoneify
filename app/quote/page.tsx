@@ -82,6 +82,29 @@ const FaceIdIcon = () => (
   </svg>
 );
 
+/** A fresh, unanswered questionnaire. Each device starts from this so no answer
+ * from a previously viewed phone is pre-selected or priced. */
+const emptyDiagnostics = () => ({
+    calls: null as boolean | null,
+    touch: null as boolean | null,
+    originalScreen: null as boolean | null,
+    defects: [] as string[],
+    screenCondition: null as string | null,
+    screenSpots: null as string | null,
+    screenLines: null as string | null,
+    screenDiscoloration: null as string | null,
+    bodyScratches: null as string | null,
+    bodyDents: null as string | null,
+    bodyPanel: null as string | null,
+    bodyBent: null as string | null,
+    hardware: [] as string[],
+    accessories: [] as string[],
+    warranty: null as boolean | null,
+    validBill: null as boolean | null,
+    eSim: null as 'Single eSIM' | 'Dual eSIM' | null,
+    mobileAge: null as 'below3' | '3to6' | '6to11' | 'above11' | null
+  });
+
 export default function QuotePage() {
   // Whether to ask warranty/GST-bill for this device. Previously a
   // hand-maintained allowlist of "recent" models unrelated to the pricing
@@ -217,6 +240,7 @@ export default function QuotePage() {
         else stage = 'brand';
       }
 
+      resetAnswersOnDeviceChange(sBrand, sModel, sStorage);
       setSelectedBrand(sBrand);
       setSelectedModel(sModel);
       setSelectedStorage(sStorage);
@@ -291,6 +315,7 @@ export default function QuotePage() {
     // Pass existing history state so Next.js App Router doesn't break on back navigation
     window.history.pushState(window.history.state, '', newUrl);
 
+    resetAnswersOnDeviceChange(newBrand, newModel, newStorage);
     setSelectedBrand(newBrand);
     setSelectedModel(newModel);
     setSelectedSamsungSeries(null);
@@ -356,6 +381,18 @@ export default function QuotePage() {
   const asksESimQuestion = modelQuestionnaire.eSimMode !== 'NOT_ASKED' && isESimEligible(selectedBrand, selectedModel);
   const asksAgeQuestion = runnerProfile ? runnerAsksAge(selectedModel) : modelQuestionnaire.ageMode === 'ASKED' ||
     questionnaireFor({ brand: selectedBrand, model: selectedModel }).asksAge;
+  // Rules without 3-6 / 6-11 month values offer only below/above 11 months, so every option shown changes the price.
+  const ageOptions = (runnerProfile ? 'brackets' : questionnaireFor({ brand: selectedBrand, model: selectedModel }).ageResolution) === 'brackets'
+    ? [
+        { id: 'below3', label: 'Below 3 months', sub: 'Valid bill mandatory' },
+        { id: '3to6', label: '3 months - 6 months', sub: 'Valid bill mandatory' },
+        { id: '6to11', label: '6 months - 11 months', sub: 'Valid bill mandatory' },
+        { id: 'above11', label: 'Above 11 months', sub: '' },
+      ]
+    : [
+        { id: 'below3', label: 'Below 11 months', sub: 'Valid bill mandatory' },
+        { id: 'above11', label: 'Above 11 months', sub: '' },
+      ];
   const finalPrice = activeFinalQuote?.price ?? null;
   const priceRequestIdRef = useRef(0);
   const startingRequestIdRef = useRef(0);
@@ -410,26 +447,27 @@ export default function QuotePage() {
     }
   }, [step]);
 
-  const [diagnostics, setDiagnostics] = useState({
-    calls: null as boolean | null,
-    touch: null as boolean | null,
-    originalScreen: null as boolean | null,
-    defects: [] as string[],
-    screenCondition: null as string | null,
-    screenSpots: null as string | null,
-    screenLines: null as string | null,
-    screenDiscoloration: null as string | null,
-    bodyScratches: null as string | null,
-    bodyDents: null as string | null,
-    bodyPanel: null as string | null,
-    bodyBent: null as string | null,
-    hardware: [] as string[],
-    accessories: [] as string[],
-    warranty: null as boolean | null,
-    validBill: null as boolean | null,
-    eSim: null as 'Single eSIM' | 'Dual eSIM' | null,
-    mobileAge: null as 'below3' | '3to6' | '6to11' | 'above11' | null
-  });
+  const [diagnostics, setDiagnostics] = useState(emptyDiagnostics);
+  // The device the current answers belong to. Answers never carry over to
+  // another phone: changing brand, model or storage (picker, back/forward,
+  // header link) starts that phone from an empty questionnaire. The reset is
+  // applied in the same update as the device change, so the session-save
+  // effect never stores one phone's answers under another.
+  const answersDeviceRef = useRef('');
+  const resetAnswersOnDeviceChange = (brand: string, model: string, storage: string) => {
+    const next = `${brand}|${model}|${storage}`;
+    const previous = answersDeviceRef.current;
+    answersDeviceRef.current = next;
+    if (!previous || previous === next) return;
+    setDiagnostics(emptyDiagnostics());
+    setFinalQuote(null);
+    setFinalPriceError(null);
+    setManualInspectionRequired(false);
+    setAppliedCoupon(false);
+    setCouponInput('');
+    setMarketPriceFetched(false);
+    setCashifyPrice(null);
+  };
 
   const [userPhone, setUserPhone] = useState('');
   const [userName, setUserName] = useState('');
@@ -2836,12 +2874,7 @@ export default function QuotePage() {
                   {diagnostics.warranty === true ? "(Because you chose your device is under brand's warranty)" : "Please select the age of your device from the purchase date."}
                 </p>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginBottom: '3rem' }}>
-                  {[
-                    { id: 'below3', label: 'Below 3 months', sub: 'Valid bill mandatory' },
-                    { id: '3to6', label: '3 months - 6 months', sub: 'Valid bill mandatory' },
-                    { id: '6to11', label: '6 months - 11 months', sub: 'Valid bill mandatory' },
-                    { id: 'above11', label: 'Above 11 months', sub: '' }
-                  ].map((age) => (
+                  {ageOptions.map((age) => (
                     <button key={age.id} onClick={() => setDiagnostics({ ...diagnostics, mobileAge: age.id as any })} style={{ display: 'flex', flexDirection: 'column', padding: '1.5rem', borderRadius: '8px', border: diagnostics.mobileAge === age.id ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.mobileAge === age.id ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', cursor: 'pointer', color: diagnostics.mobileAge === age.id ? '#4CD964' : 'var(--foreground)', textAlign: 'left' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: age.sub ? '0.25rem' : '0' }}>
                         <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.mobileAge === age.id ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.mobileAge === age.id ? '#4CD964' : 'transparent', flexShrink: 0 }} />
@@ -2862,7 +2895,7 @@ export default function QuotePage() {
                     } else { 
                       setFinalQuote(null); navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 10); 
                     } 
-                  }} disabled={!diagnostics.mobileAge} className="btn-primary" style={{ fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: diagnostics.mobileAge ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
+                  }} disabled={!ageOptions.some(o => o.id === diagnostics.mobileAge)} className="btn-primary" style={{ fontWeight: 600, padding: '1rem 4rem', borderRadius: '8px', opacity: ageOptions.some(o => o.id === diagnostics.mobileAge) ? 1 : 0.5 }}>Continue <ArrowRightIcon /></button>
                 </div>
               </div>
             )}
@@ -2988,7 +3021,7 @@ export default function QuotePage() {
                 onClick={() => {
                   setFinalQuote(null);
                   setMarketPriceFetched(false);
-                  setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], screenCondition: null, screenSpots: null, screenLines: null, screenDiscoloration: null, bodyScratches: null, bodyDents: null, bodyPanel: null, bodyBent: null, hardware: [], accessories: [], warranty: null, validBill: null, eSim: null, mobileAge: null });
+                  setDiagnostics(emptyDiagnostics());
                   navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 3);
                 }}
                 style={{
@@ -3188,7 +3221,7 @@ export default function QuotePage() {
           
           <div style={{ display: 'flex', gap: '0.75rem', marginTop: '1rem', width: '100%' }}>
             <button type="button" onClick={handleBack} className="btn-outline" style={{ flex: 1, padding: '12px', fontSize: '1rem' }}>Back</button>
-            <button type="button" onClick={() => { navigateToState('', '', '', 'brand', 1); setFinalQuote(null); setStartingQuote(null); setAppliedCoupon(false); { const store = getSessionStore(); if (store) clearQuoteSession(store); } setMarketPriceFetched(false); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics({ calls: null, touch: null, originalScreen: null, defects: [], screenCondition: null, screenSpots: null, screenLines: null, screenDiscoloration: null, bodyScratches: null, bodyDents: null, bodyPanel: null, bodyBent: null, hardware: [], accessories: [], warranty: null, validBill: null, eSim: null, mobileAge: null }); }} className="btn-outline" style={{ flex: 1, padding: '12px', fontSize: '1rem' }}>Start Over</button>
+            <button type="button" onClick={() => { navigateToState('', '', '', 'brand', 1); setFinalQuote(null); setStartingQuote(null); setAppliedCoupon(false); { const store = getSessionStore(); if (store) clearQuoteSession(store); } setMarketPriceFetched(false); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics(emptyDiagnostics()); }} className="btn-outline" style={{ flex: 1, padding: '12px', fontSize: '1rem' }}>Start Over</button>
             <button type="button" onClick={() => setStep(12)} className="btn-primary" style={{ flex: 2, padding: '12px', fontSize: '1rem', fontWeight: 600, cursor: 'pointer' }}>Schedule Pickup</button>
           </div>
         </div>
