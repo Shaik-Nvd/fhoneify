@@ -23353,7 +23353,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "2 GB/32 GB",
     "ram": "2 GB",
     "color": "Default",
-    "referencePriceStatus": "pending"
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-a1-2-gb-32-gb"
   },
   {
     "id": "xiaomi-redmi-a7-3-gb-64-gb",
@@ -23371,7 +23372,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "8 GB/256 GB",
     "ram": "8 GB",
     "color": "Default",
-    "referencePriceStatus": "pending"
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-note-14-pro-plus-5g-8-gb-256-gb"
   },
   {
     "id": "xiaomi-redmi-note-17-pro-max-5g-12-gb-256-gb",
