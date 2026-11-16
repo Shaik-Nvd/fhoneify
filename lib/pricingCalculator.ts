@@ -6,6 +6,7 @@ import { inrConditionValue, resolveInrGroup, type InrDeductionConfig } from './p
 import { xiaomiInrDeductions } from './pricing/inrDeductionTables';
 import { teamTextOutOfWarrantyRule } from './pricing/appleVariantDispatch';
 import { appleEvidenceAsksAge, appleEvidenceQuote } from './pricing/appleCashifyModel';
+import { aboveElevenNeedsOutOfWarranty } from './pricing/questionnaire';
 
 /** Internal invocation context; never read from public diagnostic answers. */
 export interface PricingCalculationContext {
@@ -2889,12 +2890,16 @@ export function calculateFhoneifyPrice(
     // question Cashify does not ask. The quote API refuses an exact value
     // without it where the bill is asked (lib/pricing/pricingService.ts).
     ...(semantics.billMode === 'NOT_ASKED' || answers.validBill == null ? { validBill: true } : {}),
-    // Cashify never asks an age bracket when it does not ask age: the warranty
-    // answer is its only age signal. Exception: iPhones whose calibrated rules
-    // measured the age bracket Cashify asks after "warranty: Yes" (the crawled
-    // profile cannot see that conditional page and says NOT_ASKED).
-    ...(semantics.ageMode === 'NOT_ASKED' && !(brand === 'Apple' && appleEvidenceAsksAge(model, calculationContext?.catalogStorage ?? storageVariant))
+    // The crawled profile reads only Cashify's first page, so its ageMode says
+    // NOT_ASKED even where Cashify shows the age page after "warranty: Yes"
+    // (recorded on every Android brand tested, Nov 2026). Android keeps the
+    // customer's age answer whenever warranty is asked. iPhones keep their
+    // reviewed rule: only evidence-calibrated models read the bracket.
+    ...(semantics.ageMode === 'NOT_ASKED' && brand === 'Apple' && !appleEvidenceAsksAge(model, calculationContext?.catalogStorage ?? storageVariant)
       ? { mobileAge: answers.warranty === false ? 'above11' : null } : {}),
+    // Cashify prices "above 11 months" exactly as "warranty: No". Engines that
+    // have no branch for it receive it as out of warranty so it is not ignored.
+    ...(answers.mobileAge === 'above11' && answers.warranty !== false && aboveElevenNeedsOutOfWarranty(brand, model) ? { warranty: false } : {}),
     ...(semantics.warrantyMode === 'NOT_ASKED' ? { warranty: null, mobileAge: null } : {}),
   };
   const asAnswered = routeBrandCalculator(brand, model, cashifyGetUptoReference, diagnostics, semantics, storageVariant, calculationContext);

@@ -43,10 +43,20 @@ export interface QuestionnaireDevice {
   model: string;
 }
 
+/**
+ * How finely the active pricing path prices the age answer.
+ * - 'brackets': each of Cashify's four brackets (below 3, 3-6, 6-11, above 11 months) has its own value.
+ * - 'elevenMonths': the path has no values for the 3-6 and 6-11 brackets, so only below/above 11 months is
+ *   asked. Above 11 months prices as out of warranty, which is what Cashify does (measured on every brand
+ *   whose questionnaire has been recorded: warranty No = bill No = above 11 months).
+ */
+export type AgeResolution = 'brackets' | 'elevenMonths';
+
 export interface QuestionnaireEligibility {
   asksWarranty: boolean;
   asksBill: boolean;
   asksAge: boolean;
+  ageResolution: AgeResolution;
 }
 
 /**
@@ -93,18 +103,22 @@ const AGE_SENSITIVE_BRANDS: ReadonlySet<EngineBrand> = new Set([
  */
 export function questionnaireFor(device: QuestionnaireDevice): QuestionnaireEligibility {
   const runner = runnerScope(device.model);
-  if (runner) return { asksWarranty: runner.hasAge, asksBill: runner.hasAge, asksAge: runner.hasAge };
+  if (runner) return { asksWarranty: runner.hasAge, asksBill: runner.hasAge, asksAge: runner.hasAge, ageResolution: 'brackets' };
+  return { asksWarranty: true, asksBill: true, asksAge: true, ageResolution: ageResolutionFor(device) };
+}
+
+/** Whether the brand calculator prices every age bracket or only below/above 11 months. */
+export function ageResolutionFor(device: QuestionnaireDevice): AgeResolution {
   const engineBrand = resolveEngineBrand(device.brand, device.model);
-  const lowerModel = String(device.model || '').toLowerCase();
-
   // calculateVivoPrice's foldable branch never reads diagnostics.mobileAge.
-  const isFoldVivo = engineBrand === 'vivo' && lowerModel.includes('fold');
+  const isFoldVivo = engineBrand === 'vivo' && String(device.model || '').toLowerCase().includes('fold');
+  return AGE_SENSITIVE_BRANDS.has(engineBrand) && !isFoldVivo ? 'brackets' : 'elevenMonths';
+}
 
-  const asksAge = AGE_SENSITIVE_BRANDS.has(engineBrand) && !isFoldVivo;
+/** Engines whose calculator has no branch for an "above 11 months" answer given with warranty Yes. */
+const ABOVE_ELEVEN_UNREAD: ReadonlySet<EngineBrand> = new Set(['samsung', 'vivo', 'nothing', 'generic']);
 
-  return {
-    asksWarranty: true,
-    asksBill: true,
-    asksAge,
-  };
+/** True when "above 11 months" must be passed to this engine as out of warranty to be priced at all. */
+export function aboveElevenNeedsOutOfWarranty(brand: string, model: string): boolean {
+  return ABOVE_ELEVEN_UNREAD.has(resolveEngineBrand(brand, model));
 }
