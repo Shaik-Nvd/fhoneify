@@ -55,6 +55,7 @@ async function main() {
  pricingService.verifyLeadPrice = input => active.verifyLeadPrice(input);
  const accepted = { id: 'already-accepted', quotedPrice: 17311, answers: c1.rows[0].diagnostics };
  const saved: any[] = [accepted], immutable = JSON.stringify(accepted);
+ Object.defineProperty(prisma.lead, 'count', { value: async () => 0, configurable: true }); // coupon history: none, no database
  Object.defineProperty(prisma.lead, 'create', { value: async ({ data }: any) => { saved.push(data); return { ...data, id: `offline-${saved.length}` }; } });
  const app = express(); app.use(express.json()); app.use('/api/quote', router);
  const server = await new Promise<import('node:http').Server>(resolve => { const s = app.listen(0, '127.0.0.1', () => resolve(s)); });
@@ -81,7 +82,7 @@ async function main() {
    assert(off > row.sellingPrice && off - row.sellingPrice <= 2000);
    assert(on > row.sellingPrice && on - row.sellingPrice <= 2000);
    for (const couponApplied of [false, true]) {
-    const body = { ...req, answers: row.diagnostics, phone: '0000000000', quotedPrice: q.fhoneifyPrice, couponApplied };
+    const body = { ...req, answers: row.diagnostics, phone: '9876500000', quotedPrice: q.fhoneifyPrice, couponApplied };
     const count = saved.length;
     for (const quoteToken of [undefined, 'invalid']) { assert.equal((await post('leads', { ...body, quoteToken })).status, 409); assert.equal(saved.length, count); }
     const issued = await post('leads', { ...body, quoteToken: old.quoteToken });
@@ -99,7 +100,7 @@ async function main() {
   const row = c1.rows[0], req = { brand: row.brand, model: row.model, storage: row.storage, diagnostics: row.diagnostics };
   const fresh = await after.quote(req); assert(fresh.ok); active = before;
   const count = saved.length;
-  for (const couponApplied of [false, true]) assert.equal((await post('leads', { ...req, answers: req.diagnostics, phone: '0000000000', quotedPrice: fresh.fhoneifyPrice, quoteToken: fresh.quoteToken, couponApplied })).status, 409);
+  for (const couponApplied of [false, true]) assert.equal((await post('leads', { ...req, answers: req.diagnostics, phone: '9876500000', quotedPrice: fresh.fhoneifyPrice, quoteToken: fresh.quoteToken, couponApplied })).status, 409);
   assert.equal(saved.length, count); assert.equal(JSON.stringify(saved[0]), immutable);
   console.log('COMPOSED_ROUTER ' + JSON.stringify({ currentReferenceSnapshot: snapshot.checkedAt, profiles: table.length, preservedPriorProfiles: 12, storedPriorRows: 13, routes: routes.length, exactKeys: index.size, table, productionWrites: 0, collectionRequests: 0, acceptedCommitmentPreserved: true, rollbackRepricedTokensRequireReview: true }));
  } finally { await new Promise<void>((resolve, reject) => server.close(e => e ? reject(e) : resolve())); await prisma.$disconnect(); }

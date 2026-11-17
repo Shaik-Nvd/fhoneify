@@ -8,7 +8,7 @@ export const AIController = {
       const result = await AIService.evaluateImage(imageUrl, deviceId);
       res.json({ success: true, data: result });
     } catch (err: any) {
-      res.status(500).json({ success: false, error: err.message });
+      console.error(err); res.status(500).json({ success: false, error: 'Internal server error' });
     }
   },
 
@@ -18,7 +18,7 @@ export const AIController = {
       const price = await AIService.predictPrice(Number(basePrice), aiCondition);
       res.json({ success: true, data: { predictedPrice: price } });
     } catch (err: any) {
-      res.status(500).json({ success: false, error: err.message });
+      console.error(err); res.status(500).json({ success: false, error: 'Internal server error' });
     }
   },
 
@@ -29,7 +29,7 @@ export const AIController = {
       const result = await AIService.checkFraud(userId, imei, ipAddress);
       res.json({ success: true, data: result });
     } catch (err: any) {
-      res.status(500).json({ success: false, error: err.message });
+      console.error(err); res.status(500).json({ success: false, error: 'Internal server error' });
     }
   }
 };

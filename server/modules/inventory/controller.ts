@@ -10,7 +10,7 @@ export const InventoryController = {
       const items = await InventoryService.getListedItems({ locationId, isSelectTier });
       res.json({ success: true, data: items });
     } catch (err: any) {
-      res.status(500).json({ success: false, error: err.message });
+      console.error(err); res.status(500).json({ success: false, error: 'Internal server error' });
     }
   },
 
@@ -19,7 +19,7 @@ export const InventoryController = {
       const items = InventoryService.getAllItems();
       res.json({ success: true, data: items });
     } catch (err: any) {
-      res.status(500).json({ success: false, error: err.message });
+      console.error(err); res.status(500).json({ success: false, error: 'Internal server error' });
     }
   },
 

@@ -32,7 +32,7 @@ export async function generateTokensForUser(phone: string, usedReferralCode?: st
       }
     }
 
-    user = { id: `u-${Date.now()}`, phone, name: null, role: 'buyer', email: null, referralCode: myReferralCode, referredBy };
+    user = { id: `u-${crypto.randomUUID()}`, phone, name: null, role: 'buyer', email: null, referralCode: myReferralCode, referredBy };
     users.push(user);
     isNewUser = true;
     logger.info({ userId: user.id, phone }, 'New user registered via OTP verification');
@@ -174,7 +174,7 @@ export async function adminLoginWithPassword(username: string, password: string)
     // Find or mock the admin user
     let user = users.find((u) => u.role === 'admin');
     if (!user) {
-      user = { id: `u-admin-${Date.now()}`, phone: '9739063840', name: 'Super Admin', role: 'admin', email: 'admin@fhoneify.com' };
+      user = { id: `u-admin-${crypto.randomUUID()}`, phone: '9739063840', name: 'Super Admin', role: 'admin', email: 'admin@fhoneify.com' };
       users.push(user);
     }
 

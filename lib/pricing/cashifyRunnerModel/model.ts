@@ -151,6 +151,14 @@ export function evaluateRunner(profile: RunnerProfile, reference: number, d: Dia
   if (d.calls === false) return { price: Math.round(scrap), support: changes === 1 && variant && !variant.scrapInferredFrom ? 'measured' as const : 'inferred' as const,
     breakdown: [{ rule: 'calls:flat-scrap-deduction', amount: reference - Math.round(scrap), support: variant && !variant.scrapInferredFrom ? 'measured' as const : 'inferred' as const }], forcedAge: false, faults };
   let loss = age === 'below3' ? 0 : amount(`age:${age}`);
+  // Older never pays more: a fixed younger bracket can exceed a percentage older one on a low reference.
+  if (age !== 'below3') {
+    const brackets = ['3to6', '6to11', 'above11'];
+    for (const younger of brackets.slice(0, brackets.indexOf(age))) {
+      const rule = profile.rules[`age:${younger}`];
+      if (rule) loss = Math.max(loss, evaluateDeduction(rule, reference, sk));
+    }
+  }
   const screen: number[] = [];
   if(screenCombination)screen.push(amount(combinationKey));
   const panel: number[] = [];

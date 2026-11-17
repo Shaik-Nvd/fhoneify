@@ -97,6 +97,7 @@ async function main() {
   assert.equal(process.env.DATABASE_URL, sentinel);
   prisma.$connect = async () => { throw new Error('Database connections are disabled in this test'); };
   const leads: any[] = [];
+  Object.defineProperty(prisma.lead, 'count', { value: async () => 0, configurable: true }); // coupon history: none, no database
   Object.defineProperty(prisma.lead, 'create', {
     value: async ({ data }: any) => {
       leads.push(data);
@@ -162,7 +163,7 @@ async function main() {
       for (const omitPrice of [false, true]) {
         const body: any = {
           ...identity,
-          phone: '0000000000',
+          phone: '9876500000',
           answers: source.diagnostics,
           quoteToken: displayed.quoteToken,
           couponApplied,
@@ -171,12 +172,12 @@ async function main() {
         await record(`stale-original-price-coupon-${couponApplied}-omit-${omitPrice}`, body, 409);
       }
       await record(`stale-token-updated-6458-coupon-${couponApplied}`, {
-        ...identity, phone: '0000000000', answers: source.diagnostics,
+        ...identity, phone: '9876500000', answers: source.diagnostics,
         quoteToken: displayed.quoteToken, quotedPrice: 6458, couponApplied,
       }, 409);
       for (const token of ['invalid-signature', ''] as const) {
         await record(`${token ? 'invalid' : 'empty'}-token-updated-6458-coupon-${couponApplied}`, {
-          ...identity, phone: '0000000000', answers: source.diagnostics,
+          ...identity, phone: '9876500000', answers: source.diagnostics,
           quoteToken: token, quotedPrice: 6458, couponApplied,
         }, 409);
       }
@@ -184,7 +185,7 @@ async function main() {
 
     for (const couponApplied of [false, true]) for (const omitPrice of [false, true]) {
       await record('omitted-token-coupon-'+couponApplied+'-omit-price-'+omitPrice, {
-        ...identity, phone: '0000000000', answers: source.diagnostics, couponApplied,
+        ...identity, phone: '9876500000', answers: source.diagnostics, couponApplied,
         ...(omitPrice ? {} : {quotedPrice: 6458}),
       }, 409);
     }
@@ -200,7 +201,7 @@ async function main() {
 
     for (const couponApplied of [false, true]) {
       const accepted = await post('/api/quote/leads', {
-        ...identity, phone: '0000000000', answers: source.diagnostics,
+        ...identity, phone: '9876500000', answers: source.diagnostics,
         quoteToken: fresh.body.data.quoteToken, quotedPrice: fresh.body.data.fhoneifyPrice, couponApplied,
       });
       assert.equal(accepted.status, 200);
@@ -223,11 +224,11 @@ async function main() {
     const hybridMode = pricingRelease.mode;
     try {
       pricingRelease.mode = 'legacy';
-      const legacy = await post('/api/quote/leads', {...identity, phone: '0000000000', answers: source.diagnostics});
+      const legacy = await post('/api/quote/leads', {...identity, phone: '9876500000', answers: source.diagnostics});
       assert.equal(legacy.status, 409, 'explicit legacy rollback must not permit tokenless persistence');
       assert.equal(leads.length, 2);
       const currentQuote = await post('/api/quote/price', quoteRequest);
-      const signed = await post('/api/quote/leads', {...identity, phone: '0000000000', answers: source.diagnostics, quoteToken: currentQuote.body.data.quoteToken});
+      const signed = await post('/api/quote/leads', {...identity, phone: '9876500000', answers: source.diagnostics, quoteToken: currentQuote.body.data.quoteToken});
       assert.equal(signed.status, 200);
       assert.equal(leads.length, 3);
     } finally { pricingRelease.mode = hybridMode; }

@@ -9,7 +9,7 @@ export const CMSController = {
       const posts = CMSService.getAllPosts(isAdmin);
       res.json({ success: true, data: posts });
     } catch (err: any) {
-      res.status(500).json({ success: false, error: err.message });
+      console.error(err); res.status(500).json({ success: false, error: 'Internal server error' });
     }
   },
 

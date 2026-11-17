@@ -8,7 +8,7 @@ export const StoresController = {
       const stores = StoresService.getStores(city);
       res.json({ success: true, data: stores });
     } catch (err: any) {
-      res.status(500).json({ success: false, error: err.message });
+      console.error(err); res.status(500).json({ success: false, error: 'Internal server error' });
     }
   },
 
@@ -37,7 +37,7 @@ export const StoresController = {
       const appointments = StoresService.getUserAppointments(userId);
       res.json({ success: true, data: appointments });
     } catch (err: any) {
-      res.status(500).json({ success: false, error: err.message });
+      console.error(err); res.status(500).json({ success: false, error: 'Internal server error' });
     }
   }
 };

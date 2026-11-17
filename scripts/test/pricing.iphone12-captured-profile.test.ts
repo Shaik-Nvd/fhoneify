@@ -66,6 +66,7 @@ async function main() {
   const acceptedCommitment = { id: 'already-accepted', quotedPrice: 17311, answers: row.diagnostics };
   const frozenCommitment = JSON.stringify(acceptedCommitment);
   const persisted: any[] = [acceptedCommitment];
+  Object.defineProperty(prisma.lead, 'count', { value: async () => 0, configurable: true }); // coupon history: none, no database
   Object.defineProperty(prisma.lead, 'create', { value: async ({ data }: any) => {
     persisted.push(data); return { ...data, id: `in-memory-${persisted.length}` };
   } });
@@ -95,7 +96,7 @@ async function main() {
     assert.equal(table.afterOff, expectedGross - 99); assert.equal(table.afterOn, table.afterOff);
     for (const payout of [table.afterOff, table.afterOn]) assert(payout > row.sellingPrice && payout - row.sellingPrice <= 1000);
     const submit = (token: string | undefined, couponApplied: boolean, answers = row.diagnostics) => post('/api/quote/leads', {
-      ...identity, phone: '0000000000', answers, quoteToken: token, quotedPrice: quote.fhoneifyPrice, couponApplied });
+      ...identity, phone: '9876500000', answers, quoteToken: token, quotedPrice: quote.fhoneifyPrice, couponApplied });
     for (const coupon of [false, true]) {
       for (const token of [oldQuote.quoteToken, undefined, 'invalid']) {
         const result = await submit(token, coupon); assert.equal(result.status, 409);

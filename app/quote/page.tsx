@@ -310,7 +310,7 @@ export default function QuotePage() {
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
-  const navigateToState = (newBrand: string, newModel: string, newStorage: string, newStage: string, newStep: number) => {
+  const navigateToState = (newBrand: string, newModel: string, newStorage: string, newStage: string, newStep: number, replace = false) => {
     const params = new URLSearchParams();
     if (newBrand) params.set('brand', newBrand);
     if (newModel) params.set('model', newModel);
@@ -321,7 +321,8 @@ export default function QuotePage() {
     const newUrl = `${window.location.pathname}?${params.toString()}`;
     
     // Pass existing history state so Next.js App Router doesn't break on back navigation
-    window.history.pushState(window.history.state, '', newUrl);
+    if (replace) window.history.replaceState(window.history.state, '', newUrl);
+    else window.history.pushState(window.history.state, '', newUrl);
 
     resetAnswersOnDeviceChange(newBrand, newModel, newStorage);
     setSelectedBrand(newBrand);
@@ -403,6 +404,8 @@ export default function QuotePage() {
       ];
   const finalPrice = activeFinalQuote?.price ?? null;
   const priceRequestIdRef = useRef(0);
+  // The answers of the latest final-price request, so Try again retries exactly that request.
+  const lastPricedAnswersRef = useRef<unknown>(null);
   const startingRequestIdRef = useRef(0);
   // Set once the saved quote session has been read after a reload, so the
   // save effect cannot overwrite it with the empty initial state first.
@@ -470,6 +473,7 @@ export default function QuotePage() {
     setDiagnostics(emptyDiagnostics());
     setFinalQuote(null);
     setFinalPriceError(null);
+    setStartingPriceError(null);
     setManualInspectionRequired(false);
     setAppliedCoupon(false);
     setCouponInput('');
@@ -1332,6 +1336,7 @@ export default function QuotePage() {
    * cannot show a stale price. */
   const calculateFinalPrice = (overrideDiagnostics?: unknown) => {
     const diag = overrideDiagnostics ?? diagnostics;
+    lastPricedAnswersRef.current = diag;
     setFinalQuote(null);
     setFinalPriceError(null);
     setManualInspectionRequired(false);
@@ -1353,6 +1358,16 @@ export default function QuotePage() {
         if (requestId === priceRequestIdRef.current) setIsFinalPriceLoading(false);
       });
   };
+
+  // Changing an answer after a price was shown makes that price stale: drop it, so returning to the
+  // price screen (browser Forward included) re-prices the answers on screen instead of showing the old offer.
+  const answersAtRenderRef = useRef(diagnostics);
+  useEffect(() => {
+    const changed = answersAtRenderRef.current !== diagnostics;
+    answersAtRenderRef.current = diagnostics;
+    if (changed && step >= 3 && step <= 9) setFinalQuote(null);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [diagnostics]);
 
   // Persist the signed quotes and answers so a reload shows the same price.
   useEffect(() => {
@@ -1432,7 +1447,7 @@ export default function QuotePage() {
       // otherwise price the answers now that the user is signed in.
       if (!activeFinalQuote) calculateFinalPrice();
       setMarketPriceFetched(false);
-      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11);
+      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 1, true); // replaces the login entry, so Back from the price skips it
     } catch (err: any) {
       console.error(err);
       setAuthError(err.response?.data?.error || err.message || 'Verification failed');
@@ -2823,6 +2838,12 @@ export default function QuotePage() {
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
                   <button onClick={() => {
+                    // Reached by history without the first page answered (e.g. after the Get Upto shortcut):
+                    // ask it rather than price an empty questionnaire.
+                    if (diagnostics.calls === null || diagnostics.touch === null || diagnostics.originalScreen === null) {
+                      navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 3);
+                      return;
+                    }
                     // Keep age for measured runner flows even when older
                     // crawler metadata omitted the age page.
                     const asksAge = asksAgeQuestion;
@@ -2939,9 +2960,10 @@ export default function QuotePage() {
                   </div>
                 </div>
                 <button onClick={() => { 
-                  const prevStep = asksAgeQuestion ? 9 : 8;
-                  navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', prevStep); 
                   setShowOtpInput(false); 
+                  // Go back to the page that opened the login, not a question the flow skipped.
+                  if (stepHistory.length > 0) handleBack();
+                  else navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 3);
                 }} style={{ background: 'none', border: 'none', fontSize: '2rem', cursor: 'pointer', paddingLeft: '1rem', color: '#999', lineHeight: 1 }}>×</button>
               </div>
 
@@ -3010,7 +3032,7 @@ export default function QuotePage() {
                   </p>
                   <button type="button" onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 3)} className="btn-outline">Review answers</button>
                 </>
-              ) : <button type="button" onClick={() => calculateFinalPrice(diagnostics)} className="btn-primary" style={{ padding: '12px', borderRadius: '8px', fontWeight: 600 }}>Try again</button>}
+              ) : <button type="button" onClick={() => calculateFinalPrice(lastPricedAnswersRef.current ?? diagnostics)} className="btn-primary" style={{ padding: '12px', borderRadius: '8px', fontWeight: 600 }}>Try again</button>}
             </>
           ) : (
             <p style={{ color: 'var(--muted)' }} aria-live="polite">Calculating your exact price…</p>
@@ -3234,7 +3256,7 @@ export default function QuotePage() {
           <div style={{ display: 'flex', gap: '0.75rem', marginTop: '1rem', width: '100%' }}>
             <button type="button" onClick={handleBack} className="btn-outline" style={{ flex: 1, padding: '12px', fontSize: '1rem' }}>Back</button>
             <button type="button" onClick={() => { navigateToState('', '', '', 'brand', 1); setFinalQuote(null); setStartingQuote(null); setAppliedCoupon(false); { const store = getSessionStore(); if (store) clearQuoteSession(store); } setMarketPriceFetched(false); setUserPhone(''); setOtp(''); setShowOtpInput(false); setDiagnostics(emptyDiagnostics()); }} className="btn-outline" style={{ flex: 1, padding: '12px', fontSize: '1rem' }}>Start Over</button>
-            <button type="button" onClick={() => setStep(12)} className="btn-primary" style={{ flex: 2, padding: '12px', fontSize: '1rem', fontWeight: 600, cursor: 'pointer' }}>Schedule Pickup</button>
+            <button type="button" onClick={() => navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 12)} className="btn-primary" style={{ flex: 2, padding: '12px', fontSize: '1rem', fontWeight: 600, cursor: 'pointer' }}>Schedule Pickup</button>
           </div>
         </div>
       )}
@@ -3279,6 +3301,12 @@ export default function QuotePage() {
                 setManualInspectionRequired(true);
                 setFinalPriceError(describePricingError(err));
                 navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11);
+                return;
+              }
+              if (err?.response?.data?.code === 'COUPON_ALREADY_USED') {
+                setAppliedCoupon(false);
+                navigateToState(selectedBrand, selectedModel, selectedStorage, 'storage', 11);
+                alert(err.response.data.error + ' No pickup was booked.');
                 return;
               }
               if (err?.response?.data?.code === 'QUOTE_CHANGED') {
@@ -3326,7 +3354,7 @@ export default function QuotePage() {
             </div>
 
             <div style={{ display: 'flex', gap: '1rem', width: '100%' }}>
-              <button type="button" onClick={() => setStep(8)} className="btn-outline" style={{ flex: 1, padding: '16px', fontSize: '1.1rem' }} disabled={isSubmitting}>Back</button>
+              <button type="button" onClick={handleBack} className="btn-outline" style={{ flex: 1, padding: '16px', fontSize: '1.1rem' }} disabled={isSubmitting}>Back</button>
               <button type="submit" className="btn-primary" style={{ flex: 2, padding: '16px', fontSize: '1.1rem', fontWeight: 600, opacity: isSubmitting ? 0.7 : 1 }} disabled={isSubmitting}>
                 {isSubmitting ? 'Confirming...' : 'Confirm Pickup'}
               </button>

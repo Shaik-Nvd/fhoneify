@@ -127,6 +127,7 @@ test('actual old POST endpoint in rollback mode preserves pre-release result wit
   assert.equal(pricingRelease.mode, 'legacy');
   let writes = 0;
   prisma.$connect = async () => { throw new Error('No database connection permitted'); };
+  Object.defineProperty(prisma.lead, 'count', { value: async () => 0, configurable: true }); // coupon history: none, no database
   Object.defineProperty(prisma.lead, 'create', { value: async () => { writes++; throw new Error('No leads permitted'); } });
   const app = express(); app.use(express.json()); app.use('/api/quote', router);
   const server = app.listen(0, '127.0.0.1');

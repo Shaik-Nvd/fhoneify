@@ -160,21 +160,21 @@ export async function priceQuote(req: Request, res: Response) {
 
     // If an authenticated user checked the valuation price, automatically generate a lead tagged with 'price checked'
     const authUser = (req as any).user;
-    if (authUser && authUser.phone && authUser.phone !== 'restored-session') {
+    const checkedAnswers = parseDiagnostics(body.data.diagnostics);
+    if (authUser && authUser.phone && authUser.phone !== 'restored-session' && checkedAnswers.ok) {
       try {
-        await quoteService.createLead({
+        await quoteService.recordPriceCheck({
           userId: authUser.id,
           phone: authUser.phone,
           name: authUser.name || (authUser.role === 'admin' ? 'Administrator' : `User (${authUser.phone})`),
           brand: body.data.brand,
-          model: body.data.model.toLowerCase().startsWith(body.data.brand.toLowerCase())
-            ? body.data.model.slice(body.data.brand.length).trim()
-            : body.data.model,
+          // Stored like a booked lead, so the admin report finds the device.
+          model: body.data.model,
           storage: body.data.storage,
           quotedPrice: outcome.fhoneifyPrice,
-          status: 'price checked',
           answers: {
-            diagnostics: body.data.diagnostics,
+            // The validated answers at the top level, where the admin report reads them.
+            ...checkedAnswers.value,
             pricingAudit: {
               fhoneifyPrice: outcome.fhoneifyPrice,
               startingPrice: outcome.startingPrice,
@@ -218,6 +218,13 @@ export async function createLead(req: Request, res: Response) {
     }
     const { quoteToken, quotedPrice, couponApplied, answers, ...lead } = result.data;
 
+    // A logged-in customer books for their own verified number; otherwise it must be an Indian mobile.
+    const authUser = (req as any).user;
+    if (authUser?.phone && authUser.phone !== 'restored-session') lead.phone = authUser.phone;
+    if (!quoteService.indianMobile(lead.phone)) {
+      return res.status(400).json({ success: false, error: 'Enter a valid 10-digit mobile number' });
+    }
+
     const verified = await pricingService.verifyLeadPrice({
       brand: lead.brand,
       model: lead.model,
@@ -237,8 +244,14 @@ export async function createLead(req: Request, res: Response) {
         error: 'Your quote has changed. Please review the updated price before scheduling pickup.' });
     }
 
+    // The first-time bonus is once per mobile number, checked after the price itself is accepted.
+    if (couponApplied === true && await quoteService.couponAlreadyClaimed(lead.phone)) {
+      return res.status(409).json({ success: false, code: 'COUPON_ALREADY_USED',
+        error: 'This mobile number has already used the first-time bonus. Remove the coupon to book this pickup.' });
+    }
+
     // Optional user context
-    const userId = (req as any).user?.id;
+    const userId = authUser?.id;
 
     const created = await quoteService.createLead({
       ...lead,
@@ -282,7 +295,7 @@ export async function getCashifyPrice(req: Request, res: Response) {
     }
   } catch (err: any) {
     logger.error({ err: err.message }, 'Error in getCashifyPrice controller');
-    return res.status(500).json({ success: false, error: err.message || 'Internal server error' });
+    return res.status(500).json({ success: false, error: 'Internal server error' });
   }
 }
 

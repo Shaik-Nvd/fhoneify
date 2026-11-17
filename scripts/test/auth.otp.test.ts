@@ -52,9 +52,11 @@ const memoryStore = {
   async save(r: Rec) {
     records.set(r.phone, { ...r });
   },
-  async setAttempts(phone: string, attempts: number) {
+  async incrementAttempts(phone: string) {
     const r = records.get(phone);
-    if (r) r.attempts = attempts;
+    if (!r) return null;
+    r.attempts += 1; // synchronous, like the database's atomic increment
+    return r.attempts;
   },
   async remove(phone: string) {
     records.delete(phone);
@@ -258,7 +260,7 @@ async function main() {
     assert.equal(records.get(PHONE)!.attempts, 1);
   });
 
-  await test('brute force -> the code is destroyed after 5 wrong attempts', async () => {
+  await test('brute force -> the code is burned after 5 wrong attempts and the number is locked', async () => {
     reset();
     await call('/api/auth/otp/send', { phone: PHONE });
     const code = deliveredCode();
@@ -266,8 +268,38 @@ async function main() {
     for (let i = 0; i < 4; i++) assert.equal((await call('/api/auth/otp/verify', { phone: PHONE, code: wrong })).status, 400);
     const fifth = await call('/api/auth/otp/verify', { phone: PHONE, code: wrong });
     assert.equal(fifth.status, 429);
-    assert.equal(records.size, 0, 'the code must be destroyed, not left guessable');
-    assert.equal((await call('/api/auth/otp/verify', { phone: PHONE, code })).status, 400, 'even the right code no longer works');
+    assert.notEqual(records.get(PHONE)!.code.length, 64, 'the code must be burned, not left guessable');
+    assert.equal((await call('/api/auth/otp/verify', { phone: PHONE, code })).status, 429, 'even the right code no longer works');
+    records.get(PHONE)!.createdAt = new Date(Date.now() - 60_000);
+    const resend = await call('/api/auth/otp/send', { phone: PHONE });
+    assert.equal(resend.status, 429, 'a new code cannot be requested while locked');
+    assert.equal(providerCalls.length, 1);
+    records.get(PHONE)!.createdAt = new Date(Date.now() - 31 * 60_000);
+    assert.equal((await call('/api/auth/otp/send', { phone: PHONE })).status, 200, 'the lock ends after 30 minutes');
+    assert.equal(records.get(PHONE)!.attempts, 0);
+  });
+
+  await test('a resend does not reset the failed-attempt count', async () => {
+    reset();
+    await call('/api/auth/otp/send', { phone: PHONE });
+    const wrong = String((Number(deliveredCode()) + 3) % 1_000_000).padStart(6, '0');
+    for (let i = 0; i < 3; i++) assert.equal((await call('/api/auth/otp/verify', { phone: PHONE, code: wrong })).status, 400);
+    records.get(PHONE)!.createdAt = new Date(Date.now() - 60_000);
+    assert.equal((await call('/api/auth/otp/send', { phone: PHONE })).status, 200);
+    assert.equal(records.get(PHONE)!.attempts, 3);
+    const fresh = String((Number(deliveredCode()) + 3) % 1_000_000).padStart(6, '0');
+    assert.equal((await call('/api/auth/otp/verify', { phone: PHONE, code: fresh })).status, 400);
+    assert.equal((await call('/api/auth/otp/verify', { phone: PHONE, code: fresh })).status, 429, 'only 5 guesses in total');
+  });
+
+  await test('parallel guesses cannot exceed the attempt limit', async () => {
+    reset();
+    await call('/api/auth/otp/send', { phone: PHONE });
+    const code = deliveredCode();
+    const guesses = Array.from({ length: 30 }, (_, i) => String((Number(code) + 1 + i) % 1_000_000).padStart(6, '0'));
+    const results = await Promise.all(guesses.map(g => call('/api/auth/otp/verify', { phone: PHONE, code: g })));
+    assert.ok(results.filter(r => r.status === 400).length <= 4, 'at most 4 plain rejections before the lock');
+    assert.equal((await call('/api/auth/otp/verify', { phone: PHONE, code })).status, 429, 'the right code is locked out');
   });
 
   await test('expired code -> 400 and the record is cleared', async () => {
