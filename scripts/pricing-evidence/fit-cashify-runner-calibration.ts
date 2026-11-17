@@ -8,12 +8,14 @@ export interface FitPoint { reference: number; value: number; storage: string }
 const mean = (xs: number[]) => xs.reduce((a, b) => a + b, 0) / xs.length;
 const residual = (rule: DeductionRule, points: FitPoint[]) => Math.max(...points.map(p => Math.abs(round10(evaluateDeduction(rule, p.reference, p.storage)) - p.value)));
 export const series = (model:string):string => {
+  if(/^POCO /i.test(model))return 'POCO '+(model.match(/^POCO ([A-Z])/i)?.[1]?.toUpperCase()??'other');
+  if(/^Motorola /i.test(model))return 'Motorola '+(model.match(/(?:Moto )?(Edge|Razr|One|Signature|[EGZ])(?:\b|\d)/i)?.[1]?.toUpperCase()??'other');
   if(/^Honor /i.test(model))return 'Honor '+(model.match(/^Honor (\d+)/i)?.[1]??model.replace(/^Honor /i,''));
   if(/^Nokia /i.test(model))return 'Nokia '+(model.match(/^Nokia ([A-Z]+|\d+)/i)?.[1]?.toUpperCase()??'numeric');
   if(/^Xiaomi /i.test(model))return /Redmi Note/i.test(model)?'Redmi Note':/Redmi A\d/i.test(model)?'Redmi A':/Redmi K\d/i.test(model)?'Redmi K':/Redmi/i.test(model)?'Redmi':/Black Shark/i.test(model)?'Black Shark':/Mi A\d/i.test(model)?'Mi A':/Mix/i.test(model)?'Mix':/Max/i.test(model)?'Max':'Xiaomi flagship';
   return /fold/i.test(model)?'Fold':/flip/i.test(model)?'Flip':/s\d+ ultra/i.test(model)?'S Ultra':/note/i.test(model)?'Note':model.match(/Galaxy\s+([A-Z])/i)?.[1]?.toUpperCase()??'Pixel';
 };
-export const generation = (model:string) => Number(model.match(/(?:Fold|Flip|Pixel|Galaxy [A-Z]|Note|Honor|Nokia(?: [A-Z]+)?|Xiaomi(?: Mi)?(?: Redmi)?(?: [A-Z]+)?)\s*(\d+(?:\.\d+)?)/i)?.[1]??0);
+export const generation = (model:string) => Number(model.match(/(?:POCO [A-Z]|Motorola Moto (?:Edge|Razr|[EGZ])|Fold|Flip|Pixel|Galaxy [A-Z]|Note|Honor|Nokia(?: [A-Z]+)?|Xiaomi(?: Mi)?(?: Redmi)?(?: [A-Z]+)?)\s*(\d+(?:\.\d+)?)/i)?.[1]??0);
 
 /** Model/storage observations select the simplest supported form. No final quote table. */
 export function fitRule(points: FitPoint[], shape?: DeductionRule['form'], fallbackShape?: 'fixed' | 'pct'): DeductionRule {
@@ -58,7 +60,7 @@ export function fitRule(points: FitPoint[], shape?: DeductionRule['form'], fallb
 }
 
 export function fitCalibration(all: RunnerMeasurement[], brand: RunnerProfile['brand'], structure?: RunnerCalibration): RunnerCalibration {
-  const newBrand=['Xiaomi','Honor','Asus','Lenovo','Nokia'].includes(brand);
+  const newBrand=['Xiaomi','Honor','Asus','Lenovo','Nokia','POCO','Motorola'].includes(brand);
   const extended=brand==='Samsung'||brand==='Google'||newBrand;
   const rows = all.filter(r => r.brand === brand && r.status === 'quoted' && (!extended||r.primary!==false));
   for(const row of rows)if(!row.reference||row.base===null)throw new Error('Priced measurement missing reference/base');
@@ -179,27 +181,36 @@ export function mergeOnePlus9RT(previous:RunnerCalibration,incoming:RunnerCalibr
     profiles:{...previous.profiles,[key]:incoming.profiles[key]}};
 }
 
+/** Only the owner-approved Nokia 8.1 correction may alter released Nokia rules. */
+export function mergeNokia81(previous:RunnerCalibration,incoming:RunnerCalibration):RunnerCalibration {
+  const key=modelKey('Nokia 8.1');
+  if(!incoming.profiles[key]||Object.keys(incoming.profiles).some(id=>id!==key))throw new Error('Only Nokia 8.1 measurements may replace the released profile');
+  const protectedProfiles=Object.fromEntries(Object.entries(previous.profiles).filter(([id])=>id!==key));
+  return {...previous,sourceHash:createHash('sha256').update(JSON.stringify(protectedProfiles)+incoming.sourceHash).digest('hex'),profiles:{...previous.profiles,[key]:incoming.profiles[key]}};
+}
+
 if (require.main === module) {
   const brand = process.argv.find(a => a.startsWith('--brand='))?.slice(8) ?? process.argv[process.argv.indexOf('--brand') + 1];
-  if (brand !== 'Nothing' && brand !== 'OnePlus' && brand!=='Samsung' && brand!=='Google' && !['Xiaomi','Honor','Asus','Lenovo','Nokia'].includes(brand)) throw new Error('--brand Nothing|OnePlus|Samsung|Google required');
+  if (brand !== 'Nothing' && brand !== 'OnePlus' && brand!=='Samsung' && brand!=='Google' && !['Xiaomi','Honor','Asus','Lenovo','Nokia','POCO','Motorola'].includes(brand)) throw new Error('--brand Nothing|OnePlus|Samsung|Google required');
   const input = process.argv.find(a => a.startsWith('--input='))?.slice(8) ?? `data/pricing-evidence/${({Nothing:'nothing-2026-11-08',OnePlus:'oneplus-2026-11-09',Samsung:'samsung-2026-11-12',Google:'google-2026-11-11'} as Record<string,string>)[brand]??(brand.toLowerCase()+'-2026-11-16')}/measurements.jsonl`;
   if (!fs.existsSync(input)) throw new Error('Private source corpus absent; calibration unchanged');
   const measurements = fs.readFileSync(input, 'utf8').trim().split('\n').map(line => JSON.parse(line));
   let calibration = fitCalibration(measurements, brand as RunnerProfile['brand']);
   const onlyModel=process.argv.find(a=>a.startsWith('--only-model='))?.slice(13);
   if(onlyModel) {
-    if(brand!=='OnePlus'||onlyModel!=='OnePlus 9RT 5G')throw new Error('Only the approved OnePlus 9RT profile may be replaced');
-    const previous:RunnerCalibration=JSON.parse(fs.readFileSync('lib/pricing/cashifyRunnerModel/calibration.oneplus.json','utf8'));
-    calibration=mergeOnePlus9RT(previous,calibration);
+    if(!((brand==='OnePlus'&&onlyModel==='OnePlus 9RT 5G')||(brand==='Nokia'&&onlyModel==='Nokia 8.1')))throw new Error('Only the approved OnePlus 9RT or Nokia 8.1 profile may be replaced');
+    const previous:RunnerCalibration=JSON.parse(fs.readFileSync('lib/pricing/cashifyRunnerModel/calibration.'+brand.toLowerCase()+'.json','utf8'));
+    calibration=brand==='Nokia'?mergeNokia81(previous,calibration):mergeOnePlus9RT(previous,calibration);
   }
+  if (brand==='Nokia'&&measurements.every((r:RunnerMeasurement)=>r.model==='Nokia 8.1')&&!onlyModel)throw new Error('Nokia 8.1 rerun requires --only-model=Nokia 8.1');
   if (process.argv.includes('--write')) {
     fs.writeFileSync(path.resolve(`lib/pricing/cashifyRunnerModel/calibration.${brand.toLowerCase()}.json`), JSON.stringify(calibration, null, 2) + '\n');
     const scopes: Record<string, object> = {};
-    for (const name of ['nothing', 'oneplus','samsung','google','xiaomi','honor','asus','lenovo','nokia']) {
+    for (const name of ['nothing', 'oneplus','samsung','google','xiaomi','honor','asus','lenovo','nokia','poco','motorola']) {
       if(!fs.existsSync(`lib/pricing/cashifyRunnerModel/calibration.${name}.json`))continue;
       const data: RunnerCalibration = JSON.parse(fs.readFileSync(`lib/pricing/cashifyRunnerModel/calibration.${name}.json`, 'utf8'));
       for (const [key, profile] of Object.entries(data.profiles)) scopes[key] = { hasAge: profile.hasAge,
-        ...(!['Nothing','OnePlus'].includes(profile.brand)?{hardware:Object.keys(profile.rules).filter(k=>k.startsWith('hardware:')).map(k=>k.slice(9))}:{}),
+        ...(!['Nothing','OnePlus'].includes(profile.brand)?{hardware:[...new Set([...Object.keys(profile.rules),...(['POCO','Motorola'].includes(profile.brand)?Object.keys(profile.noOffer??{}):[])])].filter(k=>k.startsWith('hardware:')).map(k=>k.slice(9))}:{}),
         variants: Object.fromEntries(Object.entries(profile.variants).map(([storage, v]) => [storage, { accessories: v.accessories }])) };
     }
     fs.writeFileSync('lib/pricing/cashifyRunnerModel/scope.json', JSON.stringify(scopes, null, 2) + '\n');

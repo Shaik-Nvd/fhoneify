@@ -57,3 +57,6 @@ release-test-logs/
 # Private Xiaomi and other-brand evidence
 /data/pricing-evidence/*-2026-11-16/
 /.superpowers/
+
+# Private POCO/Motorola/Nokia rerun evidence
+/data/pricing-evidence/*-2026-11-17/
