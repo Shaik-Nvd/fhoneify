@@ -19993,7 +19993,8 @@
       "vibrator",
       "microphone",
       "proximity",
-      "hinge"
+      "hinge",
+      "outer_screen"
     ],
     "variants": {
       "6gb/128gb": {

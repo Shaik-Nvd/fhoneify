@@ -210,7 +210,7 @@ if (require.main === module) {
       if(!fs.existsSync(`lib/pricing/cashifyRunnerModel/calibration.${name}.json`))continue;
       const data: RunnerCalibration = JSON.parse(fs.readFileSync(`lib/pricing/cashifyRunnerModel/calibration.${name}.json`, 'utf8'));
       for (const [key, profile] of Object.entries(data.profiles)) scopes[key] = { hasAge: profile.hasAge,
-        ...(!['Nothing','OnePlus'].includes(profile.brand)?{hardware:Object.keys(profile.rules).filter(k=>k.startsWith('hardware:')).map(k=>k.slice(9))}:{}),
+        ...(!['Nothing','OnePlus'].includes(profile.brand)?{hardware:[...new Set([...Object.keys(profile.rules),...(['POCO','Motorola'].includes(profile.brand)?Object.keys(profile.noOffer??{}):[])])].filter(k=>k.startsWith('hardware:')).map(k=>k.slice(9))}:{}),
         variants: Object.fromEntries(Object.entries(profile.variants).map(([storage, v]) => [storage, { accessories: v.accessories }])) };
     }
     fs.writeFileSync('lib/pricing/cashifyRunnerModel/scope.json', JSON.stringify(scopes, null, 2) + '\n');
