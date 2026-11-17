@@ -1231,7 +1231,7 @@ export default function QuotePage() {
         { id: 'wifi', label: 'WiFi not working', icon: '📶' },
         { id: 'speaker', label: 'Speaker Faulty', icon: '🔊' },
         ...((brand.toLowerCase() === 'oneplus' && lowerModel === 'oneplus open') || runnerSupportsHardware(model,'outer_screen') ? [{ id: 'outer_screen', label: 'Outer screen damaged / line / broken or spot', icon: '\uD83D\uDCF1' }] : []),
-        ...(!['samsung','google'].includes(brand.toLowerCase()) || !runnerScope(model) || runnerSupportsHardware(model,'hinge') ? [{ id: 'hinge', label: 'Hinge damaged / not folding properly', icon: '📱' }] : []),
+        ...(!['samsung','google','motorola'].includes(brand.toLowerCase()) || !runnerScope(model) || runnerSupportsHardware(model,'hinge') ? [{ id: 'hinge', label: 'Hinge damaged / not folding properly', icon: '📱' }] : []),
         { id: 'silent', label: hasActionButton ? 'Action Button not working' : 'Silent Button not working', icon: '🔕' },
         ...(hasFaceId ? [{ id: 'face', label: isApple ? 'Face ID / Face Sensor not working' : 'Face Sensor not working', icon: <FaceIdIcon /> }] : []),
         { id: 'power', label: 'Power Button not working', icon: '⏻' },
@@ -2852,7 +2852,7 @@ export default function QuotePage() {
                     // 2. If screen IS original (originalScreen !== false) and user selected Yes on warranty (warranty === true),
                     //    the age question must ALWAYS be asked for all Apple devices (including iPhone 15, 16, 17, 18 series).
                     const screenIsNotOriginal = diagnostics.originalScreen === false;
-                    const measuredAgeSkipped=!!runnerProfile&&['Samsung','Google','Xiaomi','Honor','Asus','Lenovo','Nokia'].includes(selectedBrand)&&runnerSkipsAge(diagnostics);
+                    const measuredAgeSkipped=!!runnerProfile&&['Samsung','Google','Xiaomi','Honor','Asus','Lenovo','Nokia','POCO','Motorola'].includes(selectedBrand)&&runnerSkipsAge(diagnostics);
                     const forceAgeForWarranty = diagnostics.warranty === true && !screenIsNotOriginal;
 
                     if ((asksAge || forceAgeForWarranty) && !screenIsNotOriginal && !measuredAgeSkipped) {

@@ -36,14 +36,24 @@ const comparable = fixture.observations.filter((o: any) => o.comparisonStatus ==
 const priced = comparable.map((o: any) => {
   const parsed = parseDiagnostics(o.fhoneifyAnswers);
   if (!parsed.ok) throw new Error(`${o.id}: ${parsed.error}`);
+  // Historical QA retains the calculator/questionnaire it was collected against.
+  // POCO F6's old profile asked warranty; the Nov 15-16 runner no longer does.
+  // The current runner discrepancy is reported below, never hidden or used to refit.
   // Priced under the questionnaire Cashify showed for the model.
   // Supply catalog storage just as the authoritative service does, so Apple uses its current rules.
   const storage = o.catalogStorage ?? o.variant;
-  const result = calculateFhoneifyPrice(o.brand, o.model, o.referencePrice, parsed.value, o.cashifyQuestionnaire ?? UNKNOWN_QUESTIONNAIRE, storage, { catalogStorage: storage, disableRunnerEvidence: o.brand === 'Samsung' });
+  const result = calculateFhoneifyPrice(o.brand, o.model, o.referencePrice, parsed.value, o.cashifyQuestionnaire ?? UNKNOWN_QUESTIONNAIRE, storage, { catalogStorage: storage, disableRunnerEvidence: ['Samsung','POCO'].includes(o.brand) });
   return { o, result, error: result.cashifyConditionEquivalent - o.cashifyFinal };
 });
 
-console.log('\nSuite H - team QA Cashify observations\n');
+console.log('\nSuite H - historical team QA Cashify observations (legacy Samsung/POCO routing)\n');
+for(const o of comparable.filter((o:any)=>o.brand==='POCO')) {
+ const parsed=parseDiagnostics(o.fhoneifyAnswers);assert(parsed.ok);
+ const storage=o.catalogStorage??o.variant;
+ const q=calculateFhoneifyPrice(o.brand,o.model,o.referencePrice,parsed.value,o.cashifyQuestionnaire??UNKNOWN_QUESTIONNAIRE,storage,{catalogStorage:storage});
+ console.log('CURRENT RUNNER VS HISTORICAL OBSERVATION '+JSON.stringify({id:o.id,current:q.cashifyConditionEquivalent,historical:o.cashifyFinal,error:q.cashifyConditionEquivalent-o.cashifyFinal,questionnaireChanged:true}));
+}
+
 
 test("fixture holds the comparable observations with reproduced answers", () => {
   assert.ok(comparable.length >= 14, `${comparable.length} comparable`);

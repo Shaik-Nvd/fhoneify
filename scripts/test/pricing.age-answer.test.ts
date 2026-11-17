@@ -17,9 +17,9 @@ const price = (brand: string, model: string, edit: object) =>
   priceDevice(brand, model, R, { ...clean, warranty: true, validBill: true, ...edit } as any, crawled as any).cashifyConditionEquivalent;
 const ages = ['below3', '3to6', '6to11', 'above11'] as const;
 
+// POCO now uses measured runner age rules, covered by pricing.poco-motorola-service.
 const cases: [string, string, 'brackets' | 'elevenMonths'][] = [
   ['Vivo', 'Vivo V30', 'brackets'],
-  ['POCO', 'POCO X6 5G', 'brackets'],
   ['Oppo', 'Oppo Reno 11 5G', 'brackets'],
   ['Realme', 'Realme 12 Pro 5G', 'elevenMonths'],
   ['Motorola', 'Motorola Edge 50', 'elevenMonths'],

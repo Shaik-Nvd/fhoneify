@@ -7,10 +7,12 @@ import honor from './calibration.honor.json';
 import asus from './calibration.asus.json';
 import lenovo from './calibration.lenovo.json';
 import nokia from './calibration.nokia.json';
+import poco from './calibration.poco.json';
+import motorola from './calibration.motorola.json';
 import { evaluateRunner, modelKey, storageKey, type RunnerCalibration } from './model';
 import type { DiagnosticsType } from '../../pricingCalculator';
 
-const calibrations = [nothing, oneplus, samsung, google, xiaomi, honor, asus, lenovo, nokia] as RunnerCalibration[];
+const calibrations = [nothing, oneplus, samsung, google, xiaomi, honor, asus, lenovo, nokia, poco, motorola] as RunnerCalibration[];
 export function runnerScope(model: string, _storage?: string | null) {
   return calibrations.map(c => c.profiles[modelKey(model)]).find(Boolean) ?? null;
 }

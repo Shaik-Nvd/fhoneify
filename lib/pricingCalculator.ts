@@ -2569,7 +2569,7 @@ export function calculateXiaomiPrice(
 ): PricingResult {
   // The authoritative router opts in. Existing October research/config callers
   // retain their historical calculator, including explicitly supplied INR rules.
-  const measured=useRunnerEvidence&&!/poco/i.test(model)?runnerQuote(model,storageVariant,reference,diagnostics):null;
+  const measured=useRunnerEvidence?runnerQuote(model,storageVariant,reference,diagnostics):null;
   if(measured)return finalizeConditionQuote(reference,measured.price);
   if (!reference || reference <= 0) return { cashifyConditionEquivalent: 0, fhoneifyPrice: 0 };
 
@@ -2969,7 +2969,7 @@ function routeBrandCalculator(
     return calculateNothingPrice(model, cashifyGetUptoReference, diagnostics, semantics, calculationContext?.catalogStorage ?? storageVariant, !calculationContext?.disableRunnerEvidence);
   }
 
-  if(['google','honor','asus','lenovo','nokia'].includes(safeBrand)) {
+  if(['google','honor','asus','lenovo','nokia','motorola'].includes(safeBrand)) {
     const measured=calculationContext?.disableRunnerEvidence?null:runnerQuote(model,calculationContext?.catalogStorage??storageVariant,cashifyGetUptoReference,diagnostics);
     if(measured)return finalizeConditionQuote(cashifyGetUptoReference,measured.price);
   }

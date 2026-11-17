@@ -7,8 +7,8 @@ import { series, generation, fitCalibration } from './fit-cashify-runner-calibra
 import type { RunnerMeasurement } from './import-cashify-runner-data';
 import { statistics } from './validate-cashify-runner';
 
-export async function validateXiaomiOthers(brand:'Xiaomi'|'Honor'|'Asus'|'Lenovo'|'Nokia'|'OnePlus'|'Google') {
-  const dir=`data/pricing-evidence/${brand.toLowerCase()+'-2026-11-16'}`;
+export async function validateXiaomiOthers(brand:'Xiaomi'|'Honor'|'Asus'|'Lenovo'|'Nokia'|'OnePlus'|'Google'|'POCO'|'Motorola', options:{dir?:string;replayControls?:boolean}={}) {
+  const dir=options.dir??`data/pricing-evidence/${brand.toLowerCase()+'-2026-11-16'}`;
   const all:RunnerMeasurement[]=fs.readFileSync(`${dir}/measurements.jsonl`,'utf8').trim().split('\n').map(line=>JSON.parse(line));
   const rows=all.filter(r=>(r.primary||['OnePlus','Google'].includes(brand))&&r.status==='quoted');
   const calibration:RunnerCalibration=JSON.parse(fs.readFileSync(`lib/pricing/cashifyRunnerModel/calibration.${brand.toLowerCase()}.json`,'utf8'));
@@ -18,7 +18,8 @@ export async function validateXiaomiOthers(brand:'Xiaomi'|'Honor'|'Asus'|'Lenovo
     snapshot:{},now:()=>at,logger:{info(){},warn(){},error(){}}});
   const catalog=new Map(SEED_DEVICES.filter(d=>d.brand===brand).map(d=>[modelKey(d.model)+'|'+runnerStorageIdentity(d.storage,d.ram),d]));
   const replay:any[]=[],refusals:any[]=[],noOffer:any[]=[],moves:any[]=[];
-  for(const row of all.filter(r=>(r.primary||['OnePlus','Google'].includes(brand))&&(r.status==='quoted'||r.status==='no_offer'))) {
+  const selectedSources=new Set(all.filter(r=>r.primary).map(r=>modelKey(r.model)+'|'+storageKey(r.storage)+'|'+r.source.folder));
+  for(const row of all.filter(r=>(options.replayControls?selectedSources.has(modelKey(r.model)+'|'+storageKey(r.storage)+'|'+r.source.folder):(r.primary||['OnePlus','Google'].includes(brand)))&&(r.status==='quoted'||r.status==='no_offer'))) {
     const device=catalog.get(modelKey(row.model)+'|'+storageKey(row.storage));if(!device)throw new Error(`Catalog missing ${row.model} ${row.storage}`);
     reference=row.reference!;
     const q=await service.quote({...device,diagnostics:row.diagnostics});
