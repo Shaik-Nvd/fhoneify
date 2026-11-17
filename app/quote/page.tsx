@@ -84,6 +84,14 @@ const FaceIdIcon = () => (
 
 /** A fresh, unanswered questionnaire. Each device starts from this so no answer
  * from a previously viewed phone is pre-selected or priced. */
+/** The detail questions that belong to each physical-defect tile on the defects step. */
+const DEFECT_DETAIL_ANSWERS: Record<string, readonly string[]> = {
+  screen_scratch: ['screenCondition'],
+  screen_spot: ['screenSpots', 'screenLines', 'screenDiscoloration'],
+  body_scratch: ['bodyScratches', 'bodyDents'],
+  panel_missing: ['bodyPanel', 'bodyBent'],
+};
+
 const emptyDiagnostics = () => ({
     calls: null as boolean | null,
     touch: null as boolean | null,
@@ -1160,7 +1168,11 @@ export default function QuotePage() {
         if (val === 'battery_health') arr = arr.filter(i => i !== 'battery_service');
       }
 
-      return { ...prev, [key]: arr.includes(val) ? arr.filter(i => i !== val) : [...arr, val] };
+      // Un-ticking a defect withdraws its detail answers too; the server prices those fields on their own.
+      const withdrawn = key === 'defects' && arr.includes(val)
+        ? Object.fromEntries((DEFECT_DETAIL_ANSWERS[val] ?? []).map(field => [field, null]))
+        : {};
+      return { ...prev, ...withdrawn, [key]: arr.includes(val) ? arr.filter(i => i !== val) : [...arr, val] };
     });
   };
 
@@ -2475,7 +2487,7 @@ export default function QuotePage() {
                       <h3 style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.25rem' }}>Is your device under manufacturer warranty?</h3>
                       <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>You can get a better price for your device if it&apos;s under manufacturer warranty with a GST valid bill.</p>
                       <div style={{ display: 'flex', gap: '1rem' }}>
-                        <button onClick={() => { setDiagnostics({ ...diagnostics, warranty: true }); scrollToNextQuestion('warranty'); }} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.warranty === true ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.warranty === true ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.warranty === true ? '#4CD964' : 'var(--foreground)' }}>
+                        <button onClick={() => { setDiagnostics({ ...diagnostics, warranty: true, mobileAge: diagnostics.warranty === false ? null : diagnostics.mobileAge }); scrollToNextQuestion('warranty'); }} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.warranty === true ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.warranty === true ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.warranty === true ? '#4CD964' : 'var(--foreground)' }}>
                           <div style={{ width: '16px', height: '16px', borderRadius: '50%', border: diagnostics.warranty === true ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.warranty === true ? '#4CD964' : '#transparent' }} /> Yes
                         </button>
                         <button onClick={() => { setDiagnostics({ ...diagnostics, warranty: false, mobileAge: 'above11' }); scrollToNextQuestion('warranty'); }} style={{ flex: 1, padding: '1rem', borderRadius: '8px', border: diagnostics.warranty === false ? '1px solid #FF3B30' : '1px solid var(--border)', backgroundColor: diagnostics.warranty === false ? 'rgba(255,59,48,0.1)' : 'var(--surface-elevated)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontWeight: 500, color: diagnostics.warranty === false ? '#FF3B30' : 'var(--foreground)' }}>

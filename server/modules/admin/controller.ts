@@ -134,10 +134,15 @@ import { chromium } from 'playwright';
 
 let browserInstance: any = null;
 async function getBrowser() {
-  if (!browserInstance) {
+  if (!browserInstance || !browserInstance.isConnected()) {
     browserInstance = await chromium.launch();
   }
   return browserInstance;
+}
+
+/** Customer-typed text is untrusted: it must reach the report as text, never as markup. */
+function esc(value: unknown): string {
+  return String(value ?? '').replace(/[&<>"'`]/g, (c) => `&#${c.charCodeAt(0)};`);
 }
 
 export async function generateLeadPdf(req: AuthenticatedRequest, res: Response) {
@@ -274,7 +279,7 @@ export async function generateLeadPdf(req: AuthenticatedRequest, res: Response) 
     <html>
       <head>
         <meta charset="utf-8" />
-        <title>Fhoneify Inspection Report - ${deviceDisplayName}</title>
+        <title>Fhoneify Inspection Report - ${esc(deviceDisplayName)}</title>
         <style>
           @page {
             size: A4 portrait;
@@ -536,23 +541,23 @@ export async function generateLeadPdf(req: AuthenticatedRequest, res: Response) 
               <div class="doc-badge">Official Lead Inspection Report</div>
             </div>
             <div class="customer-pill-box">
-              <div><strong>Customer:</strong> ${lead.name || 'Unknown'}</div>
-              <div><strong>Phone:</strong> ${lead.phone}</div>
-              <div><strong>Pickup:</strong> ${lead.pickupDate || 'Pending'} ${lead.pickupTime ? 'at ' + lead.pickupTime : ''}</div>
+              <div><strong>Customer:</strong> ${esc(lead.name || 'Unknown')}</div>
+              <div><strong>Phone:</strong> ${esc(lead.phone)}</div>
+              <div><strong>Pickup:</strong> ${esc(lead.pickupDate || 'Pending')} ${esc(lead.pickupTime ? 'at ' + lead.pickupTime : '')}</div>
             </div>
           </div>
 
           <!-- Meta -->
           <div class="meta-strip">
-            <div><strong>Address:</strong> ${[lead.address, lead.city].filter(Boolean).join(', ') || 'N/A'}${lead.pincode ? ' - ' + lead.pincode : ''}</div>
-            <div><strong>Lead ID:</strong> #${lead.id.slice(0, 8)} &nbsp;|&nbsp; <strong>Date:</strong> ${new Date().toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' })}</div>
+            <div><strong>Address:</strong> ${esc([lead.address, lead.city].filter(Boolean).join(', ') || 'N/A')}${esc(lead.pincode ? ' - ' + lead.pincode : '')}</div>
+            <div><strong>Lead ID:</strong> #${esc(lead.id.slice(0, 8))} &nbsp;|&nbsp; <strong>Date:</strong> ${new Date().toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' })}</div>
           </div>
 
           <!-- Get Upto -->
           <div class="upto-banner">
             <div class="banner-info">
               <div class="sub-tag">Device Quotation Evaluation</div>
-              <div class="model-name">Sell Old ${deviceDisplayName} (${lead.storage})</div>
+              <div class="model-name">Sell Old ${esc(deviceDisplayName)} (${esc(lead.storage)})</div>
             </div>
             <div class="banner-price">
               <div class="label">Fhoneify's Get Upto</div>
@@ -605,7 +610,7 @@ export async function generateLeadPdf(req: AuthenticatedRequest, res: Response) 
                   <div class="qa-title">How many eSIMs does your device support?</div>
                   <div class="qa-desc">Carrier eSIM profile support configuration</div>
                 </div>
-                <span class="pill pill-info">${answers.eSim}</span>
+                <span class="pill pill-info">${esc(answers.eSim)}</span>
               </div>
               ` : ''}
               ${answers.mobileAge ? `
@@ -614,7 +619,7 @@ export async function generateLeadPdf(req: AuthenticatedRequest, res: Response) 
                   <div class="qa-title">What is your mobile age?</div>
                   <div class="qa-desc">Device age based on original purchase date</div>
                 </div>
-                <span class="pill ${answers.mobileAge === 'above11' ? 'pill-warn' : 'pill-yes'}">${ageMap[answers.mobileAge] || answers.mobileAge}</span>
+                <span class="pill ${answers.mobileAge === 'above11' ? 'pill-warn' : 'pill-yes'}">${esc(ageMap[answers.mobileAge] || answers.mobileAge)}</span>
               </div>
               ` : ''}
             </div>
@@ -646,35 +651,35 @@ export async function generateLeadPdf(req: AuthenticatedRequest, res: Response) 
               <div class="grid-2col">
                 <div class="qa-row">
                   <span class="qa-title">Screen Physical Condition</span>
-                  <span class="pill ${answers.screenCondition && answers.screenCondition !== 'none' ? 'pill-no' : 'pill-none'}">${answers.screenCondition || 'Flawless / None'}</span>
+                  <span class="pill ${answers.screenCondition && answers.screenCondition !== 'none' ? 'pill-no' : 'pill-none'}">${esc(answers.screenCondition || 'Flawless / None')}</span>
                 </div>
                 <div class="qa-row">
                   <span class="qa-title">Dead Pixels / Spots</span>
-                  <span class="pill ${answers.screenSpots && answers.screenSpots !== 'No spots on screen' ? 'pill-no' : 'pill-yes'}">${answers.screenSpots || 'No spots on screen'}</span>
+                  <span class="pill ${answers.screenSpots && answers.screenSpots !== 'No spots on screen' ? 'pill-no' : 'pill-yes'}">${esc(answers.screenSpots || 'No spots on screen')}</span>
                 </div>
                 <div class="qa-row">
                   <span class="qa-title">Visible Lines</span>
-                  <span class="pill ${answers.screenLines && answers.screenLines !== 'No line(s) on Display' ? 'pill-no' : 'pill-yes'}">${answers.screenLines || 'No line(s) on Display'}</span>
+                  <span class="pill ${answers.screenLines && answers.screenLines !== 'No line(s) on Display' ? 'pill-no' : 'pill-yes'}">${esc(answers.screenLines || 'No line(s) on Display')}</span>
                 </div>
                 <div class="qa-row">
                   <span class="qa-title">Screen Discoloration</span>
-                  <span class="pill ${answers.screenDiscoloration && answers.screenDiscoloration !== 'No Discoloration' ? 'pill-no' : 'pill-yes'}">${answers.screenDiscoloration || 'No Discoloration'}</span>
+                  <span class="pill ${answers.screenDiscoloration && answers.screenDiscoloration !== 'No Discoloration' ? 'pill-no' : 'pill-yes'}">${esc(answers.screenDiscoloration || 'No Discoloration')}</span>
                 </div>
                 <div class="qa-row">
                   <span class="qa-title">Body Scratches</span>
-                  <span class="pill ${answers.bodyScratches && answers.bodyScratches !== 'No scratches' ? 'pill-no' : 'pill-yes'}">${answers.bodyScratches || 'No scratches'}</span>
+                  <span class="pill ${answers.bodyScratches && answers.bodyScratches !== 'No scratches' ? 'pill-no' : 'pill-yes'}">${esc(answers.bodyScratches || 'No scratches')}</span>
                 </div>
                 <div class="qa-row">
                   <span class="qa-title">Body Dents</span>
-                  <span class="pill ${answers.bodyDents && answers.bodyDents !== 'No dents' ? 'pill-no' : 'pill-yes'}">${answers.bodyDents || 'No dents'}</span>
+                  <span class="pill ${answers.bodyDents && answers.bodyDents !== 'No dents' ? 'pill-no' : 'pill-yes'}">${esc(answers.bodyDents || 'No dents')}</span>
                 </div>
                 <div class="qa-row">
                   <span class="qa-title">Side / Back Panel</span>
-                  <span class="pill ${answers.bodyPanel && answers.bodyPanel !== 'No defect on side or back panel' ? 'pill-no' : 'pill-yes'}">${answers.bodyPanel || 'No defect'}</span>
+                  <span class="pill ${answers.bodyPanel && answers.bodyPanel !== 'No defect on side or back panel' ? 'pill-no' : 'pill-yes'}">${esc(answers.bodyPanel || 'No defect')}</span>
                 </div>
                 <div class="qa-row">
                   <span class="qa-title">Device Bent / Loose</span>
-                  <span class="pill ${answers.bodyBent && answers.bodyBent !== 'Phone not bent' ? 'pill-no' : 'pill-yes'}">${answers.bodyBent || 'Phone not bent'}</span>
+                  <span class="pill ${answers.bodyBent && answers.bodyBent !== 'Phone not bent' ? 'pill-no' : 'pill-yes'}">${esc(answers.bodyBent || 'Phone not bent')}</span>
                 </div>
               </div>
             </div>
@@ -689,7 +694,7 @@ export async function generateLeadPdf(req: AuthenticatedRequest, res: Response) 
                   const faulty = isHardwareReported(hw.id);
                   return `
                     <div class="qa-row">
-                      <span class="qa-title">${hw.label}</span>
+                      <span class="qa-title">${esc(hw.label)}</span>
                       <span class="pill ${faulty ? 'pill-no' : 'pill-yes'}">${faulty ? '⚠ Faulty / Selected' : '✓ Working / Not Selected'}</span>
                     </div>
                   `;
@@ -730,7 +735,7 @@ export async function generateLeadPdf(req: AuthenticatedRequest, res: Response) 
           <div class="final-box">
             <div class="final-left">
               <div class="final-badge">Verified Valuation Offer</div>
-              <div class="final-model">${deviceDisplayName} (${lead.storage})</div>
+              <div class="final-model">${esc(deviceDisplayName)} (${esc(lead.storage)})</div>
             </div>
             <div class="final-price-wrap">
               <div class="final-title">Fhoneify's Estimated Value</div>
@@ -743,13 +748,21 @@ export async function generateLeadPdf(req: AuthenticatedRequest, res: Response) 
     `;
 
     const browser = await getBrowser();
-    const page = await browser.newPage();
-    await page.setContent(htmlContent, { waitUntil: 'networkidle' });
-    const pdfBuffer = await page.pdf({ format: 'A4', printBackground: true });
-    await page.close(); // Close only the page to prevent memory leaks
+    // The report is self-contained: no scripts and no network, so lead text can never run code or call out.
+    const context = await browser.newContext({ javaScriptEnabled: false });
+    let pdfBuffer: Buffer;
+    try {
+      await context.route('**/*', (route: any) => route.abort());
+      const page = await context.newPage();
+      await page.setContent(htmlContent, { waitUntil: 'load' });
+      pdfBuffer = await page.pdf({ format: 'A4', printBackground: true });
+    } finally {
+      await context.close().catch(() => undefined); // Always release the page, also when rendering fails
+    }
 
-    const safeName = (lead.name || 'Unknown').replace(/[^a-zA-Z0-9]/g, '_');
-    const filename = `${safeName}_${lead.phone}_Report.pdf`;
+    const safeName = (lead.name || 'Unknown').replace(/[^a-zA-Z0-9]/g, '_').slice(0, 60);
+    const safePhone = String(lead.phone || '').replace(/[^0-9+]/g, '').slice(0, 20);
+    const filename = `${safeName}_${safePhone}_Report.pdf`;
     res.setHeader('Content-disposition', `attachment; filename="${filename}"`);
     res.setHeader('Content-type', 'application/pdf');
     res.send(pdfBuffer);

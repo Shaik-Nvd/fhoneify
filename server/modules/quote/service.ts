@@ -211,6 +211,8 @@ export async function getCustomerPickups(userId?: string, phone?: string) {
   const leads = await prisma.lead.findMany({
     where: {
       OR: orConditions,
+      // A price check is recorded for the sales team; it is not a pickup the customer booked.
+      NOT: { status: 'price checked' },
     },
     orderBy: {
       createdAt: 'desc',
