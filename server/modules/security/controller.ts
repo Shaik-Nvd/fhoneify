@@ -4,17 +4,17 @@ import { SecurityService } from './service';
 export const SecurityController = {
   async getCertificates(req: Request, res: Response) {
     try {
-      const userId = (req as any).user.id;
+      const userId = (req as any).user?.id;
       const certs = await SecurityService.getUserCertificates(userId);
       res.json({ success: true, data: certs });
     } catch (err: any) {
-      res.status(500).json({ success: false, error: err.message });
+      console.error(err); res.status(500).json({ success: false, error: 'Internal server error' });
     }
   },
 
   async downloadCertificate(req: Request, res: Response) {
     try {
-      const userId = (req as any).user.id;
+      const userId = (req as any).user?.id;
       const certId = req.params.id;
       
       const htmlContent = await SecurityService.generateCertificate(certId, userId);
@@ -23,7 +23,7 @@ export const SecurityController = {
       res.setHeader('Content-Type', 'text/html');
       res.send(htmlContent);
     } catch (err: any) {
-      res.status(500).json({ success: false, error: err.message });
+      console.error(err); res.status(500).json({ success: false, error: 'Internal server error' });
     }
   }
 };

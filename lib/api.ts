@@ -16,6 +16,8 @@ function getAccessToken(): string | null {
 
 const api: AxiosInstance = axios.create({
   baseURL: API_URL,
+  // A hung request must end in the page's retry state, not an endless spinner (Render cold starts take ~50 s).
+  timeout: 75000,
   headers: {
     'Content-Type': 'application/json',
   },

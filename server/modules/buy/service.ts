@@ -74,12 +74,7 @@ export function createOrder(userId: string, body: { address: string; couponCode?
   // Clear cart
   carts.set(userId, []);
 
-  // Credit 2% Loyalty Cashback
-  if (finalPrice > 0) {
-    const { addWalletLedgerEntry } = require('../../data');
-    const cashback = Math.floor(finalPrice * 0.02);
-    addWalletLedgerEntry(userId, cashback, 'cashback', `2% Loyalty Cashback on Order ${order.id}`);
-  }
+  // The 2% loyalty cashback is credited when the payment is verified (payments/service.ts).
 
   return order;
 }

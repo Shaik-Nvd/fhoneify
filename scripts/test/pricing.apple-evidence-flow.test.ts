@@ -87,6 +87,7 @@ async function startFixture(): Promise<Server> {
   ]);
   assert.equal(process.env.DATABASE_URL, sentinel, 'dotenv must never override the no-database sentinel');
   prisma.$connect = async () => { throw new Error('Fixture prohibits database connections'); };
+  Object.defineProperty(prisma.lead, 'count', { value: async () => 0, configurable: true }); // coupon history: none, no database
   Object.defineProperty(prisma.lead, 'create', { value: async (args: unknown) => {
     const data = (args as { data: typeof leads[number] }).data;
     assert(Number.isInteger(data.quotedPrice) && data.quotedPrice > 0, 'only verified positive prices may be stored');
@@ -120,7 +121,7 @@ async function run() {
   const req = (diagnostics: unknown, fx = f) => ({ brand: fx.device.brand, model: fx.device.model, storage: fx.device.storage, diagnostics });
   const wifi: DiagnosticsType = { ...perfect, hardware: ['wifi'] };
   const leadBody = (q: any, diagnostics: unknown, over: object = {}, fx = f) => ({
-    brand: fx.device.brand, model: fx.device.model, storage: fx.device.storage, phone: '0000000000', name: 'Fixture', quotedPrice: q.fhoneifyPrice,
+    brand: fx.device.brand, model: fx.device.model, storage: fx.device.storage, phone: '9876500000', name: 'Fixture', quotedPrice: q.fhoneifyPrice,
     quoteToken: q.quoteToken, couponApplied: true, answers: diagnostics, pickupDate: '2026-10-26', pickupTime: '10:00', address: 'x', pincode: '560001', city: 'x', ...over,
   });
   console.log(`  (fixture model: ${f.model} ${f.gb} GB, reference ₹${f.reference}; ${fixtures.length} enabled models exercised)`);

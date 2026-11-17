@@ -70,6 +70,7 @@ async function main() {
   assert.equal(process.env.DATABASE_URL, sentinel);
   prisma.$connect = async () => { throw new Error('Database connections are disabled in this test'); };
   const persisted: any[] = [];
+  Object.defineProperty(prisma.lead, 'count', { value: async () => 0, configurable: true }); // coupon history: none, no database
   Object.defineProperty(prisma.lead, 'create', { value: async ({ data }: any) => {
     persisted.push(structuredClone(data));
     return { ...data, id: `memory-${persisted.length}` };
@@ -108,7 +109,7 @@ async function main() {
   const submit = async (token?: string, price?: number) => {
     let status = 200;
     const res = { status(code: number) { status = code; return this; }, json() { return this; } };
-    await createLead({ body: { phone: '0000000000', ...input, answers: diagnostics,
+    await createLead({ body: { phone: '9876500000', ...input, answers: diagnostics,
       ...(token === undefined ? {} : { quoteToken: token }), ...(price === undefined ? {} : { quotedPrice: price }) } } as any, res as any);
     return status;
   };

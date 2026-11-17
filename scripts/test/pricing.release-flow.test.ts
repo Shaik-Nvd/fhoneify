@@ -96,6 +96,7 @@ async function startFixture(port: number): Promise<Server> {
   ]);
   assert.equal(process.env.DATABASE_URL, sentinel, 'dotenv must never override the no-database sentinel');
   prisma.$connect = async () => { throw new Error('Fixture prohibits database connections'); };
+  Object.defineProperty(prisma.lead, 'count', { value: async () => 0, configurable: true }); // coupon history: none, no database
   Object.defineProperty(prisma.lead, 'create', { value: async (args: unknown) => {
     const data = (args as { data: typeof leads[number] }).data;
     assert(Number.isInteger(data.quotedPrice) && data.quotedPrice > 0, 'only verified positive prices may be stored');
@@ -178,7 +179,7 @@ async function run() {
     return { status: response.status, body: await response.json() as { success: boolean; code?: string; data?: any } };
   };
   const leadFor = (diagnostics: object, token?: string, quotedPrice?: number) => ({ ...requestFor(diagnostics), diagnostics: undefined,
-    answers: diagnostics, phone: '0000000000', quoteToken: token, quotedPrice });
+    answers: diagnostics, phone: '9876500000', quoteToken: token, quotedPrice });
   try {
     await check('default legacy still returns the existing engine version', async () => {
       active = make(); const result = await post('/api/quote/price', requestFor(clean));
@@ -294,7 +295,7 @@ async function run() {
       const input = { brand: note.brand, model: note.model, storage: note.storage, diagnostics };
       const old = await legacy.quote(input); assert(old.ok); active = release; const count = leads.length;
       const quote = await post('/api/quote/price', input); assert.equal(quote.status, 422);
-      const lead = await post('/api/quote/leads', { ...input, diagnostics: undefined, answers: diagnostics, phone: '0000000000', quoteToken: old.quoteToken });
+      const lead = await post('/api/quote/leads', { ...input, diagnostics: undefined, answers: diagnostics, phone: '9876500000', quoteToken: old.quoteToken });
       assert.equal(lead.status, 422); assert.equal(leads.length, count);
     });
     await check('moved reference: clean baseline follows it, measured deductions stay at the calibrated reference', async () => {
@@ -361,7 +362,7 @@ async function run() {
       const input = { brand: note.brand, model: note.model, storage: note.storage };
       const quote = await post('/api/quote/price', { ...input, diagnostics: answers });
       assert.equal(quote.status, 422); assert.equal(quote.body.code, 'MANUAL_INSPECTION_REQUIRED');
-      const lead = await post('/api/quote/leads', { ...input, phone: '0000000000', answers });
+      const lead = await post('/api/quote/leads', { ...input, phone: '9876500000', answers });
       assert.equal(lead.status, 422); assert.equal(leads.length, count);
     });
     await check('unrecognized age, eSIM, parent and hardware cannot become clean quotes', async () => {
@@ -435,7 +436,7 @@ async function run() {
       assert.equal(quote.status, 422); assert.equal(quote.body.code, 'MANUAL_INSPECTION_REQUIRED'); assert.equal(quote.body.data, undefined);
       for (const token of [undefined, old.quoteToken]) {
         const lead = await post('/api/quote/leads', { brand: device.brand, model: device.model, storage: device.storage,
-          answers: uiClean, phone: '0000000000', quoteToken: token, quotedPrice: old.fhoneifyPrice });
+          answers: uiClean, phone: '9876500000', quoteToken: token, quotedPrice: old.fhoneifyPrice });
         assert.equal(lead.status, 422); assert.equal(lead.body.code, 'MANUAL_INSPECTION_REQUIRED');
       }
       assert.equal(leads.length, count);
@@ -475,7 +476,7 @@ async function run() {
       const diagnostics = { ...clean, hardware: ['wifi'] };
       const input = { brand: note.brand, model: note.model, storage: note.storage, diagnostics };
       const old = await legacy.quote(input); assert(old.ok);
-      const response = await post('/api/quote/leads', { ...input, diagnostics: undefined, answers: diagnostics, phone: '0000000000', quoteToken: old.quoteToken });
+      const response = await post('/api/quote/leads', { ...input, diagnostics: undefined, answers: diagnostics, phone: '9876500000', quoteToken: old.quoteToken });
       assert.equal(response.status, 422); assert.equal(leads.length, count);
     });
     await check('hybrid contradictory bill answers reject both quote and old-token lead without persistence', async () => {

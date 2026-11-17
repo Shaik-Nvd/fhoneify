@@ -11,7 +11,7 @@ export const DiagnosticsController = {
       const result = await DiagnosticsService.verifyIMEI(imei);
       res.json({ success: true, data: result });
     } catch (err: any) {
-      res.status(500).json({ success: false, error: err.message });
+      console.error(err); res.status(500).json({ success: false, error: 'Internal server error' });
     }
   },
 
@@ -21,7 +21,7 @@ export const DiagnosticsController = {
       const data = await DiagnosticsService.submitDiagnostics(deviceId, results);
       res.json({ success: true, data });
     } catch (err: any) {
-      res.status(500).json({ success: false, error: err.message });
+      console.error(err); res.status(500).json({ success: false, error: 'Internal server error' });
     }
   }
 };

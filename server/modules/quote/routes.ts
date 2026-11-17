@@ -32,7 +32,7 @@ router.post('/', pricingLimiter, ctrl.createQuote);
 router.post('/price', pricingLimiter, optionalAuth, ctrl.priceQuote);
 router.post('/get-upto', pricingLimiter, ctrl.getUptoBatch);
 router.post('/cashify-price', marketPriceLimiter, ctrl.getCashifyPrice);
-router.post('/leads', leadLimiter, ctrl.createLead);
+router.post('/leads', leadLimiter, optionalAuth, ctrl.createLead);
 router.get('/my-pickups', requireAuth, ctrl.getCustomerPickups);
 router.get('/:id', ctrl.getQuote);
 

@@ -50,6 +50,7 @@ async function run(){
   import('express'),import('../../server/lib/prisma'),import('../../server/modules/quote/pricing'),import('../../server/modules/quote/routes')]);
  assert.equal(process.env.DATABASE_URL,sentinel);
  prisma.$connect=async()=>{throw Error('no DB');};
+ Object.defineProperty(prisma.lead,'count',{value:async()=>0,configurable:true});
  Object.defineProperty(prisma.lead,'create',{value:async({data}:any)=>{leads.push(data);return {...data,id:`fixture-${leads.length}`};}});
  pricingRelease.mode='hybrid';
  pricingService.quote=async input=>{const out=await active.quote(input);last=out.ok?out:undefined;return out;};
@@ -75,7 +76,7 @@ async function run(){
    for(const payout of [shadow.couponOff,shadow.couponOn]) assert(payout.payout>shadow.sellingEstimate&&payout.payout-shadow.sellingEstimate<=2000);
    console.log(JSON.stringify({device:f.device.model,storage:f.device.storage,shadow}));
    for(const couponApplied of [false,true]){
-    const r=await post('/leads',{brand:f.device.brand,model:f.device.model,storage:f.device.storage,answers:f.diagnostics,quoteToken:response.body.data.quoteToken,quotedPrice:shadow.gross,couponApplied,phone:'0000000000'});
+    const r=await post('/leads',{brand:f.device.brand,model:f.device.model,storage:f.device.storage,answers:f.diagnostics,quoteToken:response.body.data.quoteToken,quotedPrice:shadow.gross,couponApplied,phone:'9876500000'});
     assert.equal(r.status,200);assert.equal(leads.at(-1).quotedPrice,response.body.data.fhoneifyPrice);assert.equal(leads.at(-1).answers.pricing.glassShadow,undefined);checks++;
    }
    for(const mutation of ['missing','mismatch','wrong-storage','bad-provenance','future-anchor'] as const){
@@ -98,7 +99,7 @@ async function run(){
    const originalAt=at;at=new Date(at.getTime()+901000); // the displayed token is now expired
    const changed=await price(f);assert.equal(last!.internal.glassShadow!.supported,false);
    for(const couponApplied of [false,true]){
-    const count=leads.length;const r=await post('/leads',{...f.device,answers:f.diagnostics,quoteToken:response.body.data.quoteToken,quotedPrice:changed.body.data.fhoneifyPrice,couponApplied,phone:'0000000000'});
+    const count=leads.length;const r=await post('/leads',{...f.device,answers:f.diagnostics,quoteToken:response.body.data.quoteToken,quotedPrice:changed.body.data.fhoneifyPrice,couponApplied,phone:'9876500000'});
     assert.equal(r.status,409);assert.equal(r.body.code,'QUOTE_CHANGED');assert.equal(leads.length,count);checks++;
    }
    records.set(f.key,record);at=originalAt;
@@ -106,7 +107,7 @@ async function run(){
    profiles.profiles.set(profileKey,{...profile,status:'FETCH_FAILED'});await price(f);assert.equal(last!.internal.glassShadow!.supported,false);profiles.profiles.set(profileKey,profile);
    const count=leads.length;const conflict={...f.diagnostics,box:false};
    const rejected=await post('/price',{...f.device,diagnostics:conflict});assert.equal(rejected.status,422);
-   const lead=await post('/leads',{...f.device,answers:conflict,quoteToken:response.body.data.quoteToken,phone:'0000000000'});assert.equal(lead.status,422);assert.equal(leads.length,count);checks++;
+   const lead=await post('/leads',{...f.device,answers:conflict,quoteToken:response.body.data.quoteToken,phone:'9876500000'});assert.equal(lead.status,422);assert.equal(leads.length,count);checks++;
   }
   // Fresh reference/profile/route metadata cannot refresh stale A/B capture evidence.
   at=new Date('2026-10-25T12:00:00Z');

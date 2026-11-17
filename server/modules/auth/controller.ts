@@ -33,6 +33,11 @@ const OTP_MAX_ATTEMPTS = 5;
 /** Minimum gap between sends for one number, so "resend" cannot be used to
  * flood a customer's WhatsApp or to farm provider spend. */
 const OTP_RESEND_COOLDOWN_MS = 45 * 1000;
+/** Wrong guesses are counted per number across resends. After OTP_MAX_ATTEMPTS the number is locked
+ * for this long, so requesting a new code cannot be used to reset the count. */
+const OTP_LOCK_MS = 30 * 60 * 1000;
+/** Marks a stored record whose code is no longer usable but whose attempt count must be kept. */
+const BURNED_CODE = 'burned';
 
 /** Codes are stored as an HMAC, never in plaintext: a database dump must not
  * be enough to complete someone's login. Keyed with the server secret. */
@@ -57,7 +62,8 @@ export interface OtpRecord {
 export interface OtpStore {
   find(phone: string): Promise<OtpRecord | null>;
   save(record: OtpRecord): Promise<void>;
-  setAttempts(phone: string, attempts: number): Promise<void>;
+  /** Atomically adds one attempt and returns the new count, or null when there is no record. */
+  incrementAttempts(phone: string): Promise<number | null>;
   remove(phone: string): Promise<void>;
 }
 
@@ -72,8 +78,13 @@ const prismaOtpStore: OtpStore = {
       create: { phone: r.phone, code: r.code, expiresAt: r.expiresAt, attempts: r.attempts },
     });
   },
-  async setAttempts(phone, attempts) {
-    await prisma.whatsAppOTP.update({ where: { phone }, data: { attempts } });
+  async incrementAttempts(phone) {
+    try {
+      const r = await prisma.whatsAppOTP.update({ where: { phone }, data: { attempts: { increment: 1 } }, select: { attempts: true } });
+      return r.attempts;
+    } catch {
+      return null; // the record was consumed or removed meanwhile
+    }
   },
   async remove(phone) {
     await prisma.whatsAppOTP.deleteMany({ where: { phone } });
@@ -127,6 +138,12 @@ export async function sendOtp(req: Request, res: Response) {
 
   try {
     const existing = await otpStore.find(phone);
+    const recent = !!existing && Date.now() - existing.createdAt.getTime() < OTP_LOCK_MS;
+    if (recent && existing!.attempts >= OTP_MAX_ATTEMPTS) {
+      const retryAfter = Math.ceil((OTP_LOCK_MS - (Date.now() - existing!.createdAt.getTime())) / 1000);
+      res.setHeader('Retry-After', String(retryAfter));
+      return res.status(429).json({ error: `Too many incorrect attempts. Try again in ${Math.ceil(retryAfter / 60)} minutes.` });
+    }
     if (existing && Date.now() - existing.createdAt.getTime() < OTP_RESEND_COOLDOWN_MS) {
       const retryAfter = Math.ceil((OTP_RESEND_COOLDOWN_MS - (Date.now() - existing.createdAt.getTime())) / 1000);
       res.setHeader('Retry-After', String(retryAfter));
@@ -170,7 +187,8 @@ export async function sendOtp(req: Request, res: Response) {
 
     // Stored only after delivery succeeded, so a failed send cannot invalidate
     // a code the customer already received.
-    await otpStore.save({ phone, code: codeHash, expiresAt, createdAt: new Date(), attempts: 0 });
+    // Failed attempts carry over to the new code, so a resend never grants fresh guesses.
+    await otpStore.save({ phone, code: codeHash, expiresAt, createdAt: new Date(), attempts: recent ? existing!.attempts : 0 });
 
     return res.status(200).json({ success: true });
   } catch (e: any) {
@@ -250,20 +268,34 @@ export async function verifyOtp(req: Request, res: Response) {
       return res.status(400).json({ error: 'Invalid or expired OTP' });
     }
 
+    if (record.attempts >= OTP_MAX_ATTEMPTS) {
+      return res.status(429).json({ error: 'Too many incorrect attempts. Request a new code later.' });
+    }
+
     if (new Date() > record.expiresAt) {
-      await otpStore.remove(phone);
+      // Keep the failed-attempt count of an expired code; only a clean record is dropped.
+      if (record.attempts === 0) await otpStore.remove(phone);
+      else if (record.code !== BURNED_CODE) await otpStore.save({ ...record, code: BURNED_CODE });
       return res.status(400).json({ error: 'Invalid or expired OTP' });
     }
 
+    // Reserve the attempt before comparing: parallel requests each take their own slot, so no more
+    // than OTP_MAX_ATTEMPTS guesses are ever compared against one code.
+    const attempts = await otpStore.incrementAttempts(phone);
+    if (attempts === null) {
+      return res.status(400).json({ error: 'Invalid or expired OTP' });
+    }
+    if (attempts > OTP_MAX_ATTEMPTS) {
+      return res.status(429).json({ error: 'Too many incorrect attempts. Request a new code later.' });
+    }
+
     if (!otpMatches(phone, code, record.code)) {
-      const attempts = record.attempts + 1;
       if (attempts >= OTP_MAX_ATTEMPTS) {
-        // Burn the code rather than leaving it guessable.
-        await otpStore.remove(phone);
-        logger.warn({ phone }, 'OTP destroyed after too many failed attempts');
-        return res.status(429).json({ error: 'Too many incorrect attempts. Request a new code.' });
+        // Burn the code rather than leaving it guessable, and keep the count as a lock.
+        await otpStore.save({ ...record, code: BURNED_CODE, attempts, createdAt: new Date() });
+        logger.warn({ phone }, 'OTP burned after too many failed attempts');
+        return res.status(429).json({ error: 'Too many incorrect attempts. Request a new code later.' });
       }
-      await otpStore.setAttempts(phone, attempts);
       return res.status(400).json({ error: 'Invalid or expired OTP' });
     }
 

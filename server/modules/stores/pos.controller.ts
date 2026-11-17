@@ -20,7 +20,7 @@ export const POSController = {
         }
       });
     } catch (err: any) {
-      res.status(500).json({ success: false, error: err.message });
+      console.error(err); res.status(500).json({ success: false, error: 'Internal server error' });
     }
   }
 };

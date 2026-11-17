@@ -43,7 +43,7 @@ export function verifyPayment(req: AuthenticatedRequest, res: Response) {
     if (!result.success) {
       return res.status(400).json({ success: false, error: result.error.issues[0].message });
     }
-    const verification = paymentsService.verifyRazorpayPayment(req.user.id, result.data.razorpayOrderId);
+    const verification = paymentsService.verifyRazorpayPayment(req.user.id, result.data.razorpayOrderId, result.data.razorpayPaymentId, result.data.razorpaySignature);
     if (!verification) {
       return res.status(404).json({ success: false, error: 'Order or verification failed' });
     }

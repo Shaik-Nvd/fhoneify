@@ -25,6 +25,15 @@ Pricing sweep: 2,396 variants, 260,760 offline prices. No exception, no NaN, neg
 
 Guard test: `scripts/test/pricing.quote-flow-audit.test.ts`.
 
+### Second pass (17 November), same PR
+
+5. **Quote page navigation:** Forward after changing an answer re-prices instead of showing the old offer. The pickup form has its own history entry, and its Back returns to the price. Continue on the accessories step sends an unanswered questionnaire back to the first question. Closing the login window returns to the page that opened it. Back from the price after logging in skips the login window. Try again retries the failed request's own answers. The Get Upto error is cleared on device change. API requests time out after 75 s and fall back to the retry state.
+6. **Leads:** a booking from a logged-in customer is linked to the account and uses the account's verified number. The phone must be an Indian mobile number. The first-time coupon is accepted once per number, checked on the server after the price. Price checks are recorded once per customer, device and day with the validated answers. The admin report's value is the payout the customer was shown.
+7. **Security:** OTP attempts are reserved atomically and carried across resends; after 5 wrong codes the number is locked for 30 minutes. Payment verification checks the buyer, refuses a second verification, and requires the Razorpay signature (refused in production when `RAZORPAY_KEY_SECRET` is not set). Cashback is credited on payment, not on order. Pickup lookup matches exact spellings of the number. Re-quote routes are admin-only. User ids are random. Server errors no longer return internal messages.
+8. **Runner age order:** an older age bracket never pays more than a younger one. No price at a real catalog reference changed. The protected-price fingerprint was re-captured: 9 of its 24,096 synthetic-reference prices changed (Pixel 9 Pro XL, Galaxy S25 Edge at a ₹20,000 test reference).
+
+Tests: `pricing.quote-flow-audit`, `pricing.lead-guards`, `pricing.runner-age-order`, and new cases in `auth.otp`.
+
 ## 3. Work order, in priority order
 
 Each task is independent unless it says otherwise. One branch and one PR per task. Run before every PR:
@@ -38,24 +47,13 @@ npx next build
 
 Never run `pricing.quote-integration.test.ts` or any reference-price script: the repo `.env` points at the production database.
 
-### P1. Quote page flow (no pricing change)
+### P1. Quote page flow
 
-All in `app/quote/page.tsx`. Line numbers are from `415a9a6`; search for the quoted code.
+Done in the second pass (item 5 above). Re-test on the live site after deploy: Forward after changing an answer, Back from the pickup form, closing the login window.
 
-1. **Forward button shows an old price.** `handlePopState` only sets the step. After reaching the price, going back, changing an answer and pressing browser Forward, step 11 shows the price and token of the old answers. Fix: keep a hash of the answers the shown quote was priced for; when step 11 is entered and the current answers differ, clear `finalQuote` and re-price. Acceptance: the price on screen always belongs to the answers in the sidebar.
-2. **Step 12 has no history entry.** `onClick={() => setStep(12)}` and the form's Back `setStep(8)`. Use `navigateToState(..., 12)` and `history.back()`. Acceptance: browser Back from the pickup form returns to the price.
-3. **"Schedule Pickup" on the Get-upto screen can lead to pricing an empty questionnaire** (step 2 → 11 → 12 → Back → step 8 → Continue sends `calls/touch/originalScreen = null`). Fix: Continue on step 8 must send the customer to the first unanswered step. Also make the server refuse a final quote whose three core answers are null, but only after confirming the Get-upto request does not rely on nulls (it uses `PERFECT_CONDITION_DIAGNOSTICS`).
-4. **Closing the login modal** uses `asksAgeQuestion ? 9 : 8` and can open an age page the flow skipped. Use `history.back()`.
-5. **"Try again"** re-prices `diagnostics`, not the answers of the failed request. Keep the last requested answers in a ref and retry those.
-6. **Stale Get-upto error:** `resetAnswersOnDeviceChange` should also clear `startingPriceError`.
-7. **Back from the price after logging in** lands on the login modal. Skip step 10 when `isAuthenticated`.
-8. **No request timeout** in `lib/api.ts`. Add `timeout: 30000` and show the existing retry button.
+### P2. Lead bookkeeping
 
-### P2. Lead bookkeeping (server, no pricing change)
-
-1. `POST /api/quote/leads` has no `optionalAuth`, so `userId` is always null and pickups are found only by phone suffix. Add `optionalAuth` to the route.
-2. `/api/quote/price` creates a `price checked` lead on every call from a logged-in user, including the Get-upto call and every reload. Create at most one per user, device and day (update the existing row), and store the parsed answers at the top level of `answers` so the admin report shows them.
-3. The admin report's "Estimated Value" is `min(quotedPrice, snapshot Get Upto)` and ignores the fee and coupon. Show `answers.pricing.customerPayout` when present.
+Done in the second pass (item 6 above).
 
 ### P3. Legacy brands (pricing policy: owner approval needed before any change)
 
@@ -72,7 +70,7 @@ Brands and catalog variants still waiting for data: Vivo 324, Realme 262, Oppo 2
 1. **Silent button and audio receiver** are ₹0 in every runner profile, on every brand. That pattern suggests the test runner never varied these answers. Ask the team to quote both on three phones per brand; if Cashify really deducts nothing, hide the two questions on runner brands.
 2. **Face sensor, fingerprint and "1–2 body scratches"** are ₹0 on hundreds of variants. Spot-check five phones; these may be real zeros.
 3. **Charger missing** is ₹0 on Galaxy S24, S24 Plus, Z Flip7 FE, Nothing Phone 3 and 3a Lite, Pixel 7 and 7 Pro although the question is shown.
-4. **Age rules mix fixed and percentage forms.** On Samsung F34 5G, M14 5G and M15 5G the 6–11 month deduction is a fixed amount and above-11 is a percentage; below a reference of about ₹4,500 the older phone would pay more. Not reachable at today's references. Add a guard in `lib/pricing/cashifyRunnerModel/model.ts` that never lets an older bracket pay more than a younger one, with a test.
+4. **Age rules mix fixed and percentage forms.** Guarded in the second pass (item 8 above).
 5. **iPhone 6 to 14 questionnaire:** the evidence model ignores warranty, bill and age on about 100 older variants, while the page decides what to ask from the database profile. Check on the live site that those models are not asked; if any is, drive the page from the evidence model's own list.
 6. **Samsung holdout** was released at 93% against a 95% gate (7 untested variants). Collect those seven.
 7. **Combination quotes** (two or more faults together) are still inferred. The list to collect is in `docs/next-quotes/`.
@@ -81,5 +79,6 @@ Brands and catalog variants still waiting for data: Vivo 324, Realme 262, Oppo 2
 
 1. Real OTP login and a booked pickup have never been tested end to end on the live site. Do one with the owner's phone and delete the lead afterwards.
 2. Set `QUOTE_STRICT_REFERENCE_MODE` on Render once every catalog variant has a database reference, so a catalog placeholder price can never be quoted. Before that, run a read-only query for variants without a row or with a row older than 30 days.
-3. Close or delete the stale pull requests 1, 5, 6, 7, 8 and 17 after checking nothing in them is still wanted.
-4. The weekly reference refresh promotes a price that moved 40% or more the same day and only flags it. Consider holding such moves for review.
+3. Set `RAZORPAY_KEY_SECRET` on Render before the buy flow takes real payments. Until then payment verification is refused in production.
+4. Close or delete the stale pull requests 1, 5, 6, 7, 8 and 17 after checking nothing in them is still wanted.
+5. The weekly reference refresh promotes a price that moved 40% or more the same day and only flags it. Consider holding such moves for review.

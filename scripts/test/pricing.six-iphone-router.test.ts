@@ -27,6 +27,7 @@ async function main() {
   assert.equal(process.env.DIRECT_URL, sentinel);
   prisma.$connect = async () => { throw new Error('No database connections permitted'); };
   const persisted: any[] = [];
+  Object.defineProperty(prisma.lead, 'count', { value: async () => 0, configurable: true }); // coupon history: none, no database
   Object.defineProperty(prisma.lead, 'create', { value: async ({ data }: any) => {
     persisted.push(data); return { ...data, id: `offline-${persisted.length}` };
   } });
@@ -114,7 +115,7 @@ async function main() {
           const payout = customerPayout(after.body.data.fhoneifyPrice, couponApplied, after.body.data.couponHeadroom);
           assert(payout.payout > row.sellingPrice && payout.payout - row.sellingPrice <= 2000, row.id);
           const lead = await post('leads', { ...request(row), diagnostics: undefined, answers: row.diagnostics,
-            phone: '0000000000', quotedPrice: after.body.data.fhoneifyPrice, quoteToken: after.body.data.quoteToken, couponApplied });
+            phone: '9876500000', quotedPrice: after.body.data.fhoneifyPrice, quoteToken: after.body.data.quoteToken, couponApplied });
           assert.equal(lead.status, 200, 'real lead controller accepts current signed quote into mock persistence');
           const stored = persisted.at(-1);
           assert.equal(stored.quotedPrice, after.body.data.fhoneifyPrice);

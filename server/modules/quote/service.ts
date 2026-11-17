@@ -190,18 +190,58 @@ export async function createLead(data: { userId?: string; name?: string; phone: 
   return lead;
 }
 
+/** The 10-digit Indian mobile number in a phone string, or null when it is not one. */
+export function indianMobile(raw: unknown): string | null {
+  const match = String(raw ?? '').replace(/[\s\-().]/g, '').match(/^(?:\+?91|0)?([6-9]\d{9})$/);
+  return match ? match[1] : null;
+}
+
+/** Every spelling under which a number may have been stored on a lead. */
+export function phoneSpellings(phone: string): string[] {
+  const d10 = indianMobile(phone);
+  return Array.from(new Set([phone, ...(d10 ? [d10, `91${d10}`, `+91${d10}`, `0${d10}`] : [])]));
+}
+
+/** Leads that never became (or no longer are) a booked pickup. */
+const NOT_A_BOOKING = ['price checked', 'lost', 'cancelled'];
+
+/** Whether this phone number already booked a pickup with the first-time coupon. */
+export async function couponAlreadyClaimed(phone: string): Promise<boolean> {
+  const count = await prisma.lead.count({
+    where: {
+      phone: { in: phoneSpellings(phone) },
+      status: { notIn: NOT_A_BOOKING },
+      answers: { path: ['pricing', 'couponClaimed'], equals: true },
+    },
+  });
+  return count > 0;
+}
+
+/**
+ * Records a logged-in customer's price check for the sales team: one row per customer, device and day,
+ * updated with the latest price and answers instead of a new row on every request.
+ */
+export async function recordPriceCheck(data: { userId: string; phone: string; name: string; brand: string; model: string; storage: string; quotedPrice: number; answers: any }) {
+  const startOfDay = new Date();
+  startOfDay.setHours(0, 0, 0, 0);
+  const existing = await prisma.lead.findFirst({
+    where: { userId: data.userId, brand: data.brand, model: data.model, storage: data.storage, status: 'price checked', createdAt: { gte: startOfDay } },
+    select: { id: true },
+  });
+  if (existing) {
+    return prisma.lead.update({ where: { id: existing.id }, data: { quotedPrice: data.quotedPrice, answers: data.answers } });
+  }
+  return createLead({ ...data, status: 'price checked' });
+}
+
 export async function getCustomerPickups(userId?: string, phone?: string) {
   const orConditions: any[] = [];
   if (userId) {
     orConditions.push({ userId });
   }
   if (phone) {
-    const cleanPhone = phone.replace(/\D/g, '');
-    const suffix10 = cleanPhone.slice(-10);
-    orConditions.push({ phone });
-    if (suffix10 && suffix10.length === 10) {
-      orConditions.push({ phone: { contains: suffix10 } });
-    }
+    // Exact spellings of this number only: a suffix match could show another person's pickups.
+    orConditions.push({ phone: { in: phoneSpellings(phone) } });
   }
 
   if (orConditions.length === 0) {

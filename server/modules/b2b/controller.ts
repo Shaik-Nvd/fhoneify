@@ -8,7 +8,7 @@ export const B2BController = {
       const auctions = await B2BService.getAuctions();
       res.json({ success: true, data: auctions });
     } catch (err: any) {
-      res.status(500).json({ success: false, error: err.message });
+      console.error(err); res.status(500).json({ success: false, error: 'Internal server error' });
     }
   },
 
@@ -17,7 +17,7 @@ export const B2BController = {
       const leads = await B2BService.getLeads('Bengaluru'); // Mock location
       res.json({ success: true, data: leads });
     } catch (err: any) {
-      res.status(500).json({ success: false, error: err.message });
+      console.error(err); res.status(500).json({ success: false, error: 'Internal server error' });
     }
   },
 
@@ -27,7 +27,7 @@ export const B2BController = {
       const wallet = await B2BService.getWallet(req.user.id);
       res.json({ success: true, data: wallet });
     } catch (err: any) {
-      res.status(500).json({ success: false, error: err.message });
+      console.error(err); res.status(500).json({ success: false, error: 'Internal server error' });
     }
   },
 
@@ -38,7 +38,7 @@ export const B2BController = {
       const result = await B2BService.claimLead(req.user.id, leadId);
       res.json({ success: true, data: result });
     } catch (err: any) {
-      res.status(500).json({ success: false, error: err.message });
+      console.error(err); res.status(500).json({ success: false, error: 'Internal server error' });
     }
   },
 
@@ -49,7 +49,7 @@ export const B2BController = {
       const result = await B2BService.placeBid(req.user.id, auctionId, Number(amount));
       res.json({ success: true, data: result });
     } catch (err: any) {
-      res.status(500).json({ success: false, error: err.message });
+      console.error(err); res.status(500).json({ success: false, error: 'Internal server error' });
     }
   }
 };

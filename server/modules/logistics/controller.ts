@@ -17,7 +17,7 @@ export const LogisticsController = {
       const float = LogisticsService.getTechFloat(req.user.id);
       res.json({ success: true, data: float });
     } catch (err: any) {
-      res.status(500).json({ success: false, error: err.message });
+      console.error(err); res.status(500).json({ success: false, error: 'Internal server error' });
     }
   },
 
@@ -27,7 +27,7 @@ export const LogisticsController = {
       const pickups = LogisticsService.getAssignedPickups(req.user.id);
       res.json({ success: true, data: pickups });
     } catch (err: any) {
-      res.status(500).json({ success: false, error: err.message });
+      console.error(err); res.status(500).json({ success: false, error: 'Internal server error' });
     }
   },
 
@@ -39,7 +39,7 @@ export const LogisticsController = {
       if (!data) return res.status(404).json({ success: false, error: 'Pickup not found' });
       res.json({ success: true, data });
     } catch (err: any) {
-      res.status(500).json({ success: false, error: err.message });
+      console.error(err); res.status(500).json({ success: false, error: 'Internal server error' });
     }
   },
 
@@ -51,7 +51,7 @@ export const LogisticsController = {
       if (!success) return res.status(400).json({ success: false, error: 'Invalid OTP' });
       res.json({ success: true, message: 'Re-quote approved and payment authorized' });
     } catch (err: any) {
-      res.status(500).json({ success: false, error: err.message });
+      console.error(err); res.status(500).json({ success: false, error: 'Internal server error' });
     }
   }
 };

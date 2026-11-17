@@ -1,4 +1,5 @@
 import { buy_orders, listings, addWalletLedgerEntry, notifications, counters, BuyOrder } from '../../data';
+import crypto from 'crypto';
 import logger from '../../lib/logger';
 
 export function createRazorpayOrder(userId: string, orderId: string) {
@@ -12,10 +13,24 @@ export function createRazorpayOrder(userId: string, orderId: string) {
   return { razorpayOrderId: rzpId, amount: 100 }; // mock response structure
 }
 
-export function verifyRazorpayPayment(userId: string, razorpayOrderId: string) {
-  const order = buy_orders.find((o) => o.razorpayOrderId === razorpayOrderId);
-  if (!order) {
-    logger.warn({ razorpayOrderId }, 'Order not found for Razorpay order ID verification');
+/** Razorpay's payment signature: HMAC-SHA256 of "order_id|payment_id" with the key secret. */
+function razorpaySignatureValid(orderId: string, paymentId: string, signature: string): boolean {
+  const secret = process.env.RAZORPAY_KEY_SECRET;
+  if (!secret) return process.env.NODE_ENV !== 'production'; // the in-memory demo flow, never in production
+  const expected = Buffer.from(crypto.createHmac('sha256', secret).update(`${orderId}|${paymentId}`).digest('hex'));
+  const actual = Buffer.from(String(signature));
+  return expected.length === actual.length && crypto.timingSafeEqual(expected, actual);
+}
+
+export function verifyRazorpayPayment(userId: string, razorpayOrderId: string, razorpayPaymentId = '', razorpaySignature = '') {
+  // Only the buyer's own order, only once, and only with a valid payment signature.
+  const order = buy_orders.find((o) => o.razorpayOrderId === razorpayOrderId && o.userId === userId);
+  if (!order || order.status === 'paid') {
+    logger.warn({ razorpayOrderId }, 'Order not found, not owned by the caller, or already paid');
+    return null;
+  }
+  if (!razorpaySignatureValid(razorpayOrderId, razorpayPaymentId, razorpaySignature)) {
+    logger.warn({ razorpayOrderId }, 'Razorpay signature rejected');
     return null;
   }
 
@@ -55,6 +70,12 @@ export function verifyRazorpayPayment(userId: string, razorpayOrderId: string) {
         createdAt: new Date().toISOString()
       });
     }
+  }
+
+  // Loyalty cashback is earned by paying, not by placing an order.
+  if ((order.finalPrice ?? 0) > 0) {
+    const cashback = Math.floor((order.finalPrice ?? 0) * 0.02);
+    addWalletLedgerEntry(order.userId, cashback, 'cashback', `2% Loyalty Cashback on Order ${order.id}`);
   }
 
   // Create notification for buyer

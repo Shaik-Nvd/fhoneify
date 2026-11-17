@@ -183,9 +183,13 @@ export async function generateLeadPdf(req: AuthenticatedRequest, res: Response) 
     }
 
     // Rule: Fhoneify's Estimated Value must not be more than Fhoneify's Get Upto Price
-    const estimatedValueAmount = getUptoAmount != null
-      ? Math.min(Math.round(lead.quotedPrice), getUptoAmount)
-      : Math.round(lead.quotedPrice);
+    // The payout the customer was shown (after the fee and any coupon) is stored with the lead.
+    const promisedPayout = Number(answers?.pricing?.customerPayout?.payout);
+    const estimatedValueAmount = Number.isFinite(promisedPayout) && promisedPayout > 0
+      ? Math.round(promisedPayout)
+      : getUptoAmount != null
+        ? Math.min(Math.round(lead.quotedPrice), getUptoAmount)
+        : Math.round(lead.quotedPrice);
 
     const lowerModel = lead.model.toLowerCase();
     const isApple = lead.brand.toLowerCase() === 'apple';
