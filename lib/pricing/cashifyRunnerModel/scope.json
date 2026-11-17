@@ -14990,6 +14990,12 @@
           "charger",
           "box"
         ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
       }
     }
   },
@@ -15610,6 +15616,4801 @@
     ],
     "variants": {
       "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pococ3": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pococ31": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pococ50": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "2gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pococ51": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pococ55": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pococ61": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pococ65": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pococ71": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pococ755g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pococ81": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pococ81x": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pococ855g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pococ85x": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocof1": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocof3gt": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocof45g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocof55g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocof65g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocof75g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocom2": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocom2pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocom2reloaded": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocom3": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocom3pro5g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocom45g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocom4pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocom4pro5g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocom5": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocom65g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocom6plus5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocom6pro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocom75g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocom7plus5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocom7pro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocom85g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocox2": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocox3": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocox3pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocox4pro5g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocox55g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocox5pro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocox65g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocox6neo5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocox6pro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocox75g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocox7pro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocox8pro": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "pocox8promax5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotoe13": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "2gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotoe22s": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotoe32": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotoe32s": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotoe40": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotoe6s": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotoe7plus": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotoe7power": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "2gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotoedge20": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotoedge20fusion": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotoedge20pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotoedge30": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotoedge30fusion": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotoedge30pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotoedge30ultra": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotoedge40": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotoedge40neo": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotoedge50": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotoedge50fusion": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotoedge50neo": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotoedge50pro": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotoedge50ultra": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "12gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotoedge60": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotoedge60fusion": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotoedge60pro": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "16gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotoedge60stylus": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotoedge70": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotoedge70fusion": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotoedge70pro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotoedge70proplus5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotoedgeplus": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog04": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog04s": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog05": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog06power": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog10power": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog13": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog14": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog22": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog24power": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog30": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog31": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog32": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog345g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog355g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog375g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog37power5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog40fusion": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog42": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog455g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog515g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog52": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog545g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog57power5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog5g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog6": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog60": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog625g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog645g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog67power5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog6plus": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog7": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog715g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog72": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog735g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog7power": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog825g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog845g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog855g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog86power5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog8plus": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog8powerlite": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog9": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog965g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotog9power": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotoone": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotorazr": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity",
+      "hinge"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotorazr40ultra": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity",
+      "outer_screen",
+      "hinge"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotorazr50": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity",
+      "outer_screen",
+      "hinge"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotorazr50ultra": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity",
+      "outer_screen",
+      "hinge"
+    ],
+    "variants": {
+      "12gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotorazr5g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity",
+      "outer_screen",
+      "hinge"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotorazr60": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity",
+      "outer_screen",
+      "hinge"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotorazr60ultra": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity",
+      "outer_screen",
+      "hinge"
+    ],
+    "variants": {
+      "16gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotosignature": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "16gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "16gb/1tb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolamotoz2force": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolaoneaction": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolaonefusionplus": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolaonemacro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolaonepower": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "motorolaonevision": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/128gb": {
         "accessories": [
           "charger",
           "box"

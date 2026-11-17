@@ -1,6 +1,6 @@
 {
   "version": "cashify-runner-rules-v5",
-  "sourceHash": "4c57f8abcb6cf0491dacb7437b631dd8c8035e785fe01968f1e9a674b8902194",
+  "sourceHash": "d4ad42505eb729e0f2b5a745705a37b879bd6a106e058f4d45f2b7b4b0355a2a",
   "profiles": {
     "nokia22": {
       "model": "Nokia 2.2",
@@ -6846,528 +6846,536 @@
             "charger",
             "box"
           ],
-          "scrap": 500,
-          "scrapInferredFrom": "Nokia 8 Sirocco"
+          "scrap": 300
+        },
+        "6gb/128gb": {
+          "accessories": [
+            "charger",
+            "box"
+          ],
+          "scrap": 300
         }
       },
       "rules": {
         "hardware:front_camera": {
           "form": "fixed",
-          "value": 420,
-          "support": 1,
-          "residual": 0,
+          "value": 430,
+          "support": 2,
+          "residual": 10,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
-            "4gb/64gb"
+            "4gb/64gb",
+            "6gb/128gb"
           ]
         },
         "hardware:back_camera": {
           "form": "fixed",
           "value": 850,
-          "support": 1,
+          "support": 2,
           "residual": 0,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
-            "4gb/64gb"
+            "4gb/64gb",
+            "6gb/128gb"
           ]
         },
         "hardware:volume": {
           "form": "fixed",
           "value": 300,
-          "support": 0,
+          "support": 2,
           "residual": 0,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 980,
-          "support": 0,
+          "form": "pct",
+          "value": 0.2628661254044834,
+          "support": 2,
           "residual": 0,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 1460,
-          "support": 0,
+          "form": "pct",
+          "value": 0.3942991881067251,
+          "support": 2,
           "residual": 0,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "hardware:battery_service": {
           "form": "fixed",
           "value": 400,
-          "support": 0,
+          "support": 2,
           "residual": 0,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "hardware:speaker": {
           "form": "fixed",
           "value": 200,
-          "support": 0,
+          "support": 2,
           "residual": 0,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "hardware:power": {
           "form": "fixed",
           "value": 300,
-          "support": 0,
+          "support": 2,
           "residual": 0,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "hardware:charging": {
           "form": "fixed",
           "value": 500,
-          "support": 0,
+          "support": 2,
           "residual": 0,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "hardware:face": {
           "form": "fixed",
           "value": 0,
-          "support": 0,
+          "support": 2,
           "residual": 0,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "hardware:silent": {
           "form": "fixed",
           "value": 0,
-          "support": 0,
+          "support": 2,
           "residual": 0,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "hardware:audio_receiver": {
           "form": "fixed",
           "value": 0,
-          "support": 0,
+          "support": 2,
           "residual": 0,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "hardware:camera_glass": {
           "form": "fixed",
           "value": 430,
-          "support": 0,
-          "residual": 0,
+          "support": 2,
+          "residual": 10,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 1460,
-          "support": 0,
+          "form": "pct",
+          "value": 0.3942991881067251,
+          "support": 2,
           "residual": 0,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "hardware:vibrator": {
           "form": "fixed",
           "value": 200,
-          "support": 0,
+          "support": 2,
           "residual": 0,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "hardware:microphone": {
           "form": "fixed",
           "value": 200,
-          "support": 0,
+          "support": 2,
           "residual": 0,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "hardware:proximity": {
           "form": "fixed",
-          "value": 110,
-          "support": 0,
-          "residual": 0,
+          "value": 70,
+          "support": 2,
+          "residual": 10,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "cracked": {
           "form": "fixed",
-          "value": 2620,
-          "support": 0,
+          "value": 1310,
+          "support": 2,
           "residual": 0,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "screen:1": {
           "form": "fixed",
-          "value": 1850,
-          "support": 0,
-          "residual": 0,
+          "value": 930,
+          "support": 2,
+          "residual": 10,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "screen:2": {
           "form": "fixed",
-          "value": 1300,
-          "support": 0,
+          "value": 650,
+          "support": 2,
           "residual": 0,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "screen:3": {
           "form": "fixed",
-          "value": 560,
-          "support": 0,
+          "value": 280,
+          "support": 2,
           "residual": 0,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "spots:0": {
-          "form": "fixed",
-          "value": 2620,
-          "support": 0,
-          "residual": 0,
+          "form": "pct",
+          "value": 0.7060294154535649,
+          "support": 2,
+          "residual": 10,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "spots:1": {
           "form": "fixed",
-          "value": 2640,
-          "support": 0,
+          "value": 1320,
+          "support": 2,
           "residual": 0,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "spots:2": {
           "form": "fixed",
-          "value": 880,
-          "support": 0,
+          "value": 440,
+          "support": 2,
           "residual": 0,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "lines:0": {
-          "form": "fixed",
-          "value": 2620,
-          "support": 0,
-          "residual": 0,
+          "form": "pct",
+          "value": 0.7060294154535649,
+          "support": 2,
+          "residual": 10,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "lines:1": {
           "form": "fixed",
-          "value": 2200,
-          "support": 0,
+          "value": 1100,
+          "support": 2,
           "residual": 0,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "color:0": {
           "form": "fixed",
-          "value": 2420,
-          "support": 0,
+          "value": 1210,
+          "support": 2,
           "residual": 0,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "color:1": {
           "form": "fixed",
-          "value": 880,
-          "support": 0,
+          "value": 440,
+          "support": 2,
           "residual": 0,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "scratch:0": {
-          "form": "fixed",
-          "value": 220,
-          "support": 0,
+          "form": "pct",
+          "value": 0.0596085186083263,
+          "support": 2,
           "residual": 0,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "scratch:1": {
           "form": "fixed",
           "value": 0,
-          "support": 0,
+          "support": 2,
           "residual": 0,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "dent:0": {
-          "form": "fixed",
-          "value": 380,
-          "support": 0,
+          "form": "pct",
+          "value": 0.10070486717894261,
+          "support": 2,
           "residual": 0,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "dent:1": {
-          "form": "fixed",
-          "value": 220,
-          "support": 0,
+          "form": "pct",
+          "value": 0.0596085186083263,
+          "support": 2,
           "residual": 0,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "panel": {
-          "form": "fixed",
-          "value": 650,
-          "support": 0,
+          "form": "pct",
+          "value": 0.17660141976805438,
+          "support": 2,
           "residual": 0,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "bent": {
-          "form": "fixed",
-          "value": 650,
-          "support": 0,
+          "form": "pct",
+          "value": 0.17660141976805438,
+          "support": 2,
           "residual": 0,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "loose": {
-          "form": "fixed",
-          "value": 650,
-          "support": 0,
+          "form": "pct",
+          "value": 0.17660141976805438,
+          "support": 2,
           "residual": 0,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "touch": {
-          "form": "fixed",
-          "value": 2620,
-          "support": 0,
+          "form": "pct",
+          "value": 0.7104776875674139,
+          "support": 2,
           "residual": 0,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "original": {
           "form": "fixed",
-          "value": 1760,
-          "support": 0,
+          "value": 880,
+          "support": 2,
           "residual": 0,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "charger": {
           "form": "fixed",
           "value": 30,
-          "support": 0,
-          "residual": 0,
+          "support": 2,
+          "residual": 10,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "box": {
           "form": "fixed",
           "value": 50,
-          "support": 0,
+          "support": 2,
           "residual": 0,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         },
         "both": {
           "form": "fixed",
           "value": 50,
-          "support": 0,
+          "support": 2,
           "residual": 0,
           "observedDates": [
-            "2026-11-15"
+            "2026-11-16"
           ],
           "measuredStorages": [
+            "4gb/64gb",
             "6gb/128gb"
-          ],
-          "inferredFrom": "Nokia 8 Sirocco"
+          ]
         }
       },
       "noOffer": {}

@@ -15,7 +15,7 @@ export interface DeductionRule {
   measuredStorages?: string[];
 }
 export interface RunnerProfile {
-  brand: 'Nothing' | 'OnePlus' | 'Samsung' | 'Google' | 'Xiaomi' | 'Honor' | 'Asus' | 'Lenovo' | 'Nokia';
+  brand: 'Nothing' | 'OnePlus' | 'Samsung' | 'Google' | 'Xiaomi' | 'Honor' | 'Asus' | 'Lenovo' | 'Nokia' | 'POCO' | 'Motorola';
   model: string;
   hasAge: boolean;
   variants: Record<string, { accessories: string[]; scrap: number; scrapInferredFrom?: string; conditionFloor?: number }>;
