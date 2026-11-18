@@ -24092,5 +24092,305 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "referencePriceStatus": "pending",
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-motorola-moto-edge-70-pro-plus-5g-12-gb-256-gb"
+  },
+  {
+    "id": "oppo-find-x8-5g-12-gb-256-gb",
+    "brand": "Oppo",
+    "model": "OPPO Find X8 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-find-x8-5g-12-gb-256-gb"
+  },
+  {
+    "id": "oppo-find-x8-5g-16-gb-512-gb",
+    "brand": "Oppo",
+    "model": "OPPO Find X8 5G",
+    "storage": "16 GB/512 GB",
+    "ram": "16 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-find-x8-5g-16-gb-512-gb"
+  },
+  {
+    "id": "oppo-a53-6-gb-128-gb",
+    "brand": "Oppo",
+    "model": "OPPO A53",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a53-6-gb-128-gb"
+  },
+  {
+    "id": "oppo-a6c-4-gb-64-gb",
+    "brand": "Oppo",
+    "model": "OPPO A6c",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a6c-4-gb-64-gb"
+  },
+  {
+    "id": "oppo-a6c-4-gb-128-gb",
+    "brand": "Oppo",
+    "model": "OPPO A6c",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-a6c-4-gb-128-gb"
+  },
+  {
+    "id": "oppo-reno16-5g-8-gb-256-gb",
+    "brand": "Oppo",
+    "model": "OPPO Reno16 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno16-5g-8-gb-256-gb"
+  },
+  {
+    "id": "oppo-reno16-5g-12-gb-256-gb",
+    "brand": "Oppo",
+    "model": "OPPO Reno16 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno16-5g-12-gb-256-gb"
+  },
+  {
+    "id": "oppo-reno16c-5g-8-gb-128-gb",
+    "brand": "Oppo",
+    "model": "OPPO Reno16c 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno-16c-5g-8-gb-128-gb"
+  },
+  {
+    "id": "oppo-reno16c-5g-8-gb-256-gb",
+    "brand": "Oppo",
+    "model": "OPPO Reno16c 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno16c-5g-8-gb-256-gb"
+  },
+  {
+    "id": "oppo-reno16c-5g-12-gb-256-gb",
+    "brand": "Oppo",
+    "model": "OPPO Reno16c 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-reno16c-5g-12-gb-256-gb"
+  },
+  {
+    "id": "infinix-gt-20-pro-8-gb-256-gb",
+    "brand": "Infinix",
+    "model": "Infinix GT 20 Pro",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-gt-20-pro-8-gb-256-gb"
+  },
+  {
+    "id": "infinix-smart-10-4-gb-64-gb",
+    "brand": "Infinix",
+    "model": "Infinix Smart 10",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-smart-10-4-gb-64-gb"
+  },
+  {
+    "id": "infinix-smart-9-hd-3-gb-64-gb",
+    "brand": "Infinix",
+    "model": "Infinix Smart 9 HD",
+    "storage": "3 GB/64 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-smart-9-hd-3-gb-64-gb"
+  },
+  {
+    "id": "infinix-smart-8-4-gb-64-gb",
+    "brand": "Infinix",
+    "model": "Infinix Smart 8",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-smart-8-4-gb-64-gb"
+  },
+  {
+    "id": "infinix-smart-8-hd-3-gb-64-gb",
+    "brand": "Infinix",
+    "model": "Infinix Smart 8 HD",
+    "storage": "3 GB/64 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-smart-8-hd-3-gb-64-gb"
+  },
+  {
+    "id": "infinix-note-40x-5g-8-gb-256-gb",
+    "brand": "Infinix",
+    "model": "Infinix Note 40X 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-note-40x-5g-8-gb-256-gb"
+  },
+  {
+    "id": "infinix-note-40x-5g-12-gb-256-gb",
+    "brand": "Infinix",
+    "model": "Infinix Note 40X 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-note-40x-5g-12-gb-256-gb"
+  },
+  {
+    "id": "infinix-note-50x-5g-6-gb-128-gb",
+    "brand": "Infinix",
+    "model": "Infinix Note 50X 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-note-50x-5g-6-gb-128-gb"
+  },
+  {
+    "id": "infinix-note-50x-5g-8-gb-128-gb",
+    "brand": "Infinix",
+    "model": "Infinix Note 50X 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-note-50x-5g-8-gb-128-gb"
+  },
+  {
+    "id": "infinix-zero-40-5g-12-gb-256-gb",
+    "brand": "Infinix",
+    "model": "Infinix Zero 40 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-zero-40-5g-12-gb-256-gb"
+  },
+  {
+    "id": "infinix-zero-40-5g-12-gb-512-gb",
+    "brand": "Infinix",
+    "model": "Infinix Zero 40 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-zero-40-5g-12-gb-512-gb"
+  },
+  {
+    "id": "infinix-zero-flip-5g-8-gb-512-gb",
+    "brand": "Infinix",
+    "model": "Infinix Zero Flip 5G",
+    "storage": "8 GB/512 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-zero-flip-5g-8-gb-512-gb"
+  },
+  {
+    "id": "infinix-hot-40i-8-gb-256-gb",
+    "brand": "Infinix",
+    "model": "Infinix Hot 40i",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-hot-40i-8-gb-256-gb"
+  },
+  {
+    "id": "infinix-hot-50-5g-4-gb-128-gb",
+    "brand": "Infinix",
+    "model": "Infinix Hot 50 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-hot-50-5g-4-gb-128-gb"
+  },
+  {
+    "id": "infinix-hot-50-5g-8-gb-128-gb",
+    "brand": "Infinix",
+    "model": "Infinix Hot 50 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-hot-50-5g-8-gb-128-gb"
+  },
+  {
+    "id": "infinix-hot-60-5g-plus-6-gb-128-gb",
+    "brand": "Infinix",
+    "model": "Infinix Hot 60 5G Plus",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-hot-60-5g-plus-6-gb-128-gb"
+  },
+  {
+    "id": "infinix-hot-60i-5g-4-gb-128-gb",
+    "brand": "Infinix",
+    "model": "Infinix Hot 60i 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-hot-60i-5g-4-gb-128-gb"
+  },
+  {
+    "id": "infinix-note-40-pro-plus-5g-12-gb-256-gb",
+    "brand": "Infinix",
+    "model": "Infinix Note 40 Pro Plus 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-note-40-pro-plus-5g-12-gb-256-gb"
+  },
+  {
+    "id": "infinix-note-40-5g-8-gb-256-gb",
+    "brand": "Infinix",
+    "model": "Infinix Note 40 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-note-40-5g-8-gb-256-gb"
+  },
+  {
+    "id": "infinix-note-40-pro-5g-8-gb-256-gb",
+    "brand": "Infinix",
+    "model": "Infinix Note 40 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-note-40-pro-5g-8-gb-256-gb"
   }
 ];
