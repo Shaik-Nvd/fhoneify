@@ -7,7 +7,7 @@ import { series, generation, fitCalibration } from './fit-cashify-runner-calibra
 import type { RunnerMeasurement } from './import-cashify-runner-data';
 import { statistics } from './validate-cashify-runner';
 
-export async function validateXiaomiOthers(brand:'Xiaomi'|'Honor'|'Asus'|'Lenovo'|'Nokia'|'OnePlus'|'Google'|'POCO'|'Motorola', options:{dir?:string;replayControls?:boolean}={}) {
+export async function validateXiaomiOthers(brand:'Xiaomi'|'Honor'|'Asus'|'Lenovo'|'Nokia'|'OnePlus'|'Google'|'POCO'|'Motorola'|'Oppo'|'Infinix', options:{dir?:string;replayControls?:boolean}={}) {
   const dir=options.dir??`data/pricing-evidence/${brand.toLowerCase()+'-2026-11-16'}`;
   const all:RunnerMeasurement[]=fs.readFileSync(`${dir}/measurements.jsonl`,'utf8').trim().split('\n').map(line=>JSON.parse(line));
   const rows=all.filter(r=>(r.primary||['OnePlus','Google'].includes(brand))&&r.status==='quoted');
