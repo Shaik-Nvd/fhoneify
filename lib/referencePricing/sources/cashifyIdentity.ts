@@ -154,6 +154,21 @@ export interface CashifyPageSnapshot {
    * a RAM-vs-no-RAM difference stays ambiguous and is rejected.
    */
   variantResolvedBy?: 'url' | 'unique-storage-chip';
+  /**
+   * The RAM/storage variant named by the catalog's own curated `cashifyLink`
+   * (e.g. "12 GB/512 GB" from ".../used-samsung-galaxy-s25-ultra-5g-12-gb-512-gb"),
+   * set only when the page was loaded from that link. A person picked that exact
+   * Cashify page for this catalog row, so when the page shows that same variant,
+   * the RAM is the catalog's own choice, not a guess.
+   */
+  curatedVariant?: string;
+}
+
+/** The "<ram>-gb-<storage>-gb" variant at the end of a Cashify device URL, as "12 GB/512 GB". */
+export function variantFromCashifyUrl(url: string): string | null {
+  const path = String(url ?? '').split(/[?#]/)[0].replace(/\/+$/, '');
+  const m = path.match(/-(\d+(?:\.\d+)?)-(gb|tb|mb)-(\d+(?:\.\d+)?)-(gb|tb|mb)$/i);
+  return m ? `${m[1]} ${m[2].toUpperCase()}/${m[3]} ${m[4].toUpperCase()}` : null;
 }
 
 /**
@@ -238,6 +253,32 @@ export function verifyPageIdentity(device: DeviceIdentity, snapshot: CashifyPage
       variant = {
         matched: true,
         reason: `storage matches (${requested.storage}); catalog omits RAM and Cashify offers exactly one configuration at this storage (${pageVariant})`,
+      };
+    }
+  }
+
+  // The second relaxation, also only with evidence: the catalog row omits RAM,
+  // and the page was loaded from the row's own curated link, whose URL names a
+  // RAM/storage variant that the page heading confirms. Without this, every
+  // catalog row written "512 GB" for a phone Cashify lists as "12 GB/512 GB"
+  // (Galaxy S22-S25 Ultra/Plus/FE) never got a reference and was quoted from an
+  // old catalog placeholder instead.
+  if (!variant.matched && snapshot.curatedVariant) {
+    const requested = parseVariant(device.storage);
+    const onPage = parseVariant(pageVariant);
+    const curated = parseVariant(snapshot.curatedVariant);
+    if (
+      requested.ram === null &&
+      requested.storage !== null &&
+      onPage.ram !== null &&
+      onPage.storage === requested.storage &&
+      curated.ram === onPage.ram &&
+      curated.storage === onPage.storage &&
+      variantFromCashifyUrl(snapshot.url) === snapshot.curatedVariant
+    ) {
+      variant = {
+        matched: true,
+        reason: `storage matches (${requested.storage}); catalog omits RAM and its curated Cashify link names ${snapshot.curatedVariant}, which the page confirms`,
       };
     }
   }

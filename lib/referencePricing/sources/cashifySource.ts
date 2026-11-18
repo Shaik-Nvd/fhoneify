@@ -20,6 +20,7 @@ import { PriceSource, PriceObservation, PriceRejection } from '../ingestion';
 import {
   CashifyPageSnapshot,
   verifyPageIdentity,
+  variantFromCashifyUrl,
   parsePriceText,
   buildCashifyUrl,
 } from './cashifyIdentity';
@@ -67,7 +68,9 @@ export function createCashifyPriceSource(options: CashifySourceOptions): PriceSo
       const snapshot = await fetchSnapshot(device, url);
       if (!snapshot) return null;
 
-      const identity = verifyPageIdentity(device, snapshot);
+      // Only the catalog's own curated link may vouch for a RAM the catalog row omits.
+      const curatedVariant = /catalog/.test(tier) ? variantFromCashifyUrl(url) : null;
+      const identity = verifyPageIdentity(device, curatedVariant ? { ...snapshot, curatedVariant } : snapshot);
       if (!identity.ok) {
         return {
           rejected: true,
