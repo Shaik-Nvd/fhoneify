@@ -19,6 +19,7 @@ import {
   buildCashifyUrl,
   splitHeading,
   CashifyPageSnapshot,
+  variantFromCashifyUrl,
 } from '../../lib/referencePricing/sources/cashifyIdentity';
 import { DeviceIdentity } from '../../lib/referencePricing/types';
 import { createCashifyUrlResolver, dictionaryKey } from '../../lib/referencePricing/sources/cashifyUrlResolver';
@@ -333,6 +334,51 @@ test('URL resolution prefers catalog link, then the existing scraper dictionarie
   assert.equal(resolve({ brand: 'Apple', model: 'Apple iPhone 6 Plus', storage: '128GB' }).tier, 'dictionary');
   assert.equal(resolve(ONEPLUS).tier, 'generated');
   assert.equal(dictionaryKey({ brand: 'Apple', model: 'Apple iPhone 6 Plus', storage: '' }), 'apple iphone 6 plus');
+});
+
+console.log('\n=== Catalog row without RAM, loaded from its own curated link ===\n');
+
+const S25U = { brand: 'Samsung', model: 'Samsung Galaxy S25 Ultra 5G', storage: '512 GB' };
+const S25U_URL = 'https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s25-ultra-5g-12-gb-512-gb';
+const s25Page = (over: Partial<CashifyPageSnapshot> = {}): CashifyPageSnapshot => ({
+  url: S25U_URL, deviceName: 'Sell Old Samsung Galaxy S25 Ultra 5G (12 GB/512 GB)', selectedVariant: '',
+  priceText: '₹69,660', variantResolvedBy: 'url', ...over,
+});
+
+test('reads the variant out of a Cashify device URL', () => {
+  assert.equal(variantFromCashifyUrl(S25U_URL), '12 GB/512 GB');
+  assert.equal(variantFromCashifyUrl('https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s25-ultra-5g-12-gb-1-tb/'), '12 GB/1 TB');
+  assert.equal(variantFromCashifyUrl('https://www.cashify.in/sell-old-mobile-phone/used-apple-iphone-14'), null);
+});
+
+test('"512 GB" is accepted as "12 GB/512 GB" when the curated link names that variant and the page confirms it', () => {
+  const verdict = verifyPageIdentity(S25U, s25Page({ curatedVariant: '12 GB/512 GB' }));
+  assert.equal(verdict.ok, true, verdict.evidence);
+  assert.match(verdict.evidence, /curated Cashify link/);
+});
+
+test('without a curated link the same page is still ambiguous (a generated URL never vouches for RAM)', () => {
+  const verdict = verifyPageIdentity(S25U, s25Page());
+  assert.equal(verdict.ok, false);
+  assert.match(verdict.evidence, /ambiguous/);
+});
+
+test('a curated link naming another RAM is rejected', () => {
+  assert.equal(verifyPageIdentity(S25U, s25Page({ curatedVariant: '16 GB/512 GB' })).ok, false);
+});
+
+test('a curated link that redirected to another variant page is rejected', () => {
+  const verdict = verifyPageIdentity(S25U, s25Page({
+    curatedVariant: '12 GB/512 GB',
+    url: 'https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s25-ultra-5g-12-gb-256-gb',
+    deviceName: 'Sell Old Samsung Galaxy S25 Ultra 5G (12 GB/256 GB)',
+  }));
+  assert.equal(verdict.ok, false);
+});
+
+test('a curated link never overrides a storage mismatch or a different device', () => {
+  assert.equal(verifyPageIdentity({ ...S25U, storage: '256 GB' }, s25Page({ curatedVariant: '12 GB/512 GB' })).ok, false);
+  assert.equal(verifyPageIdentity({ ...S25U, model: 'Samsung Galaxy S24 Ultra 5G' }, s25Page({ curatedVariant: '12 GB/512 GB' })).ok, false);
 });
 
 console.log(`\n${passed} passed, ${failed} failed.\n`);
