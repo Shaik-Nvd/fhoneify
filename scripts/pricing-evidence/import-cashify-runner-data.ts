@@ -4,7 +4,7 @@ import { createHash } from 'node:crypto';
 import { inflateRawSync } from 'node:zlib';
 import type { DiagnosticsType } from '../../lib/pricingCalculator';
 
-export type Brand = 'Nothing' | 'OnePlus' | 'Samsung' | 'Google' | 'Xiaomi' | 'Honor' | 'Asus' | 'Lenovo' | 'Nokia' | 'POCO' | 'Motorola';
+export type Brand = 'Nothing' | 'OnePlus' | 'Samsung' | 'Google' | 'Xiaomi' | 'Honor' | 'Asus' | 'Lenovo' | 'Nokia' | 'POCO' | 'Motorola' | 'Oppo' | 'Infinix';
 export interface RunnerMeasurement {
   brand: Brand; model: string; rawModel: string; storage: string; caseId: string; label: string;
   status: 'quoted' | 'pending' | 'no_offer' | 'not_applicable'; diagnostics: DiagnosticsType; answerPath: any[];
@@ -107,6 +107,7 @@ export function normalizeModel(raw: string, brand: Brand) {
   check(match,'Unrecognized model/storage format');
   let model=match[1].trim().replace(/^Oneplus\b/i,'OnePlus');
   if(brand==='Nothing') {model=model.replace(/^CMF Phone /i,'CMF by Nothing Phone ');check(/^(Nothing |CMF by Nothing )/.test(model),'Wrong brand model');}
+  else if(brand==='Oppo') check(/^OPPO /i.test(model),'Wrong brand model');
   else check(model.startsWith(brand === 'Google' ? 'Google Pixel ' : brand+' '),'Wrong brand model');
   return { model, storage:match[2].replace(/\s*\/\s*/,'/').replace(/gb/gi,'GB').replace(/tb/gi,'TB') };
 }
@@ -162,7 +163,7 @@ function normalizeAnswers(answers:any[], schema:any) {
   return {diagnostics:d, ageAsked,ageSelected};
 }
 export function importRunnerData(input: string, options: {brand:Brand;out?:string;requireMirror?:boolean}) {
-  check(['Nothing','OnePlus','Samsung','Google','Xiaomi','Honor','Asus','Lenovo','Nokia','POCO','Motorola'].includes(options.brand),'Unknown brand');
+  check(['Nothing','OnePlus','Samsung','Google','Xiaomi','Honor','Asus','Lenovo','Nokia','POCO','Motorola','Oppo','Infinix'].includes(options.brand),'Unknown brand');
   const measurements:RunnerMeasurement[]=[]; const inventory:any[]=[];const variants:any[]=[];
   const folders=fs.existsSync(path.join(input,'checkpoint.json')) ? ['.'] : fs.readdirSync(input,{withFileTypes:true}).filter(e=>e.isDirectory()).map(e=>e.name).sort();
   check(folders.length>0,'No model folders');
@@ -177,7 +178,11 @@ export function importRunnerData(input: string, options: {brand:Brand;out?:strin
     for(const f of required)check(files.has(f),'Missing required runner file');
     const zip=files.get('Cashify_Test_Results.zip');
     check(zip||options.requireMirror===false,'Missing mirror ZIP');
-    if(zip) {const entries=zipMembers(zip);for(const f of required){const matches=[...entries].filter(([name])=>path.posix.basename(name)===f);check(matches.length===1&&matches[0][1].equals(files.get(f)!),'ZIP mirror mismatch');inventory.push({folder,file:`Cashify_Test_Results.zip!/${matches[0][0]}`,bytes:matches[0][1].length,sha256:sha(matches[0][1]),mirror:true});}}
+    if(zip) {const entries=zipMembers(zip);for(const f of required){const matches=[...entries].filter(([name])=>path.posix.basename(name)===f);
+      // Oppo/Infinix: three mirrors carry an older checkpoint.json while every
+      // result file is byte-identical. The folder copy is authoritative; record the drift.
+      const checkpointDrift=['Oppo','Infinix'].includes(options.brand)&&f==='checkpoint.json'&&matches.length===1&&!matches[0][1].equals(files.get(f)!);
+      check(matches.length===1&&(checkpointDrift||matches[0][1].equals(files.get(f)!)),'ZIP mirror mismatch');inventory.push({folder,file:`Cashify_Test_Results.zip!/${matches[0][0]}`,bytes:matches[0][1].length,sha256:sha(matches[0][1]),mirror:true,...(checkpointDrift?{mirrorMismatch:'checkpoint.json differs; folder copy used'}:{})});}}
     const rows:any[]=JSON.parse(files.get('results.json')!.toString('utf8'));
     const checkpoint=JSON.parse(files.get('checkpoint.json')!.toString('utf8'));
     const csv=csvRows(files.get('results.csv')!.toString('utf8'));
@@ -271,7 +276,7 @@ export function importRunnerData(input: string, options: {brand:Brand;out?:strin
     }
     check(seen===rows.length,'Unmatched results row');
   }
-  if(['Xiaomi','Honor','Asus','Lenovo','Nokia','POCO','Motorola'].includes(options.brand)) {
+  if(['Xiaomi','Honor','Asus','Lenovo','Nokia','POCO','Motorola','Oppo','Infinix'].includes(options.brand)) {
     for(const row of measurements)row.source.format='A';
     require('./import-samsung-pixel-archives').reconcile(measurements);
   }

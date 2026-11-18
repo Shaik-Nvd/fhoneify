@@ -96,21 +96,36 @@ export function parseDetailedReport(text: string, source: RunnerMeasurement['sou
 
 /** Sources remain private; only fitted parameters and aggregate reports are public. */
 export function importArchives(input:string,brand:Brand,out:string) {
-  const archive=zipMembers(fs.readFileSync(input));const inventory:any[]=[...archive].map(([file,bytes])=>({file,sha256:hash(bytes),bytes:bytes.length,ignored:file.endsWith('/desktop.ini')||file.endsWith('/diagnostic.json')}));const measurements:RunnerMeasurement[]=[];
+  const archive=zipMembers(fs.readFileSync(input));const inventory:any[]=[...archive].map(([file,bytes])=>({file,sha256:hash(bytes),bytes:bytes.length,ignored:file.endsWith('/desktop.ini')||file.endsWith('/diagnostic.json')}));const measurements:RunnerMeasurement[]=[];const reruns:any[]=[];
   const scratch=path.join('pricing-inputs','samsung-pixel-import',brand);fs.mkdirSync(scratch,{recursive:true});
   const roots=[...archive.keys()].filter(n=>n.endsWith('/checkpoint.json')).map(n=>n.slice(0,-16));
   for(const [i,root]of roots.entries()) {
     const dir=path.join(scratch,String(i));fs.mkdirSync(dir,{recursive:true});
     for(const[n,b]of archive)if(path.posix.dirname(n)===root){inventory.push({file:n,sha256:hash(b),bytes:b.length,ignored:n.endsWith('/diagnostic.json')});if(!n.endsWith('/diagnostic.json')&&!n.endsWith('/.running.lock'))fs.writeFileSync(path.join(dir,path.posix.basename(n)),b);}
-    const imported=importRunnerData(dir,{brand});
+    // Oppo/Infinix: a folder may hold a later re-run checkpoint.json beside the
+    // checkpoint (2).json that its results/mirror files were written from. Import the
+    // consistent pair and record whether the re-run changed any price.
+    if(['Oppo','Infinix'].includes(brand)&&fs.existsSync(path.join(dir,'checkpoint (2).json'))) {
+      const mirror=[...zipMembers(fs.readFileSync(path.join(dir,'Cashify_Test_Results.zip')))].find(([n])=>n.endsWith('checkpoint.json'))?.[1];
+      const older=fs.readFileSync(path.join(dir,'checkpoint (2).json')),newer=fs.readFileSync(path.join(dir,'checkpoint.json'));
+      if(mirror&&older.equals(mirror)&&!newer.equals(mirror)) {
+        const a=JSON.parse(newer.toString('utf8')),o=JSON.parse(older.toString('utf8'));let cases=0,changed=0;
+        for(const[url,v]of Object.entries<any>(a.variants))for(const[id,r]of Object.entries<any>(v.results)){cases++;const p=o.variants[url]?.results?.[id]?.quote;if(!p||p.status!==r.quote.status||p.base!==r.quote.base)changed++;}
+        reruns.push({folder:root,rerunCases:cases,priceChanges:changed});
+        fs.writeFileSync(path.join(dir,'checkpoint.json'),older);
+      }
+    }
+    let imported;try{imported=importRunnerData(dir,{brand});}catch(error:any){throw new Error(`${error.message} in ${root}`);}
     for(const row of imported.measurements){row.source.folder=root;row.source.format='A';measurements.push(row);}
   }
   // Expand nested report ZIPs in memory; never execute or extract supplied code.
-  for (const [n,b] of archive) if(n.endsWith('.zip')&&!n.endsWith('/Cashify_Test_Results.zip')) {
+  for (const [n,b] of archive) if(n.endsWith('.zip')&&!n.endsWith('/Cashify_Test_Results.zip')&&!(['Oppo','Infinix'].includes(brand)&&/ \(\d+\)\.zip$/.test(n))) {
     for(const[k,v]of zipMembers(b))if(k.endsWith('.zip')&&!k.endsWith('/Cashify_Test_Results.zip'))archive.set(n+'!/'+k,v);
   }
   const reportHashes=new Set<string>();const reportCounts:Record<string,unknown>={};
-  for(const[n,b]of archive)if(n.endsWith('.zip')&&!n.endsWith('/Cashify_Test_Results.zip')) {
+  // Oppo/Infinix "(2)" mirror copies are older runs of a runner folder, never text-report archives.
+  const olderCopy=(n:string)=>['Oppo','Infinix'].includes(brand)&&/ \(\d+\)\.zip$/.test(n);
+  for(const[n,b]of archive)if(n.endsWith('.zip')&&!n.endsWith('/Cashify_Test_Results.zip')&&!olderCopy(n)) {
     const duplicate=reportHashes.has(hash(b));inventory.push({file:n,sha256:hash(b),bytes:b.length,duplicate});if(duplicate)continue;reportHashes.add(hash(b));
     const members=zipMembers(b);const format=members.has('verified_observations.json')?'B':'C';
     for(const[k,v]of members)inventory.push({file:n+'!/'+k,sha256:hash(v),bytes:v.length});
@@ -143,7 +158,7 @@ export function importArchives(input:string,brand:Brand,out:string) {
   reconcile(measurements);
   const counts=(xs:RunnerMeasurement[])=>Object.fromEntries(['quoted','pending','no_offer','not_applicable'].map(status=>[status,xs.filter(r=>r.status===status).length]));
   const primaryIndex=new Map(measurements.filter(r=>r.primary&&r.status==='quoted').map(r=>[modelKey(r.model)+'|'+storageKey(r.storage)+'|'+signature(r),r]));
-  const summary={brand,reportCounts,observations:measurements.length,counts:counts(measurements),primary:counts(measurements.filter(r=>r.primary)),byFormat:Object.fromEntries(['A','B','C'].map(f=>[f,counts(measurements.filter(r=>r.source.format===f))])),variants:new Set(measurements.map(r=>modelKey(r.model)+'|'+storageKey(r.storage))).size,
+  const summary={brand,reruns,reportCounts,observations:measurements.length,counts:counts(measurements),primary:counts(measurements.filter(r=>r.primary)),byFormat:Object.fromEntries(['A','B','C'].map(f=>[f,counts(measurements.filter(r=>r.source.format===f))])),variants:new Set(measurements.map(r=>modelKey(r.model)+'|'+storageKey(r.storage))).size,
     sellingOnly:measurements.filter(r=>r.status==='quoted'&&r.total===null).length,
     disagreements:measurements.filter(r=>!r.primary&&r.status==='quoted').map(r=>{const p=primaryIndex.get(modelKey(r.model)+'|'+storageKey(r.storage)+'|'+signature(r));return p&&p.base!==r.base?{model:r.model,storage:r.storage,caseId:r.source.caseId,oldBase:r.base,newBase:p.base,oldDate:r.observedAt,newDate:p.observedAt}:null;}).filter(Boolean)};
   fs.mkdirSync(out,{recursive:true});for(const[name,value]of [['summary',summary],['inventory',inventory]] as const)fs.writeFileSync(path.join(out,name+'.json'),JSON.stringify(value,null,2)+'\n');

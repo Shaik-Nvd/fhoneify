@@ -165,7 +165,7 @@ for (const device of SEED_DEVICES as any[]) {
         // are not added faults. Their ordering at an already-old age is not
         // measured by the young-phone single-fault corpus. Compare to clean;
         // preserve all separate true added-fault checks below.
-        const alternativeDisplay=runner&&['Samsung','Google','Xiaomi','Honor','Asus','Lenovo','Nokia','POCO','Motorola'].includes(runner.brand)&&
+        const alternativeDisplay=runner&&['Samsung','Google','Xiaomi','Honor','Asus','Lenovo','Nokia','POCO','Motorola','Oppo','Infinix'].includes(runner.brand)&&
           ((ladder==='screenChip'&&i===2)||(ladder==='screenScratch'&&i===3));
         const prior = runner && ladder === 'bent' && i === 2 || alternativeDisplay ? 0 : i - 1;
         check(`severity ladder: ${ladder}`, doesNotRise(values[prior], values[i], steps[prior], steps[i]), name, regimeName, () => `${JSON.stringify(steps[i])}: ${values[i]} > ${values[i - 1]}`);

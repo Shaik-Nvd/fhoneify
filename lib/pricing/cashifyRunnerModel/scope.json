@@ -20418,5 +20418,6863 @@
         ]
       }
     }
+  },
+  "oppoa11k": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "2gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa12": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa15": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "2gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa15s": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa16": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa16e": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa16k": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa17": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa17k": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa18": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa1k": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "2gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa31": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa332020": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa35g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa38": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa3pro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa3s": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "2gb/16gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa3x": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa3x5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa5": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa52": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa52020": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa53": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa53s5g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa54": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa55": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa55g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa57": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa572022": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa58": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa595g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa5pro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa5s": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "2gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa5x": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa5x5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa65g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa6c": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa6pro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa6s5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa6x5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa7": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "3gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa712018": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/16gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa745g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa77": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa772022": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa77s": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa78": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa785g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa795g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa83": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "2gb/16gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa9": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa92020": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppoa96": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppof11": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppof11pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppof11proavengeredition": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppof15": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppof17": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppof17pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppof19": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "oppof19pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "oppof19proplus5g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "oppof19s": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "oppof1plus": {
+    "hasAge": false,
+    "hardware": [
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity",
+      "front_camera",
+      "back_camera"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppof1s": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppof21pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppof21pro5g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppof21spro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppof21spro5g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppof235g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppof25pro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppof275g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppof27proplus5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppof295g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppof29pro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppof3": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppof31pro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppof335g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppof33pro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppof3plus": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppof5": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppof5youth": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppof7": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppof9": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppof9pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppofindn2flip5g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity",
+      "outer_screen",
+      "hinge"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppofindn3flip5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity",
+      "outer_screen",
+      "hinge"
+    ],
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppofindx": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppofindx2": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppofindx85g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "16gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppofindx8pro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "16gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppofindx95g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "16gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppofindx9pro": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "16gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppofindx9s": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppofindx9ultra": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "12gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppok1": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppok10": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppok105g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppok12x5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppok135g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppok13turbo5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppok13turbopro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppok13x5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppok145g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppok14x5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppok3": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppor11": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppor17": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "opporeno": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "opporeno105g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "opporeno10pro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "opporeno10proplus5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "opporeno10xzoom": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "opporeno115g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "opporeno11pro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "opporeno125g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "opporeno12pro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "opporeno135g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "opporeno13pro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "opporeno145g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "opporeno14pro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "opporeno155g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "opporeno15c5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "opporeno15pro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "opporeno165g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "opporeno16c5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "opporeno2": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "opporeno2f": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "opporeno2z": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "opporeno3pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "opporeno4pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "opporeno5pro5g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "opporeno65g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "opporeno6pro5g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "box",
+          "charger"
+        ]
+      }
+    }
+  },
+  "opporeno75g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "opporeno7pro5g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "opporeno85g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "opporeno8pro5g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "opporeno8t5g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppof315g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "oppof31proplus5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixgt10pro": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixgt20pro": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixhot10": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixhot10play": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixhot10s": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixhot11": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixhot112022": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixhot11s": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixhot12": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixhot12play": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixhot12pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixhot205g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixhot20play": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixhot305g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixhot30i": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixhot40i": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixhot505g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixhot605gplus": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixhot60i5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixhot7pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixhot8": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixhot9": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixhot9pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixnote10": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixnote10pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixnote11": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixnote11s": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixnote11sfreefireedition": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixnote12": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixnote125g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixnote12i": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixnote12pro4g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixnote12pro5g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixnote12turbo": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixnote305g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixnote405g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixnote40pro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixnote40proplus5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixnote40x5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixnote50x5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixnote7": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixs5": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixs5pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixsmart10": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixsmart4plus": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixsmart5": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "2gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixsmart6": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "2gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixsmart6hd": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "2gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixsmart6plus": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixsmart7": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixsmart7hd": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity",
+      "back_camera"
+    ],
+    "variants": {
+      "2gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixsmart8": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixsmart8hd": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixsmart9hd": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixsmarthd2021": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "2gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixzero20": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixzero405g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixzero5g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixzero5g2023": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixzero5g2023turbo": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixzero5pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixzero8i": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixzeroflip5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity",
+      "outer_screen",
+      "hinge"
+    ],
+    "variants": {
+      "8gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "infinixzeroultra": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
   }
 }

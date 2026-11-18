@@ -9,10 +9,12 @@ import lenovo from './calibration.lenovo.json';
 import nokia from './calibration.nokia.json';
 import poco from './calibration.poco.json';
 import motorola from './calibration.motorola.json';
+import oppo from './calibration.oppo.json';
+import infinix from './calibration.infinix.json';
 import { evaluateRunner, modelKey, storageKey, type RunnerCalibration } from './model';
 import type { DiagnosticsType } from '../../pricingCalculator';
 
-const calibrations = [nothing, oneplus, samsung, google, xiaomi, honor, asus, lenovo, nokia, poco, motorola] as RunnerCalibration[];
+const calibrations = [nothing, oneplus, samsung, google, xiaomi, honor, asus, lenovo, nokia, poco, motorola, oppo, infinix] as RunnerCalibration[];
 export function runnerScope(model: string, _storage?: string | null) {
   return calibrations.map(c => c.profiles[modelKey(model)]).find(Boolean) ?? null;
 }

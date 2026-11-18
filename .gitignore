@@ -60,3 +60,6 @@ release-test-logs/
 
 # Private POCO/Motorola/Nokia rerun evidence
 /data/pricing-evidence/*-2026-11-17/
+
+# Private Oppo/Infinix evidence
+/data/pricing-evidence/*-2026-11-18/

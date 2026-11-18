@@ -17,10 +17,10 @@ const price = (brand: string, model: string, edit: object) =>
   priceDevice(brand, model, R, { ...clean, warranty: true, validBill: true, ...edit } as any, crawled as any).cashifyConditionEquivalent;
 const ages = ['below3', '3to6', '6to11', 'above11'] as const;
 
-// POCO now uses measured runner age rules, covered by pricing.poco-motorola-service.
+// POCO and most Oppo models now use measured runner age rules, covered by their service tests; Oppo A76 has no measured data.
 const cases: [string, string, 'brackets' | 'elevenMonths'][] = [
   ['Vivo', 'Vivo V30', 'brackets'],
-  ['Oppo', 'Oppo Reno 11 5G', 'brackets'],
+  ['Oppo', 'Oppo A76', 'brackets'],
   ['Realme', 'Realme 12 Pro 5G', 'elevenMonths'],
   ['Motorola', 'Motorola Edge 50', 'elevenMonths'],
   ['Samsung', 'Samsung Galaxy S7', 'elevenMonths'],
@@ -52,7 +52,8 @@ for (const d of SEED_DEVICES as any[]) {
   }
   checked++;
 }
-assert.ok(checked > 1000, `checked ${checked} catalog devices`);
+// Measured brands leave this legacy loop as they are released (Oppo and Infinix: 777 devices remain); the floor only guards against an empty loop.
+assert.ok(checked > 700, `checked ${checked} catalog devices`);
 
 // Bug 2 guard: every device change in the quote page goes through the answer reset.
 const page = fs.readFileSync('app/quote/page.tsx', 'utf8');

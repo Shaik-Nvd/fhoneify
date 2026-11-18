@@ -15,7 +15,7 @@ export interface DeductionRule {
   measuredStorages?: string[];
 }
 export interface RunnerProfile {
-  brand: 'Nothing' | 'OnePlus' | 'Samsung' | 'Google' | 'Xiaomi' | 'Honor' | 'Asus' | 'Lenovo' | 'Nokia' | 'POCO' | 'Motorola';
+  brand: 'Nothing' | 'OnePlus' | 'Samsung' | 'Google' | 'Xiaomi' | 'Honor' | 'Asus' | 'Lenovo' | 'Nokia' | 'POCO' | 'Motorola' | 'Oppo' | 'Infinix';
   model: string;
   hasAge: boolean;
   variants: Record<string, { accessories: string[]; scrap: number; scrapInferredFrom?: string; conditionFloor?: number }>;
@@ -86,7 +86,7 @@ export function runnerFaults(d: DiagnosticsType): string[] {
 
 export function evaluateRunner(profile: RunnerProfile, reference: number, d: DiagnosticsType, storage?: string | null) {
   if (!Number.isFinite(reference) || reference <= 0) throw new Error('Invalid runner reference');
-  if(['Xiaomi','Honor','Asus','Lenovo','Nokia','POCO','Motorola'].includes(profile.brand)) {
+  if(['Xiaomi','Honor','Asus','Lenovo','Nokia','POCO','Motorola','Oppo','Infinix'].includes(profile.brand)) {
     const required=[d.calls,d.touch,d.originalScreen,...(profile.hasAge?[d.warranty,d.validBill]:[])];
     if(required.some(value=>typeof value!=='boolean'))throw new InspectionRequiredError('Missing runner initial answer');
   }
