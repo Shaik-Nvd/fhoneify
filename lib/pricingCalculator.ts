@@ -2684,7 +2684,11 @@ export function calculateVivoPrice(model: string, reference: CashifyGetUptoRefer
 // BRAND 5: OPPO ENGINE
 // ============================================================================
 
-export function calculateOppoPrice(model: string, reference: CashifyGetUptoReference, diagnostics: DiagnosticsType, semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE): PricingResult {
+export function calculateOppoPrice(model: string, reference: CashifyGetUptoReference, diagnostics: DiagnosticsType, semantics: QuestionnaireSemantics = UNKNOWN_QUESTIONNAIRE, storageVariant?: string, useRunnerEvidence = false): PricingResult {
+  // The authoritative router opts in to the measured November rules. On a model
+  // without a runner profile, the bespoke Find X9 / Reno16 rules below run unchanged.
+  const measured=useRunnerEvidence?runnerQuote(model,storageVariant,reference,diagnostics):null;
+  if(measured)return finalizeConditionQuote(reference,measured.price);
   if (!reference || reference <= 0) return { cashifyConditionEquivalent: 0, fhoneifyPrice: 0 };
 
   const lowerModel = String(model || "").toLowerCase();
@@ -2953,7 +2957,7 @@ function routeBrandCalculator(
     safeBrand === "oppo" || safeModel.includes("oppo") ||
     safeModel.includes("reno") || safeModel.includes("find x")
   ) {
-    return calculateOppoPrice(model, cashifyGetUptoReference, diagnostics, semantics);
+    return calculateOppoPrice(model, cashifyGetUptoReference, diagnostics, semantics, calculationContext?.catalogStorage ?? storageVariant, !calculationContext?.disableRunnerEvidence);
   }
 
   if (
@@ -2969,7 +2973,7 @@ function routeBrandCalculator(
     return calculateNothingPrice(model, cashifyGetUptoReference, diagnostics, semantics, calculationContext?.catalogStorage ?? storageVariant, !calculationContext?.disableRunnerEvidence);
   }
 
-  if(['google','honor','asus','lenovo','nokia','motorola'].includes(safeBrand)) {
+  if(['google','honor','asus','lenovo','nokia','motorola','infinix'].includes(safeBrand)) {
     const measured=calculationContext?.disableRunnerEvidence?null:runnerQuote(model,calculationContext?.catalogStorage??storageVariant,cashifyGetUptoReference,diagnostics);
     if(measured)return finalizeConditionQuote(cashifyGetUptoReference,measured.price);
   }
