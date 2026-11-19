@@ -165,6 +165,31 @@ export interface VerifiedLeadPrice {
   audit: LeadPricingAudit;
 }
 
+/** Only the walked accessory/eSIM modes that are known; UNKNOWN is left out so older consumers see no change. */
+function knownFlowModes(profile: Partial<QuestionnaireSemantics>): Partial<QuestionnaireSemantics> {
+  const out: Partial<QuestionnaireSemantics> = {};
+  for (const field of ['boxMode', 'chargerMode', 'sPenMode', 'eSimMode'] as const) {
+    const mode = profile[field];
+    if (mode === 'ASKED' || mode === 'NOT_ASKED') out[field] = mode;
+  }
+  return out;
+}
+
+/** Marks an accessory as present when Cashify's questionnaire does not ask for it. */
+export function withUnaskedAccessoriesPresent<T extends { accessories?: string[]; box?: boolean | null; charger?: boolean | null }>(
+  diagnostics: T, questionnaire: Partial<QuestionnaireSemantics>
+): T {
+  const fill: [keyof QuestionnaireSemantics, string, 'box' | 'charger' | null][] = [['boxMode', 'box', 'box'], ['chargerMode', 'charger', 'charger'], ['sPenMode', 'spen', null]];
+  let next = diagnostics;
+  for (const [mode, id, flag] of fill) {
+    if (questionnaire[mode] !== 'NOT_ASKED') continue;
+    const accessories = next.accessories ?? [];
+    if (!accessories.includes(id)) next = { ...next, accessories: [...accessories, id] };
+    if (flag && next[flag] === false) next = { ...next, [flag]: null };
+  }
+  return next;
+}
+
 async function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
   let timer: ReturnType<typeof setTimeout> | undefined;
   const timeout = new Promise<never>((_, reject) => {
@@ -207,7 +232,9 @@ export function createPricingService(deps: PricingServiceDeps) {
     const modelKey = questionnaireModelKey(device);
     try {
       const profile = await withTimeout(deps.questionnaireStore.get(modelKey), deps.referenceLookupTimeoutMs);
-      if (profile) return { warrantyMode: isQuestionMode(profile.warrantyMode) ? profile.warrantyMode : 'UNKNOWN', billMode: isQuestionMode(profile.billMode) ? profile.billMode : 'UNKNOWN', ageMode: isQuestionMode(profile.ageMode) ? profile.ageMode : 'UNKNOWN', source: 'profile', ...(releaseCandidate ? { observedAt: profile.observedAt, status: profile.status } : {}) };
+      if (profile) return { warrantyMode: isQuestionMode(profile.warrantyMode) ? profile.warrantyMode : 'UNKNOWN', billMode: isQuestionMode(profile.billMode) ? profile.billMode : 'UNKNOWN', ageMode: isQuestionMode(profile.ageMode) ? profile.ageMode : 'UNKNOWN', source: 'profile', ...(releaseCandidate ? { observedAt: profile.observedAt, status: profile.status } : {}),
+        // Accessory and eSIM questions read from Cashify's full questionnaire walk (absent until a model is walked).
+        ...knownFlowModes(profile) };
     } catch (err: any) {
       deps.logger.warn({ modelKey, err: err?.message }, 'Questionnaire profile lookup failed; using the UNKNOWN fallback');
     }
@@ -217,7 +244,9 @@ export function createPricingService(deps: PricingServiceDeps) {
   async function quote(input: { brand: string; model: string; storage: string; diagnostics: unknown }): Promise<AuthoritativeQuote | PricingFailure> {
     const parsed = parseDiagnostics(input.diagnostics);
     if (!parsed.ok) return { ok: false, code: 'INVALID_DIAGNOSTICS', message: parsed.error };
-    const diagnostics = parsed.value;
+    // The token binds the answers as submitted; pricing may fill in accessories Cashify does not ask about.
+    const submittedDiagnostics = parsed.value;
+    let diagnostics = submittedDiagnostics;
 
     const device = findCatalogDevice(input.brand, input.model, input.storage, deps.catalog);
     if (!device) return { ok: false, code: 'DEVICE_NOT_FOUND', message: 'Device not found' };
@@ -232,6 +261,11 @@ export function createPricingService(deps: PricingServiceDeps) {
       Object.assign(questionnaire, { warrantyMode: mode, billMode: mode, ageMode: mode,
         boxMode: 'ASKED', chargerMode: runnerOffersCharger(device.model, runnerStorage) ? 'ASKED' : 'NOT_ASKED',
         sPenMode: runnerOffersAccessory(device.model, runnerStorage,'spen') ? 'ASKED' : 'NOT_ASKED' });
+    } else if (device.brand !== 'Apple') {
+      // Cashify's questionnaire for this model has no such tile, so the quote page does not ask:
+      // an accessory nobody can claim must not cost the customer anything. (iPhone rules never
+      // price the charger and are calibrated on the answers as given, so they are left alone.)
+      diagnostics = withUnaskedAccessoriesPresent(diagnostics, questionnaire);
     }
     // Missing is not "No": where the bill question is shown, an exact value
     // needs the answer rather than silently depreciating (or crediting) it.
@@ -444,7 +478,7 @@ export function createPricingService(deps: PricingServiceDeps) {
         glassShadow = { supported: false, researchOnly: true, version: 'conditional-glass-shadow/v1', reason: 'SHADOW_EVALUATION_FAILED' };
       }
     }
-    const diagnosticsHash = canonicalDiagnosticsHash(diagnostics);
+    const diagnosticsHash = canonicalDiagnosticsHash(submittedDiagnostics);
     const iat = Math.floor(at.getTime() / 1000);
     const exp = iat + deps.tokenTtlSeconds;
     const quoteToken = signQuoteToken(

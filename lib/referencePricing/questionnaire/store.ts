@@ -5,6 +5,7 @@
  * history row, so profile changes are auditable.
  */
 import type { CashifyQuestionnaireProfile, QuestionMode, QuestionnaireProfileStatus } from './types';
+import { flowModesFromLabels } from './parser';
 
 export interface QuestionnaireProfileStore {
   get(modelKey: string): Promise<CashifyQuestionnaireProfile | null>;
@@ -14,7 +15,9 @@ export interface QuestionnaireProfileStore {
 }
 
 const semanticsChanged = (a: CashifyQuestionnaireProfile | null, b: CashifyQuestionnaireProfile) =>
-  !a || a.warrantyMode !== b.warrantyMode || a.billMode !== b.billMode || a.ageMode !== b.ageMode || a.status !== b.status;
+  !a || a.warrantyMode !== b.warrantyMode || a.billMode !== b.billMode || a.ageMode !== b.ageMode || a.status !== b.status ||
+  // The walked questions (accessories, tiles, age options) live in questionLabels.
+  [...(a.questionLabels ?? [])].sort().join('|') !== [...(b.questionLabels ?? [])].sort().join('|');
 
 export class InMemoryQuestionnaireProfileStore implements QuestionnaireProfileStore {
   readonly profiles = new Map<string, CashifyQuestionnaireProfile>();
@@ -42,6 +45,8 @@ const toProfile = (row: any): CashifyQuestionnaireProfile => ({
   billMode: row.billMode as QuestionMode,
   ageMode: row.ageMode as QuestionMode,
   questionLabels: row.questionLabels ?? [],
+  // Accessory/eSIM modes are kept as labels of the questionnaire walk; UNKNOWN until walked.
+  ...flowModesFromLabels(row.questionLabels),
   status: row.status as QuestionnaireProfileStatus,
   statusDetail: row.statusDetail ?? null,
   sourceUrl: row.sourceUrl ?? null,

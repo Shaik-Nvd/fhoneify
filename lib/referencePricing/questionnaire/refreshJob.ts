@@ -12,7 +12,7 @@
  * decisions are testable without Chromium.
  */
 import type { DeviceIdentity } from '../types';
-import { parseQuestionnairePage, QUESTIONNAIRE_PARSER_VERSION } from './parser';
+import { parseQuestionnairePage, parseQuestionnaireFlow, QUESTIONNAIRE_PARSER_VERSION, QUESTIONNAIRE_FLOW_PARSER_VERSION, type QuestionnaireFlowFetch } from './parser';
 import { refreshReason, QUESTIONNAIRE_MAX_AGE_DAYS } from './policy';
 import type { QuestionnaireProfileStore } from './store';
 import { questionnaireModelKey, type CashifyQuestionnaireProfile } from './types';
@@ -25,11 +25,15 @@ export interface QuestionnairePageFetch {
 }
 
 export type QuestionnairePageFetcher = (device: DeviceIdentity, url: string) => Promise<QuestionnairePageFetch>;
+export type QuestionnaireFlowFetcher = (device: DeviceIdentity, url: string) => Promise<QuestionnaireFlowFetch>;
 
 export interface QuestionnaireRefreshOptions {
   devices: DeviceIdentity[];
   store: QuestionnaireProfileStore;
-  fetchPageText: QuestionnairePageFetcher;
+  /** First page only (parser v1). Ignored when fetchFlow is given. */
+  fetchPageText?: QuestionnairePageFetcher;
+  /** The whole questionnaire walk (parser v2): accessories, tiles and age options too. */
+  fetchFlow?: QuestionnaireFlowFetcher;
   resolveUrl: (device: DeviceIdentity) => string;
   now?: () => Date;
   maxAgeDays?: number;
@@ -83,7 +87,7 @@ export async function runQuestionnaireRefresh(options: QuestionnaireRefreshOptio
       const [modelKey, variants] = next;
       const existing = await options.store.get(modelKey);
       const reason = options.force ? 'forced' : refreshReason(existing, {
-        now: now(), parserVersion: QUESTIONNAIRE_PARSER_VERSION, maxAgeDays: options.maxAgeDays ?? QUESTIONNAIRE_MAX_AGE_DAYS,
+        now: now(), parserVersion: options.fetchFlow ? QUESTIONNAIRE_FLOW_PARSER_VERSION : QUESTIONNAIRE_PARSER_VERSION, maxAgeDays: options.maxAgeDays ?? QUESTIONNAIRE_MAX_AGE_DAYS,
       });
       if (!reason || (options.limit && started >= options.limit)) {
         if (existing) {
@@ -102,7 +106,7 @@ export async function runQuestionnaireRefresh(options: QuestionnaireRefreshOptio
       bump(report.asks.bill, profile.billMode);
       bump(report.asks.age, profile.ageMode);
       report.profiles.push(profile);
-      log(`${profile.status.padEnd(16)} warranty=${profile.warrantyMode} bill=${profile.billMode} age=${profile.ageMode}  ${variants[0].brand} ${variants[0].model} (${profile.variantsChecked} variant(s)) ${profile.statusDetail ?? ''}`);
+      log(`${profile.status.padEnd(16)} warranty=${profile.warrantyMode} bill=${profile.billMode} age=${profile.ageMode} box=${profile.boxMode ?? '-'} charger=${profile.chargerMode ?? '-'} spen=${profile.sPenMode ?? '-'} esim=${profile.eSimMode ?? '-'}  ${variants[0].brand} ${variants[0].model} (${profile.variantsChecked} variant(s)) ${profile.statusDetail ?? ''}`);
 
       if (!options.dryRun) {
         const { changed } = await options.store.upsert(profile);
@@ -124,9 +128,10 @@ async function learnModel(
     modelKey,
     brand: variants[0].brand,
     model: variants[0].model,
-    parserVersion: QUESTIONNAIRE_PARSER_VERSION,
+    parserVersion: options.fetchFlow ? QUESTIONNAIRE_FLOW_PARSER_VERSION : QUESTIONNAIRE_PARSER_VERSION,
     observedAt: now().toISOString(),
   };
+  if (options.fetchFlow) return learnModelFlow(base, variants, options, options.fetchFlow);
   const unknown = (status: CashifyQuestionnaireProfile['status'], statusDetail: string, sourceUrl: string | null, variantsChecked: number, questionLabels: string[] = []): CashifyQuestionnaireProfile => ({
     ...base, warrantyMode: 'UNKNOWN', billMode: 'UNKNOWN', ageMode: 'UNKNOWN', questionLabels, status, statusDetail, sourceUrl, variantsChecked,
   });
@@ -136,7 +141,7 @@ async function learnModel(
     const url = options.resolveUrl(device);
     let fetched: QuestionnairePageFetch;
     try {
-      fetched = await options.fetchPageText(device, url);
+      fetched = await options.fetchPageText!(device, url);
     } catch (err: any) {
       // A transport failure is not evidence about the questionnaire.
       if (reads.length === 0) return unknown('FETCH_FAILED', String(err?.message ?? err).slice(0, 300), url, 0);
@@ -162,6 +167,58 @@ async function learnModel(
     questionLabels: first.questionLabels,
     status: 'OK',
     statusDetail: null,
+    sourceUrl: reads[0].url,
+    variantsChecked: reads.length,
+  };
+}
+
+/** Parser v2: one walk per variant. Warranty/bill/age follow the same rules as
+ * v1; accessory and eSIM modes are kept only when every walked variant agrees
+ * (Cashify can offer a charger with one storage and not another), otherwise
+ * they stay UNKNOWN and the quote page keeps its own fallback. */
+async function learnModelFlow(
+  base: Pick<CashifyQuestionnaireProfile, 'modelKey' | 'brand' | 'model' | 'parserVersion' | 'observedAt'>,
+  variants: DeviceIdentity[],
+  options: QuestionnaireRefreshOptions,
+  fetchFlow: QuestionnaireFlowFetcher
+): Promise<CashifyQuestionnaireProfile> {
+  const unknown = (status: CashifyQuestionnaireProfile['status'], statusDetail: string, sourceUrl: string | null, variantsChecked: number, questionLabels: string[] = []): CashifyQuestionnaireProfile => ({
+    ...base, warrantyMode: 'UNKNOWN', billMode: 'UNKNOWN', ageMode: 'UNKNOWN', questionLabels, status, statusDetail, sourceUrl, variantsChecked,
+  });
+  const reads: { url: string; parse: ReturnType<typeof parseQuestionnaireFlow> }[] = [];
+  for (const device of variants) {
+    const url = options.resolveUrl(device);
+    let fetched: QuestionnaireFlowFetch;
+    try {
+      fetched = await fetchFlow(device, url);
+    } catch (err: any) {
+      if (reads.length === 0) return unknown('FETCH_FAILED', String(err?.message ?? err).slice(0, 300), url, 0);
+      break;
+    }
+    if (fetched.pages === null) continue;
+    const parse = parseQuestionnaireFlow(fetched.pages);
+    if (!parse.ok) return unknown('PARSE_FAILED', parse.reason ?? 'parse failed', fetched.url, reads.length, parse.flowLabels);
+    reads.push({ url: fetched.url, parse });
+  }
+  if (reads.length === 0) return unknown('NOT_FOUND', 'no Cashify page for any checked variant', null, 0);
+  const first = reads[0].parse;
+  const disagree = reads.find((r) => r.parse.warrantyMode !== first.warrantyMode || r.parse.billMode !== first.billMode || r.parse.ageMode !== first.ageMode);
+  if (disagree) {
+    return unknown('VARIANT_MISMATCH', `variants disagree: ${reads.map((r) => `${r.url} w=${r.parse.warrantyMode} b=${r.parse.billMode}`).join('; ')}`, reads[0].url, reads.length, first.flowLabels);
+  }
+  const flowFields = ['boxMode', 'chargerMode', 'sPenMode', 'eSimMode'] as const;
+  const flowAgrees = reads.every((r) => flowFields.every((f) => r.parse[f] === first[f]));
+  // Without agreement the accessories page marker is dropped, so stored labels decode to UNKNOWN.
+  const labels = flowAgrees ? first.flowLabels : first.flowLabels.filter((l) => l !== 'flow:accessories-page' && !l.startsWith('accessory:'));
+  return {
+    ...base,
+    warrantyMode: first.warrantyMode,
+    billMode: first.billMode,
+    ageMode: first.ageMode,
+    ...(flowAgrees ? { boxMode: first.boxMode, chargerMode: first.chargerMode, sPenMode: first.sPenMode, eSimMode: first.eSimMode } : { eSimMode: first.eSimMode }),
+    questionLabels: labels,
+    status: 'OK',
+    statusDetail: flowAgrees ? null : `variants disagree on accessories: ${reads.map((r) => `${r.url} box=${r.parse.boxMode} charger=${r.parse.chargerMode} spen=${r.parse.sPenMode}`).join('; ')}`,
     sourceUrl: reads[0].url,
     variantsChecked: reads.length,
   };

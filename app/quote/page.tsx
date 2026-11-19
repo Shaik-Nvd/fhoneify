@@ -158,6 +158,11 @@ export default function QuotePage() {
     return lower.includes('note') || (lower.includes('s') && lower.includes('ultra'));
   };
 
+  /** A walked Cashify answer (ASKED / NOT_ASKED) wins over the fallback rule. Measured-runner
+   * models already send their recorded accessories as these modes. */
+  const asksAccessory = (mode: QuestionnaireSemantics['chargerMode'], fallback: () => boolean) =>
+    mode === 'ASKED' ? true : mode === 'NOT_ASKED' ? false : fallback();
+
   const hasChargerInBox = (brand: string, model: string, storage: string) => {
     const lowerBrand = brand.toLowerCase();
     const lowerModel = model.toLowerCase();
@@ -206,6 +211,7 @@ export default function QuotePage() {
       lowerModel.includes('15') ||
       lowerModel.includes('16') ||
       lowerModel.includes('17') ||
+      lowerModel.includes('18') ||
       lowerModel.includes('air') ||
       lowerModel.includes('se 2022') ||
       (lowerModel.includes('se') && lowerModel.includes('2022'))
@@ -2827,8 +2833,10 @@ export default function QuotePage() {
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem', marginBottom: '3rem' }}>
                   {[
                     {id: 'box', label: 'Original Box with same IMEI', icon: '📦'},
-                    ...(hasChargerInBox(selectedBrand, selectedModel, selectedStorage) ? [{ id: 'charger', label: 'Original Charger', icon: '🔌' }] : []),
-                    ...(hasSPen(selectedBrand, selectedModel, selectedStorage) ? [{ id: 'spen', label: 'Original S Pen', icon: '🖊️' }] : [])
+                    // Cashify's own accessory page for this model decides, once the questionnaire crawl has
+                    // walked it; until then the hand-maintained rules below are the fallback.
+                    ...(asksAccessory(modelQuestionnaire.chargerMode, () => hasChargerInBox(selectedBrand, selectedModel, selectedStorage)) ? [{ id: 'charger', label: 'Original Charger', icon: '🔌' }] : []),
+                    ...(asksAccessory(modelQuestionnaire.sPenMode, () => hasSPen(selectedBrand, selectedModel, selectedStorage)) ? [{ id: 'spen', label: 'Original S Pen', icon: '🖊️' }] : [])
                   ].filter(a => runnerProfile && a.id === 'charger' ? true : (a.id === 'box' ? modelQuestionnaire.boxMode : a.id === 'charger' ? modelQuestionnaire.chargerMode : a.id === 'spen' ? modelQuestionnaire.sPenMode : undefined) !== 'NOT_ASKED').map((a) => (
                     <button key={a.id} onClick={() => toggleArrayItem('accessories', a.id)} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem', padding: '3rem 1rem', borderRadius: '8px', border: diagnostics.accessories.includes(a.id) ? '1px solid #4CD964' : '1px solid var(--border)', backgroundColor: diagnostics.accessories.includes(a.id) ? 'rgba(76,217,100,0.1)' : 'var(--surface-elevated)', color: diagnostics.accessories.includes(a.id) ? '#4CD964' : 'var(--foreground)', cursor: 'pointer' }}>
                       <span style={{ fontSize: '4rem' }}>{a.icon}</span>
