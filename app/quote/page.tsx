@@ -138,6 +138,11 @@ export default function QuotePage() {
     if (lower.includes('17')) {
       return true;
     }
+
+    // The iPhone Air asks it too (walked on Cashify, 19 Nov 2026)
+    if (lower.includes('air')) {
+      return true;
+    }
     
     // For Pro / Pro Max generations (13, 14, 15, 16, 18), it applies to Pro and Pro Max models
     if ((lower.includes('13') || lower.includes('14') || lower.includes('15') || lower.includes('16') || lower.includes('18')) && (lower.includes('pro') || lower.includes('max'))) {
@@ -393,7 +398,8 @@ export default function QuotePage() {
   // never asks warranty, bill or age; each profile records its own flow.
   const asksWarrantyQuestion = runnerProfile ? runnerAsksAge(selectedModel) : showsQuestion(modelQuestionnaire.warrantyMode) && isWarrantyEligible(selectedBrand, selectedModel);
   const asksBillQuestion = runnerProfile ? runnerAsksAge(selectedModel) : showsQuestion(modelQuestionnaire.billMode) && isWarrantyEligible(selectedBrand, selectedModel);
-  const asksESimQuestion = modelQuestionnaire.eSimMode !== 'NOT_ASKED' && isESimEligible(selectedBrand, selectedModel);
+  // Cashify's walked first page decides (it asks the iPhone Air, which the rule below missed); the rule is the fallback.
+  const asksESimQuestion = modelQuestionnaire.eSimMode === 'ASKED' ? true : modelQuestionnaire.eSimMode === 'NOT_ASKED' ? false : isESimEligible(selectedBrand, selectedModel);
   const asksAgeQuestion = runnerProfile ? runnerAsksAge(selectedModel) : modelQuestionnaire.ageMode === 'ASKED' ||
     questionnaireFor({ brand: selectedBrand, model: selectedModel }).asksAge;
   // Rules without 3-6 / 6-11 month values offer only below/above 11 months, so every option shown changes the price.
