@@ -18,13 +18,28 @@ export default function AdminLoginPage() {
     setLoading(true);
 
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'}/api/auth/admin/login`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password }),
-      });
+      // The API runs on a host that can be cold or down; without a timeout
+      // the spinner would wait forever.
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), 60000);
+      let res: Response;
+      try {
+        res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'}/api/auth/admin/login`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username, password }),
+          signal: controller.signal,
+        });
+      } catch {
+        throw new Error('Server did not respond. It may be starting up - please try again in a minute.');
+      } finally {
+        clearTimeout(timer);
+      }
 
-      const data = await res.json();
+      const data = await res.json().catch(() => null);
+      if (!data) {
+        throw new Error(`Unexpected server response (${res.status}). Please try again.`);
+      }
       if (!data.success) {
         throw new Error(data.error || 'Invalid credentials');
       }
