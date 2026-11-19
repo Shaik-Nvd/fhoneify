@@ -1,4 +1,4 @@
-name: Reference price refresh (Cashify, daily)
+name: Reference price refresh (Cashify, at least every 4 days)
 
 # WHY GITHUB ACTIONS AND NOT VERCEL
 #
@@ -15,10 +15,11 @@ name: Reference price refresh (Cashify, daily)
 
 on:
   schedule:
-    # 02:30 UTC every day = 08:00 IST. Daily since 19 Nov 2026: Cashify moved
-    # 130 Get Upto prices (up to INR 2,500) within four days of a weekly run,
-    # and every one of those days quoted from the older price.
-    - cron: '30 2 * * *'
+    # 02:30 UTC = 08:00 IST on the 1st, 5th, 9th, 13th, 17th, 21st and 25th.
+    # Runs are always at least 4 days apart: 4 days within a month, and 4-7
+    # days from the 25th to the next 1st. (A "*/4" day-of-month field would
+    # also fire on the 29th and then the 1st, only 2-3 days apart.)
+    - cron: '30 2 1,5,9,13,17,21,25 * *'
   workflow_dispatch:
     inputs:
       limit:
