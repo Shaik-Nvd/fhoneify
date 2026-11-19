@@ -44,6 +44,9 @@ export function canonicalDeviceName(brand: string, model: string): string {
   const m = normalize(model);
   if (!b) return m;
   if (m.startsWith(b)) return m;
+  // Sub-brand names that already carry the brand inside them ("CMF by Nothing Phone 1") are
+  // listed by Cashify exactly as written, without the brand in front.
+  if (/^cmfby/.test(m) && m.includes(b)) return m;
   return b + m;
 }
 

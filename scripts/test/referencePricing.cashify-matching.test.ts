@@ -381,5 +381,21 @@ test('a curated link never overrides a storage mismatch or a different device', 
   assert.equal(verifyPageIdentity({ ...S25U, model: 'Samsung Galaxy S24 Ultra 5G' }, s25Page({ curatedVariant: '12 GB/512 GB' })).ok, false);
 });
 
+console.log('\n=== Catalog names and variants that exist on Cashify ===\n');
+
+test('"CMF by Nothing" models match Cashify headings without a brand prefix', () => {
+  const cmf = { brand: 'Nothing', model: 'CMF by Nothing Phone 1', storage: '8 GB/128 GB' };
+  const verdict = verifyPageIdentity(cmf, snapshot({ url: 'https://www.cashify.in/sell-old-mobile-phone/used-cmf-by-nothing-phone-1-8-gb-128-gb', deviceName: 'Sell Old CMF by Nothing Phone 1 (8 GB/128 GB)', selectedVariant: '' }));
+  assert.equal(verdict.ok, true, verdict.evidence);
+  assert.equal(canonicalDeviceName('Nothing', 'Nothing Phone 3'), 'nothingphone3', 'other Nothing models are unchanged');
+});
+
+test('the catalog has no iPhone storages that Cashify does not list (7 Plus 64/512 GB, X 128 GB)', () => {
+  const { SEED_DEVICES } = require('../../lib/seed_devices');
+  const fake = SEED_DEVICES.filter((d: any) =>
+    (d.model === 'Apple iPhone 7 Plus' && ['64GB', '512GB'].includes(d.storage)) || (d.model === 'Apple iPhone X' && d.storage === '128GB'));
+  assert.deepEqual(fake, []);
+});
+
 console.log(`\n${passed} passed, ${failed} failed.\n`);
 if (failed > 0) process.exit(1);

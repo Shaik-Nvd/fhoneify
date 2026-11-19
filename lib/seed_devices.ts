@@ -100,15 +100,6 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 7230
   },
   {
-    "id": "apple_1009",
-    "brand": "Apple",
-    "model": "Apple iPhone X",
-    "storage": "128GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 10000
-  },
-  {
     "id": "apple_1010",
     "brand": "Apple",
     "model": "Apple iPhone XR",
@@ -451,15 +442,6 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 4770
   },
   {
-    "id": "apple_2018",
-    "brand": "Apple",
-    "model": "Apple iPhone 7 Plus",
-    "storage": "64GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 10000
-  },
-  {
     "id": "apple_2019",
     "brand": "Apple",
     "model": "Apple iPhone 7 Plus",
@@ -467,15 +449,6 @@ export const SEED_DEVICES: any[] = [
     "ram": "4GB",
     "color": "Midnight",
     "basePrice": 6100
-  },
-  {
-    "id": "apple_2020",
-    "brand": "Apple",
-    "model": "Apple iPhone 7 Plus",
-    "storage": "512GB",
-    "ram": "4GB",
-    "color": "Midnight",
-    "basePrice": 10000
   },
   {
     "id": "apple_2021",
@@ -21264,7 +21237,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "12 GB/256 GB",
     "ram": "12 GB",
     "color": "Default",
-    "basePrice": 69580
+    "basePrice": 69580,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-z-fold6-5g-12-gb-256-gb"
   },
   {
     "id": "d3a8190c-a641-405c-b6e8-c37056080c4c",
@@ -21273,7 +21247,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "12 GB/512 GB",
     "ram": "12 GB",
     "color": "Default",
-    "basePrice": 70370
+    "basePrice": 70370,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-z-fold6-5g-12-gb-512-gb"
   },
   {
     "id": "4ad62ecc-bf1c-4e4a-9b16-b53291500487",
@@ -21282,7 +21257,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "12 GB/1 TB",
     "ram": "12 GB",
     "color": "Default",
-    "basePrice": 73870
+    "basePrice": 73870,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-z-fold6-5g-12-gb-1-tb"
   },
   {
     "id": "c6d8e9a8-d589-4d09-a736-e3e546d6c2f0",
