@@ -22,7 +22,7 @@ import { getQuestionnaireProfileStore, disconnectReferencePriceRepository } from
 import { InMemoryQuestionnaireProfileStore } from '../../lib/referencePricing/questionnaire/store';
 import { runQuestionnaireRefresh } from '../../lib/referencePricing/questionnaire/refreshJob';
 import { questionnaireModelKey } from '../../lib/referencePricing/questionnaire/types';
-import { readCashifyQuestionnairePage } from '../../server/modules/quote/cashifyQuestionnaireSnapshot';
+import { readCashifyQuestionnaireFlow } from '../../server/modules/quote/cashifyQuestionnaireFlow';
 import { closeCashifyBrowser } from '../../server/modules/quote/cashifyScraper';
 
 function arg(name: string): string | undefined {
@@ -54,7 +54,8 @@ async function main() {
     devices,
     store,
     resolveUrl: (d) => resolver(d).url,
-    fetchPageText: (device, url) => readCashifyQuestionnairePage(url, device.storage),
+    // The whole walk (accessories, tiles, age options), not only the first page.
+    fetchFlow: (device, url) => readCashifyQuestionnaireFlow(url, device.storage),
     limit: arg('limit') ? Number(arg('limit')) : undefined,
     force: flag('force'),
     dryRun,

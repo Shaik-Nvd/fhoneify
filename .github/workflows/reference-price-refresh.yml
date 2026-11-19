@@ -1,4 +1,4 @@
-name: Reference price refresh (Cashify, every 7 days)
+name: Reference price refresh (Cashify, daily)
 
 # WHY GITHUB ACTIONS AND NOT VERCEL
 #
@@ -10,16 +10,15 @@ name: Reference price refresh (Cashify, every 7 days)
 #
 # GitHub Actions runs the job on its own runner, off the request path entirely,
 # with Chromium available, a 6-hour job limit, and a built-in schedule. On a
-# public repository it costs nothing; on a private one this job's ~1.5h/week
-# fits inside the 2,000 free minutes/month. No paid service is introduced.
+# public repository it costs nothing (this repository is public). No paid
+# service is introduced.
 
 on:
   schedule:
-    # 02:30 UTC every Sunday = 08:00 IST, exactly 7 days apart.
-    # (A "*/7" day-of-month field would NOT be every 7 days - it resets at the
-    # start of each month and would fire twice in three days at month
-    # boundaries. Weekly-on-a-fixed-weekday is the only correct 7-day cron.)
-    - cron: '30 2 * * 0'
+    # 02:30 UTC every day = 08:00 IST. Daily since 19 Nov 2026: Cashify moved
+    # 130 Get Upto prices (up to INR 2,500) within four days of a weekly run,
+    # and every one of those days quoted from the older price.
+    - cron: '30 2 * * *'
   workflow_dispatch:
     inputs:
       limit:
