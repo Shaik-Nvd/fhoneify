@@ -553,7 +553,8 @@ export default function QuotePage() {
   const brands = useMemo(() => {
     const extracted = [...new Set(allDevices.map((d) => d.brand).filter(Boolean))];
     const allBrands = [...new Set([...Object.keys(BRAND_LOGOS), ...extracted])];
-    return sortBrands(allBrands);
+    // A brand with no phone left to sell (e.g. Huawei, which Cashify no longer buys) gets no tile.
+    return sortBrands(extracted.length ? allBrands.filter((b) => extracted.includes(b)) : allBrands);
   }, [allDevices]);
   const matchSamsungSeries = (modelName: string, series: string): boolean => {
     const normalized = modelName.toLowerCase();

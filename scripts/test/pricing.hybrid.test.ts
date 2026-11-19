@@ -119,7 +119,7 @@ async function main() {
     const yesBill = await hybrid.quote(input(iphone17Pro, { ...contradictory, validBill: true })); assert(yesBill.ok, 'explicit consistent bill-Yes remains priceable');
   });
   await check('production-style catalog fallback remains explicit and never labelled as a verified correction', async () => {
-    const missing = findCatalogDevice('Huawei', 'Huawei Mate 20 Pro', '6 GB/128 GB'); assert(missing && missing.basePrice);
+    const missing = findCatalogDevice('LG', 'LG W10', '3 GB/32 GB'); assert(missing && missing.basePrice);
     const permissive = make('hybrid', { strictReferenceMode: false });
     const q = await permissive.quote(input(missing, asked)); assert(q.ok);
     assert.equal(q.referenceStatus, 'missing'); assert.equal(q.internal.baseSource, 'catalog_base_price');

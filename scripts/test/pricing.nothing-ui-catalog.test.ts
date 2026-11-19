@@ -3,7 +3,8 @@ import { readFileSync } from 'node:fs';
 import { SEED_DEVICES } from '../../lib/seed_devices';
 
 const devices = SEED_DEVICES.filter((device) => device.brand === 'Nothing');
-assert.equal(devices.length, 34, 'Nothing catalog must contain exactly the 34 measured variants');
+// CMF by Nothing Phone 2 Pro 5G 8 GB/128 GB was removed on 19 Nov 2026: Cashify no longer lists it (404).
+assert.equal(devices.length, 33, 'Nothing catalog must contain exactly the 33 measured variants Cashify still lists');
 assert.ok(!devices.some((device) => device.id === '11111111-2222-3333-4444-555555555555'));
 for (const [model, storage] of [
   ['Nothing Phone 4a', '6 GB/128 GB'],

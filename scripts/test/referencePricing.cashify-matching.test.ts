@@ -397,5 +397,12 @@ test('the catalog has no iPhone storages that Cashify does not list (7 Plus 64/5
   assert.deepEqual(fake, []);
 });
 
+test('phones Cashify no longer buys are not offered (checked 19 Nov 2026: 404, empty page or no price on the RAM-specific page too)', () => {
+  const { SEED_DEVICES } = require('../../lib/seed_devices');
+  const discontinued = new Set<string>(["Samsung|Samsung Galaxy S7|64 GB","Samsung|Samsung Galaxy S7|32 GB","Samsung|Samsung Galaxy S7 Edge|32 GB","Samsung|Samsung Galaxy S7 Edge|64 GB","Samsung|Samsung Galaxy S7 Edge|128 GB","Samsung|Samsung Galaxy S10e|128 GB","Samsung|Samsung Galaxy Z Flip|8 GB/256 GB","Samsung|Samsung Galaxy A6|4 GB/64 GB","Huawei|Huawei Mate 30 Pro|8 GB/256 GB","Huawei|Huawei P30 Pro|8 GB/256 GB","Huawei|Huawei Mate 20 Pro|6 GB/128 GB","Huawei|Huawei P20 Pro|6 GB/128 GB","Huawei|Huawei P30 Lite|6 GB/128 GB","Nokia|Nokia 5.1|3 GB/32 GB","Xiaomi|Xiaomi Redmi 3S|2 GB/16 GB","Xiaomi|Xiaomi Redmi 3S|3 GB/32 GB","Xiaomi|Xiaomi Redmi 3S Prime|3 GB/32 GB","Xiaomi|Xiaomi Redmi 4A|2 GB/16 GB","Xiaomi|Xiaomi Redmi 4A|3 GB/32 GB","OnePlus|OnePlus 7T Pro McLaren Edition|12 GB/256 GB","Asus|Asus ROG Phone II ZS660KL|8 GB/128 GB","Nothing|CMF by Nothing Phone 2 Pro 5G|8 GB/128 GB"]);
+  assert.deepEqual(SEED_DEVICES.filter((d: any) => discontinued.has(`${d.brand}|${d.model}|${d.storage}`)).map((d: any) => `${d.model} ${d.storage}`), []);
+  assert.deepEqual(SEED_DEVICES.filter((d: any) => !d.brand || !d.model || !d.storage), [], 'no incomplete catalog rows');
+});
+
 console.log(`\n${passed} passed, ${failed} failed.\n`);
 if (failed > 0) process.exit(1);
