@@ -14,7 +14,8 @@ const missing = [
   ['OnePlus Nord CE 6 Lite 5G', '8 GB/128 GB'], ['OnePlus Nord CE 6 Lite 5G', '8 GB/256 GB'],
 ];
 const devices = SEED_DEVICES.filter(d => d.brand === 'OnePlus');
-assert.equal(devices.length, 116);
+// OnePlus 7T Pro McLaren Edition was removed on 19 Nov 2026: Cashify no longer lists it (404).
+assert.equal(devices.length, 115);
 for (const [model, storage] of missing) {
   const found = devices.filter(d => d.model === model && d.storage === storage);
   assert.equal(found.length, 1, `${model} ${storage} must be unique`);

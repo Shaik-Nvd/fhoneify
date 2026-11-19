@@ -1573,14 +1573,6 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 11930
   },
   {
-    "id": "oneplus_7030",
-    "brand": "OnePlus",
-    "model": "OnePlus 7T Pro McLaren Edition",
-    "storage": "12 GB/256 GB",
-    "color": "Midnight",
-    "basePrice": 9090
-  },
-  {
     "id": "oneplus_7031",
     "brand": "OnePlus",
     "model": "OnePlus Nord",
@@ -2274,14 +2266,6 @@ export const SEED_DEVICES: any[] = [
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-nord-ce-6-lite-5g-8-gb-256-gb"
   },
   {
-    "id": "asus_8000",
-    "brand": "Asus",
-    "model": "Asus ROG Phone II ZS660KL",
-    "storage": "8 GB/128 GB",
-    "color": "Midnight",
-    "basePrice": 7020
-  },
-  {
     "id": "asus_8001",
     "brand": "Asus",
     "model": "Asus ROG Phone II ZS660KL",
@@ -2400,9 +2384,6 @@ export const SEED_DEVICES: any[] = [
     "storage": "8 GB/128 GB",
     "color": "Midnight",
     "basePrice": 8490
-  },
-  {
-    "basePrice": 8370
   },
   {
     "id": "google_batch_1",
@@ -6072,16 +6053,6 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "basePrice": 1750,
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-5-1-plus-3-gb-32-gb"
-  },
-  {
-    "id": "nokia_5_1_3_32",
-    "brand": "Nokia",
-    "model": "Nokia 5.1",
-    "storage": "3 GB/32 GB",
-    "ram": "3GB",
-    "color": "Default",
-    "basePrice": 1540,
-    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-nokia-5-1-3-gb-32-gb"
   },
   {
     "id": "516de334-4cae-4f86-97ac-52a6cb670492",
@@ -10334,16 +10305,6 @@ export const SEED_DEVICES: any[] = [
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-cmf-by-nothing-phone-2-pro-5g-8-gb-256-gb"
   },
   {
-    "id": "1b31219a-81d4-46b7-a772-68cfc3acb554",
-    "brand": "Nothing",
-    "model": "CMF by Nothing Phone 2 Pro 5G",
-    "storage": "8 GB/128 GB",
-    "ram": "8 GB",
-    "color": "Default",
-    "basePrice": 12940,
-    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-cmf-by-nothing-phone-2-pro-5g-8-gb-128-gb"
-  },
-  {
     "id": "6c1adc19-901c-470d-8bfe-1ee863c6b0f9",
     "brand": "Nothing",
     "model": "Nothing Phone 3",
@@ -12842,56 +12803,6 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "basePrice": 80000,
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oppo-find-x9-ultra-12-gb-512-gb"
-  },
-  {
-    "id": "f708917c-aa5f-4c4f-8ee4-06ef9e49b437",
-    "brand": "Huawei",
-    "model": "Huawei P30 Pro",
-    "storage": "8 GB/256 GB",
-    "ram": "8 GB",
-    "color": "Default",
-    "basePrice": 7780,
-    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-huawei-p30-pro-8-gb-256-gb"
-  },
-  {
-    "id": "833b8b7d-a632-498c-bc75-f11b25a9ec73",
-    "brand": "Huawei",
-    "model": "Huawei P30 Lite",
-    "storage": "6 GB/128 GB",
-    "ram": "6 GB",
-    "color": "Default",
-    "basePrice": 4080,
-    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-huawei-p30-lite-6-gb-128-gb"
-  },
-  {
-    "id": "bb2041f4-cd24-48c0-8cc0-b7fc7a54867b",
-    "brand": "Huawei",
-    "model": "Huawei Mate 20 Pro",
-    "storage": "6 GB/128 GB",
-    "ram": "6 GB",
-    "color": "Default",
-    "basePrice": 4370,
-    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-huawei-mate-20-pro-6-gb-128-gb"
-  },
-  {
-    "id": "09741a7c-5e40-41a9-bac3-60112db99e44",
-    "brand": "Huawei",
-    "model": "Huawei P20 Pro",
-    "storage": "6 GB/128 GB",
-    "ram": "6 GB",
-    "color": "Default",
-    "basePrice": 3670,
-    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-huawei-p20-pro-6-gb-128-gb"
-  },
-  {
-    "id": "5fee0c58-e0eb-437c-82f8-a9cd1f97e469",
-    "brand": "Huawei",
-    "model": "Huawei Mate 30 Pro",
-    "storage": "8 GB/256 GB",
-    "ram": "8 GB",
-    "color": "Default",
-    "basePrice": 8210,
-    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-huawei-mate-30-pro-8-gb-256-gb"
   },
   {
     "id": "5f667d7f-cec8-4939-938e-6a812d804e24",
@@ -18923,16 +18834,6 @@ export const SEED_DEVICES: any[] = [
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a53-5g-8-gb-128-gb"
   },
   {
-    "id": "8690fad2-e65c-4462-8a17-88fb158f7c3f",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy A6",
-    "storage": "4 GB/64 GB",
-    "ram": "4 GB",
-    "color": "Default",
-    "basePrice": 5550,
-    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a6-4-gb-64-gb"
-  },
-  {
     "id": "66e08506-5dd9-452d-9cfc-975e4f559a63",
     "brand": "Samsung",
     "model": "Samsung Galaxy A6",
@@ -21315,15 +21216,6 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 50590
   },
   {
-    "id": "11faafa6-d5d1-4adc-a9ef-c7a3a0f33e69",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy Z Flip",
-    "storage": "8 GB/256 GB",
-    "ram": "8 GB",
-    "color": "Default",
-    "basePrice": 8840
-  },
-  {
     "id": "f7d67a7c-79b5-46c3-83d2-a7e8c6dadf60",
     "brand": "Samsung",
     "model": "Samsung Galaxy Z Flip4",
@@ -21487,7 +21379,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "6 GB/128 GB",
     "ram": "6 GB",
     "color": "Default",
-    "basePrice": 7900
+    "basePrice": 7900,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-11-lite-ne-5g-6-gb-128-gb"
   },
   {
     "id": "xiaomi_11_lite_ne_5g_8_128",
@@ -21496,7 +21389,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "8 GB/128 GB",
     "ram": "8 GB",
     "color": "Default",
-    "basePrice": 8310
+    "basePrice": 8310,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-11-lite-ne-5g-8-gb-128-gb"
   },
   {
     "id": "xiaomi_11i_hypercharge_5g_6_128",
@@ -21603,34 +21497,6 @@ export const SEED_DEVICES: any[] = [
   }
 ,
   {
-    "id": "xiaomi_redmi_3s_prime_3_32",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 3S Prime",
-    "storage": "3 GB/32 GB",
-    "ram": "3 GB",
-    "color": "Default",
-    "basePrice": 1100
-  },
-  {
-    "id": "xiaomi_redmi_3s_2_16",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 3S",
-    "storage": "2 GB/16 GB",
-    "ram": "2 GB",
-    "color": "Default",
-    "basePrice": 760
-  },
-  {
-    "id": "xiaomi_redmi_3s_3_32",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 3S",
-    "storage": "3 GB/32 GB",
-    "ram": "3 GB",
-    "color": "Default",
-    "basePrice": 810
-  }
-,
-  {
     "id": "xiaomi_15_12_512",
     "brand": "Xiaomi",
     "model": "Xiaomi 15",
@@ -21650,31 +21516,14 @@ export const SEED_DEVICES: any[] = [
   }
 ,
   {
-    "id": "xiaomi_redmi_4a_2_16",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 4A",
-    "storage": "2 GB/16 GB",
-    "ram": "2 GB",
-    "color": "Default",
-    "basePrice": 630
-  },
-  {
-    "id": "xiaomi_redmi_4a_3_32",
-    "brand": "Xiaomi",
-    "model": "Xiaomi Redmi 4A",
-    "storage": "3 GB/32 GB",
-    "ram": "3 GB",
-    "color": "Default",
-    "basePrice": 700
-  },
-  {
     "id": "xiaomi-redmi-10-power-8-128",
     "brand": "Xiaomi",
     "model": "Xiaomi Redmi 10 Power",
     "storage": "8 GB/128 GB",
     "ram": "8 GB",
     "color": "Default",
-    "basePrice": 5120
+    "basePrice": 5120,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-xiaomi-redmi-10-power-8-gb-128-gb"
   },
   {
     "id": "xiaomi-14-12-512",
@@ -21930,7 +21779,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "128 GB",
     "ram": "12 GB",
     "color": "Default",
-    "basePrice": 14190
+    "basePrice": 14190,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s20-ultra-5g-12-gb-128-gb"
   },
   {
     "id": "samsung-galaxy-s20-ultra-12-128",
@@ -21939,7 +21789,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "128 GB",
     "ram": "12 GB",
     "color": "Default",
-    "basePrice": 13470
+    "basePrice": 13470,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s20-ultra-12-gb-128-gb"
   },
   {
     "id": "samsung-galaxy-s20-plus-8-128",
@@ -21948,7 +21799,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "128 GB",
     "ram": "8 GB",
     "color": "Default",
-    "basePrice": 10570
+    "basePrice": 10570,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s20-plus-8-gb-128-gb"
   },
   {
     "id": "samsung-galaxy-s20-fe-5g-8-128",
@@ -21957,7 +21809,8 @@ export const SEED_DEVICES: any[] = [
     "storage": "128 GB",
     "ram": "8 GB",
     "color": "Default",
-    "basePrice": 8720
+    "basePrice": 8720,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s20-fe-5g-8-gb-128-gb"
   },
   {
     "id": "samsung-galaxy-s20-fe-8-256",
@@ -21978,67 +21831,14 @@ export const SEED_DEVICES: any[] = [
     "basePrice": 7310
   },
   {
-    "id": "samsung-galaxy-s10e-6-128",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S10e",
-    "storage": "128 GB",
-    "ram": "6 GB",
-    "color": "Default",
-    "basePrice": 5900
-  },
-  {
     "id": "samsung-galaxy-s8-4-64",
     "brand": "Samsung",
     "model": "Samsung Galaxy S8",
     "storage": "64 GB",
     "ram": "4 GB",
     "color": "Default",
-    "basePrice": 3520
-  },
-  {
-    "id": "samsung-galaxy-s7-edge-4-128",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S7 Edge",
-    "storage": "128 GB",
-    "ram": "4 GB",
-    "color": "Default",
-    "basePrice": 3020
-  },
-  {
-    "id": "samsung-galaxy-s7-edge-4-64",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S7 Edge",
-    "storage": "64 GB",
-    "ram": "4 GB",
-    "color": "Default",
-    "basePrice": 2730
-  },
-  {
-    "id": "samsung-galaxy-s7-edge-4-32",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S7 Edge",
-    "storage": "32 GB",
-    "ram": "4 GB",
-    "color": "Default",
-    "basePrice": 2480
-  },
-  {
-    "id": "samsung-galaxy-s7-4-64",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S7",
-    "storage": "64 GB",
-    "ram": "4 GB",
-    "color": "Default",
-    "basePrice": 2590
-  },
-  {
-    "id": "samsung-galaxy-s7-4-32",
-    "brand": "Samsung",
-    "model": "Samsung Galaxy S7",
-    "storage": "32 GB",
-    "ram": "4 GB",
-    "color": "Default",
-    "basePrice": 2300
+    "basePrice": 3520,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s8-4-gb-64-gb"
   },
   {
     "id": "samsung_z_fold8_ultra_1",

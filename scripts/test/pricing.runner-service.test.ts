@@ -12,7 +12,7 @@ const service = createPricingService({ repository: { async get(key: string) { re
   now: () => at, logger: { info() {}, warn() {}, error() {} } });
 (async () => {
   for (const [brand, model, storage] of [
-    ['Nothing', 'Nothing Phone 1', '8 GB/128 GB'], ['Nothing', 'CMF by Nothing Phone 2 Pro 5G', '8 GB/128 GB'],
+    ['Nothing', 'Nothing Phone 1', '8 GB/128 GB'], ['Nothing', 'CMF by Nothing Phone 2 Pro 5G', '8 GB/256 GB'],
     ['OnePlus', 'OnePlus 8', '8 GB/128 GB'], ['OnePlus', 'OnePlus 12R', '8 GB/128 GB'],
     ['OnePlus', 'Oneplus Open', '16 GB/512 GB'], ['OnePlus', 'OnePlus 9RT 5G', '12 GB/256 GB'],
   ]) {
