@@ -2,7 +2,7 @@
  * READ-ONLY audit: compares every catalog variant's stored reference price with
  * the "Get Upto" price on its live Cashify page, fetched over plain HTTP.
  *
- *   node --import tsx scripts/reference-pricing/audit-against-cashify.ts <out.json> [--concurrency 4]
+ *   node --import tsx scripts/reference-pricing/audit-against-cashify.ts <out.json> [--concurrency 4] [--only keys.json] [--delay-ms 0]
  *
  * Nothing is written to the database. The result file is a private audit
  * artifact: keep it out of the public repository.
@@ -17,7 +17,12 @@ import { splitHeading, parseVariant, canonicalDeviceName } from '../../lib/refer
 
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36';
 const out = process.argv[2];
-const concurrency = Number(process.argv[process.argv.indexOf('--concurrency') + 1]) || 4;
+const argAfter = (flag: string) => (process.argv.indexOf(flag) > 0 ? process.argv[process.argv.indexOf(flag) + 1] : undefined);
+const concurrency = Number(argAfter('--concurrency')) || 4;
+/** Pause between requests per worker, to stay well under Cashify's rate limit. */
+const delayMs = Number(argAfter('--delay-ms')) || 0;
+/** Optional JSON list of "Brand|Model|Storage" to audit instead of the whole catalog. */
+const only = argAfter('--only') ? new Set<string>(JSON.parse(fs.readFileSync(argAfter('--only')!, 'utf8'))) : null;
 
 function normalize(s: string) { return s.toLowerCase().replace(/[^a-z0-9]/g, ''); }
 
@@ -47,7 +52,7 @@ async function main() {
   for (const d of SEED_DEVICES as any[]) if (d.cashifyLink && d.brand) curated.set(deviceKey(d), d.cashifyLink);
   const resolve = createCashifyUrlResolver({ curatedLinks: curated, dictionary: loadCashifyUrlDictionary() });
 
-  const devices = (SEED_DEVICES as any[]).filter(d => d.brand && d.model && d.storage);
+  const devices = (SEED_DEVICES as any[]).filter(d => d.brand && d.model && d.storage && (!only || only.has(`${d.brand}|${d.model}|${d.storage}`)));
   const results: any[] = [];
   let next = 0;
   async function worker() {
@@ -55,6 +60,7 @@ async function main() {
       const d = devices[next++];
       const key = deviceKey(d);
       const { url, tier } = resolve(d);
+      if (delayMs) await new Promise(res => setTimeout(res, delayMs));
       const page = await readPage(url);
       const heading = splitHeading(page.h1);
       const nameOk = normalize(heading.name) === canonicalDeviceName(d.brand, d.model);
