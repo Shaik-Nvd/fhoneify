@@ -24171,5 +24171,155 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "referencePriceStatus": "pending",
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-note-40-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "tecno-phantom-v-flip-5g-8-gb-256-gb",
+    "brand": "Tecno",
+    "model": "Tecno Phantom V Flip 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-phantom-v-flip-8-gb-256-gb"
+  },
+  {
+    "id": "tecno-phantom-v-flip2-5g-8-gb-256-gb",
+    "brand": "Tecno",
+    "model": "Tecno Phantom V Flip2 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-phantom-v-flip2-5g-8-gb-256-gb"
+  },
+  {
+    "id": "tecno-phantom-v-fold2-5g-12-gb-512-gb",
+    "brand": "Tecno",
+    "model": "Tecno Phantom V Fold2 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-phantom-v-fold2-5g-12-gb-512-gb"
+  },
+  {
+    "id": "tecno-pop-x-4-gb-64-gb",
+    "brand": "Tecno",
+    "model": "Tecno POP X",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pop-x-4-gb-64-gb"
+  },
+  {
+    "id": "tecno-pova-5-pro-8-gb-128-gb",
+    "brand": "Tecno",
+    "model": "Tecno Pova 5 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pova-5-pro-8-gb-128-gb"
+  },
+  {
+    "id": "tecno-pova-5-pro-8-gb-256-gb",
+    "brand": "Tecno",
+    "model": "Tecno Pova 5 Pro",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pova-5-pro-8-gb-256-gb"
+  },
+  {
+    "id": "tecno-pova-6-neo-5g-6-gb-128-gb",
+    "brand": "Tecno",
+    "model": "Tecno Pova 6 Neo 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pova-6-neo-5g-6-gb-128-gb"
+  },
+  {
+    "id": "tecno-pova-6-neo-5g-8-gb-256-gb",
+    "brand": "Tecno",
+    "model": "Tecno Pova 6 Neo 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pova-6-neo-5g-8-gb-256-gb"
+  },
+  {
+    "id": "tecno-pova-6-pro-5g-8-gb-256-gb",
+    "brand": "Tecno",
+    "model": "Tecno Pova 6 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pova-6-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "tecno-pova-curve-2-5g-8-gb-128-gb",
+    "brand": "Tecno",
+    "model": "Tecno Pova Curve 2 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pova-curve-2-5g-8-gb-128-gb"
+  },
+  {
+    "id": "tecno-pova-curve-2-5g-8-gb-256-gb",
+    "brand": "Tecno",
+    "model": "Tecno Pova Curve 2 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pova-curve-2-5g-8-gb-256-gb"
+  },
+  {
+    "id": "tecno-pova-slim-5g-8-gb-128-gb",
+    "brand": "Tecno",
+    "model": "Tecno Pova Slim 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pova-slim-5g-8-gb-128-gb"
+  },
+  {
+    "id": "tecno-spark-20-pro-5g-8-gb-128-gb",
+    "brand": "Tecno",
+    "model": "Tecno Spark 20 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-spark-20-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "tecno-spark-20-pro-5g-8-gb-256-gb",
+    "brand": "Tecno",
+    "model": "Tecno Spark 20 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-spark-20-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "tecno-spark-go-5g-4-gb-128-gb",
+    "brand": "Tecno",
+    "model": "Tecno Spark Go 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-spark-go-5g-4-gb-128-gb"
   }
 ];

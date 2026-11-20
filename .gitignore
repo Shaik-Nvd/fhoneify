@@ -63,3 +63,6 @@ release-test-logs/
 
 # Private Oppo/Infinix evidence
 /data/pricing-evidence/*-2026-11-18/
+
+# Private Tecno evidence
+/data/pricing-evidence/*-2026-11-21/
