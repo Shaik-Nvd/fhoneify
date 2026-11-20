@@ -21869,7 +21869,8 @@ export const SEED_DEVICES: any[] = [
     "ram": "16 GB",
     "color": "Default",
     "basePrice": 142469
-  },
+  }
+,
   {
     "id": "xiaomi-redmi-note-11-4-gb-64-gb",
     "brand": "Xiaomi",
@@ -24171,5 +24172,2204 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "referencePriceStatus": "pending",
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-infinix-note-40-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "tecno-phantom-v-flip-5g-8-gb-256-gb",
+    "brand": "Tecno",
+    "model": "Tecno Phantom V Flip 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-phantom-v-flip-8-gb-256-gb"
+  },
+  {
+    "id": "tecno-phantom-v-flip2-5g-8-gb-256-gb",
+    "brand": "Tecno",
+    "model": "Tecno Phantom V Flip2 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-phantom-v-flip2-5g-8-gb-256-gb"
+  },
+  {
+    "id": "tecno-phantom-v-fold2-5g-12-gb-512-gb",
+    "brand": "Tecno",
+    "model": "Tecno Phantom V Fold2 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-phantom-v-fold2-5g-12-gb-512-gb"
+  },
+  {
+    "id": "tecno-pop-x-4-gb-64-gb",
+    "brand": "Tecno",
+    "model": "Tecno POP X",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pop-x-4-gb-64-gb"
+  },
+  {
+    "id": "tecno-pova-5-pro-8-gb-128-gb",
+    "brand": "Tecno",
+    "model": "Tecno Pova 5 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pova-5-pro-8-gb-128-gb"
+  },
+  {
+    "id": "tecno-pova-5-pro-8-gb-256-gb",
+    "brand": "Tecno",
+    "model": "Tecno Pova 5 Pro",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pova-5-pro-8-gb-256-gb"
+  },
+  {
+    "id": "tecno-pova-6-neo-5g-6-gb-128-gb",
+    "brand": "Tecno",
+    "model": "Tecno Pova 6 Neo 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pova-6-neo-5g-6-gb-128-gb"
+  },
+  {
+    "id": "tecno-pova-6-neo-5g-8-gb-256-gb",
+    "brand": "Tecno",
+    "model": "Tecno Pova 6 Neo 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pova-6-neo-5g-8-gb-256-gb"
+  },
+  {
+    "id": "tecno-pova-6-pro-5g-8-gb-256-gb",
+    "brand": "Tecno",
+    "model": "Tecno Pova 6 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pova-6-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "tecno-pova-curve-2-5g-8-gb-128-gb",
+    "brand": "Tecno",
+    "model": "Tecno Pova Curve 2 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pova-curve-2-5g-8-gb-128-gb"
+  },
+  {
+    "id": "tecno-pova-curve-2-5g-8-gb-256-gb",
+    "brand": "Tecno",
+    "model": "Tecno Pova Curve 2 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pova-curve-2-5g-8-gb-256-gb"
+  },
+  {
+    "id": "tecno-pova-slim-5g-8-gb-128-gb",
+    "brand": "Tecno",
+    "model": "Tecno Pova Slim 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-pova-slim-5g-8-gb-128-gb"
+  },
+  {
+    "id": "tecno-spark-20-pro-5g-8-gb-128-gb",
+    "brand": "Tecno",
+    "model": "Tecno Spark 20 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-spark-20-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "tecno-spark-20-pro-5g-8-gb-256-gb",
+    "brand": "Tecno",
+    "model": "Tecno Spark 20 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-spark-20-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "tecno-spark-go-5g-4-gb-128-gb",
+    "brand": "Tecno",
+    "model": "Tecno Spark Go 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-tecno-spark-go-5g-4-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-a5-2017-3-gb-32-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A5 2017",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-a5-2017-3-gb-32-gb"
+  },
+  {
+    "id": "samsung-galaxy-s10e-6-gb-128-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S10e",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s-10e-6-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-z-flip-8-gb-256-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy Z Flip",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-z-flip-8-gb-128-gb"
+  },
+  {
+    "id": "samsung-galaxy-s26-fe-5g-8-gb-256-gb",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy S26 FE 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-samsung-galaxy-s26-fe-5g-8-gb-256-gb"
+  },
+  {
+    "id": "vivo-u10-3-gb-32-gb",
+    "brand": "Vivo",
+    "model": "Vivo U10",
+    "storage": "3 GB/32 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-u10-3-gb-32-gb"
+  },
+  {
+    "id": "vivo-u10-3-gb-64-gb",
+    "brand": "Vivo",
+    "model": "Vivo U10",
+    "storage": "3 GB/64 GB",
+    "ram": "3 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-u10-3-gb-64-gb"
+  },
+  {
+    "id": "vivo-u10-4-gb-64-gb",
+    "brand": "Vivo",
+    "model": "Vivo U10",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-u10-4-gb-64-gb"
+  },
+  {
+    "id": "vivo-x60-pro-plus-12-gb-256-gb",
+    "brand": "Vivo",
+    "model": "Vivo X60 Pro Plus",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x60-pro-plus-12-gb-256-gb"
+  },
+  {
+    "id": "vivo-x200-pro-16-gb-512-gb",
+    "brand": "Vivo",
+    "model": "Vivo X200 Pro",
+    "storage": "16 GB/512 GB",
+    "ram": "16 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-x200-pro-16-gb-512-gb"
+  },
+  {
+    "id": "vivo-t5-pro-5g-6-gb-128-gb",
+    "brand": "Vivo",
+    "model": "Vivo T5 Pro 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t5-pro-5g-6-gb-128-gb"
+  },
+  {
+    "id": "vivo-t5-pro-5g-8-gb-128-gb",
+    "brand": "Vivo",
+    "model": "Vivo T5 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t5-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "vivo-t5-pro-5g-8-gb-256-gb",
+    "brand": "Vivo",
+    "model": "Vivo T5 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t5-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "vivo-t5-pro-5g-12-gb-256-gb",
+    "brand": "Vivo",
+    "model": "Vivo T5 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t5-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "vivo-t5-lite-5g-4-gb-64-gb",
+    "brand": "Vivo",
+    "model": "Vivo T5 Lite 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t5-lite-5g-4-gb-64-gb"
+  },
+  {
+    "id": "vivo-t5-lite-5g-4-gb-128-gb",
+    "brand": "Vivo",
+    "model": "Vivo T5 Lite 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t5-lite-5g-4-gb-128-gb"
+  },
+  {
+    "id": "vivo-t5-lite-5g-6-gb-128-gb",
+    "brand": "Vivo",
+    "model": "Vivo T5 Lite 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t5-lite-5g-6-gb-128-gb"
+  },
+  {
+    "id": "vivo-t5-lite-5g-6-gb-256-gb",
+    "brand": "Vivo",
+    "model": "Vivo T5 Lite 5G",
+    "storage": "6 GB/256 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t5-lite-5g-6-gb-256-gb"
+  },
+  {
+    "id": "vivo-s2-8-gb-128-gb",
+    "brand": "Vivo",
+    "model": "Vivo S2",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-s2-8-gb-128-gb"
+  },
+  {
+    "id": "vivo-s2-8-gb-256-gb",
+    "brand": "Vivo",
+    "model": "Vivo S2",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-s2-8-gb-256-gb"
+  },
+  {
+    "id": "vivo-t5-5g-6-gb-128-gb",
+    "brand": "Vivo",
+    "model": "Vivo T5 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t5-5g-6-gb-128-gb"
+  },
+  {
+    "id": "vivo-t5-5g-8-gb-128-gb",
+    "brand": "Vivo",
+    "model": "Vivo T5 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t5-5g-8-gb-128-gb"
+  },
+  {
+    "id": "vivo-t5-5g-8-gb-256-gb",
+    "brand": "Vivo",
+    "model": "Vivo T5 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t5-5g-8-gb-256-gb"
+  },
+  {
+    "id": "vivo-t5-5g-12-gb-256-gb",
+    "brand": "Vivo",
+    "model": "Vivo T5 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-t5-5g-12-gb-256-gb"
+  },
+  {
+    "id": "vivo-v80-8-gb-128-gb",
+    "brand": "Vivo",
+    "model": "Vivo V80",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v80-8-gb-128-gb"
+  },
+  {
+    "id": "vivo-v80-8-gb-256-gb",
+    "brand": "Vivo",
+    "model": "Vivo V80",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v80-8-gb-256-gb"
+  },
+  {
+    "id": "vivo-v80-8-gb-512-gb",
+    "brand": "Vivo",
+    "model": "Vivo V80",
+    "storage": "8 GB/512 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-vivo-v80-8-gb-512-gb"
+  },
+  {
+    "id": "oneplus_7030",
+    "brand": "OnePlus",
+    "model": "OnePlus 7T Pro McLaren Edition",
+    "storage": "12 GB/256 GB",
+    "color": "Midnight",
+    "basePrice": 9090,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-oneplus-7tpro-mclaren-edition-12-gb-256-gb"
+  },
+  {
+    "id": "realme-c1-2-gb-16-gb",
+    "brand": "Realme",
+    "model": "Realme C1",
+    "storage": "2 GB/16 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c1-2-gb-16-gb"
+  },
+  {
+    "id": "realme-x-4-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme X",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-x-4-gb-128-gb"
+  },
+  {
+    "id": "realme-x-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme X",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-x-8-gb-128-gb"
+  },
+  {
+    "id": "realme-narzo-10-4-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme Narzo 10",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-10-4-gb-128-gb"
+  },
+  {
+    "id": "realme-c11-2-gb-32-gb",
+    "brand": "Realme",
+    "model": "Realme C11",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c11-2-gb-32-gb"
+  },
+  {
+    "id": "realme-x7-pro-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme X7 Pro",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-x7-pro-8-gb-128-gb"
+  },
+  {
+    "id": "realme-c20-2-gb-32-gb",
+    "brand": "Realme",
+    "model": "Realme C20",
+    "storage": "2 GB/32 GB",
+    "ram": "2 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c20-2-gb-32-gb"
+  },
+  {
+    "id": "realme-gt-neo-3-150w-12-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme GT NEO 3 150W",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-neo-3-15-w-12-gb-256-gb"
+  },
+  {
+    "id": "realme-c63-4-gb-64-gb",
+    "brand": "Realme",
+    "model": "Realme C63",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c63-4-gb-64-gb"
+  },
+  {
+    "id": "realme-c63-4-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme C63",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c63-4-gb-128-gb"
+  },
+  {
+    "id": "realme-c63-5g-4-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme C63 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c63-5g-4-gb-128-gb"
+  },
+  {
+    "id": "realme-c63-5g-6-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme C63 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c63-5g-6-gb-128-gb"
+  },
+  {
+    "id": "realme-c63-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme C63 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c63-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-p2-pro-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme P2 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p2-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-p2-pro-5g-12-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme P2 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p2-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "realme-p2-pro-5g-12-gb-512-gb",
+    "brand": "Realme",
+    "model": "Realme P2 Pro 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p2-pro-5g-12-gb-512-gb"
+  },
+  {
+    "id": "realme-13-plus-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme 13 Plus 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-13-plus-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-13-plus-5g-8-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme 13 Plus 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-13-plus-5g-8-gb-256-gb"
+  },
+  {
+    "id": "realme-13-plus-5g-12-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme 13 Plus 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-13-plus-5g-12-gb-256-gb"
+  },
+  {
+    "id": "realme-narzo-70-turbo-5g-6-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme Narzo 70 Turbo 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-70-turbo-5g-6-gb-128-gb"
+  },
+  {
+    "id": "realme-narzo-70-turbo-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme Narzo 70 Turbo 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-70-turbo-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-narzo-70-turbo-5g-12-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme Narzo 70 Turbo 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-70-turbo-5g-12-gb-256-gb"
+  },
+  {
+    "id": "realme-p1-speed-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme P1 Speed 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p1-speed-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-p1-speed-5g-12-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme P1 Speed 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p1-speed-5g-12-gb-256-gb"
+  },
+  {
+    "id": "realme-14x-5g-6-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme 14x 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-14x-5g-6-gb-128-gb"
+  },
+  {
+    "id": "realme-14x-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme 14x 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-14x-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-narzo-n63-4-gb-64-gb",
+    "brand": "Realme",
+    "model": "Realme Narzo N63",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-n63-4-gb-64-gb"
+  },
+  {
+    "id": "realme-narzo-n63-4-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme Narzo N63",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-n63-4-gb-128-gb"
+  },
+  {
+    "id": "realme-p3x-5g-6-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme P3X 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p3x-5g-6-gb-128-gb"
+  },
+  {
+    "id": "realme-p3x-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme P3X 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p3x-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-p3-5g-6-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme P3 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p3-5g-6-gb-128-gb"
+  },
+  {
+    "id": "realme-p3-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme P3 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p3-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-p3-5g-8-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme P3 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p3-5g-8-gb-256-gb"
+  },
+  {
+    "id": "realme-p3-pro-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme P3 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p3-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-p3-pro-5g-8-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme P3 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p3-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "realme-p3-pro-5g-12-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme P3 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p3-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "realme-p3-ultra-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme P3 Ultra 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p3-ultra-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-p3-ultra-5g-8-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme P3 Ultra 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p3-ultra-5g-8-gb-256-gb"
+  },
+  {
+    "id": "realme-p3-ultra-5g-12-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme P3 Ultra 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p3-ultra-5g-12-gb-256-gb"
+  },
+  {
+    "id": "realme-c75-5g-4-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme C75 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c75-5g-4-gb-128-gb"
+  },
+  {
+    "id": "realme-c75-5g-6-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme C75 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c75-5g-6-gb-128-gb"
+  },
+  {
+    "id": "realme-narzo-80x-5g-6-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme Narzo 80x 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-80x-5g-6-gb-128-gb"
+  },
+  {
+    "id": "realme-narzo-80x-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme Narzo 80x 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-80x-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-c73-5g-4-gb-64-gb",
+    "brand": "Realme",
+    "model": "Realme C73 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c73-5g-4-gb-64-gb"
+  },
+  {
+    "id": "realme-c73-5g-4-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme C73 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c73-5g-4-gb-128-gb"
+  },
+  {
+    "id": "realme-14t-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme 14T 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-14t-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-14t-5g-8-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme 14T 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-14t-5g-8-gb-256-gb"
+  },
+  {
+    "id": "realme-gt-7-8-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme GT 7",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-7-8-gb-256-gb"
+  },
+  {
+    "id": "realme-gt-7-12-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme GT 7",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-7-12-gb-256-gb"
+  },
+  {
+    "id": "realme-gt-7-12-gb-512-gb",
+    "brand": "Realme",
+    "model": "Realme GT 7",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-7-12-gb-512-gb"
+  },
+  {
+    "id": "realme-gt-7-16-gb-512-gb",
+    "brand": "Realme",
+    "model": "Realme GT 7",
+    "storage": "16 GB/512 GB",
+    "ram": "16 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-7-16-gb-512-gb"
+  },
+  {
+    "id": "realme-gt-7t-8-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme GT 7T",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-7t-8-gb-256-gb"
+  },
+  {
+    "id": "realme-gt-7t-12-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme GT 7T",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-7t-12-gb-256-gb"
+  },
+  {
+    "id": "realme-gt-7t-12-gb-512-gb",
+    "brand": "Realme",
+    "model": "Realme GT 7T",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-7t-12-gb-512-gb"
+  },
+  {
+    "id": "realme-narzo-80-lite-5g-4-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme Narzo 80 Lite 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-80-lite-5g-4-gb-128-gb"
+  },
+  {
+    "id": "realme-narzo-80-lite-5g-6-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme Narzo 80 Lite 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-80-lite-5g-6-gb-128-gb"
+  },
+  {
+    "id": "realme-c71-6-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme C71",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c71-6-gb-128-gb"
+  },
+  {
+    "id": "realme-15-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme 15 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-15-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-15-5g-8-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme 15 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-15-5g-8-gb-256-gb"
+  },
+  {
+    "id": "realme-15-5g-12-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme 15 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-15-5g-12-gb-256-gb"
+  },
+  {
+    "id": "realme-15-pro-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme 15 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-15-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-15-pro-5g-8-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme 15 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-15-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "realme-15-pro-5g-12-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme 15 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-15-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "realme-15-pro-5g-12-gb-512-gb",
+    "brand": "Realme",
+    "model": "Realme 15 Pro 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-15-pro-5g-12-gb-512-gb"
+  },
+  {
+    "id": "realme-15t-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme 15T 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-15t-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-15t-5g-12-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme 15T 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-15t-5g-12-gb-256-gb"
+  },
+  {
+    "id": "realme-p3-lite-5g-4-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme P3 Lite 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p3-lite-5g-4-gb-128-gb"
+  },
+  {
+    "id": "realme-p3-lite-5g-6-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme P3 Lite 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p3-lite-5g-6-gb-128-gb"
+  },
+  {
+    "id": "realme-p4-5g-6-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme P4 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p4-5g-6-gb-128-gb"
+  },
+  {
+    "id": "realme-p4-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme P4 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p4-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-p4-5g-8-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme P4 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p4-5g-8-gb-256-gb"
+  },
+  {
+    "id": "realme-p4-pro-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme P4 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p4-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-p4-pro-5g-8-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme P4 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p4-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "realme-p4-pro-5g-12-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme P4 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p4-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "realme-15x-5g-6-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme 15X 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-15x-5g-6-gb-128-gb"
+  },
+  {
+    "id": "realme-15x-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme 15X 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-15x-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-15x-5g-8-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme 15X 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-15x-5g-8-gb-256-gb"
+  },
+  {
+    "id": "realme-c85-5g-4-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme C85 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c85-5g-4-gb-128-gb"
+  },
+  {
+    "id": "realme-c85-5g-6-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme C85 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c85-5g-6-gb-128-gb"
+  },
+  {
+    "id": "realme-gt-8-pro-12-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme GT 8 Pro",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-8-pro-12-gb-256-gb"
+  },
+  {
+    "id": "realme-16-pro-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme 16 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-16-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-16-pro-5g-8-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme 16 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-16-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "realme-16-pro-5g-12-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme 16 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-16-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "realme-narzo-90x-5g-4-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme Narzo 90x 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-90x-5g-4-gb-128-gb"
+  },
+  {
+    "id": "realme-narzo-90x-5g-6-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme Narzo 90x 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-90x-5g-6-gb-128-gb"
+  },
+  {
+    "id": "realme-narzo-90x-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme Narzo 90x 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-90x-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-p4x-5g-6-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme P4x 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p4x-5g-6-gb-128-gb"
+  },
+  {
+    "id": "realme-p4x-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme P4x 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p4x-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-p4x-5g-8-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme P4x 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p4x-5g-8-gb-256-gb"
+  },
+  {
+    "id": "realme-p4-power-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme P4 Power 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p4-power-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-p4-power-5g-8-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme P4 Power 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p4-power-5g-8-gb-256-gb"
+  },
+  {
+    "id": "realme-p4-power-5g-12-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme P4 Power 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p4-power-5g-12-gb-256-gb"
+  },
+  {
+    "id": "realme-16-pro-plus-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme 16 Pro Plus 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-16-pro-plus-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-16-pro-plus-5g-8-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme 16 Pro Plus 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-16-pro-plus-5g-8-gb-256-gb"
+  },
+  {
+    "id": "realme-16-pro-plus-5g-12-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme 16 Pro Plus 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-16-pro-plus-5g-12-gb-256-gb"
+  },
+  {
+    "id": "realme-c83-5g-4-gb-64-gb",
+    "brand": "Realme",
+    "model": "Realme C83 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c83-5g-4-gb-64-gb"
+  },
+  {
+    "id": "realme-c83-5g-4-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme C83 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c83-5g-4-gb-128-gb"
+  },
+  {
+    "id": "realme-c83-5g-6-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme C83 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c83-5g-6-gb-128-gb"
+  },
+  {
+    "id": "realme-narzo-90-5g-6-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme Narzo 90 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-90-5g-6-gb-128-gb"
+  },
+  {
+    "id": "realme-narzo-90-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme Narzo 90 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-90-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-narzo-power-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme Narzo Power 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-power-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-narzo-power-5g-8-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme Narzo Power 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-power-5g-8-gb-256-gb"
+  },
+  {
+    "id": "realme-p4-lite-4-gb-64-gb",
+    "brand": "Realme",
+    "model": "Realme P4 Lite",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p4-lite-4-gb-64-gb"
+  },
+  {
+    "id": "realme-p4-lite-4-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme P4 Lite",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p4-lite-4-gb-128-gb"
+  },
+  {
+    "id": "realme-p4-lite-6-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme P4 Lite",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p4-lite-6-gb-128-gb"
+  },
+  {
+    "id": "realme-16-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme 16 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-16-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-16-5g-8-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme 16 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-16-5g-8-gb-256-gb"
+  },
+  {
+    "id": "realme-16-5g-12-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme 16 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-16-5g-12-gb-256-gb"
+  },
+  {
+    "id": "realme-p4-lite-5g-4-gb-64-gb",
+    "brand": "Realme",
+    "model": "Realme P4 Lite 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p4-lite-5g-4-gb-64-gb"
+  },
+  {
+    "id": "realme-p4-lite-5g-4-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme P4 Lite 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p4-lite-5g-4-gb-128-gb"
+  },
+  {
+    "id": "realme-p4-lite-5g-6-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme P4 Lite 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p4-lite-5g-6-gb-128-gb"
+  },
+  {
+    "id": "realme-narzo-100-lite-5g-4-gb-64-gb",
+    "brand": "Realme",
+    "model": "Realme Narzo 100 Lite 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-100-lite-5g-4-gb-64-gb"
+  },
+  {
+    "id": "realme-narzo-100-lite-5g-4-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme Narzo 100 Lite 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-100-lite-5g-4-gb-128-gb"
+  },
+  {
+    "id": "realme-narzo-100-lite-5g-6-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme Narzo 100 Lite 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-100-lite-5g-6-gb-128-gb"
+  },
+  {
+    "id": "realme-16t-5g-6-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme 16T 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-16t-5g-6-gb-128-gb"
+  },
+  {
+    "id": "realme-16t-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme 16T 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-16t-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-16t-5g-8-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme 16T 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-16t-5g-8-gb-256-gb"
+  },
+  {
+    "id": "realme-c100x-4-gb-64-gb",
+    "brand": "Realme",
+    "model": "Realme C100x",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c100x-4-gb-64-gb"
+  },
+  {
+    "id": "realme-p4r-5g-4-gb-64-gb",
+    "brand": "Realme",
+    "model": "Realme P4R 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p4r-5g-4-gb-64-gb"
+  },
+  {
+    "id": "realme-p4r-5g-4-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme P4R 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p4r-5g-4-gb-128-gb"
+  },
+  {
+    "id": "realme-p4r-5g-6-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme P4R 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p4r-5g-6-gb-128-gb"
+  },
+  {
+    "id": "realme-p4r-5g-6-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme P4R 5G",
+    "storage": "6 GB/256 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p4r-5g-6-gb-256-gb"
+  },
+  {
+    "id": "realme-c100i-4-gb-64-gb",
+    "brand": "Realme",
+    "model": "Realme C100i",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-c100i-4-gb-64-gb"
+  },
+  {
+    "id": "realme-p4s-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme P4s 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p4s-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-p4s-5g-8-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme P4s 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p4s-5g-8-gb-256-gb"
+  },
+  {
+    "id": "realme-p4s-5g-12-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme P4s 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-p4s-5g-12-gb-256-gb"
+  },
+  {
+    "id": "realme-16x-5g-4-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme 16x 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-16x-5g-4-gb-128-gb"
+  },
+  {
+    "id": "realme-16x-5g-6-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme 16x 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-16x-5g-6-gb-128-gb"
+  },
+  {
+    "id": "realme-16x-5g-6-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme 16x 5G",
+    "storage": "6 GB/256 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-16x-5g-6-gb-256-gb"
+  },
+  {
+    "id": "iqoo-z11xa-5g-8-gb-128-gb",
+    "brand": "iQOO",
+    "model": "iQOO Z11xa 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z11xa-5g-8-gb-128-gb"
+  },
+  {
+    "id": "iqoo-z11-lite-5g-4-gb-64-gb",
+    "brand": "iQOO",
+    "model": "iQOO Z11 Lite 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z11-lite-5g-4-gb-64-gb"
+  },
+  {
+    "id": "iqoo-z11-lite-5g-4-gb-128-gb",
+    "brand": "iQOO",
+    "model": "iQOO Z11 Lite 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z11-lite-5g-4-gb-128-gb"
+  },
+  {
+    "id": "iqoo-z11-lite-5g-6-gb-128-gb",
+    "brand": "iQOO",
+    "model": "iQOO Z11 Lite 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z11-lite-5g-6-gb-128-gb"
+  },
+  {
+    "id": "iqoo-z11-lite-5g-6-gb-256-gb",
+    "brand": "iQOO",
+    "model": "iQOO Z11 Lite 5G",
+    "storage": "6 GB/256 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z11-lite-5g-6-gb-256-gb"
+  },
+  {
+    "id": "ai-novaflip-5g-8-gb-256-gb",
+    "brand": "Ai+",
+    "model": "Ai+ NovaFlip 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-ai-novaflip-5g-8-gb-256-gb"
+  },
+  {
+    "id": "ai-pulse-2-fe-4-gb-64-gb",
+    "brand": "Ai+",
+    "model": "Ai+ Pulse 2 FE",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-ai-pulse-2-fe-4-gb-64-gb"
+  },
+  {
+    "id": "realme-13-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme 13 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-13-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-13-5g-8-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme 13 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-13-5g-8-gb-256-gb"
+  },
+  {
+    "id": "realme-13-pro-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme 13 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-13-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-13-pro-5g-8-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme 13 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-13-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "realme-13-pro-5g-12-gb-512-gb",
+    "brand": "Realme",
+    "model": "Realme 13 Pro 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-13-pro-5g-12-gb-512-gb"
+  },
+  {
+    "id": "realme-13-pro-plus-5g-8-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme 13 Pro Plus 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-13-pro-plus-5g-8-gb-256-gb"
+  },
+  {
+    "id": "realme-13-pro-plus-5g-12-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme 13 Pro Plus 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-13-pro-plus-5g-12-gb-256-gb"
+  },
+  {
+    "id": "realme-13-pro-plus-5g-12-gb-512-gb",
+    "brand": "Realme",
+    "model": "Realme 13 Pro Plus 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-13-pro-plus-5g-12-gb-512-gb"
+  },
+  {
+    "id": "realme-14-pro-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme 14 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-14-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-14-pro-5g-8-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme 14 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-14-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "realme-14-pro-plus-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme 14 Pro Plus 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-14-pro-plus-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-14-pro-plus-5g-8-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme 14 Pro Plus 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-14-pro-plus-5g-8-gb-256-gb"
+  },
+  {
+    "id": "realme-14-pro-plus-5g-12-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme 14 Pro Plus 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-14-pro-plus-5g-12-gb-256-gb"
+  },
+  {
+    "id": "realme-14-pro-plus-5g-12-gb-512-gb",
+    "brand": "Realme",
+    "model": "Realme 14 Pro Plus 5G",
+    "storage": "12 GB/512 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-14-pro-plus-5g-12-gb-512-gb"
+  },
+  {
+    "id": "realme-14-pro-lite-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme 14 Pro Lite 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-14-pro-lite-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-14-pro-lite-5g-8-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme 14 Pro Lite 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-14-pro-lite-5g-8-gb-256-gb"
+  },
+  {
+    "id": "realme-gt-7-pro-5g-12-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme GT 7 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-7-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "realme-gt-7-pro-5g-16-gb-512-gb",
+    "brand": "Realme",
+    "model": "Realme GT 7 Pro 5G",
+    "storage": "16 GB/512 GB",
+    "ram": "16 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-gt-7-pro-5g-16-gb-512-gb"
+  },
+  {
+    "id": "realme-narzo-80-pro-5g-8-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme Narzo 80 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-80-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "realme-narzo-80-pro-5g-8-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme Narzo 80 Pro 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-80-pro-5g-8-gb-256-gb"
+  },
+  {
+    "id": "realme-narzo-80-pro-5g-12-gb-256-gb",
+    "brand": "Realme",
+    "model": "Realme Narzo 80 Pro 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-80-pro-5g-12-gb-256-gb"
+  },
+  {
+    "id": "realme-narzo-80-lite-4g-4-gb-64-gb",
+    "brand": "Realme",
+    "model": "Realme Narzo 80 Lite 4G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-80-lite-4g-4-gb-64-gb"
+  },
+  {
+    "id": "realme-narzo-80-lite-4g-6-gb-128-gb",
+    "brand": "Realme",
+    "model": "Realme Narzo 80 Lite 4G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-realme-narzo-80-lite-4g-6-gb-128-gb"
+  },
+  {
+    "id": "iqoo-z11-5g-6-gb-128-gb",
+    "brand": "iQOO",
+    "model": "iQOO Z11 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z11-5g-6-gb-128-gb"
+  },
+  {
+    "id": "iqoo-z11-5g-8-gb-128-gb",
+    "brand": "iQOO",
+    "model": "iQOO Z11 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z11-5g-8-gb-128-gb"
+  },
+  {
+    "id": "iqoo-z11-5g-8-gb-256-gb",
+    "brand": "iQOO",
+    "model": "iQOO Z11 5G",
+    "storage": "8 GB/256 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z11-5g-8-gb-256-gb"
+  },
+  {
+    "id": "iqoo-z11-5g-12-gb-256-gb",
+    "brand": "iQOO",
+    "model": "iQOO Z11 5G",
+    "storage": "12 GB/256 GB",
+    "ram": "12 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-iqoo-z11-5g-12-gb-256-gb"
+  },
+  {
+    "id": "ai-nova-2-power-5g-6-gb-128-gb",
+    "brand": "Ai+",
+    "model": "Ai+ Nova 2 Power 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-ai-nova-2-power-5g-6-gb-128-gb"
+  },
+  {
+    "id": "ai-nova-2-power-5g-8-gb-128-gb",
+    "brand": "Ai+",
+    "model": "Ai+ Nova 2 Power 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-ai-nova-2-power-5g-8-gb-128-gb"
+  },
+  {
+    "id": "ai-nova-2-pro-5g-6-gb-128-gb",
+    "brand": "Ai+",
+    "model": "Ai+ Nova 2 Pro 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-ai-nova-2-pro-5g-6-gb-128-gb"
+  },
+  {
+    "id": "ai-nova-2-pro-5g-8-gb-128-gb",
+    "brand": "Ai+",
+    "model": "Ai+ Nova 2 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-ai-nova-2-pro-5g-8-gb-128-gb"
+  },
+  {
+    "id": "ai-nova-2-neo-5g-4-gb-64-gb",
+    "brand": "Ai+",
+    "model": "Ai+ Nova 2 Neo 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-ai-nova-2-neo-5g-4-gb-64-gb"
+  },
+  {
+    "id": "ai-nova-2-neo-5g-4-gb-128-gb",
+    "brand": "Ai+",
+    "model": "Ai+ Nova 2 Neo 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-ai-nova-2-neo-5g-4-gb-128-gb"
+  },
+  {
+    "id": "ai-nova-2-neo-5g-6-gb-128-gb",
+    "brand": "Ai+",
+    "model": "Ai+ Nova 2 Neo 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-ai-nova-2-neo-5g-6-gb-128-gb"
+  },
+  {
+    "id": "ai-nova-2-ultra-5g-6-gb-128-gb",
+    "brand": "Ai+",
+    "model": "Ai+ Nova 2 Ultra 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-ai-nova-2-ultra-5g-6-gb-128-gb"
+  },
+  {
+    "id": "ai-nova-2-ultra-5g-8-gb-128-gb",
+    "brand": "Ai+",
+    "model": "Ai+ Nova 2 Ultra 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-ai-nova-2-ultra-5g-8-gb-128-gb"
+  },
+  {
+    "id": "ai-nova-2-5g-4-gb-64-gb",
+    "brand": "Ai+",
+    "model": "Ai+ Nova 2 5G",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-ai-nova-2-5g-4-gb-64-gb"
+  },
+  {
+    "id": "ai-nova-2-5g-4-gb-128-gb",
+    "brand": "Ai+",
+    "model": "Ai+ Nova 2 5G",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-ai-nova-2-5g-4-gb-128-gb"
+  },
+  {
+    "id": "ai-nova-2-5g-6-gb-128-gb",
+    "brand": "Ai+",
+    "model": "Ai+ Nova 2 5G",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-ai-nova-2-5g-6-gb-128-gb"
+  },
+  {
+    "id": "ai-pulse-2-4-gb-64-gb",
+    "brand": "Ai+",
+    "model": "Ai+ Pulse 2",
+    "storage": "4 GB/64 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-ai-pulse-2-4-gb-64-gb"
+  },
+  {
+    "id": "ai-pulse-2-4-gb-128-gb",
+    "brand": "Ai+",
+    "model": "Ai+ Pulse 2",
+    "storage": "4 GB/128 GB",
+    "ram": "4 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-ai-pulse-2-4-gb-128-gb"
+  },
+  {
+    "id": "ai-pulse-2-6-gb-128-gb",
+    "brand": "Ai+",
+    "model": "Ai+ Pulse 2",
+    "storage": "6 GB/128 GB",
+    "ram": "6 GB",
+    "color": "Default",
+    "referencePriceStatus": "pending",
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-ai-pulse-2-6-gb-128-gb"
   }
 ];

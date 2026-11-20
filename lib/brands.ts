@@ -1,10 +1,11 @@
 export const BRANDS = [
   'Apple', 'Xiaomi', 'Samsung', 'Vivo', 'OnePlus', 'Oppo', 'Realme',
   'Motorola', 'Lenovo', 'Nokia', 'Honor', 'Asus', 'Google', 'POCO', 
-  'LG', 'Infinix', 'Tecno', 'iQOO', 'Nothing', 'Huawei'
+  'LG', 'Infinix', 'Tecno', 'iQOO', 'Nothing', 'Huawei', 'Ai+'
 ];
 
 const svgs: Record<string, string> = {
+  'Ai+': `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='Arial, sans-serif' font-weight='900' font-size='45' fill='#000000' letter-spacing='1'>Ai+</text></svg>`,
   Honor: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M2.601 9.753v1.823H.807V9.753H0v4.498h.807v-1.874h1.794v1.874h.807V9.753zm18.671.801h.898c.369 0 .667.297.667.662a.665.665 0 0 1-.667.663h-.898zm-.806-.801v4.498h.806v-2.002l1.68 2.002H24l-1.376-1.64a1.462 1.462 0 0 0-.444-2.858h-1.716zm-7.63-.014v2.807l-1.959-2.807h-.644v4.498h.807v-2.82l1.968 2.82h.633V9.739zm-7.532 2.26c0-.832.68-1.506 1.517-1.506A1.51 1.51 0 0 1 8.337 12c0 .832-.679 1.506-1.516 1.506c-.403 0-.789-.159-1.073-.441A1.5 1.5 0 0 1 5.304 12zM4.497 12c0 .933.566 1.774 1.434 2.132c.869.357 1.868.16 2.533-.5s.863-1.653.503-2.515a2.32 2.32 0 0 0-2.146-1.425a2.316 2.316 0 0 0-2.323 2.307zm11.04-.001a1.513 1.513 0 0 1 1.518-1.506c.838 0 1.516.675 1.516 1.507a1.513 1.513 0 0 1-1.518 1.506c-.402 0-.788-.159-1.072-.441a1.5 1.5 0 0 1-.444-1.066M14.73 12c0 .933.566 1.774 1.434 2.132c.868.357 1.868.16 2.532-.5c.665-.66.864-1.653.504-2.515a2.325 2.325 0 0 0-2.147-1.425a2.316 2.316 0 0 0-2.323 2.307z"/></svg>`,
   Infinix: `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='Arial, sans-serif' font-weight='900' font-size='45' fill='#000000' letter-spacing='1'>Infinix</text></svg>`,
   Motorola: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#001489" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12s12-5.373 12-12C24.002 5.375 18.632.002 12.007 0zm7.327 18.065s-.581-2.627-1.528-4.197c-.514-.857-1.308-1.553-2.368-1.532c-.745 0-1.399.423-2.2 1.553q-.704 1.156-1.235 2.403s-.29-.675-.63-1.343a8 8 0 0 0-.605-1.049c-.804-1.13-1.455-1.539-2.2-1.553c-1.049-.021-1.854.675-2.364 1.528c-.948 1.574-1.528 4.197-1.528 4.197h-.864l4.606-15.12l3.56 11.804l.024.021l.024-.021l3.56-11.804l4.61 15.113z"/></svg>`,
@@ -48,7 +49,8 @@ export const BRAND_LOGOS: Record<string, string> = {
   Tecno: 'https://upload.wikimedia.org/wikipedia/commons/5/5e/Tecno_Mobile_logo.svg',
   iQOO: 'https://upload.wikimedia.org/wikipedia/commons/a/aa/IQOO_logo.svg',
   Nothing: getSvgUrl('Nothing'),
-  Huawei: 'https://cdn.simpleicons.org/huawei/FF0000'
+  Huawei: 'https://cdn.simpleicons.org/huawei/FF0000',
+  'Ai+': getSvgUrl('Ai+')
 };
 
 export const getBrandLogoStyle = (brand: string) => {

@@ -7,5 +7,7 @@ import {protectedPriceFingerprint} from '../pricing-evidence/check-oppo-infinix-
 // exactly their rows left the fingerprint and no other price changed (diffed row by row).
 // 19 Nov 2026 (later): 22 variants Cashify no longer buys and one empty catalog row were removed;
 // exactly their rows left the fingerprint and no other price changed (diffed row by row).
-assert.deepEqual(protectedPriceFingerprint(),{count:25572,sha256:'cbc19d095536f44cbec077ca90bf6119300edf7a4c20a43e08ec8423f346aea6'});
-console.log('PASS 25572 protected-brand prices unchanged from main a9c1c8e apart from removed catalog rows');
+// 21 Nov 2026: Tecno moved to measured rules and left the protected set (68 rows); 205 variants from the
+// owner's missing-models audit were added (McLaren as its original row). A row-by-row diff against main a7c0554 shows no other price changed.
+assert.deepEqual(protectedPriceFingerprint(),{count:27216,sha256:'f9eb14a45932ef0d0f779b8e11b325082418c373daa5b16c77325987189dcbd6'});
+console.log('PASS 27216 protected-brand prices unchanged from main a9c1c8e apart from removed catalog rows');

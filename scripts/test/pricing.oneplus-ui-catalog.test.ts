@@ -15,7 +15,7 @@ const missing = [
 ];
 const devices = SEED_DEVICES.filter(d => d.brand === 'OnePlus');
 // OnePlus 7T Pro McLaren Edition was removed on 19 Nov 2026: Cashify no longer lists it (404).
-assert.equal(devices.length, 115);
+assert.equal(devices.length, 116); // 7T Pro McLaren restored 21 Nov 2026
 for (const [model, storage] of missing) {
   const found = devices.filter(d => d.model === model && d.storage === storage);
   assert.equal(found.length, 1, `${model} ${storage} must be unique`);

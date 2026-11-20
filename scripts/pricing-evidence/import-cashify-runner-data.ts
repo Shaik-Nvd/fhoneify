@@ -4,7 +4,7 @@ import { createHash } from 'node:crypto';
 import { inflateRawSync } from 'node:zlib';
 import type { DiagnosticsType } from '../../lib/pricingCalculator';
 
-export type Brand = 'Nothing' | 'OnePlus' | 'Samsung' | 'Google' | 'Xiaomi' | 'Honor' | 'Asus' | 'Lenovo' | 'Nokia' | 'POCO' | 'Motorola' | 'Oppo' | 'Infinix';
+export type Brand = 'Nothing' | 'OnePlus' | 'Samsung' | 'Google' | 'Xiaomi' | 'Honor' | 'Asus' | 'Lenovo' | 'Nokia' | 'POCO' | 'Motorola' | 'Oppo' | 'Infinix' | 'Tecno';
 export interface RunnerMeasurement {
   brand: Brand; model: string; rawModel: string; storage: string; caseId: string; label: string;
   status: 'quoted' | 'pending' | 'no_offer' | 'not_applicable'; diagnostics: DiagnosticsType; answerPath: any[];
@@ -163,7 +163,7 @@ function normalizeAnswers(answers:any[], schema:any) {
   return {diagnostics:d, ageAsked,ageSelected};
 }
 export function importRunnerData(input: string, options: {brand:Brand;out?:string;requireMirror?:boolean}) {
-  check(['Nothing','OnePlus','Samsung','Google','Xiaomi','Honor','Asus','Lenovo','Nokia','POCO','Motorola','Oppo','Infinix'].includes(options.brand),'Unknown brand');
+  check(['Nothing','OnePlus','Samsung','Google','Xiaomi','Honor','Asus','Lenovo','Nokia','POCO','Motorola','Oppo','Infinix','Tecno'].includes(options.brand),'Unknown brand');
   const measurements:RunnerMeasurement[]=[]; const inventory:any[]=[];const variants:any[]=[];
   const folders=fs.existsSync(path.join(input,'checkpoint.json')) ? ['.'] : fs.readdirSync(input,{withFileTypes:true}).filter(e=>e.isDirectory()).map(e=>e.name).sort();
   check(folders.length>0,'No model folders');
@@ -276,7 +276,7 @@ export function importRunnerData(input: string, options: {brand:Brand;out?:strin
     }
     check(seen===rows.length,'Unmatched results row');
   }
-  if(['Xiaomi','Honor','Asus','Lenovo','Nokia','POCO','Motorola','Oppo','Infinix'].includes(options.brand)) {
+  if(['Xiaomi','Honor','Asus','Lenovo','Nokia','POCO','Motorola','Oppo','Infinix','Tecno'].includes(options.brand)) {
     for(const row of measurements)row.source.format='A';
     require('./import-samsung-pixel-archives').reconcile(measurements);
   }

@@ -27276,5 +27276,1927 @@
         ]
       }
     }
+  },
+  "tecnocamon12air": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnocamon15": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnocamon15pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnocamon16": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnocamon16premier": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnocamon17": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnocamon17pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnocamon18": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnocamon19": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnocamon19neo": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnocamon19pro5g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnocamon20": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnocamon20premier5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "16gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnocamon20pro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnocamon20spro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnocamon305g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnocamon30premier5g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "12gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnophantomvflip25g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity",
+      "outer_screen",
+      "hinge"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnophantomvflip5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity",
+      "outer_screen",
+      "hinge"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnophantomvfold25g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity",
+      "outer_screen",
+      "hinge"
+    ],
+    "variants": {
+      "12gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnophantomvfold5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity",
+      "outer_screen",
+      "hinge"
+    ],
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "12gb/512gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnophantomx": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnophantomx25g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnophantomx2pro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "12gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnopopx": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnopova": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnopova2": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnopova3": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnopova4": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnopova5g": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnopova5pro": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnopova6neo5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnopova6pro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnopova75g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnopova7pro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnopovacurve25g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnopovacurve5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnopovaneo": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnopovaslim5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnospark105g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnospark20pro5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "8gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "8gb/256gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnospark30c5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnospark4": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnospark5": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "2gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnospark5pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnospark6air": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "2gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "3gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnospark7p": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnospark7pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnospark8": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "2gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnospark8c": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnospark8p": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnospark8pro": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnospark8t": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnospark9": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      },
+      "6gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnosparkgo2023": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnosparkgo3": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnosparkgo5g": {
+    "hasAge": true,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/128gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnosparkpower2": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "4gb/64gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
+  },
+  "tecnosparkpower2air": {
+    "hasAge": false,
+    "hardware": [
+      "front_camera",
+      "back_camera",
+      "volume",
+      "fingerprint",
+      "wifi",
+      "battery_service",
+      "speaker",
+      "power",
+      "charging",
+      "face",
+      "silent",
+      "audio_receiver",
+      "camera_glass",
+      "bluetooth",
+      "vibrator",
+      "microphone",
+      "proximity"
+    ],
+    "variants": {
+      "3gb/32gb": {
+        "accessories": [
+          "charger",
+          "box"
+        ]
+      }
+    }
   }
 }

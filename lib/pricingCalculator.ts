@@ -2973,7 +2973,7 @@ function routeBrandCalculator(
     return calculateNothingPrice(model, cashifyGetUptoReference, diagnostics, semantics, calculationContext?.catalogStorage ?? storageVariant, !calculationContext?.disableRunnerEvidence);
   }
 
-  if(['google','honor','asus','lenovo','nokia','motorola','infinix'].includes(safeBrand)) {
+  if(['google','honor','asus','lenovo','nokia','motorola','infinix','tecno'].includes(safeBrand)) {
     const measured=calculationContext?.disableRunnerEvidence?null:runnerQuote(model,calculationContext?.catalogStorage??storageVariant,cashifyGetUptoReference,diagnostics);
     if(measured)return finalizeConditionQuote(cashifyGetUptoReference,measured.price);
   }

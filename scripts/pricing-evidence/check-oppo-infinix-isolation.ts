@@ -6,7 +6,7 @@ import { PERFECT_CONDITION_DIAGNOSTICS as clean } from '../../lib/pricing/perfec
 const changes=[{}, {calls:false}, {mobileAge:'above11',warranty:false}, {hardware:['back_camera']}, {screenCondition:'Screen cracked/ glass broken'}, {accessories:[]}];
 export function protectedPriceFingerprint() {
 const digest=createHash('sha256');let count=0;
-for(const device of SEED_DEVICES.filter(d=>!['Oppo','Infinix'].includes(d.brand)))for(const reference of [20000,50000])for(const edit of changes) {
+for(const device of SEED_DEVICES.filter(d=>!['Oppo','Infinix','Tecno'].includes(d.brand)))for(const reference of [20000,50000])for(const edit of changes) {
   let result:unknown;try {const q=priceDevice(device.brand,device.model,reference,{...clean,...edit},undefined,device.storage);result=[q.cashifyConditionEquivalent,q.fhoneifyPrice];}
   catch(error:any){result=[error.name,error.reason??error.message];}
   digest.update(JSON.stringify([device.id,reference,edit,result])+'\n');count++;
