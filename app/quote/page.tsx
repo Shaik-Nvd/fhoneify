@@ -1630,8 +1630,14 @@ export default function QuotePage() {
     }
   };
 
+  const pageMaxWidth = useMemo(() => {
+    if (step === 1 && selectionStage === 'model') return '80rem'; // max-w-7xl (1280px) for 6-column grid like Cashify
+    if (step > 2) return '1000px';
+    return '40rem';
+  }, [step, selectionStage]);
+
   return (
-    <div className="page-animate" style={{ maxWidth: step > 2 ? '1000px' : '40rem', margin: '0 auto', padding: '3rem 1rem' }}>
+    <div className="page-animate" style={{ maxWidth: pageMaxWidth, margin: '0 auto', padding: '3rem 1rem' }}>
       
       <div id="quote-recaptcha-container"></div>
       
@@ -2382,7 +2388,7 @@ export default function QuotePage() {
                   <p>We are coming soon! Mobile phones for this brand are under processing and uploading.</p>
                 </div>
               ) : (
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '1rem' }}>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
                   {models.map((m) => (
                     <button key={m} onClick={() => handleModelSelect(m)} className="card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem', padding: '1rem', border: '1px solid var(--border)', backgroundColor: 'var(--surface)', borderRadius: '12px', cursor: 'pointer' }}>
                       <img src={`/images/models/${m.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`} alt={m} style={{ width: '70px', height: '100px', objectFit: 'contain' }} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; e.currentTarget.onerror = null; }} />
