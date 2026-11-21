@@ -6,7 +6,6 @@ import { findCatalogDeviceById } from '../../../lib/pricing/catalog';
 import { parseDiagnostics } from '../../../lib/pricing/diagnostics';
 import type { PricingErrorCode } from '../../../lib/pricing/pricingService';
 import { buildLeadAnswers } from '../../../lib/pricing/payout';
-import { isBrandLocked } from '../../../lib/brands';
 import config from '../../config';
 import logger from '../../lib/logger';
 
@@ -145,10 +144,6 @@ export async function priceQuote(req: Request, res: Response) {
     const body = PriceQuoteSchema.safeParse(req.body);
     if (!body.success) {
       return res.status(400).json({ success: false, error: body.error.issues[0].message });
-    }
-
-    if (isBrandLocked(body.data.brand)) {
-      return res.status(403).json({ success: false, error: `${body.data.brand} is currently under testing and quotes cannot be issued.` });
     }
 
     const outcome = await pricingService.quote(body.data);
