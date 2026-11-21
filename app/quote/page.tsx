@@ -8,7 +8,7 @@ import { useAuthStore } from '@/lib/authStore';
 import { useHydratedAuth } from '@/lib/useHydratedAuth';
 
 
-import { BRAND_LOGOS, getBrandLogoStyle, sortBrands } from '@/lib/brands';
+import { BRAND_LOGOS, getBrandLogoStyle, sortBrands, isBrandLocked } from '@/lib/brands';
 import { SEED_DEVICES } from '@/lib/seed_devices';
 // Prices come only from POST /api/quote/price. This page must not import the
 // pricing engine or the price snapshot: a second, browser-side price is what
@@ -253,6 +253,16 @@ export default function QuotePage() {
       const sStep = parseInt(params.get('step') || '1', 10);
       
       let stage = params.get('stage') as any;
+      if (isBrandLocked(sBrand)) {
+        resetAnswersOnDeviceChange('', '', '');
+        setSelectedBrand('');
+        setSelectedModel('');
+        setSelectedStorage('');
+        setStep(1);
+        setSelectionStage('brand');
+        setError(`${sBrand} is currently under testing and cannot be accessed.`);
+        return;
+      }
       if (!stage) {
         if (sModel) stage = 'storage';
         else if (sBrand) stage = 'model';
@@ -322,6 +332,10 @@ export default function QuotePage() {
   }, []);
 
   const navigateToState = (newBrand: string, newModel: string, newStorage: string, newStage: string, newStep: number, replace = false) => {
+    if (isBrandLocked(newBrand)) {
+      setError(`${newBrand} is currently under testing and cannot be accessed.`);
+      return;
+    }
     const params = new URLSearchParams();
     if (newBrand) params.set('brand', newBrand);
     if (newModel) params.set('model', newModel);
@@ -1660,12 +1674,69 @@ export default function QuotePage() {
                     <div key={i} className="card skeleton" style={{ height: '110px', borderRadius: '12px', border: '1px solid var(--border)' }}></div>
                   ))
                 ) : (
-                  brands.map((b) => (
-                    <button key={b} onClick={() => handleBrandSelect(b)} className="card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', padding: '1.5rem 1rem', border: '1px solid var(--border)', backgroundColor: 'var(--surface)', borderRadius: '12px', cursor: 'pointer', transition: 'all 200ms' }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = '#4CD964'; e.currentTarget.style.transform = 'translateY(-2px)'; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.transform = 'translateY(0)'; }}>
-                      <img src={BRAND_LOGOS[b] || '/images/placeholder-phone.svg'} alt={b} style={getBrandLogoStyle(b)} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; }} />
-                      <span style={{ fontSize: '0.85rem', fontWeight: 500 }}>{b}</span>
-                    </button>
-                  ))
+                  brands.map((b) => {
+                    const locked = isBrandLocked(b);
+                    if (locked) {
+                      return (
+                        <div
+                          key={b}
+                          className="card"
+                          title={`${b} is temporarily locked for testing`}
+                          style={{
+                            position: 'relative',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            gap: '1rem',
+                            padding: '1.5rem 1rem',
+                            border: '1px solid var(--border)',
+                            backgroundColor: 'var(--surface)',
+                            borderRadius: '12px',
+                            cursor: 'not-allowed',
+                            opacity: 0.55,
+                            userSelect: 'none',
+                          }}
+                        >
+                          <span
+                            style={{
+                              position: 'absolute',
+                              top: '8px',
+                              right: '8px',
+                              display: 'flex',
+                              alignItems: 'center',
+                              gap: '4px',
+                              borderRadius: '9999px',
+                              backgroundColor: 'rgba(0,0,0,0.7)',
+                              color: '#FCD34D',
+                              fontSize: '10px',
+                              fontWeight: 600,
+                              padding: '2px 8px',
+                            }}
+                          >
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                            </svg>
+                            Testing
+                          </span>
+                          <img
+                            src={BRAND_LOGOS[b] || '/images/placeholder-phone.svg'}
+                            alt={b}
+                            style={{ ...getBrandLogoStyle(b), filter: 'grayscale(1)', opacity: 0.7 }}
+                            onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; }}
+                          />
+                          <span style={{ fontSize: '0.85rem', fontWeight: 500 }}>{b}</span>
+                        </div>
+                      );
+                    }
+                    return (
+                      <button key={b} onClick={() => handleBrandSelect(b)} className="card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', padding: '1.5rem 1rem', border: '1px solid var(--border)', backgroundColor: 'var(--surface)', borderRadius: '12px', cursor: 'pointer', transition: 'all 200ms' }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = '#4CD964'; e.currentTarget.style.transform = 'translateY(-2px)'; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.transform = 'translateY(0)'; }}>
+                        <img src={BRAND_LOGOS[b] || '/images/placeholder-phone.svg'} alt={b} style={getBrandLogoStyle(b)} onError={(e) => { e.currentTarget.src = '/images/placeholder-phone.svg'; }} />
+                        <span style={{ fontSize: '0.85rem', fontWeight: 500 }}>{b}</span>
+                      </button>
+                    );
+                  })
                 )}
               </div>
             </>
