@@ -45,7 +45,7 @@ function rulesFor(table: Record<Regime, Record<string, Curve>>, regime: Regime) 
   const cached = ruleCache.get(table)?.[regime]; if (cached) return cached;
   const rules: Record<string, DeductionRule> = {};
   for (const [key, curve] of Object.entries(table[regime])) {
-    const ruleKey = Object.hasOwn(RULE_KEY, key) ? RULE_KEY[key] : key;
+    const ruleKey = Object.prototype.hasOwnProperty.call(RULE_KEY, key) ? RULE_KEY[key] : key;
     if (!ruleKey) continue;
     rules[ruleKey] = Object.freeze({ form: 'curve', value: 0, knots: curve.knots, shares: curve.shares, support: 0, residual: 0, inferredFrom: 'generic-android' }) as DeductionRule;
   }
