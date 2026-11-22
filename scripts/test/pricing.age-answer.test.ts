@@ -21,10 +21,12 @@ const ages = ['below3', '3to6', '6to11', 'above11'] as const;
 const cases: [string, string, 'brackets' | 'elevenMonths'][] = [
   ['Vivo', 'Vivo V30', 'brackets'],
   ['Oppo', 'Oppo A76', 'brackets'],
-  ['Realme', 'Realme 12 Pro 5G', 'elevenMonths'],
-  ['Motorola', 'Motorola Edge 50', 'elevenMonths'],
-  ['Samsung', 'Samsung Galaxy S7', 'elevenMonths'],
-  ['Vivo', 'Vivo X Fold3 Pro', 'elevenMonths'],
+  // 22 Nov 2026: unmeasured Android phones use the cross-brand generic rules, which price every bracket.
+  ['Realme', 'Realme 12 Pro 5G', 'brackets'],
+  ['Motorola', 'Motorola Edge 50', 'brackets'],
+  ['Vivo', 'Vivo X Fold3 Pro', 'brackets'],
+  ['iQOO', 'iQOO Z11 5G', 'brackets'],
+  ['Ai+', 'Ai+ Nova 2 5G', 'brackets'],
 ];
 for (const [brand, model, resolution] of cases) {
   assert.equal(runnerScope(model), null, `${model} must not be on the measured rules for this test`);

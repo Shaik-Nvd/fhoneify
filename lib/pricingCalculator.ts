@@ -1,4 +1,5 @@
 import { runnerScope, runnerQuote } from './pricing/cashifyRunnerModel';
+import { genericQuote } from './pricing/cashifyRunnerModel/generic';
 import { referenceBonus } from './pricing/referenceBonus';
 import { CASHIFY_CALIBRATION } from './pricing/calibration';
 import { UNKNOWN_QUESTIONNAIRE, type QuestionnaireSemantics } from './pricing/questionnaireSemantics';
@@ -2865,6 +2866,12 @@ export function calculateGenericAndroidPrice(brand: string, model: string, refer
   return finalizeConditionQuote(reference, cashifyPrice);
 }
 
+/** Every Android brand; Apple keeps its own reference-driven engine. */
+function isGenericAndroid(brand: string, model: string) {
+  const b = String(brand || '').toLowerCase().trim(), m = String(model || '').toLowerCase();
+  return b !== '' && b !== 'apple' && !m.includes('iphone');
+}
+
 // ============================================================================
 // CENTRAL ROUTER DISPATCHER
 // ============================================================================
@@ -2884,6 +2891,16 @@ export function calculateFhoneifyPrice(
     // even when the first-page crawler recorded age NOT_ASKED.
     return routeBrandCalculator(brand, model, cashifyGetUptoReference, answers, semantics,
       calculationContext?.catalogStorage ?? storageVariant, calculationContext);
+  }
+
+  // Android phones without a measured profile of their own (Vivo, Realme, iQOO, LG, Ai+ and untested
+  // models of measured brands) use Cashify's cross-brand rules: one curve per answer and regime, fitted
+  // from every measured Android brand. Predicting each measured brand from the others, these miss
+  // Cashify by 4% of the reference on average, against 12% for the old brand calculators.
+  if (!calculationContext?.disableRunnerEvidence && !runner && isGenericAndroid(brand, model)) {
+    const answered: DiagnosticsType = { ...answers, ...(semantics.billMode === 'NOT_ASKED' && answers.validBill == null ? { validBill: true } : {}) };
+    const generic = genericQuote(model, calculationContext?.catalogStorage ?? storageVariant, cashifyGetUptoReference, answered, semantics);
+    return finalizeConditionQuote(cashifyGetUptoReference, generic.price);
   }
 
   // A question Cashify never asks for this model is not a "No": its answer is
