@@ -20,7 +20,7 @@ const HOME_BRANDS = [
 export default function BrandPicker() {
   return (
     <section aria-labelledby="brand-picker-title" className="mx-auto max-w-7xl px-4 py-14 md:px-6 md:py-20">
-      <div className="mb-8 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+      <div data-reveal className="mb-8 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <h2 id="brand-picker-title" className="font-display text-[1.9rem] font-medium leading-tight tracking-[-0.02em] text-foreground md:text-[2.5rem]">
             Which phone are you selling?
@@ -30,20 +30,20 @@ export default function BrandPicker() {
       </div>
 
       <ul className="grid grid-cols-3 gap-3 sm:grid-cols-4 lg:grid-cols-6">
-        {HOME_BRANDS.map((brand) => (
-          <li key={brand.name}>
+        {HOME_BRANDS.map((brand, i) => (
+          <li key={brand.name} data-reveal="scale" style={{ '--d': `${i * 45}ms` } as React.CSSProperties}>
             <Link
               href={`/quote?brand=${encodeURIComponent(brand.name)}`}
               className="group flex h-full flex-col items-center gap-3 rounded-2xl border border-border bg-surface p-3 pb-3.5 text-foreground no-underline shadow-token-sm transition-[border-color,box-shadow,transform] duration-200 hover:-translate-y-0.5 hover:border-gold hover:text-foreground hover:shadow-token-md sm:p-4"
             >
               <span className="flex aspect-[16/10] w-full items-center justify-center overflow-hidden rounded-xl bg-white ring-1 ring-black/5">
-                <Image src={brand.logo} alt="" width={96} height={96} className="h-[74%] w-auto object-contain" />
+                <Image src={brand.logo} alt="" width={96} height={96} className="h-[74%] w-auto object-contain transition-transform duration-300 group-hover:scale-110" />
               </span>
               <span className="text-sm font-semibold">{brand.name}</span>
             </Link>
           </li>
         ))}
-        <li>
+        <li data-reveal="scale" style={{ '--d': `${HOME_BRANDS.length * 45}ms` } as React.CSSProperties}>
           <Link
             href="/quote"
             className="flex h-full min-h-[120px] flex-col items-center justify-center gap-2 rounded-2xl border border-dashed border-border p-4 text-center text-sm font-semibold text-gold no-underline transition-colors hover:border-gold hover:bg-gold-soft hover:text-gold"

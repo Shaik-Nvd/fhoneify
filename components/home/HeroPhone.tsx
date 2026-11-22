@@ -2,6 +2,7 @@
 
 import { Component, useEffect, useRef, type ReactNode } from 'react';
 import PhoneModel from './PhoneModel';
+import LiveQuoteScreen from './LiveQuoteScreen';
 
 // Resting pose (matches .phone-rig defaults) and maximum pointer tilt.
 const REST_X = 6;
@@ -64,7 +65,7 @@ function InteractivePhone() {
     };
   }, []);
 
-  return <PhoneModel ref={rigRef} />;
+  return <PhoneModel ref={rigRef} screen={<LiveQuoteScreen />} />;
 }
 
 class PhoneBoundary extends Component<{ children: ReactNode }, { failed: boolean }> {
