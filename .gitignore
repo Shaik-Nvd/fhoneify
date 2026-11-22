@@ -66,3 +66,6 @@ release-test-logs/
 
 # Private Tecno evidence
 /data/pricing-evidence/*-2026-11-21/
+
+# Private cross-brand analysis and audits
+/data/pricing-evidence/*-2026-11-22/

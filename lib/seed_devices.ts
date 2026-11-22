@@ -26371,5 +26371,24 @@ export const SEED_DEVICES: any[] = [
     "color": "Default",
     "referencePriceStatus": "pending",
     "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-ai-pulse-2-6-gb-128-gb"
+  },
+  {
+    "id": "asus_8000",
+    "brand": "Asus",
+    "model": "Asus ROG Phone II ZS660KL",
+    "storage": "8 GB/128 GB",
+    "color": "Midnight",
+    "basePrice": 7020,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-asus-rog-phonr-ii-zs660kl-8-gb-128-gb"
+  },
+  {
+    "id": "1b31219a-81d4-46b7-a772-68cfc3acb554",
+    "brand": "Nothing",
+    "model": "CMF by Nothing Phone 2 Pro 5G",
+    "storage": "8 GB/128 GB",
+    "ram": "8 GB",
+    "color": "Default",
+    "basePrice": 12940,
+    "cashifyLink": "https://www.cashify.in/sell-old-mobile-phone/used-cmf-by-nothing-phoe-2-pro-5g-8-gb-128-gb"
   }
 ];

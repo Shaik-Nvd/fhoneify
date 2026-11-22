@@ -2,12 +2,15 @@ import type { DiagnosticsType } from '../../pricingCalculator';
 import { InspectionRequiredError } from '../inspectionRequired';
 
 export interface DeductionRule {
-  form: 'fixed' | 'pct' | 'affine' | 'capped' | 'byStorage';
+  form: 'fixed' | 'pct' | 'affine' | 'capped' | 'byStorage' | 'curve';
   value: number;
   slope?: number;
   values?: Record<string, number>;
   references?: Record<string, number>;
   fallback?: { form: 'fixed' | 'pct'; value: number };
+  /** form 'curve': share of the reference, linear in log(reference) between knots, flat outside. */
+  knots?: number[];
+  shares?: number[];
   support: number;
   residual: number;
   inferredFrom?: string;
@@ -15,7 +18,7 @@ export interface DeductionRule {
   measuredStorages?: string[];
 }
 export interface RunnerProfile {
-  brand: 'Nothing' | 'OnePlus' | 'Samsung' | 'Google' | 'Xiaomi' | 'Honor' | 'Asus' | 'Lenovo' | 'Nokia' | 'POCO' | 'Motorola' | 'Oppo' | 'Infinix' | 'Tecno';
+  brand: 'Nothing' | 'OnePlus' | 'Samsung' | 'Google' | 'Xiaomi' | 'Honor' | 'Asus' | 'Lenovo' | 'Nokia' | 'POCO' | 'Motorola' | 'Oppo' | 'Infinix' | 'Tecno' | 'Generic';
   model: string;
   hasAge: boolean;
   variants: Record<string, { accessories: string[]; scrap: number; scrapInferredFrom?: string; conditionFloor?: number }>;
@@ -35,7 +38,17 @@ export function runnerAge(value: string | null): string {
   return raw || 'below3';
 }
 
+/** Share of the reference for a 'curve' rule (cross-brand generic Android model). */
+export function curveShareAt(knots: number[], shares: number[], reference: number) {
+  if (reference <= knots[0]) return shares[0];
+  if (reference >= knots[knots.length - 1]) return shares[shares.length - 1];
+  const i = knots.findIndex(k => k >= reference) - 1;
+  const t = (Math.log(reference) - Math.log(knots[i])) / (Math.log(knots[i + 1]) - Math.log(knots[i]));
+  return shares[i] + t * (shares[i + 1] - shares[i]);
+}
+
 export function evaluateDeduction(rule: DeductionRule, reference: number, storage: string): number {
+  if (rule.form === 'curve') return Math.max(0, curveShareAt(rule.knots!, rule.shares!, reference) * reference);
   const form = rule.form === 'byStorage' ? rule.fallback!.form : rule.form;
   const value = rule.form === 'byStorage' ? rule.fallback!.value : rule.value;
   if (rule.form === 'byStorage' && rule.values?.[storage] !== undefined) {
@@ -86,7 +99,7 @@ export function runnerFaults(d: DiagnosticsType): string[] {
 
 export function evaluateRunner(profile: RunnerProfile, reference: number, d: DiagnosticsType, storage?: string | null) {
   if (!Number.isFinite(reference) || reference <= 0) throw new Error('Invalid runner reference');
-  if(['Xiaomi','Honor','Asus','Lenovo','Nokia','POCO','Motorola','Oppo','Infinix','Tecno'].includes(profile.brand)) {
+  if(['Xiaomi','Honor','Asus','Lenovo','Nokia','POCO','Motorola','Oppo','Infinix','Tecno','Generic'].includes(profile.brand)) {
     const required=[d.calls,d.touch,d.originalScreen,...(profile.hasAge?[d.warranty,d.validBill]:[])];
     if(required.some(value=>typeof value!=='boolean'))throw new InspectionRequiredError('Missing runner initial answer');
   }

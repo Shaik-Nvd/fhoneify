@@ -313,10 +313,17 @@
           "residual": 0
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 930,
+          "form": "pct",
+          "value": 0.3940677966101695,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 930,
+            "references": {
+              "2gb/32gb": 2360
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -367,10 +374,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 930,
+          "form": "pct",
+          "value": 0.3940677966101695,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 930,
+            "references": {
+              "2gb/32gb": 2360
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -481,22 +495,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 410,
+          "form": "pct",
+          "value": 0.17372881355932204,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 410,
+            "references": {
+              "2gb/32gb": 2360
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 410,
+          "form": "pct",
+          "value": 0.17372881355932204,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 410,
+            "references": {
+              "2gb/32gb": 2360
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 410,
+          "form": "pct",
+          "value": 0.17372881355932204,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 410,
+            "references": {
+              "2gb/32gb": 2360
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -1323,22 +1358,46 @@
           "residual": 10
         },
         "panel": {
-          "form": "fixed",
-          "value": 650,
+          "form": "pct",
+          "value": 0.176797113516514,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 650,
+            "references": {
+              "4gb/64gb": 3600,
+              "4gb/128gb": 3750
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 650,
+          "form": "pct",
+          "value": 0.176797113516514,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 650,
+            "references": {
+              "4gb/64gb": 3600,
+              "4gb/128gb": 3750
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 650,
+          "form": "pct",
+          "value": 0.176797113516514,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 650,
+            "references": {
+              "4gb/64gb": 3600,
+              "4gb/128gb": 3750
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -1401,10 +1460,18 @@
           "residual": 0
         },
         "age:3to6": {
-          "form": "fixed",
-          "value": 490,
+          "form": "pct",
+          "value": 0.09337741727448612,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 490,
+            "references": {
+              "4gb/64gb": 5130,
+              "4gb/128gb": 5360
+            }
+          }
         },
         "age:6to11": {
           "form": "pct",
@@ -1949,22 +2016,43 @@
       },
       "rules": {
         "age:above11": {
-          "form": "fixed",
-          "value": 1340,
+          "form": "pct",
+          "value": 0.24319419237749546,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1340,
+            "references": {
+              "4gb/64gb": 5510
+            }
+          }
         },
         "age:3to6": {
-          "form": "fixed",
-          "value": 620,
+          "form": "pct",
+          "value": 0.11252268602540835,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 620,
+            "references": {
+              "4gb/64gb": 5510
+            }
+          }
         },
         "age:6to11": {
-          "form": "fixed",
-          "value": 770,
+          "form": "pct",
+          "value": 0.1397459165154265,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 770,
+            "references": {
+              "4gb/64gb": 5510
+            }
+          }
         },
         "hardware:front_camera": {
           "form": "fixed",
@@ -1985,16 +2073,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 1100,
+          "form": "pct",
+          "value": 0.1996370235934664,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1100,
+            "references": {
+              "4gb/64gb": 5510
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 1650,
+          "form": "pct",
+          "value": 0.29945553539019965,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1650,
+            "references": {
+              "4gb/64gb": 5510
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -2045,10 +2147,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 1650,
+          "form": "pct",
+          "value": 0.29945553539019965,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1650,
+            "references": {
+              "4gb/64gb": 5510
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -2135,10 +2244,17 @@
           "residual": 0
         },
         "scratch:0": {
-          "form": "fixed",
-          "value": 660,
+          "form": "pct",
+          "value": 0.11978221415607986,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 660,
+            "references": {
+              "4gb/64gb": 5510
+            }
+          }
         },
         "scratch:1": {
           "form": "fixed",
@@ -2147,34 +2263,69 @@
           "residual": 0
         },
         "dent:0": {
-          "form": "fixed",
-          "value": 880,
+          "form": "pct",
+          "value": 0.15970961887477314,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 880,
+            "references": {
+              "4gb/64gb": 5510
+            }
+          }
         },
         "dent:1": {
-          "form": "fixed",
-          "value": 660,
+          "form": "pct",
+          "value": 0.11978221415607986,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 660,
+            "references": {
+              "4gb/64gb": 5510
+            }
+          }
         },
         "panel": {
-          "form": "fixed",
-          "value": 730,
+          "form": "pct",
+          "value": 0.132486388384755,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 730,
+            "references": {
+              "4gb/64gb": 5510
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 730,
+          "form": "pct",
+          "value": 0.132486388384755,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 730,
+            "references": {
+              "4gb/64gb": 5510
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 1270,
+          "form": "pct",
+          "value": 0.23049001814882034,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1270,
+            "references": {
+              "4gb/64gb": 5510
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -2516,10 +2667,17 @@
           "residual": 0
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 770,
+          "form": "pct",
+          "value": 0.39487179487179486,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 770,
+            "references": {
+              "2gb/32gb": 1950
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -2570,10 +2728,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 770,
+          "form": "pct",
+          "value": 0.39487179487179486,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 770,
+            "references": {
+              "2gb/32gb": 1950
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -2684,22 +2849,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 350,
+          "form": "pct",
+          "value": 0.1794871794871795,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 350,
+            "references": {
+              "2gb/32gb": 1950
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 350,
+          "form": "pct",
+          "value": 0.1794871794871795,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 350,
+            "references": {
+              "2gb/32gb": 1950
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 350,
+          "form": "pct",
+          "value": 0.1794871794871795,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 350,
+            "references": {
+              "2gb/32gb": 1950
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -2774,10 +2960,18 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 590,
+          "form": "pct",
+          "value": 0.2645261168523061,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 590,
+            "references": {
+              "2gb/32gb": 2200,
+              "3gb/32gb": 2260
+            }
+          }
         },
         "hardware:wifi": {
           "form": "pct",
@@ -2948,22 +3142,46 @@
           "residual": 10
         },
         "panel": {
-          "form": "fixed",
-          "value": 400,
+          "form": "pct",
+          "value": 0.17933974023885157,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 400,
+            "references": {
+              "2gb/32gb": 2200,
+              "3gb/32gb": 2260
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 400,
+          "form": "pct",
+          "value": 0.17933974023885157,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 400,
+            "references": {
+              "2gb/32gb": 2200,
+              "3gb/32gb": 2260
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 400,
+          "form": "pct",
+          "value": 0.17933974023885157,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 400,
+            "references": {
+              "2gb/32gb": 2200,
+              "3gb/32gb": 2260
+            }
+          }
         },
         "touch": {
           "form": "pct",
@@ -4140,10 +4358,19 @@
           }
         },
         "age:3to6": {
-          "form": "fixed",
-          "value": 470,
+          "form": "pct",
+          "value": 0.04476507382685166,
           "support": 3,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 470,
+            "references": {
+              "6gb/128gb": 10180,
+              "8gb/128gb": 10510,
+              "8gb/256gb": 10790
+            }
+          }
         },
         "age:6to11": {
           "form": "fixed",
@@ -5035,16 +5262,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 730,
+          "form": "pct",
+          "value": 0.26545454545454544,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 730,
+            "references": {
+              "3gb/32gb": 2750
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 1090,
+          "form": "pct",
+          "value": 0.39636363636363636,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1090,
+            "references": {
+              "3gb/32gb": 2750
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -5095,10 +5336,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 1090,
+          "form": "pct",
+          "value": 0.39636363636363636,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1090,
+            "references": {
+              "3gb/32gb": 2750
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -5209,22 +5457,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 490,
+          "form": "pct",
+          "value": 0.1781818181818182,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 490,
+            "references": {
+              "3gb/32gb": 2750
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 490,
+          "form": "pct",
+          "value": 0.1781818181818182,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 490,
+            "references": {
+              "3gb/32gb": 2750
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 490,
+          "form": "pct",
+          "value": 0.1781818181818182,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 490,
+            "references": {
+              "3gb/32gb": 2750
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -6620,10 +6889,18 @@
           "residual": 10
         },
         "age:3to6": {
-          "form": "fixed",
-          "value": 660,
+          "form": "pct",
+          "value": 0.06872017353579175,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 660,
+            "references": {
+              "6gb/128gb": 9400,
+              "8gb/128gb": 9800
+            }
+          }
         },
         "age:6to11": {
           "form": "fixed",
@@ -7470,16 +7747,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 790,
+          "form": "pct",
+          "value": 0.2651006711409396,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 790,
+            "references": {
+              "4gb/64gb": 2980
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 1180,
+          "form": "pct",
+          "value": 0.3959731543624161,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1180,
+            "references": {
+              "4gb/64gb": 2980
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -7530,10 +7821,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 1180,
+          "form": "pct",
+          "value": 0.3959731543624161,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1180,
+            "references": {
+              "4gb/64gb": 2980
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -7644,22 +7942,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 530,
+          "form": "pct",
+          "value": 0.17785234899328858,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 530,
+            "references": {
+              "4gb/64gb": 2980
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 530,
+          "form": "pct",
+          "value": 0.17785234899328858,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 530,
+            "references": {
+              "4gb/64gb": 2980
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 530,
+          "form": "pct",
+          "value": 0.17785234899328858,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 530,
+            "references": {
+              "4gb/64gb": 2980
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -7991,16 +8310,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 1040,
+          "form": "pct",
+          "value": 0.2653061224489796,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1040,
+            "references": {
+              "6gb/128gb": 3920
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 1560,
+          "form": "pct",
+          "value": 0.3979591836734694,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1560,
+            "references": {
+              "6gb/128gb": 3920
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -8051,10 +8384,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 1560,
+          "form": "pct",
+          "value": 0.3979591836734694,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1560,
+            "references": {
+              "6gb/128gb": 3920
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -8165,22 +8505,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 700,
+          "form": "pct",
+          "value": 0.17857142857142858,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 700,
+            "references": {
+              "6gb/128gb": 3920
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 700,
+          "form": "pct",
+          "value": 0.17857142857142858,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 700,
+            "references": {
+              "6gb/128gb": 3920
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 700,
+          "form": "pct",
+          "value": 0.17857142857142858,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 700,
+            "references": {
+              "6gb/128gb": 3920
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -10369,22 +10730,46 @@
           "residual": 10
         },
         "panel": {
-          "form": "fixed",
-          "value": 550,
+          "form": "pct",
+          "value": 0.17623678994341116,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 550,
+            "references": {
+              "4gb/128gb": 3070,
+              "6gb/128gb": 3170
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 550,
+          "form": "pct",
+          "value": 0.17623678994341116,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 550,
+            "references": {
+              "4gb/128gb": 3070,
+              "6gb/128gb": 3170
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 550,
+          "form": "pct",
+          "value": 0.17623678994341116,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 550,
+            "references": {
+              "4gb/128gb": 3070,
+              "6gb/128gb": 3170
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -10452,16 +10837,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 1100,
+          "form": "pct",
+          "value": 0.2631578947368421,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1100,
+            "references": {
+              "6gb/128gb": 4180
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 1660,
+          "form": "pct",
+          "value": 0.39712918660287083,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1660,
+            "references": {
+              "6gb/128gb": 4180
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -10512,10 +10911,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 1660,
+          "form": "pct",
+          "value": 0.39712918660287083,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1660,
+            "references": {
+              "6gb/128gb": 4180
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -10626,22 +11032,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 740,
+          "form": "pct",
+          "value": 0.17703349282296652,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 740,
+            "references": {
+              "6gb/128gb": 4180
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 740,
+          "form": "pct",
+          "value": 0.17703349282296652,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 740,
+            "references": {
+              "6gb/128gb": 4180
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 740,
+          "form": "pct",
+          "value": 0.17703349282296652,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 740,
+            "references": {
+              "6gb/128gb": 4180
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -13172,16 +13599,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 1150,
+          "form": "pct",
+          "value": 0.26497695852534564,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1150,
+            "references": {
+              "6gb/128gb": 4340
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 1720,
+          "form": "pct",
+          "value": 0.39631336405529954,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1720,
+            "references": {
+              "6gb/128gb": 4340
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -13232,10 +13673,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 1720,
+          "form": "pct",
+          "value": 0.39631336405529954,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1720,
+            "references": {
+              "6gb/128gb": 4340
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -13346,22 +13794,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 770,
+          "form": "pct",
+          "value": 0.1774193548387097,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 770,
+            "references": {
+              "6gb/128gb": 4340
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 770,
+          "form": "pct",
+          "value": 0.1774193548387097,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 770,
+            "references": {
+              "6gb/128gb": 4340
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 770,
+          "form": "pct",
+          "value": 0.1774193548387097,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 770,
+            "references": {
+              "6gb/128gb": 4340
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -14249,16 +14718,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 360,
+          "form": "pct",
+          "value": 0.2647058823529412,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 360,
+            "references": {
+              "3gb/32gb": 1360
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 540,
+          "form": "pct",
+          "value": 0.39705882352941174,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 540,
+            "references": {
+              "3gb/32gb": 1360
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -14309,10 +14792,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 540,
+          "form": "pct",
+          "value": 0.39705882352941174,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 540,
+            "references": {
+              "3gb/32gb": 1360
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -14411,22 +14901,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 240,
+          "form": "pct",
+          "value": 0.17647058823529413,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 240,
+            "references": {
+              "3gb/32gb": 1360
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 240,
+          "form": "pct",
+          "value": 0.17647058823529413,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 240,
+            "references": {
+              "3gb/32gb": 1360
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 240,
+          "form": "pct",
+          "value": 0.17647058823529413,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 240,
+            "references": {
+              "3gb/32gb": 1360
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -15055,16 +15566,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 1300,
+          "form": "pct",
+          "value": 0.26369168356997974,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1300,
+            "references": {
+              "8gb/128gb": 4930
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 1950,
+          "form": "pct",
+          "value": 0.39553752535496955,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1950,
+            "references": {
+              "8gb/128gb": 4930
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -15115,10 +15640,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 1950,
+          "form": "pct",
+          "value": 0.39553752535496955,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1950,
+            "references": {
+              "8gb/128gb": 4930
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -15229,22 +15761,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 870,
+          "form": "pct",
+          "value": 0.17647058823529413,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 870,
+            "references": {
+              "8gb/128gb": 4930
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 870,
+          "form": "pct",
+          "value": 0.17647058823529413,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 870,
+            "references": {
+              "8gb/128gb": 4930
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 870,
+          "form": "pct",
+          "value": 0.17647058823529413,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 870,
+            "references": {
+              "8gb/128gb": 4930
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -15312,16 +15865,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 610,
+          "form": "pct",
+          "value": 0.2663755458515284,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 610,
+            "references": {
+              "6gb/64gb": 2290
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 910,
+          "form": "pct",
+          "value": 0.39737991266375544,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 910,
+            "references": {
+              "6gb/64gb": 2290
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -15372,10 +15939,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 910,
+          "form": "pct",
+          "value": 0.39737991266375544,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 910,
+            "references": {
+              "6gb/64gb": 2290
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -15486,22 +16060,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 410,
+          "form": "pct",
+          "value": 0.17903930131004367,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 410,
+            "references": {
+              "6gb/64gb": 2290
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 410,
+          "form": "pct",
+          "value": 0.17903930131004367,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 410,
+            "references": {
+              "6gb/64gb": 2290
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 410,
+          "form": "pct",
+          "value": 0.17903930131004367,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 410,
+            "references": {
+              "6gb/64gb": 2290
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -15569,16 +16164,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 470,
+          "form": "pct",
+          "value": 0.2655367231638418,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 470,
+            "references": {
+              "6gb/64gb": 1770
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 700,
+          "form": "pct",
+          "value": 0.3954802259887006,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 700,
+            "references": {
+              "6gb/64gb": 1770
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -15629,10 +16238,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 700,
+          "form": "pct",
+          "value": 0.3954802259887006,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 700,
+            "references": {
+              "6gb/64gb": 1770
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -15743,22 +16359,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 310,
+          "form": "pct",
+          "value": 0.1751412429378531,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 310,
+            "references": {
+              "6gb/64gb": 1770
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 310,
+          "form": "pct",
+          "value": 0.1751412429378531,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 310,
+            "references": {
+              "6gb/64gb": 1770
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 310,
+          "form": "pct",
+          "value": 0.1751412429378531,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 310,
+            "references": {
+              "6gb/64gb": 1770
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -16090,16 +16727,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 380,
+          "form": "pct",
+          "value": 0.26573426573426573,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 380,
+            "references": {
+              "4gb/32gb": 1430
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 570,
+          "form": "pct",
+          "value": 0.3986013986013986,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 570,
+            "references": {
+              "4gb/32gb": 1430
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -16150,10 +16801,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 570,
+          "form": "pct",
+          "value": 0.3986013986013986,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 570,
+            "references": {
+              "4gb/32gb": 1430
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -16246,22 +16904,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 250,
+          "form": "pct",
+          "value": 0.17482517482517482,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 250,
+            "references": {
+              "4gb/32gb": 1430
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 250,
+          "form": "pct",
+          "value": 0.17482517482517482,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 250,
+            "references": {
+              "4gb/32gb": 1430
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 250,
+          "form": "pct",
+          "value": 0.17482517482517482,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 250,
+            "references": {
+              "4gb/32gb": 1430
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -16336,16 +17015,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 540,
+          "form": "pct",
+          "value": 0.2660098522167488,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 540,
+            "references": {
+              "4gb/64gb": 2030
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 800,
+          "form": "pct",
+          "value": 0.39408866995073893,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 800,
+            "references": {
+              "4gb/64gb": 2030
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -16396,10 +17089,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 800,
+          "form": "pct",
+          "value": 0.39408866995073893,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 800,
+            "references": {
+              "4gb/64gb": 2030
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -16510,22 +17210,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 360,
+          "form": "pct",
+          "value": 0.17733990147783252,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 360,
+            "references": {
+              "4gb/64gb": 2030
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 360,
+          "form": "pct",
+          "value": 0.17733990147783252,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 360,
+            "references": {
+              "4gb/64gb": 2030
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 360,
+          "form": "pct",
+          "value": 0.17733990147783252,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 360,
+            "references": {
+              "4gb/64gb": 2030
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -16593,16 +17314,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 560,
+          "form": "pct",
+          "value": 0.26666666666666666,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 560,
+            "references": {
+              "4gb/64gb": 2100
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 830,
+          "form": "pct",
+          "value": 0.3952380952380952,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 830,
+            "references": {
+              "4gb/64gb": 2100
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -16653,10 +17388,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 830,
+          "form": "pct",
+          "value": 0.3952380952380952,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 830,
+            "references": {
+              "4gb/64gb": 2100
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -16767,22 +17509,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 370,
+          "form": "pct",
+          "value": 0.1761904761904762,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 370,
+            "references": {
+              "4gb/64gb": 2100
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 370,
+          "form": "pct",
+          "value": 0.1761904761904762,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 370,
+            "references": {
+              "4gb/64gb": 2100
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 370,
+          "form": "pct",
+          "value": 0.1761904761904762,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 370,
+            "references": {
+              "4gb/64gb": 2100
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -16850,16 +17613,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 570,
+          "form": "pct",
+          "value": 0.26635514018691586,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 570,
+            "references": {
+              "6gb/64gb": 2140
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 850,
+          "form": "pct",
+          "value": 0.397196261682243,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 850,
+            "references": {
+              "6gb/64gb": 2140
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -16910,10 +17687,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 850,
+          "form": "pct",
+          "value": 0.397196261682243,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 850,
+            "references": {
+              "6gb/64gb": 2140
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -17024,22 +17808,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 380,
+          "form": "pct",
+          "value": 0.17757009345794392,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 380,
+            "references": {
+              "6gb/64gb": 2140
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 380,
+          "form": "pct",
+          "value": 0.17757009345794392,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 380,
+            "references": {
+              "6gb/64gb": 2140
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 380,
+          "form": "pct",
+          "value": 0.17757009345794392,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 380,
+            "references": {
+              "6gb/64gb": 2140
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -17377,10 +18182,17 @@
           "residual": 0
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 1250,
+          "form": "pct",
+          "value": 0.39556962025316456,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1250,
+            "references": {
+              "4gb/64gb": 3160
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -17431,10 +18243,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 1250,
+          "form": "pct",
+          "value": 0.39556962025316456,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1250,
+            "references": {
+              "4gb/64gb": 3160
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -17545,22 +18364,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 560,
+          "form": "pct",
+          "value": 0.17721518987341772,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 560,
+            "references": {
+              "4gb/64gb": 3160
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 560,
+          "form": "pct",
+          "value": 0.17721518987341772,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 560,
+            "references": {
+              "4gb/64gb": 3160
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 560,
+          "form": "pct",
+          "value": 0.17721518987341772,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 560,
+            "references": {
+              "4gb/64gb": 3160
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -17609,22 +18449,43 @@
       },
       "rules": {
         "age:above11": {
-          "form": "fixed",
-          "value": 1100,
+          "form": "pct",
+          "value": 0.24336283185840707,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1100,
+            "references": {
+              "4gb/64gb": 4520
+            }
+          }
         },
         "age:3to6": {
-          "form": "fixed",
-          "value": 510,
+          "form": "pct",
+          "value": 0.11283185840707964,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 510,
+            "references": {
+              "4gb/64gb": 4520
+            }
+          }
         },
         "age:6to11": {
-          "form": "fixed",
-          "value": 630,
+          "form": "pct",
+          "value": 0.13938053097345132,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 630,
+            "references": {
+              "4gb/64gb": 4520
+            }
+          }
         },
         "hardware:front_camera": {
           "form": "fixed",
@@ -17651,10 +18512,17 @@
           "residual": 0
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 1360,
+          "form": "pct",
+          "value": 0.3008849557522124,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1360,
+            "references": {
+              "4gb/64gb": 4520
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -17705,10 +18573,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 1360,
+          "form": "pct",
+          "value": 0.3008849557522124,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1360,
+            "references": {
+              "4gb/64gb": 4520
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -17795,10 +18670,17 @@
           "residual": 0
         },
         "scratch:0": {
-          "form": "fixed",
-          "value": 540,
+          "form": "pct",
+          "value": 0.11946902654867257,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 540,
+            "references": {
+              "4gb/64gb": 4520
+            }
+          }
         },
         "scratch:1": {
           "form": "fixed",
@@ -17807,34 +18689,69 @@
           "residual": 0
         },
         "dent:0": {
-          "form": "fixed",
-          "value": 720,
+          "form": "pct",
+          "value": 0.1592920353982301,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 720,
+            "references": {
+              "4gb/64gb": 4520
+            }
+          }
         },
         "dent:1": {
-          "form": "fixed",
-          "value": 540,
+          "form": "pct",
+          "value": 0.11946902654867257,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 540,
+            "references": {
+              "4gb/64gb": 4520
+            }
+          }
         },
         "panel": {
-          "form": "fixed",
-          "value": 600,
+          "form": "pct",
+          "value": 0.13274336283185842,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 600,
+            "references": {
+              "4gb/64gb": 4520
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 600,
+          "form": "pct",
+          "value": 0.13274336283185842,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 600,
+            "references": {
+              "4gb/64gb": 4520
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 1040,
+          "form": "pct",
+          "value": 0.23008849557522124,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1040,
+            "references": {
+              "4gb/64gb": 4520
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -18146,22 +19063,43 @@
       },
       "rules": {
         "age:above11": {
-          "form": "fixed",
-          "value": 1320,
+          "form": "pct",
+          "value": 0.24220183486238533,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1320,
+            "references": {
+              "4gb/64gb": 5450
+            }
+          }
         },
         "age:3to6": {
-          "form": "fixed",
-          "value": 610,
+          "form": "pct",
+          "value": 0.11192660550458716,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 610,
+            "references": {
+              "4gb/64gb": 5450
+            }
+          }
         },
         "age:6to11": {
-          "form": "fixed",
-          "value": 760,
+          "form": "pct",
+          "value": 0.13944954128440368,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 760,
+            "references": {
+              "4gb/64gb": 5450
+            }
+          }
         },
         "hardware:front_camera": {
           "form": "fixed",
@@ -18182,16 +19120,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 1090,
+          "form": "pct",
+          "value": 0.2,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1090,
+            "references": {
+              "4gb/64gb": 5450
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 1640,
+          "form": "pct",
+          "value": 0.30091743119266057,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1640,
+            "references": {
+              "4gb/64gb": 5450
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -18242,10 +19194,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 1640,
+          "form": "pct",
+          "value": 0.30091743119266057,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1640,
+            "references": {
+              "4gb/64gb": 5450
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -18332,10 +19291,17 @@
           "residual": 0
         },
         "scratch:0": {
-          "form": "fixed",
-          "value": 650,
+          "form": "pct",
+          "value": 0.11926605504587157,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 650,
+            "references": {
+              "4gb/64gb": 5450
+            }
+          }
         },
         "scratch:1": {
           "form": "fixed",
@@ -18344,34 +19310,69 @@
           "residual": 0
         },
         "dent:0": {
-          "form": "fixed",
-          "value": 870,
+          "form": "pct",
+          "value": 0.1596330275229358,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 870,
+            "references": {
+              "4gb/64gb": 5450
+            }
+          }
         },
         "dent:1": {
-          "form": "fixed",
-          "value": 650,
+          "form": "pct",
+          "value": 0.11926605504587157,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 650,
+            "references": {
+              "4gb/64gb": 5450
+            }
+          }
         },
         "panel": {
-          "form": "fixed",
-          "value": 730,
+          "form": "pct",
+          "value": 0.13394495412844037,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 730,
+            "references": {
+              "4gb/64gb": 5450
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 730,
+          "form": "pct",
+          "value": 0.13394495412844037,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 730,
+            "references": {
+              "4gb/64gb": 5450
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 1250,
+          "form": "pct",
+          "value": 0.22935779816513763,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1250,
+            "references": {
+              "4gb/64gb": 5450
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -18937,22 +19938,43 @@
       },
       "rules": {
         "age:above11": {
-          "form": "fixed",
-          "value": 1180,
+          "form": "pct",
+          "value": 0.22648752399232247,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1180,
+            "references": {
+              "4gb/64gb": 5210
+            }
+          }
         },
         "age:3to6": {
-          "form": "fixed",
-          "value": 490,
+          "form": "pct",
+          "value": 0.09404990403071017,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 490,
+            "references": {
+              "4gb/64gb": 5210
+            }
+          }
         },
         "age:6to11": {
-          "form": "fixed",
-          "value": 630,
+          "form": "pct",
+          "value": 0.12092130518234165,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 630,
+            "references": {
+              "4gb/64gb": 5210
+            }
+          }
         },
         "hardware:front_camera": {
           "form": "fixed",
@@ -18973,16 +19995,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 1060,
+          "form": "pct",
+          "value": 0.2034548944337812,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1060,
+            "references": {
+              "4gb/64gb": 5210
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 1590,
+          "form": "pct",
+          "value": 0.30518234165067176,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1590,
+            "references": {
+              "4gb/64gb": 5210
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -19033,10 +20069,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 1590,
+          "form": "pct",
+          "value": 0.30518234165067176,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1590,
+            "references": {
+              "4gb/64gb": 5210
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -19123,10 +20166,17 @@
           "residual": 0
         },
         "scratch:0": {
-          "form": "fixed",
-          "value": 620,
+          "form": "pct",
+          "value": 0.11900191938579655,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 620,
+            "references": {
+              "4gb/64gb": 5210
+            }
+          }
         },
         "scratch:1": {
           "form": "fixed",
@@ -19135,34 +20185,69 @@
           "residual": 0
         },
         "dent:0": {
-          "form": "fixed",
-          "value": 830,
+          "form": "pct",
+          "value": 0.15930902111324377,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 830,
+            "references": {
+              "4gb/64gb": 5210
+            }
+          }
         },
         "dent:1": {
-          "form": "fixed",
-          "value": 620,
+          "form": "pct",
+          "value": 0.11900191938579655,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 620,
+            "references": {
+              "4gb/64gb": 5210
+            }
+          }
         },
         "panel": {
-          "form": "fixed",
-          "value": 710,
+          "form": "pct",
+          "value": 0.1362763915547025,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 710,
+            "references": {
+              "4gb/64gb": 5210
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 710,
+          "form": "pct",
+          "value": 0.1362763915547025,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 710,
+            "references": {
+              "4gb/64gb": 5210
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 1200,
+          "form": "pct",
+          "value": 0.23032629558541268,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1200,
+            "references": {
+              "4gb/64gb": 5210
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -19223,10 +20308,18 @@
           "residual": 0
         },
         "age:3to6": {
-          "form": "fixed",
-          "value": 640,
+          "form": "pct",
+          "value": 0.08457704055473986,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 640,
+            "references": {
+              "4gb/128gb": 7440,
+              "6gb/128gb": 7690
+            }
+          }
         },
         "age:6to11": {
           "form": "pct",
@@ -20983,10 +22076,18 @@
           "residual": 10
         },
         "age:3to6": {
-          "form": "fixed",
-          "value": 630,
+          "form": "pct",
+          "value": 0.06348941893812483,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 630,
+            "references": {
+              "6gb/128gb": 9750,
+              "8gb/128gb": 10090
+            }
+          }
         },
         "age:6to11": {
           "form": "fixed",
@@ -21163,10 +22264,18 @@
           "residual": 0
         },
         "scratch:0": {
-          "form": "fixed",
-          "value": 660,
+          "form": "pct",
+          "value": 0.06651272460184507,
           "support": 2,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 660,
+            "references": {
+              "6gb/128gb": 9750,
+              "8gb/128gb": 10090
+            }
+          }
         },
         "scratch:1": {
           "form": "fixed",
@@ -21175,28 +22284,60 @@
           "residual": 0
         },
         "dent:0": {
-          "form": "fixed",
-          "value": 750,
+          "form": "pct",
+          "value": 0.07558264159300576,
           "support": 2,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 750,
+            "references": {
+              "6gb/128gb": 9750,
+              "8gb/128gb": 10090
+            }
+          }
         },
         "dent:1": {
-          "form": "fixed",
-          "value": 660,
+          "form": "pct",
+          "value": 0.06651272460184507,
           "support": 2,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 660,
+            "references": {
+              "6gb/128gb": 9750,
+              "8gb/128gb": 10090
+            }
+          }
         },
         "panel": {
-          "form": "fixed",
-          "value": 780,
+          "form": "pct",
+          "value": 0.078605947256726,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 780,
+            "references": {
+              "6gb/128gb": 9750,
+              "8gb/128gb": 10090
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 780,
+          "form": "pct",
+          "value": 0.078605947256726,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 780,
+            "references": {
+              "6gb/128gb": 9750,
+              "8gb/128gb": 10090
+            }
+          }
         },
         "loose": {
           "form": "fixed",
@@ -22053,22 +23194,43 @@
       },
       "rules": {
         "age:above11": {
-          "form": "fixed",
-          "value": 2330,
+          "form": "pct",
+          "value": 0.20896860986547086,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 2330,
+            "references": {
+              "8gb/256gb": 11150
+            }
+          }
         },
         "age:3to6": {
-          "form": "fixed",
-          "value": 720,
+          "form": "pct",
+          "value": 0.06457399103139014,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 720,
+            "references": {
+              "8gb/256gb": 11150
+            }
+          }
         },
         "age:6to11": {
-          "form": "fixed",
-          "value": 1060,
+          "form": "pct",
+          "value": 0.09506726457399103,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1060,
+            "references": {
+              "8gb/256gb": 11150
+            }
+          }
         },
         "hardware:front_camera": {
           "form": "fixed",
@@ -22089,16 +23251,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 2300,
+          "form": "pct",
+          "value": 0.2062780269058296,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 2300,
+            "references": {
+              "8gb/256gb": 11150
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 3450,
+          "form": "pct",
+          "value": 0.3094170403587444,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 3450,
+            "references": {
+              "8gb/256gb": 11150
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -22149,10 +23325,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 3450,
+          "form": "pct",
+          "value": 0.3094170403587444,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 3450,
+            "references": {
+              "8gb/256gb": 11150
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -22239,10 +23422,17 @@
           "residual": 0
         },
         "scratch:0": {
-          "form": "fixed",
-          "value": 770,
+          "form": "pct",
+          "value": 0.06905829596412556,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 770,
+            "references": {
+              "8gb/256gb": 11150
+            }
+          }
         },
         "scratch:1": {
           "form": "fixed",
@@ -22251,34 +23441,69 @@
           "residual": 0
         },
         "dent:0": {
-          "form": "fixed",
-          "value": 860,
+          "form": "pct",
+          "value": 0.07713004484304933,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 860,
+            "references": {
+              "8gb/256gb": 11150
+            }
+          }
         },
         "dent:1": {
-          "form": "fixed",
-          "value": 770,
+          "form": "pct",
+          "value": 0.06905829596412556,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 770,
+            "references": {
+              "8gb/256gb": 11150
+            }
+          }
         },
         "panel": {
-          "form": "fixed",
-          "value": 910,
+          "form": "pct",
+          "value": 0.08161434977578476,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 910,
+            "references": {
+              "8gb/256gb": 11150
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 910,
+          "form": "pct",
+          "value": 0.08161434977578476,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 910,
+            "references": {
+              "8gb/256gb": 11150
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 1400,
+          "form": "pct",
+          "value": 0.12556053811659193,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1400,
+            "references": {
+              "8gb/256gb": 11150
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -23674,16 +24899,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 3380,
+          "form": "pct",
+          "value": 0.26593233674272226,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 3380,
+            "references": {
+              "12gb/512gb": 12710
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 5070,
+          "form": "pct",
+          "value": 0.3988985051140834,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 5070,
+            "references": {
+              "12gb/512gb": 12710
+            }
+          }
         },
         "hardware:speaker": {
           "form": "fixed",
@@ -23734,10 +24973,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 5070,
+          "form": "pct",
+          "value": 0.3988985051140834,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 5070,
+            "references": {
+              "12gb/512gb": 12710
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -23854,22 +25100,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 1820,
+          "form": "pct",
+          "value": 0.14319433516915814,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1820,
+            "references": {
+              "12gb/512gb": 12710
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 1820,
+          "form": "pct",
+          "value": 0.14319433516915814,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1820,
+            "references": {
+              "12gb/512gb": 12710
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 1820,
+          "form": "pct",
+          "value": 0.14319433516915814,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1820,
+            "references": {
+              "12gb/512gb": 12710
+            }
+          }
         },
         "box": {
           "form": "fixed",
@@ -23896,10 +25163,17 @@
           "residual": 0
         },
         "hardware:hinge": {
-          "form": "fixed",
-          "value": 2740,
+          "form": "pct",
+          "value": 0.2155782848151062,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 2740,
+            "references": {
+              "12gb/512gb": 12710
+            }
+          }
         }
       },
       "noOffer": {
@@ -24125,22 +25399,46 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 280,
+          "form": "pct",
+          "value": 0.178163248763881,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 280,
+            "references": {
+              "3gb/32gb": 1520,
+              "4gb/64gb": 1620
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 280,
+          "form": "pct",
+          "value": 0.178163248763881,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 280,
+            "references": {
+              "3gb/32gb": 1520,
+              "4gb/64gb": 1620
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 280,
+          "form": "pct",
+          "value": 0.178163248763881,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 280,
+            "references": {
+              "3gb/32gb": 1520,
+              "4gb/64gb": 1620
+            }
+          }
         },
         "touch": {
           "form": "pct",
@@ -24208,16 +25506,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 500,
+          "form": "pct",
+          "value": 0.26595744680851063,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 500,
+            "references": {
+              "4gb/64gb": 1880
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 750,
+          "form": "pct",
+          "value": 0.39893617021276595,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 750,
+            "references": {
+              "4gb/64gb": 1880
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -24268,10 +25580,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 750,
+          "form": "pct",
+          "value": 0.39893617021276595,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 750,
+            "references": {
+              "4gb/64gb": 1880
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -24382,22 +25701,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 330,
+          "form": "pct",
+          "value": 0.17553191489361702,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 330,
+            "references": {
+              "4gb/64gb": 1880
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 330,
+          "form": "pct",
+          "value": 0.17553191489361702,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 330,
+            "references": {
+              "4gb/64gb": 1880
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 330,
+          "form": "pct",
+          "value": 0.17553191489361702,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 330,
+            "references": {
+              "4gb/64gb": 1880
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -24465,16 +25805,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 360,
+          "form": "pct",
+          "value": 0.2647058823529412,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 360,
+            "references": {
+              "4gb/32gb": 1360
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 540,
+          "form": "pct",
+          "value": 0.39705882352941174,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 540,
+            "references": {
+              "4gb/32gb": 1360
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -24525,10 +25879,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 540,
+          "form": "pct",
+          "value": 0.39705882352941174,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 540,
+            "references": {
+              "4gb/32gb": 1360
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -24633,22 +25994,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 240,
+          "form": "pct",
+          "value": 0.17647058823529413,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 240,
+            "references": {
+              "4gb/32gb": 1360
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 240,
+          "form": "pct",
+          "value": 0.17647058823529413,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 240,
+            "references": {
+              "4gb/32gb": 1360
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 240,
+          "form": "pct",
+          "value": 0.17647058823529413,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 240,
+            "references": {
+              "4gb/32gb": 1360
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -24720,16 +26102,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 380,
+          "form": "pct",
+          "value": 0.26573426573426573,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 380,
+            "references": {
+              "4gb/32gb": 1430
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 570,
+          "form": "pct",
+          "value": 0.3986013986013986,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 570,
+            "references": {
+              "4gb/32gb": 1430
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -24780,10 +26176,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 570,
+          "form": "pct",
+          "value": 0.3986013986013986,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 570,
+            "references": {
+              "4gb/32gb": 1430
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -24894,22 +26297,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 250,
+          "form": "pct",
+          "value": 0.17482517482517482,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 250,
+            "references": {
+              "4gb/32gb": 1430
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 250,
+          "form": "pct",
+          "value": 0.17482517482517482,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 250,
+            "references": {
+              "4gb/32gb": 1430
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 250,
+          "form": "pct",
+          "value": 0.17482517482517482,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 250,
+            "references": {
+              "4gb/32gb": 1430
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -25553,16 +26977,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 600,
+          "form": "pct",
+          "value": 0.26548672566371684,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 600,
+            "references": {
+              "4gb/64gb": 2260
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 900,
+          "form": "pct",
+          "value": 0.39823008849557523,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 900,
+            "references": {
+              "4gb/64gb": 2260
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -25613,10 +27051,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 900,
+          "form": "pct",
+          "value": 0.39823008849557523,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 900,
+            "references": {
+              "4gb/64gb": 2260
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -25727,22 +27172,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 400,
+          "form": "pct",
+          "value": 0.17699115044247787,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 400,
+            "references": {
+              "4gb/64gb": 2260
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 400,
+          "form": "pct",
+          "value": 0.17699115044247787,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 400,
+            "references": {
+              "4gb/64gb": 2260
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 400,
+          "form": "pct",
+          "value": 0.17699115044247787,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 400,
+            "references": {
+              "4gb/64gb": 2260
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -25816,10 +27282,17 @@
           "residual": 0
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 900,
+          "form": "pct",
+          "value": 0.3930131004366812,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 900,
+            "references": {
+              "3gb/32gb": 2290
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -25870,10 +27343,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 900,
+          "form": "pct",
+          "value": 0.3930131004366812,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 900,
+            "references": {
+              "3gb/32gb": 2290
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -25984,22 +27464,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 400,
+          "form": "pct",
+          "value": 0.17467248908296942,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 400,
+            "references": {
+              "3gb/32gb": 2290
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 400,
+          "form": "pct",
+          "value": 0.17467248908296942,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 400,
+            "references": {
+              "3gb/32gb": 2290
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 400,
+          "form": "pct",
+          "value": 0.17467248908296942,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 400,
+            "references": {
+              "3gb/32gb": 2290
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -26367,16 +27868,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 560,
+          "form": "pct",
+          "value": 0.2616822429906542,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 560,
+            "references": {
+              "3gb/32gb": 2140
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 850,
+          "form": "pct",
+          "value": 0.397196261682243,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 850,
+            "references": {
+              "3gb/32gb": 2140
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -26427,10 +27942,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 850,
+          "form": "pct",
+          "value": 0.397196261682243,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 850,
+            "references": {
+              "3gb/32gb": 2140
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -26541,22 +28063,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 370,
+          "form": "pct",
+          "value": 0.17289719626168223,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 370,
+            "references": {
+              "3gb/32gb": 2140
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 370,
+          "form": "pct",
+          "value": 0.17289719626168223,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 370,
+            "references": {
+              "3gb/32gb": 2140
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 370,
+          "form": "pct",
+          "value": 0.17289719626168223,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 370,
+            "references": {
+              "3gb/32gb": 2140
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -27345,22 +28888,46 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 660,
+          "form": "pct",
+          "value": 0.17665332564164118,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 660,
+            "references": {
+              "4gb/64gb": 3670,
+              "4gb/128gb": 3800
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 660,
+          "form": "pct",
+          "value": 0.17665332564164118,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 660,
+            "references": {
+              "4gb/64gb": 3670,
+              "4gb/128gb": 3800
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 660,
+          "form": "pct",
+          "value": 0.17665332564164118,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 660,
+            "references": {
+              "4gb/64gb": 3670,
+              "4gb/128gb": 3800
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -27410,22 +28977,43 @@
       },
       "rules": {
         "age:above11": {
-          "form": "fixed",
-          "value": 1090,
+          "form": "pct",
+          "value": 0.22614107883817428,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1090,
+            "references": {
+              "4gb/64gb": 4820
+            }
+          }
         },
         "age:3to6": {
-          "form": "fixed",
-          "value": 450,
+          "form": "pct",
+          "value": 0.09336099585062241,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 450,
+            "references": {
+              "4gb/64gb": 4820
+            }
+          }
         },
         "age:6to11": {
-          "form": "fixed",
-          "value": 590,
+          "form": "pct",
+          "value": 0.12240663900414937,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 590,
+            "references": {
+              "4gb/64gb": 4820
+            }
+          }
         },
         "hardware:front_camera": {
           "form": "fixed",
@@ -27452,10 +29040,17 @@
           "residual": 0
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 1480,
+          "form": "pct",
+          "value": 0.3070539419087137,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1480,
+            "references": {
+              "4gb/64gb": 4820
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -27506,10 +29101,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 1480,
+          "form": "pct",
+          "value": 0.3070539419087137,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1480,
+            "references": {
+              "4gb/64gb": 4820
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -27596,10 +29198,17 @@
           "residual": 0
         },
         "scratch:0": {
-          "form": "fixed",
-          "value": 580,
+          "form": "pct",
+          "value": 0.12033195020746888,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 580,
+            "references": {
+              "4gb/64gb": 4820
+            }
+          }
         },
         "scratch:1": {
           "form": "fixed",
@@ -27608,34 +29217,69 @@
           "residual": 0
         },
         "dent:0": {
-          "form": "fixed",
-          "value": 770,
+          "form": "pct",
+          "value": 0.15975103734439833,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 770,
+            "references": {
+              "4gb/64gb": 4820
+            }
+          }
         },
         "dent:1": {
-          "form": "fixed",
-          "value": 580,
+          "form": "pct",
+          "value": 0.12033195020746888,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 580,
+            "references": {
+              "4gb/64gb": 4820
+            }
+          }
         },
         "panel": {
-          "form": "fixed",
-          "value": 660,
+          "form": "pct",
+          "value": 0.13692946058091288,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 660,
+            "references": {
+              "4gb/64gb": 4820
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 660,
+          "form": "pct",
+          "value": 0.13692946058091288,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 660,
+            "references": {
+              "4gb/64gb": 4820
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 1110,
+          "form": "pct",
+          "value": 0.23029045643153526,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1110,
+            "references": {
+              "4gb/64gb": 4820
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -27972,22 +29616,43 @@
       },
       "rules": {
         "age:above11": {
-          "form": "fixed",
-          "value": 1170,
+          "form": "pct",
+          "value": 0.24273858921161826,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1170,
+            "references": {
+              "4gb/64gb": 4820
+            }
+          }
         },
         "age:3to6": {
-          "form": "fixed",
-          "value": 540,
+          "form": "pct",
+          "value": 0.11203319502074689,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 540,
+            "references": {
+              "4gb/64gb": 4820
+            }
+          }
         },
         "age:6to11": {
-          "form": "fixed",
-          "value": 670,
+          "form": "pct",
+          "value": 0.13900414937759337,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 670,
+            "references": {
+              "4gb/64gb": 4820
+            }
+          }
         },
         "hardware:front_camera": {
           "form": "fixed",
@@ -28008,16 +29673,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 960,
+          "form": "pct",
+          "value": 0.1991701244813278,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 960,
+            "references": {
+              "4gb/64gb": 4820
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 1450,
+          "form": "pct",
+          "value": 0.3008298755186722,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1450,
+            "references": {
+              "4gb/64gb": 4820
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -28068,10 +29747,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 1450,
+          "form": "pct",
+          "value": 0.3008298755186722,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1450,
+            "references": {
+              "4gb/64gb": 4820
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -28158,10 +29844,17 @@
           "residual": 0
         },
         "scratch:0": {
-          "form": "fixed",
-          "value": 580,
+          "form": "pct",
+          "value": 0.12033195020746888,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 580,
+            "references": {
+              "4gb/64gb": 4820
+            }
+          }
         },
         "scratch:1": {
           "form": "fixed",
@@ -28170,34 +29863,69 @@
           "residual": 0
         },
         "dent:0": {
-          "form": "fixed",
-          "value": 770,
+          "form": "pct",
+          "value": 0.15975103734439833,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 770,
+            "references": {
+              "4gb/64gb": 4820
+            }
+          }
         },
         "dent:1": {
-          "form": "fixed",
-          "value": 580,
+          "form": "pct",
+          "value": 0.12033195020746888,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 580,
+            "references": {
+              "4gb/64gb": 4820
+            }
+          }
         },
         "panel": {
-          "form": "fixed",
-          "value": 640,
+          "form": "pct",
+          "value": 0.13278008298755187,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 640,
+            "references": {
+              "4gb/64gb": 4820
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 640,
+          "form": "pct",
+          "value": 0.13278008298755187,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 640,
+            "references": {
+              "4gb/64gb": 4820
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 1110,
+          "form": "pct",
+          "value": 0.23029045643153526,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1110,
+            "references": {
+              "4gb/64gb": 4820
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -28265,16 +29993,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 630,
+          "form": "pct",
+          "value": 0.26359832635983266,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 630,
+            "references": {
+              "3gb/32gb": 2390
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 950,
+          "form": "pct",
+          "value": 0.39748953974895396,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 950,
+            "references": {
+              "3gb/32gb": 2390
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -28325,10 +30067,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 950,
+          "form": "pct",
+          "value": 0.39748953974895396,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 950,
+            "references": {
+              "3gb/32gb": 2390
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -28439,22 +30188,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 430,
+          "form": "pct",
+          "value": 0.1799163179916318,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 430,
+            "references": {
+              "3gb/32gb": 2390
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 430,
+          "form": "pct",
+          "value": 0.1799163179916318,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 430,
+            "references": {
+              "3gb/32gb": 2390
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 430,
+          "form": "pct",
+          "value": 0.1799163179916318,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 430,
+            "references": {
+              "3gb/32gb": 2390
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -29847,16 +31617,32 @@
           "residual": 10
         },
         "age:3to6": {
-          "form": "fixed",
-          "value": 520,
+          "form": "pct",
+          "value": 0.06551057588879936,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 520,
+            "references": {
+              "4gb/128gb": 7790,
+              "6gb/128gb": 8080
+            }
+          }
         },
         "age:6to11": {
-          "form": "fixed",
-          "value": 760,
+          "form": "pct",
+          "value": 0.09574622629901446,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 760,
+            "references": {
+              "4gb/128gb": 7790,
+              "6gb/128gb": 8080
+            }
+          }
         },
         "hardware:front_camera": {
           "form": "fixed",
@@ -30027,10 +31813,18 @@
           "residual": 0
         },
         "scratch:0": {
-          "form": "fixed",
-          "value": 550,
+          "form": "pct",
+          "value": 0.06929003219007625,
           "support": 2,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 550,
+            "references": {
+              "4gb/128gb": 7790,
+              "6gb/128gb": 8080
+            }
+          }
         },
         "scratch:1": {
           "form": "fixed",
@@ -30039,28 +31833,60 @@
           "residual": 0
         },
         "dent:0": {
-          "form": "fixed",
-          "value": 620,
+          "form": "pct",
+          "value": 0.07810876355972232,
           "support": 2,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 620,
+            "references": {
+              "4gb/128gb": 7790,
+              "6gb/128gb": 8080
+            }
+          }
         },
         "dent:1": {
-          "form": "fixed",
-          "value": 550,
+          "form": "pct",
+          "value": 0.06929003219007625,
           "support": 2,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 550,
+            "references": {
+              "4gb/128gb": 7790,
+              "6gb/128gb": 8080
+            }
+          }
         },
         "panel": {
-          "form": "fixed",
-          "value": 650,
+          "form": "pct",
+          "value": 0.0818882198609992,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 650,
+            "references": {
+              "4gb/128gb": 7790,
+              "6gb/128gb": 8080
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 650,
+          "form": "pct",
+          "value": 0.0818882198609992,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 650,
+            "references": {
+              "4gb/128gb": 7790,
+              "6gb/128gb": 8080
+            }
+          }
         },
         "loose": {
           "form": "fixed",
@@ -34378,22 +36204,46 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 720,
+          "form": "pct",
+          "value": 0.10139557762950151,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 720,
+            "references": {
+              "6gb/128gb": 7020,
+              "8gb/128gb": 7180
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 720,
+          "form": "pct",
+          "value": 0.10139557762950151,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 720,
+            "references": {
+              "6gb/128gb": 7020,
+              "8gb/128gb": 7180
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 720,
+          "form": "pct",
+          "value": 0.10139557762950151,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 720,
+            "references": {
+              "6gb/128gb": 7020,
+              "8gb/128gb": 7180
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -35308,16 +37158,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 910,
+          "form": "pct",
+          "value": 0.2653061224489796,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 910,
+            "references": {
+              "6gb/128gb": 3430
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 1360,
+          "form": "pct",
+          "value": 0.3965014577259475,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1360,
+            "references": {
+              "6gb/128gb": 3430
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -35368,10 +37232,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 1360,
+          "form": "pct",
+          "value": 0.3965014577259475,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1360,
+            "references": {
+              "6gb/128gb": 3430
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -35482,22 +37353,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 600,
+          "form": "pct",
+          "value": 0.1749271137026239,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 600,
+            "references": {
+              "6gb/128gb": 3430
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 600,
+          "form": "pct",
+          "value": 0.1749271137026239,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 600,
+            "references": {
+              "6gb/128gb": 3430
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 600,
+          "form": "pct",
+          "value": 0.1749271137026239,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 600,
+            "references": {
+              "6gb/128gb": 3430
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -35565,16 +37457,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 1780,
+          "form": "pct",
+          "value": 0.26253687315634217,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1780,
+            "references": {
+              "6gb/128gb": 6780
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 2670,
+          "form": "pct",
+          "value": 0.3938053097345133,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 2670,
+            "references": {
+              "6gb/128gb": 6780
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -35625,10 +37531,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 2670,
+          "form": "pct",
+          "value": 0.3938053097345133,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 2670,
+            "references": {
+              "6gb/128gb": 6780
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -35739,22 +37652,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 780,
+          "form": "pct",
+          "value": 0.11504424778761062,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 780,
+            "references": {
+              "6gb/128gb": 6780
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 780,
+          "form": "pct",
+          "value": 0.11504424778761062,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 780,
+            "references": {
+              "6gb/128gb": 6780
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 780,
+          "form": "pct",
+          "value": 0.11504424778761062,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 780,
+            "references": {
+              "6gb/128gb": 6780
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -36553,22 +38487,46 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 850,
+          "form": "pct",
+          "value": 0.11000355998576006,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 850,
+            "references": {
+              "6gb/128gb": 7600,
+              "8gb/128gb": 7850
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 850,
+          "form": "pct",
+          "value": 0.11000355998576006,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 850,
+            "references": {
+              "6gb/128gb": 7600,
+              "8gb/128gb": 7850
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 850,
+          "form": "pct",
+          "value": 0.11000355998576006,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 850,
+            "references": {
+              "6gb/128gb": 7600,
+              "8gb/128gb": 7850
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -36817,22 +38775,46 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 850,
+          "form": "pct",
+          "value": 0.09807537765728314,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 850,
+            "references": {
+              "6gb/128gb": 8540,
+              "8gb/128gb": 8790
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 850,
+          "form": "pct",
+          "value": 0.09807537765728314,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 850,
+            "references": {
+              "6gb/128gb": 8540,
+              "8gb/128gb": 8790
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 850,
+          "form": "pct",
+          "value": 0.09807537765728314,
           "support": 2,
-          "residual": 10
+          "residual": 10,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 850,
+            "references": {
+              "6gb/128gb": 8540,
+              "8gb/128gb": 8790
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -37777,16 +39759,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 2370,
+          "form": "pct",
+          "value": 0.26421404682274247,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 2370,
+            "references": {
+              "8gb/256gb": 8970
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 3550,
+          "form": "pct",
+          "value": 0.3957636566332218,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 3550,
+            "references": {
+              "8gb/256gb": 8970
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -37837,10 +39833,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 3550,
+          "form": "pct",
+          "value": 0.3957636566332218,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 3550,
+            "references": {
+              "8gb/256gb": 8970
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -37939,22 +39942,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 1590,
+          "form": "pct",
+          "value": 0.17725752508361203,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1590,
+            "references": {
+              "8gb/256gb": 8970
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 1590,
+          "form": "pct",
+          "value": 0.17725752508361203,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1590,
+            "references": {
+              "8gb/256gb": 8970
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 1590,
+          "form": "pct",
+          "value": 0.17725752508361203,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1590,
+            "references": {
+              "8gb/256gb": 8970
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -38579,16 +40603,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 2830,
+          "form": "pct",
+          "value": 0.264733395696913,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 2830,
+            "references": {
+              "12gb/512gb": 10690
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 4240,
+          "form": "pct",
+          "value": 0.39663236669784846,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 4240,
+            "references": {
+              "12gb/512gb": 10690
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -38639,10 +40677,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 4240,
+          "form": "pct",
+          "value": 0.39663236669784846,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 4240,
+            "references": {
+              "12gb/512gb": 10690
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -38747,22 +40792,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 1890,
+          "form": "pct",
+          "value": 0.17680074836295603,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1890,
+            "references": {
+              "12gb/512gb": 10690
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 1890,
+          "form": "pct",
+          "value": 0.17680074836295603,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1890,
+            "references": {
+              "12gb/512gb": 10690
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 1890,
+          "form": "pct",
+          "value": 0.17680074836295603,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1890,
+            "references": {
+              "12gb/512gb": 10690
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -38842,16 +40908,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 2380,
+          "form": "pct",
+          "value": 0.2638580931263858,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 2380,
+            "references": {
+              "8gb/256gb": 9020
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 3570,
+          "form": "pct",
+          "value": 0.39578713968957874,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 3570,
+            "references": {
+              "8gb/256gb": 9020
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -38902,10 +40982,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 3570,
+          "form": "pct",
+          "value": 0.39578713968957874,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 3570,
+            "references": {
+              "8gb/256gb": 9020
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -39016,22 +41103,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 1590,
+          "form": "pct",
+          "value": 0.1762749445676275,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1590,
+            "references": {
+              "8gb/256gb": 9020
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 1590,
+          "form": "pct",
+          "value": 0.1762749445676275,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1590,
+            "references": {
+              "8gb/256gb": 9020
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 1590,
+          "form": "pct",
+          "value": 0.1762749445676275,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1590,
+            "references": {
+              "8gb/256gb": 9020
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -39106,16 +41214,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 3660,
+          "form": "pct",
+          "value": 0.2642599277978339,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 3660,
+            "references": {
+              "12gb/256gb": 13850
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 5490,
+          "form": "pct",
+          "value": 0.39638989169675093,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 5490,
+            "references": {
+              "12gb/256gb": 13850
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -39166,10 +41288,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 5490,
+          "form": "pct",
+          "value": 0.39638989169675093,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 5490,
+            "references": {
+              "12gb/256gb": 13850
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -39280,22 +41409,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 2440,
+          "form": "pct",
+          "value": 0.17617328519855596,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 2440,
+            "references": {
+              "12gb/256gb": 13850
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 2440,
+          "form": "pct",
+          "value": 0.17617328519855596,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 2440,
+            "references": {
+              "12gb/256gb": 13850
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 2440,
+          "form": "pct",
+          "value": 0.17617328519855596,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 2440,
+            "references": {
+              "12gb/256gb": 13850
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -39929,16 +42079,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 280,
+          "form": "pct",
+          "value": 0.26666666666666666,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 280,
+            "references": {
+              "4gb/64gb": 1050
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 410,
+          "form": "pct",
+          "value": 0.3904761904761905,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 410,
+            "references": {
+              "4gb/64gb": 1050
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -39989,10 +42153,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 410,
+          "form": "pct",
+          "value": 0.3904761904761905,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 410,
+            "references": {
+              "4gb/64gb": 1050
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -40091,22 +42262,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 180,
+          "form": "pct",
+          "value": 0.17142857142857143,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 180,
+            "references": {
+              "4gb/64gb": 1050
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 180,
+          "form": "pct",
+          "value": 0.17142857142857143,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 180,
+            "references": {
+              "4gb/64gb": 1050
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 180,
+          "form": "pct",
+          "value": 0.17142857142857143,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 180,
+            "references": {
+              "4gb/64gb": 1050
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -40451,10 +42643,17 @@
           "residual": 0
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 680,
+          "form": "pct",
+          "value": 0.4,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 680,
+            "references": {
+              "4gb/64gb": 1700
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -40505,10 +42704,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 680,
+          "form": "pct",
+          "value": 0.4,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 680,
+            "references": {
+              "4gb/64gb": 1700
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -40619,22 +42825,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 300,
+          "form": "pct",
+          "value": 0.17647058823529413,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 300,
+            "references": {
+              "4gb/64gb": 1700
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 300,
+          "form": "pct",
+          "value": 0.17647058823529413,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 300,
+            "references": {
+              "4gb/64gb": 1700
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 300,
+          "form": "pct",
+          "value": 0.17647058823529413,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 300,
+            "references": {
+              "4gb/64gb": 1700
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -40702,16 +42929,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 390,
+          "form": "pct",
+          "value": 0.2653061224489796,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 390,
+            "references": {
+              "4gb/32gb": 1470
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 580,
+          "form": "pct",
+          "value": 0.3945578231292517,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 580,
+            "references": {
+              "4gb/32gb": 1470
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -40762,10 +43003,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 580,
+          "form": "pct",
+          "value": 0.3945578231292517,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 580,
+            "references": {
+              "4gb/32gb": 1470
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -40876,22 +43124,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 260,
+          "form": "pct",
+          "value": 0.17687074829931973,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 260,
+            "references": {
+              "4gb/32gb": 1470
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 260,
+          "form": "pct",
+          "value": 0.17687074829931973,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 260,
+            "references": {
+              "4gb/32gb": 1470
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 260,
+          "form": "pct",
+          "value": 0.17687074829931973,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 260,
+            "references": {
+              "4gb/32gb": 1470
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -41231,16 +43500,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 1490,
+          "form": "pct",
+          "value": 0.26325088339222613,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1490,
+            "references": {
+              "6gb/128gb": 5660
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 2240,
+          "form": "pct",
+          "value": 0.3957597173144876,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 2240,
+            "references": {
+              "6gb/128gb": 5660
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -41291,10 +43574,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 2240,
+          "form": "pct",
+          "value": 0.3957597173144876,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 2240,
+            "references": {
+              "6gb/128gb": 5660
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -41405,22 +43695,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 990,
+          "form": "pct",
+          "value": 0.17491166077738515,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 990,
+            "references": {
+              "6gb/128gb": 5660
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 990,
+          "form": "pct",
+          "value": 0.17491166077738515,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 990,
+            "references": {
+              "6gb/128gb": 5660
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 990,
+          "form": "pct",
+          "value": 0.17491166077738515,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 990,
+            "references": {
+              "6gb/128gb": 5660
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -42036,16 +44347,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 2310,
+          "form": "pct",
+          "value": 0.26674364896073904,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 2310,
+            "references": {
+              "8gb/128gb": 8660
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 3470,
+          "form": "pct",
+          "value": 0.4006928406466513,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 3470,
+            "references": {
+              "8gb/128gb": 8660
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -42096,10 +44421,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 3470,
+          "form": "pct",
+          "value": 0.4006928406466513,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 3470,
+            "references": {
+              "8gb/128gb": 8660
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -42210,22 +44542,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 1300,
+          "form": "pct",
+          "value": 0.15011547344110854,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1300,
+            "references": {
+              "8gb/128gb": 8660
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 1300,
+          "form": "pct",
+          "value": 0.15011547344110854,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1300,
+            "references": {
+              "8gb/128gb": 8660
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 1300,
+          "form": "pct",
+          "value": 0.15011547344110854,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1300,
+            "references": {
+              "8gb/128gb": 8660
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -42557,16 +44910,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 2390,
+          "form": "pct",
+          "value": 0.2646733111849391,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 2390,
+            "references": {
+              "8gb/128gb": 9030
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 3580,
+          "form": "pct",
+          "value": 0.3964562569213732,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 3580,
+            "references": {
+              "8gb/128gb": 9030
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -42617,10 +44984,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 3580,
+          "form": "pct",
+          "value": 0.3964562569213732,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 3580,
+            "references": {
+              "8gb/128gb": 9030
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -42731,22 +45105,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 1170,
+          "form": "pct",
+          "value": 0.12956810631229235,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1170,
+            "references": {
+              "8gb/128gb": 9030
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 1170,
+          "form": "pct",
+          "value": 0.12956810631229235,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1170,
+            "references": {
+              "8gb/128gb": 9030
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 1170,
+          "form": "pct",
+          "value": 0.12956810631229235,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1170,
+            "references": {
+              "8gb/128gb": 9030
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -42814,16 +45209,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 2660,
+          "form": "pct",
+          "value": 0.2665330661322645,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 2660,
+            "references": {
+              "8gb/128gb": 9980
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 3980,
+          "form": "pct",
+          "value": 0.39879759519038077,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 3980,
+            "references": {
+              "8gb/128gb": 9980
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -42874,10 +45283,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 3980,
+          "form": "pct",
+          "value": 0.39879759519038077,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 3980,
+            "references": {
+              "8gb/128gb": 9980
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -42988,22 +45404,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 1430,
+          "form": "pct",
+          "value": 0.1432865731462926,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1430,
+            "references": {
+              "8gb/128gb": 9980
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 1430,
+          "form": "pct",
+          "value": 0.1432865731462926,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1430,
+            "references": {
+              "8gb/128gb": 9980
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 1430,
+          "form": "pct",
+          "value": 0.1432865731462926,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1430,
+            "references": {
+              "8gb/128gb": 9980
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -43071,16 +45508,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 3390,
+          "form": "pct",
+          "value": 0.2654659357870008,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 3390,
+            "references": {
+              "12gb/128gb": 12770
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 5090,
+          "form": "pct",
+          "value": 0.3985904463586531,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 5090,
+            "references": {
+              "12gb/128gb": 12770
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -43131,10 +45582,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 5090,
+          "form": "pct",
+          "value": 0.3985904463586531,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 5090,
+            "references": {
+              "12gb/128gb": 12770
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -43245,22 +45703,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 1820,
+          "form": "pct",
+          "value": 0.14252153484729835,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1820,
+            "references": {
+              "12gb/128gb": 12770
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 1820,
+          "form": "pct",
+          "value": 0.14252153484729835,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1820,
+            "references": {
+              "12gb/128gb": 12770
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 1820,
+          "form": "pct",
+          "value": 0.14252153484729835,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1820,
+            "references": {
+              "12gb/128gb": 12770
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -43328,16 +45807,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 3680,
+          "form": "pct",
+          "value": 0.26436781609195403,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 3680,
+            "references": {
+              "12gb/128gb": 13920
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 5520,
+          "form": "pct",
+          "value": 0.39655172413793105,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 5520,
+            "references": {
+              "12gb/128gb": 13920
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -43388,10 +45881,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 5520,
+          "form": "pct",
+          "value": 0.39655172413793105,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 5520,
+            "references": {
+              "12gb/128gb": 13920
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -43502,22 +46002,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 1820,
+          "form": "pct",
+          "value": 0.1307471264367816,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1820,
+            "references": {
+              "12gb/128gb": 13920
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 1820,
+          "form": "pct",
+          "value": 0.1307471264367816,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1820,
+            "references": {
+              "12gb/128gb": 13920
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 1820,
+          "form": "pct",
+          "value": 0.1307471264367816,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1820,
+            "references": {
+              "12gb/128gb": 13920
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -46070,16 +48591,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 6710,
+          "form": "pct",
+          "value": 0.26386158081006683,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 6710,
+            "references": {
+              "8gb/256gb": 25430
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 10070,
+          "form": "pct",
+          "value": 0.39598898938261895,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 10070,
+            "references": {
+              "8gb/256gb": 25430
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -50565,16 +53100,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 900,
+          "form": "pct",
+          "value": 0.26548672566371684,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 900,
+            "references": {
+              "4gb/64gb": 3390
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 1350,
+          "form": "pct",
+          "value": 0.39823008849557523,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1350,
+            "references": {
+              "4gb/64gb": 3390
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -50625,10 +53174,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 1350,
+          "form": "pct",
+          "value": 0.39823008849557523,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1350,
+            "references": {
+              "4gb/64gb": 3390
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -50739,22 +53295,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 600,
+          "form": "pct",
+          "value": 0.17699115044247787,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 600,
+            "references": {
+              "4gb/64gb": 3390
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 600,
+          "form": "pct",
+          "value": 0.17699115044247787,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 600,
+            "references": {
+              "4gb/64gb": 3390
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 600,
+          "form": "pct",
+          "value": 0.17699115044247787,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 600,
+            "references": {
+              "4gb/64gb": 3390
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -51633,16 +54210,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 2310,
+          "form": "pct",
+          "value": 0.27176470588235296,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 2310,
+            "references": {
+              "8gb/256gb": 8500
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 3460,
+          "form": "pct",
+          "value": 0.40705882352941175,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 3460,
+            "references": {
+              "8gb/256gb": 8500
+            }
+          }
         },
         "hardware:speaker": {
           "form": "fixed",
@@ -51693,10 +54284,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 3460,
+          "form": "pct",
+          "value": 0.40705882352941175,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 3460,
+            "references": {
+              "8gb/256gb": 8500
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -51801,22 +54399,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 1560,
+          "form": "pct",
+          "value": 0.18352941176470589,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1560,
+            "references": {
+              "8gb/256gb": 8500
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 1560,
+          "form": "pct",
+          "value": 0.18352941176470589,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1560,
+            "references": {
+              "8gb/256gb": 8500
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 1560,
+          "form": "pct",
+          "value": 0.18352941176470589,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1560,
+            "references": {
+              "8gb/256gb": 8500
+            }
+          }
         },
         "box": {
           "form": "fixed",
@@ -51843,10 +54462,17 @@
           "residual": 0
         },
         "hardware:hinge": {
-          "form": "fixed",
-          "value": 1870,
+          "form": "pct",
+          "value": 0.22,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1870,
+            "references": {
+              "8gb/256gb": 8500
+            }
+          }
         }
       },
       "noOffer": {
@@ -53808,16 +56434,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 4510,
+          "form": "pct",
+          "value": 0.2640515222482436,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 4510,
+            "references": {
+              "12gb/256gb": 17080
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 6760,
+          "form": "pct",
+          "value": 0.3957845433255269,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 6760,
+            "references": {
+              "12gb/256gb": 17080
+            }
+          }
         },
         "hardware:speaker": {
           "form": "fixed",
@@ -53868,10 +56508,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 6760,
+          "form": "pct",
+          "value": 0.3957845433255269,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 6760,
+            "references": {
+              "12gb/256gb": 17080
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -53994,22 +56641,43 @@
           "residual": 0
         },
         "panel": {
-          "form": "fixed",
-          "value": 2210,
+          "form": "pct",
+          "value": 0.12939110070257612,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 2210,
+            "references": {
+              "12gb/256gb": 17080
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 2210,
+          "form": "pct",
+          "value": 0.12939110070257612,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 2210,
+            "references": {
+              "12gb/256gb": 17080
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 2210,
+          "form": "pct",
+          "value": 0.12939110070257612,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 2210,
+            "references": {
+              "12gb/256gb": 17080
+            }
+          }
         },
         "box": {
           "form": "fixed",
@@ -54042,10 +56710,17 @@
           "residual": 0
         },
         "hardware:hinge": {
-          "form": "fixed",
-          "value": 3650,
+          "form": "pct",
+          "value": 0.21370023419203746,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 3650,
+            "references": {
+              "12gb/256gb": 17080
+            }
+          }
         }
       },
       "noOffer": {}
@@ -56103,16 +58778,30 @@
           "residual": 0
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 1140,
+          "form": "pct",
+          "value": 0.20614828209764918,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1140,
+            "references": {
+              "4gb/128gb": 5530
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 1710,
+          "form": "pct",
+          "value": 0.3092224231464738,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1710,
+            "references": {
+              "4gb/128gb": 5530
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -56163,10 +58852,17 @@
           "residual": 0
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 1710,
+          "form": "pct",
+          "value": 0.3092224231464738,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1710,
+            "references": {
+              "4gb/128gb": 5530
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -56253,10 +58949,17 @@
           "residual": 0
         },
         "scratch:0": {
-          "form": "fixed",
-          "value": 660,
+          "form": "pct",
+          "value": 0.11934900542495479,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 660,
+            "references": {
+              "4gb/128gb": 5530
+            }
+          }
         },
         "scratch:1": {
           "form": "fixed",
@@ -56265,34 +58968,69 @@
           "residual": 0
         },
         "dent:0": {
-          "form": "fixed",
-          "value": 890,
+          "form": "pct",
+          "value": 0.1609403254972875,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 890,
+            "references": {
+              "4gb/128gb": 5530
+            }
+          }
         },
         "dent:1": {
-          "form": "fixed",
-          "value": 660,
+          "form": "pct",
+          "value": 0.11934900542495479,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 660,
+            "references": {
+              "4gb/128gb": 5530
+            }
+          }
         },
         "panel": {
-          "form": "fixed",
-          "value": 720,
+          "form": "pct",
+          "value": 0.1301989150090416,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 720,
+            "references": {
+              "4gb/128gb": 5530
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 720,
+          "form": "pct",
+          "value": 0.1301989150090416,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 720,
+            "references": {
+              "4gb/128gb": 5530
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 1270,
+          "form": "pct",
+          "value": 0.22965641952983726,
           "support": 1,
-          "residual": 0
+          "residual": 0,
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1270,
+            "references": {
+              "4gb/128gb": 5530
+            }
+          }
         },
         "touch": {
           "form": "fixed",

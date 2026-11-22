@@ -3,6 +3,7 @@ import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { evaluateDeduction, modelKey, round10, runnerFaults, storageKey, type DeductionRule, type RunnerCalibration, type RunnerProfile } from '../../lib/pricing/cashifyRunnerModel/model';
 import type { RunnerMeasurement } from './import-cashify-runner-data';
+import { convertPercentageRules, referencesFrom } from './convert-percentage-rules';
 
 export interface FitPoint { reference: number; value: number; storage: string }
 const mean = (xs: number[]) => xs.reduce((a, b) => a + b, 0) / xs.length;
@@ -172,7 +173,10 @@ export function fitCalibration(all: RunnerMeasurement[], brand: RunnerProfile['b
     else delete variant.conditionFloor;
   }
   for (const profile of Object.values(profiles)) if (Object.values(profile.variants).some(v => !Number.isFinite(v.scrap))) throw new Error(`${profile.model}: missing measured calls scrap and no approved sibling fallback`);
-  return { version: newBrand?'cashify-runner-rules-v5':extended?'cashify-runner-rules-v4':'cashify-runner-rules-v3', sourceHash: createHash('sha256').update(JSON.stringify(rows)).digest('hex'), profiles };
+  const calibration: RunnerCalibration = { version: newBrand?'cashify-runner-rules-v5':extended?'cashify-runner-rules-v4':'cashify-runner-rules-v3', sourceHash: createHash('sha256').update(JSON.stringify(rows)).digest('hex'), profiles };
+  // Percentage-type answers follow the reference (see convert-percentage-rules.ts).
+  convertPercentageRules(calibration, referencesFrom(rows as any));
+  return calibration;
 }
 
 /** Restricted release correction; repeat fits hash the same protected profiles. */

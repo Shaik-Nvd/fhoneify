@@ -53,8 +53,8 @@
           ]
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 670,
+          "form": "pct",
+          "value": 0.26693227091633465,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -62,11 +62,18 @@
           ],
           "measuredStorages": [
             "6gb/128gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 670,
+            "references": {
+              "6gb/128gb": 2510
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 1000,
+          "form": "pct",
+          "value": 0.398406374501992,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -74,7 +81,14 @@
           ],
           "measuredStorages": [
             "6gb/128gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1000,
+            "references": {
+              "6gb/128gb": 2510
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -173,8 +187,8 @@
           ]
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 1000,
+          "form": "pct",
+          "value": 0.398406374501992,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -182,7 +196,14 @@
           ],
           "measuredStorages": [
             "6gb/128gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1000,
+            "references": {
+              "6gb/128gb": 2510
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -401,8 +422,8 @@
           ]
         },
         "panel": {
-          "form": "fixed",
-          "value": 450,
+          "form": "pct",
+          "value": 0.17928286852589642,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -410,11 +431,18 @@
           ],
           "measuredStorages": [
             "6gb/128gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 450,
+            "references": {
+              "6gb/128gb": 2510
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 450,
+          "form": "pct",
+          "value": 0.17928286852589642,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -422,11 +450,18 @@
           ],
           "measuredStorages": [
             "6gb/128gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 450,
+            "references": {
+              "6gb/128gb": 2510
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 450,
+          "form": "pct",
+          "value": 0.17928286852589642,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -434,7 +469,14 @@
           ],
           "measuredStorages": [
             "6gb/128gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 450,
+            "references": {
+              "6gb/128gb": 2510
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -550,8 +592,8 @@
           ]
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 720,
+          "form": "pct",
+          "value": 0.26373626373626374,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -559,11 +601,18 @@
           ],
           "measuredStorages": [
             "6gb/128gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 720,
+            "references": {
+              "6gb/128gb": 2730
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 1080,
+          "form": "pct",
+          "value": 0.3956043956043956,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -571,7 +620,14 @@
           ],
           "measuredStorages": [
             "6gb/128gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1080,
+            "references": {
+              "6gb/128gb": 2730
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -670,8 +726,8 @@
           ]
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 1080,
+          "form": "pct",
+          "value": 0.3956043956043956,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -679,7 +735,14 @@
           ],
           "measuredStorages": [
             "6gb/128gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1080,
+            "references": {
+              "6gb/128gb": 2730
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -898,8 +961,8 @@
           ]
         },
         "panel": {
-          "form": "fixed",
-          "value": 480,
+          "form": "pct",
+          "value": 0.17582417582417584,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -907,11 +970,18 @@
           ],
           "measuredStorages": [
             "6gb/128gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 480,
+            "references": {
+              "6gb/128gb": 2730
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 480,
+          "form": "pct",
+          "value": 0.17582417582417584,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -919,11 +989,18 @@
           ],
           "measuredStorages": [
             "6gb/128gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 480,
+            "references": {
+              "6gb/128gb": 2730
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 480,
+          "form": "pct",
+          "value": 0.17582417582417584,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -931,7 +1008,14 @@
           ],
           "measuredStorages": [
             "6gb/128gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 480,
+            "references": {
+              "6gb/128gb": 2730
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -1607,8 +1691,8 @@
           ]
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 1610,
+          "form": "pct",
+          "value": 0.2635024549918167,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -1616,11 +1700,18 @@
           ],
           "measuredStorages": [
             "8gb/256gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1610,
+            "references": {
+              "8gb/256gb": 6110
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 2420,
+          "form": "pct",
+          "value": 0.3960720130932897,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -1628,7 +1719,14 @@
           ],
           "measuredStorages": [
             "8gb/256gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 2420,
+            "references": {
+              "8gb/256gb": 6110
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -1727,8 +1825,8 @@
           ]
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 2420,
+          "form": "pct",
+          "value": 0.3960720130932897,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -1736,7 +1834,14 @@
           ],
           "measuredStorages": [
             "8gb/256gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 2420,
+            "references": {
+              "8gb/256gb": 6110
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -1955,8 +2060,8 @@
           ]
         },
         "panel": {
-          "form": "fixed",
-          "value": 1080,
+          "form": "pct",
+          "value": 0.176759410801964,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -1964,11 +2069,18 @@
           ],
           "measuredStorages": [
             "8gb/256gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1080,
+            "references": {
+              "8gb/256gb": 6110
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 1080,
+          "form": "pct",
+          "value": 0.176759410801964,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -1976,11 +2088,18 @@
           ],
           "measuredStorages": [
             "8gb/256gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1080,
+            "references": {
+              "8gb/256gb": 6110
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 1080,
+          "form": "pct",
+          "value": 0.176759410801964,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -1988,7 +2107,14 @@
           ],
           "measuredStorages": [
             "8gb/256gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1080,
+            "references": {
+              "8gb/256gb": 6110
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -2104,8 +2230,8 @@
           ]
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 4180,
+          "form": "pct",
+          "value": 0.26422250316055623,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -2113,11 +2239,18 @@
           ],
           "measuredStorages": [
             "12gb/512gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 4180,
+            "references": {
+              "12gb/512gb": 15820
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 6270,
+          "form": "pct",
+          "value": 0.3963337547408344,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -2125,7 +2258,14 @@
           ],
           "measuredStorages": [
             "12gb/512gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 6270,
+            "references": {
+              "12gb/512gb": 15820
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -2224,8 +2364,8 @@
           ]
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 6270,
+          "form": "pct",
+          "value": 0.3963337547408344,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -2233,7 +2373,14 @@
           ],
           "measuredStorages": [
             "12gb/512gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 6270,
+            "references": {
+              "12gb/512gb": 15820
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -2452,8 +2599,8 @@
           ]
         },
         "panel": {
-          "form": "fixed",
-          "value": 2790,
+          "form": "pct",
+          "value": 0.1763590391908976,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -2461,11 +2608,18 @@
           ],
           "measuredStorages": [
             "12gb/512gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 2790,
+            "references": {
+              "12gb/512gb": 15820
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 2790,
+          "form": "pct",
+          "value": 0.1763590391908976,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -2473,11 +2627,18 @@
           ],
           "measuredStorages": [
             "12gb/512gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 2790,
+            "references": {
+              "12gb/512gb": 15820
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 2790,
+          "form": "pct",
+          "value": 0.1763590391908976,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -2485,7 +2646,14 @@
           ],
           "measuredStorages": [
             "12gb/512gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 2790,
+            "references": {
+              "12gb/512gb": 15820
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -2602,8 +2770,8 @@
           ]
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 650,
+          "form": "pct",
+          "value": 0.2631578947368421,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -2611,11 +2779,18 @@
           ],
           "measuredStorages": [
             "4gb/128gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 650,
+            "references": {
+              "4gb/128gb": 2470
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 980,
+          "form": "pct",
+          "value": 0.3967611336032389,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -2623,7 +2798,14 @@
           ],
           "measuredStorages": [
             "4gb/128gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 980,
+            "references": {
+              "4gb/128gb": 2470
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -2722,8 +2904,8 @@
           ]
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 980,
+          "form": "pct",
+          "value": 0.3967611336032389,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -2731,7 +2913,14 @@
           ],
           "measuredStorages": [
             "4gb/128gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 980,
+            "references": {
+              "4gb/128gb": 2470
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -3109,8 +3298,8 @@
           ]
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 430,
+          "form": "pct",
+          "value": 0.26380368098159507,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -3118,11 +3307,18 @@
           ],
           "measuredStorages": [
             "3gb/32gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 430,
+            "references": {
+              "3gb/32gb": 1630
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 650,
+          "form": "pct",
+          "value": 0.3987730061349693,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -3130,7 +3326,14 @@
           ],
           "measuredStorages": [
             "3gb/32gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 650,
+            "references": {
+              "3gb/32gb": 1630
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -3229,8 +3432,8 @@
           ]
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 650,
+          "form": "pct",
+          "value": 0.3987730061349693,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -3238,7 +3441,14 @@
           ],
           "measuredStorages": [
             "3gb/32gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 650,
+            "references": {
+              "3gb/32gb": 1630
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -3457,8 +3667,8 @@
           ]
         },
         "panel": {
-          "form": "fixed",
-          "value": 290,
+          "form": "pct",
+          "value": 0.17791411042944785,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -3466,11 +3676,18 @@
           ],
           "measuredStorages": [
             "3gb/32gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 290,
+            "references": {
+              "3gb/32gb": 1630
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 290,
+          "form": "pct",
+          "value": 0.17791411042944785,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -3478,11 +3695,18 @@
           ],
           "measuredStorages": [
             "3gb/32gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 290,
+            "references": {
+              "3gb/32gb": 1630
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 290,
+          "form": "pct",
+          "value": 0.17791411042944785,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -3490,7 +3714,14 @@
           ],
           "measuredStorages": [
             "3gb/32gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 290,
+            "references": {
+              "3gb/32gb": 1630
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -4151,8 +4382,8 @@
           ]
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 370,
+          "form": "pct",
+          "value": 0.2642857142857143,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -4160,11 +4391,18 @@
           ],
           "measuredStorages": [
             "4gb/32gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 370,
+            "references": {
+              "4gb/32gb": 1400
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 550,
+          "form": "pct",
+          "value": 0.39285714285714285,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -4172,7 +4410,14 @@
           ],
           "measuredStorages": [
             "4gb/32gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 550,
+            "references": {
+              "4gb/32gb": 1400
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -5968,8 +6213,8 @@
           ]
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 540,
+          "form": "pct",
+          "value": 0.2621359223300971,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -5977,11 +6222,18 @@
           ],
           "measuredStorages": [
             "3gb/64gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 540,
+            "references": {
+              "3gb/64gb": 2060
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 820,
+          "form": "pct",
+          "value": 0.39805825242718446,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -5989,7 +6241,14 @@
           ],
           "measuredStorages": [
             "3gb/64gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 820,
+            "references": {
+              "3gb/64gb": 2060
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -6088,8 +6347,8 @@
           ]
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 820,
+          "form": "pct",
+          "value": 0.39805825242718446,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -6097,7 +6356,14 @@
           ],
           "measuredStorages": [
             "3gb/64gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 820,
+            "references": {
+              "3gb/64gb": 2060
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -6304,8 +6570,8 @@
           ]
         },
         "panel": {
-          "form": "fixed",
-          "value": 360,
+          "form": "pct",
+          "value": 0.17475728155339806,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -6313,11 +6579,18 @@
           ],
           "measuredStorages": [
             "3gb/64gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 360,
+            "references": {
+              "3gb/64gb": 2060
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 360,
+          "form": "pct",
+          "value": 0.17475728155339806,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -6325,11 +6598,18 @@
           ],
           "measuredStorages": [
             "3gb/64gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 360,
+            "references": {
+              "3gb/64gb": 2060
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 360,
+          "form": "pct",
+          "value": 0.17475728155339806,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -6337,7 +6617,14 @@
           ],
           "measuredStorages": [
             "3gb/64gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 360,
+            "references": {
+              "3gb/64gb": 2060
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -6830,8 +7117,8 @@
           ]
         },
         "panel": {
-          "form": "fixed",
-          "value": 280,
+          "form": "pct",
+          "value": 0.17721518987341772,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -6839,11 +7126,18 @@
           ],
           "measuredStorages": [
             "3gb/32gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 280,
+            "references": {
+              "3gb/32gb": 1580
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 280,
+          "form": "pct",
+          "value": 0.17721518987341772,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -6851,11 +7145,18 @@
           ],
           "measuredStorages": [
             "3gb/32gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 280,
+            "references": {
+              "3gb/32gb": 1580
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 280,
+          "form": "pct",
+          "value": 0.17721518987341772,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -6863,7 +7164,14 @@
           ],
           "measuredStorages": [
             "3gb/32gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 280,
+            "references": {
+              "3gb/32gb": 1580
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -7598,8 +7906,8 @@
           ]
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 830,
+          "form": "pct",
+          "value": 0.2643312101910828,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -7607,11 +7915,18 @@
           ],
           "measuredStorages": [
             "6gb/256gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 830,
+            "references": {
+              "6gb/256gb": 3140
+            }
+          }
         },
         "hardware:wifi": {
-          "form": "fixed",
-          "value": 1250,
+          "form": "pct",
+          "value": 0.3980891719745223,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -7619,7 +7934,14 @@
           ],
           "measuredStorages": [
             "6gb/256gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1250,
+            "references": {
+              "6gb/256gb": 3140
+            }
+          }
         },
         "hardware:battery_service": {
           "form": "fixed",
@@ -7718,8 +8040,8 @@
           ]
         },
         "hardware:bluetooth": {
-          "form": "fixed",
-          "value": 1250,
+          "form": "pct",
+          "value": 0.3980891719745223,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -7727,7 +8049,14 @@
           ],
           "measuredStorages": [
             "6gb/256gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 1250,
+            "references": {
+              "6gb/256gb": 3140
+            }
+          }
         },
         "hardware:vibrator": {
           "form": "fixed",
@@ -7946,8 +8275,8 @@
           ]
         },
         "panel": {
-          "form": "fixed",
-          "value": 560,
+          "form": "pct",
+          "value": 0.17834394904458598,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -7955,11 +8284,18 @@
           ],
           "measuredStorages": [
             "6gb/256gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 560,
+            "references": {
+              "6gb/256gb": 3140
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 560,
+          "form": "pct",
+          "value": 0.17834394904458598,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -7967,11 +8303,18 @@
           ],
           "measuredStorages": [
             "6gb/256gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 560,
+            "references": {
+              "6gb/256gb": 3140
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 560,
+          "form": "pct",
+          "value": 0.17834394904458598,
           "support": 1,
           "residual": 0,
           "observedDates": [
@@ -7979,7 +8322,14 @@
           ],
           "measuredStorages": [
             "6gb/256gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 560,
+            "references": {
+              "6gb/256gb": 3140
+            }
+          }
         },
         "touch": {
           "form": "fixed",
@@ -8105,8 +8455,8 @@
           ]
         },
         "hardware:fingerprint": {
-          "form": "fixed",
-          "value": 550,
+          "form": "pct",
+          "value": 0.2662673340444736,
           "support": 2,
           "residual": 10,
           "observedDates": [
@@ -8115,7 +8465,15 @@
           "measuredStorages": [
             "4gb/64gb",
             "6gb/64gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 550,
+            "references": {
+              "4gb/64gb": 2030,
+              "6gb/64gb": 2100
+            }
+          }
         },
         "hardware:wifi": {
           "form": "pct",
@@ -8482,8 +8840,8 @@
           ]
         },
         "panel": {
-          "form": "fixed",
-          "value": 370,
+          "form": "pct",
+          "value": 0.17912529744810043,
           "support": 2,
           "residual": 10,
           "observedDates": [
@@ -8492,11 +8850,19 @@
           "measuredStorages": [
             "4gb/64gb",
             "6gb/64gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 370,
+            "references": {
+              "4gb/64gb": 2030,
+              "6gb/64gb": 2100
+            }
+          }
         },
         "bent": {
-          "form": "fixed",
-          "value": 370,
+          "form": "pct",
+          "value": 0.17912529744810043,
           "support": 2,
           "residual": 10,
           "observedDates": [
@@ -8505,11 +8871,19 @@
           "measuredStorages": [
             "4gb/64gb",
             "6gb/64gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 370,
+            "references": {
+              "4gb/64gb": 2030,
+              "6gb/64gb": 2100
+            }
+          }
         },
         "loose": {
-          "form": "fixed",
-          "value": 370,
+          "form": "pct",
+          "value": 0.17912529744810043,
           "support": 2,
           "residual": 10,
           "observedDates": [
@@ -8518,7 +8892,15 @@
           "measuredStorages": [
             "4gb/64gb",
             "6gb/64gb"
-          ]
+          ],
+          "convertedFrom": {
+            "form": "fixed",
+            "value": 370,
+            "references": {
+              "4gb/64gb": 2030,
+              "6gb/64gb": 2100
+            }
+          }
         },
         "touch": {
           "form": "pct",

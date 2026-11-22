@@ -110,9 +110,10 @@ export function questionnaireFor(device: QuestionnaireDevice): QuestionnaireElig
 /** Whether the brand calculator prices every age bracket or only below/above 11 months. */
 export function ageResolutionFor(device: QuestionnaireDevice): AgeResolution {
   const engineBrand = resolveEngineBrand(device.brand, device.model);
-  // calculateVivoPrice's foldable branch never reads diagnostics.mobileAge.
-  const isFoldVivo = engineBrand === 'vivo' && String(device.model || '').toLowerCase().includes('fold');
-  return AGE_SENSITIVE_BRANDS.has(engineBrand) && !isFoldVivo ? 'brackets' : 'elevenMonths';
+  // Every Android phone without a measured profile is priced by the cross-brand generic rules
+  // (lib/pricing/cashifyRunnerModel/generic.ts), which price all four of Cashify's age brackets.
+  if (engineBrand !== 'apple') return 'brackets';
+  return AGE_SENSITIVE_BRANDS.has(engineBrand) ? 'brackets' : 'elevenMonths';
 }
 
 /** Engines whose calculator has no branch for an "above 11 months" answer given with warranty Yes. */
