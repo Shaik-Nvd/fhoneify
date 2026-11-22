@@ -46,31 +46,28 @@ function useMotionAllowed() {
   return ok;
 }
 
-/** Glides from the last shown value to the new server price. */
-function useCountTo(target: number | undefined, animate: boolean) {
-  const [value, setValue] = useState(target ?? 0);
-  const shown = useRef(value);
+/** Counts up to the server price of the phone on screen. The figure is tied to the phone it belongs
+ * to: when the phone changes, the old phone's price is never rendered, not even for one frame. */
+function useCountTo(target: number | undefined, animate: boolean, key: string) {
+  const [state, setState] = useState<{ key: string; value: number }>({ key, value: target ?? 0 });
   useEffect(() => {
     if (!target) return;
-    if (!animate) {
-      shown.current = target;
-      setValue(target);
-      return;
-    }
-    const from = shown.current || target * 0.6;
+    if (!animate) { setState({ key, value: target }); return; }
+    const from = target * 0.85;
     const start = performance.now();
     let frame = 0;
     const step = (now: number) => {
       const t = Math.min(1, (now - start) / COUNT_MS);
-      const v = from + (target - from) * (1 - Math.pow(1 - t, 3));
-      shown.current = v;
-      setValue(v);
+      setState({ key, value: from + (target - from) * (1 - Math.pow(1 - t, 3)) });
       if (t < 1) frame = requestAnimationFrame(step);
     };
     frame = requestAnimationFrame(step);
     return () => cancelAnimationFrame(frame);
-  }, [target, animate]);
-  return value;
+  }, [target, animate, key]);
+  if (!target) return 0;
+  // A render for a new phone before its first animation frame shows that phone's own starting figure.
+  if (state.key !== key) return animate ? target * 0.85 : target;
+  return state.value;
 }
 
 /** A word split into letters that rise in (or out) one after another. */
@@ -117,7 +114,7 @@ export default function HeroStage() {
 
   const model = FEATURED_MODELS[sel];
   const price = prices[model.id];
-  const counted = useCountTo(price, motion);
+  const counted = useCountTo(price, motion, model.id);
 
   const selRef = useRef(0);
   const go = useCallback((to: number, dir: 1 | -1, fromUser: boolean) => {
