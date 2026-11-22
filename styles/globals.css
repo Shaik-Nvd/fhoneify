@@ -513,114 +513,39 @@ select option {
   .bar-solid { background-color: var(--background) !important; }
 }
 
-/* ---------- Marketing home: hero stage ---------- */
-.hero-stage {
-  isolation: isolate;
-}
-.hero-aurora {
-  position: absolute;
-  aspect-ratio: 1;
-  border-radius: 9999px;
+/* ---------- Marketing home: hero ---------- */
+.hero-glow {
   will-change: transform;
-  animation: hero-drift 18s ease-in-out infinite alternate;
-}
-.hero-aurora-a {
-  top: -38%;
-  right: -22%;
-  width: min(1100px, 120vw);
-  background: radial-gradient(closest-side, rgba(212, 175, 55, 0.26), rgba(212, 175, 55, 0.07) 55%, transparent);
-}
-.hero-aurora-b {
-  bottom: -55%;
-  left: -30%;
-  width: min(900px, 110vw);
-  background: radial-gradient(closest-side, rgba(176, 112, 34, 0.2), transparent);
-  animation-duration: 24s;
-  animation-direction: alternate-reverse;
+  animation: hero-drift 20s ease-in-out infinite alternate;
 }
 @keyframes hero-drift {
   from { transform: translate3d(0, 0, 0) scale(1); }
-  to { transform: translate3d(-6%, 5%, 0) scale(1.12); }
+  to { transform: translate3d(-5%, 4%, 0) scale(1.08); }
 }
-.hero-grid {
+.hero-hairlines {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-  background-size: 56px 56px;
-  -webkit-mask-image: radial-gradient(ellipse 70% 65% at 72% 38%, #000 10%, transparent 72%);
-  mask-image: radial-gradient(ellipse 70% 65% at 72% 38%, #000 10%, transparent 72%);
-}
-.hero-sweep {
-  display: none;
-}
-@media (min-width: 768px) {
-  .hero-sweep {
-    display: block;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 1600px;
-    height: 1600px;
-    margin: -800px 0 0 -800px;
-    background: conic-gradient(from 0deg, transparent 0deg, rgba(212, 175, 55, 0.07) 24deg, transparent 52deg, transparent 180deg, rgba(212, 175, 55, 0.05) 206deg, transparent 236deg);
-    animation: hero-spin 26s linear infinite;
-    will-change: transform;
-  }
+    linear-gradient(color-mix(in srgb, var(--gold) 9%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--gold) 9%, transparent) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(ellipse 60% 70% at 78% 30%, #000 5%, transparent 70%);
+  mask-image: radial-gradient(ellipse 60% 70% at 78% 30%, #000 5%, transparent 70%);
 }
 @keyframes hero-spin {
   to { transform: rotate(360deg); }
 }
-.hero-spark {
-  position: absolute;
-  bottom: -8px;
-  left: calc(var(--i) * 9.5% + 3%);
-  width: 3px;
-  height: 3px;
-  border-radius: 9999px;
-  background: #e9cf7a;
-  box-shadow: 0 0 10px 2px rgba(212, 175, 55, 0.55);
-  opacity: 0;
-  animation: hero-rise calc(7s + var(--i) * 0.7s) linear infinite;
-  animation-delay: calc(var(--i) * -1.3s);
-}
-@keyframes hero-rise {
-  0% { transform: translate3d(0, 0, 0); opacity: 0; }
-  12% { opacity: 0.9; }
-  80% { opacity: 0.5; }
-  100% { transform: translate3d(18px, -680px, 0); opacity: 0; }
-}
 .hero-in {
-  animation: hero-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: hero-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
   animation-delay: var(--d, 0ms);
 }
 @keyframes hero-in {
-  from { opacity: 0; transform: translate3d(0, 22px, 0); }
+  from { opacity: 0; transform: translate3d(0, 16px, 0); }
   to { opacity: 1; transform: none; }
 }
 .hero-ping {
   animation: hero-ping 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 @keyframes hero-ping {
-  75%, 100% { transform: scale(2.4); opacity: 0; }
-}
-
-/* Headline word that cycles through brands (5 words, 2.5 s each). */
-.hero-rotator {
-  display: grid;
-  overflow: hidden;
-  padding-bottom: 0.14em;
-  margin-bottom: -0.14em;
-}
-.hero-rotator-word {
-  grid-area: 1 / 1;
-  animation: hero-rotate 12.5s cubic-bezier(0.7, 0, 0.2, 1) infinite both;
-  animation-delay: calc(var(--n) * 2.5s);
-}
-/* Each word enters exactly as the previous one leaves, so a word is always shown. */
-@keyframes hero-rotate {
-  0% { transform: translateY(105%); opacity: 0; }
-  4%, 20% { transform: translateY(0); opacity: 1; }
-  24%, 100% { transform: translateY(-105%); opacity: 0; }
+  75%, 100% { transform: scale(2.6); opacity: 0; }
 }
 .hero-gold-text {
   padding-right: 0.1em;
@@ -635,6 +560,30 @@ select option {
 @keyframes gold-flow {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
+}
+
+/* Hero price check */
+.pc-search:focus-within {
+  box-shadow: 0 0 0 4px var(--gold-soft), var(--shadow-md);
+}
+.pc-swap {
+  animation: pc-swap 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes pc-swap {
+  from { opacity: 0; transform: translate3d(0, 10px, 0); }
+  to { opacity: 1; transform: none; }
+}
+.pc-float {
+  animation: pc-float 6s ease-in-out infinite;
+}
+@keyframes pc-float {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-6px) rotate(1deg); }
+}
+.pc-shimmer {
+  background: linear-gradient(90deg, var(--surface) 25%, var(--surface-elevated) 50%, var(--surface) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
 }
 
 /* Gold call to action with a periodic light sweep. Fixed colours: it sits on dark panels. */
@@ -681,34 +630,6 @@ select option {
 @keyframes cta-shine {
   0% { transform: translateX(-150%) skewX(-20deg); }
   32%, 100% { transform: translateX(360%) skewX(-20deg); }
-}
-
-/* Hero phone screen */
-.lqs-swap {
-  animation: lqs-swap 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-@keyframes lqs-swap {
-  from { opacity: 0; transform: translateY(10px) scale(0.97); }
-  to { opacity: 1; transform: none; }
-}
-.lqs-tick {
-  animation: lqs-tick 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) both;
-}
-@keyframes lqs-tick {
-  from { opacity: 0; transform: scale(0); }
-  to { opacity: 1; transform: none; }
-}
-.lqs-shimmer {
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.06) 25%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.06) 75%);
-  background-size: 200% 100%;
-  animation: shimmer 1.4s linear infinite;
-}
-.chip-bob {
-  animation: chip-bob 5s ease-in-out infinite;
-}
-@keyframes chip-bob {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-7px); }
 }
 
 /* Price ticker */
@@ -795,18 +716,8 @@ select option {
   animation: hero-spin 60s linear infinite reverse;
 }
 
-/* Reduced motion: still pictures. The rotator shows its last word (phone),
-   the ticker becomes a normal swipeable row. */
+/* Reduced motion: still pictures. The popular strip becomes a normal swipeable row. */
 @media (prefers-reduced-motion: reduce) {
-  .hero-rotator-word {
-    animation: none !important;
-    opacity: 0;
-  }
-  .hero-rotator-word:last-child {
-    opacity: 1;
-  }
-  .hero-spark,
-  .hero-sweep,
   .cta-gold::after {
     display: none;
   }
@@ -817,7 +728,7 @@ select option {
   }
   .ticker-track {
     animation: none !important;
-    padding-inline: 1.25rem;
+    padding-inline: 1rem;
   }
   .ticker-copy {
     display: none;
