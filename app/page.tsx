@@ -10,8 +10,8 @@ import FAQs from '@/components/FAQs';
 import WarrantyClaim from '@/components/WarrantyClaim';
 
 // Server-rendered: the headline and the "Get instant quote" action are in the
-// initial HTML. The hero phone, the live price ticker and the scroll reveals
-// hydrate on top. Popular-model prices now live in the hero ticker.
+// initial HTML. The hero stage (phone, live prices, model rail) and the
+// scroll reveals hydrate on top. Popular-model prices now live in the hero.
 export default function LandingPage() {
   return (
     <div className="w-full overflow-x-clip">

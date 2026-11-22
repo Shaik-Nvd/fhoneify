@@ -37,7 +37,7 @@ export default function ProcessSteps() {
         <ol data-reveal className="relative mt-12 grid gap-8 md:grid-cols-3 md:gap-6" style={{ '--d': '80ms' } as React.CSSProperties}>
           {/* Gold thread that draws through the step markers as the list scrolls in. */}
           <span aria-hidden="true" className="absolute left-[16.66%] right-[16.66%] top-[1.3rem] hidden h-px bg-border md:block">
-            <span className="draw-x absolute inset-0 bg-gradient-to-r from-gold via-[#e9cf7a] to-gold" />
+            <span className="draw-x absolute inset-0 bg-gradient-to-r from-gold via-[color-mix(in_srgb,var(--gold)_55%,var(--background))] to-gold" />
           </span>
           {STEPS.map(({ Icon, title, desc, Visual }, i) => (
             <li
@@ -48,7 +48,7 @@ export default function ProcessSteps() {
             >
               {i < STEPS.length - 1 && (
                 <span aria-hidden="true" className="absolute -bottom-8 left-[1.3rem] top-[2.6rem] w-px bg-border md:hidden">
-                  <span className="draw-y absolute inset-0 bg-gradient-to-b from-gold to-[#e9cf7a]" />
+                  <span className="draw-y absolute inset-0 bg-gradient-to-b from-gold to-[color-mix(in_srgb,var(--gold)_55%,var(--background))]" />
                 </span>
               )}
               <span className="relative z-10 flex h-[2.6rem] w-[2.6rem] items-center justify-center rounded-full bg-gold text-sm font-bold text-on-gold shadow-gold ring-[6px] ring-surface">

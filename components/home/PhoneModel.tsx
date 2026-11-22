@@ -1,5 +1,5 @@
-import { forwardRef } from 'react';
-import { Check, Smartphone, Truck, Wallet, Zap } from 'lucide-react';
+import { forwardRef, type ReactNode } from 'react';
+import { Check, Smartphone } from 'lucide-react';
 
 // Number of stacked layers that form the phone's metal frame. Each sits a
 // little further back in Z, so a gentle tilt reveals a real edge.
@@ -10,7 +10,7 @@ const EDGE_LAYERS = 9;
  * fallback for touch devices, reduced motion and script failures; HeroPhone
  * only adds pointer tilt on top of it by setting --rx/--ry on the rig.
  */
-const PhoneModel = forwardRef<HTMLDivElement>(function PhoneModel(_props, rigRef) {
+const PhoneModel = forwardRef<HTMLDivElement, { screen?: ReactNode }>(function PhoneModel({ screen }, rigRef) {
   return (
     <div className="phone-stage relative mx-auto flex w-full items-center justify-center" aria-hidden="true">
       {/* Backdrop: brass halo, orbit rings and a floor shadow. No blur filters. */}
@@ -44,15 +44,11 @@ const PhoneModel = forwardRef<HTMLDivElement>(function PhoneModel(_props, rigRef
             {/* Front glass */}
             <div className="phone-layer bg-[#050505] p-[3.4%] shadow-[0_40px_80px_-30px_rgba(0,0,0,0.55)]" style={{ transform: 'translateZ(0.5px)' }}>
               <div className="relative h-full w-full overflow-hidden rounded-[calc(var(--phone-radius)*0.86)] bg-[#0e0d0b]">
-                <PhoneScreen />
+                {screen ?? <PhoneScreen />}
                 <div className="phone-glare absolute inset-0" />
               </div>
             </div>
 
-            {/* Floating facts at different depths */}
-            <Chip className="-left-[34%] top-[16%]" z={70} icon={<Zap className="h-[1.1em] w-[1.1em]" />} label="Instant quote" />
-            <Chip className="-right-[40%] top-[66%]" z={95} icon={<Truck className="h-[1.1em] w-[1.1em]" />} label="Free doorstep pickup" />
-            <Chip className="-left-[26%] bottom-[9%]" z={55} icon={<Wallet className="h-[1.1em] w-[1.1em]" />} label="Paid at pickup" />
           </div>
         </div>
       </div>
@@ -61,18 +57,6 @@ const PhoneModel = forwardRef<HTMLDivElement>(function PhoneModel(_props, rigRef
 });
 
 export default PhoneModel;
-
-function Chip({ className, z, icon, label }: { className: string; z: number; icon: React.ReactNode; label: string }) {
-  return (
-    <div
-      className={`phone-chip absolute flex items-center gap-[0.55em] whitespace-nowrap rounded-[0.9em] border border-border bg-background px-[0.85em] py-[0.6em] text-[0.82em] font-semibold text-foreground shadow-token-lg ${className}`}
-      style={{ '--z': `${z}px` } as React.CSSProperties}
-    >
-      <span className="flex h-[1.9em] w-[1.9em] items-center justify-center rounded-full bg-gold-soft text-gold">{icon}</span>
-      {label}
-    </div>
-  );
-}
 
 /** The phone's screen: a quiet preview of the quote flow. No prices shown. */
 function PhoneScreen() {

@@ -52,21 +52,21 @@ export default function SellCompare() {
         <div
           data-reveal="scale"
           style={{ '--d': '220ms' } as React.CSSProperties}
-          className="glow-edge relative overflow-hidden rounded-3xl bg-[#0f0e0c] p-6 text-[#f5f2ea] shadow-token-lg md:p-8"
+          className="glow-edge relative overflow-hidden rounded-3xl bg-background p-6 text-foreground shadow-token-lg md:p-8"
         >
-          <div aria-hidden="true" className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[radial-gradient(closest-side,rgba(212,175,55,0.28),transparent)]" />
-          <p className="relative text-sm font-semibold uppercase tracking-[0.14em] text-[#d4af37]">Selling with Fhoneify</p>
+          <div aria-hidden="true" className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[radial-gradient(closest-side,color-mix(in_srgb,var(--gold)_22%,transparent),transparent)]" />
+          <p className="relative text-sm font-semibold uppercase tracking-[0.14em] text-gold">Selling with Fhoneify</p>
           <ul className="relative mt-6 flex flex-col gap-4">
             {FHONEIFY.map((item) => (
               <li key={item} className="flex items-start gap-3 font-medium">
-                <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#d4af37] text-[#15110a]">
+                <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold text-on-gold">
                   <Check aria-hidden="true" className="h-3.5 w-3.5" strokeWidth={3} />
                 </span>
                 {item}
               </li>
             ))}
           </ul>
-          <Link href="/quote" className="cta-gold group relative mt-8 w-full no-underline sm:w-auto">
+          <Link href="/quote" className="btn-cta cta-shine group relative mt-8 w-full no-underline sm:w-auto">
             <span className="relative z-[1]">Get instant quote</span>
             <ArrowRight aria-hidden="true" className="relative z-[1] h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
