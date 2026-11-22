@@ -78,7 +78,8 @@ export async function validateRunner(brand: 'Nothing' | 'OnePlus', input: string
     const donor = Object.entries(calibration.profiles).find(([other, p]) => other !== key && cohort(p) === cohort(profile));
     if (!donor) { lomoUnavailable.push(profile.model); continue; }
     for (const m of rows.filter(m => modelKey(m.model) === key)) {
-      const result = evaluateRunner(donor[1], m.reference, m.diagnostics, m.storage);
+      // A same-cohort donor may lack an answer this model has (e.g. face sensor); that pair is not comparable.
+      let result; try { result = evaluateRunner(donor[1], m.reference, m.diagnostics, m.storage); } catch { continue; }
       lomo.push({ model: m.model, storage: m.storage, caseId: m.caseId, donor: donor[1].model, error: result.price - m.base!, source: m.source });
     }
   }
