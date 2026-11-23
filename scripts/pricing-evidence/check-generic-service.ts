@@ -7,7 +7,10 @@ config({ path: process.argv[2], quiet: true } as any);
   const { getQuestionnaireProfileStore, getReferencePriceRepository } = await import('../../lib/referencePricing/getStore');
   const { SEED_DEVICES } = await import('../../lib/seed_devices');
   const { runnerScope } = await import('../../lib/pricing/cashifyRunnerModel');
-  const service = createPricingService({ repository: getReferencePriceRepository(), questionnaireStore: getQuestionnaireProfileStore(), pricingMode: 'hybrid',
+  const repo = getReferencePriceRepository(), profiles = getQuestionnaireProfileStore(); const rc = new Map<string, any>(), pc = new Map<string, any>();
+  const repository = { async get(k: string) { if (!rc.has(k)) rc.set(k, await repo.get(k)); return rc.get(k); } } as any;
+  const questionnaireStore = { async get(k: string) { if (!pc.has(k)) pc.set(k, await profiles.get(k)); return pc.get(k); } } as any;
+  const service = createPricingService({ repository, questionnaireStore, pricingMode: 'hybrid',
     signingSecret: 'audit-only-local-signing-secret-32-chars', tokenTtlSeconds: 900, strictReferenceMode: false, referenceLookupTimeoutMs: 20000, logger: { info() {}, warn() {}, error() {} } } as any);
   const devices = (SEED_DEVICES as any[]).filter(d => d.brand && d.brand !== 'Apple' && !runnerScope(d.model));
   const cases: Record<string, object> = { perfect: {}, wifi: { hardware: ['wifi'] }, cracked: { screenCondition: 'Screen cracked/ glass broken', defects: ['screen_scratch'] }, noBox: { accessories: ['charger'] }, age6to11: { mobileAge: '6to11' } };
