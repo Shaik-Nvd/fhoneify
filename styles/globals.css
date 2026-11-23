@@ -449,17 +449,23 @@ select option {
   from { transform: rotateY(-34deg) rotateX(10deg) translateY(18px); }
   to { transform: none; }
 }
+/* The phone is sized from the screen height as well as its width, so the whole hero (copy, phone,
+   carousel controls) fits one screen between the header and the bottom menu. The phone is about
+   2.09 times as tall as it is wide; --hero-chrome is the height everything else in the hero needs. */
 .phone-device {
-  --pw: clamp(196px, 46vw, 240px);
+  --hero-chrome: 530px;
+  --pw: clamp(104px, min(46vw, calc((100svh - var(--hero-chrome)) / 2.09)), 210px);
 }
-@media (min-width: 768px) {
-  .phone-device { --pw: 260px; }
+@media (max-height: 760px) and (max-width: 639px) {
+  .phone-device { --hero-chrome: 480px; }
+  /* Very short phones (e.g. 375x667): the subtitle and trust row are repeated on the phone's screen. */
+  .hero-short-hide { display: none; }
+}
+@media (min-width: 640px) {
+  .phone-device { --hero-chrome: 560px; --pw: clamp(150px, calc((100svh - var(--hero-chrome)) / 2.09), 260px); }
 }
 @media (min-width: 1024px) {
-  .phone-device { --pw: 236px; }
-}
-@media (min-width: 1280px) {
-  .phone-device { --pw: 280px; }
+  .phone-device { --hero-chrome: 300px; --pw: clamp(180px, calc((100svh - var(--hero-chrome)) / 2.09), 280px); }
 }
 .phone-rig {
   transform-style: preserve-3d;

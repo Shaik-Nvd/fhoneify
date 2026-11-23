@@ -257,7 +257,7 @@ export default function HeroStage() {
   );
 
   return (
-    <div className="relative grid grid-cols-[minmax(0,1fr)] items-center gap-6 lg:grid-cols-[minmax(0,1.02fr)_minmax(0,1fr)] lg:gap-4">
+    <div className="relative grid grid-cols-[minmax(0,1fr)] items-center gap-3 sm:gap-6 lg:grid-cols-[minmax(0,1.02fr)_minmax(0,1fr)] lg:gap-4">
       {/* Copy */}
       <div className="relative z-10 min-w-0">
         <p className="hero-drop flex items-center gap-2 text-sm font-semibold text-gold" style={{ '--d': '0ms' } as React.CSSProperties}>
@@ -268,7 +268,7 @@ export default function HeroStage() {
           Now buying phones in Bengaluru
         </p>
 
-        <h1 id="hero-title" className="font-display mt-5 text-[2.7rem] font-medium leading-[1.04] tracking-[-0.035em] text-foreground sm:text-[3.5rem] lg:text-[4.3rem]">
+        <h1 id="hero-title" className="font-display mt-3 text-[2.3rem] font-medium leading-[1.04] tracking-[-0.035em] text-foreground sm:mt-5 sm:text-[3.5rem] lg:text-[clamp(3rem,7.2svh,4.3rem)]">
           <span className="sr-only">Sell your old phone. Get paid at your door.</span>
           <span aria-hidden="true" className="hero-line block">
             <span className="hero-line-in block" style={{ '--d': '60ms' } as React.CSSProperties}>
@@ -290,16 +290,16 @@ export default function HeroStage() {
           </span>
         </h1>
 
-        <p className="hero-rise mt-5 max-w-[30rem] text-[1.04rem] leading-relaxed text-muted sm:text-lg" style={{ '--d': '320ms' } as React.CSSProperties}>
+        <p className="hero-rise hero-short-hide mt-3 max-w-[30rem] text-[0.98rem] leading-snug text-muted sm:mt-5 sm:text-lg sm:leading-relaxed" style={{ '--d': '320ms' } as React.CSSProperties}>
           See what your phone is worth in a few taps. No sign-up, and no obligation to sell.
         </p>
 
-        <div className="hero-rise mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6" style={{ '--d': '400ms' } as React.CSSProperties}>
+        <div className="hero-rise mt-4 flex flex-col gap-2.5 sm:mt-8 sm:flex-row sm:items-center sm:gap-6" style={{ '--d': '400ms' } as React.CSSProperties}>
           <Link href="/quote" className="btn-cta cta-shine group no-underline">
             <span className="relative z-[1]">Get instant quote</span>
             <ArrowRight aria-hidden="true" className="relative z-[1] h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
-          <ul className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-muted">
+          <ul className="hero-short-hide flex flex-wrap gap-x-5 gap-y-1 text-sm text-muted">
             <li className="flex items-center gap-1.5">
               <Truck aria-hidden="true" className="h-4 w-4 text-gold" />
               Free doorstep pickup
@@ -346,12 +346,13 @@ export default function HeroStage() {
           </span>
         </div>
 
-        <div className="relative pt-4">
+        <div className="relative pt-1 sm:pt-4">
           <HeroPhone screen={screen} />
         </div>
 
         {/* Rail of real model photos on an arc */}
-        <div className="relative mx-auto -mt-6 h-[var(--rail-h)] w-full max-w-[560px] [--rail-h:132px] [--ru:62px] sm:[--rail-h:150px] sm:[--ru:84px]">
+        {/* Hidden on small phones so the hero fits one screen; arrows, swipe and autoplay still change phone. */}
+        <div className="relative mx-auto -mt-6 hidden h-[var(--rail-h)] w-full max-w-[560px] sm:block [--rail-h:132px] [--ru:62px] sm:[--rail-h:110px] sm:[--ru:70px] [@media(min-height:860px)]:sm:[--rail-h:150px] [@media(min-height:860px)]:sm:[--ru:84px]">
           {FEATURED_MODELS.map((m, j) => {
             const k = ks[j];
             const slot = SLOTS[Math.min(Math.abs(k), SLOTS.length - 1)];
@@ -383,7 +384,7 @@ export default function HeroStage() {
         </div>
 
         {/* Controls */}
-        <div className="relative mt-1 flex items-center justify-center gap-2.5">
+        <div className="relative mt-2 flex items-center justify-center gap-2.5 sm:mt-1">
           <button type="button" onClick={() => step(-1)} aria-label="Previous phone" className="hero-ctl">
             <ArrowLeft aria-hidden="true" className="h-4 w-4" />
           </button>
