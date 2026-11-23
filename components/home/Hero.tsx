@@ -16,8 +16,10 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-4 pb-8 pt-8 sm:pt-12 md:px-10 lg:pb-12 lg:pt-14">
+      <div className="mx-auto flex max-w-7xl items-center px-4 pb-3 pt-4 sm:pb-8 sm:pt-8 md:px-10 lg:min-h-[calc(100svh-4rem)] lg:pb-6 lg:pt-6">
+        <div className="w-full">
         <HeroStage />
+        </div>
       </div>
     </section>
   );
