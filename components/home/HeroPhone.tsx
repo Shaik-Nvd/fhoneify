@@ -9,7 +9,7 @@ const REST_Y = -16;
 const TILT_Y = 16;
 const TILT_X = 10;
 
-function InteractivePhone() {
+function InteractivePhone({ screen }: { screen: ReactNode }) {
   const rigRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -64,7 +64,7 @@ function InteractivePhone() {
     };
   }, []);
 
-  return <PhoneModel ref={rigRef} />;
+  return <PhoneModel ref={rigRef} screen={screen} />;
 }
 
 class PhoneBoundary extends Component<{ children: ReactNode }, { failed: boolean }> {
@@ -77,10 +77,10 @@ class PhoneBoundary extends Component<{ children: ReactNode }, { failed: boolean
   }
 }
 
-export default function HeroPhone() {
+export default function HeroPhone({ screen }: { screen: ReactNode }) {
   return (
     <PhoneBoundary>
-      <InteractivePhone />
+      <InteractivePhone screen={screen} />
     </PhoneBoundary>
   );
 }
