@@ -1,5 +1,4 @@
 import Hero from '@/components/home/Hero';
-import AutoDetectDeviceBanner from '@/components/home/AutoDetectDeviceBanner';
 import BrandPicker from '@/components/home/BrandPicker';
 import ProcessSteps from '@/components/home/ProcessSteps';
 import SellCompare from '@/components/home/SellCompare';
@@ -17,7 +16,6 @@ export default function LandingPage() {
     <div className="w-full overflow-x-clip">
       <RevealBoot />
       <Hero />
-      <AutoDetectDeviceBanner />
       <BrandPicker />
       <ProcessSteps />
       <SellCompare />
